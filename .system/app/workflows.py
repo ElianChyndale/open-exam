@@ -16,6 +16,53 @@ FIX_RULES = {
     "missed_root_cause": "先列现象，再单独写 root cause，不允许只总结表层现象。",
 }
 
+FORMULA_DENSE_SUBJECTS = {
+    "Alternative Investments",
+    "Alternative_Investments",
+    "Corporate Issuers",
+    "Corporate_Issuers",
+    "Derivatives",
+    "Economics",
+    "Equity",
+    "Equity Investments",
+    "Financial Reporting and Analysis",
+    "Financial Statement Analysis",
+    "Financial_Statement_Analysis",
+    "Fixed Income",
+    "Fixed_Income",
+    "Portfolio Management",
+    "Portfolio_Management",
+    "Quantitative Methods",
+    "Quantitative_Methods",
+}
+
+CONCEPT_FIRST_SUBJECTS = {
+    "Ethical and Professional Standards",
+    "Ethical_and_Professional_Standards",
+}
+
+MOCK_BUCKETS = {
+    "Alternative Investments": "AltInv",
+    "Alternative_Investments": "AltInv",
+    "Corporate Issuers": "CorpIss",
+    "Corporate_Issuers": "CorpIss",
+    "Derivatives": "Derivatives",
+    "Economics": "Economics",
+    "Equity": "Equity",
+    "Equity Investments": "Equity",
+    "Ethical and Professional Standards": "Ethics",
+    "Ethical_and_Professional_Standards": "Ethics",
+    "Financial Statement Analysis": "FRA",
+    "Financial Reporting and Analysis": "FRA",
+    "Financial_Statement_Analysis": "FRA",
+    "Fixed Income": "FI",
+    "Fixed_Income": "FI",
+    "Portfolio Management": "Portfolio",
+    "Portfolio_Management": "Portfolio",
+    "Quantitative Methods": "Quant",
+    "Quantitative_Methods": "Quant",
+}
+
 
 def default_fix_rule(error_type: str) -> str:
     return FIX_RULES.get(error_type, "把错误转成一句可重复执行的纠偏规则。")
@@ -56,6 +103,66 @@ def classify_moc_gap_type(error_type: str) -> str:
     if error_type == "concept_confusion":
         return "knowledge_tree"
     return "exam_trap"
+
+
+def resolve_moc_target_path(repo: Repository, moc_target: str) -> Path | None:
+    if not moc_target:
+        return None
+    path = Path(moc_target)
+    if not path.is_absolute():
+        path = repo.root / path
+    return path
+
+
+def read_moc_text(repo: Repository, moc_target: str) -> str:
+    path = resolve_moc_target_path(repo, moc_target)
+    if not path or not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8")
+
+
+def subject_supports_formula_nodes(event: MistakeEvent) -> bool:
+    if event.topic in CONCEPT_FIRST_SUBJECTS:
+        return False
+    if event.topic in FORMULA_DENSE_SUBJECTS:
+        return True
+    return "Alternative_Investments" in (event.moc_target or "")
+
+
+def classify_gap_target(event: MistakeEvent, moc_text: str) -> str:
+    if event.error_type == "concept_confusion":
+        return "knowledge_tree_concept"
+    if event.error_type != "formula_misuse":
+        return "exam_trap"
+    if not subject_supports_formula_nodes(event):
+        return "knowledge_tree_concept"
+
+    has_core_formula_section = "核心公式" in moc_text
+    has_node_mapping_column = "知识树节点" in moc_text
+
+    if not has_core_formula_section and not has_node_mapping_column:
+        return "both"
+    if not has_core_formula_section:
+        return "knowledge_tree_core_formula"
+    return "formula_table_variant"
+
+
+def gap_type_for_target(gap_target: str) -> str:
+    if gap_target in {"knowledge_tree_concept", "knowledge_tree_core_formula"}:
+        return "knowledge_tree"
+    if gap_target == "exam_trap":
+        return "exam_trap"
+    return "formula"
+
+
+def mock_bucket_for_event(event: MistakeEvent) -> str | None:
+    if event.moc_target:
+        parts = Path(event.moc_target).parts
+        if len(parts) >= 2:
+            subject_dir = parts[-2]
+            if subject_dir in MOCK_BUCKETS:
+                return MOCK_BUCKETS[subject_dir]
+    return MOCK_BUCKETS.get(event.topic)
 
 
 def build_strategy_rule(events: list[MistakeEvent]) -> StrategyRule:
@@ -122,11 +229,13 @@ def moc_gap_review(repo: Repository) -> Path | None:
         key = f"{event.topic}::{event.los}::{event.error_type}::{event.moc_target}"
         buckets[key].append(event)
 
-    recommendations: list[tuple[list[MistakeEvent], str]] = []
+    recommendations: list[tuple[list[MistakeEvent], str, str]] = []
     for grouped in buckets.values():
         if len(grouped) < 3:
             continue
-        recommendations.append((grouped, classify_moc_gap_type(grouped[0].error_type)))
+        sample = grouped[0]
+        gap_target = classify_gap_target(sample, read_moc_text(repo, sample.moc_target))
+        recommendations.append((grouped, gap_type_for_target(gap_target), gap_target))
 
     if not recommendations:
         return None
@@ -139,9 +248,9 @@ def moc_gap_review(repo: Repository) -> Path | None:
         "",
         "# MOC Gap Review",
     ]
-    for grouped, gap_type in sorted(
+    for grouped, gap_type, gap_target in sorted(
         recommendations,
-        key=lambda item: (-len(item[0]), item[0][0].topic, item[0][0].los),
+        key=lambda item: (-len(item[0]), item[0][0].topic, item[0][0].los, item[2]),
     ):
         sample = grouped[0]
         evidence_refs = sorted({ref for event in grouped for ref in event.evidence_refs})
@@ -153,7 +262,8 @@ def moc_gap_review(repo: Repository) -> Path | None:
                 f"moc_target: {sample.moc_target}",
                 f"recurrence: {len(grouped)}",
                 f"suggested_gap_type: {gap_type}",
-                f"reason: Repeated {sample.error_type} errors suggest the MOC may need a stronger {gap_type} treatment for this LOS.",
+                f"gap_target: {gap_target}",
+                f"reason: Repeated {sample.error_type} errors suggest the MOC may need a stronger {gap_target} treatment for this LOS.",
                 f"event_ids: {', '.join(event_ids)}",
                 f"evidence_refs: {', '.join(evidence_refs)}",
             ]
@@ -162,6 +272,43 @@ def moc_gap_review(repo: Repository) -> Path | None:
     path = repo.memory_root / "strategy" / "moc-gap-review.md"
     repo.write_markdown(path, "\n".join(lines), "moc_gap_review", "moc-gap-review")
     return path
+
+
+def export_mock_pages(repo: Repository) -> None:
+    events = [event for event in repo.load_events() if event.source_layer == "question"]
+    grouped: dict[str, list[MistakeEvent]] = defaultdict(list)
+    for event in events:
+        bucket = mock_bucket_for_event(event)
+        if bucket:
+            grouped[bucket].append(event)
+
+    for bucket, bucket_events in grouped.items():
+        lines = [
+            "---",
+            f"bucket: {bucket}",
+            f"question_count: {len(bucket_events)}",
+            "---",
+            "",
+            f"# {bucket} Mock Mistakes",
+        ]
+        for event in bucket_events:
+            evidence_assets = ", ".join(event.evidence_assets) if event.evidence_assets else ""
+            lines.extend(
+                [
+                    "",
+                    f"## {event.topic} | {event.los}",
+                    f"- error_type: {event.error_type}",
+                    f"- question_source: {event.question_source or 'unknown'}",
+                    f"- source_type: {event.source_type or 'unknown'}",
+                    f"- wrong_choice_or_output: {event.wrong_choice_or_output}",
+                    f"- correct_resolution: {event.correct_resolution}",
+                    f"- evidence_refs: {', '.join(event.evidence_refs)}",
+                    f"- evidence_assets: {evidence_assets}",
+                    f"- moc_target: {event.moc_target}",
+                ]
+            )
+        path = repo.vault_root / "mock" / bucket / f"00-{bucket}-Mistakes.md"
+        repo.write_markdown(path, "\n".join(lines), "mock_projection", f"mock-{bucket}-mistakes")
 
 
 def export_obsidian(repo: Repository) -> None:
@@ -221,12 +368,18 @@ def export_obsidian(repo: Repository) -> None:
     )
 
 
+def refresh_learning_outputs(repo: Repository) -> None:
+    export_obsidian(repo)
+    export_mock_pages(repo)
+
+
 def pre_mock_brief(repo: Repository) -> StrategyRule:
     events = repo.load_events()
     mine_patterns(repo)
     rule = build_strategy_rule(events)
     repo.save_strategy_rule(rule)
-    export_obsidian(repo)
+    moc_gap_review(repo)
+    refresh_learning_outputs(repo)
     return rule
 
 
@@ -260,7 +413,7 @@ def post_mock_retro(repo: Repository, session_id: str) -> Path:
 
     path = repo.memory_root / "strategy" / f"{session_id}-retro.md"
     repo.write_markdown(path, "\n".join(lines), "mock_retro", f"{session_id}-retro")
-    export_obsidian(repo)
+    refresh_learning_outputs(repo)
     return path
 
 

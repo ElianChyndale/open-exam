@@ -95,6 +95,9 @@ Fixed Income (M01-M14)
 │
 ├── M03: Bond Valuation: Prices and Yields【考试核心】↔ 2026 Outline P19
 │   ├── Price engine
+│   │   ├── 核心公式
+│   │   │   ├── `P = Σ C/(1+y/m)^t + FV/(1+y/m)^N`
+│   │   │   └── `Full Price = Clean Price + Accrued Interest`
 │   │   ├── bond value = coupon PV + principal PV
 │   │   ├── discount / premium / par relation to coupon rate and YTM
 │   │   └── longer maturity + lower coupon -> price more sensitive to yield change
@@ -117,6 +120,10 @@ Fixed Income (M01-M14)
 │
 ├── M05: Floating-Rate and Money Market Measures【考试核心】↔ 2026 Outline P19
 │   ├── Floating-rate instruments
+│   │   ├── 核心公式
+│   │   │   ├── `BDY = (FV - P)/FV x 360/t`
+│   │   │   ├── `MMY = (FV - P)/P x 360/t`
+│   │   │   └── `BEY = (FV - P)/P x 365/t`
 │   │   ├── reference rate + quoted margin; reset mitigates but does not erase rate risk
 │   │   ├── discount margin connects price away from par with required spread
 │   │   └── credit deterioration can push FRN below par despite resets
@@ -128,6 +135,10 @@ Fixed Income (M01-M14)
 │
 ├── M06: Spot, Par, and Forward Curves【考试核心】↔ 2026 Outline P19
 │   ├── Curve dictionary
+│   │   ├── 核心公式
+│   │   │   ├── `P = Σ CF_t/(1+s_t)^t`
+│   │   │   ├── `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)`
+│   │   │   └── `Par coupon = (1 - DF_N)/Σ DF_t`
 │   │   ├── spot curve discounts a single cash flow at each maturity
 │   │   ├── par curve gives coupon rate making a bond price equal par
 │   │   └── forward curve implies future borrowing/lending rates from today's curve
@@ -139,6 +150,9 @@ Fixed Income (M01-M14)
 │
 ├── M07: Interest Rate Risk and Return【考试核心】↔ 2026 Outline P19
 │   ├── Return decomposition
+│   │   ├── 核心公式
+│   │   │   ├── `HPR = (coupon + reinvestment income + sale price - purchase price)/purchase price`
+│   │   │   └── `D_mac = Σ[t x PV(CF_t)] / Price`
 │   │   ├── coupon income + reinvestment income + price change
 │   │   ├── pull to par and horizon effect
 │   │   └── realized return differs when sale yield or reinvestment rate changes
@@ -150,6 +164,11 @@ Fixed Income (M01-M14)
 │
 ├── M08: Yield-Based Duration and Convexity【考试核心】↔ 2026 Outline P20
 │   ├── Duration family
+│   │   ├── 核心公式
+│   │   │   ├── `D_mod = D_mac/(1+y/m)`
+│   │   │   ├── `Money Duration = D_mod x Full Price`
+│   │   │   ├── `PVBP ≈ Money Duration x 0.0001`
+│   │   │   └── `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2`
 │   │   ├── modified duration estimates % price sensitivity to yield
 │   │   ├── money duration estimates currency price change per yield unit
 │   │   └── PVBP = price change for 1 bp yield shift
@@ -288,43 +307,43 @@ Securitization
 
 ### M03-M06 定价、收益率与曲线
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Coupon Bond Price | `P = Σ_{t=1}^{N} C/(1+y/m)^t + FV/(1+y/m)^N` | `y` 与 coupon frequency 必须同口径 |
-| Full Price | `Full Price = Clean Price + Accrued Interest` | invoice price 看 full |
-| Accrued Interest | `AI = Coupon per period x Days since last coupon / Days in coupon period` | day-count convention 题先读清 |
-| Current Yield | `Annual Coupon / Bond Price` | 只看 coupon income |
-| Effective Annual Yield | `EAY = (1 + periodic rate)^m - 1` | 年化 conversion 高频 |
-| Discount Yield | `BDY = (FV - P)/FV x 360/t` | 分母是 face value |
-| Money Market Yield | `MMY = (FV - P)/P x 360/t` | 分母换成 purchase price |
-| Bond Equivalent Yield | `BEY = (FV - P)/P x 365/t` | 与 MMY 的 day basis 区分 |
-| Spot Pricing | `P = Σ CF_t/(1+s_t)^t` | 每笔 cash flow 用匹配 spot |
-| Forward from Spot | `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^{n-m}` | 先对齐区间长度 |
-| Par Rate | `Par coupon = (1 - DF_N)/Σ DF_t` | discount factor 版最稳 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Coupon Bond Price | `P = Σ_{t=1}^{N} C/(1+y/m)^t + FV/(1+y/m)^N` | `M03` | `y` 与 coupon frequency 必须同口径 |
+| Full Price | `Full Price = Clean Price + Accrued Interest` | `M03` | invoice price 看 full |
+| Accrued Interest | `AI = Coupon per period x Days since last coupon / Days in coupon period` | `M03` | day-count convention 题先读清 |
+| Current Yield | `Annual Coupon / Bond Price` | `M04` | 只看 coupon income |
+| Effective Annual Yield | `EAY = (1 + periodic rate)^m - 1` | `M04` | 年化 conversion 高频 |
+| Discount Yield | `BDY = (FV - P)/FV x 360/t` | `M05` | 分母是 face value |
+| Money Market Yield | `MMY = (FV - P)/P x 360/t` | `M05` | 分母换成 purchase price |
+| Bond Equivalent Yield | `BEY = (FV - P)/P x 365/t` | `M05` | 与 MMY 的 day basis 区分 |
+| Spot Pricing | `P = Σ CF_t/(1+s_t)^t` | `M06` | 每笔 cash flow 用匹配 spot |
+| Forward from Spot | `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^{n-m}` | `M06` | 先对齐区间长度 |
+| Par Rate | `Par coupon = (1 - DF_N)/Σ DF_t` | `M06` | discount factor 版最稳 |
 
 ### M07-M09 回报与利率风险
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Holding Period Return | `HPR = (Coupon income + reinvestment income + sale price - purchase price)/purchase price` | return source 要拆开 |
-| Macaulay Duration | `D_mac = Σ[t x PV(CF_t)] / Price` | cash-flow time weighted average |
-| Modified Duration | `D_mod = D_mac/(1+y/m)` | fixed cash-flow % price sensitivity |
-| Money Duration | `Money Duration = D_mod x Full Price` | 货币价格变化基础 |
-| PVBP | `PVBP ≈ Money Duration x 0.0001` | 1 bp shock |
-| Duration Price Approx | `%ΔP ≈ -D_mod x Δy` | 一阶近似 |
-| Convexity | `Convexity = [P_- + P_+ - 2P_0] / (P_0 x (Δy)^2)` | 价格重估版常见 |
-| Convexity Adjusted Change | `%ΔP ≈ -D x Δy + 0.5 x Convexity x (Δy)^2` | 注意 `Δy` 用小数 |
-| Portfolio Duration | `D_p = Σ w_i D_i` | 价值权重，曲线非平行时有限 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Holding Period Return | `HPR = (Coupon income + reinvestment income + sale price - purchase price)/purchase price` | `M07` | return source 要拆开 |
+| Macaulay Duration | `D_mac = Σ[t x PV(CF_t)] / Price` | `M07` | cash-flow time weighted average |
+| Modified Duration | `D_mod = D_mac/(1+y/m)` | `M08` | fixed cash-flow % price sensitivity |
+| Money Duration | `Money Duration = D_mod x Full Price` | `M08` | 货币价格变化基础 |
+| PVBP | `PVBP ≈ Money Duration x 0.0001` | `M08` | 1 bp shock |
+| Duration Price Approx | `%ΔP ≈ -D_mod x Δy` | `M08` | 一阶近似 |
+| Convexity | `Convexity = [P_- + P_+ - 2P_0] / (P_0 x (Δy)^2)` | `M08` | 价格重估版常见 |
+| Convexity Adjusted Change | `%ΔP ≈ -D x Δy + 0.5 x Convexity x (Δy)^2` | `M08` | 注意 `Δy` 用小数 |
+| Portfolio Duration | `D_p = Σ w_i D_i` | `M08` | 价值权重，曲线非平行时有限 |
 
 ### M10-M14 信用与证券化
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Expected Credit Loss Intuition | `ECL ≈ PD x LGD x Exposure` | Level I 重点在三因子方向 |
-| Loss Given Default | `LGD = 1 - Recovery Rate` | recovery 越高，LGD 越低 |
-| Interest Coverage | `EBIT / Interest Expense` 或 `EBITDA / Interest Expense` | 看题目指定 numerator |
-| Debt to EBITDA | `Total Debt / EBITDA` | leverage 越高通常信用越弱 |
-| Senior Claim Recovery Logic | `Higher priority -> higher expected recovery` | 排名不是公式但常决定答案 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Expected Credit Loss Intuition | `ECL ≈ PD x LGD x Exposure` | `M10` | Level I 重点在三因子方向 |
+| Loss Given Default | `LGD = 1 - Recovery Rate` | `M10` | recovery 越高，LGD 越低 |
+| Interest Coverage | `EBIT / Interest Expense` 或 `EBITDA / Interest Expense` | `M11` | 看题目指定 numerator |
+| Debt to EBITDA | `Total Debt / EBITDA` | `M11` | leverage 越高通常信用越弱 |
+| Senior Claim Recovery Logic | `Higher priority -> higher expected recovery` | `M11` | 排名不是公式但常决定答案 |
 
 ---
 

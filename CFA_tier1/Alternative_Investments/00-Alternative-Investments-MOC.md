@@ -102,6 +102,10 @@ Alternative Investments (M01-M07)
 │   │       └── 尽调: Single **需自行尽调**，FOF **专业团队尽调**
 │   │
 │   ├── 1.3 费用结构【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `Management Fee = AUM × 管理费率`
+│   │   │   ├── `Incentive Fee = 超额收益 × 提成比例`
+│   │   │   └── `总费用 = 管理费 + 业绩提成`
 │   │   ├── 管理费: X% × AUM（通常 1-2%）
 │   │   ├── 业绩提成: Y% × 超额收益（通常 20%）
 │   │   ├── 是否有 Hurdle Rate / High Water Mark?
@@ -178,6 +182,12 @@ Alternative Investments (M01-M07)
 │
 ├── M02: Alternative Investment Performance and Returns
 │   ├── 2.1 业绩衡量指标【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `TVPI = DPI + RVPI`
+│   │   │   ├── `DPI = 累计分配 / 实缴资本`
+│   │   │   ├── `RVPI = 剩余价值 / 实缴资本`
+│   │   │   ├── `Sortino = (Rp - Rf) / σd`
+│   │   │   └── `Sharpe = (Rp - Rf) / σp`
 │   │   ├── TVPI (Total Value to Paid-In) = DPI + RVPI
 │   │   │   └── 总价值倍数 = 已分配价值 + 剩余价值 / 实缴资本
 │   │   ├── DPI (Distributed to Paid-In)
@@ -272,6 +282,10 @@ Alternative Investments (M01-M07)
 │   │   │       │   └── Hybrid REITs: 两者结合
 │   │   │       └── 流动性: REITs > Direct Real Estate（公开交易 vs 非流动）
 │   │   ├── 估值方法
+│   │   │   ├── 核心公式
+│   │   │   │   ├── `NOI = 租金收入 - 运营费用`
+│   │   │   │   ├── `Cap Rate = NOI / Property Value`
+│   │   │   │   └── `Property Value = NOI / Cap Rate`
 │   │   │   ├── Income Approach (收益法)——最常用
 │   │   │   │   ├── NOI (Net Operating Income) = 租金收入 - 运营费用（不含折旧和利息）
 │   │   │   │   ├── Cap Rate (资本化率) = NOI / Property Value
@@ -309,6 +323,10 @@ Alternative Investments (M01-M07)
 ├── M05: Natural Resources (自然资源)
 │   └── 5.1 商品期货【考试核心】
 │       ├── 期货定价理论
+│       │   ├── 核心公式
+│       │   │   ├── `Futures Price = Spot × e^((r + s - y) × T)`
+│       │   │   ├── `Roll Yield = (Near Future - Far Future) / Near Future`
+│       │   │   └── `持有成本 ≈ r + s - y`
 │       │   ├── Futures Price = Spot × e^((r + s - y) × T)
 │       │   │   ├── r = 无风险利率
 │       │   │   ├── s = 存储成本 (Storage Cost)
@@ -354,6 +372,9 @@ Alternative Investments (M01-M07)
 │   │       ├── 风险: 低，与股市相关性 0.1-0.3
 │   │       └── 回报: 6-10%
 │   └── 6.3 杠杆与风险【考试核心】
+│       ├── 核心公式
+│       │   ├── `Gross Leverage = (Long + |Short|) / Capital`
+│       │   └── `Net Leverage = (Long - |Short|) / Capital`
 │       ├── Gross Leverage (总杠杆) = (Long + |Short|) / Capital
 │       │   └── 反映基金总敞口，包括多空双边
 │       ├── Net Leverage (净杠杆) = (Long - |Short|) / Capital
@@ -542,37 +563,37 @@ M05-M07 其他另类
 
 ### 业绩衡量
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| TVPI | DPI + RVPI | 总价值倍数 = 已分配 + 剩余价值 |
-| DPI | 累计分配 / 实缴资本 | 现金回报倍数 |
-| RVPI | 剩余价值 / 实缴资本 | 未实现回报倍数 |
-| IRR | NPV = 0 的折现率 | 内部收益率 |
-| Sortino | (Rp - Rf) / σ_d | 下行风险调整收益 |
-| Sharpe | (Rp - Rf) / σ_p | 总风险调整收益 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| TVPI | DPI + RVPI | `2.1` | 总价值倍数 = 已分配 + 剩余价值 |
+| DPI | 累计分配 / 实缴资本 | `2.1` | 现金回报倍数 |
+| RVPI | 剩余价值 / 实缴资本 | `2.1` | 未实现回报倍数 |
+| IRR | NPV = 0 的折现率 | `2.1` | 内部收益率 |
+| Sortino | (Rp - Rf) / σ_d | `2.1` | 下行风险调整收益 |
+| Sharpe | (Rp - Rf) / σ_p | `2.1` | 总风险调整收益 |
 
 ### 房地产
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| Cap Rate | NOI / Property Value | 资本化率 |
-| Property Value | NOI / Cap Rate | 房地产估值 |
-| NOI | 租金收入 - 运营费用 | 净营运收入（不含折旧利息） |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Cap Rate | NOI / Property Value | `4.1` | 资本化率 |
+| Property Value | NOI / Cap Rate | `4.1` | 房地产估值 |
+| NOI | 租金收入 - 运营费用 | `4.1` | 净营运收入（不含折旧利息） |
 
 ### 商品期货
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| 期货定价 | Spot × e^((r + s - y)×T) | r=利率, s=存储, y=便利收益 |
-| Roll Yield | (Near Future - Far Future) / Near Future | 展期收益 |
-| 持有成本 | Futures - Spot ≈ r + s - y | 成本 carry |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| 期货定价 | Spot × e^((r + s - y)×T) | `5.1` | r=利率, s=存储, y=便利收益 |
+| Roll Yield | (Near Future - Far Future) / Near Future | `5.1` | 展期收益 |
+| 持有成本 | Futures - Spot ≈ r + s - y | `5.1` | 成本 carry |
 
 ### 对冲基金
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| Gross Leverage | (Long + \|Short\|) / Capital | 总杠杆 |
-| Net Leverage | (Long - \|Short\|) / Capital | 净杠杆 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Gross Leverage | (Long + \|Short\|) / Capital | `6.3` | 总杠杆 |
+| Net Leverage | (Long - \|Short\|) / Capital | `6.3` | 净杠杆 |
 
 ---
 

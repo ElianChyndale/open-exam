@@ -87,6 +87,9 @@ Corporate Issuers (M01-M08)
 │
 ├── M03: Working Capital and Liquidity【考试核心】↔ 2026 Outline: Working Capital
 │   ├── Operating cycle
+│   │   ├── 核心公式
+│   │   │   ├── `Operating cycle = DIO + DSO`
+│   │   │   └── `Cash conversion cycle = DIO + DSO - DPO`
 │   │   ├── inventory days + receivable days - payable days = cash conversion cycle
 │   │   ├── receivable quality, inventory policy, supplier terms, seasonality
 │   │   └── liquidity buffers protect operations but tie up capital
@@ -98,6 +101,10 @@ Corporate Issuers (M01-M08)
 │
 ├── M04: Capital Investments【考试核心】↔ 2026 Outline: Capital Investments
 │   ├── Cash-flow discipline
+│   │   ├── 核心公式
+│   │   │   ├── `NPV = Σ CFt/(1+r)^t - Initial Outlay`
+│   │   │   ├── `0 = Σ CFt/(1+IRR)^t - Initial Outlay`
+│   │   │   └── `PI = PV of future cash inflows / Initial investment`
 │   │   ├── use incremental after-tax cash flows; ignore sunk costs
 │   │   ├── include opportunity costs, cannibalization, working capital, salvage/tax effects
 │   │   └── independent vs mutually exclusive vs capital-rationed decisions
@@ -109,6 +116,11 @@ Corporate Issuers (M01-M08)
 │
 ├── M05: Cost of Capital【考试核心】↔ 2026 Outline: Cost of Capital
 │   ├── Component costs
+│   │   ├── 核心公式
+│   │   │   ├── `After-tax cost of debt = rd(1-T)`
+│   │   │   ├── `Cost of preferred = Dp/Pp`
+│   │   │   ├── `Cost of equity = rf + β(E(Rm)-rf)` 或 `D1/P0 + g`
+│   │   │   └── `WACC = wd rd(1-T) + wp rp + we re`
 │   │   ├── debt: after-tax required return on borrowing
 │   │   ├── preferred: dividend relative to current price
 │   │   └── common equity: CAPM, dividend growth, or risk-premium logic
@@ -120,6 +132,10 @@ Corporate Issuers (M01-M08)
 │
 ├── M06: Capital Structure and Leverage【考试核心】↔ 2026 Outline: Capital Structure
 │   ├── Leverage mechanics
+│   │   ├── 核心公式
+│   │   │   ├── `DOL = %ΔEBIT / %ΔSales`
+│   │   │   ├── `DFL = %ΔEPS / %ΔEBIT`
+│   │   │   └── `DTL = DOL x DFL`
 │   │   ├── operating leverage from fixed operating costs
 │   │   ├── financial leverage from fixed financing costs
 │   │   └── total leverage transmits sales shock to EPS shock
@@ -208,38 +224,38 @@ Governance
 
 ### M03 Working Capital
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Operating Cycle | `DIO + DSO` | 销售与回款链 |
-| Cash Conversion Cycle | `DIO + DSO - DPO` | 营运资本核心 |
-| DIO | `Average Inventory / COGS x 365` | 题目有时给 turnover |
-| DSO | `Average Receivables / Revenue x 365` | collection speed |
-| DPO | `Average Payables / Purchases or COGS x 365` | denominator 读题 |
-| Current Ratio | `Current Assets / Current Liabilities` | liquidity 不等于 efficiency |
-| Quick Ratio | `(Cash + Marketable Securities + Receivables)/Current Liabilities` | 排除 inventory |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Operating Cycle | `DIO + DSO` | `M03` | 销售与回款链 |
+| Cash Conversion Cycle | `DIO + DSO - DPO` | `M03` | 营运资本核心 |
+| DIO | `Average Inventory / COGS x 365` | `M03` | 题目有时给 turnover |
+| DSO | `Average Receivables / Revenue x 365` | `M03` | collection speed |
+| DPO | `Average Payables / Purchases or COGS x 365` | `M03` | denominator 读题 |
+| Current Ratio | `Current Assets / Current Liabilities` | `M03` | liquidity 不等于 efficiency |
+| Quick Ratio | `(Cash + Marketable Securities + Receivables)/Current Liabilities` | `M03` | 排除 inventory |
 
 ### M04 Capital Investments
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Net Present Value | `NPV = Σ CF_t/(1+r)^t - Initial Outlay` | value rule 主指标 |
-| Internal Rate of Return | `0 = Σ CF_t/(1+IRR)^t - Initial Outlay` | 非常规现金流小心 |
-| Profitability Index | `PI = PV of future cash inflows / Initial investment` | capital rationing 辅助 |
-| Payback Period | `Time until cumulative undiscounted CF recovers outlay` | 不代表价值 |
-| Discounted Payback | `Time until discounted CF recovers outlay` | 仍忽略回收后现金流 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Net Present Value | `NPV = Σ CF_t/(1+r)^t - Initial Outlay` | `M04` | value rule 主指标 |
+| Internal Rate of Return | `0 = Σ CF_t/(1+IRR)^t - Initial Outlay` | `M04` | 非常规现金流小心 |
+| Profitability Index | `PI = PV of future cash inflows / Initial investment` | `M04` | capital rationing 辅助 |
+| Payback Period | `Time until cumulative undiscounted CF recovers outlay` | `M04` | 不代表价值 |
+| Discounted Payback | `Time until discounted CF recovers outlay` | `M04` | 仍忽略回收后现金流 |
 
 ### M05-M06 Cost of Capital and Leverage
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| After-tax Cost of Debt | `r_d(1-T)` | interest tax shield |
-| Cost of Preferred | `D_p/P_p` | preferred no growth case |
-| CAPM Cost of Equity | `r_f + β(E(R_m)-r_f)` | 与 Portfolio 联动 |
-| Dividend Growth Cost of Equity | `D_1/P_0 + g` | stable growth 口径 |
-| WACC | `w_d r_d(1-T) + w_p r_p + w_e r_e` | market-value weights |
-| Degree of Operating Leverage | `%ΔEBIT / %ΔSales` | operating fixed costs |
-| Degree of Financial Leverage | `%ΔEPS / %ΔEBIT` | financing fixed costs |
-| Degree of Total Leverage | `DOL x DFL` | sales -> EPS |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| After-tax Cost of Debt | `r_d(1-T)` | `M05` | interest tax shield |
+| Cost of Preferred | `D_p/P_p` | `M05` | preferred no growth case |
+| CAPM Cost of Equity | `r_f + β(E(R_m)-r_f)` | `M05` | 与 Portfolio 联动 |
+| Dividend Growth Cost of Equity | `D_1/P_0 + g` | `M05` | stable growth 口径 |
+| WACC | `w_d r_d(1-T) + w_p r_p + w_e r_e` | `M05` | market-value weights |
+| Degree of Operating Leverage | `%ΔEBIT / %ΔSales` | `M06` | operating fixed costs |
+| Degree of Financial Leverage | `%ΔEPS / %ΔEBIT` | `M06` | financing fixed costs |
+| Degree of Total Leverage | `DOL x DFL` | `M06` | sales -> EPS |
 
 ---
 

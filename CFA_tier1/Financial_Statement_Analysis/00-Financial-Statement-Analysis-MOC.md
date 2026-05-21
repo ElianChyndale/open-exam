@@ -96,6 +96,9 @@ FRA (M01-M11)
 │   │   ├── unusual / infrequent items
 │   │   └── accounting policy changes
 │   ├── 2.4 EPS【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `Basic EPS = (NI - Pref Div) / Weighted Avg Shares`
+│   │   │   └── `Diluted EPS = Adjusted NI / Adjusted weighted shares`
 │   │   ├── simple capital structure -> basic EPS
 │   │   ├── complex capital structure -> diluted EPS
 │   │   └── antidilutive securities excluded
@@ -116,6 +119,10 @@ FRA (M01-M11)
 │   │   ├── cash flow statement links income statement to balance sheet changes
 │   │   └── CFO / CFI / CFF classify the source of cash movement
 │   ├── 4.2 Direct vs indirect preparation【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `CFO = NI + Noncash Charges - Noncash Gains/Losses ± WC Changes`
+│   │   │   ├── `FCFF = CFO + Interest(1-T) - FCInv`
+│   │   │   └── `FCFE = CFO - FCInv + Net Borrowing`
 │   │   ├── compute cash flows from income statement and balance sheet data
 │   │   ├── convert indirect CFO to direct method
 │   │   └── 注意：NI-to-CFO bridge is a reconciliation, not a definition【考试陷阱】
@@ -168,8 +175,15 @@ FRA (M01-M11)
 ├── M10: Financial Analysis Techniques
 │   ├── 10.1 Tools and limitations【考试核心】↔ Topic Outline P12-P13
 │   ├── 10.2 Activity / liquidity / solvency / profitability ratios【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `Current ratio = CA / CL`
+│   │   │   ├── `Quick ratio = (Cash + ST Inv + Receivables) / CL`
+│   │   │   ├── `Inventory turnover = COGS / Avg Inventory`
+│   │   │   └── `ROE = NI / Avg Equity`
 │   ├── 10.3 Ratio relationships and industry-specific ratios【考试核心】
 │   ├── 10.4 DuPont decomposition【考试核心】
+│   │   ├── 核心公式
+│   │   │   └── `ROE = Net Margin x Asset Turnover x Financial Leverage`
 │   └── 10.5 Ratio analysis for modeling and forecasting【考试核心】
 │
 └── M11: Financial Statement Modeling
@@ -240,47 +254,47 @@ Income Statement
 
 ### Income Statement and Cash Flow
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Basic EPS | `(NI - Pref Div) / Weighted Avg Shares` | EPS 基础式 |
-| Diluted EPS | `Adjusted NI available to common / Adjusted weighted shares` | 先排除 antidilutive instruments |
-| CFO (Indirect) | `NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` | 现金流重构核心 |
-| FCFF | `CFO + Interest(1-T) - FCInv` | 公司自由现金流 |
-| FCFE | `CFO - FCInv + Net Borrowing` | 股权自由现金流 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Basic EPS | `(NI - Pref Div) / Weighted Avg Shares` | `2.4` | EPS 基础式 |
+| Diluted EPS | `Adjusted NI available to common / Adjusted weighted shares` | `2.4` | 先排除 antidilutive instruments |
+| CFO (Indirect) | `NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` | `4.2` | 现金流重构核心 |
+| FCFF | `CFO + Interest(1-T) - FCInv` | `4.2` | 公司自由现金流 |
+| FCFE | `CFO - FCInv + Net Borrowing` | `4.2` | 股权自由现金流 |
 
 ### Liquidity and Activity
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Current Ratio | `CA / CL` | 流动性 |
-| Quick Ratio | `(Cash + ST Inv + Receivables) / CL` | 更保守流动性 |
-| Inventory Turnover | `COGS / Avg Inventory` | 存货效率 |
-| Days Inventory | `365 / Inventory Turnover` | DIO 常与 CCC 联动 |
-| Receivables Turnover | `Revenue / Avg Receivables` | 回款效率 |
-| DSO | `365 / Receivables Turnover` | 应收账款天数 |
-| Total Asset Turnover | `Revenue / Avg Total Assets` | 资产效率 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Current Ratio | `CA / CL` | `10.2` | 流动性 |
+| Quick Ratio | `(Cash + ST Inv + Receivables) / CL` | `10.2` | 更保守流动性 |
+| Inventory Turnover | `COGS / Avg Inventory` | `10.2` | 存货效率 |
+| Days Inventory | `365 / Inventory Turnover` | `10.2` | DIO 常与 CCC 联动 |
+| Receivables Turnover | `Revenue / Avg Receivables` | `10.2` | 回款效率 |
+| DSO | `365 / Receivables Turnover` | `10.2` | 应收账款天数 |
+| Total Asset Turnover | `Revenue / Avg Total Assets` | `10.2` | 资产效率 |
 
 ### Profitability and Solvency
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Gross Margin | `Gross Profit / Revenue` | revenue/COGS choice 的敏感点 |
-| Operating Margin | `Operating Income / Revenue` | 经营盈利能力 |
-| Net Margin | `NI / Revenue` | DuPont 第一段 |
-| ROA | `NI / Avg Total Assets` | 资产盈利能力 |
-| ROE | `NI / Avg Equity` | 股东回报 |
-| Financial Leverage | `Avg Assets / Avg Equity` | DuPont 杠杆段 |
-| Debt-to-Equity | `Total Debt / Total Equity` | 偿债结构 |
-| Interest Coverage | `EBIT / Interest Expense` | 信用分析常用 |
-| DuPont | `Net Margin x Asset Turnover x Financial Leverage` | ROE 分解 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Gross Margin | `Gross Profit / Revenue` | `10.2` | revenue/COGS choice 的敏感点 |
+| Operating Margin | `Operating Income / Revenue` | `10.2` | 经营盈利能力 |
+| Net Margin | `NI / Revenue` | `10.4` | DuPont 第一段 |
+| ROA | `NI / Avg Total Assets` | `10.2` | 资产盈利能力 |
+| ROE | `NI / Avg Equity` | `10.4` | 股东回报 |
+| Financial Leverage | `Avg Assets / Avg Equity` | `10.4` | DuPont 杠杆段 |
+| Debt-to-Equity | `Total Debt / Total Equity` | `10.2` | 偿债结构 |
+| Interest Coverage | `EBIT / Interest Expense` | `10.2` | 信用分析常用 |
+| DuPont | `Net Margin x Asset Turnover x Financial Leverage` | `10.4` | ROE 分解 |
 
 ### Tax and Cash Quality
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Effective Tax Rate | `Income Tax Expense / Pretax Income` | 与 statutory rate 对比 |
-| Cash Tax Rate | `Cash Taxes Paid / Pretax Income` | cash vs accrual tax lens |
-| Operating Cash Flow Ratio | `CFO / Current Liabilities` | 覆盖短期负债 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Effective Tax Rate | `Income Tax Expense / Pretax Income` | `8.3` | 与 statutory rate 对比 |
+| Cash Tax Rate | `Cash Taxes Paid / Pretax Income` | `8.3` | cash vs accrual tax lens |
+| Operating Cash Flow Ratio | `CFO / Current Liabilities` | `10.2` | 覆盖短期负债 |
 
 ---
 

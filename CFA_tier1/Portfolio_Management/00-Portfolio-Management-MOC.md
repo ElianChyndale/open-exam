@@ -66,6 +66,10 @@ Portfolio Management (M01-M07)
 │
 ├── M01: Portfolio Risk and Return【考试核心】↔ 2026 Outline: Portfolio Risk and Return
 │   ├── Single asset -> portfolio translation
+│   │   ├── 核心公式
+│   │   │   ├── `E(Rp) = Σ wiE(Ri)`
+│   │   │   ├── `σp² = w1²σ1²+w2²σ2²+2w1w2Cov12`
+│   │   │   └── `Corr = Cov/(σ1σ2)`
 │   │   ├── expected return is weight average
 │   │   ├── variance adds covariance terms, not just asset variances
 │   │   └── correlation controls diversification benefit
@@ -76,6 +80,9 @@ Portfolio Management (M01-M07)
 │
 ├── M02: Utility and Capital Allocation【考试核心】↔ 2026 Outline: Risk Aversion
 │   ├── Investor preference
+│   │   ├── 核心公式
+│   │   │   ├── `U = E(Rp)-0.5Aσp²`
+│   │   │   └── `CAL = Rf + [(E(Rr)-Rf)/σr] x σp`
 │   │   ├── utility penalizes variance according to risk aversion
 │   │   ├── indifference curve slope reflects risk-return trade-off
 │   │   └── higher `A` requires more return for the same variance
@@ -87,6 +94,12 @@ Portfolio Management (M01-M07)
 │
 ├── M03: CAPM, Beta, and Performance Lens【考试核心】↔ 2026 Outline: CAPM
 │   ├── Market equilibrium
+│   │   ├── 核心公式
+│   │   │   ├── `CAPM = Rf + β(E(Rm)-Rf)`
+│   │   │   ├── `β = Cov(Ri,Rm)/Var(Rm)`
+│   │   │   ├── `Sharpe = (Rp-Rf)/σp`
+│   │   │   ├── `Treynor = (Rp-Rf)/βp`
+│   │   │   └── `Jensen alpha = Rp-[Rf+βp(Rm-Rf)]`
 │   │   ├── systematic risk earns expected compensation
 │   │   ├── beta measures market sensitivity
 │   │   └── SML prices required return for beta exposure
@@ -196,20 +209,20 @@ Portfolio Risk/Return
 
 ## 核心公式速查
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Portfolio Return | `Σ wiE(Ri)` | 组合期望收益 |
-| Two-asset Variance | `w1²σ1²+w2²σ2²+2w1w2Cov12` | 分散化核心 |
-| Correlation | `Cov/(σ1σ2)` | 判断分散化来源 |
-| Utility | `E(Rp)-0.5Aσp²` | 风险厌恶框架 |
-| CAL | `Rf + [(E(Rr)-Rf)/σr] x σp` | 风险资产与无风险资产组合 |
-| CAPM | `Rf + β(E(Rm)-Rf)` | required return |
-| Beta | `Cov(Ri,Rm)/Var(Rm)` | systematic risk |
-| Sharpe | `(Rp-Rf)/σp` | total risk-adjusted performance |
-| Treynor | `(Rp-Rf)/βp` | beta-adjusted performance |
-| Jensen Alpha | `Rp-[Rf+βp(Rm-Rf)]` | CAPM 偏离度 |
-| M-squared Intuition | `Sharpe difference scaled to market risk` | 看清 total-risk-adjusted comparison |
-| Required Excess Return | `β_i x (E(R_m)-R_f)` | CAPM risk premium |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Portfolio Return | `Σ wiE(Ri)` | `M01` | 组合期望收益 |
+| Two-asset Variance | `w1²σ1²+w2²σ2²+2w1w2Cov12` | `M01` | 分散化核心 |
+| Correlation | `Cov/(σ1σ2)` | `M01` | 判断分散化来源 |
+| Utility | `E(Rp)-0.5Aσp²` | `M02` | 风险厌恶框架 |
+| CAL | `Rf + [(E(Rr)-Rf)/σr] x σp` | `M02` | 风险资产与无风险资产组合 |
+| CAPM | `Rf + β(E(Rm)-Rf)` | `M03` | required return |
+| Beta | `Cov(Ri,Rm)/Var(Rm)` | `M03` | systematic risk |
+| Sharpe | `(Rp-Rf)/σp` | `M03` | total risk-adjusted performance |
+| Treynor | `(Rp-Rf)/βp` | `M03` | beta-adjusted performance |
+| Jensen Alpha | `Rp-[Rf+βp(Rm-Rf)]` | `M03` | CAPM 偏离度 |
+| M-squared Intuition | `Sharpe difference scaled to market risk` | `M03` | 看清 total-risk-adjusted comparison |
+| Required Excess Return | `β_i x (E(R_m)-R_f)` | `M03` | CAPM risk premium |
 
 ---
 

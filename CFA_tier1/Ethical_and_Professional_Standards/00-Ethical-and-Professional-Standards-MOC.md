@@ -196,15 +196,15 @@ Code of Ethics
 
 ## 核心公式速查
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Ethics | 无核心数值公式 | 本科重在判断框架 |
-| Priority Rule | `client > market integrity > employer/self convenience` | 先守客户与市场 |
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | law 与 Standards 冲突时常考 |
-| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | 信息题第一闸 |
-| Suitability Gate | `client facts + portfolio context + risk/return fit` | 不是单产品热度判断 |
-| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | disclosure 不是橡皮擦 |
-| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | 结构化记忆链 |
+| 指标 | 公式/判断链 | 知识树节点 | 考试说明 |
+|------|---------------|------------|----------|
+| Ethics | 无核心数值公式 | `M01-M08` | 本科重在判断框架 |
+| Priority Rule | `client > market integrity > employer/self convenience` | `M05-M07` | 先守客户与市场 |
+| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `M03` | law 与 Standards 冲突时常考 |
+| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `M04` | 信息题第一闸 |
+| Suitability Gate | `client facts + portfolio context + risk/return fit` | `M05` | 不是单产品热度判断 |
+| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | `M07` | disclosure 不是橡皮擦 |
+| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | `M08` | 结构化记忆链 |
 
 ---
 

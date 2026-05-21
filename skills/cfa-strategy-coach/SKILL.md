@@ -12,3 +12,15 @@ Turn pattern evidence into:
 - pacing checkpoints
 - mock follow-up
 
+## Strategy rules
+
+- strategy must be evidence-backed
+- strategy must change the next decision
+- strategy must not replace event capture
+
+When possible, tie strategy to:
+
+- the weakest topic
+- the next mock
+- the next targeted drill
+- the current MOC gap queue

@@ -68,6 +68,11 @@ Economics (M01-M09)
 │
 ├── M01: Demand, Supply, and Elasticity【考试核心】↔ 2026 Outline: Demand and Supply
 │   ├── Equilibrium map
+│   │   ├── 核心公式
+│   │   │   ├── `Own-price elasticity = %ΔQd / %ΔP`
+│   │   │   ├── `Income elasticity = %ΔQd / %ΔIncome`
+│   │   │   ├── `Cross-price elasticity = %ΔQx / %ΔPy`
+│   │   │   └── `Total revenue = Price x Quantity`
 │   │   ├── price change -> movement along curve
 │   │   ├── income, tastes, input cost, technology, taxes -> curve shifts
 │   │   └── price control and taxes alter surplus and deadweight loss
@@ -90,6 +95,11 @@ Economics (M01-M09)
 │
 ├── M03: Aggregate Output, Prices, and Growth【考试核心】↔ 2026 Outline: Aggregate Output
 │   ├── Output measures
+│   │   ├── 核心公式
+│   │   │   ├── `GDP = C + I + G + (X-M)`
+│   │   │   ├── `GDP deflator = Nominal GDP / Real GDP x 100`
+│   │   │   ├── `Inflation rate = Index_t/Index_(t-1) - 1`
+│   │   │   └── `(1+nominal) = (1+real)(1+inflation)`
 │   │   ├── GDP expenditure identity and value-added intuition
 │   │   ├── nominal vs real GDP; GDP deflator; per-capita lens
 │   │   └── potential output and growth sources: labor, capital, productivity
@@ -151,10 +161,16 @@ Economics (M01-M09)
 │
 └── M09: Exchange Rate Calculations【考试核心】↔ 2026 Outline: Exchange Rate Calculations
     ├── Quote mechanics
+    │   ├── 核心公式
+    │   │   ├── `A/C = (A/B) x (B/C)`
+    │   │   └── `B/A = 1/(A/B)`
     │   ├── direct vs indirect quote; base vs price currency
     │   ├── appreciation/depreciation follows quote convention
     │   └── bid/ask inversion and cross-rate logic
     ├── Forward mechanics
+    │   ├── 核心公式
+    │   │   ├── `Forward premium = (F-S)/S`
+    │   │   └── `F = S(1+id)/(1+if)`
     │   ├── forward premium/discount and forward points
     │   ├── covered interest parity ties FX forward to interest differential
     │   └── arbitrage reasoning checks directional sanity
@@ -220,27 +236,27 @@ Demand/Supply
 
 ### M01-M03 Micro and Macro Measures
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Own-price Elasticity | `%ΔQ_d / %ΔP` | magnitude 判 elastic/inelastic |
-| Income Elasticity | `%ΔQ_d / %ΔIncome` | sign 与 size 都有信息 |
-| Cross-price Elasticity | `%ΔQ_x / %ΔP_y` | substitutes positive |
-| Total Revenue | `Price x Quantity` | 与 elasticity 方向联动 |
-| GDP Expenditure Identity | `GDP = C + I + G + (X-M)` | 宏观入口 |
-| GDP Deflator | `Nominal GDP / Real GDP x 100` | price level lens |
-| Inflation Rate | `Index_t/Index_(t-1) - 1` | CPI/deflator 都可 |
-| Fisher Exact | `(1+nominal) = (1+real)(1+inflation)` | 口径最稳 |
-| Fisher Approximation | `real ≈ nominal - inflation` | 小率近似 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Own-price Elasticity | `%ΔQ_d / %ΔP` | `M01` | magnitude 判 elastic/inelastic |
+| Income Elasticity | `%ΔQ_d / %ΔIncome` | `M01` | sign 与 size 都有信息 |
+| Cross-price Elasticity | `%ΔQ_x / %ΔP_y` | `M01` | substitutes positive |
+| Total Revenue | `Price x Quantity` | `M01` | 与 elasticity 方向联动 |
+| GDP Expenditure Identity | `GDP = C + I + G + (X-M)` | `M03` | 宏观入口 |
+| GDP Deflator | `Nominal GDP / Real GDP x 100` | `M03` | price level lens |
+| Inflation Rate | `Index_t/Index_(t-1) - 1` | `M03` | CPI/deflator 都可 |
+| Fisher Exact | `(1+nominal) = (1+real)(1+inflation)` | `M03` | 口径最稳 |
+| Fisher Approximation | `real ≈ nominal - inflation` | `M03` | 小率近似 |
 
 ### M09 FX Calculations
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Cross Rate | `A/C = (A/B) x (B/C)` | 中间币种要约掉 |
-| Inverted Quote | `B/A = 1/(A/B)` | bid/ask inversion 要换边 |
-| Forward Premium | `(F-S)/S` | 报价方向先定 |
-| Forward Points | `Forward Rate - Spot Rate` | points sign 看 quote |
-| Covered Interest Parity | `F = S(1+i_d)/(1+i_f)` | domestic/foreign 先定义 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Cross Rate | `A/C = (A/B) x (B/C)` | `M09` | 中间币种要约掉 |
+| Inverted Quote | `B/A = 1/(A/B)` | `M09` | bid/ask inversion 要换边 |
+| Forward Premium | `(F-S)/S` | `M09` | 报价方向先定 |
+| Forward Points | `Forward Rate - Spot Rate` | `M09` | points sign 看 quote |
+| Covered Interest Parity | `F = S(1+i_d)/(1+i_f)` | `M09` | domestic/foreign 先定义 |
 
 ---
 

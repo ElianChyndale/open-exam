@@ -250,6 +250,12 @@ python scripts/cfa.py post-mock-retro --session-id mock-2
 - 学习卡住了：`review-session`
 - agent 解释错了：`audit-agent`
 
+`record-mistake` 完成后自动执行 MOC 补缺检查（新增）：
+
+- 按 `docs/moc-auto-patch-workflow.md` 流程执行
+- 如果当前错题暴露 MOC 中缺失的公式或概念对比，直接写入对应 `00-*-MOC.md`
+- 调用顺序：`record-mistake` → `mine-patterns` → `moc-gap-review` → **`moc-auto-patch`** → `refresh-learning-outputs`
+
 如果用户提供的是错题截图：
 
 - 先把截图视为原始证据

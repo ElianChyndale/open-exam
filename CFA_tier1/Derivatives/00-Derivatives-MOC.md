@@ -111,10 +111,18 @@ Derivatives (M01-M08)
 │
 ├── M05: Pricing and Valuation of Forwards and Futures【考试核心】↔ 2026 Outline: Pricing and Valuation of Forward Contracts
 │   ├── Forward price cases
+│   │   ├── 核心公式
+│   │   │   ├── `F0(T) = S0(1+r)^T`
+│   │   │   ├── `F0(T) = [S0 - PV(I)](1+r)^T`
+│   │   │   └── `F0(T) = S0(1+r-q)^T` 或 `S0e^(r-q)T`
 │   │   ├── no-income asset: spot grown at risk-free rate
 │   │   ├── known income: subtract PV of income before carrying forward
 │   │   └── known yield: reduce carry by continuous/discrete yield assumption
 │   ├── Contract value
+│   │   ├── 核心公式
+│   │   │   ├── `Long expiry payoff = ST - K`
+│   │   │   ├── `Short expiry payoff = K - ST`
+│   │   │   └── `Vt = St - PVt(K)`
 │   │   ├── long forward gains when market forward price rises above contract price
 │   │   ├── futures marking-to-market realizes gains/losses daily
 │   │   └── interest-rate correlation can make futures and forwards diverge
@@ -122,6 +130,8 @@ Derivatives (M01-M08)
 │
 ├── M06: Pricing and Valuation of Swaps【考试核心】↔ 2026 Outline: Pricing and Valuation of Interest Rates and Other Swaps
 │   ├── Swap anatomy
+│   │   ├── 核心公式
+│   │   │   └── `Net swap payment = Notional x (Floating rate - Fixed rate) x accrual factor`
 │   │   ├── fixed-for-floating interest rate swap exchanges net interest cash flows
 │   │   ├── currency swap may exchange principal and coupon currencies
 │   │   └── initial fixed rate chosen so inception value is approximately zero
@@ -133,10 +143,18 @@ Derivatives (M01-M08)
 │
 ├── M07: Options and Put-Call Parity【考试核心】↔ 2026 Outline: Options
 │   ├── Payoff language
+│   │   ├── 核心公式
+│   │   │   ├── `Call payoff = max(0, ST - X)`
+│   │   │   ├── `Put payoff = max(0, X - ST)`
+│   │   │   ├── `Long call profit = max(0, ST - X) - c0`
+│   │   │   └── `Long put profit = max(0, X - ST) - p0`
 │   │   ├── call payoff `max(0, S_T - X)`; put payoff `max(0, X - S_T)`
 │   │   ├── intrinsic value, time value, moneyness
 │   │   └── payoff excludes premium; profit includes premium and financing context
 │   ├── Parity and synthetics
+│   │   ├── 核心公式
+│   │   │   ├── `c + PV(X) = p + S0`
+│   │   │   └── `c = p + S0 - PV(X)`
 │   │   ├── European parity: call + PV(strike) = put + stock
 │   │   ├── rearrange to synthesize call, put, stock, protective put, fiduciary call
 │   │   └── lower/upper bounds expose arbitrage relationships
@@ -144,10 +162,16 @@ Derivatives (M01-M08)
 │
 └── M08: One-Period Option Valuation【考试核心】↔ 2026 Outline: Binomial Valuation
     ├── Replication branch
+    │   ├── 核心公式
+    │   │   ├── `h = (Cu - Cd)/(Su - Sd)`
+    │   │   └── `V0 = hS0 + B`
     │   ├── compute option payoff in up/down states
     │   ├── hedge ratio matches state-contingent payoff difference
     │   └── borrowing/lending completes replicating portfolio
     ├── Risk-neutral branch
+    │   ├── 核心公式
+    │   │   ├── `p* = [(1+r)-d]/(u-d)`
+    │   │   └── `V0 = [p*Vu + (1-p*)Vd]/(1+r)`
     │   ├── derive risk-neutral probability from no-arbitrage growth
     │   ├── expected risk-neutral payoff discounted at risk-free rate
     │   └── higher volatility widens state spread and can raise option value
@@ -216,37 +240,37 @@ Pricing Spine
 
 ### M04-M06 Forward Commitments
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Forward Price, No Income | `F_0(T) = S_0(1+r)^T` | carry 主干 |
-| Forward Price, Known Income | `F_0(T) = [S_0 - PV(I)](1+r)^T` | 先扣收入现值 |
-| Forward Price, Known Yield | `F_0(T) = S_0(1+r-q)^T` 或连续口径 `S_0e^{(r-q)T}` | 看题目口径 |
-| Long Forward Expiry Payoff | `S_T - K` | `K` 是约定 delivery price |
-| Short Forward Expiry Payoff | `K - S_T` | long/short 对称 |
-| Long Forward Value During Life | `V_t = S_t - PV_t(K)` | 无 income 的简化直觉 |
-| Net Swap Payment | `Notional x (Floating rate - Fixed rate) x accrual factor` | payer/receiver 方向先读题 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Forward Price, No Income | `F_0(T) = S_0(1+r)^T` | `M05` | carry 主干 |
+| Forward Price, Known Income | `F_0(T) = [S_0 - PV(I)](1+r)^T` | `M05` | 先扣收入现值 |
+| Forward Price, Known Yield | `F_0(T) = S_0(1+r-q)^T` 或连续口径 `S_0e^{(r-q)T}` | `M05` | 看题目口径 |
+| Long Forward Expiry Payoff | `S_T - K` | `M05` | `K` 是约定 delivery price |
+| Short Forward Expiry Payoff | `K - S_T` | `M05` | long/short 对称 |
+| Long Forward Value During Life | `V_t = S_t - PV_t(K)` | `M05` | 无 income 的简化直觉 |
+| Net Swap Payment | `Notional x (Floating rate - Fixed rate) x accrual factor` | `M06` | payer/receiver 方向先读题 |
 
 ### M07 Options and Parity
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Call Payoff | `max(0, S_T - X)` | payoff 不是 profit |
-| Put Payoff | `max(0, X - S_T)` | 高频 |
-| Long Call Profit | `max(0, S_T - X) - c_0` | premium 不能漏 |
-| Long Put Profit | `max(0, X - S_T) - p_0` | premium 不能漏 |
-| Put-Call Parity | `c + PV(X) = p + S_0` | European options |
-| Synthetic Long Call | `c = p + S_0 - PV(X)` | 会移项比背图强 |
-| Synthetic Protective Put | `p + S_0 = c + PV(X)` | 两边经济等价 |
-| Intrinsic Value | `max(0, payoff driver)` | call/put 分别代入 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Call Payoff | `max(0, S_T - X)` | `M07` | payoff 不是 profit |
+| Put Payoff | `max(0, X - S_T)` | `M07` | 高频 |
+| Long Call Profit | `max(0, S_T - X) - c_0` | `M07` | premium 不能漏 |
+| Long Put Profit | `max(0, X - S_T) - p_0` | `M07` | premium 不能漏 |
+| Put-Call Parity | `c + PV(X) = p + S_0` | `M07` | European options |
+| Synthetic Long Call | `c = p + S_0 - PV(X)` | `M07` | 会移项比背图强 |
+| Synthetic Protective Put | `p + S_0 = c + PV(X)` | `M07` | 两边经济等价 |
+| Intrinsic Value | `max(0, payoff driver)` | `M07` | call/put 分别代入 |
 
 ### M08 Binomial Valuation
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Hedge Ratio | `h = (C_u - C_d)/(S_u - S_d)` | replication 核心 |
-| Risk-neutral Probability | `p* = [(1+r)-d]/(u-d)` | 不是真实概率 |
-| One-Period Option Value | `V_0 = [p*V_u + (1-p*)V_d]/(1+r)` | 先算 terminal payoff |
-| Replicating Portfolio Value | `V_0 = hS_0 + B` | `B` 可为 borrowing |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Hedge Ratio | `h = (C_u - C_d)/(S_u - S_d)` | `M08` | replication 核心 |
+| Risk-neutral Probability | `p* = [(1+r)-d]/(u-d)` | `M08` | 不是真实概率 |
+| One-Period Option Value | `V_0 = [p*V_u + (1-p*)V_d]/(1+r)` | `M08` | 先算 terminal payoff |
+| Replicating Portfolio Value | `V_0 = hS_0 + B` | `M08` | `B` 可为 borrowing |
 
 ---
 
