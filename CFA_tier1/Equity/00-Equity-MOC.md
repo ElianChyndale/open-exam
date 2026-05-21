@@ -78,6 +78,10 @@ Equity Investments (M01-M08)
 │
 ├── M02: Security Market Indexes【考试核心】↔ CFA Institute 2026 Security Market Indexes
 │   ├── Index construction
+│   │   ├── 核心公式
+│   │   │   ├── `Price-weighted index = Σ Prices / Divisor`
+│   │   │   ├── `Equal-weighted return = Σ Security Returns / N`
+│   │   │   └── `Value-weighted return = Σ weight_i x Return_i`
 │   │   ├── target market, constituent selection, weighting, rebalancing, reconstitution
 │   │   ├── price-weighted, equal-weighted, market-cap-weighted, fundamental-weighted
 │   │   └── divisor adjustment preserves continuity after splits/constituent changes
@@ -142,6 +146,11 @@ Equity Investments (M01-M08)
 │
 └── M08: Equity Valuation Concepts and Tools【考试核心】↔ 2026 Outline: Equity Valuation
     ├── Intrinsic value
+    │   ├── 核心公式
+    │   │   ├── `P0 = D1/(r-g)`
+    │   │   ├── `r = D1/P0 + g`
+    │   │   ├── `g = retention ratio x ROE`
+    │   │   └── `P0/E1 = payout ratio/(r-g)`
     │   ├── present value logic; dividends/cash-flow expectations; required return
     │   ├── Gordon growth for stable perpetual dividend growth
     │   └── justified multiples connect fundamentals to price ratios
@@ -211,31 +220,31 @@ Company Analysis
 
 ### M01-M03 市场、交易与指数
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Leverage Ratio | `Value of Position / Investor Equity` | margin 基础 |
-| Initial Margin | `Investor Equity / Purchase Value` | 先分清 equity 与 loan |
-| Margin Call Price, Long | `Loan / [Shares x (1 - maintenance margin)]` | 高频轻计算 |
-| Short Sale Return | `(Initial proceeds - repurchase cost - costs)/initial equity` | 注意借券与保证金语境 |
-| Price-weighted Index | `Σ Prices / Divisor` | split 后 divisor 调整 |
-| Equal-weighted Index Return | `Σ Security Returns / N` | 再平衡影响不能忘 |
-| Value-weighted Index Return | `Σ Market-value weight_i x Return_i` | market-cap 权重 |
-| Total Return | `(Ending value + income - beginning value)/beginning value` | 与 price return 区分 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Leverage Ratio | `Value of Position / Investor Equity` | `M01` | margin 基础 |
+| Initial Margin | `Investor Equity / Purchase Value` | `M01` | 先分清 equity 与 loan |
+| Margin Call Price, Long | `Loan / [Shares x (1 - maintenance margin)]` | `M01` | 高频轻计算 |
+| Short Sale Return | `(Initial proceeds - repurchase cost - costs)/initial equity` | `M01` | 注意借券与保证金语境 |
+| Price-weighted Index | `Σ Prices / Divisor` | `M02` | split 后 divisor 调整 |
+| Equal-weighted Index Return | `Σ Security Returns / N` | `M02` | 再平衡影响不能忘 |
+| Value-weighted Index Return | `Σ Market-value weight_i x Return_i` | `M02` | market-cap 权重 |
+| Total Return | `(Ending value + income - beginning value)/beginning value` | `M02` | 与 price return 区分 |
 
 ### M07-M08 预测与估值
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Sustainable Growth | `g = retention ratio x ROE` | growth 要有融资逻辑 |
-| Gordon Growth Model | `P_0 = D_1/(r-g)` | 必须 `r > g` |
-| Required Return from GGM | `r = D_1/P_0 + g` | implied return |
-| Dividend Yield | `D_1/P_0` | total expected return 的一部分 |
-| Justified Leading P/E | `P_0/E_1 = payout ratio/(r-g)` | fundamentals link |
-| Justified Trailing P/E | `P_0/E_0 = payout ratio(1+g)/(r-g)` | denominator 差异 |
-| P/B | `Price per share / BVPS` | 资产型/金融公司常见 |
-| P/S | `Price per share / Sales per share` | loss firms 也可能可比 |
-| EV | `Equity value + Debt + Preferred + Minority interest - Cash` | enterprise multiples 底座 |
-| EV/EBITDA | `Enterprise Value / EBITDA` | capital structure comparability 较强 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Sustainable Growth | `g = retention ratio x ROE` | `M07` | growth 要有融资逻辑 |
+| Gordon Growth Model | `P_0 = D_1/(r-g)` | `M08` | 必须 `r > g` |
+| Required Return from GGM | `r = D_1/P_0 + g` | `M08` | implied return |
+| Dividend Yield | `D_1/P_0` | `M08` | total expected return 的一部分 |
+| Justified Leading P/E | `P_0/E_1 = payout ratio/(r-g)` | `M08` | fundamentals link |
+| Justified Trailing P/E | `P_0/E_0 = payout ratio(1+g)/(r-g)` | `M08` | denominator 差异 |
+| P/B | `Price per share / BVPS` | `M08` | 资产型/金融公司常见 |
+| P/S | `Price per share / Sales per share` | `M08` | loss firms 也可能可比 |
+| EV | `Equity value + Debt + Preferred + Minority interest - Cash` | `M08` | enterprise multiples 底座 |
+| EV/EBITDA | `Enterprise Value / EBITDA` | `M08` | capital structure comparability 较强 |
 
 ---
 

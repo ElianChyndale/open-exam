@@ -7,6 +7,12 @@ from tempfile import TemporaryDirectory
 import pytest
 
 
+def write_moc(tmp_path: Path, relative_path: str, lines: list[str]) -> None:
+    path = tmp_path / relative_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
 def test_record_question_mistake_creates_event_and_card(tmp_path: Path) -> None:
     from app.cli import run_cli
 
@@ -84,6 +90,12 @@ def test_record_question_mistake_preserves_screenshot_metadata(tmp_path: Path) -
     assert "source_type: screenshot" in card_text
     assert "evidence_assets: attachments/mock4-q18.png" in card_text
     assert "moc_target: CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md" in card_text
+
+    mock_projection = tmp_path / "CFA_tier1" / "mock" / "FI" / "00-FI-Mistakes.md"
+    assert mock_projection.exists()
+    projection_text = mock_projection.read_text(encoding="utf-8")
+    assert "Fixed Income" in projection_text
+    assert "attachments/mock4-q18.png" in projection_text
 
 
 def test_learning_block_is_classified_as_cognitive_bias(tmp_path: Path) -> None:
@@ -186,6 +198,24 @@ def test_mine_patterns_creates_insight_after_three_related_errors(tmp_path: Path
 def test_moc_gap_review_creates_recommendation_for_repeated_targeted_errors(tmp_path: Path) -> None:
     from app.cli import run_cli
 
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+        [
+            "## Quantitative Methods 核心知识树",
+            "```text",
+            "├── 1.5 Annualization and continuous compounding【考试核心】",
+            "│   ├── 定义/直觉",
+            "│   │   └── 连续复利和普通复利口径要分开",
+            "```",
+            "",
+            "## 核心公式速查",
+            "| 指标 | 公式 | 知识树节点 | 考试说明 |",
+            "|------|------|------------|----------|",
+            "| Convert CC Return | `e^(r_cc)-1` | `1.5` | 连续复利回到 holding period return |",
+        ],
+    )
+
     base_payload = {
         "source_layer": "question",
         "topic": "Quantitative Methods",
@@ -209,15 +239,214 @@ def test_moc_gap_review_creates_recommendation_for_repeated_targeted_errors(tmp_
             repo_root=tmp_path,
         )
 
-    exit_code = run_cli(["moc-gap-review"], repo_root=tmp_path)
-
-    assert exit_code == 0
     review = tmp_path / ".system" / "memory" / "strategy" / "moc-gap-review.md"
     assert review.exists()
     text = review.read_text(encoding="utf-8")
     assert "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md" in text
     assert "recurrence: 3" in text
     assert "suggested_gap_type:" in text
+    assert "gap_target: knowledge_tree_concept" in text
+
+
+def test_moc_gap_review_marks_formula_table_variant_when_tree_has_core_formula(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Derivatives/00-Derivatives-MOC.md",
+        [
+            "## Derivatives 核心知识树",
+            "```text",
+            "├── M05: Pricing and Valuation of Forwards and Futures【考试核心】",
+            "│   ├── 核心公式",
+            "│   │   └── F0(T) = S0(1+r)^T",
+            "```",
+            "",
+            "## 核心公式速查",
+            "| 指标 | 公式 | 知识树节点 | 考试说明 |",
+            "|------|------|------------|----------|",
+            "| Forward Price | `F0(T) = S0(1+r)^T` | `M05` | 无收入资产远期价格 |",
+        ],
+    )
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Derivatives",
+        "los": "DER.Forward",
+        "prompt_or_question": "Known-yield forward question.",
+        "correct_resolution": "Use the yield-adjusted carry variant.",
+        "error_type": "formula_misuse",
+        "confidence": 2,
+        "time_spent": 100,
+        "evidence_refs": ["forward-variant"],
+        "moc_target": "CFA_tier1/Derivatives/00-Derivatives-MOC.md",
+    }
+
+    for wrong in ["A", "B", "C"]:
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    review = tmp_path / ".system" / "memory" / "strategy" / "moc-gap-review.md"
+    text = review.read_text(encoding="utf-8")
+    assert "gap_target: formula_table_variant" in text
+
+
+def test_moc_gap_review_marks_both_when_tree_and_formula_table_are_missing(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
+        [
+            "## Fixed Income 核心知识树",
+            "```text",
+            "├── M03: Yield Measures, Spot Rates, and Forward Rates【考试核心】",
+            "│   └── 注意：先分清 spot、par、forward 的题目口径",
+            "```",
+            "",
+            "## 高频考试陷阱速查",
+            "| 错误理解 | 正确理解 |",
+            "|----------|----------|",
+            "| 远期利率可以直接套现值公式 | 先匹配利率定义再进公式 |",
+        ],
+    )
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Fixed Income",
+        "los": "FI.ForwardRates",
+        "prompt_or_question": "Forward rate extraction question.",
+        "correct_resolution": "Use the no-arbitrage spot/forward linkage.",
+        "error_type": "formula_misuse",
+        "confidence": 2,
+        "time_spent": 95,
+        "evidence_refs": ["fi-forward-1"],
+        "moc_target": "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
+    }
+
+    for wrong in ["A", "B", "C"]:
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    review = tmp_path / ".system" / "memory" / "strategy" / "moc-gap-review.md"
+    text = review.read_text(encoding="utf-8")
+    assert "gap_target: both" in text
+
+
+def test_moc_gap_review_marks_knowledge_tree_concept_for_concept_confusion(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## Corporate Issuers 核心知识树",
+            "```text",
+            "├── 2.3 Mutually exclusive projects【考试核心】",
+            "│   └── 注意：NPV 和 IRR 排序冲突时优先 NPV",
+            "```",
+        ],
+    )
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Corporate Issuers",
+        "los": "CI.3",
+        "prompt_or_question": "Capital budgeting conflict question.",
+        "correct_resolution": "Choose the higher NPV project when projects are mutually exclusive.",
+        "error_type": "concept_confusion",
+        "confidence": 2,
+        "time_spent": 150,
+        "evidence_refs": ["corp-concept-1"],
+        "moc_target": "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+    }
+
+    for wrong in ["A", "B", "C"]:
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    review = tmp_path / ".system" / "memory" / "strategy" / "moc-gap-review.md"
+    text = review.read_text(encoding="utf-8")
+    assert "gap_target: knowledge_tree_concept" in text
+
+
+def test_moc_gap_review_marks_exam_trap_for_non_formula_non_concept_errors(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Economics/00-Economics-MOC.md",
+        [
+            "## Economics 核心知识树",
+            "```text",
+            "├── M04: Currency exchange rates【考试核心】",
+            "│   └── 注意：先读清 base / price currency",
+            "```",
+        ],
+    )
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Economics",
+        "los": "ECO.FX",
+        "prompt_or_question": "FX quote-direction question.",
+        "correct_resolution": "Read the quote convention before deciding appreciation.",
+        "error_type": "careless_reading",
+        "confidence": 2,
+        "time_spent": 80,
+        "evidence_refs": ["econ-trap-1"],
+        "moc_target": "CFA_tier1/Economics/00-Economics-MOC.md",
+    }
+
+    for wrong in ["A", "B", "C"]:
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    review = tmp_path / ".system" / "memory" / "strategy" / "moc-gap-review.md"
+    text = review.read_text(encoding="utf-8")
+    assert "gap_target: exam_trap" in text
+
+
+def test_moc_gap_review_keeps_ethics_out_of_formula_targeting(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Ethical_and_Professional_Standards/00-Ethical-and-Professional-Standards-MOC.md",
+        [
+            "## Ethical and Professional Standards 核心知识树",
+            "```text",
+            "├── M03: Standard I - Professionalism【考试核心】",
+            "│   └── 注意：law answers 'may I'; ethics asks 'should I'",
+            "```",
+            "",
+            "## 核心公式速查",
+            "| 指标 | 公式 | 知识树节点 | 考试说明 |",
+            "|------|------|------------|----------|",
+        ],
+    )
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Ethical and Professional Standards",
+        "los": "I.B",
+        "prompt_or_question": "Independence and objectivity question.",
+        "correct_resolution": "Issuer-paid travel can impair independence.",
+        "error_type": "formula_misuse",
+        "confidence": 2,
+        "time_spent": 70,
+        "evidence_refs": ["ethics-1"],
+        "moc_target": "CFA_tier1/Ethical_and_Professional_Standards/00-Ethical-and-Professional-Standards-MOC.md",
+    }
+
+    for wrong in ["A", "B", "C"]:
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    review = tmp_path / ".system" / "memory" / "strategy" / "moc-gap-review.md"
+    text = review.read_text(encoding="utf-8")
+    assert "gap_target: knowledge_tree_concept" in text
+    assert "knowledge_tree_core_formula" not in text
 
 
 def test_moc_gap_review_skips_repeated_errors_without_moc_target(tmp_path: Path) -> None:

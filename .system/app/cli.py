@@ -4,7 +4,7 @@ import argparse
 from pathlib import Path
 
 from app.storage import Repository
-from app.workflows import export_obsidian, load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event
+from app.workflows import load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event, refresh_learning_outputs
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -31,15 +31,20 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
     repo = Repository(repo_root or Path.cwd())
 
     if args.command in {"record-mistake", "review-session", "audit-agent"}:
-        record_event(repo, load_payload(args.payload), args.command)
-        export_obsidian(repo)
+        event = record_event(repo, load_payload(args.payload), args.command)
+        if event.source_layer == "question":
+            mine_patterns(repo)
+            moc_gap_review(repo)
+        refresh_learning_outputs(repo)
         return 0
     if args.command == "mine-patterns":
         mine_patterns(repo)
-        export_obsidian(repo)
+        moc_gap_review(repo)
+        refresh_learning_outputs(repo)
         return 0
     if args.command == "moc-gap-review":
         moc_gap_review(repo)
+        refresh_learning_outputs(repo)
         return 0
     if args.command == "pre-mock-brief":
         pre_mock_brief(repo)

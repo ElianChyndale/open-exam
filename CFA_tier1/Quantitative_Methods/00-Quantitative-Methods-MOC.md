@@ -47,18 +47,18 @@ tags:
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 |
-|------|------|------|--------|
-| M01 | Rates and Returns | 概念+计算 | HPR, MWRR, TWRR, annualized return |
-| M02 | Time Value of Money | 计算 | PV/FV, annuity, perpetuity, implied return |
-| M03 | Statistical Measures | 概念+计算 | mean, variance, skewness, kurtosis |
-| M04 | Probability Trees & Bayes | 概念 | conditional probability, Bayes |
-| M05 | Portfolio Mathematics | 计算 | covariance, correlation, portfolio variance |
-| M06 | Simulation | 概念 | Monte Carlo, bootstrap |
-| M07 | Sampling & Estimation | 计算 | CLT, standard error, confidence interval |
-| M08 | Hypothesis Testing | 计算+策略 | H0/H1, Type I/II, p-value |
-| M09 | Correlation & Regression | 计算+策略 | t-test, F-test, R^2, SEE |
-| M10 | Big Data / ML Intro | 概念 | supervised vs unsupervised, overfitting |
+| 模块  | 内容                        | 难度    | 必考点                                         |
+| --- | ------------------------- | ----- | ------------------------------------------- |
+| M01 | Rates and Returns         | 概念+计算 | HPR, MWRR, TWRR, annualized return          |
+| M02 | Time Value of Money       | 计算    | PV/FV, annuity, perpetuity, implied return  |
+| M03 | Statistical Measures      | 概念+计算 | mean, variance, skewness, kurtosis          |
+| M04 | Probability Trees & Bayes | 概念    | conditional probability, Bayes              |
+| M05 | Portfolio Mathematics     | 计算    | covariance, correlation, portfolio variance |
+| M06 | Simulation                | 概念    | Monte Carlo, bootstrap                      |
+| M07 | Sampling & Estimation     | 计算    | CLT, standard error, confidence interval    |
+| M08 | Hypothesis Testing        | 计算+策略 | H0/H1, Type I/II, p-value                   |
+| M09 | Correlation & Regression  | 计算+策略 | t-test, F-test, R^2, SEE                    |
+| M10 | Big Data / ML Intro       | 概念    | supervised vs unsupervised, overfitting     |
 
 ---
 
@@ -79,20 +79,48 @@ Quantitative Methods (M01-M10)
 │   │   └── 注意：rate 高不只因 inflation，高风险补偿也会抬升 rate【考试陷阱】
 │   ├── 1.3 Return measurement ladder【考试核心】
 │   │   ├── HPR = price change + income over beginning value
+│   │   ├── 核心公式
+│   │   │   ├── `HPR = (P1 - P0 + D1)/P0`
+│   │   │   ├── `Arithmetic mean = ΣRi / n`
+│   │   │   └── `Geometric mean = [(1+R1)...(1+Rn)]^(1/n)-1`
 │   │   ├── arithmetic mean: 单期 expected return 口径
 │   │   ├── geometric mean: 多期复合增长口径
 │   │   └── harmonic mean: price multiple / averaging rate 场景易见
 │   ├── 1.4 MWRR vs TWRR【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `MWRR: Σ CFt/(1+r)^t = 0`
+│   │   │   └── `TWRR: [(1+HP1)...(1+HPn)] - 1`
 │   │   ├── MWRR = portfolio cash flow IRR
 │   │   ├── TWRR = subperiod returns linked after external cash-flow breaks
 │   │   └── 注意：客户增减资金造成的 return distortion 归 MWRR，不归经理【考试陷阱】
 │   └── 1.5 Annualization and continuous compounding【考试核心】
+│       ├── 核心公式
+│       │   ├── `Annualized return = (1+R_period)^c - 1`
+│       │   ├── `r_cc = ln(1 + HPR)`
+│       │   ├── `FV = PVe^(rt)`
+│       │   └── `PV = FVe^(-rt)`
 │       ├── effective annual return vs stated period return
 │       ├── r_cc = ln(1 + HPR)
 │       └── continuously compounded returns 可加，普通 returns 不可直接相加
+│   ├── 1.6 Gross Return vs Net Return【考试核心】← 高频错因
+│   │   ├── Gross Return = (P1 + D1)/P0 = 1 + HPR
+│   │   ├── Trading expenses 已反映在 gross return 中，不重复扣除
+│   │   ├── Net Return = Gross Return - Management/Admin fees
+│   │   └── 注意：gross return 是税前、非风险调整口径【考试陷阱】
+│   ├── 1.7 Leveraged and After-Tax Return【考试核心】← 高频错因
+│   │   ├── Leveraged Return = R_p + (B/E)(R_p - r_D)
+│   │   │   └── B = 借款额, E = 自有本金, r_D = 借款利率
+│   │   ├── After-Tax Return = Pre-tax Return × (1 - t)
+│   │   │   └── t = 税率
+│   │   └── 注意：计算顺序不可逆：Gross → Net → Leverage → Tax【考试陷阱】
 │
 ├── M02: Time Value of Money
 │   ├── 2.1 Cash-flow map【考试核心】↔ Topic Outline P0
+│   │   ├── 核心公式
+│   │   │   ├── `FV = PV(1+r)^n`
+│   │   │   ├── `PV = FV/(1+r)^n`
+│   │   │   ├── `Ordinary annuity PV = A[1-1/(1+r)^n]/r`
+│   │   │   └── `Perpetuity PV = A/r`
 │   │   ├── single sum: one PV / one FV
 │   │   ├── level annuity: equal finite cash flows
 │   │   ├── perpetuity: equal cash flows forever
@@ -102,6 +130,8 @@ Quantitative Methods (M01-M10)
 │   │   ├── equity intrinsic value = dividends / cash-flow expectations PV
 │   │   └── 注意：先识别 cash-flow timing，再选 formula【考试陷阱】
 │   ├── 2.3 Implied quantities【考试核心】
+│   │   ├── 核心公式
+│   │   │   └── `r = D1/P0 + g`
 │   │   ├── bond implied return from PV and promised CF
 │   │   ├── equity required return from price, dividend, growth
 │   │   └── equity implied growth from price and required return
@@ -118,6 +148,10 @@ Quantitative Methods (M01-M10)
 │   │   ├── median, mode, quantiles, percentile location
 │   │   └── 注意：outlier 对 mean 影响通常大于 median【考试陷阱】
 │   ├── 3.2 Dispersion【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `Population variance = Σ(x-μ)^2/n`
+│   │   │   ├── `Sample variance = Σ(x-x̄)^2/(n-1)`
+│   │   │   └── `Standard deviation = sqrt(Variance)`
 │   │   ├── range / mean absolute deviation
 │   │   ├── variance / standard deviation
 │   │   ├── downside deviation
@@ -133,6 +167,9 @@ Quantitative Methods (M01-M10)
 │
 ├── M04: Probability Concepts
 │   ├── 4.1 Expected value / variance / standard deviation【考试核心】↔ Topic Outline P1
+│   │   ├── 核心公式
+│   │   │   ├── `E(X) = Σ p(xi)xi`
+│   │   │   └── `Var(X) = E(X^2)-[E(X)]^2`
 │   │   ├── discrete outcome probabilities
 │   │   ├── total risk from probability-weighted dispersion
 │   │   └── expected value 是概率加权中心，不是必然结果
@@ -141,6 +178,9 @@ Quantitative Methods (M01-M10)
 │   │   ├── terminal payoff
 │   │   └── conditional expectation at decision node
 │   └── 4.3 Bayes update【考试核心】
+│       ├── 核心公式
+│       │   ├── `P(A|B) = P(A∩B)/P(B)`
+│       │   └── `P(Bj|A)=[P(A|Bj)P(Bj)]/Σ[P(A|Bi)P(Bi)]`
 │       ├── prior probability
 │       ├── conditional likelihood
 │       ├── posterior probability
@@ -148,10 +188,16 @@ Quantitative Methods (M01-M10)
 │
 ├── M05: Portfolio Mathematics
 │   ├── 5.1 Return moments【考试核心】↔ Topic Outline P1
+│   │   ├── 核心公式
+│   │   │   ├── `E(Rp) = Σ wiE(Ri)`
+│   │   │   └── `σp² = w1²σ1²+w2²σ2²+2w1w2Cov12`
 │   │   ├── portfolio expected return
 │   │   ├── variance and standard deviation
 │   │   └── weights sum to one for fully invested portfolio
 │   ├── 5.2 Joint probability function【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `Cov12 = Σ p(R1-E(R1))(R2-E(R2))`
+│   │   │   └── `Corr12 = Cov12/(σ1σ2)`
 │   │   ├── scenario pair returns
 │   │   ├── covariance from joint states
 │   │   └── correlation standardizes covariance
@@ -160,6 +206,8 @@ Quantitative Methods (M01-M10)
 │   │   ├── lower correlation lowers portfolio variance
 │   │   └── 注意：低 correlation 不等于负 expected return
 │   └── 5.4 Shortfall risk【考试核心】
+│       ├── 核心公式
+│       │   └── `Roy safety-first = (E(Rp)-RL)/σp`
 │       ├── threshold return RL
 │       ├── Roy safety-first ratio
 │       └── choose highest safety-first ratio when returns assumed normal
@@ -182,6 +230,8 @@ Quantitative Methods (M01-M10)
 │   │   ├── convenience / judgmental
 │   │   └── sampling method changes sampling error and bias exposure
 │   ├── 7.2 CLT and standard error【考试核心】
+│   │   ├── 核心公式
+│   │   │   └── `SE = σ/√n` 或 `s/√n`
 │   │   ├── sample mean distribution tightens as n grows
 │   │   ├── SE scales by 1/sqrt(n)
 │   │   └── 注意：大样本降低 standard error，不消灭 bad sampling design【考试陷阱】
@@ -191,6 +241,10 @@ Quantitative Methods (M01-M10)
 │
 ├── M08: Hypothesis Testing
 │   ├── 8.1 Test components【考试核心】↔ Topic Outline P2
+│   │   ├── 核心公式
+│   │   │   ├── `CI: x̄ ± z_(α/2)σ/√n`
+│   │   │   ├── `CI: x̄ ± t_(α/2,n-1)s/√n`
+│   │   │   └── `z/t = (x̄-μ0)/(σ/√n)` or `(x̄-μ0)/(s/√n)`
 │   │   ├── null / alternative
 │   │   ├── significance level alpha
 │   │   ├── test statistic and rejection region
@@ -209,6 +263,10 @@ Quantitative Methods (M01-M10)
 │   │   ├── parametric vs nonparametric correlation test
 │   │   └── contingency table independence test
 │   ├── 9.2 Simple linear regression model【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `Yi = b0 + b1Xi + ei`
+│   │   │   ├── `b1 = Cov(X,Y)/Var(X)`
+│   │   │   └── `b0 = ȳ - b1x̄`
 │   │   ├── dependent variable Y
 │   │   ├── independent variable X
 │   │   ├── intercept, slope, residual
@@ -217,6 +275,11 @@ Quantitative Methods (M01-M10)
 │   │   ├── linearity / homoskedasticity / independence / normal errors
 │   │   └── residual plot hints assumption violations
 │   ├── 9.4 Fit and inference【考试核心】
+│   │   ├── 核心公式
+│   │   │   ├── `R² = SSR/SST`
+│   │   │   ├── `SEE = sqrt(SSE/(n-2))`
+│   │   │   ├── `t = (b1-β1,0)/SE(b1)`
+│   │   │   └── `F = MSR/MSE`
 │   │   ├── R2, SEE, coefficient t-test, ANOVA F-test
 │   │   ├── predicted value and prediction interval
 │   │   └── different functional forms
@@ -293,74 +356,79 @@ Returns
 
 ### M01 Returns
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| HPR | `(P1 - P0 + D1)/P0` | 最基础收益率公式 |
-| Gross Return | `(P1 + D1)/P0 = 1 + HPR` | 连乘收益时常改用 gross return |
-| Arithmetic Mean | `ΣRi / n` | 单期 expected return 常用 |
-| Geometric Mean | `[(1+R1)(1+R2)...(1+Rn)]^(1/n)-1` | 多期复合财富增长口径 |
-| Annualized Return | `(1+R_period)^c - 1` | `c` 是一年内期数 |
-| Continuously Compounded Return | `ln(1+HPR)` | 与普通 HPR 可互转 |
-| Convert CC Return | `e^(r_cc)-1` | 连续复利回到 holding period return |
-| MWRR | `Σ CFt/(1+r)^t = 0` | 投资者现金流敏感，实质是 IRR |
-| TWRR | `[(1+HP1)(1+HP2)...(1+HPn)] - 1` | 经理业绩口径 |
+| 指标                             | 公式                                   | 知识树节点 | 考试说明                             |
+| ------------------------------ | ------------------------------------ | ----- | -------------------------------- |
+| HPR                            | `(P1 - P0 + D1)/P0`                  | `1.3` | 最基础收益率公式                         |
+| Gross Return                   | `(P1 + D1)/P0 = 1 + HPR`             | `1.6` | 连乘收益时常改用 gross return            |
+| Arithmetic Mean                | `ΣRi / n`                            | `1.3` | 单期 expected return 常用            |
+| Geometric Mean                 | `[(1+R1)(1+R2)...(1+Rn)]^(1/n)-1`    | `1.3` | 多期复合财富增长口径                       |
+| Annualized Return              | `(1+R_period)^c - 1`                 | `1.5` | `c` 是一年内期数                       |
+| Continuously Compounded Return | `ln(1+HPR)`                          | `1.5` | 与普通 HPR 可互转                      |
+| Convert CC Return              | `e^(r_cc)-1`                         | `1.5` | 连续复利回到 holding period return     |
+| MWRR                           | `Σ CFt/(1+r)^t = 0`                  | `1.4` | 投资者现金流敏感，实质是 IRR                 |
+| TWRR                           | `[(1+HP1)(1+HP2)...(1+HPn)]^1/2 - 1` | `1.4` | 经理业绩口径                           |
+| Net Return                     | `Gross Return - Mgmt/Admin Fees`     | `1.6` | trading expenses 已在 gross 中，不重复减 |
+| Leveraged Return               | `R_p + (B/E)(R_p - r_D)`             | `1.7` | B=借款, E=自有本金, r_D=借款利率           |
+| After-Tax Return               | `R_pre × (1 - t)`                    | `1.7` | t=税率，先算杠杆后税前回报再扣税                |
 
 ### M02 Time Value of Money
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| FV | `PV(1+r)^n` | TVM 核心 |
-| PV | `FV/(1+r)^n` | TVM 核心 |
-| Ordinary Annuity PV | `A[1-1/(1+r)^n]/r` | 固定期末现金流 |
-| Ordinary Annuity FV | `A[(1+r)^n-1]/r` | 累积型现金流 |
-| Annuity Due PV | `PV_ordinary(1+r)` | 期初支付多滚一期 |
-| Annuity Due FV | `FV_ordinary(1+r)` | 易与 ordinary annuity 混 |
-| Perpetuity PV | `A/r` | 高频快算 |
-| Growing Perpetuity PV | `A1/(r-g)` | 必须满足 `r>g` |
-| Growing Annuity PV | `[A1/(r-g)][1-((1+g)^n/(1+r)^n)]` | 增长有限期现金流 |
-| Gordon Link | `r=D1/P0+g` | Quant 与 Equity 交叉 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| FV | `PV(1+r)^n` | `2.1` | TVM 核心 |
+| PV | `FV/(1+r)^n` | `2.1` | TVM 核心 |
+| FV with Continuous Compounding | `PVe^(rt)` | `2.1` | 当题目给的是连续复利利率时，用 `e^(rt)` 而不是 `(1+r)^n` |
+| PV with Continuous Discounting | `FVe^(-rt)` | `2.1` | 连续贴现是连续复利的逆运算 |
+| Ordinary Annuity PV | `A[1-1/(1+r)^n]/r` | `2.1` | 固定期末现金流 |
+| Ordinary Annuity FV | `A[(1+r)^n-1]/r` | `2.1` | 累积型现金流 |
+| Annuity Due PV | `PV_ordinary(1+r)` | `2.1` | 期初支付多滚一期 |
+| Annuity Due FV | `FV_ordinary(1+r)` | `2.1` | 易与 ordinary annuity 混 |
+| Perpetuity PV | `A/r` | `2.1` | 高频快算 |
+| Growing Perpetuity PV | `A1/(r-g)` | `2.1` | 必须满足 `r>g` |
+| Growing Annuity PV | `[A1/(r-g)][1-((1+g)^n/(1+r)^n)]` | `2.1` | 增长有限期现金流 |
+| Gordon Link | `r=D1/P0+g` | `2.3` | Quant 与 Equity 交叉 |
 
 ### M03-M05 Statistics, Probability, Portfolio Math
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Population Variance | `Σ(x-μ)^2/n` | 总体已知口径 |
-| Sample Variance | `Σ(x-x̄)²/(n-1)` | 注意 n-1 |
-| Standard Deviation | `sqrt(Variance)` | 风险与离散度基本量 |
-| Coefficient of Variation | `s/mean` | 相对离散度 |
-| Expected Value | `Σ p(xi)xi` | 概率题入口 |
-| Variance Identity | `E(X^2)-[E(X)]^2` | 两种方差算法要会互认 |
-| Conditional Probability | `P(A∩B)/P(B)` | Bayes 前置 |
-| Total Probability | `Σ P(A|Bi)P(Bi)` | Bayes 分母 |
-| Bayes Formula | `P(Bj|A)=[P(A|Bj)P(Bj)]/Σ[P(A|Bi)P(Bi)]` | 用新信息更新先验 |
-| Portfolio Return | `Σ wiE(Ri)` | 权重求和 |
-| Covariance | `Σ p(R1-E(R1))(R2-E(R2))` | 组合方差前置 |
-| Correlation | `Cov12/(σ1σ2)` | 规范到 `-1` 至 `1` |
-| Portfolio Variance | `w1²σ1²+w2²σ2²+2w1w2Cov12` | 常考两资产组合 |
-| Roy Safety-First | `(E(Rp)-RL)/σp` | threshold return 框架 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Population Variance | `Σ(x-μ)^2/n` | `3.2` | 总体已知口径 |
+| Sample Variance | `Σ(x-x̄)²/(n-1)` | `3.2` | 注意 n-1 |
+| Standard Deviation | `sqrt(Variance)` | `3.2` | 风险与离散度基本量 |
+| Coefficient of Variation | `s/mean` | `3.2` | 相对离散度 |
+| Expected Value | `Σ p(xi)xi` | `4.1` | 概率题入口 |
+| Variance Identity | `E(X^2)-[E(X)]^2` | `4.1` | 两种方差算法要会互认 |
+| Conditional Probability | `P(A∩B)/P(B)` | `4.3` | Bayes 前置 |
+| Total Probability | `Σ P(A|Bi)P(Bi)` | `4.3` | Bayes 分母 |
+| Bayes Formula | `P(Bj|A)=[P(A|Bj)P(Bj)]/Σ[P(A|Bi)P(Bi)]` | `4.3` | 用新信息更新先验 |
+| Portfolio Return | `Σ wiE(Ri)` | `5.1` | 权重求和 |
+| Covariance | `Σ p(R1-E(R1))(R2-E(R2))` | `5.2` | 组合方差前置 |
+| Correlation | `Cov12/(σ1σ2)` | `5.2` | 规范到 `-1` 至 `1` |
+| Portfolio Variance | `w1²σ1²+w2²σ2²+2w1w2Cov12` | `5.1` | 常考两资产组合 |
+| Roy Safety-First | `(E(Rp)-RL)/σp` | `5.4` | threshold return 框架 |
 
 ### M07-M08 Sampling and Testing
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Standard Error | `σ/√n` or `s/√n` | 抽样与估计核心 |
-| CI, Sigma Known | `x̄ ± z_(α/2)σ/√n` | 总体方差已知 |
-| CI, Sigma Unknown | `x̄ ± t_(α/2,n-1)s/√n` | 常见考试场景 |
-| Required Sample Size | `(zσ/E)^2` | `E` 是 margin of error |
-| z-stat / t-stat | `(x̄-μ0)/(σ/√n)` or `(x̄-μ0)/(s/√n)` | 先分清方差是否已知 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Standard Error | `σ/√n` or `s/√n` | `7.2` | 抽样与估计核心 |
+| CI, Sigma Known | `x̄ ± z_(α/2)σ/√n` | `8.1` | 总体方差已知 |
+| CI, Sigma Unknown | `x̄ ± t_(α/2,n-1)s/√n` | `8.1` | 常见考试场景 |
+| Required Sample Size | `(zσ/E)^2` | `7.2` | `E` 是 margin of error |
+| z-stat / t-stat | `(x̄-μ0)/(σ/√n)` or `(x̄-μ0)/(s/√n)` | `8.1` | 先分清方差是否已知 |
 
 ### M09 Correlation and Regression
 
-| 指标 | 公式 | 考试说明 |
-|------|------|----------|
-| Correlation test t | `r√[(n-2)/(1-r²)]` | 独立性检验 |
-| Regression Equation | `Yi=b0+b1Xi+ei` | 简单线性回归骨架 |
-| Regression slope | `Cov(X,Y)/Var(X)` | 回归核心 |
-| Regression Intercept | `ȳ-b1x̄` | 斜率确定后回代 |
-| R-squared | `SSR/SST` | 拟合度，不是因果性 |
-| SEE | `sqrt(SSE/(n-2))` | 回归残差尺度 |
-| Slope t-stat | `(b1-β1,0)/SE(b1)` | 检验 slope |
-| F-stat | `MSR/MSE` | 检验整体模型 |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Correlation test t | `r√[(n-2)/(1-r²)]` | `9.1` | 独立性检验 |
+| Regression Equation | `Yi=b0+b1Xi+ei` | `9.2` | 简单线性回归骨架 |
+| Regression slope | `Cov(X,Y)/Var(X)` | `9.2` | 回归核心 |
+| Regression Intercept | `ȳ-b1x̄` | `9.2` | 斜率确定后回代 |
+| R-squared | `SSR/SST` | `9.4` | 拟合度，不是因果性 |
+| SEE | `sqrt(SSE/(n-2))` | `9.4` | 回归残差尺度 |
+| Slope t-stat | `(b1-β1,0)/SE(b1)` | `9.4` | 检验 slope |
+| F-stat | `MSR/MSE` | `9.4` | 检验整体模型 |
 
 ---
 
@@ -378,3 +446,8 @@ Returns
 | fail to reject H0 等于接受 H0 | 只是证据不足以拒绝 |
 | correlation 高说明因果强 | 相关不等于因果 |
 | R² 高说明模型一定好用 | 还要看显著性、设定和经济意义 |
+| gross return 不含 trading expenses | gross return 已含 trading expenses，只额外扣 mgmt/admin fees |
+| 连续复利 r_cc 用 (P1-P0)/P0 计算 | r_cc = ln(P1/P0) = ln(1+HPR)，不是简单收益率 |
+| 连续复利下 FV 还用 `PV(1+r)^n` | 若题目利率口径是连续复利，应用 `FV = PVe^(rt)`，PV 则用 `FVe^(-rt)` |
+| leveraged return = 自有资金回报率 | leveraged return = R_p + (B/E)(R_p - r_D)，杠杆放大正负收益 |
+| after-tax return 先扣税再算杠杆 | 顺序不可逆：Gross → Net → Leverage → Tax |

@@ -185,6 +185,16 @@
   },
   "active": "b90affa7e2b886b0",
   "lastOpenFiles": [
+    "docs/superpowers/plans/2026-05-21-cfa-moc-formula-bidirectional-mapping.md",
+    "docs/superpowers/specs/2026-05-21-cfa-moc-formula-bidirectional-mapping-design.md",
+    "AGENTS.md.tmp.33292.08195d87618a",
+    "AGENTS.md.tmp.33292.6938761ec89d",
+    "skills/cfa-question-captor/SKILL.md.tmp.33292.492df67a3106",
+    "docs/moc-auto-patch-workflow.md",
+    "docs/moc-auto-patch-workflow.md.tmp.33292.9da49fc64505",
+    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md.tmp.33292.283df4cb00cd",
+    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md.tmp.33292.d1e70aead48b",
+    "CFA_tier1/mock/Quant/00-Quant-Mistakes.md",
     "skills/cfa-screenshot-mistake-captor/SKILL.md",
     "skills/cfa-screenshot-mistake-captor",
     "docs/superpowers/plans/2026-05-21-cfa-screenshot-capture-moc-gap.md",
@@ -208,18 +218,8 @@
     "CFA_tier1/Equity/股权投资_Equity_知识框架.md",
     "CFA_tier1/Financial_Statement_Analysis/财务分析_Financial_Statement_Analysis_知识框架.md",
     "CFA_tier1/Corporate_Issuers/公司金融_Corporate_Issuers_知识框架.md",
-    "CFA_tier1/Economics/经济学_Economics_知识框架.md",
-    "CFA_tier1/Ethical_and_Professional_Standards/道德_Ethical_and_Professional_Standards_知识框架.md",
-    "CFA_tier1/00-CFA_L1_备考指南.md",
-    "CFA_tier1/01-Quantitative/数量_Quantitative_Methods_知识框架.md",
     "CFA_tier1/mock/Quant",
     "CFA_tier1/mock/Portfolio",
-    "CFA_tier1/mock/FRA",
-    "CFA_tier1/mock/FI",
-    "CFA_tier1/mock/Ethics",
-    "CFA_tier1/mock/Equity",
-    "CFA_tier1/mock/Economics",
-    "CFA_tier1/mock/Derivatives",
-    "CFA_tier1/mock/CorpIss"
+    "CFA_tier1/mock/FRA"
   ]
 }
