@@ -69,7 +69,7 @@ Portfolio Management (M01-M07)
 │   │   ├── 核心公式
 │   │   │   ├── `E(Rp) = Σ wiE(Ri)`
 │   │   │   ├── `σp² = w1²σ1²+w2²σ2²+2w1w2Cov12`
-│   │   │   └── `Corr = Cov/(σ1σ2)`
+│   │   │   └── `Corr(R1,R2) = Cov(R1,R2)/(σ1σ2)`
 │   │   ├── expected return is weight average
 │   │   ├── variance adds covariance terms, not just asset variances
 │   │   └── correlation controls diversification benefit
@@ -82,7 +82,7 @@ Portfolio Management (M01-M07)
 │   ├── Investor preference
 │   │   ├── 核心公式
 │   │   │   ├── `U = E(Rp)-0.5Aσp²`
-│   │   │   └── `CAL = Rf + [(E(Rr)-Rf)/σr] x σp`
+│   │   │   └── `E(R_C) = R_f + [(E(R_P)-R_f)/σ_P] x σ_C`
 │   │   ├── utility penalizes variance according to risk aversion
 │   │   ├── indifference curve slope reflects risk-return trade-off
 │   │   └── higher `A` requires more return for the same variance
@@ -95,11 +95,11 @@ Portfolio Management (M01-M07)
 ├── M03: CAPM, Beta, and Performance Lens【考试核心】↔ 2026 Outline: CAPM
 │   ├── Market equilibrium
 │   │   ├── 核心公式
-│   │   │   ├── `CAPM = Rf + β(E(Rm)-Rf)`
-│   │   │   ├── `β = Cov(Ri,Rm)/Var(Rm)`
+│   │   │   ├── `E(R_i) = R_f + β_i[E(R_M)-R_f]`
+│   │   │   ├── `β_i = Cov(R_i,R_M)/Var(R_M)`
 │   │   │   ├── `Sharpe = (Rp-Rf)/σp`
 │   │   │   ├── `Treynor = (Rp-Rf)/βp`
-│   │   │   └── `Jensen alpha = Rp-[Rf+βp(Rm-Rf)]`
+│   │   │   └── `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]`
 │   │   ├── systematic risk earns expected compensation
 │   │   ├── beta measures market sensitivity
 │   │   └── SML prices required return for beta exposure
@@ -213,14 +213,14 @@ Portfolio Risk/Return
 |------|------|------------|----------|
 | Portfolio Return | `Σ wiE(Ri)` | `M01` | 组合期望收益 |
 | Two-asset Variance | `w1²σ1²+w2²σ2²+2w1w2Cov12` | `M01` | 分散化核心 |
-| Correlation | `Cov/(σ1σ2)` | `M01` | 判断分散化来源 |
+| Correlation | `Corr(R_1,R_2) = Cov(R_1,R_2)/(σ_1σ_2)` | `M01` | 判断分散化来源 |
 | Utility | `E(Rp)-0.5Aσp²` | `M02` | 风险厌恶框架 |
-| CAL | `Rf + [(E(Rr)-Rf)/σr] x σp` | `M02` | 风险资产与无风险资产组合 |
-| CAPM | `Rf + β(E(Rm)-Rf)` | `M03` | required return |
-| Beta | `Cov(Ri,Rm)/Var(Rm)` | `M03` | systematic risk |
+| CAL | `E(R_C) = R_f + [(E(R_P)-R_f)/σ_P] x σ_C` | `M02` | 风险资产与无风险资产组合 |
+| CAPM | `E(R_i) = R_f + β_i[E(R_M)-R_f]` | `M03` | required return |
+| Beta | `β_i = Cov(R_i,R_M)/Var(R_M)` | `M03` | systematic risk |
 | Sharpe | `(Rp-Rf)/σp` | `M03` | total risk-adjusted performance |
 | Treynor | `(Rp-Rf)/βp` | `M03` | beta-adjusted performance |
-| Jensen Alpha | `Rp-[Rf+βp(Rm-Rf)]` | `M03` | CAPM 偏离度 |
+| Jensen Alpha | `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]` | `M03` | CAPM 偏离度 |
 | M-squared Intuition | `Sharpe difference scaled to market risk` | `M03` | 看清 total-risk-adjusted comparison |
 | Required Excess Return | `β_i x (E(R_m)-R_f)` | `M03` | CAPM risk premium |
 

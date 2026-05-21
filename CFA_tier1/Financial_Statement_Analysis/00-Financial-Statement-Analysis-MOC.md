@@ -256,23 +256,23 @@ Income Statement
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| Basic EPS | `(NI - Pref Div) / Weighted Avg Shares` | `2.4` | EPS 基础式 |
-| Diluted EPS | `Adjusted NI available to common / Adjusted weighted shares` | `2.4` | 先排除 antidilutive instruments |
+| Basic EPS | `(NI - Preferred Dividends) / Weighted Average Shares` | `2.4` | EPS 基础式 |
+| Diluted EPS | `Adjusted NI Available to Common / Adjusted Weighted Average Shares` | `2.4` | 先排除 antidilutive instruments |
 | CFO (Indirect) | `NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` | `4.2` | 现金流重构核心 |
-| FCFF | `CFO + Interest(1-T) - FCInv` | `4.2` | 公司自由现金流 |
+| FCFF | `FCFF = CFO + Interest(1 - T) - FCInv` | `4.2` | 公司自由现金流 |
 | FCFE | `CFO - FCInv + Net Borrowing` | `4.2` | 股权自由现金流 |
 
 ### Liquidity and Activity
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| Current Ratio | `CA / CL` | `10.2` | 流动性 |
+| Current Ratio | `Current Assets / Current Liabilities` | `10.2` | 流动性 |
 | Quick Ratio | `(Cash + ST Inv + Receivables) / CL` | `10.2` | 更保守流动性 |
-| Inventory Turnover | `COGS / Avg Inventory` | `10.2` | 存货效率 |
+| Inventory Turnover | `COGS / Average Inventory` | `10.2` | 存货效率 |
 | Days Inventory | `365 / Inventory Turnover` | `10.2` | DIO 常与 CCC 联动 |
-| Receivables Turnover | `Revenue / Avg Receivables` | `10.2` | 回款效率 |
+| Receivables Turnover | `Revenue / Average Receivables` | `10.2` | 回款效率 |
 | DSO | `365 / Receivables Turnover` | `10.2` | 应收账款天数 |
-| Total Asset Turnover | `Revenue / Avg Total Assets` | `10.2` | 资产效率 |
+| Total Asset Turnover | `Revenue / Average Total Assets` | `10.2` | 资产效率 |
 
 ### Profitability and Solvency
 
@@ -281,9 +281,9 @@ Income Statement
 | Gross Margin | `Gross Profit / Revenue` | `10.2` | revenue/COGS choice 的敏感点 |
 | Operating Margin | `Operating Income / Revenue` | `10.2` | 经营盈利能力 |
 | Net Margin | `NI / Revenue` | `10.4` | DuPont 第一段 |
-| ROA | `NI / Avg Total Assets` | `10.2` | 资产盈利能力 |
-| ROE | `NI / Avg Equity` | `10.4` | 股东回报 |
-| Financial Leverage | `Avg Assets / Avg Equity` | `10.4` | DuPont 杠杆段 |
+| ROA | `NI / Average Total Assets` | `10.2` | 资产盈利能力 |
+| ROE | `NI / Average Equity` | `10.4` | 股东回报 |
+| Financial Leverage | `Average Assets / Average Equity` | `10.4` | DuPont 杠杆段 |
 | Debt-to-Equity | `Total Debt / Total Equity` | `10.2` | 偿债结构 |
 | Interest Coverage | `EBIT / Interest Expense` | `10.2` | 信用分析常用 |
 | DuPont | `Net Margin x Asset Turnover x Financial Leverage` | `10.4` | ROE 分解 |

@@ -114,7 +114,7 @@ Derivatives (M01-M08)
 │   │   ├── 核心公式
 │   │   │   ├── `F0(T) = S0(1+r)^T`
 │   │   │   ├── `F0(T) = [S0 - PV(I)](1+r)^T`
-│   │   │   └── `F0(T) = S0(1+r-q)^T` 或 `S0e^(r-q)T`
+│   │   │   └── `F0(T) = S0[(1+r)/(1+q)]^T` 或连续口径 `S0e^((r-q)T)`
 │   │   ├── no-income asset: spot grown at risk-free rate
 │   │   ├── known income: subtract PV of income before carrying forward
 │   │   └── known yield: reduce carry by continuous/discrete yield assumption
@@ -244,7 +244,7 @@ Pricing Spine
 |------|------|------------|----------|
 | Forward Price, No Income | `F_0(T) = S_0(1+r)^T` | `M05` | carry 主干 |
 | Forward Price, Known Income | `F_0(T) = [S_0 - PV(I)](1+r)^T` | `M05` | 先扣收入现值 |
-| Forward Price, Known Yield | `F_0(T) = S_0(1+r-q)^T` 或连续口径 `S_0e^{(r-q)T}` | `M05` | 看题目口径 |
+| Forward Price, Known Yield | `F_0(T) = S_0[(1+r)/(1+q)]^T` 或连续口径 `S_0e^{(r-q)T}` | `M05` | 看题目给的是离散收益率还是连续收益率 |
 | Long Forward Expiry Payoff | `S_T - K` | `M05` | `K` 是约定 delivery price |
 | Short Forward Expiry Payoff | `K - S_T` | `M05` | long/short 对称 |
 | Long Forward Value During Life | `V_t = S_t - PV_t(K)` | `M05` | 无 income 的简化直觉 |
