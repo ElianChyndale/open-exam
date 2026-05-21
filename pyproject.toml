@@ -1,0 +1,20 @@
+[project]
+name = "cfa-tier1-agent-system"
+version = "0.1.0"
+description = "Local CFA Tier 1 mistake system with skills, CLI, memory, and OpenAI Agents SDK scaffolding."
+requires-python = ">=3.11"
+dependencies = [
+  "openai-agents>=0.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = [".system/tests"]
