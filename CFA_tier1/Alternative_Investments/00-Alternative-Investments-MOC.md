@@ -183,7 +183,7 @@ Alternative Investments (M01-M07)
 ├── M02: Alternative Investment Performance and Returns
 │   ├── 2.1 业绩衡量指标【考试核心】
 │   │   ├── 核心公式
-│   │   │   ├── `TVPI = DPI + RVPI`
+│   │   │   ├── `TVPI = (累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI`
 │   │   │   ├── `DPI = 累计分配 / 实缴资本`
 │   │   │   ├── `RVPI = 剩余价值 / 实缴资本`
 │   │   │   ├── `Sortino = (Rp - Rf) / σd`
@@ -324,9 +324,9 @@ Alternative Investments (M01-M07)
 │   └── 5.1 商品期货【考试核心】
 │       ├── 期货定价理论
 │       │   ├── 核心公式
-│       │   │   ├── `Futures Price = Spot × e^((r + s - y) × T)`
+│       │   │   ├── `F_0(T) = S_0e^((r + s - y)T)`
 │       │   │   ├── `Roll Yield = (Near Future - Far Future) / Near Future`
-│       │   │   └── `持有成本 ≈ r + s - y`
+│       │   │   └── `ln[F_0(T)/S_0]/T = r + s - y`
 │       │   ├── Futures Price = Spot × e^((r + s - y) × T)
 │       │   │   ├── r = 无风险利率
 │       │   │   ├── s = 存储成本 (Storage Cost)
@@ -565,35 +565,35 @@ M05-M07 其他另类
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| TVPI | DPI + RVPI | `2.1` | 总价值倍数 = 已分配 + 剩余价值 |
-| DPI | 累计分配 / 实缴资本 | `2.1` | 现金回报倍数 |
-| RVPI | 剩余价值 / 实缴资本 | `2.1` | 未实现回报倍数 |
-| IRR | NPV = 0 的折现率 | `2.1` | 内部收益率 |
-| Sortino | (Rp - Rf) / σ_d | `2.1` | 下行风险调整收益 |
-| Sharpe | (Rp - Rf) / σ_p | `2.1` | 总风险调整收益 |
+| TVPI | `(累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI` | `2.1` | 总价值倍数 = 已分配 + 剩余价值 |
+| DPI | `累计分配 / 实缴资本` | `2.1` | 现金回报倍数 |
+| RVPI | `剩余价值 / 实缴资本` | `2.1` | 未实现回报倍数 |
+| IRR | `0 = Σ_{t=0}^{N} CF_t/(1+IRR)^t` | `2.1` | 内部收益率 |
+| Sortino | `(R_p - R_f)/σ_d` | `2.1` | 下行风险调整收益 |
+| Sharpe | `(R_p - R_f)/σ_p` | `2.1` | 总风险调整收益 |
 
 ### 房地产
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| Cap Rate | NOI / Property Value | `4.1` | 资本化率 |
-| Property Value | NOI / Cap Rate | `4.1` | 房地产估值 |
-| NOI | 租金收入 - 运营费用 | `4.1` | 净营运收入（不含折旧利息） |
+| Cap Rate | `NOI / Property Value` | `4.1` | 资本化率 |
+| Property Value | `NOI / Cap Rate` | `4.1` | 房地产估值 |
+| NOI | `租金收入 - 运营费用` | `4.1` | 净营运收入（不含折旧利息） |
 
 ### 商品期货
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| 期货定价 | Spot × e^((r + s - y)×T) | `5.1` | r=利率, s=存储, y=便利收益 |
-| Roll Yield | (Near Future - Far Future) / Near Future | `5.1` | 展期收益 |
-| 持有成本 | Futures - Spot ≈ r + s - y | `5.1` | 成本 carry |
+| 期货定价 | `F_0(T) = S_0e^((r + s - y)T)` | `5.1` | r=利率, s=存储, y=便利收益 |
+| Roll Yield | `(Near Future - Far Future) / Near Future` | `5.1` | 展期收益 |
+| 持有成本 | `ln[F_0(T)/S_0]/T = r + s - y` | `5.1` | 连续复利口径下的 cost of carry |
 
 ### 对冲基金
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| Gross Leverage | (Long + \|Short\|) / Capital | `6.3` | 总杠杆 |
-| Net Leverage | (Long - \|Short\|) / Capital | `6.3` | 净杠杆 |
+| Gross Leverage | `(Long + \|Short\|) / Capital` | `6.3` | 总杠杆 |
+| Net Leverage | `(Long - \|Short\|) / Capital` | `6.3` | 净杠杆 |
 
 ---
 

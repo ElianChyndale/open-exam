@@ -119,7 +119,7 @@ Corporate Issuers (M01-M08)
 │   │   ├── 核心公式
 │   │   │   ├── `After-tax cost of debt = rd(1-T)`
 │   │   │   ├── `Cost of preferred = Dp/Pp`
-│   │   │   ├── `Cost of equity = rf + β(E(Rm)-rf)` 或 `D1/P0 + g`
+│   │   │   ├── `Cost of equity = r_f + β[E(R_M) - r_f]` 或 `D_1/P_0 + g`
 │   │   │   └── `WACC = wd rd(1-T) + wp rp + we re`
 │   │   ├── debt: after-tax required return on borrowing
 │   │   ├── preferred: dividend relative to current price
@@ -228,9 +228,9 @@ Governance
 |------|------|------------|----------|
 | Operating Cycle | `DIO + DSO` | `M03` | 销售与回款链 |
 | Cash Conversion Cycle | `DIO + DSO - DPO` | `M03` | 营运资本核心 |
-| DIO | `Average Inventory / COGS x 365` | `M03` | 题目有时给 turnover |
-| DSO | `Average Receivables / Revenue x 365` | `M03` | collection speed |
-| DPO | `Average Payables / Purchases or COGS x 365` | `M03` | denominator 读题 |
+| DIO | `(Average Inventory / COGS) x 365` | `M03` | 题目有时给 turnover |
+| DSO | `(Average Receivables / Revenue) x 365` | `M03` | collection speed |
+| DPO | `(Average Payables / Purchases or COGS) x 365` | `M03` | denominator 读题 |
 | Current Ratio | `Current Assets / Current Liabilities` | `M03` | liquidity 不等于 efficiency |
 | Quick Ratio | `(Cash + Marketable Securities + Receivables)/Current Liabilities` | `M03` | 排除 inventory |
 
@@ -238,8 +238,8 @@ Governance
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| Net Present Value | `NPV = Σ CF_t/(1+r)^t - Initial Outlay` | `M04` | value rule 主指标 |
-| Internal Rate of Return | `0 = Σ CF_t/(1+IRR)^t - Initial Outlay` | `M04` | 非常规现金流小心 |
+| Net Present Value | `NPV = Σ_{t=0}^{N} CF_t/(1 + r)^t` | `M04` | value rule 主指标 |
+| Internal Rate of Return | `0 = Σ_{t=0}^{N} CF_t/(1 + IRR)^t` | `M04` | 非常规现金流小心 |
 | Profitability Index | `PI = PV of future cash inflows / Initial investment` | `M04` | capital rationing 辅助 |
 | Payback Period | `Time until cumulative undiscounted CF recovers outlay` | `M04` | 不代表价值 |
 | Discounted Payback | `Time until discounted CF recovers outlay` | `M04` | 仍忽略回收后现金流 |
@@ -248,11 +248,11 @@ Governance
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| After-tax Cost of Debt | `r_d(1-T)` | `M05` | interest tax shield |
-| Cost of Preferred | `D_p/P_p` | `M05` | preferred no growth case |
-| CAPM Cost of Equity | `r_f + β(E(R_m)-r_f)` | `M05` | 与 Portfolio 联动 |
-| Dividend Growth Cost of Equity | `D_1/P_0 + g` | `M05` | stable growth 口径 |
-| WACC | `w_d r_d(1-T) + w_p r_p + w_e r_e` | `M05` | market-value weights |
+| After-tax Cost of Debt | `r_d(1 - T)` | `M05` | interest tax shield |
+| Cost of Preferred | `r_p = D_p/P_p` | `M05` | preferred no growth case |
+| CAPM Cost of Equity | `r_e = r_f + β[E(R_M) - r_f]` | `M05` | 与 Portfolio 联动 |
+| Dividend Growth Cost of Equity | `r_e = D_1/P_0 + g` | `M05` | stable growth 口径 |
+| WACC | `WACC = w_d r_d(1 - T) + w_p r_p + w_e r_e` | `M05` | market-value weights |
 | Degree of Operating Leverage | `%ΔEBIT / %ΔSales` | `M06` | operating fixed costs |
 | Degree of Financial Leverage | `%ΔEPS / %ΔEBIT` | `M06` | financing fixed costs |
 | Degree of Total Leverage | `DOL x DFL` | `M06` | sales -> EPS |

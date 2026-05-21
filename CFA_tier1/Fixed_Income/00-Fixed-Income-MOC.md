@@ -136,9 +136,9 @@ Fixed Income (M01-M14)
 ├── M06: Spot, Par, and Forward Curves【考试核心】↔ 2026 Outline P19
 │   ├── Curve dictionary
 │   │   ├── 核心公式
-│   │   │   ├── `P = Σ CF_t/(1+s_t)^t`
+│   │   │   ├── `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t`
 │   │   │   ├── `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)`
-│   │   │   └── `Par coupon = (1 - DF_N)/Σ DF_t`
+│   │   │   └── `Par rate = (1 - DF_N)/Σ_{t=1}^{N} DF_t`
 │   │   ├── spot curve discounts a single cash flow at each maturity
 │   │   ├── par curve gives coupon rate making a bond price equal par
 │   │   └── forward curve implies future borrowing/lending rates from today's curve
@@ -152,7 +152,7 @@ Fixed Income (M01-M14)
 │   ├── Return decomposition
 │   │   ├── 核心公式
 │   │   │   ├── `HPR = (coupon + reinvestment income + sale price - purchase price)/purchase price`
-│   │   │   └── `D_mac = Σ[t x PV(CF_t)] / Price`
+│   │   │   └── `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price`
 │   │   ├── coupon income + reinvestment income + price change
 │   │   ├── pull to par and horizon effect
 │   │   └── realized return differs when sale yield or reinvestment rate changes
@@ -317,22 +317,22 @@ Securitization
 | Discount Yield | `BDY = (FV - P)/FV x 360/t` | `M05` | 分母是 face value |
 | Money Market Yield | `MMY = (FV - P)/P x 360/t` | `M05` | 分母换成 purchase price |
 | Bond Equivalent Yield | `BEY = (FV - P)/P x 365/t` | `M05` | 与 MMY 的 day basis 区分 |
-| Spot Pricing | `P = Σ CF_t/(1+s_t)^t` | `M06` | 每笔 cash flow 用匹配 spot |
+| Spot Pricing | `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t` | `M06` | 每笔 cash flow 用匹配 spot |
 | Forward from Spot | `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^{n-m}` | `M06` | 先对齐区间长度 |
-| Par Rate | `Par coupon = (1 - DF_N)/Σ DF_t` | `M06` | discount factor 版最稳 |
+| Par Rate | `Par rate = (1 - DF_N)/Σ_{t=1}^{N} DF_t` | `M06` | discount factor 版最稳 |
 
 ### M07-M09 回报与利率风险
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
 | Holding Period Return | `HPR = (Coupon income + reinvestment income + sale price - purchase price)/purchase price` | `M07` | return source 要拆开 |
-| Macaulay Duration | `D_mac = Σ[t x PV(CF_t)] / Price` | `M07` | cash-flow time weighted average |
+| Macaulay Duration | `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price` | `M07` | cash-flow time weighted average |
 | Modified Duration | `D_mod = D_mac/(1+y/m)` | `M08` | fixed cash-flow % price sensitivity |
 | Money Duration | `Money Duration = D_mod x Full Price` | `M08` | 货币价格变化基础 |
 | PVBP | `PVBP ≈ Money Duration x 0.0001` | `M08` | 1 bp shock |
 | Duration Price Approx | `%ΔP ≈ -D_mod x Δy` | `M08` | 一阶近似 |
 | Convexity | `Convexity = [P_- + P_+ - 2P_0] / (P_0 x (Δy)^2)` | `M08` | 价格重估版常见 |
-| Convexity Adjusted Change | `%ΔP ≈ -D x Δy + 0.5 x Convexity x (Δy)^2` | `M08` | 注意 `Δy` 用小数 |
+| Convexity Adjusted Change | `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2` | `M08` | 注意 `Δy` 用小数 |
 | Portfolio Duration | `D_p = Σ w_i D_i` | `M08` | 价值权重，曲线非平行时有限 |
 
 ### M10-M14 信用与证券化
