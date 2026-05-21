@@ -1,0 +1,7 @@
+.pytest_cache/
+__pycache__/
+*.pyc
+.env
+.env.local
+.system/events/catalog.sqlite3
+.system/evals/results/
