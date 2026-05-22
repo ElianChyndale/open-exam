@@ -33,7 +33,7 @@ tags:
 | 权重 | 8-12% |
 | 考试形式 | 单选题，概念+计算+策略判断 |
 | 难度特点 | 数量逻辑不难，但 IPS 和 behavioral finance 常因边界不清而失分 |
-| 学习建议 | 先抓组合风险收益和 CAPM，再把 IPS 与 behavioral bias 串成“投资决策框架” |
+| 学习建议 | 先抓组合风险收益和 CAPM，再把 IPS 与 behavioral bias 串成"投资决策框架" |
 | 状态 | 学习中 |
 | tags | CFA L1, Portfolio Management, MOC |
 
@@ -41,112 +41,112 @@ tags:
 
 ## 最关键：不是找最好的资产，而是找最适合目标与约束的组合
 
-Portfolio Management 的关键词是“组合、约束、匹配”，不是单资产英雄主义。
+Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产英雄主义。
 
 ---
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 |
-|------|------|------|--------|
-| M01 | Portfolio Risk and Return | 计算 | E(Rp), variance, diversification |
-| M02 | Utility and CAL | 计算+策略 | risk aversion, capital allocation line |
-| M03 | CAPM and Beta | 计算 | SML, beta, required return |
-| M04 | Market Efficiency / Active vs Passive | 概念 | active/passive implications |
-| M05 | IPS | 策略 | return objective, risk objective, constraints |
-| M06 | Behavioral Biases | 概念 | cognitive vs emotional biases |
-| M07 | Risk Management | 概念 | governance, budgeting, exposure control |
+| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
+|------|------|------|--------|----------|
+| M01 | Portfolio Risk and Return | 计算 | E(Rp), variance, diversification | [[M01-Portfolio-Risk-and-Return.md]] |
+| M02 | Utility and CAL | 计算+策略 | risk aversion, capital allocation line | [[M02-Utility-and-CAL.md]] |
+| M03 | CAPM and Beta | 计算 | SML, beta, required return | [[M03-CAPM-and-Beta.md]] |
+| M04 | Market Efficiency / Active vs Passive | 概念 | active/passive implications | [[M04-Market-Efficiency-and-Portfolio-Construction.md]] |
+| M05 | IPS | 策略 | return objective, risk objective, constraints | [[M05-IPS.md]] |
+| M06 | Behavioral Biases | 概念 | cognitive vs emotional biases | [[M06-Behavioral-Biases.md]] |
+| M07 | Risk Management | 概念 | governance, budgeting, exposure control | [[M07-Risk-Management.md]] |
 
 ---
 
-## Portfolio Management 核心知识树
+## Portfolio Management 核心知识树 (Core Knowledge Tree)
 
 ```text
-Portfolio Management (M01-M07)
+投资组合管理 (Portfolio Management) (M01-M07)
 │
-├── M01: Portfolio Risk and Return【考试核心】↔ 2026 Outline: Portfolio Risk and Return
-│   ├── Single asset -> portfolio translation
-│   │   ├── 核心公式
-│   │   │   ├── `E(Rp) = Σ wiE(Ri)`
-│   │   │   ├── `σp² = w1²σ1²+w2²σ2²+2w1w2Cov12`
-│   │   │   └── `Corr(R1,R2) = Cov(R1,R2)/(σ1σ2)`
-│   │   ├── expected return is weight average
-│   │   ├── variance adds covariance terms, not just asset variances
-│   │   └── correlation controls diversification benefit
-│   ├── Efficient opportunity set
-│   │   ├── risk-return trade-off; minimum-variance intuition
-│   │   └── unsystematic risk can be diversified away
-│   └── 注意：portfolio risk can fall while every component remains risky
+├── M01: 组合风险与收益 (Portfolio Risk and Return)【考试核心】↔ 2026 Outline: Portfolio Risk and Return
+│   ├── 从单资产到投资组合的转换 (Single asset -> portfolio translation)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 组合期望收益: `E(Rp) = Σ wiE(Ri)`
+│   │   │   ├── 两资产方差: `σp² = w1²σ1²+w2²σ2²+2w1w2Cov12`
+│   │   │   └── 相关系数: `Corr(R1,R2) = Cov(R1,R2)/(σ1σ2)`
+│   │   ├── 期望收益是单项收益的加权平均 (expected return is weight average)
+│   │   ├── 方差包含协方差项而非仅资产方差 (variance adds covariance terms, not just asset variances)
+│   │   └── 相关系数决定分散化收益 (correlation controls diversification benefit)
+│   ├── 有效机会集 (Efficient opportunity set)
+│   │   ├── 风险-收益权衡与最小方差直觉 (risk-return trade-off; minimum-variance intuition)
+│   │   └── 非系统性风险可通过分散化消除 (unsystematic risk can be diversified away)
+│   └── 注意：组合风险可以在每个成分资产仍有风险时下降 (portfolio risk can fall while every component remains risky)
 │
-├── M02: Utility and Capital Allocation【考试核心】↔ 2026 Outline: Risk Aversion
-│   ├── Investor preference
-│   │   ├── 核心公式
-│   │   │   ├── `U = E(Rp)-0.5Aσp²`
-│   │   │   └── `E(R_C) = R_f + [(E(R_P)-R_f)/σ_P] x σ_C`
-│   │   ├── utility penalizes variance according to risk aversion
-│   │   ├── indifference curve slope reflects risk-return trade-off
-│   │   └── higher `A` requires more return for the same variance
-│   ├── CAL logic
-│   │   ├── combine risk-free asset with risky portfolio
-│   │   ├── Sharpe ratio is CAL slope
-│   │   └── borrowing/lending choice changes risky-asset weight
-│   └── 注意：risk tolerance is preference; risk capacity belongs in IPS reality check
+├── M02: 效用与资本配置 (Utility and Capital Allocation)【考试核心】↔ 2026 Outline: Risk Aversion
+│   ├── 投资者偏好 (Investor preference)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 效用函数: `U = E(Rp)-0.5Aσp²`
+│   │   │   └── 资本配置线: `E(R_C) = R_f + [(E(R_P)-R_f)/σ_P] x σ_C`
+│   │   ├── 效用按风险厌恶程度惩罚方差 (utility penalizes variance according to risk aversion)
+│   │   ├── 无差异曲线斜率反映风险-收益权衡 (indifference curve slope reflects risk-return trade-off)
+│   │   └── 更高的 `A` 需要更高收益补偿相同方差 (higher `A` requires more return for the same variance)
+│   ├── 资本配置线逻辑 (CAL logic)
+│   │   ├── 无风险资产与风险组合的配比 (combine risk-free asset with risky portfolio)
+│   │   ├── 夏普比率是CAL的斜率 (Sharpe ratio is CAL slope)
+│   │   └── 借入/贷出选择影响风险资产权重 (borrowing/lending choice changes risky-asset weight)
+│   └── 注意：风险容忍度是偏好；风险承受能力属于IPS现实检验 (risk tolerance is preference; risk capacity belongs in IPS reality check)
 │
-├── M03: CAPM, Beta, and Performance Lens【考试核心】↔ 2026 Outline: CAPM
-│   ├── Market equilibrium
-│   │   ├── 核心公式
-│   │   │   ├── `E(R_i) = R_f + β_i[E(R_M)-R_f]`
-│   │   │   ├── `β_i = Cov(R_i,R_M)/Var(R_M)`
-│   │   │   ├── `Sharpe = (Rp-Rf)/σp`
-│   │   │   ├── `Treynor = (Rp-Rf)/βp`
-│   │   │   └── `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]`
-│   │   ├── systematic risk earns expected compensation
-│   │   ├── beta measures market sensitivity
-│   │   └── SML prices required return for beta exposure
-│   ├── Evaluation link
-│   │   ├── alpha compares realized/expected return to CAPM benchmark
-│   │   ├── Sharpe uses total risk; Treynor uses beta risk
-│   │   └── security above SML looks underpriced in CAPM language
-│   └── 注意：high standard deviation and high beta are different diagnoses
+├── M03: CAPM、Beta与绩效视角 (CAPM, Beta, and Performance Lens)【考试核心】↔ 2026 Outline: CAPM
+│   ├── 市场均衡 (Market equilibrium)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── CAPM: `E(R_i) = R_f + β_i[E(R_M)-R_f]`
+│   │   │   ├── Beta系数: `β_i = Cov(R_i,R_M)/Var(R_M)`
+│   │   │   ├── 夏普比率: `Sharpe = (Rp-Rf)/σp`
+│   │   │   ├── 特雷诺比率: `Treynor = (Rp-Rf)/βp`
+│   │   │   └── 詹森阿尔法: `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]`
+│   │   ├── 系统性风险获得预期补偿 (systematic risk earns expected compensation)
+│   │   ├── Beta衡量市场敏感度 (beta measures market sensitivity)
+│   │   └── SML对Beta暴露定价必要回报 (SML prices required return for beta exposure)
+│   ├── 绩效评估关联 (Evaluation link)
+│   │   ├── Alpha比较实际/预期收益与CAPM基准 (alpha compares realized/expected return to CAPM benchmark)
+│   │   ├── Sharpe使用总风险，Treynor使用Beta风险 (Sharpe uses total risk; Treynor uses beta risk)
+│   │   └── SML上方的证券在CAPM框架中看似被低估 (security above SML looks underpriced in CAPM language)
+│   └── 注意：高标准差和高Beta是不同的诊断 (high standard deviation and high beta are different diagnoses)
 │
-├── M04: Market Efficiency and Portfolio Construction【考试核心】↔ 2026 Outline: Portfolio Planning
-│   ├── Construction spine
-│   │   ├── objectives -> constraints -> asset allocation -> implementation -> review
-│   │   ├── strategic allocation dominates policy risk budget
-│   │   └── active/passive choice follows edge, cost, tax, market efficiency
-│   ├── Practical constraints
-│   │   ├── benchmark appropriateness, transaction costs, taxes, liquidity
-│   │   └── risk budgeting allocates scarce active risk intentionally
-│   └── 注意：portfolio design is a process, not a one-shot optimizer screenshot
+├── M04: 市场有效性与组合构建 (Market Efficiency and Portfolio Construction)【考试核心】↔ 2026 Outline: Portfolio Planning
+│   ├── 组合构建主线 (Construction spine)
+│   │   ├── 目标→约束→资产配置→执行→回顾 (objectives -> constraints -> asset allocation -> implementation -> review)
+│   │   ├── 战略性配置主导政策风险预算 (strategic allocation dominates policy risk budget)
+│   │   └── 主动/被动选择取决于优势、成本、税收、市场有效性 (active/passive choice follows edge, cost, tax, market efficiency)
+│   ├── 实际约束 (Practical constraints)
+│   │   ├── 基准适配性、交易成本、税收、流动性 (benchmark appropriateness, transaction costs, taxes, liquidity)
+│   │   └── 风险预算有意分配稀缺的主动风险 (risk budgeting allocates scarce active risk intentionally)
+│   └── 注意：组合设计是一个过程，而非一次优化器截图 (portfolio design is a process, not a one-shot optimizer screenshot)
 │
-├── M05: Investment Policy Statement【考试核心】↔ 2026 Outline: IPS
-│   ├── Objectives
-│   │   ├── return need and return desire are not always the same
-│   │   ├── risk willingness and risk ability must be reconciled
-│   │   └── objective language should be decision usable
-│   ├── Constraints
-│   │   ├── liquidity, time horizon, taxes, legal/regulatory, unique circumstances
-│   │   └── constraints can force portfolio choice away from theoretical optimum
-│   └── 注意：IPS is where investor reality vetoes elegant but unsuitable portfolios
+├── M05: 投资政策声明 (Investment Policy Statement)【考试核心】↔ 2026 Outline: IPS
+│   ├── 目标 (Objectives)
+│   │   ├── 收益需求与收益期望并不总是一致 (return need and return desire are not always the same)
+│   │   ├── 风险意愿与风险能力必须协调 (risk willingness and risk ability must be reconciled)
+│   │   └── 目标表述应具有决策指导性 (objective language should be decision usable)
+│   ├── 约束 (Constraints)
+│   │   ├── 流动性、时间跨度、税收、法律/监管、特殊情形 (liquidity, time horizon, taxes, legal/regulatory, unique circumstances)
+│   │   └── 约束可能迫使组合偏离理论最优 (constraints can force portfolio choice away from theoretical optimum)
+│   └── 注意：IPS是投资者现实否决优雅但不适配合约的地方 (IPS is where investor reality vetoes elegant but unsuitable portfolios)
 │
-├── M06: Behavioral Biases【考试核心】↔ 2026 Outline: Behavioral Biases
-│   ├── Cognitive errors
-│   │   ├── belief perseverance, information-processing, framing, availability
-│   │   └── often mitigated by education, process, checklists
-│   ├── Emotional biases
-│   │   ├── loss aversion, overconfidence, self-control, endowment/status quo
-│   │   └── often managed rather than fully corrected
-│   └── 注意：bias classification matters because mitigation differs
+├── M06: 行为偏差 (Behavioral Biases)【考试核心】↔ 2026 Outline: Behavioral Biases
+│   ├── 认知错误 (Cognitive errors)
+│   │   ├── 信念固着、信息处理、框架效应、可得性 (belief perseverance, information-processing, framing, availability)
+│   │   └── 常可通过教育、流程、检查表缓解 (often mitigated by education, process, checklists)
+│   ├── 情绪偏差 (Emotional biases)
+│   │   ├── 损失厌恶、过度自信、自我控制、禀赋/现状偏差 (loss aversion, overconfidence, self-control, endowment/status quo)
+│   │   └── 通常管理而非完全纠正 (often managed rather than fully corrected)
+│   └── 注意：偏差分类之所以重要是因为纠正方式不同 (bias classification matters because mitigation differs)
 │
-└── M07: Risk Management【考试核心】↔ CFA Institute 2026 Introduction to Risk Management
-    ├── Risk system
-    │   ├── governance, identification, measurement, modification, monitoring
-    │   ├── financial vs non-financial risks; risk interactions
-    │   └── risk budget aligns exposure with mission and capital
-    ├── Risk action
-    │   ├── avoid, accept, transfer, mitigate, monitor
-    │   └── reporting should make exposures decision-visible
-    └── 注意：good risk management enables chosen risk taking; it is not fear with spreadsheets
+└── M07: 风险管理 (Risk Management)【考试核心】↔ CFA Institute 2026 Introduction to Risk Management
+    ├── 风险体系 (Risk system)
+    │   ├── 治理、识别、衡量、改变化、监控 (governance, identification, measurement, modification, monitoring)
+    │   ├── 金融风险与非金融风险；风险互动 (financial vs non-financial risks; risk interactions)
+    │   └── 风险预算使风险暴露与使命和资本对齐 (risk budget aligns exposure with mission and capital)
+    ├── 风险行动 (Risk action)
+    │   ├── 规避、接受、转移、缓释、监控 (avoid, accept, transfer, mitigate, monitor)
+    │   └── 报告应使风险暴露决策可视化 (reporting should make exposures decision-visible)
+    └── 注意：好的风险管理使选定的风险承担成为可能，而非用电子表格恐惧 (good risk management enables chosen risk taking; it is not fear with spreadsheets)
 ```
 
 ---
@@ -168,13 +168,13 @@ Portfolio Management (M01-M07)
 ## 跨模块关联
 
 ```text
-Portfolio Risk/Return
-├── Utility and CAL
-│   └── CAPM and Beta
-│       └── Active vs Passive Choice
-└── IPS
-    ├── Behavioral Biases
-    └── Risk Management
+投资组合风险与收益 (Portfolio Risk/Return)
+├── 效用与资本配置线 (Utility and CAL)
+│   └── CAPM与Beta (CAPM and Beta)
+│       └── 主动与被动选择 (Active vs Passive Choice)
+└── 投资政策说明书 (IPS)
+    ├── 行为偏差 (Behavioral Biases)
+    └── 风险管理 (Risk Management)
 ```
 
 ---

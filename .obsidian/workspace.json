@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+                "file": "skills/cfa-question-captor/SKILL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00-Quantitative-Methods-MOC"
+              "title": "SKILL"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+                "file": "CFA_tier1/Economics/00-Economics-MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 00-Quantitative-Methods-MOC"
+              "title": "Backlinks for 00-Economics-MOC"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+                "file": "CFA_tier1/Economics/00-Economics-MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 00-Quantitative-Methods-MOC"
+              "title": "Outgoing links from 00-Economics-MOC"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+                "file": "CFA_tier1/Economics/00-Economics-MOC.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 00-Quantitative-Methods-MOC"
+              "title": "Outline of 00-Economics-MOC"
             }
           }
         ]
@@ -185,41 +185,41 @@
   },
   "active": "b90affa7e2b886b0",
   "lastOpenFiles": [
-    "docs/superpowers/plans/2026-05-21-cfa-moc-formula-bidirectional-mapping.md",
-    "docs/superpowers/specs/2026-05-21-cfa-moc-formula-bidirectional-mapping-design.md",
-    "AGENTS.md.tmp.33292.08195d87618a",
-    "AGENTS.md.tmp.33292.6938761ec89d",
-    "skills/cfa-question-captor/SKILL.md.tmp.33292.492df67a3106",
-    "docs/moc-auto-patch-workflow.md",
-    "docs/moc-auto-patch-workflow.md.tmp.33292.9da49fc64505",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md.tmp.33292.283df4cb00cd",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md.tmp.33292.d1e70aead48b",
-    "CFA_tier1/mock/Quant/00-Quant-Mistakes.md",
-    "skills/cfa-screenshot-mistake-captor/SKILL.md",
-    "skills/cfa-screenshot-mistake-captor",
-    "docs/superpowers/plans/2026-05-21-cfa-screenshot-capture-moc-gap.md",
-    "docs/superpowers/specs/2026-05-21-cfa-screenshot-capture-moc-gap-design.md",
-    "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
-    "CFA_tier1/Alternative_Investments/00-Alternative-Investments-MOC.md",
-    "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md",
-    "CFA_tier1/Quantitative_Methods/数量_Quantitative_Methods_知识框架.md",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
-    "CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md",
-    "CFA_tier1/Derivatives/00-Derivatives-MOC.md",
-    "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
-    "CFA_tier1/Equity/00-Equity-MOC.md",
+    "skills/cfa-review-synthesizer/SKILL.md",
+    "skills/cfa-question-captor/SKILL.md",
+    "skills/cfa-pattern-miner/SKILL.md",
+    "skills/cfa-intent-router/SKILL.md",
+    "skills/cfa-bias-detector/SKILL.md",
+    "skills/cfa-agent-auditor/SKILL.md",
+    "CFA_tier1/00-Index.md",
+    "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md",
+    "CFA_tier1/Corporate_Issuers/M01-Corporate-Structures-and-Ownership.md",
+    "CFA_tier1/Quantitative_Methods/M10-Big-Data-and-ML.md",
+    "CFA_tier1/Quantitative_Methods/M10-Big-Data-and-ML.md.tmp.5088.a6873980e432",
+    "CFA_tier1/Quantitative_Methods/M09-Correlation-and-Regression.md",
+    "CFA_tier1/Quantitative_Methods/M09-Correlation-and-Regression.md.tmp.5088.aa0a91195183",
+    "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md",
+    "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md.tmp.5088.09e00aaef841",
+    "CFA_tier1/Quantitative_Methods/M07-Sampling-and-Estimation.md",
+    "CFA_tier1/Quantitative_Methods/M07-Sampling-and-Estimation.md.tmp.5088.58f1a9ca23ca",
+    "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md",
+    "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md.tmp.5088.9cd92994dd70",
+    "CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md",
+    "CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md.tmp.5088.abfda39e1649",
+    "CFA_tier1/Quantitative_Methods/M04-Probability-Concepts.md",
+    "CFA_tier1/Quantitative_Methods/M04-Probability-Concepts.md.tmp.5088.058c5a62eb69",
+    "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures.md",
+    "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures.md.tmp.5088.89dbb5d35baf",
+    "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money.md",
+    "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money.md.tmp.5088.0cc18dc1782b",
+    "CFA_tier1/Economics/M01-Demand-Supply-and-Elasticity.md",
+    "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md.tmp.5088.2d8de068b8d9",
+    "CFA_tier1/Economics/M03-Aggregate-Output-Prices-and-Growth.md",
+    "CFA_tier1/Economics/M02-The-Firm-and-Market-Structures.md",
     "CFA_tier1/Economics/00-Economics-MOC.md",
-    "CFA_tier1/Ethical_and_Professional_Standards/00-Ethical-and-Professional-Standards-MOC.md",
-    "00-Alternative-Investments-MOC.md",
-    "CFA_tier1/Portfolio_Management/投资组合_Portfolio_Management_知识框架.md",
-    "CFA_tier1/Alternative_Investments/另类投资_Alternative_Investments_知识框架.md",
-    "CFA_tier1/Derivatives/衍生品_Derivatives_知识框架.md",
-    "CFA_tier1/Fixed_Income/固定收益_Fixed_Income_知识框架.md",
-    "CFA_tier1/Equity/股权投资_Equity_知识框架.md",
-    "CFA_tier1/Financial_Statement_Analysis/财务分析_Financial_Statement_Analysis_知识框架.md",
-    "CFA_tier1/Corporate_Issuers/公司金融_Corporate_Issuers_知识框架.md",
-    "CFA_tier1/mock/Quant",
-    "CFA_tier1/mock/Portfolio",
-    "CFA_tier1/mock/FRA"
+    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+    "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md",
+    "CFA_tier1/Alternative_Investments/00-Alternative-Investments-MOC.md",
+    "docs/superpowers/plans/2026-05-21-cfa-moc-formula-bidirectional-mapping.md"
   ]
 }

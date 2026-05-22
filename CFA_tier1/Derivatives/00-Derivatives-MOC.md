@@ -47,134 +47,134 @@ tags:
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 |
-|------|------|------|--------|
-| M01 | Derivative Instruments and Markets | 概念 | underlying, exchange vs OTC, settlement |
-| M02 | Forward Commitments and Contingent Claims | 概念 | forwards, futures, swaps, options |
-| M03 | Benefits, Risks, and Uses | 策略 | hedging, exposure transformation, leverage |
-| M04 | Arbitrage, Replication, and Cost of Carry | 计算 | no-arbitrage, carry, replication |
-| M05 | Pricing and Valuation of Forwards/Futures | 计算 | forward price vs forward value, marking to market |
-| M06 | Pricing and Valuation of Swaps | 概念+计算 | fixed-for-floating, FRA strip intuition |
-| M07 | Options and Put-Call Parity | 计算 | payoff, moneyness, parity, synthetics |
-| M08 | One-Period Option Valuation | 计算 | binomial hedge ratio, risk-neutral pricing |
+| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
+|------|------|------|--------|----------|
+| M01 | Derivative Instruments and Markets | 概念 | underlying, exchange vs OTC, settlement | [[M01-Instruments-and-Markets]] |
+| M02 | Forward Commitments and Contingent Claims | 概念 | forwards, futures, swaps, options | [[M02-Forward-Commitments-and-Contingent-Claims]] |
+| M03 | Benefits, Risks, and Uses | 策略 | hedging, exposure transformation, leverage | [[M03-Benefits-and-Risks]] |
+| M04 | Arbitrage, Replication, and Cost of Carry | 计算 | no-arbitrage, carry, replication | [[M04-Arbitrage-and-Replication]] |
+| M05 | Pricing and Valuation of Forwards/Futures | 计算 | forward price vs forward value, marking to market | [[M05-Forward-and-Futures-Pricing]] |
+| M06 | Pricing and Valuation of Swaps | 概念+计算 | fixed-for-floating, FRA strip intuition | [[M06-Swap-Pricing]] |
+| M07 | Options and Put-Call Parity | 计算 | payoff, moneyness, parity, synthetics | [[M07-Options-and-Put-Call-Parity]] |
+| M08 | One-Period Option Valuation | 计算 | binomial hedge ratio, risk-neutral pricing | [[M08-Binomial-Valuation]] |
 
 ---
 
-## Derivatives 核心知识树
+## Derivatives 核心知识树 (Core Knowledge Tree)
 
 ```text
-Derivatives (M01-M08)
+衍生品 (Derivatives) (M01-M08)
 │
-├── M01: Derivative Instruments and Markets【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features
-│   ├── Contract map
-│   │   ├── underlying: equity, rate, FX, credit, commodity, other reference
-│   │   ├── long vs short; payoff depends on future state of underlying
-│   │   └── settlement: physical delivery vs cash settlement
-│   ├── Market map
-│   │   ├── exchange-traded: standardized, clearinghouse, margin
-│   │   ├── OTC: customization, counterparty exposure, bilateral terms
-│   │   └── notional amount scales exposure but is not automatically cash at risk
+├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features
+│   ├── 合约地图 (Contract Map)
+│   │   ├── 标的资产：股票、利率、外汇、信用、大宗商品及其他参照物 (underlying: equity, rate, FX, credit, commodity, other reference)
+│   │   ├── 多头 vs 空头；收益取决于标的资产未来状态 (long vs short; payoff depends on future state of underlying)
+│   │   └── 结算：实物交割或现金结算 (settlement: physical delivery vs cash settlement)
+│   ├── 市场地图 (Market Map)
+│   │   ├── 交易所交易：标准化、清算所、保证金 (exchange-traded: standardized, clearinghouse, margin)
+│   │   ├── 场外交易：定制化、交易对手风险、双边条款 (OTC: customization, counterparty exposure, bilateral terms)
+│   │   └── 名义金额放大敞口但不等于在险现金 (notional amount scales exposure but is not automatically cash at risk)
 │   └── 注意：derivative value can be small today while exposure is economically large【考试陷阱】
 │
-├── M02: Forward Commitments and Contingent Claims【考试核心】↔ 2026 Outline: Forward Commitment and Contingent Claim Features
-│   ├── Forward commitments
-│   │   ├── forward: customized future trade obligation
-│   │   ├── futures: standardized obligation with daily settlement
-│   │   └── swap: series of forward-like exchanges
-│   ├── Contingent claims
-│   │   ├── call gives right to buy; put gives right to sell
-│   │   ├── option holder has right; writer bears contingent obligation
-│   │   └── credit and other claims pay only if trigger/state occurs
+├── M02: 远期承诺与或有求偿 (Forward Commitments and Contingent Claims)【考试核心】↔ 2026 Outline: Forward Commitment and Contingent Claim Features
+│   ├── 远期承诺 (Forward Commitments)
+│   │   ├── 远期合约：定制化的未来交易义务 (forward: customized future trade obligation)
+│   │   ├── 期货：标准化的每日结算义务 (futures: standardized obligation with daily settlement)
+│   │   └── 互换：一系列类似远期的交换协议 (swap: series of forward-like exchanges)
+│   ├── 或有索取权 (Contingent Claims)
+│   │   ├── 看涨期权赋予买入权利；看跌期权赋予卖出权利 (call gives right to buy; put gives right to sell)
+│   │   ├── 期权持有人拥有权利；卖方承担或有义务 (option holder has right; writer bears contingent obligation)
+│   │   └── 信用衍生品及其他仅在触发时支付 (credit and other claims pay only if trigger/state occurs)
 │   └── 注意：right vs obligation is the first fork before every payoff question
 │
-├── M03: Benefits, Risks, and Uses【考试核心】↔ CFA Institute 2026 Derivative Benefits
-│   ├── Benefits
-│   │   ├── hedge an existing exposure; transform duration, beta, currency, commodity risk
-│   │   ├── gain exposure with capital efficiency and lower implementation friction
-│   │   └── price discovery and risk transfer
-│   ├── Risks and users
-│   │   ├── leverage, liquidity, counterparty, basis, model, operational risk
-│   │   ├── issuers use hedges to stabilize financing/operating cash flows
-│   │   └── investors use derivatives for risk control, tactical exposure, arbitrage
+├── M03: 收益、风险与用途 (Benefits, Risks, and Uses)【考试核心】↔ CFA Institute 2026 Derivative Benefits
+│   ├── 收益 (Benefits)
+│   │   ├── 对冲现有敞口；转换久期、Beta、货币、商品风险 (hedge an existing exposure; transform duration, beta, currency, commodity risk)
+│   │   ├── 以资本效率和较低摩擦获得风险敞口 (gain exposure with capital efficiency and lower implementation friction)
+│   │   └── 价格发现与风险转移 (price discovery and risk transfer)
+│   ├── 风险与使用者 (Risks and Users)
+│   │   ├── 杠杆、流动性、交易对手、基差、模型、操作风险 (leverage, liquidity, counterparty, basis, model, operational risk)
+│   │   ├── 发行方使用对冲稳定融资/经营现金流 (issuers use hedges to stabilize financing/operating cash flows)
+│   │   └── 投资者使用衍生品进行风险控制、战术性敞口、套利 (investors use derivatives for risk control, tactical exposure, arbitrage)
 │   └── 注意：hedging reduces a chosen risk; it may introduce basis or counterparty risk
 │
-├── M04: Arbitrage, Replication, and Cost of Carry【考试核心】↔ 2026 Outline: Arbitrage and Replication
-│   ├── No-arbitrage logic
-│   │   ├── law of one price for identical future cash flows
-│   │   ├── replication portfolio pins fair derivative price
-│   │   └── arbitrage action pushes mispriced contract back to fair relation
-│   ├── Carry relation
-│   │   ├── financing cost raises forward price for an investment asset
-│   │   ├── known income / yield / convenience benefits reduce net carry
-│   │   └── value after initiation differs from original forward price
+├── M04: 套利、复制与持有成本 (Arbitrage, Replication, and Cost of Carry)【考试核心】↔ 2026 Outline: Arbitrage and Replication
+│   ├── 无套利逻辑 (No-Arbitrage Logic)
+│   │   ├── 一价定律适用于相同未来现金流 (law of one price for identical future cash flows)
+│   │   ├── 复制组合确定衍生品公平价格 (replication portfolio pins fair derivative price)
+│   │   └── 套利行为将错误定价推回公平关系 (arbitrage action pushes mispriced contract back to fair relation)
+│   ├── 持有成本关系 (Carry Relation)
+│   │   ├── 融资成本提高投资资产的远期价格 (financing cost raises forward price for an investment asset)
+│   │   ├── 已知收入/收益率/便利收益减少净持有成本 (known income / yield / convenience benefits reduce net carry)
+│   │   └── 存续期价值与初始远期价格不同 (value after initiation differs from original forward price)
 │   └── 注意：price at initiation and value during life are cousins, not twins【考试陷阱】
 │
-├── M05: Pricing and Valuation of Forwards and Futures【考试核心】↔ 2026 Outline: Pricing and Valuation of Forward Contracts
-│   ├── Forward price cases
-│   │   ├── 核心公式
-│   │   │   ├── `F0(T) = S0(1+r)^T`
-│   │   │   ├── `F0(T) = [S0 - PV(I)](1+r)^T`
+├── M05: 远期与期货定价估值 (Pricing and Valuation of Forwards and Futures)【考试核心】↔ 2026 Outline: Pricing and Valuation of Forward Contracts
+│   ├── 远期价格情形 (Forward Price Cases)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `F0(T) = S0(1+r)^T` 无收益资产远期价格 (no-income asset)
+│   │   │   ├── `F0(T) = [S0 - PV(I)](1+r)^T` 已知收入资产远期价格 (known income asset)
 │   │   │   └── `F0(T) = S0[(1+r)/(1+q)]^T` 或连续口径 `S0e^((r-q)T)`
-│   │   ├── no-income asset: spot grown at risk-free rate
-│   │   ├── known income: subtract PV of income before carrying forward
-│   │   └── known yield: reduce carry by continuous/discrete yield assumption
-│   ├── Contract value
-│   │   ├── 核心公式
-│   │   │   ├── `Long expiry payoff = ST - K`
-│   │   │   ├── `Short expiry payoff = K - ST`
-│   │   │   └── `Vt = St - PVt(K)`
-│   │   ├── long forward gains when market forward price rises above contract price
-│   │   ├── futures marking-to-market realizes gains/losses daily
-│   │   └── interest-rate correlation can make futures and forwards diverge
+│   │   ├── 无收益资产：现货以无风险利率增长 (no-income asset: spot grown at risk-free rate)
+│   │   ├── 已知收入：扣除收入现值后向前滚动 (known income: subtract PV of income before carrying forward)
+│   │   └── 已知收益率：按连续/离散收益率减少持有成本 (known yield: reduce carry by continuous/discrete yield assumption)
+│   ├── 合约价值 (Contract Value)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `Long expiry payoff = ST - K` 多头到期收益 (long expiry payoff)
+│   │   │   ├── `Short expiry payoff = K - ST` 空头到期收益 (short expiry payoff)
+│   │   │   └── `Vt = St - PVt(K)` 存续期多头价值 (long forward value during life)
+│   │   ├── 多头远期在市场远期价格高于合约价格时获利 (long forward gains when market forward price rises above contract price)
+│   │   ├── 期货逐日盯市每日实现盈亏 (futures marking-to-market realizes gains/losses daily)
+│   │   └── 利率相关性可导致期货与远期价格分化 (interest-rate correlation can make futures and forwards diverge)
 │   └── 注意：long forward payoff at expiry = spot minus delivery price, not current value formula
 │
-├── M06: Pricing and Valuation of Swaps【考试核心】↔ 2026 Outline: Pricing and Valuation of Interest Rates and Other Swaps
-│   ├── Swap anatomy
-│   │   ├── 核心公式
-│   │   │   └── `Net swap payment = Notional x (Floating rate - Fixed rate) x accrual factor`
-│   │   ├── fixed-for-floating interest rate swap exchanges net interest cash flows
-│   │   ├── currency swap may exchange principal and coupon currencies
-│   │   └── initial fixed rate chosen so inception value is approximately zero
-│   ├── Valuation intuition
-│   │   ├── swap can be viewed as bond pair or strip of forward-rate agreements
-│   │   ├── value changes as fixed rate vs market swap curve changes
-│   │   └── payer/receiver label follows fixed leg exposure
+├── M06: 互换定价与估值 (Pricing and Valuation of Swaps)【考试核心】↔ 2026 Outline: Pricing and Valuation of Interest Rates and Other Swaps
+│   ├── 互换结构 (Swap Anatomy)
+│   │   ├── 核心公式 (English)
+│   │   │   └── `Net swap payment = Notional x (Floating rate - Fixed rate) x accrual factor` 互换净支付 (net swap payment)
+│   │   ├── 固定换浮动利率互换交换净利息现金流 (fixed-for-floating interest rate swap exchanges net interest cash flows)
+│   │   ├── 货币互换可能交换本金和票息币种 (currency swap may exchange principal and coupon currencies)
+│   │   └── 初始固定利率使起始价值约等于零 (initial fixed rate chosen so inception value is approximately zero)
+│   ├── 估值直觉 (Valuation Intuition)
+│   │   ├── 互换可视为债券对或远期利率协议组合 (swap can be viewed as bond pair or strip of forward-rate agreements)
+│   │   ├── 价值随固定利率与市场互换曲线变化 (value changes as fixed rate vs market swap curve changes)
+│   │   └── 支付方/接收方标签取决于固定端敞口 (payer/receiver label follows fixed leg exposure)
 │   └── 注意：notional is reference amount in vanilla interest rate swaps, not exchanged principal
 │
-├── M07: Options and Put-Call Parity【考试核心】↔ 2026 Outline: Options
-│   ├── Payoff language
-│   │   ├── 核心公式
-│   │   │   ├── `Call payoff = max(0, ST - X)`
-│   │   │   ├── `Put payoff = max(0, X - ST)`
-│   │   │   ├── `Long call profit = max(0, ST - X) - c0`
-│   │   │   └── `Long put profit = max(0, X - ST) - p0`
-│   │   ├── call payoff `max(0, S_T - X)`; put payoff `max(0, X - S_T)`
-│   │   ├── intrinsic value, time value, moneyness
-│   │   └── payoff excludes premium; profit includes premium and financing context
-│   ├── Parity and synthetics
-│   │   ├── 核心公式
-│   │   │   ├── `c + PV(X) = p + S0`
-│   │   │   └── `c = p + S0 - PV(X)`
-│   │   ├── European parity: call + PV(strike) = put + stock
-│   │   ├── rearrange to synthesize call, put, stock, protective put, fiduciary call
-│   │   └── lower/upper bounds expose arbitrage relationships
+├── M07: 期权与看涨看跌平价 (Options and Put-Call Parity)【考试核心】↔ 2026 Outline: Options
+│   ├── 收益语言 (Payoff Language)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `Call payoff = max(0, ST - X)` 看涨期权到期收益 (call expiry payoff)
+│   │   │   ├── `Put payoff = max(0, X - ST)` 看跌期权到期收益 (put expiry payoff)
+│   │   │   ├── `Long call profit = max(0, ST - X) - c0` 多头看涨期权利润 (long call profit)
+│   │   │   └── `Long put profit = max(0, X - ST) - p0` 多头看跌期权利润 (long put profit)
+│   │   ├── 看涨期权收益 `max(0, S_T - X)`；看跌期权收益 `max(0, X - S_T)` (call payoff; put payoff)
+│   │   ├── 内在价值、时间价值、实值状态 (intrinsic value, time value, moneyness)
+│   │   └── 收益不包括权利金；利润包括权利金和融资成本 (payoff excludes premium; profit includes premium and financing context)
+│   ├── 平价关系与合成头寸 (Parity and Synthetics)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `c + PV(X) = p + S0` 买卖权平价 (put-call parity)
+│   │   │   └── `c = p + S0 - PV(X)` 合成看涨期权 (synthetic long call)
+│   │   ├── 欧式平价：看涨期权 + 行权价现值 = 看跌期权 + 股票 (European parity: call + PV(strike) = put + stock)
+│   │   ├── 移项可合成看涨、看跌、股票、保护性看跌、信托看涨 (rearrange to synthesize call, put, stock, protective put, fiduciary call)
+│   │   └── 上下限揭示套利关系 (lower/upper bounds expose arbitrage relationships)
 │   └── 注意：do not carry European parity unchanged into every American-option fact pattern
 │
-└── M08: One-Period Option Valuation【考试核心】↔ 2026 Outline: Binomial Valuation
-    ├── Replication branch
-    │   ├── 核心公式
-    │   │   ├── `h = (Cu - Cd)/(Su - Sd)`
-    │   │   └── `V0 = hS0 + B`
-    │   ├── compute option payoff in up/down states
-    │   ├── hedge ratio matches state-contingent payoff difference
-    │   └── borrowing/lending completes replicating portfolio
-    ├── Risk-neutral branch
-    │   ├── 核心公式
-    │   │   ├── `p* = [(1+r)-d]/(u-d)`
-    │   │   └── `V0 = [p*Vu + (1-p*)Vd]/(1+r)`
-    │   ├── derive risk-neutral probability from no-arbitrage growth
-    │   ├── expected risk-neutral payoff discounted at risk-free rate
-    │   └── higher volatility widens state spread and can raise option value
+└── M08: 单期二叉树期权估值 (One-Period Option Valuation)【考试核心】↔ 2026 Outline: Binomial Valuation
+    ├── 复制分支 (Replication Branch)
+    │   ├── 核心公式 (English)
+    │   │   ├── `h = (Cu - Cd)/(Su - Sd)` 对冲比率 (hedge ratio)
+    │   │   └── `V0 = hS0 + B` 复制组合价值 (replicating portfolio value)
+    │   ├── 计算上涨/下跌状态的期权收益 (compute option payoff in up/down states)
+    │   ├── 对冲比率匹配状态依赖收益差异 (hedge ratio matches state-contingent payoff difference)
+    │   └── 借入/贷出完成复制组合 (borrowing/lending completes replicating portfolio)
+    ├── 风险中性分支 (Risk-Neutral Branch)
+    │   ├── 核心公式 (English)
+    │   │   ├── `p* = [(1+r)-d]/(u-d)` 风险中性概率 (risk-neutral probability)
+    │   │   └── `V0 = [p*Vu + (1-p*)Vd]/(1+r)` 单期期权价值 (one-period option value)
+    │   ├── 从无套利增长推导风险中性概率 (derive risk-neutral probability from no-arbitrage growth)
+    │   ├── 风险中性期望收益以无风险利率贴现 (expected risk-neutral payoff discounted at risk-free rate)
+    │   └── 更高波动率扩大状态价差并可能提高期权价值 (higher volatility widens state spread and can raise option value)
     └── 注意：risk-neutral probability is pricing machinery, not the investor's real forecast
 ```
 
@@ -198,16 +198,16 @@ Derivatives (M01-M08)
 
 ```text
 Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations
-└── Contingent claims -> option payoff asymmetry
+├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
+└── Contingent claims -> option payoff asymmetry (中文)
 Uses and Risks
-├── issuer hedge -> financing/operating exposure control
-└── investor exposure -> capital efficiency + leverage discipline
+├── issuer hedge -> financing/operating exposure control (中文)
+└── investor exposure -> capital efficiency + leverage discipline (中文)
 Pricing Spine
-├── no-arbitrage -> replication -> cost of carry
-├── forwards/futures -> forward value and daily settlement
-├── swaps -> bond pair / FRA strip intuition
-└── options -> parity -> binomial valuation
+├── no-arbitrage -> replication -> cost of carry (中文)
+├── forwards/futures -> forward value and daily settlement (中文)
+├── swaps -> bond pair / FRA strip intuition (中文)
+└── options -> parity -> binomial valuation (中文)
 ```
 
 ---
