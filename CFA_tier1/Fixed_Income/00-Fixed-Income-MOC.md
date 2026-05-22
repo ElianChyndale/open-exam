@@ -47,199 +47,199 @@ tags:
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 |
-|------|------|------|--------|
-| M01 | Instrument Features and Cash Flows | 概念 | indenture, covenants, contingency provisions |
-| M02 | Issuance, Trading, and Funding Markets | 概念 | primary/secondary, repos, government vs corporate |
-| M03 | Bond Valuation: Prices and Yields | 计算 | clean/full price, accrued interest, matrix pricing |
-| M04 | Fixed-Rate Yield and Spread Measures | 计算 | YTM, annual yield conversion, spread measures |
-| M05 | Floating-Rate and Money Market Measures | 计算 | FRN spreads, discount yield, MMY |
-| M06 | Spot, Par, and Forward Curves | 计算 | curve comparison, spot discounting, forwards |
-| M07 | Interest Rate Risk and Return | 计算+策略 | return sources, horizon, Macaulay duration |
-| M08 | Yield-Based Duration and Convexity | 计算 | modified duration, money duration, PVBP, convexity |
-| M09 | Curve-Based and Empirical Risk | 概念+计算 | effective duration, key rate duration |
-| M10 | Credit Risk | 概念 | PD, LGD, ratings, spread volatility |
-| M11 | Government and Corporate Credit Analysis | 概念+计算 | sovereign factors, coverage, leverage, priority |
-| M12 | Securitization Foundations | 概念 | parties, benefits, structure |
-| M13 | ABS and Credit Enhancement | 概念 | covered bonds, internal/external enhancement |
-| M14 | MBS and CMO Structures | 概念 | prepayment, contraction/extension, tranche cash flows |
+| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
+|------|------|------|--------|----------|
+| M01 | Instrument Features and Cash Flows | 概念 | indenture, covenants, contingency provisions | [[M01-Instrument-Features]] |
+| M02 | Issuance, Trading, and Funding Markets | 概念 | primary/secondary, repos, government vs corporate | [[M02-Issuance-and-Trading]] |
+| M03 | Bond Valuation: Prices and Yields | 计算 | clean/full price, accrued interest, matrix pricing | [[M03-Bond-Valuation]] |
+| M04 | Fixed-Rate Yield and Spread Measures | 计算 | YTM, annual yield conversion, spread measures | [[M04-Yield-and-Spread-Measures]] |
+| M05 | Floating-Rate and Money Market Measures | 计算 | FRN spreads, discount yield, MMY | [[M05-Floating-Rate-and-Money-Market]] |
+| M06 | Spot, Par, and Forward Curves | 计算 | curve comparison, spot discounting, forwards | [[M06-Spot-Par-and-Forward-Curves]] |
+| M07 | Interest Rate Risk and Return | 计算+策略 | return sources, horizon, Macaulay duration | [[M07-Interest-Rate-Risk]] |
+| M08 | Yield-Based Duration and Convexity | 计算 | modified duration, money duration, PVBP, convexity | [[M08-Duration-and-Convexity]] |
+| M09 | Curve-Based and Empirical Risk | 概念+计算 | effective duration, key rate duration | [[M09-Curve-Based-and-Empirical-Risk]] |
+| M10 | Credit Risk | 概念 | PD, LGD, ratings, spread volatility | [[M10-Credit-Risk]] |
+| M11 | Government and Corporate Credit Analysis | 概念+计算 | sovereign factors, coverage, leverage, priority | [[M11-Government-and-Corporate-Credit]] |
+| M12 | Securitization Foundations | 概念 | parties, benefits, structure | [[M12-Securitization-Foundations]] |
+| M13 | ABS and Credit Enhancement | 概念 | covered bonds, internal/external enhancement | [[M13-ABS-and-Credit-Enhancement]] |
+| M14 | MBS and CMO Structures | 概念 | prepayment, contraction/extension, tranche cash flows | [[M14-MBS-and-CMO]] |
 
 ---
 
-## Fixed Income 核心知识树
+## Fixed Income 核心知识树 (Core Knowledge Tree)
 
 ```text
-Fixed Income (M01-M14)
+固定收益 (Fixed Income) (M01-M14)
 │
-├── M01: Instrument Features and Cash Flows【考试核心】↔ 2026 Outline P18
-│   ├── Contract anatomy
-│   │   ├── issuer / par / coupon / maturity / currency / seniority
-│   │   ├── bond indenture: legal promises, payment terms, covenants
-│   │   └── affirmative covenants vs negative covenants【考试陷阱】
-│   ├── Cash-flow structures
-│   │   ├── fixed-rate / floating-rate / zero-coupon / amortizing
-│   │   ├── inflation-linked / step-up / deferred coupon intuition
-│   │   └── contingency provisions: callable benefits issuer; putable benefits investor
+├── M01: 工具特征与现金流 (Instrument Features and Cash Flows)【考试核心】↔ 2026 Outline P18
+│   ├── 合同解剖 (Contract Anatomy)
+│   │   ├── 发行人/面值/票息/期限/货币/优先级 (issuer/par/coupon/maturity/currency/seniority)
+│   │   ├── 债券契约：法律承诺、支付条款、契约条款 (bond indenture: legal promises, payment terms, covenants)
+│   │   └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】
+│   ├── 现金流结构 (Cash-Flow Structures)
+│   │   ├── 固定利率/浮动利率/零息/摊还债券 (fixed-rate/floating-rate/zero-coupon/amortizing)
+│   │   ├── 通胀挂钩/递增票息/递延票息 (inflation-linked/step-up/deferred coupon)
+│   │   └── 或有条款：可赎回利于发行人，可回售利于投资者 (contingency provisions: callable benefits issuer; putable benefits investor)
 │   └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变
 │
-├── M02: Issuance, Trading, and Funding Markets【考试核心】↔ 2026 Outline P18-P19
-│   ├── Market map
-│   │   ├── money market vs capital market; sovereign vs quasi-government vs corporate
-│   │   ├── primary issuance vs secondary trading; dealer market liquidity
-│   │   └── fixed-income indexes: maturity, issuer, credit, currency segmentation
-│   ├── Corporate funding
-│   │   ├── bank loans / commercial paper / repos / bonds
-│   │   ├── repo = collateralized financing with haircut and counterparty exposure
-│   │   └── investment-grade vs high-yield access and spread behavior
+├── M02: 发行、交易与融资市场 (Issuance, Trading, and Funding Markets)【考试核心】↔ 2026 Outline P18-P19
+│   ├── 市场地图 (Market Map)
+│   │   ├── 货币市场 vs 资本市场；主权债 vs 准政府债 vs 公司债 (money market vs capital market; sovereign vs quasi-government vs corporate)
+│   │   ├── 一级发行 vs 二级交易；做市商市场流动性 (primary issuance vs secondary trading; dealer market liquidity)
+│   │   └── 固定收益指数：期限、发行人、信用、货币细分 (fixed-income indexes: maturity, issuer, credit, currency segmentation)
+│   ├── 公司融资 (Corporate Funding)
+│   │   ├── 银行贷款/商业票据/回购/债券 (bank loans/commercial paper/repos/bonds)
+│   │   ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure)
+│   │   └── 投资级 vs 高收益债的融资渠道与利差行为 (investment-grade vs high-yield access and spread behavior)
 │   └── 注意：repo 看起来像 sale-and-repurchase，经济本质常按融资理解
 │
-├── M03: Bond Valuation: Prices and Yields【考试核心】↔ 2026 Outline P19
-│   ├── Price engine
-│   │   ├── 核心公式
-│   │   │   ├── `P = Σ C/(1+y/m)^t + FV/(1+y/m)^N`
-│   │   │   └── `Full Price = Clean Price + Accrued Interest`
-│   │   ├── bond value = coupon PV + principal PV
-│   │   ├── discount / premium / par relation to coupon rate and YTM
-│   │   └── longer maturity + lower coupon -> price more sensitive to yield change
-│   ├── Trading price conventions
-│   │   ├── full price = clean price + accrued interest【考试核心】
-│   │   ├── between-coupon-date pricing uses fractional period handling
-│   │   └── matrix pricing estimates yield/price for illiquid bonds
+├── M03: 债券估值：价格与收益率 (Bond Valuation: Prices and Yields)【考试核心】↔ 2026 Outline P19
+│   ├── 定价引擎 (Pricing Engine)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 债券定价公式: `P = Σ C/(1+y/m)^t + FV/(1+y/m)^N`
+│   │   │   └── 全价公式: `Full Price = Clean Price + Accrued Interest`
+│   │   ├── 债券价值 = 票息现值 + 本金现值 (bond value = coupon PV + principal PV)
+│   │   ├── 折价/溢价/平价与票息率及 YTM 的关系 (discount/premium/par relation to coupon rate and YTM)
+│   │   └── 期限越长、票息越低 -> 价格对收益率变动越敏感 (longer maturity + lower coupon -> price more sensitive to yield change)
+│   ├── 交易价格惯例 (Trading Price Conventions)
+│   │   ├── 全价 = 净价 + 应计利息 (full price = clean price + accrued interest)【考试核心】
+│   │   ├── 票息日间定价使用分数期处理 (between-coupon-date pricing uses fractional period handling)
+│   │   └── 矩阵定价估算非流动性债券的收益率/价格 (matrix pricing estimates yield/price for illiquid bonds)
 │   └── 注意：quoted clean price 是报价习惯，不是买方最终 cash paid【考试陷阱】
 │
-├── M04: Fixed-Rate Yield and Spread Measures【考试核心】↔ 2026 Outline P19
-│   ├── Yield lens
-│   │   ├── YTM is IRR under promised cash flows and reinvestment assumptions
-│   │   ├── current yield captures coupon income only
-│   │   └── annual yield conversion depends on compounding frequency
-│   ├── Spread lens
-│   │   ├── government benchmark spread / interpolated spread / G-spread intuition
-│   │   ├── spread embeds credit, liquidity, option, tax, technical factors
-│   │   └── price and yield move inversely for option-free fixed-rate bonds
+├── M04: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)【考试核心】↔ 2026 Outline P19
+│   ├── 收益率视角 (Yield Lens)
+│   │   ├── YTM 是承诺现金流和再投资假设下的 IRR (YTM is IRR under promised cash flows and reinvestment assumptions)
+│   │   ├── 当期收益率仅捕捉票息收入 (current yield captures coupon income only)
+│   │   └── 年化收益率转换取决于复利频率 (annual yield conversion depends on compounding frequency)
+│   ├── 利差视角 (Spread Lens)
+│   │   ├── 国债基准利差/插值利差/G-利差 (government benchmark spread/interpolated spread/G-spread)
+│   │   ├── 利差包含信用、流动性、期权、税收、技术面因素 (spread embeds credit, liquidity, option, tax, technical factors)
+│   │   └── 无期权固定利率债券的价格与收益率呈反向关系 (price and yield move inversely for option-free fixed-rate bonds)
 │   └── 注意：same YTM 不代表 same value if timing/risk structure differs
 │
-├── M05: Floating-Rate and Money Market Measures【考试核心】↔ 2026 Outline P19
-│   ├── Floating-rate instruments
-│   │   ├── 核心公式
-│   │   │   ├── `BDY = (FV - P)/FV x 360/t`
-│   │   │   ├── `MMY = (FV - P)/P x 360/t`
-│   │   │   └── `BEY = (FV - P)/P x 365/t`
-│   │   ├── reference rate + quoted margin; reset mitigates but does not erase rate risk
-│   │   ├── discount margin connects price away from par with required spread
-│   │   └── credit deterioration can push FRN below par despite resets
-│   ├── Money market instruments
-│   │   ├── discount basis vs add-on basis
-│   │   ├── bank discount yield vs money market yield vs bond equivalent yield
-│   │   └── denominator matters: par or purchase price; 360-day or 365-day year
-│   └── 注意：money market quotes love denominator traps more than they love elegance
+├── M05: 浮动利率与货币市场指标 (Floating-Rate and Money Market Measures)【考试核心】↔ 2026 Outline P19
+│   ├── 浮动利率工具 (Floating-Rate Instruments)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 银行贴现收益率: `BDY = (FV - P)/FV x 360/t`
+│   │   │   ├── 货币市场收益率: `MMY = (FV - P)/P x 360/t`
+│   │   │   └── 债券等价收益率: `BEY = (FV - P)/P x 365/t`
+│   │   ├── 参考利率 + 报价利差；重置缓释但未消除利率风险 (reference rate + quoted margin; reset mitigates but does not erase rate risk)
+│   │   ├── 贴现利差连接偏离面值的价格与所需利差 (discount margin connects price away from par with required spread)
+│   │   └── 信用恶化可在重置后仍使 FRN 低于面值 (credit deterioration can push FRN below par despite resets)
+│   ├── 货币市场工具 (Money Market Instruments)
+│   │   ├── 贴现基础 vs 加息基础 (discount basis vs add-on basis)
+│   │   ├── 银行贴现收益率 vs 货币市场收益率 vs 债券等价收益率 (bank discount yield vs money market yield vs bond equivalent yield)
+│   │   └── 分母陷阱：面值或购买价格；360 天或 365 天 (denominator matters: par or purchase price; 360-day or 365-day year)
+│   └── 注意：货币市场报价偏爱分母陷阱 (money market quotes love denominator traps)
 │
-├── M06: Spot, Par, and Forward Curves【考试核心】↔ 2026 Outline P19
-│   ├── Curve dictionary
-│   │   ├── 核心公式
-│   │   │   ├── `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t`
-│   │   │   ├── `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)`
-│   │   │   └── `Par rate = (1 - DF_N)/Σ_{t=1}^{N} DF_t`
-│   │   ├── spot curve discounts a single cash flow at each maturity
-│   │   ├── par curve gives coupon rate making a bond price equal par
-│   │   └── forward curve implies future borrowing/lending rates from today's curve
-│   ├── Curve calculations
-│   │   ├── spot pricing: each CF gets its maturity-matched spot rate
-│   │   ├── forward from spot; spot from chained forwards
-│   │   └── par rate solved from discount factors
-│   └── 注意：forward rate is an implied no-arbitrage rate, not a guaranteed forecast
+├── M06: 即期、平价与远期曲线 (Spot, Par, and Forward Curves)【考试核心】↔ 2026 Outline P19
+│   ├── 曲线词典 (Curve Dictionary)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 即期定价公式: `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t`
+│   │   │   ├── 远期利率推导: `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)`
+│   │   │   └── 平价利率公式: `Par rate = (1 - DF_N)/Σ_{t=1}^{N} DF_t`
+│   │   ├── 即期曲线以各期限匹配的即期利率贴现单笔现金流 (spot curve discounts a single cash flow at each maturity)
+│   │   ├── 平价曲线给出使债券价格等于面值的票息率 (par curve gives coupon rate making a bond price equal par)
+│   │   └── 远期曲线隐含从当前曲线推算的未来借贷利率 (forward curve implies future borrowing/lending rates from today's curve)
+│   ├── 曲线计算 (Curve Calculations)
+│   │   ├── 即期定价：每笔现金流使用其期限匹配的即期利率 (spot pricing: each CF gets its maturity-matched spot rate)
+│   │   ├── 从即期推导远期；从链式远期推导即期 (forward from spot; spot from chained forwards)
+│   │   └── 从贴现因子求解平价利率 (par rate solved from discount factors)
+│   └── 注意：远期利率是隐含的无套利利率，非确定性预测 (forward rate is an implied no-arbitrage rate, not a guaranteed forecast)
 │
-├── M07: Interest Rate Risk and Return【考试核心】↔ 2026 Outline P19
-│   ├── Return decomposition
-│   │   ├── 核心公式
-│   │   │   ├── `HPR = (coupon + reinvestment income + sale price - purchase price)/purchase price`
-│   │   │   └── `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price`
-│   │   ├── coupon income + reinvestment income + price change
-│   │   ├── pull to par and horizon effect
-│   │   └── realized return differs when sale yield or reinvestment rate changes
-│   ├── Horizon and Macaulay duration
-│   │   ├── investment horizon < Macaulay duration -> price risk dominates
-│   │   ├── investment horizon > Macaulay duration -> reinvestment risk dominates
-│   │   └── Macaulay duration = weighted average time to cash flows
-│   └── 注意：duration matching is about balancing price and reinvestment effects, not freezing price
+├── M07: 利率风险与回报 (Interest Rate Risk and Return)【考试核心】↔ 2026 Outline P19
+│   ├── 回报分解 (Return Decomposition)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 持有期回报率: `HPR = (coupon + reinvestment income + sale price - purchase price)/purchase price`
+│   │   │   └── Macaulay 久期: `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price`
+│   │   ├── 票息收入 + 再投资收入 + 价格变动 (coupon income + reinvestment income + price change)
+│   │   ├── 回归面值与持有期效应 (pull to par and horizon effect)
+│   │   └── 当卖出收益率或再投资率变化时，已实现回报不同 (realized return differs when sale yield or reinvestment rate changes)
+│   ├── 持有期与 Macaulay 久期 (Horizon and Macaulay Duration)
+│   │   ├── 投资期限 < Macaulay 久期 -> 价格风险占主导 (investment horizon < Macaulay duration -> price risk dominates)
+│   │   ├── 投资期限 > Macaulay 久期 -> 再投资风险占主导 (investment horizon > Macaulay duration -> reinvestment risk dominates)
+│   │   └── Macaulay 久期 = 现金流的时间加权平均 (Macaulay duration = weighted average time to cash flows)
+│   └── 注意：久期匹配是关于平衡价格和再投资效应，而非锁定价格 (duration matching is about balancing price and reinvestment effects, not freezing price)
 │
-├── M08: Yield-Based Duration and Convexity【考试核心】↔ 2026 Outline P20
-│   ├── Duration family
-│   │   ├── 核心公式
-│   │   │   ├── `D_mod = D_mac/(1+y/m)`
-│   │   │   ├── `Money Duration = D_mod x Full Price`
-│   │   │   ├── `PVBP ≈ Money Duration x 0.0001`
-│   │   │   └── `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2`
-│   │   ├── modified duration estimates % price sensitivity to yield
-│   │   ├── money duration estimates currency price change per yield unit
-│   │   └── PVBP = price change for 1 bp yield shift
-│   ├── Convexity
-│   │   ├── convexity corrects curvature missed by duration
-│   │   ├── positive convexity helps for symmetric yield moves
-│   │   └── portfolio duration/convexity use value weights with limitations
-│   └── 注意：duration is local and yield-based; do not treat it as a full curve stress test
+├── M08: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)【考试核心】↔ 2026 Outline P20
+│   ├── 久期家族 (Duration Family)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── 修正久期: `D_mod = D_mac/(1+y/m)`
+│   │   │   ├── 货币久期: `Money Duration = D_mod x Full Price`
+│   │   │   ├── PVBP: `PVBP ≈ Money Duration x 0.0001`
+│   │   │   └── 价格变化近似: `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2`
+│   │   ├── 修正久期估计价格对收益率变动的百分比敏感度 (modified duration estimates % price sensitivity to yield)
+│   │   ├── 货币久期估计每单位收益率变动的货币价格变化 (money duration estimates currency price change per yield unit)
+│   │   └── PVBP = 收益率变动 1bp 的价格变化 (PVBP = price change for 1 bp yield shift)
+│   ├── 凸性 (Convexity)
+│   │   ├── 凸性修正久期遗漏的曲率 (convexity corrects curvature missed by duration)
+│   │   ├── 正凸性有利于对称收益率变动 (positive convexity helps for symmetric yield moves)
+│   │   └── 组合久期/凸性使用价值权重但有局限性 (portfolio duration/convexity use value weights with limitations)
+│   └── 注意：久期是局部的、基于收益率的；勿将其视为完整曲线压力测试 (duration is local and yield-based; do not treat it as a full curve stress test)
 │
-├── M09: Curve-Based and Empirical Risk Measures【考试核心】↔ 2026 Outline P20
-│   ├── Option-aware risk
-│   │   ├── effective duration/effective convexity reprice when cash flows may change
-│   │   ├── embedded option changes callability/prepayment behavior
-│   │   └── analytical duration may differ from observed empirical duration
-│   ├── Curve risk
-│   │   ├── key rate duration isolates maturity-bucket sensitivity
-│   │   ├── non-parallel curve shifts break single-duration intuition
-│   │   └── benchmark shift and credit spread shift are separate questions
-│   └── 注意：callable and MBS risk cannot be fully trusted to plain modified duration
+├── M09: 曲线与实证风险度量 (Curve-Based and Empirical Risk Measures)【考试核心】↔ 2026 Outline P20
+│   ├── 期权感知风险 (Option-Aware Risk)
+│   │   ├── 有效久期/有效凸性在现金流可能变化时重新定价 (effective duration/effective convexity reprice when cash flows may change)
+│   │   ├── 嵌入期权改变可赎回/提前还款行为 (embedded option changes callability/prepayment behavior)
+│   │   └── 分析久期可能与观察到的经验久期不同 (analytical duration may differ from observed empirical duration)
+│   ├── 曲线风险 (Curve Risk)
+│   │   ├── 关键利率久期隔离期限区间的敏感度 (key rate duration isolates maturity-bucket sensitivity)
+│   │   ├── 非平行曲线移动打破单一久期直觉 (non-parallel curve shifts break single-duration intuition)
+│   │   └── 基准利率变动与信用利差变动是独立问题 (benchmark shift and credit spread shift are separate questions)
+│   └── 注意：可赎回债券和 MBS 的风险不能完全依赖普通修正久期 (callable and MBS risk cannot be fully trusted to plain modified duration)
 │
-├── M10: Credit Risk【考试核心】↔ 2026 Outline P20
-│   ├── Loss logic
-│   │   ├── expected credit loss intuition = PD x LGD x exposure
-│   │   ├── default risk, downgrade risk, spread risk
-│   │   └── recovery and seniority shape loss severity
-│   ├── Ratings and spread drivers
-│   │   ├── ratings summarize relative credit risk but are not guarantees
-│   │   ├── macro, market, issuer factors move spread level and volatility
-│   │   └── liquidity and optionality can coexist with pure credit spread
-│   └── 注意：a spread widens before default often because required compensation changed
+├── M10: 信用风险 (Credit Risk)【考试核心】↔ 2026 Outline P20
+│   ├── 损失逻辑 (Loss Logic)
+│   │   ├── 预期信用损失 = PD x LGD x 敞口 (expected credit loss intuition = PD x LGD x exposure)
+│   │   ├── 违约风险、降级风险、利差风险 (default risk, downgrade risk, spread risk)
+│   │   └── 回收率与优先级决定损失严重程度 (recovery and seniority shape loss severity)
+│   ├── 评级与利差驱动因素 (Ratings and Spread Drivers)
+│   │   ├── 评级总结相对信用风险但非保证 (ratings summarize relative credit risk but are not guarantees)
+│   │   ├── 宏观、市场、发行人因素影响利差水平与波动性 (macro, market, issuer factors move spread level and volatility)
+│   │   └── 流动性和期权特征可与纯信用利差共存 (liquidity and optionality can coexist with pure credit spread)
+│   └── 注意：利差常在违约前走阔，因为所需补偿发生了变化 (a spread widens before default often because required compensation changed)
 │
-├── M11: Government and Corporate Credit Analysis【考试核心】↔ 2026 Outline P20
-│   ├── Government issuers
-│   │   ├── monetary sovereignty, fiscal flexibility, external position, political risk
-│   │   └── sovereign and non-sovereign issuers do not share identical support assumptions
-│   ├── Corporate issuers
-│   │   ├── business risk + financial risk + governance/structure
-│   │   ├── leverage, coverage, cash-flow stability, refinancing access
-│   │   └── secured vs unsecured; senior vs subordinated; bankruptcy priority
-│   └── 注意：issuer rating and issue rating can differ when collateral and ranking differ
+├── M11: 政府与公司信用分析 (Government and Corporate Credit Analysis)【考试核心】↔ 2026 Outline P20
+│   ├── 政府发行人 (Government Issuers)
+│   │   ├── 货币主权、财政灵活性、外部头寸、政治风险 (monetary sovereignty, fiscal flexibility, external position, political risk)
+│   │   └── 主权与非主权发行人的支持假设不同 (sovereign and non-sovereign issuers do not share identical support assumptions)
+│   ├── 公司发行人 (Corporate Issuers)
+│   │   ├── 商业风险 + 财务风险 + 治理结构 (business risk + financial risk + governance/structure)
+│   │   ├── 杠杆率、覆盖率、现金流稳定性、再融资渠道 (leverage, coverage, cash-flow stability, refinancing access)
+│   │   └── 担保 vs 无担保；优先 vs 次级；破产优先级 (secured vs unsecured; senior vs subordinated; bankruptcy priority)
+│   └── 注意：发行人评级与债项评级在抵押品和清偿顺序不同时可能不同 (issuer rating and issue rating can differ when collateral and ranking differ)
 │
-├── M12: Securitization Foundations【考试核心】↔ 2026 Outline P20
-│   ├── Structure
-│   │   ├── originator -> SPV -> investors; servicer collects cash flows
-│   │   ├── bankruptcy remoteness and asset isolation
-│   │   └── pass-through vs structured allocation intuition
-│   ├── Why securitize
-│   │   ├── funding diversification, liquidity transformation, risk redistribution
-│   │   └── investors gain tailored exposure but face structural complexity
-│   └── 注意：structure changes claim on cash flows; it does not magic away collateral risk
+├── M12: 资产证券化基础 (Securitization Foundations)【考试核心】↔ 2026 Outline P20
+│   ├── 结构 (Structure)
+│   │   ├── 发起人 -> SPV -> 投资者；服务机构收取现金流 (originator -> SPV -> investors; servicer collects cash flows)
+│   │   ├── 破产隔离与资产隔离 (bankruptcy remoteness and asset isolation)
+│   │   └── 过手 vs 结构化分配 (pass-through vs structured allocation intuition)
+│   ├── 为何证券化 (Why Securitize)
+│   │   ├── 融资多元化、流动性转换、风险再分配 (funding diversification, liquidity transformation, risk redistribution)
+│   │   └── 投资者获得定制化敞口但面临结构复杂性 (investors gain tailored exposure but face structural complexity)
+│   └── 注意：结构改变对现金流的请求权，但不能消除抵押品风险 (structure changes claim on cash flows; it does not magic away collateral risk)
 │
-├── M13: ABS and Credit Enhancement【考试核心】↔ 2026 Outline P21
-│   ├── ABS families
-│   │   ├── auto loans, credit cards, receivables, other non-mortgage collateral
-│   │   ├── collateral cash flow pattern determines amortization and trigger risk
-│   │   └── covered bond keeps dual recourse unlike typical ABS isolation
-│   ├── Credit enhancement
-│   │   ├── subordination, overcollateralization, excess spread, reserve accounts
-│   │   └── guarantees/insurance as external support
-│   └── 注意：credit enhancement reallocates loss absorption; it is not free yield
+├── M13: ABS 与信用增级 (ABS and Credit Enhancement)【考试核心】↔ 2026 Outline P21
+│   ├── ABS 类型 (ABS Families)
+│   │   ├── 汽车贷款、信用卡、应收账款、其他非抵押担保品 (auto loans, credit cards, receivables, other non-mortgage collateral)
+│   │   ├── 担保品现金流模式决定摊还与触发风险 (collateral cash flow pattern determines amortization and trigger risk)
+│   │   └── 有担保债券保持双重追索权，不同于典型 ABS 隔离 (covered bond keeps dual recourse unlike typical ABS isolation)
+│   ├── 信用增级 (Credit Enhancement)
+│   │   ├── 分层、超额抵押、超额利差、准备金账户 (subordination, overcollateralization, excess spread, reserve accounts)
+│   │   └── 担保/保险作为外部支持 (guarantees/insurance as external support)
+│   └── 注意：信用增级重新分配损失吸收，而非免费收益 (credit enhancement reallocates loss absorption; it is not free yield)
 │
-└── M14: MBS and CMO Structures【考试核心】↔ 2026 Outline P21
-    ├── Mortgage cash-flow risk
-    │   ├── borrower prepayment creates contraction risk when rates fall
-    │   ├── extension risk grows when rates rise and refinancing slows
-    │   └── passthrough investors receive scheduled principal plus prepayments
-    ├── Structuring
-    │   ├── agency/non-agency distinction; collateral and guarantee analysis
-    │   ├── CMO tranches redistribute prepayment timing
-    │   └── sequential-pay vs planned allocation intuition
-    └── 注意：MBS can show negative convexity because cash flows change against the investor
+└── M14: MBS 与 CMO 结构 (MBS and CMO Structures)【考试核心】↔ 2026 Outline P21
+    ├── 抵押贷款现金流风险 (Mortgage Cash-Flow Risk)
+    │   ├── 借款人提前还款导致利率下降时的收缩风险 (borrower prepayment creates contraction risk when rates fall)
+    │   ├── 利率上升且再融资放缓时展期风险增加 (extension risk grows when rates rise and refinancing slows)
+    │   └── 过手投资者收到计划本金加上提前还款 (passthrough investors receive scheduled principal plus prepayments)
+    ├── 结构化 (Structuring)
+    │   ├── 机构/非机构区分；抵押品与担保分析 (agency/non-agency distinction; collateral and guarantee analysis)
+    │   ├── CMO 分层重新分配提前还款时间 (CMO tranches redistribute prepayment timing)
+    │   └── 顺序偿付 vs 计划分配 (sequential-pay vs planned allocation intuition)
+    └── 注意：MBS 可能呈现负凸性，因为现金流对投资者不利变化 (MBS can show negative convexity because cash flows change against the investor)
 ```
 
 ---
@@ -262,20 +262,20 @@ Fixed Income (M01-M14)
 ## 跨模块关联
 
 ```text
-Instrument Features
-├── Cash-flow structure -> Pricing on coupon dates and between dates
-├── Contingency provisions -> Effective duration / convexity
-└── Seniority and collateral -> Credit analysis
-Pricing and Yield
-├── YTM -> fixed-rate spread measures
-├── Spot curve -> par curve -> forward curve
-└── Holding-period return -> horizon vs Macaulay duration
-Risk Layer
-├── Yield-based duration -> convexity -> portfolio aggregation
-├── Curve-based risk -> key rate duration -> non-parallel shifts
-└── Credit spread -> sovereign/corporate analysis -> issue ranking
-Securitization
-└── SPV structure -> ABS enhancement -> MBS prepayment -> CMO tranching
+工具特征 (Instrument Features)
+├── 现金流结构 -> 票息日与非票息日定价 (Cash-flow structure -> Pricing on coupon dates and between dates)
+├── 或有条款 -> 有效久期/凸性 (Contingency provisions -> Effective duration / convexity)
+└── 优先级与抵押品 -> 信用分析 (Seniority and collateral -> Credit analysis)
+定价与收益率 (Pricing and Yield)
+├── YTM -> 固定利率利差度量 (YTM -> fixed-rate spread measures)
+├── 即期曲线 -> 平价曲线 -> 远期曲线 (Spot curve -> par curve -> forward curve)
+└── 持有期回报 -> 持有期 vs Macaulay 久期 (Holding-period return -> horizon vs Macaulay duration)
+风险分层 (Risk Layer)
+├── 基于收益率的久期 -> 凸性 -> 组合聚合 (Yield-based duration -> convexity -> portfolio aggregation)
+├── 基于曲线的风险 -> 关键利率久期 -> 非平行移动 (Curve-based risk -> key rate duration -> non-parallel shifts)
+└── 信用利差 -> 主权/公司分析 -> 债项排名 (Credit spread -> sovereign/corporate analysis -> issue ranking)
+证券化 (Securitization)
+└── SPV 结构 -> ABS 增级 -> MBS 提前还款 -> CMO 分层 (SPV structure -> ABS enhancement -> MBS prepayment -> CMO tranching)
 ```
 
 ---

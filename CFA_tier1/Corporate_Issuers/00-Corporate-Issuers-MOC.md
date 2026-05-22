@@ -47,120 +47,120 @@ Corporate Issuers 的主线是“公司决策是否真的增加股东价值”�
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 |
-|------|------|------|--------|
-| M01 | Corporate Structures and Ownership | 概念 | legal forms, stakeholders, claims |
-| M02 | Corporate Governance and ESG | 概念+策略 | principal-agent, board, stakeholder conflicts |
-| M03 | Working Capital and Liquidity | 计算+策略 | operating cycle, CCC, liquidity policy |
-| M04 | Capital Investments | 计算 | incremental cash flow, NPV, IRR, real options |
-| M05 | Cost of Capital | 计算 | component costs, WACC, marginal capital |
-| M06 | Capital Structure and Leverage | 概念+计算 | DOL, DFL, debt capacity, trade-offs |
-| M07 | Business Models | 概念 | revenue model, cost structure, scalability |
-| M08 | Capital Allocation Integration | 策略 | governance -> projects -> financing -> value |
+| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
+|------|------|------|--------|----------|
+| M01 | Corporate Structures and Ownership | 概念 | legal forms, stakeholders, claims | [[M01-Corporate-Structures-and-Ownership]] |
+| M02 | Corporate Governance and ESG | 概念+策略 | principal-agent, board, stakeholder conflicts | [[M02-Corporate-Governance-and-ESG]] |
+| M03 | Working Capital and Liquidity | 计算+策略 | operating cycle, CCC, liquidity policy | [[M03-Working-Capital-and-Liquidity]] |
+| M04 | Capital Investments | 计算 | incremental cash flow, NPV, IRR, real options | [[M04-Capital-Investments]] |
+| M05 | Cost of Capital | 计算 | component costs, WACC, marginal capital | [[M05-Cost-of-Capital]] |
+| M06 | Capital Structure and Leverage | 概念+计算 | DOL, DFL, debt capacity, trade-offs | [[M06-Capital-Structure-and-Leverage]] |
+| M07 | Business Models | 概念 | revenue model, cost structure, scalability | [[M07-Business-Models]] |
+| M08 | Capital Allocation Integration | 策略 | governance -> projects -> financing -> value | [[M08-Capital-Allocation-Integration]] |
 
 ---
 
-## Corporate Issuers 核心知识树
+## Corporate Issuers 核心知识树 (Core Knowledge Tree)
 
 ```text
-Corporate Issuers (M01-M08)
+Corporate Issuers (公司金融) (M01-M08)
 │
-├── M01: Corporate Structures and Ownership【考试核心】↔ 2026 Outline: Corporate Structures
-│   ├── Legal form and claims
-│   │   ├── sole proprietorship, partnership, corporation, limited liability form
-│   │   ├── debt contract claims vs equity residual claims
-│   │   └── public ownership separates capital provision from day-to-day control
-│   ├── Stakeholders
-│   │   ├── shareholders, creditors, managers, employees, customers, regulators
-│   │   └── stakeholder objective conflicts become governance problems
+├── M01: Corporate Structures and Ownership (公司结构与所有权)【考试核心】↔ 2026 Outline: Corporate Structures
+│   ├── 法律形式与权益类型 (Legal Form & Claims)
+│   │   ├── 独资/合伙/公司/有限责任 (Sole Proprietorship / Partnership / Corporation / LLC)
+│   │   ├── 债务合约索偿权 vs 股权剩余索偿权 (Debt Contract Claims vs Equity Residual Claims)
+│   │   └── 公众所有权将资本提供与日常控制分离 (Public Ownership Separates Capital from Control)
+│   ├── 利益相关者 (Stakeholders)
+│   │   ├── 股东/债权人/管理层/员工/客户/监管机构 (Shareholders, Creditors, Managers, Regulators, etc.)
+│   │   └── 利益相关者目标冲突 → 治理问题 (Stakeholder Objective Conflicts)
 │   └── 注意：limited liability protects owners from some losses; it does not guarantee firm survival
 │
-├── M02: Corporate Governance and ESG【考试核心】↔ 2026 Outline: Corporate Governance
-│   ├── Agency architecture
-│   │   ├── principal-agent conflict: control, information, incentive mismatch
-│   │   ├── board oversight, committees, compensation, audit, shareholder rights
-│   │   └── weak governance raises capital misallocation and financing risk
-│   ├── ESG and stewardship
-│   │   ├── material ESG factors alter risk, cash flows, cost of capital
-│   │   └── disclosure quality and engagement shape investor assessment
+├── M02: Corporate Governance and ESG (公司治理与 ESG)【考试核心】↔ 2026 Outline: Corporate Governance
+│   ├── 代理架构 (Agency Architecture)
+│   │   ├── 委托-代理冲突：控制权、信息、激励不匹配 (Principal-Agent Conflict: Control, Information, Incentive)
+│   │   ├── 董事会监督/委员会/薪酬/审计/股东权利 (Board Oversight, Committees, Compensation, Audit, Shareholder Rights)
+│   │   └── 弱治理导致资本错配与融资风险上升 (Weak Governance Raises Capital Misallocation & Financing Risk)
+│   ├── ESG 与受托责任 (ESG and Stewardship)
+│   │   ├── 重大 ESG 因素改变风险、现金流与资本成本 (Material ESG Factors Alter Risk, Cash Flows, Cost of Capital)
+│   │   └── 披露质量与投资者沟通影响评估 (Disclosure Quality & Engagement Shape Investor Assessment)
 │   └── 注意：governance is not decorative prose; it changes decisions and discount rates
 │
-├── M03: Working Capital and Liquidity【考试核心】↔ 2026 Outline: Working Capital
-│   ├── Operating cycle
-│   │   ├── 核心公式
-│   │   │   ├── `Operating cycle = DIO + DSO`
-│   │   │   └── `Cash conversion cycle = DIO + DSO - DPO`
-│   │   ├── inventory days + receivable days - payable days = cash conversion cycle
-│   │   ├── receivable quality, inventory policy, supplier terms, seasonality
-│   │   └── liquidity buffers protect operations but tie up capital
-│   ├── Financing policy
-│   │   ├── aggressive policy: lower liquidity cushion, higher rollover pressure
-│   │   ├── conservative policy: more stable, more capital intensive
-│   │   └── short-term financing choice depends on cash-flow predictability
+├── M03: Working Capital and Liquidity (营运资本与流动性)【考试核心】↔ 2026 Outline: Working Capital
+│   ├── 经营周期 (Operating Cycle)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `Operating cycle = DIO + DSO` 经营周期
+│   │   │   └── `Cash conversion cycle = DIO + DSO - DPO` 现金转换周期
+│   │   ├── 存货天数 + 应收天数 - 应付天数 = 现金转换周期 (Cash Conversion Cycle)
+│   │   ├── 应收质量/库存政策/供应商条款/季节性因素 (Receivable Quality, Inventory Policy, Supplier Terms, Seasonality)
+│   │   └── 流动性缓冲保护运营但占用资本 (Liquidity Buffers Protect Operations but Tie Up Capital)
+│   ├── 融资政策 (Financing Policy)
+│   │   ├── 激进政策：低流动性缓冲，高展期压力 (Aggressive Policy: Lower Liquidity Cushion, Higher Rollover Pressure)
+│   │   ├── 保守政策：更稳定，更资本密集 (Conservative Policy: More Stable, More Capital Intensive)
+│   │   └── 短期融资选择取决于现金流可预测性 (Short-Term Financing Choice Depends on Cash-Flow Predictability)
 │   └── 注意：shrinking DIO or DSO helps only if service, sales, and credit quality survive
 │
-├── M04: Capital Investments【考试核心】↔ 2026 Outline: Capital Investments
-│   ├── Cash-flow discipline
-│   │   ├── 核心公式
-│   │   │   ├── `NPV = Σ CFt/(1+r)^t - Initial Outlay`
-│   │   │   ├── `0 = Σ CFt/(1+IRR)^t - Initial Outlay`
-│   │   │   └── `PI = PV of future cash inflows / Initial investment`
-│   │   ├── use incremental after-tax cash flows; ignore sunk costs
-│   │   ├── include opportunity costs, cannibalization, working capital, salvage/tax effects
-│   │   └── independent vs mutually exclusive vs capital-rationed decisions
-│   ├── Decision criteria
-│   │   ├── NPV maximizes value under compatible assumptions
-│   │   ├── IRR, PI, payback, discounted payback answer different questions
-│   │   └── real options: timing, expansion, abandonment, flexibility
+├── M04: Capital Investments (资本投资决策)【考试核心】↔ 2026 Outline: Capital Investments
+│   ├── 现金流纪律 (Cash-Flow Discipline)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `NPV = Σ CFt/(1+r)^t - Initial Outlay` 净现值
+│   │   │   ├── `0 = Σ CFt/(1+IRR)^t - Initial Outlay` 内部收益率
+│   │   │   └── `PI = PV of future cash inflows / Initial investment` 盈利指数
+│   │   ├── 使用增量税后现金流；忽略沉没成本 (Use Incremental After-Tax Cash Flows; Ignore Sunk Costs)
+│   │   ├── 包含机会成本、蚕食效应、营运资本、残值与税务影响 (Include Opportunity Costs, Cannibalization, WC, Salvage/Tax)
+│   │   └── 独立项目 vs 互斥项目 vs 资本约束决策 (Independent vs Mutually Exclusive vs Capital-Rationed)
+│   ├── 决策标准 (Decision Criteria)
+│   │   ├── NPV 在兼容假设下最大化价值 (NPV Maximizes Value Under Compatible Assumptions)
+│   │   ├── IRR、PI、回收期、折现回收期回答不同问题 (IRR, PI, Payback, Discounted Payback Answer Different Questions)
+│   │   └── 实物期权：时机、扩张、放弃、灵活性 (Real Options: Timing, Expansion, Abandonment, Flexibility)
 │   └── 注意：financing cash flows usually do not enter project cash flows when discount rate handles financing
 │
-├── M05: Cost of Capital【考试核心】↔ 2026 Outline: Cost of Capital
-│   ├── Component costs
-│   │   ├── 核心公式
-│   │   │   ├── `After-tax cost of debt = rd(1-T)`
-│   │   │   ├── `Cost of preferred = Dp/Pp`
-│   │   │   ├── `Cost of equity = r_f + β[E(R_M) - r_f]` 或 `D_1/P_0 + g`
-│   │   │   └── `WACC = wd rd(1-T) + wp rp + we re`
-│   │   ├── debt: after-tax required return on borrowing
-│   │   ├── preferred: dividend relative to current price
-│   │   └── common equity: CAPM, dividend growth, or risk-premium logic
-│   ├── WACC construction
-│   │   ├── market-value target weights; marginal cost for new capital
-│   │   ├── project risk must match discount rate
-│   │   └── flotation and issuance frictions affect financing choices
+├── M05: Cost of Capital (资本成本)【考试核心】↔ 2026 Outline: Cost of Capital
+│   ├── 各要素成本 (Component Costs)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `After-tax cost of debt = rd(1-T)` 税后债务成本
+│   │   │   ├── `Cost of preferred = Dp/Pp` 优先股成本
+│   │   │   ├── `Cost of equity = r_f + β[E(R_M) - r_f]` 或 `D_1/P_0 + g` 股权成本
+│   │   │   └── `WACC = wd rd(1-T) + wp rp + we re` 加权平均资本成本
+│   │   ├── 债务：税后借款必要回报率 (Debt: After-Tax Required Return on Borrowing)
+│   │   ├── 优先股：相对于当前价格的股息率 (Preferred: Dividend Relative to Current Price)
+│   │   └── 普通股：CAPM、股息增长或风险溢价逻辑 (Common Equity: CAPM, Dividend Growth, or Risk-Premium)
+│   ├── WACC 构建 (WACC Construction)
+│   │   ├── 市场价值目标权重；新资本的边际成本 (Market-Value Target Weights; Marginal Cost for New Capital)
+│   │   ├── 项目风险必须与折现率匹配 (Project Risk Must Match Discount Rate)
+│   │   └── 发行摩擦影响融资选择 (Flotation and Issuance Frictions Affect Financing Choices)
 │   └── 注意：a company WACC is not a universal hurdle rate for every project【考试陷阱】
 │
-├── M06: Capital Structure and Leverage【考试核心】↔ 2026 Outline: Capital Structure
-│   ├── Leverage mechanics
-│   │   ├── 核心公式
-│   │   │   ├── `DOL = %ΔEBIT / %ΔSales`
-│   │   │   ├── `DFL = %ΔEPS / %ΔEBIT`
-│   │   │   └── `DTL = DOL x DFL`
-│   │   ├── operating leverage from fixed operating costs
-│   │   ├── financial leverage from fixed financing costs
-│   │   └── total leverage transmits sales shock to EPS shock
-│   ├── Structure trade-offs
-│   │   ├── debt tax benefit vs financial distress and loss of flexibility
-│   │   ├── business risk shapes debt capacity
-│   │   └── MM benchmark clarifies which frictions make structure matter
+├── M06: Capital Structure and Leverage (资本结构与杠杆)【考试核心】↔ 2026 Outline: Capital Structure
+│   ├── 杠杆机制 (Leverage Mechanics)
+│   │   ├── 核心公式 (English)
+│   │   │   ├── `DOL = %ΔEBIT / %ΔSales` 经营杠杆度
+│   │   │   ├── `DFL = %ΔEPS / %ΔEBIT` 财务杠杆度
+│   │   │   └── `DTL = DOL x DFL` 总杠杆度
+│   │   ├── 经营杠杆来自固定经营成本 (Operating Leverage from Fixed Operating Costs)
+│   │   ├── 财务杠杆来自固定融资成本 (Financial Leverage from Fixed Financing Costs)
+│   │   └── 总杠杆将销售冲击传导为 EPS 冲击 (Total Leverage Transmits Sales Shock to EPS Shock)
+│   ├── 结构权衡 (Structure Trade-Offs)
+│   │   ├── 债务税盾 vs 财务困境与灵活性损失 (Debt Tax Benefit vs Financial Distress & Loss of Flexibility)
+│   │   ├── 经营风险决定债务容量 (Business Risk Shapes Debt Capacity)
+│   │   └── MM 基准明确了哪些摩擦让结构变得重要 (MM Benchmark Clarifies Which Frictions Make Structure Matter)
 │   └── 注意：higher ROE from leverage may simply be higher risk wearing a nicer jacket
 │
-├── M07: Business Models【考试核心】↔ 2026 Outline: Business Models
-│   ├── Model anatomy
-│   │   ├── value proposition, revenue mechanism, customer economics
-│   │   ├── asset-light vs asset-heavy; recurring vs transactional revenue
-│   │   └── fixed/variable cost mix drives scalability and operating leverage
-│   ├── Risk map
-│   │   ├── network, platform, subscription, manufacturing, financial-intermediation patterns
-│   │   └── model quality shows up in margins, cash conversion, reinvestment needs
+├── M07: Business Models (商业模式)【考试核心】↔ 2026 Outline: Business Models
+│   ├── 模型解剖 (Model Anatomy)
+│   │   ├── 价值主张、收入机制、客户经济学 (Value Proposition, Revenue Mechanism, Customer Economics)
+│   │   ├── 轻资产 vs 重资产；经常性 vs 交易性收入 (Asset-Light vs Asset-Heavy; Recurring vs Transactional Revenue)
+│   │   └── 固定/可变成本结构决定可扩展性与经营杠杆 (Fixed/Variable Cost Mix Drives Scalability & Operating Leverage)
+│   ├── 风险地图 (Risk Map)
+│   │   ├── 网络/平台/订阅/制造/金融中介模式 (Network, Platform, Subscription, Manufacturing, Financial-Intermediation)
+│   │   └── 模型质量体现在利润率、现金转换、再投资需求 (Model Quality Shows in Margins, Cash Conversion, Reinvestment)
 │   └── 注意：fast revenue growth without economic unit value can still destroy value
 │
-└── M08: Capital Allocation Integration【考试核心】↔ Cross-module synthesis
-    ├── Governance -> identify accountable decision makers
-    ├── Working capital -> preserve operating liquidity
-    ├── Capital budgeting -> choose value-adding projects
-    ├── Cost of capital -> charge risk-consistent hurdle rates
-    └── Capital structure -> fund without overloading resilience
+└── M08: Capital Allocation Integration (资本配置整合)【考试核心】↔ Cross-module synthesis
+    ├── 治理 → 明确决策责任人 (Governance -> Identify Accountable Decision Makers)
+    ├── 营运资本 → 维持经营流动性 (Working Capital -> Preserve Operating Liquidity)
+    ├── 资本预算 → 选择增值项目 (Capital Budgeting -> Choose Value-Adding Projects)
+    ├── 资本成本 → 设定风险匹配的最低收益率 (Cost of Capital -> Charge Risk-Consistent Hurdle Rates)
+    └── 资本结构 → 融资而不过度消耗缓冲 (Capital Structure -> Fund Without Overloading Resilience)
 ```
 
 ---
@@ -183,13 +183,13 @@ Corporate Issuers (M01-M08)
 
 ```text
 Governance
-├── affects Capital Allocation Quality
-│   └── Capital Investments
-│       └── WACC
-│           └── Capital Structure
-└── affects Working Capital Discipline
-    └── Liquidity Risk
-        └── Business Model Sustainability
+├── affects Capital Allocation Quality (中文)
+│   └── Capital Investments (中文)
+│       └── WACC (中文)
+│           └── Capital Structure (中文)
+└── affects Working Capital Discipline (中文)
+    └── Liquidity Risk (中文)
+        └── Business Model Sustainability (中文)
 ```
 
 ---

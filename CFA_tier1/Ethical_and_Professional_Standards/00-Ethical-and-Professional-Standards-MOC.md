@@ -46,97 +46,97 @@ Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职�
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 |
-|------|------|------|--------|
-| M01 | Ethics and Trust | 概念 | profession, fiduciary mindset |
-| M02 | Code of Ethics | 概念 | 七条 Code 总纲 |
-| M03 | Standard I | 情境 | law, independence, misrepresentation |
-| M04 | Standard II | 情境 | MNPI, market manipulation |
-| M05 | Standard III | 情境 | duties to clients, suitability, confidentiality |
-| M06 | Standard IV-V | 情境+流程 | duties to employers, diligence, communication, records |
-| M07 | Standard VI-VII | 情境 | conflicts, priority, referral fees, CFA designation |
-| M08 | GIPS | 概念 | composites, discretion, verification |
+| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
+|------|------|------|--------|----------|
+| M01 | Ethics and Trust | 概念 | profession, fiduciary mindset | [[M01-Ethics-Trust-and-Professionalism]] |
+| M02 | Code of Ethics | 概念 | 七条 Code 总纲 | [[M02-Code-of-Ethics]] |
+| M03 | Standard I | 情境 | law, independence, misrepresentation | [[M03-Standard-I-Professionalism]] |
+| M04 | Standard II | 情境 | MNPI, market manipulation | [[M04-Standard-II-Capital-Markets-Integrity]] |
+| M05 | Standard III | 情境 | duties to clients, suitability, confidentiality | [[M05-Standard-III-Duties-to-Clients]] |
+| M06 | Standard IV-V | 情境+流程 | duties to employers, diligence, communication, records | [[M06-Standards-IV-and-V]] |
+| M07 | Standard VI-VII | 情境 | conflicts, priority, referral fees, CFA designation | [[M07-Standards-VI-and-VII]] |
+| M08 | GIPS | 概念 | composites, discretion, verification | [[M08-GIPS]] |
 
 ---
 
-## Ethical and Professional Standards 核心知识树
+## Ethical and Professional Standards 核心知识树 (Core Knowledge Tree)
 
 ```text
-Ethics (M01-M08)
+职业伦理与专业标准 (Ethics and Professional Standards) (M01-M08)
 │
-├── M01: Ethics, Trust, and Professionalism【考试核心】↔ 2026 Outline: Ethics and Trust
-│   ├── Profession logic
-│   │   ├── specialized knowledge + service orientation + trust
-│   │   ├── capital markets rely on credible conduct and information integrity
-│   │   └── ethical action can exceed legal minimum
+├── M01: 伦理、信任与职业精神 (Ethics, Trust, and Professionalism)【考试核心】↔ 2026 Outline: Ethics and Trust
+│   ├── 职业逻辑 (Profession logic)
+│   │   ├── 专业知识 + 服务导向 + 信任 (specialized knowledge + service orientation + trust)
+│   │   ├── 资本市场依赖于可信行为与信息完整性 (capital markets rely on credible conduct and information integrity)
+│   │   └── 道德行为可超越法律最低要求 (ethical action can exceed legal minimum)
 │   └── 注意：law answers "may I"; Ethics often asks "should I"
 │
-├── M02: Code of Ethics【考试核心】↔ 2026 Outline: Code and Standards
-│   ├── Integrity, competence, diligence, respect
-│   ├── client interests and profession integrity above personal interest
-│   ├── independent professional judgment
-│   └── competence maintenance and market integrity mindset
+├── M02: 道德准则 (Code of Ethics)【考试核心】↔ 2026 Outline: Code and Standards
+│   ├── 诚信、能力、勤勉、尊重 (integrity, competence, diligence, respect)
+│   ├── 客户利益与职业诚信高于个人利益 (client interests and profession integrity above personal interest)
+│   ├── 独立专业判断 (independent professional judgment)
+│   └── 保持能力与市场诚信意识 (competence maintenance and market integrity mindset)
 │
-├── M03: Standard I - Professionalism【考试核心】↔ 2026 Outline: Standard I
-│   ├── I(A) Knowledge of the Law
-│   │   ├── know applicable law; follow stricter rule; dissociate from violations
+├── M03: 准则 I：专业精神 (Standard I: Professionalism)【考试核心】↔ 2026 Outline: Standard I
+│   ├── I(A) 了解法律 (Knowledge of the Law)
+│   │   ├── 了解适用法律；遵循更严格规则；远离违规行为 (know applicable law; follow stricter rule; dissociate from violations)
 │   │   └── 注意：ignorance of law is not a comfortable exam defense【考试陷阱】
-│   ├── I(B) Independence and Objectivity
-│   │   ├── gifts, issuer-paid travel, pressure, allocation of benefits
-│   │   └── protect judgment before conflict becomes recommendation
-│   ├── I(C) Misrepresentation
-│   │   ├── plagiarism, guarantees, credentials, model/source representation
-│   └── I(D) Misconduct
-│       └── dishonest conduct that reflects adversely on professional integrity
+│   ├── I(B) 独立性与客观性 (Independence and Objectivity)
+│   │   ├── 礼物、发行人付费差旅、压力、利益分配 (gifts, issuer-paid travel, pressure, allocation of benefits)
+│   │   └── 在冲突影响推荐之前保护判断 (protect judgment before conflict becomes recommendation)
+│   ├── I(C) 虚假陈述 (Misrepresentation)
+│   │   ├── 剽窃、保证、资质、模型/来源陈述 (plagiarism, guarantees, credentials, model/source representation)
+│   └── I(D) 不当行为 (Misconduct)
+│       └── 对职业诚信产生负面影响的不诚实行为 (dishonest conduct that reflects adversely on professional integrity)
 │
-├── M04: Standard II - Integrity of Capital Markets【考试核心】↔ 2026 Outline: Standard II
-│   ├── II(A) Material Nonpublic Information
-│   │   ├── material if reasonable investor would care; nonpublic until disseminated
-│   │   ├── mosaic theory uses public and nonmaterial nonpublic pieces
-│   │   └── firewall/restricted-list practices reduce misuse risk
-│   ├── II(B) Market Manipulation
-│   │   ├── information-based distortion
-│   │   └── transaction-based false price/volume impression
+├── M04: 准则 II：资本市场诚信 (Standard II: Integrity of Capital Markets)【考试核心】↔ 2026 Outline: Standard II
+│   ├── II(A) 重大非公开信息 (Material Nonpublic Information)
+│   │   ├── 若合理投资者会关注则为重大；传播前为非公开 (material if reasonable investor would care; nonpublic until disseminated)
+│   │   ├── 马赛克理论使用公开与非重大非公开信息碎片 (mosaic theory uses public and nonmaterial nonpublic pieces)
+│   │   └── 防火墙/限制清单做法减少滥用风险 (firewall/restricted-list practices reduce misuse risk)
+│   ├── II(B) 市场操纵 (Market Manipulation)
+│   │   ├── 基于信息的扭曲 (information-based distortion)
+│   │   └── 基于交易的虚假价格/成交量假象 (transaction-based false price/volume impression)
 │   └── 注意：a clever trading story does not sanitize false market signals
 │
-├── M05: Standard III - Duties to Clients【考试核心】↔ 2026 Outline: Standard III
-│   ├── III(A) Loyalty, Prudence, and Care
-│   │   ├── client benefit, fiduciary mindset, soft-dollar and proxy awareness
-│   ├── III(B) Fair Dealing
-│   │   ├── recommendation dissemination and trade allocation fairness
-│   ├── III(C) Suitability
-│   │   ├── investigate objectives/constraints; portfolio context matters
-│   ├── III(D) Performance Presentation
-│   │   ├── fair, accurate, complete communication
-│   └── III(E) Preservation of Confidentiality
-│       └── exceptions: client permission, law requirement, illegal activity handling
+├── M05: 准则 III：对客户的义务 (Standard III: Duties to Clients)【考试核心】↔ 2026 Outline: Standard III
+│   ├── III(A) 忠诚、审慎与谨慎 (Loyalty, Prudence, and Care)
+│   │   ├── 客户利益、受托人意识、软美元与代理投票意识 (client benefit, fiduciary mindset, soft-dollar and proxy awareness)
+│   ├── III(B) 公平交易 (Fair Dealing)
+│   │   ├── 推荐传播与交易分配的公平性 (recommendation dissemination and trade allocation fairness)
+│   ├── III(C) 适当性 (Suitability)
+│   │   ├── 调查目标/约束；投资组合背景至关重要 (investigate objectives/constraints; portfolio context matters)
+│   ├── III(D) 业绩陈述 (Performance Presentation)
+│   │   ├── 公平、准确、完整的沟通 (fair, accurate, complete communication)
+│   └── III(E) 保密义务 (Preservation of Confidentiality)
+│       └── 例外：客户许可、法律要求、非法活动处理 (exceptions: client permission, law requirement, illegal activity handling)
 │
-├── M06: Standards IV-V【考试核心】↔ 2026 Outline: Employer and Analysis Duties
-│   ├── Standard IV - Employers
-│   │   ├── loyalty while employed; transition preparation vs solicitation/theft boundary
-│   │   ├── additional compensation needs written consent from all parties
-│   │   └── supervisors need reasonable compliance procedures and follow-up
-│   ├── Standard V - Investment Analysis
-│   │   ├── diligence and reasonable basis before recommendation/action
-│   │   ├── distinguish fact/opinion, risk/limitation, process changes
-│   │   └── retain records supporting analysis and communications
+├── M06: 准则 IV-V (Standards IV-V)【考试核心】↔ 2026 Outline: Employer and Analysis Duties
+│   ├── 准则 IV：对雇主的义务 (Standard IV: Duties to Employers)
+│   │   ├── 在职期间忠诚；离职准备与招揽/窃取界限 (loyalty while employed; transition preparation vs solicitation/theft boundary)
+│   │   ├── 额外报酬需获得各方书面同意 (additional compensation needs written consent from all parties)
+│   │   └── 监督者需有合理的合规程序与跟进 (supervisors need reasonable compliance procedures and follow-up)
+│   ├── 准则 V：投资分析 (Standard V: Investment Analysis)
+│   │   ├── 推荐/行动前需有充分勤勉与合理依据 (diligence and reasonable basis before recommendation/action)
+│   │   ├── 区分事实/观点、风险/局限性、流程变更 (distinguish fact/opinion, risk/limitation, process changes)
+│   │   └── 保留支持分析与沟通的记录 (retain records supporting analysis and communications)
 │   └── 注意：using third-party research does not outsource all reasonable-basis duty
 │
-├── M07: Standards VI-VII【考试核心】↔ 2026 Outline: Conflicts and Responsibilities
-│   ├── VI(A) Disclosure of Conflicts
-│   │   ├── disclose beneficial ownership, compensation, relationships, issuer ties
-│   ├── VI(B) Priority of Transactions
-│   │   ├── client trades before employer/personal trades
-│   ├── VI(C) Referral Fees
-│   │   ├── disclose benefit and arrangement before service impact hides itself
-│   ├── VII(A) Conduct as Participants in CFA Programs
-│   └── VII(B) Reference to CFA Institute, Program, Designation
-│       └── no exaggeration of meaning, guarantee, or partial status
+├── M07: 准则 VI-VII (Standards VI-VII)【考试核心】↔ 2026 Outline: Conflicts and Responsibilities
+│   ├── VI(A) 冲突披露 (Disclosure of Conflicts)
+│   │   ├── 披露实益所有权、报酬、关系、发行人关联 (disclose beneficial ownership, compensation, relationships, issuer ties)
+│   ├── VI(B) 交易优先顺序 (Priority of Transactions)
+│   │   ├── 客户交易优先于雇主/个人交易 (client trades before employer/personal trades)
+│   ├── VI(C) 介绍费 (Referral Fees)
+│   │   ├── 在服务受影响前披露利益与安排 (disclose benefit and arrangement before service impact hides itself)
+│   ├── VII(A) CFA 项目参与者行为 (Conduct as Participants in CFA Programs)
+│   └── VII(B) 引用 CFA 协会、项目、称号 (Reference to CFA Institute, Program, Designation)
+│       └── 不得夸大含义、保证或部分状态 (no exaggeration of meaning, guarantee, or partial status)
 │
-└── M08: GIPS【考试核心】↔ 2026 Outline: GIPS
-    ├── Firm, composite, discretion, compliant presentation
-    ├── input data, calculation methodology, disclosure, presentation discipline
-    ├── verification evaluates firm compliance process, not a magic performance guarantee
+└── M08: 全球投资业绩标准 (GIPS)【考试核心】↔ 2026 Outline: GIPS
+    ├── 公司、组合组、自由裁量权、合规陈述 (firm, composite, discretion, compliant presentation)
+    ├── 输入数据、计算方法、披露、陈述纪律 (input data, calculation methodology, disclosure, presentation discipline)
+    ├── 验证评估公司合规流程，而非业绩保证 (verification evaluates firm compliance process, not a magic performance guarantee)
     └── 注意：GIPS and Standard III(D) meet at honest performance communication
 ```
 
@@ -157,14 +157,14 @@ Ethics (M01-M08)
 ## 跨模块关联
 
 ```text
-Code of Ethics
-└── Standards I-VII
-    ├── Duties to Clients
-    ├── Duties to Employers
-    ├── Capital Market Integrity
-    └── Conflicts / Communication / Records
-        └── GIPS
-            └── Performance Presentation
+道德准则 (Code of Ethics)
+└── 准则 I-VII (Standards I-VII)
+    ├── 对客户的义务 (Duties to Clients)
+    ├── 对雇主的义务 (Duties to Employers)
+    ├── 资本市场诚信 (Capital Market Integrity)
+    └── 冲突 / 沟通 / 记录 (Conflicts / Communication / Records)
+        └── 全球投资业绩标准 (GIPS)
+            └── 业绩陈述 (Performance Presentation)
 ```
 
 ---
