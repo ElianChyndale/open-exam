@@ -1,12 +1,12 @@
 ---
-title: "M03 — Working Capital and Liquidity"
+title: "M04 — Working Capital and Liquidity"
 description: 营运资本与流动性 — 经营周期、现金转换周期、融资政策
-module: M03
-official_module: 4
+module: M04
+official_module: "Module 4: Working Capital and Liquidity"
 subject: Corporate_Issuers
 ---
 
-# M03: Working Capital and Liquidity（营运资本与流动性）
+# M04: Working Capital and Liquidity（营运资本与流动性）
 
 ## 1. 核心知识点
 

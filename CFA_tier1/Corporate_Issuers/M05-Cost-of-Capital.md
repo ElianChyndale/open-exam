@@ -1,12 +1,12 @@
 ---
-title: "M05 — Cost of Capital"
+title: "M06 — Cost of Capital"
 description: 资本成本 — 各要素成本计算、WACC构建、边际资本成本
-module: M05
-official_module: 5
+module: M06
+official_module: "Module 5: Capital Investments and Capital Allocation"
 subject: Corporate_Issuers
 ---
 
-# M05: Cost of Capital（资本成本）
+# M06: Cost of Capital（资本成本）
 
 ## 1. 核心知识点
 

@@ -1,12 +1,12 @@
 ---
 title: "M03 — Bond Valuation"
 description: 债券估值——价格计算、全价与净价、应计利息与矩阵定价（中英双语 CFA 备考）
-module: M03
+module: M06
 subject: Fixed_Income
 official_module: "Module 6: Fixed-Income Bond Valuation: Prices and Yields"
 ---
 
-# M03: 债券估值：价格与收益率 (Bond Valuation: Prices and Yields)
+# M06: 债券估值：价格与收益率 (Bond Valuation: Prices and Yields)
 
 ## 1. 核心知识点
 

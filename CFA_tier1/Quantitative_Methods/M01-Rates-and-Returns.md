@@ -140,12 +140,19 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 - 给定期间收益率，用 `(1 + R)^c - 1` 年化
 - 注意区分"年化收益率"和"有效年利率（EAR）"的等价性
 
+**考点五：Gross → Net → Leverage → Tax 计算顺序**
+- 计算顺序不可逆：**Gross Return → Net Return → Leveraged Return → After-Tax Return**
+- Gross Return 已含 trading expenses，计算 Net Return 时只减 management/administrative fees
+- Leverage 公式 `R_p + (B/E)(R_p - r_D)` 在 Net Return 基础上计算
+- After-tax 在 Leveraged Return 基础上乘以 `(1 - t)`
+- **常见错误**：在 Gross Return 阶段多减 trading expenses，或在 Leverage 之前扣税
+
 ## 4. 易错点提醒
 
-1. **Gross Return 含 trading expenses 不含 mgmt fees**：Gross Return 已经扣除了交易费用，计算 Net Return 时只额外扣除管理费和行政费。
+1. **Gross Return 含 trading expenses，trading expenses 不重复扣除**：Gross Return 已经扣除了交易费用（trading expenses 直接贡献于回报计算），计算 Net Return 时只额外扣除管理费和行政费，不要重复扣减 trading expenses。
 2. **顺序不可逆**：Leverage 和 Tax 的计算顺序为 Gross → Net → Leverage → Tax。
-3. **MWRR 受现金流影响**：MWRR 低不代表经理表现差，可能只是客户在低点赎回。
-4. **连续复利用 e 不用 (1+r)^n**：题目给连续复利利率时，必须用指数函数。
+3. **MWRR 受现金流时点扰动，反映投资者体验；TWRR 几何链接子期间收益，反映经理表现**：MWRR（资金加权收益率）= IRR，受现金流进出时点影响，衡量的是投资者实际体验；TWRR（时间加权收益率）通过在各现金流进出时点拆分组合、几何链接子期间 HPR，衡量的是基金经理的投资管理能力。MWRR 低不代表经理表现差，可能只是客户在低点赎回。
+4. **连续复利收益率必须用 ln(P1/P0) = ln(1+HPR)，不要用 (P1-P0)/P0**：计算连续复利收益率必须用自然对数公式 r_cc = ln(P1/P0) = ln(1+HPR)，不能用简单持有期收益率公式 (P1-P0)/P0。同样地，题目给连续复利利率时，终值计算必须用 e^(rt)，不能用 (1+r)^n。
 5. **Harmonic Mean 的特殊用途**：计算平均价格倍数（如平均 P/E）时要用调和平均。
 6. **几何平均 ≤ 算术平均**：两者差距反映波动率，差距越大说明波动越大。
 

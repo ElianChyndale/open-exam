@@ -1,12 +1,12 @@
 ---
-title: "M04 — Capital Investments"
+title: "M05 — Capital Investments"
 description: 资本投资决策 — NPV、IRR、现金流纪律、实物期权
-module: M04
-official_module: 5
+module: M05
+official_module: "Module 5: Capital Investments and Capital Allocation"
 subject: Corporate_Issuers
 ---
 
-# M04: Capital Investments（资本投资决策）
+# M05: Capital Investments（资本投资决策）
 
 ## 1. 核心知识点
 

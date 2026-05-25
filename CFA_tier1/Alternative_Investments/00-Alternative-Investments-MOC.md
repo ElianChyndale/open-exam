@@ -79,109 +79,109 @@ Alternative Investments (另类投资) (M01-M07)
 ├── M01: Alternative Investment Features, Methods, and Structures (另类投资特征、方式与结构)
 │   ├── 1.1 另类投资的六大特征 (Six Core Features of Alternative Investments)【考试核心】
 │   │   ├── ILL (Illiquidity): 非流动性——买卖困难，周期长
-│   │   │   ├── 各子类别流动性排序（从高到低）↔ PP_P20
-│   │   │   ├── REITs: 高流动性 (publicly traded) ↔ PP_P20 正确答案
-│   │   │   ├── Hedge Funds: 低流动性 (lockup + notice period)
-│   │   │   ├── PE / VC: 极低流动性 (7-10年锁定)
-│   │   │   └── Direct Real Estate: 最 illiquid (买卖困难)
-│   │   ├── LOW (Low Correlation): 与传统资产低相关性——分散化价值
-│   │   ├── HIGH (High Return Potential): 高收益潜力——风险补偿
-│   │   ├── COMPLEX (Complex Structures): 复杂结构——多层实体、嵌套
-│   │   ├── LIMIT (Limited Transparency): 透明度有限——信息披露少
-│   │   └── UNIQUE (Unique Risks): 独特风险——非系统性、难以量化
+│   │   │   ├── 各子类别流动性排序（从高到低）↔ PP_P20 (排序对比)
+│   │   │   ├── REITs: 高流动性 (publicly traded) ↔ PP_P20 正确答案 (公开交易)
+│   │   │   ├── Hedge Funds: 低流动性 (lockup + notice period) (赎回受限)
+│   │   │   ├── PE / VC: 极低流动性 (7-10年锁定) (长期锁仓)
+│   │   │   └── Direct Real Estate: 最 illiquid (买卖困难) (直接持有)
+│   │   ├── LOW (Low Correlation): 与传统资产低相关性——分散化价值 (低相关)
+│   │   ├── HIGH (High Return Potential): 高收益潜力——风险补偿 (高潜力)
+│   │   ├── COMPLEX (Complex Structures): 复杂结构——多层实体、嵌套 (结构复杂)
+│   │   ├── LIMIT (Limited Transparency): 透明度有限——信息披露少 (信息有限)
+│   │   └── UNIQUE (Unique Risks): 独特风险——非系统性、难以量化 (风险独特)
 │   │
 │   ├── 1.2 投资方法 (Investment Approaches)【考试核心】
-│   │   ├── Direct Investment (直接投资): 直接购买资产所有权
-│   │   ├── Indirect Investment (间接投资): 通过基金、ETF投资
+│   │   ├── Direct Investment (直接投资): 直接购买资产所有权 (直接持有)
+│   │   ├── Indirect Investment (间接投资): 通过基金、ETF投资 (间接参与)
 │   │   ├── Fund-of-Funds (FOF): 投资基金的基金 ↔ PP_P63
-│   │   │   ├── 费用: **双重费用**（底层基金费 + FOF管理费，通常额外+1% + 10%激励）
-│   │   │   ├── 赎回条款: **较好**（可协商 better terms）↔ PP_P63
-│   │   │   ├── 分散化: **多样化**（投资多个对冲基金）↔ PP_P63
-│   │   │   └── 门槛: **较低**（小投资者可通过 FOF 参与）↔ PP_P63
+│   │   │   ├── 费用: **双重费用**（底层基金费 + FOF管理费，通常额外+1% + 10%激励） (双重费用)
+│   │   │   ├── 赎回条款: **较好**（可协商 better terms）↔ PP_P63 (可协商)
+│   │   │   ├── 分散化: **多样化**（投资多个对冲基金）↔ PP_P63 (多元配置)
+│   │   │   └── 门槛: **较低**（小投资者可通过 FOF 参与）↔ PP_P63 (门槛低)
 │   │   └── Single Hedge Fund vs FOF 对比 ↔ PP_P63
-│   │       ├── 费用: Single **较低**（一层费用），FOF **较高**（双重费用）
-│   │       ├── 流动性: Single **较差**，FOF **较好**（可协商条款）
-│   │       ├── 分散化: Single **集中**，FOF **分散**
-│   │       └── 尽调: Single **需自行尽调**，FOF **专业团队尽调**
+│   │       ├── 费用: Single **较低**（一层费用），FOF **较高**（双重费用） (费用对比)
+│   │       ├── 流动性: Single **较差**，FOF **较好**（可协商条款） (流动性对比)
+│   │       ├── 分散化: Single **集中**，FOF **分散** (分散程度)
+│   │       └── 尽调: Single **需自行尽调**，FOF **专业团队尽调** (尽调方式)
 │   │
 │   ├── 1.3 费用结构 (Fee Structure)【考试核心】
 │   │   ├── 核心公式 (English)
 │   │   │   ├── `Management Fee = AUM × 管理费率`
 │   │   │   ├── `Incentive Fee = 超额收益 × 提成比例`
 │   │   │   └── `总费用 = 管理费 + 业绩提成` (English)
-│   │   ├── 管理费: X% × AUM（通常 1-2%）
-│   │   ├── 业绩提成: Y% × 超额收益（通常 20%）
+│   │   ├── 管理费: X% × AUM（通常 1-2%） (固定费率)
+│   │   ├── 业绩提成: Y% × 超额收益（通常 20%） (浮动激励)
 │   │   ├── 是否有 Hurdle Rate / High Water Mark?
-│   │   │   ├── Hurdle Rate (门槛收益率): 通常为 6-8%，达到后才收取业绩提成
-│   │   │   └── High Water Mark (高水位线): 只对新创造的收益收取提成，防止重复收费
+│   │   │   ├── Hurdle Rate (门槛收益率): 通常为 6-8%，达到后才收取业绩提成 (门槛收益)
+│   │   │   └── High Water Mark (高水位线): 只对新创造的收益收取提成，防止重复收费 (高水位)
 │   │   ├── 计算步骤: (English)
-│   │   │   ├── 步骤1: 计算当期收益 = 期末NAV - 期初NAV
-│   │   │   ├── 步骤2: 判断是否超过 Hurdle Rate（如有）
-│   │   │   ├── 步骤3: 判断是否超过 High Water Mark（如有）
-│   │   │   └── 步骤4: Incentive Fee = 超额收益 × 提成比例
+│   │   │   ├── 步骤1: 计算当期收益 = 期末NAV - 期初NAV (收益计算)
+│   │   │   ├── 步骤2: 判断是否超过 Hurdle Rate（如有） (门槛判断)
+│   │   │   ├── 步骤3: 判断是否超过 High Water Mark（如有） (水位判断)
+│   │   │   └── 步骤4: Incentive Fee = 超额收益 × 提成比例 (提成计算)
 │   │   └── 总费用 = 管理费 + 业绩提成 (English)
 │   │       └── 注意: FOF有双重费用（底层基金费用 + FOF费用）
 │   │
 │   ├── 1.4 基金组织形式与治理结构 (Fund Legal Structure and Governance)【考试核心】↔ PP_P11
-│   │   ├── 有限合伙制 (Limited Partnership)——另类投资最常用结构
+│   │   ├── 有限合伙制 (Limited Partnership)——另类投资最常用结构 (有限合伙)
 │   │   │   ├── 普通合伙人 (General Partner, GP)
-│   │   │   │   ├── 角色: 基金日常管理和运营决策的唯一责任方 (English)
-│   │   │   │   ├── 出资: 通常仅占 1-2% (English)
-│   │   │   │   ├── 责任: 承担无限责任（现实中通过 LLC 实体隔离）
-│   │   │   │   └── 收益: 管理费 + Carried Interest（业绩分成，通常20%）
+│   │   │   │   ├── 角色: 基金日常管理和运营决策的唯一责任方 (English) (管理运营)
+│   │   │   │   ├── 出资: 通常仅占 1-2% (English) (小额出资)
+│   │   │   │   ├── 责任: 承担无限责任（现实中通过 LLC 实体隔离） (无限责任)
+│   │   │   │   └── 收益: 管理费 + Carried Interest（业绩分成，通常20%） (双重收益)
 │   │   │   └── 有限合伙人 (Limited Partner, LP)
-│   │   │       ├── 角色: 被动投资者 (passive investors) ↔ 核心考点
-│   │   │       ├── 出资: 绝大部分出资（98-99%） (English)
-│   │   │       ├── 责任: 以出资额为限 (limited liability)
-│   │   │       ├── 不参与管理: not involved in management ↔ PP_P11
-│   │   │       ├── 不参与运营: not involved in operations and decisions controlled solely by GP
-│   │   │       ├── 不承担责任: not liable for debts and liabilities
+│   │   │       ├── 角色: 被动投资者 (passive investors) ↔ 核心考点 (被动投资)
+│   │   │       ├── 出资: 绝大部分出资（98-99%） (English) (主要出资)
+│   │   │       ├── 责任: 以出资额为限 (limited liability) (有限责任)
+│   │   │       ├── 不参与管理: not involved in management ↔ PP_P11 (管理隔离)
+│   │   │       ├── 不参与运营: not involved in operations and decisions controlled solely by GP (运营隔离)
+│   │   │       ├── 不承担责任: not liable for debts and liabilities (债务隔离)
 │   │   │       └── 注意: "Limited"指责任有限，不是权力有限 ↔ PP_P11 陷阱
 │   │   ├── LP的有限参与方式（不丧失有限责任保护）
 │   │   │   ├── Advisory Committee (顾问委员会)
-│   │   │   │   ├── 职能: 审议利益冲突、审批估值政策、审查关联交易 (English)
-│   │   │   │   ├── 性质: 建议性 (advisory)，不具有投资决策权
-│   │   │   │   └── 关键区分: 参与讨论 ≠ 拥有决策权 ↔ PP_P11
+│   │   │   │   ├── 职能: 审议利益冲突、审批估值政策、审查关联交易 (English) (咨询职能)
+│   │   │   │   ├── 性质: 建议性 (advisory)，不具有投资决策权 (建议性质)
+│   │   │   │   └── 关键区分: 参与讨论 ≠ 拥有决策权 ↔ PP_P11 (无权决策)
 │   │   │   └── "No-fault Divorce" 条款
-│   │   │       └── LP 可在特定条件下（如 GP 失职）罢免 GP
+│   │   │       └── LP 可在特定条件下（如 GP 失职）罢免 GP (罢免权)
 │   │   ├── LP过度参与的后果【考试陷阱】
-│   │   │   ├── 若 LP 积极参与管理或运营决策
-│   │   │   ├── 可能失去 limited liability（有限责任保护）
-│   │   │   ├── 面临 unlimited liability（无限责任）
-│   │   │   └── 这是法律上"刺破公司面纱" (Piercing the Corporate Veil) 的风险
+│   │   │   ├── 若 LP 积极参与管理或运营决策 (过度参与)
+│   │   │   ├── 可能失去 limited liability（有限责任保护） (失去保护)
+│   │   │   ├── 面临 unlimited liability（无限责任） (无限风险)
+│   │   │   └── 这是法律上"刺破公司面纱" (Piercing the Corporate Veil) 的风险 (面纱刺破)
 │   │   └── GP 的 Fiduciary Duty（信托责任）
-│   │       ├── Capital Calls 必须按比例公平分配投资机会
-│   │       ├── Follow-on Investments 不得歧视某些 LP
-│   │       └── Side Letters（特殊条款）需透明披露
+│   │       ├── Capital Calls 必须按比例公平分配投资机会 (公平分配)
+│   │       ├── Follow-on Investments 不得歧视某些 LP (禁止歧视)
+│   │       └── Side Letters（特殊条款）需透明披露 (透明披露)
 │   │
 │   ├── 1.5 收益瀑布分配结构 (Waterfall Distribution)【考试核心】↔ PP_P13
 │   │   ├── American Waterfall (美式瀑布) = Deal-by-Deal
-│   │   │   ├── 分配单位: 单个项目 (per-deal / deal-by-deal)
-│   │   │   ├── GP 业绩报酬收取: 每个项目退出时即可收取
-│   │   │   ├── 优势方: GP ↔ PP_P13
-│   │   │   └── 风险: 可能前期多拿，后期需依赖Clawback
+│   │   │   ├── 分配单位: 单个项目 (per-deal / deal-by-deal) (逐笔分配)
+│   │   │   ├── GP 业绩报酬收取: 每个项目退出时即可收取 (逐项计提)
+│   │   │   ├── 优势方: GP ↔ PP_P13 (利GP)
+│   │   │   └── 风险: 可能前期多拿，后期需依赖Clawback (前期超分)
 │   │   ├── European Waterfall (欧式瀑布) = Whole-of-Fund
-│   │   │   ├── 分配单位: 整个基金 (whole fund / aggregate)
-│   │   │   ├── LP 先收回全部出资 + 优先回报后，GP 才能收取业绩报酬
-│   │   │   ├── 优势方: LP ↔ PP_P13
-│   │   │   └── 特点: 更保守，保护LP利益
+│   │   │   ├── 分配单位: 整个基金 (whole fund / aggregate) (整体分配)
+│   │   │   ├── LP 先收回全部出资 + 优先回报后，GP 才能收取业绩报酬 (保护LP)
+│   │   │   ├── 优势方: LP ↔ PP_P13 (利LP)
+│   │   │   └── 特点: 更保守，保护LP利益 (保守分配)
 │   │   └── 回拨条款 (Clawback Provision)
-│   │       ├── 若前期GP多拿了业绩报酬，后期需退还
-│   │       └── 保护 LP 利益，确保整体收益分配公平
+│   │       ├── 若前期GP多拿了业绩报酬，后期需退还 (追回机制)
+│   │       └── 保护 LP 利益，确保整体收益分配公平 (公平保障)
 │   │
 │   └── 1.6 数字资产基础结构 (Digital Asset Foundations)【考试核心】
-│       ├── 层级关系: Tokenization 的底层技术
-│       ├── ICO (首次代币发行) ↔ PP_P70
-│       │   ├── 本质: **融资方式** (Fundraising) **
-│       │   ├── 定义: 公司出售加密代币筹集资金 (English)
-│       │   └── 记忆口诀: "区块链是技术账本了，代币化是过程印本子，ICO是融资卖本子"
+│       ├── 层级关系: Tokenization 的底层技术 (层次关系)
+│       ├── ICO (首次代币发行) ↔ PP_P70 (首次发行)
+│       │   ├── 本质: **融资方式** (Fundraising) ** (融资本质)
+│       │   ├── 定义: 公司出售加密代币筹集资金 (English) (代币融资)
+│       │   └── 记忆口诀: "区块链是技术账本了，代币化是过程印本子，ICO是融资卖本子" (记忆口诀)
 │       ├── 区块链 (Blockchain): 分布式账本技术 (DLT)
-│       │   ├── 去中心化、不可篡改、透明可追溯 (English)
+│       │   ├── 去中心化、不可篡改、透明可追溯 (English) (三大特性)
 │       │   └── 注意: 区块链 ≠ 比特币，比特币只是区块链的应用之一 (English)
 │       └── Tokenization (代币化)
-│           ├── 定义: 将资产权利转化为区块链上的数字代币 (English)
-│           ├── 优势: 提高流动性、降低交易成本、实现 fractional ownership
-│           └── 与ICO区别: Tokenization是过程/技术，ICO是融资事件
+│           ├── 定义: 将资产权利转化为区块链上的数字代币 (English) (资产上链)
+│           ├── 优势: 提高流动性、降低交易成本、实现 fractional ownership (优势概括)
+│           └── 与ICO区别: Tokenization是过程/技术，ICO是融资事件 (本质区别)
 │
 ├── M02: Alternative Investment Performance and Returns (另类投资业绩与回报)
 │   ├── 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】
@@ -191,137 +191,137 @@ Alternative Investments (另类投资) (M01-M07)
 │   │   │   ├── `RVPI = 剩余价值 / 实缴资本`
 │   │   │   ├── `Sortino比率 = (R_p - R_f) / σ_d (下行风险调整收益)`
 │   │   │   └── `夏普比率 = (R_p - R_f) / σ_p (总风险调整收益)`
-│   │   ├── TVPI (总价值倍数, Total Value to Paid-In) = DPI + RVPI
-│   │   │   └── 总价值倍数 = 已分配价值 + 剩余价值 / 实缴资本 (English)
-│   │   ├── DPI (现金回报倍数, Distributed to Paid-In)
-│   │   │   └── 现金回报倍数 = 累计分配 / 实缴资本 (English)
-│   │   ├── RVPI (未实现回报倍数, Residual Value to Paid-In)
-│   │   │   └── 未实现回报倍数 = 剩余价值 / 实缴资本 (English)
-│   │   ├── IRR (内部收益率, Internal Rate of Return)
-│   │   │   └── NPV = 0 的折现率，考虑时间价值
-│   │   ├── Sortino比率 (Sortino Ratio) = (R_p - R_f) / σ_d (下行风险调整收益)
-│   │   │   └── 下行风险调整收益（仅考虑下行波动） (English)
-│   │   └── 夏普比率 (Sharpe Ratio) = (R_p - R_f) / σ_p (总风险调整收益)
-│   │       └── 总风险调整收益（考虑总波动） (English)
+│   │   ├── TVPI (总价值倍数, Total Value to Paid-In) = DPI + RVPI (总回报倍数)
+│   │   │   └── 总价值倍数 = 已分配价值 + 剩余价值 / 实缴资本 (English) (总值指标)
+│   │   ├── DPI (现金回报倍数, Distributed to Paid-In) (现金回报)
+│   │   │   └── 现金回报倍数 = 累计分配 / 实缴资本 (English) (已实现回报)
+│   │   ├── RVPI (未实现回报倍数, Residual Value to Paid-In) (剩余价值)
+│   │   │   └── 未实现回报倍数 = 剩余价值 / 实缴资本 (English) (未实现指标)
+│   │   ├── IRR (内部收益率, Internal Rate of Return) (时间价值)
+│   │   │   └── NPV = 0 的折现率，考虑时间价值 (内部回报)
+│   │   ├── Sortino比率 (Sortino Ratio) = (R_p - R_f) / σ_d (下行风险调整收益) (下行风险)
+│   │   │   └── 下行风险调整收益（仅考虑下行波动） (English) (下行波动)
+│   │   └── 夏普比率 (Sharpe Ratio) = (R_p - R_f) / σ_p (总风险调整收益) (总风险调整)
+│   │       └── 总风险调整收益（考虑总波动） (English) (总波动)
 │   ├── 2.2 J曲线 (J-Curve Dynamics)【考试核心】
-│   │   ├── 定义: PE基金生命周期中收益随时间变化的曲线形态
+│   │   ├── 定义: PE基金生命周期中收益随时间变化的曲线形态 (收益曲线)
 │   │   ├── 早期负收益原因: (English)
-│   │   │   ├── 管理费持续收取（按承诺资本AUM）
-│   │   │   ├── 初期费用、交易成本、设立费用 (English)
-│   │   │   └── 投资尚未成熟，未产生回报，未实现退出 (English)
+│   │   │   ├── 管理费持续收取（按承诺资本AUM） (费用拖累)
+│   │   │   ├── 初期费用、交易成本、设立费用 (English) (初期成本)
+│   │   │   └── 投资尚未成熟，未产生回报，未实现退出 (English) (未成熟期)
 │   │   ├── 后期转正原因: (English)
-│   │   │   ├── 投资标的成熟，价值增长 (English)
-│   │   │   ├── 项目退出（IPO、并购、二级出售）
-│   │   │   └── DPI上升，RVPI下降，TVPI趋于稳定
+│   │   │   ├── 投资标的成熟，价值增长 (English) (价值释放)
+│   │   │   ├── 项目退出（IPO、并购、二级出售） (退出变现)
+│   │   │   └── DPI上升，RVPI下降，TVPI趋于稳定 (指标收敛)
 │   │   └── 不同策略的J曲线:
-│   │       ├── VC: J曲线最深（早期投资，失败率高，回报周期长）
-│   │       ├── LBO: 相对较浅（成熟公司，有现金流，杠杆放大回报）
-│   │       └── Growth Equity: 介于两者之间
+│   │       ├── VC: J曲线最深（早期投资，失败率高，回报周期长） (深J曲线)
+│   │       ├── LBO: 相对较浅（成熟公司，有现金流，杠杆放大回报） (浅J曲线)
+│   │       └── Growth Equity: 介于两者之间 (中J曲线)
 │   └── 2.3 收益平滑 (Smoothed Returns)【考试陷阱】
-│       ├── 原因: 非流动性资产按评估估值 (Appraisal Value) 而非市价 (Market Value)
+│       ├── 原因: 非流动性资产按评估估值 (Appraisal Value) 而非市价 (Market Value) (评估偏差)
 │       ├── 后果: (English)
-│       │   ├── 低估波动率 (Volatility)
-│       │   ├── 低估与市场的相关性 (Correlation)
-│       │   └── 导致风险调整后收益被高估（Sharpe/Sortino偏高）
+│       │   ├── 低估波动率 (Volatility) (低估风险)
+│       │   ├── 低估与市场的相关性 (Correlation) (低估相关)
+│       │   └── 导致风险调整后收益被高估（Sharpe/Sortino偏高） (高估收益)
 │       └── Unsmoothing调整:
-│           ├── 目的: 还原真实波动率 (English)
-│           └── 方法: 对评估收益进行去平滑处理，更接近公开市场价格波动 (English)
+│           ├── 目的: 还原真实波动率 (English) (还原波动)
+│           └── 方法: 对评估收益进行去平滑处理，更接近公开市场价格波动 (English) (去平滑化)
 │
 ├── M03: Private Capital (私人资本)
 │   ├── 3.1 Private Equity (私募股权)【考试核心】
 │   │   ├── LBO (Leveraged Buyout) 杠杆收购
-│   │   │   ├── 资本结构: 60-80%债务 + 20-40%股权 (English)
+│   │   │   ├── 资本结构: 60-80%债务 + 20-40%股权 (English) (高杠杆)
 │   │   │   ├── 回报来源: (English)
-│   │   │   │   ├── 价值创造: 运营改善、收入增长、成本削减 (English)
-│   │   │   │   └── 杠杆放大: 用债务放大股权回报（放大效应） (English)
+│   │   │   │   ├── 价值创造: 运营改善、收入增长、成本削减 (English) (运营改善)
+│   │   │   │   └── 杠杆放大: 用债务放大股权回报（放大效应） (English) (杠杆效应)
 │   │   │   ├── 退出方式: (English)
-│   │   │   │   ├── IPO (首次公开发行)
-│   │   │   │   ├── Secondary Sale (二次出售给另一PE)
-│   │   │   │   ├── Recapitalization (资本重组)
-│   │   │   │   └── Write-off / Liquidation (核销/清算)
+│   │   │   │   ├── IPO (首次公开发行) (上市退出)
+│   │   │   │   ├── Secondary Sale (二次出售给另一PE) (转售退出)
+│   │   │   │   ├── Recapitalization (资本重组) (重组退出)
+│   │   │   │   └── Write-off / Liquidation (核销/清算) (清算退出)
 │   │   │   └── 注意: LBO 债务比例并非固定50%，而是根据目标公司现金流决定
 │   │   ├── VC (Venture Capital) 风险投资
 │   │   │   ├── 投资阶段: (English)
-│   │   │   │   ├── 种子期 (Seed): 最早阶段，概念验证
-│   │   │   │   ├── 早期 (Early): 产品开发、市场初步验证
-│   │   │   │   └── 成长期 (Expansion/Growth): 规模化扩张
+│   │   │   │   ├── 种子期 (Seed): 最早阶段，概念验证 (种子阶段)
+│   │   │   │   ├── 早期 (Early): 产品开发、市场初步验证 (早期阶段)
+│   │   │   │   └── 成长期 (Expansion/Growth): 规模化扩张 (成长阶段)
 │   │   │   ├── 与PE核心区别:
-│   │   │   │   ├── 投资对象: 早期/成长期公司 vs 成熟公司
-│   │   │   │   ├── 资本结构: 极少使用债务 vs 高杠杆
-│   │   │   │   ├── 风险水平: 极高（失败率高）vs 中等
-│   │   │   │   ├── 回报特征: 幂律分布（少数项目贡献大部分回报）vs 较稳定
-│   │   │   │   └── 投资期限: 更长（7-10年+）vs 3-7年
+│   │   │   │   ├── 投资对象: 早期/成长期公司 vs 成熟公司 (对象差异)
+│   │   │   │   ├── 资本结构: 极少使用债务 vs 高杠杆 (杠杆差异)
+│   │   │   │   ├── 风险水平: 极高（失败率高）vs 中等 (风险差异)
+│   │   │   │   ├── 回报特征: 幂律分布（少数项目贡献大部分回报）vs 较稳定 (回报差异)
+│   │   │   │   └── 投资期限: 更长（7-10年+）vs 3-7年 (期限差异)
 │   │   │   └── 注意: VC投资早期公司，PE（LBO）投资成熟公司 ↔ 考试陷阱
 │   │   └── Growth Equity (成长股权)
-│   │       ├── 少数股权投资（不寻求控制权） (English)
-│   │       ├── 投资对象: 已盈利、需扩张资金的成熟公司 (English)
-│   │       └── 风险/回报: 介于VC和LBO之间
+│   │       ├── 少数股权投资（不寻求控制权） (English) (少数股权)
+│   │       ├── 投资对象: 已盈利、需扩张资金的成熟公司 (English) (扩张资金)
+│   │       └── 风险/回报: 介于VC和LBO之间 (中等风险)
 │   │
 │   ├── 3.2 Private Debt (私人债权)【考试核心】
 │   │   ├── Direct Lending (直接借贷)
-│   │   │   ├── 非银行金融机构向中小企业直接放贷 (English)
-│   │   │   └── 特征: 有抵押、有契约保护、收益率高于公开市场债券 (English)
+│   │   │   ├── 非银行金融机构向中小企业直接放贷 (English) (直接贷款)
+│   │   │   └── 特征: 有抵押、有契约保护、收益率高于公开市场债券 (English) (抵押保护)
 │   │   ├── Mezzanine Debt (夹层债务)
-│   │   │   ├── 介于优先债务和股权之间的混合资本 (English)
-│   │   │   ├── 特征: 可转换为股权的期权（Warrants/Equity Kicker）
-│   │   │   └── 回报: 利息 + 股权上行收益，通常12-15% (English)
+│   │   │   ├── 介于优先债务和股权之间的混合资本 (English) (混合资本)
+│   │   │   ├── 特征: 可转换为股权的期权（Warrants/Equity Kicker） (认股权证)
+│   │   │   └── 回报: 利息 + 股权上行收益，通常12-15% (English) (利息加股权)
 │   │   ├── Venture Debt (创业债务)
-│   │   │   ├── 向VC支持的公司提供债务融资
-│   │   │   └── 特征: 通常无抵押，依赖VC背书，利率较高
+│   │   │   ├── 向VC支持的公司提供债务融资 (VC配套债)
+│   │   │   └── 特征: 通常无抵押，依赖VC背书，利率较高 (无抵押)
 │   │   └── 与PE费用结构差异:
-│   │       ├── PE: 2%管理费 + 20%业绩提成（Carried Interest）
-│   │       └── Private Debt: 通常只收管理费（1-1.5%），极少有业绩提成
+│   │       ├── PE: 2%管理费 + 20%业绩提成（Carried Interest） (2/20结构)
+│   │       └── Private Debt: 通常只收管理费（1-1.5%），极少有业绩提成 (纯管理费)
 │   │
 │   └── 3.3 PE与Private Debt对比 (PE vs Private Debt Comparison)（见核心对比专题）
 │
 ├── M04: Real Estate and Infrastructure (房地产与基础设施)
 │   ├── 4.1 房地产 (Real Estate)【考试核心】
 │   │   ├── 投资形式 (English)
-│   │   │   ├── Direct Investment: 直接购买物业所有权
+│   │   │   ├── Direct Investment: 直接购买物业所有权 (直接持有)
 │   │   │   └── 间接投资 (Indirect Investment)
 │   │   │       ├── REITs (房地产投资信托基金, Real Estate Investment Trusts)
-│   │   │       │   ├── Equity REITs: 拥有并经营物业，主要收入来自租金
-│   │   │       │   ├── Mortgage REITs: 投资房地产抵押贷款/抵押支持证券
-│   │   │       │   └── Hybrid REITs: 两者结合
-│   │   │       └── 流动性: REITs > Direct Real Estate（公开交易 vs 非流动）
+│   │   │       │   ├── Equity REITs: 拥有并经营物业，主要收入来自租金 (权益型)
+│   │   │       │   ├── Mortgage REITs: 投资房地产抵押贷款/抵押支持证券 (抵押型)
+│   │   │       │   └── Hybrid REITs: 两者结合 (混合型)
+│   │   │       └── 流动性: REITs > Direct Real Estate（公开交易 vs 非流动） (流动性对比)
 │   │   ├── 估值方法 (English)
 │   │   │   ├── 核心公式 (English)
 │   │   │   │   ├── `NOI = 租金收入 - 运营费用`
 │   │   │   │   ├── `资本化率 (Cap Rate) = NOI / Property Value`
 │   │   │   │   └── `物业价值 (Property Value) = NOI / Cap Rate`
 │   │   │   ├── Income Approach (收益法)——最常用
-│   │   │   │   ├── NOI (Net Operating Income) = 租金收入 - 运营费用（不含折旧和利息）
-│   │   │   │   ├── Cap Rate (资本化率) = NOI / Property Value
-│   │   │   │   └── 物业价值 (Property Value) = NOI / 资本化率 (Cap Rate)
+│   │   │   │   ├── NOI (Net Operating Income) = 租金收入 - 运营费用（不含折旧和利息） (净营运收入)
+│   │   │   │   ├── Cap Rate (资本化率) = NOI / Property Value (资本化率)
+│   │   │   │   └── 物业价值 (Property Value) = NOI / 资本化率 (Cap Rate) (估值公式)
 │   │   │   ├── Cost Approach (成本法)
-│   │   │   │   └── 土地价值 + 重置成本 - 折旧 (English)
+│   │   │   │   └── 土地价值 + 重置成本 - 折旧 (English) (重置成本)
 │   │   │   └── Sales Comparison Approach (市场比较法)
-│   │   │       └── 参照类似物业近期交易价格调整 (English)
+│   │   │       └── 参照类似物业近期交易价格调整 (English) (市场比较)
 │   │   ├── Cap Rate 驱动因素
-│   │   │   ├── 利率环境: 利率↑ → Cap Rate↑ → Value↓
-│   │   │   ├── 风险溢价: 风险↑ → Cap Rate↑ → Value↓
-│   │   │   └── 增长预期: 增长↑ → Cap Rate↓ → Value↑
+│   │   │   ├── 利率环境: 利率↑ → Cap Rate↑ → Value↓ (利率影响)
+│   │   │   ├── 风险溢价: 风险↑ → Cap Rate↑ → Value↓ (风险影响)
+│   │   │   └── 增长预期: 增长↑ → Cap Rate↓ → Value↑ (增长影响)
 │   │   └── 房地产周期 (English)
-│   │       ├── 复苏期、扩张期、过热期、衰退期 (English)
-│   │       └── 与宏观经济、利率、就业密切相关 (English)
+│   │       ├── 复苏期、扩张期、过热期、衰退期 (English) (四周期)
+│   │       └── 与宏观经济、利率、就业密切相关 (English) (宏观联动)
 │   │
 │   └── 4.2 基础设施 (Infrastructure)【考试核心】
-│       ├── 定义: 提供公共服务的长期实物资产（公路、港口、电网、通信塔等） (English)
+│       ├── 定义: 提供公共服务的长期实物资产（公路、港口、电网、通信塔等） (English) (公共服务)
 │       ├── 投资形式: (English)
-│       │   ├── 直接投资 (Direct Ownership)
-│       │   ├── Listed Infrastructure Funds (上市基础设施基金)
-│       │   └── Unlisted Funds / PPP (公私合营)
+│       │   ├── 直接投资 (Direct Ownership) (直接拥有)
+│       │   ├── Listed Infrastructure Funds (上市基础设施基金) (上市基金)
+│       │   └── Unlisted Funds / PPP (公私合营) (公私合营)
 │       ├── 棕地 (Brownfield) vs 绿地 (Greenfield)
-│       │   ├── Brownfield: 现有运营资产，有稳定现金流
-│       │   │   ├── 风险: 低（运营成熟） (English)
-│       │   │   ├── 回报: 8-10%（稳定、防御性） (English)
-│   │   │   └── 特征: 购买既有资产，改造/运营优化 (English)
-│   │   ├── Greenfield: 新建项目，从无到有
-│   │   │   ├── 风险: 高（建设风险、监管风险、需求风险） (English)
-│   │   │   ├── 回报: 12-15%（高风险高回报） (English)
-│   │   │   └── 特征: 开发新建，周期长，资本投入大 (English)
+│       │   ├── Brownfield: 现有运营资产，有稳定现金流 (稳定运营)
+│       │   │   ├── 风险: 低（运营成熟） (English) (低风险)
+│       │   │   ├── 回报: 8-10%（稳定、防御性） (English) (稳健回报)
+│   │   │   └── 特征: 购买既有资产，改造/运营优化 (English) (购买优化)
+│   │   ├── Greenfield: 新建项目，从无到有 (新建项目)
+│   │   │   ├── 风险: 高（建设风险、监管风险、需求风险） (English) (高风险)
+│   │   │   ├── 回报: 12-15%（高风险高回报） (English) (高回报)
+│   │   │   └── 特征: 开发新建，周期长，资本投入大 (English) (开发建设)
 │   │   └── 注意: 棕地风险低回报低，绿地风险高回报高 ↔ 考试陷阱 (English)
-│       └── 与LBO关系: 基础设施收购常用杠杆（稳定现金流适合举债）
+│       └── 与LBO关系: 基础设施收购常用杠杆（稳定现金流适合举债） (杠杆收购)
 │
 ├── M05: Natural Resources (自然资源)
 │   └── 5.1 商品期货 (Commodity Futures)【考试核心】
@@ -331,95 +331,95 @@ Alternative Investments (另类投资) (M01-M07)
 │       │   │   ├── `展期收益 (Roll Yield) = (近期期货 - 远期期货) / 近期期货`
 │       │   │   └── `持有成本率 = ln[F_0(T)/S_0] / T = r + s - y`
 │       │   ├── 期货价格 (Futures Price) = 现货价格 × e^{((r + s - y) × T)}
-│       │   │   ├── r = 无风险利率
-│       │   │   ├── s = 存储成本 (Storage Cost)
-│       │   │   └── y = 便利收益 (Convenience Yield)
+│       │   │   ├── r = 无风险利率 (无风险利率)
+│       │   │   ├── s = 存储成本 (Storage Cost) (存储成本)
+│       │   │   └── y = 便利收益 (Convenience Yield) (便利收益)
 │       │   └── 持有成本理论 (Cost of Carry)
 │       ├── Contango (正向市场) vs Backwardation (反向市场)
 │       │   ├── Contango (正向市场): 期货价格 > 现货价格 (Futures Price > Spot Price)
-│       │   │   ├── Roll Yield: 负 (不利)
-│       │   │   ├── 驱动: 存储成本高 / 便利收益低 (English)
-│       │   │   └── 投资者影响: 长期持期货有损耗（需不断展期亏损） (English)
+│       │   │   ├── Roll Yield: 负 (不利) (负展期)
+│       │   │   ├── 驱动: 存储成本高 / 便利收益低 (English) (存储高)
+│       │   │   └── 投资者影响: 长期持期货有损耗（需不断展期亏损） (English) (长期损耗)
 │       │   └── Backwardation (反向市场): 期货价格 < 现货价格 (Futures Price < Spot Price)
-│       │       ├── Roll Yield: 正 (有利)
-│       │       ├── 驱动: 便利收益高（现货稀缺） (English)
-│       │       └── 投资者影响: 长期持期货有收益（展期获利） (English)
+│       │       ├── Roll Yield: 正 (有利) (正展期)
+│       │       ├── 驱动: 便利收益高（现货稀缺） (English) (现货稀缺)
+│       │       └── 投资者影响: 长期持期货有收益（展期获利） (English) (展期获利)
 │       ├── Roll Yield 计算
-│       │   ├── 公式: (Near Future - Far Future) / Near Future
-│       │   └── 本质: 展期收益/成本，由期限结构决定 (English)
+│       │   ├── 公式: (Near Future - Far Future) / Near Future (展期公式)
+│       │   └── 本质: 展期收益/成本，由期限结构决定 (English) (期限结构)
 │       └── 商品期货投资策略 (English)
-│           ├── 被动投资: 指数跟踪（考虑期限结构影响） (English)
-│           └── 主动投资: 期限结构套利、现货-期货套利 (English)
+│           ├── 被动投资: 指数跟踪（考虑期限结构影响） (English) (被动跟踪)
+│           └── 主动投资: 期限结构套利、现货-期货套利 (English) (主动套利)
 │
 ├── M06: Hedge Funds (对冲基金)
 │   ├── 6.1 对冲基金特征 (Hedge Fund Characteristics)
-│   │   ├── 流动性: 相对PE/VC较高，但有 Lockup Period (锁定期，通常1-3年) + Notice Period (通知期，30-90天)
-│   │   ├── 透明度: 相对其他另类投资较高（需定期披露持仓），但仍低于传统共同基金 (English)
-│   │   ├── 费用结构: 通常 2/20（2%管理费 + 20%业绩提成），部分新基金降低至 1/10 (English)
-│   │   └── 高水位线: 普遍采用，保护投资者 (English)
+│   │   ├── 流动性: 相对PE/VC较高，但有 Lockup Period (锁定期，通常1-3年) + Notice Period (通知期，30-90天) (赎回受限)
+│   │   ├── 透明度: 相对其他另类投资较高（需定期披露持仓），但仍低于传统共同基金 (English) (半透明)
+│   │   ├── 费用结构: 通常 2/20（2%管理费 + 20%业绩提成），部分新基金降低至 1/10 (English) (2/20结构)
+│   │   └── 高水位线: 普遍采用，保护投资者 (English) (高水位)
 │   ├── 6.2 对冲基金策略 (Hedge Fund Strategies)【考试核心】
 │   │   ├── Equity Long/Short (股票多空)
-│   │   │   ├── 同时持有多头和空头头寸，降低市场风险敞口 (English)
-│   │   │   ├── 风险: 中等，与股市相关性 0.5-0.7 (English)
-│   │   │   └── 回报: 8-12% (English)
+│   │   │   ├── 同时持有多头和空头头寸，降低市场风险敞口 (English) (多空对冲)
+│   │   │   ├── 风险: 中等，与股市相关性 0.5-0.7 (English) (中等风险)
+│   │   │   └── 回报: 8-12% (English) (中等回报)
 │   │   ├── Global Macro (全球宏观)
-│   │   │   ├── 基于宏观经济趋势，跨资产类别（外汇、利率、股指） (English)
-│   │   │   ├── 风险: 高，与股市相关性 0.2-0.4 (English)
-│   │   │   └── 回报: 10-15% (English)
+│   │   │   ├── 基于宏观经济趋势，跨资产类别（外汇、利率、股指） (English) (宏观驱动)
+│   │   │   ├── 风险: 高，与股市相关性 0.2-0.4 (English) (高风险)
+│   │   │   └── 回报: 10-15% (English) (高回报)
 │   │   ├── Event Driven (事件驱动)
-│   │   │   ├── 利用公司特定事件（并购、重组、破产） (English)
-│   │   │   ├── 风险: 中高，与股市相关性 0.4-0.6 (English)
-│   │   │   └── 回报: 10-14% (English)
+│   │   │   ├── 利用公司特定事件（并购、重组、破产） (English) (事件套利)
+│   │   │   ├── 风险: 中高，与股市相关性 0.4-0.6 (English) (中高风险)
+│   │   │   └── 回报: 10-14% (English) (中高回报)
 │   │   └── Relative Value (相对价值)
-│   │       ├── 利用相关资产定价偏差，市场中性策略 (English)
-│   │       ├── 风险: 低，与股市相关性 0.1-0.3 (English)
-│   │       └── 回报: 6-10% (English)
+│   │       ├── 利用相关资产定价偏差，市场中性策略 (English) (相对价值)
+│   │       ├── 风险: 低，与股市相关性 0.1-0.3 (English) (低风险)
+│   │       └── 回报: 6-10% (English) (低回报)
 │   └── 6.3 杠杆与风险 (Leverage and Risk)【考试核心】
 │       ├── 核心公式 (English)
 │       │   ├── `总杠杆 (Gross Leverage) = (多头 + |空头|) / 资本`
 │       │   └── `净杠杆 (Net Leverage) = (多头 - |空头|) / 资本`
 │       ├── Gross Leverage (总杠杆) = (Long + |Short|) / Capital
-│       │   └── 反映基金总敞口，包括多空双边 (English)
+│       │   └── 反映基金总敞口，包括多空双边 (English) (双边敞口)
 │       ├── Net Leverage (净杠杆) = (Long - |Short|) / Capital
-│       │   └── 反映市场风险敞口，市场中性策略Net Leverage接近0
+│       │   └── 反映市场风险敞口，市场中性策略Net Leverage接近0 (净敞口)
 │       └── 注意: Gross ≠ Net，完全不同 ↔ 考试陷阱
 │           └── 很多对冲基金是净多头 (Net Long)，并非完全对冲市场风险
 │
 └── M07: Digital Assets (数字资产)
     ├── 7.1 区块链与共识机制【考试核心】 (English)
     │   ├── 区块链 (Blockchain)
-    │   │   ├── 本质: 分布式账本技术 (DLT)
-    │   │   ├── 特征: 去中心化、不可篡改、透明可追溯 (English)
+    │   │   ├── 本质: 分布式账本技术 (DLT) (分布式账本)
+    │   │   ├── 特征: 去中心化、不可篡改、透明可追溯 (English) (三大特征)
     │   │   └── 注意: 区块链是底层技术，比特币是应用之一 ↔ 考试陷阱 (English)
     │   ├── PoW (Proof of Work) 工作量证明
-    │   │   ├── 方式: 挖矿（算力竞争） (English)
-    │   │   ├── 能耗: 高 (English)
-    │   │   ├── 安全性: 高（51%攻击成本高） (English)
-    │   │   └── 代表: Bitcoin
+    │   │   ├── 方式: 挖矿（算力竞争） (English) (算力竞争)
+    │   │   ├── 能耗: 高 (English) (高能耗)
+    │   │   ├── 安全性: 高（51%攻击成本高） (English) (高安全)
+    │   │   └── 代表: Bitcoin (比特币)
     │   └── PoS (Proof of Stake) 权益证明
-    │       ├── 方式: 质押（持有量决定记账权） (English)
-    │       ├── 能耗: 低 (English)
-    │       ├── 安全性: 中高 (English)
-    │       └── 代表: Ethereum 2.0
+    │       ├── 方式: 质押（持有量决定记账权） (English) (质押机制)
+    │       ├── 能耗: 低 (English) (低能耗)
+    │       ├── 安全性: 中高 (English) (中高安全)
+    │       └── 代表: Ethereum 2.0 (以太坊)
     ├── 7.2 数字资产类型 (English)
-    │   ├── Cryptocurrencies (加密货币): 支付型代币，如 Bitcoin, Litecoin
-    │   ├── Utility Tokens (效用代币): 使用特定平台服务的权利
-    │   └── Security Tokens (证券型代币): 代表传统资产所有权，受证券法规监管
+    │   ├── Cryptocurrencies (加密货币): 支付型代币，如 Bitcoin, Litecoin (支付代币)
+    │   ├── Utility Tokens (效用代币): 使用特定平台服务的权利 (平台代币)
+    │   └── Security Tokens (证券型代币): 代表传统资产所有权，受证券法规监管 (证券代币)
     └── 7.3 Tokenization (代币化)【考试核心】
-        ├── 定义: 将资产权利转化为区块链上的数字代币 (English)
+        ├── 定义: 将资产权利转化为区块链上的数字代币 (English) (资产上链)
         ├── 与ICO区别:
-        │   ├── Tokenization: 资产数字化过程/技术
-        │   └── ICO: 融资事件，公司出售代币筹集资金
+        │   ├── Tokenization: 资产数字化过程/技术 (技术过程)
+        │   └── ICO: 融资事件，公司出售代币筹集资金 (融资事件)
         ├── 优势: (English)
-        │   ├── 提高流动性（ fractional ownership，降低投资门槛）
-        │   ├── 降低交易成本（去中介化） (English)
-        │   ├── 24/7交易，跨境无障碍 (English)
-        │   └── 提高透明度（链上可追溯） (English)
+        │   ├── 提高流动性（ fractional ownership，降低投资门槛） (提高流动)
+        │   ├── 降低交易成本（去中介化） (English) (降低成本)
+        │   ├── 24/7交易，跨境无障碍 (English) (全天候)
+        │   └── 提高透明度（链上可追溯） (English) (可追溯)
         └── 风险: (English)
-            ├── 监管不确定性 (English)
-            ├── 技术风险（智能合约漏洞） (English)
-            ├── 流动性风险（市场深度不足） (English)
-            └── 托管与安全风险（私钥管理） (English)
+            ├── 监管不确定性 (English) (监管风险)
+            ├── 技术风险（智能合约漏洞） (English) (技术风险)
+            ├── 流动性风险（市场深度不足） (English) (流动性风险)
+            └── 托管与安全风险（私钥管理） (English) (托管风险)
 ```
 
 ---

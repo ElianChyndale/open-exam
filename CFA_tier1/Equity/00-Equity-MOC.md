@@ -67,13 +67,13 @@ Equity Investments (权益投资) (M01-M08)
 │
 ├── M01: Market Organization and Structure (市场组织与结构)【考试核心】↔ 2026 Outline: Market Organization
 │   ├── 市场管道 (Market plumbing)
-│   │   ├── 初级市场筹集资本，二级市场转让所有权 (primary market raises capital; secondary market transfers ownership)
-│   │   ├── 经纪商、自营商、拍卖、报价驱动、订单驱动结构 (broker, dealer, auction, quote-driven, order-driven structures)
-│   │   └── 流动性维度：紧度、深度、弹性 (liquidity dimensions: tightness, depth, resiliency)
+│   │   ├── 初级市场筹集资本，二级市场转让所有权 (primary market raises capital; secondary market transfers ownership) (融资与交易)
+│   │   ├── 经纪商、自营商、拍卖、报价驱动、订单驱动结构 (broker, dealer, auction, quote-driven, order-driven structures) (交易机制)
+│   │   └── 流动性维度：紧度、深度、弹性 (liquidity dimensions: tightness, depth, resiliency) (三维度)
 │   ├── 订单与交易 (Orders and trading)
-│   │   ├── 市价单、限价单、止损单、执行与有效期限指令 (market, limit, stop, execution and validity instructions)
-│   │   ├── 买卖价差、显性成本、隐性成本、价格影响 (bid-ask spread, explicit cost, implicit cost, price impact)
-│   │   └── 保证金买入与卖空改变杠杆与清算风险 (margin purchase and short sale alter leverage and liquidation risk)
+│   │   ├── 市价单、限价单、止损单、执行与有效期限指令 (market, limit, stop, execution and validity instructions) (订单类型)
+│   │   ├── 买卖价差、显性成本、隐性成本、价格影响 (bid-ask spread, explicit cost, implicit cost, price impact) (交易成本)
+│   │   └── 保证金买入与卖空改变杠杆与清算风险 (margin purchase and short sale alter leverage and liquidation risk) (杠杆交易)
 │   └── 注意：best price instruction and best execution outcome are related but not identical
 │
 ├── M02: Security Market Indexes (证券市场指数)【考试核心】↔ CFA Institute 2026 Security Market Indexes
@@ -82,66 +82,66 @@ Equity Investments (权益投资) (M01-M08)
 │   │   │   ├── 价格加权指数：`Price-weighted index = Σ Prices / Divisor`
 │   │   │   ├── 等权收益率：`Equal-weighted return = Σ Security Returns / N`
 │   │   │   └── 市值加权收益率：`Value-weighted return = Σ weight_i x Return_i`
-│   │   ├── 目标市场、成分选择、加权、再平衡、指数重构 (target market, constituent selection, weighting, rebalancing, reconstitution)
-│   │   ├── 价格加权、等权、市值加权、基本面加权 (price-weighted, equal-weighted, market-cap-weighted, fundamental-weighted)
-│   │   └── 除数调整在股票拆分或成分变更后保持连续性 (divisor adjustment preserves continuity after splits/constituent changes)
+│   │   ├── 目标市场、成分选择、加权、再平衡、指数重构 (target market, constituent selection, weighting, rebalancing, reconstitution) (构建流程)
+│   │   ├── 价格加权、等权、市值加权、基本面加权 (price-weighted, equal-weighted, market-cap-weighted, fundamental-weighted) (加权方法)
+│   │   └── 除数调整在股票拆分或成分变更后保持连续性 (divisor adjustment preserves continuity after splits/constituent changes) (除数调整)
 │   ├── 指数收益 (Index return)
-│   │   ├── 价格收益不包括收入；总收益将收入再投资 (price return excludes income; total return reinvests income)
-│   │   ├── 等权加重再平衡与换手率压力 (equal weighting raises rebalancing/turnover pressure)
-│   │   └── 指数用途：基准、市场代理、产品标的 (index use: benchmark, market proxy, product underlying)
+│   │   ├── 价格收益不包括收入；总收益将收入再投资 (price return excludes income; total return reinvests income) (收益类型)
+│   │   ├── 等权加重再平衡与换手率压力 (equal weighting raises rebalancing/turnover pressure) (再平衡成本)
+│   │   └── 指数用途：基准、市场代理、产品标的 (index use: benchmark, market proxy, product underlying) (三大用途)
 │   └── 注意：weighting method changes both representation and return pattern【考试陷阱】
 │
 ├── M03: Market Efficiency (市场有效性)【考试核心】↔ 2026 Outline: Market Efficiency
 │   ├── 信息集 (Information set)
-│   │   ├── 弱式：历史价格与成交量信息 (weak form: past price/volume information)
-│   │   ├── 半强式：公开信息 (semi-strong form: public information)
-│   │   └── 强式：公开加私有信息 (strong form: public plus private information)
+│   │   ├── 弱式：历史价格与成交量信息 (weak form: past price/volume information) (弱式有效)
+│   │   ├── 半强式：公开信息 (semi-strong form: public information) (半强有效)
+│   │   └── 强式：公开加私有信息 (strong form: public plus private information) (强式有效)
 │   ├── 启示 (Implications)
-│   │   ├── 交易成本与套利限制很重要 (transaction costs and limits to arbitrage matter)
-│   │   ├── 异常现象可能反映行为、风险、数据挖掘或市场摩擦 (anomalies may reflect behavior, risk, data mining, or market friction)
-│   │   └── 市场有效性指导主动与被动选择 (efficiency informs active vs passive choice)
+│   │   ├── 交易成本与套利限制很重要 (transaction costs and limits to arbitrage matter) (套利限制)
+│   │   ├── 异常现象可能反映行为、风险、数据挖掘或市场摩擦 (anomalies may reflect behavior, risk, data mining, or market friction) (市场异象)
+│   │   └── 市场有效性指导主动与被动选择 (efficiency informs active vs passive choice) (投资策略)
 │   └── 注意：efficiency is about consistent abnormal return after costs, not about prices never moving
 │
 ├── M04: Overview of Equity Securities (权益证券概览)【考试核心】↔ 2026 Outline: Overview of Equity Securities
 │   ├── 权益设计 (Claim design)
-│   │   ├── 普通股：剩余索取权、投票权、股息自主决定权、清算剩余 (common shares: residual claim, voting, dividend discretion, liquidation residual)
-│   │   ├── 优先股：股息优先、通常有限投票权、类似债券与类似权益特征 (preferred shares: dividend priority, often limited voting, bond-like/equity-like traits)
-│   │   └── 可赎回、可回售、累积、参与条款改变投资者权利 (callable, putable, cumulative, participating terms change investor rights)
+│   │   ├── 普通股：剩余索取权、投票权、股息自主决定权、清算剩余 (common shares: residual claim, voting, dividend discretion, liquidation residual) (普通股特征)
+│   │   ├── 优先股：股息优先、通常有限投票权、类似债券与类似权益特征 (preferred shares: dividend priority, often limited voting, bond-like/equity-like traits) (优先股特征)
+│   │   └── 可赎回、可回售、累积、参与条款改变投资者权利 (callable, putable, cumulative, participating terms change investor rights) (条款特征)
 │   ├── 获取方式与地域 (Access and geography)
-│   │   ├── 公开与私募权益证券 (public vs private equity securities)
-│   │   ├── 存托凭证与外国所有权敞口 (depositary receipts and foreign ownership exposure)
-│   │   └── 流动性、披露、治理、结算差异 (differences in liquidity, disclosure, governance, settlement)
+│   │   ├── 公开与私募权益证券 (public vs private equity securities) (公募私募)
+│   │   ├── 存托凭证与外国所有权敞口 (depositary receipts and foreign ownership exposure) (跨境投资)
+│   │   └── 流动性、披露、治理、结算差异 (differences in liquidity, disclosure, governance, settlement) (市场差异)
 │   └── 注意：equity claim priority is low, but upside participation is not capped like debt
 │
 ├── M05: Company Analysis - Past and Present (公司分析：历史与现状)【考试核心】↔ 2026 Outline: Company Analysis
 │   ├── 了解业务 (Understand the business)
-│   │   ├── 收入模式、客户经济学、成本结构、资本密集度 (revenue model, customer economics, cost structure, capital intensity)
-│   │   ├── 盈利能力、再投资、资产负债表韧性 (profitability, reinvestment, balance-sheet resilience)
-│   │   └── 管理层质量与资本配置纪律 (management quality and capital allocation discipline)
+│   │   ├── 收入模式、客户经济学、成本结构、资本密集度 (revenue model, customer economics, cost structure, capital intensity) (业务画像)
+│   │   ├── 盈利能力、再投资、资产负债表韧性 (profitability, reinvestment, balance-sheet resilience) (财务健康)
+│   │   └── 管理层质量与资本配置纪律 (management quality and capital allocation discipline) (管理质量)
 │   ├── 理性看待历史 (Read history without worshiping it)
-│   │   ├── 正常化与暂时性业绩 (normalized vs transitory performance)
-│   │   ├── 会计质量与同行可比性 (accounting quality and peer comparability)
-│   │   └── ROE、利润率、周转率、杠杆的驱动因素 (drivers of ROE, margins, turnover, leverage)
+│   │   ├── 正常化与暂时性业绩 (normalized vs transitory performance) (常态业绩)
+│   │   ├── 会计质量与同行可比性 (accounting quality and peer comparability) (会计质量)
+│   │   └── ROE、利润率、周转率、杠杆的驱动因素 (drivers of ROE, margins, turnover, leverage) (杜邦分析)
 │   └── 注意：historical growth becomes useful only after you identify its driver and sustainability
 │
 ├── M06: Industry and Competitive Analysis (行业与竞争分析)【考试核心】↔ 2026 Outline: Industry Analysis
 │   ├── 行业视角 (Industry lens)
-│   │   ├── 生命周期阶段、周期性、长期趋势、监管 (life-cycle stage, cyclicality, secular change, regulation)
-│   │   ├── 需求增长、供给纪律、产能、替代品 (demand growth, supply discipline, capacity, substitution)
-│   │   └── 竞争力量塑造定价能力与利润率 (competitive forces shape pricing power and margins)
+│   │   ├── 生命周期阶段、周期性、长期趋势、监管 (life-cycle stage, cyclicality, secular change, regulation) (行业分析)
+│   │   ├── 需求增长、供给纪律、产能、替代品 (demand growth, supply discipline, capacity, substitution) (供需分析)
+│   │   └── 竞争力量塑造定价能力与利润率 (competitive forces shape pricing power and margins) (竞争分析)
 │   ├── 行业中的公司 (Company within industry)
-│   │   ├── 成本优势、差异化、网络效应、转换成本 (cost advantage, differentiation, network effects, switching costs)
-│   │   └── 市场份额增长可能创造价值或破坏利润率 (market share gain can be value creating or margin destroying)
+│   │   ├── 成本优势、差异化、网络效应、转换成本 (cost advantage, differentiation, network effects, switching costs) (竞争优势)
+│   │   └── 市场份额增长可能创造价值或破坏利润率 (market share gain can be value creating or margin destroying) (份额取舍)
 │   └── 注意：an attractive industry does not guarantee an attractive stock at its current price
 │
 ├── M07: Company Analysis - Forecasting (公司分析：预测)【考试核心】↔ 2026 Outline: Company Analysis Forecasting
 │   ├── 预测主干 (Forecast spine)
-│   │   ├── 自上而下宏观/行业假设与自下而上运营驱动因素 (top-down macro/industry assumptions vs bottom-up operating drivers)
-│   │   ├── 收入 -> 利润率 -> 盈利/现金流 -> 资产负债表需求 (revenue -> margin -> earnings/cash flow -> balance-sheet needs)
-│   │   └── 基准、乐观、悲观情景与催化剂/风险地图 (base, upside, downside scenarios and catalyst/risk map)
+│   │   ├── 自上而下宏观/行业假设与自下而上运营驱动因素 (top-down macro/industry assumptions vs bottom-up operating drivers) (预测方法)
+│   │   ├── 收入 -> 利润率 -> 盈利/现金流 -> 资产负债表需求 (revenue -> margin -> earnings/cash flow -> balance-sheet needs) (预测链条)
+│   │   └── 基准、乐观、悲观情景与催化剂/风险地图 (base, upside, downside scenarios and catalyst/risk map) (情景分析)
 │   ├── 预测纪律 (Forecast discipline)
-│   │   ├── 增长必须由留存收益、资本回报率或外部资本提供资金 (growth must be funded by retention, returns on capital, or external capital)
-│   │   └── 预测期应与竞争优势持续时间匹配 (forecast horizon should fit competitive advantage durability)
+│   │   ├── 增长必须由留存收益、资本回报率或外部资本提供资金 (growth must be funded by retention, returns on capital, or external capital) (增长融资)
+│   │   └── 预测期应与竞争优势持续时间匹配 (forecast horizon should fit competitive advantage durability) (预测期限)
 │   └── 注意：forecast precision without assumption quality is decoration, not analysis
 │
 └── M08: Equity Valuation Concepts and Tools (权益估值概念与工具)【考试核心】↔ 2026 Outline: Equity Valuation
@@ -151,13 +151,13 @@ Equity Investments (权益投资) (M01-M08)
     │   │   ├── 隐含必要收益率：`r = D_1/P_0 + g`
     │   │   ├── 可持续增长率：`g = Retention Ratio x ROE`
     │   │   └── 合理领先市盈率：`P_0/E_1 = Payout Ratio/(r - g)`
-    │   ├── 现值逻辑；股息/现金流预期；必要收益率 (present value logic; dividends/cash-flow expectations; required return)
-    │   ├── 适用于稳定永续股息增长的戈登增长模型 (Gordon growth for stable perpetual dividend growth)
-    │   └── 合理倍数将基本面与价格比率联系起来 (justified multiples connect fundamentals to price ratios)
+    │   ├── 现值逻辑；股息/现金流预期；必要收益率 (present value logic; dividends/cash-flow expectations; required return) (现值逻辑)
+    │   ├── 适用于稳定永续股息增长的戈登增长模型 (Gordon growth for stable perpetual dividend growth) (戈登模型)
+    │   └── 合理倍数将基本面与价格比率联系起来 (justified multiples connect fundamentals to price ratios) (合理倍数)
     ├── 相对估值 (Relative valuation)
-    │   ├── 市盈率、市净率、市销率、市现率、EV/EBITDA 与同行选择 (P/E, P/B, P/S, P/CF, EV/EBITDA and peer selection)
-    │   ├── 领先与 trailing 分母；周期性与会计可比性 (trailing vs forward denominator; cyclicality and accounting comparability)
-    │   └── 估值信号必须经过增长、风险、质量检验 (valuation signal must be tested against growth, risk, quality)
+    │   ├── 市盈率、市净率、市销率、市现率、EV/EBITDA 与同行选择 (P/E, P/B, P/S, P/CF, EV/EBITDA and peer selection) (估值倍数)
+    │   ├── 领先与 trailing 分母；周期性与会计可比性 (trailing vs forward denominator; cyclicality and accounting comparability) (口径对比)
+    │   └── 估值信号必须经过增长、风险、质量检验 (valuation signal must be tested against growth, risk, quality) (信号验证)
     └── 注意：a low multiple can be cheap, deserved, or both【考试陷阱】
 ```
 

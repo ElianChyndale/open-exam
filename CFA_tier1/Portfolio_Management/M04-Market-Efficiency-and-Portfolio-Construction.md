@@ -1,12 +1,12 @@
 ---
 title: "M04 — Market Efficiency and Portfolio Construction"
 description: 市场有效性假说、主动与被动管理选择、组合构建流程、战略与战术配置及风险预算
-module: M04
+module: M05
 subject: Portfolio_Management
 official_module: "Basics of Portfolio Planning and Construction"
 ---
 
-# M04: 市场有效性与组合构建 (Market Efficiency and Portfolio Construction)
+# M05: 市场有效性与组合构建 (Market Efficiency and Portfolio Construction)
 
 ## 1. 核心知识点 (Core Knowledge Points)
 

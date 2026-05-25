@@ -1,6 +1,6 @@
 ---
 bucket: Quant
-question_count: 5
+question_count: 10
 ---
 
 # Quant Mock Mistakes
@@ -52,5 +52,55 @@ question_count: 5
 - wrong_choice_or_output: B. maturity premium
 - correct_resolution: C. real risk-free interest rate. The real risk-free rate reflects the time preferences of individuals for current versus future real consumption.
 - evidence_refs: chat-screenshot-2026-05-21-q38
+- evidence_assets: chat_image_1
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | unknown_from_screenshot
+- error_type: formula_misuse
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: 选择了 A. 1.42 percent。错误路径：在计算低于 target 的偏差时，没有把 target 2% 转成 0.02，导致 deviation 和 squared deviation 口径错误。
+- correct_resolution: 若收益率按小数表示，则 target 2% 必须写成 0.02。低于 2% 的回报分别用 (0.015-0.02)^2、(-0.02-0.02)^2、(0-0.02)^2，合计 0.002025，再按题目口径开方得到 1.50%。核心不是公式变了，而是 percent 与 decimal 必须全程统一单位。
+- evidence_refs: chat-screenshot-2026-05-25-target-semideviation
+- evidence_assets: chat_image_1
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | unknown_from_user_note
+- error_type: concept_confusion
+- question_source: self_report
+- source_type: typed
+- wrong_choice_or_output: 把偏度图的 y 轴记成了别的含义，而不是 frequency（频率）。
+- correct_resolution: 偏度图本质是在展示数据分布形状。y 轴表示 frequency（频率），x 轴表示变量取值或收益结果；判断左偏/右偏时先看尾巴方向，但读图前先锁定坐标轴含义。
+- evidence_refs: chat-note-2026-05-25-skewness-axis
+- evidence_assets: 
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | unknown_from_screenshot
+- error_type: prompt_misread
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: 选择了 A. a less representative sample。错误路径不是知识点完全不会，而是疲劳下把题干方向看反了，把 "probability sampling compared to non-probability sampling" 误读成在求 non-probability sampling 的特征。
+- correct_resolution: 正确答案是 C. a more representative sample。题干比较的是 probability sampling 相对于 non-probability sampling 的结果：probability sampling 给总体成员更均等的被抽中机会，因此通常更具代表性、更准确、更可靠。
+- evidence_refs: chat-screenshot-2026-05-25-probability-sampling-misread
+- evidence_assets: chat_image_1
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | unknown_from_screenshot
+- error_type: concept_confusion
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: 选择了 A. random variable and the respective statistic。错误点在于把 sampling error 误记成样本内随机变量与统计量之间的差，而没有抓住它是 statistic 与被估计总体参数之间的差。
+- correct_resolution: 正确答案是 C。Sampling error 指样本统计量（statistic）的观测值与它试图估计的总体参数/quantity 之间的差，而不是 random variable 与 statistic 之间的差。
+- evidence_refs: chat-screenshot-2026-05-25-sampling-error-definition
+- evidence_assets: chat_image_1
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | unknown_from_screenshot
+- error_type: concept_confusion
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: 选择了 C. The standard deviation of the original sample。错误点在于把 bootstrap 下 sample mean 的 standard error，误解成依赖原始样本的标准差，而没有抓住它是由各次 resample 产生的均值分布来估计。
+- correct_resolution: 正确答案是 A. The mean of each resample。Bootstrap 估计 sample mean 的 standard error，本质上是看所有 resamples 产生的 sample means 的离散程度，因此需要先得到每个 resample 的 mean；原始样本的 mean 或 standard deviation 都不是这个题目所需的直接输入。
+- evidence_refs: chat-screenshot-2026-05-25-bootstrap-standard-error
 - evidence_assets: chat_image_1
 - moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md

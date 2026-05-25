@@ -52,148 +52,153 @@ FRA 的关键不是背条文，而是把“交易→报表→比率→投资判�
 | M01 | M1: Introduction to Financial Statement Analysis | Analysis Framework | 概念 | sources of information, audit role | [[M01-Analysis-Framework]] |
 | M02 | M2: Analyzing Income Statements | Income Statement | 概念+计算 | revenue recognition, EPS | [[M02-Income-Statement]] |
 | M03 | M3: Analyzing Balance Sheets | Balance Sheet | 概念 | intangibles, liabilities, common-size | [[M03-Balance-Sheet]] |
-| M04 | M4: Analyzing Stmts of Cash Flows I / M5: Analyzing Stmts of Cash Flows II | Cash Flow Statements I-II | 计算 | direct/indirect, classification, FCFF/FCFE | [[M04-Cash-Flow-Statements]] |
-| M05 | M6: Analysis of Inventories | Inventory Analysis | 概念+计算 | lower of cost and NRV, FIFO/LIFO effects | [[M05-Inventory-Analysis]] |
-| M06 | M7: Analysis of Long-Term Assets | Long-Term Assets | 概念+策略 | intangibles, impairment, derecognition | [[M06-Long-Term-Assets]] |
-| M07 | M8: Topics in Long-Term Liabilities and Equity | Long-Term Liabilities & Equity | 概念 | leases, pensions, stock-based compensation | [[M07-Long-Term-Liabilities-and-Equity]] |
-| M08 | M9: Analysis of Income Taxes | Income Taxes | 概念+计算 | DTA/DTL, effective/statutory/cash tax rates | [[M08-Income-Taxes]] |
-| M09 | M10: Financial Reporting Quality | Financial Reporting Quality | 策略 | quality spectrum, warning signs, manipulation | [[M09-Financial-Reporting-Quality]] |
-| M10 | M11: Financial Analysis Techniques | Financial Analysis Techniques | 计算+解释 | ratios, DuPont, industry ratios | [[M10-Financial-Analysis-Techniques]] |
-| M11 | M12: Introduction to Financial Statement Modeling | Financial Statement Modeling | 策略 | sales-based model, forecast horizon, bias | [[M11-Financial-Statement-Modeling]] |
-
-> ⚠️ **差距提示**：官方 2026 课程将 "Cash Flow Statements" 拆分为两个独立模块：M4 "Analyzing Statements of Cash Flows I" 和 M5 "Analyzing Statements of Cash Flows II"，而当前笔记将它们合并为 M04。CF I 聚焦间接法与分类逻辑，CF II 侧重自由现金流（FCFF/FCFE）和现金流比率。当前 M04 已涵盖两部分内容，但缺少独立模块拆分的粒度。建议复习时分别对照官方考纲确认各自学习要点。
+| M04 | M4: Analyzing Statements of Cash Flows I | Cash Flow Statements I | 计算 | direct/indirect method, classification | [[M04-Analyzing-Cash-Flows-I]] |
+| M05 | M5: Analyzing Statements of Cash Flows II | Cash Flow Statements II | 计算 | FCFF, FCFE, cash flow ratios | [[M05-Analyzing-Cash-Flows-II]] |
+| M06 | M6: Analysis of Inventories | Inventory Analysis | 概念+计算 | lower of cost and NRV, FIFO/LIFO effects | [[M05-Inventory-Analysis]] |
+| M07 | M7: Analysis of Long-Term Assets | Long-Term Assets | 概念+策略 | intangibles, impairment, derecognition | [[M06-Long-Term-Assets]] |
+| M08 | M8: Topics in Long-Term Liabilities and Equity | Long-Term Liabilities & Equity | 概念 | leases, pensions, stock-based compensation | [[M07-Long-Term-Liabilities-and-Equity]] |
+| M09 | M9: Analysis of Income Taxes | Income Taxes | 概念+计算 | DTA/DTL, effective/statutory/cash tax rates | [[M08-Income-Taxes]] |
+| M10 | M10: Financial Reporting Quality | Financial Reporting Quality | 策略 | quality spectrum, warning signs, manipulation | [[M09-Financial-Reporting-Quality]] |
+| M11 | M11: Financial Analysis Techniques | Financial Analysis Techniques | 计算+解释 | ratios, DuPont, industry ratios | [[M10-Financial-Analysis-Techniques]] |
+| M12 | M12: Introduction to Financial Statement Modeling | Financial Statement Modeling | 策略 | sales-based model, forecast horizon, bias | [[M11-Financial-Statement-Modeling]] |
 
 ---
 
 ## Financial Statement Analysis 核心知识树 (Core Knowledge Tree)
 
 ```text
-FRA / Financial Statement Analysis (财务报表分析) (官方 12 模块: M1-M12 / 笔记 11 模块: M01-M11)
+FRA / Financial Statement Analysis (财务报表分析) (官方 12 模块: M1-M12 / 笔记 12 模块: M01-M12)
 │
 ├── M01: Analysis Framework (分析框架)
 │   ├── 1.1 Framework Steps (分析框架步骤)【考试核心】↔ Topic Outline P10
-│   │   ├── 阐明目的与背景 (articulate purpose and context)
-│   │   ├── 收集数据 / 处理数据 / 分析数据 (collect data / process data / analyze data)
-│   │   └── 更新结论与建议 (update conclusions and recommendations)
+│   │   ├── 阐明目的与背景 (articulate purpose and context)（明确目标）
+│   │   ├── 收集数据 / 处理数据 / 分析数据 (collect data / process data / analyze data)（三步分析）
+│   │   └── 更新结论与建议 (update conclusions and recommendations)（迭代更新）
 │   ├── 1.2 Information Hierarchy (信息层级)【考试核心】
-│   │   ├── 年度与中期报表 (annual and interim statements)
-│   │   ├── 监管文件、附注与补充信息 (regulatory filings, notes, supplementary information)
-│   │   ├── 管理层评论与审计报告 (management commentary and audit reports)
-│   │   └── 报告以外的其他分析师来源 (other analyst sources beyond reports)
+│   │   ├── 年度与中期报表 (annual and interim statements)（报表来源）
+│   │   ├── 监管文件、附注与补充信息 (regulatory filings, notes, supplementary information)（补充披露）
+│   │   ├── 管理层评论与审计报告 (management commentary and audit reports)（管理层视角）
+│   │   └── 报告以外的其他分析师来源 (other analyst sources beyond reports)（外部信息）
 │   └── 1.3 Reporting Systems (报告体系)【考试核心】
-│       ├── 准则差异改变可比性 (standards differences alter comparability)
+│       ├── 准则差异改变可比性 (standards differences alter comparability)（准则差异）
 │       └── 注意：附注与 reporting choices 常是答案来源【考试陷阱】
 │
 ├── M02: Income Statement (利润表)
 │   ├── 2.1 Revenue Recognition (收入确认)【考试核心】↔ Topic Outline P10-P11
-│   │   ├── 一般确认原则 (general recognition principles)
-│   │   ├── 特定应用改变确认时点 (specific applications alter timing)
-│   │   └── 时点选择影响利润率与趋势解读 (timing choices affect margins and trend interpretation)
+│   │   ├── 一般确认原则 (general recognition principles)（确认基准）
+│   │   ├── 特定应用改变确认时点 (specific applications alter timing)（时点调整）
+│   │   └── 时点选择影响利润率与趋势解读 (timing choices affect margins and trend interpretation)（利润影响）
 │   ├── 2.2 Expense Recognition (费用确认)【考试核心】
-│   │   ├── 配比逻辑 (matching logic)
-│   │   ├── 资本化 vs 费用化 (capitalize vs expense)
+│   │   ├── 配比逻辑 (matching logic)（收支匹配）
+│   │   ├── 资本化 vs 费用化 (capitalize vs expense)（时点选择）
 │   │   └── 注意：capitalization shifts expense timing, not economic reality【考试陷阱】
 │   ├── 2.3 Unusual Items and Policy Changes (非常项目与政策变更)【考试核心】
-│   │   ├── 终止经营 (discontinued operations)
-│   │   ├── 非常/偶发项目 (unusual / infrequent items)
-│   │   └── 会计政策变更 (accounting policy changes)
+│   │   ├── 终止经营 (discontinued operations)（非持续）
+│   │   ├── 非常/偶发项目 (unusual / infrequent items)（偶发项目）
+│   │   └── 会计政策变更 (accounting policy changes)（政策调整）
 │   ├── 2.4 EPS (每股收益)【考试核心】
 │   │   ├── 核心公式 (English)
 │   │   │   ├── `Basic EPS = (NI - Pref Div) / Weighted Avg Shares` (中文)
 │   │   │   └── `Diluted EPS = Adjusted NI / Adjusted weighted shares` (中文)
-│   │   ├── 简单资本结构 -> 基础每股收益 (simple capital structure -> basic EPS)
-│   │   ├── 复杂资本结构 -> 稀释每股收益 (complex capital structure -> diluted EPS)
-│   │   └── 反稀释证券被排除 (antidilutive securities excluded)
+│   │   ├── 简单资本结构 -> 基础每股收益 (simple capital structure -> basic EPS)（基础EPS）
+│   │   ├── 复杂资本结构 -> 稀释每股收益 (complex capital structure -> diluted EPS)（稀释EPS）
+│   │   └── 反稀释证券被排除 (antidilutive securities excluded)（反稀释）
 │   └── 2.5 Common-Size Income Statement and Income-Statement Ratios (同比例利润表与利润表比率)【考试核心】
 │
 ├── M03: Balance Sheet (资产负债表)
 │   ├── 3.1 Intangible Assets (无形资产)【考试核心】↔ Topic Outline P11
-│   │   ├── 外购 vs 内部产生 (purchased vs internally generated)
-│   │   └── 有限寿命 vs 无限寿命的分析含义 (finite-life vs indefinite-life analysis implications)
+│   │   ├── 外购 vs 内部产生 (purchased vs internally generated)（来源区分）
+│   │   └── 有限寿命 vs 无限寿命的分析含义 (finite-life vs indefinite-life analysis implications)（寿命影响）
 │   ├── 3.2 Goodwill (商誉)【考试核心】
-│   │   ├── 收购剩余 (acquisition residual)
-│   │   └── 减值风险 (impairment risk)
+│   │   ├── 收购剩余 (acquisition residual)（收购差额）
+│   │   └── 减值风险 (impairment risk)（减值测试）
 │   ├── 3.3 Financial Instruments and Non-Current Liabilities (金融工具与非流动负债)【考试核心】
 │   └── 3.4 Common-Size Balance Sheet and Related Ratios (同比例资产负债表与相关比率)【考试核心】
 │
-├── M04: Cash Flow Statements I-II (现金流量表 I-II) [官方拆分为 M4 + M5]
+├── M04: Analyzing Statements of Cash Flows I (现金流量表分析 I)
 │   ├── 4.1 Three-Statement Linkage (三大报表联动)【考试核心】↔ Topic Outline P11
-│   │   ├── 现金流量表连接利润表与资产负债表变动 (cash flow statement links income statement to balance sheet changes)
-│   │   └── CFO/CFI/CFF 分类现金变动来源 (CFO / CFI / CFF classify the source of cash movement)
+│   │   ├── 现金流量表连接利润表与资产负债表变动 (cash flow statement links income statement to balance sheet changes)（三表桥梁）
+│   │   └── CFO/CFI/CFF 分类现金变动来源 (CFO / CFI / CFF classify the source of cash movement)（三类现金流）
 │   ├── 4.2 Direct vs Indirect Preparation (直接法与间接法编制)【考试核心】
 │   │   ├── 核心公式 (English)
-│   │   │   ├── `CFO = NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` (中文)
+│   │   │   └── `CFO = NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` (中文)
+│   │   ├── 从利润表和资产负债表数据计算现金流 (compute cash flows from income statement and balance sheet data)（数据推导）
+│   │   ├── 将间接法 CFO 转换为直接法 (convert indirect CFO to direct method)（方法转换）
+│   │   └── 注意：NI-to-CFO bridge is a reconciliation, not a definition【考试陷阱】
+│   └── 4.3 IFRS vs US GAAP Cash Flow Classification (现金流分类差异)【考试核心】
+│
+├── M05: Analyzing Statements of Cash Flows II (现金流量表分析 II)
+│   ├── 5.1 报告式 vs 同比例现金流量表 (reported vs common-size cash flow statements)【考试核心】
+│   ├── 5.2 Free Cash Flow (自由现金流)【考试核心】
+│   │   ├── 核心公式 (English)
 │   │   │   ├── `FCFF = CFO + Interest(1-T) - FCInv` (中文)
 │   │   │   └── `FCFE = CFO - FCInv + Net Borrowing` (中文)
-│   │   ├── 从利润表和资产负债表数据计算现金流 (compute cash flows from income statement and balance sheet data)
-│   │   ├── 将间接法 CFO 转换为直接法 (convert indirect CFO to direct method)
-│   │   └── 注意：NI-to-CFO bridge is a reconciliation, not a definition【考试陷阱】
-│   ├── 4.3 IFRS vs US GAAP Cash Flow Classification (现金流分类差异)【考试核心】
-│   └── 4.4 Analysis Outputs (分析产出)【考试核心】
-│       ├── 报告式 vs 同比例现金流量表 (reported vs common-size cash flow statements)
-│       ├── FCFF 与 FCFE (FCFF and FCFE)
-│       └── 业绩与覆盖现金流比率 (performance and coverage cash flow ratios)
+│   │   ├── FCFF: 公司自由现金流 (Free Cash Flow to the Firm)（企业现金）
+│   │   └── FCFE: 股权自由现金流 (Free Cash Flow to Equity)（股东现金）
+│   └── 5.3 Cash Flow Ratio Analysis (现金流比率分析)【考试核心】
+│       ├── 业绩现金流比率 (performance cash flow ratios)（业绩比率）
+│       └── 覆盖现金流比率 (coverage cash flow ratios)（覆盖比率）
 │
-├── M05: Inventory Analysis (存货分析)
-│   ├── 5.1 Measurement Basis (计量基础)【考试核心】↔ Topic Outline P11
-│   │   ├── 成本与可变现净值孰低 (lower of cost and net realizable value)
-│   │   └── 减记对报表与比率的影响 (write-down implications for statements and ratios)
-│   ├── 5.2 Cost-Flow Methods (成本流转方法)【考试核心】
-│   │   ├── FIFO/加权平均/LIFO 比较 (FIFO / weighted average / LIFO comparison)
-│   │   ├── 通胀 vs 通缩效应 (inflation vs deflation effects)
+├── M06: Inventory Analysis (存货分析)
+│   ├── 6.1 Measurement Basis (计量基础)【考试核心】↔ Topic Outline P11
+│   │   ├── 成本与可变现净值孰低 (lower of cost and net realizable value)（孰低法）
+│   │   └── 减记对报表与比率的影响 (write-down implications for statements and ratios)（减记影响）
+│   ├── 6.2 Cost-Flow Methods (成本流转方法)【考试核心】
+│   │   ├── FIFO/加权平均/LIFO 比较 (FIFO / weighted average / LIFO comparison)（成本流转）
+│   │   ├── 通胀 vs 通缩效应 (inflation vs deflation effects)（物价效应）
 │   │   └── 注意：inventory method changes COGS, taxes, margins, inventory balances【考试陷阱】
-│   └── 5.3 Inventory Disclosures and Analyst Checks (存货披露与分析师检查点)【考试核心】
+│   └── 6.3 Inventory Disclosures and Analyst Checks (存货披露与分析师检查点)【考试核心】
 │
-├── M06: Long-Term Assets (长期资产)
-│   ├── 6.1 Intangible Asset Origin (无形资产来源)【考试核心】↔ Topic Outline P11-P12
-│   │   ├── 外购 (purchased)
-│   │   ├── 内部开发 (internally developed)
-│   │   └── 企业合并取得 (acquired in business combination)
-│   ├── 6.2 PP&E and Intangible Impairment / Derecognition (固定资产与无形资产减值/终止确认)【考试核心】
-│   └── 6.3 Disclosure Analysis (披露分析)【考试核心】
+├── M07: Long-Term Assets (长期资产)
+│   ├── 7.1 Intangible Asset Origin (无形资产来源)【考试核心】↔ Topic Outline P11-P12
+│   │   ├── 外购 (purchased)（外部取得）
+│   │   ├── 内部开发 (internally developed)（自行研发）
+│   │   └── 企业合并取得 (acquired in business combination)（合并取得）
+│   ├── 7.2 PP&E and Intangible Impairment / Derecognition (固定资产与无形资产减值/终止确认)【考试核心】
+│   └── 7.3 Disclosure Analysis (披露分析)【考试核心】
 │
-├── M07: Long-Term Liabilities and Equity (长期负债与权益)
-│   ├── 7.1 Lease Reporting: Lessor vs Lessee (租赁会计：出租人与承租人)【考试核心】↔ Topic Outline P12
-│   ├── 7.2 Defined Contribution vs Defined Benefit Plans (确定缴费 vs 确定给付计划)【考试核心】
-│   ├── 7.3 Stock-Based Compensation (股权激励薪酬)【考试核心】
+├── M08: Long-Term Liabilities and Equity (长期负债与权益)
+│   ├── 8.1 Lease Reporting: Lessor vs Lessee (租赁会计：出租人与承租人)【考试核心】↔ Topic Outline P12
+│   ├── 8.2 Defined Contribution vs Defined Benefit Plans (确定缴费 vs 确定给付计划)【考试核心】
+│   ├── 8.3 Stock-Based Compensation (股权激励薪酬)【考试核心】
 │   └── 注意：liability / equity presentation choices change leverage reading【考试陷阱】
 │
-├── M08: Income Taxes (所得税)
-│   ├── 8.1 Accounting Profit vs Taxable Income (会计利润 vs 应税所得)【考试核心】↔ Topic Outline P12
-│   │   ├── 应付税款 vs 所得税费用 (taxes payable vs income tax expense)
-│   │   ├── 暂时性差异 (temporary differences)
-│   │   └── 永久性差异 (permanent differences)
-│   ├── 8.2 Deferred Tax Assets and Liabilities (递延所得税资产与负债)【考试核心】
-│   ├── 8.3 Effective / Statutory / Cash Tax Rates (有效/法定/现金税率)【考试核心】
-│   └── 8.4 Tax Disclosures and Effective-Rate Reconciliation (税务披露与有效税率调节)【考试核心】
+├── M09: Income Taxes (所得税)
+│   ├── 9.1 Accounting Profit vs Taxable Income (会计利润 vs 应税所得)【考试核心】↔ Topic Outline P12
+│   │   ├── 应付税款 vs 所得税费用 (taxes payable vs income tax expense)（税负差异）
+│   │   ├── 暂时性差异 (temporary differences)（时间差异）
+│   │   └── 永久性差异 (permanent differences)（永久差异）
+│   ├── 9.2 Deferred Tax Assets and Liabilities (递延所得税资产与负债)【考试核心】
+│   ├── 9.3 Effective / Statutory / Cash Tax Rates (有效/法定/现金税率)【考试核心】
+│   └── 9.4 Tax Disclosures and Effective-Rate Reconciliation (税务披露与有效税率调节)【考试核心】
 │
-├── M09: Financial Reporting Quality (财务报告质量)
-│   ├── 9.1 Reporting Quality vs Quality of Reported Results (报告质量 vs 报告结果质量)【考试核心】↔ Topic Outline P12
-│   ├── 9.2 Conservative vs Aggressive Accounting (稳健 vs 激进会计政策)【考试核心】
-│   ├── 9.3 Motivation, Opportunity, Discipline Mechanisms (动机、机会与约束机制)【考试核心】
-│   ├── 9.4 Non-GAAP Presentation Choices and Accounting Estimates (非 GAAP 列报选择与会计估计)【考试核心】
-│   └── 9.5 Warning Signs and Manipulation Detection (预警信号与操纵识别)【考试核心】
+├── M10: Financial Reporting Quality (财务报告质量)
+│   ├── 10.1 Reporting Quality vs Quality of Reported Results (报告质量 vs 报告结果质量)【考试核心】↔ Topic Outline P12
+│   ├── 10.2 Conservative vs Aggressive Accounting (稳健 vs 激进会计政策)【考试核心】
+│   ├── 10.3 Motivation, Opportunity, Discipline Mechanisms (动机、机会与约束机制)【考试核心】
+│   ├── 10.4 Non-GAAP Presentation Choices and Accounting Estimates (非 GAAP 列报选择与会计估计)【考试核心】
+│   └── 10.5 Warning Signs and Manipulation Detection (预警信号与操纵识别)【考试核心】
 │
-├── M10: Financial Analysis Techniques (财务分析技术)
-│   ├── 10.1 Tools and Limitations (分析工具与局限)【考试核心】↔ Topic Outline P12-P13
-│   ├── 10.2 Activity / Liquidity / Solvency / Profitability Ratios (营运/流动性/偿债/盈利比率)【考试核心】
+├── M11: Financial Analysis Techniques (财务分析技术)
+│   ├── 11.1 Tools and Limitations (分析工具与局限)【考试核心】↔ Topic Outline P12-P13
+│   ├── 11.2 Activity / Liquidity / Solvency / Profitability Ratios (营运/流动性/偿债/盈利比率)【考试核心】
 │   │   ├── 核心公式 (English)
 │   │   │   ├── `Current ratio = CA / CL` (中文)
 │   │   │   ├── `Quick ratio = (Cash + ST Inv + Receivables) / CL` (中文)
 │   │   │   ├── `Inventory turnover = COGS / Avg Inventory` (中文)
 │   │   │   └── `ROE = NI / Avg Equity` (中文)
-│   ├── 10.3 Ratio Relationships and Industry-Specific Ratios (比率联动与行业比率)【考试核心】
-│   ├── 10.4 DuPont Decomposition (杜邦分解)【考试核心】
+│   ├── 11.3 Ratio Relationships and Industry-Specific Ratios (比率联动与行业比率)【考试核心】
+│   ├── 11.4 DuPont Decomposition (杜邦分解)【考试核心】
 │   │   ├── 核心公式 (English)
 │   │   │   └── `ROE = Net Margin x Asset Turnover x Financial Leverage` (中文)
-│   └── 10.5 Ratio Analysis for Modeling and Forecasting (建模与预测中的比率分析)【考试核心】
+│   └── 11.5 Ratio Analysis for Modeling and Forecasting (建模与预测中的比率分析)【考试核心】
 │
-└── M11: Financial Statement Modeling (财务报表建模)
-    ├── 11.1 基于销售的 Pro Forma 模型 (Sales-based pro forma model)【考试核心】↔ Topic Outline P13
-    ├── 11.2 分析师预测偏差与修正 (Analyst forecast bias and remedies)【考试核心】
-    ├── 11.3 波特效应对价格与成本的影响 (Porter effects on prices and costs)【考试核心】
-    ├── 11.4 通胀/通缩在销售与成本预测中的影响 (Inflation / deflation in sales and cost forecasts)【考试核心】
-    └── 11.5 预测期与终值选择 (Explicit forecast horizon and terminal projection choices)【考试核心】
+└── M12: Financial Statement Modeling (财务报表建模)
+    ├── 12.1 基于销售的 Pro Forma 模型 (Sales-based pro forma model)【考试核心】↔ Topic Outline P13
+    ├── 12.2 分析师预测偏差与修正 (Analyst forecast bias and remedies)【考试核心】
+    ├── 12.3 波特效应对价格与成本的影响 (Porter effects on prices and costs)【考试核心】
+    ├── 12.4 通胀/通缩在销售与成本预测中的影响 (Inflation / deflation in sales and cost forecasts)【考试核心】
+    └── 12.5 预测期与终值选择 (Explicit forecast horizon and terminal projection choices)【考试核心】
 ```
 
 ---
@@ -261,8 +266,8 @@ Income Statement (利润表)
 | Basic EPS | `(NI - Preferred Dividends) / Weighted Average Shares` | `2.4` | EPS 基础式 |
 | Diluted EPS | `Adjusted NI Available to Common / Adjusted Weighted Average Shares` | `2.4` | 先排除 antidilutive instruments |
 | CFO (Indirect) | `NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` | `4.2` | 现金流重构核心 |
-| FCFF | `FCFF = CFO + Interest(1 - T) - FCInv` | `4.2` | 公司自由现金流 |
-| FCFE | `CFO - FCInv + Net Borrowing` | `4.2` | 股权自由现金流 |
+| FCFF | `FCFF = CFO + Interest(1 - T) - FCInv` | `5.2` | 公司自由现金流 |
+| FCFE | `CFO - FCInv + Net Borrowing` | `5.2` | 股权自由现金流 |
 
 ### Liquidity and Activity
 

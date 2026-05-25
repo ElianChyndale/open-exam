@@ -1,16 +1,16 @@
 ---
-title: "M11 — Financial Statement Modeling"
+title: "M12 — Financial Statement Modeling"
 description: "财务报表建模全面解析：基于销售的 pro forma 模型、分析师预测偏差与修正、波特效应、通胀/通缩影响及预测期与终值选择"
-module: M11
+module: M12
 official_module: "M12: Introduction to Financial Statement Modeling"
 subject: Financial_Statement_Analysis
 ---
 
-# M11: 财务报表建模 (Financial Statement Modeling)
+# M12: 财务报表建模 (Financial Statement Modeling)
 
 ## 1. 核心知识点
 
-### 11.1 基于销售的 Pro Forma 模型 (Sales-Based Pro Forma Model)
+### 12.1 基于销售的 Pro Forma 模型 (Sales-Based Pro Forma Model)
 
 - **核心原理**：以销售预测(sales forecast)作为输入驱动变量(input driver)，根据历史关系确定其他财务报表项目的预测值
 - **销售百分比法 (Percentage-of-Sales Method)**：假设某些项目（如 COGS、SG&A、流动资产、流动负债）与销售额保持固定比例关系
@@ -18,7 +18,7 @@ subject: Financial_Statement_Analysis
 - **迭代过程 (Iterative Process)**：预测的利息费用(interest expense)取决于预测的债务水平，而债务水平又取决于融资需求(funding needs)，需要通过循环引用(circular reference)解决
 - **模型结构**：利润表预测 → 资产负债表预测 → 现金流量表预测 → 融资缺口分析(plug/financing shortfall)
 
-### 11.2 分析师预测偏差与修正 (Analyst Forecast Bias and Remedies)
+### 12.2 分析师预测偏差与修正 (Analyst Forecast Bias and Remedies)
 
 **常见偏差类型：**
 - **过度乐观偏差 (Optimism Bias)**：分析师倾向于高估收益增长，尤其是对热门行业和明星股票
@@ -32,7 +32,7 @@ subject: Financial_Statement_Analysis
 - 交叉验证(cross-validation)：比较公司指引(management guidance)、卖方分析师(sell-side analyst)预测和独立第三方预测
 - 使用预测精确度指标(forecast accuracy metrics)系统跟踪和分析预测历史记录
 
-### 11.3 波特效应：价格与成本影响 (Porter Effects on Prices and Costs)
+### 12.3 波特效应：价格与成本影响 (Porter Effects on Prices and Costs)
 
 - **波特五力模型 (Porter's Five Forces)** 在财务预测中的应用：
   - 供应商议价能力(bargaining power of suppliers) → 影响 COGS 和利润率预测
@@ -43,7 +43,7 @@ subject: Financial_Statement_Analysis
 
 - **分析应用**：五力分析结果应转化为具体的预测假设——例如，供应商议价能力强意味着未来毛利率可能下降，预测时应反映这一趋势
 
-### 11.4 通胀/通缩在销售与成本预测中的影响 (Inflation / Deflation in Sales and Cost Forecasts)
+### 12.4 通胀/通缩在销售与成本预测中的影响 (Inflation / Deflation in Sales and Cost Forecasts)
 
 - **通胀环境 (Inflationary Environment)**：
   - 在销售预测中反映价格增长(pass-through pricing)能力
@@ -56,7 +56,7 @@ subject: Financial_Statement_Analysis
   - 存货减记风险上升（与 M05 存货分析关联）
   - 固定成本负担加重（通缩下同样的固定成本需要更多的销量覆盖）
 
-### 11.5 预测期与终值选择 (Explicit Forecast Horizon and Terminal Projection Choices)
+### 12.5 预测期与终值选择 (Explicit Forecast Horizon and Terminal Projection Choices)
 
 - **显式预测期 (Explicit Forecast Horizon)**：通常为 3-5 年，在此期间逐项详细预测各财务科目
 - **终值 (Terminal Value)**：预测期后的价值，通常占公司总价值的很大比例（有时 > 70%）

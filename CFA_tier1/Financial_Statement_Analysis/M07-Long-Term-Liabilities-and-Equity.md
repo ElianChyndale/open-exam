@@ -1,16 +1,16 @@
 ---
-title: "M07 — Long-Term Liabilities and Equity"
+title: "M08 — Long-Term Liabilities and Equity"
 description: "长期负债与权益全面解析：租赁会计（出租人与承租人）、养老金计划（DC vs DB）、股权激励薪酬及负债/权益列报对杠杆解读的影响"
-module: M07
+module: M08
 official_module: "M8: Topics in Long-Term Liabilities and Equity"
 subject: Financial_Statement_Analysis
 ---
 
-# M07: 长期负债与权益分析 (Long-Term Liabilities and Equity Analysis)
+# M08: 长期负债与权益分析 (Long-Term Liabilities and Equity Analysis)
 
 ## 1. 核心知识点
 
-### 7.1 租赁会计：出租人与承租人 (Lease Reporting: Lessor vs Lessee)
+### 8.1 租赁会计：出租人与承租人 (Lease Reporting: Lessor vs Lessee)
 
 **承租人会计 (Lessee Accounting)：**
 - US GAAP (ASC 842) / IFRS 16：两类租赁均要求承租人在资产负债表确认使用权资产(right-of-use asset)和租赁负债(lease liability)
@@ -23,7 +23,7 @@ subject: Financial_Statement_Analysis
 - 出租人分类取决于所有权风险报酬是否转移给承租人
 - 销售型租赁(sales-type lease)在租赁开始日确认销售利润
 
-### 7.2 确定缴费 vs 确定给付计划 (Defined Contribution vs Defined Benefit Plans)
+### 8.2 确定缴费 vs 确定给付计划 (Defined Contribution vs Defined Benefit Plans)
 
 **确定缴费计划 (Defined Contribution Plan)：**
 - 雇主按固定比例缴费(contribution)，员工承担投资风险(investment risk)
@@ -38,7 +38,7 @@ subject: Financial_Statement_Analysis
 - DB 计划对财务报表的影响复杂，分析师需关注精算假设(actuarial assumptions)（折现率、工资增长率、死亡率）的变化
 - 计划资产与 PBO 之间的缺口(gap)即净负债或净资产
 
-### 7.3 股权激励薪酬 (Stock-Based Compensation)
+### 8.3 股权激励薪酬 (Stock-Based Compensation)
 
 - 员工期权(employee stock options, ESOs)和限制性股票(restricted stock units, RSUs)
 - 确认原则：按授予日公允价值(fair value at grant date)确认薪酬费用(compensation expense)，在服务期(vesting period)内分摊

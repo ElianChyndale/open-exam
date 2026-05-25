@@ -1,16 +1,16 @@
 ---
-title: "M06 — Long-Term Assets"
+title: "M07 — Long-Term Assets"
 description: "长期资产全面解析：无形资产来源（外购、内部开发、企业合并）、PP&E与无形资产减值终止确认及披露分析方法"
-module: M06
+module: M07
 official_module: "M7: Analysis of Long-Term Assets"
 subject: Financial_Statement_Analysis
 ---
 
-# M06: 长期资产分析 (Long-Term Assets Analysis)
+# M07: 长期资产分析 (Long-Term Assets Analysis)
 
 ## 1. 核心知识点
 
-### 6.1 无形资产来源 (Intangible Asset Origin)
+### 7.1 无形资产来源 (Intangible Asset Origin)
 
 无形资产的会计处理取决于其来源，不同来源的确认条件差异显著：
 
@@ -28,7 +28,7 @@ subject: Financial_Statement_Analysis
 - 这些资产包括客户关系(customer relationships)、技术(technology)、品牌(brands)等
 - 合并中确认的无形资产往往比被收购方账面金额更高
 
-### 6.2 PP&E 与无形资产减值/终止确认 (PP&E and Intangible Impairment / Derecognition)
+### 7.2 PP&E 与无形资产减值/终止确认 (PP&E and Intangible Impairment / Derecognition)
 
 - **PP&E 减值**：当资产的账面价值(carrying amount)超过可收回金额(recoverable amount)时确认减值损失
   - IFRS：可收回金额为公允价值减出售成本与使用价值(value in use)两者中的较高者
@@ -41,7 +41,7 @@ subject: Financial_Statement_Analysis
   - 出售(disposal)：差额 = 出售收入 - 账面价值，计入利润表
   - 报废(abandonment)：剩余账面价值一次性计入费用
 
-### 6.3 披露分析 (Disclosure Analysis)
+### 7.3 披露分析 (Disclosure Analysis)
 
 - **折旧政策 (Depreciation Policy)**：折旧方法（直线法 straight-line、双倍余额递减法 DDB、产量法 units of production）的选择影响各期利润
 - **使用寿命估计 (Useful Life Estimates)**：管理层对使用寿命的估计直接影响年度折旧费用

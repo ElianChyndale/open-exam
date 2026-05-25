@@ -1,12 +1,12 @@
 ---
 title: "M12 — Securitization Foundations"
 description: 资产证券化基础——SPV 结构、破产隔离、过手与结构化分配（中英双语 CFA 备考）
-module: M12
+module: M16
 subject: Fixed_Income
-official_module: "Supplementary — Securitization"
+official_module: "Module 17: Fixed-Income Securitization"
 ---
 
-# M12: 资产证券化基础 (Securitization Foundations)
+# M16: 资产证券化基础 (Securitization Foundations)
 
 ## 1. 核心知识点
 

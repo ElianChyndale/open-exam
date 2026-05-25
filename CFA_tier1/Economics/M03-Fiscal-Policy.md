@@ -1,12 +1,12 @@
 ---
-title: "M05 — Fiscal Policy"
+title: "M03 — Fiscal Policy"
 description: 财政政策 — 政府支出、税收、乘数效应、赤字与债务可持续性
-module: M05
+module: M03
 subject: Economics
-official_module: "M3: Fiscal Policy"
+official_module: "Module 3: Fiscal Policy"
 ---
 
-# M05: Fiscal Policy（财政政策）
+# M03: Fiscal Policy（财政政策）
 
 ## 1. 核心知识点（中英双语讲解）
 
@@ -89,7 +89,6 @@ official_module: "M3: Fiscal Policy"
 
 ## 5. 跨模块关联
 
-- 财政政策的宏观经济背景来自 **[[M03-Aggregate-Output-Prices-and-Growth]]**
-- 财政政策与经济周期的配合见 **[[M04-Business-Cycles]]**
-- 财政政策与货币政策的配合对比在 **[[M06-Monetary-Policy]]** 中讨论
-- 财政政策对利率和汇率的影响延伸至 **[[M08-Capital-Flows-and-FX-Markets]]**
+- 财政政策与经济周期的配合见 **[[M02-Understanding-Business-Cycles]]**
+- 财政政策与货币政策的配合对比在 **[[M04-Monetary-Policy]]** 中讨论
+- 财政政策对利率和汇率的影响延伸至 **[[M07-Capital-Flows-and-FX-Markets]]**

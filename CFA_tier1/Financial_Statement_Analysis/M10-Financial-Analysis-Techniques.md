@@ -1,16 +1,16 @@
 ---
-title: "M10 — Financial Analysis Techniques"
+title: "M11 — Financial Analysis Techniques"
 description: "财务分析技术全面解析：流动性/营运/偿债/盈利四大类比率、杜邦分解、比率联动与行业比率、建模预测中的比率应用及分析工具与局限"
-module: M10
+module: M11
 official_module: "M11: Financial Analysis Techniques"
 subject: Financial_Statement_Analysis
 ---
 
-# M10: 财务分析技术 (Financial Analysis Techniques)
+# M11: 财务分析技术 (Financial Analysis Techniques)
 
 ## 1. 核心知识点
 
-### 10.1 分析工具与局限 (Tools and Limitations)
+### 11.1 分析工具与局限 (Tools and Limitations)
 
 **主要分析工具：**
 - **同比例分析 (Common-Size Analysis)**：将报表各项目表示为基准（收入或总资产）的百分比，消除规模影响
@@ -24,7 +24,7 @@ subject: Financial_Statement_Analysis
 - 行业多样性使得行业平均未必代表正常水平
 - 单一比率无法反映全貌，需要综合运用
 
-### 10.2 营运/流动性/偿债/盈利比率 (Activity / Liquidity / Solvency / Profitability Ratios)
+### 11.2 营运/流动性/偿债/盈利比率 (Activity / Liquidity / Solvency / Profitability Ratios)
 
 **流动性比率 (Liquidity Ratios)——短期偿债能力：**
 
@@ -72,13 +72,13 @@ subject: Financial_Statement_Analysis
 - `Inventory turnover = COGS / Avg Inventory`
 - `ROE = NI / Avg Equity`
 
-### 10.3 比率联动与行业比率 (Ratio Relationships and Industry-Specific Ratios)
+### 11.3 比率联动与行业比率 (Ratio Relationships and Industry-Specific Ratios)
 
 - **比率联动关系**：各比率之间存在内在逻辑联动——例如存货周转率下降(效率恶化)可能导致毛利率上升(可能因提价或产品组合变化)，需综合解读
 - **行业特定比率 (Industry-Specific Ratios)**：银行业关注净息差(net interest margin)；零售业关注同店销售增长(same-store sales growth)和每平方英尺销售额(sales per square foot)
 - **比率分析的三角验证**：单个比率的变化应与其他相关比率的变化一致，否则可能存在操纵或误解
 
-### 10.4 杜邦分解 (DuPont Decomposition)
+### 11.4 杜邦分解 (DuPont Decomposition)
 
 **三因式杜邦分解：**
 ```
@@ -95,7 +95,7 @@ ROE = (NI / Revenue) x (Revenue / Avg Assets) x (Avg Assets / Avg Equity)
 - 相同 ROE 的背后可能是完全不同的商业策略（高利润率低周转 vs 低利润高周转）
 - 财务杠杆驱动的 ROE 增长不可持续——分析师需要关注盈利增长的"质量"
 
-### 10.5 建模与预测中的比率分析 (Ratio Analysis for Modeling and Forecasting)
+### 11.5 建模与预测中的比率分析 (Ratio Analysis for Modeling and Forecasting)
 
 - 历史比率是构建财务预测模型(forecasting model)的基础输入
 - 关键假设：未来的比率预计会维持、改善还是恶化？

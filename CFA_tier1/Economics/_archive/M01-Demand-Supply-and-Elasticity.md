@@ -3,8 +3,11 @@ title: "M01 — Demand, Supply, and Elasticity"
 description: 需求供给与弹性 — 需求定律、供给定律、弹性计算、消费者/生产者剩余
 module: M01
 subject: Economics
+status: retired
 official_module: "— (Not in CFA 2026 L1 Economics)"
 ---
+
+> ⚠️ 此模块不属于 CFA 2026 L1 官方大纲，仅供参考。
 
 # M01: Demand, Supply, and Elasticity（需求供给与弹性）
 

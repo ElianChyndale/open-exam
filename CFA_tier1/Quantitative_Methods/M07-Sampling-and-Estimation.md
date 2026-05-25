@@ -74,6 +74,11 @@ los:
 - 主要用于估计统计量的偏误（Bias）和方差
 - 计算成本比 Bootstrap 低（只需要 n 次计算），但信息量较少
 
+> **【Bootstrap vs Jackknife 辨析】**
+> - **Bootstrap**：有放回重抽原始数据（每次抽取 n 个），用各次重抽样本的 mean 的分布来估计标准误（Standard Error），而非直接从原始数据计算 SD。
+> - **Jackknife**：逐次删除一个观测值，重新计算统计量，通过 n 次结果的变化幅度估计偏误（Bias），不是用于去除异常值。
+> - **区分要点**：Bootstrap 估标准误（SE）；Jackknife 估偏误（Bias）。
+
 ## 2. 关键公式
 
 | 公式 | 解释 | 使用场景 |
@@ -110,6 +115,9 @@ los:
 3. **大样本不解决偏误**：增大样本量使抽样误差变小，但不影响系统性的抽样偏误（Bias）。
 4. **好样本的关键是代表性，不只是大**：一个有偏的大样本比一个随机的小样本更差。
 5. **Data Snooping 是常见隐蔽问题**：反复挖掘同一数据集寻找模式会过度拟合（Overfitting），需要用样本外数据验证。
+6. **Sampling Error 定义**：Sampling Error = 样本统计量（statistic）与它试图估计的总体参数（parameter）之差，不是 random variable 与 statistic 之差。
+7. **Probability Sampling 更具代表性**：概率抽样给总体成员更均等的被抽中机会，结果通常比非概率抽样更具代表性、更准确、更可靠。非概率抽样（便利抽样、判断抽样）容易引入偏误。
+8. **Bootstrap SE vs Jackknife 区分**：Bootstrap 通过有放回重抽原始样本、计算每次重抽样本的统计量分布来估计标准误；Jackknife 通过逐次删除一个观测值、重新计算统计量，用变化幅度来估计偏误（不是用于去除异常值）。
 
 ## 5. 跨模块关联
 

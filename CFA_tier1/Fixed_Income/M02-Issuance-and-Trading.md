@@ -1,12 +1,12 @@
 ---
-title: "M02 — Issuance and Trading"
+title: "M03 — Issuance and Trading"
 description: 债券发行与交易——一级市场、二级市场、回购融资与市场结构（中英双语 CFA 备考）
-module: M02
+module: M03
 subject: Fixed_Income
-official_module: "Module 3: Fixed-Income Issuance and Trading, Module 4: Fixed-Income Markets for Corporate Issuers, Module 5: Fixed-Income Markets for Government Issuers"
+official_module: "Module 3: Fixed-Income Issuance and Trading"
 ---
 
-# M02: 发行、交易与融资市场 (Issuance, Trading, and Funding Markets)
+# M03: 发行、交易与回购融资 (Issuance, Trading, and Repo Financing)
 
 ## 1. 核心知识点
 
@@ -16,11 +16,12 @@ official_module: "Module 3: Fixed-Income Issuance and Trading, Module 4: Fixed-I
 - **一级发行 vs 二级交易；做市商市场流动性 (primary issuance vs secondary trading; dealer market liquidity)**：一级市场 (primary market) 是新发行债券的初始销售；二级市场 (secondary market) 是已发行债券的交易。债券二级市场以做市商 (dealer) 为核心，采用场外交易 (OTC) 模式。
 - **固定收益指数：期限、发行人、信用、货币细分 (fixed-income indexes: maturity, issuer, credit, currency segmentation)**：债券指数按期限（短期/中期/长期）、发行人类型（政府/公司）、信用评级（投资级/高收益）、货币（本币/外币）等维度细分。
 
-### 1.2 公司融资 (Corporate Funding)
+### 1.2 回购融资 (Repo Financing)
 
-- **银行贷款/商业票据/回购/债券 (bank loans/commercial paper/repos/bonds)**：企业融资渠道包括银行贷款（双边或银团贷款）、商业票据（短期无担保）、回购协议 (repo) 和长期债券发行。
-- **回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure)**：回购协议本质是抵押短期融资，一方出售证券并承诺未来回购。Haircut（折扣率）是抵押品的价值缓冲，保护资金出借方。
-- **投资级 vs 高收益债的融资渠道与利差行为 (investment-grade vs high-yield access and spread behavior)**：投资级债券 (investment-grade) 信用评级高，融资成本低，利差波动小；高收益债券 (high-yield) 信用评级低，融资成本高，利差对经济周期敏感。
+- **回购协议 (repurchase agreement / repo)**：一方出售证券并承诺在未来特定日期以约定价格购回。本质是抵押短期融资——卖出方融入资金，买入方获得抵押品和利息收入。
+- **Haircut（折扣率）**：抵押品价值超过融资金额的部分，保护资金出借方在抵押品价值下降时的风险。Haircut 越高，借方可融得的资金越少。
+- **回购利率 (repo rate)**：反映抵押融资成本，通常低于无担保融资利率（如银行间拆借利率）。回购利率受抵押品质量、期限和市场流动性影响。
+- **交易对手风险 (counterparty risk)**：如果抵押品价值大幅下降，融资方可能违约；如果融资方违约，资金出借方持有抵押品但面临流动性风险。
 
 ## 2. 关键公式
 
@@ -46,5 +47,6 @@ official_module: "Module 3: Fixed-Income Issuance and Trading, Module 4: Fixed-I
 ## 5. 跨模块关联
 
 - 回购融资 → [[M01-Instrument-Features]] 的抵押品概念
-- 市场结构 → [[M11-Government-and-Corporate-Credit]] 不同发行人的信用分析
-- 利差行为 → [[M04-Yield-and-Spread-Measures]] 的利差度量
+- 市场结构 → [[M04-FI-Markets-Corp-Issuers]] 公司发行人融资市场
+- 市场结构 → [[M05-FI-Markets-Government-Issuers]] 政府发行人融资市场
+- 利差行为 → [[M07-Yield-and-Spread-Measures]] 的利差度量

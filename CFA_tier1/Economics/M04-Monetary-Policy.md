@@ -1,12 +1,12 @@
 ---
-title: "M06 — Monetary Policy"
+title: "M04 — Monetary Policy"
 description: 货币政策 — 中央银行设计、政策工具、传导机制、可信度与独立性
-module: M06
+module: M04
 subject: Economics
-official_module: "M4: Monetary Policy"
+official_module: "Module 4: Monetary Policy"
 ---
 
-# M06: Monetary Policy（货币政策）
+# M04: Monetary Policy（货币政策）
 
 ## 1. 核心知识点（中英双语讲解）
 
@@ -99,7 +99,6 @@ official_module: "M4: Monetary Policy"
 
 ## 5. 跨模块关联
 
-- 货币政策目标与 **[[M03-Aggregate-Output-Prices-and-Growth]]** 中的通胀和产出紧密相关
-- 央行政策应对经济周期的时机在 **[[M04-Business-Cycles]]** 中讨论
-- 财政与货币政策的配合对比见 **[[M05-Fiscal-Policy]]**
-- 货币政策通过利率渠道影响汇率，见 **[[M08-Capital-Flows-and-FX-Markets]]** 和 **[[M09-Exchange-Rate-Calculations]]**
+- 央行政策应对经济周期的时机在 **[[M02-Understanding-Business-Cycles]]** 中讨论
+- 财政与货币政策的配合对比见 **[[M03-Fiscal-Policy]]**
+- 货币政策通过利率渠道影响汇率，见 **[[M07-Capital-Flows-and-FX-Markets]]** 和 **[[M08-Exchange-Rate-Calculations]]**

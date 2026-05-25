@@ -1,12 +1,12 @@
 ---
 title: "M14 — MBS and CMO"
 description: 抵押贷款支持证券与 CMO——提前还款风险、收缩风险、展期风险与分层结构（中英双语 CFA 备考）
-module: M14
+module: M18
 subject: Fixed_Income
-official_module: "Supplementary — Securitization"
+official_module: "Module 19: Mortgage-Backed Security (MBS) Instrument and Market Features"
 ---
 
-# M14: MBS 与 CMO 结构 (MBS and CMO Structures)
+# M18: 住宅 MBS 与 CMO 结构 (RMBS and CMO Structures)
 
 ## 1. 核心知识点
 

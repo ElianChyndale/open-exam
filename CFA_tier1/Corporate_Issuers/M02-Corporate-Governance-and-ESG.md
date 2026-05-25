@@ -1,12 +1,12 @@
 ---
-title: "M02 — Corporate Governance and ESG"
+title: "M03 — Corporate Governance and ESG"
 description: 公司治理与ESG — 代理架构、董事会监督、ESG因素如何影响风险与价值
-module: M02
-official_module: 3
+module: M03
+official_module: "Module 3: Corporate Governance: Conflicts, Mechanisms, Risks, and Benefits"
 subject: Corporate_Issuers
 ---
 
-# M02: Corporate Governance and ESG（公司治理与 ESG）
+# M03: Corporate Governance and ESG（公司治理与 ESG）
 
 ## 1. 核心知识点
 
