@@ -57,18 +57,16 @@ tags:
 | M06 | M6: Simulation Methods | Simulation Methods                | 概念    | Monte Carlo, bootstrap, lognormal distribution | [[M06-Simulation-Methods]] |
 | M07 | M7: Estimation and Inference | Sampling, Estimation & Inference     | 计算    | CLT, standard error, confidence interval, bootstrap | [[M07-Sampling-and-Estimation]] |
 | M08 | M8: Hypothesis Testing | Hypothesis Testing        | 计算+策略 | H0/H1, Type I/II, p-value, parametric vs nonparametric | [[M08-Hypothesis-Testing]] |
-| M09 | M9: Parametric & Non-Parametric Tests of Independence | Tests of Independence     | 计算+策略 | correlation test, contingency table, parametric vs nonparametric | ⚠️ 需新建 |
+| M09 | M9: Parametric & Non-Parametric Tests of Independence | Tests of Independence     | 计算+策略 | correlation test, contingency table, parametric vs nonparametric | [[M09-Tests-of-Independence]] |
 | M10 | M10: Simple Linear Regression | Correlation & Regression  | 计算+策略 | t-test, F-test, R^2, SEE, prediction | [[M09-Correlation-and-Regression]] |
 | M11 | M11: Introduction to Big Data Techniques | Big Data / ML Techniques       | 概念    | fintech, AI/ML, data science applications | [[M10-Big-Data-and-ML]] |
-
-> ⚠️ **差距提示**：官方课程将 M09 "Tests of Independence" 作为独立模块，包含列联表独立性检验和参数/非参数相关检验。当前笔记将这部分合并到 "Correlation & Regression" 中。建议补充独立笔记 [[M09-Tests-of-Independence]]。
 
 ---
 
 ## Quantitative Methods 核心知识树 (Core Knowledge Tree)
 
 ```text
-Quantitative Methods (数量方法) (M01-M10)
+Quantitative Methods (数量方法) (M01-M11)
 │
 ├── M01: Rates and Returns (收益率与回报)
 │   ├── 1.1 Interest Rate 的三种解释 (Three Interpretations of Interest Rate)【考试核心】↔ Topic Outline P0
@@ -94,8 +92,8 @@ Quantitative Methods (数量方法) (M01-M10)
 │   │   │   ├── `MWRR: Σ CFt/(1+r)^t = 0`（资金加权收益率公式）
 │   │   │   ├── `Compounded TWRR = [(1 + HP_1)(1 + HP_2)...(1 + HP_n)] - 1`（复合时间加权收益率公式）
 │   │   │   └── `Annualized TWRR = (1 + Compounded TWRR)^(1/n) - 1`（年化时间加权收益率公式）
-│   │   ├── 资金加权收益率 = 组合现金流内部收益率 (MWRR = Portfolio Cash Flow IRR)
-│   │   ├── 时间加权收益率 = 外部现金流中断后连接子期间收益 (TWRR = Subperiod Returns Linked After External Cash-Flow Breaks)
+│   │   ├── 资金加权收益率 = 组合现金流内部收益率 (MWRR = Portfolio Cash Flow IRR) (IRR反映投资者体验)
+│   │   ├── 时间加权收益率 = 外部现金流中断后连接子期间收益 (TWRR = Subperiod Returns Linked After External Cash-Flow Breaks) (几何链接反映经理能力)
 │   │   └── 注意：客户增减资金造成的 return distortion 归 MWRR，不归经理【考试陷阱】
 │   └── 1.5 Annualization and Continuous Compounding (年化与连续复利)【考试核心】
 │       ├── 核心公式 (English)
@@ -104,12 +102,12 @@ Quantitative Methods (数量方法) (M01-M10)
 │       │   ├── `FV = PVe^(rt)`（连续复利终值公式）
 │       │   └── `PV = FVe^(-rt)`（连续复利现值公式）
 │       ├── 实际年化收益率 vs 名义期间收益率 (Effective Annual Return vs Stated Period Return)
-│       ├── 连续复利收益率 = ln(1 + HPR) (r_cc = ln(1 + HPR))
+│       ├── 连续复利收益率 = ln(1 + HPR) (r_cc = ln(1 + HPR)) (对数比价非简单差)
 │       └── continuously compounded returns 可加，普通 returns 不可直接相加
 │   ├── 1.6 Gross Return vs Net Return (总回报 vs 净回报)【考试核心】← 高频错因
 │   │   ├── 总回报 = (期末价+股利)/期初价 = 1 + HPR (Gross Return = (P_1 + D_1)/P_0 = 1 + HPR)
-│   │   ├── Trading expenses 已反映在 gross return 中，不重复扣除
-│   │   ├── 净回报 = 总回报 - 管理费/行政费 (Net Return = Gross Return - Management/Admin Fees)
+│   │   ├── Trading expenses 已反映在 gross return 中，不重复扣除 (已含交易费)
+│   │   ├── 净回报 = 总回报 - 管理费/行政费 (Net Return = Gross Return - Management/Admin Fees) (管理费额外扣)
 │   │   └── 注意：gross return 是税前、非风险调整口径【考试陷阱】
 │   ├── 1.7 Leveraged and After-Tax Return (杠杆与税后回报)【考试核心】← 高频错因
 │   │   ├── 杠杆回报 = 自有资金回报 + (借款/自有资本)(组合回报 - 借款利率) (Leveraged Return = R_p + (B/E)(R_p - r_D))
@@ -161,7 +159,7 @@ Quantitative Methods (数量方法) (M01-M10)
 │   │   ├── 下行偏差 (Downside Deviation)
 │   │   └── 变异系数用于相对离散度 (Coefficient of Variation for Relative Dispersion)
 │   ├── 3.3 Distribution Shape (分布形态)【考试核心】
-│   │   ├── 偏度: 不对称性 (Skewness: Asymmetry)
+│   │   ├── 偏度: 不对称性 (Skewness: Asymmetry) (y轴=frequency x轴=return)
 │   │   ├── 峰度: 尾部厚度 (Kurtosis: Tail Thickness)
 │   │   └── 注意：left-skew / right-skew 判断要看长尾方向【考试陷阱】
 │   └── 3.4 Correlation Intuition (相关性直觉)【考试核心】
@@ -218,14 +216,14 @@ Quantitative Methods (数量方法) (M01-M10)
 │
 ├── M06: Simulation Methods (模拟方法)
 │   ├── 6.1 Distribution Link (分布联动)【考试核心】↔ Topic Outline P1
-│   │   ├── 连续复利收益率可被建模为正态分布 (Continuously Compounded Returns May Be Modeled Normal)
-│   │   └── 由这些收益导出的价格呈对数正态且非负 (Prices Derived from Those Returns Are Lognormal and Nonnegative)
+│   │   ├── 连续复利收益率可被建模为正态分布 (正态→对数正态映射)
+│   │   └── 由这些收益导出的价格呈对数正态且非负 (价格非负有下限)
 │   ├── 6.2 Monte Carlo (蒙特卡洛模拟)【考试核心】
-│   │   ├── 指定输入分布 (Specify Input Distribution)
-│   │   ├── 抽取随机情景 (Draw Random Scenarios)
-│   │   └── 汇总输出分布 (Summarize Output Distribution)
+│   │   ├── 指定输入分布 (Specify Input Distribution) (设定参数/分布形态)
+│   │   ├── 抽取随机情景 (Draw Random Scenarios) (大量路径模拟)
+│   │   └── 汇总输出分布 (Summarize Output Distribution) (统计量/分位数)
 │   └── 6.3 Bootstrap Resampling (自助重抽样)【考试核心】
-│       ├── 有放回地重抽观测数据 (Resample Observed Data with Replacement)
+│       ├── 有放回地重抽观测数据 (Resample Observed Data with Replacement) (经验分布重抽样)
 │       └── 注意：bootstrap inherits observed-sample limitations【考试陷阱】
 │
 ├── M07: Sampling and Estimation (抽样与估计)
@@ -240,8 +238,8 @@ Quantitative Methods (数量方法) (M01-M10)
 │   │   ├── 标准误按 1/sqrt(n) 缩放 (SE Scales by 1/sqrt(n))
 │   │   └── 注意：大样本降低 standard error，不消灭 bad sampling design【考试陷阱】
 │   └── 7.3 Resampling Estimators (重抽样估计量)【考试核心】
-│       ├── 自助法 (Bootstrap)
-│       └── 刀切法 (Jackknife)
+│       ├── 自助法 (Bootstrap)有放回重抽原始样本估统计量分布 (有放回重抽估标准误)
+│       └── 刀切法 (Jackknife)逐次删除一个观测值估偏误，非去异常值 (逐次剔一估偏误)
 │
 ├── M08: Hypothesis Testing (假设检验)
 │   ├── 8.1 Test Components (检验构件)【考试核心】↔ Topic Outline P2
@@ -261,12 +259,14 @@ Quantitative Methods (数量方法) (M01-M10)
 │       ├── 参数检验依赖分布假设 (Parametric Relies on Distributional Assumptions)
 │       └── 非参数检验在假设/尺度条件不满足时有用 (Nonparametric Helps When Assumptions / Scale Conditions Fail)
 │
-├── M09: Correlation and Regression (相关与回归)
-│   ├── 9.1 Independence Tests (独立性检验)【考试核心】↔ Topic Outline P2
+├── M09: Tests of Independence (独立性检验)
+│   ├── 9.1 Correlation Tests (相关检验)【考试核心】↔ Topic Outline P2
 │   │   ├── 总体相关系数等于零检验 (Population Correlation Equals Zero Test)
 │   │   ├── 参数 vs 非参数相关检验 (Parametric vs Nonparametric Correlation Test)
 │   │   └── 列联表独立性检验 (Contingency Table Independence Test)
-│   ├── 9.2 Simple Linear Regression Model (简单线性回归模型)【考试核心】
+│
+├── M10: Simple Linear Regression (简单线性回归)
+│   ├── 10.1 Simple Linear Regression Model (简单线性回归模型)【考试核心】
 │   │   ├── 核心公式 (English)
 │   │   │   ├── `Yi = b0 + b1Xi + ei`（回归方程公式）
 │   │   │   ├── `b1 = Cov(X,Y)/Var(X)`（斜率公式）
@@ -275,10 +275,10 @@ Quantitative Methods (数量方法) (M01-M10)
 │   │   ├── 自变量 X (Independent Variable X)
 │   │   ├── 截距、斜率、残差 (Intercept, Slope, Residual)
 │   │   └── 最小二乘法最小化 SSE (Least Squares Minimizes SSE)
-│   ├── 9.3 Regression Diagnostics (回归诊断)【考试核心】
+│   ├── 10.2 Regression Diagnostics (回归诊断)【考试核心】
 │   │   ├── 线性/同方差/独立性/正态误差 (Linearity / Homoskedasticity / Independence / Normal Errors)
 │   │   └── 残差图提示假设违反 (Residual Plot Hints Assumption Violations)
-│   ├── 9.4 Fit and Inference (拟合与推断)【考试核心】
+│   ├── 10.3 Fit and Inference (拟合与推断)【考试核心】
 │   │   ├── 核心公式 (English)
 │   │   │   ├── `R² = SSR/SST`（R平方公式）
 │   │   │   ├── `SEE = sqrt(SSE/(n-2))`（估计标准误公式）
@@ -289,14 +289,14 @@ Quantitative Methods (数量方法) (M01-M10)
 │   │   └── 不同函数形式 (Different Functional Forms)
 │   └── 注意：prediction interval 比 point estimate 更诚实地表达 uncertainty【考试陷阱】
 │
-└── M10: Big Data and ML (大数据与机器学习)
-    ├── 10.1 Fintech data context【考试核心】↔ Topic Outline P2
+└── M11: Big Data and ML (大数据与机器学习)
+    ├── 11.1 Fintech data context【考试核心】↔ Topic Outline P2
     │   ├── 数据收集 (Data Gathering)
     │   └── 数据分析在投资过程中的相关性 (Data Analysis Relevance for Investment Process)
-    ├── 10.2 Big Data / AI / ML definitions【考试核心】
-    └── 10.3 Investment applications【考试核心】
-        ├── 研究信号提取 (Research Signal Extraction)
-        ├── 风险/运营/客户分析 (Risk / Operations / Client Analytics)
+    ├── 11.2 Big Data / AI / ML definitions【考试核心】(三大概念辨析)
+    └── 11.3 Investment applications【考试核心】
+        ├── 研究信号提取 (Research Signal Extraction) (Alpha/因子挖掘)
+        ├── 风险/运营/客户分析 (Risk / Operations / Client Analytics) (风控/效率/画像)
         └── 注意：model sophistication 不替代 validation and governance【考试陷阱】
 ```
 
@@ -422,18 +422,23 @@ Returns
 | Required Sample Size | `n = (zσ/E)^2` | `7.2` | `E` 是 margin of error |
 | z-stat / t-stat | `(x̄ - μ_0)/(σ/√n)` or `(x̄ - μ_0)/(s/√n)` | `8.1` | 先分清方差是否已知 |
 
-### M09 Correlation and Regression
+### M09 Tests of Independence
 
 | 指标 | 公式 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
 | Correlation test t | `t = r√[(n - 2)/(1 - r^2)]` | `9.1` | 独立性检验 |
-| Regression Equation | `Y_i = b_0 + b_1X_i + e_i` | `9.2` | 简单线性回归骨架 |
-| Regression slope | `b_1 = Cov(X,Y)/Var(X)` | `9.2` | 回归核心 |
-| Regression Intercept | `b_0 = ȳ - b_1x̄` | `9.2` | 斜率确定后回代 |
-| R-squared | `R^2 = SSR/SST` | `9.4` | 拟合度，不是因果性 |
-| SEE | `SEE = sqrt[SSE/(n - 2)]` | `9.4` | 回归残差尺度 |
-| Slope t-stat | `t = (b_1 - β_{1,0})/SE(b_1)` | `9.4` | 检验 slope |
-| F-stat | `F = MSR/MSE` | `9.4` | 检验整体模型 |
+
+### M10 Simple Linear Regression
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Regression Equation | `Y_i = b_0 + b_1X_i + e_i` | `10.1` | 简单线性回归骨架 |
+| Regression slope | `b_1 = Cov(X,Y)/Var(X)` | `10.1` | 回归核心 |
+| Regression Intercept | `b_0 = ȳ - b_1x̄` | `10.1` | 斜率确定后回代 |
+| R-squared | `R^2 = SSR/SST` | `10.3` | 拟合度，不是因果性 |
+| SEE | `SEE = sqrt[SSE/(n - 2)]` | `10.3` | 回归残差尺度 |
+| Slope t-stat | `t = (b_1 - β_{1,0})/SE(b_1)` | `10.3` | 检验 slope |
+| F-stat | `F = MSR/MSE` | `10.3` | 检验整体模型 |
 
 ---
 

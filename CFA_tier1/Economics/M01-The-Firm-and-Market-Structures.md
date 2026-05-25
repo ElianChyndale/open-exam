@@ -1,12 +1,12 @@
 ---
-title: "M02 — The Firm and Market Structures"
+title: "M01 — The Firm and Market Structures"
 description: 企业与市场结构 — 成本利润分析、四种市场结构、定价权、进入壁垒
-module: M02
+module: M01
 subject: Economics
-official_module: "M1: The Firm and Market Structures"
+official_module: "Module 1: The Firm and Market Structures"
 ---
 
-# M02: The Firm and Market Structures（企业与市场结构）
+# M01: The Firm and Market Structures（企业与市场结构）
 
 ## 1. 核心知识点（中英双语讲解）
 
@@ -112,6 +112,6 @@ official_module: "M1: The Firm and Market Structures"
 
 ## 5. 跨模块关联
 
-- 市场结构影响企业定价行为，进而影响 **[[M01-Demand-Supply-and-Elasticity]]** 中的弹性分析
-- 不同市场结构对宏观产出的影响在 **[[M03-Aggregate-Output-Prices-and-Growth]]** 中体现
-- 反垄断政策与 **[[M05-Fiscal-Policy]]** 中的政府干预相关
+- 不同市场结构对宏观经济的影响与 **[[M02-Understanding-Business-Cycles]]** 中的周期分析相连
+- 反垄断政策与 **[[M03-Fiscal-Policy]]** 中的政府干预相关
+- 市场结构影响企业定价行为，弹性分析内容已移至 _archive 供参考

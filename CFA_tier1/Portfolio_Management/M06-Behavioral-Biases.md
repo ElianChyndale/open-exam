@@ -1,12 +1,12 @@
 ---
 title: "M06 — Behavioral Biases"
 description: 行为金融学中的认知错误与情绪偏差分类、特征、对投资决策的影响及纠正/管理方式
-module: M06
+module: M07
 subject: Portfolio_Management
 official_module: "The Behavioral Biases of Individuals"
 ---
 
-# M06: 行为偏差 (Behavioral Biases)
+# M07: 行为偏差 (Behavioral Biases)
 
 ## 1. 核心知识点 (Core Knowledge Points)
 
@@ -105,5 +105,5 @@ official_module: "The Behavioral Biases of Individuals"
 - [[M03-CAPM-and-Beta]]：行为偏差可能解释 CAPM 异常现象（如动量效应）
 - [[M04-Market-Efficiency-and-Portfolio-Construction]]：偏差影响市场有效性和组合构建
 - [[M05-IPS]]：偏差影响 IPS 的准确性，特别是 self-assessment 部分
-- [[07-Risk-Management]]：偏差可能使风险暴露超出预期
+- [[M07-Risk-Management]]：偏差可能使风险暴露超出预期
 - [[00-Portfolio-Management-MOC]]

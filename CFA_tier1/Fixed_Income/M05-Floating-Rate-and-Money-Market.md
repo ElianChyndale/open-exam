@@ -1,12 +1,12 @@
 ---
 title: "M05 — Floating-Rate and Money Market Measures"
 description: 浮动利率与货币市场指标——FRN 利差、贴现收益率、货币市场收益率与债券等价收益率（中英双语 CFA 备考）
-module: M05
+module: M08
 subject: Fixed_Income
 official_module: "Module 8: Yield and Yield Spread Measures for Floating-Rate Instruments"
 ---
 
-# M05: 浮动利率与货币市场指标 (Floating-Rate and Money Market Measures)
+# M08: 浮动利率与货币市场指标 (Floating-Rate and Money Market Measures)
 
 ## 1. 核心知识点
 

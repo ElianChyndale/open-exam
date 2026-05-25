@@ -1,12 +1,12 @@
 ---
 title: "M08 — Duration and Convexity"
 description: 基于收益率的久期与凸性——修正久期、货币久期、PVBP 与凸性调整（中英双语 CFA 备考）
-module: M08
+module: M11
 subject: Fixed_Income
 official_module: "Module 11: Yield-Based Bond Duration Measures and Properties, Module 12: Yield-Based Bond Convexity and Portfolio Properties"
 ---
 
-# M08: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)
+# M11: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)
 
 ## 1. 核心知识点
 

@@ -1,12 +1,12 @@
 ---
 title: "M11 — Government and Corporate Credit Analysis"
 description: 政府与公司信用分析——主权评级、债券优先级、财务比率与债务结构（中英双语 CFA 备考）
-module: M11
+module: M14
 subject: Fixed_Income
-official_module: "Module 14: Credit Risk (Credit Analysis)"
+official_module: "Module 15: Credit Analysis for Government Issuers, Module 16: Credit Analysis for Corporate Issuers"
 ---
 
-# M11: 政府与公司信用分析 (Government and Corporate Credit Analysis)
+# M14: 政府与公司信用分析 (Government and Corporate Credit Analysis)
 
 ## 1. 核心知识点
 

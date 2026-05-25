@@ -1,12 +1,12 @@
 ---
 title: "M07 — Interest Rate Risk and Return"
 description: 利率风险与回报——回报分解、持有期回报、回归面值效应与 Macaulay 久期（中英双语 CFA 备考）
-module: M07
+module: M10
 subject: Fixed_Income
 official_module: "Module 10: Interest Rate Risk and Return"
 ---
 
-# M07: 利率风险与回报 (Interest Rate Risk and Return)
+# M10: 利率风险与回报 (Interest Rate Risk and Return)
 
 ## 1. 核心知识点
 

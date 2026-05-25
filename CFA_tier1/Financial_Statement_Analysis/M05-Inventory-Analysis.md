@@ -1,22 +1,22 @@
 ---
-title: "M05 — Inventory Analysis"
+title: "M06 — Inventory Analysis"
 description: "存货分析全面解析：计量基础（成本与可变现净值孰低）、成本流转方法（FIFO/加权平均/LIFO）、通胀通缩效应及存货披露分析"
-module: M05
+module: M06
 official_module: "M6: Analysis of Inventories"
 subject: Financial_Statement_Analysis
 ---
 
-# M05: 存货分析 (Inventory Analysis)
+# M06: 存货分析 (Inventory Analysis)
 
 ## 1. 核心知识点
 
-### 5.1 计量基础 (Measurement Basis)
+### 6.1 计量基础 (Measurement Basis)
 
 - **成本与可变现净值孰低 (Lower of Cost and Net Realizable Value)**：存货期末计量采用成本与可变现净值(NRV)孰低原则。IFRS 使用 NRV；US GAAP 使用市价(market)即重置成本(replacement cost)
 - **减记对报表与比率的影响 (Write-Down Implications for Statements and Ratios)**：存货减记(inventory write-down)同时增加当期 COGS、减少利润、降低存货账面价值和资产总额，从而影响毛利率(gross margin)、流动比率(current ratio)和存货周转率(inventory turnover)
 - 减记转回(reversal of write-down)：IFRS 允许在后续期间转回至原成本，US GAAP 不允许转回——这是跨准则比较的重要差异
 
-### 5.2 成本流转方法 (Cost-Flow Methods)
+### 6.2 成本流转方法 (Cost-Flow Methods)
 
 - **FIFO / 加权平均 / LIFO 比较 (FIFO / Weighted Average / LIFO Comparison)**：
   - FIFO（先进先出）：先购入的存货先发出，期末存货反映最近购入成本
@@ -30,7 +30,7 @@ subject: Financial_Statement_Analysis
 
 **【考试陷阱】** 存货计价方法改变(inventory method changes)会影响 COGS、税金(taxes)、利润率(margins)和存货余额(inventory balances)——在跨公司比较时需调整统一。
 
-### 5.3 存货披露与分析师检查点 (Inventory Disclosures and Analyst Checks)
+### 6.3 存货披露与分析师检查点 (Inventory Disclosures and Analyst Checks)
 
 - 检查存货账龄(aging of inventory)以识别潜在的过时(obsolescence)风险
 - 关注 LIFO liquidation（LIFO 清算）：当 LIFO 公司消耗旧层存货时，COGS 异常低、利润异常高

@@ -1,12 +1,12 @@
 ---
-title: "M09 — Exchange Rate Calculations"
+title: "M08 — Exchange Rate Calculations"
 description: 汇率计算 — 报价方式、交叉汇率、远期汇率、利率平价、套利检查
-module: M09
+module: M08
 subject: Economics
-official_module: "M8: Exchange Rate Calculations"
+official_module: "Module 8: Exchange Rate Calculations"
 ---
 
-# M09: Exchange Rate Calculations（汇率计算）
+# M08: Exchange Rate Calculations（汇率计算）
 
 ## 1. 核心知识点（中英双语讲解）
 
@@ -111,6 +111,6 @@ UIP假设投资者不通过远期对冲，而是根据预期的未来即期汇�
 
 ## 5. 跨模块关联
 
-- 汇率制度对计算背景的影响见 **[[M08-Capital-Flows-and-FX-Markets]]**
-- 利率差异对远期汇率的影响与 **[[M06-Monetary-Policy]]** 中的利率政策相连
-- 贸易和资本流动影响即期和远期汇率，见 **[[M07-Geopolitics-and-Trade]]**
+- 汇率制度对计算背景的影响见 **[[M07-Capital-Flows-and-FX-Markets]]**
+- 利率差异对远期汇率的影响与 **[[M04-Monetary-Policy]]** 中的利率政策相连
+- 贸易和资本流动影响即期和远期汇率，见 **[[M06-International-Trade]]** 和 **[[M05-Introduction-to-Geopolitics]]**

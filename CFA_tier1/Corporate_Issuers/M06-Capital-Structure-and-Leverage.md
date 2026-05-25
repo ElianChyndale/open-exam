@@ -1,12 +1,12 @@
 ---
-title: "M06 — Capital Structure and Leverage"
+title: "M07 — Capital Structure and Leverage"
 description: 资本结构与杠杆 — DOL、DFL、债务容量、MM理论、结构权衡
-module: M06
-official_module: 6
+module: M07
+official_module: "Module 6: Capital Structure"
 subject: Corporate_Issuers
 ---
 
-# M06: Capital Structure and Leverage（资本结构与杠杆）
+# M07: Capital Structure and Leverage（资本结构与杠杆）
 
 ## 1. 核心知识点
 

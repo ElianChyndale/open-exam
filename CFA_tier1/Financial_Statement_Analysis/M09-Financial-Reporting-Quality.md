@@ -1,30 +1,30 @@
 ---
-title: "M09 — Financial Reporting Quality"
+title: "M10 — Financial Reporting Quality"
 description: "财务报告质量全面解析：报告质量与报告结果质量的区别、稳健与激进会计政策、操纵动机与约束机制、非GAAP列报选择及预警信号识别"
-module: M09
+module: M10
 official_module: "M10: Financial Reporting Quality"
 subject: Financial_Statement_Analysis
 ---
 
-# M09: 财务报告质量分析 (Financial Reporting Quality Analysis)
+# M10: 财务报告质量分析 (Financial Reporting Quality Analysis)
 
 ## 1. 核心知识点
 
-### 9.1 报告质量 vs 报告结果质量 (Reporting Quality vs Quality of Reported Results)
+### 10.1 报告质量 vs 报告结果质量 (Reporting Quality vs Quality of Reported Results)
 
 - **报告质量 (Reporting Quality)**：指财务信息是否遵循 GAAP/IFRS、是否完整透明。高质量的财务报告具有相关性(relevance)、如实反映(faithful representation)、可比性(comparability)和可验证性(verifiability)
 - **报告结果质量 (Quality of Reported Results)**：指报告利润是否可持续(sustainable)且来源于核心经营——即使报告质量高，报告结果也可能不可持续
 - **质量谱系 (Quality Spectrum)**：从高到低包括 GAAP/IFRS compliant（合规）、within GAAP but biased（偏颇）、non-GAAP（非 GAAP 列报）到 fraudulent（欺诈）
 - **分析师的双重任务**：既要评估报告是否符合准则(reporting quality)，也要判断盈利的可持续性(quality of results)
 
-### 9.2 稳健 vs 激进会计政策 (Conservative vs Aggressive Accounting)
+### 10.2 稳健 vs 激进会计政策 (Conservative vs Aggressive Accounting)
 
 - **稳健会计 (Conservative Accounting)**：加速确认费用和损失、延迟确认收入和利得——降低当期利润和资产，减少未来利润波动空间
 - **激进会计 (Aggressive Accounting)**：加速确认收入和利得、延迟确认费用和损失——提高当期报告利润，但增加未来业绩风险和调整压力
 - **关键判断维度**：收入确认时点(revenue recognition timing)、准备金计提水平(provision levels)、资产减值倾向(impairment倾向)、资本化 vs 费用化选择
 - 注意：稳健不等于"好"，激进不等于"坏"——关键在于与公司历史和政策的一致性和合理性
 
-### 9.3 动机、机会与约束机制 (Motivation, Opportunity, Discipline Mechanisms)
+### 10.3 动机、机会与约束机制 (Motivation, Opportunity, Discipline Mechanisms)
 
 **操纵动机 (Motivations for Manipulation)：**
 - 满足盈利预期(meet earnings expectations)
@@ -44,14 +44,14 @@ subject: Financial_Statement_Analysis
 - 分析师和媒体监督
 - 公司治理结构(corporate governance)
 
-### 9.4 非 GAAP 列报选择与会计估计 (Non-GAAP Presentation Choices and Accounting Estimates)
+### 10.4 非 GAAP 列报选择与会计估计 (Non-GAAP Presentation Choices and Accounting Estimates)
 
 - **非 GAAP 指标 (Non-GAAP Measures)**：如调整后 EBITDA(adjusted EBITDA)、非 GAAP 每股收益(pro forma EPS)
 - 管理层可能通过排除某些费用(如重组费用、股权激励费用)来呈现更有利的业绩
 - 分析师应关注：非 GAAP 调整是否一致、排除项目是否频繁发生、非 GAAP 与 GAAP 指标的差距是否在扩大
 - **会计估计 (Accounting Estimates)**：涉及大量管理层判断，包括折旧年限、残值、坏账准备、保修费用、养老金假设等
 
-### 9.5 预警信号与操纵识别 (Warning Signs and Manipulation Detection)
+### 10.5 预警信号与操纵识别 (Warning Signs and Manipulation Detection)
 
 **红旗信号 (Red Flags)：**
 - 收入增长与应收账款增长严重不匹配

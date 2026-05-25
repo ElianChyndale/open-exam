@@ -1,12 +1,12 @@
 ---
-title: "M07 — Business Models"
+title: "M08 — Business Models"
 description: 商业模式 — 价值主张、收入机制、成本结构、风险地图
-module: M07
-official_module: 7
+module: M08
+official_module: "Module 7: Business Models"
 subject: Corporate_Issuers
 ---
 
-# M07: Business Models（商业模式）
+# M08: Business Models（商业模式）
 
 ## 1. 核心知识点
 

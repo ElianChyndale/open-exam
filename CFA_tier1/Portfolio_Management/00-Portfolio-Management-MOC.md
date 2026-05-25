@@ -51,18 +51,19 @@ Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产
 |------|-------------|------|------|--------|----------|
 | M01 | Portfolio Risk and Return Part I | Portfolio Risk and Return | 计算 | E(Rp), variance, diversification | [[M01-Portfolio-Risk-and-Return.md]] |
 | M02 | Portfolio Risk and Return Part II | Utility and CAL | 计算+策略 | risk aversion, capital allocation line | [[M02-Utility-and-CAL.md]] |
-| M03 | Portfolio Risk and Return Part II | CAPM and Beta | 计算 | SML, beta, required return | [[M03-CAPM-and-Beta.md]] |
-| M04 | Basics of Portfolio Planning and Construction | Market Efficiency / Active vs Passive | 概念 | active/passive implications | [[M04-Market-Efficiency-and-Portfolio-Construction.md]] |
-| M05 | Basics of Portfolio Planning and Construction | IPS | 策略 | return objective, risk objective, constraints | [[M05-IPS.md]] |
-| M06 | The Behavioral Biases of Individuals | Behavioral Biases | 概念 | cognitive vs emotional biases | [[M06-Behavioral-Biases.md]] |
-| M07 | Introduction to Risk Management | Risk Management | 概念 | governance, budgeting, exposure control | [[M07-Risk-Management.md]] |
+| M03 | Portfolio Management: An Overview | Portfolio Management Overview | 概念 | pooled investments, PM process, IPS intro | [[M03-Portfolio-Management-Overview.md]] |
+| M04 | Portfolio Risk and Return Part II | CAPM and Beta | 计算 | SML, beta, required return | [[M03-CAPM-and-Beta.md]] |
+| M05 | Basics of Portfolio Planning and Construction | Market Efficiency / Active vs Passive | 概念 | active/passive implications | [[M04-Market-Efficiency-and-Portfolio-Construction.md]] |
+| M06 | Basics of Portfolio Planning and Construction | IPS | 策略 | return objective, risk objective, constraints | [[M05-IPS.md]] |
+| M07 | The Behavioral Biases of Individuals | Behavioral Biases | 概念 | cognitive vs emotional biases | [[M06-Behavioral-Biases.md]] |
+| M08 | Introduction to Risk Management | Risk Management | 概念 | governance, budgeting, exposure control | [[M07-Risk-Management.md]] |
 
 ---
 
 ## Portfolio Management 核心知识树 (Core Knowledge Tree)
 
 ```text
-投资组合管理 (Portfolio Management) (M01-M07)
+投资组合管理 (Portfolio Management) (M01-M08)
 │
 ├── M01: 组合风险与收益 (Portfolio Risk and Return)【考试核心】↔ 2026 Outline: Portfolio Risk and Return
 │   ├── 从单资产到投资组合的转换 (Single asset -> portfolio translation)
@@ -92,7 +93,23 @@ Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产
 │   │   └── 借入/贷出选择影响风险资产权重 (borrowing/lending choice changes risky-asset weight)
 │   └── 注意：风险容忍度是偏好；风险承受能力属于IPS现实检验 (risk tolerance is preference; risk capacity belongs in IPS reality check)
 │
-├── M03: CAPM、Beta与绩效视角 (CAPM, Beta, and Performance Lens)【考试核心】↔ 2026 Outline: CAPM
+├── M03: 投资组合管理概述 (Portfolio Management: An Overview)【新模块】↔ 2026 Outline: Portfolio Management: An Overview
+│   ├── 组合管理流程 (Portfolio management process)
+│   │   ├── 三阶段循环：规划 → 执行 → 反馈 (planning -> execution -> feedback)
+│   │   ├── 规划阶段产出 IPS 和战略资产配置 (IPS + SAA from planning)
+│   │   └── 反馈阶段包含监控、再平衡和 IPS 调整 (monitoring, rebalancing, IPS update)
+│   ├── 集合投资工具 (Pooled investment vehicles)
+│   │   ├── 共同基金 (Mutual funds)：按 NAV 定价，开放/封闭型
+│   │   ├── ETF：交易所交易，AP套利维持价格贴近NAV
+│   │   ├── SMA：直接持有证券，个性化管理
+│   │   ├── 对冲基金 (Hedge funds)：多策略，锁定期，"2 and 20"费用
+│   │   └── 私募股权 (Private equity)：长期锁定，J-curve效应
+│   ├── 投资者类型 (Types of investors)
+│   │   ├── 个人投资者：行为偏差影响大，生命周期驱动
+│   │   └── 机构投资者：受托责任，监管严格，长期投资
+│   └── IPS 简介：组合管理流程中的指导性决策框架
+│
+├── M04: CAPM、Beta与绩效视角 (CAPM, Beta, and Performance Lens)【考试核心】↔ 2026 Outline: CAPM
 │   ├── 市场均衡 (Market equilibrium)
 │   │   ├── 核心公式 (English)
 │   │   │   ├── CAPM: `E(R_i) = R_f + β_i[E(R_M)-R_f]`
@@ -100,45 +117,45 @@ Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产
 │   │   │   ├── 夏普比率: `Sharpe = (Rp-Rf)/σp`
 │   │   │   ├── 特雷诺比率: `Treynor = (Rp-Rf)/βp`
 │   │   │   └── 詹森阿尔法: `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]`
-│   │   ├── 系统性风险获得预期补偿 (systematic risk earns expected compensation)
+│   │   ├── 系统性风险获得预期补偿 (systematic risk earns expected compensation) (Beta风险有补偿)
 │   │   ├── Beta衡量市场敏感度 (beta measures market sensitivity)
 │   │   └── SML对Beta暴露定价必要回报 (SML prices required return for beta exposure)
 │   ├── 绩效评估关联 (Evaluation link)
-│   │   ├── Alpha比较实际/预期收益与CAPM基准 (alpha compares realized/expected return to CAPM benchmark)
-│   │   ├── Sharpe使用总风险，Treynor使用Beta风险 (Sharpe uses total risk; Treynor uses beta risk)
+│   │   ├── Alpha比较实际/预期收益与CAPM基准 (alpha compares realized/expected return to CAPM benchmark) (超额收益测经理)
+│   │   ├── Sharpe使用总风险，Treynor使用Beta风险 (Sharpe uses total risk; Treynor uses beta risk) (风险口径不同)
 │   │   └── SML上方的证券在CAPM框架中看似被低估 (security above SML looks underpriced in CAPM language)
 │   └── 注意：高标准差和高Beta是不同的诊断 (high standard deviation and high beta are different diagnoses)
 │
-├── M04: 市场有效性与组合构建 (Market Efficiency and Portfolio Construction)【考试核心】↔ 2026 Outline: Portfolio Planning
+├── M05: 市场有效性与组合构建 (Market Efficiency and Portfolio Construction)【考试核心】↔ 2026 Outline: Portfolio Planning
 │   ├── 组合构建主线 (Construction spine)
-│   │   ├── 目标→约束→资产配置→执行→回顾 (objectives -> constraints -> asset allocation -> implementation -> review)
-│   │   ├── 战略性配置主导政策风险预算 (strategic allocation dominates policy risk budget)
+│   │   ├── 目标→约束→资产配置→执行→回顾 (objectives -> constraints -> asset allocation -> implementation -> review) (IPS五步法)
+│   │   ├── 战略性配置主导政策风险预算 (strategic allocation dominates policy risk budget) (长期收益主驱动)
 │   │   └── 主动/被动选择取决于优势、成本、税收、市场有效性 (active/passive choice follows edge, cost, tax, market efficiency)
 │   ├── 实际约束 (Practical constraints)
 │   │   ├── 基准适配性、交易成本、税收、流动性 (benchmark appropriateness, transaction costs, taxes, liquidity)
 │   │   └── 风险预算有意分配稀缺的主动风险 (risk budgeting allocates scarce active risk intentionally)
 │   └── 注意：组合设计是一个过程，而非一次优化器截图 (portfolio design is a process, not a one-shot optimizer screenshot)
 │
-├── M05: 投资政策声明 (Investment Policy Statement)【考试核心】↔ 2026 Outline: IPS
+├── M06: 投资政策声明 (Investment Policy Statement)【考试核心】↔ 2026 Outline: IPS
 │   ├── 目标 (Objectives)
-│   │   ├── 收益需求与收益期望并不总是一致 (return need and return desire are not always the same)
-│   │   ├── 风险意愿与风险能力必须协调 (risk willingness and risk ability must be reconciled)
+│   │   ├── 收益需求与收益期望并不总是一致 (return need and return desire are not always the same) (需求≠期望)
+│   │   ├── 风险意愿与风险能力必须协调 (risk willingness and risk ability must be reconciled) (意愿≠能力)
 │   │   └── 目标表述应具有决策指导性 (objective language should be decision usable)
 │   ├── 约束 (Constraints)
-│   │   ├── 流动性、时间跨度、税收、法律/监管、特殊情形 (liquidity, time horizon, taxes, legal/regulatory, unique circumstances)
+│   │   ├── 流动性、时间跨度、税收、法律/监管、特殊情形 (liquidity, time horizon, taxes, legal/regulatory, unique circumstances) (L-T-T-L-U五约束)
 │   │   └── 约束可能迫使组合偏离理论最优 (constraints can force portfolio choice away from theoretical optimum)
 │   └── 注意：IPS是投资者现实否决优雅但不适配合约的地方 (IPS is where investor reality vetoes elegant but unsuitable portfolios)
 │
-├── M06: 行为偏差 (Behavioral Biases)【考试核心】↔ 2026 Outline: Behavioral Biases
+├── M07: 行为偏差 (Behavioral Biases)【考试核心】↔ 2026 Outline: Behavioral Biases
 │   ├── 认知错误 (Cognitive errors)
-│   │   ├── 信念固着、信息处理、框架效应、可得性 (belief perseverance, information-processing, framing, availability)
+│   │   ├── 信念固着、信息处理、框架效应、可得性 (belief perseverance, information-processing, framing, availability) (认知错误四类)
 │   │   └── 常可通过教育、流程、检查表缓解 (often mitigated by education, process, checklists)
 │   ├── 情绪偏差 (Emotional biases)
-│   │   ├── 损失厌恶、过度自信、自我控制、禀赋/现状偏差 (loss aversion, overconfidence, self-control, endowment/status quo)
+│   │   ├── 损失厌恶、过度自信、自我控制、禀赋/现状偏差 (loss aversion, overconfidence, self-control, endowment/status quo) (情绪偏差四类)
 │   │   └── 通常管理而非完全纠正 (often managed rather than fully corrected)
 │   └── 注意：偏差分类之所以重要是因为纠正方式不同 (bias classification matters because mitigation differs)
 │
-└── M07: 风险管理 (Risk Management)【考试核心】↔ CFA Institute 2026 Introduction to Risk Management
+└── M08: 风险管理 (Risk Management)【考试核心】↔ CFA Institute 2026 Introduction to Risk Management
     ├── 风险体系 (Risk system)
     │   ├── 治理、识别、衡量、改变化、监控 (governance, identification, measurement, modification, monitoring)
     │   ├── 金融风险与非金融风险；风险互动 (financial vs non-financial risks; risk interactions)
@@ -168,13 +185,14 @@ Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产
 ## 跨模块关联
 
 ```text
-投资组合风险与收益 (Portfolio Risk/Return)
-├── 效用与资本配置线 (Utility and CAL)
-│   └── CAPM与Beta (CAPM and Beta)
-│       └── 主动与被动选择 (Active vs Passive Choice)
-└── 投资政策说明书 (IPS)
-    ├── 行为偏差 (Behavioral Biases)
-    └── 风险管理 (Risk Management)
+投资组合管理概述 (Portfolio Management Overview) [M03]
+├── 投资组合风险与收益 (Portfolio Risk/Return) [M01]
+│   └── 效用与资本配置线 (Utility and CAL) [M02]
+│       └── CAPM与Beta (CAPM and Beta) [M04]
+│           └── 主动与被动选择 (Active vs Passive Choice) [M05]
+└── 投资政策说明书 (IPS) [M06]
+    ├── 行为偏差 (Behavioral Biases) [M07]
+    └── 风险管理 (Risk Management) [M08]
 ```
 
 ---
@@ -216,13 +234,14 @@ Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产
 | Correlation | `Corr(R_1,R_2) = Cov(R_1,R_2)/(σ_1σ_2)` | `M01` | 判断分散化来源 |
 | Utility | `E(Rp)-0.5Aσp²` | `M02` | 风险厌恶框架 |
 | CAL | `E(R_C) = R_f + [(E(R_P)-R_f)/σ_P] x σ_C` | `M02` | 风险资产与无风险资产组合 |
-| CAPM | `E(R_i) = R_f + β_i[E(R_M)-R_f]` | `M03` | required return |
-| Beta | `β_i = Cov(R_i,R_M)/Var(R_M)` | `M03` | systematic risk |
-| Sharpe | `(Rp-Rf)/σp` | `M03` | total risk-adjusted performance |
-| Treynor | `(Rp-Rf)/βp` | `M03` | beta-adjusted performance |
-| Jensen Alpha | `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]` | `M03` | CAPM 偏离度 |
-| M-squared Intuition | `Sharpe difference scaled to market risk` | `M03` | 看清 total-risk-adjusted comparison |
-| Required Excess Return | `β_i x (E(R_m)-R_f)` | `M03` | CAPM risk premium |
+| Pooled Vehicle NAV | `(资产市值 - 负债) / 流通份额` | `M03` | 基金定价基础 |
+| CAPM | `E(R_i) = R_f + β_i[E(R_M)-R_f]` | `M04` | required return |
+| Beta | `β_i = Cov(R_i,R_M)/Var(R_M)` | `M04` | systematic risk |
+| Sharpe | `(Rp-Rf)/σp` | `M04` | total risk-adjusted performance |
+| Treynor | `(Rp-Rf)/βp` | `M04` | beta-adjusted performance |
+| Jensen Alpha | `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]` | `M04` | CAPM 偏离度 |
+| M-squared Intuition | `Sharpe difference scaled to market risk` | `M04` | 看清 total-risk-adjusted comparison |
+| Required Excess Return | `β_i x (E(R_m)-R_f)` | `M04` | CAPM risk premium |
 
 ---
 

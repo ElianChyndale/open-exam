@@ -56,13 +56,14 @@ Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职�
 | M06 | Guidance for Standards I-VII | Standard IV-V | 情境+流程 | duties to employers, diligence, communication, records | [[M06-Standards-IV-and-V]] |
 | M07 | Guidance for Standards I-VII | Standard VI-VII | 情境 | conflicts, priority, referral fees, CFA designation | [[M07-Standards-VI-and-VII]] |
 | M08 | Introduction to GIPS | GIPS | 概念 | composites, discretion, verification | [[M08-GIPS]] |
+| M09 | Ethics Application | 道德应用 | 情境+案例 | 伦理决策框架、案例分析、违规识别、综合情境判断 | [[M09-Ethics-Application]] |
 
 ---
 
 ## Ethical and Professional Standards 核心知识树 (Core Knowledge Tree)
 
 ```text
-职业伦理与专业标准 (Ethics and Professional Standards) (M01-M08)
+职业伦理与专业标准 (Ethics and Professional Standards) (M01-M09)
 │
 ├── M01: 伦理、信任与职业精神 (Ethics, Trust, and Professionalism)【考试核心】↔ 2026 Outline: Ethics and Trust
 │   ├── 职业逻辑 (Profession logic)
@@ -133,11 +134,25 @@ Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职�
 │   └── VII(B) 引用 CFA 协会、项目、称号 (Reference to CFA Institute, Program, Designation)
 │       └── 不得夸大含义、保证或部分状态 (no exaggeration of meaning, guarantee, or partial status)
 │
-└── M08: 全球投资业绩标准 (GIPS)【考试核心】↔ 2026 Outline: GIPS
-    ├── 公司、组合组、自由裁量权、合规陈述 (firm, composite, discretion, compliant presentation)
-    ├── 输入数据、计算方法、披露、陈述纪律 (input data, calculation methodology, disclosure, presentation discipline)
-    ├── 验证评估公司合规流程，而非业绩保证 (verification evaluates firm compliance process, not a magic performance guarantee)
-    └── 注意：GIPS and Standard III(D) meet at honest performance communication
+├── M08: 全球投资业绩标准 (GIPS)【考试核心】↔ 2026 Outline: GIPS
+│   ├── 公司、组合组、自由裁量权、合规陈述 (firm, composite, discretion, compliant presentation)
+│   ├── 输入数据、计算方法、披露、陈述纪律 (input data, calculation methodology, disclosure, presentation discipline)
+│   ├── 验证评估公司合规流程，而非业绩保证 (verification evaluates firm compliance process, not a magic performance guarantee)
+│   └── 注意：GIPS and Standard III(D) meet at honest performance communication
+│
+└── M09: 道德应用 (Ethics Application)【考试核心】↔ 2026 Outline: Ethics Application
+    ├── 伦理决策 7 步框架 (7-step Ethical Decision-Making Framework)
+    │   ├── 识别事实 → 界定利益相关方 → 确定义务 → 考虑方案 → 检验决策 → 实施 → 反思
+    │   └── 日光测试：决策能否公开辩护？(sunlight test)
+    ├── 综合情境判断树 (Integrated Scenario Decision Tree)
+    │   ├── 事实提取 → 受影响方映射 → 标准触发 → 更严格标准评估 → 最保守行动
+    │   └── 跨标准交叉判断 (multiple standards may apply simultaneously)
+    ├── 常见违规模式与案例分析 (Common Violation Patterns and Case Studies)
+    │   ├── 利益冲突、信息滥用、适当性、勤勉缺失、陈述夸大、保密泄露
+    │   └── 一个场景可能触发多个标准
+    ├── 法律、道德与 CFA 标准的三角关系 (Law, Ethics, and CFA Standards)
+    │   └── 遵循更严格标准原则 (stricter standard rule)
+    └── 注意：solving a higher-level ethical dilemma requires step-by-step reasoning, not gut feeling
 ```
 
 ---
@@ -158,13 +173,15 @@ Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职�
 
 ```text
 道德准则 (Code of Ethics)
-└── 准则 I-VII (Standards I-VII)
-    ├── 对客户的义务 (Duties to Clients)
-    ├── 对雇主的义务 (Duties to Employers)
-    ├── 资本市场诚信 (Capital Market Integrity)
-    └── 冲突 / 沟通 / 记录 (Conflicts / Communication / Records)
-        └── 全球投资业绩标准 (GIPS)
-            └── 业绩陈述 (Performance Presentation)
+├── 准则 I-VII (Standards I-VII)
+│   ├── 对客户的义务 (Duties to Clients)
+│   ├── 对雇主的义务 (Duties to Employers)
+│   ├── 资本市场诚信 (Capital Market Integrity)
+│   └── 冲突 / 沟通 / 记录 (Conflicts / Communication / Records)
+│       └── 全球投资业绩标准 (GIPS)
+│           └── 业绩陈述 (Performance Presentation)
+└── 道德应用 (Ethics Application) — 综合情境分析与决策框架
+    └── 涵盖上述全部内容的应用与案例
 ```
 
 ---
@@ -198,7 +215,7 @@ Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职�
 
 | 指标 | 公式/判断链 | 知识树节点 | 考试说明 |
 |------|---------------|------------|----------|
-| Ethics | 无核心数值公式 | `M01-M08` | 本科重在判断框架 |
+| Ethics | 无核心数值公式 | `M01-M09` | 本科重在判断框架 |
 | Priority Rule | `client > market integrity > employer/self convenience` | `M05-M07` | 先守客户与市场 |
 | Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `M03` | law 与 Standards 冲突时常考 |
 | MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `M04` | 信息题第一闸 |

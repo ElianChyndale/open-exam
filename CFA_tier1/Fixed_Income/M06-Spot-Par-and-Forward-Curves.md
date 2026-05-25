@@ -1,12 +1,12 @@
 ---
 title: "M06 — Spot, Par, and Forward Curves"
 description: 即期曲线、平价曲线与远期曲线——贴现因子、无套利定价与曲线计算（中英双语 CFA 备考）
-module: M06
+module: M09
 subject: Fixed_Income
 official_module: "Module 9: The Term Structure of Interest Rates: Spot, Par, and Forward Curves"
 ---
 
-# M06: 即期、平价与远期曲线 (Spot, Par, and Forward Curves)
+# M09: 即期、平价与远期曲线 (Spot, Par, and Forward Curves)
 
 ## 1. 核心知识点
 

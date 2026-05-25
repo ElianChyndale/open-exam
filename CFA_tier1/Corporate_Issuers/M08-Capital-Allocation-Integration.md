@@ -1,12 +1,12 @@
 ---
-title: "M08 — Capital Allocation Integration"
+title: "M09 — Capital Allocation Integration"
 description: 资本配置整合 — 从治理到资本预算到融资的全链路价值创造
-module: M08
-official_module: 5
+module: M09
+official_module: "Module 5: Capital Investments and Capital Allocation"
 subject: Corporate_Issuers
 ---
 
-# M08: Capital Allocation Integration（资本配置整合）
+# M09: Capital Allocation Integration（资本配置整合）
 
 ## 1. 核心知识点
 

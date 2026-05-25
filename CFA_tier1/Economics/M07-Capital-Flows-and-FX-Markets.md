@@ -1,12 +1,12 @@
 ---
-title: "M08 — Capital Flows and FX Markets"
+title: "M07 — Capital Flows and the FX Market"
 description: 资本流动与外汇市场 — 国际收支、汇率制度、外汇市场参与者与交易工具
-module: M08
+module: M07
 subject: Economics
-official_module: "M7: Capital Flows and the FX Market"
+official_module: "Module 7: Capital Flows and the FX Market"
 ---
 
-# M08: Capital Flows and FX Markets（资本流动与外汇市场）
+# M07: Capital Flows and the FX Market（资本流动与外汇市场）
 
 ## 1. 核心知识点（中英双语讲解）
 
@@ -106,7 +106,6 @@ official_module: "M7: Capital Flows and the FX Market"
 
 ## 5. 跨模块关联
 
-- 经常账户的变动与 **[[M03-Aggregate-Output-Prices-and-Growth]]** 中的GDP核算相连
-- 货币政策对资本流动和汇率的影响见 **[[M06-Monetary-Policy]]**
-- 汇率计算和利率平价的数学实现见 **[[M09-Exchange-Rate-Calculations]]**
-- 贸易政策变化影响经常账户，见 **[[M07-Geopolitics-and-Trade]]**
+- 货币政策对资本流动和汇率的影响见 **[[M04-Monetary-Policy]]**
+- 汇率计算和利率平价的数学实现见 **[[M08-Exchange-Rate-Calculations]]**
+- 贸易政策变化影响经常账户，见 **[[M06-International-Trade]]**

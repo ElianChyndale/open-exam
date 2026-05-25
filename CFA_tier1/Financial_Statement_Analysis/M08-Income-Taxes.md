@@ -1,16 +1,16 @@
 ---
-title: "M08 — Income Taxes"
+title: "M09 — Income Taxes"
 description: "所得税全面解析：会计利润与应税所得的差异、递延所得税资产与负债的确认、有效/法定/现金税率的计算与分析、税务披露与调节"
-module: M08
+module: M09
 official_module: "M9: Analysis of Income Taxes"
 subject: Financial_Statement_Analysis
 ---
 
-# M08: 所得税分析 (Income Taxes Analysis)
+# M09: 所得税分析 (Income Taxes Analysis)
 
 ## 1. 核心知识点
 
-### 8.1 会计利润 vs 应税所得 (Accounting Profit vs Taxable Income)
+### 9.1 会计利润 vs 应税所得 (Accounting Profit vs Taxable Income)
 
 - **应付税款 vs 所得税费用 (Taxes Payable vs Income Tax Expense)**：
   - 应付税款(taxes payable) = 应税所得(taxable income) x 法定税率，是实际应缴给税务局的金额
@@ -28,7 +28,7 @@ subject: Financial_Statement_Analysis
   - 常见来源：罚款(fines and penalties)、某些免税收入(tax-exempt income)
   - 影响有效税率(effective tax rate)但不产生 DTA/DTL
 
-### 8.2 递延所得税资产与负债 (Deferred Tax Assets and Liabilities)
+### 9.2 递延所得税资产与负债 (Deferred Tax Assets and Liabilities)
 
 **递延所得税负债 (Deferred Tax Liability, DTL)：**
 - 产生原因：会计利润 > 应税所得（当期少交税，未来多交税）
@@ -44,7 +44,7 @@ subject: Financial_Statement_Analysis
 - US GAAP：按相关资产/负债的分类确定流动性
 - DTA/DTL 不能简单以净额列示(netting)，需满足特定条件
 
-### 8.3 有效/法定/现金税率 (Effective / Statutory / Cash Tax Rates)
+### 9.3 有效/法定/现金税率 (Effective / Statutory / Cash Tax Rates)
 
 - **有效税率 (Effective Tax Rate)** = `Income Tax Expense / Pretax Income`——财报中呈现的实际税率
 - **法定税率 (Statutory Tax Rate)** = 公司所在司法管辖区的企业法定税率——用于计算所得税费用的基准
@@ -52,7 +52,7 @@ subject: Financial_Statement_Analysis
 
 三者差异的分析意义：有效税率与法定税率的差异提示永久性差异的存在；现金税率低于有效税率可能说明大量 DTL 转回或存在税务优惠
 
-### 8.4 税务披露与有效税率调节 (Tax Disclosures and Effective-Rate Reconciliation)
+### 9.4 税务披露与有效税率调节 (Tax Disclosures and Effective-Rate Reconciliation)
 
 - 公司需要提供有效税率与法定税率的调节表(reconciliation)
 - 调节项目包括：永久性差异、不同税率辖区的影响、税率变动、DTA 估价备抵变动

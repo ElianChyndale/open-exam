@@ -1,12 +1,12 @@
 ---
 title: "M01 — Instrument Features"
-description: 债券工具特征——合同解剖、现金流结构与或有条款（中英双语 CFA 备考）
+description: 债券工具特征——合同解剖、债券契约、肯定性与否定性契约及或有条款（中英双语 CFA 备考）
 module: M01
 subject: Fixed_Income
-official_module: "Module 1: Fixed-Income Instrument Features, Module 2: Fixed-Income Cash Flows and Types"
+official_module: "Module 1: Fixed-Income Instrument Features"
 ---
 
-# M01: 工具特征与现金流 (Instrument Features and Cash Flows)
+# M01: 工具特征 (Instrument Features)
 
 ## 1. 核心知识点
 
@@ -16,11 +16,17 @@ official_module: "Module 1: Fixed-Income Instrument Features, Module 2: Fixed-In
 - **债券契约：法律承诺、支付条款、契约条款 (bond indenture: legal promises, payment terms, covenants)**：契约是发行人与持有人之间的法律合同，包含支付时间表、提前赎回条款、财务约束等。
 - **肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】**：肯定性契约要求发行人做某事（如按时披露财报），否定性契约禁止发行人做某事（如限制新增债务）。考试常混淆两者的分类。
 
-### 1.2 现金流结构 (Cash-Flow Structures)
+### 1.2 债券契约 (Bond Indenture)
 
-- **固定利率/浮动利率/零息/摊还债券 (fixed-rate/floating-rate/zero-coupon/amortizing)**：固定利率债券每期支付固定票息；浮动利率债券票息随参考利率调整；零息债券以折价发行，到期一次性支付面值；摊还债券每期偿还部分本金。
-- **通胀挂钩/递增票息/递延票息 (inflation-linked/step-up/deferred coupon)**：通胀挂钩债券本金随 CPI 调整；递增票息债券的票息率随时间上升；递延票息债券初期不支付票息，后期一次性支付累积票息。
-- **或有条款：可赎回利于发行人，可回售利于投资者 (contingency provisions: callable benefits issuer; putable benefits investor)**：可赎回债券 (callable bond) 允许发行人按约定价格提前赎回；可回售债券 (putable bond) 允许投资者按约定价格提前回售给发行人。
+- **法律承诺 (legal promises)**：包括按时支付利息和本金、提供财务报表、维持抵押品等。这些承诺构成发行人的法律义务。
+- **支付条款 (payment terms)**：明确票息支付时间和金额、本金偿还方式、计息基准 (day-count convention) 等。
+- **契约条款 (covenants)**：保护投资者利益的约定。肯定性契约 (affirmative covenants) 要求发行人做某事（如按时披露财报、支付税负）；否定性契约 (negative covenants) 限制发行人做某事（如限制新增债务、限制资产出售、限制股息支付）。
+
+### 1.3 或有条款 (Contingency Provisions)
+
+- **可赎回债券 (callable bond)【考试核心】**：发行人在约定时间按约定价格赎回债券，有利于发行人（利率下行时可再融资）。
+- **可回售债券 (putable bond)【考试核心】**：投资者在约定时间按约定价格将债券回售给发行人，有利于投资者（利率上升时可收回资金）。
+- **偿债基金条款 (sinking fund provision)**：要求发行人定期偿还部分本金，降低信用风险但影响投资者再投资计划。
 
 ## 2. 关键公式
 
@@ -43,6 +49,6 @@ official_module: "Module 1: Fixed-Income Instrument Features, Module 2: Fixed-In
 
 ## 5. 跨模块关联
 
-- 现金流结构 → [[M03-Bond-Valuation]] 的定价方法
+- 现金流结构 → [[M02-Fixed-Income-Cash-Flows]] 的完整现金流分类
 - 或有条款 → [[M09-Curve-Based-and-Empirical-Risk]] 的有效久期与凸性
 - 优先级与抵押品 → [[M11-Government-and-Corporate-Credit]] 的信用分析

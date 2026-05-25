@@ -1,12 +1,12 @@
 ---
-title: "M04 — Business Cycles"
+title: "M02 — Understanding Business Cycles"
 description: 经济周期 — 周期阶段、经济指标、信贷与库存效应
-module: M04
+module: M02
 subject: Economics
-official_module: "M2: Understanding Business Cycles"
+official_module: "Module 2: Understanding Business Cycles"
 ---
 
-# M04: Business Cycles（经济周期）
+# M02: Understanding Business Cycles（经济周期）
 
 ## 1. 核心知识点（中英双语讲解）
 
@@ -90,6 +90,5 @@ official_module: "M2: Understanding Business Cycles"
 
 ## 5. 跨模块关联
 
-- 经济周期直接关系到 **[[M03-Aggregate-Output-Prices-and-Growth]]** 中的产出缺口概念
-- 经济周期的政策应对涉及 **[[M05-Fiscal-Policy]]** 和 **[[M06-Monetary-Policy]]**
-- 周期不同阶段对汇率和资本流动的影响见 **[[M08-Capital-Flows-and-FX-Markets]]**
+- 经济周期的政策应对涉及 **[[M03-Fiscal-Policy]]** 和 **[[M04-Monetary-Policy]]**
+- 周期不同阶段对汇率和资本流动的影响见 **[[M07-Capital-Flows-and-FX-Markets]]**
