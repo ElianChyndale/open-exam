@@ -3,6 +3,7 @@ title: "M02 — Utility and CAL"
 description: 效用函数与资本配置线，包括风险厌恶系数、无差异曲线、最优风险组合选择与借贷决策
 module: M02
 subject: Portfolio_Management
+official_module: "Portfolio Risk and Return Part II"
 ---
 
 # M02: 效用与资本配置线 (Utility and Capital Allocation Line)

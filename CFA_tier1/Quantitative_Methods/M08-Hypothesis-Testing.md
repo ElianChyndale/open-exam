@@ -2,7 +2,12 @@
 title: "M08 — Hypothesis Testing"
 description: 假设检验 — H0/H1, Type I/II, p-value, 置信区间, 参数与非参数检验
 module: M08
+official_module: "Module 8: Hypothesis Testing"
 subject: Quantitative_Methods
+los:
+  - explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test
+  - construct hypothesis tests and determine their statistical significance, the associated Type I and Type II errors, and power of the test given a significance level
+  - compare and contrast parametric and nonparametric tests, and describe situations where each is the more appropriate type of test
 ---
 
 # M08: Hypothesis Testing（假设检验）

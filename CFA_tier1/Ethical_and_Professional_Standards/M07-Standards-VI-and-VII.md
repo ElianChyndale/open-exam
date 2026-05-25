@@ -3,6 +3,7 @@ title: "M07 — Standards VI and VII"
 description: "准则 VI 和 VII — 冲突披露、交易优先顺序、介绍费、CFA 项目行为与称号使用"
 module: M07
 subject: Ethical_and_Professional_Standards
+official_module: "Guidance for Standards I-VII"
 ---
 
 # M07: 准则 VI 和 VII (Standards VI and VII)

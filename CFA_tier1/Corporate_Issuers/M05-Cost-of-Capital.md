@@ -2,6 +2,7 @@
 title: "M05 — Cost of Capital"
 description: 资本成本 — 各要素成本计算、WACC构建、边际资本成本
 module: M05
+official_module: 5
 subject: Corporate_Issuers
 ---
 

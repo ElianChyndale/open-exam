@@ -3,6 +3,7 @@ title: "M02 -- Forward Commitments and Contingent Claims"
 description: "远期承诺与或有索取权：远期、期货、互换、期权的定义、特征与区别 (Forward Commitments and Contingent Claims: forwards, futures, swaps, options definitions and features)"
 module: M02
 subject: Derivatives
+official_module: "Forward Commitment and Contingent Claim Features and Instruments"
 ---
 
 # M02: 远期承诺与或有索取权 (Forward Commitments and Contingent Claims)

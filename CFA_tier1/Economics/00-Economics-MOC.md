@@ -45,19 +45,24 @@ tags:
 
 ---
 
-## 科目概览
+## 科目概览（与 CFA 2026 L1 官方课程对齐）
 
-| 模块  | 内容                                   | 难度     | 必考点                                                 | 章节文件                                      |
-| --- | ------------------------------------ | ------ | --------------------------------------------------- | ----------------------------------------- |
-| M01 | Demand, Supply, and Elasticity       | 概念+轻计算 | curve shifts, elasticity, consumer/producer surplus | [[M01-Demand-Supply-and-Elasticity]]      |
-| M02 | The Firm and Market Structures       | 概念     | pricing power, barriers, output/profit logic        | [[M02-The-Firm-and-Market-Structures]]    |
-| M03 | Aggregate Output, Prices, and Growth | 概念+计算  | GDP, inflation, real/nominal rates                  | [[M03-Aggregate-Output-Prices-and-Growth]] |
-| M04 | Business Cycles and Indicators       | 策略     | phases, indicators, credit/inventory effects        | [[M04-Business-Cycles]]                   |
-| M05 | Fiscal Policy                        | 概念+策略  | multipliers, deficits, crowding out                 | [[M05-Fiscal-Policy]]                     |
-| M06 | Monetary Policy                      | 概念+策略  | objectives, tools, transmission, credibility        | [[M06-Monetary-Policy]]                   |
-| M07 | Geopolitics and Trade                | 概念     | comparative advantage, restrictions, blocs          | [[M07-Geopolitics-and-Trade]]             |
-| M08 | Capital Flows and FX Markets         | 概念     | balance of payments, FX regimes, participants       | [[M08-Capital-Flows-and-FX-Markets]]      |
-| M09 | Exchange Rate Calculations           | 计算     | quotes, cross rates, forward points, parity         | [[M09-Exchange-Rate-Calculations]]        |
+| 模块  | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+| --- | --- | --- | --- | --- | --- |
+| M01 | — | Demand, Supply, and Elasticity | 概念+轻计算 | curve shifts, elasticity, consumer/producer surplus | [[M01-Demand-Supply-and-Elasticity]] |
+| M02 | M1: The Firm and Market Structures | The Firm and Market Structures | 概念 | pricing power, barriers, output/profit logic | [[M02-The-Firm-and-Market-Structures]] |
+| M03 | — | Aggregate Output, Prices, and Growth | 概念+计算 | GDP, inflation, real/nominal rates | [[M03-Aggregate-Output-Prices-and-Growth]] |
+| M04 | M2: Understanding Business Cycles | Business Cycles and Indicators | 策略 | phases, indicators, credit/inventory effects | [[M04-Business-Cycles]] |
+| M05 | M3: Fiscal Policy | Fiscal Policy | 概念+策略 | multipliers, deficits, crowding out | [[M05-Fiscal-Policy]] |
+| M06 | M4: Monetary Policy | Monetary Policy | 概念+策略 | objectives, tools, transmission, credibility | [[M06-Monetary-Policy]] |
+| M07 | M5: Introduction to Geopolitics / M6: International Trade | Geopolitics and Trade | 概念 | comparative advantage, restrictions, blocs | [[M07-Geopolitics-and-Trade]] |
+| M08 | M7: Capital Flows and the FX Market | Capital Flows and FX Markets | 概念 | balance of payments, FX regimes, participants | [[M08-Capital-Flows-and-FX-Markets]] |
+| M09 | M8: Exchange Rate Calculations | Exchange Rate Calculations | 计算 | quotes, cross rates, forward points, parity | [[M09-Exchange-Rate-Calculations]] |
+
+> ⚠️ **差距提示**：
+> 1. M01 "Demand, Supply, and Elasticity" 和 M03 "Aggregate Output, Prices, and Growth" **不属于 CFA 2026 L1 经济学官方模块**，可能已移至其他科目。建议确认是否保留或移除。
+> 2. 官方 M5 "Introduction to Geopolitics" 和 M6 "International Trade" **在当前笔记中合并为 M07**，未拆分两个独立模块。建议根据官方结构拆分或至少标注两个子模块。
+> 3. 官方课程共 **8 个模块**，当前笔记包含 **9 个模块**（含 2 个非官方模块），需关注内容范围差异。
 
 ---
 

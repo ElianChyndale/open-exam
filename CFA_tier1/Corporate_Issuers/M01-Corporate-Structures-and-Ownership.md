@@ -2,6 +2,7 @@
 title: "M01 — Corporate Structures and Ownership"
 description: 公司结构与所有权 — 法律形式、利益相关者、所有权与控制的分离
 module: M01
+official_module: 1
 subject: Corporate_Issuers
 ---
 

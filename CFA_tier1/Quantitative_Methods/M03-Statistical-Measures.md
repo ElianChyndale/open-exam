@@ -1,8 +1,14 @@
 ---
-title: "M03 — Statistical Measures"
+title: "M03 — Statistical Measures of Asset Returns"
 description: 统计量与分布特征 — 均值, 方差, 偏度, 峰度, 相关系数
 module: M03
+official_module: "Module 3: Statistical Measures of Asset Returns"
 subject: Quantitative_Methods
+los:
+  - calculate, interpret, and evaluate measures of central tendency and location to address an investment problem
+  - calculate, interpret, and evaluate measures of dispersion to address an investment problem
+  - interpret and evaluate measures of skewness and kurtosis to address an investment problem
+  - interpret correlation between two variables to address an investment problem
 ---
 
 # M03: Statistical Measures（统计量与分布特征）

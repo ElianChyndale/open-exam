@@ -1,8 +1,13 @@
 ---
-title: "M02 — Time Value of Money"
+title: "M02 — Time Value of Money in Finance"
 description: 货币时间价值 — PV/FV, 年金, 永续年金, 隐含变量求解, 现金流可加性
 module: M02
+official_module: "Module 2: Time Value of Money in Finance"
 subject: Quantitative_Methods
+los:
+  - calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows
+  - calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the PV and cash flows
+  - explain the cash flow additivity principle, its importance for the no-arbitrage condition, and its use in calculating implied forward interest rates, forward exchange rates, and option values
 ---
 
 # M02: Time Value of Money（货币时间价值）

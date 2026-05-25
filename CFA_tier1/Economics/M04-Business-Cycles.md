@@ -3,6 +3,7 @@ title: "M04 — Business Cycles"
 description: 经济周期 — 周期阶段、经济指标、信贷与库存效应
 module: M04
 subject: Economics
+official_module: "M2: Understanding Business Cycles"
 ---
 
 # M04: Business Cycles（经济周期）

@@ -3,6 +3,7 @@ title: "M05 — Fiscal Policy"
 description: 财政政策 — 政府支出、税收、乘数效应、赤字与债务可持续性
 module: M05
 subject: Economics
+official_module: "M3: Fiscal Policy"
 ---
 
 # M05: Fiscal Policy（财政政策）

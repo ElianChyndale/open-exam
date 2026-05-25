@@ -2,6 +2,7 @@
 title: "M06 — Capital Structure and Leverage"
 description: 资本结构与杠杆 — DOL、DFL、债务容量、MM理论、结构权衡
 module: M06
+official_module: 6
 subject: Corporate_Issuers
 ---
 

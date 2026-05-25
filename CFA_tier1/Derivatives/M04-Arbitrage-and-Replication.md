@@ -3,6 +3,7 @@ title: "M04 -- Arbitrage, Replication, and Cost of Carry"
 description: "套利、复制与持有成本：无套利定价、复制组合、持有成本关系 (Arbitrage, Replication, and Cost of Carry: no-arbitrage pricing, replication portfolio, carry relation)"
 module: M04
 subject: Derivatives
+official_module: "Arbitrage/Replication/Cost of Carry"
 ---
 
 # M04: 套利、复制与持有成本 (Arbitrage, Replication, and Cost of Carry)

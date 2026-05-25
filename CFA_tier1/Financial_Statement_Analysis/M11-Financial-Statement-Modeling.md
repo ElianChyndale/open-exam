@@ -2,6 +2,7 @@
 title: "M11 — Financial Statement Modeling"
 description: "财务报表建模全面解析：基于销售的 pro forma 模型、分析师预测偏差与修正、波特效应、通胀/通缩影响及预测期与终值选择"
 module: M11
+official_module: "M12: Introduction to Financial Statement Modeling"
 subject: Financial_Statement_Analysis
 ---
 

@@ -2,6 +2,7 @@
 title: "M03 — Balance Sheet"
 description: "资产负债表深度解析：无形资产、商誉、金融工具、非流动负债的确认与计量，以及同比例资产负债表分析技术"
 module: M03
+official_module: "M3: Analyzing Balance Sheets"
 subject: Financial_Statement_Analysis
 ---
 

@@ -2,6 +2,7 @@
 title: "M02 — Corporate Governance and ESG"
 description: 公司治理与ESG — 代理架构、董事会监督、ESG因素如何影响风险与价值
 module: M02
+official_module: 3
 subject: Corporate_Issuers
 ---
 

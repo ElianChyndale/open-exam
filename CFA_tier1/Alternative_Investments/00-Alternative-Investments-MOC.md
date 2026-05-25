@@ -44,12 +44,15 @@ Alternative Investments 的核心是理解**非流动性溢价**与**低相关�
 
 - **学习顺序**：先建立另类投资基础概念（M1-M2）→ 掌握私募股权与私人债权（M3）→ 攻克房地产与基础设施（M4）→ 最后掌握商品、对冲基金与数字资产（M5-M7）
 
-| 模块 | 内容 | 核心问题 | 章节文件 |
-|------|------|----------|----------|
-| M01-M02 | 基础框架 | "另类投资是什么？怎么衡量业绩？" | [[M01-Features-and-Structure.md]] / [[M02-Performance-Measurement.md]] |
-| M03 | 私人资本 | "PE、LBO、VC、Private Debt 怎么运作？" | [[M03-Private-Capital.md]] |
-| M04 | 实物资产 | "房地产 Cap Rate、基础设施棕绿地" | [[M04-Real-Estate-and-Infrastructure.md]] |
-| M05-M07 | 其他另类 | "商品期限结构、对冲基金策略、数字资产" | [[M05-Natural-Resources.md]] / [[M06-Hedge-Funds.md]] / [[M07-Digital-Assets.md]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | Alternative Investment Features/Methods/Structures | 另类投资特征与结构 | 概念 | 六大特征、费用结构、GP/LP | [[M01-Features-and-Structure.md]] |
+| M02 | Alternative Investment Performance and Returns | 另类投资业绩与回报 | 计算 | TVPI/DPI/RVPI、J曲线 | [[M02-Performance-Measurement.md]] |
+| M03 | Private Capital: Equity and Debt | 私人资本 | 概念+计算 | LBO、VC、Private Debt | [[M03-Private-Capital.md]] |
+| M04 | Real Estate and Infrastructure | 实物资产 | 概念+计算 | Cap Rate、棕地/绿地 | [[M04-Real-Estate-and-Infrastructure.md]] |
+| M05 | Natural Resources | 自然资源 | 概念 | Contango/Backwardation、Roll Yield | [[M05-Natural-Resources.md]] |
+| M06 | Hedge Funds | 对冲基金 | 概念 | 策略分类、杠杆指标 | [[M06-Hedge-Funds.md]] |
+| M07 | Introduction to Digital Assets | 数字资产 | 概念 | 区块链、PoW/PoS、Tokenization | [[M07-Digital-Assets.md]] |
 
 ---
 

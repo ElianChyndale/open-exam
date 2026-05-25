@@ -3,6 +3,7 @@ title: "M08 -- Binomial Valuation of Options"
 description: "单期二叉树期权估值：对冲比率、复制组合、风险中性概率、期权价值 (One-Period Binomial Option Valuation: hedge ratio, replicating portfolio, risk-neutral probability, option value)"
 module: M08
 subject: Derivatives
+official_module: "Valuing a Derivative Using a One-Period Binomial Model"
 ---
 
 # M08: 单期二叉树期权估值 (Binomial Valuation of Options)

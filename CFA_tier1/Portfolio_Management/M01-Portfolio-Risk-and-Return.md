@@ -3,6 +3,7 @@ title: "M01 — Portfolio Risk and Return"
 description: 投资组合风险与收益的核心概念，包括期望收益计算、方差/协方差、相关系数、分散化收益与有效前沿
 module: M01
 subject: Portfolio_Management
+official_module: "Portfolio Risk and Return Part I"
 ---
 
 # M01: 组合风险与收益 (Portfolio Risk and Return)

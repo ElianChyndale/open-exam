@@ -3,6 +3,7 @@ title: "M08 — Equity Valuation Concepts and Tools"
 description: 权益估值概念与工具：戈登增长模型、合理倍数、相对估值法、DDM 与 multiples 应用
 module: M08
 subject: Equity
+official_module: "Module 8: Equity Valuation: Concepts and Basic Tools"
 ---
 
 # M08: 权益估值概念与工具 (Equity Valuation Concepts and Tools)

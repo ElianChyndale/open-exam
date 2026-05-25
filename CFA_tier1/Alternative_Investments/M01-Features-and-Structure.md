@@ -3,6 +3,7 @@ title: "M01 — Features and Structure"
 description: "另类投资的核心特征（ILL-COMPLEX-LOW-HIGH-LIMIT-UNIQUE）、投资方式（直接/间接/FOF）、费用结构（2/20、Hurdle Rate、High Water Mark）、基金组织形式（GP/LP、有限合伙制）、收益瀑布分配结构（美式/欧式瀑布）以及数字资产基础结构"
 module: M01
 subject: Alternative_Investments
+official_module: "Alternative Investment Features/Methods/Structures"
 ---
 
 # M01: 另类投资特征、方式与结构 (Features, Methods, and Structures)

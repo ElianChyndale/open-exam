@@ -3,6 +3,7 @@ title: "M04 — Overview of Equity Securities"
 description: 权益证券概述：普通股与优先股特征、公开与私募权益、存托凭证、外国股票投资渠道
 module: M04
 subject: Equity
+official_module: "Module 4: Overview of Equity Securities"
 ---
 
 # M04: 权益证券概述 (Overview of Equity Securities)

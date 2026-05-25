@@ -3,6 +3,7 @@ title: "M05 — Investment Policy Statement"
 description: 投资策略说明书的构成要素，包括收益目标与风险目标的设定、约束条件分析及 IPS 编写逻辑
 module: M05
 subject: Portfolio_Management
+official_module: "Basics of Portfolio Planning and Construction"
 ---
 
 # M05: 投资策略说明书 (Investment Policy Statement)

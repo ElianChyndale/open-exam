@@ -3,6 +3,7 @@ title: "M02 — Security Market Indexes"
 description: 证券市场指数：指数构建方法、加权方式、再平衡与指数重构、价格收益与总收益
 module: M02
 subject: Equity
+official_module: "Module 2: Security Market Indexes"
 ---
 
 # M02: 证券市场指数 (Security Market Indexes)

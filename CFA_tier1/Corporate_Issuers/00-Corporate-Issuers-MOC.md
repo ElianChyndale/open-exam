@@ -45,18 +45,24 @@ Corporate Issuers 的主线是“公司决策是否真的增加股东价值”�
 
 ---
 
-## 科目概览
+## 科目概览（与 CFA 2026 L1 官方课程对齐）
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Corporate Structures and Ownership | 概念 | legal forms, stakeholders, claims | [[M01-Corporate-Structures-and-Ownership]] |
-| M02 | Corporate Governance and ESG | 概念+策略 | principal-agent, board, stakeholder conflicts | [[M02-Corporate-Governance-and-ESG]] |
-| M03 | Working Capital and Liquidity | 计算+策略 | operating cycle, CCC, liquidity policy | [[M03-Working-Capital-and-Liquidity]] |
-| M04 | Capital Investments | 计算 | incremental cash flow, NPV, IRR, real options | [[M04-Capital-Investments]] |
-| M05 | Cost of Capital | 计算 | component costs, WACC, marginal capital | [[M05-Cost-of-Capital]] |
-| M06 | Capital Structure and Leverage | 概念+计算 | DOL, DFL, debt capacity, trade-offs | [[M06-Capital-Structure-and-Leverage]] |
-| M07 | Business Models | 概念 | revenue model, cost structure, scalability | [[M07-Business-Models]] |
-| M08 | Capital Allocation Integration | 策略 | governance -> projects -> financing -> value | [[M08-Capital-Allocation-Integration]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | M1: Organizational Forms, Corporate Issuer Features, and Ownership | Corporate Structures and Ownership | 概念 | legal forms, stakeholders, claims | [[M01-Corporate-Structures-and-Ownership]] |
+| ❌ 缺失 | **M2: Investors and Other Stakeholders** | Investors and Other Stakeholders | — | stakeholder relationships, objectives, information asymmetry | ⚠️ 需新建 |
+| M02 | M3: Corporate Governance: Conflicts, Mechanisms, Risks, and Benefits | Corporate Governance and ESG | 概念+策略 | principal-agent, board, stakeholder conflicts | [[M02-Corporate-Governance-and-ESG]] |
+| M03 | M4: Working Capital and Liquidity | Working Capital and Liquidity | 计算+策略 | operating cycle, CCC, liquidity policy | [[M03-Working-Capital-and-Liquidity]] |
+| M04 | M5: Capital Investments and Capital Allocation | Capital Investments | 计算 | incremental cash flow, NPV, IRR, real options | [[M04-Capital-Investments]] |
+| M05 | M5: Capital Investments and Capital Allocation | Cost of Capital | 计算 | component costs, WACC, marginal capital | [[M05-Cost-of-Capital]] |
+| M06 | M6: Capital Structure | Capital Structure and Leverage | 概念+计算 | DOL, DFL, debt capacity, trade-offs | [[M06-Capital-Structure-and-Leverage]] |
+| M07 | M7: Business Models | Business Models | 概念 | revenue model, cost structure, scalability | [[M07-Business-Models]] |
+| M08 | M5: Capital Investments and Capital Allocation | Capital Allocation Integration | 策略 | governance -> projects -> financing -> value | [[M08-Capital-Allocation-Integration]] |
+
+> **差距提示**：
+> 1. **官方 M2 "Investors and Other Stakeholders" 完全缺失** -- 当前 vault 中没有独立笔记对应此模块。该模块涵盖投资者类型、利益相关者关系、信息不对称与分析师角色。建议新建笔记 `[[M02a-Investors-and-Other-Stakeholders]]`。
+> 2. **官方 M5 "Capital Investments and Capital Allocation"** 内容分散在 vault 的 M04 (Capital Investments)、M05 (Cost of Capital) 和 M08 (Capital Allocation Integration) 三个笔记中。官方课程将成本资本视为资本预算的一部分而非独立模块。
+> 3. **vault M02 标题含 "ESG"**，但官方 M3 标题不包含 ESG。ESG 内容在官方课程中作为治理框架的一部分讨论，非独立标题。
 
 ---
 

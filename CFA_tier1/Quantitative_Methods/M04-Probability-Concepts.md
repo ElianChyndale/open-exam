@@ -1,8 +1,13 @@
 ---
-title: "M04 — Probability Concepts"
-description: 概率基础 — 期望值, 方差, 概率树, 贝叶斯更新
+title: "M04 — Probability Trees and Conditional Expectations"
+description: 概率基础 — 期望值, 概率树, 条件期望, 贝叶斯更新
 module: M04
+official_module: "Module 4: Probability Trees and Conditional Expectations"
 subject: Quantitative_Methods
+los:
+  - calculate expected values, variances, and standard deviations and demonstrate their application to investment problems
+  - formulate an investment problem as a probability tree and explain the use of conditional expectations in investment application
+  - calculate and interpret an updated probability in an investment setting using Bayes' formula
 ---
 
 # M04: Probability Concepts（概率基础）

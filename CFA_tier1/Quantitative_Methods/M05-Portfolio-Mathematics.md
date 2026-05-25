@@ -2,7 +2,12 @@
 title: "M05 — Portfolio Mathematics"
 description: 投资组合数学 — 期望收益, 方差, 协方差, 相关系数, 分散化, 短缺风险
 module: M05
+official_module: "Module 5: Portfolio Mathematics"
 subject: Quantitative_Methods
+los:
+  - calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns
+  - calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns
+  - define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy's safety-first criterion
 ---
 
 # M05: Portfolio Mathematics（投资组合数学）

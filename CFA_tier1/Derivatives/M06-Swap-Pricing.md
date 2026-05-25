@@ -3,6 +3,7 @@ title: "M06 -- Swap Pricing and Valuation"
 description: "互换定价与估值：互换结构、固定换浮动利率互换、货币互换、估值直觉 (Pricing and Valuation of Swaps: swap anatomy, fixed-for-floating swaps, currency swaps, valuation intuition)"
 module: M06
 subject: Derivatives
+official_module: "Pricing and Valuation of Interest Rates and Other Swaps"
 ---
 
 # M06: 互换定价与估值 (Swap Pricing and Valuation)

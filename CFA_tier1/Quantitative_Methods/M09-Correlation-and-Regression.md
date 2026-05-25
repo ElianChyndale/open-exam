@@ -1,8 +1,16 @@
 ---
-title: "M09 — Correlation and Regression"
-description: 相关与回归 — 独立性检验, 简单线性回归, 回归诊断, 拟合与推断
-module: M09
+title: "M10 — Simple Linear Regression"
+description: 简单线性回归 — 模型设定, 回归诊断, 拟合, 推断, 预测
+module: M10
+official_module: "Module 10: Simple Linear Regression"
 subject: Quantitative_Methods
+los:
+  - describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients
+  - explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated
+  - calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression
+  - describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate
+  - calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model
+  - describe different functional forms of simple linear regressions
 ---
 
 # M09: Correlation and Regression（相关与回归）

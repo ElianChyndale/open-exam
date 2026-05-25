@@ -3,6 +3,7 @@ title: "M13 — ABS and Credit Enhancement"
 description: 资产支持证券与信用增级——ABS 类型、抵押品分析、内部与外部信用增级（中英双语 CFA 备考）
 module: M13
 subject: Fixed_Income
+official_module: "Supplementary — Securitization"
 ---
 
 # M13: ABS 与信用增级 (ABS and Credit Enhancement)

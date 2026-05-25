@@ -3,6 +3,7 @@ title: "M04 — Standard II: Integrity of Capital Markets"
 description: "准则 II：资本市场诚信 — 重大非公开信息与市场操纵"
 module: M04
 subject: Ethical_and_Professional_Standards
+official_module: "Guidance for Standards I-VII"
 ---
 
 # M04: 准则 II：资本市场诚信 (Standard II: Integrity of Capital Markets)

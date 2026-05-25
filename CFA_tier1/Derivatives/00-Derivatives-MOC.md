@@ -47,16 +47,16 @@ tags:
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Derivative Instruments and Markets | 概念 | underlying, exchange vs OTC, settlement | [[M01-Instruments-and-Markets]] |
-| M02 | Forward Commitments and Contingent Claims | 概念 | forwards, futures, swaps, options | [[M02-Forward-Commitments-and-Contingent-Claims]] |
-| M03 | Benefits, Risks, and Uses | 策略 | hedging, exposure transformation, leverage | [[M03-Benefits-and-Risks]] |
-| M04 | Arbitrage, Replication, and Cost of Carry | 计算 | no-arbitrage, carry, replication | [[M04-Arbitrage-and-Replication]] |
-| M05 | Pricing and Valuation of Forwards/Futures | 计算 | forward price vs forward value, marking to market | [[M05-Forward-and-Futures-Pricing]] |
-| M06 | Pricing and Valuation of Swaps | 概念+计算 | fixed-for-floating, FRA strip intuition | [[M06-Swap-Pricing]] |
-| M07 | Options and Put-Call Parity | 计算 | payoff, moneyness, parity, synthetics | [[M07-Options-and-Put-Call-Parity]] |
-| M08 | One-Period Option Valuation | 计算 | binomial hedge ratio, risk-neutral pricing | [[M08-Binomial-Valuation]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | Derivative Instrument and Derivative Market Features | Derivative Instruments and Markets | 概念 | underlying, exchange vs OTC, settlement | [[M01-Instruments-and-Markets]] |
+| M02 | Forward Commitment and Contingent Claim Features and Instruments | Forward Commitments and Contingent Claims | 概念 | forwards, futures, swaps, options | [[M02-Forward-Commitments-and-Contingent-Claims]] |
+| M03 | Derivative Benefits/Risks/Uses | Benefits, Risks, and Uses | 策略 | hedging, exposure transformation, leverage | [[M03-Benefits-and-Risks]] |
+| M04 | Arbitrage/Replication/Cost of Carry | Arbitrage, Replication, and Cost of Carry | 计算 | no-arbitrage, carry, replication | [[M04-Arbitrage-and-Replication]] |
+| M05 | Pricing and Valuation of Forward Contracts, Pricing and Valuation of Futures Contracts | Pricing and Valuation of Forwards/Futures | 计算 | forward price vs forward value, marking to market | [[M05-Forward-and-Futures-Pricing]] |
+| M06 | Pricing and Valuation of Interest Rates and Other Swaps | Pricing and Valuation of Swaps | 概念+计算 | fixed-for-floating, FRA strip intuition | [[M06-Swap-Pricing]] |
+| M07 | Pricing and Valuation of Options, Option Replication Using Put-Call Parity | Options and Put-Call Parity | 计算 | payoff, moneyness, parity, synthetics | [[M07-Options-and-Put-Call-Parity]] |
+| M08 | Valuing a Derivative Using a One-Period Binomial Model | One-Period Option Valuation | 计算 | binomial hedge ratio, risk-neutral pricing | [[M08-Binomial-Valuation]] |
 
 ---
 

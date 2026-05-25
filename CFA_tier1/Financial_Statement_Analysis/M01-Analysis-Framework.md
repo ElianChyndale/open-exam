@@ -2,6 +2,7 @@
 title: "M01 — Analysis Framework"
 description: "财务报表分析框架：涵盖系统化分析步骤、信息层级结构与IFRS/US GAAP报告体系，为CFA L1财务分析科目奠定方法论基础"
 module: M01
+official_module: "M1: Introduction to Financial Statement Analysis"
 subject: Financial_Statement_Analysis
 ---
 

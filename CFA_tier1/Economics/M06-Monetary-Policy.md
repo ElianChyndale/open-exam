@@ -3,6 +3,7 @@ title: "M06 — Monetary Policy"
 description: 货币政策 — 中央银行设计、政策工具、传导机制、可信度与独立性
 module: M06
 subject: Economics
+official_module: "M4: Monetary Policy"
 ---
 
 # M06: Monetary Policy（货币政策）

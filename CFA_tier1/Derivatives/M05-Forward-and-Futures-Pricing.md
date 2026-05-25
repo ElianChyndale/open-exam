@@ -3,6 +3,7 @@ title: "M05 -- Forward and Futures Pricing and Valuation"
 description: "远期与期货定价估值：远期价格公式、合约存续期价值、逐日盯市 (Pricing and Valuation of Forwards and Futures: forward price formulas, contract value during life, marking-to-market)"
 module: M05
 subject: Derivatives
+official_module: "Pricing and Valuation of Forward Contracts, Pricing and Valuation of Futures Contracts"
 ---
 
 # M05: 远期与期货定价估值 (Forward and Futures Pricing and Valuation)

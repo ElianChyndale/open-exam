@@ -5,3 +5,4 @@ __pycache__/
 .env.local
 .system/events/catalog.sqlite3
 .system/evals/results/
+.gstack/

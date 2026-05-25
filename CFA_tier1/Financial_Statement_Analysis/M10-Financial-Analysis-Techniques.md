@@ -2,6 +2,7 @@
 title: "M10 — Financial Analysis Techniques"
 description: "财务分析技术全面解析：流动性/营运/偿债/盈利四大类比率、杜邦分解、比率联动与行业比率、建模预测中的比率应用及分析工具与局限"
 module: M10
+official_module: "M11: Financial Analysis Techniques"
 subject: Financial_Statement_Analysis
 ---
 

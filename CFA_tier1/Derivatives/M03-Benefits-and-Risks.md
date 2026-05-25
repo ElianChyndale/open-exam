@@ -3,6 +3,7 @@ title: "M03 -- Benefits, Risks, and Uses"
 description: "衍生品收益与风险：对冲、风险暴露转换、杠杆效应及各类风险 (Benefits, Risks, and Uses: hedging, exposure transformation, leverage, and various risk types)"
 module: M03
 subject: Derivatives
+official_module: "Derivative Benefits/Risks/Uses"
 ---
 
 # M03: 收益、风险与用途 (Benefits, Risks, and Uses)

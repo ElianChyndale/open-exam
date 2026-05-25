@@ -3,6 +3,7 @@ title: "M01 — Instrument Features"
 description: 债券工具特征——合同解剖、现金流结构与或有条款（中英双语 CFA 备考）
 module: M01
 subject: Fixed_Income
+official_module: "Module 1: Fixed-Income Instrument Features, Module 2: Fixed-Income Cash Flows and Types"
 ---
 
 # M01: 工具特征与现金流 (Instrument Features and Cash Flows)

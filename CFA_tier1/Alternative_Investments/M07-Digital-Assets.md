@@ -3,6 +3,7 @@ title: "M07 — Digital Assets"
 description: "数字资产的核心概念——区块链（分布式账本技术）、共识机制（PoW工作量证明 vs PoS权益证明）、数字资产类型（加密货币/效用代币/证券型代币）以及代币化（Tokenization）的优势与风险"
 module: M07
 subject: Alternative_Investments
+official_module: "Introduction to Digital Assets"
 ---
 
 # M07: 数字资产 (Digital Assets)

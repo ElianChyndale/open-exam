@@ -45,20 +45,23 @@ tags:
 
 ---
 
-## 科目概览
+## 科目概览（与 CFA 2026 L1 官方课程对齐）
 
-| 模块  | 内容                        | 难度    | 必考点                                         | 章节文件 |
-| --- | ------------------------- | ----- | ------------------------------------------- | --- |
-| M01 | Rates and Returns         | 概念+计算 | HPR, MWRR, TWRR, annualized return          | [[M01-Rates-and-Returns]] |
-| M02 | Time Value of Money       | 计算    | PV/FV, annuity, perpetuity, implied return  | [[M02-Time-Value-of-Money]] |
-| M03 | Statistical Measures      | 概念+计算 | mean, variance, skewness, kurtosis          | [[M03-Statistical-Measures]] |
-| M04 | Probability Trees & Bayes | 概念    | conditional probability, Bayes              | [[M04-Probability-Concepts]] |
-| M05 | Portfolio Mathematics     | 计算    | covariance, correlation, portfolio variance | [[M05-Portfolio-Mathematics]] |
-| M06 | Simulation                | 概念    | Monte Carlo, bootstrap                      | [[M06-Simulation-Methods]] |
-| M07 | Sampling & Estimation     | 计算    | CLT, standard error, confidence interval    | [[M07-Sampling-and-Estimation]] |
-| M08 | Hypothesis Testing        | 计算+策略 | H0/H1, Type I/II, p-value                   | [[M08-Hypothesis-Testing]] |
-| M09 | Correlation & Regression  | 计算+策略 | t-test, F-test, R^2, SEE                    | [[M09-Correlation-and-Regression]] |
-| M10 | Big Data / ML Intro       | 概念    | supervised vs unsupervised, overfitting     | [[M10-Big-Data-and-ML]] |
+| 模块  | 官方 Module | 内容                        | 难度    | 必考点                                         | 章节文件 |
+| --- | --- | ------------------------- | ----- | ------------------------------------------- | --- |
+| M01 | M1: Rates and Returns | Rates and Returns         | 概念+计算 | HPR, MWRR, TWRR, annualized return          | [[M01-Rates-and-Returns]] |
+| M02 | M2: Time Value of Money in Finance | Time Value of Money in Finance      | 计算    | PV/FV, annuity, perpetuity, implied return, cash flow additivity | [[M02-Time-Value-of-Money]] |
+| M03 | M3: Statistical Measures of Asset Returns | Statistical Measures of Asset Returns      | 概念+计算 | mean, variance, skewness, kurtosis, correlation | [[M03-Statistical-Measures]] |
+| M04 | M4: Probability Trees and Conditional Expectations | Probability Trees & Conditional Expectations | 概念    | expected value, probability trees, Bayes    | [[M04-Probability-Concepts]] |
+| M05 | M5: Portfolio Mathematics | Portfolio Mathematics     | 计算    | covariance, correlation, portfolio variance, shortfall risk | [[M05-Portfolio-Mathematics]] |
+| M06 | M6: Simulation Methods | Simulation Methods                | 概念    | Monte Carlo, bootstrap, lognormal distribution | [[M06-Simulation-Methods]] |
+| M07 | M7: Estimation and Inference | Sampling, Estimation & Inference     | 计算    | CLT, standard error, confidence interval, bootstrap | [[M07-Sampling-and-Estimation]] |
+| M08 | M8: Hypothesis Testing | Hypothesis Testing        | 计算+策略 | H0/H1, Type I/II, p-value, parametric vs nonparametric | [[M08-Hypothesis-Testing]] |
+| M09 | M9: Parametric & Non-Parametric Tests of Independence | Tests of Independence     | 计算+策略 | correlation test, contingency table, parametric vs nonparametric | ⚠️ 需新建 |
+| M10 | M10: Simple Linear Regression | Correlation & Regression  | 计算+策略 | t-test, F-test, R^2, SEE, prediction | [[M09-Correlation-and-Regression]] |
+| M11 | M11: Introduction to Big Data Techniques | Big Data / ML Techniques       | 概念    | fintech, AI/ML, data science applications | [[M10-Big-Data-and-ML]] |
+
+> ⚠️ **差距提示**：官方课程将 M09 "Tests of Independence" 作为独立模块，包含列联表独立性检验和参数/非参数相关检验。当前笔记将这部分合并到 "Correlation & Regression" 中。建议补充独立笔记 [[M09-Tests-of-Independence]]。
 
 ---
 
