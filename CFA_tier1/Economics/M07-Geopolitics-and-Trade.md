@@ -3,6 +3,7 @@ title: "M07 — Geopolitics and Trade"
 description: 地缘政治与贸易 — 比较优势、贸易壁垒、区域一体化、地缘政治风险
 module: M07
 subject: Economics
+official_module: "M5: Introduction to Geopolitics / M6: International Trade"
 ---
 
 # M07: Geopolitics and Trade（地缘政治与贸易）

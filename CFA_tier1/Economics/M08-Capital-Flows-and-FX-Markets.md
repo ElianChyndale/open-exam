@@ -3,6 +3,7 @@ title: "M08 — Capital Flows and FX Markets"
 description: 资本流动与外汇市场 — 国际收支、汇率制度、外汇市场参与者与交易工具
 module: M08
 subject: Economics
+official_module: "M7: Capital Flows and the FX Market"
 ---
 
 # M08: Capital Flows and FX Markets（资本流动与外汇市场）

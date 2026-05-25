@@ -3,6 +3,7 @@ title: "M03 — CAPM and Beta"
 description: 资本资产定价模型、Beta系数、证券市场线、绩效评估指标（Sharpe/Treynor/Alpha）及系统性风险与非系统性风险的辨析
 module: M03
 subject: Portfolio_Management
+official_module: "Portfolio Risk and Return Part II"
 ---
 
 # M03: CAPM 与 Beta (CAPM and Beta)

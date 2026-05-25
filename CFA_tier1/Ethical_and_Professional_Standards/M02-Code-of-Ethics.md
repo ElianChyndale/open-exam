@@ -3,6 +3,7 @@ title: "M02 — Code of Ethics"
 description: "道德准则 — 七条道德准则总纲及其在职业实践中的应用"
 module: M02
 subject: Ethical_and_Professional_Standards
+official_module: "Code of Ethics and Standards of Professional Conduct"
 ---
 
 # M02: 道德准则 (Code of Ethics)

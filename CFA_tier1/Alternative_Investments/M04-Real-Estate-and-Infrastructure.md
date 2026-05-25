@@ -3,6 +3,7 @@ title: "M04 — Real Estate and Infrastructure"
 description: "房地产投资的三种估值方法（收益法/成本法/市场比较法）、Cap Rate驱动因素与反向关系、REITs三种类型、基础设施的棕地与绿地投资对比"
 module: M04
 subject: Alternative_Investments
+official_module: "Real Estate and Infrastructure"
 ---
 
 # M04: 房地产与基础设施 (Real Estate and Infrastructure)

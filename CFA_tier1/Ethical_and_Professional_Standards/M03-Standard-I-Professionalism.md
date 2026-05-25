@@ -3,6 +3,7 @@ title: "M03 — Standard I: Professionalism"
 description: "准则 I：专业性 — 了解法律、独立性与客观性、虚假陈述、不当行为"
 module: M03
 subject: Ethical_and_Professional_Standards
+official_module: "Guidance for Standards I-VII"
 ---
 
 # M03: 准则 I：专业精神 (Standard I: Professionalism)

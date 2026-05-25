@@ -47,22 +47,22 @@ tags:
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Instrument Features and Cash Flows | 概念 | indenture, covenants, contingency provisions | [[M01-Instrument-Features]] |
-| M02 | Issuance, Trading, and Funding Markets | 概念 | primary/secondary, repos, government vs corporate | [[M02-Issuance-and-Trading]] |
-| M03 | Bond Valuation: Prices and Yields | 计算 | clean/full price, accrued interest, matrix pricing | [[M03-Bond-Valuation]] |
-| M04 | Fixed-Rate Yield and Spread Measures | 计算 | YTM, annual yield conversion, spread measures | [[M04-Yield-and-Spread-Measures]] |
-| M05 | Floating-Rate and Money Market Measures | 计算 | FRN spreads, discount yield, MMY | [[M05-Floating-Rate-and-Money-Market]] |
-| M06 | Spot, Par, and Forward Curves | 计算 | curve comparison, spot discounting, forwards | [[M06-Spot-Par-and-Forward-Curves]] |
-| M07 | Interest Rate Risk and Return | 计算+策略 | return sources, horizon, Macaulay duration | [[M07-Interest-Rate-Risk]] |
-| M08 | Yield-Based Duration and Convexity | 计算 | modified duration, money duration, PVBP, convexity | [[M08-Duration-and-Convexity]] |
-| M09 | Curve-Based and Empirical Risk | 概念+计算 | effective duration, key rate duration | [[M09-Curve-Based-and-Empirical-Risk]] |
-| M10 | Credit Risk | 概念 | PD, LGD, ratings, spread volatility | [[M10-Credit-Risk]] |
-| M11 | Government and Corporate Credit Analysis | 概念+计算 | sovereign factors, coverage, leverage, priority | [[M11-Government-and-Corporate-Credit]] |
-| M12 | Securitization Foundations | 概念 | parties, benefits, structure | [[M12-Securitization-Foundations]] |
-| M13 | ABS and Credit Enhancement | 概念 | covered bonds, internal/external enhancement | [[M13-ABS-and-Credit-Enhancement]] |
-| M14 | MBS and CMO Structures | 概念 | prepayment, contraction/extension, tranche cash flows | [[M14-MBS-and-CMO]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | Module 1: Fixed-Income Instrument Features, Module 2: Fixed-Income Cash Flows and Types | Instrument Features and Cash Flows | 概念 | indenture, covenants, contingency provisions | [[M01-Instrument-Features]] |
+| M02 | Module 3: Fixed-Income Issuance and Trading, Module 4: Fixed-Income Markets for Corporate Issuers, Module 5: Fixed-Income Markets for Government Issuers | Issuance, Trading, and Funding Markets | 概念 | primary/secondary, repos, government vs corporate | [[M02-Issuance-and-Trading]] |
+| M03 | Module 6: Fixed-Income Bond Valuation: Prices and Yields | Bond Valuation: Prices and Yields | 计算 | clean/full price, accrued interest, matrix pricing | [[M03-Bond-Valuation]] |
+| M04 | Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds | Fixed-Rate Yield and Spread Measures | 计算 | YTM, annual yield conversion, spread measures | [[M04-Yield-and-Spread-Measures]] |
+| M05 | Module 8: Yield and Yield Spread Measures for Floating-Rate Instruments | Floating-Rate and Money Market Measures | 计算 | FRN spreads, discount yield, MMY | [[M05-Floating-Rate-and-Money-Market]] |
+| M06 | Module 9: The Term Structure of Interest Rates: Spot, Par, and Forward Curves | Spot, Par, and Forward Curves | 计算 | curve comparison, spot discounting, forwards | [[M06-Spot-Par-and-Forward-Curves]] |
+| M07 | Module 10: Interest Rate Risk and Return | Interest Rate Risk and Return | 计算+策略 | return sources, horizon, Macaulay duration | [[M07-Interest-Rate-Risk]] |
+| M08 | Module 11: Yield-Based Bond Duration Measures and Properties, Module 12: Yield-Based Bond Convexity and Portfolio Properties | Yield-Based Duration and Convexity | 计算 | modified duration, money duration, PVBP, convexity | [[M08-Duration-and-Convexity]] |
+| M09 | Module 13: Curve-Based and Empirical Fixed-Income Risk Measures | Curve-Based and Empirical Risk | 概念+计算 | effective duration, key rate duration | [[M09-Curve-Based-and-Empirical-Risk]] |
+| M10 | Module 14: Credit Risk | Credit Risk | 概念 | PD, LGD, ratings, spread volatility | [[M10-Credit-Risk]] |
+| M11 | Module 14: Credit Risk (Credit Analysis) | Government and Corporate Credit Analysis | 概念+计算 | sovereign factors, coverage, leverage, priority | [[M11-Government-and-Corporate-Credit]] |
+| M12 | Supplementary — Securitization | Securitization Foundations | 概念 | parties, benefits, structure | [[M12-Securitization-Foundations]] |
+| M13 | Supplementary — Securitization | ABS and Credit Enhancement | 概念 | covered bonds, internal/external enhancement | [[M13-ABS-and-Credit-Enhancement]] |
+| M14 | Supplementary — Securitization | MBS and CMO Structures | 概念 | prepayment, contraction/extension, tranche cash flows | [[M14-MBS-and-CMO]] |
 
 ---
 

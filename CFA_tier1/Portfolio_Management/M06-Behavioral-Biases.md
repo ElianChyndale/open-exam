@@ -3,6 +3,7 @@ title: "M06 — Behavioral Biases"
 description: 行为金融学中的认知错误与情绪偏差分类、特征、对投资决策的影响及纠正/管理方式
 module: M06
 subject: Portfolio_Management
+official_module: "The Behavioral Biases of Individuals"
 ---
 
 # M06: 行为偏差 (Behavioral Biases)

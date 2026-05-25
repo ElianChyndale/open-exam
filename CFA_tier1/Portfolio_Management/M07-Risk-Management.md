@@ -3,6 +3,7 @@ title: "M07 — Risk Management"
 description: 风险管理的全面框架，包括风险治理、识别、计量、改变化与监控，金融风险与非金融风险分类，风险预算与风险改变化工具
 module: M07
 subject: Portfolio_Management
+official_module: "Introduction to Risk Management"
 ---
 
 # M07: 风险管理 (Risk Management)

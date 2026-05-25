@@ -1,8 +1,13 @@
 ---
-title: "M07 — Sampling and Estimation"
-description: 抽样与估计 — 抽样方法, CLT, 标准误, 置信区间, 重抽样估计量
+title: "M07 — Sampling, Estimation and Inference"
+description: 抽样与估计 — 抽样方法, CLT, 标准误, 重抽样
 module: M07
+official_module: "Module 7: Estimation and Inference"
 subject: Quantitative_Methods
+los:
+  - compare and contrast simple random, stratified random, cluster, convenience, and judgmental sampling and their implications for sampling error in an investment problem
+  - explain the central limit theorem and its importance for the distribution and standard error of the sample mean
+  - describe the use of resampling (bootstrap, jackknife) to estimate the sampling distribution of a statistic
 ---
 
 # M07: Sampling and Estimation（抽样与估计）

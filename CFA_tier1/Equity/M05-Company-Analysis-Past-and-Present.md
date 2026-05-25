@@ -3,6 +3,7 @@ title: "M05 — Company Analysis: Past and Present"
 description: 公司分析：历史与现状 — 商业模式理解、盈利能力评估、会计质量与同行可比性、管理层质量
 module: M05
 subject: Equity
+official_module: "Module 5: Company Analysis: Past and Present"
 ---
 
 # M05: 公司分析：历史与现状 (Company Analysis: Past and Present)

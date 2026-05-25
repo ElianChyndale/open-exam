@@ -47,16 +47,16 @@ Equity 的核心是“企业价值如何变成股票价格，以及价格为何�
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Market Organization and Structure | 概念 | orders, execution, margin, primary vs secondary | [[M01-Market-Organization-and-Structure]] |
-| M02 | Security Market Indexes | 概念+轻计算 | index return, weighting, rebalancing | [[M02-Security-Market-Indexes]] |
-| M03 | Market Efficiency | 概念 | forms, anomalies, active/passive implications | [[M03-Market-Efficiency]] |
-| M04 | Overview of Equity Securities | 概念 | common/preferred, public/private, foreign shares | [[M04-Overview-of-Equity-Securities]] |
-| M05 | Company Analysis: Past and Present | 策略 | business model, profitability, quality of earnings | [[M05-Company-Analysis-Past-and-Present]] |
-| M06 | Industry and Competitive Analysis | 策略 | life cycle, competitive forces, pricing power | [[M06-Industry-and-Competitive-Analysis]] |
-| M07 | Company Analysis: Forecasting | 策略+计算 | revenue drivers, margins, scenario linkage | [[M07-Company-Analysis-Forecasting]] |
-| M08 | Equity Valuation Concepts and Tools | 计算 | DDM, multiples, justified valuation ratios | [[M08-Equity-Valuation-Concepts]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | Module 1: Market Organization and Structure | Market Organization and Structure | 概念 | orders, execution, margin, primary vs secondary | [[M01-Market-Organization-and-Structure]] |
+| M02 | Module 2: Security Market Indexes | Security Market Indexes | 概念+轻计算 | index return, weighting, rebalancing | [[M02-Security-Market-Indexes]] |
+| M03 | Module 3: Market Efficiency | Market Efficiency | 概念 | forms, anomalies, active/passive implications | [[M03-Market-Efficiency]] |
+| M04 | Module 4: Overview of Equity Securities | Overview of Equity Securities | 概念 | common/preferred, public/private, foreign shares | [[M04-Overview-of-Equity-Securities]] |
+| M05 | Module 5: Company Analysis: Past and Present | Company Analysis: Past and Present | 策略 | business model, profitability, quality of earnings | [[M05-Company-Analysis-Past-and-Present]] |
+| M06 | Module 6: Industry and Competitive Analysis | Industry and Competitive Analysis | 策略 | life cycle, competitive forces, pricing power | [[M06-Industry-and-Competitive-Analysis]] |
+| M07 | Module 7: Company Analysis: Forecasting | Company Analysis: Forecasting | 策略+计算 | revenue drivers, margins, scenario linkage | [[M07-Company-Analysis-Forecasting]] |
+| M08 | Module 8: Equity Valuation: Concepts and Basic Tools | Equity Valuation Concepts and Tools | 计算 | DDM, multiples, justified valuation ratios | [[M08-Equity-Valuation-Concepts]] |
 
 ---
 

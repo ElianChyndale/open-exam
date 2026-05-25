@@ -2,6 +2,7 @@
 title: "M08 — Capital Allocation Integration"
 description: 资本配置整合 — 从治理到资本预算到融资的全链路价值创造
 module: M08
+official_module: 5
 subject: Corporate_Issuers
 ---
 

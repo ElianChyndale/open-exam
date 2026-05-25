@@ -3,6 +3,7 @@ title: "M01 — Market Organization and Structure"
 description: 市场组织与结构：一级与二级市场、做市商与经纪商、订单类型、保证金交易与卖空机制
 module: M01
 subject: Equity
+official_module: "Module 1: Market Organization and Structure"
 ---
 
 # M01: 市场组织与结构 (Market Organization and Structure)

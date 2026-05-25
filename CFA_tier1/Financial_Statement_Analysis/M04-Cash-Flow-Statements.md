@@ -2,6 +2,7 @@
 title: "M04 — Cash Flow Statements"
 description: "现金流量表全面解析：三表联动、直接法与间接法编制、IFRS与US GAAP分类差异、自由现金流计算及现金流比率分析"
 module: M04
+official_module: "M4: Analyzing Statements of Cash Flows I / M5: Analyzing Statements of Cash Flows II"
 subject: Financial_Statement_Analysis
 ---
 

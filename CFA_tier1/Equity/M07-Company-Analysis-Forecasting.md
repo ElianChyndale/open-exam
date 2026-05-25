@@ -3,6 +3,7 @@ title: "M07 — Company Analysis: Forecasting"
 description: 公司分析：预测 — 自上而下与自下而上预测、收入驱动因素、情景分析、增长可持续性
 module: M07
 subject: Equity
+official_module: "Module 7: Company Analysis: Forecasting"
 ---
 
 # M07: 公司分析：预测 (Company Analysis: Forecasting)

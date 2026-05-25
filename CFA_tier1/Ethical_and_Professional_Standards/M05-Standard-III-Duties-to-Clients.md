@@ -3,6 +3,7 @@ title: "M05 — Standard III: Duties to Clients"
 description: "准则 III：对客户的义务 — 忠诚审慎、公平交易、适当性、业绩陈述、保密义务"
 module: M05
 subject: Ethical_and_Professional_Standards
+official_module: "Guidance for Standards I-VII"
 ---
 
 # M05: 准则 III：对客户的义务 (Standard III: Duties to Clients)

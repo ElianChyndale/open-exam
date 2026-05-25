@@ -1,8 +1,13 @@
 ---
 title: "M06 — Simulation Methods"
-description: 模拟方法 — 分布联动, 蒙特卡洛模拟, 自助重抽样
+description: 模拟方法 — 对数正态分布, 蒙特卡洛模拟, 自助重抽样
 module: M06
+official_module: "Module 6: Simulation Methods"
 subject: Quantitative_Methods
+los:
+  - explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns
+  - describe Monte Carlo simulation and explain how it can be used in investment applications
+  - describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications
 ---
 
 # M06: Simulation Methods（模拟方法）

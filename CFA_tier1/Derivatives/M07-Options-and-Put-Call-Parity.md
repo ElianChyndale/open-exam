@@ -3,6 +3,7 @@ title: "M07 -- Options and Put-Call Parity"
 description: "期权与买卖权平价：期权收益、利润、实值状态、买卖权平价、合成头寸 (Options and Put-Call Parity: payoff, profit, moneyness, put-call parity, synthetic positions)"
 module: M07
 subject: Derivatives
+official_module: "Pricing and Valuation of Options, Option Replication Using Put-Call Parity"
 ---
 
 # M07: 期权与买卖权平价 (Options and Put-Call Parity)

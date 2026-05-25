@@ -3,6 +3,7 @@ title: "M01 — Ethics, Trust, and Professionalism"
 description: "道德、信任与职业精神 — 职业的本质、信任在资本市场中的作用、道德与法律的边界"
 module: M01
 subject: Ethical_and_Professional_Standards
+official_module: "Ethics and Trust in the Investment Profession"
 ---
 
 # M01: 伦理、信任与职业精神 (Ethics, Trust, and Professionalism)

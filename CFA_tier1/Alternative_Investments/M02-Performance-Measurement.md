@@ -3,6 +3,7 @@ title: "M02 — Performance Measurement"
 description: "另类投资业绩衡量指标（TVPI/DPI/RVPI/IRR）、风险调整收益指标（Sortino Ratio / Sharpe Ratio）、J曲线动态以及收益平滑现象"
 module: M02
 subject: Alternative_Investments
+official_module: "Alternative Investment Performance and Returns"
 ---
 
 # M02: 另类投资业绩与回报 (Performance and Returns)

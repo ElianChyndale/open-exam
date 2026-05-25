@@ -3,6 +3,7 @@ title: "M03 — Market Efficiency"
 description: 市场有效性：弱式、半强式、强式有效市场，异常现象，主动与被动投资含义
 module: M03
 subject: Equity
+official_module: "Module 3: Market Efficiency"
 ---
 
 # M03: 市场有效性 (Market Efficiency)

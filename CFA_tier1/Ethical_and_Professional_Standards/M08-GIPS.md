@@ -3,6 +3,7 @@ title: "M08 — GIPS"
 description: "全球投资业绩标准 — 公司定义、组合组、自由裁量权、合规陈述与验证"
 module: M08
 subject: Ethical_and_Professional_Standards
+official_module: "Introduction to GIPS"
 ---
 
 # M08: 全球投资业绩标准 (Global Investment Performance Standards)

@@ -3,6 +3,7 @@ title: "M06 — Standards IV and V"
 description: "准则 IV 和 V — 对雇主的义务与投资分析职责"
 module: M06
 subject: Ethical_and_Professional_Standards
+official_module: "Guidance for Standards I-VII"
 ---
 
 # M06: 准则 IV 和 V (Standards IV and V)

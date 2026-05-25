@@ -3,6 +3,7 @@ title: "M03 — Private Capital"
 description: "私人资本的两大分支——私募股权（LBO杠杆收购、VC风险投资、Growth Equity成长股权）和私人债权（直接借贷、夹层债务、创业债务）的运作机制、结构差异与考试要点"
 module: M03
 subject: Alternative_Investments
+official_module: "Private Capital: Equity and Debt"
 ---
 
 # M03: 私人资本 (Private Capital)

@@ -2,6 +2,7 @@
 title: "M05 — Inventory Analysis"
 description: "存货分析全面解析：计量基础（成本与可变现净值孰低）、成本流转方法（FIFO/加权平均/LIFO）、通胀通缩效应及存货披露分析"
 module: M05
+official_module: "M6: Analysis of Inventories"
 subject: Financial_Statement_Analysis
 ---
 

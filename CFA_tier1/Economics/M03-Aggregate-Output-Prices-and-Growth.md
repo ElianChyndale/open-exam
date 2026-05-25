@@ -3,6 +3,7 @@ title: "M03 — Aggregate Output, Prices, and Growth"
 description: 总产出、价格与增长 — GDP核算、通胀衡量、经济增长来源
 module: M03
 subject: Economics
+official_module: "— (Not in CFA 2026 L1 Economics)"
 ---
 
 # M03: Aggregate Output, Prices, and Growth（总产出、价格与增长）

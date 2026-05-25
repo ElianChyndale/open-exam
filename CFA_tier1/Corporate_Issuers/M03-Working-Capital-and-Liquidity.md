@@ -2,6 +2,7 @@
 title: "M03 — Working Capital and Liquidity"
 description: 营运资本与流动性 — 经营周期、现金转换周期、融资政策
 module: M03
+official_module: 4
 subject: Corporate_Issuers
 ---
 

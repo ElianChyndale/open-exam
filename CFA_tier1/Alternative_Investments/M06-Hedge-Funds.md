@@ -3,6 +3,7 @@ title: "M06 — Hedge Funds"
 description: "对冲基金的核心特征（流动性/透明度/费用结构/高水位线）、四大投资策略（股票多空/全球宏观/事件驱动/相对价值）以及杠杆指标（总杠杆与净杠杆）"
 module: M06
 subject: Alternative_Investments
+official_module: "Hedge Funds"
 ---
 
 # M06: 对冲基金 (Hedge Funds)

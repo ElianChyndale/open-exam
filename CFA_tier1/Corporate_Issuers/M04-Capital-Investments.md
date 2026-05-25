@@ -2,6 +2,7 @@
 title: "M04 — Capital Investments"
 description: 资本投资决策 — NPV、IRR、现金流纪律、实物期权
 module: M04
+official_module: 5
 subject: Corporate_Issuers
 ---
 

@@ -3,6 +3,7 @@ title: "M09 — Exchange Rate Calculations"
 description: 汇率计算 — 报价方式、交叉汇率、远期汇率、利率平价、套利检查
 module: M09
 subject: Economics
+official_module: "M8: Exchange Rate Calculations"
 ---
 
 # M09: Exchange Rate Calculations（汇率计算）

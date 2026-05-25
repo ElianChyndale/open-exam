@@ -3,6 +3,7 @@ title: "M10 — Credit Risk"
 description: 信用风险——预期信用损失、PD/LGD、违约风险、降级风险与评级分析（中英双语 CFA 备考）
 module: M10
 subject: Fixed_Income
+official_module: "Module 14: Credit Risk"
 ---
 
 # M10: 信用风险 (Credit Risk)

@@ -2,6 +2,7 @@
 title: "M08 — Income Taxes"
 description: "所得税全面解析：会计利润与应税所得的差异、递延所得税资产与负债的确认、有效/法定/现金税率的计算与分析、税务披露与调节"
 module: M08
+official_module: "M9: Analysis of Income Taxes"
 subject: Financial_Statement_Analysis
 ---
 

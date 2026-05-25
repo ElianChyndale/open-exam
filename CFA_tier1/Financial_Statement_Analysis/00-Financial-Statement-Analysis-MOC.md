@@ -45,28 +45,30 @@ FRA 的关键不是背条文，而是把“交易→报表→比率→投资判�
 
 ---
 
-## 科目概览
+## 科目概览（与 CFA 2026 L1 官方课程对齐）
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Analysis Framework | 概念 | sources of information, audit role | [[M01-Analysis-Framework]] |
-| M02 | Income Statement | 概念+计算 | revenue recognition, EPS | [[M02-Income-Statement]] |
-| M03 | Balance Sheet | 概念 | intangibles, liabilities, common-size | [[M03-Balance-Sheet]] |
-| M04 | Cash Flow Statements I-II | 计算 | direct/indirect, classification, FCFF/FCFE | [[M04-Cash-Flow-Statements]] |
-| M05 | Inventory Analysis | 概念+计算 | lower of cost and NRV, FIFO/LIFO effects | [[M05-Inventory-Analysis]] |
-| M06 | Long-Term Assets | 概念+策略 | intangibles, impairment, derecognition | [[M06-Long-Term-Assets]] |
-| M07 | Long-Term Liabilities & Equity | 概念 | leases, pensions, stock-based compensation | [[M07-Long-Term-Liabilities-and-Equity]] |
-| M08 | Income Taxes | 概念+计算 | DTA/DTL, effective/statutory/cash tax rates | [[M08-Income-Taxes]] |
-| M09 | Financial Reporting Quality | 策略 | quality spectrum, warning signs, manipulation | [[M09-Financial-Reporting-Quality]] |
-| M10 | Financial Analysis Techniques | 计算+解释 | ratios, DuPont, industry ratios | [[M10-Financial-Analysis-Techniques]] |
-| M11 | Financial Statement Modeling | 策略 | sales-based model, forecast horizon, bias | [[M11-Financial-Statement-Modeling]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | M1: Introduction to Financial Statement Analysis | Analysis Framework | 概念 | sources of information, audit role | [[M01-Analysis-Framework]] |
+| M02 | M2: Analyzing Income Statements | Income Statement | 概念+计算 | revenue recognition, EPS | [[M02-Income-Statement]] |
+| M03 | M3: Analyzing Balance Sheets | Balance Sheet | 概念 | intangibles, liabilities, common-size | [[M03-Balance-Sheet]] |
+| M04 | M4: Analyzing Stmts of Cash Flows I / M5: Analyzing Stmts of Cash Flows II | Cash Flow Statements I-II | 计算 | direct/indirect, classification, FCFF/FCFE | [[M04-Cash-Flow-Statements]] |
+| M05 | M6: Analysis of Inventories | Inventory Analysis | 概念+计算 | lower of cost and NRV, FIFO/LIFO effects | [[M05-Inventory-Analysis]] |
+| M06 | M7: Analysis of Long-Term Assets | Long-Term Assets | 概念+策略 | intangibles, impairment, derecognition | [[M06-Long-Term-Assets]] |
+| M07 | M8: Topics in Long-Term Liabilities and Equity | Long-Term Liabilities & Equity | 概念 | leases, pensions, stock-based compensation | [[M07-Long-Term-Liabilities-and-Equity]] |
+| M08 | M9: Analysis of Income Taxes | Income Taxes | 概念+计算 | DTA/DTL, effective/statutory/cash tax rates | [[M08-Income-Taxes]] |
+| M09 | M10: Financial Reporting Quality | Financial Reporting Quality | 策略 | quality spectrum, warning signs, manipulation | [[M09-Financial-Reporting-Quality]] |
+| M10 | M11: Financial Analysis Techniques | Financial Analysis Techniques | 计算+解释 | ratios, DuPont, industry ratios | [[M10-Financial-Analysis-Techniques]] |
+| M11 | M12: Introduction to Financial Statement Modeling | Financial Statement Modeling | 策略 | sales-based model, forecast horizon, bias | [[M11-Financial-Statement-Modeling]] |
+
+> ⚠️ **差距提示**：官方 2026 课程将 "Cash Flow Statements" 拆分为两个独立模块：M4 "Analyzing Statements of Cash Flows I" 和 M5 "Analyzing Statements of Cash Flows II"，而当前笔记将它们合并为 M04。CF I 聚焦间接法与分类逻辑，CF II 侧重自由现金流（FCFF/FCFE）和现金流比率。当前 M04 已涵盖两部分内容，但缺少独立模块拆分的粒度。建议复习时分别对照官方考纲确认各自学习要点。
 
 ---
 
 ## Financial Statement Analysis 核心知识树 (Core Knowledge Tree)
 
 ```text
-FRA / Financial Statement Analysis (财务报表分析) (M01-M11)
+FRA / Financial Statement Analysis (财务报表分析) (官方 12 模块: M1-M12 / 笔记 11 模块: M01-M11)
 │
 ├── M01: Analysis Framework (分析框架)
 │   ├── 1.1 Framework Steps (分析框架步骤)【考试核心】↔ Topic Outline P10
@@ -114,7 +116,7 @@ FRA / Financial Statement Analysis (财务报表分析) (M01-M11)
 │   ├── 3.3 Financial Instruments and Non-Current Liabilities (金融工具与非流动负债)【考试核心】
 │   └── 3.4 Common-Size Balance Sheet and Related Ratios (同比例资产负债表与相关比率)【考试核心】
 │
-├── M04: Cash Flow Statements I-II (现金流量表 I-II)
+├── M04: Cash Flow Statements I-II (现金流量表 I-II) [官方拆分为 M4 + M5]
 │   ├── 4.1 Three-Statement Linkage (三大报表联动)【考试核心】↔ Topic Outline P11
 │   │   ├── 现金流量表连接利润表与资产负债表变动 (cash flow statement links income statement to balance sheet changes)
 │   │   └── CFO/CFI/CFF 分类现金变动来源 (CFO / CFI / CFF classify the source of cash movement)

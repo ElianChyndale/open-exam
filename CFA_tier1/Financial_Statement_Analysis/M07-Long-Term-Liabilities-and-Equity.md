@@ -2,6 +2,7 @@
 title: "M07 — Long-Term Liabilities and Equity"
 description: "长期负债与权益全面解析：租赁会计（出租人与承租人）、养老金计划（DC vs DB）、股权激励薪酬及负债/权益列报对杠杆解读的影响"
 module: M07
+official_module: "M8: Topics in Long-Term Liabilities and Equity"
 subject: Financial_Statement_Analysis
 ---
 

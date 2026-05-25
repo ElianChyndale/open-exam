@@ -3,6 +3,7 @@ title: "M05 — Natural Resources"
 description: "商品期货定价理论（持有成本模型、便利收益、存储成本）、Contango正向市场与Backwardation反向市场、Roll Yield展期收益计算及投资策略"
 module: M05
 subject: Alternative_Investments
+official_module: "Natural Resources"
 ---
 
 # M05: 自然资源 (Natural Resources)

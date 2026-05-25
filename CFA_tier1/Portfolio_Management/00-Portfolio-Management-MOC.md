@@ -47,15 +47,15 @@ Portfolio Management 的关键词是"组合、约束、匹配"，不是单资产
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Portfolio Risk and Return | 计算 | E(Rp), variance, diversification | [[M01-Portfolio-Risk-and-Return.md]] |
-| M02 | Utility and CAL | 计算+策略 | risk aversion, capital allocation line | [[M02-Utility-and-CAL.md]] |
-| M03 | CAPM and Beta | 计算 | SML, beta, required return | [[M03-CAPM-and-Beta.md]] |
-| M04 | Market Efficiency / Active vs Passive | 概念 | active/passive implications | [[M04-Market-Efficiency-and-Portfolio-Construction.md]] |
-| M05 | IPS | 策略 | return objective, risk objective, constraints | [[M05-IPS.md]] |
-| M06 | Behavioral Biases | 概念 | cognitive vs emotional biases | [[M06-Behavioral-Biases.md]] |
-| M07 | Risk Management | 概念 | governance, budgeting, exposure control | [[M07-Risk-Management.md]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | Portfolio Risk and Return Part I | Portfolio Risk and Return | 计算 | E(Rp), variance, diversification | [[M01-Portfolio-Risk-and-Return.md]] |
+| M02 | Portfolio Risk and Return Part II | Utility and CAL | 计算+策略 | risk aversion, capital allocation line | [[M02-Utility-and-CAL.md]] |
+| M03 | Portfolio Risk and Return Part II | CAPM and Beta | 计算 | SML, beta, required return | [[M03-CAPM-and-Beta.md]] |
+| M04 | Basics of Portfolio Planning and Construction | Market Efficiency / Active vs Passive | 概念 | active/passive implications | [[M04-Market-Efficiency-and-Portfolio-Construction.md]] |
+| M05 | Basics of Portfolio Planning and Construction | IPS | 策略 | return objective, risk objective, constraints | [[M05-IPS.md]] |
+| M06 | The Behavioral Biases of Individuals | Behavioral Biases | 概念 | cognitive vs emotional biases | [[M06-Behavioral-Biases.md]] |
+| M07 | Introduction to Risk Management | Risk Management | 概念 | governance, budgeting, exposure control | [[M07-Risk-Management.md]] |
 
 ---
 

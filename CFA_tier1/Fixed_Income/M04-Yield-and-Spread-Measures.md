@@ -3,6 +3,7 @@ title: "M04 — Yield and Spread Measures"
 description: 固定利率债券收益率与利差——YTM、当期收益率、年化转换与利差度量（中英双语 CFA 备考）
 module: M04
 subject: Fixed_Income
+official_module: "Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds"
 ---
 
 # M04: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)

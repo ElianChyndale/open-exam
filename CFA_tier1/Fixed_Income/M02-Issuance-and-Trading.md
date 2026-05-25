@@ -3,6 +3,7 @@ title: "M02 — Issuance and Trading"
 description: 债券发行与交易——一级市场、二级市场、回购融资与市场结构（中英双语 CFA 备考）
 module: M02
 subject: Fixed_Income
+official_module: "Module 3: Fixed-Income Issuance and Trading, Module 4: Fixed-Income Markets for Corporate Issuers, Module 5: Fixed-Income Markets for Government Issuers"
 ---
 
 # M02: 发行、交易与融资市场 (Issuance, Trading, and Funding Markets)

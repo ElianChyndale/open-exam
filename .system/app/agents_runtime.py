@@ -57,31 +57,37 @@ def build_openai_agents() -> dict[str, Any]:
         name=specs["review_coach"].name,
         handoff_description=specs["review_coach"].handoff_description,
         instructions=specs["review_coach"].instructions,
+        model="deepseek-v4-flash[1m]",
     )
     pattern_miner = Agent(
         name=specs["pattern_miner"].name,
         handoff_description=specs["pattern_miner"].handoff_description,
         instructions=specs["pattern_miner"].instructions,
+        model="deepseek-v4-flash[1m]",
     )
     strategy_coach = Agent(
         name=specs["strategy_coach"].name,
         handoff_description=specs["strategy_coach"].handoff_description,
         instructions=specs["strategy_coach"].instructions,
+        model="deepseek-v4-flash[1m]",
     )
     validator = Agent(
         name=specs["validator"].name,
         handoff_description=specs["validator"].handoff_description,
         instructions=specs["validator"].instructions,
+        model="deepseek-v4-flash[1m]",
     )
     mistake_recorder = Agent(
         name=specs["mistake_recorder"].name,
         handoff_description=specs["mistake_recorder"].handoff_description,
         instructions=specs["mistake_recorder"].instructions,
+        model="deepseek-v4-flash[1m]",
     )
     orchestrator = Agent(
         name=specs["orchestrator"].name,
         instructions=specs["orchestrator"].instructions,
         handoffs=[mistake_recorder, review_coach, pattern_miner, strategy_coach, validator],
+        model="deepseek-v4-flash[1m]",
     )
     return {
         "orchestrator": orchestrator,

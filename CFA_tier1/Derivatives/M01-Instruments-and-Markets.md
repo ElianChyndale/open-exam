@@ -3,6 +3,7 @@ title: "M01 -- Instruments and Markets"
 description: "衍生品工具与市场：合约要素、市场结构、交易所与场外交易、结算方式 (Derivative Instruments and Markets: contract elements, market structure, exchange vs OTC, settlement)"
 module: M01
 subject: Derivatives
+official_module: "Derivative Instrument and Derivative Market Features"
 ---
 
 # M01: 衍生品工具与市场 (Instruments and Markets)

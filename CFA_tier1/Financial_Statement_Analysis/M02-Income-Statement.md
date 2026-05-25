@@ -2,6 +2,7 @@
 title: "M02 — Income Statement"
 description: "利润表全面解析：收入确认原则、费用配比、非常项目处理、每股收益计算及同比例分析，CFA L1 核心计算模块"
 module: M02
+official_module: "M2: Analyzing Income Statements"
 subject: Financial_Statement_Analysis
 ---
 

@@ -3,6 +3,7 @@ title: "M02 — The Firm and Market Structures"
 description: 企业与市场结构 — 成本利润分析、四种市场结构、定价权、进入壁垒
 module: M02
 subject: Economics
+official_module: "M1: The Firm and Market Structures"
 ---
 
 # M02: The Firm and Market Structures（企业与市场结构）

@@ -1,8 +1,13 @@
 ---
-title: "M10 — Big Data and ML"
-description: 大数据与机器学习 — 数据收集, AI/ML 定义, 监督与非监督学习, 过拟合
-module: M10
+title: "M11 — Introduction to Big Data Techniques"
+description: 大数据与机器学习 — Fintech, AI/ML, 数据科学, 投资管理应用
+module: M11
+official_module: "Module 11: Introduction to Big Data Techniques"
 subject: Quantitative_Methods
+los:
+  - describe aspects of 'fintech' that are directly relevant for the gathering and analyzing of financial data
+  - describe Big Data, artificial intelligence, and machine learning
+  - describe applications of Big Data and Data Science to investment management
 ---
 
 # M10: Big Data and ML（大数据与机器学习）

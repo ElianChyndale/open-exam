@@ -46,16 +46,16 @@ Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职�
 
 ## 科目概览
 
-| 模块 | 内容 | 难度 | 必考点 | 章节文件 |
-|------|------|------|--------|----------|
-| M01 | Ethics and Trust | 概念 | profession, fiduciary mindset | [[M01-Ethics-Trust-and-Professionalism]] |
-| M02 | Code of Ethics | 概念 | 七条 Code 总纲 | [[M02-Code-of-Ethics]] |
-| M03 | Standard I | 情境 | law, independence, misrepresentation | [[M03-Standard-I-Professionalism]] |
-| M04 | Standard II | 情境 | MNPI, market manipulation | [[M04-Standard-II-Capital-Markets-Integrity]] |
-| M05 | Standard III | 情境 | duties to clients, suitability, confidentiality | [[M05-Standard-III-Duties-to-Clients]] |
-| M06 | Standard IV-V | 情境+流程 | duties to employers, diligence, communication, records | [[M06-Standards-IV-and-V]] |
-| M07 | Standard VI-VII | 情境 | conflicts, priority, referral fees, CFA designation | [[M07-Standards-VI-and-VII]] |
-| M08 | GIPS | 概念 | composites, discretion, verification | [[M08-GIPS]] |
+| 模块 | 官方 Module | 内容 | 难度 | 必考点 | 章节文件 |
+|------|-------------|------|------|--------|----------|
+| M01 | Ethics and Trust in the Investment Profession | Ethics and Trust | 概念 | profession, fiduciary mindset | [[M01-Ethics-Trust-and-Professionalism]] |
+| M02 | Code of Ethics and Standards of Professional Conduct | Code of Ethics | 概念 | 七条 Code 总纲 | [[M02-Code-of-Ethics]] |
+| M03 | Guidance for Standards I-VII | Standard I | 情境 | law, independence, misrepresentation | [[M03-Standard-I-Professionalism]] |
+| M04 | Guidance for Standards I-VII | Standard II | 情境 | MNPI, market manipulation | [[M04-Standard-II-Capital-Markets-Integrity]] |
+| M05 | Guidance for Standards I-VII | Standard III | 情境 | duties to clients, suitability, confidentiality | [[M05-Standard-III-Duties-to-Clients]] |
+| M06 | Guidance for Standards I-VII | Standard IV-V | 情境+流程 | duties to employers, diligence, communication, records | [[M06-Standards-IV-and-V]] |
+| M07 | Guidance for Standards I-VII | Standard VI-VII | 情境 | conflicts, priority, referral fees, CFA designation | [[M07-Standards-VI-and-VII]] |
+| M08 | Introduction to GIPS | GIPS | 概念 | composites, discretion, verification | [[M08-GIPS]] |
 
 ---
 

@@ -2,7 +2,14 @@
 title: "M01 — Rates and Returns"
 description: 收益率与回报 — HPR, MWRR, TWRR, 年化收益率, 连续复利
 module: M01
+official_module: "Module 1: Rates and Returns"
 subject: Quantitative_Methods
+los:
+  - interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums
+  - calculate and interpret different approaches to return measurement over time and describe their appropriate uses
+  - compare the money-weighted and time-weighted rates of return and evaluate portfolio performance based on these measures
+  - calculate and interpret annualized return measures and continuously compounded returns and describe their appropriate uses
+  - calculate and interpret major return measures and describe their appropriate uses
 ---
 
 # M01: Rates and Returns（收益率与回报）

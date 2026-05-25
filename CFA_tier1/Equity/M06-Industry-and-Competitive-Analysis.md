@@ -3,6 +3,7 @@ title: "M06 — Industry and Competitive Analysis"
 description: 行业与竞争分析：生命周期、周期性、五力模型、竞争优势来源、定价能力
 module: M06
 subject: Equity
+official_module: "Module 6: Industry and Competitive Analysis"
 ---
 
 # M06: 行业与竞争分析 (Industry and Competitive Analysis)

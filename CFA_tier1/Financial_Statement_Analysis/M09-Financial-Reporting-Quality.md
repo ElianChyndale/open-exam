@@ -2,6 +2,7 @@
 title: "M09 — Financial Reporting Quality"
 description: "财务报告质量全面解析：报告质量与报告结果质量的区别、稳健与激进会计政策、操纵动机与约束机制、非GAAP列报选择及预警信号识别"
 module: M09
+official_module: "M10: Financial Reporting Quality"
 subject: Financial_Statement_Analysis
 ---
 

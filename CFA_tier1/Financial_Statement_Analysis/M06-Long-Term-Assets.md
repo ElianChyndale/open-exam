@@ -2,6 +2,7 @@
 title: "M06 — Long-Term Assets"
 description: "长期资产全面解析：无形资产来源（外购、内部开发、企业合并）、PP&E与无形资产减值终止确认及披露分析方法"
 module: M06
+official_module: "M7: Analysis of Long-Term Assets"
 subject: Financial_Statement_Analysis
 ---
 

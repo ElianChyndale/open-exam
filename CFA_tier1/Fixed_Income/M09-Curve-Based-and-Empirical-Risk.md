@@ -3,6 +3,7 @@ title: "M09 — Curve-Based and Empirical Risk"
 description: 曲线与实证风险度量——有效久期、有效凸性、关键利率久期与曲线非平行移动（中英双语 CFA 备考）
 module: M09
 subject: Fixed_Income
+official_module: "Module 13: Curve-Based and Empirical Fixed-Income Risk Measures"
 ---
 
 # M09: 曲线与实证风险度量 (Curve-Based and Empirical Risk Measures)
