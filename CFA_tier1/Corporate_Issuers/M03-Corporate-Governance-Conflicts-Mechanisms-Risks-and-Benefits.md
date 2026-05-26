@@ -74,11 +74,14 @@ tags:
 ```text
 3. Corporate Governance: Conflicts, Mechanisms, Risks, and Benefits
 ├─ 3.1 代理架构 (Agency Architecture)
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Principal-agent conflict：委托人与代理人目标、信息和控制权不一致。
+│  ├─ 3.1.2 Conflict map：shareholder-manager、shareholder-creditor、controlling-minority、firm-stakeholder。
+│  ├─ 3.1.3 Governance mechanisms：board、committees、compensation、audit、disclosure、shareholder rights、takeover market。
+│  └─ 3.1.4 Governance risk：弱治理会导致 empire building、tunneling、overinvestment、risk shifting 和披露质量下降。
 ├─ 3.2 ESG 与受托责任 (ESG and Stewardship)
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 Stewardship：投资者通过投票、engagement 和监督推动长期价值。
+│  ├─ 3.2.2 Material ESG：只有能影响 cash flow、risk、growth 或 cost of capital 的 ESG 才进入估值。
+│  └─ 3.2.3 考试判断：治理机制不是越多越好，而是是否针对具体冲突并降低 agency cost。
 ```
 
 ## 4. 知识点详解
@@ -117,12 +120,19 @@ ESG 代表 **环境 (Environmental)、社会 (Social)、治理 (Governance)** �
 
 ### 5.1 核心内容
 
-本模块以概念为主，但以下框架值得掌握：
+| 冲突 | 典型行为 | 缓解机制 | 考试判断 |
+|---|---|---|---|
+| Shareholder vs manager | empire building、短期奖金、过度保守 | 独立董事、薪酬对齐、审计、披露 | 看激励是否绑定长期价值。 |
+| Shareholder vs creditor | asset substitution、debt overhang、过度分红 | covenants、collateral、限制举债/分红 | 股东有限责任会提高风险偏好。 |
+| Controlling vs minority | tunneling、related-party transactions | minority rights、independent board、披露 | 控制权集中不等于治理好。 |
+| Firm vs stakeholders | 环境外部性、产品安全、劳工问题 | regulation、ESG oversight、stakeholder engagement | material ESG 才进入财务判断。 |
 
-| 概念 | 核心逻辑 | 应用场景 |
-|------|----------|----------|
-| 代理成本 (Agency Cost) | 管理层偏离股东利益导致的损失 + 监督/激励成本 | 评估治理机制的有效性 |
-| ESG 整合 | 将 ESG 因素纳入投资分析和决策流程 | 投资组合构建 |
+### 5.2 治理机制决策树
+
+1. 先识别谁是 principal、谁是 agent。
+2. 找冲突来自信息不对称、激励错配还是控制权滥用。
+3. 匹配机制：监督类、激励类、权利类、披露类、市场约束类。
+4. 判断机制效果：降低 agency cost 还是只是形式合规。
 
 ## 6. 常见考点与解题思路
 
@@ -163,16 +173,13 @@ ESG 代表 **环境 (Environmental)、社会 (Social)、治理 (Governance)** �
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Investors-and-Other-Stakeholders]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Working-Capital-and-Liquidity]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 代理问题根源 → [[M01-Corporate-Structures-and-Ownership]] 所有权与控制分离
-- 治理影响决策 → [[M04-Capital-Investments]] 管理层可能因激励扭曲选择非最优项目
-- 治理影响融资 → [[M05-Cost-of-Capital]] 弱治理 → 高风险溢价 → 高资本成本
-- ESG 与风险 → [[M03-Working-Capital-and-Liquidity]] ESG 因素可能影响供应链流动性和经营持续性
-- 治理与资本结构 → [[M06-Capital-Structure-and-Leverage]] 管理层可能因个人风险偏好选择次优杠杆水平
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Agency cost | [[M02-Investors-and-Other-Stakeholders]] | 利益相关者冲突是治理问题来源。 | 先找冲突主体。 |
+| Capital allocation quality | [[M05-Capital-Investments-and-Capital-Allocation]] | 弱治理导致过度投资、项目筛选差和资本浪费。 | 治理会影响 NPV 项目是否被正确选择。 |
+| Financing constraints | [[M06-Capital-Structure]] | 债权人通过 covenants 和定价回应治理风险。 | 治理差会提高资本成本。 |
+| Working capital discipline | [[M04-Working-Capital-and-Liquidity]] | 管理层激励影响应收、库存和供应商付款政策。 | 激进营运资本可能是风险转移。 |
+| ESG materiality | Equity / PM / Ethics | 重大 ESG 影响现金流、风险和估值。 | ESG 题要落到财务传导路径。 |
 
 
 ## 9. 复习与刷题提示

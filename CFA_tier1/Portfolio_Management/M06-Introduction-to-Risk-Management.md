@@ -92,20 +92,30 @@ tags:
 ```text
 6. Introduction to Risk Management
 ├─ 6.1 风险管理框架 (Risk Management Framework)
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Governance：定义 risk tolerance、角色、职责、报告线和独立性
+│  ├─ 6.1.2 Identification：识别会阻碍目标实现的金融和非金融风险
+│  ├─ 6.1.3 Measurement：用 VaR、stress test、scenario、tracking error 等量化暴露
+│  ├─ 6.1.4 Modification：avoid / accept / transfer / mitigate / monitor
+│  └─ 6.1.5 Monitoring：持续跟踪、报告和根据目标变化更新
 ├─ 6.2 风险分类 (Risk Classification)
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 Financial risks：market、credit、liquidity、operational
+│  ├─ 6.2.2 Non-financial risks：legal、regulatory、tax、accounting、model、reputation
+│  ├─ 6.2.3 Tail risk：低概率高损失，常规波动指标可能低估
+│  └─ 6.2.4 Interaction：流动性风险可放大市场/信用风险，操作风险可触发声誉风险
 ├─ 6.3 风险改变化方式 (Risk Modification Methods)
-│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.3.1 Avoid：退出或不进入风险活动
+│  ├─ 6.3.2 Accept/retain：风险在容忍度内或转移成本太高时自留
+│  ├─ 6.3.3 Transfer：保险、衍生品、外包等把风险转给他方
+│  ├─ 6.3.4 Mitigate：分散化、对冲、限额、流程控制降低概率或损失
+│  └─ 6.3.5 Monitor：风险暂不处理但设置指标和触发点
 ├─ 6.4 风险预算 (Risk Budgeting)
-│  ├─ 6.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.4.1 Risk budget：把总风险限额分配给资产类别、策略或经理
+│  ├─ 6.4.2 Active risk budget：约束相对 benchmark 的偏离程度
+│  └─ 6.4.3 监控：实际风险超过预算时需要降风险、再平衡或修订目标
 ├─ 6.5 风险管理的关键原则
-│  ├─ 6.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.5.1 目标：不是最小化风险，而是使风险与 return objective 匹配
+│  ├─ 6.5.2 独立性：风险管理职能应能独立挑战投资决策
+│  └─ 6.5.3 持续性：风险管理是循环过程，不是一次性报表
 ```
 
 ## 4. 知识点详解
@@ -179,6 +189,17 @@ tags:
 
 *注：M07 以概念题为主，VaR 等指标在 CFA L1 只要求基本理解。*
 
+### 5.2 风险处理决策树
+
+| 题干情景 | 首选动作 | 对应节点 | 判断理由 |
+|---|---|---|---|
+| 风险不符合使命或收益不足以补偿 | avoid | `6.3.1` | 不承担不必要风险。 |
+| 风险小且转移成本高 | accept/retain | `6.3.2` | 自留更经济。 |
+| 可通过保险/衍生品转给他方 | transfer | `6.3.3` | 风险承担方改变，不代表风险消失。 |
+| 可通过分散化、限额、流程降低 | mitigate | `6.3.4` | 降低概率或损失幅度。 |
+| 风险暂在预算内但需观察 | monitor | `6.3.5` | 设触发点和报告频率。 |
+| 主动风险超限 | 降低 tracking error / 再平衡 | `6.4` | 风险预算是风险额度，不是资金预算。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -220,8 +241,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `6.1` 风险框架 | [[M04-Basics-of-Portfolio-Planning-and-Construction]]、Ethics | IPS 目标和受托责任需要风险治理支持 | 风险管理不是只在损失后补救。 |
+| `6.2` 风险分类 | Fixed Income、Derivatives、Alternatives | 信用、市场、流动性、模型和操作风险识别 | 风险常相互放大，不是孤立标签。 |
+| `6.3` 风险处理 | Derivatives、Insurance、Portfolio construction | hedge、transfer、diversify、retain | 转移风险不等于消灭风险。 |
+| `6.4` 风险预算 | Active management、Performance | tracking error、active risk 限额 | 预算分配的是风险，不是资金。 |
+| `6.5` 风险原则 | Behavioral、Governance | 独立风控与行为偏差校正 | 目标是匹配风险和收益，而非压到最低。 |
 
 ### Legacy 关联补充
 

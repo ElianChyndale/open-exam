@@ -80,20 +80,20 @@ tags:
 ```text
 8. Pricing and Valuation of Options
 ├─ 8.1 Introduction
-│  ├─ 8.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.1.1 Option holder has a right, writer has an obligation；premium 是权利价格
+│  └─ 8.1.2 Call 买入权，put 卖出权；exercise style 决定是否可提前行权
 ├─ 8.2 Option Value relative to the Underlying Spot Price
-│  ├─ 8.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.2.1 Call value 随 S 上升而上升；put value 随 S 上升而下降
+│  └─ 8.2.2 Strike 越高，call 越便宜、put 越贵；其他条件不变
 ├─ 8.3 Option Exercise Value
-│  ├─ 8.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.3.1 Call exercise value=`max(0,S-X)`；put exercise value=`max(0,X-S)`
+│  └─ 8.3.2 Option value = exercise/intrinsic value + time value
 ├─ 8.4 Option Moneyness
-│  ├─ 8.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.4.1 Call ITM when S>X；put ITM when X>S；ATM when S≈X
+│  └─ 8.4.2 Moneyness 判断不扣 premium，profit 才扣 premium
 ├─ 8.5 Option Time Value
-│  ├─ 8.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.5.1 Time value=`option price - intrinsic value`，反映未来有利状态的可能性
+│  └─ 8.5.2 Volatility 和 time to expiration 上升通常提高 option value
 ```
 
 ## 4. 知识点详解
@@ -124,6 +124,16 @@ tags:
 - **对应动作**：识别概念并应用到题干。
 
 ## 5. 关键公式与计算框架
+
+### 5.0 本模块公式选择
+
+| 知识树节点 | 公式/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 8.3.1 | `Call exercise value = max(0, S - X)` | call intrinsic value | 不扣 premium；这是 exercise value，不是 profit。 |
+| 8.3.1 | `Put exercise value = max(0, X - S)` | put intrinsic value | S 与 X 的方向不能反。 |
+| 8.3.2 | `Time value = Option value - Exercise value` | time value 题 | Time value 通常非负；value 不应低于 exercise value。 |
+| 8.4.1 | Call ITM if `S > X`; put ITM if `X > S` | moneyness 题 | Moneyness 不考虑 premium。 |
+| 8.5.2 | Option value drivers: S, X, time, volatility, risk-free rate, income/yield | factor direction 题 | Volatility 和 time 上升通常提高 call 与 put value。 |
 
 ### 5.1 M04-M06 Forward Commitments
 
@@ -209,24 +219,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M09-Option-Replication-Using-Put-Call-Parity]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
-└── Contingent claims -> option payoff asymmetry (中文)
-Uses and Risks
-├── issuer hedge -> financing/operating exposure control (中文)
-└── investor exposure -> capital efficiency + leverage discipline (中文)
-Pricing Spine
-├── no-arbitrage -> replication -> cost of carry (中文)
-├── forwards/futures -> forward value and daily settlement (中文)
-├── swaps -> bond pair / FRA strip intuition (中文)
-└── options -> parity -> binomial valuation (中文)
-```
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M02 -> M08` | option right/obligation | payoff/profit 和 moneyness 的基础。 |
+| `M08 -> M09` | call/put、strike、exercise value | put-call parity 需要同一 underlying、strike、maturity、European。 |
+| `M08 -> M10` | terminal option payoff | binomial 先算 up/down 状态 payoff。 |
+| `Quant -> M08` | volatility、probability、discounting | 判断 option value drivers。 |
+| `PM/Risk -> M08` | downside protection、premium cost | 解释 option hedge 的收益和成本。 |
 
 ---
 

@@ -73,14 +73,18 @@ tags:
 ```text
 2. Fixed-Income Cash Flows and Types
 ├─ 2.1 票息结构 (Coupon Structures)
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 Fixed-rate：CF_t 已知，后续可直接用 YTM/spot curve 贴现
+│  ├─ 2.1.2 Floating-rate：coupon = reference rate + quoted margin；reset 降低利率风险但保留信用 spread 风险
+│  ├─ 2.1.3 Zero-coupon/deferred coupon：回报主要来自 price accretion；duration 通常更高
+│  └─ 2.1.4 Step-up/PIK：票息路径改变发行人现金压力；PIK 会增加债务负担
 ├─ 2.2 特殊票息与本金结构 (Special Coupon and Principal Structures)
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 Bullet vs amortizing：bullet 到期还本，amortizing 每期还本；本金越早回收，duration 通常越低
+│  ├─ 2.2.2 Sinking fund：降低到期集中偿付压力，但给投资者带来再投资不确定性
+│  └─ 2.2.3 Inflation-linked：adjusted principal = original principal x CPI ratio；保护购买力但仍有实际收益率和税务口径
 ├─ 2.3 或有条款 (Contingency Provisions)
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 Issuer-benefit：call、prepayment option；利率下降时投资者面临 reinvestment risk
+│  ├─ 2.3.2 Investor-benefit：put、conversion right；通常降低投资者要求收益率
+│  └─ 2.3.3 Legal/tax/regulatory：影响发行地点、报价惯例和 after-tax return，不直接等同信用质量
 ```
 
 ## 4. 知识点详解
@@ -149,6 +153,13 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| CF_t 展开 | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] | fixed/floating/zero/amortizing cash flows | 先画现金流，再贴现 |
+| FRN reset | [[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]] | reference rate + quoted margin | 判断 price relative to par |
+| 或有现金流 | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | call/put/prepayment 影响现金流 | 触发 effective duration/convexity |
+| 摊还/提前还款 | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] | amortizing principal pattern | 判断 contraction/extension risk |
+
 - **上游模块**：[[M01-Fixed-Income-Instrument-Features]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M03-Fixed-Income-Issuance-and-Trading]]。本模块输出会被后续更复杂题型调用。
 
@@ -158,7 +169,7 @@ tags:
 - 浮动利率 → [[M05-Floating-Rate-and-Money-Market]] FRN定价与贴现利差
 - FRN 风险度量 → [[M04-Yield-and-Spread-Measures]] 浮动利率利差度量
 - 或有条款 → [[M09-Curve-Based-and-Empirical-Risk]] 有效久期与有效凸性
-- 摊销结构 → [[M14-MBS-and-CMO]] MBS的提前还款与摊销风险
+- 摊销结构 → [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] MBS 的提前还款与摊销风险
 
 
 ## 9. 复习与刷题提示

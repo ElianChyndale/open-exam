@@ -69,14 +69,18 @@ tags:
 ```text
 7. Business Models
 ├─ 7.1 Introduction
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 主线：商业模式解释公司如何创造、交付和获取价值。
+│  └─ 7.1.2 考试判断：增长快不等于价值创造，要看 unit economics、现金转换和再投资需求。
 ├─ 7.2 Defining the Business Model
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 Value proposition：客户为什么购买，痛点和替代方案是什么。
+│  ├─ 7.2.2 Revenue model：subscription、transaction、advertising、licensing、spread/fee 等收入机制。
+│  ├─ 7.2.3 Cost structure：fixed vs variable、asset-light vs asset-heavy，决定 scalability 和 DOL。
+│  └─ 7.2.4 Resources/capabilities：品牌、技术、网络、数据、渠道和监管牌照。
 ├─ 7.3 Business Model Types
-│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.3.1 Subscription/recurring：收入可预测，但要看 churn、CAC 和 LTV。
+│  ├─ 7.3.2 Platform/network：网络效应可能提高 moat，但常需先投入获客和补贴。
+│  ├─ 7.3.3 Manufacturing/asset-heavy：资本密集、库存和周期风险更高。
+│  └─ 7.3.4 Financial intermediation：资产负债表、信用风险、流动性和监管资本是核心。
 ```
 
 ## 4. 知识点详解
@@ -98,70 +102,27 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 M02 Investors and Other Stakeholders
+### 5.1 商业模式诊断框架
 
-| 概念 | 核心逻辑 | 知识树节点 | 考试说明 |
-|------|----------|------------|----------|
-| 信息不对称 | 内部人 vs 外部人的信息差距 | `M02` | 概念理解为主 |
-| 逆向选择 | 事前信息不对称导致市场失灵 | `M02` | 区分事前/事后 |
-| 道德风险 | 事后信息不对称导致代理行为偏移 | `M02` | 与 M03 治理联动 |
-| 信号传递 | 通过资本结构/股息等可信行动传递信息 | `M02` | 区分信号 vs 噪音 |
-| 利益相关者冲突 | 不同群体目标不一致导致财富转移 | `M02` | 分析谁受益谁受损 |
+| 维度 | 判断问题 | 对应节点 | 考试说明 |
+|---|---|---|---|
+| Value proposition | 客户痛点是什么，替代方案是什么？ | 7.2.1 | 没有清晰价值主张，增长难持续。 |
+| Revenue model | 收入是 recurring、transactional、advertising、licensing 还是 spread/fee？ | 7.2.2 | 收入可预测性影响风险和估值。 |
+| Unit economics | 单位客户/订单是否贡献正经济价值？ | 7.1.2 | 高增长但 unit economics 差会毁灭价值。 |
+| Cost structure | fixed vs variable，asset-light vs asset-heavy | 7.2.3 | 决定 operating leverage 和 scalability。 |
+| Cash conversion | DIO、DSO、DPO 和 upfront cash collection | 7.1.2 | 模式质量常体现在 CCC。 |
+| Reinvestment need | 增长是否需要大量 capex、NOWC 或获客投入？ | 7.1.2 | 增长必须有资本回报支撑。 |
+| Moat | switching cost、network effect、brand、regulation | 7.2.4 | 护城河决定增长期和利润率。 |
 
-### 5.2 M04 Working Capital
+### 5.2 模式类型速查
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Operating Cycle | `DIO + DSO` | `M04` | 销售与回款链 |
-| Cash Conversion Cycle | `DIO + DSO - DPO` | `M04` | 营运资本核心 |
-| Working Capital | `Current Assets - Current Liabilities` | `M04` | 【考纲重点】流动性规模 |
-| Net Operating Working Capital | `Operating Current Assets - Operating Current Liabilities` | `M04` | 排除融资性流动项目时使用 |
-| DIO | `(Average Inventory / COGS) x 365` | `M04` | 题目有时给 turnover |
-| DSO | `(Average Receivables / Revenue) x 365` | `M04` | collection speed |
-| DPO | `(Average Payables / Purchases or COGS) x 365` | `M04` | denominator 读题 |
-| Current Ratio | `Current Assets / Current Liabilities` | `M04` | liquidity 不等于 efficiency |
-| Quick Ratio | `(Cash + Marketable Securities + Receivables)/Current Liabilities` | `M04` | 排除 inventory |
-| Inventory Turnover | `COGS / Average Inventory` | `M04` | 与 DIO 互为天数换算 |
-| Receivables Turnover | `Revenue / Average Receivables` | `M04` | 与 DSO 互为天数换算 |
-| Payables Turnover | `Purchases or COGS / Average Payables` | `M04` | 与 DPO 互为天数换算 |
-
-### 5.3 M05 Capital Investments
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Net Present Value | `NPV = Σ_{t=0}^{N} CF_t/(1 + r)^t` | `M05` | value rule 主指标 |
-| Internal Rate of Return | `0 = Σ_{t=0}^{N} CF_t/(1 + IRR)^t` | `M05` | 非常规现金流小心 |
-| Profitability Index | `PI = PV of future cash inflows / Initial investment` | `M05` | capital rationing 辅助 |
-| Equivalent Annual Annuity | `EAA = NPV / annuity factor` | `M05` | 【考纲重点】不同寿命互斥项目可比 |
-| Operating Cash Flow, Tax Form | `OCF = (S - C - D)(1 - T) + D` | `M05` | 增量税后现金流 |
-| Operating Cash Flow, Shortcut | `OCF = (S - C)(1 - T) + DT` | `M05` | depreciation tax shield |
-| Payback Period | `Time until cumulative undiscounted CF recovers outlay` | `M05` | 不代表价值 |
-| Discounted Payback | `Time until discounted CF recovers outlay` | `M05` | 仍忽略回收后现金流 |
-
-### 5.4 M06-M07 Cost of Capital and Leverage
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| After-tax Cost of Debt | `r_d(1 - T)` | `M06` | interest tax shield |
-| Cost of Preferred | `r_p = D_p/P_p` | `M06` | preferred no growth case |
-| CAPM Cost of Equity | `r_e = r_f + β[E(R_M) - r_f]` | `M06` | 与 Portfolio 联动 |
-| Dividend Growth Cost of Equity | `r_e = D_1/P_0 + g` | `M06` | stable growth 口径 |
-| Bond-Yield-plus-Risk-Premium | `r_e = YTM on long-term debt + equity risk premium` | `M06` | 【考纲重点】CAPM/DDM 信息不足时的估计法 |
-| WACC | `WACC = w_d r_d(1 - T) + w_p r_p + w_e r_e` | `M06` | market-value weights |
-| Degree of Operating Leverage | `%ΔEBIT / %ΔSales` | `M07` | operating fixed costs |
-| DOL, Quantity Form | `Q(P - V) / [Q(P - V) - F]` | `M07` | 【考纲重点】给价格/变动成本/固定成本时使用 |
-| Degree of Financial Leverage | `%ΔEPS / %ΔEBIT` | `M07` | financing fixed costs |
-| DFL, EBIT Form | `EBIT / (EBIT - Interest)` | `M07` | 无优先股的常见简化 |
-| Degree of Total Leverage | `DOL x DFL` | `M07` | sales -> EPS |
-| DTL, Quantity Form | `Q(P - V) / [Q(P - V) - F - Interest]` | `M07` | 经营杠杆和财务杠杆合并 |
-
-### 5.5 考纲范围标记
-
-| 标记 | 内容 |
-|------|------|
-| 【考纲重点】 | Working capital cycles、capital budgeting cash flows/NPV/IRR/PI/EAA、cost of capital、WACC、leverage |
-| 【考纲内但无核心公式】 | Corporate structures、stakeholders、governance、business models 主要考概念、冲突和治理机制 |
-| 【超纲/扩展】 | APV 完整估值、MM 命题严格证明、复杂实物期权定价不作为 Level I 必背公式 |
+| 类型 | 优势 | 主要风险 |
+|---|---|---|
+| Subscription | 收入可预测、留存价值高 | churn、CAC 回收期长 |
+| Platform/network | 网络效应、规模经济 | 冷启动、监管、补贴依赖 |
+| Asset-light | 扩张快、资本需求低 | 控制力弱、供应链/平台依赖 |
+| Asset-heavy manufacturing | 产能和质量可控 | capex 高、周期和库存风险 |
+| Financial intermediation | 利差/手续费规模化 | 信用、流动性、监管资本风险 |
 
 ---
 
@@ -190,23 +151,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Capital-Structure]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Governance
-├── affects Capital Allocation Quality (中文)
-│   └── Capital Investments (中文)
-│       └── WACC (中文)
-│           └── Capital Structure (中文)
-└── affects Working Capital Discipline (中文)
-    └── Liquidity Risk (中文)
-        └── Business Model Sustainability (中文)
-```
-
----
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Cost structure / scalability | [[M06-Capital-Structure]] | fixed cost mix 决定 DOL，影响债务容量。 | 高 DOL 公司通常更怕收入下滑。 |
+| Cash conversion | [[M04-Working-Capital-and-Liquidity]] | 不同模式有不同 DIO/DSO/DPO 和现金收款节奏。 | 负 CCC 要判断是否可持续。 |
+| Reinvestment / capital allocation | [[M05-Capital-Investments-and-Capital-Allocation]] | 增长是否创造价值取决于再投资回报。 | 高增长不等于高 NPV。 |
+| Governance / stakeholder trust | [[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]] | 平台、金融中介和订阅模式依赖信任和治理。 | 弱治理会削弱模式可持续性。 |
+| Equity valuation | Equity | 商业模式决定增长期、利润率、风险和估值倍数。 | 模式好也要看当前价格。 |
 
 
 ## 9. 复习与刷题提示

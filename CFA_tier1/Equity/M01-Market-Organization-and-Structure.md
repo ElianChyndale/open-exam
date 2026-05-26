@@ -108,11 +108,15 @@ tags:
 ```text
 1. Market Organization and Structure
 ├─ 1.1 市场管道 (Market plumbing)
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 金融系统功能：资本配置、风险转移、流动性提供、价格发现、信息聚合。
+│  ├─ 1.1.2 资产与合约分类：securities 是可交易金融资产，contracts 约定未来现金流或交割，real assets/commodities/currencies 要分清标的属性。
+│  ├─ 1.1.3 中介机构：brokers 代理撮合，dealers 自营报价，securitizers 打包资产，depositories/insurers 提供金融服务。
+│  └─ 1.1.4 市场结构：primary market 融资，secondary market 提供退出和价格发现；order-driven/quote-driven/brokered 看谁提供流动性。
 ├─ 1.2 订单与交易 (Orders and trading)
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 持仓方向：long 赚上涨，short 赚下跌但亏损无上限；short seller 需支付被借证券的 income。
+│  ├─ 1.2.2 保证金：leverage ratio = position/equity；margin call 发生在 equity/market value 低于 maintenance margin。
+│  ├─ 1.2.3 订单类型：market order 保成交不保价，limit order 保价不保成交，stop order 触发后改变执行状态。
+│  └─ 1.2.4 指令与监管：execution、validity、clearing instructions 约束交易；监管目标是公平、有序、透明和保护投资者。
 ```
 
 ## 4. 知识点详解
@@ -129,14 +133,28 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 核心内容
+### 5.1 保证金与卖空计算
 
-| 指标 | 公式 |
-|------|------|
-| 杠杆比率 (Leverage Ratio) | `Value of Position / Investor Equity` |
-| 初始保证金率 (Initial Margin) | `Investor Equity / Purchase Value` |
-| 保证金追缴价格 (Margin Call Price, Long) | `Loan / [Shares x (1 - Maintenance Margin)]` |
-| 卖空收益率 (Short Sale Return) | `(Initial Proceeds - Repurchase Cost - Costs) / Initial Equity` |
+| 工具 | 公式/框架 | 对应节点 | 考试判断 |
+|---|---|---|---|
+| Leverage ratio | `Value of position / investor equity` | 1.2.2 | 杠杆越高，同样价格变动对 equity 的影响越大。 |
+| Initial margin | `Investor equity / purchase value` | 1.2.2 | 初始自有资金占 purchase value 的比例。 |
+| Long margin equity | `Shares x price - loan` | 1.2.2 | long 的 debt 通常固定，价格下跌压缩 equity。 |
+| Margin call price, long | `Loan / [Shares x (1 - maintenance margin)]` | 1.2.2 | 先算 loan，再令 equity/value = maintenance margin。 |
+| Short sale equity | `Initial sale proceeds + margin deposit - shares x current price` | 1.2.1 | short 的 liability 随股价上涨而上升。 |
+| Margin call price, short | `(Initial sale proceeds + margin deposit) / [Shares x (1 + maintenance margin)]` | 1.2.1 | short 题价格上涨触发追缴。 |
+| Margin return | `(Ending equity - beginning equity + income received - costs) / beginning equity` | 1.2.2 | 题干费用、利息、股息必须读清。 |
+| Short sale return | `(Initial proceeds - repurchase cost - dividends paid - costs + interest on collateral) / initial equity` | 1.2.1 | 空头要支付卖空期间的股息。 |
+
+### 5.2 订单判断框架
+
+| 题干目标 | 应选/判断 | 风险 |
+|---|---|---|
+| 立即成交 | Market order | price uncertainty / slippage |
+| 控制最低卖价或最高买价 | Limit order | non-execution risk |
+| 价格触发后执行 | Stop order | 触发后不保证成交价 |
+| 限制订单有效时间 | Validity instruction | day / GTC 等时间约束 |
+| 限制成交方式 | Execution instruction | all-or-nothing、hidden、best effort 等 |
 
 ## 6. 常见考点与解题思路
 
@@ -166,14 +184,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Security-Market-Indexes]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **市场结构影响指数构建** → [[M02-Security-Market-Indexes]]
-- **交易成本与流动性影响市场效率** → [[M03-Market-Efficiency]]
-- **margin 交易影响资本结构** → [[M05-Company-Analysis-Past-and-Present]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| 流动性、交易成本、价格影响 | [[M02-Security-Market-Indexes]] | 指数复制成本、rebalancing 成本和可投资性依赖市场结构。 | 指数题不只算权重，也要理解可交易性。 |
+| 信息流、套利成本、short constraints | [[M03-Market-Efficiency]] | 市场效率能否实现取决于交易摩擦和套利约束。 | 有信息不等于可无成本套利。 |
+| common/preferred/security 分类 | [[M04-Overview-of-Equity-Securities]] | 本模块先定义证券类型，后续模块分析权益 claim。 | 不要把所有 traded instrument 都当 equity。 |
+| margin/short sale | Portfolio Management / Risk | 杠杆改变收益分布、亏损风险和保证金约束。 | 计算后要解释风险方向。 |
 
 
 ## 9. 复习与刷题提示

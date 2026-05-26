@@ -73,8 +73,11 @@ tags:
 ```text
 3. Derivative Benefits, Risks, and Issuer and Investor Uses
 ├─ 3.1 核心内容
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Benefits：hedging、risk transfer、price discovery、lower transaction cost、capital efficiency
+│  ├─ 3.1.2 Risks：leverage、liquidity、counterparty、basis、model、operational risk
+│  ├─ 3.1.3 Issuer use：稳定 financing cost、commodity input/output price、FX cash flows
+│  ├─ 3.1.4 Investor use：tactical exposure、portfolio hedging、duration/beta/currency transformation
+│  └─ 3.1.5 考试判断：hedging reduces a selected risk but can introduce basis/counterparty risk
 ```
 
 ## 4. 知识点详解
@@ -106,7 +109,13 @@ tags:
 
 ### 5.1 核心内容
 
-该模块以概念为主，无核心计算公式。
+| 节点 | 决策框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 3.1.1 | Benefit = desired exposure or risk transfer with lower cash outlay | 用途题 | 资本效率不等于低风险，leverage 会放大盈亏。 |
+| 3.1.2 | Residual risk checklist | 对冲题 | 检查 basis、liquidity、counterparty、model、operational risk。 |
+| 3.1.3 | Issuer hedge map | 发行人/公司题 | 债务发行人常对冲利率或 FX，生产企业常对冲商品价格。 |
+| 3.1.4 | Investor use map | 投资者题 | 投资者可对冲组合、改变 beta/duration/currency，或主动投机。 |
+| 3.1.5 | Hedge vs speculate vs arbitrage | 动机识别题 | 是否已有原始敞口是 hedge 与 speculate 的关键分叉；无风险错价才是 arbitrage。 |
 
 ## 6. 常见考点与解题思路
 
@@ -136,14 +145,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Forward-Commitment-and-Contingent-Claim-Features-and-Instruments]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M01-Instruments-and-Markets]]：不同市场结构对应不同风险特征
-- [[M04-Arbitrage-and-Replication]]：无套利定价保证合约公平，降低模型风险
-- [[M00-Derivatives-MOC]]：返回科目总览
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M02 -> M03` | forwards/futures/swaps/options 的 payoff 特征 | 匹配风险管理目标和工具选择。 |
+| `M03 -> M04` | arbitrage as distinct use | 进入 no-arbitrage pricing 时先确认是否真是套利。 |
+| `M03 -> PM` | portfolio hedge、tactical exposure、currency overlay | 连接组合风险管理和资产配置。 |
+| `M03 -> FI/Equity/Corp` | duration、beta、FX、commodity exposure | 判断发行人和投资者的具体对冲对象。 |
 
 
 ## 9. 复习与刷题提示

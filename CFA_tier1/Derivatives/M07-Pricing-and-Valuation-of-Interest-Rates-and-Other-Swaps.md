@@ -71,14 +71,15 @@ tags:
 ```text
 7. Pricing and Valuation of Interest Rates and Other Swaps
 ├─ 7.1 Introduction
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 Swap 是一系列未来现金流交换，常见 fixed-for-floating interest rate swap
+│  └─ 7.1.2 Notional 通常只是计算参考额，plain vanilla 利率互换不交换本金
 ├─ 7.2 Swaps vs. Forwards
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 Swap 可看作一串 forward/FRA，但每期现金流和重置机制不同
+│  └─ 7.2.2 初始 swap fixed rate 使合约起始价值约为零
 ├─ 7.3 Swap Values and Prices
-│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.3.1 Net payment=`Notional x (Floating rate - Fixed rate) x accrual factor`
+│  ├─ 7.3.2 Value to fixed-rate payer ≈ floating-leg value - fixed-leg value
+│  └─ 7.3.3 市场固定利率上升时，固定利率支付方通常受益
 ```
 
 ## 4. 知识点详解
@@ -99,6 +100,16 @@ tags:
 - **对应动作**：识别概念并应用到题干。
 
 ## 5. 关键公式与计算框架
+
+### 5.0 本模块公式选择
+
+| 知识树节点 | 公式/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 7.2.1 | Swap = strip of forward contracts / FRAs | 概念比较题 | swap 不是单一期货，而是一系列交换现金流。 |
+| 7.3.1 | `Net payment = Notional x (Floating rate - Fixed rate) x accrual factor` | 固定换浮动净支付题 | 方向先看题干是 fixed-rate payer 还是 receiver。 |
+| 7.3.2 | Value to fixed-rate payer ≈ floating-leg value - fixed-leg value | swap value 方向题 | 市场固定利率上升时，旧 fixed payer 支付较低固定利率，价值上升。 |
+| 7.3.2 | Initial swap price/rate chosen so value ≈ 0 | 起始定价题 | price/rate 与 value 分开：rate 是合约条款，value 是当前净现值。 |
+| 7.1.2 | Notional is reference amount | notional 题 | Plain vanilla interest rate swap 通常不交换 notional。 |
 
 ### 5.1 M04-M06 Forward Commitments
 
@@ -182,24 +193,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Pricing-and-Valuation-of-Futures-Contracts]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M08-Pricing-and-Valuation-of-Options]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
-└── Contingent claims -> option payoff asymmetry (中文)
-Uses and Risks
-├── issuer hedge -> financing/operating exposure control (中文)
-└── investor exposure -> capital efficiency + leverage discipline (中文)
-Pricing Spine
-├── no-arbitrage -> replication -> cost of carry (中文)
-├── forwards/futures -> forward value and daily settlement (中文)
-├── swaps -> bond pair / FRA strip intuition (中文)
-└── options -> parity -> binomial valuation (中文)
-```
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M05/M06 -> M07` | forward-like cash flows、rate forwards | 把 swap 理解成多期 forward/FRA 组合。 |
+| `M07 -> FI` | fixed leg、floating leg、discounting | 连接债券估值、浮动利率和收益率曲线。 |
+| `M07 -> Corporate Issuers` | fixed/floating debt exposure | 判断发行人如何用 swap 转换融资现金流。 |
+| `M07 -> Risk Management` | payer/receiver exposure | 判断利率上升或下降对 swap 价值的影响。 |
 
 ---
 

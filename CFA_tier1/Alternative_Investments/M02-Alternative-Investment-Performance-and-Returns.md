@@ -69,14 +69,17 @@ tags:
 ```text
 2. Alternative Investment Performance and Returns
 ├─ 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 TVPI = DPI + RVPI，衡量 total value；DPI 是已分配现金，RVPI 是未退出剩余价值。
+│  ├─ 2.1.2 PIC = paid-in capital / committed capital，衡量资本调用进度，不是回报倍数。
+│  ├─ 2.1.3 IRR 是 NPV=0 的折现率，受现金流时点影响；倍数高不一定 IRR 高。
+│  └─ 2.1.4 Sharpe 用总波动，Sortino 用 downside deviation；另类资产 return smoothing 会让二者偏乐观。
 ├─ 2.2 J曲线 (J-Curve Dynamics)【考试核心】
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 早期：management fee、组织成本、投资尚未退出，DPI 低且净回报可为负。
+│  ├─ 2.2.2 中后期：投资增值和退出带来 distributions，DPI 上升、RVPI 下降，TVPI/IRR 改善。
+│  └─ 2.2.3 VC 通常 J 曲线更深更长；LBO 有成熟现金流和杠杆，曲线可能较浅。
 ├─ 2.3 收益平滑 (Smoothed Returns)【考试陷阱】
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 Appraisal/model-based NAV 不会像公开市场价格一样即时反映信息。
+│  └─ 2.3.2 后果：volatility/correlation 被低估，risk-adjusted return 被高估；unsmoothing 试图还原真实波动。
 ```
 
 ## 4. 知识点详解
@@ -127,13 +130,16 @@ J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| TVPI | (累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI |
-| DPI | 累计分配 / 实缴资本 |
-| RVPI | 剩余价值 / 实缴资本 |
-| Sortino | (R_p - R_f) / σ_d |
-| Sharpe | (R_p - R_f) / σ_p |
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| TVPI | `(累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI` | `2.1.1` | 总价值倍数；加法关系，不是乘法 |
+| DPI | `累计分配 / 实缴资本` | `2.1.1` | 已实现现金回报，退出越多通常越高 |
+| RVPI | `剩余价值 / 实缴资本` | `2.1.1` | 未实现账面价值，对估值假设敏感 |
+| PIC Multiple | `Paid-in Capital / Committed Capital` | `2.1.2` | 资本调用进度，不衡量收益高低 |
+| IRR | `0 = Σ CF_t / (1 + IRR)^t` | `2.1.3` | 对现金流时点敏感 |
+| Sortino | `(R_p - R_f) / downside deviation` | `2.1.4` | 只惩罚下行波动 |
+| Sharpe | `(R_p - R_f) / σ_p` | `2.1.4` | 使用总波动；smoothed returns 会高估 |
+| Net return after fees | `gross return - management fee - incentive fee - expenses` | `2.1/2.2` | 题干给 fee terms 时要从 gross 过桥到 net |
 
 ## 6. 常见考点与解题思路
 
@@ -163,15 +169,11 @@ J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Alternative-Investment-Features-Methods-and-Structures]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Investments-in-Private-Capital-Equity-and-Debt]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- TVPI/DPI/RVPI → [[M03-Private-Capital.md]] (PE基金业绩报告)
-- J曲线 → [[M03-Private-Capital.md]] (PE基金生命周期)
-- 收益平滑 → [[M04-Real-Estate-and-Infrastructure.md]] (房地产估值)
-- 费用计算 → [[M01-Features-and-Structure.md]] (管理费和业绩提成)
+- **来自 M01**：费用结构、流动性限制、估值频率解释为什么 gross return 和 reported return 不等于投资者真实体验。
+- **到 M03**：TVPI/DPI/RVPI、PIC、IRR、J-curve 是 private capital 的核心业绩语言。
+- **到 M04**：direct real estate/infrastructure 的 appraisal NAV 常触发 smoothed returns。
+- **到 M06**：hedge fund 评价会用 net return、Sharpe/Sortino、fee drag 和高水位线。
+- **到 PM/FSA**：风险统计与业绩陈述需要识别 valuation lag、manager marks 和费用口径。
 
 
 ## 9. 复习与刷题提示

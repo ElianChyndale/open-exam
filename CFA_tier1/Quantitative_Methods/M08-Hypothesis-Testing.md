@@ -73,20 +73,30 @@ tags:
 ```text
 8. Hypothesis Testing
 ├─ 8.1 检验构件（Test Components）
-│  ├─ 8.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.1.1 Hypotheses：H0 通常是无差异/等于，H1 决定单尾或双尾
+│  ├─ 8.1.2 Significance level：`α` 是 Type I error 容许上限
+│  ├─ 8.1.3 Test statistic：把样本差异标准化为 z/t/F/χ²
+│  ├─ 8.1.4 Decision rule：critical value 或 p-value 二选一，一致即可
+│  └─ 8.1.5 结论语言：只能 reject 或 fail to reject，不能说 accept H0
 ├─ 8.2 错误结构（Error Architecture）
-│  ├─ 8.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.2.1 Type I：H0 为真却拒绝，概率为 α
+│  ├─ 8.2.2 Type II：H0 为假却未拒绝，概率为 β
+│  ├─ 8.2.3 Power：`1-β`，样本量、效应量、α 上升通常提高 power
+│  └─ 8.2.4 权衡：降低 α 会使拒绝更难，其他条件不变时 β 上升
 ├─ 8.3 参数与非参数检验（Parametric vs Nonparametric）
-│  ├─ 8.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.3.1 Parametric：依赖分布/参数假设，满足假设时 power 更高
+│  ├─ 8.3.2 Nonparametric：适合 ordinal data、小样本、严重非正态或 outlier
+│  └─ 8.3.3 判断：不要因为非参数“假设少”就忽略其检验力较低的代价
 ├─ 8.4 双样本检验（Two-Sample Tests）
-│  ├─ 8.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.4.1 Pooled t：独立双样本、方差相等未知，用 `s_p²`
+│  ├─ 8.4.2 Unequal variance t：不假设方差相等，不合并方差
+│  ├─ 8.4.3 Paired t：同一对象 before/after 或 matched pairs，对差值做 t 检验
+│  ├─ 8.4.4 F-test：比较两个总体方差，正态性敏感
+│  └─ 8.4.5 Two-proportion z：大样本比例差，用合并比例 `p̂`
 ├─ 8.5 单样本方差检验（Chi-Square Test for a Single Variance）
-│  ├─ 8.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.5.1 单总体方差：`χ²=(n-1)s²/σ0²`，df=`n-1`
+│  ├─ 8.5.2 分布特征：χ² 右偏、非负，df 越大越接近正态
+│  └─ 8.5.3 判断陷阱：对正态性极其敏感，不适合严重非正态总体
 ```
 
 ## 4. 知识点详解
@@ -326,6 +336,22 @@ tags:
 | `F = s₁²/s₂²` | F 检验统计量 | 检验两个总体方差是否相等，df₁=n₁-1, df₂=n₂-1 |
 | `t = d̄/(s_d/√n)` | 配对比较 t 检验统计量 | df = n-1，n 为配对个数，d̄ 为差值均值 |
 | `χ² = (n-1)s²/σ₀²` | 卡方检验统计量 | 检验单个总体方差是否等于特定值，df = n-1 |
+| `Power = 1 - β` | 检验力 | 正确拒绝错误 H0 的概率 |
+| `z = (p̂₁-p̂₂)/√[p̂(1-p̂)(1/n₁+1/n₂)]` | 双样本比例检验 | 合并比例 `p̂=(x₁+x₂)/(n₁+n₂)` |
+
+### 5.2 检验选择树
+
+| 题干对象 | 条件 | 使用检验 | 对应节点 |
+|---|---|---|---|
+| 单总体均值 | σ 已知 | z-test | `8.1` |
+| 单总体均值 | σ 未知 | t-test, df=`n-1` | `8.1` |
+| 两独立均值 | 方差相等 | pooled t-test | `8.4.1` |
+| 两独立均值 | 方差不等/未假设相等 | unequal variance t-test | `8.4.2` |
+| 同一对象前后比较 | matched pairs | paired t-test | `8.4.3` |
+| 两总体方差 | 独立正态样本 | F-test | `8.4.4` |
+| 单总体方差 | 检验 σ²=σ0² | χ² test | `8.5` |
+| 两总体比例 | 大样本比例差 | two-proportion z-test | `8.4.5` |
+| ordinal/非正态小样本 | 分布假设不可靠 | nonparametric test | `8.3` |
 
 ## 6. 常见考点与解题思路
 
@@ -370,8 +396,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M07-Estimation-and-Inference]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `8.1` H0/H1/p-value | [[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]、M10 Regression | 相关性检验、回归系数检验、模型整体检验 | p-value 不是 H0 为真的概率。 |
+| `8.2` Type I/II/power | Research design、Risk Management | 样本量和显著性水平选择 | fail to reject 不等于证明 H0。 |
+| `8.3` 非参数检验 | Big Data、Alternative data | 数据等级、异常值和分布假设不足时 | 非参数检验不是“总是更好”。 |
+| `8.4` 双样本检验 | Portfolio performance、Economics | 比较两策略、两市场或前后绩效 | 独立样本和配对样本必须先分清。 |
+| `8.5` 方差检验 | Risk Management、PM | 风险是否超过目标或两个风险是否不同 | χ²/F 对正态性敏感。 |
 
 ### Legacy 关联补充
 

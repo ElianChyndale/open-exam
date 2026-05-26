@@ -79,11 +79,13 @@ tags:
 ```text
 13. Curve-Based and Empirical Fixed-Income Risk Measures
 ├─ 13.1 期权感知风险 (Option-Aware Risk)
-│  ├─ 13.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 13.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 13.1.1 Effective duration = (P_- - P_+)/(2P_0Δy)；现金流可能随利率变化时重新定价
+│  ├─ 13.1.2 Effective convexity = (P_- + P_+ - 2P_0)/(P_0Δy^2)；适合 callable/putable/MBS
+│  └─ 13.1.3 Empirical duration 用历史价格和 benchmark yield 估计，反映市场实际行为
 ├─ 13.2 曲线风险 (Curve Risk)
-│  ├─ 13.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 13.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 13.2.1 Key rate duration：只改变一个 maturity bucket，衡量非平行曲线风险
+│  ├─ 13.2.2 Steepening/flattening/twist：不能用单一 modified duration 完整解释
+│  └─ 13.2.3 Benchmark yield shift 与 credit spread shift 分开看，避免把 spread widening 误判成 curve move
 ```
 
 ## 4. 知识点详解
@@ -141,14 +143,21 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Curve shocks | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] | key maturity rates | 处理 steepening/flattening/twist |
+| Option-aware risk | [[M01-Fixed-Income-Instrument-Features]] / [[M02-Fixed-Income-Cash-Flows-and-Types]] | call/put/prepayment cash-flow changes | 选择 effective duration/convexity |
+| Credit separation | [[M14-Credit-Risk]] | benchmark yield vs spread move | 区分利率风险和信用利差风险 |
+| MBS risk | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] | prepayment-sensitive cash flows | 解释 empirical/effective duration 偏离 |
+
 - **上游模块**：[[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M14-Credit-Risk]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
-- 有效久期 → [[M08-Duration-and-Convexity]] 的修正久期对比
+- 有效久期 → [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] 的修正久期对比
 - 嵌入期权 → [[M01-Instrument-Features]] 的或有条款
-- Spread shift → [[M10-Credit-Risk]] 的信用利差分析
+- Spread shift → [[M14-Credit-Risk]] 的信用利差分析
 
 
 ## 9. 复习与刷题提示

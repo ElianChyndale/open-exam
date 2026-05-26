@@ -77,20 +77,25 @@ tags:
 ```text
 3. Fiscal Policy
 ├─ 3.1 财政政策工具（Fiscal Policy Tools）
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Government spending：直接进入 AD，乘数通常大于税收乘数
+│  ├─ 3.1.2 Taxes：影响 disposable income、labor supply、investment incentives
+│  ├─ 3.1.3 Transfers：改变家庭收入和自动稳定器强度，但不是政府购买
+│  └─ 3.1.4 Automatic stabilizers：累进税和失业救济无需新立法即可平滑周期
 ├─ 3.2 扩张性与紧缩性财政政策（Expansionary vs Contractionary Fiscal Policy）
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 Expansionary：increase G / cut T，应对 recession 或负 output gap
+│  ├─ 3.2.2 Contractionary：cut G / raise T，应对 overheating 或 inflation pressure
+│  └─ 3.2.3 考试判断：政策方向看对 AD 的净影响，不只看某一个税种或支出项目
 ├─ 3.3 财政乘数（Fiscal Multiplier）
-│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.3.1 Spending multiplier=`1/(1-MPC)`；MPC 越高，乘数越大
+│  ├─ 3.3.2 Tax multiplier=`-MPC/(1-MPC)`；绝对值通常小于支出乘数
+│  └─ 3.3.3 Leakages：saving、taxes、imports、capacity constraints 都会削弱乘数
 ├─ 3.4 财政政策的约束（Constraints on Fiscal Policy）
-│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.4.1 Time lags：recognition、action/implementation、impact lag
+│  ├─ 3.4.2 Crowding out：政府借款推高利率，挤出私人投资
+│  └─ 3.4.3 Debt sustainability：关注 debt/GDP、primary balance、r 与 g 的关系
 ├─ 3.5 供给侧效应（Supply-Side Effects）
-│  ├─ 3.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.5.1 税收改变劳动供给、储蓄、投资和创业激励
+│  └─ 3.5.2 基础设施/教育支出可能提高长期 potential GDP
 ```
 
 ## 4. 知识点详解
@@ -190,14 +195,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Understanding-Business-Cycles]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Monetary-Policy]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 财政政策与经济周期的配合见 **[[M02-Understanding-Business-Cycles]]**
-- 财政政策与货币政策的配合对比在 **[[M04-Monetary-Policy]]** 中讨论
-- 财政政策对利率和汇率的影响延伸至 **[[M07-Capital-Flows-and-FX-Markets]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M02 -> M03` | output gap、unemployment、cycle phase | 判断财政政策应扩张还是紧缩。 |
+| `M03 -> M04` | deficit financing、policy mix、inflation pressure | 财政扩张可能迫使央行紧缩或影响利率路径。 |
+| `M03 -> M07/M08` | debt credibility、interest rates、capital flows | 财政赤字和债务风险影响 FX pressure 与 forward rates。 |
+| `M03 -> FI` | government borrowing、sovereign risk | 连接收益率、信用利差和债务可持续性。 |
+| `M03 -> PM` | fiscal impulse、automatic stabilizers | 连接宏观情景和资产配置。 |
 
 
 ## 9. 复习与刷题提示

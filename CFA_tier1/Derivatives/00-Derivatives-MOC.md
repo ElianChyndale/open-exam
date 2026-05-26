@@ -50,59 +50,75 @@ tags:
 ```text
 Derivatives (5-8%)
 ├─ 1. Derivative Instrument and Derivative Market Features
-│  ├─ 1.1 Introduction
-│  ├─ 1.2 Derivative Features
-│  ├─ 1.3 Derivative Underlyings
+│  ├─ 1.1 合约要素：underlying、notional、long/short、settlement；价值来自标的未来状态
+│  ├─ 1.2 市场结构：exchange-traded 标准化/清算/保证金，OTC 定制化/双边信用风险
+│  └─ 1.3 考试判断：notional 放大敞口但不是最大损失；market value 可小于 economic exposure
 ├─ 2. Forward Commitment and Contingent Claim Features and Instruments
-│  ├─ 2.1 Introduction
-│  ├─ 2.2 Forwards, Futures, and Swaps
-│  ├─ 2.3 Futures
+│  ├─ 2.1 Forward commitments：forwards、futures、swaps 都是义务；payoff 线性、上下行对称
+│  ├─ 2.2 Contingent claims：options 是权利；holder 选择行权，writer 承担或有义务
+│  └─ 2.3 第一分叉：right vs obligation 决定 payoff 图形、风险上限和是否有 premium
 ├─ 3. Derivative Benefits, Risks, and Issuer and Investor Uses
-│  ├─ 3.1 Introduction
-│  ├─ 3.2 Derivative Benefits
-│  ├─ 3.3 Derivative Risks
+│  ├─ 3.1 用途：hedging、speculation、arbitrage、exposure transformation、price discovery
+│  ├─ 3.2 风险：leverage、liquidity、counterparty、basis、model、operational risk
+│  └─ 3.3 考试判断：hedge 降低目标风险，但可能引入 basis/counterparty risk
 ├─ 4. Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives
-│  ├─ 4.1 Introduction
-│  ├─ 4.2 Arbitrage
-│  ├─ 4.3 Replication
+│  ├─ 4.1 无套利：相同未来现金流必须同价；错价时买便宜现金流、卖贵现金流
+│  ├─ 4.2 复制：derivative price = replicating portfolio cost；后续 parity/binomial 都从这里来
+│  └─ 4.3 持有成本：forward price = spot compounded by net carry；income/yield/convenience benefit 降低 fair price
 ├─ 5. Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities
-│  ├─ 5.1 Introduction
-│  ├─ 5.2 Pricing and Valuation of Forward Contracts
-│  ├─ 5.3 Pricing and Valuation of Interest Rate Forward Contracts
+│  ├─ 5.1 Pricing at inception：no income `F0=S0(1+r)^T`；known income `[S0-PV(I)](1+r)^T`；yield `S0[(1+r)/(1+q)]^T`
+│  ├─ 5.2 Valuation during life：long value 约等于 current asset PV minus PV(delivery price)，price 与 value 不同
+│  └─ 5.3 Varying maturities：远期曲线来自不同期限 carry、利率和收入假设
 ├─ 6. Pricing and Valuation of Futures Contracts
-│  ├─ 6.1 Introduction
-│  ├─ 6.2 Pricing of Futures Contracts at Inception
-│  ├─ 6.3 MTM Valuation: Forwards versus Futures
+│  ├─ 6.1 Futures price：若利率确定且无 default，理论上接近 forward price
+│  ├─ 6.2 Daily settlement：marking to market 每日实现盈亏，margin call 改变现金流时点
+│  └─ 6.3 Forward vs futures：利率与标的正相关时 futures price 可高于 forward price
 ├─ 7. Pricing and Valuation of Interest Rates and Other Swaps
-│  ├─ 7.1 Introduction
-│  ├─ 7.2 Swaps vs. Forwards
-│  ├─ 7.3 Swap Values and Prices
+│  ├─ 7.1 Swap as forward strip：互换是一串远期/FRAs，初始 fixed rate 使价值约为零
+│  ├─ 7.2 Net payment：`Notional x (Floating - Fixed) x accrual`，方向取决于 payer/receiver
+│  └─ 7.3 Valuation intuition：fixed-rate payer 价值随市场固定利率上升而上升
 ├─ 8. Pricing and Valuation of Options
-│  ├─ 8.1 Introduction
-│  ├─ 8.2 Option Value relative to the Underlying Spot Price
-│  ├─ 8.3 Option Exercise Value
+│  ├─ 8.1 Payoff：call `max(0,ST-X)`，put `max(0,X-ST)`；profit 还要扣 premium
+│  ├─ 8.2 Value components：option value = intrinsic value + time value；moneyness 由 S 与 X 决定
+│  └─ 8.3 Drivers：underlying price、strike、volatility、time、risk-free rate、income/yield
 ├─ 9. Option Replication Using Put-Call Parity
-│  ├─ 9.1 Introduction
-│  ├─ 9.2 Put–Call Parity
-│  ├─ 9.3 Option Strategies Based on Put–Call Parity
+│  ├─ 9.1 European parity：`c + PV(X) = p + S0`，两边到期现金流相同
+│  ├─ 9.2 Synthetics：移项得到 synthetic call/put/stock/bond；套利题买便宜组合、卖贵组合
+│  └─ 9.3 Forward parity：用 forward 代替现货时要匹配到期和交割价
 ├─ 10. Valuing a Derivative Using a One-Period Binomial Model
-│  ├─ 10.1 Introduction
-│  ├─ 10.2 Binomial Valuation
-│  ├─ 10.3 The Binomial Model
+│  ├─ 10.1 Terminal payoff：先算 up/down 状态的 option payoff
+│  ├─ 10.2 Replication：`h=(Vu-Vd)/(Su-Sd)`，再用 borrowing/lending 完成复制
+│  └─ 10.3 Risk-neutral pricing：`p*=[(1+r)-d]/(u-d)`，`V0=[p*Vu+(1-p*)Vd]/(1+r)`；p* 不是真实概率
 ```
 
 ## 4. 跨模块依赖关系
 
-- **M01 Derivative Instrument and Derivative Market Features**：承接 `本科目入口`，输出到 `Forward Commitment and Contingent Claim Features and Instruments`。
-- **M02 Forward Commitment and Contingent Claim Features and Instruments**：承接 `Derivative Instrument and Derivative Market Features`，输出到 `Derivative Benefits, Risks, and Issuer and Investor Uses`。
-- **M03 Derivative Benefits, Risks, and Issuer and Investor Uses**：承接 `Forward Commitment and Contingent Claim Features and Instruments`，输出到 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives`。
-- **M04 Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives**：承接 `Derivative Benefits, Risks, and Issuer and Investor Uses`，输出到 `Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities`。
-- **M05 Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities**：承接 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives`，输出到 `Pricing and Valuation of Futures Contracts`。
-- **M06 Pricing and Valuation of Futures Contracts**：承接 `Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities`，输出到 `Pricing and Valuation of Interest Rates and Other Swaps`。
-- **M07 Pricing and Valuation of Interest Rates and Other Swaps**：承接 `Pricing and Valuation of Futures Contracts`，输出到 `Pricing and Valuation of Options`。
-- **M08 Pricing and Valuation of Options**：承接 `Pricing and Valuation of Interest Rates and Other Swaps`，输出到 `Option Replication Using Put-Call Parity`。
-- **M09 Option Replication Using Put-Call Parity**：承接 `Pricing and Valuation of Options`，输出到 `Valuing a Derivative Using a One-Period Binomial Model`。
-- **M10 Valuing a Derivative Using a One-Period Binomial Model**：承接 `Option Replication Using Put-Call Parity`，输出到 `本科目总结`。
+```text
+Instrument layer (M01-M03)
+├─ contract terms -> payoff / settlement / counterparty exposure
+├─ forward commitments -> forwards, futures, swaps (linear obligations)
+└─ contingent claims -> options, credit triggers (asymmetric rights)
+
+Pricing spine (M04-M07)
+├─ no-arbitrage + replication (M04)
+├─ cost of carry -> forwards and futures (M05-M06)
+└─ swap = strip of forwards / bond-pair intuition (M07)
+
+Option spine (M08-M10)
+├─ payoff/profit/moneyness (M08)
+├─ put-call parity and synthetics (M09)
+└─ binomial replication and risk-neutral value (M10)
+```
+
+| 依赖关系 | 输入 | 输出到考试判断 | 外部接口 |
+|---|---|---|---|
+| `M01 -> M02` | underlying、long/short、settlement、market venue | 区分 obligation 与 right，确定 payoff 图形 | PM hedge mandate、FI/FX underlying |
+| `M03 -> M04` | hedge/speculate/arbitrage motive | 只有 identical cash flows 才能做 no-arbitrage；hedge 不等于套利 | Risk management、PM exposure control |
+| `M04 -> M05/M06` | spot、risk-free rate、income/yield/storage/convenience | 选择 correct cost-of-carry formula；识别 mispricing | Economics rates/FX、FI money markets |
+| `M05/M06 -> M07` | forward/futures cash-flow timing | swap 是多期 forward-like cash flows，notional 多数不交换 | FI floating/fixed rates |
+| `M08 -> M09` | option payoff、strike、premium、exercise style | 仅 European vanilla 直接套基础 parity | Equity options、corporate liabilities |
+| `M09 -> M10` | replication and same-payoff logic | binomial 的 hedge ratio 与 risk-neutral pricing 是 parity 思想延伸 | Quant probability trees |
+| `Economics/Quant -> Derivatives` | interest rates、FX quotes、volatility、discounting | 定价输入来自宏观利率、汇率和概率模型 | Economics M08、Quant TVM/probability |
 
 ## 5. 核心对比专题
 
@@ -190,25 +206,29 @@ Derivatives (5-8%)
 
 ## 8. 通用分析框架
 
-### 框架1：衍生品定价题 SOP
+### 框架1：衍生品定价题决策树
 
-1. 先识别 instrument type
-2. 画 payoff
-3. 找复制组合或 carry relation
-4. 再贴现 / 套 parity
+1. 识别工具：forward/futures/swap 是 obligation；option 是 right；credit derivative 看 trigger。
+2. 画到期 payoff：linear payoff 用 `S_T-K` 或 `K-S_T`；option 用 `max(0, S_T-X)` 或 `max(0, X-S_T)`。
+3. 选择定价骨架：有现货与 carry -> cost of carry；两组现金流相同 -> parity/replication；单期上下状态 -> binomial。
+4. 选择公式条件：无收入 `F0=S0(1+r)^T`；已知现金收入 `[S0-PV(I)](1+r)^T`；收益率 `S0[(1+r)/(1+q)]^T`；连续口径用指数形式。
+5. 区分 price 与 value：price 是新合约公平交割价，value 是既有合约当前价值；题干问 valuation 时不能只报 forward price。
 
-### 框架2：option 题 SOP
+### 框架2：风险管理与用途题决策树
 
-1. 先分清 call/put
-2. 再分清 payoff/profit
-3. 再判断 moneyness
-4. 最后代入 premium / strike
+1. 先找原始暴露：price、rate、FX、credit、commodity、equity beta。
+2. 判断目标：hedge 降低既有风险；speculation 建立方向性风险；arbitrage 锁定无风险错价；exposure transformation 改变现金流形态。
+3. 匹配工具：linear exposure 用 forward/futures/swap；需要下行保护并保留上行可用 option。
+4. 检查残余风险：basis、counterparty、liquidity、model、operational、margin/cash-flow timing。
+5. 输出结论时说明收益代价：hedge 可能放弃 upside，option protection 需要 premium，futures 需要 margin。
 
-### 框架3：parity 题 SOP
+### 框架3：option / parity / binomial 决策树
 
-1. 先写标准 parity
-2. 再移项得到目标 synthetic position
-3. 最后检查是不是 European option 条件
+1. Option 题先分 call/put、long/short、European/American，再分 payoff/profit。
+2. 若问 moneyness 或 intrinsic value：call 用 `max(0,S-X)`，put 用 `max(0,X-S)`；profit 才扣 premium。
+3. 若问 parity：先写 `c + PV(X) = p + S0`，有 known income 加 `PV(I)`，有 yield 用 `S0e^{-qT}`，再移项。
+4. 若问套利：买入 parity 较便宜一边，卖出较贵一边；必须确认同一 underlying、strike、maturity、European 条件。
+5. 若问 binomial：先算 `V_u/V_d`，再选 replication `h=(V_u-V_d)/(S_u-S_d)` 或 risk-neutral `p*=[(1+r)-d]/(u-d)`；最后折现。
 
 ---
 

@@ -73,14 +73,20 @@ tags:
 ```text
 7. Estimation and Inference
 ├─ 7.1 抽样方法（Sampling Methods）
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 Probability sampling：每个成员有已知非零抽中概率，是推断的基础
+│  ├─ 7.1.2 Simple random：概率相等；stratified：分层后抽样，提升各层代表性
+│  ├─ 7.1.3 Cluster：抽群再调查群内成员，节省成本但可能提高 sampling error
+│  ├─ 7.1.4 Non-probability：convenience/judgmental 快但偏误高
+│  └─ 7.1.5 Bias：data snooping、look-ahead、selection bias 不能靠增加 n 自动消除
 ├─ 7.2 CLT 和标准误（Central Limit Theorem and Standard Error）
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 CLT：总体非正态也可在大样本下让样本均值近似正态
+│  ├─ 7.2.2 Standard error：`SE=σ/√n` 或 `s/√n`，衡量样本均值不确定性
+│  ├─ 7.2.3 Standard deviation vs SE：前者衡量单个观测，后者衡量样本均值
+│  └─ 7.2.4 样本量效应：SE 减半需要样本量变为 4 倍
 ├─ 7.3 重抽样估计量（Resampling Estimators）
-│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.3.1 Bootstrap：有放回重抽 n 个观测，估计统计量抽样分布和 SE
+│  ├─ 7.3.2 Jackknife：每次删去一个观测，估计 bias 和 variance
+│  └─ 7.3.3 判断：bootstrap 适合复杂统计量，jackknife 计算较轻但信息较少
 ```
 
 ## 4. 知识点详解
@@ -160,6 +166,20 @@ tags:
 | `SE = s/√n` | 标准误（用样本 s 估计） | 常见考试场景 |
 | `Sampling Error = x̄ - μ` | 抽样误差 | 评估样本估计精度 |
 | `n = (zσ/E)²` | 所需样本量 | E = 期望的 margin of error |
+| `CI = x̄ ± z_(α/2)σ/√n` | z 置信区间 | σ 已知或题目指定 z |
+| `CI = x̄ ± t_(α/2,n-1)s/√n` | t 置信区间 | σ 未知，用样本 s |
+| `SE_new = SE_old/2 -> n_new = 4n_old` | 样本量与 SE | 标准误缩小一半需四倍样本 |
+
+### 5.2 推断前置决策树
+
+| 题干触发 | 决策 | 对应节点 | 防错点 |
+|---|---|---|---|
+| 样本设计题 | 先判 probability vs non-probability | `7.1` | convenience sample 不能支持强总体推断。 |
+| 总体非正态但 n 大 | 可用 CLT 近似样本均值正态 | `7.2.1` | CLT 作用于 sample mean，不是原始数据。 |
+| 问样本均值不确定性 | 用 SE | `7.2.2` | 不要把标准差当标准误。 |
+| 要区间估计 | 先判断 σ 已知/未知，再选 z/t | `7.2` | 小样本且 σ 未知用 t。 |
+| 无解析 SE 或复杂统计量 | bootstrap | `7.3.1` | 原样本有偏时 bootstrap 也有偏。 |
+| 问 bias estimate | jackknife | `7.3.2` | 不是删除异常值的方法。 |
 
 ## 6. 常见考点与解题思路
 
@@ -202,8 +222,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Simulation-Methods]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M08-Hypothesis-Testing]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `7.1` 抽样与偏误 | Big Data、Equity research、Economics | 评价数据是否支持结论 | 增大样本量降低 sampling error，但不消除 sampling bias。 |
+| `7.2` CLT/SE | [[M08-Hypothesis-Testing]] | 检验统计量分母、置信区间宽度 | SE 是样本均值的标准差，不是样本中个体的标准差。 |
+| `7.2` 样本量 | Research design | margin of error 控制 | 样本量与误差平方成反比。 |
+| `7.3` Bootstrap/jackknife | [[M06-Simulation-Methods]]、M08 | 非参数区间、统计量分布估计 | Bootstrap 估 SE，jackknife 常用于 bias/variance。 |
+| `7.1` bias | Ethics、Quant investing | 回测和研究陈述是否误导 | Look-ahead 和 data snooping 会让策略表现虚高。 |
 
 ### Legacy 关联补充
 

@@ -82,14 +82,17 @@ tags:
 ```text
 5. Company Analysis: Past and Present
 ├─ 5.1 了解业务 (Understand the business)
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Business model：收入来源、客户群、价值主张、渠道、成本结构和资本密集度。
+│  ├─ 5.1.2 Competitive position：市场份额、差异化、成本优势、转换成本和管理层执行力。
+│  └─ 5.1.3 Research report：business description -> industry context -> financial analysis -> valuation -> risks/catalysts。
 ├─ 5.2 盈利能力与韧性 (Profitability and resilience)
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 Profitability：gross/operating/net margin、ROA、ROE；要解释驱动因素而非只看高低。
+│  ├─ 5.2.2 DuPont：`ROE = net margin x asset turnover x financial leverage`，拆出经营、效率和杠杆来源。
+│  └─ 5.2.3 Resilience：现金流质量、债务期限、流动性、客户集中度和周期敏感性。
 ├─ 5.3 理性看待历史 (Read history without worshiping it)
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Normalization：剔除一次性项目、周期高低点和会计政策变化。
+│  ├─ 5.3.2 Quality of earnings：比较 earnings 与 operating cash flow，识别 accrual 和非经常项目。
+│  └─ 5.3.3 Forecast bridge：只有可解释、可持续的历史驱动因素才进入预测。
 ```
 
 ## 4. 知识点详解
@@ -114,12 +117,17 @@ tags:
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| ROE (Return on Equity) | `Net Income / Shareholders' Equity` |
-| DuPont ROE (三因素) | `Net Profit Margin × Asset Turnover × Financial Leverage` |
-| ROIC (Return on Invested Capital) | `NOPAT / (Total Debt + Equity - Cash)` |
-| 毛利率 (Gross Margin) | `(Revenue - COGS) / Revenue` |
+| 指标/框架 | 公式或检查点 | 对应节点 | 考试说明 |
+|---|---|---|---|
+| Gross margin | `Gross profit / revenue` | 5.2.1 | 产品定价能力和成本压力。 |
+| Operating margin | `Operating income / revenue` | 5.2.1 | 经营成本结构和规模效应。 |
+| Net margin | `Net income / revenue` | 5.2.1 | 受融资、税和非经营项目影响。 |
+| ROA | `Net income / average assets` | 5.2.1 | 资产盈利效率。 |
+| ROE | `Net income / average equity` | 5.2.1 | 可能被杠杆放大。 |
+| DuPont ROE | `Net margin x asset turnover x financial leverage` | 5.2.2 | 区分利润率、周转率和杠杆驱动。 |
+| ROIC | `NOPAT / invested capital` | 5.2.1 | 与资本成本比较，判断价值创造。 |
+| Earnings quality check | `Operating cash flow vs net income` | 5.3.2 | earnings 高但 cash flow 弱要谨慎。 |
+| Normalization checklist | 一次性项目、周期位置、会计政策、重组费用 | 5.3.1 | 历史数据要先清洗再预测。 |
 
 ## 6. 常见考点与解题思路
 
@@ -149,14 +157,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Overview-of-Equity-Securities]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-Industry-and-Competitive-Analysis]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **历史分析为预测提供基础** → [[M07-Company-Analysis-Forecasting]]
-- **公司质量影响估值倍数** → [[M08-Equity-Valuation-Concepts]]
-- **行业背景决定盈利模式** → [[M06-Industry-and-Competitive-Analysis]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Financial ratios / quality | FSA | 报表数据是证据，Equity 用它判断业务质量和预测输入。 | ratio 高低必须解释驱动。 |
+| Business model / management | Corporate Issuers | 管理层资本配置和商业模式影响盈利持续性。 | 好公司不等于好股票。 |
+| Normalized earnings | [[M07-Company-Analysis-Forecasting]] | 清洗后的历史业绩才可外推。 | 一次性增长不能直接进入 terminal growth。 |
+| Company quality | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] | 估值倍数要用增长、风险、盈利质量解释。 | 低倍数可能是 deserved discount。 |
 
 
 ## 9. 复习与刷题提示

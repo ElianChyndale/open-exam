@@ -78,14 +78,19 @@ tags:
 ```text
 5. Capital Investments and Capital Allocation
 ├─ 5.1 现金流纪律 (Cash-Flow Discipline)
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Incremental after-tax cash flow：只看项目带来的额外现金流，排除 sunk cost。
+│  ├─ 5.1.2 Include：opportunity cost、cannibalization、externality、NOWC、salvage value 和 tax effects。
+│  └─ 5.1.3 Exclude/avoid double count：融资现金流通常不进项目现金流，因为折现率已反映融资成本。
 ├─ 5.2 决策标准 (Decision Criteria)
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 NPV：绝对价值创造标准；independent project 若 NPV > 0 接受。
+│  ├─ 5.2.2 IRR：使 NPV = 0 的折现率；非常规现金流和互斥项目排序可能误导。
+│  ├─ 5.2.3 PI：每单位投资创造的现值，适合 capital rationing。
+│  └─ 5.2.4 Payback/discounted payback：流动性和风险粗筛，不是价值最大化规则。
 ├─ 5.3 实物期权 (Real Options)
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Timing option：等待更多信息后投资。
+│  ├─ 5.3.2 Expansion option：项目成功后扩大规模。
+│  ├─ 5.3.3 Abandonment option：不利时退出以限制损失。
+│  └─ 5.3.4 Flexibility option：切换投入、产出或生产方式。
 ```
 
 ## 4. 知识点详解
@@ -140,9 +145,14 @@ tags:
 
 | 指标 | 公式 | 说明 |
 |------|------|------|
-| 净现值 (NPV) | `NPV = Σ_{t=0}^{N} CF_t/(1+r)^t` | 价值创造的绝对度量 |
-| 内部收益率 (IRR) | `0 = Σ_{t=0}^{N} CF_t/(1+IRR)^t` | 项目本身的收益率 |
+| 净现值 (NPV) | `NPV = Σ CF_t/(1+r)^t - initial outlay` | 价值创造的绝对度量 |
+| 内部收益率 (IRR) | `0 = Σ CF_t/(1+IRR)^t - initial outlay` | 项目本身的收益率 |
 | 盈利指数 (PI) | `PI = PV of future cash inflows / Initial investment` | 每单位投资创造的现值 |
+| Equivalent annual annuity | `EAA = NPV / annuity factor` | 不同寿命互斥项目可比 |
+| OCF, tax form | `OCF = (S - C - D)(1 - T) + D` | 税后经营现金流 |
+| OCF, shortcut | `OCF = (S - C)(1 - T) + DT` | 折旧税盾口径 |
+| Initial outlay | `FCInv + NOWCInv - after-tax proceeds from old asset` | replacement project 高频 |
+| Terminal cash flow | `After-tax salvage value + recovery of NOWC` | 项目结束现金流 |
 | 回收期 | 累计现金流 ≥ 0 的时间点 | 流动性指标而非价值指标 |
 | 折现回收期 | 累计折现现金流 ≥ 0 的时间点 | 略好于回收期但仍不完整 |
 
@@ -186,16 +196,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Working-Capital-and-Liquidity]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-Capital-Structure]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 折现率 → [[M05-Cost-of-Capital]] WACC 是资本预算中最常用的折现率
-- 项目风险调整 → [[M05-Cost-of-Capital]] 风险不同的项目应使用不同折现率
-- 经营杠杆影响项目风险 → [[M06-Capital-Structure-and-Leverage]] 固定成本高的项目经营杠杆大
-- 实物期权概念 → [[M07-Business-Models]] 不同商业模式的灵活性不同
-- 资本配置整合 → [[M08-Capital-Allocation-Integration]] 资本预算应纳入公司整体价值创造策略
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| NOWC investment/recovery | [[M04-Working-Capital-and-Liquidity]] | 项目现金流包含营运资本投入和回收。 | 初始和终结现金流都要检查 NOWC。 |
+| Discount rate / hurdle rate | [[M06-Capital-Structure]] | WACC 只适合风险相近项目。 | company WACC 不是万能折现率。 |
+| Governance / capital allocation | [[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]] | 治理影响项目选择和预算纪律。 | 管理层激励可能导致 overinvestment。 |
+| Business model flexibility | [[M07-Business-Models]] | 实物期权来自商业模式和运营灵活性。 | option value 增加项目价值但不能替代现金流分析。 |
 
 
 ## 9. 复习与刷题提示

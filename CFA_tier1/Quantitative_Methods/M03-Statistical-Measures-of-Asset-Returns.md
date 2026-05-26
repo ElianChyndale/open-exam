@@ -79,17 +79,26 @@ tags:
 ```text
 3. Statistical Measures of Asset Returns
 ├─ 3.1 集中趋势与位置指标（Central Tendency and Location）
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Arithmetic mean：`Σx_i/n`，适合单期期望或对称分布中心
+│  ├─ 3.1.2 Geometric mean：`[Π(1+R_i)]^(1/n)-1`，适合多期复合收益
+│  ├─ 3.1.3 Harmonic mean：`n/Σ(1/x_i)`，适合 P/E 等价格倍数平均
+│  ├─ 3.1.4 Median / mode：偏态或 outlier 场景中 median 更代表 typical value
+│  └─ 3.1.5 Quantile：`L_p=(n+1)p/100`，用于 percentile、quartile、VaR 直觉
 ├─ 3.2 离散程度（Dispersion）
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 Range / MAD：直观但 range 对极端值最敏感
+│  ├─ 3.2.2 Population variance：`Σ(x_i-μ)^2/N`
+│  ├─ 3.2.3 Sample variance：`Σ(x_i-x̄)^2/(n-1)`，看到 sample 用 `n-1`
+│  ├─ 3.2.4 Standard deviation：与原数据同单位，是常用风险尺度
+│  ├─ 3.2.5 Downside deviation：只看低于目标收益的偏差，连接 Sortino/downside risk
+│  └─ 3.2.6 CV：`s/x̄`，比较不同均值水平的相对离散度
 ├─ 3.3 分布形态（Distribution Shape）
-│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.3.1 Skewness：看长尾方向；右偏 mean > median > mode，左偏相反
+│  ├─ 3.3.2 Kurtosis：看尾部厚度；normal kurtosis=3，excess kurtosis=kurtosis-3
+│  └─ 3.3.3 Investment judgment：负偏和厚尾意味着极端损失风险更高
 ├─ 3.4 相关性直觉（Correlation Intuition）
-│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.4.1 Correlation range：`[-1,+1]`，符号是方向，绝对值是线性强度
+│  ├─ 3.4.2 Portfolio use：低相关资产降低组合方差
+│  └─ 3.4.3 判断陷阱：相关不是因果，高相关也不保证回归模型可用
 ```
 
 ## 4. 知识点详解
@@ -177,6 +186,23 @@ tags:
 | `CV = s / x̄` | 变异系数 | 比较不同尺度的离散度 |
 | `Skewness = E[(X-μ)³]/σ³` | 偏度 | 判断分布不对称方向 |
 | `Excess Kurtosis = Kurtosis - 3` | 超额峰度 | 判断尾部厚度 |
+| `Geometric Mean = [Π(1+R_i)]^(1/n)-1` | 几何平均 | 多期复合收益 |
+| `Harmonic Mean = n/Σ(1/x_i)` | 调和平均 | 价格倍数平均 |
+| `L_p = (n+1)p/100` | 百分位位置 | 排序数据分位数 |
+| `MAD = Σ|x_i-x̄|/n` | 平均绝对偏差 | 相对稳健的离散度 |
+| `Chebyshev lower bound = 1 - 1/k²` | 切比雪夫下界 | 任意分布，k 个标准差内至少比例 |
+
+### 5.2 指标选择框架
+
+| 题干目标 | 首选指标 | 对应节点 | 判断句 |
+|---|---|---|---|
+| 单期期望中心 | arithmetic mean | `3.1.1` | 对 outlier 敏感。 |
+| 多期复合增长 | geometric mean | `3.1.2` | 波动越大，几何均值越低于算术均值。 |
+| 平均估值倍数 | harmonic mean | `3.1.3` | 适合 P/E、P/B 等 ratio。 |
+| typical value 且偏态 | median | `3.1.4` | 比均值更抗 outlier。 |
+| 样本风险 | sample variance / s | `3.2.3` | 分母用 `n-1`。 |
+| 相对风险比较 | CV | `3.2.6` | 均值不同的资产可比。 |
+| 尾部风险 | skewness + kurtosis | `3.3` | 负偏/厚尾更危险。 |
 
 ## 6. 常见考点与解题思路
 
@@ -215,8 +241,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Time-Value-of-Money-in-Finance]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Probability-Trees-and-Conditional-Expectations]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `3.1` 均值 | [[M01-Rates-and-Returns]]、Performance reporting | 算术/几何/调和均值分别对应单期、多期、倍数 | 不要用 arithmetic mean 描述长期复合财富增长。 |
+| `3.2` 方差/标准差 | [[M05-Portfolio-Mathematics]]、PM | 单资产风险扩展成组合方差 | 样本方差分母不是 n。 |
+| `3.2` downside/CV | Portfolio Management、Risk Management | 下行风险和单位收益风险比较 | CV 在均值接近 0 时解释不稳。 |
+| `3.3` skew/kurtosis | Alternatives、Risk Management | 非正态资产的尾部风险识别 | Fat tails 对应 kurtosis，不是 skewness。 |
+| `3.4` correlation | [[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]、Regression | 后续检验相关性和建立回归 | 相关不等于因果，也不说明模型没有遗漏变量。 |
 
 ### Legacy 关联补充
 

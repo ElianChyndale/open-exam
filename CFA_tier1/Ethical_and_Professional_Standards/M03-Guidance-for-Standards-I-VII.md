@@ -138,20 +138,32 @@ tags:
 ```text
 3. Guidance for Standards I-VII
 ├─ 3.1 Standard I: Professionalism
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 3.2 Standard I(A): Recommended Procedures
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 3.3 Standard I(A): Application of the Standard
-│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 3.4 Standard I(B) Independence and Objectivity
-│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 3.5 Standard I(B): Recommended Procedures
-│  ├─ 3.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 I(A) Knowledge of the Law：遵守更严格的法律/法规/Standards；发现违法要 dissociate。
+│  ├─ 3.1.2 I(B) Independence and Objectivity：礼物、压力、issuer-paid research、banking relationship 不能损害独立判断。
+│  ├─ 3.1.3 I(C) Misrepresentation：不得误导学历、业绩、模型、服务、第三方资料；引用外部材料要注明来源。
+│  ├─ 3.1.4 I(D) Misconduct：涉及 dishonesty、fraud、deceit 或影响职业声誉的行为违规。
+│  └─ 3.1.5 I(E) Competence：只在能力范围内服务，保持并提升专业能力。
+├─ 3.2 Standard II: Integrity of Capital Markets
+│  ├─ 3.2.1 II(A) MNPI：material AND nonpublic -> 不交易、不建议、不传播；mosaic theory 不能包含 MNPI。
+│  └─ 3.2.2 II(B) Market Manipulation：禁止制造虚假价格/成交量或传播误导信息。
+├─ 3.3 Standard III: Duties to Clients
+│  ├─ 3.3.1 III(A) Loyalty, Prudence, Care：客户利益优先，管理客户资产要审慎。
+│  ├─ 3.3.2 III(B) Fair Dealing：机会和推荐要公平传播，分配按既定政策，不要求所有客户绝对同价同秒。
+│  ├─ 3.3.3 III(C) Suitability：了解客户 objectives/constraints，并在整个 portfolio context 判断。
+│  ├─ 3.3.4 III(D) Performance Presentation：业绩陈述不得误导，要有合理依据和充分披露。
+│  └─ 3.3.5 III(E) Confidentiality：保密，除非客户授权、法律要求或涉及违法调查。
+├─ 3.4 Standard IV-V: Employers and Investment Process
+│  ├─ 3.4.1 IV(A) Loyalty：可为离职做有限准备，但不能挖客户、带走资料或损害雇主。
+│  ├─ 3.4.2 IV(B)/(C)：额外报酬需书面同意；主管要建立并执行合理合规程序。
+│  ├─ 3.4.3 V(A) Diligence and Reasonable Basis：研究和推荐必须有合理充分依据。
+│  ├─ 3.4.4 V(B) Communication：区分事实和观点，披露假设、风险、限制和方法变化。
+│  └─ 3.4.5 V(C) Record Retention：保留支持研究、推荐和行动的记录。
+├─ 3.5 Standard VI-VII: Conflicts and CFA Responsibilities
+│  ├─ 3.5.1 VI(A) Disclosure of Conflicts：充分、公平、显著披露可能影响独立性的冲突。
+│  ├─ 3.5.2 VI(B) Priority of Transactions：客户交易优先于雇主和个人交易。
+│  ├─ 3.5.3 VI(C) Referral Fees：向客户/潜在客户披露 referral compensation。
+│  ├─ 3.5.4 VII(A) CFA Program Conduct：不得作弊、泄题、扰乱考试或损害考试完整性。
+│  └─ 3.5.5 VII(B) CFA Designation：不能夸大 CFA 称号、候选人身份或考试成绩含义。
 ```
 
 ## 4. 知识点详解
@@ -185,13 +197,16 @@ tags:
 
 | 指标 | 公式/判断链 | 知识树节点 | 考试说明 |
 |------|---------------|------------|----------|
-| Ethics | 无核心数值公式 | `M01-M09` | 本科重在判断框架 |
-| Priority Rule | `client > market integrity > employer/self convenience` | `M05-M07` | 先守客户与市场 |
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `M03` | law 与 Standards 冲突时常考 |
-| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `M04` | 信息题第一闸 |
-| Suitability Gate | `client facts + portfolio context + risk/return fit` | `M05` | 不是单产品热度判断 |
-| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | `M07` | disclosure 不是橡皮擦 |
-| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | `M08` | 结构化记忆链 |
+| Stricter Standard Rule | `required conduct = most strict(applicable law, regulation, CFA Standards)` | `3.1.1` | law 与 Standards 冲突时常考 |
+| Independence Gate | `benefit/pressure -> could impair objectivity? -> reject/disclose/seek consent` | `3.1.2` | gifts、issuer-paid research、banking pressure |
+| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `3.2.1` | 信息题第一闸 |
+| Mosaic Theory Gate | `public information + nonmaterial nonpublic information -> may be used` | `3.2.1` | 不能含 MNPI |
+| Suitability Gate | `client facts + IPS/objectives/constraints + portfolio context + product risk/return fit` | `3.3.3` | 不是单产品热度判断 |
+| Confidentiality Exceptions | `client permission OR legal requirement OR illegal activity inquiry` | `3.3.5` | 保密不是绝对 |
+| Employer Exit Gate | `prepare OK; solicit clients/take records/use employer property not OK` | `3.4.1` | 跳槽题常考 |
+| Reasonable Basis Gate | `diligent research + adequate data + method limits disclosed` | `3.4.3/3.4.4` | 研究推荐题 |
+| Conflict Gate | `identify -> disclose prominently -> mitigate/avoid if disclosure insufficient` | `3.5.1` | disclosure 不是橡皮擦 |
+| Priority of Transactions | `client trades before employer/personal trades` | `3.5.2` | 不得抢先交易 |
 
 ### 5.1 考纲范围标记
 
@@ -230,23 +245,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Code-of-Ethics-and-Standards-of-Professional-Conduct]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Introduction-to-the-Global-Investment-Performance-Standards]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-道德准则 (Code of Ethics)
-├── 准则 I-VII (Standards I-VII)
-│   ├── 对客户的义务 (Duties to Clients)
-│   ├── 对雇主的义务 (Duties to Employers)
-│   ├── 资本市场诚信 (Capital Market Integrity)
-│   └── 冲突 / 沟通 / 记录 (Conflicts / Communication / Records)
-│       └── 全球投资业绩标准 (GIPS)
-│           └── 业绩陈述 (Performance Presentation)
-└── 道德应用 (Ethics Application) — 综合情境分析与决策框架
-    └── 涵盖上述全部内容的应用与案例
-```
+- **来自 M02**：M02 给 Standards 索引；本模块把每条 Standard 转成 required conduct、recommended procedure 和案例判断门。
+- **到 M04**：III(D) Performance Presentation 与 GIPS 直接连接；GIPS 是业绩展示的更细标准。
+- **到 M05**：M05 综合案例会同时触发多个 Standards，本模块提供定位和优先级。
+- **到 Equity/FI/Derivatives/Alts**：MNPI、market manipulation、reasonable basis、suitability 和 disclosure 会嵌入任何交易/推荐/产品题。
+- **到 PM/Wealth**：客户目标约束、IPS、fair dealing、priority of transactions 和 confidentiality 是组合管理行为底线。
 
 ---
 

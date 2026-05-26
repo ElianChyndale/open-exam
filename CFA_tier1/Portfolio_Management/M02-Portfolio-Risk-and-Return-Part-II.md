@@ -97,17 +97,23 @@ tags:
 ```text
 2. Portfolio Risk and Return: Part II
 ├─ 2.1 资本资产定价模型 (Capital Asset Pricing Model, CAPM)
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 CAPM required return：`E(Ri)=Rf+βi[E(Rm)-Rf]`
+│  ├─ 2.1.2 风险补偿：只补偿 systematic risk，不补偿可分散的 unsystematic risk
+│  └─ 2.1.3 假设边界：无税费、可无风险借贷、同质预期，现实应用要谨慎
 ├─ 2.2 Beta 系数 (Beta Coefficient)
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 Formula：`βi=Cov(Ri,Rm)/Var(Rm)=ρimσi/σm`
+│  ├─ 2.2.2 Interpretation：β>1 aggressive，β<1 defensive，β<0 反市场
+│  └─ 2.2.3 Portfolio beta：`βp=Σw_iβ_i`，系统性风险可线性加权
 ├─ 2.3 证券市场线 (Security Market Line, SML)
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 SML：截距 `Rf`，斜率 market risk premium，横轴 beta
+│  ├─ 2.3.2 Mispricing：expected return > required return 在 SML 上方，undervalued
+│  └─ 2.3.3 Jensen alpha：实际/预期收益相对 CAPM required return 的偏离
 ├─ 2.4 绩效评估指标 (Performance Evaluation Measures)
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 Sharpe：`(Rp-Rf)/σp`，完整组合用 total risk
+│  ├─ 2.4.2 Treynor：`(Rp-Rf)/βp`，充分分散组合用 systematic risk
+│  ├─ 2.4.3 M²：把 Sharpe 调整成收益率差，方便与市场比较
+│  ├─ 2.4.4 Jensen alpha：`Rp-[Rf+βp(E(Rm)-Rf)]`
+│  └─ 2.4.5 IR/TE：主动收益相对 benchmark，用 tracking error 衡量主动风险
 ```
 
 ## 4. 知识点详解
@@ -176,6 +182,17 @@ tags:
 | Information Ratio | `(Rp - Rb)/Tracking Error` | 主动收益/主动风险 |
 | 必要超额收益 | `βi × (E(Rm)-Rf)` | CAPM 的风险溢价 |
 
+### 5.2 公式选择框架
+
+| 题干目标 | 使用公式 | 知识树节点 | 判断句 |
+|---|---|---|---|
+| 求 required return | CAPM | `2.1.1` | 确认题目给的是 market return 还是 market risk premium。 |
+| 求 beta | `Cov/Var` 或 `ρσi/σm` | `2.2.1` | Beta 不是总风险。 |
+| 判断高估/低估 | expected return vs CAPM required return | `2.3.2` | 上方 undervalued，下方 overvalued。 |
+| 完整组合绩效 | Sharpe | `2.4.1` | 使用 total risk。 |
+| 充分分散组合/经理绩效 | Treynor / Jensen alpha | `2.4.2-2.4.4` | 使用 beta risk。 |
+| 主动管理相对基准 | Information ratio / tracking error | `2.4.5` | 分母是主动风险，不是 total risk。 |
+
 **考纲标记**：
 - 【考纲重点】CAPM、Beta、SML、Sharpe/Treynor/Jensen alpha、M-squared、tracking error/information ratio。
 - 【考纲内但无核心公式】CAPM assumptions、systematic vs unsystematic risk、active/passive suitability。
@@ -221,8 +238,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Portfolio-Risk-and-Return-Part-I]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Portfolio-Management-An-Overview]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `2.1` CAPM required return | Equity、Corporate Issuers、Fixed Income | 估值折现率、hurdle rate、required return | CAPM 只补偿 systematic risk。 |
+| `2.2` Beta | Quant regression、PM performance | 市场敏感度和 portfolio beta | 高 beta 不等于高 total risk。 |
+| `2.3` SML/alpha | Market efficiency、Active management | 判断是否有 mispricing 和主动机会 | SML 上方是低估。 |
+| `2.4` Performance ratios | [[M03-Portfolio-Management-An-Overview]]、M04 | 选择 active/passive、评估经理 | Sharpe、Treynor、IR 分母不同。 |
 
 ### Legacy 关联补充
 

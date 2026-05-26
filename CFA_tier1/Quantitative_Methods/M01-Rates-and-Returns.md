@@ -82,23 +82,30 @@ tags:
 ```text
 1. Rates and Returns
 ├─ 1.1 利率的三种解释（Three Interpretations of Interest Rate）
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 Required return：投资者要求的最低补偿，后续 CAPM/估值使用
+│  ├─ 1.1.2 Discount rate：未来现金流折现到今天的利率，连接 M02 TVM
+│  └─ 1.1.3 Opportunity cost：选择该资产放弃的次优收益，题目常用作概念解释
 ├─ 1.2 利率分解（Interest Rate Decomposition）
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 名义利率 ≈ real risk-free + expected inflation + default + liquidity + maturity premium
+│  ├─ 1.2.2 高利率归因：不能只说“风险高”，要指出是哪一种 premium 上升
+│  └─ 1.2.3 跨科目接口：Fixed Income 的 yield spread、Equity 的 required return 都沿用该分解
 ├─ 1.3 收益率度量阶梯（Return Measurement Ladder）
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 HPR：`(P1-P0+D1)/P0`，单一持有期总回报
+│  ├─ 1.3.2 Gross return：`(P1+D1)/P0=1+HPR`；Net return 再扣管理/行政费
+│  ├─ 1.3.3 Arithmetic mean：单期期望收益；Geometric mean：多期复合增长
+│  └─ 1.3.4 Harmonic mean：价格倍数平均，避免高倍数异常值主导
 ├─ 1.4 MWRR vs TWRR
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 MWRR：`ΣCF_t/(1+r)^t=0`，现金流时点会影响结果，衡量 investor experience
+│  ├─ 1.4.2 TWRR：先按外部现金流切段，再 `Π(1+HP_i)-1`，衡量 manager performance
+│  └─ 1.4.3 判断陷阱：差时追加/好时赎回会拖低 MWRR，不等于经理差
 ├─ 1.5 年化与连续复利（Annualization and Continuous Compounding）
-│  ├─ 1.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.5.1 年化：`(1+R_period)^c-1`，c 是一年内期数
+│  ├─ 1.5.2 连续复利：`r_cc=ln(1+HPR)`；可加性强，普通收益需乘法链接
+│  └─ 1.5.3 连续终值/现值：`FV=PV e^(rt)`，`PV=FV e^(-rt)`
 ├─ 1.6 总回报 vs 净回报（Gross Return vs Net Return）
-│  ├─ 1.6.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.6.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.6.1 Gross return 已反映 trading expenses，不再重复扣交易费用
+│  ├─ 1.6.2 Net return = gross return - management/admin fees
+│  └─ 1.6.3 杠杆税后顺序：gross -> net -> leveraged -> after-tax
 ```
 
 ## 4. 知识点详解
@@ -205,9 +212,21 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 | `r_cc = ln(1 + HPR)` | 连续复利收益率 | 需要收益率可加性时使用 |
 | `MWRR: Σ CF_t / (1+r)^t = 0` | 资金加权收益率 | 评估投资者实际体验 |
 | `Compounded TWRR = ∏(1 + HP_i) - 1` | 复合时间加权收益率 | 评估基金经理表现 |
-| `FY = PV * e^(rt)` | 连续复利终值 | 连续复利条件下的终值计算 |
+| `FV = PV * e^(rt)` | 连续复利终值 | 连续复利条件下的终值计算 |
 | `Leveraged Return = R_p + (B/E)(R_p - r_D)` | 杠杆回报 | 借款投资时的回报计算 |
 | `After-Tax Return = Pre-tax × (1 - t)` | 税后回报 | 考虑税收后的净回报 |
+
+### 5.2 选择框架
+
+| 题干触发 | 使用公式/口径 | 对应节点 | 检查点 |
+|---|---|---|---|
+| one holding period, price and income | `HPR = (P1-P0+D1)/P0` | `1.3.1` | D1 是否已含在 ending value。 |
+| average expected one-period return | arithmetic mean | `1.3.3` | 不用于描述长期复合财富增长。 |
+| compound annual growth | geometric mean | `1.3.3` | 所有期间先转 gross return 再连乘。 |
+| investor cash-flow experience | MWRR / IRR | `1.4.1` | 外部现金流时点和符号要统一。 |
+| manager performance | TWRR | `1.4.2` | 在每次外部现金流处切段。 |
+| continuously compounded | `ln(1+HPR)` or `e^r-1` | `1.5.2` | 不要和普通年化混用。 |
+| fees, leverage, taxes | gross -> net -> leverage -> tax | `1.6.3` | Gross 已包含 trading expenses。 |
 
 ## 6. 常见考点与解题思路
 
@@ -258,8 +277,14 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Time-Value-of-Money-in-Finance]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `1.1` 利率三重身份 | [[M02-Time-Value-of-Money-in-Finance]]、Fixed Income、Equity | 折现率、YTM、required return 都是同一利率语言的不同场景 | 不要把 discount rate 和 coupon rate 混为一谈。 |
+| `1.2` 利率分解 | Fixed Income credit spread、Macroeconomics | 解释 yield / required return 变化来源 | 高 nominal rate 可能来自通胀，不一定来自信用风险。 |
+| `1.3` 均值与收益率 | [[M03-Statistical-Measures-of-Asset-Returns]] | arithmetic/geometric/harmonic 在统计模块正式展开 | 几何均值用于复合，调和均值用于倍数。 |
+| `1.4` MWRR/TWRR | Portfolio Management performance | 投资者体验与经理表现分离 | 外部现金流不是投资收益本身。 |
+| `1.5` 年化/连续复利 | Fixed Income、Derivatives | 计息频率、连续贴现、远期定价 | 题目给 continuous 时不能用普通复利。 |
+| `1.6` 费用/杠杆/税 | Portfolio Management、Wealth Planning | 投资者最终到手收益和风险承受能力 | 先后顺序错会导致税基和杠杆收益错。 |
 
 ### Legacy 关联补充
 

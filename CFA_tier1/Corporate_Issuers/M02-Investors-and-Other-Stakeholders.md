@@ -73,20 +73,24 @@ tags:
 ```text
 2. Investors and Other Stakeholders
 ├─ 2.1 投资者类型 (Types of Investors)
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 Institutional vs retail：机构代表他人管理资金，散户用自有资金；信息能力和治理参与不同。
+│  ├─ 2.1.2 Equity vs debt：股东是 residual claim，债权人是 contractual claim；风险、回报和治理权利不同。
+│  └─ 2.1.3 Active ownership：投票、engagement、proxy voting 和 fiduciary duty 改变投资者角色。
 ├─ 2.2 利益相关者目标与冲突 (Stakeholder Objectives and Conflicts)
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 股东-债权人：有限责任使股东偏好高风险项目，债权人关注 downside protection。
+│  ├─ 2.2.2 股东-管理层：控制权和激励不一致，产生 agency costs。
+│  ├─ 2.2.3 控股股东-少数股东：控制权可能导致 tunneling 或 related-party transactions。
+│  └─ 2.2.4 公司-其他利益相关者：员工、客户、供应商、监管和社区目标可能与利润最大化冲突。
 ├─ 2.3 信息不对称 (Information Asymmetry)
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 Adverse selection：交易前信息不对称，优质公司可能被低估。
+│  ├─ 2.3.2 Moral hazard：交易后代理人行为偏移，需要监督、契约和激励约束。
+│  └─ 2.3.3 Signaling：股息、债务、回购、管理层持股等行动只有可信时才传递信息。
 ├─ 2.4 金融分析师的角色 (The Role of Financial Analysts)
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 信息中介：收集、分析和传播信息，降低管理层与外部投资者的信息差。
+│  └─ 2.4.2 利益冲突：sell-side、buy-side、independent analyst 的客户和激励不同。
 ├─ 2.5 ESG 与利益相关者视角 (ESG from a Stakeholder Perspective)
-│  ├─ 2.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.5.1 E/S/G 维度：环境影响社区和监管，社会影响员工客户供应链，治理影响投资者和债权人。
+│  └─ 2.5.2 财务传导：material ESG 通过 cash flow、risk 和 cost of capital 影响价值。
 ```
 
 ## 4. 知识点详解
@@ -263,16 +267,13 @@ ESG 议题天然具有利益相关者维度：
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **[[M01-Corporate-Structures-and-Ownership]]**：M01 介绍利益相关者类别（股东、债权人、管理层等），本模块深入分析其目标差异与信息不对称。所有权与控制权分离是信息不对称的根源。
-- **[[M03-Corporate-Governance-and-ESG]]**：信息不对称是代理问题的核心驱动因素。治理机制（董事会监督、薪酬设计、审计）旨在缓解信息不对称和激励冲突。ESG 披露是减少利益相关者信息不对称的关键工具。
-- **[[M06-Capital-Structure-and-Leverage]]**：信号传递理论通过资本结构选择传递管理层对公司前景的判断。信息不对称影响公司在债务和股权之间的融资选择。
-- **[[M05-Cost-of-Capital]]**：信息不对称程度直接影响公司的股权和债务融资成本。分析师覆盖和披露质量可以降低信息风险溢价。
-- **Portfolio M05 (Basics of Portfolio Planning and Construction)**：机构投资者在构建投资组合时须考虑 ESG 因素和受托责任。投资者目标与 IPS 中的风险偏好直接相关。
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Claim priority | [[M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership]] / FI | 股权和债权的索偿权差异来自组织形式和合约安排。 | 股东有投票权但最后受偿。 |
+| Agency conflict | [[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]] | 治理机制针对信息不对称和目标冲突。 | 先找冲突主体，再找治理机制。 |
+| Signaling / information risk | [[M06-Capital-Structure]] | 融资选择、股息和回购可能向市场传递管理层信息。 | 信号必须可信且有成本。 |
+| Analyst role | Equity / Market Efficiency | 分析师降低信息不对称、提高价格发现效率。 | 卖方分析师可能有利益冲突。 |
+| ESG materiality | Equity / PM / Ethics | ESG 通过现金流、风险和资本成本进入投资决策。 | ESG 不是所有场景都财务重大。 |
 
 
 ## 9. 复习与刷题提示

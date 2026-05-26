@@ -73,17 +73,21 @@ tags:
 ```text
 6. International Trade
 ├─ 6.1 贸易基础理论（Foundations of Trade）
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Absolute advantage 看单位投入产出或单位产出成本
+│  ├─ 6.1.2 Comparative advantage 看 opportunity cost，贸易方向由低机会成本决定
+│  └─ 6.1.3 Gains from trade 来自 specialization，总福利提高但分配可能不均
 ├─ 6.2 贸易限制（Trade Restrictions）
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 Tariff：提高进口价格，政府获得收入，消费者剩余下降
+│  ├─ 6.2.2 Quota：限制数量，quota rents 归许可证持有者，政府不一定有收入
+│  ├─ 6.2.3 Export subsidy：鼓励出口但扭曲资源配置，可能降低本国总福利
+│  └─ 6.2.4 Non-tariff barriers：标准、检疫、行政流程等隐性贸易成本
 ├─ 6.3 贸易条件（Terms of Trade）
-│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.3.1 `TOT = Export Price Index / Import Price Index`
+│  └─ 6.3.2 TOT 上升表示每单位出口可换更多进口，通常改善购买力
 ├─ 6.4 区域经济一体化（Regional Economic Integration）
-│  ├─ 6.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.4.1 层级：FTA -> customs union -> common market -> economic union -> monetary union
+│  ├─ 6.4.2 Trade creation：低成本成员替代高成本国内生产，提高效率
+│  └─ 6.4.3 Trade diversion：高成本成员替代低成本非成员，降低效率
 ```
 
 ## 4. 知识点详解
@@ -151,6 +155,14 @@ tags:
 **贸易条件**：`Terms of Trade = Export Price Index / Import Price Index`
 - 场景：判断一国贸易条件是否改善。指数上升表示贸易条件改善。
 
+| 节点 | 计算/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 6.1.2 | `Opportunity Cost of A = B given up / A gained` | 两国两商品产量表 | 低机会成本者有 comparative advantage，即使没有 absolute advantage 也可贸易。 |
+| 6.2 | Tariff welfare map | 关税题 | consumer loss > producer gain + government revenue，差额为 deadweight loss。 |
+| 6.2.2 | Quota rent | 配额题 | rent 归谁取决于许可证分配，不一定归政府。 |
+| 6.3 | `TOT = Export Price Index / Import Price Index` | 价格指数题 | TOT 上升通常有利，但也要看数量和需求弹性。 |
+| 6.4 | Integration ladder | 区域组织题 | 是否有统一对外关税、要素流动、政策协调、共同货币是分叉点。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -189,15 +201,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Introduction-to-Geopolitics]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M07-Capital-Flows-and-the-FX-Market]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 贸易净出口是GDP组成部分，见 **[[M03-Fiscal-Policy]]** 中的支出法核算
-- 贸易差额对汇率的影响在 **[[M07-Capital-Flows-and-FX-Markets]]** 中讨论
-- 关税等贸易政策作为财政政策的一部分见 **[[M03-Fiscal-Policy]]**
-- 贸易摩擦和供应链调整可能源于地缘政治风险，见 **[[M05-Introduction-to-Geopolitics]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M05 -> M06` | sanctions、trade restrictions、supply chain shifts | 识别贸易政策背后的地缘政治动机。 |
+| `M06 -> M07` | trade balance、terms of trade、regional blocs | 连接经常账户、资本流和汇率压力。 |
+| `M06 -> M03` | tariff revenue、subsidies、distributional effects | 关税/补贴也会成为财政政策工具。 |
+| `M06 -> Equity/Corporate` | import costs、export competitiveness、supply chain | 解释企业利润率和行业受益/受损。 |
+| `M06 -> PM` | country exposure、trade bloc membership | 连接国家配置和风险分散。 |
 
 
 ## 9. 复习与刷题提示

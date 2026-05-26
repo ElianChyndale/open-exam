@@ -71,14 +71,17 @@ tags:
 ```text
 17. Fixed-Income Securitization
 ├─ 17.1 Introduction
-│  ├─ 17.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 17.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 17.1.1 Securitization：把资产池现金流转移给 SPV，再发行 securities 给 investors
+│  ├─ 17.1.2 Bankruptcy remoteness：SPV 与 originator 隔离，降低 originator 破产对资产池的影响
+│  └─ 17.1.3 Pass-through vs structured allocation：前者按资产池现金流传递，后者通过 waterfall 重排风险
 ├─ 17.2 The Benefits of Securitization
-│  ├─ 17.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 17.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 17.2.1 Issuer/originator：融资多元化、释放资产负债表、改善流动性
+│  ├─ 17.2.2 Investors：获得特定 collateral、duration、credit tranche 的定制化敞口
+│  └─ 17.2.3 Economy/markets：把非流动贷款转为可交易证券，但不消除 collateral risk
 ├─ 17.3 The Securitization Process
-│  ├─ 17.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 17.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 17.3.1 Parties：originator、seller/depositor、SPV、servicer、trustee、credit enhancer、underwriter、investors
+│  ├─ 17.3.2 Servicer 收取并转付现金流；trustee 保护投资者并监督 waterfall
+│  └─ 17.3.3 考试判断：先识别谁转移资产、谁持有资产、谁收款、谁承担 first-loss
 ```
 
 ## 4. 知识点详解
@@ -100,73 +103,34 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 M06-M09 定价、收益率与曲线
+### 5.1 证券化流程框架
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Coupon Bond Price | `P = Σ_{t=1}^{N} C/(1+y/m)^t + FV/(1+y/m)^N` | `M06` | `y` 与 coupon frequency 必须同口径 |
-| Full Price | `Full Price = Clean Price + Accrued Interest` | `M06` | invoice price 看 full |
-| Accrued Interest | `AI = Coupon per period x Days since last coupon / Days in coupon period` | `M06` | day-count convention 题先读清 |
-| Matrix Pricing Interpolation | `Interpolated yield = y_L + [(T - T_L)/(T_H - T_L)](y_H - y_L)` | `M06` | 【考纲重点】估计非流动债券 required yield |
-| Current Yield | `Annual Coupon / Bond Price` | `M07` | 只看 coupon income |
-| Yield to Maturity | `P = Σ CF_t/(1 + YTM/m)^t` | `M07` | YTM 是使价格等于现金流现值的 IRR |
-| BEY from Periodic Yield | `BEY = periodic yield x number of periods per year` | `M07` | 债券等价收益率惯例 |
-| Effective Annual Yield | `EAY = (1 + periodic rate)^m - 1` | `M07` | 年化 conversion 高频 |
-| Government Benchmark Spread | `G-spread = YTM_bond - YTM_government benchmark` | `M07` | 【考纲重点】同期限或插值政府基准 |
-| Interpolated Spread | `I-spread = YTM_bond - swap rate at same maturity` | `M07` | 若考纲/题目使用 swap curve |
-| Zero-volatility Spread | `Z-spread = constant spread added to spot curve to price bond` | `M07` | 【扩展/谨慎】若题目只要求概念，不手算 |
-| Discount Yield | `BDY = (FV - P)/FV x 360/t` | `M08` | 分母是 face value |
-| Money Market Yield | `MMY = (FV - P)/P x 360/t` | `M08` | 分母换成 purchase price |
-| Bond Equivalent Yield | `BEY = (FV - P)/P x 365/t` | `M08` | 与 MMY 的 day basis 区分 |
-| Add-on Rate | `(FV - P)/P x 365/t` or stated day-count | `M08` | 以 purchase price 为分母，读题确认 360/365 |
-| Quoted Margin | `Coupon rate = Reference rate + Quoted margin` | `M08` | FRN coupon reset |
-| Discount Margin | `Required margin that prices FRN at current market price` | `M08` | 【考纲重点】概念判断多于手算 |
-| Spot Pricing | `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t` | `M09` | 每笔 cash flow 用匹配 spot |
-| Discount Factor | `DF_t = 1/(1+s_t)^t` | `M09` | spot pricing 前置 |
-| Forward from Spot | `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^{n-m}` | `M09` | 先对齐区间长度 |
-| Par Rate | `Par rate = (1 - DF_N)/Σ_{t=1}^{N} DF_t` | `M09` | discount factor 版最稳 |
+```text
+Originator pools assets
+-> sells/assigns assets to SPV
+-> SPV issues securities to investors
+-> servicer collects borrower payments
+-> trustee oversees waterfall and investor protections
+-> credit enhancer / liquidity provider supports designated tranches if applicable
+```
 
-### 5.2 M10-M12 回报与利率风险
+### 5.2 角色识别表
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Holding Period Return | `HPR = (Coupon income + reinvestment income + sale price - purchase price)/purchase price` | `M10` | return source 要拆开 |
-| Macaulay Duration | `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price` | `M10` | cash-flow time weighted average |
-| Modified Duration | `D_mod = D_mac/(1+y/m)` | `M11` | fixed cash-flow % price sensitivity |
-| Money Duration | `Money Duration = D_mod x Full Price` | `M11` | 货币价格变化基础 |
-| PVBP | `PVBP = (P_- - P_+)/2` or `≈ Money Duration x 0.0001` | `M11` | 1 bp shock |
-| Duration Price Approx | `%ΔP ≈ -D_mod x Δy` | `M11` | 一阶近似 |
-| Convexity | `Convexity = [P_- + P_+ - 2P_0] / (P_0 x (Δy)^2)` | `M11` | 价格重估版常见 |
-| Convexity Adjusted Change | `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2` | `M11` | 注意 `Δy` 用小数 |
-| Portfolio Duration | `D_p = Σ w_i D_i` | `M11` | 价值权重，曲线非平行时有限 |
-| Effective Duration | `EffDur = (P_- - P_+) / (2P_0Δy)` | `M12` | 【考纲重点】现金流可能随利率变化时 |
-| Effective Convexity | `EffCon = (P_- + P_+ - 2P_0)/(P_0(Δy)^2)` | `M12` | option-aware convexity |
-| Key Rate Duration | `KRD_k = -(1/P)(ΔP/Δy_k)` | `M12` | 非平行曲线移动 |
+| 角色 | 作用 | 知识树节点 | 考试判断 |
+|---|---|---|---|
+| Originator | 产生贷款/应收款并发起资产池 | `17.3.1` | 获得融资和资产负债表管理收益 |
+| SPV/SPE | 持有资产并发行 securities | `17.1.2` | bankruptcy remote 是核心特征 |
+| Servicer | 收款、催收、转付现金流 | `17.3.2` | 不一定承担 first-loss |
+| Trustee | 代表投资者监督文件和 waterfall | `17.3.2` | 保护投资者利益 |
+| Credit enhancer | 提供担保、保险或结构支持 | `17.3.3` | 改变损失分配，不消除资产风险 |
+| Investors | 按 tranche 获得风险/收益敞口 | `17.2.2` | 收益高通常伴随更低 priority 或更高风险 |
 
-### 5.3 M13-M19 信用与证券化
+### 5.3 做题顺序
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Expected Credit Loss Intuition | `ECL ≈ PD x LGD x Exposure` | `M10` | Level I 重点在三因子方向 |
-| Loss Given Default | `LGD = 1 - Recovery Rate` | `M10` | recovery 越高，LGD 越低 |
-| Interest Coverage | `EBIT / Interest Expense` 或 `EBITDA / Interest Expense` | `M11` | 看题目指定 numerator |
-| Debt to EBITDA | `Total Debt / EBITDA` | `M11` | leverage 越高通常信用越弱 |
-| Senior Claim Recovery Logic | `Higher priority -> higher expected recovery` | `M11` | 排名不是公式但常决定答案 |
-| Taxable Equivalent Yield | `Tax-exempt yield / (1 - tax rate)` | `M05` | 市政债应税等价收益率 |
-| TIPS Adjusted Principal | `Original Principal x (Current CPI / Base CPI)` | `M05` | 通胀挂钩债券 |
-| CPR from SMM | `CPR = 1 - (1 - SMM)^12` | `M18` | MBS 提前还款速度 |
-| SMM from CPR | `SMM = 1 - (1 - CPR)^(1/12)` | `M18` | CPR/SMM 互转 |
-| CMBS DSCR | `NOI / Debt Service` | `M19` | 商业抵押贷款覆盖率 |
-| CMBS LTV | `Loan Amount / Property Value` | `M19` | 抵押贷款杠杆 |
-| Debt Yield | `NOI / Loan Amount` | `M19` | CMBS 信用品质，不依赖 cap rate |
-
-### 5.4 考纲范围标记
-
-| 标记 | 内容 |
-|------|------|
-| 【考纲重点】 | Bond price/full-clean/accrued interest、yield/spread/money-market measures、spot/par/forward curves、duration/convexity/effective/key-rate measures、credit metrics、MBS/CMBS core ratios |
-| 【考纲内但无核心公式】 | Instrument features、issuance/trading, corporate/government market structure, securitization parties, covenant/seniority concepts |
-| 【超纲/扩展】 | OAS 完整模型、结构化产品现金流 waterfall 建模、复杂 prepayment model、信用迁移矩阵定价不作为 Level I 必背公式 |
+1. 先判断资产池是否已从 originator 转给 SPV，以及是否 bankruptcy remote。
+2. 再识别各方角色：谁发起、谁持有资产、谁收款、谁代表投资者、谁提供增级。
+3. 判断证券化收益：发行人融资和风险转移，投资者获得定制化敞口，市场改善流动性。
+4. 判断风险：资产池信用、提前还款、结构复杂性、servicer performance 和流动性风险仍存在。
 
 ---
 
@@ -194,6 +158,13 @@ tags:
 | ❌ 债券题都先算 YTM 就够了 | ✅ spot/forward/option-adjusted 场景不能偷懒 | 按官方定义和 LOS 口径核验。 |
 
 ## 8. 跨模块关联
+
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| ABS structure | [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] | SPV、servicer、waterfall、credit enhancer | 分析 credit enhancement 和 tranche priority |
+| MBS structure | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] | pass-through/structured allocation | 识别 prepayment 和 tranching 风险 |
+| Credit risk | [[M14-Credit-Risk]] | collateral risk、first-loss allocation | 判断损失由谁吸收 |
+| Interest-rate risk | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | cash flows may change | 触发 effective duration |
 
 - **上游模块**：[[M16-Credit-Analysis-for-Corporate-Issuers]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M18-Asset-Backed-Security-Instrument-and-Market-Features]]。本模块输出会被后续更复杂题型调用。

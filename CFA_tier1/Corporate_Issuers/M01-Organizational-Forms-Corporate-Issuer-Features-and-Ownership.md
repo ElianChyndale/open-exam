@@ -73,17 +73,21 @@ tags:
 ```text
 1. Organizational Forms, Corporate Issuer Features, and Ownership
 ├─ 1.1 Introduction
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 主线：组织形式决定责任边界、税务处理、控制权、融资能力和治理需求。
+│  └─ 1.1.2 考试判断：不要只背 legal form，要判断 owner liability 与 capital access 的取舍。
 ├─ 1.2 Organizational Forms of Businesses
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 Sole proprietorship：控制集中、设立简单、融资能力弱、owner unlimited liability。
+│  ├─ 1.2.2 Partnership：多个 owners，共享利润和责任；general partners 通常承担无限责任。
+│  ├─ 1.2.3 Corporation：separate legal entity、limited liability、perpetual life、transferable shares。
+│  └─ 1.2.4 LLC/limited partnership：混合责任保护、税务和控制安排。
 ├─ 1.3 Key Features of Corporate Issuers
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 Limited liability：股东损失通常限于出资，但不保证公司生存。
+│  ├─ 1.3.2 Separation of ownership and control：便于融资，同时产生 agency problem。
+│  ├─ 1.3.3 Transferability and liquidity：公开股份更易交易，私有股份转让受限。
+│  └─ 1.3.4 Perpetual life：公司寿命不依赖单一 owner。
 ├─ 1.4 Publicly vs. Privately Owned Corporate Issuers
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 Public：融资渠道广、流动性强、披露和监管成本高、所有权更分散。
+│  └─ 1.4.2 Private：披露少、流动性低、控制更集中、估值和退出更困难。
 ```
 
 ## 4. 知识点详解
@@ -110,70 +114,25 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 M02 Investors and Other Stakeholders
+### 5.1 组织形式比较框架
 
-| 概念 | 核心逻辑 | 知识树节点 | 考试说明 |
-|------|----------|------------|----------|
-| 信息不对称 | 内部人 vs 外部人的信息差距 | `M02` | 概念理解为主 |
-| 逆向选择 | 事前信息不对称导致市场失灵 | `M02` | 区分事前/事后 |
-| 道德风险 | 事后信息不对称导致代理行为偏移 | `M02` | 与 M03 治理联动 |
-| 信号传递 | 通过资本结构/股息等可信行动传递信息 | `M02` | 区分信号 vs 噪音 |
-| 利益相关者冲突 | 不同群体目标不一致导致财富转移 | `M02` | 分析谁受益谁受损 |
+| 组织形式 | Liability | Tax/control/capital access | 考试判断 |
+|---|---|---|---|
+| Sole proprietorship | Owner unlimited liability | 控制强、设立简单、融资弱 | 适合小规模但 owner 风险高。 |
+| General partnership | General partners unlimited liability | 合伙人共享控制与利润 | 一个合伙人的行为可能影响其他合伙人。 |
+| Limited partnership | General partner 管理并承担较高责任；limited partners 责任有限 | LP 控制较少 | 责任保护常伴随控制权限制。 |
+| Corporation | Shareholders limited liability | 融资能力强、永续、治理成本高 | ownership-control separation 是核心代价。 |
+| LLC | 通常 limited liability | 灵活税务和控制安排 | 混合特征，按题干条款判断。 |
 
-### 5.2 M04 Working Capital
+### 5.2 Public vs Private 判断表
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Operating Cycle | `DIO + DSO` | `M04` | 销售与回款链 |
-| Cash Conversion Cycle | `DIO + DSO - DPO` | `M04` | 营运资本核心 |
-| Working Capital | `Current Assets - Current Liabilities` | `M04` | 【考纲重点】流动性规模 |
-| Net Operating Working Capital | `Operating Current Assets - Operating Current Liabilities` | `M04` | 排除融资性流动项目时使用 |
-| DIO | `(Average Inventory / COGS) x 365` | `M04` | 题目有时给 turnover |
-| DSO | `(Average Receivables / Revenue) x 365` | `M04` | collection speed |
-| DPO | `(Average Payables / Purchases or COGS) x 365` | `M04` | denominator 读题 |
-| Current Ratio | `Current Assets / Current Liabilities` | `M04` | liquidity 不等于 efficiency |
-| Quick Ratio | `(Cash + Marketable Securities + Receivables)/Current Liabilities` | `M04` | 排除 inventory |
-| Inventory Turnover | `COGS / Average Inventory` | `M04` | 与 DIO 互为天数换算 |
-| Receivables Turnover | `Revenue / Average Receivables` | `M04` | 与 DSO 互为天数换算 |
-| Payables Turnover | `Purchases or COGS / Average Payables` | `M04` | 与 DPO 互为天数换算 |
-
-### 5.3 M05 Capital Investments
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Net Present Value | `NPV = Σ_{t=0}^{N} CF_t/(1 + r)^t` | `M05` | value rule 主指标 |
-| Internal Rate of Return | `0 = Σ_{t=0}^{N} CF_t/(1 + IRR)^t` | `M05` | 非常规现金流小心 |
-| Profitability Index | `PI = PV of future cash inflows / Initial investment` | `M05` | capital rationing 辅助 |
-| Equivalent Annual Annuity | `EAA = NPV / annuity factor` | `M05` | 【考纲重点】不同寿命互斥项目可比 |
-| Operating Cash Flow, Tax Form | `OCF = (S - C - D)(1 - T) + D` | `M05` | 增量税后现金流 |
-| Operating Cash Flow, Shortcut | `OCF = (S - C)(1 - T) + DT` | `M05` | depreciation tax shield |
-| Payback Period | `Time until cumulative undiscounted CF recovers outlay` | `M05` | 不代表价值 |
-| Discounted Payback | `Time until discounted CF recovers outlay` | `M05` | 仍忽略回收后现金流 |
-
-### 5.4 M06-M07 Cost of Capital and Leverage
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| After-tax Cost of Debt | `r_d(1 - T)` | `M06` | interest tax shield |
-| Cost of Preferred | `r_p = D_p/P_p` | `M06` | preferred no growth case |
-| CAPM Cost of Equity | `r_e = r_f + β[E(R_M) - r_f]` | `M06` | 与 Portfolio 联动 |
-| Dividend Growth Cost of Equity | `r_e = D_1/P_0 + g` | `M06` | stable growth 口径 |
-| Bond-Yield-plus-Risk-Premium | `r_e = YTM on long-term debt + equity risk premium` | `M06` | 【考纲重点】CAPM/DDM 信息不足时的估计法 |
-| WACC | `WACC = w_d r_d(1 - T) + w_p r_p + w_e r_e` | `M06` | market-value weights |
-| Degree of Operating Leverage | `%ΔEBIT / %ΔSales` | `M07` | operating fixed costs |
-| DOL, Quantity Form | `Q(P - V) / [Q(P - V) - F]` | `M07` | 【考纲重点】给价格/变动成本/固定成本时使用 |
-| Degree of Financial Leverage | `%ΔEPS / %ΔEBIT` | `M07` | financing fixed costs |
-| DFL, EBIT Form | `EBIT / (EBIT - Interest)` | `M07` | 无优先股的常见简化 |
-| Degree of Total Leverage | `DOL x DFL` | `M07` | sales -> EPS |
-| DTL, Quantity Form | `Q(P - V) / [Q(P - V) - F - Interest]` | `M07` | 经营杠杆和财务杠杆合并 |
-
-### 5.5 考纲范围标记
-
-| 标记 | 内容 |
-|------|------|
-| 【考纲重点】 | Working capital cycles、capital budgeting cash flows/NPV/IRR/PI/EAA、cost of capital、WACC、leverage |
-| 【考纲内但无核心公式】 | Corporate structures、stakeholders、governance、business models 主要考概念、冲突和治理机制 |
-| 【超纲/扩展】 | APV 完整估值、MM 命题严格证明、复杂实物期权定价不作为 Level I 必背公式 |
+| 维度 | Public issuer | Private issuer |
+|---|---|---|
+| Liquidity | 高，二级市场交易 | 低，退出更难 |
+| Disclosure | 监管披露多 | 信息更少、更依赖 due diligence |
+| Ownership | 通常更分散 | 通常更集中 |
+| Capital access | 更广 | 更受限但控制保留更强 |
+| Valuation | 市场价格可观察 | 估值不确定性更高 |
 
 ---
 
@@ -203,23 +162,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Investors-and-Other-Stakeholders]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Governance
-├── affects Capital Allocation Quality (中文)
-│   └── Capital Investments (中文)
-│       └── WACC (中文)
-│           └── Capital Structure (中文)
-└── affects Working Capital Discipline (中文)
-    └── Liquidity Risk (中文)
-        └── Business Model Sustainability (中文)
-```
-
----
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Limited liability / claim boundaries | [[M02-Investors-and-Other-Stakeholders]] | 不同 claim holders 的风险和权利不同。 | 股东有限责任不等于债权人无风险。 |
+| Ownership-control separation | [[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]] | 公司制融资能力强，但引入 agency problem。 | 分散所有权需要治理机制。 |
+| Public/private ownership | Equity | 流动性、披露和治理影响权益估值。 | private discount 不只是流动性。 |
+| Capital access | [[M05-Capital-Investments-and-Capital-Allocation]] | 组织形式约束项目融资能力。 | 好项目也需要可得资本支持。 |
 
 
 ## 9. 复习与刷题提示

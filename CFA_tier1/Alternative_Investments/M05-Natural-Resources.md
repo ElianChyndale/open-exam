@@ -72,9 +72,21 @@ tags:
 
 ```text
 5. Natural Resources
-├─ 5.1 商品期货 (Commodity Futures)【考试核心】
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 5.1 Natural resources investment features
+│  ├─ 5.1.1 Raw land：收益依赖土地价格增值和开发选择权；现金流弱、流动性低、政策/规划风险高。
+│  ├─ 5.1.2 Timberland：收益来自木材生长、采伐时点选择和土地价值；有通胀保护但有天气/病虫害风险。
+│  └─ 5.1.3 Farmland：收益来自农产品销售/租金和土地升值；受天气、商品价格、补贴和水资源影响。
+├─ 5.2 Commodity investment forms
+│  ├─ 5.2.1 Physical spot：有存储、保险和运输成本，适合少数商品。
+│  ├─ 5.2.2 Futures exposure：收益不等于 spot return，还包含 roll yield 和 collateral yield。
+│  └─ 5.2.3 Commodity-linked equities/funds：含经营杠杆和公司风险，不是纯商品 beta。
+├─ 5.3 商品期货 (Commodity Futures)【考试核心】
+│  ├─ 5.3.1 Cost of carry：F0(T)=S0e^((r+s-y)T)，storage cost 提高期货价，convenience yield 降低期货价。
+│  ├─ 5.3.2 Contango/backwardation：远期高于近月通常 contango，多头展期收益为负；反之 backwardation 通常为正。
+│  └─ 5.3.3 Total return：spot return + roll yield + collateral yield；考试常要求分清三来源。
+├─ 5.4 Risk, return, and diversification
+│  ├─ 5.4.1 风险来源：weather、geopolitics、currency、storage、regulation、leverage、liquidity。
+│  └─ 5.4.2 分散化：通胀和供需冲击可能带来低相关，但期货期限结构会改变投资结果。
 ```
 
 ## 4. 知识点详解
@@ -124,11 +136,13 @@ Roll Yield = (近期期货 - 远期期货) / 近期期货
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| 期货定价 | F_0(T) = S_0 × e^{((r + s - y) × T)} |
-| Roll Yield | (近期期货 - 远期期货) / 近期期货 |
-| 持有成本率 | ln[F_0(T)/S_0] / T = r + s - y |
+| 指标/框架 | 公式或判断链 | 知识树节点 | 考试说明 |
+|------|------|------|------|
+| 期货定价 | `F_0(T) = S_0e^((r + s - y)T)` | `5.3.1` | r=利率，s=存储成本，y=便利收益 |
+| 持有成本率 | `ln[F_0(T)/S_0] / T = r + s - y` | `5.3.1` | 连续复利口径 |
+| Roll Yield | `(near futures price - far futures price) / near futures price` | `5.3.2` | 多头展期：contango 通常负，backwardation 通常正 |
+| Commodity futures total return | `spot return + roll yield + collateral yield` | `5.3.3` | 不要只看现货涨跌 |
+| Natural resource screen | `income yield + biological/land growth + commodity price exposure - operating/weather/regulatory risk` | `5.1/5.4` | 用于 raw land/timberland/farmland 解释题 |
 
 ## 6. 常见考点与解题思路
 
@@ -160,14 +174,11 @@ Roll Yield = (近期期货 - 远期期货) / 近期期货
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Real-Estate-and-Infrastructure]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-Hedge-Funds]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 商品期货 → [[M01-Features-and-Structure.md]] (另类投资特征)
-- 商品周期 → [[M04-Real-Estate-and-Infrastructure.md]] (房地产周期对比)
-- 期限结构 → 可与 Derivatives 科目联动
+- **来自 M01**：自然资源可能通过 direct ownership、funds、commodity futures 或 commodity-linked equities 投资，结构决定风险。
+- **来自 M04**：raw land/farmland 与 real estate 共享土地估值、流动性和宏观周期，但现金流驱动不同。
+- **到 Derivatives**：commodity futures 的 cost of carry、roll yield、collateral yield 是最强接口。
+- **到 Economics/PM**：通胀、供需冲击、汇率和商业周期影响商品价格和组合分散化。
+- **到 Ethics**：commodity-linked 产品推荐要披露期货展期风险，不能只用现货价格叙事。
 
 
 ## 9. 复习与刷题提示

@@ -71,8 +71,11 @@ tags:
 ```text
 4. Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives
 ├─ 4.1 核心内容
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Law of one price：相同未来现金流必须同价
+│  ├─ 4.1.2 Arbitrage：零净投资、无风险、正收益机会；错价时买便宜现金流卖贵现金流
+│  ├─ 4.1.3 Replication：用现货+借贷复制衍生品现金流，复制成本决定公平价格
+│  ├─ 4.1.4 Cost of carry：financing + storage - income/yield - convenience benefit
+│  └─ 4.1.5 公式选择：无收益、已知现金收入、收益率/便利收益三类不能混用
 ```
 
 ## 4. 知识点详解
@@ -115,6 +118,15 @@ F0(T) = [S0 - PV(I)](1+r)^T
 F0(T) = S0[(1+r)/(1+q)]^T    或连续口径：S0e^((r-q)T)
 ```
 
+| 节点 | 公式/框架 | 选择条件 | 考试判断 |
+|---|---|---|---|
+| 4.1.2 | Cash-and-carry | market forward price > fair forward price | buy underlying、short forward、borrow funding。 |
+| 4.1.2 | Reverse cash-and-carry | market forward price < fair forward price | short underlying、long forward、invest proceeds。 |
+| 4.1.4 | `F0 = S0(1+r)^T` | 标的无收入、离散复利 | financing cost 是唯一 carry。 |
+| 4.1.4 | `F0 = [S0 - PV(I)](1+r)^T` | 已知现金收入 | 先扣收入现值，再滚到到期。 |
+| 4.1.4 | `F0 = S0[(1+r)/(1+q)]^T` 或 `S0e^{(r-q)T}` | 已知收益率或连续收益率 | q 降低 net carry；复利口径必须与题干一致。 |
+| 4.1.4 | `F0 = S0e^{(r+storage-convenience)T}` | 商品或储存/便利收益题 | storage 提高 forward price，convenience benefit 降低 forward price。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -145,15 +157,13 @@ F0(T) = S0[(1+r)/(1+q)]^T    或连续口径：S0e^((r-q)T)
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M05-Forward-and-Futures-Pricing]]：M04 的 carry 关系是 M05 定价的基础
-- [[M07-Options-and-Put-Call-Parity]]：无套利逻辑同样适用于期权平价关系
-- [[M08-Binomial-Valuation]]：二项式模型本质也是无套利复制
-- [[M00-Derivatives-MOC]]：返回科目总览
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M03 -> M04` | arbitrage motive vs hedge/speculation | 只有无风险同现金流错价才是套利。 |
+| `M04 -> M05/M06` | cost-of-carry and replication | 远期/期货价格公式的来源。 |
+| `M04 -> M09` | same-payoff equality | put-call parity 是无套利复制关系。 |
+| `M04 -> M10` | replication portfolio | binomial hedge ratio 和借贷头寸来自复制思想。 |
+| `Economics/Fixed Income -> M04` | risk-free rate、income/yield、storage/convenience | 定价输入来自利率、收益率和持有成本。 |
 
 
 ## 9. 复习与刷题提示

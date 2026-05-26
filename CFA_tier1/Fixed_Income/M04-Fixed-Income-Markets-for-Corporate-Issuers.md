@@ -74,20 +74,23 @@ tags:
 ```text
 4. Fixed-Income Markets for Corporate Issuers
 ├─ 4.1 公司债券市场 (Corporate Bond Markets)
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Investment grade vs high yield：BBB-/Baa3 及以上通常为 IG；HY spread 对信用周期更敏感
+│  ├─ 4.1.2 Public offering vs private placement：披露、流动性、投资者范围和 covenant 强度不同
+│  └─ 4.1.3 Seniority/collateral：secured/senior 通常 recovery 更高，连接 M16 issue analysis
 ├─ 4.2 银行贷款 (Bank Loans)
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Term loan/revolving credit：银行提供中短期或循环融资，常带 financial covenants
+│  ├─ 4.2.2 Leveraged loan 通常浮动利率、secured、senior；连接 FRN 和信用分析
+│  └─ 4.2.3 银行贷款流动性通常低于公开债券，但 covenant/抵押品保护可能更强
 ├─ 4.3 商业票据 (Commercial Paper)
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.3.1 CP 是短期无担保融资工具，通常由高信用质量发行人使用
+│  ├─ 4.3.2 Backup line of credit 支持 CP 评级和滚续能力；短端流动性风险是核心
+│  └─ 4.3.3 CP 报价连接 M08 money market yield，信用判断连接 liquidity/refinancing risk
 ├─ 4.4 中期票据 (Medium-Term Notes, MTNs)
-│  ├─ 4.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.4.1 MTN shelf/program issuance：可按需多批次发行，期限和结构灵活
+│  └─ 4.4.2 “Medium-term”是市场惯例名，不代表只能中期限
 ├─ 4.5 存款票据 (Deposit Notes)
-│  ├─ 4.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.5.1 Deposit notes/CDs 是金融机构融资工具，信用风险来自发行银行
+│  └─ 4.5.2 与 CP/MTN 对比：期限、担保、投资者基础和监管待遇不同
 ```
 
 ## 4. 知识点详解
@@ -163,15 +166,22 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| 公司融资工具 | [[M16-Credit-Analysis-for-Corporate-Issuers]] | bonds、loans、CP、MTN、deposit notes | 判断 refinancing、liquidity、capital structure risk |
+| 短端报价 | [[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]] | CP、deposit notes、floating-rate loans | 匹配 money market yield 和 FRN spread |
+| 信用利差 | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] / [[M14-Credit-Risk]] | IG/HY、secured/senior | 解释 required spread 和 recovery |
+| 契约保护 | [[M01-Fixed-Income-Instrument-Features]] | covenants、collateral | 判断债项风险而非只看发行人 |
+
 - **上游模块**：[[M03-Fixed-Income-Issuance-and-Trading]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M05-Fixed-Income-Markets-for-Government-Issuers]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
 - 融资工具 → [[M03-Bond-Valuation]] 不同工具的价格计算
-- 信用评级 → [[M10-Credit-Risk]] PD/LGD与评级关系
+- 信用评级 → [[M14-Credit-Risk]] PD/LGD 与评级关系
 - 利差行为 → [[M04-Yield-and-Spread-Measures]] 固定利率利差度量
-- 公司信用分析 → [[M11-Government-and-Corporate-Credit]] 公司发行人的财务分析
+- 公司信用分析 → [[M16-Credit-Analysis-for-Corporate-Issuers]] 公司发行人的财务分析
 
 
 ## 9. 复习与刷题提示

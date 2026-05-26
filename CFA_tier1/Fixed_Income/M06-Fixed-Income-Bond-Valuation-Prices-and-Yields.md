@@ -76,11 +76,13 @@ tags:
 ```text
 6. Fixed-Income Bond Valuation: Prices and Yields
 ├─ 6.1 定价引擎 (Pricing Engine)
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Coupon bond price：P = Σ C/(1+y/m)^t + FV/(1+y/m)^N；y、m、t 必须同口径
+│  ├─ 6.1.2 Between coupon dates：先区分 full price、clean price、accrued interest，再处理 settlement date
+│  └─ 6.1.3 Price-yield relation：coupon rate > YTM 为 premium，coupon rate < YTM 为 discount，price 与 yield 反向
 ├─ 6.2 交易价格惯例 (Trading Price Conventions)
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 Full price = clean price + accrued interest；buyer invoice price 看 full price
+│  ├─ 6.2.2 AI = coupon per period x days since last coupon / days in coupon period；day-count convention 先读题
+│  └─ 6.2.3 Matrix pricing：用相似信用/期限债券插值 required yield，再贴现目标债券现金流
 ```
 
 ## 4. 知识点详解
@@ -138,6 +140,13 @@ tags:
 | ❌ 忽略：CFA 考试中注意区分不同市场的报价惯例：美国国债、欧洲债券、公司债的报价方式不同。 | ✅ CFA 考试中注意区分不同市场的报价惯例：美国国债、欧洲债券、公司债的报价方式不同。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
+
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Price -> yield | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | clean/full price、YTM equation | 反推 YTM、current yield、spread |
+| Spot pricing | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] | PV of CF_t | 题给 spot curve 时逐笔现金流贴现 |
+| Price sensitivity | [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] | price-yield inverse relation | 久期近似的基础 |
+| Illiquid pricing | [[M03-Fixed-Income-Issuance-and-Trading]] / [[M14-Credit-Risk]] | matrix pricing comparables | 用流动性、信用、期限匹配 required yield |
 
 - **上游模块**：[[M05-Fixed-Income-Markets-for-Government-Issuers]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]]。本模块输出会被后续更复杂题型调用。

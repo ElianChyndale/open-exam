@@ -72,14 +72,20 @@ tags:
 ```text
 4. Probability Trees and Conditional Expectations
 ├─ 4.1 期望值/方差/标准差（Expected Value / Variance / Standard Deviation）
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Expected value：`E(X)=Σp_ix_i`，概率加权平均，不是最可能结果
+│  ├─ 4.1.2 Variance definition：`Σp_i[x_i-E(X)]²`
+│  ├─ 4.1.3 Variance shortcut：`E(X²)-[E(X)]²`，情景表计算更快
+│  └─ 4.1.4 Standard deviation：`σ=√Var(X)`，解释为结果分散程度
 ├─ 4.2 概率树（Probability Tree）
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 路径概率：同一路径分支概率相乘，不同互斥路径相加
+│  ├─ 4.2.2 Terminal payoff：每条路径终点对应 payoff/return
+│  ├─ 4.2.3 Conditional expectation：从叶节点往回算每个节点的概率加权值
+│  └─ 4.2.4 决策判断：选择期望值最高不等于风险最低，必要时还要看方差/shortfall
 ├─ 4.3 贝叶斯更新（Bayes Update）
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.3.1 Prior：新信息前的 `P(B_j)`
+│  ├─ 4.3.2 Likelihood：事件为真时观察到信号的概率 `P(A|B_j)`
+│  ├─ 4.3.3 Total probability：`P(A)=ΣP(A|B_i)P(B_i)`，是 Bayes 分母
+│  └─ 4.3.4 Posterior：`P(B_j|A)=P(A|B_j)P(B_j)/P(A)`，更新后概率
 ```
 
 ## 4. 知识点详解
@@ -160,6 +166,19 @@ tags:
 | `P(A|B) = P(A∩B)/P(B)` | 条件概率 | 给定 B 下 A 的概率 |
 | `P(A) = Σ P(A|B_i)P(B_i)` | 全概率 | 计算复杂事件概率 |
 | `P(B_j|A) = P(A|B_j)P(B_j)/P(A)` | 贝叶斯公式 | 新信息更新概率 |
+| `Path probability = Π branch probabilities` | 路径概率 | 概率树单一路径 |
+| `Node EV = Σp_i payoff_i` | 节点条件期望 | 从叶节点回推 |
+| `σ = √Var(X)` | 标准差 | 结果分布风险解释 |
+
+### 5.2 计算流程
+
+| 题型 | 执行动作 | 对应节点 | 防错点 |
+|---|---|---|---|
+| 离散情景求期望/方差 | 算 `E(X)` -> 算 `E(X²)` 或离差平方 -> 开方 | `4.1` | 概率总和必须等于 1。 |
+| 概率树 | 路径概率相乘 -> 终点 payoff -> 从后往前求 EV | `4.2` | 不要把同一路径概率相加。 |
+| 条件概率 | 明确条件事件在分母 | `4.3` | `P(A|B)` 和 `P(B|A)` 不可互换。 |
+| Bayes | prior × likelihood -> 全概率分母 -> posterior | `4.3` | 分母必须包含所有互斥状态。 |
+| 投资解释 | 比较 EV 后补风险/限制 | `4.2.4` | 最高 EV 不一定最适合风险厌恶投资者。 |
 
 ## 6. 常见考点与解题思路
 
@@ -205,8 +224,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Statistical-Measures-of-Asset-Returns]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Portfolio-Mathematics]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `4.1` 概率加权矩 | [[M03-Statistical-Measures-of-Asset-Returns]]、[[M05-Portfolio-Mathematics]] | 单变量 mean/variance 扩展到概率分布和组合收益 | Expected value 不是 most likely value。 |
+| `4.2` 概率树 | Derivatives、Fixed Income credit、Risk scenarios | 多阶段 payoff、违约路径、情景分析 | 路径概率乘法和互斥路径加法要分清。 |
+| `4.3` Bayes | Fixed Income、Risk Management、Big Data | 用评级、信号、模型输出更新概率 | 后验概率分母是全概率，不是单个 likelihood。 |
+| `4.1-4.2` EV + risk | Portfolio Management | 期望收益还要与方差、shortfall、风险厌恶一起判断 | 只选最高 EV 可能忽略风险目标。 |
 
 ### Legacy 关联补充
 

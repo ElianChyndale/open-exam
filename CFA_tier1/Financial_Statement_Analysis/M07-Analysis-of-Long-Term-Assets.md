@@ -75,14 +75,18 @@ tags:
 ```text
 7. Analysis of Long-Term Assets
 ├─ 7.1 无形资产来源 (Intangible Asset Origin)
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 Purchased：purchase price + directly attributable costs 资本化
+│  ├─ 7.1.2 Internally developed：research 通常费用化；IFRS development 满足条件可资本化，US GAAP 多数 R&D 费用化
+│  └─ 7.1.3 Business combination：可辨认无形资产按 fair value 确认，剩余形成 goodwill
 ├─ 7.2 PP&E 与无形资产减值/终止确认 (PP&E and Intangible Impairment / Derecognition)
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 Carrying amount = cost - accumulated depreciation/amortization - impairment
+│  ├─ 7.2.2 Depreciation：SL = (cost - residual value) / life；DDB = 2/life x beginning NBV
+│  ├─ 7.2.3 Impairment：IFRS loss = carrying amount - recoverable amount；US GAAP 先做 recoverability test
+│  └─ 7.2.4 Derecognition：gain/loss = sale proceeds - carrying amount
 ├─ 7.3 披露分析 (Disclosure Analysis)
-│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.3.1 披露：depreciation method、useful life、residual value、gross/net carrying amount、impairment
+│  ├─ 7.3.2 判断：延长 useful life 或提高 residual value 会降低 depreciation、提高 NI 和 assets
+│  └─ 7.3.3 可比性：不同折旧方法要调整后再比较 asset turnover、ROA、margin
 ```
 
 ## 4. 知识点详解
@@ -136,6 +140,9 @@ tags:
 | Carrying Amount | `Historical Cost - Accumulated Depreciation - Impairment` | 账面价值 |
 | Impairment Loss (IFRS) | `Carrying Amount - Recoverable Amount` | IFRS 减值金额 |
 | Gain/Loss on Disposal | `Sale Proceeds - Carrying Amount at Disposal` | 处置损益 |
+| Recoverable Amount (IFRS) | `Higher of Fair Value less Costs of Disposal and Value in Use` | IFRS 减值测试基础 |
+| Asset Turnover | `Revenue / Average Total Assets` | 资本化和减值会改变分母 |
+| ROA | `NI / Average Total Assets` | 折旧、减值和资产余额共同影响 |
 
 ## 6. 常见考点与解题思路
 
@@ -167,15 +174,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Analysis-of-Inventories]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M08-Topics-in-Long-Term-Liabilities-and-Equity]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M03-Balance-Sheet|资产负债表]]：长期资产是资产负债表非流动资产(non-current assets)的核心组成部分
-- [[M02-Income-Statement|利润表分析]]：折旧和摊销费用直接影响营业利润和净利润
-- [[M04-Cash-Flow-Statements|现金流量表]]：折旧加回是间接法 CFO 的关键调整项；资产购买和处置属于投资活动现金流(CFI)
-- [[M08-Income-Taxes|所得税]]：资产账面价值与计税基础(tax base)的差异产生递延所得税
+- **连接 M02**：depreciation、amortization、impairment 和 disposal gain/loss 进入利润表。
+- **连接 M03**：PP&E 和 intangibles 是非流动资产核心，估计变动会改变 assets 和 equity。
+- **连接 M04/M05**：折旧摊销是 noncash charge，indirect CFO 加回；资产购置和处置属于 CFI。
+- **连接 M09**：carrying amount 与 tax base 的差异是 DTL/DTA 常见来源。
+- **连接 M10/M11**：延长 useful life、推迟 impairment、调整 residual value 都会影响 reporting quality 和 ROA。
 
 
 ## 9. 复习与刷题提示

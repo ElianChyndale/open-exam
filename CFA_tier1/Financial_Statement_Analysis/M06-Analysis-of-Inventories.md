@@ -74,14 +74,18 @@ tags:
 ```text
 6. Analysis of Inventories
 ├─ 6.1 计量基础 (Measurement Basis)
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Lower of cost and NRV：carrying value 高于 NRV 时确认 write-down
+│  ├─ 6.1.2 Write-down 影响：COGS/loss 增加、NI 降低、inventory/assets 降低、current ratio 降低
+│  └─ 6.1.3 准则判断：IFRS 允许有限转回，US GAAP 通常不允许转回
 ├─ 6.2 成本流转方法 (Cost-Flow Methods)
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 FIFO / weighted average / LIFO：IFRS 禁止 LIFO，US GAAP 允许
+│  ├─ 6.2.2 通胀：FIFO COGS 低、gross profit/NI/inventory 高、tax 高；LIFO 相反且 CFO 高
+│  ├─ 6.2.3 通缩：上述方向反转；weighted average 介于 FIFO 与 LIFO 之间
+│  └─ 6.2.4 LIFO reserve：FIFO inventory = LIFO inventory + LIFO reserve；用于可比性调整
 ├─ 6.3 存货披露与分析师检查点 (Inventory Disclosures and Analyst Checks)
-│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.3.1 披露：cost-flow method、carrying amount、write-down/reversal、LIFO reserve
+│  ├─ 6.3.2 风险信号：inventory growth > sales growth、DOH 上升、LIFO liquidation、obsolete inventory
+│  └─ 6.3.3 判断：inventory turnover 改善必须结合 gross margin，避免把减记后的低存货误判为效率提升
 ```
 
 ## 4. 知识点详解
@@ -123,6 +127,10 @@ tags:
 | LIFO Reserve | `FIFO Inventory - LIFO Inventory` | LIFO 储备，用于方法转换调整 |
 | Adjusted COGS (FIFO basis) | `LIFO COGS - (LIFO Reserve End - LIFO Reserve Beg)` | 将 LIFO COGS 调整为 FIFO 基础 |
 | Gross Margin | `(Revenue - COGS) / Revenue` | 毛利率，受存货方法直接和间接影响 |
+| FIFO Inventory | `LIFO Inventory + LIFO Reserve` | LIFO 转 FIFO 资产口径 |
+| FIFO Retained Earnings | `LIFO Retained Earnings + LIFO Reserve x (1 - Tax Rate)` | 可比性调整时影响权益 |
+| Inventory Write-down | `Carrying Value - NRV` | NRV 低于成本时确认损失 |
+| Current Ratio Impact | `Current Assets / Current Liabilities` | 存货减记降低流动资产和流动比率 |
 
 ## 6. 常见考点与解题思路
 
@@ -153,15 +161,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Analyzing-Statements-of-Cash-Flows-II]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M07-Analysis-of-Long-Term-Assets]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M03-Balance-Sheet|资产负债表]]：存货是流动资产(current assets)的重要组成部分，直接影响 current ratio 和 working capital
-- [[M02-Income-Statement|利润表分析]]：存货计价方法直接影响 COGS 和毛利率的计算
-- [[M04-Cash-Flow-Statements|现金流量表]]：存货变动(inventory changes)是 CFO 计算中的关键营运资本调整项
-- [[M08-Income-Taxes|所得税]]：FIFO vs LIFO 导致不同的税负，影响递延所得税的计算
+- **连接 M02**：inventory method 通过 COGS 改变 gross profit、NI 和 margins。
+- **连接 M03**：inventory 是 current asset，减记或 LIFO/FIFO 选择改变 current ratio、working capital、total assets。
+- **连接 M04/M05**：inventory 增加是 CFO 减项；通胀下 LIFO 税负低，因此 CFO 可能高于 FIFO。
+- **连接 M09**：账面与税务成本流转差异会改变 taxes payable，并可能影响 deferred tax 分析。
+- **连接 M10/M11**：LIFO liquidation、存货增速超过销售、减记转回都可能是质量或可比性问题。
 
 
 ## 9. 复习与刷题提示

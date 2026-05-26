@@ -78,11 +78,13 @@ tags:
 ```text
 19. Mortgage-Backed Security (MBS) Instrument and Market Features
 ├─ 19.1 抵押贷款现金流风险 (Mortgage Cash-Flow Risk)
-│  ├─ 19.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 19.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 19.1.1 RMBS cash flow = scheduled interest + scheduled principal + prepayments；prepayment 改变本金回收时间
+│  ├─ 19.1.2 CPR/SMM：CPR = 1-(1-SMM)^12；SMM = 1-(1-CPR)^(1/12)
+│  └─ 19.1.3 Contraction risk：利率下降提前还款加快；extension risk：利率上升提前还款放慢
 ├─ 19.2 结构化 (Structuring)
-│  ├─ 19.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 19.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 19.2.1 CMO tranching：sequential/pay-through structure 重排 principal timing，不改变 collateral 本身
+│  ├─ 19.2.2 Support tranche 吸收更多 prepayment variability，PAC tranche 获得更稳定本金路径
+│  └─ 19.2.3 CMBS：DSCR = NOI/debt service，LTV = loan/property value，debt yield = NOI/loan；关注 balloon risk 和 prepayment protection
 ```
 
 ## 4. 知识点详解
@@ -140,15 +142,22 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Securitization structure | [[M17-Fixed-Income-Securitization]] | pass-through、CMO tranching | 理解现金流 waterfall |
+| ABS contrast | [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] | collateral and enhancement comparison | 区分 mortgage collateral 与普通 ABS |
+| Effective risk | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | prepayment-sensitive cash flows | 使用 effective duration/negative convexity |
+| CMBS credit | [[M14-Credit-Risk]] / [[M16-Credit-Analysis-for-Corporate-Issuers]] | DSCR、LTV、debt yield | 判断商业地产贷款信用质量 |
+
 - **上游模块**：[[M18-Asset-Backed-Security-Instrument-and-Market-Features]]。先用它提供定义、变量或基础框架。
 - **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
 - 提前还款 → [[M01-Instrument-Features]] 的嵌入期权概念（隐含看涨期权）
-- 负凸性 → [[M08-Duration-and-Convexity]] 的凸性概念
-- CMO 分层 → [[M13-ABS-and-Credit-Enhancement]] 的分层信贷增级
-- 现金流分配 → [[M12-Securitization-Foundations]] 的 SPV 结构
+- 负凸性 → [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] 的凸性概念
+- CMO 分层 → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的分层信贷增级
+- 现金流分配 → [[M17-Fixed-Income-Securitization]] 的 SPV 结构
 
 
 ## 9. 复习与刷题提示

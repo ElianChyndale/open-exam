@@ -78,17 +78,24 @@ tags:
 ```text
 5. The Behavioral Biases of Individuals
 ├─ 5.1 偏差总分类 (Bias Classification)
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Cognitive errors：信息处理或推理错误，可通过教育、流程、checklist 缓解
+│  ├─ 5.1.2 Emotional biases：情绪/本能驱动，通常更难纠正，更多采用 accommodate/moderate
+│  └─ 5.1.3 考试动作：先分类，再命名具体偏差，再说明投资影响和纠偏动作
 ├─ 5.2 认知错误 (Cognitive Errors)
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 Belief perseverance：confirmation、representativeness、illusion of control、hindsight
+│  ├─ 5.2.2 Information processing：anchoring、mental accounting、framing、availability
+│  ├─ 5.2.3 典型后果：忽略反证、错误分类概率、过度交易、分账户导致整体风险失真
+│  └─ 5.2.4 修正：反面证据清单、预设决策标准、整体组合视角、独立复核
 ├─ 5.3 情绪偏差 (Emotional Biases)
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Loss aversion：损失痛苦大于同额收益快乐，导致 disposition effect
+│  ├─ 5.3.2 Overconfidence：高估能力/信息精度，导致集中持仓和过度交易
+│  ├─ 5.3.3 Self-control / status quo / endowment / regret aversion：储蓄不足、拒绝再平衡、不愿卖出
+│  └─ 5.3.4 管理：自动储蓄、再平衡规则、分阶段交易、顾问约束
 ├─ 5.4 偏差对投资过程的影响 (Impact on Investment Process)
-│  ├─ 5.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.4.1 IPS：偏差会扭曲 stated willingness，必须与 ability 交叉验证
+│  ├─ 5.4.2 Asset allocation：现状/禀赋/损失厌恶导致集中或不再平衡
+│  ├─ 5.4.3 Trading：过度自信和确认偏差导致高换手和追涨杀跌
+│  └─ 5.4.4 Market characteristics：偏差可解释动量、泡沫、过度反应/反应不足等传统金融难解释现象
 ```
 
 ## 4. 知识点详解
@@ -151,6 +158,18 @@ tags:
 
 *注：M06 以概念辨析题为主，无复杂数学计算。*
 
+### 5.2 偏差诊断框架
+
+| 题干行为 | 可能偏差 | 类别 | 投资影响/动作 |
+|---|---|---|---|
+| 只找支持自己观点的信息 | confirmation | cognitive | 要求列出反面证据。 |
+| 因近期新闻高估概率 | availability | cognitive | 使用长期基准率校正。 |
+| 把继承股票看得特别贵 | endowment | emotional | 分阶段卖出或设置集中持仓上限。 |
+| 亏损股不卖、盈利股早卖 | loss aversion / disposition | emotional | 预设止损/再平衡规则。 |
+| 频繁交易且自认为能择时 | overconfidence | emotional | 限制换手率、记录交易理由。 |
+| 分账户忽略整体风险 | mental accounting | cognitive | 回到 total portfolio view。 |
+| 不愿改变默认配置 | status quo | emotional | 设置定期再平衡和审查触发。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -195,8 +214,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Basics-of-Portfolio-Planning-and-Construction]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-Introduction-to-Risk-Management]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `5.1` 分类 | [[M04-Basics-of-Portfolio-Planning-and-Construction]] | IPS 中 willingness 是否可信 | Cognitive 可教育，emotional 更常需管理。 |
+| `5.2` 认知错误 | Equity research、Quant evidence | 研究结论和信息处理偏差 | 数据证据可缓解但不能自动消除偏差。 |
+| `5.3` 情绪偏差 | Wealth planning、Risk Management | 客户行为、再平衡和风险暴露 | Loss aversion 不是 risk aversion。 |
+| `5.4` 投资过程影响 | M06 Risk、Market efficiency | 偏差导致错误风险承担和市场异常 | 识别偏差后必须给具体控制动作。 |
 
 ### Legacy 关联补充
 

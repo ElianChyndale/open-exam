@@ -74,11 +74,14 @@ tags:
 ```text
 3. Fixed-Income Issuance and Trading
 ├─ 3.1 市场地图 (Market Map)
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Money market vs capital market：期限、流动性和报价口径不同；T-bill/CP/repo 属短端接口
+│  ├─ 3.1.2 Issuers：sovereign、agency、supranational、corporate、structured finance；决定 benchmark 与 credit lens
+│  ├─ 3.1.3 Investors：banks、insurers、pension funds、mutual funds；负债期限和监管约束决定需求
+│  └─ 3.1.4 Indexes：按 maturity、issuer、currency、credit quality 分层；用于 benchmark 和 portfolio risk
 ├─ 3.2 回购融资 (Repo Financing)
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 Repo = collateralized borrowing；经济实质是融资，不是普通证券买卖
+│  ├─ 3.2.2 Haircut = (collateral value - loan amount)/collateral value；抵押品风险越高，haircut 越高
+│  └─ 3.2.3 Dealer/OTC 市场：流动性由做市商、bid-ask spread、issue size 和交易活跃度驱动
 ```
 
 ## 4. 知识点详解
@@ -133,6 +136,13 @@ tags:
 | ❌ 忽略：Commercial paper 通常有备用信贷额度支持，这是其信用支持的重要来源，考试常考。 | ✅ Commercial paper 通常有备用信贷额度支持，这是其信用支持的重要来源，考试常考。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
+
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| 市场分层 | [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] / [[M05-Fixed-Income-Markets-for-Government-Issuers]] | issuer、maturity、primary/secondary | 判断工具属于公司、政府还是短端融资 |
+| 流动性 | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | OTC/dealer market、bid-ask spread | 解释 spread 中的 liquidity premium |
+| Repo | [[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]] | short-term collateralized funding | 连接 money market rates 与融资成本 |
+| Benchmark | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] | 政府债/短端利率市场输入 | 构造曲线和基准收益率 |
 
 - **上游模块**：[[M02-Fixed-Income-Cash-Flows-and-Types]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M04-Fixed-Income-Markets-for-Corporate-Issuers]]。本模块输出会被后续更复杂题型调用。

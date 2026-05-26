@@ -51,63 +51,103 @@ tags:
 ```text
 Quantitative Methods (6-9%)
 ├─ 1. Rates and Returns
-│  ├─ 1.1 利率的三种解释（Three Interpretations of Interest Rate）
-│  ├─ 1.2 利率分解（Interest Rate Decomposition）
-│  ├─ 1.3 收益率度量阶梯（Return Measurement Ladder）
+│  ├─ 1.1 利率三重身份：required return / discount rate / opportunity cost，先定折现口径
+│  ├─ 1.2 名义利率分解：real risk-free + inflation + default + liquidity + maturity premium
+│  ├─ 1.3 收益率口径：HPR、gross/net、arithmetic/geometric/harmonic，按单期/多期/倍数选择
+│  ├─ 1.4 MWRR vs TWRR：现金流由投资者控制用 MWRR，评价经理表现用 TWRR
+│  ├─ 1.5 年化与连续复利：普通复利用 `(1+r)^c-1`，连续复利用 `ln(1+HPR)`
+│  └─ 1.6 杠杆与税后：先 gross/net，再 leverage，再 tax
 ├─ 2. Time Value of Money in Finance
-│  ├─ 2.1 现金流时间轴（Cash-Flow Map）
-│  ├─ 2.2 工具现值应用（Instrument PV Applications）
-│  ├─ 2.3 隐含变量求解（Implied Quantities）
+│  ├─ 2.1 现金流时间轴：single sum / annuity / perpetuity / growing stream，先判时点再套公式
+│  ├─ 2.2 固收与权益估值：债券=票息年金+本金现值，权益=股利现值
+│  ├─ 2.3 隐含变量：给 PV 和现金流反推 r、g、PMT、n，Equity 常见 `r = D1/P0 + g`
+│  └─ 2.4 现金流可加性：同一现金流组合必须有同一现值，是无套利定价接口
 ├─ 3. Statistical Measures of Asset Returns
-│  ├─ 3.1 集中趋势与位置指标（Central Tendency and Location）
-│  ├─ 3.2 离散程度（Dispersion）
-│  ├─ 3.3 分布形态（Distribution Shape）
+│  ├─ 3.1 中心与位置：mean / median / mode / quantile；偏态或 outlier 时 median 更稳
+│  ├─ 3.2 离散度：sample variance 用 `n-1`，CV 比较单位均值风险，downside deviation 看下行
+│  ├─ 3.3 分布形态：skew 看长尾方向，kurtosis 看厚尾风险，fat tails 不是 high skewness
+│  └─ 3.4 Correlation：方向和线性强度，不等于因果
 ├─ 4. Probability Trees and Conditional Expectations
-│  ├─ 4.1 期望值/方差/标准差（Expected Value / Variance / Standard Deviation）
-│  ├─ 4.2 概率树（Probability Tree）
-│  ├─ 4.3 贝叶斯更新（Bayes Update）
+│  ├─ 4.1 概率加权矩：`E(X)=Σp_ix_i`，`Var(X)=E(X^2)-[E(X)]^2`
+│  ├─ 4.2 概率树：路径概率相乘、同层概率相加，从叶节点回推 conditional expectation
+│  └─ 4.3 Bayes 更新：prior × likelihood / total probability，分母必须完整
 ├─ 5. Portfolio Mathematics
-│  ├─ 5.1 收益率矩（Return Moments）
-│  ├─ 5.2 联合概率函数（Joint Probability Function）
-│  ├─ 5.3 分散化机制（Diversification Mechanics）
+│  ├─ 5.1 组合收益与风险：`E(Rp)=Σw_iE(R_i)`；方差必须包含 covariance 项
+│  ├─ 5.2 联合概率函数：由边际收益和联合概率算 covariance / correlation
+│  ├─ 5.3 分散化机制：`ρ<1` 即有风险降低，`ρ=-1` 可出现完全对冲
+│  └─ 5.4 Roy safety-first：最大化 `[E(Rp)-R_L]/σp`
 ├─ 6. Simulation Methods
-│  ├─ 6.1 分布联动（Distribution Link）
-│  ├─ 6.2 蒙特卡洛模拟（Monte Carlo Simulation）
-│  ├─ 6.3 自助重抽样（Bootstrap Resampling）
+│  ├─ 6.1 分布设定：先选输入分布、参数和相关结构，输出是结果分布而非单点答案
+│  ├─ 6.2 Monte Carlo：适合复杂、多路径、非线性 payoff；风险是模型假设错
+│  └─ 6.3 Historical / bootstrap：保留历史经验分布，但受样本代表性限制
 ├─ 7. Estimation and Inference
-│  ├─ 7.1 抽样方法（Sampling Methods）
-│  ├─ 7.2 CLT 和标准误（Central Limit Theorem and Standard Error）
-│  ├─ 7.3 重抽样估计量（Resampling Estimators）
+│  ├─ 7.1 抽样方法：simple random / stratified / cluster / systematic，先识别偏差来源
+│  ├─ 7.2 CLT 与 SE：样本均值近似正态，`SE=s/√n` 决定区间宽度
+│  ├─ 7.3 置信区间：σ 已知或大样本可用 z，σ 未知且小样本用 t
+│  └─ 7.4 Bootstrap / jackknife：用重抽样估计估计量分布和标准误
 ├─ 8. Hypothesis Testing
-│  ├─ 8.1 检验构件（Test Components）
-│  ├─ 8.2 错误结构（Error Architecture）
-│  ├─ 8.3 参数与非参数检验（Parametric vs Nonparametric）
+│  ├─ 8.1 检验构件：H0/H1、test statistic、critical value、p-value、significance level
+│  ├─ 8.2 错误结构：Type I=错拒真 H0，Type II=未拒假 H0；power=1-Type II
+│  ├─ 8.3 均值/方差/比例检验：按样本数、独立/配对、方差是否已知选 z/t/F/χ²
+│  └─ 8.4 参数 vs 非参数：分布假设不可靠或数据为 ranks 时转非参数
 ├─ 9. Parametric and Non-Parametric Tests of Independence
-│  ├─ 9.1 相关系数检验（Test of Correlation）
-│  ├─ 9.2 列联表独立性检验（Contingency Table Independence Test）
+│  ├─ 9.1 Correlation test：检验 `ρ=0` 用 `t=r√[(n-2)/(1-r²)]`，df=`n-2`
+│  └─ 9.2 Contingency table：expected cell=`row total × column total / n`，df=`(r-1)(c-1)`
 ├─ 10. Simple Linear Regression
-│  ├─ 10.1 简单线性回归模型（Simple Linear Regression Model）
-│  ├─ 10.2 回归诊断（Regression Diagnostics）
-│  ├─ 10.3 拟合与推断（Fit and Inference）
+│  ├─ 10.1 模型设定：`Y_i=b0+b1X_i+ε_i`，slope 是 X 每变 1 单位的 Y 期望变化
+│  ├─ 10.2 ANOVA 与拟合：SST=SSR+SSE，`R²=SSR/SST` 只说明样本解释度
+│  ├─ 10.3 斜率与整体检验：slope 用 t，整体模型用 F，简单回归中 `F=t²`
+│  └─ 10.4 预测：点预测 `Ŷ=b0+b1X`，prediction interval 宽于 confidence interval
 ├─ 11. Introduction to Big Data Techniques
-│  ├─ 11.1 金融科技数据背景（Fintech Data Context）
-│  ├─ 11.2 大数据 / AI / ML 定义
-│  ├─ 11.3 投资应用（Investment Applications）
+│  ├─ 11.1 Fintech 数据：volume / velocity / variety，非结构化数据需要清洗和特征提取
+│  ├─ 11.2 AI/ML 类型：supervised / unsupervised / reinforcement，先看有无标签
+│  ├─ 11.3 投资应用：文本情绪、风险监控、组合构建、交易执行
+│  └─ 11.4 模型风险：overfitting、data snooping、sample bias、解释性不足
 ```
 
 ## 4. 跨模块依赖关系
 
-- **M01 Rates and Returns**：承接 `本科目入口`，输出到 `Time Value of Money in Finance`。
-- **M02 Time Value of Money in Finance**：承接 `Rates and Returns`，输出到 `Statistical Measures of Asset Returns`。
-- **M03 Statistical Measures of Asset Returns**：承接 `Time Value of Money in Finance`，输出到 `Probability Trees and Conditional Expectations`。
-- **M04 Probability Trees and Conditional Expectations**：承接 `Statistical Measures of Asset Returns`，输出到 `Portfolio Mathematics`。
-- **M05 Portfolio Mathematics**：承接 `Probability Trees and Conditional Expectations`，输出到 `Simulation Methods`。
-- **M06 Simulation Methods**：承接 `Portfolio Mathematics`，输出到 `Estimation and Inference`。
-- **M07 Estimation and Inference**：承接 `Simulation Methods`，输出到 `Hypothesis Testing`。
-- **M08 Hypothesis Testing**：承接 `Estimation and Inference`，输出到 `Parametric and Non-Parametric Tests of Independence`。
-- **M09 Parametric and Non-Parametric Tests of Independence**：承接 `Hypothesis Testing`，输出到 `Simple Linear Regression`。
-- **M10 Simple Linear Regression**：承接 `Parametric and Non-Parametric Tests of Independence`，输出到 `Introduction to Big Data Techniques`。
-- **M11 Introduction to Big Data Techniques**：承接 `Simple Linear Regression`，输出到 `本科目总结`。
+```text
+Return / discount rate layer
+├─ M01 Rates and Returns
+│  ├─ feeds M02: discount rate, compounding, IRR/MWRR
+│  ├─ feeds M03: arithmetic/geometric/harmonic mean vocabulary
+│  └─ feeds Portfolio Management: performance return, leverage, after-tax return
+├─ M02 Time Value of Money
+│  ├─ feeds Fixed Income: bond price = coupon PV + principal PV, YTM as implied rate
+│  ├─ feeds Equity: DDM / Gordon growth and required return
+│  └─ feeds Corporate Issuers: NPV, IRR, capital budgeting
+Statistical measurement layer
+├─ M03 Statistical Measures
+│  ├─ feeds M04: mean/variance as probability-weighted moments
+│  ├─ feeds M05: variance, covariance, correlation as portfolio risk inputs
+│  └─ feeds M10: correlation intuition before regression inference
+├─ M04 Probability and Bayes
+│  ├─ feeds M05: joint probability table -> covariance/correlation
+│  ├─ feeds M06: simulation inputs and scenario probabilities
+│  └─ feeds Fixed Income / Risk: default probability updating
+Portfolio and inference layer
+├─ M05 Portfolio Mathematics
+│  ├─ feeds Portfolio Management: diversification, efficient frontier, safety-first choice
+│  └─ feeds M06: simulated portfolio return distribution
+├─ M06 Simulation Methods
+│  └─ feeds Risk Management: stress testing, scenario analysis, distribution of outcomes
+├─ M07 Estimation -> M08 Hypothesis Testing -> M09 Independence -> M10 Regression
+│  ├─ estimation supplies SE and confidence interval logic
+│  ├─ hypothesis testing supplies reject/fail-to-reject discipline
+│  └─ regression supplies prediction and model-risk language
+└─ M11 Big Data
+   ├─ consumes M03-M10: validation, overfitting checks, statistical evidence
+   └─ feeds all investment topics: alternative data and model governance
+```
+
+| 接口 | Quant 输出 | 下游科目/模块 | 考试判断 |
+|---|---|---|---|
+| 折现率接口 | required return、PV/FV、IRR | Fixed Income、Equity、Corporate Issuers | 先确认现金流时点和复利频率，再折现或反求收益率。 |
+| 风险度量接口 | variance、standard deviation、correlation、covariance | Portfolio Management、Risk Management | 风险不是简单加权平均，相关性决定分散化效果。 |
+| 概率接口 | expected value、Bayes、probability tree | Fixed Income credit risk、Derivatives payoff、Risk scenarios | 新信息题用 Bayes，路径题用概率树从终点回推。 |
+| 推断接口 | CI、p-value、test statistic、regression output | Equity research、Economics、Portfolio analytics | 统计显著不等于经济显著；fail to reject 不等于 accept。 |
+| 数据科技接口 | ML 类型、alternative data、overfitting 风险 | Quant investing、Ethics、Risk governance | 先问数据是否有标签、是否有样本偏差、模型是否可解释。 |
 
 ## 5. 核心对比专题
 
@@ -245,25 +285,32 @@ Quantitative Methods (6-9%)
 
 ### 框架1：收益率题决策树
 
-1. 先问：有没有中途现金流？
-2. 有现金流且要评估 investor experience：用 `MWRR`
-3. 有现金流但要评估 manager performance：用 `TWRR`
-4. 多期复合回报：优先 `geometric mean`
+1. 题目问单一持有期总回报：用 `HPR = (P1 - P0 + D1)/P0`。
+2. 题目问多期历史平均财富增长：用 `geometric mean`；问下一期预期收益：用 `arithmetic mean`。
+3. 有外部现金流且问投资者实际体验：用 `MWRR/IRR`。
+4. 有外部现金流但问经理表现：拆分子期间，用 `TWRR = Π(1+HP_i)-1`。
+5. 题目给连续复利口径：普通收益转 `r_cc=ln(1+HPR)`；连续转普通用 `e^r-1`。
+6. 题目有费用、杠杆、税：按 `gross -> net -> leveraged -> after-tax` 排序，不提前扣税。
 
 ### 框架2：统计推断题决策树
 
-1. 问题是在估计还是检验？
-2. 如果是估计：先找 `point estimate` 还是 `confidence interval`
-3. 如果是检验：先写 `H0 / H1`
-4. 再判断 `z` 还是 `t`
-5. 最后用 `p-value` 或 `critical value` 做结论
+1. 先问任务是 estimation 还是 hypothesis test。
+2. Estimation：点估计直接用样本统计量；区间估计先选标准误 `SE=s/√n`，再选 z/t。
+3. σ 已知或大样本且条件允许：用 z；σ 未知、小样本且近似正态：用 t。
+4. Hypothesis test：先写 H0/H1，再判断 one-tailed / two-tailed。
+5. 单总体均值：z/t；双均值独立样本：pooled 或 unequal t；配对样本：paired t。
+6. 方差检验：单方差用 χ²，双方差用 F；类别独立性用 χ²。
+7. 决策只写 reject / fail to reject；解释时补充经济意义和样本限制。
 
 ### 框架3：回归题决策树
 
-1. 先看 `slope` 是否显著
-2. 再看 `overall model` 是否显著
-3. 再看 `R²` 是否够解释力
-4. 最后检查 residual/经济含义，避免把统计显著误当投资显著
+1. 先确认模型：`Y_i=b0+b1X_i+ε_i`，Y 是被解释变量，X 是解释变量。
+2. 问点预测：代入 `Ŷ=b0+b1X`。
+3. 问 slope 解释：X 增加 1 单位，Y 的条件期望改变 `b1`。
+4. 问 slope 是否显著：用 `t=(b1-β1,0)/SE(b1)`。
+5. 问模型整体是否显著：用 `F=MSR/MSE`；简单回归中可用 `F=t²` 校验。
+6. 问拟合度：看 `R²=SSR/SST`，但不能推出因果或预测稳定。
+7. 问预测区间：prediction interval 用于单个 Y，宽于 mean response 的 confidence interval。
 
 ---
 

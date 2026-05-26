@@ -73,12 +73,14 @@ tags:
 
 ```text
 16. Credit Analysis for Corporate Issuers
-├─ 16.1 政府发行人 (Government Issuers)
-│  ├─ 16.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 16.1.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 16.2 公司发行人 (Corporate Issuers)
-│  ├─ 16.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 16.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 16.1 Business Risk
+│  ├─ 16.1.1 Industry structure：周期性、竞争强度、进入壁垒、监管风险影响 cash-flow stability
+│  ├─ 16.1.2 Company position：规模、市场份额、多元化、成本结构决定抗冲击能力
+│  └─ 16.1.3 Operating leverage：固定成本越高，收入下滑对 EBITDA 和 coverage 冲击越大
+├─ 16.2 Financial Risk and Issue Analysis
+│  ├─ 16.2.1 Coverage：EBIT/interest 或 EBITDA/interest；越高越好，按题干指定 numerator
+│  ├─ 16.2.2 Leverage：debt/EBITDA、debt/capital；越高通常信用越弱
+│  └─ 16.2.3 Recovery waterfall：secured/senior/subordinated、collateral、covenants 影响 issue rating
 ```
 
 ## 4. 知识点详解
@@ -135,14 +137,21 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Corporate funding | [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] | bonds、loans、CP、MTN | 判断 refinancing/liquidity risk |
+| Credit risk | [[M14-Credit-Risk]] | PD/LGD/recovery、spread drivers | 把财务指标转成信用结论 |
+| FSA ratios | Financial Statement Analysis | coverage、leverage、cash flow stability | 读取题干会计数据并判断趋势 |
+| Securitization issuer | [[M17-Fixed-Income-Securitization]] | originator credit vs asset pool risk | 区分发行人风险和资产池风险 |
+
 - **上游模块**：[[M15-Credit-Analysis-for-Government-Issuers]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M17-Fixed-Income-Securitization]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
-- 公司信用分析 → [[M10-Credit-Risk]] 的 PD/LGD 框架
+- 公司信用分析 → [[M14-Credit-Risk]] 的 PD/LGD 框架
 - 担保品与优先级 → [[M01-Instrument-Features]] 的合同要素
-- 发行人与债项评级 → [[M13-ABS-and-Credit-Enhancement]] 的结构化信用增级
+- 发行人与债项评级 → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的结构化信用增级
 
 
 ## 9. 复习与刷题提示

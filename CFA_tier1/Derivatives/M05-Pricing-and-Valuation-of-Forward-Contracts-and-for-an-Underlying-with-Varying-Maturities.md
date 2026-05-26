@@ -70,14 +70,16 @@ tags:
 ```text
 5. Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities
 ├─ 5.1 Introduction
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Price vs value：forward price 是新合约公平交割价；value 是既有合约当前价值
+│  └─ 5.1.2 Timeline：initiation value 通常为 0，life value 可正可负，到期 payoff=`S_T-K`
 ├─ 5.2 Pricing and Valuation of Forward Contracts
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 No income：`F0(T)=S0(1+r)^T`
+│  ├─ 5.2.2 Known income：`F0(T)=[S0-PV(I)](1+r)^T`
+│  ├─ 5.2.3 Known yield：`F0(T)=S0[(1+r)/(1+q)]^T` 或 `S0e^{(r-q)T}`
+│  └─ 5.2.4 Long value：无收入时 `V_t=S_t-PV_t(K)`；有收入时先扣剩余收入现值
 ├─ 5.3 Pricing and Valuation of Interest Rate Forward Contracts
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Forward rates 来自不同期限 spot rates 的 no-arbitrage 关系
+│  └─ 5.3.2 FRA/利率远期用于锁定未来借贷利率，接口在 Fixed Income
 ```
 
 ## 4. 知识点详解
@@ -181,24 +183,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-Pricing-and-Valuation-of-Futures-Contracts]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
-└── Contingent claims -> option payoff asymmetry (中文)
-Uses and Risks
-├── issuer hedge -> financing/operating exposure control (中文)
-└── investor exposure -> capital efficiency + leverage discipline (中文)
-Pricing Spine
-├── no-arbitrage -> replication -> cost of carry (中文)
-├── forwards/futures -> forward value and daily settlement (中文)
-├── swaps -> bond pair / FRA strip intuition (中文)
-└── options -> parity -> binomial valuation (中文)
-```
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M04 -> M05` | no-arbitrage and carry | 选择 forward price 公式。 |
+| `M05 -> M06` | forward price/value baseline | 对比 futures 的 daily settlement。 |
+| `M05 -> M07` | forward-like cash flows | swap 可视为多期 forward/FRA 组合。 |
+| `Economics M08 -> M05` | FX forwards、CIP | 外汇远期与利差平价共享无套利逻辑。 |
+| `FI -> M05` | spot rates、forward rates、discounting | 利率远期和 FRA 依赖固定收益期限结构。 |
 
 ---
 

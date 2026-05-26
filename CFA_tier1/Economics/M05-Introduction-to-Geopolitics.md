@@ -85,20 +85,25 @@ tags:
 ```text
 5. Introduction to Geopolitics
 ├─ 5.1 地缘政治风险的定义（Defining Geopolitical Risk）
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Geopolitics：国家间合作与竞争如何影响经济、贸易、资本和安全
+│  ├─ 5.1.2 Political risk 偏单国政策/制度；geopolitical risk 偏跨国冲突、制裁、联盟变化
+│  └─ 5.1.3 考试判断：先识别 actor、tool、transmission channel，再判断资产影响
 ├─ 5.2 地缘政治冲击的传导渠道（Transmission Channels of Geopolitical Shocks）
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 供应链/贸易：tariff、sanction、export control、blockade 改变成本与数量
+│  ├─ 5.2.2 金融渠道：risk premium 上升、capital flight、safe-haven demand、credit spread widening
+│  ├─ 5.2.3 商品渠道：能源/粮食供给冲击推高通胀并改变 terms of trade
+│  └─ 5.2.4 政策渠道：财政国防支出、补贴、央行通胀应对、资本管制
 ├─ 5.3 地缘政治风险对资产价格的影响（Impact on Asset Prices）
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Equity：cash flow 下降或 risk premium 上升会压低估值
+│  ├─ 5.3.2 FI/Credit：安全港国债收益率可能下降，风险发行人 spread 扩大
+│  ├─ 5.3.3 FX：避险货币可能升值，外部融资依赖国家货币承压
+│  └─ 5.3.4 Commodities：供给受限商品上涨，进口国 terms of trade 恶化
 ├─ 5.4 地缘政治风险分析框架（Geopolitical Risk Analysis Framework）
-│  ├─ 5.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.4.1 Probability x impact x horizon x channel 四格分析
+│  └─ 5.4.2 Scenario analysis / stress testing 优先于单一历史相关性
 ├─ 5.5 投资组合中的地缘政治风险管理（Managing Geopolitical Risk in Portfolios）
-│  ├─ 5.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.5.1 Diversification 降低单一国家/行业暴露但不能消除系统性冲击
+│  └─ 5.5.2 Hedging 可用 FX forwards、commodity futures、options，但有 basis 和成本
 ```
 
 ## 4. 知识点详解
@@ -157,13 +162,13 @@ tags:
 
 此模块侧重概念理解，无特定计算公式。但对以下经济关系需要理解：
 
-**风险溢价与资产价格的关系**：
-`Asset Price = Expected Cash Flow / (Risk-Free Rate + Risk Premium)`
-- 场景：地缘政治风险上升 → 风险溢价上升 → 资产价格下降，即使预期现金流不变。
-
-**安全港效应**：
-- 避险情绪上升时，资金流向安全港资产（如美元、日元、瑞士法郎、黄金、美债）
-- 导致安全港货币升值，风险货币贬值
+| 节点 | 框架/关系 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 5.2 | Shock -> channel -> macro variable -> asset price | 任何情景题 | 不要直接从“冲突”跳到“所有资产下跌”。 |
+| 5.3 | `Asset Price ≈ Expected Cash Flow / (Risk-Free Rate + Risk Premium)` | 解释风险溢价 | cash flow 不变时，risk premium 上升会压低价格。 |
+| 5.3 | Safe-haven flow: risk-off -> high-quality government bonds / safe-haven FX | 避险题 | 安全港资产受益，风险货币和高 beta 资产承压。 |
+| 5.4 | `Risk priority = probability x impact` | 场景排序 | 低概率高影响事件适合 stress test，不适合只看均值。 |
+| 5.5 | Hedge effectiveness = exposure match - basis/cost/counterparty risk | 风险管理题 | 对冲不是免费消除风险，而是重塑风险。 |
 
 ## 6. 常见考点与解题思路
 
@@ -202,15 +207,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Monetary-Policy]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-International-Trade]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 地缘政治冲击影响货币政策决策，见 **[[M04-Monetary-Policy]]**
-- 地缘政治风险影响资本流动和汇率，见 **[[M07-Capital-Flows-and-FX-Markets]]**
-- 贸易摩擦作为地缘政治风险的具体体现，见 **[[M06-International-Trade]]**
-- 财政政策应对地缘政治冲击（增加国防支出、能源补贴等），见 **[[M03-Fiscal-Policy]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M05 -> M06 Trade` | tariffs、sanctions、trade blocs、supply chain re-routing | 判断贸易成本、贸易创造/转移和福利影响。 |
+| `M05 -> M07 FX` | capital flight、safe-haven flows、capital controls | 判断汇率压力和资本账户变化。 |
+| `M05 -> M03/M04` | defense spending、energy subsidies、inflation shock | 判断财政/货币政策应对。 |
+| `M05 -> PM` | scenario analysis、tail risk、country exposure | 连接压力测试和资产配置。 |
+| `M05 -> Derivatives` | FX/commodity hedging needs | 使用 forwards/futures/options 管理外部冲击。 |
 
 
 ## 9. 复习与刷题提示

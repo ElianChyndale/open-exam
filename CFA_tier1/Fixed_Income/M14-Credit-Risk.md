@@ -75,11 +75,13 @@ tags:
 ```text
 14. Credit Risk
 ├─ 14.1 损失逻辑 (Loss Logic)
-│  ├─ 14.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 14.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 14.1.1 Expected credit loss intuition：ECL ≈ PD x LGD x exposure
+│  ├─ 14.1.2 LGD = 1 - recovery rate；recovery 受 seniority、collateral、covenants 和 bankruptcy priority 影响
+│  └─ 14.1.3 Credit risk 包含 default risk、downgrade risk、spread risk；价格可在违约前已下跌
 ├─ 14.2 评级与利差驱动因素 (Ratings and Spread Drivers)
-│  ├─ 14.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 14.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 14.2.1 Ratings 是相对信用风险意见，不是违约保证；issuer rating 与 issue rating 可不同
+│  ├─ 14.2.2 Spread drivers：宏观、行业、发行人、流动性、税收、期权、technical factors
+│  └─ 14.2.3 Spread widening -> required return 上升、price 下降；原因需区分信用与非信用
 ```
 
 ## 4. 知识点详解
@@ -136,14 +138,21 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Spread interpretation | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | credit/liquidity/option spread components | 解释 spread widening/price decline |
+| Sovereign credit | [[M15-Credit-Analysis-for-Government-Issuers]] | PD、LGD、rating migration | 分析政府发行人信用 |
+| Corporate credit | [[M16-Credit-Analysis-for-Corporate-Issuers]] | coverage、leverage、recovery drivers | 分析公司发行人和债项风险 |
+| Securitized credit | [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] | tranche loss allocation | 判断 credit enhancement 和 first-loss |
+
 - **上游模块**：[[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M15-Credit-Analysis-for-Government-Issuers]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
 - 信用利差 → [[M04-Yield-and-Spread-Measures]] 的利差度量
-- 回收率/优先级 → [[M11-Government-and-Corporate-Credit]] 的债项优先级
-- 信用风险建模 → [[M12-Securitization-Foundations]] 的资产隔离逻辑
+- 回收率/优先级 → [[M16-Credit-Analysis-for-Corporate-Issuers]] 的债项优先级
+- 信用风险建模 → [[M17-Fixed-Income-Securitization]] 的资产隔离逻辑
 
 
 ## 9. 复习与刷题提示

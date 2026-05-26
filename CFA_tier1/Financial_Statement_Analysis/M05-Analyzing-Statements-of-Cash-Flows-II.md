@@ -75,14 +75,17 @@ tags:
 ```text
 5. Analyzing Statements of Cash Flows II
 ├─ 5.1 报告式与同比例现金流量表 (Reported vs Common-Size Cash Flow Statements)
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Reported SCF：先判断现金来自 CFO、CFI 还是 CFF
+│  ├─ 5.1.2 Common-size SCF：cash flow item / revenue 或 / total cash inflows，按题干基数
+│  └─ 5.1.3 判断：CFO 强于 CFI/CFF 更可持续，出售资产或借款带来的现金不能当经营质量
 ├─ 5.2 自由现金流 (Free Cash Flow)
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 FCFF = CFO + Interest(1 - T) - FCInv；给 debt + equity holders
+│  ├─ 5.2.2 FCFE = CFO - FCInv + Net Borrowing；给 common equity holders
+│  └─ 5.2.3 判断：FCInv 两个口径都扣；net borrowing 只进入 FCFE
 ├─ 5.3 现金流比率分析 (Cash Flow Ratio Analysis)
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Performance ratios：CFO / revenue、CFO / NI 看现金转化
+│  ├─ 5.3.2 Coverage ratios：CFO / current liabilities、CFO / total debt、cash interest coverage
+│  └─ 5.3.3 判断：现金流比率更接近偿债能力，但可能受 working capital timing 扰动
 ```
 
 ## 4. 知识点详解
@@ -134,6 +137,10 @@ tags:
 | FCFF | `CFO + Interest(1 - T) - FCInv` | 公司自由现金流 |
 | FCFE | `CFO - FCInv + Net Borrowing` | 股权自由现金流 |
 | CFO / CL | `CFO / Current Liabilities` | 经营现金流比率，衡量短期偿债能力 |
+| Cash Flow Margin | `CFO / Revenue` | 每单位收入转为经营现金的能力 |
+| Debt Coverage | `CFO / Total Debt` | 现金流覆盖总债务 |
+| Cash Interest Coverage | `(CFO + Interest Paid + Taxes Paid) / Interest Paid` | 现金口径利息覆盖 |
+| FCFE from FCFF | `FCFF - Interest(1 - T) + Net Borrowing` | 两个自由现金流口径转换 |
 
 ## 6. 常见考点与解题思路
 
@@ -165,13 +172,10 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Analyzing-Statements-of-Cash-Flows-I]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M06-Analysis-of-Inventories]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M04-Analyzing-Cash-Flows-I|现金流量表分析 I]]：FCFF/FCFE 的计算以 CFO 为基础，需先掌握间接法编制
-- [[M11-Financial-Analysis-Techniques|财务分析技术]]：现金流比率是偿债能力和盈利质量分析的重要工具，与 DuPont 分析互为补充
+- **连接 M04**：所有 FCFF/FCFE 和 coverage ratios 都依赖 M04 的 CFO 计算。
+- **连接 Equity**：FCFF 用于 firm valuation；FCFE 用于 equity valuation，口径混用会导致估值错误。
+- **连接 Credit/Fixed Income**：CFO coverage、debt coverage 和 cash interest coverage 是现金偿债能力证据。
+- **连接 M10/M11**：CFO 与 NI 的关系用于质量判断；现金流比率与盈利比率要交叉验证。
 
 
 ## 9. 复习与刷题提示

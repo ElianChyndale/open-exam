@@ -73,17 +73,20 @@ tags:
 ```text
 2. Code of Ethics and Standards of Professional Conduct
 ├─ 2.1 职业的本质 (Nature of a Profession)
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 2.2 道德与法律的边界 (Ethics vs. Law)
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 2.3 受托人心态 (Fiduciary Mindset)
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 Professional Conduct Program：负责调查、纪律和执行 Code and Standards。
+│  └─ 2.1.2 考试判断：Code/Standards 不是建议，对 CFA members 和 candidates 有约束。
+├─ 2.2 Code of Ethics 六项总纲
+│  ├─ 2.2.1 Integrity/competence/diligence/respect：诚信、能力、勤勉和尊重是底线。
+│  ├─ 2.2.2 Client/prospective client/employer duty：合理谨慎、独立判断、服务客户与雇主。
+│  ├─ 2.2.3 Professionalism and market integrity：维护资本市场诚信，不损害 profession。
+│  └─ 2.2.4 Maintain and improve competence：持续提升个人和行业能力。
+├─ 2.3 Seven Standards index
+│  ├─ 2.3.1 I Professionalism；II Integrity of Capital Markets；III Duties to Clients。
+│  ├─ 2.3.2 IV Duties to Employers；V Investment Analysis, Recommendations, and Actions。
+│  └─ 2.3.3 VI Conflicts of Interest；VII Responsibilities as a CFA Institute Member or Candidate。
 ├─ 2.4 七条职业行为准则总纲 (Seven Standards Overview)
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 本模块负责“索引”，M03 负责 guidance，M05 负责综合应用。
+│  └─ 2.4.2 做题先把题干行为归类到最可能的 Standard，再比较 required vs recommended conduct。
 ```
 
 ## 4. 知识点详解
@@ -121,11 +124,13 @@ Standards I-VII 涵盖了从专业精神、市场诚信到客户义务、雇主�
 
 ### 5.1 核心内容
 
-| 框架 | 内容 | 应用场景 |
-|------|------|----------|
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | 法律与标准冲突时 |
-| Priority Rule | `client > market integrity > employer/self convenience` | 利益冲突排序 |
-| 道德底线判断 | 合法 + 合乎职业标准 + 可公开辩护 | 情境题基本原则 |
+| 框架 | 内容 | 知识树节点 | 应用场景 |
+|------|------|------|----------|
+| Code role | `profession -> code -> standards -> enforcement -> trust` | `2.1/2.2` | 解释 Code 为什么定义 profession |
+| Standards locator | `facts -> affected party -> Standard I-VII -> subsection` | `2.3/2.4` | 案例题定位第一步 |
+| Required vs recommended | `violation test first; recommended procedure second` | `2.4` | 别把 best practice 误判为必然违规 |
+| Stricter Standard Rule | `required conduct = most strict(applicable law, regulation, CFA Standards)` | `2.3` | 法律与标准冲突时 |
+| Priority Rule | `client / market integrity before employer or self convenience` | `2.3` | 利益冲突排序 |
 
 ## 6. 常见考点与解题思路
 
@@ -162,14 +167,11 @@ Standards I-VII 涵盖了从专业精神、市场诚信到客户义务、雇主�
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Ethics-and-Trust-in-the-Investment-Profession]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Guidance-for-Standards-I-VII]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Code-of-Ethics]] — Code of Ethics 是 Standards 的总纲
-- [[M03-Standard-I-Professionalism]] — Standard I 具体展开专业性要求
-- [[M05-Standard-III-Duties-to-Clients]] — 受托人义务的具体应用
+- **来自 M01**：profession、trust、ethics vs law 解释 Code and Standards 的存在理由。
+- **到 M03**：M02 是 Standards I-VII 的目录；M03 展开每个 subsection 的 required conduct 和 recommended procedures。
+- **到 M05**：案例题用 M02 快速定位可能违反的 Standard，再用 M03/M05 判断最佳动作。
+- **到 GIPS/M04**：Performance Presentation 是 Standard III(D) 的一部分，GIPS 是更具体的业绩展示标准。
+- **到全科目**：所有研究、推荐、交易、客户沟通和营销材料都应能映射回至少一个 Standard。
 
 
 ## 9. 复习与刷题提示

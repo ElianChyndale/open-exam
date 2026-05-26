@@ -77,17 +77,23 @@ tags:
 ```text
 9. Analysis of Income Taxes
 ├─ 9.1 会计利润 vs 应税所得 (Accounting Profit vs Taxable Income)
-│  ├─ 9.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.1.1 Accounting profit 用于 financial reporting；taxable income 用于 tax return
+│  ├─ 9.1.2 Taxes payable = taxable income x tax rate；income tax expense 进入利润表
+│  ├─ 9.1.3 Temporary differences 会未来转回，产生 DTA/DTL
+│  └─ 9.1.4 Permanent differences 不转回，只影响 effective tax rate
 ├─ 9.2 递延所得税资产与负债 (Deferred Tax Assets and Liabilities)
-│  ├─ 9.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.2.1 DTL：当期少交税、未来多交税；常见于税法加速折旧
+│  ├─ 9.2.2 DTA：当期多交税、未来少交税；常见于保修、坏账、亏损结转
+│  ├─ 9.2.3 Valuation allowance：增加会降低 DTA、增加 tax expense、降低 NI
+│  └─ 9.2.4 税率变动：用预期转回时税率重估 DTA/DTL，变动进当期损益
 ├─ 9.3 有效/法定/现金税率 (Effective / Statutory / Cash Tax Rates)
-│  ├─ 9.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.3.1 ETR = income tax expense / pretax income
+│  ├─ 9.3.2 Cash tax rate = cash taxes paid / pretax income
+│  └─ 9.3.3 判断：ETR vs statutory 解释永久差异；cash vs ETR 解释递延与现金税负
 ├─ 9.4 税务披露与有效税率调节 (Tax Disclosures and Effective-Rate Reconciliation)
-│  ├─ 9.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.4.1 披露：DTA/DTL 组成、valuation allowance、NOL carryforward、ETR reconciliation
+│  ├─ 9.4.2 分析：税率异常波动、估价备抵大幅变动、境外税率差异
+│  └─ 9.4.3 判断：披露变化可能影响 future cash taxes、NI quality 和 ratios
 ```
 
 ## 4. 知识点详解
@@ -151,6 +157,10 @@ tags:
 | Effective Tax Rate | `Income Tax Expense / Pretax Income` | 有效税率 |
 | Cash Tax Rate | `Cash Taxes Paid / Pretax Income` | 现金税率 |
 | Income Tax Expense | `Taxes Payable + DTL Increase - DTA Increase` | 所得税费用构成 |
+| Taxes Payable | `Taxable Income x Tax Rate` | 实际应缴税款基础 |
+| Taxable Temporary Difference | `Carrying Amount of Asset > Tax Base` 或 `Carrying Amount of Liability < Tax Base` | 通常产生 DTL |
+| Deductible Temporary Difference | `Carrying Amount of Asset < Tax Base` 或 `Carrying Amount of Liability > Tax Base` | 通常产生 DTA |
+| DTA Net of Valuation Allowance | `Gross DTA - Valuation Allowance` | 分析可实现性 |
 
 ## 6. 常见考点与解题思路
 
@@ -183,16 +193,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M08-Topics-in-Long-Term-Liabilities-and-Equity]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M10-Financial-Reporting-Quality]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Income-Statement|利润表分析]]：所得税费用是利润表的重要组成部分，影响净利润
-- [[M03-Balance-Sheet|资产负债表]]：DTA 和 DTL 分别列示在资产和负债方
-- [[M04-Cash-Flow-Statements|现金流量表]]：应付税款(taxes paid)是 CFO 的重要组成部分
-- [[M06-Long-Term-Assets|长期资产]]：资产的账面价值与计税基础差异是 DTL 的主要来源之一
-- [[M10-Financial-Analysis-Techniques|财务分析技术]]：有效税率分析是盈利质量评估的重要维度
+- **连接 M02**：income tax expense 决定 net income；ETR 异常会扭曲 net margin 和 EPS。
+- **连接 M03/M07**：DTA/DTL 来自资产负债账面价值与 tax base 的差异，长期资产折旧是核心来源。
+- **连接 M04/M05**：taxes payable / cash taxes paid 影响 CFO；tax expense 不等于当期现金流出。
+- **连接 M06**：FIFO/LIFO 和 write-down 可能改变 taxable income、tax payable 和现金税负。
+- **连接 M10/M11**：valuation allowance、ETR reconciliation 和 tax rate sustainability 是质量与预测输入。
 
 
 ## 9. 复习与刷题提示

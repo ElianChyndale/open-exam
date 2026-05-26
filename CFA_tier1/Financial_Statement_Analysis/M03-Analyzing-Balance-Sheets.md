@@ -82,17 +82,21 @@ tags:
 ```text
 3. Analyzing Balance Sheets
 ├─ 3.1 无形资产 (Intangible Assets)
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Purchased intangibles：按 purchase cost 资本化，后续按 finite/indefinite life 处理
+│  ├─ 3.1.2 Internally generated intangibles：US GAAP 多数 R&D 费用化；IFRS development 可有条件资本化
+│  └─ 3.1.3 判断：未确认内部无形资产会低估 assets，并可能高估 ROA
 ├─ 3.2 商誉 (Goodwill)
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 Goodwill = purchase price - fair value of identifiable net assets
+│  ├─ 3.2.2 后续处理：不系统摊销，进行 impairment testing
+│  └─ 3.2.3 判断：goodwill impairment 通常说明收购假设恶化，并降低 NI 与 equity
 ├─ 3.3 金融工具与非流动负债 (Financial Instruments and Non-Current Liabilities)
-│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.3.1 金融资产分类：amortized cost / FVOCI / FVTPL 决定 valuation changes 进入 OCI 或 income
+│  ├─ 3.3.2 债券负债：premium/discount amortization 改变 interest expense 和 carrying amount
+│  └─ 3.3.3 分类判断：current vs non-current 直接影响 current ratio、working capital、debt ratios
 ├─ 3.4 同比例资产负债表与相关比率 (Common-Size Balance Sheet and Related Ratios)
-│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.4.1 Common-size BS item = balance sheet item / total assets
+│  ├─ 3.4.2 Working capital = current assets - current liabilities
+│  └─ 3.4.3 判断：资产结构、资本结构和流动性要结合行业与会计政策解释
 ```
 
 ## 4. 知识点详解
@@ -135,6 +139,10 @@ tags:
 | Working Capital | `Current Assets - Current Liabilities` | 营运资本，衡量短期财务健康 |
 | Debt-to-Equity | `Total Debt / Total Equity` | 杠杆率，衡量偿债结构 |
 | Book Value per Share | `(Total Equity - Pref Equity) / Common Shares Outstanding` | 每股账面价值 |
+| Common-Size BS Item | `Balance Sheet Item / Total Assets` | 用于比较资产与资本结构 |
+| Current Ratio | `Current Assets / Current Liabilities` | 流动性判断 |
+| Debt-to-Assets | `Total Debt / Total Assets` | 资本结构和偿债风险 |
+| Goodwill | `Purchase Price - Fair Value of Identifiable Net Assets` | 企业合并中形成的商誉 |
 
 ## 6. 常见考点与解题思路
 
@@ -166,14 +174,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Analyzing-Income-Statements]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Analyzing-Statements-of-Cash-Flows-I]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M06-Long-Term-Assets|长期资产]]：无形资产和 PP&E 的确认、计量与减值处理在本模块基础上进一步展开
-- [[M07-Long-Term-Liabilities-and-Equity|长期负债与权益]]：非流动负债的细分类型（租赁、养老金、股权激励）在 M07 详细讨论
-- [[M10-Financial-Analysis-Techniques|财务分析技术]]：资产负债表数据是计算 solvency 和 liquidity 比率的直接来源
+- **连接 M02**：NI 通过 retained earnings 改变 equity；资本化/费用化选择同时改变 assets 和 profit。
+- **连接 M04**：AR、inventory、AP 等 BS 变动是 CFO 调整的核心；PP&E 变动连接 CFI。
+- **连接 M07/M08**：无形资产、PP&E、租赁负债、养老金负债会在后续模块细化，但 ratio 影响先在 BS 中体现。
+- **连接 M09**：asset carrying amount 与 tax base 差异产生 DTA/DTL。
+- **连接 M11**：liquidity、solvency、activity ratios 的分母多数来自资产负债表，周转率优先用平均余额。
 
 
 ## 9. 复习与刷题提示

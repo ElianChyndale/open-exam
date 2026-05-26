@@ -81,20 +81,26 @@ tags:
 ```text
 1. Introduction to Financial Statement Analysis
 ├─ 1.1 Introduction
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 角色：把 financial reports 转成 valuation、credit、stewardship 的证据
+│  ├─ 1.1.2 输入：annual/interim reports、notes、MD&A、audit report、industry data
+│  └─ 1.1.3 判断：题干问“role”时不要直接算 ratio，先说明使用者目标和限制
 ├─ 1.2 Financial Statement Analysis Framework
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 六步框架：articulate purpose -> collect data -> process data -> analyze data -> conclusions -> update
+│  ├─ 1.2.2 执行要点：先明确 purpose and context，再决定是否需要 common-size、ratio、trend 或 forecast
+│  └─ 1.2.3 考试判断：recommendation 必须能回溯到 data source、method、assumption 和 limitation
 ├─ 1.3 Scope of Financial Statement Analysis
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 范围：profitability、liquidity、solvency、cash flow quality、forecasting
+│  ├─ 1.3.2 局限：historical cost、estimates、management bias、different standards reduce comparability
+│  └─ 1.3.3 输出：不是“报表真实无误”，而是“在限制下是否 decision useful”
 ├─ 1.4 Regulated Sources of Information
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 Financial statements：三表和附注是主证据；notes 往往解释会计政策和估计
+│  ├─ 1.4.2 MD&A：解释管理层视角、风险、趋势，但可能带 bias
+│  ├─ 1.4.3 Audit report：提供 reasonable assurance，不保证商业成功或没有 fraud
+│  └─ 1.4.4 Regulatory filings：更完整但滞后，适合核验披露一致性
 ├─ 1.5 Comparison of IFRS with Alternative Financial Reporting Systems
-│  ├─ 1.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.5.1 准则差异：IFRS/US GAAP 会改变 recognition、measurement、classification
+│  ├─ 1.5.2 分析动作：跨公司比较前先调整会计政策差异，不直接比较原始 ratio
+│  └─ 1.5.3 Other sources：industry reports、economic data、company presentations 用来补充而非替代 filings
 ```
 
 ## 4. 知识点详解
@@ -126,78 +132,22 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 Income Statement and Cash Flow
+### 5.1 分析框架
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
+| 框架 | 步骤 | 知识树节点 | 考试说明 |
 |------|------|------------|----------|
-| Gross Profit | `Revenue - COGS` | `2.5` | 【考纲重点】利润率与存货方法联动 |
-| Operating Income | `Gross Profit - Operating Expenses` | `2.5` | 分析经营盈利能力 |
-| Pretax Income | `EBT = EBIT - Interest Expense` | `2.5` | 税前利润口径 |
-| Basic EPS | `(NI - Preferred Dividends) / Weighted Average Shares` | `2.4` | EPS 基础式 |
-| Diluted EPS | `Adjusted NI Available to Common / Adjusted Weighted Average Shares` | `2.4` | 先排除 antidilutive instruments |
-| CFO (Indirect) | `NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` | `4.2` | 现金流重构核心 |
-| Cash Collected from Customers | `Revenue - ΔAccounts Receivable` | `4.2` | 【考纲重点】直接法 CFO 常见转换 |
-| Cash Paid to Suppliers | `COGS + ΔInventory - ΔAccounts Payable` | `4.2` | 直接法 CFO 常见转换 |
-| Cash Paid for Operating Expenses | `Operating Expense - Depreciation + ΔPrepaids - ΔAccrued Expenses` | `4.2` | 题目会给简化项目 |
-| FCFF | `FCFF = CFO + Interest(1 - T) - FCInv` | `5.2` | 公司自由现金流 |
-| FCFE | `CFO - FCInv + Net Borrowing` | `5.2` | 股权自由现金流 |
+| FSA Framework | `articulate purpose -> collect data -> process data -> analyze/interpret -> report conclusions -> update` | `1.2` | 先明确分析目的，再选数据和工具 |
+| Source Reliability Ladder | `audited statements/notes -> regulatory filings -> MD&A -> external sources -> management presentations` | `1.4` | 越靠后越需要交叉验证 |
+| Comparability Check | `standard -> accounting policy -> fiscal period -> currency -> segment mix` | `1.5` | 跨公司比较前必须统一口径 |
+| Decision-Useful Test | `relevance + faithful representation + comparability + timeliness` | `1.3` | 判断信息能否支持投资或信用结论 |
 
-### 5.2 Liquidity and Activity
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Current Ratio | `Current Assets / Current Liabilities` | `10.2` | 流动性 |
-| Quick Ratio | `(Cash + ST Inv + Receivables) / CL` | `10.2` | 更保守流动性 |
-| Inventory Turnover | `COGS / Average Inventory` | `10.2` | 存货效率 |
-| Days Inventory | `365 / Inventory Turnover` | `10.2` | DIO 常与 CCC 联动 |
-| Receivables Turnover | `Revenue / Average Receivables` | `10.2` | 回款效率 |
-| DSO | `365 / Receivables Turnover` | `10.2` | 应收账款天数 |
-| Payables Turnover | `Purchases / Average Trade Payables` | `10.2` | DPO 前置 |
-| DPO | `365 / Payables Turnover` | `10.2` | 供应商付款天数 |
-| Cash Conversion Cycle | `DIO + DSO - DPO` | `10.2` | FRA 与 Corporate Issuers 联动 |
-| Total Asset Turnover | `Revenue / Average Total Assets` | `10.2` | 资产效率 |
-| LIFO Reserve Adjustment | `FIFO Inventory = LIFO Inventory + LIFO Reserve` | `6.2` | 【考纲重点】US GAAP LIFO 可比性调整 |
-| FIFO COGS from LIFO | `FIFO COGS = LIFO COGS - ΔLIFO Reserve` | `6.2` | 通胀环境下常考方向 |
-| Inventory Write-down | `Loss = Carrying Value - NRV` | `6.1` | NRV 低于成本时确认 |
-
-### 5.3 Profitability and Solvency
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Gross Margin | `Gross Profit / Revenue` | `10.2` | revenue/COGS choice 的敏感点 |
-| Operating Margin | `Operating Income / Revenue` | `10.2` | 经营盈利能力 |
-| Pretax Margin | `Pretax Income / Revenue` | `10.2` | 税前盈利能力 |
-| Net Margin | `NI / Revenue` | `10.4` | DuPont 第一段 |
-| ROA | `NI / Average Total Assets` | `10.2` | 资产盈利能力 |
-| ROE | `NI / Average Equity` | `10.4` | 股东回报 |
-| Return on Invested Capital | `NOPAT / Average Invested Capital` | `10.2` | 【考纲重点】经营资本回报口径 |
-| Financial Leverage | `Average Assets / Average Equity` | `10.4` | DuPont 杠杆段 |
-| Debt-to-Equity | `Total Debt / Total Equity` | `10.2` | 偿债结构 |
-| Debt-to-Assets | `Total Debt / Total Assets` | `10.2` | 偿债结构 |
-| Debt-to-Capital | `Total Debt / (Total Debt + Total Equity)` | `10.2` | capital structure |
-| Interest Coverage | `EBIT / Interest Expense` | `10.2` | 信用分析常用 |
-| DuPont | `Net Margin x Asset Turnover x Financial Leverage` | `10.4` | ROE 分解 |
-| Five-Step DuPont | `(NI/EBT) x (EBT/EBIT) x (EBIT/Revenue) x (Revenue/Assets) x (Assets/Equity)` | `10.4` | 【考纲重点】税负、利息、经营、效率、杠杆拆分 |
-
-### 5.4 Tax and Cash Quality
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Effective Tax Rate | `Income Tax Expense / Pretax Income` | `8.3` | 与 statutory rate 对比 |
-| Cash Tax Rate | `Cash Taxes Paid / Pretax Income` | `8.3` | cash vs accrual tax lens |
-| Deferred Tax Liability | `DTL = Tax Base Carrying Amount Difference x Tax Rate` | `9.2` | 【考纲重点】资产账面价值 > 税基通常产生 DTL |
-| Deferred Tax Asset | `DTA = Deductible Temporary Difference x Tax Rate` | `9.2` | 可抵扣暂时性差异 |
-| Operating Cash Flow Ratio | `CFO / Current Liabilities` | `10.2` | 覆盖短期负债 |
-| Free Cash Flow to Firm Coverage | `FCFF / Total Debt` | `5.3` | cash-flow coverage 直觉 |
-| Accruals Ratio | `(NI - CFO) / Average Total Assets` | `10.5` | 【考纲重点】盈利质量预警，口径以题目为准 |
-
-### 5.5 考纲范围标记
+### 5.2 本模块无核心计算公式
 
 | 标记 | 内容 |
 |------|------|
-| 【考纲重点】 | EPS、现金流直接/间接法、FCFF/FCFE、存货方法与 LIFO reserve、税项、比率分析、DuPont、建模假设 |
-| 【考纲内但无核心公式】 | 报告框架、审计意见、披露质量、会计政策选择的定性分析 |
-| 【超纲/扩展】 | 复杂养老金精算、完整租赁摊销表、信用损失模型细节、完整三表建模模板不作为 Level I 必背公式 |
+| 【考纲重点】 | financial statement analysis framework、信息来源层级、审计与 MD&A 的作用、IFRS/其他准则差异 |
+| 【考纲内但无核心公式】 | 本模块主要考 describe/identify，不要求背跨模块 ratio 公式 |
+| 【做题输出】 | 写清 purpose、source、limitation、下一步分析动作 |
 
 ---
 
@@ -228,24 +178,10 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Analyzing-Income-Statements]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Income Statement (利润表)
-├── 通过留存收益流入资产负债表 (flows into Balance Sheet via retained earnings)
-├── 通过非现金调整连接现金流量表 (links to Cash Flow via non-cash adjustments)
-└── 驱动比率分析 (drives Ratio Analysis)
-    ├── 盈利能力 (profitability)
-    ├── 营运能力 (activity)
-    └── 偿债能力 (solvency)
-        └── 建模 (Modeling)
-            └── 预测假设 (Forecast assumptions)
-```
-
----
+- **本科目起点**：M01 不是计算模块，而是所有后续模块的证据选择规则。后面每次做 ratio、CFO、税项或质量判断，都要先问数据来源和可比性。
+- **连接 M02/M03/M04**：三张报表分析使用 M01 的 framework 组织输入：目的 -> 报表/附注 -> 处理口径 -> 解释结论。
+- **连接 M10 Financial Reporting Quality**：审计意见、MD&A、notes 和 non-GAAP presentation 都是质量判断证据，不可只看数字。
+- **连接 M11/M12**：比率分析和建模假设必须注明 source、period、standard、limitation；否则预测看似精确但证据弱。
 
 
 ## 9. 复习与刷题提示

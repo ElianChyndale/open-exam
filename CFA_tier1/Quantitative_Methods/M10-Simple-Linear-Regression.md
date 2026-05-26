@@ -84,14 +84,23 @@ tags:
 ```text
 10. Simple Linear Regression
 ├─ 10.1 简单线性回归模型（Simple Linear Regression Model）
-│  ├─ 10.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.1.1 Model：`Y_i=b0+b1X_i+e_i`，Y 是 dependent，X 是 independent
+│  ├─ 10.1.2 Slope：`b1=Cov(X,Y)/Var(X)`，解释为 X 增加 1 单位时 Y 的平均变化
+│  ├─ 10.1.3 Intercept：`b0=ȳ-b1x̄`，X=0 时的预测值，未必有经济意义
+│  └─ 10.1.4 OLS objective：最小化 `SSE=Σ(Y_i-Ŷ_i)²`
 ├─ 10.2 回归诊断（Regression Diagnostics）
-│  ├─ 10.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.2.1 Linearity：残差图若有曲线模式，线性设定不合适
+│  ├─ 10.2.2 Homoskedasticity：残差方差恒定；喇叭形提示 heteroskedasticity
+│  ├─ 10.2.3 Independence：时间序列残差若有趋势/交替模式，可能 serial correlation
+│  ├─ 10.2.4 Normal errors：小样本推断需要，影响 t/F 检验可靠性
+│  └─ 10.2.5 诊断后果：标准误错会让显著性结论失真
 ├─ 10.3 拟合与推断（Fit and Inference）
-│  ├─ 10.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.3.1 ANOVA：`SST=SSR+SSE`，`R²=SSR/SST=1-SSE/SST`
+│  ├─ 10.3.2 SEE：`√[SSE/(n-2)]`，衡量预测误差尺度
+│  ├─ 10.3.3 Slope t-test：`t=(b1-β1,0)/SE(b1)`，df=`n-2`
+│  ├─ 10.3.4 F-test：`F=MSR/MSE`，简单回归中 `F=t²`
+│  ├─ 10.3.5 Prediction：`Ŷ=b0+b1X`，prediction interval 宽于 confidence interval
+│  └─ 10.3.6 Functional form：linear-log / log-linear 改变系数解释口径
 ```
 
 ## 4. 知识点详解
@@ -172,6 +181,23 @@ tags:
 | `SEE = √[SSE/(n-2)]` | 估计标准误 | 回归预测精度 |
 | `t = (b₁-β₁,₀)/SE(b₁)` | 斜率 t 检验 | 检验 X 对 Y 的线性影响 |
 | `F = MSR/MSE` | ANOVA F 统计量 | 检验整体模型显著性 |
+| `SST = SSR + SSE` | ANOVA 分解 | 总变异=解释变异+残差变异 |
+| `R² = 1 - SSE/SST` | 拟合优度 | 样本内解释比例 |
+| `Ŷ = b₀ + b₁X` | 点预测 | 给定 X 预测 Y |
+| `b₁ = r(s_Y/s_X)` | 斜率与相关系数 | 简单回归中连接 correlation |
+| `R² = r²` | 简单回归关系 | 仅限一个解释变量 |
+
+### 5.2 回归解题框架
+
+| 题干任务 | 动作 | 对应节点 | 防错点 |
+|---|---|---|---|
+| 解释 slope | 写 X 每变 1 单位，Y 的条件均值变 `b1` | `10.1.2` | 不要说成 X 导致 Y，除非研究设计支持因果。 |
+| 计算系数 | 用 `b1=Cov/Var`，`b0=ȳ-b1x̄` | `10.1` | intercept 可能没有经济意义。 |
+| 解读 ANOVA 表 | 算 `R²`、`SEE`、`F` | `10.3.1-10.3.4` | df 回归=1，残差=`n-2`。 |
+| 检验 slope | 用 t-test | `10.3.3` | 与 correlation t-test 等价。 |
+| 整体模型显著性 | 用 F-test | `10.3.4` | 简单回归中 `F=t²` 可校验。 |
+| 点预测/区间 | 先算 `Ŷ`，再判断 prediction interval | `10.3.5` | prediction interval 比 mean CI 更宽。 |
+| 残差图 | 找曲线、喇叭形、序列模式 | `10.2` | 假设违反会污染标准误和检验。 |
 
 ## 6. 常见考点与解题思路
 
@@ -212,8 +238,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M11-Introduction-to-Big-Data-Techniques]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `10.1` slope/covariance | [[M03-Statistical-Measures-of-Asset-Returns]]、[[M05-Portfolio-Mathematics]] | Cov、Var、Correlation 进入预测模型 | 回归 slope 有单位，correlation 无单位。 |
+| `10.3` t/F 检验 | [[M08-Hypothesis-Testing]]、M09 | slope 和整体模型显著性 | 统计显著不等于经济显著。 |
+| `10.3` R²/SEE | Equity research、Portfolio analytics | 衡量样本内解释力和预测误差 | 高 R² 不说明因果或样本外稳定。 |
+| `10.2` 诊断 | Big Data / ML | 模型验证、残差检查、overfitting 风险 | 假设违反会使 p-value 不可靠。 |
+| `10.3.5` Prediction | Investment forecasting | 预测收益、价格、风险指标 | 样本外预测要比样本内拟合更谨慎。 |
 
 ### Legacy 关联补充
 

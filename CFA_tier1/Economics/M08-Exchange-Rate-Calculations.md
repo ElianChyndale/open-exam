@@ -70,20 +70,23 @@ tags:
 ```text
 8. Exchange Rate Calculations
 ├─ 8.1 汇率报价基础（Exchange Rate Quote Basics）
-│  ├─ 8.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.1.1 `A/B` 表示 1 单位 A 兑换 B；A 是 base currency，B 是 price currency
+│  ├─ 8.1.2 A/B 上升表示 A 升值、B 贬值；direct/indirect quote 先转成同一视角
+│  └─ 8.1.3 倒数报价：`B/A = 1/(A/B)`；bid/ask 倒置必须换边
 ├─ 8.2 交叉汇率（Cross Rate Calculation）
-│  ├─ 8.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.2.1 基本链：`A/C = (A/B) x (B/C)`，中间货币必须约掉
+│  └─ 8.2.2 Bid/ask：目标 bid 用你卖出目标 base 的不利价格链，ask 用买入目标 base 的不利价格链
 ├─ 8.3 远期汇率（Forward Exchange Rate）
-│  ├─ 8.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.3.1 Forward points = `F - S`；points 的小数位取决于货币对报价习惯
+│  ├─ 8.3.2 Forward premium/discount = `(F-S)/S`，按题目期限年化
+│  └─ 8.3.3 Premium 是 forward quote 相对 spot 的定价关系，不是未来 spot 预测
 ├─ 8.4 抛补利率平价（Covered Interest Parity, CIP）
-│  ├─ 8.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.4.1 Direct quote 下 `F = S x (1+i_d)/(1+i_f)`
+│  ├─ 8.4.2 高利率货币通常远期贴水；低利率货币通常远期升水
+│  └─ 8.4.3 市场 forward 偏离 CIP 时，借低收益路径、投资高收益路径并用 forward 锁汇
 ├─ 8.5 无抛补利率平价（Uncovered Interest Parity, UIP）
-│  ├─ 8.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.5.1 UIP 用预期未来 spot 替代 forward，暴露于汇率风险
+│  └─ 8.5.2 Carry trade 不是无风险套利，因为没有 forward 锁定换回汇率
 ```
 
 ## 4. 知识点详解
@@ -217,14 +220,13 @@ UIP假设投资者不通过远期对冲，而是根据预期的未来即期汇�
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M07-Capital-Flows-and-the-FX-Market]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 汇率制度对计算背景的影响见 **[[M07-Capital-Flows-and-FX-Markets]]**
-- 利率差异对远期汇率的影响与 **[[M04-Monetary-Policy]]** 中的利率政策相连
-- 贸易和资本流动影响即期和远期汇率，见 **[[M06-International-Trade]]** 和 **[[M05-Introduction-to-Geopolitics]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M07 -> M08` | quote convention、spot/forward market context | 先定报价方向，再计算升贬值和 cross rate。 |
+| `M04 -> M08` | domestic/foreign rates | 用 CIP 计算 forward rate 或检验 covered arbitrage。 |
+| `M06/M05 -> M08` | trade shock、capital flow、safe-haven demand | 解释 spot move 背后的经济原因，但不替代报价计算。 |
+| `M08 -> Derivatives` | FX forwards、forward points、hedging | 连接外汇远期定价和风险管理。 |
+| `M08 -> Quant/PM` | percentage currency return、base currency conversion | 计算国际投资收益和货币贡献。 |
 
 
 ## 9. 复习与刷题提示

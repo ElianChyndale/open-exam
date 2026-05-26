@@ -77,20 +77,20 @@ tags:
 ```text
 6. Pricing and Valuation of Futures Contracts
 ├─ 6.1 Introduction
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Futures 是 exchange-traded forward commitment，有 clearinghouse、margin、daily settlement
+│  └─ 6.1.2 Price vs value：futures price 是合约价格，daily MTM 使合约价值每日归零附近
 ├─ 6.2 Pricing of Futures Contracts at Inception
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 若利率确定且无违约，futures price 通常接近 forward price
+│  └─ 6.2.2 仍以 cost-of-carry 为基础：spot、financing、income/yield、storage/convenience
 ├─ 6.3 MTM Valuation: Forwards versus Futures
-│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.3.1 Futures gains/losses are realized daily；forwards gains/losses accumulate until settlement
+│  └─ 6.3.2 Margin calls create cash-flow timing risk and reinvestment effects
 ├─ 6.4 Interest Rate Futures versus Forward Contracts
-│  ├─ 6.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.4.1 Interest rate futures 对利率路径和 daily settlement 更敏感
+│  └─ 6.4.2 Convexity/correlation intuition：利率与标的相关性会造成 futures-forward difference
 ├─ 6.5 Forward and Futures Price Differences
-│  ├─ 6.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.5.1 标的价格与利率正相关时，long futures 盈利常在高利率时收到，futures price 可高于 forward price
+│  └─ 6.5.2 标的价格与利率负相关时，futures price 可低于 forward price
 ```
 
 ## 4. 知识点详解
@@ -121,6 +121,16 @@ tags:
 - **对应动作**：识别概念并应用到题干。
 
 ## 5. 关键公式与计算框架
+
+### 5.0 本模块公式选择
+
+| 知识树节点 | 公式/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 6.2.1 | Futures price ≈ fair forward price | 利率确定、无违约、现金流时点影响可忽略 | Level I 多先用 forward/carry 直觉，再解释 daily settlement 差异。 |
+| 6.3.1 | Daily MTM gain/loss = today's futures price change x contract multiplier | 期货每日结算题 | 盈亏每日实现，合约价值被结算回接近零。 |
+| 6.3.2 | Margin balance = initial margin + cumulative gains - cumulative losses | 保证金题 | margin 是履约保障，不是 option premium。 |
+| 6.5.1 | Positive correlation with rates -> futures price may exceed forward price | forward vs futures 概念题 | 盈利现金流在高利率时收到，reinvestment 更有利。 |
+| 6.5.2 | Negative correlation with rates -> futures price may be below forward price | forward vs futures 概念题 | 盈利现金流在低利率时收到，reinvestment 较不利。 |
 
 ### 5.1 M04-M06 Forward Commitments
 
@@ -206,24 +216,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
-└── Contingent claims -> option payoff asymmetry (中文)
-Uses and Risks
-├── issuer hedge -> financing/operating exposure control (中文)
-└── investor exposure -> capital efficiency + leverage discipline (中文)
-Pricing Spine
-├── no-arbitrage -> replication -> cost of carry (中文)
-├── forwards/futures -> forward value and daily settlement (中文)
-├── swaps -> bond pair / FRA strip intuition (中文)
-└── options -> parity -> binomial valuation (中文)
-```
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M05 -> M06` | forward price/value baseline | 比较 futures 是否因 daily settlement 偏离 forward。 |
+| `M06 -> M07` | futures/forward cash-flow timing | 理解 swap 是多期 forward-like cash flows。 |
+| `M01 -> M06` | clearinghouse、margin、exchange trading | 解释 futures 的信用风险和现金流机制。 |
+| `FI -> M06` | interest rate futures、rate correlation | 判断利率期货与远期价格差异。 |
+| `PM/Risk -> M06` | margin and liquidity needs | 期货对冲会产生现金流和追加保证金风险。 |
 
 ---
 

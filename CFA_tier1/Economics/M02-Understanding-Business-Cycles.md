@@ -74,20 +74,22 @@ tags:
 ```text
 2. Understanding Business Cycles
 ├─ 2.1 经济周期阶段（Phases of the Business Cycle）
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 四阶段：expansion -> peak -> contraction/recession -> trough
+│  ├─ 2.1.2 产出缺口：`(Actual GDP - Potential GDP)/Potential GDP`；正缺口偏过热，负缺口偏衰退
+│  └─ 2.1.3 判断重点：阶段不是日期标签，而是产出、就业、利润、信贷的组合状态
 ├─ 2.2 各经济变量的周期行为（Cyclical Behavior of Key Variables）
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 领先变量：new orders、housing starts、equity prices、initial claims、yield spread
+│  ├─ 2.2.2 同步变量：industrial production、payroll employment、personal income、sales
+│  └─ 2.2.3 滞后变量：unemployment duration、unit labor cost、prime rate、commercial loans
 ├─ 2.3 经济指标分类（Classes of Economic Indicators）
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 leading 用来预测拐点；coincident 用来确认当前；lagging 用来确认已经发生
+│  └─ 2.3.2 考试陷阱：就业数据常被误当领先指标，失业率多为滞后
 ├─ 2.4 扩散指数与综合指数（Diffusion and Composite Indexes）
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 diffusion index 看上升指标占比，解决“广度”问题
+│  └─ 2.4.2 composite index 合成多个指标，降低单项数据噪声
 ├─ 2.5 信贷渠道与经济周期（Credit Channel and Business Cycles）
-│  ├─ 2.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.5.1 金融加速器：资产负债表恶化 -> 信贷收缩 -> 投资下降 -> 产出进一步下行
+│  └─ 2.5.2 政策接口：信贷紧缩会削弱货币传导，扩大财政稳定器需求
 ```
 
 ## 4. 知识点详解
@@ -148,6 +150,13 @@ tags:
 **奥肯定律（Okun's Law）**（近似关系）：`ΔUnemployment ≈ −0.5 × (ΔReal GDP − Potential Growth)`
 - 场景：GDP增速超出潜在增长率时，失业率下降；反之失业率上升。注意不同国家系数不同，CFA考试中理解方向性关系即可。
 
+| 决策框架 | 输入 | 输出 |
+|---|---|---|
+| 周期阶段判断 | GDP growth、employment、industrial production、sales、profits | expansion / peak / contraction / trough |
+| 指标时序判断 | 指标名称 + 相对经济活动的提前/同步/滞后 | leading / coincident / lagging |
+| 信贷周期判断 | credit spreads、lending standards、loan growth、default risk | 信贷放大繁荣或放大衰退 |
+| 政策接口 | output gap、inflation pressure、credit stress | 转入 fiscal/monetary policy 选择 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -187,13 +196,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-The-Firm-and-Market-Structures]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Fiscal-Policy]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 经济周期的政策应对涉及 **[[M03-Fiscal-Policy]]** 和 **[[M04-Monetary-Policy]]**
-- 周期不同阶段对汇率和资本流动的影响见 **[[M07-Capital-Flows-and-FX-Markets]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M01 -> M02` | pricing power、profit cyclicality | 判断企业利润和行业表现为何随周期变化。 |
+| `M02 -> M03 Fiscal Policy` | output gap、unemployment、automatic stabilizer trigger | 判断扩张/紧缩财政和乘数效果。 |
+| `M02 -> M04 Monetary Policy` | inflation pressure、credit conditions、housing sensitivity | 判断央行宽松/紧缩及传导是否有效。 |
+| `M02 -> M07 FX` | growth differential、risk appetite、capital flows | 周期强弱影响资本流和货币压力。 |
+| `M02 -> PM/FI/Equity` | leading indicators、yield curve、credit cycle | 连接资产配置、利率预期和周期股/防御股判断。 |
 
 
 ## 9. 复习与刷题提示

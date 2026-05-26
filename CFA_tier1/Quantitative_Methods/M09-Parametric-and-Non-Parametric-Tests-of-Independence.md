@@ -70,11 +70,16 @@ tags:
 ```text
 9. Parametric and Non-Parametric Tests of Independence
 ├─ 9.1 相关系数检验（Test of Correlation）
-│  ├─ 9.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.1.1 Pearson parametric test：检验 `H0: ρ=0`，要求双变量正态，关注线性关系
+│  ├─ 9.1.2 Test statistic：`t=r√[(n-2)/(1-r²)]`，df=`n-2`
+│  ├─ 9.1.3 Spearman nonparametric test：基于 rank，适合 ordinal、异常值或非正态数据
+│  └─ 9.1.4 判断陷阱：显著相关不等于因果，也不等于经济意义重大
 ├─ 9.2 列联表独立性检验（Contingency Table Independence Test）
-│  ├─ 9.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.2.1 适用对象：两个 categorical variables 是否独立
+│  ├─ 9.2.2 Expected frequency：`E=(row total × column total)/n`
+│  ├─ 9.2.3 Chi-square statistic：`χ²=Σ[(O-E)²/E]`，右尾检验
+│  ├─ 9.2.4 df：`(r-1)(c-1)`
+│  └─ 9.2.5 限制：期望频数过低会使 χ² 近似不可靠；结果不说明方向和强度
 ```
 
 ## 4. 知识点详解
@@ -140,6 +145,16 @@ tags:
 | `df = (r-1)(c-1)` | 卡方检验自由度 | 列联表自由度计算 |
 | `df = n-2` | 相关系数 t 检验自由度 | Pearson 相关性检验 |
 
+### 5.2 检验选择框架
+
+| 数据/问题 | 使用检验 | 对应节点 | 结论写法 |
+|---|---|---|---|
+| 两个连续变量、近似正态、问线性相关 | Pearson correlation t-test | `9.1.1-9.1.2` | reject/fail to reject `H0:ρ=0`。 |
+| 有序数据、异常值明显或非正态 | Spearman rank correlation | `9.1.3` | 说明单调关系，不要求线性。 |
+| 两个分类变量 | χ² independence test | `9.2` | 拒绝 H0 只能说明不独立。 |
+| 列联表有小期望频数 | 谨慎解释 χ² | `9.2.5` | 近似可能不可靠。 |
+| 相关性显著 | 回到投资含义 | `9.1.4` | 不自动推出因果或可交易策略。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -179,8 +194,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M08-Hypothesis-Testing]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M10-Simple-Linear-Regression]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `9.1` Pearson t-test | [[M10-Simple-Linear-Regression]] | 简单回归 slope t-test 与 correlation t-test 等价，`R²=r²` | df 是 `n-2`，不是 `n-1`。 |
+| `9.1` Spearman | [[M08-Hypothesis-Testing]]、Big Data | 非参数 rank 检验处理 ordinal/异常值数据 | Spearman 检测单调关系，不一定是线性。 |
+| `9.2` χ² independence | Ethics survey、Economics categories、Risk classification | 类别变量是否独立 | 不说明关系方向或强度。 |
+| `9.1-9.2` 独立性证据 | Portfolio Mathematics、Research | 相关性是否可作为组合或模型输入 | 统计显著还要检验经济意义和样本稳定性。 |
 
 ### Legacy 关联补充
 

@@ -89,11 +89,15 @@ tags:
 ```text
 4. Overview of Equity Securities
 ├─ 4.1 权益设计 (Claim design)
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Common shares：剩余索取权、投票权、股息不固定、清算顺位低但上行不封顶。
+│  ├─ 4.1.2 Preferred shares：股息和清算优先，通常投票权有限，兼具债券式收益和权益式次级风险。
+│  ├─ 4.1.3 条款识别：cumulative 保护漏付股息，participating 分享额外收益，callable 有利发行人，putable 有利投资者。
+│  └─ 4.1.4 风险判断：claim priority 越低，required return 通常越高。
 ├─ 4.2 获取方式与地域 (Access and geography)
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Public vs private equity：流动性、披露、治理、估值不确定性和 due diligence 不同。
+│  ├─ 4.2.2 Depositary receipts：便利跨境交易，但不消除汇率、结算、国家和治理风险。
+│  ├─ 4.2.3 Foreign equity exposure：看 trading currency、underlying issuer、local market rules 和 ownership limits。
+│  └─ 4.2.4 考试判断：证券形式改变交易与权利安排，不一定改变底层企业经济风险。
 ```
 
 ## 4. 知识点详解
@@ -111,14 +115,24 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 核心内容
+### 5.1 权益证券条款判断表
 
-本模块概念为主，无重点公式。
+| 条款/类型 | 核心含义 | 对应节点 | 考试判断 |
+|---|---|---|---|
+| Common shares | Residual claim + voting rights | 4.1.1 | 清算顺位低，上行参与最大。 |
+| Preferred shares | Dividend/liquidation preference | 4.1.2 | 不等于 bond；仍可能承担权益风险。 |
+| Preferred dividend | `Par value x dividend rate` | 4.1.2 | 固定股息不等于法定利息。 |
+| Cumulative preferred | 漏付股息累积，普通股分红前需补足 | 4.1.3 | 更保护 preferred holders。 |
+| Participating preferred | 除固定股息外分享额外收益 | 4.1.3 | 上行参与强于普通 preferred。 |
+| Callable preferred | 发行人可赎回 | 4.1.3 | 利率下降时对投资者不利。 |
+| Putable preferred | 投资者可要求回售 | 4.1.3 | 对投资者更有利。 |
+| DR ratio | `1 DR = N underlying foreign shares` | 4.2.2 | 影响每份 DR 对底层股份的经济暴露。 |
 
-| 概念 | 要点 |
-|------|------|
-| 优先股股息率 (Preferred Dividend Rate) | `Par Value × Dividend Rate` |
-| 存托凭证比率 (DR Ratio) | `1 DR = N underlying foreign shares` |
+### 5.2 选择框架
+
+1. 先识别 claim：common / preferred / private equity / depositary receipt。
+2. 再看权利：voting、dividend priority、liquidation priority、call/put/cumulative/participating。
+3. 最后判断风险来源：流动性、披露、治理、汇率、国家风险和估值不确定性。
 
 ## 6. 常见考点与解题思路
 
@@ -148,14 +162,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Market-Efficiency]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Company-Analysis-Past-and-Present]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **权益类型影响估值模型选择** → [[M08-Equity-Valuation-Concepts]]
-- **公司融资决策涉及权益发行** → [[M05-Company-Analysis-Past-and-Present]]
-- **存托凭证涉及跨境投资与市场结构** → [[M01-Market-Organization-and-Structure]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Common/preferred claim | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] | claim priority 和 dividend pattern 决定估值模型。 | preferred 不要直接用 common equity 逻辑。 |
+| Voting/control rights | Corporate Issuers | 所有权与控制权影响治理冲突。 | dual-class 或 limited voting 会改变代理风险。 |
+| Public/private equity | [[M05-Company-Analysis-Past-and-Present]] | 披露质量、流动性和治理影响公司分析证据强度。 | private comparable 要打折看待。 |
+| Depositary receipts | Economics / FX | 跨境证券暴露于汇率、国家和结算规则。 | 本地交易便利不等于本地经济风险。 |
 
 
 ## 9. 复习与刷题提示

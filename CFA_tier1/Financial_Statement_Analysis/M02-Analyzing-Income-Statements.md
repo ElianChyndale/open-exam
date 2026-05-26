@@ -82,20 +82,25 @@ tags:
 ```text
 2. Analyzing Income Statements
 ├─ 2.1 收入确认 (Revenue Recognition)
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 五步模型：contract -> performance obligations -> transaction price -> allocation -> recognize when control transfers
+│  ├─ 2.1.2 特殊场景：long-term contracts、installment sales、bundled sales 改变确认时点
+│  └─ 2.1.3 考试判断：提前确认会提高当期 revenue、gross margin、assets，并降低未来可持续性
 ├─ 2.2 费用确认 (Expense Recognition)
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 Matching：直接费用与相关收入配比，期间费用在发生期确认
+│  ├─ 2.2.2 Capitalize vs expense：资本化提高当期 NI/Assets，后期通过 depreciation/amortization 压低利润
+│  └─ 2.2.3 考试判断：资本化不是创造价值，只是移动费用时点并改变 ROA/asset turnover
 ├─ 2.3 非常项目与政策变更 (Unusual Items and Policy Changes)
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 Discontinued operations：与 continuing operations 分开列示，分析持续盈利时通常剔除
+│  ├─ 2.3.2 Unusual / infrequent items：单独识别但不必然不可持续，要看是否反复发生
+│  └─ 2.3.3 Accounting policy changes：通常追溯调整以保持可比性；估计变更通常未来适用
 ├─ 2.4 每股收益 (EPS)
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 Basic EPS = (NI - preferred dividends) / weighted average shares
+│  ├─ 2.4.2 Diluted EPS = adjusted income available to common / adjusted weighted shares
+│  └─ 2.4.3 考试判断：convertibles、options、warrants 先测 antidilutive，反稀释证券排除
 ├─ 2.5 同比例利润表与利润表比率 (Common-Size Income Statement and Income-Statement Ratios)
-│  ├─ 2.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.5.1 Common-size item = income statement item / revenue
+│  ├─ 2.5.2 Gross margin = gross profit / revenue；operating margin = operating income / revenue
+│  └─ 2.5.3 判断：margin trend 要同时解释 revenue policy、COGS、费用资本化和 one-off items
 ```
 
 ## 4. 知识点详解
@@ -154,6 +159,9 @@ tags:
 | Gross Margin | `Gross Profit / Revenue` | 毛利率，核心盈利指标 |
 | Operating Margin | `Operating Income / Revenue` | 营业利润率，反映经营效率 |
 | Net Margin | `Net Income / Revenue` | 净利润率，最终的盈利水平 |
+| Common-Size IS Item | `Income Statement Item / Revenue` | 用于跨公司和跨期间利润结构比较 |
+| Gross Profit | `Revenue - COGS` | 毛利额，连接存货方法和毛利率 |
+| Operating Income | `Gross Profit - Operating Expenses` | 经营利润，不含融资和税项影响 |
 
 ## 6. 常见考点与解题思路
 
@@ -185,14 +193,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Introduction-to-Financial-Statement-Analysis]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Analyzing-Balance-Sheets]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M04-Cash-Flow-Statements|现金流量表]]：净利润是间接法计算 CFO 的起点，非现金费用(如折旧摊销)在利润表中确认
-- [[M09-Financial-Reporting-Quality|财务报告质量]]：收入确认激进程度和费用资本化程度是盈利质量(earnings quality)的核心判断依据
-- [[M10-Financial-Analysis-Techniques|财务分析技术]]：利润表中的各项数据是计算盈利比率(profitability ratios)的来源
+- **连接 M01**：先确认收入/费用信息来自 statements、notes 还是 MD&A；不同披露来源可靠性不同。
+- **连接 M03**：NI 经 retained earnings 进入 equity；capitalization 同时提高资产和权益。
+- **连接 M04/M05**：NI 是 indirect CFO 起点；折旧摊销和股权激励等 noncash expenses 需要加回。
+- **连接 M06/M07**：COGS 受 inventory method 影响；depreciation/amortization 受长期资产政策影响。
+- **连接 M10/M11**：收入确认激进程度、费用资本化、反复出现的“non-recurring”项目都会改变 profitability ratios 和 earnings quality。
 
 
 ## 9. 复习与刷题提示

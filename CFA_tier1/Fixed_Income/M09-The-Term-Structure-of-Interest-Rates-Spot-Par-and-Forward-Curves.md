@@ -76,11 +76,13 @@ tags:
 ```text
 9. The Term Structure of Interest Rates: Spot, Par, and Forward Curves
 ├─ 9.1 曲线词典 (Curve Dictionary)
-│  ├─ 9.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.1.1 Spot curve：每个 maturity 的零息折现率；P = Σ CF_t/(1+s_t)^t
+│  ├─ 9.1.2 Par curve：使不同期限债券按 par 发行的 coupon rate；par rate = (1-DF_N)/ΣDF_t
+│  └─ 9.1.3 Forward curve：由今天 spot curve 隐含的未来区间利率，不是确定预测
 ├─ 9.2 曲线计算 (Curve Calculations)
-│  ├─ 9.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.2.1 Discount factor：DF_t = 1/(1+s_t)^t；先转 DF 再算 par rate 最稳
+│  ├─ 9.2.2 Forward from spot：(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)
+│  └─ 9.2.3 选曲线：单笔 CF 用 spot，平价票息用 par，未来借贷锁价用 forward
 ```
 
 ## 4. 知识点详解
@@ -141,6 +143,13 @@ tags:
 | ❌ 忽略：曲线间的关系依赖于无套利假设：如果市场存在摩擦或套利限制，实际关系可能偏离理论值。 | ✅ 曲线间的关系依赖于无套利假设：如果市场存在摩擦或套利限制，实际关系可能偏离理论值。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
+
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Spot pricing | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] | spot rates、discount factors | 每笔现金流用匹配期限折现 |
+| Spread models | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | benchmark/swap/spot curve | 计算或解释 G-spread/I-spread/Z-spread |
+| Curve risk | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | key maturity rates | 非平行移动和 KRD 的输入 |
+| Portfolio horizon | [[M10-Interest-Rate-Risk-and-Return]] | forward/reinvestment rate intuition | 解释未来收益率变化与 realized return |
 
 - **上游模块**：[[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M10-Interest-Rate-Risk-and-Return]]。本模块输出会被后续更复杂题型调用。

@@ -78,20 +78,26 @@ tags:
 ```text
 5. Ethics Application
 ├─ 5.1 Introduction
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Case triage：抽取 facts、actors、clients/employer/market/profession、time order、disclosures、approvals。
+│  └─ 5.1.2 先判断 required conduct 是否被违反，再判断 recommended procedure 是否更优。
 ├─ 5.2 Professionalism
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 Law/standards：选择更严格标准；发现违法或不道德行为要 dissociate。
+│  ├─ 5.2.2 Independence/objectivity：礼物、压力、issuer paid research 和 compensation 需要拒绝/披露/管理。
+│  └─ 5.2.3 Misrepresentation/misconduct/competence：不得夸大能力、业绩、模型或身份。
 ├─ 5.3 Integrity of Capital Markets
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 MNPI：material AND nonpublic -> no trade/recommend/disclose；mosaic theory 不能混入 MNPI。
+│  └─ 5.3.2 Manipulation：制造虚假价格/成交量或散布误导信息均违规。
 ├─ 5.4 Duties to Clients
-│  ├─ 5.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.4.1 Loyalty/prudence/care：客户利益优先，按客户目标和限制行动。
+│  ├─ 5.4.2 Fair dealing/suitability：机会公平、推荐适合客户并放在 portfolio context。
+│  └─ 5.4.3 Performance/confidentiality：业绩不得误导；保密除非授权、法律要求或违法调查。
 ├─ 5.5 Duties to Employers
-│  ├─ 5.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.5.1 Loyalty：离职准备可以有限进行，但不能挖客户、带走记录或使用雇主财产。
+│  └─ 5.5.2 Additional compensation/supervision：额外报酬需同意；主管要建立并执行合理程序。
+├─ 5.6 Analysis, Conflicts, and CFA Responsibilities
+│  ├─ 5.6.1 Reasonable basis/communication/records：推荐要有依据，披露假设和风险，保留记录。
+│  ├─ 5.6.2 Conflicts：识别、显著披露、必要时回避；客户交易优先，referral fees 必须披露。
+│  └─ 5.6.3 CFA conduct/designation：不得泄题作弊，不得夸大 CFA 身份和通过考试的含义。
 ```
 
 ## 4. 知识点详解
@@ -125,13 +131,14 @@ tags:
 
 | 指标 | 公式/判断链 | 知识树节点 | 考试说明 |
 |------|---------------|------------|----------|
-| Ethics | 无核心数值公式 | `M01-M09` | 本科重在判断框架 |
-| Priority Rule | `client > market integrity > employer/self convenience` | `M05-M07` | 先守客户与市场 |
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `M03` | law 与 Standards 冲突时常考 |
-| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `M04` | 信息题第一闸 |
-| Suitability Gate | `client facts + portfolio context + risk/return fit` | `M05` | 不是单产品热度判断 |
-| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | `M07` | disclosure 不是橡皮擦 |
-| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | `M08` | 结构化记忆链 |
+| Case triage | `facts -> actors -> affected parties -> candidate Standards -> violation? -> best action` | `5.1` | 综合案例第一步 |
+| Stricter Standard Rule | `required conduct = most strict(applicable law, regulation, CFA Standards)` | `5.2.1` | law 与 Standards 冲突时常考 |
+| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `5.3.1` | 信息题第一闸 |
+| Suitability Gate | `client objectives/constraints + portfolio context + product risk/return fit` | `5.4.2` | 不是单产品热度判断 |
+| Confidentiality Gate | `keep confidential unless authorization/legal requirement/illegal activity inquiry` | `5.4.3` | 例外条件要精准 |
+| Employer Exit Gate | `limited preparation OK; client solicitation/records/property misuse not OK` | `5.5.1` | 跳槽题 |
+| Conflict Gate | `identify -> disclose prominently -> mitigate/avoid if disclosure insufficient` | `5.6.2` | disclosure 不是橡皮擦 |
+| CFA Designation Gate | `accurate factual use only; no superior performance implication` | `5.6.3` | VII(B) 高频 |
 
 ### 5.1 考纲范围标记
 
@@ -170,23 +177,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Introduction-to-the-Global-Investment-Performance-Standards]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-道德准则 (Code of Ethics)
-├── 准则 I-VII (Standards I-VII)
-│   ├── 对客户的义务 (Duties to Clients)
-│   ├── 对雇主的义务 (Duties to Employers)
-│   ├── 资本市场诚信 (Capital Market Integrity)
-│   └── 冲突 / 沟通 / 记录 (Conflicts / Communication / Records)
-│       └── 全球投资业绩标准 (GIPS)
-│           └── 业绩陈述 (Performance Presentation)
-└── 道德应用 (Ethics Application) — 综合情境分析与决策框架
-    └── 涵盖上述全部内容的应用与案例
-```
+- **整合 M01-M04**：M01 提供 ethics/trust 底座，M02 提供 Standards 索引，M03 提供 guidance，M04 处理 GIPS/业绩展示。
+- **到全科目行为约束**：研究报告、交易执行、客户推荐、模型假设、业绩宣传、另类产品 suitability 都可被 Ethics 应用题包装。
+- **到 PM/Wealth**：client objectives/constraints、fair dealing、priority of transactions、confidentiality 是常见综合场景。
+- **到 Alts/Derivatives/FI/Equity**：复杂产品、杠杆、MNPI、market manipulation、conflict disclosure 和 reasonable basis 是跨科高频接口。
+- **输出原则**：最佳答案通常是停止违规、保护客户/市场、披露或隔离冲突、升级 compliance，并保留记录。
 
 ---
 
