@@ -93,6 +93,34 @@ tags:
 │  └─ 7.2.4 Horizon discipline：预测期应匹配竞争优势持续时间，不能为了估值结果随意拉长。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Normalized historical base"] --> B{"Forecast approach"}
+  B -->|Top-down| C["Macro -> industry -> market share -> revenue"]
+  B -->|Bottom-up| D["Units/customers/stores x price or ARPU"]
+  C --> E["Revenue forecast"]
+  D --> E
+  E --> F["Margin forecast"]
+  F --> G["Earnings and cash flow"]
+  G --> H["Working capital and capex"]
+  H --> I["Capital structure and financing need"]
+  I --> J["Valuation input"]
+```
+
+```mermaid
+flowchart LR
+  A["Growth assumption"] --> B["Retention ratio x ROE check"]
+  A --> C["Industry and competitive evidence"]
+  A --> D["Scenario: base / upside / downside"]
+  B --> E{"Supported?"}
+  C --> E
+  D --> E
+  E -->|Yes| F["Use with sensitivity"]
+  E -->|No| G["Revise growth, financing, or risk assumption"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 预测主干 (Forecast spine)

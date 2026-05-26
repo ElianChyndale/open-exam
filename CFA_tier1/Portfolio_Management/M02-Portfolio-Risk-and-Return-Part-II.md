@@ -116,6 +116,21 @@ tags:
 │  └─ 2.4.5 IR/TE：主动收益相对 benchmark，用 tracking error 衡量主动风险
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Risk in portfolio"] --> B{"Can diversify away?"}
+    B -->|yes| C["Unsystematic risk<br/>no expected return compensation"]
+    B -->|no| D["Systematic risk"]
+    D --> E["Beta<br/>Cov(Ri,Rm)/Var(Rm)"]
+    E --> F["CAPM required return<br/>Rf + beta x market risk premium"]
+    F --> G{"Expected return vs required"}
+    G -->|higher| H["Undervalued / positive alpha"]
+    G -->|lower| I["Overvalued / negative alpha"]
+    F --> J["Performance measures<br/>Sharpe / Treynor / Jensen / M2"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 资本资产定价模型 (Capital Asset Pricing Model, CAPM)

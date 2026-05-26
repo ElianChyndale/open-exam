@@ -83,6 +83,23 @@ tags:
 │  └─ 16.2.3 Recovery waterfall：secured/senior/subordinated、collateral、covenants 影响 issue rating
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Corporate creditworthiness"] --> B["Business risk"]
+  A --> C["Financial risk"]
+  A --> D["Issue analysis"]
+  B --> B1["Industry cyclicality / competition / regulation"]
+  B --> B2["Scale / diversification / cost structure"]
+  C --> C1["Coverage: EBIT or EBITDA / interest"]
+  C --> C2["Leverage: debt / EBITDA or debt / capital"]
+  C --> C3["Cash flow stability and liquidity"]
+  D --> D1["Secured vs unsecured"]
+  D --> D2["Senior vs subordinated"]
+  D --> D3["Covenants and recovery"]
+```
+
 ## 4. 知识点详解
 
 ### 16.1 政府发行人 (Government Issuers)

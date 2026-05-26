@@ -95,6 +95,23 @@ tags:
 │  └─ 7.4.2 Diversification 不能只看历史相关性；压力期相关性、流动性和监管变化会重定价。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Digital assets"] --> B["Technology layer"]
+  B --> B1["Distributed ledger<br/>shared record"]
+  B --> B2["Consensus<br/>validates updates"]
+  B --> B3["Smart contracts<br/>automated execution rules"]
+  A --> C["Asset forms"]
+  C --> C1["Cryptocurrency<br/>native medium/value transfer"]
+  C --> C2["Utility token<br/>network access/use"]
+  C --> C3["Security token<br/>investment claim"]
+  C --> C4["Stablecoin<br/>designed price stability"]
+  C --> C5["Tokenized asset<br/>digital representation of underlying asset"]
+  A --> D["Risks<br/>custody/private key, cyber, regulation, liquidity, volatility"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 区块链与共识机制【考试核心】

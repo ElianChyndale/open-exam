@@ -93,6 +93,20 @@ tags:
 │  └─ 4.5.2 与 CP/MTN 对比：期限、担保、投资者基础和监管待遇不同
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["Corporate funding need"] --> B["Short-term liquidity"]
+  A --> C["Long-term capital"]
+  B --> B1["CP: unsecured, backup line"]
+  B --> B2["Repo: collateralized funding"]
+  B --> B3["Deposit notes/CDs: bank credit"]
+  C --> C1["IG bonds: lower spread, broader access"]
+  C --> C2["HY bonds: higher spread, stronger credit focus"]
+  C --> C3["Bank loans: floating, senior/secured often"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 公司债券市场 (Corporate Bond Markets)

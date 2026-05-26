@@ -82,6 +82,22 @@ tags:
 │  └─ 2.3.2 后果：volatility/correlation 被低估，risk-adjusted return 被高估；unsmoothing 试图还原真实波动。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Alternative performance"] --> B["Capital path"]
+  B --> C["Committed capital"]
+  C --> D["Paid-in capital<br/>PIC = paid-in / committed"]
+  D --> E["Distributions<br/>DPI = distributed / paid-in"]
+  D --> F["Residual NAV<br/>RVPI = residual value / paid-in"]
+  E --> G["TVPI = DPI + RVPI"]
+  F --> G
+  A --> H["IRR<br/>sensitive to timing and interim marks"]
+  A --> I["J-curve<br/>early fees/costs, later exits"]
+  A --> J["Appraisal smoothing<br/>reported volatility/correlation may be understated"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】

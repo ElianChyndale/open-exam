@@ -102,6 +102,35 @@ tags:
 │  └─ 12.5.3 判断：terminal growth 长期不应显著超过经济增长，terminal margin 要符合竞争格局
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Sales forecast"] --> B["COGS and operating expenses"]
+  A --> C["Working capital items"]
+  A --> D["Capex and capacity needs"]
+  B --> E["Pro forma income statement"]
+  C --> F["Pro forma balance sheet"]
+  D --> F
+  E --> G["Retained earnings and tax"]
+  F --> H["Cash flow and financing need"]
+  H --> I{"Plug"}
+  I -->|Assets > liabilities + equity| J["External financing need"]
+  I -->|Assets < liabilities + equity| K["Cash surplus or debt reduction"]
+```
+
+```mermaid
+flowchart LR
+  A["Forecast assumption"] --> B["Historical base rate"]
+  A --> C["Industry and Porter evidence"]
+  A --> D["Inflation or deflation pass-through"]
+  A --> E["Bias check: optimism, herding, anchoring"]
+  B --> F["Scenario and sensitivity test"]
+  C --> F
+  D --> F
+  E --> F
+```
+
 ## 4. 知识点详解
 
 ### 12.1 基于销售的 Pro Forma 模型 (Sales-Based Pro Forma Model)

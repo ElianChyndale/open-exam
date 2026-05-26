@@ -88,6 +88,22 @@ tags:
 │  └─ 4.3.4 Posterior：`P(B_j|A)=P(A|B_j)P(B_j)/P(A)`，更新后概率
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Investment uncertainty"] --> B["列出互斥状态"]
+    B --> C["给每条分支概率"]
+    C --> D["路径概率 = branch probabilities 相乘"]
+    D --> E["Terminal payoff / return"]
+    E --> F["从叶节点回推 EV"]
+    F --> G["比较 EV + risk / shortfall"]
+    A --> H["Bayes update"]
+    H --> I["Prior x likelihood"]
+    I --> J["除以 total probability"]
+    J --> K["Posterior"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 期望值/方差/标准差（Expected Value / Variance / Standard Deviation）

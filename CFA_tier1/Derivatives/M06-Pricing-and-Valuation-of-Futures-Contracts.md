@@ -93,6 +93,20 @@ tags:
 │  └─ 6.5.2 标的价格与利率负相关时，futures price 可低于 forward price
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Futures contract"] --> B["Daily mark to market"]
+  B --> C["Gain/loss realized each day"]
+  C --> D{"Margin account below maintenance?"}
+  D -->|Yes| E["Margin call<br/>restore required margin"]
+  D -->|No| F["Position continues"]
+  A --> G["Price relation to forward"]
+  G --> H["If rates certain and no default: futures approx forward"]
+  G --> I["If underlying gains and rates positively correlated: futures can be higher"]
+```
+
 ## 4. 知识点详解
 
 ### 6.1 Introduction

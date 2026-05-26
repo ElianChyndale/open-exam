@@ -84,6 +84,21 @@ tags:
 │  └─ 14.2.3 Spread widening -> required return 上升、price 下降；原因需区分信用与非信用
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Credit risk"] --> B["Default risk"]
+  A --> C["Downgrade risk"]
+  A --> D["Spread risk"]
+  B --> E["Expected credit loss ~= PD x LGD x exposure"]
+  E --> F["LGD = 1 - recovery rate"]
+  F --> G["Recovery driven by seniority, collateral, covenants"]
+  H["Observed spread"] --> H1["Credit premium"]
+  H --> H2["Liquidity premium"]
+  H --> H3["Tax / option / technical factors"]
+```
+
 ## 4. 知识点详解
 
 ### 14.1 损失逻辑 (Loss Logic)

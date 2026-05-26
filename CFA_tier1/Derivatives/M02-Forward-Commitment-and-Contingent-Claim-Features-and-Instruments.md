@@ -97,6 +97,21 @@ tags:
 │  └─ 2.5.3 Profit = payoff - premium for long option；payoff 不是 profit
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Derivative family"] --> B{"Right or obligation?"}
+  B --> C["Forward commitment<br/>both sides obligated"]
+  C --> C1["Forward<br/>customized OTC, payoff S_T - K"]
+  C --> C2["Futures<br/>standardized, daily settlement, margin"]
+  C --> C3["Swap<br/>series of forward-like exchanges"]
+  B --> D["Contingent claim<br/>holder has right"]
+  D --> D1["Call holder<br/>right to buy, payoff max(0,S_T-X)"]
+  D --> D2["Put holder<br/>right to sell, payoff max(0,X-S_T)"]
+  D --> D3["Writer<br/>receives premium, bears obligation"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 Introduction

@@ -1,0 +1,33 @@
+/* CFA module diagrams: keep Mermaid SVGs inside the note container. */
+.markdown-rendered .mermaid,
+.markdown-preview-view .mermaid,
+.markdown-source-view.mod-cm6 .cm-embed-block .mermaid,
+.markdown-source-view.mod-cm6 .cm-preview-code-block .mermaid {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-rendered .mermaid svg,
+.markdown-preview-view .mermaid svg,
+.markdown-source-view.mod-cm6 .cm-embed-block .mermaid svg,
+.markdown-source-view.mod-cm6 .cm-preview-code-block .mermaid svg {
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+.markdown-rendered .mermaid foreignObject,
+.markdown-preview-view .mermaid foreignObject {
+  max-width: 100%;
+}
+
+@media print {
+  .markdown-rendered .mermaid,
+  .markdown-preview-view .mermaid {
+    overflow: visible;
+  }
+}

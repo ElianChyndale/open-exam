@@ -84,6 +84,20 @@ tags:
 │  └─ 8.3.3 BEY/add-on rate 用 purchase price，day basis 按题干 365 或指定口径
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["FRN coupon reset"] --> B["Reference rate + quoted margin"]
+  B --> C["Compare quoted margin with required margin"]
+  C --> C1["Required = quoted -> price near par"]
+  C --> C2["Required > quoted -> price below par"]
+  C --> C3["Required < quoted -> price above par"]
+  D["Money market yield"] --> D1["BDY: discount / FV, 360"]
+  D --> D2["MMY: discount / price, 360"]
+  D --> D3["BEY/add-on: discount / price, day basis from question"]
+```
+
 ## 4. 知识点详解
 
 ### 8.1 Introduction

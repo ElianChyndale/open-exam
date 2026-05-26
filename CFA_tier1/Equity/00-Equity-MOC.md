@@ -89,6 +89,35 @@ Equity Investments (11-14%)
 │  └─ 8.4 Relative valuation：先找真可比公司，再统一 trailing/forward、会计口径、资本结构和周期位置。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Market structure and trading costs"] --> B["Index construction and benchmarks"]
+  A --> C["Market efficiency and implementable alpha"]
+  D["Equity security claims"] --> E["Company analysis"]
+  F["Industry structure and competitive position"] --> G["Forecast revenue, margins, cash flow"]
+  E --> G
+  G --> H["Valuation model choice"]
+  H --> I{"Output vs market price"}
+  I -->|Value > price| J["Potential undervaluation, test risk and costs"]
+  I -->|Value < price| K["Potential overvaluation, test assumptions"]
+  I -->|Close| L["Fairly valued"]
+```
+
+```mermaid
+flowchart LR
+  A["Valuation question"] --> B{"Cash-flow or comparable evidence?"}
+  B -->|Stable dividends| C["DDM / Gordon growth"]
+  B -->|Forecast FCFE available| D["Present value of FCFE"]
+  B -->|Peer data reliable| E["Relative valuation multiples"]
+  B -->|Asset-heavy or liquidation lens| F["Asset-based valuation"]
+  C --> G["Check r > g and sustainable payout"]
+  D --> H["Check forecast quality"]
+  E --> I["Adjust for growth, risk, quality, accounting"]
+  F --> J["Check asset values and liabilities"]
+```
+
 ## 4. 跨模块依赖关系
 
 ### Equity 内部依赖图

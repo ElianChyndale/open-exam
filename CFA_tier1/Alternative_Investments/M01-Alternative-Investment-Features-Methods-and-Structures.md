@@ -91,6 +91,21 @@ tags:
 │  └─ 1.4.3 Compensation：management fee 看 fee base；incentive fee 看 eligible profit、hurdle、high-water mark。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Alternative investment structure"] --> B{"Access method?"}
+  B --> C["Direct investment<br/>more control, concentrated risk, operating burden"]
+  B --> D["Co-investment<br/>lower fee drag, deal access dependence"]
+  B --> E["Fund investment<br/>diversification, manager selection, illiquidity"]
+  E --> F{"Fund terms"}
+  F --> G["Closed-end<br/>capital commitment, drawdowns, exits"]
+  F --> H["Open-end<br/>subscriptions/redemptions subject to liquidity terms"]
+  F --> I["Fees<br/>management fee + incentive fee/carried interest"]
+  I --> J["Check hurdle, high-water mark, fee base"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 Introduction

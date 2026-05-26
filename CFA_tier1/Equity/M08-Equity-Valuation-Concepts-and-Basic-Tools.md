@@ -116,6 +116,33 @@ tags:
 │  └─ 8.2.4 Signal validation：低倍数要用 growth、risk、quality 三重检验，避免 value trap。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Equity valuation problem"] --> B{"Model category"}
+  B -->|Present value| C["DDM or FCFE"]
+  B -->|Relative value| D["Price or enterprise multiples"]
+  B -->|Asset-based| E["Assets minus liabilities"]
+  C --> F{"Dividend stable and r > g?"}
+  F -->|Yes| G["Gordon growth model"]
+  F -->|No| H["Multistage DDM or FCFE logic"]
+  D --> I["Select true comparables"]
+  I --> J["Adjust for growth, risk, quality, accounting, cycle"]
+  E --> K["Useful for asset-heavy or liquidation lens"]
+```
+
+```mermaid
+flowchart LR
+  A["Justified multiple"] --> B["P/E: payout, r, g"]
+  A --> C["P/B: ROE, r, g"]
+  A --> D["P/S: net margin and P/E"]
+  B --> E["Low multiple may be cheap or deserved"]
+  C --> E
+  D --> E
+  E --> F["Validate with growth, risk, quality"]
+```
+
 ## 4. 知识点详解
 
 ### 8.1 内在价值 (Intrinsic value)

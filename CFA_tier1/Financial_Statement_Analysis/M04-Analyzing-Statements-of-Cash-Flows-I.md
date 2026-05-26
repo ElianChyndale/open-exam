@@ -95,6 +95,36 @@ tags:
 │  └─ 4.3.3 判断：比较 CFO 前先把利息和股利分类调到同一口径
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Net income"] --> B["Add noncash charges"]
+  B --> C["Subtract noncash gains"]
+  C --> D{"Working capital change"}
+  D -->|Current asset increases| E["Subtract from CFO"]
+  D -->|Current asset decreases| F["Add to CFO"]
+  D -->|Current liability increases| G["Add to CFO"]
+  D -->|Current liability decreases| H["Subtract from CFO"]
+  E --> I["CFO"]
+  F --> I
+  G --> I
+  H --> I
+```
+
+```mermaid
+flowchart LR
+  A["Accrual revenue and expenses"] --> B["Adjust related BS accounts"]
+  B --> C["Cash collected from customers"]
+  B --> D["Cash paid to suppliers"]
+  B --> E["Cash paid for operating expenses"]
+  C --> F["Direct CFO"]
+  D --> F
+  E --> F
+  G["Indirect CFO"] --> H["Same total CFO, different presentation"]
+  F --> H
+```
+
 ## 4. 知识点详解
 
 ### 4.1 三大报表联动 (Three-Statement Linkage)

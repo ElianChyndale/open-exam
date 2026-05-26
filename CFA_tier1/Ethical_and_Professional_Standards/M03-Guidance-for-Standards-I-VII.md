@@ -166,6 +166,23 @@ tags:
 │  └─ 3.5.5 VII(B) CFA Designation：不能夸大 CFA 称号、候选人身份或考试成绩含义。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Standards I-VII case triage"] --> B{"What is threatened?"}
+  B --> C["Professionalism<br/>law/objectivity/misrepresentation/misconduct"]
+  B --> D["Market integrity<br/>MNPI or manipulation"]
+  B --> E["Client duty<br/>loyalty, suitability, fair dealing, confidentiality"]
+  B --> F["Employer duty<br/>loyalty, compensation, supervision"]
+  B --> G["Investment process<br/>reasonable basis, communication, records"]
+  B --> H["Conflict/CFA conduct<br/>disclosure, priority, referrals, designation"]
+  D --> I{"MNPI test"}
+  I --> J["Material AND nonpublic -> no trade/recommend/share"]
+  I --> K["Mosaic allowed only without MNPI"]
+  E --> L["Client interest before member/employer convenience"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 Standard I: Professionalism

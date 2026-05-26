@@ -70,6 +70,22 @@ Ethical and Professional Standards (15-20%)
 │  └─ 5.3 Best action：优先停止违规、披露/隔离冲突、升级监督、保护客户和市场诚信。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Ethics case"] --> B["Identify facts, roles, stakeholders, timeline"]
+  B --> C{"Legal rule conflicts with Standards?"}
+  C -->|Yes| D["Apply stricter requirement"]
+  C -->|No| E["Map to relevant Standard"]
+  D --> E
+  E --> F{"Violation?"}
+  F -->|Yes| G["Best action: stop, disclose, escalate, dissociate"]
+  F -->|No| H["Check recommended procedures and documentation"]
+  G --> I["Protect clients, market integrity, profession"]
+  H --> I
+```
+
 ## 4. 跨模块依赖关系
 
 ```text

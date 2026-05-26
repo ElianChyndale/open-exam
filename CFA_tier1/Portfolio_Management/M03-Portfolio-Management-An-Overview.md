@@ -107,6 +107,21 @@ tags:
 │  └─ 3.4.3 Workflow：IPS 把客户信息翻译成资产配置和再平衡纪律
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["Planning"] --> B["IPS"]
+    B --> C["Strategic asset allocation"]
+    C --> D["Execution"]
+    D --> E["Select vehicles<br/>fund / ETF / SMA / hedge fund / PE"]
+    E --> F["Feedback"]
+    F --> G["Monitor / rebalance / evaluate"]
+    G --> A
+    H["Investor type<br/>individual vs institutional"] --> B
+    H --> E
+```
+
 ## 4. 知识点详解
 
 ### 3.1 投资组合管理流程 (Portfolio Management Process)

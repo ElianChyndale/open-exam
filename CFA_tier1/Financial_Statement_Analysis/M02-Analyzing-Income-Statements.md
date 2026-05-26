@@ -103,6 +103,31 @@ tags:
 │  └─ 2.5.3 判断：margin trend 要同时解释 revenue policy、COGS、费用资本化和 one-off items
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Contract"] --> B["Performance obligations"]
+  B --> C["Transaction price"]
+  C --> D["Allocate price"]
+  D --> E["Recognize when control transfers"]
+  E --> F["Revenue and gross margin"]
+  F --> G["NI, EPS, common-size ratios"]
+  H["Expense choice"] --> I{"Capitalize or expense?"}
+  I -->|Expense now| J["Lower current NI, lower assets"]
+  I -->|Capitalize| K["Higher current NI/assets; future depreciation or amortization"]
+  J --> G
+  K --> G
+```
+
+```mermaid
+flowchart LR
+  A["Potential common shares"] --> B{"Dilutive?"}
+  B -->|No, EPS increases| C["Exclude as antidilutive"]
+  B -->|Yes, EPS decreases| D["Adjust numerator and denominator"]
+  D --> E["Diluted EPS <= Basic EPS"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 收入确认 (Revenue Recognition)

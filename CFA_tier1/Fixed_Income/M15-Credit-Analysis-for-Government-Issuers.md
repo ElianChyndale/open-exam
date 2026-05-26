@@ -78,6 +78,22 @@ tags:
 │  └─ 15.2.3 Supranational：成员国资本支持与 preferred creditor status 可改善信用质量
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Government credit analysis"] --> B["Sovereign issuer"]
+  A --> C["Non-sovereign issuer"]
+  B --> B1["Economic growth"]
+  B --> B2["Fiscal balance and debt burden"]
+  B --> B3["External position"]
+  B --> B4["Monetary policy and political risk"]
+  B --> D["Local currency vs foreign currency"]
+  C --> C1["Legal obligation"]
+  C --> C2["Support willingness and capacity"]
+  C --> C3["Project or tax revenue source"]
+```
+
 ## 4. 知识点详解
 
 ### 15.1 政府发行人 (Government Issuers)

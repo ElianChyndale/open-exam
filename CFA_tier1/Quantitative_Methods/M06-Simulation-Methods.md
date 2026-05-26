@@ -87,6 +87,22 @@ tags:
 │  └─ 6.3.3 限制：继承原始样本偏差，不能凭空创造未出现过的尾部结构
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Simulation question"] --> B{"数据来源"}
+    B -->|指定理论分布| C["Monte Carlo"]
+    C --> D["Set distributions / parameters / correlations"]
+    D --> E["Draw many scenarios"]
+    E --> F["Output distribution<br/>mean / variance / quantiles"]
+    B -->|历史样本| G["Bootstrap"]
+    G --> H["Sample with replacement"]
+    H --> I["Empirical sampling distribution"]
+    A --> J["Distribution link"]
+    J --> K["cc return normal -> price lognormal"]
+```
+
 ## 4. 知识点详解
 
 ### 6.1 分布联动（Distribution Link）

@@ -93,6 +93,25 @@ tags:
 │  └─ 2.5.2 财务传导：material ESG 通过 cash flow、risk 和 cost of capital 影响价值。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Decision["公司决策"] --> Claims{"影响哪类 claim?"}
+    Claims --> Equity["Shareholders<br/>residual claim, upside, voting"]
+    Claims --> Debt["Creditors<br/>contractual claim, downside protection"]
+    Claims --> Other["Employees / customers / suppliers / regulators"]
+    Equity --> Conflict["冲突地图"]
+    Debt --> Conflict
+    Other --> Conflict
+    Conflict --> SM["Shareholder-manager<br/>agency cost"]
+    Conflict --> SC["Shareholder-creditor<br/>risk shifting / debt overhang"]
+    Conflict --> Stake["Firm-stakeholder<br/>quality, labor, ESG, compliance"]
+    SM --> Mechanism["治理/披露/契约/信号传递"]
+    SC --> Mechanism
+    Stake --> Mechanism
+```
+
 ## 4. 知识点详解
 
 ### 2.1 投资者类型 (Types of Investors)

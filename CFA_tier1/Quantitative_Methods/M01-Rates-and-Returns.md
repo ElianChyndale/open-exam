@@ -108,6 +108,22 @@ tags:
 │  └─ 1.6.3 杠杆税后顺序：gross -> net -> leveraged -> after-tax
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["题干问 return measure"] --> B{"单期还是多期?"}
+    B -->|单一持有期| C["HPR<br/>(P1 - P0 + D1) / P0"]
+    B -->|多期平均| D{"用途?"}
+    D -->|下一期预期| E["Arithmetic mean"]
+    D -->|复合财富增长| F["Geometric mean"]
+    D -->|价格倍数平均| G["Harmonic mean"]
+    A --> H{"有外部现金流?"}
+    H -->|投资者体验| I["MWRR / IRR"]
+    H -->|经理表现| J["TWRR: split at cash flows"]
+    A --> K["费用/杠杆/税<br/>gross -> net -> leveraged -> after-tax"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 利率的三种解释（Three Interpretations of Interest Rate）

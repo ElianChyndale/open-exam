@@ -100,6 +100,31 @@ tags:
 │  └─ 4.2.4 考试判断：证券形式改变交易与权利安排，不一定改变底层企业经济风险。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Equity security"] --> B{"Claim type"}
+  B -->|Common shares| C["Residual claim, voting, variable dividends"]
+  B -->|Preferred shares| D["Dividend and liquidation preference, often limited voting"]
+  D --> E{"Special terms"}
+  E -->|Cumulative| F["Missed dividends accumulate"]
+  E -->|Participating| G["Shares extra upside"]
+  E -->|Callable| H["Issuer can redeem"]
+  E -->|Putable| I["Investor can sell back"]
+  C --> J["Higher upside and lower priority"]
+  D --> K["Hybrid risk-return profile"]
+```
+
+```mermaid
+flowchart LR
+  A["Access route"] --> B{"Public, private, or foreign?"}
+  B -->|Public| C["More liquidity and disclosure"]
+  B -->|Private| D["Less liquidity, more due diligence, valuation uncertainty"]
+  B -->|Depositary receipt| E["Trading convenience for foreign issuer"]
+  E --> F["Still exposed to FX, country, governance, settlement risk"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 权益设计 (Claim design)

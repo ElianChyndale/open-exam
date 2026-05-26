@@ -91,6 +91,22 @@ tags:
 │  └─ 10.5.2 风险中性世界下所有资产期望收益按无风险利率贴现
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  S0["S0"] --> Su["Up state: S0 x u"]
+  S0 --> Sd["Down state: S0 x d"]
+  Su --> Vu["Derivative payoff Vu"]
+  Sd --> Vd["Derivative payoff Vd"]
+  Vu --> H["Hedge ratio h = (Vu - Vd)/(Su - Sd)"]
+  Vd --> H
+  H --> R["Replicate with h shares + borrowing/lending"]
+  R --> V0["Value today = cost of replicating portfolio"]
+  S0 --> P["Risk-neutral p* = ((1+r)-d)/(u-d)"]
+  P --> RN["V0 = [p*Vu + (1-p*)Vd]/(1+r)"]
+```
+
 ## 4. 知识点详解
 
 ### 10.1 Introduction

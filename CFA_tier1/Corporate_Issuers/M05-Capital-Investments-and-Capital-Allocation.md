@@ -93,6 +93,22 @@ tags:
 │  └─ 5.3.4 Flexibility option：切换投入、产出或生产方式。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Project["资本投资题"] --> Type{"项目关系"}
+    Type --> Independent["Independent<br/>positive NPV accept"]
+    Type --> MutEx["Mutually exclusive<br/>choose highest NPV"]
+    Type --> Ration["Capital rationing<br/>PI helps rank"]
+    Project --> CF["建立 incremental after-tax CF timeline"]
+    CF --> Include["Include<br/>opportunity cost, externality, NOWC, salvage tax"]
+    CF --> Exclude["Exclude<br/>sunk cost, financing CF, double count"]
+    Include --> NPV["Discount at risk-matched hurdle rate"]
+    Exclude --> NPV
+    NPV --> Options["Real options<br/>delay / expand / abandon / flexibility add value"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 现金流纪律 (Cash-Flow Discipline)

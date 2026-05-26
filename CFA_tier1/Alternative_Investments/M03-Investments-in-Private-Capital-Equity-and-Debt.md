@@ -91,6 +91,22 @@ tags:
 │  └─ 3.4.2 考试输出要同时写 potential diversification benefit 和 liquidity/valuation/manager concentration cost。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Private capital"] --> B["Private equity"]
+  A --> C["Private debt"]
+  B --> B1["Venture capital<br/>early-stage growth, high failure risk"]
+  B --> B2["Growth equity<br/>expansion capital, less mature than buyout"]
+  B --> B3["LBO<br/>control + leverage + operational improvement"]
+  B --> B4["Distressed equity<br/>turnaround/restructuring risk"]
+  C --> C1["Direct lending<br/>contractual yield + credit spread"]
+  C --> C2["Mezzanine<br/>subordinated debt + equity-like upside"]
+  C --> C3["Distressed debt<br/>restructuring recovery risk"]
+  A --> D["Common constraints<br/>illiquidity, valuation lag, manager selection"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 Introduction

@@ -100,6 +100,22 @@ tags:
 │  └─ 5.6.3 CFA conduct/designation：不得泄题作弊，不得夸大 CFA 身份和通过考试的含义。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Ethics application"] --> B["Lock facts and timeline"]
+  B --> C["Identify role<br/>member, supervisor, analyst, adviser, candidate"]
+  C --> D["Identify affected party<br/>client, employer, market, CFA Program, public"]
+  D --> E["Map to Standards I-VII"]
+  E --> F{"Conduct violates?"}
+  F -->|Yes| G["Stop or avoid conduct"]
+  G --> H["Disclose, escalate, correct, or dissociate as needed"]
+  F -->|No| I["Check recommended procedure and documentation"]
+  H --> J["Choose most conservative action protecting clients and market integrity"]
+  I --> J
+```
+
 ## 4. 知识点详解
 
 ### 5.1 Introduction

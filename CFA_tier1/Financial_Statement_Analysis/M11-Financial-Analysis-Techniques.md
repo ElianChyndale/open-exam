@@ -116,6 +116,36 @@ tags:
 │  └─ 11.5.3 判断：异常 ratio 先查 accounting choice 和 one-off，再用于模型
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Ratio question"] --> B{"Category"}
+  B --> C["Liquidity: short-term coverage"]
+  B --> D["Activity: turnover and days"]
+  B --> E["Solvency: leverage and coverage"]
+  B --> F["Profitability: margins and returns"]
+  C --> G["Compare trend, peers, and policy"]
+  D --> G
+  E --> G
+  F --> G
+  G --> H["Interpret driver, not just number"]
+  H --> I["Check accounting policy, seasonality, industry context"]
+```
+
+```mermaid
+flowchart LR
+  A["ROE"] --> B["Net margin"]
+  A --> C["Asset turnover"]
+  A --> D["Financial leverage"]
+  B --> E["Profitability and cost control"]
+  C --> F["Asset efficiency"]
+  D --> G["Capital structure risk"]
+  E --> H["Sustainable ROE?"]
+  F --> H
+  G --> H
+```
+
 ## 4. 知识点详解
 
 ### 11.1 分析工具与局限 (Tools and Limitations)

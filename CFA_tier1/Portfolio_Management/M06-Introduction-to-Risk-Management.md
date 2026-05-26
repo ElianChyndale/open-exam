@@ -118,6 +118,27 @@ tags:
 │  └─ 6.5.3 持续性：风险管理是循环过程，不是一次性报表
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Risk governance"] --> B["Define risk tolerance"]
+    B --> C["Identify risks"]
+    C --> D["Measure exposures"]
+    D --> E{"Risk response"}
+    E -->|not worth taking| F["Avoid"]
+    E -->|within tolerance / transfer costly| G["Accept / retain"]
+    E -->|insurance / derivatives / outsourcing| H["Transfer"]
+    E -->|limits / diversify / hedge / controls| I["Mitigate"]
+    E -->|watch triggers| J["Monitor"]
+    F --> K["Report and review"]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    K --> B
+```
+
 ## 4. 知识点详解
 
 ### 6.1 风险管理框架 (Risk Management Framework)

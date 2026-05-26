@@ -100,6 +100,29 @@ tags:
 │  └─ 3.2.4 考试陷阱：看到 anomaly 不要立刻否定效率，要问是否可持续、可交易、扣除成本后仍有效。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Information used by strategy"] --> B{"Information set"}
+  B -->|Historical prices and volume| C["Weak-form efficiency"]
+  B -->|Public information| D["Semi-strong-form efficiency"]
+  B -->|Public + private information| E["Strong-form efficiency"]
+  C --> F["Technical analysis should not earn persistent after-cost abnormal return"]
+  D --> G["Public fundamental analysis should not earn persistent after-cost abnormal return"]
+  E --> H["Even private information would not help; strongest and least realistic"]
+```
+
+```mermaid
+flowchart LR
+  A["Observed anomaly"] --> B{"Still profitable after costs?"}
+  B -->|No| C["Consistent with practical efficiency"]
+  B -->|Yes| D{"Alternative explanation?"}
+  D -->|Risk premium| E["Compensation, not free alpha"]
+  D -->|Data mining or bias| F["Evidence weak"]
+  D -->|Behavior and limits to arbitrage| G["Possible efficiency challenge"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 信息集与有效形式 (Information set and forms)

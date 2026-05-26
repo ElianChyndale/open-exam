@@ -84,6 +84,19 @@ tags:
 │  └─ 9.1.6 Forward parity：用 forward exposure 替换 stock exposure 时必须匹配到期与交割价
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+  A["Fiduciary call<br/>Call + PV(X)"] --> C["Same payoff at T"]
+  B["Protective put<br/>Put + Stock"] --> C
+  C --> D["European parity<br/>c + PV(X) = p + S0"]
+  D --> E["Synthetic call<br/>p + S0 - PV(X)"]
+  D --> F["Synthetic put<br/>c + PV(X) - S0"]
+  D --> G["Synthetic stock<br/>c + PV(X) - p"]
+  D --> H["Synthetic bond<br/>p + S0 - c"]
+```
+
 ## 4. 知识点详解
 
 ### 9.1 核心内容

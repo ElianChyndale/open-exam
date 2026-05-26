@@ -89,6 +89,34 @@ tags:
 │  └─ 7.3.3 可比性：不同折旧方法要调整后再比较 asset turnover、ROA、margin
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Long-term asset cost"] --> B{"Asset type and source"}
+  B -->|Purchased| C["Capitalize qualifying cost"]
+  B -->|Internally developed| D["Research expense; development may qualify under IFRS"]
+  B -->|Business combination| E["Recognize identifiable intangibles at fair value"]
+  C --> F["Depreciation or amortization if finite life"]
+  D --> F
+  E --> F
+  F --> G["Carrying amount = cost - accumulated depreciation/amortization - impairment"]
+  G --> H{"Disposal?"}
+  H -->|Yes| I["Gain/loss = proceeds - carrying amount"]
+  H -->|No| J["Continue disclosure and impairment review"]
+```
+
+```mermaid
+flowchart LR
+  A["Estimate choice"] --> B["Useful life"]
+  A --> C["Residual value"]
+  A --> D["Depreciation method"]
+  B --> E["Depreciation expense"]
+  C --> E
+  D --> E
+  E --> F["NI, assets, ROA, asset turnover"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 无形资产来源 (Intangible Asset Origin)

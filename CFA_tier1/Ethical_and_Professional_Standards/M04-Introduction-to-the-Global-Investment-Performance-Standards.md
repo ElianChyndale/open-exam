@@ -97,6 +97,23 @@ tags:
 │  └─ 4.4.2 Verification 不保证单个 composite 或每个 return number 正确。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["GIPS compliance claim"] --> B["Define the firm"]
+  B --> C["Identify all actual fee-paying discretionary portfolios"]
+  C --> D["Assign each to correct composite by strategy/mandate"]
+  D --> E["Use required inputs and calculation methods"]
+  E --> F["Prepare compliant presentation with required disclosures"]
+  F --> G{"Verification?"}
+  G -->|Optional but useful| H["Third party tests firm-level policies and procedures"]
+  G -->|No| I["Firm may still claim compliance only if all requirements met"]
+  H --> J["Does not guarantee individual return accuracy"]
+  I --> K["Fair representation + full disclosure"]
+  J --> K
+```
+
 ## 4. 知识点详解
 
 ### 4.1 GIPS 的定位 (Purpose of GIPS)

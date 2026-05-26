@@ -84,6 +84,26 @@ tags:
 │  └─ 3.2.3 考试判断：治理机制不是越多越好，而是是否针对具体冲突并降低 agency cost。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Case["治理情景题"] --> Parties["识别冲突主体"]
+    Parties --> Source{"冲突来源"}
+    Source --> Info["Information asymmetry"]
+    Source --> Incentive["Incentive mismatch"]
+    Source --> Control["Control-right abuse"]
+    Info --> Tool["匹配机制"]
+    Incentive --> Tool
+    Control --> Tool
+    Tool --> Board["Board / committees / audit"]
+    Tool --> Pay["Compensation alignment"]
+    Tool --> Rights["Shareholder rights / covenants / disclosure"]
+    Board --> Outcome["降低 agency cost<br/>改善 cash flow, risk, cost of capital"]
+    Pay --> Outcome
+    Rights --> Outcome
+```
+
 ## 4. 知识点详解
 
 ### 3.1 代理架构 (Agency Architecture)

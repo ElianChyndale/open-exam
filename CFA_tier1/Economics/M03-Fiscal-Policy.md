@@ -98,6 +98,20 @@ tags:
 │  └─ 3.5.2 基础设施/教育支出可能提高长期 potential GDP
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    State["识别宏观状态"] --> Gap{"Output gap / inflation?"}
+    Gap -->|Negative gap / unemployment high| Exp["Expansionary fiscal<br/>increase G / cut T / higher transfers"]
+    Gap -->|Positive gap / inflation high| Con["Contractionary fiscal<br/>cut G / raise T"]
+    Exp --> AD1["AD rises<br/>multiplier depends on MPC and leakages"]
+    Con --> AD2["AD falls<br/>inflation pressure eases with lag"]
+    AD1 --> Limits["检查约束<br/>recognition/action/impact lag<br/>crowding out / debt sustainability"]
+    AD2 --> Limits
+    Limits --> Output["考试输出<br/>growth, inflation, rates, deficit, debt/GDP"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 财政政策工具（Fiscal Policy Tools）

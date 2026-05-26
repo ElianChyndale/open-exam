@@ -103,6 +103,23 @@ tags:
 │  └─ 1.4.2 本模块只建判断底座，具体违规定位在 M03 和 M05 中完成。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Investment profession trust"] --> B["Specialized knowledge"]
+  A --> C["Service to clients and public"]
+  A --> D["Code and standards"]
+  A --> E["Discipline and enforcement"]
+  B --> F["Professional judgment"]
+  C --> F
+  D --> F
+  E --> F
+  F --> G{"Minimum law enough?"}
+  G -->|No, ethics stricter| H["Choose action supporting trust"]
+  G -->|Legal conflict| I["Follow stricter standard"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 职业的本质 (Nature of a Profession)

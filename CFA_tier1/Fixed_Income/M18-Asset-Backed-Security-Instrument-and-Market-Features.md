@@ -88,6 +88,22 @@ tags:
 │  └─ 18.2.3 考试判断：信用增级重新分配损失吸收顺序，不等于消灭违约风险
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["ABS collateral"] --> B["Amortizing assets: auto loans / equipment leases"]
+  A --> C["Revolving receivables: credit cards / trade receivables"]
+  A --> D["CDO collateral: debt instruments"]
+  E["Credit enhancement"] --> F["Internal"]
+  E --> G["External"]
+  F --> F1["Subordination"]
+  F --> F2["Overcollateralization"]
+  F --> F3["Excess spread / reserve account"]
+  G --> G1["Guarantee / insurance / letter of credit"]
+  H["Covered bond"] --> H1["Dual recourse: issuer + cover pool"]
+```
+
 ## 4. 知识点详解
 
 ### 18.1 ABS 类型 (ABS Families)

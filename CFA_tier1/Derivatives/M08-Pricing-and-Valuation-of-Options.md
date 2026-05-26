@@ -96,6 +96,22 @@ tags:
 │  └─ 8.5.2 Volatility 和 time to expiration 上升通常提高 option value
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Option value"] --> B["Intrinsic value"]
+  A --> C["Time value"]
+  B --> D["Call: max(0,S-X)"]
+  B --> E["Put: max(0,X-S)"]
+  C --> F["Volatility up -> option value up"]
+  C --> G["Time to expiration up -> option value usually up"]
+  A --> H{"Moneyness"}
+  H --> I["Call ITM if S > X"]
+  H --> J["Put ITM if X > S"]
+  H --> K["Profit deducts premium; moneyness does not"]
+```
+
 ## 4. 知识点详解
 
 ### 8.1 Introduction

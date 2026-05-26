@@ -83,6 +83,19 @@ tags:
 │  └─ 11.2.3 Yield-based measures 假设现金流固定；含期权债券需转向 effective duration
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Macaulay duration"] --> B["Modified duration = MacDur / (1 + y/m)"]
+  B --> C["% price change ~= -ModDur x dy"]
+  B --> D["Money duration = ModDur x full price"]
+  D --> E["PVBP ~= money duration x 0.0001"]
+  F["Duration rises when"] --> F1["Maturity longer"]
+  F --> F2["Coupon lower"]
+  F --> F3["Yield lower"]
+```
+
 ## 4. 知识点详解
 
 ### 11.1 久期家族 (Duration Family)

@@ -113,6 +113,26 @@ tags:
 │  └─ 4.4.5 Unique circumstances：ESG、集中持股、遗产规划、特殊偏好
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Client facts"] --> B["Return objective"]
+    A --> C["Risk objective"]
+    C --> D["Willingness"]
+    C --> E["Ability / capacity"]
+    D --> F{"Conflict?"}
+    E --> F
+    F -->|ability lower| G["Use ability as risk ceiling"]
+    F -->|aligned| H["Document risk tolerance"]
+    A --> I["Constraints: L-T-T-L-U"]
+    I --> J["Liquidity / Time / Taxes / Legal / Unique"]
+    B --> K["Strategic asset allocation"]
+    G --> K
+    H --> K
+    J --> K
+```
+
 ## 4. 知识点详解
 
 ### 4.1 IPS 概述 (IPS Overview)

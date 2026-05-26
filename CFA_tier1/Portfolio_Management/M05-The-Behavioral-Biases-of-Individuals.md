@@ -98,6 +98,24 @@ tags:
 │  └─ 5.4.4 Market characteristics：偏差可解释动量、泡沫、过度反应/反应不足等传统金融难解释现象
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Observed investor behavior"] --> B{"来源"}
+    B -->|information / reasoning error| C["Cognitive error"]
+    B -->|emotion / instinct| D["Emotional bias"]
+    C --> E["Educate / evidence / checklist"]
+    D --> F["Accommodate or moderate<br/>rules and guardrails"]
+    A --> G["Investment impact"]
+    G --> H["risk tolerance"]
+    G --> I["asset allocation"]
+    G --> J["trading / rebalancing"]
+    H --> K["Feed back to IPS"]
+    I --> K
+    J --> K
+```
+
 ## 4. 知识点详解
 
 ### 5.1 偏差总分类 (Bias Classification)

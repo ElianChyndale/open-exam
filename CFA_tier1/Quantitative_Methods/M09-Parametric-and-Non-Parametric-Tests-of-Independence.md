@@ -82,6 +82,23 @@ tags:
 │  └─ 9.2.5 限制：期望频数过低会使 χ² 近似不可靠；结果不说明方向和强度
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Independence / association question"] --> B{"变量类型"}
+    B -->|two continuous variables| C{"满足正态且关注线性?"}
+    C -->|是| D["Pearson correlation t-test<br/>df = n-2"]
+    C -->|否: ordinal / outlier / nonnormal| E["Spearman rank correlation"]
+    B -->|two categorical variables| F["Chi-square independence test"]
+    F --> G["Expected cell = row total x column total / n"]
+    G --> H["chi-square = sum (O-E)^2/E"]
+    H --> I["df = (r-1)(c-1)"]
+    D --> J["显著不等于因果"]
+    E --> J
+    F --> K["不独立不说明方向/强度"]
+```
+
 ## 4. 知识点详解
 
 ### 9.1 相关系数检验（Test of Correlation）

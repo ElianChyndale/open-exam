@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "56cf906fed3e6855",
+        "id": "08c4104829bc1922",
         "type": "tabs",
         "children": [
           {
-            "id": "35b64ef44ca58832",
+            "id": "8e611c85d6b64399",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA_tier1/Economics/00-Economics-MOC.md",
+                "file": "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00-Economics-MOC"
+              "title": "M01-The-Firm-and-Market-Structures"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "fe70c5ee0d32b929",
@@ -183,8 +183,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "35b64ef44ca58832",
+  "active": "8e611c85d6b64399",
   "lastOpenFiles": [
+    "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md",
+    "docs/cfa-module-diagram-enrichment.md",
+    "CFA_tier1/Economics/00-Economics-MOC.md.tmp.37656.a569d5a62d99",
+    "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md.tmp.37656.2b87200122c1",
+    "CFA_tier1/mock/Economics/00-Economics-Mistakes.md",
+    "CFA_tier1/Economics/00-Economics-MOC.md.tmp.37656.0fd568eef399",
+    "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md.tmp.37656.77ed3ccd0052",
+    "CFA_tier1/Economics/00-Economics-MOC.md.tmp.37656.727c5511e634",
+    "CFA_tier1/Economics/00-Economics-MOC.md",
     "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
     "CFA_tier1/Quantitative_Methods/M09-Parametric-and-Non-Parametric-Tests-of-Independence.md",
     "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md.tmp.37656.b4b1dc67b7d2",
@@ -192,12 +201,7 @@
     "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md.tmp.37656.124219914338",
     "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md.tmp.37656.9d032c1d5fc0",
     "skills/cfa-note-annotator-workspace/iteration-1/benchmark.md.tmp.37656.ac56b18578d8",
-    "skills/cfa-note-annotator-workspace/iteration-1/review.html",
-    "skills/cfa-note-annotator-workspace/iteration-1/benchmark.json.tmp.37656.872c2dfa95af",
     "skills/cfa-note-annotator-workspace/iteration-1/benchmark.md",
-    "skills/cfa-note-annotator-workspace/iteration-1/benchmark.json",
-    "skills/cfa-note-annotator-workspace/iteration-1/gordon-growth-note/without_skill/grading.json",
-    "skills/cfa-note-annotator-workspace/iteration-1/callable-bond-note/without_skill/grading.json",
     "CFA_tier1/CFA_2026_L1_Complete_Curriculum.md",
     "skills/cfa-note-annotator/SKILL.md",
     "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
@@ -217,10 +221,6 @@
     "CFA_tier1/Financial_Statement_Analysis/M04-Analyzing-Statements-of-Cash-Flows-I.md",
     "CFA_tier1/Financial_Statement_Analysis/M03-Analyzing-Balance-Sheets.md",
     "CFA_tier1/Financial_Statement_Analysis/M02-Analyzing-Income-Statements.md",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
-    "CFA_tier1/Alternative_Investments/_legacy/2026-05-26-official-sync/00-Alternative-Investments-MOC.md",
-    "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md",
-    "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]

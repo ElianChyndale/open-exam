@@ -83,6 +83,25 @@ tags:
 │  └─ 7.3.4 Financial intermediation：资产负债表、信用风险、流动性和监管资本是核心。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    BM["Business model diagnosis"] --> VP["Value proposition<br/>why customers buy"]
+    BM --> Rev["Revenue model<br/>subscription / transaction / ads / spread"]
+    BM --> Cost["Cost structure<br/>fixed vs variable, asset-light vs asset-heavy"]
+    BM --> Moat["Resources / moat<br/>network, brand, data, regulation"]
+    Rev --> Quality["Quality checks"]
+    Cost --> Quality
+    Moat --> Quality
+    Quality --> Unit["Unit economics positive?"]
+    Quality --> Cash["Cash conversion sustainable?"]
+    Quality --> Reinvest["Growth needs capex / NOWC / CAC?"]
+    Unit --> Value["Value creation only if growth earns adequate return"]
+    Cash --> Value
+    Reinvest --> Value
+```
+
 ## 4. 知识点详解
 
 ### 7.1 Introduction

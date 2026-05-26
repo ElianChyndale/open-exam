@@ -82,6 +82,20 @@ tags:
 │  └─ 5.3.2 FRA/利率远期用于锁定未来借贷利率，接口在 Fixed Income
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Forward question"] --> B{"At inception or during life?"}
+  B --> C["Pricing at inception<br/>set value near zero"]
+  C --> C1["No income: F0 = S0(1+r)^T"]
+  C --> C2["Known income: [S0 - PV(I)](1+r)^T"]
+  C --> C3["Yield: S0[(1+r)/(1+q)]^T"]
+  B --> D["Valuation during life<br/>compare current fair price with contract delivery price"]
+  D --> E["Long value rises when current forward price > old delivery price"]
+  D --> F["Short value moves in opposite direction"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 Introduction

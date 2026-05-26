@@ -77,6 +77,19 @@ tags:
 │  └─ 1.1.4 考试判断：notional 是敞口规模参照，不是初始投资额或最大损失
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Derivative contract"] --> B["Underlying asset or rate"]
+  A --> C["Notional amount<br/>exposure scale, not cash invested"]
+  A --> D["Long/short position<br/>benefits from opposite price moves"]
+  A --> E{"Trading venue?"}
+  E --> F["Exchange-traded<br/>standardized, clearinghouse, margin"]
+  E --> G["OTC<br/>customized, bilateral counterparty risk"]
+  A --> H["Settlement<br/>cash or physical"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 核心内容

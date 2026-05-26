@@ -105,6 +105,22 @@ Quantitative Methods (6-9%)
 │  └─ 11.4 模型风险：overfitting、data snooping、sample bias、解释性不足
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["Return / discount rate<br/>M01-M02"] --> B["Statistical measures<br/>M03"]
+    B --> C["Probability and portfolio math<br/>M04-M05"]
+    C --> D["Simulation<br/>M06"]
+    B --> E["Estimation<br/>M07"]
+    E --> F["Hypothesis testing<br/>M08-M09"]
+    F --> G["Regression<br/>M10"]
+    G --> H["Big data model risk<br/>M11"]
+    D --> H
+    C --> I["Portfolio Management"]
+    A --> J["FI / Equity / Corporate Issuers"]
+```
+
 ## 4. 跨模块依赖关系
 
 ```text

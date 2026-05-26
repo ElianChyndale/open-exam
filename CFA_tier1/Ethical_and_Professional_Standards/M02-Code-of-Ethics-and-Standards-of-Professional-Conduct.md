@@ -89,6 +89,21 @@ tags:
 │  └─ 2.4.2 做题先把题干行为归类到最可能的 Standard，再比较 required vs recommended conduct。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Code and Standards"] --> B["Code of Ethics<br/>broad professional principles"]
+  A --> C["Seven Standards<br/>case classification map"]
+  C --> C1["I Professionalism<br/>law, objectivity, misrepresentation, misconduct"]
+  C --> C2["II Market Integrity<br/>MNPI, manipulation"]
+  C --> C3["III Duties to Clients<br/>loyalty, fair dealing, suitability, performance, confidentiality"]
+  C --> C4["IV Duties to Employers<br/>loyalty, compensation, supervision"]
+  C --> C5["V Investment Analysis<br/>basis, communication, records"]
+  C --> C6["VI Conflicts<br/>disclosure, priority, referrals"]
+  C --> C7["VII CFA Responsibilities<br/>program conduct, designation use"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 职业的本质 (Nature of a Profession)

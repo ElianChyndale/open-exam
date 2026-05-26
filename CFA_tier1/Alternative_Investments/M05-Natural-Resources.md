@@ -89,6 +89,23 @@ tags:
 │  └─ 5.4.2 分散化：通胀和供需冲击可能带来低相关，但期货期限结构会改变投资结果。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Natural resources exposure"] --> B["Direct resources"]
+  A --> C["Commodity futures"]
+  B --> B1["Farmland/timberland/raw land<br/>cash yield + price appreciation + inflation link"]
+  B --> B2["Risks<br/>weather, policy, operations, illiquidity"]
+  C --> C1["Total return"]
+  C1 --> C2["Spot return"]
+  C1 --> C3["Roll yield"]
+  C1 --> C4["Collateral yield"]
+  C3 --> D{"Futures curve"}
+  D --> E["Contango<br/>long roll yield usually negative"]
+  D --> F["Backwardation<br/>long roll yield usually positive"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 商品期货 (Commodity Futures)【考试核心】

@@ -92,6 +92,22 @@ tags:
 │  └─ 5.5.2 Inflation-linked：adjusted principal = original principal x current CPI/base CPI；保护 purchasing power
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Government issuer"] --> B["Sovereign"]
+  A --> C["Agency / quasi-government"]
+  A --> D["Supranational"]
+  A --> E["Municipal"]
+  B --> B1["Local currency: monetary flexibility + inflation risk"]
+  B --> B2["Foreign currency: FX reserve and refinancing constraint"]
+  C --> C1["Explicit / implicit / no support"]
+  D --> D1["Member support + preferred creditor status"]
+  E --> E1["GO: tax base"]
+  E --> E2["Revenue: project cash flow"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 主权债券 (Sovereign Bonds)

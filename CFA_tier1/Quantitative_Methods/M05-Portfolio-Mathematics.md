@@ -96,6 +96,21 @@ tags:
 │  └─ 5.4.3 选择规则：在候选组合中选择 SFRatio 最大者
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["Asset inputs<br/>E(R), sigma, covariance"] --> B["Portfolio return<br/>weighted average"]
+    A --> C["Portfolio variance<br/>own risk + covariance terms"]
+    C --> D{"Correlation rho"}
+    D -->|rho = +1| E["No diversification"]
+    D -->|rho < +1| F["Diversification benefit"]
+    D -->|rho = -1| G["Potential full hedge"]
+    C --> H["Portfolio SD = sqrt(variance)"]
+    H --> I["Roy safety-first<br/>(E(Rp)-RL)/sigma_p"]
+    I --> J["Choose highest SFRatio"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 收益率矩（Return Moments）

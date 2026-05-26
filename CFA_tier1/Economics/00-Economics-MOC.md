@@ -49,10 +49,10 @@ tags:
 Economics (6-9%)
 ├─ 1. The Firm and Market Structures
 │  ├─ 1.1 成本-利润口径：TR=P×Q, accounting profit=TR-explicit costs, economic profit=TR-explicit-implicit costs
-│  ├─ 1.2 产量决策：MR=MC 定最优产量；P≥AVC 短期继续生产，P<AVC 关停；长期看 P 与 ATC
-│  ├─ 1.3 规模经济：LRAC 下降/上升判断 economies/diseconomies；自然垄断来自大规模固定成本
-│  ├─ 1.4 市场结构识别：企业数量、产品差异、进入壁垒、定价权、长期经济利润
-│  └─ 1.5 集中度指标：CR_n 与 HHI 只描述集中，不等于竞争强度；需结合进口竞争和潜在进入
+│  ├─ 1.2 产量决策：MR=MC 定最优产量；P≥AVC 短期继续生产，P<AVC 关停；长期看 P 与 ATC ↳ 笔记：Perfect competition 下 MC schedule = supply function，其他结构无唯一 supply function（oligopoly 有 strategic interdependence）
+│  ├─ 1.3 规模经济：LRAC 下降/上升判断 economies/diseconomies；自然垄断来自大规模固定成本 ↳ 笔记：Economies of scale=单位成本↓，Diseconomies=单位成本↑，Constant returns=单位成本不变；Output↑→Cost per unit↓，LRAC 向下倾斜部分
+│  ├─ 1.4 市场结构识别：企业数量、产品差异、进入壁垒、定价权、长期经济利润；barriers to entry 排序为 perfect competition 近乎无、monopolistic competition 低、oligopoly 高、monopoly 非常高；price leader 被小企业 undercut 时，先判断低价是否迫使高成本小企业退出，领导者份额可能上升 ← 高频错因
+│  └─ 1.5 集中度指标：CR_n 与 HHI 只描述集中，不等于竞争强度；monopoly 下单一企业 market share=100%，CR_1=100%，HHI 在百分数口径为 10,000；仍需结合进口竞争和潜在进入
 ├─ 2. Understanding Business Cycles
 │  ├─ 2.1 周期阶段：expansion -> peak -> contraction/recession -> trough；题目常考变量先后顺序
 │  ├─ 2.2 指标分类：leading 预测、coincident 确认当前、lagging 滞后验证；不要用滞后指标预测拐点
@@ -88,6 +88,22 @@ Economics (6-9%)
 │  ├─ 8.2 交叉汇率：A/C=(A/B)×(B/C)，中间货币必须约掉；bid 用保守买入链、ask 用保守卖出链
 │  ├─ 8.3 远期汇率：forward points=F-S；premium=(F-S)/S，可按题目期限年化
 │  └─ 8.4 CIP：F=S(1+i_d)/(1+i_f)；高利率货币通常远期贴水，forward premium 不等于未来必然升值
+```
+
+## 核心图解
+
+```mermaid
+flowchart LR
+    M01["M01 市场结构<br/>pricing power / cost pass-through"] --> M02["M02 周期判断<br/>growth / inflation / credit"]
+    M02 --> M03["M03 财政政策<br/>G / T / transfers"]
+    M02 --> M04["M04 货币政策<br/>rates / reserves / QE"]
+    M03 --> Mix["Policy mix<br/>AD / rates / debt credibility"]
+    M04 --> Mix
+    M05["M05 地缘政治<br/>risk shock / sanctions"] --> M06["M06 贸易<br/>TOT / restrictions / blocs"]
+    M06 --> M07["M07 BOP & FX market<br/>current account / capital flows"]
+    Mix --> M07
+    M07 --> M08["M08 FX calculations<br/>quote / cross rate / forward"]
+    M08 --> Assets["考试输出<br/>price / yield / FX / risk premium"]
 ```
 
 ## 4. 跨模块依赖关系
@@ -146,8 +162,8 @@ External block (M05-M08)
 | Average Total Cost | `ATC = TC / Q` | `M01` | `P > ATC` 表示正经济利润 |
 | Average Variable Cost | `AVC = TVC / Q` | `M01` | shutdown 判断常用 |
 | Marginal Product | `MP = ΔTP / ΔL` | `M01` | 生产函数边际量 |
-| Concentration Ratio | `CR_n = Σ market share of largest n firms` | `M01` | 【考纲重点】行业集中度轻计算 |
-| Herfindahl-Hirschman Index | `HHI = Σ market share_i^2` | `M01` | 【考纲重点】市场份额用百分数或小数时口径要统一 |
+| Concentration Ratio | `CR_n = Σ market share of largest n firms` | `M01` | 【考纲重点】行业集中度轻计算；pure monopoly 下单一企业 market share=100%，所以 `CR_1=100%` |
+| Herfindahl-Hirschman Index | `HHI = Σ market share_i^2` | `M01` | 【考纲重点】市场份额口径必须统一：百分数口径下 monopoly `HHI=100^2=10,000`；小数口径下 `HHI=1.0^2=1.0` |
 
 ### M03 Fiscal Policy
 
@@ -201,6 +217,12 @@ External block (M05-M08)
 | ❌ 汇率题可以不看 domestic/foreign 定义 | ✅ 不看报价方向最容易整题错掉 | 按官方定义和 LOS 口径核验。 |
 | ❌ economic profit 为零就是公司亏损 | ✅ 可能仍有正常会计利润和资本补偿 | 按官方定义和 LOS 口径核验。 |
 | ❌ 贸易逆差单独决定本币走势 | ✅ 资本流、政策、利差和预期都可能主导 | 按官方定义和 LOS 口径核验。 |
+| ❌ price leader 被 undercut，领导者市场份额一定下降 | ✅ 若低价低于小企业可持续成本，边缘企业可能退出，dominant price leader 的市场份额可能上升 | 寡头/价格领导题先判断退出机制，不按“低价抢份额”直觉作答。 |
+| ❌ payoff matrix 一律先套 no-collusion Nash equilibrium | ✅ 若题干给出 collusive agreement / side payment，先按联合利润最大化与分成激励判断 | 寡头博弈题先圈出 no collusion vs collusion，再选 Nash 或 collusive outcome。 |
+| ❌ colluding 和 non-colluding 下每家公司都面对 individual demand curve | ✅ colluding 下先看 aggregate market demand 如何在参与者间分配；non-colluding 下各公司才面对自己的 individual demand curve | 寡头需求曲线题先判断是否 collusion，不要把两种情境合并。 |
+| ❌ Cournot assumption 是价格竞争或对手价格不变 | ✅ Cournot assumption 是各企业选择自己的 profit-maximizing output，并假设 competitors' output will not change | 看到 Cournot/古诺时，先锁定 output competition，不要误套 Bertrand price competition。 |
+| ❌ HHI 与 CR_n 可以混用百分数和小数口径 | ✅ 先锁定 market share 单位；monopoly 下 `CR_1=100%`，HHI 若用百分数为 `10,000`，若用小数为 `1.0` | concentration measure 题先统一单位，再解释集中度和局限。 |
+| ❌ monopolistic competition 因为有差异化产品，所以进入壁垒高 | ✅ monopolistic competition 通常 low barriers to entry；high barriers 更符合 oligopoly，very high barriers 才是 monopoly | 市场结构题看到 high barriers，优先在 oligopoly/monopoly 间判断，不要被 product differentiation 带偏。 |
 
 ## 8. 通用分析框架
 
@@ -216,9 +238,9 @@ External block (M05-M08)
 
 1. 先问企业是否 price taker：若是，进入 perfect competition，并用 `P=MR`、长期 `P=MC=min ATC`。
 2. 若有差异化但进入壁垒低：monopolistic competition，短期可有经济利润，长期需求曲线与 ATC 相切。
-3. 若少数企业且策略互动明显：oligopoly，重点判断 kinked demand、game theory、collusion stability。
-4. 若单一卖方且壁垒极高：monopoly，使用 `MR=MC` 定产量、需求曲线定价格，注意 deadweight loss 和 price discrimination。
-5. 如果题干只给 `CR_n` 或 `HHI`，先算集中度，再写限制：指标不能识别潜在进入、进口竞争和产品差异。
+3. 若少数企业、进入壁垒高且策略互动明显：oligopoly，先圈出题干是 no collusion 还是 collusive agreement / side payment；无合谋才优先找 Nash equilibrium 和 firm-level individual demand curve，有合谋则先看 aggregate market demand 的分配、联合利润最大化和分成后是否有偏离激励。若题干给 Cournot/古诺假设，核心是各企业选择自己的 profit-maximizing output，并假设 competitors' output will not change。
+4. 若单一卖方且壁垒极高：monopoly，使用 `MR=MC` 定产量、需求曲线定价格，注意 deadweight loss 和 price discrimination；集中度指标上，单一企业 market share=100%，`CR_1=100%`，HHI 达到最大值。
+5. 如果题干只给 `CR_n` 或 `HHI`，先统一 market share 单位再算集中度：百分数口径 HHI 范围通常是 0 到 10,000，小数口径范围是 0 到 1；最后写限制：指标不能识别潜在进入、进口竞争和产品差异。
 
 ### 框架3：汇率题决策树
 

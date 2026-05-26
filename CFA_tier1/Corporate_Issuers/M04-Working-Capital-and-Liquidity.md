@@ -88,6 +88,21 @@ tags:
 │  └─ 4.3.3 Cash ratio：最保守，只看现金和短期证券。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    Buy["Buy / produce inventory"] --> DIO["DIO<br/>days in inventory"]
+    DIO --> Sell["Sell on credit"]
+    Sell --> DSO["DSO<br/>days to collect cash"]
+    DSO --> Cash["Cash received"]
+    Supplier["Supplier credit"] --> DPO["DPO<br/>days to pay suppliers"]
+    DPO -.->|subtract| CCC["CCC = DIO + DSO - DPO"]
+    DIO --> CCC
+    DSO --> CCC
+    CCC --> Interpret["Shorter CCC = less financing need<br/>but check service, credit quality, supplier risk"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 经营周期 (Operating Cycle) 与现金转换周期 (Cash Conversion Cycle)

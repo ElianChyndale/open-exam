@@ -87,6 +87,21 @@ tags:
 │  └─ 2.3.3 Legal/tax/regulatory：影响发行地点、报价惯例和 after-tax return，不直接等同信用质量
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["Cash flow structure"] --> B["Coupon path"]
+  A --> C["Principal path"]
+  A --> D["Contingency"]
+  B --> B1["Fixed / floating / zero / step-up / PIK"]
+  C --> C1["Bullet: principal at maturity"]
+  C --> C2["Amortizing: principal before maturity"]
+  D --> D1["Call or prepay: issuer benefit"]
+  D --> D2["Put or convert: investor benefit"]
+  A --> E["Choose valuation and risk measure"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 票息结构 (Coupon Structures)

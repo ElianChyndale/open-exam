@@ -77,6 +77,25 @@ Alternative Investments (7-10%)
 │  └─ 7.3 Risk/return：high volatility、custody/private key、cybersecurity、regulation、liquidity fragmentation；tokenization 提高可分割性但不消除底层资产风险。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Alternative investment review"] --> B["Access structure"]
+  A --> C["Return measurement"]
+  A --> D["Asset category"]
+  B --> B1["Direct<br/>control + concentration/operations"]
+  B --> B2["Co-investment<br/>lower fees + GP sourcing dependence"]
+  B --> B3["Fund/FOF<br/>diversification + fee drag/illiquidity"]
+  C --> C1["IRR<br/>cash-flow timing sensitive"]
+  C --> C2["Multiples<br/>TVPI = DPI + RVPI"]
+  C --> C3["Smoothed NAV<br/>vol/correlation may be understated"]
+  D --> D1["Private capital"]
+  D --> D2["Real assets"]
+  D --> D3["Hedge funds"]
+  D --> D4["Digital assets"]
+```
+
 ## 4. 跨模块依赖关系
 
 ```text

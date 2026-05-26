@@ -79,6 +79,20 @@ Portfolio Management (8-12%)
 │  └─ 6.4 绩效与风险：风险管理不是最小化风险，而是让风险服务目标收益
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["Investor facts"] --> B["IPS<br/>objectives + constraints"]
+    B --> C["Risk-return inputs<br/>M01-M02"]
+    C --> D["Strategic asset allocation<br/>M03-M04"]
+    D --> E["Implementation<br/>vehicles / active-passive"]
+    E --> F["Behavior check<br/>M05"]
+    F --> G["Risk governance<br/>M06"]
+    G --> H["Monitoring / feedback"]
+    H --> B
+```
+
 ## 4. 跨模块依赖关系
 
 ```text
