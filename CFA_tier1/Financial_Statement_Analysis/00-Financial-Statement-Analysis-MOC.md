@@ -1,14 +1,14 @@
 ---
 title: "00-Financial-Statement-Analysis-MOC"
-description: "CFA Level I 2026 official module map for Financial Statement Analysis."
+description: "CFA L1 FSA 中枢 — 三表·比率·杜邦·递延税·报告质量·建模"
 subject: "Financial Statement Analysis"
 topic_area: Financial_Statement_Analysis
 level: CFA Level I
-curriculum_year: 2026
 exam_weight: "11-14%"
+exam_format: 概念+计算混合
+difficulty: 会计准则差异+比率计算，需大量练习
 note_type: master_moc
 status: active
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
 tags:
   - CFA_L1
   - MOC
@@ -16,130 +16,143 @@ tags:
   - official_2026
 ---
 
-# Financial Statement Analysis MOC
+# 📚 00-Financial-Statement-Analysis-MOC
 
-> Official 2026 Level I projection. Module names, numbers, and order are locked to the CFA Institute Learning Ecosystem scrape generated on 2026-05-25.
+> **一句话核心**：三张报表+四种比率+杜邦分解+递延税+报告质量。M02-M05是计算核心。
 
-## Official Module Table
+---
 
-| Module | Official Module | Official Page Items | Chapter File |
-|---|---|---|---|
-| M01 | Module 1: Introduction to Financial Statement Analysis | 7 items | [[M01-Introduction-to-Financial-Statement-Analysis]] |
-| M02 | Module 2: Analyzing Income Statements | 7 items | [[M02-Analyzing-Income-Statements]] |
-| M03 | Module 3: Analyzing Balance Sheets | 7 items | [[M03-Analyzing-Balance-Sheets]] |
-| M04 | Module 4: Analyzing Statements of Cash Flows I | 9 items | [[M04-Analyzing-Statements-of-Cash-Flows-I]] |
-| M05 | Module 5: Analyzing Statements of Cash Flows II | 6 items | [[M05-Analyzing-Statements-of-Cash-Flows-II]] |
-| M06 | Module 6: Analysis of Inventories | 5 items | [[M06-Analysis-of-Inventories]] |
-| M07 | Module 7: Analysis of Long-Term Assets | 6 items | [[M07-Analysis-of-Long-Term-Assets]] |
-| M08 | Module 8: Topics in Long-Term Liabilities and Equity | 5 items | [[M08-Topics-in-Long-Term-Liabilities-and-Equity]] |
-| M09 | Module 9: Analysis of Income Taxes | 6 items | [[M09-Analysis-of-Income-Taxes]] |
-| M10 | Module 10: Financial Reporting Quality | 14 items | [[M10-Financial-Reporting-Quality]] |
-| M11 | Module 11: Financial Analysis Techniques | 17 items | [[M11-Financial-Analysis-Techniques]] |
-| M12 | Module 12: Introduction to Financial Statement Modeling | 7 items | [[M12-Introduction-to-Financial-Statement-Modeling]] |
+## 📋 官方模块概览
 
-## Official Knowledge Tree
+| # | 内容 | ⚖️ | 🎯 必考点 | 🔗 |
+|---|------|-----|-----------|-----|
+| M01 | Introduction to FSA | 概念 | IFRS vs US GAAP、监管文件 | [[M01-Introduction-to-Financial-Statement-Analysis]] |
+| M02 | Analyzing Income Statements | **计算** | 📐 收入确认、EPS、non-recurring | [[M02-Analyzing-Income-Statements]] |
+| M03 | Analyzing Balance Sheets | **计算** | 无形资产、商誉、金融工具 | [[M03-Analyzing-Balance-Sheets]] |
+| M04 | Cash Flows I | **计算** | 📐 直接/间接法、CFO/CFI/CFF | [[M04-Analyzing-Statements-of-Cash-Flows-I]] |
+| M05 | Cash Flows II | **计算** | 📐 FCFF/FCFE、现金流比率 | [[M05-Analyzing-Statements-of-Cash-Flows-II]] |
+| M06 | Analysis of Inventories | **计算** | FIFO/LIFO、通胀影响 | [[M06-Analysis-of-Inventories]] |
+| M07 | Long-Term Assets | 计算 | 减值、处置 | [[M07-Analysis-of-Long-Term-Assets]] |
+| M08 | Long-Term Liabilities & Equity | 计算 | 租赁、养老金、股权激励 | [[M08-Topics-in-Long-Term-Liabilities-and-Equity]] |
+| M09 | Analysis of Income Taxes | **计算** | 📐 DTA/DTL、有效税率 | [[M09-Analysis-of-Income-Taxes]] |
+| M10 | Financial Reporting Quality | 概念 | 激进vs保守、红旗信号 | [[M10-Financial-Reporting-Quality]] |
+| M11 | Financial Analysis Techniques | **计算** | 📐 四大比率、DuPont分解 | [[M11-Financial-Analysis-Techniques]] |
+| M12 | Financial Statement Modeling | 计算 | 预测模型、情景分析 | [[M12-Introduction-to-Financial-Statement-Modeling]] |
+
+---
+
+## 🌳 核心知识树
 
 ```text
-Financial Statement Analysis (11-14%)
-├── M01: Introduction to Financial Statement Analysis
-│   ├── Learning Outcomes: Introduction to Financial Statement Analysis
-│   ├── 1.01 | Introduction
-│   ├── 1.02 | Financial Statement Analysis Framework
-│   ├── 1.03 | Scope of Financial Statement Analysis
-│   ├── 1.04 | Regulated Sources of Information
-│   ├── 1.05 | Comparison of IFRS with Alternative Financial Reporting Systems
-│   ├── 1.06 | Other Sources of Information
-├── M02: Analyzing Income Statements
-│   ├── Learning Outcomes: Analyzing Income Statements
-│   ├── 2.01 | Introduction
-│   ├── 2.02 | Revenue Recognition
-│   ├── 2.03 | Expense Recognition
-│   ├── 2.04 | Non-Recurring Items
-│   ├── 2.05 | Earnings per Share
-│   ├── 2.06 | Income Statement Ratios and Common-Size Analysis
-├── M03: Analyzing Balance Sheets
-│   ├── Learning Outcomes: Analyzing Balance Sheets
-│   ├── 3.01 | Introduction
-│   ├── 3.02 | Intangible Assets
-│   ├── 3.03 | Goodwill
-│   ├── 3.04 | Financial Instruments
-│   ├── 3.05 | Non-Current Liabilities
-│   ├── 3.06 | Ratios and Common-Size Analysis
-├── M04: Analyzing Statements of Cash Flows I
-│   ├── Learning Outcomes: Analyzing Statements of Cash Flows I
-│   ├── 4.01 | Introduction
-│   ├── 4.02 | Linkages between the Financial Statements
-│   ├── 4.03 | The Direct Method for Cash Flows from Operating Activities
-│   ├── 4.04 | The Indirect Method for Cash Flows from Operating Activities
-│   ├── 4.05 | Conversion from the Indirect to Direct Method
-│   ├── 4.06 | Cash Flows from Investing Activities
-│   ├── 4.07 | Cash Flows from Financing Activities
-│   └── ... 1 more page items
-├── M05: Analyzing Statements of Cash Flows II
-│   ├── Learning Outcomes: Analyzing Statements of Cash Flows II
-│   ├── 5.01 | Introduction
-│   ├── 5.02 | Evaluating Sources and Uses of Cash
-│   ├── 5.03 | Ratios and Common-Size Analysis
-│   ├── 5.04 | Free Cash Flow Measures
-│   ├── 5.05 | Cash Flow Statement Analysis: Cash Flow Ratios
-├── M06: Analysis of Inventories
-│   ├── Learning Outcomes: Analysis of Inventories
-│   ├── 6.01 | Introduction
-│   ├── 6.02 | Inventory Valuation
-│   ├── 6.03 | The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin
-│   ├── 6.04 | Presentation and Disclosure
-├── M07: Analysis of Long-Term Assets
-│   ├── Learning Outcomes: Analysis of Long-Term Assets
-│   ├── 7.01 | Introduction
-│   ├── 7.02 | Acquisition of Intangible Assets
-│   ├── 7.03 | Impairment and Derecognition of Assets
-│   ├── 7.04 | Presentation and Disclosure
-│   ├── 7.05 | Using Disclosures in Analysis
-├── M08: Topics in Long-Term Liabilities and Equity
-│   ├── Learning Outcomes: Topics in Long-Term Liabilities and Equity
-│   ├── 8.01 | Introduction
-│   ├── 8.02 | Leases
-│   ├── 8.03 | Financial Reporting for Postemployment and Share-Based Compensation Plans
-│   ├── 8.04 | Presentation and Disclosure
-├── M09: Analysis of Income Taxes
-│   ├── Learning Outcomes: Analysis of Income Taxes
-│   ├── 9.01 | Introduction
-│   ├── 9.02 | Differences between Accounting Profit and Taxable Income
-│   ├── 9.03 | Deferred Tax Assets and Liabilities
-│   ├── 9.04 | Corporate Income Tax Rates
-│   ├── 9.05 | Presentation and Disclosure
-├── M10: Financial Reporting Quality
-│   ├── Learning Outcomes: Financial Reporting Quality
-│   ├── 10.01 | Introduction
-│   ├── 10.02 | Conceptual Overview
-│   ├── 10.03 | GAAP, Decision Useful Financial Reporting
-│   ├── 10.04 | Biased Accounting Choices
-│   ├── 10.05 | Departures from GAAP
-│   ├── 10.06 | Differentiate between Conservative and Aggressive Accounting
-│   ├── 10.07 | Context for Assessing Financial Reporting Quality
-│   └── ... 6 more page items
-├── M11: Financial Analysis Techniques
-│   ├── Learning Outcomes: Financial Analysis Techniques
-│   ├── 11.01 | Introduction
-│   ├── 11.02 | The Financial Analysis Process
-│   ├── 11.03 | Analytical Tools and Techniques
-│   ├── 11.04 | Financial Ratio Analysis
-│   ├── 11.05 | Common Size Balance Sheets and Income Statements
-│   ├── 11.06 | Cross-Sectional, Trend Analysis, and Relationships in Financial Statements
-│   ├── 11.07 | The Use of Graphs and Regression Analysis
-│   └── ... 9 more page items
-├── M12: Introduction to Financial Statement Modeling
-│   ├── Learning Outcomes: Introduction to Financial Statement Modeling
-│   ├── 12.01 | Introduction
-│   ├── 12.02 | Building a Financial Statement Model
-│   ├── 12.03 | Behavioral Finance and Analyst Forecasts
-│   ├── 12.04 | The Impact of Competitive Factors in Prices and Costs
-│   ├── 12.05 | Modeling Inflation and Deflation
-│   ├── 12.06 | The Forecast Horizon and Long-Term Forecasting
+📚 Financial Statement Analysis (11-14%) (M01-M12) 知识体系
+
+├─ 🏆 M01: Introduction to FSA（分析框架）
+│  └─ ⭐ IFRS vs US GAAP 主要差异、监管文件
+│
+├─ 🏆 M02: Analyzing Income Statements（损益表分析）【高频计算】
+│  ├─ ⭐ 收入确认五步法（IFRS 15）
+│  ├─ 📐 Basic EPS = (NI - Preferred Dividends) / Weighted Avg Shares
+│  ├─ 📐 Diluted EPS（含可转债·期权·认股权证的稀释效应）
+│  ├─ ⭐ Non-recurring items：Discontinued/I/U、会计政策变更
+│  └─ ⚠️ 资本化vs费用化：资本化→当期NI↑但折旧↓未来NI
+│
+├─ 🏆 M03: Analyzing Balance Sheets（资产负债表分析）【计算】
+│  ├─ ⭐ 无形资产：购买(capitalize) vs 内部自创(expense) vs 并购(公允价值)
+│  ├─ ⭐ 商誉：不摊销·每年减值测试（⚠️ 减值不可转回）
+│  └─ ⭐ 金融工具：FVTPL / FVTOCI / Amortized Cost
+│
+├─ 🏆 M04-M05: Cash Flow Statements（现金流量表）【高频计算】
+│  ├─ 📐 CFO间接法 = NI + Depreciation - ΔAR + ΔAP - ΔInventory
+│  ├─ 📐 FCFF = CFO + Interest×(1-t) - CapEx（公司自由现金流）
+│  ├─ 📐 FCFE = CFO - CapEx + Net Borrowing（权益自由现金流）
+│  └─ ⚠️ NI≠CFO！NI含非现金项目（折旧·摊销·递延税），需调整营运资本变动
+│
+├─ 🏆 M06: Analysis of Inventories（存货分析）【高频计算】
+│  ├─ ⭐ FIFO：COGS低·NI高·存货高（通胀时）
+│  ├─ ⭐ LIFO：COGS高·NI低·存货低（⚠️ IFRS不允用LIFO）
+│  └─ 📐 LIFO Reserve = FIFO Inventory - LIFO Inventory（FIFO↔LIFO转换）
+│
+├─ 🏆 M07: Analysis of Long-Term Assets（长期资产）
+│  ├─ ⭐ 减值：判断→比较账面vs回收额→确认/转回
+│  └─ ⚠️ IFRS允许减值转回；US GAAP不允许（商誉也不允许）
+│
+├─ 🏆 M08: Long-Term Liabilities and Equity（长期负债与权益）【计算】
+│  ├─ ⭐ 租赁：lessee→使用权资产(ROU)+租赁负债
+│  └─ ⭐ 养老金：DC(缴款确定) vs DB(待遇确定)
+│
+├─ 🏆 M09: Analysis of Income Taxes（所得税分析）【高频计算】
+│  ├─ 📐 DTL = 应纳税暂时性差异 × 税率（未来需多交税）
+│  ├─ 📐 DTA = 可抵扣暂时性差异 × 税率（未来可少交税）
+│  ├─ 🎯 永久性差异→不影响DTA/DTL（如罚款·招待费）
+│  └─ ⚠️ DTL≠欠税！是未来才需交的税
+│
+├─ 🏆 M10: Financial Reporting Quality（报告质量）
+│  ├─ ⭐ 激进vs保守会计的识别
+│  └─ ⭐ 红旗信号(red flags)：收入提前确认·费用递延·关联交易
+│
+├─ 🏆 M11: Financial Analysis Techniques（财务分析技术）【高频计算】
+│  ├─ ⭐ 四大比率
+│  │  ├─ 流动性：Current / Quick / Cash Ratio
+│  │  ├─ 营运：Inventory / Receivables / Payables Turnover
+│  │  ├─ 偿债：D/E / Debt-to-Assets / ICR
+│  │  └─ 盈利：Gross/Operating/Net Margin / ROA / ROE
+│  └─ 📐 DuPont ROE = (NI/Rev)×(Rev/Assets)×(Assets/Equity)
+│     🎯 三因子分解：净利率×资产周转率×财务杠杆
+│
+└─ 🏆 M12: Financial Statement Modeling（财务建模）
+   └─ ⭐ 历史比率→预测假设→pro forma模型
 ```
 
-## Governance Rules
+---
 
-- Treat this MOC as a projection of the official 2026 module registry, not as the source of truth.
-- Add formulas, traps, and mistake-driven notes only when they trace back to `.system/events/` or `.system/memory/`.
-- Do not split or merge official modules in the root subject folder; put legacy or custom breakdowns under `_legacy/`.
+## 🔗 跨模块依赖关系
+
+```text
+M01（FSA概览）
+├── M02（损益）→ M10（报告质量）
+├── M03（资产负债）→ M06（存货）→ M07（长期资产）→ M08（负债/权益）
+│                                    └── M09（所得税）
+├── M04-M05（现金流）→ M11（比率分析）
+│                          └── M12（建模）
+└── 所有模块 → Equity估值/FI信用分析/PM
+
+🔗 跨科目关键接口：
+  M02 EPS ──► Equity M08 估值市盈率
+  M04 CFO ──► Corporate Issuers M04 营运资本
+  M06 FIFO/LIFO ──► FI 债券分析与比率
+  M08 租赁 ──► FI M08 长期负债
+  M11 杜邦 ──► Equity M05 公司分析
+```
+
+---
+
+## 📐 核心公式速查
+
+| 公式 | 用途 | ⚠️ |
+|------|------|-----|
+| Basic EPS=(NI-PS Div)/WA Shares | 基本EPS | 优先股股利扣除 |
+| CFO(indirect)=NI+Dep-ΔAR+ΔAP-ΔInv | 间接法CFO | |
+| FCFF=CFO+Int(1-t)-CapEx | 公司自由现金流 | |
+| DTL/(DTA)=暂差×税率 | 递延税 | 永久差异不影响 |
+| DuPont=(NI/Rev)×(Rev/Assets)×(Assets/Equity) | ROE三因子 | |
+
+## 🚨 高频陷阱速查
+
+| ❌ 错误 | ✅ 正确 | 🎯 |
+|---------|---------|-----|
+| NI=CFO | CFO需调整非现金+营运资本 | ⭐⭐⭐ |
+| LIFO下COGS更低 | 通胀时LIFO-COSS↑ NI↓ | ⭐⭐⭐ |
+| 资本化=当期NI更高 | 是，但未来折旧降低后续NI | ⭐⭐⭐ |
+| DTL=欠税 | DTL是未来才需交的税 | ⭐⭐ |
+| 商誉可摊销 | 不摊销，每年减值测试 | ⭐⭐ |
+| 稀释EPS>Basic | 稀释因子加入分母→更小 | ⭐⭐ |
+
+---
+
+## 💡 学习路径
+
+```
+阶段1（三表基础）：M01→M02→M03→M04→M05（损益表+资产负债表+现金流）
+阶段2（专题+计算）：M06→M07→M08→M09（存货+资产+负债+税）
+阶段3（分析+应用）：M11→M12→M10（比率/杜邦→建模→报告质量）
+```

@@ -31,92 +31,123 @@ tags:
 
 The candidate should be able to:
 
-- explain the cash conversion cycle and compare issuers’ cash conversion cycles
-- explain liquidity and compare issuers’ liquidity levels
-- describe issuers’ objectives and compare methods for managing working capital and liquidity
+- explain the cash conversion cycle and compare issuers' cash conversion cycles
+- explain liquidity and compare issuers' liquidity levels
+- describe issuers' objectives and compare methods for managing working capital and liquidity
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Corporate_Issuers/M03-Working-Capital-and-Liquidity.md`
+```text
+🏆 【营运资本与流动性】
+│
+├── 🔷 经营周期与现金转换周期（CCC）📐🎯
+│   ├── 经营周期（Operating Cycle）= DOH + DSO
+│   │   └── 从采购存货到收回现金的完整周期
+│   ├── 现金转换周期（CCC）= DOH + DSO - DPO 🎯
+│   │   └── 公司实际需要融资的天数
+│   ├── DIO（存货周转天数）= (Avg Inv / COGS) × 365
+│   │   └── 影响因素：行业特性、库存管理效率（JIT）
+│   ├── DSO（应收账款天数）= (Avg AR / Revenue) × 365
+│   │   └── 影响因素：信用政策、收款效率
+│   └── DPO（应付账款天数）= (Avg AP / Purchases) × 365 ⚠️
+│       └── 影响因素：供应商谈判地位
+│
+├── 🔷 融资政策 🎯
+│   ├── 激进政策（Aggressive Policy）
+│   │   ├── 更多短期债务，流动性缓冲小
+│   │   ├── 优势：融资成本低（短期利率通常低于长期）
+│   │   └── ⚠️ 劣势：展期风险（rollover risk）高
+│   └── 保守政策（Conservative Policy）
+│       ├── 更多长期资金 + 权益，高流动性缓冲
+│       ├── 优势：更稳健，不易受市场波动影响
+│       └── ⚠️ 劣势：降低 ROA，资本成本高
+│
+├── 🔷 流动性比率 📐🎯
+│   ├── Current Ratio = CA / CL
+│   │   └── ⚠️ 高不等于好（存货积压可能导致虚高）
+│   ├── Quick Ratio = (Cash + ST Inv + AR) / CL
+│   │   └── 排除存货，更严格的流动性衡量
+│   └── Cash Ratio = (Cash + ST Inv) / CL
+│       └── 最保守的流动性指标
+│
+├── 🔷 流动性缓冲
+│   ├── 持有现金或易于变现的资产
+│   ├── 保护运营不受现金流波动影响
+│   └── ⚠️ 存在机会成本（占用资本）
+│
+│   💡 核心洞察：CCC 越短越好，负的 CCC 是优质信号
+│   🎯 高频考点：CCC 计算、激进 vs 保守政策、流动性比率含义
+```
 
-_Alignment score: 1.00. Original official module field: Module 4: Working Capital and Liquidity._
+## 📐 关键公式表
 
-#### M04: Working Capital and Liquidity（营运资本与流动性）
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `DIO = (Avg Inventory / COGS) × 365` | 存货周转天数 | 衡量存货出售速度 | 越低越好，但过低可能缺货 |
+| `DSO = (Avg Receivables / Revenue) × 365` | 应收账款天数 | 衡量收款速度 | 越高说明收款越慢 |
+| `DPO = (Avg Payables / Purchases) × 365` | 应付账款天数 | 衡量付款速度 | 分母是 Purchases，非 COGS ⚠️ |
+| `Operating Cycle = DIO + DSO` | 经营周期 | 从采购到收款的完整周期 | 越长说明营运资本需求越大 |
+| `CCC = DIO + DSO - DPO` | 现金转换周期 | 实际需融资天数 | 越短越好；负值更优 |
+| `Current Ratio = CA / CL` | 流动比率 | 短期偿债能力 | 包含存货，可能虚高 |
+| `Quick Ratio = (Cash + ST Inv + AR) / CL` | 速动比率 | 严格流动性 | 排除存货 |
+| `Cash Ratio = (Cash + ST Inv) / CL` | 现金比率 | 最保守流动性 | 很少单独使用 |
+| `Net Working Capital = CA - CL` | 净营运资本 | 流动性缓冲 | 正值为传统模式 |
 
-##### 1. 核心知识点
+## 🛠️ 常见考点与解题思路
 
-###### 1.1 经营周期 (Operating Cycle) 与现金转换周期 (Cash Conversion Cycle)
+### 主题1：现金转换周期计算（🎯 必考）
+- **题型**：给定财务数据，计算 CCC
+- **解题步骤**：
+  1. 计算 DIO = (Avg Inv / COGS) × 365
+  2. 计算 DSO = (Avg AR / Revenue) × 365
+  3. 计算 DPO = (Avg AP / Purchases) × 365（如果只给 COGS，假设 Purchases = COGS 或调整存货变动）
+  4. CCC = DIO + DSO - DPO
+  5. 解读：CCC 越短，对营运资本需求越低；负 CCC 意味着公司先收钱后付款
 
-**营运资本管理 (Working Capital Management)** 的核心是管理短期资产与短期负债之间的匹配，确保公司有足够流动性维持日常运营。
+### 主题2：激进 vs 保守政策判断（🎯 高频）
+- **题型**：描述公司融资行为，问政策类型
+- **判断依据**：
+  - 短期债务占比高 + 低流动性缓冲 → **激进政策**
+  - 长期融资占比高 + 高流动性缓冲 → **保守政策**
+- **选择因素**：现金流可预测性越强，越适合激进政策；反之保守
 
-- **经营周期 (Operating Cycle)** = 存货周转天数 (Days of Inventory Outstanding, DIO) + 应收账款周转天数 (Days of Sales Outstanding, DSO)
-  - 代表从采购存货到收回现金的完整周期
-- **现金转换周期 (Cash Conversion Cycle, CCC)** = DIO + DSO - 应付账款周转天数 (Days of Payables Outstanding, DPO)
-  - 代表公司实际需要融资的天数。CCC 越短，说明公司对营运资本的需求越低。
+### 主题3：流动性比率解读陷阱
+- **题型**：问流动比率高是否意味着流动性好
+- **答案**：不一定。如果流动资产主要是滞销存货，流动比率虽高但无法快速变现
+- **延展**：需结合存货质量、应收账款账龄和行业特征综合判断
 
-**影响各周转天数的因素**：
+## 🚨 易错点与考试陷阱
 
-- **DIO**：取决于行业特性（零售商周转快，制造商周转慢）和库存管理效率（如 JIT 模式）
-- **DSO**：取决于信用政策和收款效率。宽松的信用政策可能增加销售，但也延长了现金回收期
-- **DPO**：取决于与供应商的谈判地位。延迟付款可以保留现金，但可能损害供应商关系
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|------------|------------|------|
+| DPO 的分母是 COGS | DPO 的分母是 **Purchases**，非 COGS | 只有 Purchases 才产生应付账款 |
+| 缩短 CCC 总是好事 | 过度压缩 DSO 可能流失客户，过度延长 DPO 可能激怒供应商 | 利益平衡比数字本身更重要 |
+| 流动比率高 = 流动性好 | 流动比率高可能因存货积压或应收款账期过长 | 需结合质量和行业特征分析 |
+| 激进政策总是危险的 | 现金流可预测性强的公司适合激进政策 | 关键在匹配度 |
+| CCC 为正才正常 | 优质商业模式 CCC 可以为负（如零售业先收钱后付款） | 负 CCC 是竞争优势 |
+| 现金比率是最好的流动性指标 | 现金比率过于保守，忽略了应收款的变现能力 | 实际中很少单独使用 |
+| 流动性缓冲越大越好 | 过多现金占用资本，降低 ROA | 需权衡安全与效率 |
 
-**流动性缓冲 (Liquidity Buffers)**：持有现金或易于变现的资产可以保护运营不受现金流波动的影响，但同时也占用了资本，存在机会成本。
+## 🔄 跨模块关联
 
-###### 1.2 融资政策 (Financing Policy)
+- **[[M05-Capital-Investments-and-Capital-Allocation]]** — 项目现金流分析中需包含营运资本变动（初始投入和回收）；营运资本效率影响项目 NPV
+- **[[M06-Capital-Structure]]** — 融资政策（激进 vs 保守）与资本结构决策相关；短期 vs 长期融资选择影响资本成本
+- **[[M07-Business-Models]]** — 不同商业模式的 CCC 特征不同（零售业 CCC 通常为负，制造业为正）；商业模式分析需考虑营运资本需求
+- **[[M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership]]** — 不同企业形式的融资能力不同，影响营运资本融资政策选择
+- **[[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]]** — 管理层可能因激励扭曲选择不适当的营运资本管理策略
 
-公司如何为营运资本融资可分为两种策略：
+## 📋 复习与刷题提示
 
-- **激进政策 (Aggressive Policy)**：使用更多短期债务融资，流动性缓冲较小。优势是融资成本较低（短期利率通常低于长期），劣势是**展期风险 (rollover risk)** 较高 — 如果市场环境恶化，公司可能无法续借。
-- **保守政策 (Conservative Policy)**：使用更多长期资金和权益融资，持有较多流动性缓冲。更稳健但更资本密集，降低资产回报率 (ROA)。
+- **计算题优先**：CCC = DIO + DSO - DPO 是必考公式。分别计算三个周转天数是关键
+- **概念辨析**：区分 Operating Cycle（经营周期）和 CCC（现金转换周期），Operating Cycle 不包含 DPO
+- **政策对比**：激进 vs 保守融资政策的优劣及其适用范围
+- **比率解读**：流动比率、速动比率、现金比率的递进关系 — 越来越保守
+- **DPO 陷阱**：牢记 DPO 的分母是 Purchases 而非 COGS。如果题目只给 COGS，需要根据存货变动推算 Purchases
+- **综合分析**：理解 CCC 变化的多重含义 — 缩短 CCC 可能是好事（管理改善），也可能是坏事（过度挤压供应商）
+- **行业背景**：同一 CCC 值在不同行业有完全不同的含义，永远在行业背景下解读
 
-**选择因素**：现金流可预测性越强，越适合采用激进政策；反之则宜保守。
+## 📋 复习与刷题提示
 
-###### 1.3 流动性比率 (Liquidity Ratios)
-
-- **流动比率 (Current Ratio)** = `Current Assets / Current Liabilities`，衡量短期偿债能力的粗略指标
-- **速动比率 (Quick Ratio)** = `(Cash + Marketable Securities + Receivables) / Current Liabilities`，剔除了存货，更严格地衡量流动性
-- **现金比率 (Cash Ratio)** = `(Cash + Marketable Securities) / Current Liabilities`，最保守的流动性指标
-
-##### 2. 关键公式
-
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| 存货周转天数 (DIO) | `(Average Inventory / COGS) x 365` | 存货售出平均天数 |
-| 应收账款周转天数 (DSO) | `(Average Receivables / Revenue) x 365` | 收款平均天数 |
-| 应付账款周转天数 (DPO) | `(Average Payables / Purchases or COGS) x 365` | 付款平均天数，注意分母是 purchases |
-| 经营周期 | `DIO + DSO` | 从付出现金到收回现金的时间 |
-| 现金转换周期 | `DIO + DSO - DPO` | 实际需要融资的天数 |
-
-使用场景：CCC 分析帮助判断公司营运资本管理的效率。CCC 下降可能是好事（管理改善），也可能是坏事（过度挤压供应商或收紧信用导致销售下降）。
-
-##### 3. 常见考点与解题思路
-
-**考点 1：计算现金转换周期**
-- 给定 DIO、DSO、DPO 或相关周转率数据，求 CCC。
-- 解题步骤：先分别计算 DIO、DSO、DPO，再代入 CCC = DIO + DSO - DPO。
-
-**考点 2：激进 vs 保守融资政策判断**
-- 题目描述公司的融资行为（如"公司用短期借款支持长期营运资本需求"），问其政策类型。
-- 判断依据：短期融资占比高 → 激进；长期融资占比高 + 高流动性缓冲 → 保守。
-
-**考点 3：流动性比率的解读陷阱**
-- 题目问：流动比率高是否意味着流动性好？
-- 不一定：如果大量流动资产是滞销存货，则流动比率虽高但无法快速变现。
-
-##### 4. 易错点提醒
-
-- **DPO 的分母是 purchases 而不是 COGS**：如果题目只给了 COGS，可能需要假设 purchases = COGS 或通过存货变动调整。
-- **缩短 CCC 并非总是好事**：过度压缩 DSO 可能流失客户，过度延长 DPO 可能激怒供应商。**服务质量、销售增长和信用质量必须同步考量。**
-- **流动比率高 ≠ 效率高**：流动比率的分子中积压的存货和应收款可能是低效信号。
-- **现金比率过于保守**：考试中不常作为首选指标，但需要知道其含义。
-
-##### 5. 跨模块关联
-
-- 营运资本效率 → [[M04-Capital-Investments]] 项目现金流中需包含营运资本变动
-- 融资政策 → [[M05-Cost-of-Capital]] 短期 vs 长期融资成本对应资本结构决策
-- 流动性与杠杆 → [[M06-Capital-Structure-and-Leverage]] 激进融资政策增加财务杠杆风险
-- 现金转换周期 → [[M07-Business-Models]] 不同商业模式的 CCC 特征不同（如零售业 CCC 通常为负）
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **核心公式**：CCC = DOH + DSO - DPO（必须能默写）
+- **高频考点**：CCC计算、流动性来源判断（CFO vs 外部融资）
+- **跨科目链接**：CCC概念→FSA M11 比率分析；流动性→FI M04 回购市场

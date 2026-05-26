@@ -98,6 +98,119 @@ _Alignment score: 0.39. Original official module field: Hedge Funds._
 - 费用结构 → [[M01-Features-and-Structure.md]] (2/20结构与高水位线)
 - 杠杆对比 → [[M03-Private-Capital.md]] (PE杠杆 vs 对冲基金杠杆)
 - 业绩衡量 → [[M02-Performance-Measurement.md]] (Sharpe/Sortino应用于对冲基金评估)
+### 🌳 核心知识树
+
+```text
+🏆 M06: Hedge Funds（对冲基金）
+│
+├── ⭐ 对冲基金特征 (HF Characteristics) 🎯高频
+│   ├── 流动性: 锁定期(1-3年) + 通知期(30-90天)
+│   ├── 透明度: 高于PE/VC，低于共同基金
+│   ├── 费用: 通常2/20（2%管理费+20%业绩提成）
+│   └── 高水位线: 普遍采用，保护投资者
+│
+├── ⭐ 四大策略 (HF Strategies) 🎯超高頻
+│   ├── Equity Long/Short (股票多空)
+│   │   ├── 同时持有多头和空头，降低市场风险
+│   │   └── 风险中等，与股票相关性0.5-0.7
+│   ├── Global Macro (全球宏观)
+│   │   ├── 基于宏观经济趋势跨资产交易
+│   │   └── 高风险，与股票相关性0.2-0.4
+│   ├── Event Driven (事件驱动)
+│   │   ├── 利用公司特定事件（并购、重组）
+│   │   └── 风险中高，与股票相关性0.4-0.6
+│   └── Relative Value (相对价值)
+│       ├── 利用定价偏差，市场中性
+│       └── 风险低，与股票相关性0.1-0.3
+│
+├── ⭐ 杠杆指标 (Leverage Metrics) 🎯超高頻
+│   ├── 📐 总杠杆 (Gross) = (Long + |Short|) / Capital
+│   └── 📐 净杠杆 (Net) = (Long - |Short|) / Capital
+│       ⚠️ Gross≠Net，概念完全不同
+│
+├── ⭐ 对冲基金风险
+│   ├── 策略风险: 不同策略风险水平差异大
+│   ├── 杠杆风险: 放大收益也放大亏损
+│   ├── 流动性风险: 锁定期和通知期限制赎回
+│   ├── 对手方风险: 衍生品交易对手违约
+│   └── 风格漂移: 偏离既定策略
+│
+└── ⭐ 对冲基金分散化
+    ├── 与传统资产低到中等相关性
+    ├── 不同策略之间互补性
+    └── ⚠️ 危机时相关性可能上升
+```
+
+### 📐 关键公式表
+
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| 总杠杆 = (Long + |Short|) / Capital | 总敞口杠杆 | 衡量总头寸规模 | 包括多空双边 |
+| 净杠杆 = (Long - |Short|) / Capital | 市场敞口杠杆 | 衡量方向性风险 | 市场中性≈0 |
+| 管理费 = AUM × 2% | 管理费 | 年度固定费用 | 无论盈亏都收取 |
+| 业绩提成 = 超额收益 × 20% | 激励费 | 收益分成 | 受High Water Mark约束 |
+| 净回报 = Gross Return - Fees | 投资者所得 | 真实投资回报 | 费用侵蚀显著 |
+
+### 🛠️ 常见考点与解题思路
+
+**Topic 1: 四大策略辨析**
+- 题干描述基金的投资方式和持仓特征 → 判断策略类型
+- 多空持仓 → Equity L/S
+- 宏观经济判断 → Global Macro
+- 公司事件套利 → Event Driven
+- 价差套利 → Relative Value
+
+**Topic 2: 杠杆计算**
+- Gross Leverage = (Long + |Short|) / Capital
+- Net Leverage = (Long - |Short|) / Capital
+- 市场中性：Net ≈ 0
+- 解题：注意空头用绝对值
+
+**Topic 3: 策略风险排序**
+- 低风险：Relative Value
+- 中等风险：Equity Long/Short
+- 中高风险：Event Driven
+- 高风险：Global Macro
+
+**Topic 4: 费用计算**
+- 管理费直接从AUM中扣除
+- 业绩提成需考虑Hurdle Rate和High Water Mark
+- 净回报 = 总回报 - 管理费 - 业绩提成
+
+### 🚨 易错点与考试陷阱
+
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|------------|------------|------|
+| 总杠杆 = 净杠杆 | 总杠杆=总敞口，净杠杆=市场敞口 | 概念完全不同 |
+| 对冲基金名称中的"对冲"=完全对冲市场风险 | 很多基金是净多头的 | 名称不反映实际风险 |
+| 策略风险水平仅由名称决定 | 同策略内也有差异 | 看具体持仓和管理人 |
+| 锁定期=通知期 | 锁定期是最短持有期，通知期是赎回提前通知 | 两个不同约束 |
+| Relative Value = 无风险 | 有模型风险和执行风险 | 价差可能扩大 |
+| Global Macro = 股票策略 | 跨资产类别交易 | 外汇、利率、商品、股票 |
+| 对冲基金总是提供分散化 | 危机时相关性上升 | 分散化是动态的 |
+| 高水位线保护GP | 高水位线保护LP | 防止重复收费 |
+
+### 🔄 跨模块关联
+
+- **费用结构** → [[M01-Alternative-Investment-Features-Methods-and-Structures]]（2/20结构和高水位线）
+- **杠杆对比** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE杠杆vs对冲基金杠杆）
+- **业绩衡量** → [[M02-Alternative-Investment-Performance-and-Returns]]（Sharpe/Sortino用于HF评估）
+- **对冲基金策略与市场效率** → Equity M03（套利与市场效率）
+- **基金结构** → [[M01-Alternative-Investment-Features-Methods-and-Structures]]（GP/LP角色）
+- **Global Macro与宏观经济** → Economics M02-M04（宏观策略的决策依据）
+- **EV/EBITDA与事件驱动** → Equity M08（并购套利的估值逻辑）
+
+### 📋 复习与刷题提示
+
+- **四大策略特征对比**：运作方式、风险水平、与股票相关性是最高频考点
+- **Gross vs Net Leverage计算**：区分总杠杆和净杠杆的计算和含义
+- **策略风险排序**：Relative Value < Equity L/S < Event Driven < Global Macro
+- **费用结构**：理解2/20和高水位线的保护机制
+- **对冲基金vs PE/VC对比**：流动性、透明度、费用结构差异
+- **风险类型**：策略风险、杠杆风险、流动性风险、对手方风险
+- **刷题建议**：mock中策略判断和杠杆计算最高频
+- **注意"对冲"的误导**：名称易引起误解，基金可能保留大量方向性风险
+
 ## Review Hooks
 
 - Add mistake-driven traps only after they can be traced back to `.system/events/`.

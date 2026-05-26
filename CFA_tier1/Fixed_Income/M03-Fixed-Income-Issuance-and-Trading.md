@@ -35,57 +35,117 @@ The candidate should be able to:
 - describe types of fixed-income indexes
 - compare primary and secondary fixed-income markets to equity markets
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Fixed_Income/M02-Issuance-and-Trading.md`
+```text
+🏆 M03: Fixed-Income Issuance and Trading（固定收益发行与交易）
+├─ ⭐ 3.1 市场分类 (Market Map)
+│  ├─ 📐 货币市场 vs 资本市场：期限是否超过一年
+│  ├─ 📐 主权债 vs 准政府债 vs 公司债：信用风险逐级升高
+│  ├─ 🎯 一级市场 (primary)：新发行债券的初始销售
+│  ├─ 🎯 二级市场 (secondary)：已发行债券的交易 (OTC 模式)
+│  ├─ 🎯 固定收益指数细分：期限/发行人/信用/货币
+│  └─ ⚠️ 一级市场发行量不直接反映二级市场流动性
+│
+├─ ⭐ 3.2 市场参与者
+│  ├─ 💡 发行人：政府、机构、公司、超国家组织
+│  ├─ 💡 投资者：机构（养老保险基金、保险公司、基金）主导
+│  └─ 💡 做市商 (dealer)：OTC 市场的核心流动性提供者
+│
+├─ ⭐ 3.3 回购融资 (Repo Financing)
+│  ├─ 📐 Repo = 出售证券 + 承诺未来购回（抵押短期融资）
+│  ├─ 📐 Haircut (折扣率) = (抵押品价值 - 融资金额) / 抵押品价值
+│  ├─ 🎯 回购利率 (repo rate)：通常低于无担保融资利率
+│  ├─ 🎯 交易对手风险 (counterparty risk)
+│  └─ ⚠️ Repo 看起来像买卖，但经济本质常按融资理解【考试陷阱】
+│
+└─ ⭐ 3.4 指数与基准
+   ├─ 💡 债券指数类型：综合、政府、公司、高收益
+   ├─ 💡 指数构建：市值加权 vs 等权重
+   └─ 💡 基准作用：业绩比较、ETF 追踪
+```
 
-_Alignment score: 1.00. Original official module field: Module 3: Fixed-Income Issuance and Trading._
+## 📐 关键公式表
 
-#### M03: 发行、交易与回购融资 (Issuance, Trading, and Repo Financing)
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `Repo rate ≈ 抵押融资成本` | 回购利率 | 比较融资成本 | 通常低于无担保融资利率 |
+| `Haircut = (抵押品价值 - 融资金额) / 抵押品价值` | 折扣率 | 计算融资比例 | Haircut 越高，可融资金越少 |
+| `Bid-ask spread 衡量流动性` | 做市商报价差 | 评估市场流动性 | 报价差越小，流动性越好 |
+| `Bond Index: market-value-weighted` | 债券指数构建 | 指数追踪 | 市值加权最常用 |
+| `Investment Grade: BBB-/Baa3+` | 投资级/高收益分界 | 信用分类 | 标普 vs 穆迪命名不同 |
 
-##### 1. 核心知识点
+### 关键数值记忆
+- 货币市场期限分界：1 年（365 天）
+- 投资级/高收益分界：S&P BBB- / Moody's Baa3
+- CP 免注册期限：美国 270 天
+- Repo haircut 范围：通常 2%-20%（取决于抵押品质量）
 
-###### 1.1 市场地图 (Market Map)
+## 🛠️ 常见考点与解题思路
 
-- **货币市场 vs 资本市场；主权债 vs 准政府债 vs 公司债 (money market vs capital market; sovereign vs quasi-government vs corporate)**：货币市场 (money market) 交易期限不超过一年的短期工具；资本市场 (capital market) 交易长期债券。主权债由中央政府发行，准政府债由政府机构发行，公司债由企业发行，三者信用风险逐级升高。
-- **一级发行 vs 二级交易；做市商市场流动性 (primary issuance vs secondary trading; dealer market liquidity)**：一级市场 (primary market) 是新发行债券的初始销售；二级市场 (secondary market) 是已发行债券的交易。债券二级市场以做市商 (dealer) 为核心，采用场外交易 (OTC) 模式。
-- **固定收益指数：期限、发行人、信用、货币细分 (fixed-income indexes: maturity, issuer, credit, currency segmentation)**：债券指数按期限（短期/中期/长期）、发行人类型（政府/公司）、信用评级（投资级/高收益）、货币（本币/外币）等维度细分。
+### 考点 1：区分 Primary vs Secondary Market
+- **思路**：新发行 → primary；已发行债券交易 → secondary
+- **关键**：一级市场决定发行价格和融资额，二级市场决定流动性和价格发现
 
-###### 1.2 回购融资 (Repo Financing)
+### 考点 2：区分 Money Market vs Capital Market
+- **思路**：期限 < 1 年（T-bill、CP、repo）→ money market；期限 > 1 年 → capital market
+- **典型工具**：Money market = T-bills, commercial paper, bankers' acceptances, repos
 
-- **回购协议 (repurchase agreement / repo)**：一方出售证券并承诺在未来特定日期以约定价格购回。本质是抵押短期融资——卖出方融入资金，买入方获得抵押品和利息收入。
-- **Haircut（折扣率）**：抵押品价值超过融资金额的部分，保护资金出借方在抵押品价值下降时的风险。Haircut 越高，借方可融得的资金越少。
-- **回购利率 (repo rate)**：反映抵押融资成本，通常低于无担保融资利率（如银行间拆借利率）。回购利率受抵押品质量、期限和市场流动性影响。
-- **交易对手风险 (counterparty risk)**：如果抵押品价值大幅下降，融资方可能违约；如果融资方违约，资金出借方持有抵押品但面临流动性风险。
+### 考点 3：理解 Repo 的经济实质
+- **思路**：虽然是买卖形式，但会计和风险上按抵押融资处理
+- **记忆技巧**：Repo = secured short-term borrowing (出售方融入资金，买入方融出资金)
 
-##### 2. 关键公式
+### 考点 4：区分 Investment-Grade vs High-Yield
+- **思路**：评级 BBB-/Baa3 及以上为投资级；以下为高收益
+- **考试常考**：两类债券的收益率特征、利差敏感性、违约率差异
 
-本模块以概念为主。需要理解的核心关系：
+## 🚨 易错点与考试陷阱
 
-- `Repo rate ≈ 抵押融资成本` —— 通常低于无担保融资利率
-- `Haircut = (抵押品价值 - 融资金额) / 抵押品价值`
-- `Bid-ask spread 衡量债券市场流动性` —— 做市商报价差越小，流动性越好
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-------------|-------------|------|
+| Repo 是两笔独立的买卖 | 经济本质是抵押融资（一笔交易的两个环节） | 会计处理可能不同，但经济实质是贷款 |
+| 发行量大 = 流动性好 | 流动性取决于交易活跃度和做市商参与度 | 发行量和流动性是不同概念 |
+| 债券市场以交易所交易为主 | 债券市场以 OTC（场外）交易为主 | 与股票市场不同 |
+| Commercial paper 无风险 | CP 依赖发行人信用和备用信贷额度 | 金融危机中 CP 市场曾冻结 |
 
-##### 3. 常见考点与解题思路
+## 🔄 跨模块关联
 
-- **区分 primary market 与 secondary market**：新发行 → primary；已发行债券交易 → secondary。
-- **区分 money market 与 capital market 工具**：期限短于一年（如 T-bill、CP、repo）→ money market；期限长于一年 → capital market。
-- **理解 repo 的经济实质**：虽然是买卖形式，但会计和风险上按抵押融资处理。
-- **区分 investment-grade 与 high-yield 债券**：评级 BBB-/Baa3 及以上为投资级；以下为高收益。
+- **回购融资** → [[M01-Fixed-Income-Instrument-Features]] 的抵押品概念
+- **市场结构** → [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] 公司发行人融资市场
+- **市场结构** → [[M05-Fixed-Income-Markets-for-Government-Issuers]] 政府发行人融资市场
+- **利差行为** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的利差度量
+- **指数与基准** → [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] 的基准收益率曲线
 
-##### 4. 易错点提醒
+## 📋 复习与刷题提示
 
-- **Repo 看起来像 sale-and-repurchase，但经济本质常按融资理解【考试陷阱】**：不要因为存在两笔交易就认为它是买卖，应关注其抵押融资的经济实质。
-- **一级市场发行量不直接反映二级市场流动性**：发行量大不一定流动性好，还要看交易活跃度和做市商参与度。
-- **Commercial paper 通常有备用信贷额度支持**，这是其信用支持的重要来源，考试常考。
+- **核心重点**：回购协议 (repo) 的经济实质和风险管理是最高频考点
+- **市场分类**：
+  - 货币市场（T-bill、CP、Repo、BA）：期限 ≤ 1 年
+  - 资本市场（国债、公司债、MBS）：期限 > 1 年
+- **概念对比**：一级市场（新发行、定价、融资额）vs 二级市场（交易、流动性、价格发现）
+- **Commercial paper**：理解备用信贷额度的重要性，CP 市场在金融危机中的冻结风险
+- **关键区分**：
+  - 投资级（BBB-/Baa3 及以上）vs 高收益（BB+/Ba1 及以下）
+  - 公开发行 vs 私募的区别
+- **刷题建议**：
+  - 重点做回购融资（repo rate、haircut 的计算和理解）
+  - 市场分类（money market vs capital market 工具识别）
+  - 指数相关题目（债券指数构建方法和细分维度）
+- **易混淆点**：Repo 的"买卖"形式 vs "融资"实质；一级市场发行量不直接等于二级市场流动性
+- **复习时间分配**：40% 回购协议，30% 市场分类，20% 指数，10% 参与者
 
-##### 5. 跨模块关联
-
-- 回购融资 → [[M01-Instrument-Features]] 的抵押品概念
-- 市场结构 → [[M04-FI-Markets-Corp-Issuers]] 公司发行人融资市场
-- 市场结构 → [[M05-FI-Markets-Government-Issuers]] 政府发行人融资市场
-- 利差行为 → [[M07-Yield-and-Spread-Measures]] 的利差度量
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **市场数据**：
+  - 固定收益市场规模约 3 倍于股票市场
+  - OTC 交易占债券交易 > 90%
+  - 美国国债日均交易量 > $500B
+- **交易结算**：
+  - 美国国债 T+1 结算
+  - 公司债 T+2 结算
+  - DVP（付款交割）消除本金风险
+- **关键数值**：
+  - 货币市场期限分界：1 年
+  - IG/HY 分界：BBB-/Baa3
+  - CP 免注册：270 天
+  - Repo haircut：通常 2%-20%（取决于抵押品质量和波动性）
+  - 债券市场规模：约 3 倍于全球股票市场
+  - OTC 交易：占债券市场交易量的 90% 以上

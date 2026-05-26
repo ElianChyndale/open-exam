@@ -35,57 +35,129 @@ The candidate should be able to:
 - describe the uses of ratings from credit rating agencies and their limitations
 - describe macroeconomic, market, and issuer-specific factors that influence the level and volatility of yield spreads
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Fixed_Income/M10-Credit-Risk.md`
+```text
+🏆 M14: Credit Risk（信用风险）
+├─ ⭐ 14.1 损失逻辑 (Loss Logic)
+│  ├─ 📐 预期信用损失 = PD × LGD × Exposure
+│  ├─ 📐 LGD = 1 - Recovery Rate
+│  ├─ 🎯 PD (违约概率)：发行人无法支付本息的可能性
+│  ├─ 🎯 LGD (违约损失率)：违约后的损失比例
+│  ├─ 🎯 Recovery Rate：违约后回收的比例（担保高→回收高）
+│  └─ ⚠️ 回收率存在很大不确定性
+│
+├─ ⭐ 14.2 信用风险类型
+│  ├─ 📐 违约风险 (Default Risk)：实际不支付本息
+│  ├─ 📐 降级风险 (Downgrade Risk)：评级下调导致价格下跌
+│  ├─ 📐 利差风险 (Spread Risk)：信用利差走阔导致价格下跌
+│  └─ 💡 利差常在违约前走阔（前瞻性定价）
+│
+├─ ⭐ 14.3 信用评级
+│  ├─ 💡 Moody's / S&P / Fitch 三大评级机构
+│  ├─ 💡 投资级：BBB-/Baa3 及以上；高收益：BB+/Ba1 及以下
+│  ├─ 🎯 评级总结相对信用风险，非保证
+│  └─ ⚠️ Issuer rating ≠ Issue rating（债项因担保、优先级不同）
+│
+└─ ⭐ 14.4 利差驱动因素
+   ├─ 💡 宏观因素：GDP 增长、利率水平、通胀
+   ├─ 💡 市场因素：流动性、风险偏好、技术面
+   ├─ 💡 发行人因素：财务健康、行业前景、管理层质量
+   └─ 💡 Spread ≈ 信用风险溢价 + 流动性溢价 + 期权成本
+```
 
-_Alignment score: 1.00. Original official module field: Module 14: Credit Risk._
+## 📐 关键公式表
 
-#### M13: 信用风险 (Credit Risk)
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `ECL ≈ PD × LGD × Exposure` | 预期信用损失 | 信用风险评估 | 三要素缺一不可 |
+| `LGD = 1 - Recovery Rate` | 违约损失率 | 损失程度估算 | 回收率难以精确预测 |
+| `Credit Spread = YTM_bond - YTM_benchmark` | 信用利差 | 风险度量 | 可能含流动性和期权溢价 |
+| `Spread ≈ 信用 + 流动性 + 期权溢价` | 利差分解 | 利差因素分析 | 非纯信用补偿 |
 
-##### 1. 核心知识点
+## 🛠️ 常见考点与解题思路
 
-###### 1.1 损失逻辑 (Loss Logic)
+### 考点 1：计算预期损失
+- **题型**：给定 PD、回收率、敞口，计算 ECL
+- **步骤**：
+  1. 回收率 → LGD = 1 - 回收率
+  2. ECL = PD × LGD × Exposure
+- **注意**：LGD 和回收率的关系是互补的
 
-- **预期信用损失 = PD x LGD x 敞口 (expected credit loss intuition = PD x LGD x exposure)**：信用风险的核心度量。PD (probability of default) 是违约概率；LGD (loss given default) = 1 - 回收率；exposure 是违约时的风险敞口。
-- **违约风险、降级风险、利差风险 (default risk, downgrade risk, spread risk)**：信用风险不限于违约本身。降级风险 (downgrade risk) 指评级下调导致价格下跌；利差风险 (spread risk) 指信用利差走阔导致价格下跌，即使尚未违约。
-- **回收率与优先级决定损失严重程度 (recovery and seniority shape loss severity)**：担保债务的回收率通常高于无担保债务；优先级债务的回收率高于次级债务。LGD = 1 - Recovery Rate。
+### 考点 2：区分违约风险与利差风险
+- **违约风险**：发行人无法按时支付本息，涉及实际违约
+- **利差风险**：二级市场价格因信用担忧下跌，尚未发生违约
+- **考试常考**：两者的概念区分和实际案例判断
 
-###### 1.2 评级与利差驱动因素 (Ratings and Spread Drivers)
+### 考点 3：理解评级对融资成本的影响
+- **降级** → 利差走阔 → 债券价格下跌 → 发行人融资成本上升
+- **负面观察**：即使未正式降级，列入负面观察名单也会产生影响
+- **评级限制**：滞后性、发债人付费模式可能产生利益冲突
 
-- **评级总结相对信用风险但非保证 (ratings summarize relative credit risk but are not guarantees)**：评级机构（Moody's、S&P、Fitch）的评级是对相对违约风险的综合评估，不保证特定违约概率或损失率。
-- **宏观、市场、发行人因素影响利差水平与波动性 (macro, market, issuer factors move spread level and volatility)**：宏观因素（GDP 增长、利率）、市场因素（流动性、风险偏好）、发行人因素（财务健康、行业前景）共同决定信用利差。
-- **流动性和期权特征可与纯信用利差共存 (liquidity and optionality can coexist with pure credit spread)**：观察到的利差是信用风险补偿、流动性补偿和期权补偿的混合体，不能简单等同于纯信用风险溢价。
+### 考点 4：分析利差变化的驱动因素
+- **信用恶化**（基本面变差）：发行人的财务指标恶化
+- **流动性恶化**（交易困难）：市场深度下降、bid-ask spread 扩大
+- **风险偏好下降**（市场整体因素）：危机时期利差系统性走阔
 
-##### 2. 关键公式
+## 🚨 易错点与考试陷阱
 
-| 指标 | 公式 |
-|------|------|
-| 预期信用损失 | `ECL ≈ PD x LGD x Exposure` |
-| 违约损失率 | `LGD = 1 - Recovery Rate` |
-| 信用利差 | `Credit Spread = YTM_bond - YTM_benchmark` |
-| 利差分解 (概念) | `Spread ≈ 信用风险溢价 + 流动性溢价 + 期权成本` |
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-------------|-------------|------|
+| 利差走阔 = 即将违约 | 利差是前瞻性定价，走阔是为风险补偿增加 | 违约前利差常先走阔 |
+| Issuer rating = Issue rating | 具体债项因担保、优先级可能不同 | 需区分主体评级和债项评级 |
+| Credit spread 只反映信用风险 | 包含流动性溢价和期权成本 | 多因素混合 |
+| 回收率可精确预测 | 取决于复杂的法律和市场环境 | 不确定性很大 |
 
-##### 3. 常见考点与解题思路
+## 🔄 跨模块关联
 
-- **计算预期损失**：给出 PD、回收率、敞口，计算 ECL。注意回收率转 LGD：LGD = 1 - 回收率。
-- **区分违约风险与利差风险**：违约风险涉及发行人无法支付本息；利差风险是二级市场价格因信用担忧而下跌，即使尚未发生违约。
-- **理解评级对融资成本的影响**：降级通常导致利差走阔、债券价格下跌；列入负面观察名单也会产生影响。
-- **分析利差变化的驱动因素**：判断利差走阔是源于信用恶化（发行人基本面变差）、流动性恶化（交易困难）还是市场风险偏好下降。
+- **信用利差** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的利差度量
+- **回收率/优先级** → [[M15-Credit-Analysis-for-Government-Issuers]] 和 [[M16-Credit-Analysis-for-Corporate-Issuers]] 的债项优先级
+- **信用风险建模** → [[M17-Fixed-Income-Securitization]] 的资产隔离逻辑
+- **信用增级** → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的内外部增级
 
-##### 4. 易错点提醒
+## 📋 复习与刷题提示
 
-- **利差常在违约前走阔，因为所需补偿发生了变化 (a spread widens before default often because required compensation changed)**：信用利差是市场对信用风险的前瞻性定价，利差走阔本身不意味着违约，而是市场要求的风险补偿增加。
-- **Issuer rating ≠ issue rating**：发行人的评级针对其整体偿债能力，具体债项的评级可能因担保品、优先级等因素而不同。
-- **Credit spread 不是静态的**：即使发行人基本面不变，市场风险偏好的变化也会导致利差波动（如危机时期利差系统性走阔）。
-- **Recovery rate 存在很大不确定性**：违约后的实际回收率取决于复杂的法律程序和市场环境，难以准确预测。
+- **核心重点**：ECL 计算、PD/LGD/回收率的关系
+  - ECL = PD × LGD × Exposure
+  - LGD = 1 - Recovery Rate
+  - 回收率取决于担保品和优先级
+- **风险类型区分**：
+  - 违约风险：实际不支付本息（最严重）
+  - 降级风险：评级下调导致价格下跌
+  - 利差风险：信用利差走阔导致价格下跌
+  - 利差常在违约前走阔（市场前瞻性定价）
+- **评级体系**：
+  - 投资级：BBB-/Baa3 及以上
+  - 高收益（垃圾级）：BB+/Ba1 及以下
+  - 局限性：滞后性、发债人付费模式
+  - Issuer rating ≠ Issue rating
+- **利差分解**：
+  - Spread ≈ 信用溢价 + 流动性溢价 + 期权成本
+  - 利差驱动三因素：宏观（GDP、利率）、市场（流动性、风险偏好）、发行人（财务、行业）
+- **典型计算流程**：
+  1. 已知 PD = 2%，Recovery Rate = 40%，Exposure = $10M
+  2. LGD = 1 - 0.40 = 0.60
+  3. ECL = 0.02 × 0.60 × $10M = $120,000
+- **刷题建议**：
+  - 重点做 ECL 计算题
+  - 利差驱动因素分析题（判断给定因素 → spread ↑/↓）
+  - 评级相关题（投资级 vs 高收益分界）
+- **易混淆点**：
+  - 利差走阔 ≠ 即将违约（可能是流动性恶化或风险偏好转变）
+  - Issuer rating ≠ Issue rating
+  - 回收率难以精确预测
 
-##### 5. 跨模块关联
-
-- 信用利差 → [[M04-Yield-and-Spread-Measures]] 的利差度量
-- 回收率/优先级 → [[M11-Government-and-Corporate-Credit]] 的债项优先级
-- 信用风险建模 → [[M12-Securitization-Foundations]] 的资产隔离逻辑
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **关键数值记忆**：
+  - ECL = PD × LGD × Exposure
+  - LGD = 1 - Recovery Rate
+  - IG 回收率：有担保 50-80%，优先无担保 30-60%
+  - HY 回收率：优先有担保 30-60%，次级 10-30%
+- **信用评级体系**：
+  - 投资级：AAA → BBB-（S&P）/ Aaa → Baa3（Moody's）
+  - 高收益：BB+ → D（S&P）/ Ba1 → C（Moody's）
+  - 评级符号：S&P ±（如 BBB+），Moody's 数字（如 Baa1）
+- **利差驱动因素总结**：
+  - 宏观：GDP 增长、通胀、货币政策
+  - 市场：流动性、风险偏好、技术面供需
+  - 发行人：财务健康、行业地位、管理层质量
+  - 利差 ≈ 信用溢价 + 流动性溢价 + 期权成本
