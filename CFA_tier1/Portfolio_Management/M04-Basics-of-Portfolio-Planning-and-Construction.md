@@ -1,6 +1,6 @@
 ---
 title: "M04: Basics of Portfolio Planning and Construction"
-description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Portfolio Management"
 topic_area: "Portfolio_Management"
 level: "CFA Level I"
@@ -55,14 +55,14 @@ tags:
 ## 1. 模块定位
 
 ### 4.1 学习任务
-- **核心问题**：考试希望你用 `Basics of Portfolio Planning and Construction` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Basics of Portfolio Planning and Construction` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 4.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 4.3 关键英文术语
 - **Basics of Portfolio Planning and Construction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -78,105 +78,152 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 4.1 | describe the reasons for a written investment policy statement (IPS) | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 4.2 | describe the major components of an IPS | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 4.3 | describe risk and return objectives and how they may be developed for a client | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 4.4 | explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 4.5 | describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 4.6 | explain the specification of asset classes in relation to asset allocation | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 4.7 | describe the principles of portfolio construction and the role of asset allocation in relation to the IPS | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 4.8 | describe how environmental, social, and governance (ESG) considerations may be integrated into portfolio planning and construction | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 4.1 | describe the reasons for a written investment policy statement (IPS) | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 4.2 | describe the major components of an IPS | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 4.3 | describe risk and return objectives and how they may be developed for a client | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 4.4 | explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 4.5 | describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 4.6 | explain the specification of asset classes in relation to asset allocation | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 4.7 | describe the principles of portfolio construction and the role of asset allocation in relation to the IPS | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 4.8 | describe how environmental, social, and governance (ESG) considerations may be integrated into portfolio planning and construction | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 4. Basics of Portfolio Planning and Construction
-├─ 4.1 Introduction
-│  ├─ 4.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.1.2 应用/判断：把概念或公式转成解题动作
-├─ 4.2 The Investment Policy Statement
-│  ├─ 4.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.2.2 应用/判断：把概念或公式转成解题动作
-├─ 4.3 IPS Risk and Return Objectives
-│  ├─ 4.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.3.2 应用/判断：把概念或公式转成解题动作
-├─ 4.4 IPS Constraints
-│  ├─ 4.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.4.2 应用/判断：把概念或公式转成解题动作
-├─ 4.5 Gathering Client Information
-│  ├─ 4.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.5.2 应用/判断：把概念或公式转成解题动作
+├─ 4.1 IPS 概述 (IPS Overview)
+│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.2 收益目标 (Return Objectives)
+│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.3 风险目标 (Risk Objectives)
+│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.4 约束条件 (Constraints) — L-T-T-L-U
+│  ├─ 4.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.4.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 4.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the reasons for a written investment policy statement (IPS)`。
-- **核心词汇**：**Basics of Portfolio Planning and Construction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 4.1 IPS 概述 (IPS Overview)
 
-### 4.2 The Investment Policy Statement
-- **中文主线**：本节点解决 `The Investment Policy Statement` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the major components of an IPS`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **IPS (Investment Policy Statement, 投资策略说明书)** 是客户与投资经理之间的指导性文件
+- 它记录投资者的目标、约束和投资指导原则
+- 不是法律合同，而是决策框架 (decision-making framework)
+- 考试中 IPS 题是高频题型，通常要求根据给定情景写出或分析 IPS
 
-### 4.3 IPS Risk and Return Objectives
-- **中文主线**：本节点解决 `IPS Risk and Return Objectives` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe risk and return objectives and how they may be developed for a client`。
-- **核心词汇**：**The Investment Policy Statement（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 4.2 收益目标 (Return Objectives)
 
-### 4.4 IPS Constraints
-- **中文主线**：本节点解决 `IPS Constraints` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance`。
-- **核心词汇**：**IPS Risk and Return Objectives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **所需收益 (required return / return need)**：必须达到的最低收益，通常来自支出需求
+- **期望收益 (return desire / return wish)**：投资者希望达到的更高收益
+- 两者冲突时，以 required return 为准（现实约束优先）
+- 收益目标表述必须是 **可量化的 (quantifiable)** 和 **决策可用的 (decision-useful)**
+  - 错误示例："获得合理收益"
+  - 正确示例："在扣除通胀后实现每年 5% 的实际收益"
+- 常见分类：**绝对收益目标 (absolute)** vs **相对收益目标 (relative)** 如超越基准
 
-### 4.5 Gathering Client Information
-- **中文主线**：本节点解决 `Gathering Client Information` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets`。
-- **核心词汇**：**IPS Constraints（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 4.3 风险目标 (Risk Objectives)
 
+- **风险意愿 (risk willingness / risk tolerance)**：投资者心理上愿意承受的风险
+  - 通过问卷评估：投资经验、损失反应、时间跨度
+- **风险能力 (risk ability / risk capacity)**：投资者财务上能够承受的风险
+  - 取决于收入水平、财富规模、支出需求、投资期限
+  - 资金越紧张、期限越短 → risk capacity 越低
+- **客观风险承受力 (objective risk tolerance)** 是 willingness 和 ability 的**较低者**
+  - 例如：willingness 高但 capacity 低 → 以 capacity 为准
+
+### 4.4 约束条件 (Constraints) — L-T-T-L-U
+
+| 约束类型 | 英文 | 说明 |
+|----------|------|------|
+| 流动性 | Liquidity | 短期现金需求，如学费、医疗费、遗产税 |
+| 时间跨度 | Time horizon | 投资期限，影响是否可承受短期波动 |
+| 税收 | Taxes | 税种、税率、税收优惠账户的使用 |
+| 法律/监管 | Legal/Regulatory | 信托责任、养老金法规、投资限制 |
+| 特殊情形 | Unique circumstances | 道德偏好、ESG 限制、遗产规划等 |
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Portfolio return | `Rp = Σ wi Ri` | 组合收益是资产收益的加权平均。 |
-| Portfolio variance | `σp² = w1²σ1² + w2²σ2² + 2w1w2ρ12σ1σ2` | 相关性越低，分散化收益越明显。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式/概念 | 说明 |
+|------|-----------|------|
+| Required return | 支出需求 / 可投资资产 + 通胀 | 常见于 endowment/ foundation 题目 |
+| 风险承受力 | `min(willingness, ability)` | 取较低者 |
+| 名义 vs 实际收益 | 实际收益 = 名义收益 - 通胀率 | 支出需求通常与通胀挂钩 |
+| 税前 vs 税后收益 | 税后收益 = 税前收益 × (1 - 税率) | 受税收约束时需换算 |
+
+*注：M05 题型以策略分析和情景题为主，无复杂数学公式。*
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 4.1 考点1：写 Return Objective | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 4.2 考点2：写 Risk Objective | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 4.3 考点3：按 L-T-T-L-U 写 Constraints | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 4.4 考点4：IPS 修改建议 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 考点1：写 Return Objective
+- **步骤**：
+  1. 计算所需收益（支出率 + 通胀）
+  2. 与客户期望收益做对比
+  3. 确定以 required return 为基准
+  4. 用可量化语言表述
+
+### 6.2 考点2：写 Risk Objective
+- **步骤**：
+  1. 分别评估 willingness（问卷、投资经验、行为反应）
+  2. 评估 ability（财富、收入、支出、期限）
+  3. 两者取低 → 形成 risk objective 表述
+  4. 常见表述："可接受的最大年度损失为 XX%" 或 "能够承受 XX% 的波动"
+
+### 6.3 考点3：按 L-T-T-L-U 写 Constraints
+- **步骤**：逐项分析情景中提到的约束 → 每个约束写 1-2 句 → 注意不要遗漏
+- 常见陷阱：考生容易跳过 Liquidity 或 Unique circumstances
+
+### 6.4 考点4：IPS 修改建议
+- **步骤**：给定现有 IPS → 指出与实际情况的矛盾 → 给出修改建议
+- 常见题型：年老客户/高净值客户/机构投资者情景
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Basics of Portfolio Planning and Construction` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ IPS 先写约束再写目标无所谓 | ✅ 考试严格区分 objective 与 constraints | 按官方定义和 LOS 口径核验。 |
+| ❌ 收益目标越高越好 | ✅ 收益目标必须与风险目标一致 | 按官方定义和 LOS 口径核验。 |
+| ❌ 风险意愿高就可以设高风险组合 | ✅ 还要看风险能力是否支撑得住 | 按官方定义和 LOS 口径核验。 |
+| ❌ Required return 和 desire return 相同 | ✅ 需要区分"必须"和"希望" | 按官方定义和 LOS 口径核验。 |
+| ❌ Liquidity 就是现金流 | ✅ Liquidity 是短期现金需求，区别于日常现金流 | 按官方定义和 LOS 口径核验。 |
+| ❌ IPS 一旦写好就不能改 | ✅ IPS 需要定期回顾和更新 | 按官方定义和 LOS 口径核验。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Portfolio-Management-An-Overview]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M03-Portfolio-Management-An-Overview]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- [[M02-Utility-and-CAL]]：风险厌恶系数 A 是 risk tolerance 的量化形式
+- [[M04-Market-Efficiency-and-Portfolio-Construction]]：组合构建流程 = IPS 的执行
+- [[M06-Behavioral-Biases]]：行为偏差影响客户对自身 willingness 的判断
+- [[M07-Risk-Management]]：风险管理是确保 IPS 目标可执行的重要手段
+- [[00-Portfolio-Management-MOC]]
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M05-IPS.md` (0.309), `M04-Market-Efficiency-and-Portfolio-Construction.md` (0.297), `00-Portfolio-Management-MOC.md` (0.283)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M05-IPS.md` (medium, 0.309)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

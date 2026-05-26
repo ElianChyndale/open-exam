@@ -1,6 +1,6 @@
 ---
 title: "M01: Introduction to Financial Statement Analysis"
-description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Financial Statement Analysis"
 topic_area: "Financial_Statement_Analysis"
 level: "CFA Level I"
@@ -48,14 +48,14 @@ tags:
 ## 1. 模块定位
 
 ### 1.1 学习任务
-- **核心问题**：考试希望你用 `Introduction to Financial Statement Analysis` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Introduction to Financial Statement Analysis` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 1.2 考试角色
 - **难度类型**：概念+案例判断。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 1.3 关键英文术语
 - **Introduction to Financial Statement Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -70,112 +70,193 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 1.1 | describe the steps in the financial statement analysis framework | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 1.2 | describe the roles of financial statement analysis | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 1.3 | describe the importance of regulatory filings, financial statement notes and supplementary information, management’s commentary, and audit reports | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 1.4 | describe implications for financial analysis of alternative financial reporting systems and the importance of monitoring developments in financial reporting standards | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 1.5 | describe information sources that analysts use in financial statement analysis besides annual and interim financial reports | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.1 | describe the steps in the financial statement analysis framework | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 1.2 | describe the roles of financial statement analysis | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 1.3 | describe the importance of regulatory filings, financial statement notes and supplementary information, management’s commentary, and audit reports | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 1.4 | describe implications for financial analysis of alternative financial reporting systems and the importance of monitoring developments in financial reporting standards | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 1.5 | describe information sources that analysts use in financial statement analysis besides annual and interim financial reports | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 1. Introduction to Financial Statement Analysis
 ├─ 1.1 Introduction
-│  ├─ 1.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 1.1.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 1.2 Financial Statement Analysis Framework
-│  ├─ 1.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 1.2.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 1.3 Scope of Financial Statement Analysis
-│  ├─ 1.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 1.3.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 1.4 Regulated Sources of Information
-│  ├─ 1.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 1.4.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 1.5 Comparison of IFRS with Alternative Financial Reporting Systems
-│  ├─ 1.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 1.5.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 1.5.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 1.5.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
 ### 1.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the steps in the financial statement analysis framework`。
-- **核心词汇**：**Introduction to Financial Statement Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Introduction` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：描述定义、流程和适用场景
 
 ### 1.2 Financial Statement Analysis Framework
-- **中文主线**：本节点解决 `Financial Statement Analysis Framework` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the roles of financial statement analysis`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Financial Statement Analysis Framework` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：描述定义、流程和适用场景
 
 ### 1.3 Scope of Financial Statement Analysis
-- **中文主线**：本节点解决 `Scope of Financial Statement Analysis` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the importance of regulatory filings, financial statement notes and supplementary information, management’s commentary, and audit reports`。
-- **核心词汇**：**Financial Statement Analysis Framework（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Scope of Financial Statement Analysis` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：描述定义、流程和适用场景
 
 ### 1.4 Regulated Sources of Information
-- **中文主线**：本节点解决 `Regulated Sources of Information` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe implications for financial analysis of alternative financial reporting systems and the importance of monitoring developments in financial reporting standards`。
-- **核心词汇**：**Scope of Financial Statement Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Regulated Sources of Information` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：描述定义、流程和适用场景
 
 ### 1.5 Comparison of IFRS with Alternative Financial Reporting Systems
-- **中文主线**：本节点解决 `Comparison of IFRS with Alternative Financial Reporting Systems` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe information sources that analysts use in financial statement analysis besides annual and interim financial reports`。
-- **核心词汇**：**Regulated Sources of Information（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 1.9 Legacy 补强要点
-- 来自 `00-Financial-Statement-Analysis-MOC.md`：## 最关键：先看交易怎么穿三表，再看会计政策怎样改结果; FRA 的关键不是背条文，而是把“交易→报表→比率→投资判断”连成一条线。; ## Financial Statement Analysis 核心知识树 (Core Knowledge Tree)。
-- 来自 `M01-Analysis-Framework.md`：## 1. 核心知识点; 识别关键驱动因素(key drivers)和风险因素(risk factors); 持续监控(ongoing monitoring)关键财务指标的变化趋势。
-
+- **中文主线**：围绕 `Comparison of IFRS with Alternative Financial Reporting Systems` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：描述定义、流程和适用场景
 
 ## 5. 关键公式与计算框架
 
-本模块以概念判断为主，无核心计算公式。复习时把 `Introduction to Financial Statement Analysis` 的定义、触发条件、优缺点和例外情形整理成判断清单。
+### 5.1 Income Statement and Cash Flow
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Gross Profit | `Revenue - COGS` | `2.5` | 【考纲重点】利润率与存货方法联动 |
+| Operating Income | `Gross Profit - Operating Expenses` | `2.5` | 分析经营盈利能力 |
+| Pretax Income | `EBT = EBIT - Interest Expense` | `2.5` | 税前利润口径 |
+| Basic EPS | `(NI - Preferred Dividends) / Weighted Average Shares` | `2.4` | EPS 基础式 |
+| Diluted EPS | `Adjusted NI Available to Common / Adjusted Weighted Average Shares` | `2.4` | 先排除 antidilutive instruments |
+| CFO (Indirect) | `NI + Noncash Charges - Noncash Gains/Losses ± WC Changes` | `4.2` | 现金流重构核心 |
+| Cash Collected from Customers | `Revenue - ΔAccounts Receivable` | `4.2` | 【考纲重点】直接法 CFO 常见转换 |
+| Cash Paid to Suppliers | `COGS + ΔInventory - ΔAccounts Payable` | `4.2` | 直接法 CFO 常见转换 |
+| Cash Paid for Operating Expenses | `Operating Expense - Depreciation + ΔPrepaids - ΔAccrued Expenses` | `4.2` | 题目会给简化项目 |
+| FCFF | `FCFF = CFO + Interest(1 - T) - FCInv` | `5.2` | 公司自由现金流 |
+| FCFE | `CFO - FCInv + Net Borrowing` | `5.2` | 股权自由现金流 |
+
+### 5.2 Liquidity and Activity
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Current Ratio | `Current Assets / Current Liabilities` | `10.2` | 流动性 |
+| Quick Ratio | `(Cash + ST Inv + Receivables) / CL` | `10.2` | 更保守流动性 |
+| Inventory Turnover | `COGS / Average Inventory` | `10.2` | 存货效率 |
+| Days Inventory | `365 / Inventory Turnover` | `10.2` | DIO 常与 CCC 联动 |
+| Receivables Turnover | `Revenue / Average Receivables` | `10.2` | 回款效率 |
+| DSO | `365 / Receivables Turnover` | `10.2` | 应收账款天数 |
+| Payables Turnover | `Purchases / Average Trade Payables` | `10.2` | DPO 前置 |
+| DPO | `365 / Payables Turnover` | `10.2` | 供应商付款天数 |
+| Cash Conversion Cycle | `DIO + DSO - DPO` | `10.2` | FRA 与 Corporate Issuers 联动 |
+| Total Asset Turnover | `Revenue / Average Total Assets` | `10.2` | 资产效率 |
+| LIFO Reserve Adjustment | `FIFO Inventory = LIFO Inventory + LIFO Reserve` | `6.2` | 【考纲重点】US GAAP LIFO 可比性调整 |
+| FIFO COGS from LIFO | `FIFO COGS = LIFO COGS - ΔLIFO Reserve` | `6.2` | 通胀环境下常考方向 |
+| Inventory Write-down | `Loss = Carrying Value - NRV` | `6.1` | NRV 低于成本时确认 |
+
+### 5.3 Profitability and Solvency
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Gross Margin | `Gross Profit / Revenue` | `10.2` | revenue/COGS choice 的敏感点 |
+| Operating Margin | `Operating Income / Revenue` | `10.2` | 经营盈利能力 |
+| Pretax Margin | `Pretax Income / Revenue` | `10.2` | 税前盈利能力 |
+| Net Margin | `NI / Revenue` | `10.4` | DuPont 第一段 |
+| ROA | `NI / Average Total Assets` | `10.2` | 资产盈利能力 |
+| ROE | `NI / Average Equity` | `10.4` | 股东回报 |
+| Return on Invested Capital | `NOPAT / Average Invested Capital` | `10.2` | 【考纲重点】经营资本回报口径 |
+| Financial Leverage | `Average Assets / Average Equity` | `10.4` | DuPont 杠杆段 |
+| Debt-to-Equity | `Total Debt / Total Equity` | `10.2` | 偿债结构 |
+| Debt-to-Assets | `Total Debt / Total Assets` | `10.2` | 偿债结构 |
+| Debt-to-Capital | `Total Debt / (Total Debt + Total Equity)` | `10.2` | capital structure |
+| Interest Coverage | `EBIT / Interest Expense` | `10.2` | 信用分析常用 |
+| DuPont | `Net Margin x Asset Turnover x Financial Leverage` | `10.4` | ROE 分解 |
+| Five-Step DuPont | `(NI/EBT) x (EBT/EBIT) x (EBIT/Revenue) x (Revenue/Assets) x (Assets/Equity)` | `10.4` | 【考纲重点】税负、利息、经营、效率、杠杆拆分 |
+
+### 5.4 Tax and Cash Quality
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Effective Tax Rate | `Income Tax Expense / Pretax Income` | `8.3` | 与 statutory rate 对比 |
+| Cash Tax Rate | `Cash Taxes Paid / Pretax Income` | `8.3` | cash vs accrual tax lens |
+| Deferred Tax Liability | `DTL = Tax Base Carrying Amount Difference x Tax Rate` | `9.2` | 【考纲重点】资产账面价值 > 税基通常产生 DTL |
+| Deferred Tax Asset | `DTA = Deductible Temporary Difference x Tax Rate` | `9.2` | 可抵扣暂时性差异 |
+| Operating Cash Flow Ratio | `CFO / Current Liabilities` | `10.2` | 覆盖短期负债 |
+| Free Cash Flow to Firm Coverage | `FCFF / Total Debt` | `5.3` | cash-flow coverage 直觉 |
+| Accruals Ratio | `(NI - CFO) / Average Total Assets` | `10.5` | 【考纲重点】盈利质量预警，口径以题目为准 |
+
+### 5.5 考纲范围标记
+
+| 标记 | 内容 |
+|------|------|
+| 【考纲重点】 | EPS、现金流直接/间接法、FCFF/FCFE、存货方法与 LIFO reserve、税项、比率分析、DuPont、建模假设 |
+| 【考纲内但无核心公式】 | 报告框架、审计意见、披露质量、会计政策选择的定性分析 |
+| 【超纲/扩展】 | 复杂养老金精算、完整租赁摊销表、信用损失模型细节、完整三表建模模板不作为 Level I 必背公式 |
+
+---
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 1.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 1.2 Financial Statement Analysis Framework | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 1.3 Scope of Financial Statement Analysis | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 1.4 Regulated Sources of Information | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐ | 1.5 Comparison of IFRS with Alternative Financial Reporting Systems | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Introduction to Financial Statement Analysis` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 净利润高说明经营质量高 | ✅ 还要看 CFO 和 accrual quality | 按官方定义和 LOS 口径核验。 |
+| ❌ FIFO/LIFO 只影响存货，不影响利润 | ✅ 会直接影响 COGS、税、利润和 ratios | 按官方定义和 LOS 口径核验。 |
+| ❌ capitalizing cost 一定更好 | ✅ 只是把费用后移，不是凭空创造价值 | 按官方定义和 LOS 口径核验。 |
+| ❌ CFO 就是 cash receipts - cash payments 的简单差 | ✅ indirect method 需要从 NI 系统调整 | 按官方定义和 LOS 口径核验。 |
+| ❌ FCFF 和 FCFE 本质一样 | ✅ 一个给所有资本提供者，一个只给股东 | 按官方定义和 LOS 口径核验。 |
+| ❌ diluted EPS 一定比 basic EPS 大 | ✅ 稀释通常让 EPS 更低或相同 | 按官方定义和 LOS 口径核验。 |
+| ❌ goodwill 一定会摊销 | ✅ IFRS/US GAAP 现行更关注 impairment | 按官方定义和 LOS 口径核验。 |
+| ❌ current ratio 高一定更稳健 | ✅ 也可能说明营运资本占用低效 | 按官方定义和 LOS 口径核验。 |
+| ❌ DuPont 只是记公式 | ✅ 它是解释 ROE 来源的逻辑框架 | 按官方定义和 LOS 口径核验。 |
+| ❌ ratio 只要会算就够了 | ✅ 真正丢分点通常在“如何解释变化” | 按官方定义和 LOS 口径核验。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M02-Analyzing-Income-Statements]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M02-Analyzing-Income-Statements]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+```text
+Income Statement (利润表)
+├── 通过留存收益流入资产负债表 (flows into Balance Sheet via retained earnings)
+├── 通过非现金调整连接现金流量表 (links to Cash Flow via non-cash adjustments)
+└── 驱动比率分析 (drives Ratio Analysis)
+    ├── 盈利能力 (profitability)
+    ├── 营运能力 (activity)
+    └── 偿债能力 (solvency)
+        └── 建模 (Modeling)
+            └── 预测假设 (Forecast assumptions)
+```
+
+---
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：00-Financial-Statement-Analysis-MOC.md（confidence 0.602）
-- **可复用结构**：00-Financial-Statement-Analysis-MOC；笔记属性；最关键：先看交易怎么穿三表，再看会计政策怎样改结果；科目概览（与 CFA 2026 L1 官方课程对齐）；Financial Statement Analysis 核心知识树 (Core Knowledge Tree)；核心对比专题
-- **高价值要点**：## 最关键：先看交易怎么穿三表，再看会计政策怎样改结果；FRA 的关键不是背条文，而是把“交易→报表→比率→投资判断”连成一条线。；## Financial Statement Analysis 核心知识树 (Core Knowledge Tree)；│ ├── 1.1 Framework Steps (分析框架步骤)【考试核心】↔ Topic Outline P10
-- **公式/计算线索**：description: CFA Level I Financial Statement Analysis master MOC for statements, accounting effects, ratios, formulas, and traps.；│ │ ├── 终止经营 (discontinued operations)（非持续）；│ │ ├── 核心公式 (English)
-- **易错提示**：│ └── 注意：附注与 reporting choices 常是答案来源【考试陷阱】；│ │ └── 注意：capitalization shifts expense timing, not economic reality【考试陷阱】；│ │ └── 注意：NI-to-CFO bridge is a reconciliation, not a definition【考试陷阱】
-
-### 来源：M01-Analysis-Framework.md（confidence 0.547）
-- **可复用结构**：M01: 财务报表分析框架 (Analysis Framework)；1. 核心知识点；1.1 分析框架步骤 (Framework Steps)；1.2 信息层级 (Information Hierarchy)；1.3 报告体系 (Reporting Systems)；2. 关键公式
-- **高价值要点**：## 1. 核心知识点；识别关键驱动因素(key drivers)和风险因素(risk factors)；持续监控(ongoing monitoring)关键财务指标的变化趋势；## 2. 关键公式
-- **公式/计算线索**：数据分析：计算财务比率(financial ratios)、进行同比例分析(common-size analysis)、趋势分析(trend analysis)和行业对比；## 2. 关键公式
-- **易错提示**：**【考试陷阱】** 附注(notes)与报告选择(reporting choices)常是单选题答案来源——会计政策变更的披露位置和具体内容往往决定分析方向。；**考点1**：分析框架四个步骤的顺序与内容。解题思路：按"目的→数据→分析→结论"四步记忆，注意每一步骤的输入(input)和输出(output)；## 4. 易错点提醒
+- **主要 legacy 来源**：`00-Financial-Statement-Analysis-MOC.md` (high, 0.602)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

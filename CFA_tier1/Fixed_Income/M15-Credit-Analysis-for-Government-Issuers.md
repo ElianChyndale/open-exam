@@ -1,6 +1,6 @@
 ---
 title: "M15: Credit Analysis for Government Issuers"
-description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Fixed Income"
 topic_area: "Fixed_Income"
 level: "CFA Level I"
@@ -41,14 +41,14 @@ tags:
 ## 1. 模块定位
 
 ### 15.1 学习任务
-- **核心问题**：考试希望你用 `Credit Analysis for Government Issuers` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Credit Analysis for Government Issuers` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 15.2 考试角色
 - **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 15.3 关键英文术语
 - **Credit Analysis for Government Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -62,94 +62,92 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 15.1 | explain special considerations when evaluating the credit of sovereign and non-sovereign government debt issuers and issues | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 15.1 | explain special considerations when evaluating the credit of sovereign and non-sovereign government debt issuers and issues | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 15. Credit Analysis for Government Issuers
-├─ 15.1 Introduction
-│  ├─ 15.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 15.1.2 应用/判断：把概念或公式转成解题动作
-├─ 15.2 Sovereign Credit Analysis
-│  ├─ 15.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 15.2.2 应用/判断：把概念或公式转成解题动作
-├─ 15.3 Non-Sovereign Credit Risk
-│  ├─ 15.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 15.3.2 应用/判断：把概念或公式转成解题动作
+├─ 15.1 政府发行人 (Government Issuers)
+│  ├─ 15.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 15.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 15.2 公司发行人 (Corporate Issuers)
+│  ├─ 15.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 15.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 15.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain special considerations when evaluating the credit of sovereign and non-sovereign government debt issuers and issues`。
-- **核心词汇**：**Credit Analysis for Government Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 15.1 政府发行人 (Government Issuers)
 
-### 15.2 Sovereign Credit Analysis
-- **中文主线**：本节点解决 `Sovereign Credit Analysis` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain special considerations when evaluating the credit of sovereign and non-sovereign government debt issuers and issues`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **货币主权、财政灵活性、外部头寸、政治风险 (monetary sovereignty, fiscal flexibility, external position, political risk)**：主权信用的评估维度：能否自主印钞（货币主权）、财政赤字和债务水平（财政灵活性）、外汇储备和贸易平衡（外部头寸）、治理稳定性和政策连续性（政治风险）。
+- **主权与非主权发行人的支持假设不同 (sovereign and non-sovereign issuers do not share identical support assumptions)**：地方政府、市政债等非主权发行人的信用分析需要额外考虑上级政府的支持意愿和能力，不自动等同于主权信用。
 
-### 15.3 Non-Sovereign Credit Risk
-- **中文主线**：本节点解决 `Non-Sovereign Credit Risk` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain special considerations when evaluating the credit of sovereign and non-sovereign government debt issuers and issues`。
-- **核心词汇**：**Sovereign Credit Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 15.2 公司发行人 (Corporate Issuers)
 
-### 15.9 Legacy 补强要点
-- 来自 `M11-Government-and-Corporate-Credit.md`：## 1. 核心知识点; **杠杆率、覆盖率、现金流稳定性、再融资渠道 (leverage, coverage, cash-flow stability, refinancing access)**：核心定量指标：Debt/EBITDA（杠杆率），EBITDA/Interest（利息覆盖率），自由现金流（稳定性），以及银行信贷额度和资本市场融资能力（再融资渠道）。; ## 2. 关键公式。
-- 来自 `M05-FI-Markets-Government-Issuers.md`：## 1. 核心知识点; ## 2. 关键公式; **通胀挂钩债券的收益率不是名义收益率的直接替代**：实际收益率和通货膨胀补偿的分离是理解 TIPS 定价的关键。。
-
+- **商业风险 + 财务风险 + 治理结构 (business risk + financial risk + governance/structure)**：公司信用分析的三支柱。商业风险考察行业特征和竞争地位；财务风险考察杠杆、覆盖率和现金流；治理结构考察管理层、所有权结构和关联交易。
+- **杠杆率、覆盖率、现金流稳定性、再融资渠道 (leverage, coverage, cash-flow stability, refinancing access)**：核心定量指标：Debt/EBITDA（杠杆率），EBITDA/Interest（利息覆盖率），自由现金流（稳定性），以及银行信贷额度和资本市场融资能力（再融资渠道）。
+- **担保 vs 无担保；优先 vs 次级；破产优先级 (secured vs unsecured; senior vs subordinated; bankruptcy priority)**：担保债务以特定资产作为抵押品；优先级债务在破产时比次级债务优先受偿。同一发行人的不同债项可能有不同评级。
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Credit loss | `expected loss = probability of default × loss given default` | 信用题要分清 PD、LGD、recovery rate。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式 |
+|------|------|
+| 利息覆盖率 (ICR) | `ICR = EBIT / Interest Expense` 或 `EBITDA / Interest Expense` |
+| 杠杆率 | `Debt / EBITDA` |
+| 债务资本比 | `Total Debt / (Total Debt + Total Equity)` |
+| 自由现金流 | `FCF = CFO - CapEx - 优先股股息` |
+| 回收率预期 | 优先级担保 > 优先级无担保 > 次级 |
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 15.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 15.2 Sovereign Credit Analysis | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 15.3 Non-Sovereign Credit Risk | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+- **计算和解读覆盖率**：ICR 越低，信用风险越高。注意题目是否使用 EBIT 还是 EBITDA。
+- **区分 issuer rating 与 issue rating**：同一发行人的不同债项可能因担保品和优先级不同而有不同评级。
+- **主权信用分析框架**：从货币主权、财政灵活性、外部头寸、政治风险四个维度评估。每个维度下有哪些关键指标。
+- **区分 secured 与 unsecured、senior 与 subordinated**：破产清算时，secured creditors 优先于 unsecured，senior 优先于 subordinated。
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Credit Analysis for Government Issuers` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：发行人评级与债项评级在抵押品和清偿顺序不同时可能不同 (issuer rating and issue rating can differ when collateral and… | ✅ 发行人评级与债项评级在抵押品和清偿顺序不同时可能不同 (issuer rating and issue rating can differ when collateral and… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：Sovereign ceiling 不是绝对的：传统上认为境内的公司评级不可能高于主权评级，但在某些情况下（如公司有大量海外收入和资产）可能存在例外。 | ✅ Sovereign ceiling 不是绝对的：传统上认为境内的公司评级不可能高于主权评级，但在某些情况下（如公司有大量海外收入和资产）可能存在例外。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：ICR 使用 EBIT 还是 EBITDA 影响大：EBITDA 通常大于 EBIT，因此 EBITDA-based ICR 更高。题目没有明确时，留意上下文提示。 | ✅ ICR 使用 EBIT 还是 EBITDA 影响大：EBITDA 通常大于 EBIT，因此 EBITDA-based ICR 更高。题目没有明确时，留意上下文提示。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：Notching（评级差异化） ：同一发行人的不同债项之间评级相差的级数（notch），主要取决于优先级、担保品和结构支持。 | ✅ Notching（评级差异化） ：同一发行人的不同债项之间评级相差的级数（notch），主要取决于优先级、担保品和结构支持。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M14-Credit-Risk]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M16-Credit-Analysis-for-Corporate-Issuers]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M14-Credit-Risk]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M16-Credit-Analysis-for-Corporate-Issuers]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- 公司信用分析 → [[M10-Credit-Risk]] 的 PD/LGD 框架
+- 担保品与优先级 → [[M01-Instrument-Features]] 的合同要素
+- 发行人与债项评级 → [[M13-ABS-and-Credit-Enhancement]] 的结构化信用增级
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：M11-Government-and-Corporate-Credit.md（confidence 0.557）
-- **可复用结构**：M14: 政府与公司信用分析 (Government and Corporate Credit Analysis)；1. 核心知识点；1.1 政府发行人 (Government Issuers)；1.2 公司发行人 (Corporate Issuers)；2. 关键公式；3. 常见考点与解题思路
-- **高价值要点**：## 1. 核心知识点；**杠杆率、覆盖率、现金流稳定性、再融资渠道 (leverage, coverage, cash-flow stability, refinancing access)**：核心定量指标：Debt/EBITDA（杠杆率），EBITDA/Interest（利息覆盖率），自由现金流（稳定性），以及银行信贷额度和资本市场融资能力（再融资渠道）。；## 2. 关键公式；**主权信用分析框架**：从货币主权、财政灵活性、外部头寸、政治风险四个维度评估。每个维度下有哪些关键指标。
-- **公式/计算线索**：## 2. 关键公式
-- **易错提示**：**计算和解读覆盖率**：ICR 越低，信用风险越高。注意题目是否使用 EBIT 还是 EBITDA。；## 4. 易错点提醒
-
-### 来源：M05-FI-Markets-Government-Issuers.md（confidence 0.455）
-- **可复用结构**：M05: 政府发行人固定收益市场 (FI Markets: Government Issuers)；1. 核心知识点；1.1 主权债券 (Sovereign Bonds)；1.2 政府机构债券 (Government Agency Debt)；1.3 超国家债券 (Supranational Bonds)；1.4 市政债券 (Municipal Bonds)
-- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；**通胀挂钩债券的收益率不是名义收益率的直接替代**：实际收益率和通货膨胀补偿的分离是理解 TIPS 定价的关键。
-- **公式/计算线索**：## 2. 关键公式；国债收益率基准 → [[M04-Yield-and-Spread-Measures]] 利差度量以国债为基准
-- **易错提示**：## 4. 易错点提醒；**主权债券不一定是无风险的【考试陷阱】**：即使是美国国债，从利率风险和通胀风险角度看并非无风险。主权违约风险在新兴市场中真实存在。
+- **主要 legacy 来源**：`M11-Government-and-Corporate-Credit.md` (high, 0.557)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

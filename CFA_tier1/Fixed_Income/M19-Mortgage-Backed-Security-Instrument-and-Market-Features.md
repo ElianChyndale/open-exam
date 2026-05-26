@@ -1,6 +1,6 @@
 ---
 title: "M19: Mortgage-Backed Security (MBS) Instrument and Market Features"
-description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Fixed Income"
 topic_area: "Fixed_Income"
 level: "CFA Level I"
@@ -46,14 +46,14 @@ tags:
 ## 1. 模块定位
 
 ### 19.1 学习任务
-- **核心问题**：考试希望你用 `Mortgage-Backed Security (MBS) Instrument and Market Features` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Mortgage-Backed Security (MBS) Instrument and Market Features` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 19.2 考试角色
 - **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 19.3 关键英文术语
 - **Mortgage-Backed Security (MBS) Instrument and Market Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -68,96 +68,98 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 19.1 | define prepayment risk and describe time tranching structures in securitizations and their purpose | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 19.2 | describe fundamental features of residential mortgage loans that are securitized | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 19.3 | describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 19.4 | describe characteristics and risks of commercial mortgage-backed securities | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 19.1 | define prepayment risk and describe time tranching structures in securitizations and their purpose | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 19.2 | describe fundamental features of residential mortgage loans that are securitized | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 19.3 | describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 19.4 | describe characteristics and risks of commercial mortgage-backed securities | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 19. Mortgage-Backed Security (MBS) Instrument and Market Features
-├─ 19.1 Introduction
-│  ├─ 19.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 19.1.2 应用/判断：把概念或公式转成解题动作
-├─ 19.2 Time Tranching
-│  ├─ 19.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 19.2.2 应用/判断：把概念或公式转成解题动作
-├─ 19.3 Mortgage Loans and Their Characteristic Features
-│  ├─ 19.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 19.3.2 应用/判断：把概念或公式转成解题动作
-├─ 19.4 Residential Mortgage-Backed Securities (RMBS)
-│  ├─ 19.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 19.4.2 应用/判断：把概念或公式转成解题动作
-├─ 19.5 Commercial Mortgage-Backed Securities (CMBS)
-│  ├─ 19.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 19.5.2 应用/判断：把概念或公式转成解题动作
+├─ 19.1 抵押贷款现金流风险 (Mortgage Cash-Flow Risk)
+│  ├─ 19.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 19.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 19.2 结构化 (Structuring)
+│  ├─ 19.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 19.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 19.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define prepayment risk and describe time tranching structures in securitizations and their purpose`。
-- **核心词汇**：**Mortgage-Backed Security (MBS) Instrument and Market Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 19.1 抵押贷款现金流风险 (Mortgage Cash-Flow Risk)
 
-### 19.2 Time Tranching
-- **中文主线**：本节点解决 `Time Tranching` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe fundamental features of residential mortgage loans that are securitized`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **借款人提前还款导致利率下降时的收缩风险 (borrower prepayment creates contraction risk when rates fall)**：当利率下降时，借款人倾向于再融资来提前还款 (prepayment)。这导致 MBS 投资者提前收回本金，面临收缩风险 (contraction risk)——资金回笼后只能以较低利率再投资。
+- **利率上升且再融资放缓时展期风险增加 (extension risk grows when rates rise and refinancing slows)**：当利率上升时，借款人不会提前还款，MBS 投资者面临展期风险 (extension risk)——预期回收本金的时间延长，锁定在较低利率的资金期限被拉长。
+- **过手投资者收到计划本金加上提前还款 (passthrough investors receive scheduled principal plus prepayments)**：过手 MBS (pass-through) 将抵押贷款池的本息按比例传递给投资者，包含计划内本金摊销和任何提前还款。
 
-### 19.3 Mortgage Loans and Their Characteristic Features
-- **中文主线**：本节点解决 `Mortgage Loans and Their Characteristic Features` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type`。
-- **核心词汇**：**Time Tranching（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 19.2 结构化 (Structuring)
 
-### 19.4 Residential Mortgage-Backed Securities (RMBS)
-- **中文主线**：本节点解决 `Residential Mortgage-Backed Securities (RMBS)` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe characteristics and risks of commercial mortgage-backed securities`。
-- **核心词汇**：**Mortgage Loans and Their Characteristic Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
-
-### 19.5 Commercial Mortgage-Backed Securities (CMBS)
-- **中文主线**：本节点解决 `Commercial Mortgage-Backed Securities (CMBS)` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define prepayment risk and describe time tranching structures in securitizations and their purpose`。
-- **核心词汇**：**Residential Mortgage-Backed Securities (RMBS)（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
-
+- **机构/非机构区分；抵押品与担保分析 (agency/non-agency distinction; collateral and guarantee analysis)**：机构 MBS (agency MBS) 由 Ginnie Mae、Fannie Mae、Freddie Mac 发行或担保，有政府或政府机构的信用支持；非机构 MBS (non-agency MBS) 没有政府担保，依赖信用增级。
+- **CMO 分层重新分配提前还款时间 (CMO tranches redistribute prepayment timing)**：CMO (collateralized mortgage obligation) 将 MBS 现金流切分为不同层级的证券 (tranches)，各层级有不同的本金偿还顺序，从而重新分配提前还款风险。
+- **顺序偿付 vs 计划分配 (sequential-pay vs planned allocation intuition)**：顺序偿付结构 (sequential-pay) 中，优先级 tranche 先收回本金，然后下一级再开始回收；计划分配结构（如 PAC tranche）有预先设定的本金偿还计划，提供更可预测的现金流。
 
 ## 5. 关键公式与计算框架
 
-本模块以概念判断为主，无核心计算公式。复习时把 `Mortgage-Backed Security (MBS) Instrument and Market Features` 的定义、触发条件、优缺点和例外情形整理成判断清单。
+### 5.1 核心内容
+
+本模块以概念为主。核心关系为：
+
+- `Prepayment risk = 收缩风险 (利率↓) + 展期风险 (利率↑)`
+- `CPR (Conditional Prepayment Rate) = 1 - (1 - SMM)^12`，其中 SMM 是单月提前还款率
+- `PSA 基准模型：100% PSA = 第 1 个月 0.2%，直至第 30 个月 6%，之后保持 6%`
+- `负凸性 (negative convexity) = 利率下降时 MBS 价格上涨受限`
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 19.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 19.2 Time Tranching | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 19.3 Mortgage Loans and Their Characteristic Features | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 19.4 Residential Mortgage-Backed Securities (RMBS) | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐ | 19.5 Commercial Mortgage-Backed Securities (CMBS) | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+- **区分收缩风险与展期风险**：利率下降 → 提前还款增加 → 收缩风险（资金需低利率再投资）；利率上升 → 提前还款减少 → 展期风险（资金锁定时间延长）。
+- **理解 CMO 分层的作用**：CMO 不消除提前还款风险，而是将其在不同层级间重新分配。优先级 tranche 先偿还，吸收部分收缩风险；次级 tranche 后偿还，承担更多展期风险。
+- **分析 agency vs non-agency MBS 的区别**：agency MBS 有政府/机构担保，信用风险低；non-agency MBS 信用风险取决于抵押品质量和信用增级。
+- **判断负凸性**：MBS 在利率下降时价格上升幅度小于普通债券，因为提前还款限制了价格上升空间。
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Mortgage-Backed Security (MBS) Instrument and Market Features` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：MBS 可能呈现负凸性，因为现金流对投资者不利变化 (MBS can show negative convexity because cash flows change agai… | ✅ MBS 可能呈现负凸性，因为现金流对投资者不利变化 (MBS can show negative convexity because cash flows change agai… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：CMO 不消除提前还款风险：它只重新分配。所有层的总风险和 MBS 池的总风险相同。 | ✅ CMO 不消除提前还款风险：它只重新分配。所有层的总风险和 MBS 池的总风险相同。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：PAC (Planned Amortization Class) tranche 不是无风险的：虽然 PAC 有本金偿还计划保护，但在极端提前还款情境下保护可能失效（打破 PAC… | ✅ PAC (Planned Amortization Class) tranche 不是无风险的：虽然 PAC 有本金偿还计划保护，但在极端提前还款情境下保护可能失效（打破 PAC… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：Prepayment modeling 是 MBS 分析的核心难点：提前还款行为受利率路径、房价变动、失业率、季节性因素等多种因素影响，难以精确预测。 | ✅ Prepayment modeling 是 MBS 分析的核心难点：提前还款行为受利率路径、房价变动、失业率、季节性因素等多种因素影响，难以精确预测。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M18-Asset-Backed-Security-Instrument-and-Market-Features]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M18-Asset-Backed-Security-Instrument-and-Market-Features]]。先用它提供定义、变量或基础框架。
+- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- 提前还款 → [[M01-Instrument-Features]] 的嵌入期权概念（隐含看涨期权）
+- 负凸性 → [[M08-Duration-and-Convexity]] 的凸性概念
+- CMO 分层 → [[M13-ABS-and-Credit-Enhancement]] 的分层信贷增级
+- 现金流分配 → [[M12-Securitization-Foundations]] 的 SPV 结构
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M14-MBS-and-CMO.md` (0.352), `M19-CMBS.md` (0.318), `M13-ABS-and-Credit-Enhancement.md` (0.28)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M14-MBS-and-CMO.md` (medium, 0.352)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

@@ -1,6 +1,6 @@
 ---
 title: "M06: Introduction to Risk Management"
-description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Portfolio Management"
 topic_area: "Portfolio_Management"
 level: "CFA Level I"
@@ -56,14 +56,14 @@ tags:
 ## 1. 模块定位
 
 ### 6.1 学习任务
-- **核心问题**：考试希望你用 `Introduction to Risk Management` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Introduction to Risk Management` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 6.2 考试角色
 - **难度类型**：概念+案例判断。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 6.3 关键英文术语
 - **Introduction to Risk Management（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -79,99 +79,169 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 6.1 | define risk management | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
-| 6.2 | describe features of a risk management framework | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 6.3 | define risk governance and describe elements of effective risk governance | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 6.4 | explain how risk tolerance affects risk management | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 6.5 | describe risk budgeting and its role in risk governance | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 6.6 | identify financial and non-financial sources of risk and describe how they may interact | 描述定义、流程和适用场景；识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
-| 6.7 | describe methods for measuring and modifying risk exposures and factors to consider in choosing among the methods | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 6.1 | define risk management | 识别概念、解释机制并应用到题干。 | 写出结论、依据、公式口径和限制条件。 |
+| 6.2 | describe features of a risk management framework | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 6.3 | define risk governance and describe elements of effective risk governance | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 6.4 | explain how risk tolerance affects risk management | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 6.5 | describe risk budgeting and its role in risk governance | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 6.6 | identify financial and non-financial sources of risk and describe how they may interact | 描述定义、流程和适用场景；识别题干中的关键事实和触发条件 | 写出结论、依据、公式口径和限制条件。 |
+| 6.7 | describe methods for measuring and modifying risk exposures and factors to consider in choosing among the methods | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 6. Introduction to Risk Management
-├─ 6.1 Introduction
-│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
-├─ 6.2 Risk Management Process
-│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
-├─ 6.3 Risk Management Framework
-│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
-├─ 6.4 Risk Governance - An Enterprise View
-│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
-├─ 6.5 Risk Tolerance
-│  ├─ 6.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.5.2 应用/判断：把概念或公式转成解题动作
+├─ 6.1 风险管理框架 (Risk Management Framework)
+│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.2 风险分类 (Risk Classification)
+│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.3 风险改变化方式 (Risk Modification Methods)
+│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.4 风险预算 (Risk Budgeting)
+│  ├─ 6.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.4.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.5 风险管理的关键原则
+│  ├─ 6.5.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.5.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 6.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`define risk management`。
-- **核心词汇**：**Introduction to Risk Management（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 6.1 风险管理框架 (Risk Management Framework)
 
-### 6.2 Risk Management Process
-- **中文主线**：本节点解决 `Risk Management Process` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe features of a risk management framework`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+风险管理是一个系统性过程，包含五个核心步骤：
 
-### 6.3 Risk Management Framework
-- **中文主线**：本节点解决 `Risk Management Framework` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define risk governance and describe elements of effective risk governance`。
-- **核心词汇**：**Risk Management Process（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+1. **风险治理 (Risk governance)**：建立风险管理组织结构、政策、角色和职责
+2. **风险识别 (Risk identification)**：找出影响投资目标实现的各类风险
+3. **风险计量 (Risk measurement)**：量化风险敞口的大小和影响
+4. **风险改变化 (Risk modification)**：通过工具调整风险敞口
+5. **风险监控 (Risk monitoring)**：持续追踪风险变化并报告
 
-### 6.4 Risk Governance - An Enterprise View
-- **中文主线**：本节点解决 `Risk Governance - An Enterprise View` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how risk tolerance affects risk management`。
-- **核心词汇**：**Risk Management Framework（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 6.2 风险分类 (Risk Classification)
 
-### 6.5 Risk Tolerance
-- **中文主线**：本节点解决 `Risk Tolerance` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe risk budgeting and its role in risk governance`。
-- **核心词汇**：**Risk Governance - An Enterprise View（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**金融风险 (Financial Risks)**：
 
+| 风险类型 | 英文 | 说明 |
+|----------|------|------|
+| 市场风险 | Market risk | 资产价格变动导致的损失风险 |
+| 信用风险 | Credit risk | 交易对手违约的风险 |
+| 流动性风险 | Liquidity risk | 无法以合理价格及时交易的风险 |
+| 操作风险 | Operational risk | 内部流程/系统/人员失误导致的风险 |
+
+**非金融风险 (Non-Financial Risks)**：
+
+| 风险类型 | 英文 | 说明 |
+|----------|------|------|
+| 法律风险 | Legal risk | 合同不可执行或法律纠纷 |
+| 监管风险 | Regulatory risk | 法规变化带来的影响 |
+| 税务风险 | Tax risk | 税法变动导致的损失 |
+| 会计风险 | Accounting risk | 会计处理方法变更的影响 |
+| 模型风险 | Model risk | 模型假设错误或使用不当 |
+| 声誉风险 | Reputational risk | 负面事件损害机构声誉 |
+| 尾部风险 | Tail risk | 极端事件发生的低概率高风险场景 |
+
+### 6.3 风险改变化方式 (Risk Modification Methods)
+
+| 方式 | 英文 | 说明 |
+|------|------|------|
+| 规避 | Avoid | 不参与产生风险的活动 |
+| 接受 | Accept | 承担风险（self-insure） |
+| 转移 | Transfer | 通过衍生品/保险转移风险 |
+| 缓释 | Mitigate | 通过分散化/对冲降低风险 |
+| 监控 | Monitor | 持续观察并准备应对 |
+
+### 6.4 风险预算 (Risk Budgeting)
+
+- **风险预算 (risk budget)**：将总风险限额分配到不同资产类别、策略或部门
+- 主动风险预算 (active risk budget) 决定了组合偏离基准的最大程度
+- 风险预算应与企业/投资者的使命、目标、资本实力一致
+
+### 6.5 风险管理的关键原则
+
+- 好的风险管理**不是**把风险降到最低，而是使风险与回报目标相匹配
+- 风险管理 **不是** 恐惧驱动的电子表格工作，而是**赋能**选定的风险承担
+- 独立性原则：风险管理职能应与投资决策职能分离（独立的风险管理官）
+- 风险管理是持续的过程，非一次性事件
 
 ## 5. 关键公式与计算框架
 
-本模块以概念判断为主，无核心计算公式。复习时把 `Introduction to Risk Management` 的定义、触发条件、优缺点和例外情形整理成判断清单。
+### 5.1 核心内容
+
+| 指标 | 公式/概念 | 说明 |
+|------|-----------|------|
+| 风险价值 (VaR) | 给定置信水平下的最大损失 | `P(ΔP ≤ -VaR) = 1 - α` |
+| 跟踪误差 (Tracking error) | `σ(Rp - Rb)` | 主动风险的衡量 |
+| 风险预算偏差 | 实际风险 vs 预算风险限额 | 监控主动风险是否超限 |
+| 夏普比率再审视 | `(Rp-Rf)/σp` | 风险调整后收益的完整衡量 |
+
+*注：M07 以概念题为主，VaR 等指标在 CFA L1 只要求基本理解。*
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 6.1 考点1：风险分类判断 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 6.2 考点2：风险管理流程排序 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 6.3 考点3：风险改变化方式选择 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 6.4 考点4：风险预算与主动风险 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 考点1：风险分类判断
+- **步骤**：给定情景 → 判断属于哪种风险类型
+- 常见题型：区分市场风险、信用风险、操作风险、流动性风险
+
+### 6.2 考点2：风险管理流程排序
+- **步骤**：给一系列风险管理动作 → 按正确顺序排列
+- 正确顺序：治理 → 识别 → 计量 → 改变化 → 监控
+
+### 6.3 考点3：风险改变化方式选择
+- **步骤**：给定风险情景 → 选择最合适的改变化方式
+- 关键：规避（不参与）、接受（自留）、转移（保险/衍生品）、缓释（分散化）
+
+### 6.4 考点4：风险预算与主动风险
+- **步骤**：分析主动风险水准 → 判断是否超出风险预算
+- 常见题型：给定追踪误差和预算限额 → 判断是否需要调整
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Introduction to Risk Management` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 风险管理目标是把风险降到最低 | ✅ 目标是使风险与回报目标匹配 | 按官方定义和 LOS 口径核验。 |
+| ❌ 操作风险 = 小概率不重要 | ✅ 操作风险（如交易员错误）可能造成重大损失 | 按官方定义和 LOS 口径核验。 |
+| ❌ 风险转移 = 风险消失 | ✅ 转移只是改变了风险承担方，系统性风险无法转移 | 按官方定义和 LOS 口径核验。 |
+| ❌ 风险预算就是资金预算 | ✅ 风险预算分配的是风险限额，不是资金 | 按官方定义和 LOS 口径核验。 |
+| ❌ VaR 衡量最大损失 | ✅ VaR 衡量给定置信水平下的最小可能损失 | 按官方定义和 LOS 口径核验。 |
+| ❌ 流动性风险只在危机时出现 | ✅ 流动性风险在正常市场也可能存在 | 按官方定义和 LOS 口径核验。 |
+| ❌ 风险管理是风控部门的事 | ✅ 风险管理是每个投资决策的一部分 | 按官方定义和 LOS 口径核验。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。先用它提供定义、变量或基础框架。
+- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- [[M01-Portfolio-Risk-and-Return]]：风险概念源于组合收益的波动性
+- [[M03-CAPM-and-Beta]]：系统性风险是 CAPM 的定价基础
+- [[M04-Market-Efficiency-and-Portfolio-Construction]]：风险预算是组合构建的一部分
+- [[M05-IPS]]：风险管理确保 IPS 目标的实现
+- [[M06-Behavioral-Biases]]：行为偏差可能误导风险判断
+- [[00-Portfolio-Management-MOC]]
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M07-Risk-Management.md` (0.312)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M07-Risk-Management.md` (medium, 0.312)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

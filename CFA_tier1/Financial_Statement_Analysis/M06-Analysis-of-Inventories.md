@@ -1,6 +1,6 @@
 ---
 title: "M06: Analysis of Inventories"
-description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Financial Statement Analysis"
 topic_area: "Financial_Statement_Analysis"
 level: "CFA Level I"
@@ -44,14 +44,14 @@ tags:
 ## 1. 模块定位
 
 ### 6.1 学习任务
-- **核心问题**：考试希望你用 `Analysis of Inventories` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Analysis of Inventories` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 6.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 6.3 关键英文术语
 - **Analysis of Inventories（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -65,92 +65,114 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 6.1 | describe the measurement of inventory at the lower of cost and net realisable value and its implications for financial statements and ratios | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 6.2 | calculate and explain how inflation and deflation of inventory costs affect the financial statements and ratios of companies that use different inventory valuation methods | 计算并解释数值结果；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 6.3 | describe the presentation and disclosures relating to inventories and explain issues that analysts should consider when examining a company’s inventory disclosures and other sources of information | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.1 | describe the measurement of inventory at the lower of cost and net realisable value and its implications for financial statements and ratios | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 6.2 | calculate and explain how inflation and deflation of inventory costs affect the financial statements and ratios of companies that use different inventory valuation methods | 计算并解释数值结果；解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 6.3 | describe the presentation and disclosures relating to inventories and explain issues that analysts should consider when examining a company’s inventory disclosures and other sources of information | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 6. Analysis of Inventories
-├─ 6.1 Introduction
-│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
-├─ 6.2 Inventory Valuation
-│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
-├─ 6.3 The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin
-│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
-├─ 6.4 Presentation and Disclosure
-│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
+├─ 6.1 计量基础 (Measurement Basis)
+│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.2 成本流转方法 (Cost-Flow Methods)
+│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.3 存货披露与分析师检查点 (Inventory Disclosures and Analyst Checks)
+│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 6.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the measurement of inventory at the lower of cost and net realisable value and its implications for financial statements and ratios`。
-- **核心词汇**：**Analysis of Inventories（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 6.1 计量基础 (Measurement Basis)
 
-### 6.2 Inventory Valuation
-- **中文主线**：本节点解决 `Inventory Valuation` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释机制、原因和后果；官方表述为：`calculate and explain how inflation and deflation of inventory costs affect the financial statements and ratios of companies that use different inventory valuation methods`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **成本与可变现净值孰低 (Lower of Cost and Net Realizable Value)**：存货期末计量采用成本与可变现净值(NRV)孰低原则。IFRS 使用 NRV；US GAAP 使用市价(market)即重置成本(replacement cost)
+- **减记对报表与比率的影响 (Write-Down Implications for Statements and Ratios)**：存货减记(inventory write-down)同时增加当期 COGS、减少利润、降低存货账面价值和资产总额，从而影响毛利率(gross margin)、流动比率(current ratio)和存货周转率(inventory turnover)
+- 减记转回(reversal of write-down)：IFRS 允许在后续期间转回至原成本，US GAAP 不允许转回——这是跨准则比较的重要差异
 
-### 6.3 The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin
-- **中文主线**：本节点解决 `The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`describe the presentation and disclosures relating to inventories and explain issues that analysts should consider when examining a company’s inventory disclosures and other sources of information`。
-- **核心词汇**：**Inventory Valuation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 6.2 成本流转方法 (Cost-Flow Methods)
 
-### 6.4 Presentation and Disclosure
-- **中文主线**：本节点解决 `Presentation and Disclosure` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the measurement of inventory at the lower of cost and net realisable value and its implications for financial statements and ratios`。
-- **核心词汇**：**The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **FIFO / 加权平均 / LIFO 比较 (FIFO / Weighted Average / LIFO Comparison)**：
+  - FIFO（先进先出）：先购入的存货先发出，期末存货反映最近购入成本
+  - 加权平均法(weighted average cost)：所有存货成本加权平均计算发出成本
+  - LIFO（后进先出）：后购入的存货先发出，期末存货反映最早购入成本（US GAAP 允许，IFRS 禁止）
 
+- **通胀 vs 通缩效应 (Inflation vs Deflation Effects)**：
+  - **通胀 (Inflation) 环境下**：FIFO 的 COGS 更低、利润更高、期末存货价值更高、所得税更高；LIFO 相反
+  - **通缩 (Deflation) 环境下**：两种方法的效果反转
+  - LIFO 储备(LIFO reserve)：US GAAP 要求使用 LIFO 的公司披露 LIFO reserve，用于将 LIFO 存货调整为 FIFO 基础
+
+**【考试陷阱】** 存货计价方法改变(inventory method changes)会影响 COGS、税金(taxes)、利润率(margins)和存货余额(inventory balances)——在跨公司比较时需调整统一。
+
+### 6.3 存货披露与分析师检查点 (Inventory Disclosures and Analyst Checks)
+
+- 检查存货账龄(aging of inventory)以识别潜在的过时(obsolescence)风险
+- 关注 LIFO liquidation（LIFO 清算）：当 LIFO 公司消耗旧层存货时，COGS 异常低、利润异常高
+- 比较存货增长率与销售增长率：存货增速显著高于销售增速可能是过时或跌价风险的信号
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Current ratio | `current assets / current liabilities` | 衡量短期偿债能力，但不等于现金质量。 |
-| Gross margin | `gross profit / revenue` | 可用于比较定价能力和成本压力。 |
-| ROE | `net income / average equity` | 可用 DuPont 分解定位盈利、效率和杠杆来源。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式 | 说明 |
+|------|------|------|
+| Inventory Turnover | `COGS / Average Inventory` | 存货周转率，衡量存货管理效率 |
+| Days Inventory on Hand (DOH) | `365 / Inventory Turnover` | 存货持有天数 |
+| LIFO Reserve | `FIFO Inventory - LIFO Inventory` | LIFO 储备，用于方法转换调整 |
+| Adjusted COGS (FIFO basis) | `LIFO COGS - (LIFO Reserve End - LIFO Reserve Beg)` | 将 LIFO COGS 调整为 FIFO 基础 |
+| Gross Margin | `(Revenue - COGS) / Revenue` | 毛利率，受存货方法直接和间接影响 |
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 6.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 6.2 Inventory Valuation | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 6.3 The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 6.4 Presentation and Disclosure | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+- **考点1**：FIFO vs LIFO 在不同经济环境下的财务影响。解题思路：先判断通胀还是通缩，再逐项分析 COGS、利润、存货、税金、现金流的变化方向
+- **考点2**：LIFO Reserve 的调整计算。解题思路：利用 LIFO reserve 将 LIFO 财务报表调整为 FIFO 基础进行可比分析
+- **考点3**：存货减记的影响。解题思路：减记确认时 COGS 增加、利润减少、存货余额降低；转回时 IFRS 下反向操作
+- **考点4**：存货比率分析。解题思路：结合存货周转率和毛利率的变化，判断是效率提升还是潜在的过时风险
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Analysis of Inventories` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：LIFO 与现金流: 通胀下 LIFO 的 COGS 较高、利润较低、税负较低，因此经营现金流更高——这是 LIFO 的核心税务优势 | ✅ LIFO 与现金流: 通胀下 LIFO 的 COGS 较高、利润较低、税负较低，因此经营现金流更高——这是 LIFO 的核心税务优势 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：期末存货与 COGS 的方向关系: FIFO 下，期末存货余额越高说明 COGS 越低；LIFO 下相反——理解这个反向关系至关重要 | ✅ 期末存货与 COGS 的方向关系: FIFO 下，期末存货余额越高说明 COGS 越低；LIFO 下相反——理解这个反向关系至关重要 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：LIFO liquidation: 当 LIFO 公司销量大于采购量（消耗旧层）时，COGS 异常下降、利润虚增——这是盈利质量的危险信号 | ✅ LIFO liquidation: 当 LIFO 公司销量大于采购量（消耗旧层）时，COGS 异常下降、利润虚增——这是盈利质量的危险信号 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：减记转回: IFRS 允许但不强制转回，转回金额以原减记金额为上限 | ✅ 减记转回: IFRS 允许但不强制转回，转回金额以原减记金额为上限 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Analyzing-Statements-of-Cash-Flows-II]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M07-Analysis-of-Long-Term-Assets]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M05-Analyzing-Statements-of-Cash-Flows-II]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M07-Analysis-of-Long-Term-Assets]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- [[M03-Balance-Sheet|资产负债表]]：存货是流动资产(current assets)的重要组成部分，直接影响 current ratio 和 working capital
+- [[M02-Income-Statement|利润表分析]]：存货计价方法直接影响 COGS 和毛利率的计算
+- [[M04-Cash-Flow-Statements|现金流量表]]：存货变动(inventory changes)是 CFO 计算中的关键营运资本调整项
+- [[M08-Income-Taxes|所得税]]：FIFO vs LIFO 导致不同的税负，影响递延所得税的计算
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M05-Inventory-Analysis.md` (0.41), `00-Financial-Statement-Analysis-MOC.md` (0.29), `M01-Analysis-Framework.md` (0.28)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M05-Inventory-Analysis.md` (medium, 0.41)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
