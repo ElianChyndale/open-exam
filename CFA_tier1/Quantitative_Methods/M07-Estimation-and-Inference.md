@@ -37,125 +37,132 @@ The candidate should be able to:
 
 ## Local Study Notes
 
-### Migrated from `CFA_tier1/Quantitative_Methods/M07-Sampling-and-Estimation.md`
+### 🌳 核心知识树
 
-_Alignment score: 1.00. Original official module field: Module 7: Estimation and Inference._
+```text
+🏆 M07: Estimation and Inference（抽样与估计）
+│
+├── ⭐ 抽样方法 (Sampling Methods)
+│   ├── 概率抽样 (Probability Sampling)
+│   │   ├── 简单随机抽样: 每个成员被抽中概率相等
+│   │   ├── 分层抽样: 先分层再每层内随机抽 → 降低抽样误差
+│   │   └── 整群抽样: 随机抽群再调查群内全部
+│   ├── 非概率抽样 (Non-Probability Sampling)
+│   │   ├── 便利抽样: 最易获取 → 速度快但代表性差
+│   │   └── 判断抽样: 研究者主观选择 → 易引入偏误
+│   └── ⚠️ 概率抽样更具代表性，非概率抽样易引入偏误
+│
+├── ⭐ 抽样误差与偏误 (Sampling Error & Bias)
+│   ├── 📐 抽样误差 = x̄ - μ（随机性自然结果）
+│   ├── 抽样偏误: 系统性偏离，来自有缺陷的抽样设计
+│   ├── 增大样本量 → 降低抽样误差，但不消除抽样偏误
+│   ├── Data Snooping: 反复分析方法数据 → 样本外检验
+│   └── Look-Ahead Bias: 使用时点尚不可得的信息
+│
+├── ⭐ 中心极限定理 (Central Limit Theorem)
+│   ├── n 足够大 (n ≥ 30) → 样本均值抽样分布 ≈ 正态
+│   ├── 不依赖总体分布形状（即使总体非正态！）
+│   ├── 样本均值均值 ≈ μ；样本均值标准差 = σ/√n
+│   └── 💡 CLT 是统计推断的基石
+│
+├── ⭐ 标准误 (Standard Error)
+│   ├── 📐 已知总体 σ: SE = σ/√n
+│   ├── 📐 未知总体 σ: SE = s/√n（用样本标准差估计）
+│   ├── SE 衡量样本均值的"不确定性"
+│   ├── 💡 SE < σ（标准差），且随 n↑ 而减小
+│   └── ⚠️ 标准误 ≠ 标准差
+│
+├── ⭐ 重抽样估计量 (Resampling Estimators)
+│   ├── Bootstrap: 有放回重抽样 n 个，重复大量次数
+│   │   └── 🎯 估标准误 (SE)
+│   ├── Jackknife: 每次删除一个观测值，估偏误
+│   │   └── 🎯 估偏误 (Bias)
+│   └── ⚠️ Bootstrap 估 SE，Jackknife 估 Bias — 用途不同
+│
+├── 💡 关键洞察
+│   ├── CLT 的伟大之处：不依赖总体分布，使得推断普遍可行
+│   ├── 标准误 = 标准差 / √n — SE 随 n 增大而减小
+│   ├── 扩大样本量不解决系统性偏误 — 代表性比大小更重要
+│   ├── Data Snooping 和 Look-Ahead 是回测中最隐蔽的两大 bias
+│   └── Probability Sampling > Non-Probability Sampling
+│
+└── ⚠️ 考试陷阱总结
+    ├── 标准误 vs 标准差：SE = σ/√n，不是 σ
+    ├── CLT 条件：n ≥ 30，不要求总体正态
+    ├── 大样本不解决偏误 — bias 是系统性的
+    ├── Bootstrap 估 SE，Jackknife 估 Bias
+    ├── Data Snooping → 样本外验证
+    └── Sampling Error 定义: 统计量 - 参数
+```
 
-#### M07: Sampling and Estimation（抽样与估计）
+### 📐 关键公式表
 
-##### 1. 核心知识点
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `SE = σ/√n` | 标准误（已知总体 σ） | CLT 区间估计 | σ 是总体标准差 |
+| `SE = s/√n` | 标准误（用样本 s 估计） | 常见考试场景 | s 是样本标准差 |
+| `Sampling Error = x̄ - μ` | 抽样误差 | 评估样本估计精度 | 随机性的自然结果 |
+| `n = (zσ/E)²` | 所需样本量公式 | E = 期望 margin of error | 先确定 z 和 E |
+| **Bootstrap**: 有放回重抽 n 个 | 重抽样估 SE | 统计量抽样分布 | 不解决原始偏误 |
+| **Jackknife**: 逐次留一 | 重抽样估 Bias | 统计量偏误估计 | 计算成本比 Bootstrap 低 |
 
-###### 1.1 抽样方法（Sampling Methods）
+### 🛠️ 常见考点与解题思路
 
-**概率抽样（Probability Sampling）**：每个总体成员有已知的非零概率被抽中。
-
-- **简单随机抽样（Simple Random Sampling）**：每个成员被抽中的概率相等。最基础的方法，但不一定总适用。
-- **分层抽样（Stratified Random Sampling）**：先将总体分成若干层（Stratum，如按行业、市值分组），再在每层内随机抽样。**优势**：保证每层都有代表性，降低抽样误差。
-- **整群抽样（Cluster Sampling）**：将总体分成若干群（如地理区域），随机抽取几个群，对群内全部成员调查。
-
-**非概率抽样（Non-Probability Sampling）**：某些成员被选中的概率未知或为零。
-
-- **便利抽样（Convenience Sampling）**：选取最容易获得的样本。速度快但代表性差。
-- **判断抽样（Judgmental Sampling）**：基于研究者的主观判断选择样本。容易引入个人偏误。
-
-**抽样误差与偏误（Sampling Error and Bias）**：
-- 抽样误差（Sampling Error）：样本统计量与总体参数之间的差异，是随机性的自然结果
-- 抽样偏误（Sampling Bias）：系统性的偏离，通常来自有缺陷的抽样设计
-- 增大样本量可以降低抽样误差，但不能消除抽样偏误
-
-**数据 snooping（Data Snooping / Data Mining Bias）**：
-- 反复分析同一数据集直到发现"显著"模式 — 本质上是在挖掘随机噪声
-- 解决方法：样本外检验（Out-of-Sample Test）
-
-**前视偏误（Look-Ahead Bias）**：
-- 使用在分析时点尚不可得的信息进行回测
-- 例：用全年财务数据在年中做策略回测（Q2 时 Q4 数据尚未公布）
-
-###### 1.2 CLT 和标准误（Central Limit Theorem and Standard Error）
-
-**中心极限定理（Central Limit Theorem, CLT）**：
-- 如果样本容量 n 足够大（一般 n ≥ 30），样本均值的抽样分布近似服从正态分布
-- 这个结论**不依赖于总体分布的形状**（即使总体是非正态的！）
-- 样本均值的均值 ≈ 总体均值 μ
-- 样本均值的标准差（即标准误）= σ / √n
-
-**标准误（Standard Error of the Mean）**：
-`SE = σ / √n` （已知总体标准差时）
-`SE = s / √n` （未知总体标准差时，用样本标准差估计）
-
-**标准误的含义**：标准误衡量的是样本均值的"不确定性" — 如果从同一总体重复抽样，样本均值之间的波动幅度。
-
-> **【考试核心】** CLT 是统计推断的基石：它让我们即使在总体分布未知的情况下，也可以用正态分布进行区间估计和假设检验。
-
-**标准误 vs 标准差**：
-- 标准差（σ）：衡量单个观测值的离散度
-- 标准误（σ/√n）：衡量样本均值的离散度
-- 标准误 < 标准差，且随 n 增大而减小
-
-###### 1.3 重抽样估计量（Resampling Estimators）
-
-**自助法（Bootstrap）**：
-- 从样本中有放回重复抽样，每次抽取 n 个观测值，重复大量次数
-- 对每个自助样本计算统计量，形成该统计量的经验抽样分布
-- 详见 [[M06-Simulation-Methods]] 中 1.3 节的展开
-
-**刀切法（Jackknife）**：
-- 每次从样本中**剔除一个观测值**（Leave-One-Out），计算统计量
-- 对所有 n 个可能的剔除组合做平均
-- 主要用于估计统计量的偏误（Bias）和方差
-- 计算成本比 Bootstrap 低（只需要 n 次计算），但信息量较少
-
-> **【Bootstrap vs Jackknife 辨析】**
-> - **Bootstrap**：有放回重抽原始数据（每次抽取 n 个），用各次重抽样本的 mean 的分布来估计标准误（Standard Error），而非直接从原始数据计算 SD。
-> - **Jackknife**：逐次删除一个观测值，重新计算统计量，通过 n 次结果的变化幅度估计偏误（Bias），不是用于去除异常值。
-> - **区分要点**：Bootstrap 估标准误（SE）；Jackknife 估偏误（Bias）。
-
-##### 2. 关键公式
-
-| 公式 | 解释 | 使用场景 |
-|------|------|----------|
-| `SE = σ/√n` | 标准误（已知总体 σ） | CLT 应用 |
-| `SE = s/√n` | 标准误（用样本 s 估计） | 常见考试场景 |
-| `Sampling Error = x̄ - μ` | 抽样误差 | 评估样本估计精度 |
-| `n = (zσ/E)²` | 所需样本量 | E = 期望的 margin of error |
-
-##### 3. 常见考点与解题思路
-
-**考点一：CLT 的应用条件**
+**考点1：CLT 的应用条件**
 - 问：何时样本均值的抽样分布为正态？
-- 答：(1) 总体本身就是正态分布，或 (2) 样本容量足够大（n ≥ 30）
-- 注意：CLT 不要求总体服从正态分布
+- 答：(1) 总体本身就是正态分布，或 (2) n ≥ 30
+- CLT 不要求总体服从正态分布 — 这是核心考点
+- ⚠️ CLT 仍然需要独立同分布 (i.i.d.) 抽样
 
-**考点二：计算标准误**
-- 给总体标准差 σ 和样本大小 n → SE = σ/√n
-- 给样本标准差 s 和样本大小 n → SE = s/√n
-- 注意区分总体标准差 σ 和样本标准差 s
+**考点2：计算标准误**
+- 给总体 σ 和 n → SE = σ/√n
+- 给样本 s 和 n → SE = s/√n
+- ⚠️ 区分总体标准差和样本标准差
 
-**考点三：判断抽样方法优劣**
-- 一个研究采用了 convenience sample → 指出潜在的偏误
-- 怎样的样本设计可以减少偏误 → 推荐 stratified random sampling
+**考点3：判断抽样方法优劣**
+- Convenience sample → 指出代表性不足的偏误
+- 推荐改进 → Stratified Random Sampling（保证各层代表性）
+- Probability vs Non-Probability → 考试必考分类题
 
-**考点四：标准误与样本量的关系**
+**考点4：标准误与样本量的关系**
 - SE 与 √n 成反比
-- 要将 SE 减半，需要将样本量增至 4 倍
+- SE 减半 → 需要 4 倍样本量
+- n → 4n → SE → SE/2
 
-##### 4. 易错点提醒
+**考点5：Bootstrap vs Jackknife 区分**
+- Bootstrap：有放回重抽 → 估 SE
+- Jackknife：留一法 → 估 Bias
+- ⚠️ 考试可能将两者对比出题
 
-1. **标准误 vs 标准差**：标准误是样本均值的标准差，不是原始数据的标准差。公式中除以 √n 的是标准差。
-2. **CLT 需要大样本**：n ≥ 30 是经验规则。如果总体高度非正态，可能需要更大样本。
-3. **大样本不解决偏误**：增大样本量使抽样误差变小，但不影响系统性的抽样偏误（Bias）。
-4. **好样本的关键是代表性，不只是大**：一个有偏的大样本比一个随机的小样本更差。
-5. **Data Snooping 是常见隐蔽问题**：反复挖掘同一数据集寻找模式会过度拟合（Overfitting），需要用样本外数据验证。
-6. **Sampling Error 定义**：Sampling Error = 样本统计量（statistic）与它试图估计的总体参数（parameter）之差，不是 random variable 与 statistic 之差。
-7. **Probability Sampling 更具代表性**：概率抽样给总体成员更均等的被抽中机会，结果通常比非概率抽样更具代表性、更准确、更可靠。非概率抽样（便利抽样、判断抽样）容易引入偏误。
-8. **Bootstrap SE vs Jackknife 区分**：Bootstrap 通过有放回重抽原始样本、计算每次重抽样本的统计量分布来估计标准误；Jackknife 通过逐次删除一个观测值、重新计算统计量，用变化幅度来估计偏误（不是用于去除异常值）。
+### 🚨 易错点与考试陷阱
 
-##### 5. 跨模块关联
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-----------|-----------|------|
+| 标准误 = 样本标准差 | 标准误 = 样本标准差/√n | 标准误是样本均值的标准差 |
+| CLT 要求总体正态分布 | CLT 在 n≥30 时适用于任何分布 | CLT 的伟大之处就是不需要总体正态 |
+| 大样本可以消除抽样偏误 | 大样本降低抽样误差，不消除偏误 | 偏误是系统性的，不是随机性的 |
+| Bootstrap 估 Bias，Jackknife 估 SE | Bootstrap 估 SE，Jackknife 估 Bias | 两者用途正好相反 |
+| Sampling Error = x̄ 与 μ 的比值 | Sampling Error = x̄ - μ（差值） | 是差不是比 |
+| 大样本 = 好样本 | 代表性比大小更重要 | 有偏的大样本不如随机的小样本 |
 
-- **[[M03-Statistical-Measures]]**：样本方差 `s² = Σ(x_i-x̄)²/(n-1)` 的标准误概念在这里应用。
-- **[[M06-Simulation-Methods]]**：Bootstrap 在此作为重抽样估计量出现，与 M06 的模拟方法形成完整的方法链条。
-- **[[M08-Hypothesis-Testing]]**：标准误是假设检验中检验统计量的分母。CLT 使 z-test 和 t-test 成为可能。
-- **[[M09-Correlation-and-Regression]]**：回归系数的标准误（SE of slope coefficient）是 M07 标准误概念在回归框架中的推广。
+### 🔄 跨模块关联
+
+- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 样本方差 s² = Σ(xᵢ-x̄)²/(n-1) 的标准误概念在此应用。
+- **[[M06-Simulation-Methods]]** — Bootstrap 作为重抽样估计量，与 M06 的模拟方法形成完整方法链条。
+- **[[M08-Hypothesis-Testing]]** — 标准误是假设检验中检验统计量的分母。CLT 使 z-test 和 t-test 成为可能。
+- **[[M10-Simple-Linear-Regression]]** — 回归系数的标准误 SE(b₁) 是 M07 标准误概念在回归框架中的推广。
+
+### 📋 复习与刷题提示
+
+- **核心能力**：区分五种抽样方法，掌握 CLT 的条件和含义，熟练计算标准误
+- **必考题型**：CLT 条件判断、标准误计算、抽样方法分类、Bootstrap vs Jackknife
+- **最常犯错误**：标准误与标准差混淆、CLT 误认为需要总体正态、大样本与偏误的关系理解偏差
+- 记忆口诀：
+  - 标准误 = 标准差 ÷ √n
+  - CLT：n ≥ 30，不挑分布
+  - 分层抽样 = 层内随机，保证代表性
+  - Bootstrap 估 SE，Jackknife 估 Bias
+- 刷题建议：重点做抽样方法分类题和标准误计算题
 ## Review Hooks
 
 - Add mistake-driven traps only after they can be traced back to `.system/events/`.

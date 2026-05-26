@@ -37,56 +37,124 @@ The candidate should be able to:
 - describe types and characteristics of non-mortgage asset-backed securities, including the cash flows and risks of each type
 - describe collateralized debt obligations, including their cash flows and risks
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Fixed_Income/M13-ABS-and-Credit-Enhancement.md`
+```text
+🏆 M18: ABS and Credit Enhancement（ABS 与信用增级）
+├─ ⭐ 18.1 ABS 类型
+│  ├─ 📐 汽车贷款 ABS：有明确摊销计划
+│  ├─ 📐 信用卡 ABS：循环结构，本金可重新投资
+│  ├─ 📐 应收账款 ABS：依赖商业付款周期
+│  ├─ 📐 CDO (债务抵押债券)：以债券/贷款为担保品
+│  └─ 💡 摊还型 vs 循环型：还款模式不同
+│
+├─ ⭐ 18.2 Covered Bond（有担保债券）
+│  ├─ 📐 双重追索权 (Dual Recourse)：担保池 + 发行人信用
+│  ├─ 🎯 资产不出表（留在发行人资产负债表上）
+│  ├─ 💡 Covered bond ≠ ABS（法律结构不同）
+│  └─ ⚠️ Covered bond 不是 ABS【易错】
+│
+├─ ⭐ 18.3 内部信用增级
+│  ├─ 📐 分层 (Subordination)：优先级先受偿
+│  ├─ 📐 超额抵押 (Overcollateralization)：资产 > 证券
+│  ├─ 📐 超额利差 (Excess Spread)：收益 > 支付 + 费用
+│  ├─ 📐 准备金账户 (Reserve Account)：现金缓冲
+│  └─ ⚠️ 增级重新分配损失吸收，非免费收益
+│
+└─ ⭐ 18.4 外部信用增级
+   ├─ 💡 债券保险 (Bond Insurance)
+   ├─ 💡 信用证 (Letter of Credit)
+   ├─ 💡 公司担保 (Corporate Guarantee)
+   └─ 💡 依赖第三方信用质量
+```
 
-_Alignment score: 1.00. Original official module field: Module 18: Asset-Backed Security (ABS) Instrument and Market Features._
+## 📐 关键公式表
 
-#### M17: ABS 与信用增级 (ABS and Credit Enhancement)
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `Overcollateralization = (资产池面值 - 证券面值) / 证券面值` | 超额抵押率 | 信用增级评估 | 比率越高保护越强 |
+| `Excess Spread = 资产池利率 - 证券利率 - 费用` | 超额利差 | 损失吸收缓冲 | 可迅速耗尽 |
+| `Credit Enhancement Level = 次级层 + 准备金 + 超额利差现值` | 信用增级水平 | 全面评估 | 加权计算 |
+| `Covered Bond: 资产池 + 发行人信用` | 双重追索权 | 风险分析 | 与 ABS 的单一追索不同 |
 
-##### 1. 核心知识点
+## 🛠️ 常见考点与解题思路
 
-###### 1.1 ABS 类型 (ABS Families)
+### 考点 1：区分内部 vs 外部信用增级
+- **内部**：分层、超额抵押、超额利差、准备金账户（不依赖第三方）
+- **外部**：保险、信用证、第三方担保（依赖第三方信用质量）
+- **考试常考**：给定增级方式判断类型
 
-- **汽车贷款、信用卡、应收账款、其他非抵押担保品 (auto loans, credit cards, receivables, other non-mortgage collateral)**：ABS (asset-backed securities) 的抵押品范围广泛。汽车贷款 ABS 有明确的摊销计划；信用卡 ABS 通常为循环结构（本金可重新投资于新应收账款）；应收账款 ABS 依赖商业交易的付款周期。
-- **担保品现金流模式决定摊还与触发风险 (collateral cash flow pattern determines amortization and trigger risk)**：不同类型 ABS 的现金流模式不同。摊还型 (amortizing) 如汽车贷款有固定还款计划；循环型 (revolving) 如信用卡允许借款人在额度内循环使用。
-- **有担保债券保持双重追索权，不同于典型 ABS 隔离 (covered bond keeps dual recourse unlike typical ABS isolation)**：Covered bond（有担保债券）与 ABS 的关键区别：covered bond 投资者同时拥有对担保池和发行人的双重追索权 (dual recourse)；而 ABS 投资者仅对 SPV 中的资产池有追索权。
+### 考点 2：理解 Covered Bond 的双重追索权
+- **第一重追索**：对担保资产池
+- **第二重追索**：对发行人的其他资产
+- **与 ABS 区别**：ABS 投资者仅对 SPV 资产池有追索权
+- **关键**：Covered bond 资产不出表，仍在发行人资产负债表上
 
-###### 1.2 信用增级 (Credit Enhancement)
+### 考点 3：ABS 摊销类型判断
+- **摊还型 (Amortizing)**：汽车贷款 → 有固定还款计划
+- **循环型 (Revolving)**：信用卡 → 额度可循环使用
+- **判断依据**：基础资产的现金流模式
 
-- **分层、超额抵押、超额利差、准备金账户 (subordination, overcollateralization, excess spread, reserve accounts)**：内部增级方式。分层 (subordination/tranching) 让优先级吸收次级层的保护；超额抵押 (overcollateralization) 指资产池价值超过发行的债券金额；超额利差 (excess spread) 是资产池收益超过证券支付和费用的部分；准备金账户 (reserve account) 作为现金缓冲。
-- **担保/保险作为外部支持 (guarantees/insurance as external support)**：外部增级来自第三方机构，如保险公司提供的债券保险 (bond insurance)、银行开立的信用证 (letter of credit) 或公司担保 (corporate guarantee)。
+### 考点 4：分析超额利差的缓冲作用
+- **机制**：资产池利率 - 证券利率 - 费用 = 超额利差
+- **缓冲**：当部分贷款违约时，超额利差先吸收损失
+- **风险**：大规模违约会迅速耗尽
 
-##### 2. 关键公式
+## 🚨 易错点与考试陷阱
 
-| 指标 | 公式/概念 |
-|------|-----------|
-| 超额抵押 | `Overcollateralization = (资产池面值 - 证券面值) / 证券面值` |
-| 超额利差 | `Excess Spread = 资产池加权平均利率 - 证券加权平均利率 - 费用` |
-| 信用增级水平 | `Credit Enhancement Level = 次级层 + 准备金 + 超额利差现值` |
-| 双重追索权 | `Covered Bond: 资产池 + 发行人信用` |
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-------------|-------------|------|
+| Credit enhancement = free yield | 重新分配损失吸收，优先级收益降低有代价 | 次级层承受更大风险 |
+| Covered bond = ABS | 法律结构不同，covered bond 资产不出表 | 双重追索 vs 单一追索 |
+| 超额利差永久有效 | 大规模违约后可能迅速耗尽 | 缓冲有限 |
+| 所有 ABS 结构相同 | 有摊还型、循环型、触发机制等差异 | 需逐一分析 |
 
-##### 3. 常见考点与解题思路
+## 🔄 跨模块关联
 
-- **区分内部与外部信用增级**：内部（分层、超额抵押、超额利差、准备金账户）vs 外部（保险、信用证、第三方担保）。
-- **理解 covered bond 的双重追索权**：covered bond 投资者在发行人违约时，既可以追索担保资产池，也可以追索发行人的其他资产。这与 ABS 的单一追索权不同。
-- **ABS 的摊销类型判断**：给定抵押品特征（如汽车贷款、信用卡应收款），判断是摊还型还是循环型结构。
-- **分析超额利差的缓冲作用**：当资产池中部分贷款违约时，超额利差可以吸收损失，保护优先级证券投资者。
+- **信用增级** → [[M17-Fixed-Income-Securitization]] 的 SPV 结构
+- **分层设计** → [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] 的 CMO 分层
+- **Covered bond** → [[M15-Credit-Analysis-for-Government-Issuers]] 和 [[M16-Credit-Analysis-for-Corporate-Issuers]] 的发行人信用分析
+- **信用风险** → [[M14-Credit-Risk]] 的 PD/LGD 框架
 
-##### 4. 易错点提醒
+## 📋 复习与刷题提示
 
-- **信用增级重新分配损失吸收，而非免费收益 (credit enhancement reallocates loss absorption; it is not free yield)**：信用增级提高优先级证券的信用质量，但代价是次级层承担更大的风险。优先级收益率的"降低"不是免费获得的，而是通过牺牲次级的利益实现的。
-- **Covered bond 不是 ABS**：两者最大区别在于法律结构——covered bond 不出售资产给 SPV，资产仍留在发行人资产负债表上，投资者有双重追索权。
-- **Excess spread 不是永久性保护**：如果资产池中的贷款大规模违约，超额利差可能迅速耗尽。
-- **Trigger events（触发事件）** ：许多 ABS 设有信用触发机制（如超额利差降至阈值以下），一旦触发会改变现金流分配方式，如强制提前摊还。
+- **核心重点**：内部 vs 外部信用增级的区分
+  - 内部：分层、超额抵押、超额利差、准备金账户
+  - 外部：保险、信用证、第三方担保
+  - 考试常考：给定增级方式 → 判断内/外部类型
+- **Covered bond 要点**：
+  - 双重追索权：担保池 + 发行人信用
+  - 资产不出表：仍在发行人资产负债表
+  - 与 ABS 本质区别：法律结构不同（covered bond 不是 ABS）
+  - Covered bond 投资者在发行人违约时有双重追索
+- **ABS 类型与现金流特征**：
+  - 汽车贷款 ABS：摊销型，有固定还款计划，提前还款风险低
+  - 信用卡 ABS：循环型，本金可重新投资，提前还款风险中等
+  - 应收账款 ABS：循环或摊销，依赖商业付款周期
+  - CDO：以债券/贷款为担保品，多层结构化
+- **关键数据**：
+  - 超额抵押率 = (资产池面值 - 证券面值) / 证券面值
+  - 超额利差 = 资产池利率 - 证券利率 - 费用
+  - 信用增级水平 = 次级层 + 准备金 + 超额利差现值
+- **刷题建议**：
+  - 重点做信用增级识别题（内部 vs 外部）
+  - Covered bond 分析题（双重追索权和 ABS 对比）
+  - ABS 类型特征题（汽车贷款/信用卡/应收账款区别）
+  - Trigger events 相关题（超额利差触发机制）
+- **易混淆点**：
+  - Credit enhancement ≠ free yield
+  - Covered bond ≠ ABS
+  - 超额利差不是永久性保护
+  - 不同 ABS 的结构差异大
 
-##### 5. 跨模块关联
-
-- 信用增级 → [[M12-Securitization-Foundations]] 的 SPV 结构
-- 分层设计 → [[M14-MBS-and-CMO]] 的 CMO 分层
-- Covered bond → [[M11-Government-and-Corporate-Credit]] 的发行人信用分析
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **考试技巧**：
+  - 信用增级 ≠ 免费收益（次级层承受更多风险）
+  - Covered bond 不是 ABS，核心区别为资产是否出表
+  - 超额利差缓冲有限，大规模违约时迅速耗尽
+  - 摊还型 vs 循环型：看基础资产现金流的还款模式
+  - CDO 的担保资产池是债券/贷款而非消费贷款
+- **补充概念**：
+  - 触发机制（Triggers）：超额利差下降到阈值以下 → 现金流瀑布转向
+  - 提前摊还（Early Amortization）：触发后加速偿还投资者本金
+  - CDO 的经理人主动管理 vs ABS 的被动池管理
+  - 金融危机后 CDO 市场大幅萎缩，合规 CLO 仍活跃

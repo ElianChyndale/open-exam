@@ -125,6 +125,111 @@ _Alignment score: 0.45. Original official module field: Alternative Investment F
 - 投资方法 → [[M03-Private-Capital.md]] ~ [[M07-Digital-Assets.md]] (各类资产的参与方式)
 - 数字资产基础 → [[M07-Digital-Assets.md]] (区块链与代币化详解)
 - 六大特征 → 所有M02-M07模块的具体体现
+### 🌳 核心知识树
+
+```text
+🏆 M01: Alternative Investment Features, Methods, and Structures（另类投资特征、方式与结构）
+│
+├── ⭐ 六大核心特征 ILL-LOW-HIGH-COMPLEX-LIMIT-UNIQUE 🎯超高頻
+│   ├── ILL - Illiquidity (非流动性) ⭐⭐⭐⭐⭐
+│   ├── LOW - Low Correlation (低相关性) ⭐⭐⭐⭐⭐
+│   ├── HIGH - High Return Potential (高收益潜力) ⭐⭐⭐⭐⭐
+│   ├── COMPLEX - Complex Structures (复杂结构) ⭐⭐⭐⭐
+│   ├── LIMIT - Limited Transparency (有限透明度) ⭐⭐⭐⭐
+│   └── UNIQUE - Unique Risks (独特风险) ⭐⭐⭐
+│
+├── ⭐ 投资方法 (Investment Methods) 🎯高频
+│   ├── 直接投资 (Direct): 直接购买资产所有权
+│   ├── 间接投资 (Indirect): 通过基金/ETF
+│   └── FOF (Fund-of-Funds): ⚠️ 双重费用
+│
+├── ⭐ 费用结构 (Fee Structure) 🎯超高頻
+│   ├── 📐 管理费 = AUM × Management Fee%
+│   ├── 📐 业绩提成 = Excess Return × Incentive Fee%
+│   ├── Hurdle Rate: 门槛收益率 ⚠️ 达标后才收提成
+│   └── High Water Mark: 高水位线 ⚠️ 只对新收益收费
+│
+├── ⭐ 基金组织形式 (Fund Structure)
+│   ├── GP (General Partner): 管理运营、1-2%出资、Carried Interest
+│   └── LP (Limited Partner): 被动投资、98-99%出资、有限责任
+│       ⚠️ LP过度参与管理可能丧失有限责任保护
+│
+├── ⭐ 收益瀑布 (Waterfall Distribution) 🎯高频
+│   ├── 美式 (Deal-by-Deal): 逐项目分配，有利于GP
+│   ├── 欧式 (Whole-of-Fund): 基金整体分配，有利于LP
+│   └── Clawback: 回拨条款保护LP
+│
+└── ⭐ 数字资产基础 (Digital Asset Foundation)
+    ├── 区块链 (Blockchain): 分布式账本
+    └── 代币化 (Tokenization): 资产权利上链
+```
+
+### 📐 关键公式表
+
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| 管理费 = AUM × 管理费率 | 年度管理费 | 根据管理资产规模收取 | 通常1-2%/年 |
+| 业绩提成 = (NAV_end - NAV_begin) × Incentive Fee% | 业绩报酬 | 按超额收益计算 | 需检查Hurdle和High Water Mark |
+| 净回报 = 总回报 - 管理费 - 业绩提成 | 投资者净收益 | 计算LP最终所得 | 费用扣除顺序影响结果 |
+| NAV after Fees = NAV before Fees - Mgmt Fee - Incentive Fee | 费用后净资产 | 多期业绩跟踪 | High Water Mark基于历史最高NAV |
+| 总费用率 = (管理费 + 业绩提成) / AUM | 总费用比率 | 比较不同基金的费用水平 | 业绩提成波动大 |
+
+### 🛠️ 常见考点与解题思路
+
+**Topic 1: 费用计算（必考）**
+- 步骤1：计算管理费 = AUM × 管理费率
+- 步骤2：扣除管理费后计算收益
+- 步骤3：检查是否超过Hurdle Rate
+- 步骤4：检查是否超过High Water Mark
+- 步骤5：计算业绩提成 = 超额收益 × 提成比例
+- 步骤6：总费用 = 管理费 + 业绩提成
+
+**Topic 2: GP vs LP角色区分**
+- GP：负责运营、承担无限责任（通过LLC隔离）、收益来自管理费+Carried Interest
+- LP：被动投资者、以出资额为限承担有限责任
+- 陷阱：LP参与管理决策可能丧失有限责任保护（刺破公司面纱）
+
+**Topic 3: 美式vs欧式瀑布**
+- 美式：有利GP，GP在单个项目退出时即可收费
+- 欧式：有利LP，LP先收回全部出资再分配
+- Clawback：防止GP前期多拿
+
+**Topic 4: 流动性排序**
+- REITs（公开交易）> 对冲基金 > PE/VC > 直接房地产
+- 理解不同另类资产的流动性差异
+
+### 🚨 易错点与考试陷阱
+
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|------------|------------|------|
+| High Water Mark = Hurdle Rate | HWM是历史最高净值，Hurdle是最低收益率门槛 | 两个不同概念，可能共存 |
+| GP承担无限责任 = GP个人资产全部暴露 | GP可通过LLC实体隔离风险 | 实操中GP注册为有限责任公司 |
+| LP参与讨论=丧失有限责任保护 | 参与顾问委员会讨论不丧失保护 | 参与管理运营决策才会 |
+| 美式瀑布更公平 | 美式有利GP，欧式有利LP | 分配顺序影响实际收益 |
+| FOF的额外费用很小 | FOF有双重费用（底层+FOF层），通常+1%+10% | 费用叠加效应显著 |
+| 另类投资总是提供分散化 | 低相关性在危机时可能消失 | 相关性是动态的 |
+| 管理费只收一次 | 管理费逐年收取 | 对长期回报侵蚀显著 |
+
+### 🔄 跨模块关联
+
+- **费用结构对比** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE的2/20结构）
+- **费用结构对比** → [[M06-Hedge-Funds]]（对冲基金的费用设置）
+- **LL-LOW-HIGH特征在各类资产中的体现** → 所有M02-M07模块
+- **水瀑布结构** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE基金分配）
+- **数字资产基础** → [[M07-Introduction-to-Digital-Assets]]（区块链和代币化详解）
+- **投资方法** → [[M04-Real-Estate-and-Infrastructure]]（房地产的直接vs间接投资）
+- **Fee计算与业绩衡量** → [[M02-Alternative-Investment-Performance-and-Returns]]（净回报计算）
+
+### 📋 复习与刷题提示
+
+- **六大特征必须记住缩写**：ILL-LOW-HIGH-COMPLEX-LIMIT-UNIQUE，每个特征的含义和理解
+- **费用计算是必考计算题**：管理费→Hurdle→HWM→业绩提成→净回报
+- **GP/LP角色**：理解GP的管理职责和LP的责任限制
+- **瀑布结构**：美式vs欧式的区别和Clawback的作用
+- **流动性排序**：各种另类资产的流动性从高到低排序
+- **刷题建议**：mock中费用计算题为重点，概念题集中在六大特征和GP/LP角色
+- **FOF的理解**：FOF vs single fund的优缺点对比
+
 ## Review Hooks
 
 - Add mistake-driven traps only after they can be traced back to `.system/events/`.

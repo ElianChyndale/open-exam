@@ -37,121 +37,145 @@ The candidate should be able to:
 
 ## Local Study Notes
 
-### Migrated from `CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money.md`
+### 🌳 核心知识树
 
-_Alignment score: 1.00. Original official module field: Module 2: Time Value of Money in Finance._
+```text
+🏆 M02: Time Value of Money in Finance（货币时间价值）
+│
+├── ⭐ 现金流时间轴 (Cash-Flow Map)
+│   ├── 📐 FV = PV × (1 + r)^n — TVM 核心关系
+│   ├── 四种基本模式：单笔、等额年金、永续年金、增长现金流
+│   ├── 先付年金 (Annuity Due)：期初支付 = 普通年金 × (1+r)
+│   └── ⚠️ 先画时间轴，再选公式，不要一上来就套公式
+│
+├── ⭐ 四种基本现金流模式 (Four Cash Flow Patterns)
+│   ├── Single Sum — 最简单，直接代入 FV/PV 公式
+│   ├── 📐 Ordinary Annuity: PV = A[1 - 1/(1+r)^n] / r
+│   ├── 📐 Perpetuity: PV = A / r — 分子必须是第一期现金流
+│   ├── 📐 Growing Perpetuity: PV = A₁/(r-g) — 要求 r > g
+│   └── 📐 Growing Annuity: PV = A₁/(r-g)[1 - ((1+g)/(1+r))^n]
+│
+├── ⭐ 工具现值应用 (Instrument PV Applications)
+│   ├── Fixed Income：债券价格 = 票息年金现值 + 本金现值
+│   ├── Equity：股票价值 = 未来股利现值 (DDM)
+│   └── 🎯 先识别现金流时点和模式，再选公式
+│
+├── ⭐ 隐含变量求解 (Implied Quantities)
+│   ├── 📐 戈登增长模型: r = D₁/P₀ + g
+│   ├── 已知 PV, FV, PMT, n 中任意三个 → 反求第四个
+│   ├── 债券 → 反求 YTM；股权 → 反求要求回报率
+│   └── 🎯 高频考点：用金融计算器反向求解
+│
+├── ⭐ 现金流可加性 (Cash-Flow Additivity)
+│   ├── 组合现值 = 各组成部分现值之和
+│   ├── 是套利定价和无套利条件的基础
+│   └── ⚠️ 多个现金流序列 → 分别折现再加总，不是单一公式
+│
+├── 💡 关键洞察
+│   ├── TVM 是所有资产定价的共同基础 — 债券、股票、衍生品
+│   ├── 先付年金 = 普通年金 × (1+r) — 记住这个简单倍数关系
+│   ├── Perpetuity 公式是从年金公式取 n→∞ 的极限
+│   └── Cash-flow additivity 是无套利定价的数学基础
+│
+└── ⚠️ 考试陷阱总结
+    ├── Perpetuity 分子必须是第一期现金流 A₁，不是 A₀
+    ├── Growing perpetuity 必须满足 r > g
+    ├── 计息频率与支付频率不一致 → 先统一利率口径
+    └── 画时间轴是最好的纠错方法
+```
 
-#### M02: Time Value of Money（货币时间价值）
+### 📐 关键公式表
 
-##### 1. 核心知识点
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `FV = PV(1+r)^n` | 终值公式 | 单笔投资未来价值 | r 和 n 必须同频率 |
+| `PV = FV/(1+r)^n` | 现值公式 | 未来单笔现金流折现 | 折现率与期数匹配 |
+| `PV_annuity = A[1-1/(1+r)^n]/r` | 普通年金现值 | 等额分期现金流 | 确认是期末支付 |
+| `PV_annuity_due = PV_ordinary × (1+r)` | 先付年金现值 | 期初支付场景(房租/保费) | 比普通年金多乘 (1+r) |
+| `PV_perpetuity = A/r` | 永续年金现值 | 永续债券、优先股 | 分子用 A₁ |
+| `PV_growing_perpetuity = A₁/(r-g)` | 永续增长年金 | DDM 股利折现模型 | 必须 r > g |
+| `PV_growing_annuity = A₁/(r-g)[1-((1+g)/(1+r))^n]` | 增长年金现值 | 有限期增长现金流 | g 可为 0 → 退化为普通年金 |
+| `r = D₁/P₀ + g` | 戈登增长模型 | 从股价反推要求回报率 | 股利增长率恒定的假设 |
+| `EAR = (1 + r_nom/m)^m - 1` | 有效年利率 | 比较不同计息频率 | m = 年复利次数 |
 
-###### 1.1 现金流时间轴（Cash-Flow Map）
+### 🛠️ 常见考点与解题思路
 
-TVM（Time Value of Money）的核心前提：**今天的 1 元钱比未来的 1 元钱更值钱**，因为今天的钱可以投资生息。
+**考点1：现金流模式识别与分类（第一步最关键）**
+- 步骤 1：画现金流时间轴 — 将每个现金流标注在时间轴上
+- 步骤 2：判断支付时点 — 期初 = Annuity Due，期末 = Ordinary Annuity
+- 步骤 3：判断期限 — 有限期 = Annuity，无限期 = Perpetuity
+- 步骤 4：是否有增长 — 有增长 = Growing Annuity/Perpetuity
+- 步骤 5：代入对应公式，注意 r 与 n 的频率一致
+- ⚠️ 最常见错误：不画时间轴直接套公式；把 Annuity Due 当 Ordinary Annuity
+- 💡 时间轴是 TVM 问题最有效的纠错工具
 
-**核心关系（Core Relationship）**：
-`FV = PV × (1 + r)^n`
+**考点2：隐含利率反推（金融计算器必会）**
+- 已知：贷款额 (PV)、月还款额 (PMT)、期数 (n)
+- 金融计算器操作：输入 PV, PMT, n, FV=0 → 求解 I/Y
+- 解出的是每期利率（如月利率），需年化
+- 年化方法：名义年利率 = 月利率 × 12；EAR = (1+月利率)^12 - 1
+- 戈登增长模型反推: r = D₁/P₀ + g (已知股价、股利、增长率求回报率)
+- ⚠️ 注意还款频率 vs 计息频率的匹配 — 先统一再计算
 
-- PV = 现值（Present Value）：今天投资的本金
-- FV = 终值（Future Value）：未来某一时点的本利和
-- r = 每期利率（Periodic Interest Rate）
-- n = 期数（Number of Periods）
+**考点3：不同计息频率比较与 EAR 计算**
+- 公式：EAR = (1 + r_nominal/m)^m - 1，m = 年复利次数
+- 计息频率越高 → EAR 越高（但增速递减）
+- 极端情况 — 连续复利: EAR = e^r - 1 (m → ∞)
+- 💡 EAR 用于比较不同计息频率下的真实年化收益率
+- ⚠️ 复利次数不同时不能直接比较名义利率，必须统一到 EAR
 
-**四种基本现金流模式（Four Basic Cash Flow Patterns）**：
+**考点4：债券定价 (TVM 在固收中的直接应用)**
+- 债券价格 = 未来各期票息的年金现值 + 到期本金的单笔现值
+- 票息 = 面值 × 票面利率 / 年付息次数
+- 半年付息的处理: 周期利率 = r/2，期数 = 2n
+- 到期收益率 (YTM) 是使债券价格等于现金流现值的折现率
+- ⚠️ 最易错：半年付息但不用 r/2 和 2n；或混淆票面利率和 YTM
 
-1. **单笔现金流（Single Sum）**：一笔资金，一个现值对应一个终值。最简单的 TVM 题型，直接代入公式。
-2. **等额年金（Ordinary Annuity）**：每期末支付等额现金流。考试常见 — 如等额本息还款、固定票息债券。
-3. **永续年金（Perpetuity）**：等额现金流无限持续。公式最简单：`PV = A / r`，但注意必须分子为第一个现金流。
-4. **增长现金流（Growing Stream）**：现金流按固定增长率增长。增长率 g 低于折现率 r 时可用永续增长公式。
+**考点5：现金流可加性 (Cash Flow Additivity) 的应用**
+- 原则：一个投资组合的现值 = 各组成部分现值的和
+- 应用场景：
+  - 混合现金流 → 分别折现再加总
+  - 远期利率计算 (利用不同期限债券价格)
+  - 套利定价中的无套利条件
+- ⚠️ 不要试图找"统一公式" — 逐一处理各子序列才是正确思路
+- 💡 这是无套利定价的数学基础 — 同一现金流不应因拆分方式不同而得到不同现值
 
-**先付年金（Annuity Due）vs 普通年金（Ordinary Annuity）**：
-- 先付年金每期期初支付，普通年金每期期末支付
-- 先付年金现值 = 普通年金现值 × (1 + r)
-- 先付年金终值 = 普通年金终值 × (1 + r)
+**考点6：先付年金 vs 普通年金转换**
+- Annuity Due PV = Ordinary Annuity PV × (1+r)
+- Annuity Due FV = Ordinary Annuity FV × (1+r)
+- 核心逻辑：先付年金每笔付款早了一个计息期
+- ⚠️ 考试中常见陷阱：模糊描述支付时点，默认是 Ordinary Annuity
+- 💡 如果题目说"immediate"或"at the beginning" → Annuity Due
 
-###### 1.2 工具现值应用（Instrument PV Applications）
+### 🚨 易错点与考试陷阱
 
-TVM 最基本的应用就是将未来现金流折现。无论债券还是股票，估值工作的本质都是**把未来现金流折现到今天**：
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-----------|-----------|------|
+| Perpetuity 用任意一期现金流做分子 | 必须用第一期现金流 A₁ 做分子 | 公式由等比级数求和推导，A₁ 对应第一期 |
+| Growing perpetuity 可接受 r ≤ g | 必须 r > g，否则现值无穷大 | r ≤ g 时级数发散，经济上不合理 |
+| Annuity Due 和 Ordinary Annuity 一样 | Annuity Due = Ordinary × (1+r) | 期初付款比期末付款早一期生息 |
+| 半年付息直接用年利率 | 半年付息用 r/2 做周期利率，2n 做期数 | 利率和期数必须同频率 |
+| 混合现金流可套单一公式 | 不同模式分别折现再加总 | 现金流可加性原则要求分别处理 |
 
-- **固定收益（Fixed Income）**：债券价格 = 未来各期票息现值 + 到期本金现值
-- **股权（Equity）**：股票内在价值 = 预期未来股利的现值（DDM）
-- 实际考试中，先识别现金流的时点和模式，再选择合适的公式。
+### 🔄 跨模块关联
 
-> **【考试陷阱】** 不要一上来就套公式 — 先画现金流时间轴，判断是单笔、年金还是混合模式。
+- **[[M01-Rates-and-Returns]]** — MWRR 本质就是 TVM 的 IRR 应用，"折现率"的概念从 M01 的利率解释延续而来。
+- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 几何平均收益率与 TVM 中的复合增长概念相通。
+- **[[M05-Portfolio-Mathematics]]** — Sharpe Ratio、SFRatio 均涉及折现概念。
+- **Fixed Income** — 债券定价 = TVM 最直接的应用（票息年金 + 本金现值）。
+- **Equity** — DDM 戈登增长模型 = TVM 永续增长年金在股权中的应用。
+- **Corporate Issuers** — 资本预算中的 NPV、IRR、Payback Period 全部基于 TVM 框架。
 
-###### 1.3 隐含变量求解（Implied Quantities）
+### 📋 复习与刷题提示
 
-已知部分变量（PV、FV、PMT 等），反求未知变量（r、n、A）：
-
-**戈登增长模型（Gordon Growth Model）形式的隐含回报率**：
-`r = D_1 / P_0 + g`
-- 这是将 Perpetuity 与 TVM 结合的经典公式
-- 常见于 Equity 和 Quant 交叉考点
-
-**隐含求解方法论**：
-- 债券：已知价格、票息、期限 → 反求到期收益率（YTM）
-- 股权：已知价格、股利、增长率 → 反求要求回报率
-- 贷款：已知贷款额、还款额、期数 → 反求隐含利率
-
-###### 1.4 现金流可加性（Cash-Flow Additivity）
-
-CFA 考试中一个重要但容易被忽视的原则：
-
-**一个投资组合的现值 = 各组成部分现值的和**
-- 这是套利定价逻辑的基础
-- 意味着同一现金流不应因不同的"拆分方式"而得到不同的现值
-- 为远期利率、远期汇率和期权定价提供直觉
-
-> **【考试陷阱】** 考试会给你多个不同的现金流序列，要求你分别折现再加总，而不是直接套单一的年金公式。
-
-##### 2. 关键公式
-
-| 公式 | 解释 | 使用场景 |
-|------|------|----------|
-| `FV = PV(1+r)^n` | 终值公式 | 单笔投资未来价值 |
-| `PV = FV/(1+r)^n` | 现值公式 | 未来单笔现金流的现值 |
-| `PV_annuity = A[1-1/(1+r)^n]/r` | 普通年金现值 | 等额分期现金流的现值 |
-| `PV_perpetuity = A/r` | 永续年金现值 | 永续等额现金流的现值 |
-| `PV_annuity_due = PV_ordinary × (1+r)` | 先付年金现值 | 每期期初等额支付 |
-| `PV_growing_perpetuity = A_1/(r-g)` | 永续增长年金现值 | 股利折现模型（DDM）基础 |
-| `PV_growing_annuity = A_1/(r-g)[1-((1+g)/(1+r))^n]` | 增长年金现值 | 有限期增长现金流 |
-| `r = D_1/P_0 + g` | 戈登增长模型 | 从股价反推要求回报率 |
-
-##### 3. 常见考点与解题思路
-
-**考点一：固定收益债券定价**
-- 债券价格 = 票息年金现值 + 本金单笔现值
-- 注意票息频率（半年付息时折半率、加倍期数）
-
-**考点二：隐含利率反推**
-- 给定贷款金额、月还款额和期数，计算隐含月利率和年化利率
-- 用金融计算器或 TVM 公式的反向求解
-
-**考点三：不同计息频率的比较**
-- 给定 nominal annual rate 和 compounding frequency，计算 EAR
-- `EAR = (1 + r_nominal / m)^m - 1`
-
-**考点四：年金模式识别**
-- 期初支付 → Annuity Due（每月 1 号交租）
-- 期末支付 → Ordinary Annuity（月底发工资）
-- 无限期 → Perpetuity（永续债）
-
-##### 4. 易错点提醒
-
-1. **Perpetuity 公式的分子一定要用第一期现金流**：`PV = A_1 / r` 而不是 A_0 / r
-2. **增长年金/永续年金必须满足 r > g**：否则现值无穷大，经济上不合理
-3. **先付年金 vs 后付年金**：后付年金多了一个"再乘 (1+r)"的步骤，考试常故意混淆
-4. **计息频率和支付频率不一致**：必须先统一利率口径再做计算
-5. **画时间轴**：最有效的纠错手段 — 把每个现金流标在时间轴上
-
-##### 5. 跨模块关联
-
-- **[[M01-Rates-and-Returns]]**：MWRR 本质就是 TVM 的 IRR 应用，"折现率"的概念从 M01 的利率解释延续而来。
-- **[[M03-Statistical-Measures]]**：几何平均收益率与 TVM 中的复合增长概念相通 — geometric mean 就是平均每年复合增长率。
-- **Fixed Income**：债券定价 = TVM 最直接的应用场景（票息年金 + 本金单笔现值）。
-- **Equity**：戈登增长模型（Gordon Growth Model）是 TVM 在股利折现中的核心应用：
-  `V_0 = D_1 / (r - g)`，本质就是永续增长年金的现值公式（分母有 r-g 而不是 r）。
-- **Corporate Issuers**：资本预算中的 NPV、IRR、Payback Period 全部基于 TVM 框架。
+- **核心能力**：快速识别四种现金流模式，熟练使用金融计算器求解隐含变量
+- **必考题型**：年金现值/终值计算、隐含利率反推、EAR 换算、债券定价计算
+- **最常犯错误**：年金模式误判、利率与期数频率不匹配、Perpetuity 分子用错
+- 记忆口诀：
+  - 时间轴画第一 — 现金流的时点决定一切
+  - 频率必须匹配 — 折半率配加倍期数
+  - Due 比 Ordinary 多乘 (1+r)
+- 刷题建议：重点练习年金模式识别题和金融计算器反求解题，这些是 CFA 必考
 ## Review Hooks
 
 - Add mistake-driven traps only after they can be traced back to `.system/events/`.

@@ -1,14 +1,14 @@
 ---
 title: "00-Equity-MOC"
-description: "CFA Level I 2026 official module map for Equity."
+description: "CFA Level I Equity 详细 MOC — 市场结构、指数、效率、估值模型、行业分析"
 subject: "Equity Investments"
 topic_area: Equity
 level: CFA Level I
-curriculum_year: 2026
 exam_weight: "11-14%"
+exam_format: 概念+计算混合
+difficulty: 前半概念（市场/指数/效率），后半计算（估值模型）
 note_type: master_moc
 status: active
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
 tags:
   - CFA_L1
   - MOC
@@ -16,104 +16,137 @@ tags:
   - official_2026
 ---
 
-# Equity Investments MOC
+# 00-Equity-MOC
 
-> Official 2026 Level I projection. Module names, numbers, and order are locked to the CFA Institute Learning Ecosystem scrape generated on 2026-05-25.
+## 官方模块概览
 
-## Official Module Table
+| 模块 | 内容 | 难度 | 必考点 | 文件 |
+|------|------|------|--------|------|
+| M01 | Market Organization & Structure | 概念 | 金融系统功能、交易指令类型、保证金 | [[M01-Market-Organization-and-Structure]] |
+| M02 | Security Market Indexes | 概念+计算 | 指数构建方法、价格/总回报、加权方法 | [[M02-Security-Market-Indexes]] |
+| M03 | Market Efficiency | 概念 | 三式有效、行为金融、市场异象 | [[M03-Market-Efficiency]] |
+| M04 | Overview of Equity Securities | 概念 | 普通股/优先股特征、存托凭证 | [[M04-Overview-of-Equity-Securities]] |
+| M05 | Company Analysis: Past & Present | 概念 | 商业模型分析、收入与盈利分析 | [[M05-Company-Analysis-Past-and-Present]] |
+| M06 | Industry & Competitive Analysis | 概念 | Porter Five Forces、PESTLE | [[M06-Industry-and-Competitive-Analysis]] |
+| M07 | Company Analysis: Forecasting | 概念 | 收入/费用预测、情景分析 | [[M07-Company-Analysis-Forecasting]] |
+| M08 | Equity Valuation | 计算 | DDM、GGM、Multiples、EV、Asset-based | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] |
 
-| Module | Official Module | Official Page Items | Chapter File |
-|---|---|---|---|
-| M01 | Module 1: Market Organization and Structure | 19 items | [[M01-Market-Organization-and-Structure]] |
-| M02 | Module 2: Security Market Indexes | 10 items | [[M02-Security-Market-Indexes]] |
-| M03 | Module 3: Market Efficiency | 10 items | [[M03-Market-Efficiency]] |
-| M04 | Module 4: Overview of Equity Securities | 8 items | [[M04-Overview-of-Equity-Securities]] |
-| M05 | Module 5: Company Analysis: Past and Present | 7 items | [[M05-Company-Analysis-Past-and-Present]] |
-| M06 | Module 6: Industry and Competitive Analysis | 7 items | [[M06-Industry-and-Competitive-Analysis]] |
-| M07 | Module 7: Company Analysis: Forecasting | 7 items | [[M07-Company-Analysis-Forecasting]] |
-| M08 | Module 8: Equity Valuation: Concepts and Basic Tools | 14 items | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] |
+---
 
-## Official Knowledge Tree
+## 核心知识树
 
 ```text
-Equity Investments (11-14%)
-├── M01: Market Organization and Structure
-│   ├── Learning Outcomes: Market Organization and Structure
-│   ├── 1.01 | Introduction
-│   ├── 1.02 | The Functions of the Financial System
-│   ├── 1.03 | Assets and Contracts
-│   ├── 1.04 | Securities
-│   ├── 1.05 | Currencies, Commodities, and Real Assets
-│   ├── 1.06 | Contracts
-│   ├── 1.07 | Financial Intermediaries
-│   └── ... 11 more page items
-├── M02: Security Market Indexes
-│   ├── Learning Outcomes: Security Market Indexes
-│   ├── 2.01 | Introduction
-│   ├── 2.02 | Index Definition and Calculations of Value and Returns
-│   ├── 2.03 | Index Construction
-│   ├── 2.04 | Index Management: Rebalancing and Reconstitution
-│   ├── 2.05 | Uses of Market Indexes
-│   ├── 2.06 | Equity indexes
-│   ├── 2.07 | Fixed-income indexes
-│   └── ... 2 more page items
-├── M03: Market Efficiency
-│   ├── Learning Outcomes: Market Efficiency
-│   ├── 3.01 | Introduction
-│   ├── 3.02 | The Concept of Market Efficiency
-│   ├── 3.03 | Factors Affecting Market Efficiency Including Trading Costs
-│   ├── 3.04 | Forms of Market Efficiency
-│   ├── 3.05 | Implications of the Efficient Market Hypothesis
-│   ├── 3.06 | Market Pricing Anomalies - Time Series and Cross-Sectional
-│   ├── 3.07 | Other Anomalies, Implications of Market Pricing Anomalies
-│   └── ... 2 more page items
-├── M04: Overview of Equity Securities
-│   ├── Learning Outcomes: Overview of Equity Securities
-│   ├── 4.01 | Importance of Equity Securities
-│   ├── 4.02 | Characteristics of Equity Securities
-│   ├── 4.03 | Private Versus Public Equity Securities
-│   ├── 4.04 | Non-Domestic Equity Securities
-│   ├── 4.05 | Risk and Return Characteristics
-│   ├── 4.06 | Equity and Company Value
-│   ├── 4.07 | Summary
-├── M05: Company Analysis: Past and Present
-│   ├── Learning Outcomes: Company Analysis: Past and Present
-│   ├── 5.01 | Introduction
-│   ├── 5.02 | Company Research Reports
-│   ├── 5.03 | Determining the Business Model
-│   ├── 5.04 | Revenue Analysis
-│   ├── 5.05 | Operating Profitability and Working Capital Analysis
-│   ├── 5.06 | Capital Investments and Capital Structure
-├── M06: Industry and Competitive Analysis
-│   ├── Learning Outcomes: Industry and Competitive Analysis
-│   ├── 6.01 | Introduction
-│   ├── 6.02 | Uses of Industry Analysis
-│   ├── 6.03 | Industry Classification
-│   ├── 6.04 | Industry Survey
-│   ├── 6.05 | Industry Structure and External Influences
-│   ├── 6.06 | Competitive Positioning
-├── M07: Company Analysis: Forecasting
-│   ├── Learning Outcomes: Company Analysis: Forecasting
-│   ├── 7.01 | Introduction
-│   ├── 7.02 | Forecast Objects, Principles, and Approaches
-│   ├── 7.03 | Forecasting Revenues
-│   ├── 7.04 | Forecasting Operating Expenses and Working Capital
-│   ├── 7.05 | Forecasting Capital Investments and Capital Structure
-│   ├── 7.06 | Scenario Analysis
-├── M08: Equity Valuation: Concepts and Basic Tools
-│   ├── Learning Outcomes: Equity Valuation: Concepts and Basic Tools
-│   ├── 8.01 | Introduction
-│   ├── 8.02 | Estimated Value and Market Price
-│   ├── 8.03 | Categories of Equity Valuation Models
-│   ├── 8.04 | Background for the Dividend Discount Model
-│   ├── 8.05 | Dividend Discount Model (DDM) and Free-Cash-Flow-to-Equity Model (FCFE)
-│   ├── 8.06 | Preferred Stock Valuation
-│   ├── 8.07 | The Gordon Growth Model
-│   └── ... 6 more page items
+📈 Equity (11-14%) (M01-M08) 知识体系
+
+├─ 🏆 M01: Market Organization and Structure（市场组织）【高频考点】
+│  ├─ ⭐ 金融系统四大功能：储蓄→投资·支付清算·风险管理·价发现
+│  ├─ ⭐ 交易指令：市价单(立即成交) vs 限价单(指定价格)
+│  ├─ 📐 保证金交易
+│  │  ├─ 杠杆率 = 市值 / 自有资金
+│  │  └─ 📐 Margin Call价 = P₀×(1-im)/(1-mm)
+│  └─ ⭐ 做空：先借后卖·需支付股息·无限风险
+│
+├─ 🏆 M02: Security Market Indexes（指数）【计算】
+│  ├─ ⭐ 加权方法
+│  │  ├─ 价格加权：高价股影响大（DJIA）
+│  │  ├─ 市值加权：大公司影响大（S&P 500）
+│  │  ├─ 等权重：小公司影响放大
+│  │  └─ 基本面加权：按财务指标加权
+│  ├─ 📐 价格回报(Price Return) vs 总回报(Total Return含股息)
+│  └─ 🎯 再平衡(Rebalancing) vs 重构(Reconstitution)不同
+│
+├─ 🏆 M03: Market Efficiency（市场效率）【高频概念】
+│  ├─ ⭐ 三式有效假设
+│  │  ├─ 弱式：技术分析无效（历史价已反映）
+│  │  ├─ 半强式：基本面无效（公开信息已反映）
+│  │  └─ 强式：内幕信息也无效（所有信息已反映）
+│  ├─ ⭐ 市场异象：规模效应·价值效应·动量效应
+│  └─ ⚠️ 行为偏差：过度反应·代表性偏误·锚定
+│
+├─ 🏆 M04: Overview of Equity Securities（权益证券）
+│  ├─ ⭐ 普通股：投票权·剩余索偿权·无固定股息
+│  ├─ ⭐ 优先股：固定股息·优先分配·无投票权
+│  └─ ⭐ 存托凭证(DR)：ADR/GDR（非本土股投资方式）
+│
+├─ 🏆 M05-M07: 公司行业分析（概念为主）
+│  ├─ M05: Company Analysis Past & Present（过去与现在）
+│  ├─ M06: Industry & Competitive Analysis（行业竞争分析）
+│  │  └─ Porter Five Forces + PESTLE
+│  └─ M07: Company Analysis Forecasting（预测）
+│
+└─ 🏆 M08: Equity Valuation（权益估值）【高频计算】
+   ├─ 📐 GGM: V₀ = D₁/(r-g)
+   │  🎯 稳定增长公司；⚠️ g<r
+   ├─ 📐 两阶段DDM: V₀ = ΣDt/(1+r)^t + Pn/(1+r)^n
+   ├─ 📐 P/E multiple: V₀ = 可比P/E × 目标EPS
+   ├─ 📐 EV/EBITDA：消除杠杆和折旧差异
+   ├─ 📐 资产基础法：V = 资产公允价值 - 负债
+   ├─ 📐 隐含回报率：r = D₁/P₀ + g（Gordon反转）
+   └─ ⚠️ P/E低≠便宜——要考虑增长(PEG ratio)
 ```
 
-## Governance Rules
+## 关键公式
 
-- Treat this MOC as a projection of the official 2026 module registry, not as the source of truth.
-- Add formulas, traps, and mistake-driven notes only when they trace back to `.system/events/` or `.system/memory/`.
-- Do not split or merge official modules in the root subject folder; put legacy or custom breakdowns under `_legacy/`.
+| 公式 | 用途 |
+|------|------|
+| Leverage Ratio = 市值/自有资金 | 保证金交易杠杆 |
+| Margin Call Price = P₀ × (1-im)/(1-mm) | 追缴价格 |
+| V₀ = D₁/(r-g) | GGM |
+| r = D₁/P₀ + g | Gordon 隐含回报 |
+| P/E = (1-b)/(r-g) | 基本面 P/E |
+| EV = MV Equity + MV Debt - Cash | 企业价值 |
+| V₀ = ΣDt/(1+r)^t + Pn/(1+r)^n | 两阶段 DDM |
+
+## 🔑 核心对比专题
+
+| 对比项 | 🔑 关键区别 | 🎯 考试判断 |
+|--------|-------------|-------------|
+| 价格加权 vs 市值加权 | 高价股影响大 vs 大公司影响大 | 看指数构成 |
+| 弱/半强/强式有效 | 依次否定技术/基本面/内幕信息 | 哪类分析能获利？ |
+| 普通股 vs 优先股 | 有投票权 vs 优先分配 | 固定股息→优先股 |
+| GGM vs 两阶段DDM | 稳定增长 vs 先高增后稳 | 增长模式判断 |
+| P/E vs EV/EBITDA | PE受杠杆影响；EV消除杠杆差异 | 资本结构差异大→EV |
+
+## 📐 核心公式速查
+
+| 公式 | 用途 | ⚠️ 注意 |
+|------|------|---------|
+| `Leverage = MV/Equity` | 杠杆率 | |
+| `Margin Call = P₀×(1-im)/(1-mm)` | 追缴价 | 理解推导逻辑 |
+| `V₀ = D₁/(r-g)` | GGM | ⚠️ 要求g<r |
+| `r = D₁/P₀ + g` | 隐含回报率 | |
+| `P/E = (1-b)/(r-g)` | 基本面P/E | 与增长相关 |
+| `EV = MV Equity + MV Debt - Cash` | 企业价值 | |
+
+## 🚨 高频陷阱速查
+
+| ❌ 错误理解 | ✅ 正确理解 | 🎯 考频 |
+|-------------|-------------|---------|
+| 弱式有效=市场完全无效 | 仅反映历史价格 | ⭐⭐⭐ |
+| 价格回报=总回报 | 总回报含股息再投资 | ⭐⭐ |
+| P/E越低越便宜 | 要考虑增长(PEG) | ⭐⭐⭐ |
+| GGM适用所有公司 | 要求g<r且稳定增长 | ⭐⭐⭐ |
+| 技术分析有效市场也能用 | 弱式以上无效 | ⭐⭐ |
+
+## 🔗 跨模块关联
+
+```text
+M01（市场基础）
+├── M02（指数）──► M03（效率）
+├── M04（权益类型）──► M08（估值核心）
+└── M05-M07（公司/行业分析）←── FSA比率
+
+🔗 跨科目：
+  M08 GGM r=D₁/P₀+g ──► Quant M02 TVM
+  M01 保证金 ──► FI M04 回购市场
+  M03 行为金融 ──► PM M05 行为偏差
+  M08 估值倍数 ──► FSA M11 比率分析
+```
+
+## 🗺️ 学习路径
+
+```
+阶段1 ─── M01→M02→M03（市场基础+指数+效率概念）
+阶段2 ─── M04→M05→M06→M07（权益+公司/行业分析）
+阶段3 ─── M08（估值计算：DDM/GGM/倍数）
+```

@@ -31,63 +31,123 @@ tags:
 
 The candidate should be able to:
 
-- calculate and interpret the sources of return from investing in a fixed-rate bond;
-- describe the relationships among a bond’s holding period return, its Macaulay duration, and the investment horizon;
-- define, calculate, and interpret Macaulay duration.
+- calculate and interpret the sources of return from investing in a fixed-rate bond
+- describe the relationships among a bond's holding period return, its Macaulay duration, and the investment horizon
+- define, calculate, and interpret Macaulay duration
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Fixed_Income/M07-Interest-Rate-Risk.md`
+```text
+🏆 M10: Interest Rate Risk and Return（利率风险与回报）
+├─ ⭐ 10.1 回报分解 (Return Decomposition)
+│  ├─ 📐 HPR = (票息 + 再投资收入 + 售价 - 买价) / 买价
+│  ├─ 💡 回报三来源：
+│  │  ├─ 票息收入 (coupon income)
+│  │  ├─ 再投资收入 (reinvestment income)
+│  │  └─ 价格变动 (price change / capital gain or loss)
+│  ├─ 📐 回归面值 (Pull to Par)：折价债价格上升，溢价债价格下降
+│  └─ ⚠️ 已实现回报 ≠ YTM（再投资率变化或提前卖出时）
+│
+├─ ⭐ 10.2 持有期与利率风险
+│  ├─ 📐 Horizon < Macaulay Duration → 价格风险主导（利率↑ → 价格↓）
+│  ├─ 📐 Horizon > Macaulay Duration → 再投资风险主导（利率↓ → 再投资收益↓）
+│  ├─ 📐 Horizon = Macaulay Duration → 价格风险与再投资风险抵消（免疫）
+│  └─ 🎯 零息债券：无再投资风险，但价格风险最大
+│
+└─ ⭐ 10.3 Macaulay 久期
+   ├─ 📐 D_mac = Σ[t × PV(CF_t)] / Full Price
+   ├─ 💡 = 现金流回收时间的加权平均值（以 PV 为权重）
+   ├─ 💡 零息债券 D_mac = 期限；付息债券 D_mac < 期限
+   └─ 🎯 衡量债券的利率敏感度
+```
 
-_Alignment score: 1.00. Original official module field: Module 10: Interest Rate Risk and Return._
+## 📐 关键公式表
 
-#### M10: 利率风险与回报 (Interest Rate Risk and Return)
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `HPR = (总票息 + 再投资收入 + 售价 - 买价) / 买价` | 持有期回报率 | 计算实际回报 | 再投资收入需复利计算 |
+| `D_mac = Σ[t × PV(CF_t)] / Full Price` | Macaulay 久期 | 衡量利率敏感度 | 现金流时间加权平均 |
+| `Horizon < D_mac → 价格风险主导` | 久期 vs 持有期 | 判断风险类型 | Horizon > D_mac → 再投资风险主导 |
+| `Pull to Par: 折价↑/溢价↓ → Par` | 回归面值 | 到期前价格分析 | 速度非线性，到期前加快 |
 
-##### 1. 核心知识点
+## 🛠️ 常见考点与解题思路
 
-###### 1.1 回报分解 (Return Decomposition)
+### 考点 1：计算持有期回报 (HPR)
+- **步骤**：
+  1. 计算持有期间收到的所有票息
+  2. 计算票息再投资收入（按再投资利率复利）
+  3. 计算卖出时的资本利得/损失
+  4. HPR = (总票息 + 再投资收入 + 售价 - 买价) / 买价
+- **注意**：再投资收入的复利计算是易错点
 
-- **核心公式 (English)**
-  - 持有期回报率: `HPR = (coupon + reinvestment income + sale price - purchase price)/purchase price`
-  - Macaulay 久期: `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price`
-- **票息收入 + 再投资收入 + 价格变动 (coupon income + reinvestment income + price change)**：债券的持有期回报由三部分构成：收到的票息、票息再投资产生的收益、以及卖出时的资本利得/损失。
-- **回归面值与持有期效应 (pull to par and horizon effect)**：随着到期日临近，折价债券价格逐渐上升趋近面值（回归面值）；溢价债券价格逐渐下降趋近面值。这一效应独立于利率变化。
-- **当卖出收益率或再投资率变化时，已实现回报不同 (realized return differs when sale yield or reinvestment rate changes)**：如果投资者在到期前卖出债券，或市场利率变化导致再投资收入改变，实际实现的持有期回报将不同于 YTM。
+### 考点 2：利用 Macaulay 久期判断免疫状态
+- **思路**：投资者的持有期 = Macaulay Duration → 价格风险与再投资风险大致抵消
+- **应用**：保险公司等负债驱动型投资者使用久期匹配进行免疫
 
-###### 1.2 持有期与 Macaulay 久期 (Horizon and Macaulay Duration)
+### 考点 3：Pull-to-Par 效应分析
+- **题型**：给定折价/溢价债券和固定市场利率，计算到期前某时点的价格
+- **思路**：折价债券随时间推移价格上升趋近面值；溢价债券价格下降趋近面值
+- **速度**：非线性的，到期前加速
 
-- **投资期限 < Macaulay 久期 -> 价格风险占主导 (investment horizon < Macaulay duration -> price risk dominates)**：久期大于持有期意味着价格风险（利率上升导致价格下跌）超过再投资风险。
-- **投资期限 > Macaulay 久期 -> 再投资风险占主导 (investment horizon > Macaulay duration -> reinvestment risk dominates)**：久期小于持有期意味着再投资风险（利率下降导致再投资收益减少）占主导。
-- **Macaulay 久期 = 现金流的时间加权平均 (Macaulay duration = weighted average time to cash flows)**：以每期现金流现值为权重，计算现金流回收时间的加权平均。
+### 考点 4：利率变化对回报的影响
+- **利率下降** → 价格上升但再投资收入减少（price effect dominates short-term）
+- **利率上升** → 价格下降但再投资收入增加（reinvestment effect dominates long-term）
 
-##### 2. 关键公式
+## 🚨 易错点与考试陷阱
 
-| 指标 | 公式 |
-|------|------|
-| 持有期回报率 (HPR) | `HPR = (总票息 + 再投资收入 + 售价 - 买价) / 买价` |
-| Macaulay 久期 | `D_mac = Σ_{t=1}^{N}[t x PV(CF_t)] / Full Price` |
-| 价格风险 vs 再投资风险 | `Horizon < D_mac → 价格风险主导`；`Horizon > D_mac → 再投资风险主导` |
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-------------|-------------|------|
+| Duration 匹配冻结价格 | 平衡价格和再投资效应，非冻结价格 | 两者抵消而非价格不变 |
+| 持有期回报 = YTM | YTM 假设持有至到期且再投资率=YTM | 提前卖出或再投资率不同时偏离 |
+| Pull-to-par 是线性的 | 速度随到期临近加快 | 价格路径是凸的 |
+| 零息债券无风险 | 没有再投资风险，但价格风险最大 | 久期最长 |
 
-##### 3. 常见考点与解题思路
+## 🔄 跨模块关联
 
-- **计算持有期回报**：给定买入价格、卖出价格、票息收入和再投资利率，计算 HPR。注意再投资收入的复利计算。
-- **利用 Macaulay 久期判断免疫状态**：若投资者的持有期等于 Macaulay 久期，价格风险与再投资风险大致抵消（利率免疫）。
-- **Pull-to-par 效应分析**：给定折价/溢价债券和固定的市场利率，计算到期前某时点的价格。
-- **判断利率变化方向对债券持有者回报的影响**：利率下降 → 价格上升但再投资收入减少；利率上升 → 价格下降但再投资收入增加。
+- **Macaulay 久期** → [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] 的修正久期
+- **持有期回报** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的 YTM 比较
+- **利率风险** → [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] 的 curve-based 风险
+- **凸性** → [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] 的凸性调整
 
-##### 4. 易错点提醒
+## 📋 复习与刷题提示
 
-- **Duration 匹配是关于平衡价格和再投资效应，而非冻结价格 (duration matching is about balancing price and reinvestment effects, not freezing price)**：Macaulay 久期匹配使价格效应和再投资效应相互抵消，不等于债券价格不变化。
-- **持有期回报 ≠ YTM**：YTM 假设持有至到期且再投资率等于 YTM。如果提前卖出或再投资率不同，实际回报会偏离 YTM。
-- **Pull-to-par 速度不是线性的**：折价债券的价格向面值回归的速度随着到期日临近而加快。
-- **零息债券没有再投资风险**：因为没有期间现金流，所以再投资风险为零，但价格风险最大。
+- **核心重点**：Macaulay 久期的计算及其与持有期的关系
+- **回报分解**：理解 HPR 的三部分来源
+  - 票息收入 + 再投资收入 + 价格变动 = 持有期回报
+  - 再投资收入计算需注意复利
+- **免疫概念**：持有期 = Macaulay Duration 时的风险抵消机制
+  - Horizon < D_mac → 价格风险主导
+  - Horizon > D_mac → 再投资风险主导
+  - Horizon = D_mac → 免疫（大致抵消）
+- **Pull-to-par 分析**：
+  - 折价债券：价格随时间上升（C 形路径）
+  - 溢价债券：价格随时间下降（倒 C 形路径）
+  - 速度非线性，到期前加速
+- **Macaulay Duration 计算**：
+  - D_mac = Σ[t × PV(CF_t)] / Full Price
+  - 零息债券 D_mac = maturity
+  - 付息债券 D_mac < maturity
+  - 高票息 → 更短的久期
+- **典型计算流程**：
+  1. 计算每期现金流 PV
+  2. 计算 PV 权重
+  3. 权重 × 时间求和
+- **刷题建议**：
+  - 重点做 HPR 计算题（含再投资收入的复利计算）
+  - 久期-持有期关系分析题（判断风险主导类型）
+  - Pull-to-par 路径分析题
+- **易混淆点**：
+  - 持有期回报 ≠ YTM
+  - Duration 匹配不冻结价格（平衡价格和再投资效应）
+  - 零息债券：无再投资风险但有最大价格风险
 
-##### 5. 跨模块关联
-
-- Macaulay 久期 → [[M08-Duration-and-Convexity]] 的修正久期
-- 持有期回报 → [[M04-Yield-and-Spread-Measures]] 的 YTM 比较
-- 利率风险 → [[M09-Curve-Based-and-Empirical-Risk]] 的 curve-based 风险
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **关键数值记忆**：
+  - D_mac 零息债券 = 期限
+  - D_mac 付息债券 < 期限
+  - 票息越高 → D_mac 越短
+  - Yield 越高 → D_mac 越短
+- **考试技巧**：
+  - HPR 计算中再投资收入需要用再投资利率复利计算（非 YTM）
+  - 免疫条件：Horizon = Macaulay Duration
+  - Pull-to-Par 路径不对称：折价 C 形 vs 溢价倒 C 形
+  - 零息债券的 Pull-to-Par 是指数型增长路径

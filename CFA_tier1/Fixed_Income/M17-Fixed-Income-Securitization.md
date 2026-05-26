@@ -33,55 +33,125 @@ The candidate should be able to:
 - explain benefits of securitization for issuers, investors, economies, and financial markets
 - describe securitization, including the parties and the roles they play
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Fixed_Income/M12-Securitization-Foundations.md`
+```text
+🏆 M17: Fixed-Income Securitization（资产证券化基础）
+├─ ⭐ 17.1 证券化基本结构
+│  ├─ 📐 发起人 (Originator) → SPV → 投资者
+│  ├─ 📐 服务机构 (Servicer)：收取和管理现金流
+│  ├─ 📐 受托人 (Trustee)：代表投资者利益
+│  ├─ 📐 承销商 (Underwriter)：发行和分销证券
+│  ├─ 📐 评级机构 (Rating Agency)：对各级别评级
+│  └─ 📐 信用增级提供方 (Credit Enhancer)
+│
+├─ ⭐ 17.2 SPV 与破产隔离
+│  ├─ 🎯 SPV = 特殊目的载体 (Special Purpose Vehicle)
+│  ├─ 🎯 破产隔离 (Bankruptcy Remoteness)：发起人破产时资产不受影响
+│  ├─ 🎯 真实出售 (True Sale)：资产从发起人转移给 SPV
+│  └─ ⚠️ SPV 不是发起人的子公司【易错】
+│
+├─ ⭐ 17.3 现金流分配结构
+│  ├─ 📐 过手 (Pass-through)：按比例分配给所有投资者
+│  ├─ 📐 分层结构 (Tranched)：按优先级分配
+│  └─ 💡 分层不消除风险，只重新分配
+│
+└─ ⭐ 17.4 证券化的益处
+   ├─ 💡 对发起人：融资多元化、流动性转换、风险转移
+   ├─ 💡 对投资者：定制化敞口、更高收益、多样选择
+   ├─ 💡 对经济：促进信贷流动、提高效率
+   └─ ⚠️ 结构能重新分配风险，但不能消除基础资产风险
+```
 
-_Alignment score: 1.00. Original official module field: Module 17: Fixed-Income Securitization._
+## 📐 关键公式表
 
-#### M16: 资产证券化基础 (Securitization Foundations)
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `SPV 独立性 = 破产隔离 + 资产真实出售` | SPV 功能 | 理解结构化 | SPV 必须独立 |
+| `Pass-through: 按比例分配` | 过手结构 | 简单分配 | 无分层 |
+| `Tranched: 优先级先收，次级再收` | 分层结构 | 结构化分配 | 优先级先受保护 |
+| `信用质量 = f(抵押品质量, 结构设计)` | 信用质量决定 | 风险评估 | 两者共同决定 |
 
-##### 1. 核心知识点
+## 🛠️ 常见考点与解题思路
 
-###### 1.1 结构 (Structure)
+### 考点 1：理解 SPV 的作用
+- **核心功能**：法律独立性和破产隔离
+- **前提**：资产必须"真实出售"给 SPV（不是抵押或担保）
+- **后果**：即便发起人破产，SPV 中的资产不被纳入破产财产
 
-- **发起人 -> SPV -> 投资者；服务机构收取现金流 (originator -> SPV -> investors; servicer collects cash flows)**：证券化的基本链条。发起人 (originator) 将资产出售给 SPV (special purpose vehicle)；SPV 以资产池为支持发行证券给投资者；服务机构 (servicer) 负责收取和管理现金流。
-- **破产隔离与资产隔离 (bankruptcy remoteness and asset isolation)**：SPV 的核心功能是实现破产隔离 (bankruptcy remoteness)——即便发起人破产，SPV 中的资产也不受破产清算影响。这是证券化产品信用质量的核心基础。
-- **过手 vs 结构化分配 (pass-through vs structured allocation intuition)**：过手结构 (pass-through) 将资产池的现金流按比例分配给所有投资者；结构化分配 (structured/tranched) 将现金流按优先级进行分层分配。
+### 考点 2：区分 Pass-Through vs Tranched
+- **Pass-through**：简单结构，投资者按比例分配所有现金流
+- **Tranched**：复杂结构，优先级先收本金，次级后收
+- **关键区别**：分层是否有信用增级功能
 
-###### 1.2 为何证券化 (Why Securitize)
+### 考点 3：识别证券化参与方
+- **常见的 6 个角色**：发起人、SPV、服务商、受托人、承销商、评级机构
+- **考试常考**：每个角色的职能和责任范围
 
-- **融资多元化、流动性转换、风险再分配 (funding diversification, liquidity transformation, risk redistribution)**：对发起人而言，证券化提供了传统银行贷款之外的融资渠道，将非流动性资产转化为可交易的证券，并将信用风险转移给资本市场投资者。
-- **投资者获得定制化敞口但面临结构复杂性 (investors gain tailored exposure but face structural complexity)**：不同风险偏好的投资者可以选择不同层级 (tranches) 的证券，获得与自身需求匹配的风险收益特征。但代价是需要理解复杂的交易结构和法律安排。
+### 考点 4：理解证券化动机
+- **发起人角度**：降低融资成本、转移信用风险、释放资本
+- **投资者角度**：获得定制化风险收益特征、多样化
 
-##### 2. 关键公式
+## 🚨 易错点与考试陷阱
 
-本模块以概念为主。核心关系为：
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-------------|-------------|------|
+| 证券化消除基础资产风险 | 重新分配风险，不能消除 | 基础资产普遍违约时优先级也受损 |
+| SPV 是发起人的子公司 | SPV 必须独立于发起人 | 否则破产隔离无效 |
+| Servicer 角色不重要 | Servicer 勤勉度直接影响现金流回收 | 能力不足可能导致违约率上升 |
+| 所有证券化都一样 | 结构、触发机制、增级、服务人差异大 | 需逐一分析 |
 
-- `SPV 独立性 = 破产隔离 + 资产真实出售` —— SPV 必须独立于发起人
-- `Pass-through: 投资者按比例分配现金流`；`Tranched: 优先级先收，次级再收`
-- `信用质量 not only depend on collateral quality, but also on structure`
+## 🔄 跨模块关联
 
-##### 3. 常见考点与解题思路
+- **SPV 结构** → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的信用增级
+- **现金流分配** → [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] 的 MBS 提前还款
+- **破产隔离** → [[M15-Credit-Analysis-for-Government-Issuers]] 和 [[M16-Credit-Analysis-for-Corporate-Issuers]] 的优先级概念
+- **结构化风险** → [[M14-Credit-Risk]] 的信用风险评估
 
-- **理解 SPV 在证券化中的作用**：SPV 的法律独立性是破产隔离的前提。SPV 不是发起人的子公司，资产是"真实出售"给 SPV 的。
-- **区分 pass-through 与 tranched 结构**：过手结构简单，所有投资者同比例分摊；分层结构复杂，不同层级有不同的现金流分配规则。
-- **识别证券化的参与方**：发起人、SPV、服务机构、受托人、承销商、评级机构、信用增级提供方。理解每个角色的职能。
-- **理解证券化的动机**：从发起人（降低融资成本、转移风险）和投资者（获得定制化敞口）两个角度分析。
+## 📋 复习与刷题提示
 
-##### 4. 易错点提醒
+- **核心重点**：SPV 的功能和破产隔离概念
+  - SPV = 特殊目的载体，实现资产隔离
+  - 破产隔离：发起人破产时资产不受影响
+  - 前提：资产必须"真实出售"给 SPV（不是抵押）
+- **参与方角色**：
+  - 发起人 (Originator)：出售资产
+  - SPV：发行证券
+  - 服务机构 (Servicer)：收现金流
+  - 受托人 (Trustee)：代表投资者
+  - 承销商 (Underwriter)：分销证券
+  - 评级机构：对各级别评级
+  - 信用增级提供方：提升信用质量
+- **现金流分配**：
+  - Pass-through：按比例分配，简单透明
+  - Tranched：按优先级分配，复杂但有信用增级功能
+  - 分层不消除风险，只重新分配
+- **证券化的益处**：
+  - 对发起人：融资多元化、流动性转换、风险转移、释放资本
+  - 对投资者：定制化敞口、不同风险收益选择
+  - 对经济：促进信贷流动、提高金融市场效率
+- **证券化的风险**：
+  - 结构能重新分配风险但不能消除基础资产风险
+  - Servicer 能力不足或破产可能影响现金流回收
+  - 交易结构复杂性增加分析难度
+- **刷题建议**：
+  - 重点做 SPV 角色题（破产隔离机制）
+  - 参与方识别题（每个角色的职能）
+  - 现金流分配结构分析（pass-through vs tranched）
+  - 证券化动机分析题（发起人和投资者角度）
+- **易混淆点**：
+  - SPV 不是发起人的子公司
+  - 不是所有证券化都一样（结构差异大）
+  - 结构不能消除基础资产风险
 
-- **结构改变对现金流的请求权，但不能神奇地消除抵押品风险 (structure changes claim on cash flows; it does not magic away collateral risk)**：证券化可以重新分配风险，但不会消除基础资产的内在风险。如果基础资产普遍违约，即使是优先级也会受到损失。
-- **SPV 不是发起人的子公司**：这是破产隔离的关键。如果 SPV 被视为发起人的子公司，破产时资产可能被法院纳入破产财产。
-- **Servicer 的角色很重要**：servicer 的尽职程度直接影响现金流回收。如果 servicer 能力不足或破产，可能导致违约率上升。
-- **Not all securitizations are equal**：交易结构、触发机制、信用增级、服务人的差异会导致信用质量差异。
-
-##### 5. 跨模块关联
-
-- SPV 结构 → [[M13-ABS-and-Credit-Enhancement]] 的信用增级
-- 现金流分配 → [[M14-MBS-and-CMO]] 的 MBS 提前还款
-- 破产隔离 → [[M11-Government-and-Corporate-Credit]] 的优先级概念
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **考试技巧**：
+  - 证券化的核心是破产隔离 + 真实出售
+  - Pass-through 无信用增级功能；Tranched 有信用增级功能
+  - SPV 必须独立于发起人（否则破产隔离无效）
+  - Servicer 的勤勉程度直接影响投资者的现金流回收
+  - 基础资产质量是最终信用保障（再好的结构也无法弥补劣质资产）
+- **补充概念**：
+  - Waterfall（瀑布式现金流分配）：按优先顺序逐级分配
+  - Trigger events（触发机制）：超额利差耗尽后触发加速清偿
+  - Clean-up call：资产池余额 < 5-10% 时可赎回剩余证券
+  - 证券化市场在金融危机后监管加强（风险自留要求）

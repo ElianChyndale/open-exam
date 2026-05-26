@@ -32,66 +32,129 @@ tags:
 The candidate should be able to:
 
 - define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)
-- explain how a bond’s maturity, coupon, and yield level affect its interest rate risk
+- explain how a bond's maturity, coupon, and yield level affect its interest rate risk
 
-## Local Study Notes
+## 🌳 核心知识树
 
-### Migrated from `CFA_tier1/Fixed_Income/M08-Duration-and-Convexity.md`
+```text
+🏆 M11: Yield-Based Bond Duration Measures and Properties（基于收益率的久期）
+├─ ⭐ 11.1 修正久期 (Modified Duration)
+│  ├─ 📐 D_mod = D_mac / (1 + y/m)
+│  ├─ 🎯 估计收益率变动 1% 时债券价格变动的百分比
+│  ├─ 📐 %ΔP ≈ -D_mod × Δy（一阶近似）
+│  └─ ⚠️ 久期是局部的、基于收益率的，假设曲线平行移动
+│
+├─ ⭐ 11.2 货币久期 (Money Duration)
+│  ├─ 📐 Money Duration = D_mod × Full Price
+│  ├─ 🎯 以货币金额（而非百分比）表示利率敏感度
+│  └─ 💡 用于计算预期价格变化的具体金额
+│
+├─ ⭐ 11.3 PVBP / DV01
+│  ├─ 📐 PVBP ≈ Money Duration × 0.0001
+│  ├─ 📐 PVBP = (P_- - P_+)/2（精确计算）
+│  └─ 🎯 收益率变动 1bp 时的价格变化
+│
+└─ ⭐ 11.4 久期影响因素
+   ├─ 💡 期限越长 → 久期越大
+   ├─ 💡 票息越低 → 久期越大（零息债券久期最大）
+   ├─ 💡 收益率水平越高 → 久期越小
+   └─ ⚠️ Duration ≠ Maturity（付息债券 Duration < Maturity）
+```
 
-_Alignment score: 0.64. Original official module field: Module 11: Yield-Based Bond Duration Measures and Properties, Module 12: Yield-Based Bond Convexity and Portfolio Properties._
+## 📐 关键公式表
 
-#### M11: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| `D_mod = D_mac / (1 + y/m)` | 修正久期 | 百分比价格敏感度 | 来源 Macaulay 久期 |
+| `Money Duration = D_mod × Full Price` | 货币久期 | 金额价格变化 | 需用 Full Price |
+| `PVBP ≈ Money Duration × 0.0001` | 基点价值 | 1bp 敏感度 | 近似公式 |
+| `%ΔP ≈ -D_mod × Δy` | 价格变化近似 | 快速估计 | 仅小幅变动准确 |
+| `D_p = Σ w_i × D_i` | 组合久期 | 组合风险管理 | 仅平行移动有效 |
 
-##### 1. 核心知识点
+## 🛠️ 常见考点与解题思路
 
-###### 1.1 久期家族 (Duration Family)
+### 考点 1：用修正久期估计价格变化
+- **题型**：给定 D_mod 和 Δy，求 %ΔP
+- **公式**：`%ΔP ≈ -D_mod × Δy`
+- **注意**：Δy 用小数表示（如 1% = 0.01），符号为负（收益率↑ → 价格↓）
 
-- **核心公式 (English)**
-  - 修正久期: `D_mod = D_mac/(1+y/m)`
-  - 货币久期: `Money Duration = D_mod x Full Price`
-  - PVBP: `PVBP ≈ Money Duration x 0.0001`
-  - 价格变化近似: `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2`
-- **修正久期估计价格对收益率变动的百分比敏感度 (modified duration estimates % price sensitivity to yield)**：修正久期 = Macaulay 久期 / (1 + y/m)，表示收益率变动 1% 时债券价格变动的百分比。
-- **货币久期估计每单位收益率变动的货币价格变化 (money duration estimates currency price change per yield unit)**：货币久期 = 修正久期 x 全价，以货币金额（而非百分比）表示利率敏感度。
-- **PVBP = 收益率变动 1bp 的价格变化 (PVBP = price change for 1 bp yield shift)**：PVBP (price value of a basis point) 也称为 DV01。
+### 考点 2：计算 PVBP / DV01
+- **方法一**（近似）：`PVBP ≈ Money Duration × 0.0001`
+- **方法二**（精确）：`PVBP = (P_- - P_+)/2`（收益率 ±1bp 后的价格差除以 2）
+- **题型**：问收益率变动 1bp 时价格变化多少
 
-###### 1.2 凸性 (Convexity)
+### 考点 3：组合久期计算
+- **公式**：以各债券市场价值占组合总值的比例为权重，加权平均各债券的久期
+- **局限性**：仅适用于收益率曲线平行移动
 
-- **凸性修正久期遗漏的曲率 (convexity corrects curvature missed by duration)**：久期是一阶线性近似，凸性补偿二阶曲率效应。当收益率变动较大时，凸性校正至关重要。
-- **正凸性有利于对称收益率变动 (positive convexity helps for symmetric yield moves)**：正凸性债券在利率下降时价格上升的幅度大于在利率等幅上升时价格下降的幅度。
-- **组合久期/凸性使用价值权重但有局限性 (portfolio duration/convexity use value weights with limitations)**：组合久期 = Σ 债券权重 x 债券久期，但仅适用于平行收益率曲线移动。
+### 考点 4：久期影响因素分析
+- **题型**：比较两只债券的久期大小
+- **思路**：期限长 > 短；票息低 > 高；收益率低 > 高；零息债券久期最大
 
-##### 2. 关键公式
+## 🚨 易错点与考试陷阱
 
-| 指标 | 公式 |
-|------|------|
-| 修正久期 | `D_mod = D_mac / (1 + y/m)` |
-| 货币久期 | `Money Duration = D_mod x Full Price` |
-| PVBP | `PVBP = (P_- - P_+)/2` 或 `≈ Money Duration x 0.0001` |
-| 价格变化（含凸性） | `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2` |
-| 凸性计算 | `Convexity = (P_- + P_+ - 2P_0) / (P_0 x (Δy)^2)` |
-| 组合久期 | `D_p = Σ w_i x D_i`（价值权重） |
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|-------------|-------------|------|
+| Duration = Maturity | 零息债券相等，付息债券 Duration < Maturity | 期间现金流缩短回收时间 |
+| 久期对所有变动都准确 | 仅小幅平行移动有效 | 大幅变动需凸性修正 |
+| PVBP 对所有债券相同 | 取决于久期和价格 | 不同债券 PVBP 不同 |
+| 组合久期无局限性 | 只适用于平行移动 | 非平行移动不准确 |
 
-##### 3. 常见考点与解题思路
+## 🔄 跨模块关联
 
-- **用修正久期估计价格变化**：给定 D_mod 和 Δy，计算 `%ΔP ≈ -D_mod x Δy`。
-- **用凸性改进估计**：收益率变动较大时（如 > 100bp），必须加入凸性项。
-- **计算 PVBP/DV01**：可用近似公式 `Money Duration x 0.0001`，或直接计算收益率上下移 1bp 后的价格差。
-- **组合久期计算**：以各债券市场价值占组合总价值的比例为权重，加权平均各债券的久期。
+- **D_mod 来自 D_mac** → [[M10-Interest-Rate-Risk-and-Return]] 的 Macaulay 久期
+- **有效久期** → [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] 的 option-aware 风险
+- **组合久期** → [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] 的凸性调整
+- **收益率分析** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的收益率概念
 
-##### 4. 易错点提醒
+## 📋 复习与刷题提示
 
-- **久期是局部的、基于收益率的；勿将其视为完整曲线压力测试 (duration is local and yield-based; do not treat it as a full curve stress test)**：久期假设收益率曲线平行移动且变动幅度很小，对于非平行移动或大幅变动不准确。
-- **Duration 和 maturity 不是一回事**：零息债券的 Macaulay duration = maturity；但付息债券的 duration < maturity。高票息债券的 duration 更短。
-- **正凸性对投资者有利**：但获得正凸性通常要付出代价（如放弃部分收益），市场不会免费提供正凸性。
-- **凸性用 decimals 计算时 Δy 也要用小数**：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。
+- **核心重点**：修正久期和 PVBP 的计算是最高频考点
+- **久期属性**：掌握期限、票息、收益率水平对久期的影响方向
+  - 期限 ↑ → 久期 ↑
+  - 票息 ↓ → 久期 ↑（零息债券久期最大）
+  - 收益率 ↓ → 久期 ↑
+- **三个概念区分**：
+  - Macaulay Duration：现金流回收时间的加权平均（年）
+  - Modified Duration：收益率变动 1% 的价格变动百分比
+  - Money Duration：收益率变动 1% 的价格变动金额
+- **PVBP 计算**：
+  - 近似：PVBP ≈ Money Duration × 0.0001
+  - 精确：PVBP = (P_- - P_+)/2
+  - PVBP = 收益率变动 1bp 的价格变化
+- **组合久期**：
+  - 公式：D_p = Σ w_i × D_i（价值权重）
+  - 局限性：仅适用于平行收益率曲线移动
+- **典型计算流程**：
+  1. 已知 D_mac = 7.5，y = 6%，m = 2
+  2. D_mod = 7.5 / (1 + 0.06/2) = 7.5 / 1.03 = 7.28
+  3. 若 Δy = 0.5%（上升50bp），%ΔP ≈ -7.28 × 0.005 = -3.64%
+- **刷题建议**：
+  - 重点做久期计算题（D_mod、Money Duration、PVBP）
+  - 久期属性分析题（比较两只债券的久期）
+  - 组合久期计算题
+- **易混淆点**：
+  - Duration ≠ Maturity（零息债除外）
+  - 久期是局部、一阶近似
+  - PVBP 因债券不同而不同
 
-##### 5. 跨模块关联
-
-- D_mod 来自 D_mac → [[M07-Interest-Rate-Risk]] 的 Macaulay 久期
-- 有效久期 → [[M09-Curve-Based-and-Empirical-Risk]] 的 option-aware 风险
-- 组合久期 → [[M04-Yield-and-Spread-Measures]] 的收益率分析
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+- **关键数值记忆**：
+  - 修正久期 ≈ Macaulay 久期 / (1 + y/m)
+  - Money Duration = 修正久期 × Full Price
+  - PVBP ≈ Money Duration × 0.0001
+  - 精确 PVBP = (P_- - P_+) / 2（收益率 ±1bp）
+- **久期影响因素对比**：
+  - 期限 ↑ → 久期 ↑
+  - 票息 ↓ → 久期 ↑（零息债久期最大）
+  - 收益率 ↓ → 久期 ↑
+  - 零息债券的修正久期 = Macaulay 久期（因为 y = 0 时不影响）
+- **典型计算示例**：
+  - 已知 D_mac = 7.5，y = 6%，m = 2
+  - D_mod = 7.5 / (1 + 0.06/2) = 7.5/1.03 = 7.28
+  - Δy = +0.5%（上升 50bp）
+  - %ΔP ≈ -7.28 × 0.005 = -3.64%
+  - 若 Δy = -0.5%（下降 50bp），%ΔP ≈ +3.64%（对称，但实际因凸性不对称）
+- **考试技巧**：
+  - 比较久期大小看期限、票息、收益率三个维度
+  - PVBP 对小幅变动精确，对大幅变动需要凸性修正
+  - 组合久期只适用于平行移动

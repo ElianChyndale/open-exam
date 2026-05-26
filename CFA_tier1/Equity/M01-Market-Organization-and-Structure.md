@@ -104,6 +104,130 @@ _Alignment score: 1.00. Original official module field: Module 1: Market Organiz
 - **市场结构影响指数构建** → [[M02-Security-Market-Indexes]]
 - **交易成本与流动性影响市场效率** → [[M03-Market-Efficiency]]
 - **margin 交易影响资本结构** → [[M05-Company-Analysis-Past-and-Present]]
+### 🌳 核心知识树
+
+```text
+🏆 M01: Market Organization and Structure（市场组织与结构）
+│
+├── ⭐ 金融体系功能 (Financial System Functions)
+│   ├── 储蓄-投资匹配 (Saving-Investment Matching)
+│   ├── 资本形成 (Capital Formation)
+│   ├── 风险配置 (Risk Allocation)
+│   └── 信号功能 (Information Signaling)
+│
+├── ⭐ 资产与合约类型 (Assets & Contracts) 🎯高频
+│   ├── 证券 (Securities): 股票、债券、优先股
+│   ├── 货币与商品 (Currencies & Commodities)
+│   ├── 合约 (Contracts): 远期、期货、互换、期权
+│   └── 实物资产 (Real Assets): 房地产、基础设施
+│
+├── ⭐ 金融中介 (Financial Intermediaries)
+│   ├── 经纪商 (Broker)
+│   ├── 做市商 (Dealer)
+│   ├── 交易所 (Exchange)
+│   ├── 投资银行 (Investment Bank)
+│   ├── 托管银行 (Custodian)
+│   └── 清算所 (Clearinghouse)
+│
+├── ⭐ 市场结构 (Market Structures) 🎯高频
+│   ├── 报价驱动 (Quote-Driven): 做市商报价
+│   ├── 订单驱动 (Order-Driven): 订单簿撮合
+│   └── 经纪人市场 (Brokered): 大额交易
+│
+├── ⭐ 头寸与杠杆 (Positions & Leverage) 🎯高频
+│   ├── 多头 (Long): 预期上涨
+│   ├── 空头 (Short): 预期下跌 ⚠️ 亏损无上限
+│   ├── 📐 保证金交易 (Margin): Leverage = Position/Equity
+│   └── 📐 追缴价格: P* = Loan / [Shares × (1-MM%)]
+│
+├── ⭐ 订单类型 (Order Types) 🎯高频
+│   ├── 市价单 (Market Order): 立即执行 ⚠️ 价格不确定
+│   ├── 限价单 (Limit Order): 价格确定 ⚠️ 可能不成交
+│   ├── 止损单 (Stop Order): 触发后变市价单
+│   └── 有效期指令 (Validity): DAY/GTD/GTC/IOC/FOK
+│
+├── ⭐ 一级与二级市场 (Primary & Secondary) 🎯高频
+│   ├── IPO/SEO: 公司筹集新资本
+│   └── 二级交易: 投资者之间交易
+│
+└── ⭐ 监管与系统稳定 (Regulation)
+    ├── 投资者保护
+    ├── 市场公平
+    └── 系统风险防范
+```
+
+### 📐 关键公式表
+
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| 杠杆比率 = Position Value / Equity | 总头寸 / 自有资金 | 衡量保证金交易的杠杆程度 | 比率越高风险越大 |
+| 初始保证金率 = Equity / Purchase Value | 自有资金占比 | 确定最低首付要求 | 通常50% |
+| Margin Call Price (Long) = Loan / [Shares × (1-MM%)] | 追缴保证金价格 | 计算股价跌到多少会触发追缴 | MM%是维持保证金率 |
+| 卖空收益率 = (初始收入 - 回购成本 - 费用) / 初始权益 | 卖空回报率 | 计算卖空交易的净收益 | 股息和借贷费需计入成本 |
+| Return on Margin Trade = (Ending Value - Loan - Initial Equity) / Initial Equity | 保证金交易收益率 | 考虑杠杆后的实际回报 | 亏损也会被放大 |
+
+### 🛠️ 常见考点与解题思路
+
+**Topic 1: 保证金交易计算**
+- 步骤1：确定 Purchase Price、Shares、Initial Margin%
+- 步骤2：计算 Equity = Purchase Value × Initial Margin%
+- 步骤3：计算 Loan = Purchase Value - Equity
+- 步骤4：Margin Call Price = Loan / [Shares × (1-MM%)]
+- 注意：股价低于此价格时，broker会要求追加资金
+
+**Topic 2: 卖空交易计算**
+- 步骤1：卖空收入 = Shares × Short Price
+- 步骤2：初始保证金存入 = 卖空收入 × Initial Margin%
+- 步骤3：总抵押 = 卖空收入 + 初始保证金
+- 步骤4：若股价上涨，抵押品需维持 MM% 比例
+- 追缴价格 = 总抵押 / [Shares × (1+MM%)]
+
+**Topic 3: 订单类型辨析**
+- Market Order: 重执行速度 > 轻价格
+- Limit Order: 轻执行 > 重价格控制
+- Stop Order: 用作止损或突破入场
+- GTC vs DAY: 有效期限的区别
+
+**Topic 4: 市场类型判断**
+- 报价驱动：做市商提供双边报价，适合流动性较低的证券
+- 订单驱动：自动撮合，适合高流动性市场
+- 经纪人市场：定制化大额交易
+
+**Topic 5: 一级 vs 二级市场**
+- 一级市场 = 新资本形成（公司收到资金）
+- 二级市场 = 所有权转移（资金在投资者间流动）
+
+### 🚨 易错点与考试陷阱
+
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|------------|------------|------|
+| 限价单比市价单更安全 | 限价单控制价格但不保证成交 | 有未成交风险（non-execution risk） |
+| 卖空最大亏损 = 100% | 卖空亏损理论上无上限 | 股价可无限上涨 |
+| Best price instruction=最佳执行 | 最佳价格≠最佳执行结果 | 执行质量还考虑速度和隐蔽性 |
+| 一级市场和二级市场都是公司融资 | 只有一级市场是公司融资 | 二级市场是投资者之间交易 |
+| 做市商=经纪商 | 做市商用自有资金交易，经纪商代理客户 | 角色和风险完全不同 |
+| 高流动性=永远低交易成本 | 市场恐慌时流动性会枯竭 | 流动性是动态变化的 |
+| FOK和IOC相同 | FOK = Fill-or-Kill（全部或取消），IOC = Immediate-or-Cancel（立即成交剩余取消） | FOK要求全部成交，IOC可部分成交 |
+
+### 🔄 跨模块关联
+
+- **市场结构影响指数构建方法** → [[M02-Security-Market-Indexes]]（加权方法选择依赖市场结构）
+- **交易成本与流动性影响市场效率** → [[M03-Market-Efficiency]]（摩擦越少，市场越有效）
+- **保证金交易影响资本结构分析** → [[M05-Company-Analysis-Past-and-Present]]（杠杆的微观基础）
+- **一级市场与权益发行** → [[M04-Overview-of-Equity-Securities]]（IPO/SEO的具体安排）
+- **市场微观结构与订单流** → [[M06-Industry-and-Competitive-Analysis]]（行业集中度与定价）
+- **清算与结算风险** → [[M07-Company-Analysis-Forecasting]]（信用风险预测）
+
+### 📋 复习与刷题提示
+
+- **Margin Call计算是必考题**：掌握Price*=Loan/[Shares×(1-MM%)]的推导，注意做多和做空的不同公式
+- **卖空题必做**：三步走 — 初始保证金存入 → 卖空所得款项 → 回购结算
+- **订单类型概念题**：市价单vs限价单vs止损单的区别几乎每年都考
+- **市场结构对比**：报价驱动vs订单驱动vs经纪人市场的特征和适用场景
+- **一级vs二级市场**：理解新资本形成与所有权转移的本质区别
+- **刷题重点**：margin计算、订单类型辨析、市场中介角色区分
+- **FRM考点延伸**：清算风险、对手方风险、流动性风险的概念交叉
+
 ## Review Hooks
 
 - Add mistake-driven traps only after they can be traced back to `.system/events/`.

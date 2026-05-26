@@ -115,6 +115,103 @@ J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
 - J曲线 → [[M03-Private-Capital.md]] (PE基金生命周期)
 - 收益平滑 → [[M04-Real-Estate-and-Infrastructure.md]] (房地产估值)
 - 费用计算 → [[M01-Features-and-Structure.md]] (管理费和业绩提成)
+### 🌳 核心知识树
+
+```text
+🏆 M02: Alternative Investment Performance and Returns（另类投资业绩与回报）
+│
+├── ⭐ 业绩衡量指标 (Performance Metrics) 🎯超高頻
+│   ├── 📐 TVPI = (Distributions + Residual Value) / Paid-In = DPI + RVPI
+│   ├── 📐 DPI = Cumulative Distributions / Paid-In （已实现）
+│   ├── 📐 RVPI = Residual Value / Paid-In （未实现）
+│   ├── 📐 IRR = NPV=0的折现率（时间加权）
+│   ├── 📐 Sharpe = (R_p - R_f) / σ_p（总风险调整）
+│   └── 📐 Sortino = (R_p - R_f) / σ_d（下行风险调整）
+│
+├── ⭐ J曲线 (J-Curve Dynamics) 🎯超高頻
+│   ├── 早期负收益: 管理费+交易成本+投资未成熟
+│   ├── 中期转正: 投资项目成熟退出
+│   ├── 后期稳定: 持续产生正回报
+│   ├── VC: J曲线最深（失败率高、回报周期长）
+│   ├── LBO: 相对较浅（有现金流、杠杆放大）
+│   └── Growth Equity: 介于两者之间
+│
+├── ⭐ 收益平滑 (Smoothed Returns) 🎯高频
+│   ├── 原因: 非流动性资产按评估值而非市价估值
+│   ├── 后果: ⚠️ 低估波动 → 低估相关性 → 高估Sharpe
+│   └── 解决: Unsmoothing处理
+│
+└── ⭐ 费用对业绩的影响 (Impact of Fees)
+    ├── 管理费: 逐年侵蚀回报
+    ├── 业绩提成: 高水位线保护投资者
+    └── 净回报 vs 总回报: 费用差异显著
+```
+
+### 📐 关键公式表
+
+| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
+|------|------|----------|---------|
+| TVPI = (Distributions + RV) / Paid-In | 总价值倍数 | 衡量基金整体业绩 | 未考虑时间价值 |
+| DPI = Distributions / Paid-In | 已实现回报倍数 | 衡量LP已收回现金比例 | DPI > 1表示已收回全部本金 |
+| RVPI = Residual Value / Paid-In | 未实现回报倍数 | 衡量剩余投资价值 | 基于评估值可能被平滑 |
+| TVPI = DPI + RVPI | 三者加法关系 | 快速检查计算一致性 | ⚠️ 常被误认为乘法 |
+| IRR (Internal Rate of Return) | 内部收益率 | 考虑时间价值的回报率 | 多期现金流输入，需用计算器 |
+| Sortino Ratio = (R_p - R_f) / σ_d | 下行风险调整收益 | 非对称分布更适用 | σ_d只计算下行波动 |
+| Sharpe Ratio = (R_p - R_f) / σ_p | 总风险调整收益 | 对称分布适用 | 高估另类投资风险调整收益 |
+
+### 🛠️ 常见考点与解题思路
+
+**Topic 1: TVPI/DPI/RVPI计算**
+- 已知累计分配金额、剩余价值和实缴资本
+- DPI = 分配/实缴；RVPI = 剩余/实缴；TVPI = DPI + RVPI
+- 注意：这是加法关系不是乘法
+
+**Topic 2: J曲线阶段判断**
+- 早期（1-3年）= 负收益（管理费消耗）
+- 中期（3-5年）= 逐步转正
+- 后期（5-10年）= 项目退出，正收益稳定
+- VC的J曲线最深，LBO较浅
+
+**Topic 3: Sortino vs Sharpe辨析**
+- 另类投资收益分布不对称 → Sortino更适合
+- Sharpe高估另类投资的风险调整收益
+- 解题：看题干描述的是"下行"还是"总"波动
+
+**Topic 4: 收益平滑影响**
+- 平滑导致：波动率↓、相关性↓、Sharpe↑（虚假）
+- 考试常问：收益平滑对业绩指标的影响方向
+
+### 🚨 易错点与考试陷阱
+
+| ❌ 错误理解 | ✅ 正确理解 | 原因 |
+|------------|------------|------|
+| TVPI = DPI × RVPI | TVPI = DPI + RVPI（加法） | 常见记忆错误 |
+| J曲线是全程亏损的 | J曲线早期负收益后期转正 | 名称来自形状像J |
+| 收益平滑是好的（数据更平稳） | 平滑导致波动和相关性被低估 | 高估了风险调整收益 |
+| DPI = RVPI | DPI是已实现现金，RVPI是未实现账面价值 | 性质完全不同 |
+| Sharpe和Sortino在另类投资中同等适用 | Sortino更适合非对称分布的另类投资 | 下行风险更相关 |
+| IRR总是最高的回报指标 | IRR对现金流时点敏感 | 早期大额回报会推高IRR |
+| TVPI > 1一定赚钱 | TVPI > 1但时间很长可能年化回报低 | 未考虑货币时间价值 |
+
+### 🔄 跨模块关联
+
+- **TVPI/DPI/RVPI的应用** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE基金业绩报告标准）
+- **J曲线** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE基金的生命周期阶段）
+- **收益平滑** → [[M04-Real-Estate-and-Infrastructure]]（房地产的评估估值）
+- **费用计算** → [[M01-Alternative-Investment-Features-Methods-and-Structures]]（管理费和业绩提成对净回报的影响）
+- **Sortino vs Sharpe** → [[M06-Hedge-Funds]]（对冲基金业绩评估）
+- **IRR计算方法** → Corporate Finance科目（NPV与IRR的关系）
+
+### 📋 复习与刷题提示
+
+- **TVPI/DPI/RVPI计算是必考题**：记住加法关系，注意区分已实现vs未实现
+- **J曲线是必考概念题**：三个阶段的特征、不同策略的J曲线差异
+- **收益平滑的影响方向**：波动被低估、相关性被低估、Sharpe被高估
+- **Sortino与Sharpe对比**：适用场景差异，另类投资中Sortino更优
+- **费用对业绩的影响**：理解净回报与总回报的差异来源
+- **IRR的局限性**：对现金流时点敏感，不直接可加
+- **刷题建议**：mock中TVPI计算最高频，J曲线概念其次
+
 ## Review Hooks
 
 - Add mistake-driven traps only after they can be traced back to `.system/events/`.
