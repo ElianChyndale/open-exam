@@ -1,172 +1,125 @@
 ---
-title: "00-Portfolio-Management-MOC"
-description: "CFA L1 PM 中枢 — 组合理论·CAPM·IPS·偏差·风险·公式·陷阱"
+title: "00-Portfolio Management-MOC"
+description: "CFA Level I 2026 Portfolio Management 官方模块导航、编号知识树、公式/框架、陷阱与学习路径"
 subject: "Portfolio Management"
-topic_area: Portfolio_Management
-level: CFA Level I
+topic_area: "Portfolio_Management"
+level: "CFA Level I"
+exam_year: 2026
 exam_weight: "8-12%"
-exam_format: 概念+计算混合
-difficulty: 组合理论和CAPM是核心框架
+module_count: 6
 note_type: master_moc
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
   - MOC
-  - Portfolio_Management
   - official_2026
+  - Portfolio_Management
 ---
 
-# 📊 00-Portfolio-Management-MOC
+# Portfolio Management MOC
 
-> **一句话核心**：从分散化(σp²公式)到定价(CAPM)到执行(IPS)→风险预算。
-
----
-
-## 📋 官方模块概览
-
-| # | 内容 | ⚖️ | 🎯 必考点 | 🔗 |
-|---|------|-----|-----------|-----|
-| M01 | Risk & Return Part I | 计算 | 📐 组合方差、有效前沿、CAL、效用函数 | [[M01-Portfolio-Risk-and-Return-Part-I]] |
-| M02 | Risk & Return Part II | 计算 | 📐 CAPM、Beta、SML、Sharpe/Treynor/α | [[M02-Portfolio-Risk-and-Return-Part-II]] |
-| M03 | PM Overview | 概念 | 三阶段流程、集合投资工具 | [[M03-Portfolio-Management-An-Overview]] |
-| M04 | Portfolio Planning & Construction | 概念 | IPS、资产配置、ESG | [[M04-Basics-of-Portfolio-Planning-and-Construction]] |
-| M05 | Behavioral Biases | 概念 | 认知错误 vs 情感偏差 | [[M05-The-Behavioral-Biases-of-Individuals]] |
-| M06 | Risk Management | 概念 | 五步骤、金融/非金融风险 | [[M06-Introduction-to-Risk-Management]] |
+> **一句话核心**：把风险收益、组合构建、行为偏差和风险管理连接成投资流程。
 
 ---
 
-## 🌳 核心知识树
+## 1. 科目定位
+
+- **考试权重**：8-12%
+- **官方模块数**：6
+- **主线框架**：设定目标约束 -> 估计风险收益 -> 构建组合 -> 监控偏差与风险
+- **使用方式**：先从官方模块导航进入，再用编号知识树做主动回忆，最后用公式/陷阱清单做考前压缩。
+
+## 2. 官方模块导航
+
+| 编号 | 官方 Module | 难度 | 必考点 | 模块链接 |
+|---|---|---|---|---|
+| M01 | Portfolio Risk and Return: Part I | 计算+解释 | Introduction / Historical Return and Risk | [[M01-Portfolio-Risk-and-Return-Part-I]] |
+| M02 | Portfolio Risk and Return: Part II | 计算+解释 | Introduction / Capital Market Theory: Risk-Free and Risky Assets | [[M02-Portfolio-Risk-and-Return-Part-II]] |
+| M03 | Portfolio Management: An Overview | 概念+应用 | Introduction / Portfolio Perspective: Diversification and Risk Reduction | [[M03-Portfolio-Management-An-Overview]] |
+| M04 | Basics of Portfolio Planning and Construction | 计算+解释 | Introduction / The Investment Policy Statement | [[M04-Basics-of-Portfolio-Planning-and-Construction]] |
+| M05 | The Behavioral Biases of Individuals | 概念+应用 | Introduction / Behavioral Bias Categories | [[M05-The-Behavioral-Biases-of-Individuals]] |
+| M06 | Introduction to Risk Management | 概念+案例判断 | Introduction / Risk Management Process | [[M06-Introduction-to-Risk-Management]] |
+
+## 3. 核心知识树
 
 ```text
-📊 Portfolio Management (8-12%) (M01-M06) 知识体系
-
-├─ 🏆 M01: Portfolio Risk and Return Part I（组合风险与收益）【高频计算】
-│  ├─ ⭐ 1.1 组合期望收益与方差
-│  │  ├─ 📐 E(Rp) = Σwi·E(Ri)（收益=加权平均）
-│  │  └─ 📐 σp² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂Cov₁₂（两资产组合方差）
-│  │     ⚠️ 不是加权平均方差！必须加协方差项
-│  ├─ ⭐ 1.2 协方差与相关系数
-│  │  ├─ 📐 Cov₁₂ = Σp(R₁-ER₁)(R₂-ER₂)
-│  │  └─ 📐 ρ₁₂ = Cov₁₂/(σ₁σ₂)，范围[-1,+1]
-│  │     🎯 ρ=-1→可构建无风险组合；ρ=+1→无分散化
-│  ├─ ⭐ 1.3 效用函数与风险厌恶
-│  │  ├─ 📐 U = E(Rp) - 0.5·A·σp²
-│  │  └─ ⭐ A>0=风险厌恶；A=0=风险中性；A<0=风险偏好
-│  ├─ ⭐ 1.4 资本配置线(CAL)
-│  │  └─ 📐 E(Rc) = Rf + [(E(Rp)-Rf)/σp]·σc
-│  ├─ ⭐ 1.5 有效前沿
-│  │  └─ 🎯 最小方差组合 → 上半部分曲线
-│  └─ ⚠️ 增加资产→非系统风险↓；系统风险不可消除
-│
-├─ 🏆 M02: Portfolio Risk and Return Part II（CAPM与绩效评估）【高频计算】
-│  ├─ ⭐ 2.1 CAPM
-│  │  └─ 📐 E(Ri) = Rf + βi[E(Rm)-Rf]
-│  ├─ ⭐ 2.2 Beta系数
-│  │  ├─ 📐 βi = Cov(Ri,Rm)/σm²
-│  │  └─ β=1同步；β>1进攻；β<1防御；β<0反向（极少见）
-│  ├─ ⭐ 2.3 证券市场线(SML)
-│  │  ├─ 🎯 SML上方=低估=正α；SML下方=高估=负α
-│  │  └─ ⚠️ CML横轴=σ（只含有效组合）；SML横轴=β（所有资产）
-│  └─ ⭐ 2.4 绩效评估指标
-│     ├─ 📐 Sharpe = (Rp-Rf)/σp（总风险→评价完整组合）
-│     ├─ 📐 Treynor = (Rp-Rf)/βp（系统风险→分散化部分）
-│     ├─ 📐 Jensen's α = Rp - [Rf+βp(E(Rm)-Rf)]
-│     └─ ⚠️ 正α≠经理能力强：可能只是承担了额外风险
-│
-├─ 🏆 M03: Portfolio Management Overview（组合管理概述）
-│  ├─ ⭐ 三阶段：规划(Planning)→执行(Execution)→反馈(Feedback)
-│  ├─ ⭐ 集合投资工具
-│  │  ├─ 开放式基金（按NAV交易）
-│  │  ├─ 封闭式基金（按市价，可能折溢价）
-│  │  └─ ETF（场内交易·税收高效·费用低）
-│  └─ ⚠️ DB（雇主担风险）vs DC（员工担风险）
-│
-├─ 🏆 M04: Portfolio Planning and Construction（IPS与构建）
-│  ├─ ⭐ IPS = 投资策略说明书（投资目标+约束条件）
-│  ├─ ⭐ 风险态度：意愿(willingness) × 能力(ability)
-│  └─ ⭐ 约束：流动性·时间·税务·法律·独特情况
-│
-├─ 🏆 M05: Behavioral Biases（行为偏差）
-│  ├─ ⭐ 认知错误（可因教育改善）
-│  │  └─ 锚定·过度自信·确认偏误·框架依赖
-│  └─ ⭐ 情感偏差（难改正）
-│     └─ 损失厌恶·后悔厌恶·禀赋效应
-│
-└─ 🏆 M06: Risk Management（风险管理）
-   ├─ ⭐ 五步骤：治理→识别→计量→改变化→监控
-   ├─ ⭐ 金融风险：市场·信用·流动性·操作
-   ├─ ⭐ 非金融风险：法律·监管·税务·声誉
-   └─ 🎯 改变化：回避·接受·转移·分散
+Portfolio Management (8-12%)
+├─ 1. Portfolio Risk and Return: Part I
+│  ├─ 1.1 Introduction
+│  ├─ 1.2 Historical Return and Risk
+│  ├─ 1.3 Other Investment Characteristics
+├─ 2. Portfolio Risk and Return: Part II
+│  ├─ 2.1 Introduction
+│  ├─ 2.2 Capital Market Theory: Risk-Free and Risky Assets
+│  ├─ 2.3 Capital Market Theory: The Capital Market Line
+├─ 3. Portfolio Management: An Overview
+│  ├─ 3.1 Introduction
+│  ├─ 3.2 Portfolio Perspective: Diversification and Risk Reduction
+│  ├─ 3.3 Portfolio Perspective: Risk-Return Trade-off, Downside Protection, Modern Portfolio Theory
+├─ 4. Basics of Portfolio Planning and Construction
+│  ├─ 4.1 Introduction
+│  ├─ 4.2 The Investment Policy Statement
+│  ├─ 4.3 IPS Risk and Return Objectives
+├─ 5. The Behavioral Biases of Individuals
+│  ├─ 5.1 Introduction
+│  ├─ 5.2 Behavioral Bias Categories
+│  ├─ 5.3 Cognitive Errors
+├─ 6. Introduction to Risk Management
+│  ├─ 6.1 Introduction
+│  ├─ 6.2 Risk Management Process
+│  ├─ 6.3 Risk Management Framework
 ```
 
----
+## 4. 跨模块依赖关系
 
-## 🔗 跨模块依赖关系
+- **M01 Portfolio Risk and Return: Part I**：承接 `本科目入口`，输出到 `Portfolio Risk and Return: Part II`。
+- **M02 Portfolio Risk and Return: Part II**：承接 `Portfolio Risk and Return: Part I`，输出到 `Portfolio Management: An Overview`。
+- **M03 Portfolio Management: An Overview**：承接 `Portfolio Risk and Return: Part II`，输出到 `Basics of Portfolio Planning and Construction`。
+- **M04 Basics of Portfolio Planning and Construction**：承接 `Portfolio Management: An Overview`，输出到 `The Behavioral Biases of Individuals`。
+- **M05 The Behavioral Biases of Individuals**：承接 `Basics of Portfolio Planning and Construction`，输出到 `Introduction to Risk Management`。
+- **M06 Introduction to Risk Management**：承接 `The Behavioral Biases of Individuals`，输出到 `本科目总结`。
 
-```text
-📊 学习顺序
+## 5. 核心对比专题
 
-M01（组合风险Part I）◄── Quant M05 Portfolio Math
-└── M02（组合风险Part II）◄── Quant M07-M10 统计+回归
-    ├── M03（PM概述）
-    ├── M04（规划与构建）┐
-    │                   ├── ◄── Ethics M03 III(C) Suitability
-    │                   │   └── 跨科目FSA比率分析
-    ├── M05（行为偏差）
-    └── M06（风险管理）
+- **概念 vs 应用**：先确认官方定义，再把定义放入题干情境判断。
+- **计算 vs 解释**：计算结果只是中间步骤，CFA Level I 经常要求解释方向、限制和投资含义。
+- **静态知识 vs 决策流程**：把每个模块压缩成“输入 -> 工具 -> 输出 -> 陷阱”的流程。
+- **英文术语 vs 中文理解**：英文保留用于识题，中文解释用于防止机械背诵。
 
-🔗 跨科目关键接口：
-  M01 CAL + M02 CML/SML ──► Quant M05 组合数学
-  M02 CAPM ──► Quant M10 回归β估算
-  M02 Jensen's α ──► Equity M08 估值-经理评估
-  M04 IPS ──► Ethics M03 客户义务
-  M05 行为偏差 ──► Equity M03 市场效率-行为金融
-  M06 风险管理 ──► FI M14-M16 信用风险
-```
+## 6. 公式与框架速查
 
----
+| 编号 | 工具 / Formula | 中文用途 |
+|---|---|---|
+| F1 | `Portfolio return: Rp = Σ wi Ri` | 组合收益是资产收益的加权平均。 |
+| F2 | `Portfolio variance: σp² = w1²σ1² + w2²σ2² + 2w1w2ρ12σ1σ2` | 相关性越低，分散化收益越明显。 |
+| F3 | `Sharpe ratio: (Rp - Rf) / σp` | 用总风险衡量超额收益效率。 |
+| F4 | `CAPM: E(Ri) = Rf + βi[E(Rm)-Rf]` | 只补偿系统性风险。 |
 
-## 🔑 核心对比专题
+## 7. 高频考试陷阱
 
-| 对比 | 🔑 区别 | 🎯 判断 |
-|------|---------|---------|
-| **CAL vs CML** | CAL=任意风险组合；CML=市场组合 | 市场组合→CML |
-| **CML vs SML** | CML横轴σ；SML横轴β | β→SML，σ→CML |
-| **Sharpe vs Treynor** | 总风险 vs 系统风险 | 全组合→Sharpe；子部分→Treynor |
-| **DB vs DC** | 雇主担风险 vs 员工担风险 | |
-| **认知 vs 情感偏差** | 可改善 vs 难改正 | |
+- **模块名和旧笔记不一致**：以 2026 官方 module 名称、编号和顺序为准。
+- **只背公式不解释**：凡是 `calculate and interpret`，必须同时会算和解释。
+- **忽略 LOS 动词**：`describe`、`explain`、`compare`、`evaluate` 对答案深度要求不同。
+- **跨模块断裂**：做错题时记录它关联到哪个 MOC 节点，必要时触发 MOC gap review。
 
----
+## 8. 通用分析框架
 
-## 📐 核心公式速查
+1. **识别任务**：读 LOS 动词和题干问法。
+2. **定位节点**：回到 `## 3. 核心知识树` 的编号节点。
+3. **选择工具**：概念框架、公式、表格比较或合规流程。
+4. **输出结论**：中文结论 + 英文关键词 + 必要限制条件。
+5. **复盘缺口**：若错因重复出现，进入 `.system/events/` 和 `.system/memory/` 闭环。
 
-| 公式 | 用途 | ⚠️ |
-|------|------|-----|
-| `E(Rp)=ΣwiE(Ri)` | 组合收益 | 加权平均 |
-| `σp²=w₁²σ₁²+w₂²σ₂²+2w₁w₂Cov₁₂` | 组合方差 | 含协方差 |
-| `βi=Cov(Ri,Rm)/σm²` | Beta | |
-| `E(Ri)=Rf+βi[E(Rm)-Rf]` | CAPM | 系统风险定价 |
-| `Sharpe=(Rp-Rf)/σp` | 总风险回报 | 评价全组合 |
-| `α=Rp-[Rf+βp(E(Rm)-Rf)]` | Jensen's α | 超额收益 |
+## 9. 学习路径建议
 
----
+- **第一轮：结构对齐**。按模块顺序读官方结构和 LOS，不急着刷难题。
+- **第二轮：主动回忆**。遮住解释，只看编号知识树说出定义、公式和陷阱。
+- **第三轮：题目驱动**。把错题回填到对应模块和 MOC 节点，形成可复用 fix rule。
+- **考前压缩**。只保留高频术语、公式/框架、易错点、跨模块依赖和错题触发点。
 
-## 🚨 高频陷阱速查
+## 10. Legacy 内容治理
 
-| ❌ 错误 | ✅ 正确 | 🎯 |
-|---------|---------|-----|
-| 组合方差=加权平均方差 | 必须加协方差项 | ⭐⭐⭐ |
-| CML上所有资产 | CML只含有效组合 | ⭐⭐⭐ |
-| β不可能为负 | β可负（反向波动） | ⭐⭐ |
-| α正=经理能力强 | 可能只是承担额外风险 | ⭐⭐ |
-| 认知偏差=情感偏差 | 认知可改善，情感难改正 | ⭐⭐ |
-
----
-
-## 💡 学习路径
-
-```
-阶段1 ─── M01→M02（组合数学+CAPM计算核心）
-阶段2 ─── M04（IPS和构建）
-阶段3 ─── M03→M05→M06（概念+偏差+风险管理）
-```
+- 本科目高置信 legacy 映射：1 条；中置信候选：13 条。
+- 详细来源与处理建议见 [[cfa-legacy-to-official-enrichment-map]]。
+- `_legacy` 只作为补强来源，不作为最终学习入口；若与官方 2026 LOS 冲突，以 registry 和官方 Topic Outline 为准。

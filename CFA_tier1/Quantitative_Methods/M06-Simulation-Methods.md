@@ -1,23 +1,29 @@
 ---
-title: "M06 — Simulation Methods"
-description: "CFA Level I 2026 official module: Simulation Methods"
-module: M06
+title: "M06: Simulation Methods"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M06"
 official_module: "Module 6: Simulation Methods"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M06: Simulation Methods
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Simulation Methods**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,176 +35,129 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns
+2. describe Monte Carlo simulation and explain how it can be used in investment applications
+3. describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications
 
-- explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns
-- describe Monte Carlo simulation and explain how it can be used in investment applications
-- describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 6.1 学习任务
+- **核心问题**：考试希望你用 `Simulation Methods` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 6.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 6.3 关键英文术语
+- **Simulation Methods（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Lognormal Distribution and Continuous Compounding（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Monte Carlo Simulation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Bootstrapping（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 6.1 | explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.2 | describe Monte Carlo simulation and explain how it can be used in investment applications | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.3 | describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M06: Simulation Methods（模拟方法）
-│
-├── ⭐ 分布联动关系 (Distribution Link)
-│   ├── 连续复利收益率 → 正态分布假设 → 价格 → 对数正态分布
-│   ├── 💡 收益率用正态（可负），价格用对数正态（非负）
-│   ├── 对数正态分布天然保证价格 ≥ 0，且右偏符合资产价格特征
-│   └── ⚠️ 正态分布允许价格为负（经济上不合理），不能用正态建模价格
-│
-├── ⭐ 蒙特卡洛模拟 (Monte Carlo Simulation)
-│   ├── 步骤 1：指定输入分布（如收益率 ~ N(μ, σ²)）
-│   ├── 步骤 2：抽取大量随机情景（如 10,000 个）
-│   ├── 步骤 3：汇总输出分布（均值、方差、分位数）
-│   ├── 📐 P_t = P₀ × e^(rt)，r ~ N(μ, σ²)
-│   ├── 🎯 适用：无解析解的复杂问题
-│   ├── ⚠️ 非优化方法 — 不告诉你"应该怎么做"
-│   └── ⚠️ GIGO: 输入分布准确性决定结果价值
-│
-├── ⭐ 自助重抽样 (Bootstrap Resampling)
-│   ├── 从原始样本中有放回抽取 n 个观测值
-│   ├── 重复大量次数 → 得到统计量的经验抽样分布
-│   ├── 🎯 适用：解析公式不可用、样本量小、无分布假设
-│   ├── 🎯 非参数方法 — 几乎不依赖分布假设
-│   └── ⚠️ Bootstrap 继承原始样本的偏误（不解决 bias）
-│
-├── ⭐ 蒙特卡洛 vs Bootstrap 对比
-│   ├── 数据来源：MC = 人为指定分布，Bootstrap = 实际观测数据
-│   ├── 抽样方式：MC = 理论分布抽样，Bootstrap = 有放回重抽样
-│   ├── 主要用途：MC = 预测未来，Bootstrap = 估计样本统计量精度
-│   └── 分布假设：MC = 需要指定，Bootstrap = 几乎无假设
-│
-├── 💡 关键洞察
-│   ├── 正态收益率 → 对数正态价格，这是经典金融建模框架
-│   ├── MC 解决"无解析解"问题，但结果质量完全依赖输入假设
-│   ├── Bootstrap 是"用数据说话"的方法，但继承数据所有缺陷
-│   └── 增加模拟次数只降低抽样误差，不改善输入质量
-│
-└── ⚠️ 考试陷阱总结
-    ├── 蒙特卡洛不是优化方法，也不是分析方法
-    ├── GIGO: 错误假设 × 大量模拟 ≠ 正确结果
-    ├── Bootstrap 不解决原始样本的偏误问题
-    ├── 收益率 ~ 正态，价格 ~ 对数正态 — 不要混淆
-    └── 解析解优先于模拟（当解析解存在时）
+6. Simulation Methods
+├─ 6.1 Introduction
+│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
+├─ 6.2 Lognormal Distribution and Continuous Compounding
+│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
+├─ 6.3 Monte Carlo Simulation
+│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
+├─ 6.4 Bootstrapping
+│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：分布联动关系（Distribution Link）
-**核心概念**：连续复利收益率通常假设服从正态分布，由此导出的资产价格服从对数正态分布。这是经典金融建模框架的核心关系。
-- **收益率用正态**：连续复利收益率 ~ N(μ, σ²)，收益率可以为负值，符合正态分布的特征
-- **价格用对数正态**：由正态收益率导出的价格 P_t = P₀ × e^(rt) 服从对数正态分布，天然保证价格非负
-- **对数正态分布的特征**：右偏，符合资产价格的典型表现——价格不能为负，且更可能出现大涨（右侧长尾）
-- ⚠️ 正态分布允许价格为负（虽然概率很小），这在经济上不合理，因此不能用正态分布直接建模价格
+### 6.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns`。
+- **核心词汇**：**Simulation Methods（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定连续复利收益率的均值和标准差，理解价格路径的对数正态分布性质。
+### 6.2 Lognormal Distribution and Continuous Compounding
+- **中文主线**：本节点解决 `Lognormal Distribution and Continuous Compounding` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`describe Monte Carlo simulation and explain how it can be used in investment applications`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：蒙特卡洛模拟（Monte Carlo Simulation）
-**核心概念**：蒙特卡洛模拟通过生成大量随机样本来近似复杂系统行为的计算方法，适用于没有解析解的复杂问题。
-- **三个核心步骤**：指定输入分布 → 抽取大量随机情景 → 汇总输出分布
-- **适用场景**：复杂退休储蓄规划、路径依赖型衍生品定价、含多个不确定因素的资本预算分析
-- **输出结果**：所有可能结果的全部分布，而不仅仅是"最好的估计"
-- ⚠️ **局限性**：不提供因果解释，结果质量取决于输入假设的正确性（GIGO），计算量大
-- ⚠️ 蒙特卡洛不是优化方法——它不告诉你"应该怎么做"，而是告诉你"如果这样做可能有什么结果"
+### 6.3 Monte Carlo Simulation
+- **中文主线**：本节点解决 `Monte Carlo Simulation` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications`。
+- **核心词汇**：**Lognormal Distribution and Continuous Compounding（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分蒙特卡洛模拟与分析解的适用场景，理解 GIGO 原则的重要性。
+### 6.4 Bootstrapping
+- **中文主线**：本节点解决 `Bootstrapping` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns`。
+- **核心词汇**：**Monte Carlo Simulation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：自助重抽样（Bootstrap Resampling）
-**核心概念**：自助法是一种从已有数据中通过有放回重复抽样来估计统计量分布的非参数方法。
-- **核心步骤**：从原始样本中有放回地抽取 n 个观测值 → 得到自助样本 → 重复大量次数 → 得到统计量的经验抽样分布
-- **适用场景**：解析公式不可用或不准确时、样本容量较小时、不需要对总体分布做强的假设
-- **优点**：几乎无分布假设，属于非参数方法
-- ⚠️ **关键局限**：Bootstrap 不能克服原始样本本身的局限性——如果原始样本有偏，自助法会继承这些偏误
+### 6.9 Legacy 补强要点
+- 来自 `M06-Simulation-Methods.md`：## 1. 核心知识点; **三个核心步骤（Three Core Steps）**：; 1. **指定输入分布（Specify Input Distribution）**：确定关键变量的概率分布及其参数（如回报率服从 μ=8%，σ=15% 的正态分布）。。
 
-**考试应用**：对比自助法与蒙特卡洛模拟的差异，理解自助法的适用条件和局限性。
 
-### 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 概念 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| 连续复利收益率 ~ N(μ, σ²) | 收益率正态假设 | MC 输入分布设定 | 收益率可负，符合正态 |
-| 价格 ~ 对数正态 | 价格恒为非负 | 资产价格建模 | 右偏分布，无负值 |
-| `P_t = P₀ × e^(rt)` | 价格路径公式 | MC 模拟价格路径 | r 从 N(μ,σ²) 抽样 |
-| Bootstrap: 有放回重抽样 n 次 | 从经验分布抽样 | 估计统计量抽样分布 | 不解决原始样本偏误 |
-| MC 三步骤: 设定 → 抽样 → 汇总 | 模拟流程 | 无解析解场景 | 不是优化方法 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| HPR | `HPR = (P1 - P0 + D1) / P0` | 持有期收益率，注意价格变动和期间现金流都要纳入。 |
+| Effective annual rate | `EAR = (1 + periodic rate)^m - 1` | 不同复利频率比较时必须转成同一口径。 |
+| Present value | `PV = FV / (1 + r)^N` | 折现率越高，现值越低。 |
 
-### 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**考点1：正态回报 → 对数正态价格的关系**
-- 给定连续复利收益率的 μ 和 σ，r ~ N(μ, σ²)
-- P_t = P₀ × e^(rt)，其中 r 从 N(μ, σ²) 中抽样
-- P_t 服从参数 μ 和 σ 的对数正态分布 (Lognormal)
-- 对数正态分布特征：恒非负、右偏、符合资产价格典型表现
-- ⚠️ 收益率用正态，价格用对数正态 — 两者对应关系是考试核心
-- 💡 正态允许负值（收益率可以负），对数正态保证非负（价格不能负）
+## 6. 常见考点与解题思路
 
-**考点2：蒙特卡洛 vs 解析解的选择**
-- 有解析解时（如 Black-Scholes 期权定价、简单债券定价）→ 解析解更精确、计算更快
-- 无解析解时（路径依赖期权、复杂多资产组合、退休储蓄规划）→ MC 模拟
-- MC 输出 = 全部可能结果的分布（不仅是点估计）
-- ⚠️ MC 不优于解析解，只是在无解析解时的替代方案
-- 💡 解析解提供精确公式，MC 提供数值近似
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点3：蒙特卡洛模拟三步骤流程**
-- 步骤 1：指定输入分布 (Specify Input Distribution)
-  - 确定关键变量的概率分布及其参数
-  - 例：回报率 ~ N(μ=8%, σ=15%)
-- 步骤 2：抽取随机情景 (Draw Random Scenarios)
-  - 从输入分布中大量随机抽样（如 10,000 次）
-  - 每次抽样 = 一个可能的未来情景
-- 步骤 3：汇总输出分布 (Summarize Output Distribution)
-  - 计算均值、方差、分位数等统计量
-  - 分析各种结果的发生概率
-- ⚠️ MC 不是优化方法 — 不告诉你"应该怎么做"
+## 7. 易错点与考试陷阱
 
-**考点4：Bootstrap 的优缺点**
-- 优点：
-  - 不依赖分布假设（非参数方法）
-  - 适用于复杂统计量（中位数、分位数等）
-  - 实现简单（有放回抽样即可）
-- 缺点：
-  - 继承原始样本的所有局限（有偏样本 → 有偏结果）
-  - 小样本时结果不可靠
-  - 计算量大（需要大量重抽样）
-- ⚠️ Bootstrap 不解决原始样本的偏误问题
+- **中英文错配**：看到 `Simulation Methods` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点5：MC vs Bootstrap 核心区别**
-- 数据来源：MC = 人为指定的概率分布；Bootstrap = 实际观测数据
-- 抽样方式：MC = 从理论分布中抽样；Bootstrap = 从经验分布中有放回抽样
-- 主要用途：MC = 预测未知的未来情景；Bootstrap = 估计已知样本的统计量精度
-- 分布假设：MC = 需要指定分布形式和参数；Bootstrap = 几乎无分布假设
+## 8. 跨模块关联
 
-### 🚨 易错点与考试陷阱
+- **上游模块**：[[M05-Portfolio-Mathematics]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M07-Estimation-and-Inference]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| 正态分布可建模资产价格 | 资产价格用对数正态分布 | 正态允许负价格，经济上不合理 |
-| MC 是优化方法 | MC 是模拟方法，不是优化 | MC 只回答"如果...会怎样"，不告诉"该怎么做" |
-| Bootstrap 能消除样本偏误 | Bootstrap 继承原始样本偏误 | 有放回抽样不改变样本的分布特征 |
-| 增加模拟次数提高结果准确性 | 增加模拟次数降低抽样误差，但不改善输入质量 | GIGO：错误假设 × 大量模拟 ≠ 正确 |
-| MC 优于解析解 | 有解析解时解析解优于 MC | 解析解更精确，计算更快 |
+## 9. 复习与刷题提示
 
-### 🔄 跨模块关联
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-- **[[M01-Rates-and-Returns]]** — 连续复利收益率 `r_cc = ln(1+HPR)` 是分布联动基础的起点。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 模拟输出的分布分析（均值、方差、偏度、峰度）是 M03 统计量的直接应用。
-- **[[M04-Probability-Trees-and-Conditional-Expectations]]** — MC 模拟本质是概率论的迭代扩展。
-- **[[M07-Estimation-and-Inference]]** — Bootstrap 是重抽样估计的核心方法，与 CLT 形成互补推断路径。
-- **[[M08-Hypothesis-Testing]]** — Bootstrap 可用于构建非参数假设检验（Bootstrap 置信区间）。
+## 10. Legacy Notes Integrated
 
-### 📋 复习与刷题提示
-
-- **核心能力**：理解正态→对数正态推导逻辑，区分 MC 与 Bootstrap 的适用场景
-- **必考题型**：MC vs 解析解选择、Bootstrap 优缺点判断、正态/对数正态区分
-- **最常犯错误**：用正态建模价格、认为 MC 优于解析解、认为 Bootstrap 能消除偏误
-- 记忆口诀：
-  - 正态收益率，对数正态价格 — 经典搭配
-  - MC 模拟未来，Bootstrap 评估过去
-  - GIGO：垃圾进，垃圾出
-- 刷题建议：本模块概念题为主，重点掌握 MC 和 Bootstrap 的适用场景对比
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M06-Simulation-Methods.md（confidence 0.9）
+- **可复用结构**：M06: Simulation Methods（模拟方法）；1. 核心知识点；1.1 分布联动（Distribution Link）；1.2 蒙特卡洛模拟（Monte Carlo Simulation）；1.3 自助重抽样（Bootstrap Resampling）；2. 关键公式
+- **高价值要点**：## 1. 核心知识点；**三个核心步骤（Three Core Steps）**：；1. **指定输入分布（Specify Input Distribution）**：确定关键变量的概率分布及其参数（如回报率服从 μ=8%，σ=15% 的正态分布）。；**自助法的核心思想**：
+- **公式/计算线索**：**连续复利收益率（Continuously Compounded Returns）** 通常假设服从正态分布（Normal Distribution）。这是蒙特卡洛模拟的基础假设。；1. **指定输入分布（Specify Input Distribution）**：确定关键变量的概率分布及其参数（如回报率服从 μ=8%，σ=15% 的正态分布）。；当解析公式不可用或不准确时（如中位数的抽样分布）
+- **易错提示**：> **【考试陷阱】** Bootstrap 不能克服原始样本本身的局限性。如果原始样本有偏（Selection Bias）或不是随机样本，自助法会**继承（Inherit）**这些偏误。；## 4. 易错点提醒

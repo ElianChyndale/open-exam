@@ -1,23 +1,29 @@
 ---
-title: "M07 — Company Analysis: Forecasting"
-description: "CFA Level I 2026 official module: Company Analysis: Forecasting"
-module: M07
+title: "M07: Company Analysis: Forecasting"
+description: "CFA Level I 2026 Equity Investments 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Equity Investments"
-topic_area: Equity
-curriculum_year: 2026
+topic_area: "Equity"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M07"
 official_module: "Module 7: Company Analysis: Forecasting"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 5
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Equity
   - official_2026
+  - Equity
 ---
 
 # M07: Company Analysis: Forecasting
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：理解股票市场结构、行业公司分析和权益估值工具。 本模块聚焦 **Company Analysis: Forecasting**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -31,236 +37,139 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain principles and approaches to forecasting a company’s financial results and position
+2. explain approaches to forecasting a company’s revenues
+3. explain approaches to forecasting a company’s operating expenses and working capital
+4. explain approaches to forecasting a company’s capital investments and capital structure
+5. describe the use of scenario analysis in forecasting
 
-- explain principles and approaches to forecasting a company’s financial results and position
-- explain approaches to forecasting a company’s revenues
-- explain approaches to forecasting a company’s operating expenses and working capital
-- explain approaches to forecasting a company’s capital investments and capital structure
-- describe the use of scenario analysis in forecasting
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Equity/M07-Company-Analysis-Forecasting.md`
+### 7.1 学习任务
+- **核心问题**：考试希望你用 `Company Analysis: Forecasting` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 1.00. Original official module field: Module 7: Company Analysis: Forecasting._
+### 7.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M07: 公司分析：预测 (Company Analysis: Forecasting)
+### 7.3 关键英文术语
+- **Company Analysis: Forecasting（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Company Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forecast Objects, Principles, and Approaches（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forecasting Revenues（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forecasting Operating Expenses and Working Capital（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forecasting Capital Investments and Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Scenario Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-##### 1. 核心知识点
+## 2. 官方 LOS 对应学习目标
 
-###### 预测主干 (Forecast spine)
-- **自上而下 (top-down)**：从宏观经济 → 行业增长 → 公司市场份额，推导收入
-- **自下而上 (bottom-up)**：从产品线销量×价格 → 汇总收入，叠加运营驱动因素
-- **逻辑链条**：**收入 (revenue)** → **利润率 (margin)** → **盈利/现金流 (earnings/cash flow)** → **资产负债表需求 (balance-sheet needs)**
-- **情景分析 (scenario analysis)**：**基准 (base)**、**乐观 (upside)**、**悲观 (downside)** 三种情景，搭配**催化剂 (catalyst)** 与**风险 (risk)** 地图
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 7.1 | explain principles and approaches to forecasting a company’s financial results and position | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 7.2 | explain approaches to forecasting a company’s revenues | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 7.3 | explain approaches to forecasting a company’s operating expenses and working capital | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 7.4 | explain approaches to forecasting a company’s capital investments and capital structure | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 7.5 | describe the use of scenario analysis in forecasting | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
 
-###### 预测纪律 (Forecast discipline)
-- **增长的资金来源**：**留存收益 (retention)**、**资本回报率 (returns on capital)** 或**外部资本 (external capital)** — 增长必须有融资逻辑
-- **预测期选择 (forecast horizon)**：应与**竞争优势持续时间 (competitive advantage durability)** 匹配 — 护城河越宽预测期越长
-- **可持续增长率 (sustainable growth rate)**：`g = Retention Ratio × ROE`，反映不改变资本结构下的最大增长率
-
-##### 2. 关键公式
-
-| 指标 | 公式 |
-|------|------|
-| 可持续增长率 (Sustainable Growth) | `g = Retention Ratio × ROE` |
-| 留存比率 (Retention Ratio) | `1 - Dividend Payout Ratio` |
-| 预期增长率 (Expected Growth) | `ROE × (1 - Payout Ratio)` |
-
-##### 3. 常见考点与解题思路
-
-- **增长融资逻辑题**：公司增长是否可持续 → 检查 g vs ROE × Retention Ratio
-- **情景敏感性分析**：关键假设变化（市占率、毛利率）对估值的影响
-- **预测起点**：通常从最近一年的正常化盈利开始，而非将某异常年份外推
-
-##### 4. 易错点提醒
-
-- **没有假设质量的预测精度只是装饰**：模型越复杂不代表预测越准确
-- **增长必须被融资**：高增长但无融资来源就不可持续
-- **不要混淆历史增长率与可持续增长率**：历史增长可能来自杠杆扩张而非内生增长
-
-##### 5. 跨模块关联
-
-- **预测驱动估值输入** → [[M08-Equity-Valuation-Concepts]]
-- **历史分析为预测提供基准** → [[M05-Company-Analysis-Past-and-Present]]
-- **行业结构决定增长假设** → [[M06-Industry-and-Competitive-Analysis]]
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 M07: Company Analysis: Forecasting（公司分析：预测）
-│
-├── ⭐ 预测原则与方法 (Forecast Principles) 🎯高频
-│   ├── 自上而下 (Top-Down): 宏观→行业→公司
-│   ├── 自下而上 (Bottom-Up): 产品线→经营驱动→汇总
-│   ├── 逻辑链: 收入→利润率→盈利→资产负债表
-│   └── 预测期应与竞争优势期匹配
-│
-├── ⭐ 收入预测 (Revenue Forecasting) 🎯高频
-│   ├── 量×价分解: Volume + Price/Mix
-│   ├── 市场份额方法: 行业规模×公司份额
-│   ├── 增长驱动: 有机增长 vs 并购增长
-│   └── 情景输入: 价格弹性、客户增长、产品周期
-│
-├── ⭐ 运营费用预测 (Expense Forecasting)
-│   ├── 固定成本: 不随收入变动（租金、折旧）
-│   ├── 可变成本: 随收入比例变动（原材料、佣金）
-│   ├── 半可变: 阶梯增长（人力）
-│   └── 规模效应 (Economies of Scale)
-│
-├── ⭐ 营运资金预测 (Working Capital Forecast)
-│   ├── DSO / DIO / DPO 周转天数
-│   ├── 现金转换周期 (CCC) = DSO + DIO - DPO
-│   └── ⚠️ 增长需要营运资金投入
-│
-├── ⭐ 资本投资与结构预测 (Capital & Structure)
-│   ├── CapEx: 维护性vs增长性
-│   ├── 融资来源: 留存收益、债务、权益
-│   └── 资本结构目标: 目标D/E比率
-│
-├── ⭐ 情景分析 (Scenario Analysis) 🎯高频
-│   ├── 基准(Base): 最可能情况
-│   ├── 乐观(Upside): 正面意外
-│   ├── 悲观(Downside): 负面意外
-│   └── 概率加权: Σ(P_i × Scenario Value_i)
-│
-└── 📐 可持续增长率 (Sustainable Growth) 🎯高频
-    └── g = Retention Ratio × ROE
-        ⚠️ 保持资本结构不变的内生增长率上限
+7. Company Analysis: Forecasting
+├─ 7.1 Introduction
+│  ├─ 7.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.1.2 应用/判断：把概念或公式转成解题动作
+├─ 7.2 Forecast Objects, Principles, and Approaches
+│  ├─ 7.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.2.2 应用/判断：把概念或公式转成解题动作
+├─ 7.3 Forecasting Revenues
+│  ├─ 7.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.3.2 应用/判断：把概念或公式转成解题动作
+├─ 7.4 Forecasting Operating Expenses and Working Capital
+│  ├─ 7.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.4.2 应用/判断：把概念或公式转成解题动作
+├─ 7.5 Forecasting Capital Investments and Capital Structure
+│  ├─ 7.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：预测原则与方法（Forecast Principles and Approaches）
-**核心概念**：公司财务预测是连接历史分析和估值判断的桥梁。自上而下法从宏观经济预测出发，逐步推导行业增长率和公司市场份额，最终得到收入预测。自下而上法从产品线层面的销量和价格出发，逐项汇总到公司整体。逻辑链条为：收入 → 利润率 → 盈利/现金流 → 资产负债表需求。预测期长度应与公司竞争优势持续时间匹配——护城河越宽预测可以越长，因为竞争压力侵蚀超额利润的速度更慢。
-- 自上而下（Top-Down）：宏观 → 行业 → 公司，关注外部环境
-- 自下而上（Bottom-Up）：产品线 → 公司整体，关注经营细节
-- 逻辑链：收入 → 利润率 → 盈利 → 资产负债表
-- 预测期选择：与竞争优势期匹配
-**考试应用**：判断哪些场景适合自上而下（受宏观影响大的行业）和自下而上（产品线清晰的公司）。注意两种方法可以交叉验证。
+### 7.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Equity Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain principles and approaches to forecasting a company’s financial results and position`。
+- **核心词汇**：**Company Analysis: Forecasting（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：收入预测（Revenue Forecasting）
-**核心概念**：收入预测的核心是量×价的分解——分析销量增长（市场份额提升、市场扩张）和价格变化（定价能力、产品组合升级）各自的贡献。常用的方法包括市场份额法（预测行业总规模×公司市场份额）、增长驱动法（识别具体驱动力并建立关联）和产品生命周期法。需要区分有机增长（内生扩张）和并购增长（外延扩张），有机增长通常更可持续。
-- 量×价分解：Volume（销量） + Price/Mix（价格/组合）共同驱动收入
-- 市场份额法：行业规模 × 公司市场份额变化
-- 增长驱动：有机增长（更可持续）vs 并购增长
-- 情景输入：价格弹性、客户增长、产品周期阶段
-**考试应用**：给定收入增长来源，判断是否有可持续性。大量依赖并购的增长模式风险更高。
+### 7.2 Forecast Objects, Principles, and Approaches
+- **中文主线**：本节点解决 `Forecast Objects, Principles, and Approaches` 在 Equity Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain approaches to forecasting a company’s revenues`。
+- **核心词汇**：**Company Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：运营费用预测（Expense Forecasting）
-**核心概念**：费用预测需要区分成本的行为模式。固定成本（租金、折旧）不随收入变动；可变成本（原材料、佣金）与收入成比例变动；半可变成本（人力）呈阶梯式增长。规模效应（Economies of Scale）意味着随着收入增长，固定成本被摊薄，利润率逐步改善。但规模不经济也可能发生——公司规模过大后管理复杂度和协调成本上升。
-- 固定成本：租金、折旧、固定薪酬，不随收入变动
-- 可变成本：原材料、佣金、物流成本，随收入比例变动
-- 半可变成本：人力成本，阶梯式增长
-- 规模效应：收入增长 → 固定成本摊薄 → 利润率改善
-**考试应用**：理解成本结构对盈利敏感性的影响。固定成本越高，经营杠杆越大，利润波动性更高。
+### 7.3 Forecasting Revenues
+- **中文主线**：本节点解决 `Forecasting Revenues` 在 Equity Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain approaches to forecasting a company’s operating expenses and working capital`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点4：营运资金预测（Working Capital Forecasting）
-**核心概念**：增长需要营运资金投入——随着收入增加，应收账款和存货通常也增加，消耗现金流。营运资金效率通过周转天数衡量：DSO（应收账款周转天数）、DIO（存货周转天数）、DPO（应付账款周转天数）。现金转换周期（CCC）= DSO + DIO - DPO，表示从支付原材料到收回现金所需的时间，CCC越短对现金流的压力越小。
-- 📐 DSO = 应收账款 / (年销售收入 / 365)
-- 📐 DIO = 存货 / (年COGS / 365)
-- 📐 DPO = 应付账款 / (年COGS / 365)
-- 📐 CCC（现金转换周期）= DSO + DIO - DPO
-**考试应用**：CCC的计算和分析。缩短CCC的方法：加快收款（降低DSO）、提高存货周转（降低DIO）、延长付款（提高DPO）。
+### 7.4 Forecasting Operating Expenses and Working Capital
+- **中文主线**：本节点解决 `Forecasting Operating Expenses and Working Capital` 在 Equity Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain approaches to forecasting a company’s capital investments and capital structure`。
+- **核心词汇**：**Forecast Objects, Principles, and Approaches（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点5：资本投资与结构预测（Capital Investments and Capital Structure Forecasting）
-**核心概念**：资本支出分为维护性和增长性两类，只有增长性CapEx创造未来增长。维护性CapEx通常与折旧接近，可按折旧的一定比例估算；增长性CapEx需与增长假设一致。融资来源有三种：留存收益（内部融资成本最低）、债务融资（利息可抵税但增加财务风险）、权益融资（成本最高但不增加固定义务）。资本结构预测应维持目标D/E比率。
-- 维护性CapEx ≈ 折旧金额，维持现有业务运营
-- 增长性CapEx：与收入和产能扩张计划相关
-- 融资来源：留存收益（内部）< 债务（利息可抵税）< 权益（成本最高）
-- 目标资本结构：维持目标D/E比率
-**考试应用**：理解增长必须被融资的逻辑。可持续增长率g = ROE × RR是保持资本结构不变下的最大增长率。
+### 7.5 Forecasting Capital Investments and Capital Structure
+- **中文主线**：本节点解决 `Forecasting Capital Investments and Capital Structure` 在 Equity Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the use of scenario analysis in forecasting`。
+- **核心词汇**：**Forecasting Revenues（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点6：情景分析（Scenario Analysis）
-**核心概念**：单一情景预测往往不够全面，情景分析通过基准、乐观和悲观三种情景揭示不同条件下的投资结果。基准情景代表最可能的情况，乐观和悲观情景分别代表正面和负面意外。每个情景需要明确关键假设（市场增长率、市占率、毛利率）的变化并计算对应的财务结果和估值结果。概率加权后的期望值提供更全面的风险收益评估。
-- 基准情景（Base Case）：最可能的预测假设
-- 乐观情景（Upside Case）：假设正面因素超预期
-- 悲观情景（Downside Case）：假设负面因素发生
-- 📐 概率加权价值 = Σ(P_i × 情景价值_i)，概率总和必须为100%
-**考试应用**：情景分析中识别关键假设变量和判断概率加权期望值。核心在于理解哪些假设变化对估值影响最大（敏感性分析）。
+### 7.9 Legacy 补强要点
+- 来自 `M07-Company-Analysis-Forecasting.md`：## 1. 核心知识点; ## 2. 关键公式; **情景敏感性分析**：关键假设变化（市占率、毛利率）对估值的影响。
 
-### 知识点7：可持续增长率（Sustainable Growth Rate）
-**核心概念**：可持续增长率是在不改变资本结构和融资政策的前提下，公司能够实现的最大增长率。公式为g = 留存比率 × ROE。如果公司的实际增长率超过可持续增长率，则需要外部融资或改变资本结构（提高杠杆或发行新股）。反之，如果实际增长率低于可持续增长率，公司可能积累现金或增加分红。
-- 📐 g = 留存比率（Retention Ratio）× ROE
-- 留存比率 = 1 - 派息率（Payout Ratio）
-- 若实际g > 可持续g → 需要外部融资
-- 若实际g < 可持续g → 可能积累现金或增加分红
-**考试应用**：可持续增长率计算是必考题。注意历史增长率不等于可持续增长率——历史增长可能来自杠杆扩张而非内生增长。
 
-### 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| g = Retention Ratio × ROE | 可持续增长率 | 不改变资本结构下最大增长率 | 假设ROE和派息率不变 |
-| Retention Ratio = 1 - Payout Ratio | 留存比率 | 公司保留多少利润用于再投资 | 亏损时Retention Ratio无意义 |
-| Payout Ratio = Dividends / Net Income | 分红比率 | 公司利润分配比例 | 成熟公司通常更高 |
-| 现金转换周期(CCC) = DSO + DIO - DPO | 现金循环周期 | 衡量现金回收效率 | CCC越短越好 |
-| DSO = AR / (Annual Sales / 365) | 应收账款周转天数 | 收款效率 | 行业标准差异大 |
-| DIO = Inventory / (COGS / 365) | 存货周转天数 | 存货管理效率 | 需考虑行业特性 |
-| DPO = AP / (COGS / 365) | 应付账款周转天数 | 付款策略 | 过长可能影响供应商关系 |
-| Probability-Weighted Value = Σ(P_i × V_i) | 概率加权期望值 | 情景分析的定量结果 | 概率总和必须=100% |
+本模块以概念判断为主，无核心计算公式。复习时把 `Company Analysis: Forecasting` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-### 🛠️ 常见考点与解题思路
+## 6. 常见考点与解题思路
 
-**Topic 1: 可持续增长率判断**
-- 公司增长是否可持续 → 比较实际g vs ROE×RR
-- 若g > ROE×RR → 需要外部融资或改变资本结构
-- 若g < ROE×RR → 可能积累现金或增加派息
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**Topic 2: 自上而下 vs 自下而上**
-- Top-Down: 从宏观经济预测出发，逐步推导到公司
-- Bottom-Up: 从产品线细节汇总
-- 考试可能问哪种方法更适合特定场景
+## 7. 易错点与考试陷阱
 
-**Topic 3: 情景敏感性分析**
-- 识别关键假设：市场增长率、市占率、毛利率
-- 改变关键假设输入 → 观察输出变化
-- 识别哪些变量对估值影响最大
+- **中英文错配**：看到 `Company Analysis: Forecasting` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**Topic 4: 预测起点选择**
-- 从最近一年的正常化盈利开始
-- 剔除一次性项目（重组费、资产出售）
-- 除非有结构性变化，否则以历史趋势为基准
+## 8. 跨模块关联
 
-**Topic 5: 增长融资逻辑**
-- 增长需要资金来源：内部留存 vs 外部融资
-- 高增长但无融资来源 = 不可持续
-- 避免混淆历史增长率与可持续增长率
+- **上游模块**：[[M06-Industry-and-Competitive-Analysis]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M08-Equity-Valuation-Concepts-and-Basic-Tools]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 🚨 易错点与考试陷阱
+## 9. 复习与刷题提示
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 没有假设质量的预测精度只是装饰 | 模型越复杂不意味着预测越准确 | GIGO (Garbage In, Garbage Out) |
-| 增长不需要融资就能持续 | 增长需要资金来源支撑 | 留存、债务或权益三种来源 |
-| 历史增长率=可持续增长率 | 历史增长可能来自杠杆扩张而非内生增长 | 需拆解增长来源 |
-| 预测越长越准确 | 预测期越长越不确定 | 竞争优势期决定了可靠预测期 |
-| 单一情景足够做投资决策 | 情景分析揭示不同情况下的投资风险 | 多情景提供更全面信息 |
-| 收入增长的来源不重要 | 有机增长vs并购增长的可持续性不同 | 有机增长更可持续 |
-| CapEx支出都创造增长 | 维护性CapEx仅维持现有业务 | 只有增长性CapEx推动扩张 |
-| 会计预测=经济预测 | 会计利润未考虑权益资本成本 | 经济利润才是价值创造的真实衡量 |
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 🔄 跨模块关联
+## 10. Legacy Notes Integrated
 
-- **预测驱动估值输入** → [[M08-Equity-Valuation-Concepts-and-Basic-Tools]]（g和D₁是GGM输入）
-- **历史分析为预测提供基准** → [[M05-Company-Analysis-Past-and-Present]]（正常化盈利是起点）
-- **行业结构决定增长假设** → [[M06-Industry-and-Competitive-Analysis]]（行业增长率约束公司增长）
-- **可持续增长率与DuPont ROE** → [[M05-Company-Analysis-Past-and-Present]]（g = RR × ROE）
-- **情景分析与风险** → [[M03-Market-Efficiency]]（不确定性管理）
-- **预测中的经济周期考虑** → Economics M02（经济指标对预测的影响）
-
-### 📋 复习与刷题提示
-
-- **可持续增长率是必考点**：掌握g = RR × ROE的计算和含义
-- **Top-Down vs Bottom-Up**：理解两种方法的应用场景和特点
-- **正常化盈利调整**：学会从报告盈利中剔除一次性项目
-- **增长融资逻辑链**：增长来源 = 留存收益 + 债务融资 + 权益融资
-- **营运资金预测**：DSO/DIO/DPO计算和现金转换周期
-- **情景分析法**：三个情景的构建和概率加权
-- **刷题建议**：mock中可持续增长率计算和概念题为高频
-- **易混淆点专项**：历史增长率 vs 可持续增长率 vs 预期增长率
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M07-Company-Analysis-Forecasting.md（confidence 0.427）
+- **可复用结构**：M07: 公司分析：预测 (Company Analysis: Forecasting)；1. 核心知识点；预测主干 (Forecast spine)；预测纪律 (Forecast discipline)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；**情景敏感性分析**：关键假设变化（市占率、毛利率）对估值的影响
+- **公式/计算线索**：**增长的资金来源**：**留存收益 (retention)**、**资本回报率 (returns on capital)** 或**外部资本 (external capital)** — 增长必须有融资逻辑；**可持续增长率 (sustainable growth rate)**：`g = Retention Ratio × ROE`，反映不改变资本结构下的最大增长率；## 2. 关键公式
+- **易错提示**：## 4. 易错点提醒；**不要混淆历史增长率与可持续增长率**：历史增长可能来自杠杆扩张而非内生增长

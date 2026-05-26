@@ -1,23 +1,29 @@
 ---
-title: "M09 — The Term Structure of Interest Rates: Spot, Par, and Forward Curves"
-description: "CFA Level I 2026 official module: The Term Structure of Interest Rates: Spot, Par, and Forward Curves"
-module: M09
+title: "M09: The Term Structure of Interest Rates: Spot, Par, and Forward Curves"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M09"
 official_module: "Module 9: The Term Structure of Interest Rates: Spot, Par, and Forward Curves"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M09: The Term Structure of Interest Rates: Spot, Par, and Forward Curves
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **The Term Structure of Interest Rates: Spot, Par, and Forward Curves**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,164 +35,138 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. define spot rates and the spot curve, and calculate the price of a bond using spot rates
+2. define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates
+3. compare the spot curve, par curve, and forward curve
 
-- define spot rates and the spot curve, and calculate the price of a bond using spot rates
-- define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates
-- compare the spot curve, par curve, and forward curve
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 9.1 学习任务
+- **核心问题**：考试希望你用 `The Term Structure of Interest Rates: Spot, Par, and Forward Curves` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 9.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 9.3 关键英文术语
+- **The Term Structure of Interest Rates: Spot, Par, and Forward Curves（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Term Structure of Interest Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Maturity Structure of Interest Rates and Spot Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Par and Forward Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Spot, Par, and Forward Yield Curves and Interpreting Their Relationship（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Yield（收益率）**：把债券价格与未来现金流连接起来的回报度量。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 9.1 | define spot rates and the spot curve, and calculate the price of a bond using spot rates | 计算并解释数值结果 | 写出结论、依据和限制条件。 |
+| 9.2 | define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates | 计算并解释数值结果 | 写出结论、依据和限制条件。 |
+| 9.3 | compare the spot curve, par curve, and forward curve | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M09: Spot, Par, and Forward Curves（即期、平价与远期曲线）
-├─ ⭐ 9.1 曲线定义 (Curve Dictionary)
-│  ├─ 📐 即期利率 (Spot Rate)：单一期限的零息收益率
-│  │  └─ 即期定价：P = Σ CF_t/(1+s_t)^t
-│  ├─ 📐 贴现因子：DF_t = 1/(1+s_t)^t
-│  ├─ 📐 平价利率 (Par Rate)：使债券按面值交易的票息率
-│  │  └─ Par rate_n = (1 - DF_n)/Σ_{t=1}^{n} DF_t
-│  ├─ 📐 远期利率 (Forward Rate)：当前曲线隐含的未来借贷利率
-│  │  └─ (1+s_n)^n = (1+s_m)^m × (1+f_{m,n})^(n-m)
-│  └─ ⚠️ 远期利率是无套利隐含利率，非确定性预测【易错】
-│
-├─ ⭐ 9.2 曲线计算
-│  ├─ 🎯 即期定价：每笔现金流用匹配期限的即期利率贴现
-│  ├─ 🎯 Spot → Forward：分解公式推导远期
-│  ├─ 🎯 Forward → Spot：链式远期连乘得到即期
-│  └─ 🎯 Discount Factor → Par Rate：通过贴现因子求解
-│
-└─ ⭐ 9.3 曲线比较
-   ├─ 💡 正常曲线（上升）：远期 > 即期 > 平价
-   ├─ 💡 倒挂曲线（下降）：远期 < 即期 < 平价
-   ├─ 💡 平坦曲线：三者相等
-   └─ ⚠️ Spot vs YTM：YTM 是单一贴现率，Spot 每期不同
+9. The Term Structure of Interest Rates: Spot, Par, and Forward Curves
+├─ 9.1 Introduction
+│  ├─ 9.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.1.2 应用/判断：把概念或公式转成解题动作
+├─ 9.2 Maturity Structure of Interest Rates and Spot Rates
+│  ├─ 9.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.2.2 应用/判断：把概念或公式转成解题动作
+├─ 9.3 Par and Forward Rates
+│  ├─ 9.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.3.2 应用/判断：把概念或公式转成解题动作
+├─ 9.4 Spot, Par, and Forward Yield Curves and Interpreting Their Relationship
+│  ├─ 9.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：曲线定义（Curve Dictionary）
-**核心概念**：利率期限结构由即期曲线、平价曲线和远期曲线三种曲线共同描述，三者之间存在内在的数学关系。理解这三种曲线的定义和关系是利率分析的基础。
-- **即期利率（Spot Rate）**：单一期限的零息收益率，每个期限对应一个即期利率。即期定价公式：`P = Σ CF_t/(1+s_t)^t`，每笔现金流使用其期限匹配的即期利率分别贴现
-- **贴现因子（Discount Factor）**：`DF_t = 1/(1+s_t)^t`，是即期利率的另一种表达形式，用于计算现值
-- **平价利率（Par Rate）**：使债券按面值交易的票息率。`Par rate_n = (1 - DF_n)/Σ_{t=1}^{n} DF_t`，用于构建互换曲线等参考基准
-- **远期利率（Forward Rate）**：当前即期曲线隐含的未来借贷利率。`(1+s_n)^n = (1+s_m)^m × (1+f_{m,n})^(n-m)`
-- ⚠️ 远期利率是无套利隐含利率，反映了当前市场对未来利率的隐含预期，但并不保证未来实际利率等于远期利率
+### 9.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`define spot rates and the spot curve, and calculate the price of a bond using spot rates`。
+- **核心词汇**：**The Term Structure of Interest Rates: Spot, Par, and Forward Curves（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：即期曲线折价计算（每期现金流用对应即期利率贴现），远期利率计算（给定 s1 和 s2，计算 f1,2）。
+### 9.2 Maturity Structure of Interest Rates and Spot Rates
+- **中文主线**：本节点解决 `Maturity Structure of Interest Rates and Spot Rates` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates`。
+- **核心词汇**：**The Term Structure of Interest Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：曲线计算（Curve Calculations）
-**核心概念**：即期、远期和平价利率之间可以互相推导。掌握这些推导关系是理解利率期限结构的关键。
-- **即期定价 vs YTM 定价**：与使用单一 YTM 不同，即期定价将每笔现金流按其到期期限对应的即期利率分别贴现。两者在平坦曲线下相等，但在倾斜曲线下不同
-- **Spot → Forward**：`f(m,n) = [(1+s_n)^n/(1+s_m)^m]^(1/(n-m)) - 1`，从即期利率推导远期利率
-- **Forward → Spot**：`(1+s_n)^n = (1+f_0,1)(1+f_1,2)...(1+f_{n-1,n})`，链式远期连乘得到即期
-- **Discount Factor → Par Rate**：先计算各期限贴现因子，再通过平价利率公式求解
+### 9.3 Par and Forward Rates
+- **中文主线**：本节点解决 `Par and Forward Rates` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the spot curve, par curve, and forward curve`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：从即期利率推导远期利率（给定 s1 和 s2，计算 f1,2）；从贴现因子求解平价利率。
+### 9.4 Spot, Par, and Forward Yield Curves and Interpreting Their Relationship
+- **中文主线**：本节点解决 `Spot, Par, and Forward Yield Curves and Interpreting Their Relationship` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`define spot rates and the spot curve, and calculate the price of a bond using spot rates`。
+- **核心词汇**：**Maturity Structure of Interest Rates and Spot Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：曲线比较（Curve Comparison）
-**核心概念**：即期、平价和远期三种曲线的相对位置取决于收益率曲线的形态。理解曲线之间的关系对利率预测和估值至关重要。
-- **正常曲线（上升）**：远期利率 > 即期利率 > 平价利率。远期利率曲线最陡峭，平价利率曲线最平坦
-- **倒挂曲线（下降）**：远期利率 < 即期利率 < 平价利率
-- **平坦曲线**：三者相等
-- **Spot vs YTM**：YTM 是单一贴现率适用于所有现金流，Spot rate 是每期现金流使用匹配期限的贴现率
-- Par rate（平价利率）不是即期利率——它通常介于即期利率之间
+### 9.9 Legacy 补强要点
+- 来自 `M06-Spot-Par-and-Forward-Curves.md`：## 1. 核心知识点; **核心公式 (English)**; ## 2. 关键公式。
+- 来自 `00-Fixed-Income-MOC.md`：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险; ## Fixed Income 核心知识树 (Core Knowledge Tree); ├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18。
 
-**考试应用**：比较不同曲线形态下三种利率的相对大小关系，通常以选择题形式出现。
 
-## 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t` | 即期定价 | 用即期利率计算债券价格 | 每期用不同的 s_t |
-| `(1+s_n)^n = (1+s_m)^m × (1+f_{m,n})^(n-m)` | 远期利率推导 | 从即期算远期 | 无套利条件 |
-| `DF_t = 1/(1+s_t)^t` | 贴现因子 | 计算现值 | 基础计算单元 |
-| `Par rate_n = (1 - DF_n)/Σ DF_t` | 平价利率 | 构建平价曲线 | 非即期利率 |
-| `(1+s_n)^n = ∏(1+f_{i-1,i})` | 即期利率（从远期） | 远期链推导即期 | 连乘所有前期远期 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
+| Full price | `full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
 
-## 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 考点 1：即期曲线折价计算
-- **题型**：给定即期利率序列，计算债券价格
-- **步骤**：每期现金流用对应的即期利率分别贴现 → 求和
-- **对比**：与使用单一 YTM 贴现的结果不同（除非曲线平坦）
+## 6. 常见考点与解题思路
 
-### 考点 2：远期利率计算
-- **题型**：给定 s1 和 s2，计算 f(1,2)
-- **公式**：`(1+s2)^2 = (1+s1)(1+f1,2)` → `f1,2 = (1+s2)^2/(1+s1) - 1`
-- **推广**：`f(m,n) = [(1+s_n)^n/(1+s_m)^m]^(1/(n-m)) - 1`
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 3：从即期构建平价曲线
-- **步骤**：1. 计算各期限贴现因子 → 2. 使用公式求解各期限平价利率
-- **注意**：平价利率通常介于即期利率之间
+## 7. 易错点与考试陷阱
 
-### 考点 4：曲线形态比较
-- **正常曲线（上升）**：远期利率 > 即期利率 > 平价利率
-- **倒挂曲线（下降）**：远期利率 < 即期利率 < 平价利率
-- **记忆**：远期利率曲线最陡峭，平价利率曲线最平坦
+- **中英文错配**：看到 `The Term Structure of Interest Rates: Spot, Par, and Forward Curves` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 🚨 易错点与考试陷阱
+## 8. 跨模块关联
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| 远期利率 = 未来实际利率 | 远期利率是当前隐含的无套利利率 | 不是预测，是数学推导 |
-| Spot rate = YTM | YTM 单一，Spot 每期不同 | 仅平坦曲线下相等 |
-| Par rate = spot rate | 平价利率使债券按面值交易 | 通常介于即期利率之间 |
-| 曲线关系总是成立 | 依赖于无套利假设 | 市场摩擦导致可能偏离 |
+- **上游模块**：[[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M10-Interest-Rate-Risk-and-Return]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🔄 跨模块关联
+## 9. 复习与刷题提示
 
-- **Spot/forward 推导** → [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] 的定价框架
-- **YTM vs spot** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的收益率概念
-- **远期利率** → [[M10-Interest-Rate-Risk-and-Return]] 的预期利率路径
-- **收益率曲线** → [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] 的久期分析
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 📋 复习与刷题提示
+## 10. Legacy Notes Integrated
 
-- **核心重点**：远期利率计算（从即期推导）是最高频计算考点
-- **概念区分**：Spot rate vs YTM
-  - YTM：单一贴现率用于所有现金流（假设曲线平坦）
-  - Spot rate：每期现金流用对应期限的即期利率贴现
-  - 两者仅在平坦收益率曲线下相等
-- **三类曲线的关系**：
-  - 正常（上升）曲线：远期 > 即期 > 平价
-  - 倒挂（下降）曲线：远期 < 即期 < 平价
-  - 平坦曲线：三者相等
-- **典型计算流程**：
-  1. 给定 s₁ = 2%，s₂ = 3%，求 f(1,2)
-  2. `(1+s₂)² = (1+s₁)(1+f₁,₂)`
-  3. `(1.03)² = (1.02)(1+f₁,₂)`
-  4. `f₁,₂ = 1.0609/1.02 - 1 = 4.01%`
-- **贴现因子**应用：
-  - DF_t = 1/(1+s_t)^t
-  - Par rate_n = (1 - DF_n)/ΣDF_t
-  - 贴现因子序列是构建曲线的核心工具
-- **刷题建议**：
-  - 重点做远期利率计算题（s₁,s₂ → f₁,₂）
-  - 即期定价题（用即期利率序列计算债券价格）
-  - 曲线关系比较题（正常 vs 倒挂曲线下的三者关系）
-- **易混淆点**：
-  - 远期利率 ≠ 未来实际利率（只是当前曲线隐含的无套利利率）
-  - Spot rate ≠ YTM（曲线倾斜时差异显著）
-  - Par rate 介于即期利率之间
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M06-Spot-Par-and-Forward-Curves.md（confidence 0.61）
+- **可复用结构**：M09: 即期、平价与远期曲线 (Spot, Par, and Forward Curves)；1. 核心知识点；1.1 曲线词典 (Curve Dictionary)；1.2 曲线计算 (Curve Calculations)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；**核心公式 (English)**；## 2. 关键公式
+- **公式/计算线索**：**核心公式 (English)**；即期定价公式: `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t`；远期利率推导: `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)`
+- **易错提示**：## 4. 易错点提醒
 
-- **曲线关系记忆**：
-  - 正常（上升）曲线：远期 > 即期 > 平价
-  - 倒挂（下降）曲线：远期 < 即期 < 平价
-  - 平坦曲线：三者相等
-  - 远期曲线最陡峭，平价曲线最平坦
-- **计算模板**：
-  - 给定 s₁ = 2%，s₂ = 3%，求 f(1,2)
-  - (1+s₂)² = (1+s₁)(1+f₁,₂)
-  - f₁,₂ = (1.03)²/(1.02) - 1 = 4.01%
-- **关键公式变体**：
-  - 从远期求即期：(1+s_n)ⁿ = ∏(1+f_{i-1,i})
-  - 从贴现因子求平价利率：Par rate_n = (1 - DF_n) / ∑DF_t
-  - 贴现因子 DF_t = 1/(1+s_t)^t
-- **曲线构建**：
-  - 即期曲线通常从国债票息剥离（bootstrapping）获得
-  - 平价曲线用于发行定价
-  - 远期曲线用于利率预期分析
-- **考试技巧**：
-  - 远期利率不是预测，是纯数学推导
-  - 即期定价比 YTM 定价更精确
-  - 曲线倾斜度影响三类曲线的排序
+### 来源：00-Fixed-Income-MOC.md（confidence 0.479）
+- **可复用结构**：00-Fixed-Income-MOC；笔记属性；最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；科目概览；Fixed Income 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；## Fixed Income 核心知识树 (Core Knowledge Tree)；├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18；├── M02: 现金流类型 (Cash Flows and Types)【考试核心】↔ 2026 Outline P18
+- **公式/计算线索**：description: CFA Level I Fixed Income master MOC for bond pricing, yield measures, duration, credit, structured products, and traps.；│ ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure) (回购融资)；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
+- **易错提示**：│ │ └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】(契约类型)；│ └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)

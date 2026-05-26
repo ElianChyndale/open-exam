@@ -1,165 +1,137 @@
 ---
 title: "00-Economics-MOC"
-description: "CFA Level I Economics 详细 MOC — 市场结构、商业周期、货币政策/财政政策、地缘政治、国际贸易、外汇"
+description: "CFA Level I 2026 Economics 官方模块导航、编号知识树、公式/框架、陷阱与学习路径"
 subject: "Economics"
-topic_area: Economics
-level: CFA Level I
+topic_area: "Economics"
+level: "CFA Level I"
+exam_year: 2026
 exam_weight: "6-9%"
-exam_format: 概念为主
-difficulty: 概念辨析多（政策类型、市场结构特征）
+module_count: 8
 note_type: master_moc
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
   - MOC
-  - Economics
   - official_2026
+  - Economics
 ---
 
-# 00-Economics-MOC
+# Economics MOC
 
-## 官方模块概览
-
-| 模块 | 内容 | 难度 | 必考点 | 文件 |
-|------|------|------|--------|------|
-| M01 | The Firm and Market Structures | 概念 | 四种市场结构、盈亏平衡/停产点 | [[M01-The-Firm-and-Market-Structures]] |
-| M02 | Understanding Business Cycles | 概念 | 商业周期四阶段、CPI/PPI/领先指标 | [[M02-Understanding-Business-Cycles]] |
-| M03 | Fiscal Policy | 概念 | 财政政策工具、扩张/紧缩判断 | [[M03-Fiscal-Policy]] |
-| M04 | Monetary Policy | 概念 | 央行角色、货币工具、通胀目标 | [[M04-Monetary-Policy]] |
-| M05 | Introduction to Geopolitics | 概念 | 地缘政治风险、全球化 | [[M05-Introduction-to-Geopolitics]] |
-| M06 | International Trade | 概念 | 贸易理论、关税/配额、区域整合 | [[M06-International-Trade]] |
-| M07 | Capital Flows and FX Market | 概念 | 外汇市场、汇率制度、资本管制 | [[M07-Capital-Flows-and-the-FX-Market]] |
-| M08 | Exchange Rate Calculations | 计算 | 交叉汇率、远期汇率、利率平价 | [[M08-Exchange-Rate-Calculations]] |
+> **一句话核心**：用市场结构、周期、政策、贸易和汇率解释宏观环境对资产价格的影响。
 
 ---
 
-## 🌳 核心知识树
+## 1. 科目定位
+
+- **考试权重**：6-9%
+- **官方模块数**：8
+- **主线框架**：识别市场/宏观变量 -> 判断冲击方向 -> 连接政策反应 -> 推导价格/产出/汇率影响
+- **使用方式**：先从官方模块导航进入，再用编号知识树做主动回忆，最后用公式/陷阱清单做考前压缩。
+
+## 2. 官方模块导航
+
+| 编号 | 官方 Module | 难度 | 必考点 | 模块链接 |
+|---|---|---|---|---|
+| M01 | The Firm and Market Structures | 概念+应用 | Introduction / Profit Maximization: Production Breakeven, Shutdown and Economies of Scale | [[M01-The-Firm-and-Market-Structures]] |
+| M02 | Understanding Business Cycles | 概念+案例判断 | Introduction / Overview of the Business Cycle | [[M02-Understanding-Business-Cycles]] |
+| M03 | Fiscal Policy | 概念+应用 | Introduction / Introduction to Monetary and Fiscal Policy | [[M03-Fiscal-Policy]] |
+| M04 | Monetary Policy | 概念+应用 | Introduction / Role of Central Banks | [[M04-Monetary-Policy]] |
+| M05 | Introduction to Geopolitics | 概念+案例判断 | Introduction / National Governments and Political Cooperation | [[M05-Introduction-to-Geopolitics]] |
+| M06 | International Trade | 概念+应用 | Introduction / Benefits and Costs of Trade | [[M06-International-Trade]] |
+| M07 | Capital Flows and the FX Market | 计算+解释 | Introduction / The Foreign Exchange Market and Exchange Rates | [[M07-Capital-Flows-and-the-FX-Market]] |
+| M08 | Exchange Rate Calculations | 计算+解释 | Introduction / Cross-Rate Calculations | [[M08-Exchange-Rate-Calculations]] |
+
+## 3. 核心知识树
 
 ```text
-📈 Economics (6-9%) (M01-M08) 知识体系
-
-├─ 🏆 M01: The Firm and Market Structures（市场结构）【高频考点】
-│  ├─ ⭐ 四种市场结构对比
-│  │  ├─ 完全竞争：非常多·无差异·无壁垒·价格接受者
-│  │  ├─ 垄断竞争：多·有差异·低壁垒·有限定价
-│  │  ├─ 寡头：少·相互依赖·高壁垒·可能共谋或价格战
-│  │  └─ 垄断：唯一·独特·极高壁垒·价格制定者
-│  ├─ 📐 盈亏平衡Q = FC/(P-VC)
-│  ├─ 🎯 停产条件：P < min AVC（短期内继续生产但亏损）
-│  └─ ⚠️ 有垄断≠必然有高利润（需求不足时也可能亏损）
-│
-├─ 🏆 M02: Understanding Business Cycles（商业周期）
-│  ├─ ⭐ 四阶段：扩张→峰值→收缩→谷底
-│  ├─ ⭐ 经济指标：领先(LEI)·同步(GDP)·滞后(失业率)
-│  └─ ⭐ 信用周期：扩张期信贷↑，衰退期信贷↓
-│
-├─ 🏆 M03-M04: Fiscal and Monetary Policy（财政与货币政策）【核心】
-│  ├─ 🏆 M03: Fiscal Policy（财政政策）
-│  │  ├─ 工具：政府支出↑·税收↓→扩张；反之→紧缩
-│  │  └─ ⚠️ 财政政策有实施滞后（立法+执行）
-│  ├─ 🏆 M04: Monetary Policy（货币政策）
-│  │  ├─ 央行工具：政策利率·准备金率·公开市场操作
-│  │  ├─ 🎯 通胀目标制 / Taylor Rule
-│  │  └─ ⚠️ 货币政策有传导滞后（6-18个月）
-│  └─ 🎯 政策交互：双扩张/双紧缩/一松一紧
-│
-├─ 🏆 M05: Introduction to Geopolitics（地缘政治）── 2026新模块
-│  └─ ⭐ 地缘风险→供应链·能源·汇率·市场情绪影响
-│
-├─ 🏆 M06: International Trade（国际贸易）
-│  ├─ ⭐ 比较优势(机会成本) vs 绝对优势
-│  ├─ ⭐ 贸易壁垒：关税(价↑)·配额(量限)·补贴
-│  └─ 🎯 区域整合：FTA→关税同盟→共同市场→经济联盟
-│
-├─ 🏆 M07: Capital Flows and FX Market（资本流动与外汇）
-│  └─ ⭐ 汇率制度谱系：自由浮动↔管理浮动↔爬行钉住↔固定↔货币联盟
-│
-└─ 🏆 M08: Exchange Rate Calculations（汇率计算）【高频计算】
-   ├─ 📐 交叉汇率：A/B = A/C × C/B
-   ├─ 📐 远期利率平价：F = S × (1+id)/(1+if)
-   ├─ 🎯 F>S→远期升水；F<S→远期贴水
-   └─ ⚠️ PPP长期近似成立，短期不成立（因贸易壁垒·非贸易品）
+Economics (6-9%)
+├─ 1. The Firm and Market Structures
+│  ├─ 1.1 Introduction
+│  ├─ 1.2 Profit Maximization: Production Breakeven, Shutdown and Economies of Scale
+│  ├─ 1.3 Introduction to Market Structures
+├─ 2. Understanding Business Cycles
+│  ├─ 2.1 Introduction
+│  ├─ 2.2 Overview of the Business Cycle
+│  ├─ 2.3 Credit Cycles
+├─ 3. Fiscal Policy
+│  ├─ 3.1 Introduction
+│  ├─ 3.2 Introduction to Monetary and Fiscal Policy
+│  ├─ 3.3 Roles and Objectives of Fiscal Policy
+├─ 4. Monetary Policy
+│  ├─ 4.1 Introduction
+│  ├─ 4.2 Role of Central Banks
+│  ├─ 4.3 Monetary Policy Tools and Monetary Transmission
+├─ 5. Introduction to Geopolitics
+│  ├─ 5.1 Introduction
+│  ├─ 5.2 National Governments and Political Cooperation
+│  ├─ 5.3 Forces of Globalization
+├─ 6. International Trade
+│  ├─ 6.1 Introduction
+│  ├─ 6.2 Benefits and Costs of Trade
+│  ├─ 6.3 Trade Restrictions and Agreements—Tariffs, Quotas, and Export Subsidies
+├─ 7. Capital Flows and the FX Market
+│  ├─ 7.1 Introduction
+│  ├─ 7.2 The Foreign Exchange Market and Exchange Rates
+│  ├─ 7.3 Exchange Rate Regimes: Ideals and Historical Perspective
+├─ 8. Exchange Rate Calculations
+│  ├─ 8.1 Introduction
+│  ├─ 8.2 Cross-Rate Calculations
+│  ├─ 8.3 Forward Rate Calculations
 ```
 
-## 关键公式
+## 4. 跨模块依赖关系
 
-| 公式 | 用途 |
-|------|------|
-| 盈亏平衡 Q = FC/(P-VC) | BEP 产量 |
-| 停产点 = P < min AVC | 短期停产条件 |
-| 交叉汇率 A/B = A/C × C/B | 汇率换算 |
-| F = S(1+id)/(1+if) | 远期利率平价 |
-| %Δ货币 = (新汇率-旧)/旧 | 升/贬值计算 |
+- **M01 The Firm and Market Structures**：承接 `本科目入口`，输出到 `Understanding Business Cycles`。
+- **M02 Understanding Business Cycles**：承接 `The Firm and Market Structures`，输出到 `Fiscal Policy`。
+- **M03 Fiscal Policy**：承接 `Understanding Business Cycles`，输出到 `Monetary Policy`。
+- **M04 Monetary Policy**：承接 `Fiscal Policy`，输出到 `Introduction to Geopolitics`。
+- **M05 Introduction to Geopolitics**：承接 `Monetary Policy`，输出到 `International Trade`。
+- **M06 International Trade**：承接 `Introduction to Geopolitics`，输出到 `Capital Flows and the FX Market`。
+- **M07 Capital Flows and the FX Market**：承接 `International Trade`，输出到 `Exchange Rate Calculations`。
+- **M08 Exchange Rate Calculations**：承接 `Capital Flows and the FX Market`，输出到 `本科目总结`。
 
-## 🚨 高频陷阱速查
+## 5. 核心对比专题
 
-| ❌ 错误理解 | ✅ 正确理解 | 🎯 |
-|-------------|-------------|-----|
-| 垄断必然高利润 | 需求不足时也可能亏损 | ⭐⭐⭐ |
-| 财政=货币 | 财政=收支；货币=利率/供给 | ⭐⭐⭐ |
-| 寡头一定有共谋 | 寡头间可能激烈竞争 | ⭐⭐ |
-| 关税保护=好事 | 推高消费者价+引发反制 | ⭐⭐ |
-| 经常账户赤字=不好 | 可能因外资流入 | ⭐⭐ |
-| PPP永远成立 | 长期近似，短期因贸易壁垒不成立 | ⭐⭐ |
+- **概念 vs 应用**：先确认官方定义，再把定义放入题干情境判断。
+- **计算 vs 解释**：计算结果只是中间步骤，CFA Level I 经常要求解释方向、限制和投资含义。
+- **静态知识 vs 决策流程**：把每个模块压缩成“输入 -> 工具 -> 输出 -> 陷阱”的流程。
+- **英文术语 vs 中文理解**：英文保留用于识题，中文解释用于防止机械背诵。
 
-## 🔗 跨模块关联
+## 6. 公式与框架速查
 
-### 跨模块依赖关系
-```text
-M01（市场结构）
-├── M02（商业周期）
-├── M03-M04（财政/货币=政策核心）
-├── M05（地缘政治对政策影响）
-├── M06（国际贸易）
-└── M07-M08（外汇市场+汇率计算）
+| 编号 | 工具 / Formula | 中文用途 |
+|---|---|---|
+| F1 | `Elasticity: elasticity = %ΔQ / %ΔP` | 绝对值大于 1 表示富有弹性。 |
+| F2 | `GDP identity: Y = C + I + G + (X - M)` | 支出法 GDP 的基本分解。 |
+| F3 | `Money multiplier: money multiplier ≈ 1 / reserve requirement` | 考试更常考方向判断而非复杂推导。 |
+| F4 | `Interest parity: forward premium/discount links interest rate differentials` | 汇率题要先确认 base/price currency。 |
 
-🔗 跨科目：
-  M04货币政策 ──► Fixed Income M09 利率期限结构
-  M08汇率计算 ──► FI M08 FRN定价
-  M01市场结构 ──► Corporate Issuers M07 商业模式
-  M02商业周期 ──► Equity M03 市场效率
-```
+## 7. 高频考试陷阱
 
-## 核心公式速查
+- **模块名和旧笔记不一致**：以 2026 官方 module 名称、编号和顺序为准。
+- **只背公式不解释**：凡是 `calculate and interpret`，必须同时会算和解释。
+- **忽略 LOS 动词**：`describe`、`explain`、`compare`、`evaluate` 对答案深度要求不同。
+- **跨模块断裂**：做错题时记录它关联到哪个 MOC 节点，必要时触发 MOC gap review。
 
-| 公式 | 用途 |
-|------|------|
-| 盈亏平衡 Q = FC/(P-VC) | BEP 产量 |
-| 停产条件：P < min AVC | 短期停产决策 |
-| 交叉汇率 A/B = A/C × C/B | 三角汇率换算 |
-| F = S × (1+id)/(1+if) | 远期利率平价 |
-| %Δ货币 = (新-旧)/旧 | 升/贬值率 |
-| 弹性 = %ΔQd/%ΔP | 需求价格弹性 |
+## 8. 通用分析框架
 
-## 通用分析框架
+1. **识别任务**：读 LOS 动词和题干问法。
+2. **定位节点**：回到 `## 3. 核心知识树` 的编号节点。
+3. **选择工具**：概念框架、公式、表格比较或合规流程。
+4. **输出结论**：中文结论 + 英文关键词 + 必要限制条件。
+5. **复盘缺口**：若错因重复出现，进入 `.system/events/` 和 `.system/memory/` 闭环。
 
-### 政策分析三步法
-1. 判断经济状态：通胀/通缩、扩张/衰退、产出缺口
-2. 选择政策工具：财政（支出/税收）vs 货币（利率/准备金）
-3. 预期效果：扩张→刺激总需求↑/通胀↑；紧缩→降温
+## 9. 学习路径建议
 
-### 外汇分析框架
-- 长期：PPP（购买力平价）、Balassa-Samuelson
-- 短期：利率平价、资本流动、风险偏好
-- 汇率制度决定政策空间：浮动→独立货币政策；固定→跟随锚定国
+- **第一轮：结构对齐**。按模块顺序读官方结构和 LOS，不急着刷难题。
+- **第二轮：主动回忆**。遮住解释，只看编号知识树说出定义、公式和陷阱。
+- **第三轮：题目驱动**。把错题回填到对应模块和 MOC 节点，形成可复用 fix rule。
+- **考前压缩**。只保留高频术语、公式/框架、易错点、跨模块依赖和错题触发点。
 
-## 核心对比专题
+## 10. Legacy 内容治理
 
-| 对比项 | 关键区别 |
-|--------|----------|
-| 完全竞争 vs 垄断 | 数量多 vs 唯一；价格接受者 vs 定价者 |
-| 财政 vs 货币政策 | 政府收支 vs 央行货币供给/利率 |
-| 扩张 vs 紧缩 | 增支减税/降息 vs 减支增税/加息 |
-| 关税 vs 配额 | 关税=税收（价格↑）；配额=数量限制 |
-| 浮动 vs 固定汇率 | 浮动=独立货币；固定=盯住锚定国 |
-
-## 跨模块关联
-
-```text
-M01 (市场结构)
-├── M02 (商业周期)
-├── M03-M04 (财政/货币) [政策分析核心]
-│   └── M05 (地缘政治对政策影响)
-├── M06 (国际贸易)
-└── M07-M08 (外汇市场与计算)
-```
+- 本科目高置信 legacy 映射：6 条；中置信候选：12 条。
+- 详细来源与处理建议见 [[cfa-legacy-to-official-enrichment-map]]。
+- `_legacy` 只作为补强来源，不作为最终学习入口；若与官方 2026 LOS 冲突，以 registry 和官方 Topic Outline 为准。

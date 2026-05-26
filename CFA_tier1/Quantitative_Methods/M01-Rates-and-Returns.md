@@ -1,23 +1,29 @@
 ---
-title: "M01 — Rates and Returns"
-description: "CFA Level I 2026 official module: Rates and Returns"
-module: M01
+title: "M01: Rates and Returns"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M01"
 official_module: "Module 1: Rates and Returns"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 5
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M01: Rates and Returns
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Rates and Returns**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -31,216 +37,143 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk
+2. calculate and interpret different approaches to return measurement over time and describe their appropriate uses
+3. compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures
+4. calculate and interpret annualized return measures and continuously compounded returns, and describe their appropriate uses
+5. calculate and interpret major return measures and describe their appropriate uses
 
-- interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk
-- calculate and interpret different approaches to return measurement over time and describe their appropriate uses
-- compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures
-- calculate and interpret annualized return measures and continuously compounded returns, and describe their appropriate uses
-- calculate and interpret major return measures and describe their appropriate uses
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 1.1 学习任务
+- **核心问题**：考试希望你用 `Rates and Returns` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 1.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 1.3 关键英文术语
+- **Rates and Returns（利率与收益率）**：把现金流的时间价值、风险补偿和投资表现放到同一套语言中比较。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Interest Rates and Time Value of Money（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Rates of Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Money-Weighted and Time-Weighted Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Annualized Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Other Major Return Measures and Their Applications（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Time Value of Money（货币时间价值）**：今天的一元钱与未来的一元钱价值不同，必须用折现或复利转换。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 1.1 | interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk | 解释结果的投资含义；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 1.2 | calculate and interpret different approaches to return measurement over time and describe their appropriate uses | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.3 | compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures | 比较相似概念的适用条件与差异；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
+| 1.4 | calculate and interpret annualized return measures and continuously compounded returns, and describe their appropriate uses | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.5 | calculate and interpret major return measures and describe their appropriate uses | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M01: Rates and Returns（收益率与回报）
-│
-├── ⭐ 利率的三种解释 (Three Interpretations)
-│   ├── 要求回报率 (Required Rate of Return)：投资者要求的最低回报
-│   ├── 折现率 (Discount Rate)：将未来现金流折算为现值
-│   └── 机会成本 (Opportunity Cost)：放弃次优选择的成本
-│
-├── ⭐ 利率分解 (Interest Rate Decomposition)
-│   ├── 名义利率 ≈ 实际无风险利率 + 预期通胀溢价 + 违约风险溢价 + 流动性风险溢价 + 期限风险溢价
-│   ├── 📐 实际无风险利率 = 短期国债实际收益率
-│   └── 🎯 高名义利率可能来自高通胀、高违约风险或低流动性，不能简单归因于单一因素
-│
-├── ⭐ 收益率度量阶梯 (Return Measurement Ladder)
-│   ├── 📐 HPR = (P₁ - P₀ + D₁) / P₀
-│   ├── 📐 算术平均 = ΣRᵢ / n — 估计单期预期收益
-│   ├── 📐 几何平均 = [Π(1+Rᵢ)]^(1/n) - 1 — 衡量多期复合增长
-│   ├── 📐 调和平均 = n / Σ(1/xᵢ) — 平均价格倍数专用
-│   └── ⚠️ 几何平均 ≤ 算术平均，差距越大说明波动越大
-│
-├── ⭐ MWRR vs TWRR
-│   ├── MWRR = IRR，对现金流时点敏感 → 衡量投资者实际体验
-│   ├── TWRR 分段计算子期间 HPR 再几何链接 → 衡量基金经理管理能力
-│   └── ⚠️ 客户在低点赎回收高点追入 → MWRR 显著低于 TWRR
-│
-├── ⭐ 年化与连续复利 (Annualization & Continuous Compounding)
-│   ├── 📐 年化收益率 = (1 + R_period)^c - 1
-│   ├── 📐 连续复利 r_cc = ln(1 + HPR) — 可加性是最大优势
-│   ├── 📐 FV = PV × e^(rt), PV = FV × e^(-rt)
-│   └── ⚠️ 连续复利必须用 e^(rt)，不是 (1+r)^n
-│
-├── ⭐ Gross Return vs Net Return
-│   ├── Gross Return = 1+HPR，已含 trading expenses
-│   └── Net Return = Gross Return - Management/Admin Fees
-│
-├── ⭐ 杠杆与税后回报
-│   ├── 📐 杠杆回报 = R_p + (B/E)(R_p - r_D)
-│   ├── 📐 税后回报 = 税前回报 × (1 - t)
-│   └── ⚠️ 顺序：Gross → Net → Leverage → Tax，不可逆
-│
-├── 💡 关键洞察
-│   ├── 利率的三种解释相通 — 折现率 = 要求回报率 = 机会成本
-│   ├── Geometric Mean 是衡量历史复合增长的唯一正确指标
-│   ├── TWRR 消除了现金流决策的影响，是基金业绩评价的标准方法
-│   └── 连续复利的多期可加性在大数据分析中优势明显
-│
-└── ⚠️ 考试陷阱总结
-    ├── Gross Return 已含 trading expenses，不重复扣除
-    ├── 计算顺序 Gross → Net → Leverage → Tax — 不可逆
-    ├── MWRR 衡量投资者体验，TWRR 衡量经理能力 — 不要混淆评价对象
-    ├── 连续复利必须用 ln() 和 e^()
-    └── Harmonic Mean 用于平均价格倍数（如 P/E）
+1. Rates and Returns
+├─ 1.1 Introduction
+│  ├─ 1.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.1.2 应用/判断：把概念或公式转成解题动作
+├─ 1.2 Interest Rates and Time Value of Money
+│  ├─ 1.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.2.2 应用/判断：把概念或公式转成解题动作
+├─ 1.3 Rates of Return
+│  ├─ 1.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.3.2 应用/判断：把概念或公式转成解题动作
+├─ 1.4 Money-Weighted and Time-Weighted Return
+│  ├─ 1.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.4.2 应用/判断：把概念或公式转成解题动作
+├─ 1.5 Annualized Return
+│  ├─ 1.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：利率的三种解释与分解（Interest Rate Interpretations and Decomposition）
-**核心概念**：利率在金融中有三种等价的解释——要求回报率、折现率和机会成本。名义利率可分解为实际无风险利率和多种风险溢价的总和。
-- **要求回报率（Required Rate of Return）**：投资者投资所要求的最低回报率，包含机会成本和风险补偿
-- **折现率（Discount Rate）**：将未来现金流折算为现值的比率，反映货币的时间价值
-- **机会成本（Opportunity Cost）**：选择某一投资而放弃次优选择所损失的潜在收益
-- **利率分解公式**：名义利率 ≈ 实际无风险利率 + 预期通胀溢价 + 违约风险溢价 + 流动性风险溢价 + 期限风险溢价
-- ⚠️ 高名义利率可能来自高通胀、高违约风险或低流动性，不能简单归因于单一因素
+### 1.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；解释机制、原因和后果；官方表述为：`interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk`。
+- **核心词汇**：**Rates and Returns（利率与收益率）**：把现金流的时间价值、风险补偿和投资表现放到同一套语言中比较。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：理解利率分解的各个组成部分，考试常问不同风险溢价对应的经济含义。
+### 1.2 Interest Rates and Time Value of Money
+- **中文主线**：本节点解决 `Interest Rates and Time Value of Money` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`calculate and interpret different approaches to return measurement over time and describe their appropriate uses`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：收益率度量（Return Measurement）
-**核心概念**：收益率有多种度量方式，每种适用于不同的分析目的。持有期收益率（HPR）是最基础的度量，算术平均和几何平均各有适用场景。
-- **HPR = (P₁ - P₀ + D₁) / P₀**：衡量单一持有期的总回报，是最基础的收益率度量
-- **算术平均 = ΣRᵢ/n**：适用于估计单期预期收益，但会高估多期复合增长
-- **几何平均 = [Π(1+Rᵢ)]^(1/n) - 1**：适用于衡量多期复合增长，几何平均 ≤ 算术平均
-- **调和平均 = n/Σ(1/xᵢ)**：适用于平均价格倍数（如平均 P/E）
-- **Gross Return**：已扣除交易费用（trading expenses），但不扣除管理费和行政费
-- **Net Return = Gross Return - Management/Admin Fees**：投资者实际到手的回报
-- ⚠️ 考试常考：Gross Return 已含 trading expenses，计算 Net Return 时不再重复扣除
+### 1.3 Rates of Return
+- **中文主线**：本节点解决 `Rates of Return` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；评价优缺点、限制和决策含义；官方表述为：`compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures`。
+- **核心词汇**：**Interest Rates and Time Value of Money（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：选择合适的均值指标，理解 Gross vs Net Return 的区别及计算顺序。
+### 1.4 Money-Weighted and Time-Weighted Return
+- **中文主线**：本节点解决 `Money-Weighted and Time-Weighted Return` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`calculate and interpret annualized return measures and continuously compounded returns, and describe their appropriate uses`。
+- **核心词汇**：**Rates of Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：MWRR vs TWRR
-**核心概念**：资金加权收益率（MWRR）和时间加权收益率（TWRR）从不同角度衡量投资回报，适用于不同的评价目的。
-- **MWRR（资金加权收益率）**：本质是 IRR，对现金流进出时点敏感，衡量投资者实际体验
-- **TWRR（时间加权收益率）**：在每个现金流进出时点将组合拆分为子期间，将各子期间 HPR 几何链接，衡量基金经理的投资管理能力
-- 当客户在业绩差时追加资金、业绩好时赎回资金时，MWRR 显著低于 TWRR
-- 基金业绩评价标准采用 TWRR（消除投资者现金流决策的影响）
+### 1.5 Annualized Return
+- **中文主线**：本节点解决 `Annualized Return` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`calculate and interpret major return measures and describe their appropriate uses`。
+- **核心词汇**：**Money-Weighted and Time-Weighted Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分 MWRR 和 TWRR 的评价对象（投资者体验 vs 经理能力），考试常考两者在特定现金流模式下的比较。
+### 1.9 Legacy 补强要点
+- 来自 `M01-Rates-and-Returns.md`：## 1. 核心知识点; > **【考试核心】** 高名义利率可能来自高通胀，也可能来自高违约风险或低流动性，不能简单归因于单一因素。; > **【考试核心】** 当题目所给利率是连续复利口径时，必须使用 e^(rt) 而不是 (1+r)^n。。
 
-### 知识点4：年化与连续复利（Annualization and Continuous Compounding）
-**核心概念**：年化收益率将不同期限的收益率标准化为年化口径。连续复利收益率具有可加性优势。
-- **年化收益率**：Annualized Return = (1 + R_period)^c - 1，c 是一年内的期数
-- **连续复利收益率**：r_cc = ln(1 + HPR)，最大优势是可加性——多期连续复利收益率可以直接相加
-- **连续复利终值**：FV = PV × e^(rt)，PV = FV × e^(-rt)
-- ⚠️ 连续复利必须用 e^(rt)，不是 (1+r)^n
 
-**考试应用**：年化收益率与有效年利率（EAR）等价；连续复利计算需用自然对数。
+## 5. 关键公式与计算框架
 
-### 知识点5：杠杆与税后回报（Leveraged and After-Tax Return）
-**核心概念**：杠杆回报和税后回报在 Gross Return 和 Net Return 的基础上进一步调整，反映了借贷和税收的影响。
-- **杠杆回报**：Leveraged Return = R_p + (B/E)(R_p - r_D)，B=借款额，E=自有本金，r_D=借款利率
-- **税后回报**：After-Tax Return = Pre-tax Return × (1 - t)，t=税率
-- ⚠️ **计算顺序不可逆**：Gross Return → Net Return → Leveraged Return → After-Tax Return，不可以先扣税再算杠杆
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Effective annual rate | `EAR = (1 + periodic rate)^m - 1` | 不同复利频率比较时必须转成同一口径。 |
 
-**考试应用**：掌握正确的计算顺序，考试常考顺序错误的陷阱。
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 📐 关键公式表
+## 6. 常见考点与解题思路
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `HPR = (P_1 - P_0 + D_1) / P_0` | 持有期收益率 | 衡量单一持有期总回报 | 不含 management fees；包含期间收入 |
-| `算术平均 = ΣR_i / n` | 算术平均收益率 | 估计单期预期收益 | 高估多期复合增长 |
-| `几何平均 = [Π(1+R_i)]^(1/n) - 1` | 几何平均收益率 | 多期复合增长衡量 | 几何平均 ≤ 算术平均 |
-| `年化收益率 = (1 + R_period)^c - 1` | 年化收益率 | 期间→年化转化 | c 是一年内期数 |
-| `r_cc = ln(1 + HPR)` | 连续复利收益率 | 需要可加性时 | 必须用 ln()，不是简单除法 |
-| `MWRR: ΣCF_t/(1+r)^t = 0` | 资金加权收益率 | 投资者实际体验 | 本质是 IRR，对现金流时点敏感 |
-| `TWRR = Π(1+HP_i) - 1` | 时间加权收益率 | 基金经理表现 | 分段 HPR 几何链接 |
-| `FV = PV × e^(rt)` | 连续复利终值 | 连续复利金融建模 | 配合 r_cc 使用，不用 (1+r)^n |
-| `杠杆回报 = R_p + (B/E)(R_p - r_D)` | 杠杆回报 | 借款投资决策 | B=借款额，E=自有本金 |
-| `税后回报 = 税前 × (1 - t)` | 税后回报 | 考虑税收后的净回报 | 在杠杆回报基础上计算 |
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 🛠️ 常见考点与解题思路
+## 7. 易错点与考试陷阱
 
-**考点1：HPR 计算与组成部分区分**
-- 步骤 1：确认期初价格 P₀、期末价格 P₁、期间收入 D₁
-- 步骤 2：代入 HPR = (P₁ - P₀ + D₁) / P₀
-- 步骤 3：若问 Gross Return = 1 + HPR
-- ⚠️ 不要混淆 Gross Return 与 HPR
+- **中英文错配**：看到 `Rates and Returns` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点2：算术平均 vs 几何平均的选择**
-- 给多个历史收益率要比较累计增长 → 几何平均
-- 给概率分布求 expected return → 算术平均
-- 给历史收益率但不指明 → 先判断题目问 expected return 还是 past growth
-- ⚠️ 几何平均始终 ≤ 算术平均
+## 8. 跨模块关联
 
-**考点3：利率分解分析**
-- 名义利率 = 实际无风险利率 + 预期通胀溢价 + 违约风险溢价 + 流动性风险溢价 + 期限风险溢价
-- 给定两种不同债券的收益率 → 分析差异来源
-  - 国债 vs 公司债 → 差异主要来自违约风险溢价
-  - 短债 vs 长债 → 差异主要来自期限风险溢价
-  - 上市股票 vs 非上市股权 → 差异包含流动性风险溢价
-- ⚠️ 高名义利率可能是高通胀、高违约风险或低流动性的综合结果
+- **上游模块**：本科目起点。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M02-Time-Value-of-Money-in-Finance]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**考点4：MWRR vs TWRR 计算与比较**
-- MWRR：列出所有现金流（含追加/赎回）解 IRR
-  - 本质 = TVM 反向求解：ΣCF_t/(1+r)^t = 0
-  - 对现金流进出时点敏感 → 衡量投资者实际体验
-- TWRR：在每次现金流进出时点分段 → 算各段 HPR → 几何链接
-  - 消除现金流决策影响 → 衡量基金经理管理能力
-- 比较规则：
-  - 若客户在差业绩时追加、好业绩时赎回 → MWRR < TWRR
-  - 若客户在好业绩时追加、差业绩时赎回 → MWRR > TWRR
-- ⚠️ MWRR 低不代表基金经理差 — 可能是客户现金流时点导致的
+## 9. 复习与刷题提示
 
-**考点5：年化收益率与连续复利**
-- 给定期间收益率 → 年化用 (1+R)^c - 1 (c = 一年内期数)
-- 给定 HPR → 连续复利用 r_cc = ln(1+HPR)
-- 连续复利终值用 FV = PV × e^(rt)
-- 连续复利的可加性: 多期 r_cc 直接相加，普通收益率需乘法链接
-- ⚠️ 连续复利与非连续复利的终值公式本质不同，不要混用
-- 💡 EAR = (1 + r_nom/m)^m - 1 与年化收益率公式等价
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**考点6：Gross → Net → Leverage → Tax 顺序**
-- Step 1: Gross Return = (P₁ + D₁) / P₀（已含 trading expenses）
-- Step 2: Net Return = Gross Return - Mgmt/Admin Fees
-- Step 3: Leveraged Return = Net Return + (B/E)(Net Return - r_D)
-- Step 4: After-Tax Return = Leveraged Return × (1 - t)
-- ⚠️ 最大错误：在 Gross 阶段多减 trading expenses，或在 Leverage 前扣税
-- ⚠️ Gross Return 已含交易费用，Net Return 只减管理费和行政费
-- ⚠️ 顺序不可逆 — 先杠杆后税，不是先税后杠杆
+## 10. Legacy Notes Integrated
 
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| Gross Return 不含任何费用 | Gross Return 已含 trading expenses，只另减 mgmt/admin fees | Trading expenses 直接贡献于价格回报 |
-| 可以先在 Gross Return 中减 trading expenses 再算 Net Return | Trading expenses 已在 Gross Return 中反映，不可重复扣除 | 重复扣减会低估收益率 |
-| Leverage 和 Tax 可以任意顺序计算 | 严格：Gross → Net → Leverage → Tax | 杠杆基于净回报，税收基于杠杆后回报 |
-| MWRR 低 = 基金经理表现差 | MWRR 衡量投资者体验，TWRR 衡量经理能力 | MWRR 受现金流时点扰动 |
-| 连续复利可用 (1+r)^n 计算终值 | 连续复利必须用 e^(rt) | 连续复利假设无间断复利 |
-| Harmonic Mean 用于一般收益率平均 | Harmonic Mean 仅用于平均价格倍数 | 调和平均对极端值最不敏感 |
-
-### 🔄 跨模块关联
-
-- **[[M02-Time-Value-of-Money-in-Finance]]** — TVM 是 HPR 和 MWRR（本质就是 IRR）的基础。MWRR = ΣCF/(1+r)^t = 0 正是 TVM 的反向应用。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 三种均值（算术/几何/调和）在此首次出现，在 M03 中进一步展开为一般统计量。
-- **[[M05-Portfolio-Mathematics]]** — 杠杆回报公式是 Portfolio return 的延伸，组合方差中的权重逻辑在此预热。
-- **[[M07-Estimation-and-Inference]]** — 年化收益率的 periodicity 转换与标准误中样本量计算有相通概念。
-
-### 📋 复习与刷题提示
-
-- **核心能力**：熟练区分 MWRR 与 TWRR 的应用场景，掌握多步计算顺序（Gross→Net→Leverage→Tax）
-- **必考题型**：HPR 计算、几何/算术平均选择、MWRR/TWRR 判别、连续复利终值计算
-- **最常犯错误**：连续复利用错公式、Gross Return 重复减 trading expenses、顺序记错
-- 记忆口诀：
-  - 利率三维度：回报率、折现率、机会成本 — 互通
-  - 平均三兄弟：算术最大，几何居中，调和最小
-  - 连续复利：HPR 取 ln，终值用 e
-- 刷题建议：重点做包含多步计算的题目（Gross→Net→Leverage→Tax），这是 CFA 高频综合题
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M01-Rates-and-Returns.md（confidence 0.791）
+- **可复用结构**：M01: Rates and Returns（收益率与回报）；1. 核心知识点；1.1 利率的三种解释（Three Interpretations of Interest Rate）；1.2 利率分解（Interest Rate Decomposition）；1.3 收益率度量阶梯（Return Measurement Ladder）；1.4 MWRR vs TWRR
+- **高价值要点**：## 1. 核心知识点；> **【考试核心】** 高名义利率可能来自高通胀，也可能来自高违约风险或低流动性，不能简单归因于单一因素。；> **【考试核心】** 当题目所给利率是连续复利口径时，必须使用 e^(rt) 而不是 (1+r)^n。；## 2. 关键公式
+- **公式/计算线索**：title: "M01 — Rates and Returns"；official_module: "Module 1: Rates and Returns"；interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums
+- **易错提示**：> **【考试陷阱】** 当客户在业绩差的时候追加资金、业绩好的时候赎回资金时，MWRR 会显著低于 TWRR，这不代表基金经理表现差。；> **【考试陷阱】** Gross Return 已经包含了交易费用（Trading Expenses），不需要再额外扣除交易费用！净回报只额外扣除管理费和行政费。；> **【考试陷阱】** 计算顺序至关重要：**Gross Return → Net Return → Leveraged Return → After-Tax Return**。不可以先扣税再算杠杆。

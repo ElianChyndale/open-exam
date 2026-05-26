@@ -1,23 +1,29 @@
 ---
-title: "M11 — Financial Analysis Techniques"
-description: "CFA Level I 2026 official module: Financial Analysis Techniques"
-module: M11
+title: "M11: Financial Analysis Techniques"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Financial Statement Analysis"
-topic_area: Financial_Statement_Analysis
-curriculum_year: 2026
+topic_area: "Financial_Statement_Analysis"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M11"
 official_module: "Module 11: Financial Analysis Techniques"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 6
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Financial_Statement_Analysis
   - official_2026
+  - Financial_Statement_Analysis
 ---
 
 # M11: Financial Analysis Techniques
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Financial Analysis Techniques**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -41,248 +47,145 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe tools and techniques used in financial analysis, including their uses and limitations
+2. calculate and interpret activity, liquidity, solvency, and profitability ratios
+3. describe relationships among ratios and evaluate a company using ratio analysis
+4. demonstrate the application of DuPont analysis of return on equity and calculate and interpret effects of changes in its components
+5. describe the uses of industry-specific ratios used in financial analysis
+6. describe how ratio analysis and other techniques can be used to model and forecast earnings
 
-- describe tools and techniques used in financial analysis, including their uses and limitations
-- calculate and interpret activity, liquidity, solvency, and profitability ratios
-- describe relationships among ratios and evaluate a company using ratio analysis
-- demonstrate the application of DuPont analysis of return on equity and calculate and interpret effects of changes in its components
-- describe the uses of industry-specific ratios used in financial analysis
-- describe how ratio analysis and other techniques can be used to model and forecast earnings
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 11.1 学习任务
+- **核心问题**：考试希望你用 `Financial Analysis Techniques` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 11.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 11.3 关键英文术语
+- **Financial Analysis Techniques（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Financial Analysis Process（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Analytical Tools and Techniques（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Financial Ratio Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Common Size Balance Sheets and Income Statements（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Cross-Sectional, Trend Analysis, and Relationships in Financial Statements（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Use of Graphs and Regression Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 11.1 | describe tools and techniques used in financial analysis, including their uses and limitations | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 11.2 | calculate and interpret activity, liquidity, solvency, and profitability ratios | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 11.3 | describe relationships among ratios and evaluate a company using ratio analysis | 描述定义、流程和适用场景；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
+| 11.4 | demonstrate the application of DuPont analysis of return on equity and calculate and interpret effects of changes in its components | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 11.5 | describe the uses of industry-specific ratios used in financial analysis | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 11.6 | describe how ratio analysis and other techniques can be used to model and forecast earnings | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 【财务分析技术】
-│
-├── 🔷 分析工具四大类 🎯
-│   ├── 同比例分析（Common-Size）：消除规模差异
-│   ├── 趋势分析（Trend Analysis）：跨期比较方向和幅度
-│   ├── 交叉截面分析（Cross-Sectional）：同业比较
-│   └── 比率分析（Ratio Analysis）：四大类系统评估
-│
-├── 🔷 流动性比率（Liquidity Ratios）— 短期偿债 🎯
-│   ├── Current Ratio = CA / CL 📐
-│   ├── Quick Ratio = (Cash + ST Inv + AR) / CL 📐
-│   └── Cash Ratio = (Cash + ST Inv) / CL 📐
-│       ⚠️ Current Ratio 高 ≠ 流动性好（存货积压）
-│
-├── 🔷 营运比率（Activity Ratios）— 运营效率 🎯
-│   ├── Inventory Turnover = COGS / Avg Inventory 📐
-│   ├── Receivables Turnover = Revenue / Avg AR 📐
-│   ├── Payables Turnover = COGS / Avg AP 📐
-│   ├── Total Asset Turnover = Revenue / Avg Total Assets 📐
-│   └── Cash Conversion Cycle = DOH + DSO - DPO 📐🎯
-│
-├── 🔷 偿债比率（Solvency Ratios）— 长期偿债 🎯
-│   ├── D/E = Total Debt / Total Equity 📐
-│   ├── Debt-to-Assets = Total Debt / Total Assets 📐
-│   ├── Financial Leverage = Avg Assets / Avg Equity 📐
-│   ├── Interest Coverage = EBIT / Interest Expense 📐
-│   └── Fixed Charge Coverage = (EBIT + Lease) / (Interest + Lease) 📐
-│
-├── 🔷 盈利比率（Profitability Ratios）— 盈利能力 🎯
-│   ├── Gross / Operating / Net Margin 📐
-│   ├── ROA = NI / Avg Total Assets 📐
-│   └── ROE = NI / Avg Equity 📐
-│
-├── 🔷 杜邦分解（DuPont Analysis）📐🎯
-│   ├── 三因式：ROE = Net Margin × Asset Turnover × Financial Leverage
-│   ├── 五因式：ROE = (NI/EBT) × (EBT/EBIT) × (EBIT/Rev) × (Rev/Assets) × (Assets/Equity)
-│   ├── 相同 ROE 可能来自不同策略：高利润率低周转 vs 低利润高周转
-│   └── ⚠️ 杠杆驱动的 ROE 增长不可持续
-│
-│   💡 核心洞察：比率分析必须放在行业背景下解读
-│   🎯 高频考点：四大类比率计算、杜邦分解、CCC、比率联动
+11. Financial Analysis Techniques
+├─ 11.1 Introduction
+│  ├─ 11.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.1.2 应用/判断：把概念或公式转成解题动作
+├─ 11.2 The Financial Analysis Process
+│  ├─ 11.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.2.2 应用/判断：把概念或公式转成解题动作
+├─ 11.3 Analytical Tools and Techniques
+│  ├─ 11.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.3.2 应用/判断：把概念或公式转成解题动作
+├─ 11.4 Financial Ratio Analysis
+│  ├─ 11.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.4.2 应用/判断：把概念或公式转成解题动作
+├─ 11.5 Common Size Balance Sheets and Income Statements
+│  ├─ 11.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：分析工具与局限（Tools and Limitations）
+### 11.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe tools and techniques used in financial analysis, including their uses and limitations`。
+- **核心词汇**：**Financial Analysis Techniques（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**主要分析工具：**
-- **同比例分析 (Common-Size Analysis)**：将报表各项目表示为基准（收入或总资产）的百分比，消除规模影响
-- **趋势分析 (Trend Analysis)**：分析同一公司跨期财务数据的变化方向和幅度
-- **交叉截面分析 (Cross-Sectional Analysis)**：比较同行业不同公司的财务指标
-- **比率分析 (Ratio Analysis)**：通过财务比率衡量公司的各个方面表现
+### 11.2 The Financial Analysis Process
+- **中文主线**：本节点解决 `The Financial Analysis Process` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret activity, liquidity, solvency, and profitability ratios`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**局限性 (Limitations)：**
-- 历史数据导向(historical orientation)——比率反映过去，不保证未来
-- 会计政策差异影响可比性(comparability)
-- 行业多样性使得行业平均未必代表正常水平
-- 单一比率无法反映全貌，需要综合运用
+### 11.3 Analytical Tools and Techniques
+- **中文主线**：本节点解决 `Analytical Tools and Techniques` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；评价优缺点、限制和决策含义；官方表述为：`describe relationships among ratios and evaluate a company using ratio analysis`。
+- **核心词汇**：**The Financial Analysis Process（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：营运/流动性/偿债/盈利比率（Activity / Liquidity / Solvency / Profitability Ratios）
+### 11.4 Financial Ratio Analysis
+- **中文主线**：本节点解决 `Financial Ratio Analysis` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`demonstrate the application of DuPont analysis of return on equity and calculate and interpret effects of changes in its components`。
+- **核心词汇**：**Analytical Tools and Techniques（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**流动性比率 (Liquidity Ratios)——短期偿债能力：**
+### 11.5 Common Size Balance Sheets and Income Statements
+- **中文主线**：本节点解决 `Common Size Balance Sheets and Income Statements` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the uses of industry-specific ratios used in financial analysis`。
+- **核心词汇**：**Financial Ratio Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-| 比率 | 公式 | 说明 |
-|------|------|------|
-| Current Ratio | `Current Assets / Current Liabilities` | 流动比率，衡量短期偿债能力 |
-| Quick Ratio | `(Cash + ST Investments + Receivables) / Current Liabilities` | 速动比率，排除存货影响 |
-| Cash Ratio | `(Cash + ST Investments) / Current Liabilities` | 现金比率，最保守的流动性指标 |
+### 11.9 Legacy 补强要点
+- 来自 `M10-Financial-Analysis-Techniques.md`：## 1. 核心知识点; #### 核心公式 (English); 分解 ROE 的来源，判断增长驱动因素。
 
-**营运比率 (Activity Ratios)——运营效率：**
 
-| 比率 | 公式 | 说明 |
-|------|------|------|
-| Inventory Turnover | `COGS / Average Inventory` | 存货周转率 |
-| Days of Inventory on Hand (DOH) | `365 / Inventory Turnover` | 存货持有天数 |
-| Receivables Turnover | `Revenue / Average Receivables` | 应收账款周转率 |
-| Days of Sales Outstanding (DSO) | `365 / Receivables Turnover` | 应收账款天数 |
-| Payables Turnover | `COGS / Average Payables` | 应付账款周转率 |
-| Total Asset Turnover | `Revenue / Average Total Assets` | 总资产周转率 |
+## 5. 关键公式与计算框架
 
-**偿债比率 (Solvency Ratios)——长期偿债和资本结构：**
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Current ratio | `current assets / current liabilities` | 衡量短期偿债能力，但不等于现金质量。 |
 
-| 比率 | 公式 | 说明 |
-|------|------|------|
-| Debt-to-Equity | `Total Debt / Total Equity` | 债务权益比 |
-| Debt-to-Assets | `Total Debt / Total Assets` | 债务资产比 |
-| Financial Leverage | `Average Total Assets / Average Equity` | 财务杠杆 |
-| Interest Coverage | `EBIT / Interest Expense` | 利息覆盖倍数 |
-| Fixed Charge Coverage | `(EBIT + Lease Payments) / (Interest + Lease Payments)` | 固定费用覆盖 |
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**盈利比率 (Profitability Ratios)——盈利能力：**
+## 6. 常见考点与解题思路
 
-| 比率 | 公式 | 说明 |
-|------|------|------|
-| Gross Profit Margin | `Gross Profit / Revenue` | 毛利率 |
-| Operating Margin | `Operating Income / Revenue` | 营业利润率 |
-| Net Profit Margin | `Net Income / Revenue` | 净利润率 |
-| ROA | `Net Income / Average Total Assets` | 资产收益率 |
-| ROE | `Net Income / Average Total Equity` | 权益收益率 |
-| Return on Common Equity | `(NI - Preferred Dividends) / Average Common Equity` | 普通股权益收益率 |
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-#### 核心公式 (English)
-- `Current ratio = CA / CL`
-- `Quick ratio = (Cash + ST Inv + Receivables) / CL`
-- `Inventory turnover = COGS / Avg Inventory`
-- `ROE = NI / Avg Equity`
+## 7. 易错点与考试陷阱
 
-### 知识点3：比率联动与行业比率（Ratio Relationships and Industry-Specific Ratios）
+- **中英文错配**：看到 `Financial Analysis Techniques` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-- **比率联动关系**：各比率之间存在内在逻辑联动——例如存货周转率下降(效率恶化)可能导致毛利率上升(可能因提价或产品组合变化)，需综合解读
-- **行业特定比率 (Industry-Specific Ratios)**：银行业关注净息差(net interest margin)；零售业关注同店销售增长(same-store sales growth)和每平方英尺销售额(sales per square foot)
-- **比率分析的三角验证**：单个比率的变化应与其他相关比率的变化一致，否则可能存在操纵或误解
+## 8. 跨模块关联
 
-### 知识点4：杜邦分解（DuPont Decomposition）
+- **上游模块**：[[M10-Financial-Reporting-Quality]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M12-Introduction-to-Financial-Statement-Modeling]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**三因式杜邦分解：**
-```
-ROE = Net Profit Margin x Total Asset Turnover x Financial Leverage
-ROE = (NI / Revenue) x (Revenue / Avg Assets) x (Avg Assets / Avg Equity)
-```
+## 9. 复习与刷题提示
 
-- **净利率 (Net Profit Margin)**：反映经营效率(efficiency)和成本控制
-- **资产周转率 (Asset Turnover)**：反映资产使用效率(utilization)
-- **财务杠杆 (Financial Leverage)**：反映资本结构风险(risk)
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**分析意义：**
-- 分解 ROE 的来源，判断增长驱动因素
-- 相同 ROE 的背后可能是完全不同的商业策略（高利润率低周转 vs 低利润高周转）
-- 财务杠杆驱动的 ROE 增长不可持续——分析师需要关注盈利增长的"质量"
+## 10. Legacy Notes Integrated
 
-### 知识点5：建模与预测中的比率分析（Ratio Analysis for Modeling and Forecasting）
-
-- 历史比率是构建财务预测模型(forecasting model)的基础输入
-- 关键假设：未来的比率预计会维持、改善还是恶化？
-- 比率趋势分析帮助识别拐点(turning point)和异常
-- 一个比率的预测需与其他比率保持一致——例如预测毛利率上升的同时预测资产周转率不变需要合理解释
-
-## 📐 关键公式表
-
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `Current Ratio = CA / CL` | 流动比率 | 短期偿债能力概览 | 包含存货，可能高估流动性 |
-| `Quick Ratio = (Cash + ST Inv + AR) / CL` | 速动比率 | 更保守的流动性 | 排除存货，更严格 |
-| `Cash Ratio = (Cash + ST Inv) / CL` | 现金比率 | 最保守的流动性 | 很少单独使用 |
-| `Inventory Turnover = COGS / Avg Inventory` | 存货周转率 | 存货管理效率 | 使用平均余额 |
-| `Receivables Turnover = Revenue / Avg AR` | 应收周转率 | 收款效率 | 分子用收入，非赊销额 |
-| `DSO = 365 / Receivables Turnover` | 应收账款天数 | 平均收款期 | 越高说明收款越慢 |
-| `Payables Turnover = COGS / Avg AP` | 应付周转率 | 付款效率 | 越高说明付款越快 |
-| `CCC = DOH + DSO - DPO` | 现金转换周期 | 营运资本效率 | 越短越好，负值更优 |
-| `Total Asset Turnover = Revenue / Avg TA` | 总资产周转率 | 资产使用效率 | 越低说明资产越重 |
-| `D/E = Total Debt / Total Equity` | 债务权益比 | 财务杠杆 | 越高风险越大 |
-| `Interest Coverage = EBIT / Interest Expense` | 利息覆盖倍数 | 偿债能力 | 越高越安全 |
-| `Fixed Charge Coverage = (EBIT + Lease) / (Interest + Lease)` | 固定费用覆盖 | 含租赁的偿债 | 比 ICR 更全面 |
-| `ROE = NI / Avg Equity` | 权益收益率 | 股东回报 | 杜邦分解揭示驱动因素 |
-| `DuPont ROE = Net Margin × Asset Turnover × Financial Leverage` | 杜邦三因式 | ROE 归因分析 | 识别增长质量 |
-
-## 🛠️ 常见考点与解题思路
-
-### 主题1：四大类比率计算（🎯 必考）
-- **题型**：给定财务报表数据，要求计算特定比率
-- **解题步骤**：
-  1. 识别比率类别（流动性/营运/偿债/盈利）
-  2. 确认分子分母的来源（利润表 vs 资产负债表）
-  3. 资产负债表项目用**平均余额**（期初+期末）/2
-  4. 代入公式计算并解释含义
-
-### 主题2：杜邦分解（🎯 高频）
-- **题型**：给出 ROE 的三个驱动因子或财务报表，要求分析 ROE 变化的原因
-- **解题框架**：
-  1. 计算三因子：净利率（经营效率）、资产周转率（使用效率）、财务杠杆（风险）
-  2. 比较各因子的变化方向和幅度
-  3. 判断：净利率和周转率驱动是高质量的；仅杠杆驱动是高风险的
-- **五因式扩展**：税负效应（NI/EBT）+ 利息负担（EBT/EBIT）+ 经营利润率（EBIT/Revenue）
-
-### 主题3：现金转换周期分析
-- **题型**：计算 CCC 并解释其含义
-- **解题步骤**：
-  1. DOH = 365 / Inventory Turnover
-  2. DSO = 365 / Receivables Turnover
-  3. DPO = 365 / Payables Turnover（分母用 Purchases 或 COGS）
-  4. CCC = DOH + DSO - DPO
-  5. 解读：CCC 越短越好；负的 CCC 是优质信号（先收钱后付款）
-
-### 主题4：比率联动分析
-- **类型**：综合分析多个比率的变化趋势
-- **解题思路**：
-  - 毛利率上升 + 存货周转率下降 → 可能是提价但存货积压
-  - ROE 上升 + 杠杆率下降 → 高质量增长
-  - ROE 上升 + 杠杆率大幅上升 → 风险驱动型增长，不可持续
-
-## 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| Current Ratio 高 = 流动性好 | Current Ratio 高可能是存货积压或应收款账期过长 | 需结合存货质量和应收账款账龄分析 |
-| Quick Ratio 排除存货 = 更准确 | Quick Ratio 排除存货但也依赖应收款的变现能力 | 应收款也可能存在坏账风险 |
-| ROE 高 = 公司好 | ROE 高可能是高杠杆的结果，需要用杜邦分解验证 | 杠杆放大了 ROE 也放大了风险 |
-| 比率分析是客观的 | 会计政策差异（FIFO vs LIFO、折旧方法）影响可比性 | IFRS vs US GAAP 差异需调整 |
-| 过去比率预测未来 | 比率是历史导向的，不保证未来表现 | 需结合前瞻性分析和行业趋势 |
-| CCC 越短越好 | CCC 过短可能意味着过度挤压供应商或收紧信用 | 可能损害供应商关系或失去销售 |
-| 财务杠杆总是坏事 | 适当杠杆可提升 ROE，但过度杠杆增加破产风险 | 关键在于杠杆是否可持续 |
-
-## 🔄 跨模块关联
-
-- **[[M02-Analyzing-Income-Statements]]** — 盈利比率（毛利率、净利率、营业利润率）的数据来源于利润表；EPS 计算涉及稀释和基本概念
-- **[[M03-Analyzing-Balance-Sheets]]** — 流动性比率和偿债比率的计算依赖于资产负债表项目；同比例资产负债表是跨期比较的基础
-- **[[M04-Analyzing-Statements-of-Cash-Flows-I]]** — CFO、CFI、CFF 数据用于现金流比率（CFO/CL、FCF/Revenue 等）的计算
-- **[[M06-Analysis-of-Inventories]]** — 存货计价方法（FIFO/LIFO）直接影响存货周转率和毛利率，跨公司比较时需调整统一
-- **[[M08-Topics-in-Long-Term-Liabilities-and-Equity]]** — 租赁负债和养老金负债影响 D/E 比率和偿债比率；负债/权益分类影响杠杆计算
-- **[[M05-Analyzing-Statements-of-Cash-Flows-II]]** — 自由现金流比率是盈利比率的重要补充，评估盈利的现金质量
-- **[[M12-Introduction-to-Financial-Statement-Modeling]]** — 历史比率是构建 Pro Forma 预测模型的核心输入；比率趋势帮助识别拐点
-
-## 📋 复习与刷题提示
-
-- **计算题优先级最高**：四大类比率的计算是 CFA L1 最高频题型。熟练所有公式，特别注意分子分母的匹配
-- **杜邦分解**：三因式和五因式都是常考内容。重点不是计算数字，而是**解读每个因子代表的商业含义**
-- **CCC 计算**：DOH、DSO、DPO 的计算及其与 CCC 的逻辑关系是必考
-- **比率解读**：同一比率在不同行业的含义不同（如零售业的高资产周转率 vs 制造业的低资产周转率）
-- **交叉验证**：学会用多个比率相互验证判断（如毛利率和存货周转率的联动分析）
-- **Limitations Awareness**：会计政策差异、季节性影响、历史导向性、行业多样性等局限性也是考点
-- **考试判断速查**：
-  - 短期偿债 → 流动性比率
-  - 运营效率 → 营运比率
-  - 长期偿债 → 偿债比率
-  - 盈利能力 → 盈利比率
-  - 拆分 ROE → 杜邦分解
-  - 消除规模差异 → 同比例分析
-  - 同行业比较 → 交叉截面分析
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M10-Financial-Analysis-Techniques.md（confidence 0.544）
+- **可复用结构**：M11: 财务分析技术 (Financial Analysis Techniques)；1. 核心知识点；11.1 分析工具与局限 (Tools and Limitations)；11.2 营运/流动性/偿债/盈利比率 (Activity / Liquidity / Solvency / Profitability Ratios)；核心公式 (English)；11.3 比率联动与行业比率 (Ratio Relationships and Industry-Specific Ratios)
+- **高价值要点**：## 1. 核心知识点；#### 核心公式 (English)；分解 ROE 的来源，判断增长驱动因素；关键假设：未来的比率预计会维持、改善还是恶化？
+- **公式/计算线索**：**比率分析 (Ratio Analysis)**：通过财务比率衡量公司的各个方面表现；### 11.2 营运/流动性/偿债/盈利比率 (Activity / Liquidity / Solvency / Profitability Ratios)；**流动性比率 (Liquidity Ratios)——短期偿债能力：**
+- **易错提示**：**考点1**：特定比率计算。解题思路：先确定比率类别（流动性/营运/偿债/盈利），再应用相应公式——注意分子分母的"匹配"原则；## 4. 易错点提醒；**比率公式的记忆**: 流动性比率用流动资产(current assets)作分子，偿债比率用债务(debt)作分子——注意分母通常是 current liabilities 或 total equity

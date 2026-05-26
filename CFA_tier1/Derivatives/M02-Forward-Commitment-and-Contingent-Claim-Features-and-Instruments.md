@@ -1,23 +1,29 @@
 ---
-title: "M02 — Forward Commitment and Contingent Claim Features and Instruments"
-description: "CFA Level I 2026 official module: Forward Commitment and Contingent Claim Features and Instruments"
-module: M02
+title: "M02: Forward Commitment and Contingent Claim Features and Instruments"
+description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Derivatives"
-topic_area: Derivatives
-curriculum_year: 2026
+topic_area: "Derivatives"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "5-8%"
+module: "M02"
 official_module: "Module 2: Forward Commitment and Contingent Claim Features and Instruments"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Derivatives
   - official_2026
+  - Derivatives
 ---
 
 # M02: Forward Commitment and Contingent Claim Features and Instruments
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用无套利、复制和工具结构理解远期、期货、互换、期权的风险转移。 本模块聚焦 **Forward Commitment and Contingent Claim Features and Instruments**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -32,182 +38,148 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics
+2. determine the value at expiration and profit from a long or a short position in a call or put option
+3. contrast forward commitments with contingent claims
 
-- define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics
-- determine the value at expiration and profit from a long or a short position in a call or put option
-- contrast forward commitments with contingent claims
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Forward Commitment and Contingent Claim Features and Instruments` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 2.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 2.3 关键英文术语
+- **Forward Commitment and Contingent Claim Features and Instruments（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forwards, Futures, and Swaps（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Futures（期货）**：交易所标准化、每日盯市的远期类合约。
+- **Swaps（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Options（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Credit Derivatives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forward Commitments vs. Contingent Claims（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+| 2.2 | determine the value at expiration and profit from a long or a short position in a call or put option | 根据条件判断正确结论 | 写出结论、依据和限制条件。 |
+| 2.3 | contrast forward commitments with contingent claims | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M02: 远期承诺与或有索取权 (Forward Commitments and Contingent Claims)
-│
-├── 🟢 两大分类 (Two-Way Classification)
-│   ├── 远期承诺 (Forward Commitments)
-│   │   └── 双方均有义务在未来执行交易 (both parties obligated)
-│   └── 或有索取权 (Contingent Claims)
-│       └── 持有人有权利但无义务 (holder has right, no obligation)
-│
-├── ⭐ 远期承诺 (Forward Commitments)
-│   ├── 远期合约 (Forward)
-│   │   ├── 定制化条款 (customized)
-│   │   ├── OTC 交易
-│   │   ├── 到期一次结算
-│   │   └── ⚠️ 存在交易对手风险
-│   ├── 期货 (Futures)
-│   │   ├── 标准化合约 (standardized)
-│   │   ├── 交易所交易
-│   │   ├── 每日盯市结算 (daily marking-to-market)
-│   │   └── 💡 本质：标准化的远期合约 + 每日结算
-│   └── 互换 (Swap)
-│       ├── OTC 交易
-│       ├── 一系列类似远期的现金流交换
-│       ├── 利率互换不交换名义本金
-│       └── 💡 本质：一系列远期合约的组合 (strip of forwards)
-│
-├── ⭐ 或有索取权 (Contingent Claims)
-│   ├── 看涨期权 (Call)
-│   │   ├── 赋予买入权利 (right to buy)
-│   │   └── Payoff: max(0, ST - X)
-│   ├── 看跌期权 (Put)
-│   │   ├── 赋予卖出权利 (right to sell)
-│   │   └── Payoff: max(0, X - ST)
-│   ├── 期权卖方 (Writer)
-│   │   └── 承担或有义务，收取权利金
-│   └── 信用衍生品 (Credit Derivatives)
-│       └── 仅在信用事件触发条件下支付
-│
-├── 📐 关键公式
-│   ├── 远期承诺 payoff = 标的资产价格变化 × 合约规模 (双边义务)
-│   └── 或有索取权 payoff = max(0, ST - X) 或 max(0, X - ST) (单边权利)
-│
-├── 🎯 高频考点
-│   ├── 权利 vs 义务的区分 (每道 payoff 题的第一步判断)
-│   ├── 远期 vs 期货的区别 (结算方式、交易场所)
-│   └── 互换 = 一系列远期合约的组合
-│
-└── ⚠️ 考试陷阱
-    ├── long forward 和 long call 不一样 (义务 vs 权利)
-    ├── 期权持有人不一定会行权 (只有经济上有利时才行使)
-    └── 互换名义本金通常不交换
+2. Forward Commitment and Contingent Claim Features and Instruments
+├─ 2.1 Introduction
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Forwards, Futures, and Swaps
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 Futures
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
+├─ 2.4 Swaps
+│  ├─ 2.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.4.2 应用/判断：把概念或公式转成解题动作
+├─ 2.5 Options
+│  ├─ 2.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：远期承诺 (Forward Commitments)
+### 2.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics`。
+- **核心词汇**：**Forward Commitment and Contingent Claim Features and Instruments（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：远期承诺是衍生品的一大类别，合约双方均有义务在未来按照约定条件执行交易。无论市场价格如何变化，双方都必须履行合约义务，因此远期承诺的收益/损失是对称的。远期承诺包括远期合约、期货合约和互换合约。
+### 2.2 Forwards, Futures, and Swaps
+- **中文主线**：本节点解决 `Forwards, Futures, and Swaps` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：根据条件判断正确结论；官方表述为：`determine the value at expiration and profit from a long or a short position in a call or put option`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **远期合约 (Forwards)**：定制化的 OTC 合约，约定在未来某一日期以约定价格买卖标的资产。到期一次结算，存续期未实现盈亏不断累积。定制化程度高但存在交易对手违约风险。
-- **期货合约 (Futures)**：在交易所交易的标准化合約，本质是标准化远期合约加上每日盯市结算（daily marking-to-market）。通过保证金制度和中央清算所（CCP）大幅降低交易对手风险。
-- **互换合约 (Swaps)**：OTC 合约，约定在未来一系列日期交换现金流。可视为一系列远期合约的组合（strip of forwards）。利率互换是最常见的类型，只交换净利息差额，不交换名义本金。
-- 📐 远期承诺的 payoff = 标的资产价格变动 × 合约规模，收益/损失对称
+### 2.3 Futures
+- **中文主线**：本节点解决 `Futures` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`contrast forward commitments with contingent claims`。
+- **核心词汇**：**Forwards, Futures, and Swaps（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：判断一个合约是否属于远期承诺的关键是看双方是否都有义务执行。远期承诺的 payoff 是对称的。考试中常要求对比远期与期货的区别，以及互换与远期合约的关系。
+### 2.4 Swaps
+- **中文主线**：本节点解决 `Swaps` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics`。
+- **核心词汇**：**Futures（期货）**：交易所标准化、每日盯市的远期类合约。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：或有索取权 (Contingent Claims)
+### 2.5 Options
+- **中文主线**：本节点解决 `Options` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics`。
+- **核心词汇**：**Swaps（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：或有索取权是衍生品的另一大类，合约持有人在未来有权利但没有义务执行交易。期权是最典型的或有索取权，持有人可以根据市场情况选择是否行权。收益/损失是非对称的——损失有限（最多损失权利金），收益潜力巨大。
+### 2.9 Legacy 补强要点
+- 来自 `00-Derivatives-MOC.md`：## 最关键：先画 payoff，再找复制组合，再看无套利价格; ## Derivatives 核心知识树 (Core Knowledge Tree); ├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features。
+- 来自 `M02-Forward-Commitments-and-Contingent-Claims.md`：description: "远期承诺与或有索取权：远期、期货、互换、期权的定义、特征与区别 (Forward Commitments and Contingent Claims: forwards, futures, swaps, options definitions and features)"; ## 1. 核心知识点; ## 2. 关键公式。
 
-- **看涨期权 (Call Option)**：赋予买方在未来以约定价格（行权价 X）买入标的资产的权利。Call payoff = max(0, ST - X)。当标的资产价格上涨超过行权价时获利。
-- **看跌期权 (Put Option)**：赋予买方在未来以约定价格卖出标的资产的权利。Put payoff = max(0, X - ST)。当标的资产价格下跌低于行权价时获利。
-- **期权卖方 (Writer / Seller)**：收取权利金（premium），承担或有义务。当买方行权时，卖方必须履行合约。期权卖方的收益有限（最多为权利金），但损失可能非常大。
-- **信用衍生品 (Credit Derivatives)**：仅在触发事件（如违约、降级）发生时支付。信用违约互换（CDS）是最常见的信用衍生品。
-- 📐 Call payoff = max(0, ST - X)；Put payoff = max(0, X - ST)
 
-**考试应用**：区分远期承诺与或有索取权是考试的起点。关键判断：双方有义务 → 远期承诺；一方有权利 → 或有索取权。payoff 计算是必考题型，需熟练掌握 max(0, ...) 公式。
+## 5. 关键公式与计算框架
 
-### 知识点3：期权收益 vs 利润 (Payoff vs Profit)
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Forward value | `Vt = St - PV(forward price)` | 远期合约价值随标的价格和折现变化。 |
+| Put-call parity | `c + PV(X) = p + S` | 欧式期权无套利关系，高频判断式。 |
+| Option payoff | `call = max(0, S - X), put = max(0, X - S)` | 先画到期收益，再考虑期权费。 |
 
-**核心概念**：期权的到期收益（payoff）和利润（profit）是两个不同的概念。收益是行权的经济价值，不考虑权利金成本；利润是扣除权利金后的净盈亏。混淆 payoff 和 profit 是考试中最常见的错误之一。
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-- **Long call payoff**: max(0, ST - X)；**Long call profit**: max(0, ST - X) - c0
-- **Long put payoff**: max(0, X - ST)；**Long put profit**: max(0, X - ST) - p0
-- **Short call profit**: c0 - max(0, ST - X)（卖方收入权利金，承担义务）
-- **Short put profit**: p0 - max(0, X - ST)
-- 🎯 高频考点：payoff ≠ profit，payoff 不包括权利金
+## 6. 常见考点与解题思路
 
-**考试应用**：payoff/profit 计算是 Derivatives 科目必考题。解题步骤：先判断 call/put → 判断 long/short → 代入 payoff 公式 → 若求 profit 则加减权利金。小心题目问的是 payoff 还是 profit。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 知识点4：远期 vs 期货的核心区别 (Forwards vs Futures)
+## 7. 易错点与考试陷阱
 
-**核心概念**：远期和期货在本质上都是锁定未来价格的合约，但在交易场所、标准化程度、结算机制和风险管理方面有显著差异。理解这些差异是 Derivatives 科目的核心能力之一。
+- **中英文错配**：看到 `Forward Commitment and Contingent Claim Features and Instruments` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-- **交易场所**：远期在 OTC 市场交易，期货在交易所交易
-- **标准化**：远期定制化，期货标准化（合约规模、到期日统一）
-- **结算机制**：远期到期一次结算，期货每日盯市结算
-- **对手风险**：远期存在双边交易对手风险，期货通过 CCP 消除对手风险
-- **保证金**：远期通常无保证金，期货有初始和维持保证金
-- 💡 **核心理解**：期货是标准化远期 + 每日盯市结算 + 中央清算
+## 8. 跨模块关联
 
-**考试应用**：远期 vs 期货对比是高频考点。考试通常从 4-5 个维度要求对比，或给出一组特征判断属于远期还是期货。常见陷阱：认为期初价格不同（实际相同）、认为期货价值存续期波动（实际每日归零）。
+- **上游模块**：[[M01-Derivative-Instrument-and-Derivative-Market-Features]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `Call payoff = max(0, ST - X)` | 看涨期权到期收益，标的价格高于行权价时行权 | 计算 call 多头到期价值 | 收益 ≠ 利润，未扣除权利金 |
-| `Put payoff = max(0, X - ST)` | 看跌期权到期收益，标的价格低于行权价时行权 | 计算 put 多头到期价值 | 收益 ≠ 利润，未扣除权利金 |
-| `Long forward payoff = ST - K` | 远期多头到期收益 = 标的到期价 - 交割价 | 远期合约到期价值 | 负债可能无限大 (ST 下跌时) |
-| `Short forward payoff = K - ST` | 远期空头到期收益 = 交割价 - 标的到期价 | 远期空头到期价值 | 负债可能无限大 (ST 上涨时) |
-| `Forward commitment payoff = ΔUnderlying × Contract Size` | 远期承诺的收益与标的价格变动成比例 | 理解远期承诺的对称收益特征 | 双边义务，收益/损失对称 |
-| `Contingent claim payoff = max(0, ...)` | 或有索取权的收益具有非对称性 | 理解期权的非线性收益 | 单边权利，损失有限(权利金) |
+## 9. 复习与刷题提示
 
-### 🛠️ 常见考点与解题思路
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**考点1：区分远期承诺 vs 或有索取权**
-- **步骤**：看双方是否有义务执行
-  - 双方均有义务 → 远期承诺 (forward, futures, swap)
-  - 一方有权利一方有义务 → 或有索取权 (option, credit derivative)
-- **关键判断**：远期承诺的 payoff 对称；或有索取权的 payoff 非对称
+## 10. Legacy Notes Integrated
 
-**考点2：远期 vs 期货对比**
-- **步骤**：从 4 个维度对比——交易场所、标准化程度、结算方式、风险类型
-- **关键点**：期货是标准化的远期合约，但每日盯市结算改变了现金流模式
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：00-Derivatives-MOC.md（confidence 0.549）
+- **可复用结构**：00-Derivatives-MOC；笔记属性；最关键：先画 payoff，再找复制组合，再看无套利价格；科目概览；Derivatives 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先画 payoff，再找复制组合，再看无套利价格；## Derivatives 核心知识树 (Core Knowledge Tree)；├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features；├── M02: 远期承诺与或有求偿 (Forward Commitments and Contingent Claims)【考试核心】↔ 2026 Outline: Forward Commitment and Contingent Claim Features
+- **公式/计算线索**：difficulty: payoff 直觉、复制组合与定价公式高度绑定；│ │ ├── 对冲现有敞口；转换久期、Beta、货币、商品风险 (hedge an existing exposure; transform duration, beta, currency, commodity risk) (风险管理)；│ │ ├── 杠杆、流动性、交易对手、基差、模型、操作风险 (leverage, liquidity, counterparty, basis, model, operational risk) (衍生品风险)
+- **易错提示**：│ └── 注意：derivative value can be small today while exposure is economically large【考试陷阱】；│ └── 注意：right vs obligation is the first fork before every payoff question；│ └── 注意：hedging reduces a chosen risk; it may introduce basis or counterparty risk
 
-**考点3：计算期权到期 payoff**
-- **步骤**：
-  1. 判断是 call 还是 put
-  2. 判断是 long 还是 short
-  3. 代入公式：call/put 分别用 max(0, ST-X) 或 max(0, X-ST)
-  4. 若是 short position，取负值
-- **陷阱**：short call 的 payoff 是 -max(0, ST-X)，不是 max(0, X-ST)
-
-**考点4：计算期权到期 profit**
-- **步骤**：在 payoff 基础上减去权利金 (premium)
-- **公式**：`Profit = Payoff - Premium` (long)；`Profit = Premium - Payoff` (short)
-- **高频陷阱**：payoff 和 profit 混淆后整题方向全错
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| long forward 和 long call 都是看涨 | long forward 是义务必须买入，long call 是权利可以选择买入 | 义务与权利的本质区别 |
-| swap 会交换名义本金 | 利率互换不交换名义本金，只交换净利息差额 | 名义本金只是计算基数 |
-| 期权到期一定会行权 | 只有经济上有利时 (in-the-money) 才会行权 | 虚值期权到期自动失效 |
-| 期货和远期完全相同 | 期货每日盯市结算，远期到期一次结算 | 结算机制不同导致现金流和信用风险不同 |
-| short call 的 payoff 是 max(0, X-ST) | short call 的 payoff 是 -max(0, ST-X) | 卖方义务与买方权利对称相反 |
-
-### 🔄 跨模块关联
-
-- **[[M01-Derivative-Instrument-and-Derivative-Market-Features]]** — 市场结构 (交易所 vs OTC) 是合约分类的基础
-- **[[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]]** — 远期合约的定价与估值
-- **[[M06-Pricing-and-Valuation-of-Futures-Contracts]]** — 期货的定价与期货-远期价格差异
-- **[[M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps]]** — 互换定价与估值
-- **[[M08-Pricing-and-Valuation-of-Options]]** — 期权的深入定价与价值边界
-- **[[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]]** — 二叉树模型为期权提供估值框架
-- **[[M00-Derivatives-MOC]]** — 返回科目总览
-
-### 📋 复习与刷题提示
-
-- M02 是整个 Derivatives 科目中概念最密集的模块，几乎所有后续模块都依赖这里的分类
-- **核心能力**：能快速区分一个工具属于远期承诺还是或有索取权
-- **必考题型**：期权 payoff/profit 计算、远期/期货对比、互换的特点
-- 记忆口诀：远期承诺有义务 (obligation)，或有索取权有权利 (right)
-- 期货是标准化的远期合约，每日盯市结算
-- 互换是一系列远期合约的组合
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+### 来源：M02-Forward-Commitments-and-Contingent-Claims.md（confidence 0.529）
+- **可复用结构**：M02: 远期承诺与或有索取权 (Forward Commitments and Contingent Claims)；1. 核心知识点；2. 关键公式；3. 常见考点与解题思路；4. 易错点提醒；5. 跨模块关联
+- **高价值要点**：description: "远期承诺与或有索取权：远期、期货、互换、期权的定义、特征与区别 (Forward Commitments and Contingent Claims: forwards, futures, swaps, options definitions and features)"；## 1. 核心知识点；## 2. 关键公式；该模块以概念为主，核心区别在于：
+- **公式/计算线索**：## 2. 关键公式；远期承诺 payoff = 标的资产价格变化 x 合约规模 (双边义务)；或有索取权 payoff = max(0, 标的资产价格 - 行权价) 或 max(0, 行权价 - 标的资产价格) (单边权利)
+- **易错提示**：## 4. 易错点提醒

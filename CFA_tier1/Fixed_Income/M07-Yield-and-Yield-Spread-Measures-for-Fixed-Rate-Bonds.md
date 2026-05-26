@@ -1,23 +1,29 @@
 ---
-title: "M07 — Yield and Yield Spread Measures for Fixed-Rate Bonds"
-description: "CFA Level I 2026 official module: Yield and Yield Spread Measures for Fixed-Rate Bonds"
-module: M07
+title: "M07: Yield and Yield Spread Measures for Fixed-Rate Bonds"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M07"
 official_module: "Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M07: Yield and Yield Spread Measures for Fixed-Rate Bonds
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Yield and Yield Spread Measures for Fixed-Rate Bonds**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,155 +35,128 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. calculate annual yield on a bond for varying compounding periods in a year
+2. compare, calculate, and interpret yield and yield spread measures for fixed-rate bonds
 
-- calculate annual yield on a bond for varying compounding periods in a year
-- compare, calculate, and interpret yield and yield spread measures for fixed-rate bonds
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 7.1 学习任务
+- **核心问题**：考试希望你用 `Yield and Yield Spread Measures for Fixed-Rate Bonds` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 7.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 7.3 关键英文术语
+- **Yield and Yield Spread Measures for Fixed-Rate Bonds（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Periodicity and Annualized Yields（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Other Yield Measures, Conventions, and Accounting for Embedded Options（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Yield Spread Measures for Fixed-Rate Bonds and Matrix Pricing（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Yield（收益率）**：把债券价格与未来现金流连接起来的回报度量。
+- **Option（期权）**：买方拥有权利但无义务，卖方承担相应义务的衍生品。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 7.1 | calculate annual yield on a bond for varying compounding periods in a year | 计算并解释数值结果 | 写出结论、依据和限制条件。 |
+| 7.2 | compare, calculate, and interpret yield and yield spread measures for fixed-rate bonds | 计算并解释数值结果；解释结果的投资含义；比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M07: Fixed-Rate Yield and Spread Measures（固定利率债收益率与利差）
-├─ ⭐ 7.1 收益率指标 (Yield Measures)
-│  ├─ 📐 YTM (到期收益率)：使债券现值等于价格的贴现率
-│  │  └─ ⚠️ 隐含假设：持有至到期且票息按 YTM 再投资
-│  ├─ 📐 当期收益率 (Current Yield) = 年票息 / 债券价格
-│  │  └─ ⚠️ 仅捕捉票息收入，忽略资本利得和再投资收入
-│  ├─ 📐 债券等价收益率 (BEY) = Periodic Yield × periods/year
-│  ├─ 📐 有效年化收益率 (EAY) = (1 + periodic rate)^m - 1
-│  └─ 🎯 不同复利频率下的收益率需标准化比较
-│
-├─ ⭐ 7.2 利差指标 (Spread Measures)
-│  ├─ 📐 G-spread = YTM_bond - YTM_government_benchmark（需插值匹配期限）
-│  ├─ 📐 I-spread = YTM_bond - swap rate at same maturity
-│  ├─ 📐 Z-spread = 各即期利率上统一加常数利差使 PV = 价格
-│  ├─ 💡 利差包含：信用 + 流动性 + 期权 + 税收 + 技术面因素
-│  └─ ⚠️ 利差不是纯信用补偿，需区分各成分
-│
-└─ ⭐ 7.3 价格-收益率关系
-   ├─ 📐 无期权固定利率债券：价格与收益率呈反向关系
-   ├─ 💡 利差走阔 → 价格下降；利差收窄 → 价格上升
-   └─ ⚠️ Same YTM ≠ same value（现金流结构不同时）
+7. Yield and Yield Spread Measures for Fixed-Rate Bonds
+├─ 7.1 Introduction
+│  ├─ 7.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.1.2 应用/判断：把概念或公式转成解题动作
+├─ 7.2 Periodicity and Annualized Yields
+│  ├─ 7.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.2.2 应用/判断：把概念或公式转成解题动作
+├─ 7.3 Other Yield Measures, Conventions, and Accounting for Embedded Options
+│  ├─ 7.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.3.2 应用/判断：把概念或公式转成解题动作
+├─ 7.4 Yield Spread Measures for Fixed-Rate Bonds and Matrix Pricing
+│  ├─ 7.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：收益率指标（Yield Measures）
-**核心概念**：固定利率债券的收益率有多种度量方式，每种衡量债券回报的不同方面。到期收益率（YTM）是最全面的度量，但隐含了重要的假设条件。
-- **到期收益率（YTM）**：使债券现值等于价格的贴现率，相当于债券的内部收益率（IRR）。隐含假设：持有至到期且所有票息收入按 YTM 再投资
-- **当期收益率（Current Yield）**：年票息收入 / 债券价格，仅捕捉票息收入，忽略资本利得/损失和再投资收入。不是总回报度量
-- **债券等价收益率（BEY）**：Periodic Yield × periods/year，用于标准化不同复利频率的收益率比较，半年度复利最常见
-- **有效年化收益率（EAY）**：`EAY = (1 + periodic rate)^m - 1`，用于跨复利频率的精确比较
-- ⚠️ YTM 的再投资假设在现实中无法严格满足——如果市场利率变化，实际持有期回报将不同于 YTM
+### 7.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`calculate annual yield on a bond for varying compounding periods in a year`。
+- **核心词汇**：**Yield and Yield Spread Measures for Fixed-Rate Bonds（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：使用金融计算器计算 YTM；比较不同复利频率的收益率（统一转换为 EAY 或 BEY）；区分 current yield 与 YTM 的概念差异。
+### 7.2 Periodicity and Annualized Yields
+- **中文主线**：本节点解决 `Periodicity and Annualized Yields` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；比较相似概念的适用条件与差异；官方表述为：`compare, calculate, and interpret yield and yield spread measures for fixed-rate bonds`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：利差指标（Spread Measures）
-**核心概念**：利差是债券收益率与基准收益率之间的差额，用于衡量信用风险、流动性风险和其他风险溢价。不同类型的利差度量提供了不同精度的信用风险分析。
-- **G-spread（G-利差）**：`YTM_bond - YTM_government_benchmark`，需插值匹配期限，是最基本的利差度量
-- **I-spread（I-利差）**：`YTM_bond - swap rate at same maturity`，以互换利率为基准
-- **Z-spread（Z-利差）**：在各即期利率上统一加一个常数利差，使现金流现值等于债券价格，比 G-spread 更精确
-- **利差成分**：利差 = 信用风险溢价 + 流动性溢价 + 期权成本 + 税收效应 + 技术面因素
-- ⚠️ 利差不是纯信用补偿，它综合了多种风险因素。利差走阔不一定等于违约风险上升，也可能是流动性恶化或市场风险偏好转变
+### 7.3 Other Yield Measures, Conventions, and Accounting for Embedded Options
+- **中文主线**：本节点解决 `Other Yield Measures, Conventions, and Accounting for Embedded Options` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`calculate annual yield on a bond for varying compounding periods in a year`。
+- **核心词汇**：**Periodicity and Annualized Yields（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算 G-spread（需在国债曲线上插值）；区分不同利差度量的适用场景；分析利差变化的含义。
+### 7.4 Yield Spread Measures for Fixed-Rate Bonds and Matrix Pricing
+- **中文主线**：本节点解决 `Yield Spread Measures for Fixed-Rate Bonds and Matrix Pricing` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`calculate annual yield on a bond for varying compounding periods in a year`。
+- **核心词汇**：**Other Yield Measures, Conventions, and Accounting for Embedded Options（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：价格-收益率关系（Price-Yield Relationship）
-**核心概念**：无期权固定利率债券的价格与收益率呈反向凸性关系。这是固定收益投资最基础的直觉——利率上升时债券价格下降，利率下降时债券价格上升。
-- **反向关系**：收益率上升 → 价格下降；收益率下降 → 价格上升
-- **凸性特征**：价格与收益率的关系不是线性的，而是凸向原点的曲线
-- **利差变化含义**：利差走阔 → 债券价格下降（相对基准）；利差收窄 → 债券价格上升
-- ⚠️ Same YTM 不代表 same value——即使两只债券有相同的 YTM，若现金流时间分布不同或含嵌入期权，它们的价格风险和再投资风险也不同
+### 7.9 Legacy 补强要点
+- 来自 `M04-Yield-and-Spread-Measures.md`：## 1. 核心知识点; ## 2. 关键公式; 【考纲内但无核心公式】利差成分解释：credit/liquidity/option/tax/technical。。
 
-**考试应用**：分析利率变化对债券价格的影响方向，理解利差变化的市场含义。
 
-## 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `P = Σ C/(1+YTM/m)^t + FV/(1+YTM/m)^N` | YTM 定义式 | 债券定价/收益率计算 | 需用金融计算器迭代 |
-| `Current Yield = 年票息 / 债券价格` | 当期收益率 | 快速估算票息回报 | 忽略资本利得 |
-| `BEY = Periodic Yield × periods/year` | 债券等价收益率 | 标准化比较 | 半年度最常用 |
-| `EAY = (1 + periodic rate)^m - 1` | 有效年化收益率 | 跨复利频率比较 | m = 年复利次数 |
-| `G-spread = YTM_bond - YTM_benchmark` | G-利差 | 信用风险衡量 | 需插值匹配期限 |
-| `Z-spread = constant spread on spot curve` | Z-利差 | 精确利差度量 | Level I 偏概念 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
 
-## 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 考点 1：YTM 计算
-- **题型**：给出债券价格、票息率、期限、面值，反推 YTM
-- **工具**：使用金融计算器 TVM 功能
-- **注意**：YTM 假设持有至到期且再投资率等于 YTM
+## 6. 常见考点与解题思路
 
-### 考点 2：不同复利频率收益率转换
-- **题型**：比较不同复利频率的债券收益率
-- **思路**：统一转换为 EAY 或 BEY 后再比较
-- **步骤**：先算 periodic rate → 再用公式转换为目标收益率
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 3：计算 G-spread
-- **步骤**：确定目标债券的期限 → 在国债曲线上插值得到对应期限的基准收益率 → 计算差值
-- **注意**：如果目标债券期限不等于任何国债期限，需要线性插值
+## 7. 易错点与考试陷阱
 
-### 考点 4：解读利差变化
-- **利差走阔** → 债券价格下降（相对基准），可能由于信用恶化、流动性下降或风险偏好转变
-- **利差收窄** → 债券价格上升（相对基准），可能由于信用改善或市场情绪好转
+- **中英文错配**：看到 `Yield and Yield Spread Measures for Fixed-Rate Bonds` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 🚨 易错点与考试陷阱
+## 8. 跨模块关联
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| Same YTM = same value | 现金流时间分布不同时风险和再投资也不同 | YTM 是加权平均 |
-| Current yield = 总回报 | 忽略 price change 和 reinvestment income | 仅捕捉票息部分 |
-| YTM 是承诺回报 | 再投资假设现实中无法严格满足 | 市场利率变化影响实际回报 |
-| Spread widening = 违约风险上升 | 也可能是流动性恶化或风险偏好转变 | 利差是多因素综合结果 |
+- **上游模块**：[[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🔄 跨模块关联
+## 9. 复习与刷题提示
 
-- **YTM** → [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] 的定价逆运算
-- **利差分析** → [[M14-Credit-Risk]] 的信用风险度量
-- **年化转换** → [[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]] 的货币市场指标
-- **曲线分析** → [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] 的即期曲线
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 📋 复习与刷题提示
+## 10. Legacy Notes Integrated
 
-- **核心重点**：YTM/Current Yield/EAY/BEY 的计算和转换是最高频考点
-- **利差指标**：
-  - G-spread：国债曲线上插值的利差（需匹配期限）
-  - I-spread：swap curve 上的利差
-  - Z-spread：各即期利率上加常数利差（Level I 偏概念）
-- **关键区分**：
-  - YTM = 总回报率（含票息+资本利得+再投资），假设持有至到期
-  - Current Yield = 仅票息回报率，忽略资本利得和再投资
-  - EAY vs BEY：EAY 考虑复利效应（年化），BEY 是单利（periodic × periods）
-- **复利频率转换**步骤：
-  1. 从报价收益率计算 periodic rate
-  2. 转换为 EAY：`EAY = (1 + periodic rate)^m - 1`
-  3. 转换为 BEY：`BEY = periodic rate × m`
-- **计算流程**：
-  - 已知 EAY 求 BEY：`periodic = (1 + EAY)^(1/m) - 1` → `BEY = periodic × m`
-  - 已知 BEY 求 EAY：`periodic = BEY/m` → `EAY = (1 + periodic)^m - 1`
-- **刷题建议**：
-  - 重点做收益率转换计算题（EAY ↔ BEY 转换）
-  - 利差分析题（G-spread 的计算和理解）
-  - YTM 相关题（金融计算器使用）
-- **易混淆点**：
-  - Current Yield 不是总回报
-  - YTM 的再投资假设在现实中无法严格满足
-
-- **关键数值记忆**：
-  - G-spread：以国债曲线为基准（需插值匹配期限）
-  - I-spread：以 swap curve 为基准
-  - Z-spread：spot curve 上统一加的常数利差
-  - OAS：含期权债券调整后的利差（Level I 了解概念即可）
-- **考试技巧**：
-  - YTM ≠ 已实现回报（再投资率变化会导致偏离）
-  - 不同复利频率的收益率必须先统一才能比较
-  - EAY 到 BEY 的转换：periodic rate = (1+EAY)^(1/m)-1，BEY = periodic × m
-- **计算流程总结**：
-  1. 已知 EAY → BEY：periodic = (1+EAY)^(1/2)-1，BEY = periodic × 2
-  2. 已知 BEY → EAY：periodic = BEY/2，EAY = (1+periodic)^2-1
-  3. 已知 YTM 半年付 → EAY：先算 periodic = YTM/2，再算 EAY = (1+periodic)^2-1
-- **利差变化分析**：
-  - Spread widening → 债券价格相对基准下降
-  - Spread narrowing → 债券价格相对基准上升
-  - 利差不是纯信用补偿，含流动性溢价和期权成本
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M04-Yield-and-Spread-Measures.md（confidence 0.466）
+- **可复用结构**：M07: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)；1. 核心知识点；1.1 收益率视角 (Yield Lens)；1.2 利差视角 (Spread Lens)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；【考纲内但无核心公式】利差成分解释：credit/liquidity/option/tax/technical。；**判断利差变化的含义**：利差走阔 → 债券价格下降（相对基准）；利差收窄 → 债券价格上升。
+- **公式/计算线索**：title: "M04 — Yield and Spread Measures"；official_module: "Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds"；# M07: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)
+- **易错提示**：## 4. 易错点提醒

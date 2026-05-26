@@ -1,23 +1,29 @@
 ---
-title: "M02 — Code of Ethics and Standards of Professional Conduct"
-description: "CFA Level I 2026 official module: Code of Ethics and Standards of Professional Conduct"
-module: M02
+title: "M02: Code of Ethics and Standards of Professional Conduct"
+description: "CFA Level I 2026 Ethical and Professional Standards 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Ethical and Professional Standards"
-topic_area: Ethical_and_Professional_Standards
-curriculum_year: 2026
+topic_area: "Ethical_and_Professional_Standards"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "15-20%"
+module: "M02"
 official_module: "Module 2: Code of Ethics and Standards of Professional Conduct"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+案例判断"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Ethical_and_Professional_Standards
   - official_2026
+  - Ethical_and_Professional_Standards
 ---
 
 # M02: Code of Ethics and Standards of Professional Conduct
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用 Code and Standards 判断专业行为、利益冲突、客户责任与合规边界。 本模块聚焦 **Code of Ethics and Standards of Professional Conduct**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -28,174 +34,111 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the structure of the CFA Institute Professional Conduct Program and the process for the enforcement of the Code and Standards
+2. identify the six components of the Code of Ethics and the seven Standards of Professional Conduct
+3. explain the ethical responsibilities required by the Code and Standards, including the sub-sections of each Standard
 
-- describe the structure of the CFA Institute Professional Conduct Program and the process for the enforcement of the Code and Standards
-- identify the six components of the Code of Ethics and the seven Standards of Professional Conduct
-- explain the ethical responsibilities required by the Code and Standards, including the sub-sections of each Standard
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Ethical_and_Professional_Standards/M02-Code-of-Ethics.md`
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Code of Ethics and Standards of Professional Conduct` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.46. Original official module field: Code of Ethics and Standards of Professional Conduct._
+### 2.2 考试角色
+- **难度类型**：概念+案例判断。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M02: 道德准则 (Code of Ethics)
+### 2.3 关键英文术语
+- **Code of Ethics and Standards of Professional Conduct（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Preface（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ethics and the Investment Industry（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **CFA Institute Code of Ethics and Standards of Professional Conduct（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ethical and Professional Standards（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ethics（伦理）**：专业行为、客户利益、市场诚信和合规责任的规范体系。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | describe the structure of the CFA Institute Professional Conduct Program and the process for the enforcement of the Code and Standards | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.2 | identify the six components of the Code of Ethics and the seven Standards of Professional Conduct | 识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
+| 2.3 | explain the ethical responsibilities required by the Code and Standards, including the sub-sections of each Standard | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M02: Code of Ethics and Standards of Professional Conduct（道德准则与职业行为标准）
-│
-├── ⭐ 道德准则的定位 (Role of the Code of Ethics)
-│   ├── CFA 职业道德体系的总纲 (umbrella framework)，为 Standards I-VII 提供价值基础
-│   ├── 描述精神 (spirit) 而非具体规则 (specific rules)
-│   └── 具有与 Standards 同等的约束力
-│
-├── ⭐ 七条道德准则 (Seven Principles)
-│   ├── Integrity — 始终保持正直与诚信
-│   ├── Competence — 维持并提升专业能力
-│   ├── Diligence — 以勤勉尽责的态度开展工作
-│   ├── Respect — 尊重他人（客户、同事、市场参与者）
-│   ├── Client Interests First — 客户利益与职业诚信高于个人利益
-│   ├── Independent Judgment — 做出独立专业判断，不受不当影响
-│   └── Market Integrity — 维护资本市场诚信与声誉
-│
-├── ⭐ 客户利益优先的边界
-│   ├── 违法或违背公共利益时，客户利益不优先
-│   ├── 客户利益 > 雇主利益 > 个人利益是一般排序
-│   └── ⚠️ 客户利益不是绝对的 — 法律和职业标准有更高优先级
-│
-├── ⭐ 独立专业判断 (Independent Professional Judgment)
-│   ├── 即使客户要求，也不能做出违反职业标准的判断
-│   └── 外部压力不能成为放弃独立判断的借口
-│
-├── ⭐ 市场诚信意识 (Market Integrity Mindset)
-│   ├── 保护市场整体利益是每个从业者的责任
-│   └── 即使单笔交易看似无害，若损害市场信任也不可接受
-│
-├── 💡 关键洞察
-│   ├── Code 是"精神"(spirit)，Standards 是"规则"(rules)，但 Code 本身具有约束力
-│   ├── 情景题应先想 Code 精神，再找具体违反的 Standard
-│   └── 考试中 Code 常与标准结合考察
-│
-└── ⚠️ 考试陷阱总结
-    ├── Code of Ethics 不是建议 — 对会员和考生具有约束力
-    ├── 客户利益不是永远第一 — 违法或损害市场诚信时例外
-    ├── Code 精神是情境题的判断依据，经常涉及
-    └── 理解 Code 才能准确判断 Standards 的边界
+2. Code of Ethics and Standards of Professional Conduct
+├─ 2.1 Preface
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Ethics and the Investment Industry
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 CFA Institute Code of Ethics and Standards of Professional Conduct
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：道德准则的定位（Role of the Code of Ethics）
+### 2.1 Preface
+- **中文主线**：本节点解决 `Preface` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the structure of the CFA Institute Professional Conduct Program and the process for the enforcement of the Code and Standards`。
+- **核心词汇**：**Code of Ethics and Standards of Professional Conduct（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-Code of Ethics 是 CFA 职业道德体系的**总纲 (umbrella framework)**，为 Standards I-VII 提供价值基础。它描述的是精神 (spirit) 而非具体规则 (specific rules)，但具有同等的约束力。
+### 2.2 Ethics and the Investment Industry
+- **中文主线**：本节点解决 `Ethics and the Investment Industry` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：识别题干中的关键事实和触发条件；官方表述为：`identify the six components of the Code of Ethics and the seven Standards of Professional Conduct`。
+- **核心词汇**：**Preface（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：七条道德准则详解（Seven Principles）
+### 2.3 CFA Institute Code of Ethics and Standards of Professional Conduct
+- **中文主线**：本节点解决 `CFA Institute Code of Ethics and Standards of Professional Conduct` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the ethical responsibilities required by the Code and Standards, including the sub-sections of each Standard`。
+- **核心词汇**：**Ethics and the Investment Industry（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-| 准则 | 英文 | 核心含义 |
-|------|------|----------|
-| 1 | Integrity | 始终保持正直与诚信 |
-| 2 | Competence | 维持并提升专业能力 |
-| 3 | Diligence | 以勤勉尽责的态度开展工作 |
-| 4 | Respect | 尊重他人（客户、同事、市场参与者） |
-| 5 | Client Interests First | 客户利益与职业诚信高于个人利益 |
-| 6 | Independent Judgment | 做出独立专业判断，不受不当影响 |
-| 7 | Market Integrity | 维护资本市场诚信与声誉 |
 
-### 知识点3：关键解读（Key Interpretations）
+## 5. 关键公式与计算框架
 
-**客户利益优先 (Client Interests Above Personal Interest)**
-- 这不是绝对的——在违法或违背公共利益时，客户利益不优先
-- 客户利益 > 雇主利益 > 个人利益是一般排序
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Ethics decision rule | `identify duty -> disclose conflicts -> protect client interests -> document action` | 伦理题更像判断流程，不是公式题。 |
 
-**独立专业判断 (Independent Professional Judgment)**
-- 即使客户要求，也不能做出违反职业标准的判断
-- 外部压力（雇主、客户、市场）不能成为放弃独立判断的借口
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**市场诚信意识 (Market Integrity Mindset)**
-- 保护市场整体利益是每个从业者的责任
-- 即使单笔交易看似无害，若损害市场信任也是不可接受的
+## 6. 常见考点与解题思路
 
-### 📐 关键公式表
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-| 框架 | 说明 |
-|------|------|
-| Code 统领 Standards | Code 提供原则，Standards 提供可操作规则 |
-| Code 的约束力 | 虽然表述抽象，但违反 Code 同样构成违规 |
-| 精神优先于字面 | 考试中应选择最符合 Code 精神的选项 |
+## 7. 易错点与考试陷阱
 
-### 🛠️ 常见考点与解题思路
+- **中英文错配**：看到 `Code of Ethics and Standards of Professional Conduct` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点1：Code vs. Standards 的关系**
-- **典型问法**：某行为虽然没有违反具体 Standard，但违背了 Code 的精神，是否违规？
-- **解题思路**：是的，Code 具有独立约束力，违背 Code 精神也可能构成违规
+## 8. 跨模块关联
 
-**考点2：客户利益优先的边界**
-- **典型问法**：客户要求某操作，操作合法但可能损害市场公信力，应如何处理？
-- **解题思路**：客户的利益不是唯一的考量因素，市场诚信和职业标准同样重要
+- **上游模块**：[[M01-Ethics-and-Trust-in-the-Investment-Profession]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Guidance-for-Standards-I-VII]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**考点3：独立判断的适用场景**
-- **典型问法**：雇主施加压力要求出具特定结论，应如何应对？
-- **解题思路**：必须坚持独立专业判断，不能因雇主压力而妥协
+## 9. 复习与刷题提示
 
-### 🚨 易错点与考试陷阱
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| Code of Ethics 只是建议，没有强制力 | Code 对 CFA 会员和考生具有约束力 |
-| 客户利益永远第一 | 违法或损害市场诚信时，客户利益不优先 |
-| Code 太抽象，考试不会考 | Code 精神是情境题的判断依据，经常涉及 |
-| Standards 就够了，不需要记 Code | 理解 Code 才能准确判断 Standards 的边界 |
+## 10. Legacy Notes Integrated
 
-### 🔄 跨模块关联
-
-- **[[M01-Ethics-and-Trust-in-the-Investment-Profession]]** — Code 的信任与职业精神基础
-- **[[M03-Guidance-for-Standards-I-VII]]** — Standards I-VII 是 Code 中 Integrity、Competence 等原则的具体化
-- **[[M05-Ethics-Application]]** — Code 精神在综合案例题中的判断依据
-
----
-
-## 复习与刷题提示
-
-- **Code 七条准则要能默写**：Integrity, Competence, Diligence, Respect, Client Interests First, Independent Judgment, Market Integrity
-- **高频考点**：Code 与 Standards 的关系（Code 有独立约束力）、客户利益优先的边界、独立判断原则
-- 考试中 Code 常与标准结合考察：看到情境题先想 Code 的精神，再找具体违反的 Standard
-- 注意对比：Code 是"精神 (spirit)"，Standards 是"规则 (rules)"，但 Code 本身具有约束力
-
-## Legacy Notes Integrated
-
-本模块整合了 `_legacy/2026-05-26-official-sync/` 中的：
-- **M02-Code-of-Ethics.md** — 知识树、七准则详解、判断框架、陷阱表（全部内容）
-
-旧链接已更新为当前官方模块文件名。
-
-## 📋 复习与刷题提示
-
-- **核心能力**：Code七准则默写（Integrity/Competence/Diligence/Respect/ClientFirst/IndependentJudgment/MarketIntegrity）
-- **常考题型**：Code vs Standards关系、客户利益优先边界、独立判断原则
-- **考试策略**：情景题→先想Code精神→再找具体违反的Standard
-- **关键提醒**：Code of Ethics 描述的是职业精神，Standards 是可操作的规则，两者同为 CFA 道德体系的核心支柱
-- **跨科目接口**：公司治理（Corp M03）中的董事会监督职责与本模块的 fiduciary duty 理念相通
-
-### 跨科目学习链接
-- **Portfolio Management M05**: 行为偏差（过度自信、确认偏误）与 Code 中 Independent Judgment 的关联
-- **Corporate Issuers M03**: 公司治理机制与 Code 中 Diligence 和 Integrity 的呼应
-- **Alternative Investments M02**: 另类投资的费用披露与 VI(C) Referral Fees 的交叉
-- 伦理决策通常涉及多层利益相关者：客户、雇主、市场、社会——Code的七条原则提供优先级框架
-- 考试中遇到Code vs Standards关系题：Code是精神(Why)，Standards是规则(What)，两者同为约束
-- 关键对比：Code of Ethics（精神层面，7条原则）vs Standards of Professional Conduct（操作层面，7大标准24条子标准）——两者同为约束
-
----
-
-### 💡 学习建议
-- 背诵Code七条准则（建议用首字母记忆法：ICDRCIM）
-- 每做一道情景题，先问：涉及哪条Code原则？再找具体违反的Standard
-- Code的七条准则和Standards I-VII的对应关系要熟记
-
-### 📝 高频解题模式
-
-- **找原则 → 找标准 → 判例外**：先定位Code原则层面（精神），再匹配具体Standard（规则），最后检查是否有正当例外（如客户要求违法时不以客户利益优先）
-- **横向对比**：III(A) Loyalty（忠诚于客户）vs IV(A) Loyalty（忠诚于雇主）——前者是client利益优先于personal，后者是employer利益优先于personal但client仍高于employer
-- **常见干扰选项**：选项中混入Standards没有明确要求的义务（如"必须举报所有同事的不道德行为"——实际只有违反法律或CFA规则时才需举报）
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M01-Ethics-Trust-and-Professionalism.md` (0.414), `M09-Ethics-Application.md` (0.369), `00-Ethical-and-Professional-Standards-MOC.md` (0.365)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

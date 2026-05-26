@@ -1,23 +1,29 @@
 ---
-title: "M02 — Investors and Other Stakeholders"
-description: "CFA Level I 2026 official module: Investors and Other Stakeholders"
-module: M02
+title: "M02: Investors and Other Stakeholders"
+description: "CFA Level I 2026 Corporate Issuers 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Corporate Issuers"
-topic_area: Corporate_Issuers
-curriculum_year: 2026
+topic_area: "Corporate_Issuers"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M02"
 official_module: "Module 2: Investors and Other Stakeholders"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+案例判断"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Corporate_Issuers
   - official_2026
+  - Corporate_Issuers
 ---
 
 # M02: Investors and Other Stakeholders
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：理解公司组织、治理、营运资本、资本配置与商业模式如何影响价值创造。 本模块聚焦 **Investors and Other Stakeholders**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,276 +35,123 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. compare the financial claims and motivations of lenders and shareholders
+2. describe a company’s stakeholder groups and compare their interests
+3. describe environmental, social, and governance factors of corporate issuers considered by investors
 
-- compare the financial claims and motivations of lenders and shareholders
-- describe a company’s stakeholder groups and compare their interests
-- describe environmental, social, and governance factors of corporate issuers considered by investors
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Corporate_Issuers/M01-Corporate-Structures-and-Ownership.md`
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Investors and Other Stakeholders` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.34. Original official module field: 1._
+### 2.2 考试角色
+- **难度类型**：概念+案例判断。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M01: Corporate Structures and Ownership（公司结构与所有权）
+### 2.3 关键英文术语
+- **Investors and Other Stakeholders（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Financial Claims of Lenders and Shareholders（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Corporate Stakeholders and Governance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Corporate ESG Considerations（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
 
-```text
-🏆 Corp M01: Corporate Structures and Ownership（公司结构与所有权）
-│
-├── ⭐ 法律形式与权益类型 (Legal Form & Claims)
-│   ├── 独资企业: 单人拥有，无限责任，个人纳税，融资有限
-│   ├── 合伙企业: 两人及以上，GP 无限连带，LP 有限
-│   ├── 公司 (Corporation): 独立法人，有限责任，双重征税，融资广泛
-│   └── LLC: 有限责任 + 税收穿透优势
-│
-├── ⭐ 债务 vs 股权索偿权
-│   ├── 债权人: 合约性固定索偿权，优先受偿
-│   ├── 股东: 剩余索偿权，更高风险，上行收益空间
-│   └── ⚠️ 债权人 < 股东在风险和收益顺序中
-│
-├── ⭐ 所有权与控制权分离
-│   ├── 公众公司上市 → 所有权分散，控制权在管理层
-│   └── 代理问题 (Principal-Agent) 的根源
-│
-├── ⭐ 利益相关者 (Stakeholders)
-│   ├── 股东: 公司价值最大化
-│   ├── 债权人: 偿债能力和现金流稳定
-│   ├── 管理层: 薪酬、职业安全、声誉
-│   ├── 员工: 薪酬、稳定性、发展
-│   ├── 客户: 质量与价格
-│   └── 监管机构: 合规运营和市场公平
-│
-├── 💡 关键洞察
-│   ├── 利益相关者目标冲突 → 治理问题
-│   ├── 无限责任 → 独资/GP；有限责任 → 公司/LLC
-│   └── 所有权与控制分离是代理问题的根源
-│
-└── ⚠️ 考试陷阱总结
-    ├── 有限责任 ≠ 公司不会倒闭
-    ├── 独资企业不是法律实体
-    ├── LLC 不是 Corporation
-    └── 债权人没有与股东相同的治理权利
-```
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | compare the financial claims and motivations of lenders and shareholders | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+| 2.2 | describe a company’s stakeholder groups and compare their interests | 比较相似概念的适用条件与差异；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.3 | describe environmental, social, and governance factors of corporate issuers considered by investors | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
 
-## 📖 知识点详解
-
-### 知识点1：企业法律形式与所有权 (Corporate Structures and Ownership)
-
-**核心概念**：企业存在多种法律形式，每种形式在责任承担、税务处理和所有权转让方面有本质区别。公众公司中所有权与控制权的分离是代理问题的根源，利益相关者目标冲突是公司治理的核心议题。
-
-- **法律形式 (Legal Forms)**：独资企业（无限责任+个人纳税）、合伙企业（无限连带/有限责任）、公司（有限责任+双重征税）、LLC（有限责任+穿透纳税）
-- **债务索偿 vs 股权索偿**：债权人拥有固定合约性索偿权（优先偿付）；股东拥有剩余索偿权（最后受偿+投票权）
-- **所有权与控制权分离**：上市公司股东拥有公司但不参与日常经营，管理层掌握实际控制权。这一分离是代理问题的根源
-- **利益相关者 (Stakeholders)**：股东、债权人、管理层、员工、客户、供应商、监管机构，目标经常冲突
-- 💡 有限责任保护股东个人资产免受公司债务追索，但公司本身仍可能破产
-
-**考试应用**：辨识企业法律形式（看责任和税务特征）、区分债务与股权索偿（固定合约 vs 剩余）、理解所有权与控制权分离（代理问题的根源）。
-
-### 📐 关键公式表
-
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| 股权比率 (Equity Ratio) | `Total Equity / Total Assets` | 衡量公司自有资本占比，反映财务稳健性 |
-| 债务权益比 (Debt-to-Equity) | `Total Debt / Total Equity` | 衡量财务杠杆水平 |
-
-### 🛠️ 常见考点与解题思路
-
-**考点1：辨识企业法律形式特征**
-- 题目给出一段描述（如"业主承担无限责任且个人纳税"），问你属于哪种形式。
-- 解题：记住无限责任 → 独资/普通合伙；有限责任 → 公司/LLC。
-
-**考点2：理解所有权与控制权的分离**
-- 题目问：为什么上市公司的股东不能直接指挥管理层？
-- 核心答案：所有权分散 + 代理问题。股东保留剩余索取权，但将日常决策委托给管理层。
-
-**考点3：区分债务索偿与股权索偿**
-- 典型选择题：债权人与股东的根本区别是什么？
-- 答案：债权人拥有**固定合约性索偿权 (fixed contractual claims)**，股东拥有**剩余索偿权 (residual claims)**。
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| 有限责任 = 公司不会倒闭 | 有限责任保护股东个人资产，但公司仍可破产 |
-| 独资企业是独立法律实体 | 独资企业与企业主是同一主体 |
-| LLC 等同于 Corporation | LLC 兼具合伙税收穿透和公司有限责任 |
-| 债权人拥有与股东相同的治理权利 | 债权人无投票权，通过契约保护利益 |
-
-### 🔄 跨模块关联
-
-- 所有权与控制权分离 → [[M02-Corporate-Governance-and-ESG]] 代理问题的根源
-- 利益相关者冲突 → [[M02-Corporate-Governance-and-ESG]] 公司治理需要协调这些冲突
-- 不同法律形式影响融资能力 → [[M05-Cost-of-Capital]] 融资渠道与资本成本的关系
-- 公众公司的决策机制 → [[M04-Capital-Investments]] 资本预算决策中的委托代理考量
-
-### Migrated from `CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md`
-
-_Alignment score: 1.00. Original official module field: Module 2: Investors and Other Stakeholders._
-
-#### M02: Investors and Other Stakeholders（投资者与其他利益相关者）
-
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 Corp M02: Investors and Other Stakeholders（投资者与其他利益相关者）
-│
-├── ⭐ 投资者类型
-│   ├── 机构投资者: 代表他人管理（养老金、保险、共同基金、对冲基金）
-│   ├── 散户投资者: 自有资金，规模小，依赖公开信息
-│   ├── 股权投资者: 剩余索偿权，最高风险，有投票权
-│   └── 债务投资者: 固定合约索偿权，较低风险，无投票权
-│
-├── ⭐ 机构投资者的特殊角色
-│   ├── 积极所有权: 投票 + 参与影响公司决策
-│   ├── 受托责任: 受益人利益置于首位
-│   └── 代理投票: 代表受益人行使投票权
-│
-├── ⭐ 利益相关者目标与冲突
-│   ├── 股东 vs 债权人: 风险偏好冲突（资产置换/债务悬置）
-│   ├── 股东 vs 管理层: 代理问题（Principal-Agent）
-│   └── 股东 vs 其他利益相关者: 利润 vs 员工/环境/客户
-│
-├── ⭐ 信息不对称
-│   ├── 逆向选择: 交易前信息不对称 → 柠檬问题
-│   ├── 道德风险: 交易后信息不对称 → 代理成本
-│   ├── 信号传递: 举债/股息/持股 → 传递私有信息
-│   └── 📐 影响: 信息不对称 → 融资成本↑
-│
-├── ⭐ 金融分析师的角色
-│   ├── 信息中介: 减少管理层与投资者之间的信息不对称
-│   ├── 卖方分析师: 对外发布报告，可能面临投行冲突
-│   ├── 买方分析师: 内部投资决策
-│   └── ⚠️ 中国墙: 隔离研究与投行部门
-│
-├── ⭐ ESG 与利益相关者
-│   ├── 环境: 社区、监管、投资者 — 合规风险
-│   ├── 社会: 员工、客户、供应商 — 声誉与许可经营
-│   ├── 治理: 股东、债权人、管理层 — 决策质量
-│   └── 📐 三条传导路径: 风险 → 现金流 → 资本成本
-│
-├── 💡 关键洞察
-│   ├── 利益相关者资本主义 vs 股东至上
-│   ├── ESG 通过风险/现金流/资本成本影响财务表现
-│   ├── 机构投资者不必然比散户更理性
-│   └── 信息不对称是公司金融最核心的市场不完美
-│
-└── ⚠️ 考试陷阱总结
-    ├── 所有投资者的信息获取能力不同 — 机构 > 散户
-    ├── 股东价值最大化 ≠ 所有利益相关者利益最大化
-    ├── 信息不对称不仅存在于管理层与股东之间
-    ├── 债权人无投票权，通过契约保护利益
-    ├── 卖方 vs 买方分析师角色不同
-    └── ESG 不是独立的非财务议题
+2. Investors and Other Stakeholders
+├─ 2.1 Introduction
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Financial Claims of Lenders and Shareholders
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 Corporate Stakeholders and Governance
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
+├─ 2.4 Corporate ESG Considerations
+│  ├─ 2.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：投资者类型 (Types of Investors)
+### 2.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the financial claims and motivations of lenders and shareholders`。
+- **核心词汇**：**Investors and Other Stakeholders（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：公司从多种渠道获得资本，不同类型的投资者在风险承担、回报形式和信息需求方面有本质区别。机构投资者代表他人管理资金，散户投资者使用自有资金投资。
+### 2.2 Financial Claims of Lenders and Shareholders
+- **中文主线**：本节点解决 `Financial Claims of Lenders and Shareholders` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；描述定义、流程和适用场景；官方表述为：`describe a company’s stakeholder groups and compare their interests`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **机构投资者 (Institutional Investors)**：代表他人管理资金（养老金基金、保险公司、共同基金、对冲基金、主权财富基金）。要求高质量披露，主动参与公司治理，有受托责任
-- **散户投资者 (Retail Investors)**：使用自有资金，规模较小，依赖公开信息，较少参与治理
-- **股权投资者 (Equity Holders)**：剩余索偿权，最高风险，有投票权，回报来自股息+资本利得
-- **债务投资者 (Debt Holders)**：固定合约索偿权，较低风险，无投票权，回报来自固定利息
-- 💡 机构投资者通过积极所有权（投票+参与）影响公司决策，对受益人负有受托责任
+### 2.3 Corporate Stakeholders and Governance
+- **中文主线**：本节点解决 `Corporate Stakeholders and Governance` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe environmental, social, and governance factors of corporate issuers considered by investors`。
+- **核心词汇**：**Financial Claims of Lenders and Shareholders（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分投资者类型。机构 vs 零售看"代表他人"vs"自有资金"；股权 vs 债务看"剩余索偿"vs"固定索偿"。
+### 2.4 Corporate ESG Considerations
+- **中文主线**：本节点解决 `Corporate ESG Considerations` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the financial claims and motivations of lenders and shareholders`。
+- **核心词汇**：**Corporate Stakeholders and Governance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：利益相关者目标与冲突 (Stakeholder Objectives and Conflicts)
+### 2.9 Legacy 补强要点
+- 来自 `M02-Investors-and-Other-Stakeholders.md`：## 1. 核心知识点; **关键冲突类型**：; **信息不对称 (Information Asymmetry)** 是指公司内部人（管理层）比外部人（投资者、债权人）掌握更多关于公司真实状况的信息。这是公司金融中最核心的市场不完美之一。。
 
-**核心概念**：不同利益相关者对公司有不同的目标，这些目标常常相互冲突。识别和理解这些冲突是公司治理和公司金融决策的基础。
 
-- **股东 vs 债权人冲突**：股东偏好高风险高回报，债权人偏好稳健。资产置换和债务悬置是典型表现
-- **股东 vs 管理层冲突**：所有权与控制权分离导致代理问题。管理层可能追求个人利益而非股东价值
-- **股东 vs 其他利益相关者**：利润最大化目标可能与员工福利、环保、客户利益产生冲突
-- 💡 **关键冲突**：股东-债权人冲突是资本结构决策的核心权衡
+## 5. 关键公式与计算框架
 
-**考试应用**：给定决策情景，分析利益相关者的受益/受损情况。常见题型：发债回购股票→股东受益，债权人受损。
+本模块以概念判断为主，无核心计算公式。复习时把 `Investors and Other Stakeholders` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-### 知识点3：信息不对称 (Information Asymmetry)
+## 6. 常见考点与解题思路
 
-**核心概念**：信息不对称是指内部人（管理层）比外部人（投资者、债权人）掌握更多关于公司真实状况的信息，导致逆向选择、道德风险和信号传递行为。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-- **逆向选择 (Adverse Selection)**：交易前信息不对称。投资者担心"柠檬问题"，压低证券发行价格
-- **道德风险 (Moral Hazard)**：交易后信息不对称。管理层可能从事高风险活动或懈怠
-- **信号传递 (Signaling)**：公司通过可观察行动传递私有信息，如举债、股息、管理层持股
-- 💡 信息不对称 → 融资成本上升。公司有动力通过信息披露降低不对称
+## 7. 易错点与考试陷阱
 
-**考试应用**：信息不对称的影响及缓解机制。逆向选择（交易前）vs 道德风险（交易后）。分析师作为信息中介减少不对称。
+- **中英文错配**：看到 `Investors and Other Stakeholders` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 知识点4：金融分析师与 ESG (Financial Analysts and ESG)
+## 8. 跨模块关联
 
-**核心概念**：金融分析师在资本市场中扮演信息中介的角色，减少管理层与投资者之间的信息不对称。ESG因素通过风险、现金流和资本成本三条路径影响公司价值。
+- **上游模块**：[[M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- **分析师类型**：卖方（对外发布报告）、买方（内部投资决策）、独立（无投行利益冲突）
-- **ESG的三条传导路径**：风险路径、现金流路径、资本成本路径
-- 💡 ESG因素通过风险、现金流和资本成本三条路径直接影响公司财务表现
+## 9. 复习与刷题提示
 
-**考试应用**：分析师角色是减少信息不对称。ESG不是独立的非财务议题——通过三条路径影响公司价值。
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 📐 关键公式表
+## 10. Legacy Notes Integrated
 
-#### 利益相关者比较表
-
-| 维度 | 股权投资者 | 债权投资者 | 管理层 | 员工 | 客户 |
-|------|-----------|-----------|--------|------|------|
-| **索偿权顺序** | 最后（剩余） | 优先于股权 | 薪酬作为费用优先 | 薪酬作为费用优先 | 无直接财务索偿权 |
-| **信息获取能力** | 中等 | 较强 | 最强 | 中等 | 弱 |
-| **利益对齐度** | 完全对齐 | 部分对齐 | 不完全对齐 | 部分对齐 | 弱对齐 |
-| **风险敞口** | 业务+市场风险 | 信用/违约风险 | 失业+声誉风险 | 失业风险 | 产品/服务风险 |
-| **治理参与度** | 投票权 | 契约条款 | 日常控制权 | 工会谈判 | 消费者法规 |
-
-#### 信息不对称分析框架
-
-| 概念 | 定义 | 影响 | 缓解机制 |
-|------|------|------|----------|
-| 逆向选择 | 交易前一方信息优势 | 市场失灵 | 强制披露、信号传递 |
-| 道德风险 | 交易后行为改变 | 代理成本 | 监督机制、激励相容 |
-| 信号传递 | 发送可信信号 | 降低信息成本 | 股息、资本结构选择 |
-
-### 🛠️ 常见考点与解题思路
-
-**考点1：区分投资者类型及其目标**
-- 机构 vs 零售 → 看"代表他人" vs "自有资金"
-- 股权 vs 债务 → 看"剩余索偿" vs "固定索偿"
-
-**考点2：分析利益相关者冲突**
-- 识别决策的财富转移效应 → 谁受益？谁受损？
-- 股东受益于高风险策略（有限责任保护），债权人受损
-
-**考点3：信息不对称的影响**
-- 信息不对称 → 投资者要求更高回报 → 提高融资成本
-
-**考点4：分析师的角色**
-- 信息中介 — 减少信息不对称，提高市场效率
-
-**考点5：ESG与利益相关者**
-- 环境 → 社区/监管；社会 → 员工/客户；治理 → 股东/债权人
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| 所有投资者信息获取能力相同 | 机构投资者能获得更多信息 |
-| 股东价值最大化 = 所有利益相关者利益最大化 | 股东目标可能与其他利益相关者冲突 |
-| 信息不对称只存在于管理层与股东之间 | 普遍存在于公司与所有外部人之间 |
-| 债权人拥有与股东相同的治理权利 | 债权人无投票权，通过契约保护利益 |
-| 卖方和买方分析师角色相同 | 卖方对外发布，买方为内部决策 |
-| ESG 是独立非财务议题 | ESG 直接影响财务表现 |
-| 机构投资者必然更理性 | 机构也有行为偏差和利益冲突 |
-
-### 🔄 跨模块关联
-
-- **[[M01-Corporate-Structures-and-Ownership]]**：M01 介绍利益相关者类别，本模块深入分析目标差异与信息不对称
-- **[[M03-Corporate-Governance-and-ESG]]**：信息不对称是代理问题的核心驱动因素
-- **[[M06-Capital-Structure-and-Leverage]]**：信号传递理论通过资本结构选择传递管理层判断
-- **[[M05-Cost-of-Capital]]**：信息不对称程度直接影响融资成本
-- **Portfolio M05**：机构投资者构建组合时须考虑 ESG 和受托责任
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M02-Investors-and-Other-Stakeholders.md（confidence 0.682）
+- **可复用结构**：M02: Investors and Other Stakeholders（投资者与其他利益相关者）；1. 核心知识点；1.1 投资者类型 (Types of Investors)；1.2 利益相关者目标与冲突 (Stakeholder Objectives and Conflicts)；1.3 信息不对称 (Information Asymmetry)；1.4 金融分析师的角色 (The Role of Financial Analysts)
+- **高价值要点**：## 1. 核心知识点；**关键冲突类型**：；**信息不对称 (Information Asymmetry)** 是指公司内部人（管理层）比外部人（投资者、债权人）掌握更多关于公司真实状况的信息。这是公司金融中最核心的市场不完美之一。；**三个关键维度**：
+- **公式/计算线索**：describe stakeholder impacts and ESG considerations from an investor perspective；公司从多种渠道获得资本，不同类型的投资者在**风险承担 (risk bearing)**、**回报形式 (return form)** 和**信息需求 (information needs)** 方面有本质区别：；## 2. 关键公式
+- **易错提示**：## 4. 易错点提醒

@@ -1,23 +1,29 @@
 ---
-title: "M14 — Credit Risk"
-description: "CFA Level I 2026 official module: Credit Risk"
-module: M14
+title: "M14: Credit Risk"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M14"
 official_module: "Module 14: Credit Risk"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M14: Credit Risk
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Credit Risk**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,167 +35,129 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe credit risk and its components, probability of default and loss given default
+2. describe the uses of ratings from credit rating agencies and their limitations
+3. describe macroeconomic, market, and issuer-specific factors that influence the level and volatility of yield spreads
 
-- describe credit risk and its components, probability of default and loss given default
-- describe the uses of ratings from credit rating agencies and their limitations
-- describe macroeconomic, market, and issuer-specific factors that influence the level and volatility of yield spreads
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 14.1 学习任务
+- **核心问题**：考试希望你用 `Credit Risk` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 14.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 14.3 关键英文术语
+- **Credit Risk（信用风险）**：发行人无法按时足额履约的风险。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Sources of Credit Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Credit Rating Agencies and Credit Ratings（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Factors Impacting Yield Spreads（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Yield（收益率）**：把债券价格与未来现金流连接起来的回报度量。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 14.1 | describe credit risk and its components, probability of default and loss given default | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 14.2 | describe the uses of ratings from credit rating agencies and their limitations | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 14.3 | describe macroeconomic, market, and issuer-specific factors that influence the level and volatility of yield spreads | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M14: Credit Risk（信用风险）
-├─ ⭐ 14.1 损失逻辑 (Loss Logic)
-│  ├─ 📐 预期信用损失 = PD × LGD × Exposure
-│  ├─ 📐 LGD = 1 - Recovery Rate
-│  ├─ 🎯 PD (违约概率)：发行人无法支付本息的可能性
-│  ├─ 🎯 LGD (违约损失率)：违约后的损失比例
-│  ├─ 🎯 Recovery Rate：违约后回收的比例（担保高→回收高）
-│  └─ ⚠️ 回收率存在很大不确定性
-│
-├─ ⭐ 14.2 信用风险类型
-│  ├─ 📐 违约风险 (Default Risk)：实际不支付本息
-│  ├─ 📐 降级风险 (Downgrade Risk)：评级下调导致价格下跌
-│  ├─ 📐 利差风险 (Spread Risk)：信用利差走阔导致价格下跌
-│  └─ 💡 利差常在违约前走阔（前瞻性定价）
-│
-├─ ⭐ 14.3 信用评级
-│  ├─ 💡 Moody's / S&P / Fitch 三大评级机构
-│  ├─ 💡 投资级：BBB-/Baa3 及以上；高收益：BB+/Ba1 及以下
-│  ├─ 🎯 评级总结相对信用风险，非保证
-│  └─ ⚠️ Issuer rating ≠ Issue rating（债项因担保、优先级不同）
-│
-└─ ⭐ 14.4 利差驱动因素
-   ├─ 💡 宏观因素：GDP 增长、利率水平、通胀
-   ├─ 💡 市场因素：流动性、风险偏好、技术面
-   ├─ 💡 发行人因素：财务健康、行业前景、管理层质量
-   └─ 💡 Spread ≈ 信用风险溢价 + 流动性溢价 + 期权成本
+14. Credit Risk
+├─ 14.1 Introduction
+│  ├─ 14.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 14.1.2 应用/判断：把概念或公式转成解题动作
+├─ 14.2 Sources of Credit Risk
+│  ├─ 14.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 14.2.2 应用/判断：把概念或公式转成解题动作
+├─ 14.3 Credit Rating Agencies and Credit Ratings
+│  ├─ 14.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 14.3.2 应用/判断：把概念或公式转成解题动作
+├─ 14.4 Factors Impacting Yield Spreads
+│  ├─ 14.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 14.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：损失逻辑（Loss Logic）
-**核心概念**：信用风险的核心度量是预期信用损失（Expected Credit Loss），由三个要素决定：违约概率、违约损失率和风险敞口。这是理解信用风险度量的基础框架。
-- **预期信用损失**：`ECL ≈ PD × LGD × Exposure`，其中 PD（Probability of Default）是违约概率，LGD（Loss Given Default）是违约损失率，Exposure 是违约时的风险敞口
-- **违约损失率**：`LGD = 1 - Recovery Rate`，回收率（Recovery Rate）取决于担保品和优先级
-- **违约风险（Default Risk）**：发行人无法按时支付本息，涉及实际违约
-- **降级风险（Downgrade Risk）**：评级下调导致价格下跌，即使尚未发生违约
-- **利差风险（Spread Risk）**：信用利差走阔导致价格下跌，是市场对信用恶化预期的反应
-- ⚠️ 利差常在违约前走阔，因为市场对信用风险进行前瞻性定价。利差走阔本身不意味着违约
+### 14.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe credit risk and its components, probability of default and loss given default`。
+- **核心词汇**：**Credit Risk（信用风险）**：发行人无法按时足额履约的风险。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算预期损失（给 PD、回收率、敞口求 ECL），注意回收率转 LGD 的步骤。
+### 14.2 Sources of Credit Risk
+- **中文主线**：本节点解决 `Sources of Credit Risk` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the uses of ratings from credit rating agencies and their limitations`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：信用评级（Credit Ratings）
-**核心概念**：信用评级机构对发行人及其债项进行相对信用风险评估。评级是债券市场和信用分析的核心参考。
-- **三大评级机构**：Moody's（穆迪）、S&P（标准普尔）、Fitch（惠誉）
-- **投资级/高收益分界**：BBB-/Baa3 及以上为投资级（Investment Grade）；BB+/Ba1 及以下为高收益（High-Yield / Non-Investment Grade）
-- **评级含义**：评级总结相对信用风险，但不是保证。同一评级内的发行人信用质量仍有差异
-- ⚠️ **Issuer rating ≠ Issue rating**：发行人的评级针对其整体偿债能力，具体债项的评级可能因担保品、优先级等因素而不同（rating notching）
+### 14.3 Credit Rating Agencies and Credit Ratings
+- **中文主线**：本节点解决 `Credit Rating Agencies and Credit Ratings` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe macroeconomic, market, and issuer-specific factors that influence the level and volatility of yield spreads`。
+- **核心词汇**：**Sources of Credit Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分投资级与高收益的评级分界，理解 issuer rating 与 issue rating 的区别。
+### 14.4 Factors Impacting Yield Spreads
+- **中文主线**：本节点解决 `Factors Impacting Yield Spreads` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe credit risk and its components, probability of default and loss given default`。
+- **核心词汇**：**Credit Rating Agencies and Credit Ratings（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：利差驱动因素（Spread Drivers）
-**核心概念**：信用利差不是单一风险因素的反映，而是多种风险补偿的混合体。理解利差的驱动因素有助于准确分析债券的相对价值。
-- **宏观因素**：GDP 增长、利率水平、通胀、经济周期阶段
-- **市场因素**：流动性条件、市场风险偏好、技术面供需
-- **发行人因素**：财务健康、行业前景、管理层质量、公司治理
-- **利差分解**：`Spread ≈ 信用风险溢价 + 流动性溢价 + 期权成本`
-- ⚠️ 观察到的利差是信用风险补偿、流动性补偿和期权补偿的混合体，不能简单等同于纯信用风险溢价
+### 14.9 Legacy 补强要点
+- 来自 `M10-Credit-Risk.md`：## 1. 核心知识点; **预期信用损失 = PD x LGD x 敞口 (expected credit loss intuition = PD x LGD x exposure)**：信用风险的核心度量。PD (probability of default) 是违约概率；LGD (loss given default) = 1 - 回收率；exposure 是违约时的风险敞口。; ## 2. 关键公式。
 
-**考试应用**：判断利差变化的驱动因素——信用恶化（基本面变差）vs 流动性恶化（交易困难）vs 风险偏好下降（市场整体因素）。
 
-## 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `ECL ≈ PD × LGD × Exposure` | 预期信用损失 | 信用风险评估 | 三要素缺一不可 |
-| `LGD = 1 - Recovery Rate` | 违约损失率 | 损失程度估算 | 回收率难以精确预测 |
-| `Credit Spread = YTM_bond - YTM_benchmark` | 信用利差 | 风险度量 | 可能含流动性和期权溢价 |
-| `Spread ≈ 信用 + 流动性 + 期权溢价` | 利差分解 | 利差因素分析 | 非纯信用补偿 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Credit loss | `expected loss = probability of default × loss given default` | 信用题要分清 PD、LGD、recovery rate。 |
 
-## 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 考点 1：计算预期损失
-- **题型**：给定 PD、回收率、敞口，计算 ECL
-- **步骤**：
-  1. 回收率 → LGD = 1 - 回收率
-  2. ECL = PD × LGD × Exposure
-- **注意**：LGD 和回收率的关系是互补的
+## 6. 常见考点与解题思路
 
-### 考点 2：区分违约风险与利差风险
-- **违约风险**：发行人无法按时支付本息，涉及实际违约
-- **利差风险**：二级市场价格因信用担忧下跌，尚未发生违约
-- **考试常考**：两者的概念区分和实际案例判断
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 3：理解评级对融资成本的影响
-- **降级** → 利差走阔 → 债券价格下跌 → 发行人融资成本上升
-- **负面观察**：即使未正式降级，列入负面观察名单也会产生影响
-- **评级限制**：滞后性、发债人付费模式可能产生利益冲突
+## 7. 易错点与考试陷阱
 
-### 考点 4：分析利差变化的驱动因素
-- **信用恶化**（基本面变差）：发行人的财务指标恶化
-- **流动性恶化**（交易困难）：市场深度下降、bid-ask spread 扩大
-- **风险偏好下降**（市场整体因素）：危机时期利差系统性走阔
+- **中英文错配**：看到 `Credit Risk` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 🚨 易错点与考试陷阱
+## 8. 跨模块关联
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| 利差走阔 = 即将违约 | 利差是前瞻性定价，走阔是为风险补偿增加 | 违约前利差常先走阔 |
-| Issuer rating = Issue rating | 具体债项因担保、优先级可能不同 | 需区分主体评级和债项评级 |
-| Credit spread 只反映信用风险 | 包含流动性溢价和期权成本 | 多因素混合 |
-| 回收率可精确预测 | 取决于复杂的法律和市场环境 | 不确定性很大 |
+- **上游模块**：[[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M15-Credit-Analysis-for-Government-Issuers]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🔄 跨模块关联
+## 9. 复习与刷题提示
 
-- **信用利差** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的利差度量
-- **回收率/优先级** → [[M15-Credit-Analysis-for-Government-Issuers]] 和 [[M16-Credit-Analysis-for-Corporate-Issuers]] 的债项优先级
-- **信用风险建模** → [[M17-Fixed-Income-Securitization]] 的资产隔离逻辑
-- **信用增级** → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的内外部增级
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 📋 复习与刷题提示
+## 10. Legacy Notes Integrated
 
-- **核心重点**：ECL 计算、PD/LGD/回收率的关系
-  - ECL = PD × LGD × Exposure
-  - LGD = 1 - Recovery Rate
-  - 回收率取决于担保品和优先级
-- **风险类型区分**：
-  - 违约风险：实际不支付本息（最严重）
-  - 降级风险：评级下调导致价格下跌
-  - 利差风险：信用利差走阔导致价格下跌
-  - 利差常在违约前走阔（市场前瞻性定价）
-- **评级体系**：
-  - 投资级：BBB-/Baa3 及以上
-  - 高收益（垃圾级）：BB+/Ba1 及以下
-  - 局限性：滞后性、发债人付费模式
-  - Issuer rating ≠ Issue rating
-- **利差分解**：
-  - Spread ≈ 信用溢价 + 流动性溢价 + 期权成本
-  - 利差驱动三因素：宏观（GDP、利率）、市场（流动性、风险偏好）、发行人（财务、行业）
-- **典型计算流程**：
-  1. 已知 PD = 2%，Recovery Rate = 40%，Exposure = $10M
-  2. LGD = 1 - 0.40 = 0.60
-  3. ECL = 0.02 × 0.60 × $10M = $120,000
-- **刷题建议**：
-  - 重点做 ECL 计算题
-  - 利差驱动因素分析题（判断给定因素 → spread ↑/↓）
-  - 评级相关题（投资级 vs 高收益分界）
-- **易混淆点**：
-  - 利差走阔 ≠ 即将违约（可能是流动性恶化或风险偏好转变）
-  - Issuer rating ≠ Issue rating
-  - 回收率难以精确预测
-
-- **关键数值记忆**：
-  - ECL = PD × LGD × Exposure
-  - LGD = 1 - Recovery Rate
-  - IG 回收率：有担保 50-80%，优先无担保 30-60%
-  - HY 回收率：优先有担保 30-60%，次级 10-30%
-- **信用评级体系**：
-  - 投资级：AAA → BBB-（S&P）/ Aaa → Baa3（Moody's）
-  - 高收益：BB+ → D（S&P）/ Ba1 → C（Moody's）
-  - 评级符号：S&P ±（如 BBB+），Moody's 数字（如 Baa1）
-- **利差驱动因素总结**：
-  - 宏观：GDP 增长、通胀、货币政策
-  - 市场：流动性、风险偏好、技术面供需
-  - 发行人：财务健康、行业地位、管理层质量
-  - 利差 ≈ 信用溢价 + 流动性溢价 + 期权成本
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M10-Credit-Risk.md（confidence 0.567）
+- **可复用结构**：M13: 信用风险 (Credit Risk)；1. 核心知识点；1.1 损失逻辑 (Loss Logic)；1.2 评级与利差驱动因素 (Ratings and Spread Drivers)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；**预期信用损失 = PD x LGD x 敞口 (expected credit loss intuition = PD x LGD x exposure)**：信用风险的核心度量。PD (probability of default) 是违约概率；LGD (loss given default) = 1 - 回收率；exposure 是违约时的风险敞口。；## 2. 关键公式；**分析利差变化的驱动因素**：判断利差走阔是源于信用恶化（发行人基本面变差）、流动性恶化（交易困难）还是市场风险偏好下降。
+- **公式/计算线索**：**预期信用损失 = PD x LGD x 敞口 (expected credit loss intuition = PD x LGD x exposure)**：信用风险的核心度量。PD (probability of default) 是违约概率；LGD (loss given default) = 1 - 回收率；exposure 是违约时的风险敞口。；**回收率与优先级决定损失严重程度 (recovery and seniority shape loss severity)**：担保债务的回收率通常高于无担保债务；优先级债务的回收率高于次级债务。LGD = 1 - Recovery Rate。；## 2. 关键公式
+- **易错提示**：**计算预期损失**：给出 PD、回收率、敞口，计算 ECL。注意回收率转 LGD：LGD = 1 - 回收率。；## 4. 易错点提醒

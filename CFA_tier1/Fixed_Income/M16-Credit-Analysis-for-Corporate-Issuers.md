@@ -1,23 +1,29 @@
 ---
-title: "M16 — Credit Analysis for Corporate Issuers"
-description: "CFA Level I 2026 official module: Credit Analysis for Corporate Issuers"
-module: M16
+title: "M16: Credit Analysis for Corporate Issuers"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M16"
 official_module: "Module 16: Credit Analysis for Corporate Issuers"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M16: Credit Analysis for Corporate Issuers
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Credit Analysis for Corporate Issuers**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,185 +35,120 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the qualitative and quantitative factors used to evaluate a corporate borrower’s creditworthiness
+2. calculate and interpret financial ratios used in credit analysis
+3. describe the seniority rankings of debt, secured versus unsecured debt and the priority of claims in bankruptcy, and their impact on credit ratings
 
-- describe the qualitative and quantitative factors used to evaluate a corporate borrower's creditworthiness
-- calculate and interpret financial ratios used in credit analysis
-- describe the seniority rankings of debt, secured versus unsecured debt and the priority of claims in bankruptcy, and their impact on credit ratings
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 16.1 学习任务
+- **核心问题**：考试希望你用 `Credit Analysis for Corporate Issuers` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 16.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 16.3 关键英文术语
+- **Credit Analysis for Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Assessing Corporate Creditworthiness（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Financial Ratios in Corporate Credit Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Seniority Rankings, Recovery Rates, and Credit Ratings（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 16.1 | describe the qualitative and quantitative factors used to evaluate a corporate borrower’s creditworthiness | 描述定义、流程和适用场景；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
+| 16.2 | calculate and interpret financial ratios used in credit analysis | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 16.3 | describe the seniority rankings of debt, secured versus unsecured debt and the priority of claims in bankruptcy, and their impact on credit ratings | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M16: Credit Analysis for Corporate Issuers（公司发行人信用分析）
-├─ ⭐ 16.1 三支柱框架 (Three Pillars)
-│  ├─ 📐 商业风险 (Business Risk)
-│  │  ├─ 行业特征：周期型 vs 防御型、进入壁垒、监管环境
-│  │  └─ 竞争地位：市场份额、定价能力、产品多元化
-│  ├─ 📐 财务风险 (Financial Risk)
-│  │  ├─ 杠杆率：Debt/EBITDA
-│  │  ├─ 覆盖率：EBITDA/Interest, EBIT/Interest
-│  │  └─ 现金流稳定性：FCF、营运资金管理
-│  └─ 📐 治理与结构 (Governance & Structure)
-│     ├─ 管理层质量、所有权结构
-│     └─ 关联交易、股东友好度（股息政策）
-│
-├─ ⭐ 16.2 核心定量指标
-│  ├─ 📐 ICR = EBIT (或 EBITDA) / Interest Expense
-│  ├─ 📐 Leverage = Debt / EBITDA
-│  ├─ 📐 Debt/Capital = Total Debt / (Total Debt + Total Equity)
-│  ├─ 📐 FCF = CFO - CapEx - Preferred Dividends
-│  └─ ⚠️ ICR 用 EBIT 还是 EBITDA 影响大（EBITDA 更高）
-│
-├─ ⭐ 16.3 优先级与清偿顺序
-│  ├─ 📐 担保债务 (Secured) > 优先无担保 > 次级 (Subordinated)
-│  ├─ 🎯 回收率：优先级担保 > 优先级无担保 > 次级
-│  └─ ⚠️ 同一发行人的不同债项可能有不同评级
-│
-└─ ⭐ 16.4 评级差异化 (Notching)
-   ├─ 💡 根据担保、优先级、回收率预期调整 1-3 级
-   ├─ 💡 Issue rating ≠ Issuer rating
-   └─ ⚠️ 为投资者提供更精细的信用风险区分
+16. Credit Analysis for Corporate Issuers
+├─ 16.1 Introduction
+│  ├─ 16.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 16.1.2 应用/判断：把概念或公式转成解题动作
+├─ 16.2 Assessing Corporate Creditworthiness
+│  ├─ 16.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 16.2.2 应用/判断：把概念或公式转成解题动作
+├─ 16.3 Financial Ratios in Corporate Credit Analysis
+│  ├─ 16.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 16.3.2 应用/判断：把概念或公式转成解题动作
+├─ 16.4 Seniority Rankings, Recovery Rates, and Credit Ratings
+│  ├─ 16.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 16.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：三支柱框架（Three Pillars of Credit Analysis）
-**核心概念**：公司信用分析从商业风险、财务风险和治理结构三个维度评估借款人的偿债能力。这三个支柱共同构成了全面的信用评估框架。
-- **商业风险（Business Risk）**：行业特征（周期型 vs 防御型、进入壁垒、监管环境）和竞争地位（市场份额、定价能力、产品多元化）
-- **财务风险（Financial Risk）**：杠杆率（Debt/EBITDA）、覆盖率（EBITDA/Interest、EBIT/Interest）、现金流稳定性（FCF、营运资金管理）
-- **治理与结构（Governance & Structure）**：管理层质量、所有权结构、关联交易、股东友好度（股息政策）、财务报告透明度
+### 16.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；评价优缺点、限制和决策含义；官方表述为：`describe the qualitative and quantitative factors used to evaluate a corporate borrower’s creditworthiness`。
+- **核心词汇**：**Credit Analysis for Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：综合运用三支柱框架评估公司信用质量，区分各支柱下的关键分析因素。
+### 16.2 Assessing Corporate Creditworthiness
+- **中文主线**：本节点解决 `Assessing Corporate Creditworthiness` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret financial ratios used in credit analysis`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：核心定量指标（Core Quantitative Metrics）
-**核心概念**：财务比率是公司信用分析的定量核心，用以衡量杠杆水平、偿债能力和财务灵活性。
-- **利息覆盖率（ICR）**：`ICR = EBIT / Interest Expense` 或 `EBITDA / Interest Expense`，衡量公司用经营利润支付利息的能力。ICR 越低信用风险越高
-- **杠杆率**：`Debt / EBITDA`，衡量债务负担相对于经营现金流的大小。比率越低越好
-- **债务资本比**：`Total Debt / (Total Debt + Total Equity)`，衡量资本结构中的债务比例
-- **自由现金流（FCF）**：`FCF = CFO - CapEx - Preferred Dividends`，衡量财务灵活性和偿债能力
-- ⚠️ ICR 使用 EBIT 还是 EBITDA 影响很大——EBITDA 通常大于 EBIT，EBITDA-based ICR 更高。题目没有明确时，留意上下文提示
+### 16.3 Financial Ratios in Corporate Credit Analysis
+- **中文主线**：本节点解决 `Financial Ratios in Corporate Credit Analysis` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the seniority rankings of debt, secured versus unsecured debt and the priority of claims in bankruptcy, and their impact on credit ratings`。
+- **核心词汇**：**Assessing Corporate Creditworthiness（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算和解读财务比率，注意 ICR 的分子是 EBIT 还是 EBITDA。
+### 16.4 Seniority Rankings, Recovery Rates, and Credit Ratings
+- **中文主线**：本节点解决 `Seniority Rankings, Recovery Rates, and Credit Ratings` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；评价优缺点、限制和决策含义；官方表述为：`describe the qualitative and quantitative factors used to evaluate a corporate borrower’s creditworthiness`。
+- **核心词汇**：**Financial Ratios in Corporate Credit Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：优先级与清偿顺序（Seniority Rankings and Bankruptcy Priority）
-**核心概念**：不同债项的优先级决定了公司破产时的受偿顺序，直接影响回收率和信用评级。
-- **担保债务（Secured）**：以特定资产作为抵押品，破产时优先从抵押品价值中受偿，回收率最高
-- **优先级无担保债务（Senior Unsecured）**：无特定抵押品，但在受偿顺序上优先于次级债务
-- **次级债务（Subordinated）**：在破产时仅在所有优先级债务完全受偿后才能获得偿还，回收率最低
-- **Issuer rating ≠ Issue rating**：同一发行人的不同债项因担保和优先级不同可能有不同评级（notching）
 
-**考试应用**：判断不同优先级在破产清偿中的顺序，理解担保/无担保对回收率和评级的影响。
+## 5. 关键公式与计算框架
 
-### 知识点4：评级差异化（Notching）
-**核心概念**：评级差异性（notching）是评级机构对同一发行人的不同债项给予不同评级的过程，反映了优先级和担保情况的差异。
-- 根据担保、优先级、回收率预期，债项评级可在发行人评级基础上调整 1-3 级
-- 优先级担保债项的评级可能高于发行人评级（notch up）
-- 次级债项的评级可能低于发行人评级（notch down）
-- Notching 为投资者提供更精细的信用风险区分，有助于精准定价
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Credit loss | `expected loss = probability of default × loss given default` | 信用题要分清 PD、LGD、recovery rate。 |
 
-**考试应用**：理解 notching 的概念和原理，区分 issuer rating 与 issue rating。
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-## 📐 关键公式表
+## 6. 常见考点与解题思路
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `ICR = EBIT / Interest Expense` | 利息覆盖率 | 衡量偿债能力 | EBITDA 版本更高 |
-| `Leverage = Debt / EBITDA` | 杠杆率 | 衡量债务负担 | 越低越好 |
-| `Debt/Capital = TD / (TD + TE)` | 债务资本比 | 衡量资本结构 | 行业差异大 |
-| `FCF = CFO - CapEx - Preferred Div` | 自由现金流 | 衡量财务灵活性 | 负值可能预示问题 |
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-## 🛠️ 常见考点与解题思路
+## 7. 易错点与考试陷阱
 
-### 考点 1：计算和解读覆盖率
-- **ICR 越低 → 信用风险越高**
-- **注意**：题目是否使用 EBIT 还是 EBITDA
-  - EBITDA-based ICR > EBIT-based ICR（因为 EBITDA > EBIT）
-  - **判断规则**：如果题目同时给出两者，留意上下文提示哪个更相关
+- **中英文错配**：看到 `Credit Analysis for Corporate Issuers` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 考点 2：区分 Issuer Rating vs Issue Rating
-- **Issuer rating**：发行人的整体偿债能力评级
-- **Issue rating**：具体债项的评级（因担保、优先级不同而不同）
-- **Notching**：在同一发行人评级基础上调整 1-3 级
+## 8. 跨模块关联
 
-### 考点 3：区分 Secured vs Unsecured、Senior vs Subordinated
-- **Secured**：有特定资产作为抵押品，破产时优先从该资产受偿
-- **Senior unsecured**：无抵押，但破产时优先于次级
-- **Subordinated**：次于所有高级债务受偿
+- **上游模块**：[[M15-Credit-Analysis-for-Government-Issuers]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M17-Fixed-Income-Securitization]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 考点 4：回收率预期
-- **破产清算顺序**：有担保债权人 → 优先无担保 → 次级 → 股东
-- **回收率**：优先级担保（50-80%）> 优先无担保（30-60%）> 次级（10-30%）
+## 9. 复习与刷题提示
 
-## 🚨 易错点与考试陷阱
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| ICR 用 EBIT 还是 EBITDA 一样 | EBITDA 更大，ICR 更高 | 折旧摊销差异 |
-| 发行人评级 = 所有债项评级 | 不同债项可能因担保和优先级不同 | Issue rating 可调整 |
-| Secured 一定安全 | 抵押品价值可能不足 | 需关注 LTV 和抵押品质量 |
-| Subordinated 一定无法回收 | 回收率低但仍有部分回收可能 | 非完全损失 |
+## 10. Legacy Notes Integrated
 
-## 🔄 跨模块关联
-
-- **PD/LGD 框架** → [[M14-Credit-Risk]] 信用风险度量基础
-- **政府信用对比** → [[M15-Credit-Analysis-for-Government-Issuers]] 政府与公司信用分析对比
-- **担保/契约/优先级** → [[M01-Fixed-Income-Instrument-Features]] 基本概念
-- **信用增级** → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 结构化信用增级
-- **融资市场** → [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] 公司发行人融资背景
-
-## 📋 复习与刷题提示
-
-- **核心重点**：ICR 和杠杆率的计算与解读
-  - ICR = EBIT (或 EBITDA) / Interest Expense
-  - Leverage = Debt / EBITDA
-  - Debt/Capital = TD / (TD + TE)
-  - FCF = CFO - CapEx - Preferred Dividends
-- **三支柱框架**：
-  1. 商业风险：行业周期型/防御型、竞争地位、定价能力
-  2. 财务风险：杠杆、覆盖率、现金流稳定性、再融资渠道
-  3. 治理与结构：管理层质量、所有权、关联交易
-- **优先级与清偿顺序**：
-  - 担保债务 (Secured) → 回收率 50-80%
-  - 优先无担保 (Senior Unsecured) → 回收率 30-60%
-  - 次级 (Subordinated) → 回收率 10-30%
-  - 股东权益 → 通常不回收
-- **评级区分**：
-  - Issuer rating：发行人整体偿债能力
-  - Issue rating：具体债项评级（可因担保品调整 1-3 notch）
-  - Notching：在同一发行人评级基础上差异化调整
-- **典型计算流程**：
-  1. EBIT = $500M，Interest = $100M
-  2. ICR = 500/100 = 5.0x（安全，通常 > 3x 为投资级水平）
-  3. Debt = $2B，EBITDA = $800M
-  4. Leverage = 2000/800 = 2.5x（较低，通常 < 3x 为投资级水平）
-- **刷题建议**：
-  - 重点做财务比率计算题（ICR、Leverage 等）
-  - 清偿优先级分析题（破产时谁先受偿）
-  - Issuer vs Issue rating 辨析题
-- **易混淆点**：
-  - ICR 用 EBIT vs EBITDA 差异很大
-  - Secured 不保证全额回收（抵押品价值可能不足）
-  - 同一发行人不同债项评级可能不同
-
-- **关键数值记忆**：
-  - ICR = EBIT / Interest Expense（> 3x 为 IG 水平）
-  - Leverage = Debt / EBITDA（< 3x 为 IG 水平）
-  - Debt/Capital = TD / (TD + TE)
-  - FCF = CFO - CapEx - Preferred Dividends
-- **财务比率行业差异**：
-  - 防御型行业（公用事业）可接受更高杠杆
-  - 周期型行业（制造）需要更低的杠杆和更高的覆盖率
-  - 科技/医药行业：高利润率但轻资产，杠杆通常较低
-- **评级 Notching 规则**：
-  - Secured 担保债：Issuer rating + 1-2 notches
-  - Senior Unsecured：Issuer rating（基准）
-  - Subordinated：Issuer rating - 1-2 notches
-  - 极端情况下差 3 个 notch 以上
-- **商业风险 vs 财务风险**：
-  - 商业风险高（强周期行业）= 需要财务风险低（低杠杆）
-  - 商业风险低（公用事业）= 可接受财务风险高（高杠杆）
-  - 两者互补决定总信用风险
-- **考试技巧**：
-  - ICR 计算注意 EBIT vs EBITDA 
-  - 担保 ≠ 无风险（抵押品价值可能不足）
-  - 同一公司不同债项评级可能因担保和优先级差异大
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M11-Government-and-Corporate-Credit.md` (0.339), `00-Fixed-Income-MOC.md` (0.256)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

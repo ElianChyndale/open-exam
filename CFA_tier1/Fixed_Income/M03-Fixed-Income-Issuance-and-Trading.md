@@ -1,23 +1,29 @@
 ---
-title: "M03 — Fixed-Income Issuance and Trading"
-description: "CFA Level I 2026 official module: Fixed-Income Issuance and Trading"
-module: M03
+title: "M03: Fixed-Income Issuance and Trading"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M03"
 official_module: "Module 3: Fixed-Income Issuance and Trading"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M03: Fixed-Income Issuance and Trading
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Fixed-Income Issuance and Trading**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,164 +35,131 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe fixed-income market segments and their issuer and investor participants
+2. describe types of fixed-income indexes
+3. compare primary and secondary fixed-income markets to equity markets
 
-- describe fixed-income market segments and their issuer and investor participants
-- describe types of fixed-income indexes
-- compare primary and secondary fixed-income markets to equity markets
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 3.1 学习任务
+- **核心问题**：考试希望你用 `Fixed-Income Issuance and Trading` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 3.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 3.3 关键英文术语
+- **Fixed-Income Issuance and Trading（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed-Income Segments, Issuers, and Investors（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed-Income Indexes（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Primary and Secondary Fixed-Income Markets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 3.1 | describe fixed-income market segments and their issuer and investor participants | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.2 | describe types of fixed-income indexes | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.3 | compare primary and secondary fixed-income markets to equity markets | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M03: Fixed-Income Issuance and Trading（固定收益发行与交易）
-├─ ⭐ 3.1 市场分类 (Market Map)
-│  ├─ 📐 货币市场 vs 资本市场：期限是否超过一年
-│  ├─ 📐 主权债 vs 准政府债 vs 公司债：信用风险逐级升高
-│  ├─ 🎯 一级市场 (primary)：新发行债券的初始销售
-│  ├─ 🎯 二级市场 (secondary)：已发行债券的交易 (OTC 模式)
-│  ├─ 🎯 固定收益指数细分：期限/发行人/信用/货币
-│  └─ ⚠️ 一级市场发行量不直接反映二级市场流动性
-│
-├─ ⭐ 3.2 市场参与者
-│  ├─ 💡 发行人：政府、机构、公司、超国家组织
-│  ├─ 💡 投资者：机构（养老保险基金、保险公司、基金）主导
-│  └─ 💡 做市商 (dealer)：OTC 市场的核心流动性提供者
-│
-├─ ⭐ 3.3 回购融资 (Repo Financing)
-│  ├─ 📐 Repo = 出售证券 + 承诺未来购回（抵押短期融资）
-│  ├─ 📐 Haircut (折扣率) = (抵押品价值 - 融资金额) / 抵押品价值
-│  ├─ 🎯 回购利率 (repo rate)：通常低于无担保融资利率
-│  ├─ 🎯 交易对手风险 (counterparty risk)
-│  └─ ⚠️ Repo 看起来像买卖，但经济本质常按融资理解【考试陷阱】
-│
-└─ ⭐ 3.4 指数与基准
-   ├─ 💡 债券指数类型：综合、政府、公司、高收益
-   ├─ 💡 指数构建：市值加权 vs 等权重
-   └─ 💡 基准作用：业绩比较、ETF 追踪
+3. Fixed-Income Issuance and Trading
+├─ 3.1 Introduction
+│  ├─ 3.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.1.2 应用/判断：把概念或公式转成解题动作
+├─ 3.2 Fixed-Income Segments, Issuers, and Investors
+│  ├─ 3.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.2.2 应用/判断：把概念或公式转成解题动作
+├─ 3.3 Fixed-Income Indexes
+│  ├─ 3.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.3.2 应用/判断：把概念或公式转成解题动作
+├─ 3.4 Primary and Secondary Fixed-Income Markets
+│  ├─ 3.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：市场分类（Market Map）
-**核心概念**：固定收益市场可以根据多种维度进行分类，包括期限（货币市场 vs 资本市场）、发行人类型（主权 vs 准政府 vs 公司）以及市场层次（一级 vs 二级）。理解这些分类是分析固定收益市场的起点。
-- **货币市场（money market）**：交易期限不超过一年的短期工具（T-bill、CP、Repo）
-- **资本市场（capital market）**：交易长期债券（期限超过一年）
-- **一级市场（primary market）**：新发行债券的初始销售，决定发行价格和融资额
-- **二级市场（secondary market）**：已发行债券的交易，以做市商（dealer）为核心的场外交易（OTC）模式，决定流动性和价格发现
-- **固定收益指数**：按期限、发行人类型、信用评级、货币等维度细分，用于业绩比较和 ETF 追踪
-- ⚠️ 一级市场发行量不直接反映二级市场流动性
+### 3.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe fixed-income market segments and their issuer and investor participants`。
+- **核心词汇**：**Fixed-Income Issuance and Trading（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分一级市场与二级市场的功能区别，以及货币市场与资本市场工具的期限分界。
+### 3.2 Fixed-Income Segments, Issuers, and Investors
+- **中文主线**：本节点解决 `Fixed-Income Segments, Issuers, and Investors` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe types of fixed-income indexes`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：市场参与者（Market Participants）
-**核心概念**：固定收益市场的参与者包括发行人、投资者和中介机构。与股票市场不同，债券市场以机构投资者为主导，做市商在二级市场中扮演核心角色。
-- **发行人**：政府（主权/市政）、机构（准政府）、公司、超国家组织
-- **投资者**：机构投资者主导（养老金基金、保险公司、共同基金、银行），个人投资者参与有限
-- **做市商（dealer）**：OTC 市场的核心流动性提供者，通过买卖报价差获利
-- 债券市场以 OTC 交易为主，不同于股票市场的交易所交易模式
+### 3.3 Fixed-Income Indexes
+- **中文主线**：本节点解决 `Fixed-Income Indexes` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare primary and secondary fixed-income markets to equity markets`。
+- **核心词汇**：**Fixed-Income Segments, Issuers, and Investors（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：识别各类市场参与者的角色和功能，理解债券市场与股票市场在交易机制上的差异。
+### 3.4 Primary and Secondary Fixed-Income Markets
+- **中文主线**：本节点解决 `Primary and Secondary Fixed-Income Markets` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe fixed-income market segments and their issuer and investor participants`。
+- **核心词汇**：**Fixed-Income Indexes（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：回购融资（Repo Financing）
-**核心概念**：回购协议（repo）是固定收益市场最重要的短期融资工具之一。本质上，回购是出售证券并承诺在未来特定日期以约定价格购回的安排，经济实质是抵押短期融资。
-- **回购机制**：一方出售证券融入资金（回购方），另一方买入证券融出资金（逆回购方），到期后回购方以约定价格购回证券
-- **Haircut（折扣率）**：抵押品价值超过融资金额的部分，保护资金出借方在抵押品价值下降时的风险。Haircut 越高，可融得的资金越少
-- **回购利率（repo rate）**：反映抵押融资成本，通常低于无担保融资利率，受抵押品质量、期限和市场流动性影响
-- **交易对手风险（counterparty risk）**：抵押品价值大幅下降时融资方可能违约
-- ⚠️ **考试陷阱**：Repo 看起来像 sale-and-repurchase，但经济本质常按融资理解
+### 3.9 Legacy 补强要点
+- 来自 `M02-Issuance-and-Trading.md`：## 1. 核心知识点; ## 2. 关键公式; 本模块以概念为主。需要理解的核心关系：。
+- 来自 `00-Fixed-Income-MOC.md`：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险; ## Fixed Income 核心知识树 (Core Knowledge Tree); ├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18。
 
-**考试应用**：理解回购的经济实质（抵押融资而非买卖），计算 haircut 和隐含融资利率。
 
-### 知识点4：指数与基准（Indexes and Benchmarks）
-**核心概念**：固定收益指数用于衡量市场表现和作为投资组合的业绩基准。指数构建方法影响其代表性和可投资性。
-- **指数类型**：综合指数、政府债券指数、公司债券指数、高收益债券指数
-- **指数构建**：市值加权最常见，也有等权重和其他加权方式
-- **基准作用**：业绩比较、ETF 追踪、被动投资策略的参考
-- 固定收益指数的细分维度包括期限、发行人、信用和货币
+## 5. 关键公式与计算框架
 
-**考试应用**：理解债券指数与股票指数的主要差异，以及指数在投资管理中的应用。
+本模块以概念判断为主，无核心计算公式。复习时把 `Fixed-Income Issuance and Trading` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-## 📐 关键公式表
+## 6. 常见考点与解题思路
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `Repo rate ≈ 抵押融资成本` | 回购利率 | 比较融资成本 | 通常低于无担保融资利率 |
-| `Haircut = (抵押品价值 - 融资金额) / 抵押品价值` | 折扣率 | 计算融资比例 | Haircut 越高，可融资金越少 |
-| `Bid-ask spread 衡量流动性` | 做市商报价差 | 评估市场流动性 | 报价差越小，流动性越好 |
-| `Bond Index: market-value-weighted` | 债券指数构建 | 指数追踪 | 市值加权最常用 |
-| `Investment Grade: BBB-/Baa3+` | 投资级/高收益分界 | 信用分类 | 标普 vs 穆迪命名不同 |
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 关键数值记忆
-- 货币市场期限分界：1 年（365 天）
-- 投资级/高收益分界：S&P BBB- / Moody's Baa3
-- CP 免注册期限：美国 270 天
-- Repo haircut 范围：通常 2%-20%（取决于抵押品质量）
+## 7. 易错点与考试陷阱
 
-## 🛠️ 常见考点与解题思路
+- **中英文错配**：看到 `Fixed-Income Issuance and Trading` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 考点 1：区分 Primary vs Secondary Market
-- **思路**：新发行 → primary；已发行债券交易 → secondary
-- **关键**：一级市场决定发行价格和融资额，二级市场决定流动性和价格发现
+## 8. 跨模块关联
 
-### 考点 2：区分 Money Market vs Capital Market
-- **思路**：期限 < 1 年（T-bill、CP、repo）→ money market；期限 > 1 年 → capital market
-- **典型工具**：Money market = T-bills, commercial paper, bankers' acceptances, repos
+- **上游模块**：[[M02-Fixed-Income-Cash-Flows-and-Types]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M04-Fixed-Income-Markets-for-Corporate-Issuers]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 考点 3：理解 Repo 的经济实质
-- **思路**：虽然是买卖形式，但会计和风险上按抵押融资处理
-- **记忆技巧**：Repo = secured short-term borrowing (出售方融入资金，买入方融出资金)
+## 9. 复习与刷题提示
 
-### 考点 4：区分 Investment-Grade vs High-Yield
-- **思路**：评级 BBB-/Baa3 及以上为投资级；以下为高收益
-- **考试常考**：两类债券的收益率特征、利差敏感性、违约率差异
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 🚨 易错点与考试陷阱
+## 10. Legacy Notes Integrated
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| Repo 是两笔独立的买卖 | 经济本质是抵押融资（一笔交易的两个环节） | 会计处理可能不同，但经济实质是贷款 |
-| 发行量大 = 流动性好 | 流动性取决于交易活跃度和做市商参与度 | 发行量和流动性是不同概念 |
-| 债券市场以交易所交易为主 | 债券市场以 OTC（场外）交易为主 | 与股票市场不同 |
-| Commercial paper 无风险 | CP 依赖发行人信用和备用信贷额度 | 金融危机中 CP 市场曾冻结 |
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M02-Issuance-and-Trading.md（confidence 0.579）
+- **可复用结构**：M03: 发行、交易与回购融资 (Issuance, Trading, and Repo Financing)；1. 核心知识点；1.1 市场地图 (Market Map)；1.2 回购融资 (Repo Financing)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；本模块以概念为主。需要理解的核心关系：
+- **公式/计算线索**：## 2. 关键公式；`Haircut = (抵押品价值 - 融资金额) / 抵押品价值`；**区分 investment-grade 与 high-yield 债券**：评级 BBB-/Baa3 及以上为投资级；以下为高收益。
+- **易错提示**：## 4. 易错点提醒；**Repo 看起来像 sale-and-repurchase，但经济本质常按融资理解【考试陷阱】**：不要因为存在两笔交易就认为它是买卖，应关注其抵押融资的经济实质。
 
-## 🔄 跨模块关联
-
-- **回购融资** → [[M01-Fixed-Income-Instrument-Features]] 的抵押品概念
-- **市场结构** → [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] 公司发行人融资市场
-- **市场结构** → [[M05-Fixed-Income-Markets-for-Government-Issuers]] 政府发行人融资市场
-- **利差行为** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的利差度量
-- **指数与基准** → [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] 的基准收益率曲线
-
-## 📋 复习与刷题提示
-
-- **核心重点**：回购协议 (repo) 的经济实质和风险管理是最高频考点
-- **市场分类**：
-  - 货币市场（T-bill、CP、Repo、BA）：期限 ≤ 1 年
-  - 资本市场（国债、公司债、MBS）：期限 > 1 年
-- **概念对比**：一级市场（新发行、定价、融资额）vs 二级市场（交易、流动性、价格发现）
-- **Commercial paper**：理解备用信贷额度的重要性，CP 市场在金融危机中的冻结风险
-- **关键区分**：
-  - 投资级（BBB-/Baa3 及以上）vs 高收益（BB+/Ba1 及以下）
-  - 公开发行 vs 私募的区别
-- **刷题建议**：
-  - 重点做回购融资（repo rate、haircut 的计算和理解）
-  - 市场分类（money market vs capital market 工具识别）
-  - 指数相关题目（债券指数构建方法和细分维度）
-- **易混淆点**：Repo 的"买卖"形式 vs "融资"实质；一级市场发行量不直接等于二级市场流动性
-- **复习时间分配**：40% 回购协议，30% 市场分类，20% 指数，10% 参与者
-
-- **市场数据**：
-  - 固定收益市场规模约 3 倍于股票市场
-  - OTC 交易占债券交易 > 90%
-  - 美国国债日均交易量 > $500B
-- **交易结算**：
-  - 美国国债 T+1 结算
-  - 公司债 T+2 结算
-  - DVP（付款交割）消除本金风险
-- **关键数值**：
-  - 货币市场期限分界：1 年
-  - IG/HY 分界：BBB-/Baa3
-  - CP 免注册：270 天
-  - Repo haircut：通常 2%-20%（取决于抵押品质量和波动性）
-  - 债券市场规模：约 3 倍于全球股票市场
-  - OTC 交易：占债券市场交易量的 90% 以上
+### 来源：00-Fixed-Income-MOC.md（confidence 0.538）
+- **可复用结构**：00-Fixed-Income-MOC；笔记属性；最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；科目概览；Fixed Income 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；## Fixed Income 核心知识树 (Core Knowledge Tree)；├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18；├── M02: 现金流类型 (Cash Flows and Types)【考试核心】↔ 2026 Outline P18
+- **公式/计算线索**：description: CFA Level I Fixed Income master MOC for bond pricing, yield measures, duration, credit, structured products, and traps.；│ ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure) (回购融资)；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
+- **易错提示**：│ │ └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】(契约类型)；│ └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)

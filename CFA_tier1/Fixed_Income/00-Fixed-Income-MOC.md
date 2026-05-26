@@ -1,265 +1,204 @@
 ---
-title: "00-Fixed-Income-MOC"
-description: "CFA L1 Fixed Income 中枢 — 19模块·知识树·公式·陷阱·跨模关联"
+title: "00-Fixed Income-MOC"
+description: "CFA Level I 2026 Fixed Income 官方模块导航、编号知识树、公式/框架、陷阱与学习路径"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-level: CFA Level I
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
 exam_weight: "11-14%"
-exam_format: 概念+计算混合
-difficulty: 前半概念多（工具/市场），后半公式密集（估值/风险/信用）
+module_count: 19
 note_type: master_moc
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
   - MOC
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
-# 📈 00-Fixed-Income-MOC
+# Fixed Income MOC
 
-> **一句话核心**：工具特征→市场结构→估值定价→风险度量→信用分析→证券化。M06-M13 是计算核心。
-
----
-
-## 📋 官方模块概览
-
-| # | 内容 | ⚖️ 难度 | 🎯 必考点 | 🔗 |
-|---|------|----------|-----------|-----|
-| M01 | Instrument Features | 概念 | indenture, covenants | [[M01-Fixed-Income-Instrument-Features]] |
-| M02 | Cash Flows and Types | 概念 | 现金流结构、或有条款 | [[M02-Fixed-Income-Cash-Flows-and-Types]] |
-| M03 | Issuance and Trading | 概念 | 一级/二级、FI指数 | [[M03-Fixed-Income-Issuance-and-Trading]] |
-| M04 | Markets for Corp Issuers | 概念 | 回购、CP、IG vs HY | [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] |
-| M05 | Markets for Govt Issuers | 概念 | 主权债、TIPS | [[M05-Fixed-Income-Markets-for-Government-Issuers]] |
-| M06 | Bond Valuation: Prices & Yields | 计算 | 定价公式、AI、matrix pricing | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] |
-| M07 | Yield & Spread (Fixed-Rate) | 计算 | YTM、G/I/Z-spread | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] |
-| M08 | Yield & Spread (Floating-Rate) | 计算 | FRN、QM/DM、货币市场收益率 | [[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]] |
-| M09 | Term Structure | 计算 | spot/par/forward curve | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] |
-| M10 | Interest Rate Risk & Return | 计算 | Macaulay duration, horizon yield | [[M10-Interest-Rate-Risk-and-Return]] |
-| M11 | Duration Measures | 计算 | ModDur, money duration, PVBP | [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] |
-| M12 | Convexity | 计算 | convexity adjustment | [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] |
-| M13 | Curve-Based Risk | 计算 | EffDur, key rate dur, empirical dur | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] |
-| M14 | Credit Risk | 概念 | PD/LGD、信用评级、利差 | [[M14-Credit-Risk]] |
-| M15 | Govt Credit Analysis | 概念 | 主权信评维度 | [[M15-Credit-Analysis-for-Government-Issuers]] |
-| M16 | Corp Credit Analysis | 计算 | ICR、杠杆率、优先级 | [[M16-Credit-Analysis-for-Corporate-Issuers]] |
-| M17 | Securitization | 概念 | SPV、信用增级 | [[M17-Fixed-Income-Securitization]] |
-| M18 | ABS | 概念 | covered bonds, CDO | [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] |
-| M19 | MBS | 概念 | RMBS, CMBS, prepayment | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] |
+> **一句话核心**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。
 
 ---
 
-## 🌳 核心知识树
+## 1. 科目定位
+
+- **考试权重**：11-14%
+- **官方模块数**：19
+- **主线框架**：拆现金流 -> 选折现率/曲线 -> 估值 -> 度量利率/信用/期权风险
+- **使用方式**：先从官方模块导航进入，再用编号知识树做主动回忆，最后用公式/陷阱清单做考前压缩。
+
+## 2. 官方模块导航
+
+| 编号 | 官方 Module | 难度 | 必考点 | 模块链接 |
+|---|---|---|---|---|
+| M01 | Fixed-Income Instrument Features | 概念+应用 | Introduction / Features of Fixed-Income Securities | [[M01-Fixed-Income-Instrument-Features]] |
+| M02 | Fixed-Income Cash Flows and Types | 概念+应用 | Introduction / Fixed-Income Cash Flow Structures | [[M02-Fixed-Income-Cash-Flows-and-Types]] |
+| M03 | Fixed-Income Issuance and Trading | 概念+应用 | Introduction / Fixed-Income Segments, Issuers, and Investors | [[M03-Fixed-Income-Issuance-and-Trading]] |
+| M04 | Fixed-Income Markets for Corporate Issuers | 计算+解释 | Introduction / Short-Term Funding Alternatives | [[M04-Fixed-Income-Markets-for-Corporate-Issuers]] |
+| M05 | Fixed-Income Markets for Government Issuers | 概念+应用 | Introduction / Sovereign Debt | [[M05-Fixed-Income-Markets-for-Government-Issuers]] |
+| M06 | Fixed-Income Bond Valuation: Prices and Yields | 计算+解释 | Introduction / Bond Pricing and the Time Value of Money | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] |
+| M07 | Yield and Yield Spread Measures for Fixed-Rate Bonds | 计算+解释 | Introduction / Periodicity and Annualized Yields | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] |
+| M08 | Yield and Yield Spread Measures for Floating-Rate Instruments | 计算+解释 | Introduction / Yield and Yield Spread Measures for Floating-Rate Notes | [[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]] |
+| M09 | The Term Structure of Interest Rates: Spot, Par, and Forward Curves | 计算+解释 | Introduction / Maturity Structure of Interest Rates and Spot Rates | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] |
+| M10 | Interest Rate Risk and Return | 计算+解释 | Introduction / Sources of Return from Investing in a Fixed-Rate Bond | [[M10-Interest-Rate-Risk-and-Return]] |
+| M11 | Yield-Based Bond Duration Measures and Properties | 计算+解释 | Introduction / Modified Duration | [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] |
+| M12 | Yield-Based Bond Convexity and Portfolio Properties | 计算+解释 | Introduction / Bond Convexity and Convexity Adjustment | [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] |
+| M13 | Curve-Based and Empirical Fixed-Income Risk Measures | 计算+解释 | Introduction / Curve-Based Interest Rate Risk Measures | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] |
+| M14 | Credit Risk | 计算+解释 | Introduction / Sources of Credit Risk | [[M14-Credit-Risk]] |
+| M15 | Credit Analysis for Government Issuers | 概念+应用 | Introduction / Sovereign Credit Analysis | [[M15-Credit-Analysis-for-Government-Issuers]] |
+| M16 | Credit Analysis for Corporate Issuers | 计算+解释 | Introduction / Assessing Corporate Creditworthiness | [[M16-Credit-Analysis-for-Corporate-Issuers]] |
+| M17 | Fixed-Income Securitization | 概念+应用 | Introduction / The Benefits of Securitization | [[M17-Fixed-Income-Securitization]] |
+| M18 | Asset-Backed Security (ABS) Instrument and Market Features | 概念+应用 | Introduction / Covered Bonds | [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] |
+| M19 | Mortgage-Backed Security (MBS) Instrument and Market Features | 概念+应用 | Introduction / Time Tranching | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] |
+
+## 3. 核心知识树
 
 ```text
-📈 Fixed Income (11-14%) (M01-M19) 学习路径
-
-├─ 🏆 M01-M05: FI基础工具与市场（概念为主）
-│  │
-│  ├─ 🏆 M01: Fixed-Income Instrument Features（债券要素）
-│  │  ├─ ⭐ 1.1 债券基本要素：面值·票息·到期日·收益率
-│  │  └─ ⭐ 1.2 契约条款
-│  │     ├─ Affirmative covenants：必须做的事（按时付息）
-│  │     └─ Negative covenants：禁止做的事（限制再融资）
-│  │
-│  ├─ 🏆 M02: Cash Flows and Types（现金流与类型）
-│  │  ├─ ⭐ 2.1 现金流结构
-│  │  │  ├─ 固定利率：已知每期票息金额
-│  │  │  ├─ 浮动利率：票息 = 参考利率 + 利差
-│  │  │  └─ 通胀挂钩：本金随CPI调整
-│  │  └─ ⭐ 2.2 或有条款
-│  │     ├─ Callable（可赎回）：issuer有权提前赎回→对发行人有利
-│  │     ├─ Putable（可回售）：investor有权提前卖回→对投资者有利
-│  │     └─ Convertible（可转换）：可换成一定数量的普通股
-│  │
-│  ├─ 🏆 M03: Fixed-Income Issuance and Trading（发行与交易）
-│  │  └─ ⭐ 一级市场（新发）vs 二级市场（交易）、FI指数
-│  │
-│  ├─ 🏆 M04: Markets for Corporate Issuers（公司发行人市场）
-│  │  ├─ ⭐ 短期融资：CP（商业票据）、Repo（回购）
-│  │  └─ ⭐ IG（投资级）vs HY（高收益/垃圾债）区分
-│  │
-│  └─ 🏆 M05: Markets for Government Issuers（政府发行人市场）
-│     ├─ ⭐ 主权债（国债）、TIPS（通胀保护债券）
-│     └─ ⭐ 非主权债：市政债、超国家机构债
-│
-├─ 🏆 M06-M13: 估值、收益与风险（计算核心，占70%考题）
-│  │
-│  ├─ 🏆 M06: Bond Valuation（债券定价）【高频计算】
-│  │  ├─ 📐 P = ΣC/(1+y/m)^t + FV/(1+y/m)^N（债券定价公式）
-│  │  ├─ 📐 Full Price = Clean Price + Accrued Interest
-│  │  ├─ 🎯 溢价/平价/折价判断：C > YTM → 溢价(premium)；C < YTM → 折价(discount)
-│  │  ├─ ⚠️ Clean price是报价，Full price是实际结算价！两者差一个AI
-│  │  └─ ⭐ Matrix pricing：用可比债券YTM估算非活跃债券价格
-│  │
-│  ├─ 🏆 M07: Yield Measures for Fixed-Rate Bonds（固定利率收益率）【高频计算】
-│  │  ├─ 📐 YTM = 债券定价公式的反算（IRR of cash flows）
-│  │  ├─ 📐 Current Yield = Annual Coupon / Bond Price
-│  │  ├─ 📐 G-spread = YTM_bond - YTM_govt（国债基准）
-│  │  ├─ 📐 I-spread = YTM_bond - Swap Rate（互换基准）
-│  │  ├─ 🎯 Periodicity转换：(1+y/m)^m = (1+y/n)^n
-│  │  └─ ⚠️ YTM隐含再投资假设——实际回报可能≠YTM
-│  │
-│  ├─ 🏆 M08: Yield Measures for Floating-Rate Instruments（浮动利率）【计算】
-│  │  ├─ 📐 FRN定价：Coupon = Reference + QM（报价利差）
-│  │  └─ 📐 DM（贴现利差）= 用当前信用风险折现后的FRN利差
-│  │
-│  ├─ 🏆 M09: Term Structure（期限结构）【计算】
-│  │  ├─ 📐 Spot curve：零息债券即期收益率曲线
-│  │  ├─ 📐 Par curve：平价债券的票息率曲线
-│  │  ├─ 📐 Forward rate：隐含远期利率
-│  │  ├─ 📐 spot→forward: f(j,k) = [(1+zj+k)^(j+k)/(1+zj)^j]^(1/k)-1
-│  │  └─ 🎯 Spot / Par / Forward 三者互推（核心技能）
-│  │
-│  ├─ 🏆 M10: Interest Rate Risk and Return（利率风险）【高频计算】
-│  │  ├─ 📐 Macaulay Duration = Σt·PVCFt / ΣPVCFt（加权平均回收期）
-│  │  ├─ 🎯 持有期回报 = coupon reinvestment + price change
-│  │  └─ ⚠️ 免疫策略：Macaulay duration ≈ 投资期
-│  │
-│  ├─ 🏆 M11: Yield-Based Duration（久期度量）【高频计算】
-│  │  ├─ 📐 Modified Duration = MacDur / (1+y/m)
-│  │  ├─ 📐 Money Duration = ModDur × Full Price
-│  │  ├─ 📐 PVBP ≈ Money Duration × 0.0001（1bp的价格变化）
-│  │  ├─ 🎯 久期性质：期限↑票息↓YTM↓ → 久期↑
-│  │  └─ ⚠️ 久期只对微小Δy有效
-│  │
-│  ├─ 🏆 M12: Convexity（凸性）【高频计算】
-│  │  ├─ 📐 Convexity = (P₋ + P₊ - 2P₀) / (P₀ × (Δy)²)
-│  │  ├─ 📐 %ΔP ≈ -ModDur·Δy + 0.5·Convexity·(Δy)²（含凸性更精确）
-│  │  ├─ ⭐ 正凸性：利率↓时涨幅>利率↑时跌幅（对投资者有利）
-│  │  └─ ⚠️ 负凸性：可赎回债和MBS——利率↓时价格涨不动
-│  │
-│  └─ 🏆 M13: Curve-Based Risk（曲线风险）【计算】
-│     ├─ 📐 Effective Duration（含期权债券用）
-│     ├─ 📐 Key Rate Duration（非平行移动用）
-│     └─ ⭐ Empirical vs Analytical Duration
-│
-├─ 🏆 M14-M16: 信用分析
-│  │
-│  ├─ 🏆 M14: Credit Risk（信用风险基础）
-│  │  ├─ ⭐ PD（违约概率）+ LGD（违约损失率）= 预期损失
-│  │  ├─ ⭐ 信用利差驱动因素：宏观/市场/发行人
-│  │  └─ ⭐ 信用评级：投资级 vs 投机级
-│  │
-│  ├─ 🏆 M15: Government Credit Analysis（政府信用）
-│  │  └─ ⭐ 四个维度：货币主权·财政灵活性·外部头寸·政治风险
-│  │
-│  └─ 🏆 M16: Corporate Credit Analysis（公司信用）【计算】
-│     ├─ ⭐ 三支柱：商业风险 + 财务风险 + 治理结构
-│     ├─ 📐 ICR = EBIT / Interest Expense（利息覆盖率）
-│     │  ⚠️ ICR用EBIT vs EBITDA差别大！EBITDA更大→ICR更高
-│     ├─ 📐 Leverage = Debt / EBITDA（杠杆率）
-│     ├─ 🎯 债务优先顺序：Secured > Senior Unsecured > Subordinated
-│     └─ ⚠️ 发行人评级≠债项评级（不同债项因担保/优先级可不同）
-│
-└─ 🏆 M17-M19: 证券化（概念为主）
-   │
-   ├─ 🏆 M17: Securitization（证券化流程）
-   │  ├─ ⭐ SPV隔离风险（bankruptcy remote）
-   │  ├─ ⭐ 信用增级（内/外部）
-   │  └─ 🎯 对发行人：融资成本↓；对投资者：更高收益
-   │
-   ├─ 🏆 M18: Asset-Backed Securities（资产支持证券）
-   │  ├─ ⭐ Covered bonds vs ABS
-   │  ├─ ⭐ CDO结构：高级/夹层/次级
-   │  └─ 🎯 信用增级方式：超额担保·储备金·劣后级
-   │
-   └─ 🏆 M19: Mortgage-Backed Securities（住房抵押贷款证券）
-      ├─ ⭐ RMBS：按揭池→过手证券→CMO分层
-      ├─ ⭐ Prepayment risk（提前还款风险）→ 负凸性
-      └─ ⭐ CMBS：call protection更强
+Fixed Income (11-14%)
+├─ 1. Fixed-Income Instrument Features
+│  ├─ 1.1 Introduction
+│  ├─ 1.2 Features of Fixed-Income Securities
+│  ├─ 1.3 Bond Indentures and Covenants
+├─ 2. Fixed-Income Cash Flows and Types
+│  ├─ 2.1 Introduction
+│  ├─ 2.2 Fixed-Income Cash Flow Structures
+│  ├─ 2.3 Fixed-Income Contingency Provisions
+├─ 3. Fixed-Income Issuance and Trading
+│  ├─ 3.1 Introduction
+│  ├─ 3.2 Fixed-Income Segments, Issuers, and Investors
+│  ├─ 3.3 Fixed-Income Indexes
+├─ 4. Fixed-Income Markets for Corporate Issuers
+│  ├─ 4.1 Introduction
+│  ├─ 4.2 Short-Term Funding Alternatives
+│  ├─ 4.3 Repurchase Agreements
+├─ 5. Fixed-Income Markets for Government Issuers
+│  ├─ 5.1 Introduction
+│  ├─ 5.2 Sovereign Debt
+│  ├─ 5.3 Sovereign Debt Issuance and Trading
+├─ 6. Fixed-Income Bond Valuation: Prices and Yields
+│  ├─ 6.1 Introduction
+│  ├─ 6.2 Bond Pricing and the Time Value of Money
+│  ├─ 6.3 Relationships between Bond Prices and Bond Features
+├─ 7. Yield and Yield Spread Measures for Fixed-Rate Bonds
+│  ├─ 7.1 Introduction
+│  ├─ 7.2 Periodicity and Annualized Yields
+│  ├─ 7.3 Other Yield Measures, Conventions, and Accounting for Embedded Options
+├─ 8. Yield and Yield Spread Measures for Floating-Rate Instruments
+│  ├─ 8.1 Introduction
+│  ├─ 8.2 Yield and Yield Spread Measures for Floating-Rate Notes
+│  ├─ 8.3 Yield Measures for Money Market Instruments
+├─ 9. The Term Structure of Interest Rates: Spot, Par, and Forward Curves
+│  ├─ 9.1 Introduction
+│  ├─ 9.2 Maturity Structure of Interest Rates and Spot Rates
+│  ├─ 9.3 Par and Forward Rates
+├─ 10. Interest Rate Risk and Return
+│  ├─ 10.1 Introduction
+│  ├─ 10.2 Sources of Return from Investing in a Fixed-Rate Bond
+│  ├─ 10.3 Investment Horizon and Interest Rate Risk
+├─ 11. Yield-Based Bond Duration Measures and Properties
+│  ├─ 11.1 Introduction
+│  ├─ 11.2 Modified Duration
+│  ├─ 11.3 Money Duration and Price Value of a Basis Point
+├─ 12. Yield-Based Bond Convexity and Portfolio Properties
+│  ├─ 12.1 Introduction
+│  ├─ 12.2 Bond Convexity and Convexity Adjustment
+│  ├─ 12.3 Bond Risk and Return Using Duration and Convexity
+├─ 13. Curve-Based and Empirical Fixed-Income Risk Measures
+│  ├─ 13.1 Introduction
+│  ├─ 13.2 Curve-Based Interest Rate Risk Measures
+│  ├─ 13.3 Bond Risk and Return Using Curve-Based Duration and Convexity
+├─ 14. Credit Risk
+│  ├─ 14.1 Introduction
+│  ├─ 14.2 Sources of Credit Risk
+│  ├─ 14.3 Credit Rating Agencies and Credit Ratings
+├─ 15. Credit Analysis for Government Issuers
+│  ├─ 15.1 Introduction
+│  ├─ 15.2 Sovereign Credit Analysis
+│  ├─ 15.3 Non-Sovereign Credit Risk
+├─ 16. Credit Analysis for Corporate Issuers
+│  ├─ 16.1 Introduction
+│  ├─ 16.2 Assessing Corporate Creditworthiness
+│  ├─ 16.3 Financial Ratios in Corporate Credit Analysis
+├─ 17. Fixed-Income Securitization
+│  ├─ 17.1 Introduction
+│  ├─ 17.2 The Benefits of Securitization
+│  ├─ 17.3 The Securitization Process
+├─ 18. Asset-Backed Security (ABS) Instrument and Market Features
+│  ├─ 18.1 Introduction
+│  ├─ 18.2 Covered Bonds
+│  ├─ 18.3 ABS Structures to Address Credit Risk
+├─ 19. Mortgage-Backed Security (MBS) Instrument and Market Features
+│  ├─ 19.1 Introduction
+│  ├─ 19.2 Time Tranching
+│  ├─ 19.3 Mortgage Loans and Their Characteristic Features
 ```
 
----
+## 4. 跨模块依赖关系
 
-## 🔗 跨模块依赖关系
+- **M01 Fixed-Income Instrument Features**：承接 `本科目入口`，输出到 `Fixed-Income Cash Flows and Types`。
+- **M02 Fixed-Income Cash Flows and Types**：承接 `Fixed-Income Instrument Features`，输出到 `Fixed-Income Issuance and Trading`。
+- **M03 Fixed-Income Issuance and Trading**：承接 `Fixed-Income Cash Flows and Types`，输出到 `Fixed-Income Markets for Corporate Issuers`。
+- **M04 Fixed-Income Markets for Corporate Issuers**：承接 `Fixed-Income Issuance and Trading`，输出到 `Fixed-Income Markets for Government Issuers`。
+- **M05 Fixed-Income Markets for Government Issuers**：承接 `Fixed-Income Markets for Corporate Issuers`，输出到 `Fixed-Income Bond Valuation: Prices and Yields`。
+- **M06 Fixed-Income Bond Valuation: Prices and Yields**：承接 `Fixed-Income Markets for Government Issuers`，输出到 `Yield and Yield Spread Measures for Fixed-Rate Bonds`。
+- **M07 Yield and Yield Spread Measures for Fixed-Rate Bonds**：承接 `Fixed-Income Bond Valuation: Prices and Yields`，输出到 `Yield and Yield Spread Measures for Floating-Rate Instruments`。
+- **M08 Yield and Yield Spread Measures for Floating-Rate Instruments**：承接 `Yield and Yield Spread Measures for Fixed-Rate Bonds`，输出到 `The Term Structure of Interest Rates: Spot, Par, and Forward Curves`。
+- **M09 The Term Structure of Interest Rates: Spot, Par, and Forward Curves**：承接 `Yield and Yield Spread Measures for Floating-Rate Instruments`，输出到 `Interest Rate Risk and Return`。
+- **M10 Interest Rate Risk and Return**：承接 `The Term Structure of Interest Rates: Spot, Par, and Forward Curves`，输出到 `Yield-Based Bond Duration Measures and Properties`。
+- **M11 Yield-Based Bond Duration Measures and Properties**：承接 `Interest Rate Risk and Return`，输出到 `Yield-Based Bond Convexity and Portfolio Properties`。
+- **M12 Yield-Based Bond Convexity and Portfolio Properties**：承接 `Yield-Based Bond Duration Measures and Properties`，输出到 `Curve-Based and Empirical Fixed-Income Risk Measures`。
+- **M13 Curve-Based and Empirical Fixed-Income Risk Measures**：承接 `Yield-Based Bond Convexity and Portfolio Properties`，输出到 `Credit Risk`。
+- **M14 Credit Risk**：承接 `Curve-Based and Empirical Fixed-Income Risk Measures`，输出到 `Credit Analysis for Government Issuers`。
+- **M15 Credit Analysis for Government Issuers**：承接 `Credit Risk`，输出到 `Credit Analysis for Corporate Issuers`。
+- **M16 Credit Analysis for Corporate Issuers**：承接 `Credit Analysis for Government Issuers`，输出到 `Fixed-Income Securitization`。
+- **M17 Fixed-Income Securitization**：承接 `Credit Analysis for Corporate Issuers`，输出到 `Asset-Backed Security (ABS) Instrument and Market Features`。
+- **M18 Asset-Backed Security (ABS) Instrument and Market Features**：承接 `Fixed-Income Securitization`，输出到 `Mortgage-Backed Security (MBS) Instrument and Market Features`。
+- **M19 Mortgage-Backed Security (MBS) Instrument and Market Features**：承接 `Asset-Backed Security (ABS) Instrument and Market Features`，输出到 `本科目总结`。
 
-```text
-📈 学习顺序
+## 5. 核心对比专题
 
-M01-M05（基础）→ 建理解
-         │
-         └──► M06-M09（估值+收益）←── Quant M02 TVM（折现）
-                │
-                ├──► M10-M13（风险度量）📐 公式核心
-                │      └──► PM 风险预算概念
-                │
-                └──► M14-M16（信用分析）
-                       └──► Corp Issuers M05-M06（资本结构）
+- **概念 vs 应用**：先确认官方定义，再把定义放入题干情境判断。
+- **计算 vs 解释**：计算结果只是中间步骤，CFA Level I 经常要求解释方向、限制和投资含义。
+- **静态知识 vs 决策流程**：把每个模块压缩成“输入 -> 工具 -> 输出 -> 陷阱”的流程。
+- **英文术语 vs 中文理解**：英文保留用于识题，中文解释用于防止机械背诵。
 
-🔗 跨科目关键接口：
-  M06 债券定价 ──► Quant M02 TVM
-  M08 FRN ──► Econ M07-M08 利率与汇率
-  M10-M13 久期/凸性 ──► Portfolio Management M01 风险度量
-  M14-M16 信用分析 ──► Corporate Issuers M05-M06 资本结构
-  M17-M19 证券化 ──► Alternative Investments 结构化产品
-```
+## 6. 公式与框架速查
 
----
+| 编号 | 工具 / Formula | 中文用途 |
+|---|---|---|
+| F1 | `Bond price: P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
+| F2 | `Full price: full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
+| F3 | `Modified duration: ModDur = MacDur / (1 + y/m)` | 近似衡量收益率变化 1 单位时价格百分比变化。 |
+| F4 | `Approximate convexity: (V- + V+ - 2V0) / (V0 × Δy²)` | 凸性修正久期的一阶近似误差。 |
+| F5 | `Credit loss: expected loss = probability of default × loss given default` | 信用题要分清 PD、LGD、recovery rate。 |
 
-## 🔑 核心对比专题
+## 7. 高频考试陷阱
 
-| 对比项 | 🔑 关键区别 | 🎯 考试判断 |
-|--------|-------------|-------------|
-| **固定 vs 浮动利率** | 已知现金流 vs 票息随参考利率变 | 看到reference rate→浮动 |
-| **溢价 vs 折价** | C>YTM=溢价；C<YTM=折价 | 比较coupon vs YTM |
-| **G-spread vs I-spread** | G=国债基准；I=互换基准 | 题目给什么基准 |
-| **Mac vs Mod Duration** | Mac=加权回收期；Mod=%ΔP敏感度 | 价格变化→ModDur |
-| **修正 vs 有效久期** | 修正假设固定现金流；有效允许含期权 | 可赎回债→有效 |
-| **正凸性 vs 负凸性** | 利率↓时价格涨幅>跌幅；反之 | MBS/可赎回→负凸 |
-| **平行 vs 非平行移动** | Duration=平行；Key rate=非平行 | 曲线斜率变化→KR |
+- **模块名和旧笔记不一致**：以 2026 官方 module 名称、编号和顺序为准。
+- **只背公式不解释**：凡是 `calculate and interpret`，必须同时会算和解释。
+- **忽略 LOS 动词**：`describe`、`explain`、`compare`、`evaluate` 对答案深度要求不同。
+- **跨模块断裂**：做错题时记录它关联到哪个 MOC 节点，必要时触发 MOC gap review。
 
----
+## 8. 通用分析框架
 
-## 📐 核心公式速查
+1. **识别任务**：读 LOS 动词和题干问法。
+2. **定位节点**：回到 `## 3. 核心知识树` 的编号节点。
+3. **选择工具**：概念框架、公式、表格比较或合规流程。
+4. **输出结论**：中文结论 + 英文关键词 + 必要限制条件。
+5. **复盘缺口**：若错因重复出现，进入 `.system/events/` 和 `.system/memory/` 闭环。
 
-| 指标 | 📐 公式 | ⚠️ 注意 |
-|------|---------|---------|
-| Bond Price | `P=ΣC/(1+y/m)^t+FV/(1+y/m)^N` | 基础定价 |
-| Full Price | `Clean + Accrued Interest` | 结算价 |
-| AI | `Coupon×(days since coupon/days in period)` | day-count |
-| Mod Duration | `MacDur/(1+y/m)` | 价格%变化 |
-| Money Duration | `ModDur×FullPrice` | 货币变化 |
-| PVBP | `≈MoneyDur×0.0001` | 1bp |
-| %ΔP含凸性 | `-ModDur·Δy+0.5·Conv·(Δy)²` | 组合公式 |
-| Eff Duration | `(P₋-P₊)/(2·P₀·Δy)` | 含期权债券 |
-| ICR | `EBIT/Interest` | 偿债能力 |
-| Leverage | `Debt/EBITDA` | 杠杆水平 |
+## 9. 学习路径建议
 
----
+- **第一轮：结构对齐**。按模块顺序读官方结构和 LOS，不急着刷难题。
+- **第二轮：主动回忆**。遮住解释，只看编号知识树说出定义、公式和陷阱。
+- **第三轮：题目驱动**。把错题回填到对应模块和 MOC 节点，形成可复用 fix rule。
+- **考前压缩**。只保留高频术语、公式/框架、易错点、跨模块依赖和错题触发点。
 
-## 🚨 高频陷阱速查
+## 10. Legacy 内容治理
 
-| ❌ 错误 | ✅ 正确 | 🎯 考频 |
-|---------|---------|---------|
-| Clean price=实际支付 | 实际付full price=clean+AI | ⭐⭐⭐ |
-| YTM=持有期回报 | YTM需满足再投资假设 | ⭐⭐⭐ |
-| 凸性总是正 | 可赎回/MBS有负凸区 | ⭐⭐ |
-| 久期可用于含期权债 | 含期权→effective duration | ⭐⭐⭐ |
-| 发行人评级=债项评级 | 因担保/优先级可不同 | ⭐⭐ |
-| 证券化消除风险 | 仅转移，不消除 | ⭐⭐ |
-
----
-
-## 💡 通用分析框架
-
-### 🎯 FI 估值三步法
-```
-Step 1 ─── 确定现金流（固定/浮动/通胀挂钩）
-Step 2 ─── 选贴现率（YTM/spot/forward）
-Step 3 ─── 计算 full price → 减 AI → clean price
-```
-
-### 🎯 利率风险度量选择
-```
-不含期权 ──→ ModDur + Convexity
-含期权 ───→ EffDur + EffConvexity
-非平行变动 ──→ Key rate duration
-```
-
-## 🗺️ 学习路径
-
-```
-阶段1（概念）：M01→M02→M03→M04→M05（重点理解工具特征）
-阶段2（计算核心）：M06→M07→M08→M09→M10→M11→M12→M13（公式+计算）
-阶段3（信用+证券化）：M14→M15→M16→M17→M18→M19
-```
+- 本科目高置信 legacy 映射：30 条；中置信候选：53 条。
+- 详细来源与处理建议见 [[cfa-legacy-to-official-enrichment-map]]。
+- `_legacy` 只作为补强来源，不作为最终学习入口；若与官方 2026 LOS 冲突，以 registry 和官方 Topic Outline 为准。

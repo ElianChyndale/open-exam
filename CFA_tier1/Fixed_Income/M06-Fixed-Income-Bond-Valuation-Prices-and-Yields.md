@@ -1,23 +1,29 @@
 ---
-title: "M06 — Fixed-Income Bond Valuation: Prices and Yields"
-description: "CFA Level I 2026 official module: Fixed-Income Bond Valuation: Prices and Yields"
-module: M06
+title: "M06: Fixed-Income Bond Valuation: Prices and Yields"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M06"
 official_module: "Module 6: Fixed-Income Bond Valuation: Prices and Yields"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M06: Fixed-Income Bond Valuation: Prices and Yields
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Fixed-Income Bond Valuation: Prices and Yields**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,154 +35,138 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. calculate a bond’s price given a yield-to-maturity on or between coupon dates
+2. identify the relationships among a bond’s price, coupon rate, maturity, and yield-to-maturity
+3. describe matrix pricing
 
-- calculate a bond's price given a yield-to-maturity on or between coupon dates
-- identify the relationships among a bond's price, coupon rate, maturity, and yield-to-maturity
-- describe matrix pricing
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 6.1 学习任务
+- **核心问题**：考试希望你用 `Fixed-Income Bond Valuation: Prices and Yields` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 6.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 6.3 关键英文术语
+- **Fixed-Income Bond Valuation: Prices and Yields（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed-Income Bond Valuation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Bond Pricing and the Time Value of Money（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Relationships between Bond Prices and Bond Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Matrix Pricing（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Time Value of Money（货币时间价值）**：今天的一元钱与未来的一元钱价值不同，必须用折现或复利转换。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 6.1 | calculate a bond’s price given a yield-to-maturity on or between coupon dates | 计算并解释数值结果 | 写出结论、依据和限制条件。 |
+| 6.2 | identify the relationships among a bond’s price, coupon rate, maturity, and yield-to-maturity | 识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
+| 6.3 | describe matrix pricing | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M06: Bond Valuation: Prices and Yields（债券估值：价格与收益率）
-├─ ⭐ 6.1 定价引擎 (Pricing Engine)
-│  ├─ 📐 债券价值 = Σ 票息现值 + 本金现值
-│  │  └─ P = Σ_{t=1}^{N} C/(1+y/m)^t + FV/(1+y/m)^N
-│  ├─ 🎯 折价/溢价/平价：票息率 vs YTM 比较
-│  │  ├─ Coupon > YTM  → Premium
-│  │  ├─ Coupon = YTM  → Par
-│  │  └─ Coupon < YTM  → Discount
-│  ├─ 💡 期限越长、票息越低 → 价格对收益率变动越敏感
-│  └─ ⚠️ 零息债券对利率变动最敏感（久期最大）
-│
-├─ ⭐ 6.2 交易价格惯例 (Trading Price Conventions)
-│  ├─ 📐 全价 (Full Price) = 净价 (Clean Price) + 应计利息 (AI)
-│  ├─ 📐 AI = 每期票息 × 上次付息至今天数 / 付息周期天数
-│  ├─ 🎯 报价用净价，实际交易结算用全价【考试核心】
-│  └─ ⚠️ Day-count convention 因市场而异（国债 actual/actual，公司债 30/360）
-│
-└─ ⭐ 6.3 矩阵定价 (Matrix Pricing)
-   ├─ 📐 利用可比债券收益率估算非流动性债券价格
-   ├─ 💡 适用于不活跃交易的债券
-   └─ 💡 依赖相似信用评级和相近期限
+6. Fixed-Income Bond Valuation: Prices and Yields
+├─ 6.1 Introduction
+│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
+├─ 6.2 Bond Pricing and the Time Value of Money
+│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
+├─ 6.3 Relationships between Bond Prices and Bond Features
+│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
+├─ 6.4 Matrix Pricing
+│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：定价引擎（Pricing Engine）
-**核心概念**：债券定价的核心逻辑是未来现金流的现值之和。债券价值等于所有未来票息和本金按照到期收益率（YTM）贴现的现值。这是固定收益分析最基础也最重要的概念。
-- **核心公式**：`P = Σ_{t=1}^{N} C/(1+y/m)^t + FV/(1+y/m)^N`，其中 C 为每期票息，y 为 YTM，m 为年复利次数，N 为总期数
-- **溢价/折价/平价判断**：Coupon > YTM → Premium；Coupon = YTM → Par；Coupon < YTM → Discount
-- **利率敏感度规律**：期限越长、票息越低 → 价格对收益率变动越敏感
-- **零息债券**：对利率变动最敏感，因为久期等于其期限，且无期间现金流缓释影响
-- ⚠️ 折价/溢价/平价关系是理解后续全部债券分析的基础
+### 6.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`calculate a bond’s price given a yield-to-maturity on or between coupon dates`。
+- **核心词汇**：**Fixed-Income Bond Valuation: Prices and Yields（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定债券参数计算价格，或给定价格反推 YTM（使用金融计算器）。判断 premium/discount/par 只需比较 coupon rate 与 YTM 的大小，无需精确计算。
+### 6.2 Bond Pricing and the Time Value of Money
+- **中文主线**：本节点解决 `Bond Pricing and the Time Value of Money` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：识别题干中的关键事实和触发条件；官方表述为：`identify the relationships among a bond’s price, coupon rate, maturity, and yield-to-maturity`。
+- **核心词汇**：**Fixed-Income Bond Valuation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：交易价格惯例（Trading Price Conventions）
-**核心概念**：债券交易中存在全价和净价两种报价方式，理解两者的区别对正确计算实际交易结算金额至关重要。
-- **全价（Full Price / Dirty Price）**：买方实际支付的金额，= 净价 + 应计利息
-- **净价（Clean Price / Quoted Price）**：报价时通常使用的价格，不含应计利息
-- **应计利息（Accrued Interest, AI）**：`AI = 每期票息 × 上次付息至今天数 / 付息周期天数`
-- ⚠️ **考试核心**：报价用净价，但实际交易结算用全价
-- ⚠️ Day-count convention 因市场而异：国债 actual/actual，公司债 30/360，计算 AI 时必须先确认
+### 6.3 Relationships between Bond Prices and Bond Features
+- **中文主线**：本节点解决 `Relationships between Bond Prices and Bond Features` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe matrix pricing`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算应计利息和全价。注意 fractional period 处理——两个票息日之间交易时，需将贴现期调整为分数期。
+### 6.4 Matrix Pricing
+- **中文主线**：本节点解决 `Matrix Pricing` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`calculate a bond’s price given a yield-to-maturity on or between coupon dates`。
+- **核心词汇**：**Bond Pricing and the Time Value of Money（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：矩阵定价（Matrix Pricing）
-**核心概念**：矩阵定价用于估算非流动性或新发行债券的合理价格或收益率。当债券不活跃交易时，利用信用评级和期限相近的可比债券价格来估算。
-- **适用场景**：不活跃交易的债券、新发行但无活跃二级市场的债券
-- **方法**：找信用评级和期限相近的可比债券 → 计算其 YTM → 用该 YTM 贴现目标债券的现金流
-- **依赖假设**：相似信用评级和相近期限的债券应具有相似的收益率
-- 矩阵定价的准确性取决于可比债券选择的合理性
+### 6.9 Legacy 补强要点
+- 来自 `M03-Bond-Valuation.md`：## 1. 核心知识点; **核心公式 (English)**; **全价 = 净价 + 应计利息 (full price = clean price + accrued interest)【考试核心】**：报价时通常使用净价 (clean price)，但实际交易结算使用全价 (full price / dirty price)。。
+- 来自 `00-Fixed-Income-MOC.md`：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险; ## Fixed Income 核心知识树 (Core Knowledge Tree); ├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18。
 
-**考试应用**：利用可比债券的 YTM 估算目标债券的价格，理解其适用场景和局限性。
 
-## 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `P = Σ_{t=1}^{N} C/(1+y/m)^t + FV/(1+y/m)^N` | 债券定价 | 计算价格 | 注意复利频率 m |
-| `Full Price = Clean Price + Accrued Interest` | 全价 | 实际结算 | 报价 ≠ 支付金额 |
-| `AI = Coupon × (Days_since_last / Days_in_period)` | 应计利息 | 票息日间交易 | 先确认 day-count 规则 |
-| `Coupon > YTM → Premium` | 溢价判断 | 判断交易状态 | 无需精确计算 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
+| Full price | `full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
 
-## 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 考点 1：计算应计利息 (AI)
-- **步骤**：计算上次付息日至结算日的天数占比 → 乘以每期票息金额
-- **关键**：先确认 day-count convention（actual/actual vs 30/360）
-- **公式**：`AI = (C/m) × (Days_since_last_payment / Days_in_coupon_period)`
+## 6. 常见考点与解题思路
 
-### 考点 2：计算 Full Price
-- **方法一**：先按票息日定价公式计算现值 → 再复利至结算日
-- **方法二**：先计算 Clean Price → 计算 AI → Full Price = Clean Price + AI
-- **注意**：Fractional period 处理易错，可先将现金流贴现至上一个票息日，再复利至结算日
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 3：判断 Premium/Discount/Par
-- **思路**：直接比较 Coupon Rate 与 YTM
-- **技巧**：不需要精确计算，大小比较即可
+## 7. 易错点与考试陷阱
 
-### 考点 4：矩阵定价计算
-- **题型**：利用可比债券的 YTM 估算目标债券的价格
-- **步骤**：找信用评级和期限相近的可比债券 → 计算其 YTM → 用该 YTM 贴现目标债券的现金流
+- **中英文错配**：看到 `Fixed-Income Bond Valuation: Prices and Yields` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 🚨 易错点与考试陷阱
+## 8. 跨模块关联
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| Clean price 是买方最终支付 | 实际结算支付 Full Price | Clean Price 只是报价习惯 |
-| 所有债券用相同 day-count | 国债 actual/actual，公司债 30/360 | 计算 AI 时必须确认 |
-| 票息日间定价与票息日相同 | 需要分数期处理 | 时间价值需精确计算 |
-| 所有市场报价惯例相同 | 美国国债、欧洲债券、公司债报价不同 | 需注意市场差异 |
+- **上游模块**：[[M05-Fixed-Income-Markets-for-Government-Issuers]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🔄 跨模块关联
+## 9. 复习与刷题提示
 
-- **定价方法** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的 YTM 计算（定价的逆运算）
-- **应计利息** → 与 day-count convention 紧密结合
-- **矩阵定价** → [[M03-Fixed-Income-Issuance-and-Trading]] 的流动性概念
-- **不同债券结构** → [[M02-Fixed-Income-Cash-Flows-and-Types]] 的现金流类型影响定价方法
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 📋 复习与刷题提示
+## 10. Legacy Notes Integrated
 
-- **核心重点**：Full Price / Clean Price / AI 的计算是最高频考点
-- **计算题**：
-  - 债券定价公式必须熟练使用金融计算器（TVM 功能）
-  - 应计利息计算：注意 day-count convention（国债 actual/actual，公司债 30/360）
-  - 分数期处理：贴现至上一个票息日 → 再复利至结算日
-- **概念理解**：YTM 与票息率的关系决定溢价/折价（Coupon > YTM → Premium，反之 Discount）
-- **Day-count conventions**：
-  - 美国国债：Actual/Actual
-  - 公司债/市政债：30/360
-  - 货币市场工具：Actual/360
-- **Matrix pricing**：理解应用场景（非流动性债券的定价估算）和方法（利用可比债券）
-- **关键区分**：
-  - Clean Price = 报价价格（不含应计利息）
-  - Full Price = 实际结算价格（含应计利息）
-  - 投资者支付 Full Price，卖方收到 Full Price
-- **刷题建议**：
-  - 重点做应计利息计算题（含不同 day-count 转换）
-  - Full price 计算题（票息日和非票息日两种场景）
-  - 溢价/折价/平价判断题
-- **常见错误**：
-  - 混淆 Clean Price 与 Full Price
-  - 忽略 Day-count convention
-  - 分数期处理时复利方向错误
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M03-Bond-Valuation.md（confidence 0.559）
+- **可复用结构**：M06: 债券估值：价格与收益率 (Bond Valuation: Prices and Yields)；1. 核心知识点；1.1 定价引擎 (Pricing Engine)；1.2 交易价格惯例 (Trading Price Conventions)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；**核心公式 (English)**；**全价 = 净价 + 应计利息 (full price = clean price + accrued interest)【考试核心】**：报价时通常使用净价 (clean price)，但实际交易结算使用全价 (full price / dirty price)。；## 2. 关键公式
+- **公式/计算线索**：official_module: "Module 6: Fixed-Income Bond Valuation: Prices and Yields"；# M06: 债券估值：价格与收益率 (Bond Valuation: Prices and Yields)；**核心公式 (English)**
+- **易错提示**：## 4. 易错点提醒；**Quoted clean price 是报价习惯，不是买方最终现金支付【考试陷阱】**：实际结算时买方支付的是 full price（clean price + AI）。；**CFA 考试中注意区分不同市场的报价惯例**：美国国债、欧洲债券、公司债的报价方式不同。
 
-- **关键数值记忆**：
-  - Day-count conventions：国债 actual/actual，公司债 30/360，货币市场 actual/360
-  - 应计利息计算必须精确到天数
-  - Matrix pricing 适用于非活跃交易债券的估值
-- **考试技巧**：
-  - 全价 = 净价 + 应计利息（这一步占分很高）
-  - 折价/溢价判断只需比较 Coupon vs YTM，不需要计算
-  - 分数期定价时优先使用贴现至上一票息日再复利的方法
-- **计算流程总结**：
-  1. 确定结算日和 day-count convention
-  2. 计算上次付息日到结算日的应计利息天数
-  3. 计算 AI = 每期票息 × (天数占比)
-  4. 若在票息日：直接使用标准定价公式
-  5. 若在票息日之间：先贴现至上一票息日，再复利至结算日
-  6. Full Price = Clean Price + AI（若已知其一）
-
-- **矩阵定价公式**：YTM_target ≈ 线性插值（可比债券 A 和 B 的 YTM 按期限加权平均）
+### 来源：00-Fixed-Income-MOC.md（confidence 0.498）
+- **可复用结构**：00-Fixed-Income-MOC；笔记属性；最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；科目概览；Fixed Income 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；## Fixed Income 核心知识树 (Core Knowledge Tree)；├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18；├── M02: 现金流类型 (Cash Flows and Types)【考试核心】↔ 2026 Outline P18
+- **公式/计算线索**：description: CFA Level I Fixed Income master MOC for bond pricing, yield measures, duration, credit, structured products, and traps.；│ ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure) (回购融资)；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
+- **易错提示**：│ │ └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】(契约类型)；│ └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)

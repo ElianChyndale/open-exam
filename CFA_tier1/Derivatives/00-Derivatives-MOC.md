@@ -1,178 +1,148 @@
 ---
 title: "00-Derivatives-MOC"
-description: "CFA L1 Derivatives 中枢 — 远期/期货/互换/期权/二叉树·公式·框架·陷阱"
+description: "CFA Level I 2026 Derivatives 官方模块导航、编号知识树、公式/框架、陷阱与学习路径"
 subject: "Derivatives"
-topic_area: Derivatives
-level: CFA Level I
+topic_area: "Derivatives"
+level: "CFA Level I"
+exam_year: 2026
 exam_weight: "5-8%"
-exam_format: 概念+计算混合
-difficulty: 无套利定价逻辑是核心主线
+module_count: 10
 note_type: master_moc
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
   - MOC
-  - Derivatives
   - official_2026
+  - Derivatives
 ---
 
-# 🔀 00-Derivatives-MOC
+# Derivatives MOC
 
-> **一句话核心**：衍生品的本质是用少量资金获取标的资产价格敞口，核心定价逻辑是无套利(replication + cost of carry)。
-
----
-
-## 📋 官方模块概览
-
-| # | 内容 | ⚖️ | 🎯 必考点 | 🔗 |
-|---|------|-----|-----------|-----|
-| M01 | Instrument & Market Features | 概念 | 衍生品定义、OTC vs 交易所 | [[M01-Derivative-Instrument-and-Derivative-Market-Features]] |
-| M02 | Forward Commitment & Contingent Claim | 概念 | 远期/期货/互换/期权到期收益 | [[M02-Forward-Commitment-and-Contingent-Claim-Features-and-Instruments]] |
-| M03 | Benefits, Risks, Uses | 概念 | 对冲、投机、套利 | [[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]] |
-| M04 | Arbitrage, Replication, Cost of Carry | 概念 | 无套利、复制定价 | [[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]] |
-| M05 | Forward Pricing & Valuation | **计算** | 📐 远期定价公式、存续期估值 | [[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]] |
-| M06 | Futures Pricing & Valuation | **计算** | MTM、期货vs远期差异 | [[M06-Pricing-and-Valuation-of-Futures-Contracts]] |
-| M07 | Swap Pricing & Valuation | **计算** | 互换=一系列远期 | [[M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps]] |
-| M08 | Option Pricing & Valuation | **计算** | moneyness、内在/时间价值、影响因素 | [[M08-Pricing-and-Valuation-of-Options]] |
-| M09 | Put-Call Parity | **计算** | 📐 c+PV(X)=p+S₀、合成头寸 | [[M09-Option-Replication-Using-Put-Call-Parity]] |
-| M10 | Binomial Model | **计算** | 📐 一期二叉树、风险中性概率 | [[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]] |
+> **一句话核心**：用无套利、复制和工具结构理解远期、期货、互换、期权的风险转移。
 
 ---
 
-## 🌳 核心知识树
+## 1. 科目定位
+
+- **考试权重**：5-8%
+- **官方模块数**：10
+- **主线框架**：识别标的与到期现金流 -> 建立无套利关系 -> 定价/估值 -> 判断风险暴露
+- **使用方式**：先从官方模块导航进入，再用编号知识树做主动回忆，最后用公式/陷阱清单做考前压缩。
+
+## 2. 官方模块导航
+
+| 编号 | 官方 Module | 难度 | 必考点 | 模块链接 |
+|---|---|---|---|---|
+| M01 | Derivative Instrument and Derivative Market Features | 概念+应用 | Introduction / Derivative Features | [[M01-Derivative-Instrument-and-Derivative-Market-Features]] |
+| M02 | Forward Commitment and Contingent Claim Features and Instruments | 概念+应用 | Introduction / Forwards, Futures, and Swaps | [[M02-Forward-Commitment-and-Contingent-Claim-Features-and-Instruments]] |
+| M03 | Derivative Benefits, Risks, and Issuer and Investor Uses | 概念+应用 | Introduction / Derivative Benefits | [[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]] |
+| M04 | Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives | 概念+应用 | Introduction / Arbitrage | [[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]] |
+| M05 | Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities | 计算+解释 | Introduction / Pricing and Valuation of Forward Contracts | [[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]] |
+| M06 | Pricing and Valuation of Futures Contracts | 计算+解释 | Introduction / Pricing of Futures Contracts at Inception | [[M06-Pricing-and-Valuation-of-Futures-Contracts]] |
+| M07 | Pricing and Valuation of Interest Rates and Other Swaps | 计算+解释 | Introduction / Swaps vs. Forwards | [[M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps]] |
+| M08 | Pricing and Valuation of Options | 计算+解释 | Introduction / Option Value relative to the Underlying Spot Price | [[M08-Pricing-and-Valuation-of-Options]] |
+| M09 | Option Replication Using Put-Call Parity | 概念+应用 | Introduction / Put–Call Parity | [[M09-Option-Replication-Using-Put-Call-Parity]] |
+| M10 | Valuing a Derivative Using a One-Period Binomial Model | 概念+应用 | Introduction / Binomial Valuation | [[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]] |
+
+## 3. 核心知识树
 
 ```text
-🔀 Derivatives (5-8%) (M01-M10) 知识体系
-
-├─ 🏆 M01-M04: 衍生品基础（概念为主）
-│  │
-│  ├─ 🏆 M01: Instrument and Market Features（衍生品特征与市场）
-│  │  ├─ ⭐ 衍生品定义：价值源于标的资产的金融工具
-│  │  └─ ⭐ OTC（定制·对手风险）vs 交易所（标准化·CCP清算）
-│  │
-│  ├─ 🏆 M02: Forward Commitment & Contingent Claim（分类）
-│  │  ├─ ⭐ Forward commitment：远期/期货/互换——双方有义务履约
-│  │  ├─ ⭐ Contingent claim：期权——买方有选择权
-│  │  └─ 🎯 到期收益计算
-│  │     ├─ 📐 Long call payoff = max(0, ST-X)
-│  │     ├─ 📐 Long put payoff = max(0, X-ST)
-│  │     └─ ⚠️ payoff≠profit！profit要扣除期权费
-│  │
-│  ├─ 🏆 M03: Benefits, Risks, Uses（用途与风险）
-│  │  └─ ⭐ 对冲·投机·套利·价格发现·杠杆
-│  │
-│  └─ 🏆 M04: Arbitrage, Replication, Cost of Carry（定价原则）
-│     ├─ ⭐ 无套利原则：复制组合成本 = 衍生品公允价值
-│     └─ ⭐ 持有成本模型：F = S×(1+持有成本) - 持有收益
-│
-├─ 🏆 M05-M07: 远期承诺定价（计算核心）
-│  │
-│  ├─ 🏆 M05: Forward Pricing and Valuation（远期定价）【高频计算】
-│  │  ├─ 📐 无收益资产：F₀(T) = S₀(1+r)^T（基础公式）
-│  │  ├─ 📐 已知收入资产：F₀(T) = [S₀-PV(I)](1+r)^T
-│  │  ├─ 📐 已知收益率资产：F₀(T) = S₀[(1+r)/(1+q)]^T
-│  │  ├─ 📐 存续期价值：Vt(long) = St - PVt(K)
-│  │  ├─ 📐 多头到期收益：ST - K；空头：K - ST
-│  │  └─ ⚠️ 期初价值=0（公平定价），存续期间价值≠0
-│  │
-│  ├─ 🏆 M06: Futures Pricing（期货定价）【计算】
-│  │  ├─ ⭐ 期货公平价格 ≈ 远期公平价格（公式相同）
-│  │  ├─ 🎯 期货 vs 远期核心区别
-│  │  │  ├─ 期货每日盯市（Mark-to-Market）+ 保证金，远期到期结算
-│  │  │  └─ 利率与标的正相关→期货价>远期；负相关→期货价<远期
-│  │  └─ ⚠️ 中央对手方(CCP)降低对手风险
-│  │
-│  ├─ 🏆 M07: Swap Pricing（互换定价）【计算】
-│  │  └─ ⭐ 互换 ≈ 一系列远期合约（FRA）
-│  │
-│  └─ 🏆 M08-M10: 期权定价（计算核心）
-│     │
-│     ├─ 🏆 M08: Option Pricing and Valuation（期权定价）【高频计算】
-│     │  ├─ ⭐ Moneyness：ITM（实值）/ ATM（平值）/ OTM（虚值）
-│     │  ├─ 📐 内在价值(Intrinsic)：立即行权的价值
-│     │  ├─ 📐 时间价值(Time)：期权价 - 内在价值
-│     │  ├─ 🎯 影响期权价格的因素
-│     │  │  ├─ c↑：S₀↑, X↓, T↑, σ↑, r↑
-│     │  │  └─ p↑：S₀↓, X↑, T↑, σ↑, r↓
-│     │  └─ ⚠️ 美式期权价值≥欧式（提前行权权有价）
-│     │
-│     ├─ 🏆 M09: Put-Call Parity（买卖权平价）【高频计算】
-│     │  ├─ 📐 c + PV(X) = p + S₀（标准欧式平价）
-│     │  ├─ 📐 c + PV(X) + PV(I) = p + S₀（含股息）
-│     │  ├─ 📐 c + PV(X) = p + S₀e^(-qT)（连续收益率）
-│     │  ├─ 📐 c + PV(X) = p + PV(F)（远期平价）
-│     │  ├─ 🎯 合成头寸：移项可得合成call/put/stock
-│     │  └─ ⚠️ 平价只对欧式成立！美式因提前行权不严格成立
-│     │
-│     └─ 🏆 M10: Binomial Model（二叉树模型）【计算】
-│        ├─ 📐 c = [πc⁺ + (1-π)c⁻] / (1+r)（期权价值）
-│        ├─ 📐 π = (1+r-d) / (u-d)（风险中性概率）
-│        ├─ 🎯 风险中性定价：用风险中性概率，不关心真实概率
-│        └─ ⚠️ 多期二叉树 = 一期递归应用
+Derivatives (5-8%)
+├─ 1. Derivative Instrument and Derivative Market Features
+│  ├─ 1.1 Introduction
+│  ├─ 1.2 Derivative Features
+│  ├─ 1.3 Derivative Underlyings
+├─ 2. Forward Commitment and Contingent Claim Features and Instruments
+│  ├─ 2.1 Introduction
+│  ├─ 2.2 Forwards, Futures, and Swaps
+│  ├─ 2.3 Futures
+├─ 3. Derivative Benefits, Risks, and Issuer and Investor Uses
+│  ├─ 3.1 Introduction
+│  ├─ 3.2 Derivative Benefits
+│  ├─ 3.3 Derivative Risks
+├─ 4. Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives
+│  ├─ 4.1 Introduction
+│  ├─ 4.2 Arbitrage
+│  ├─ 4.3 Replication
+├─ 5. Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities
+│  ├─ 5.1 Introduction
+│  ├─ 5.2 Pricing and Valuation of Forward Contracts
+│  ├─ 5.3 Pricing and Valuation of Interest Rate Forward Contracts
+├─ 6. Pricing and Valuation of Futures Contracts
+│  ├─ 6.1 Introduction
+│  ├─ 6.2 Pricing of Futures Contracts at Inception
+│  ├─ 6.3 MTM Valuation: Forwards versus Futures
+├─ 7. Pricing and Valuation of Interest Rates and Other Swaps
+│  ├─ 7.1 Introduction
+│  ├─ 7.2 Swaps vs. Forwards
+│  ├─ 7.3 Swap Values and Prices
+├─ 8. Pricing and Valuation of Options
+│  ├─ 8.1 Introduction
+│  ├─ 8.2 Option Value relative to the Underlying Spot Price
+│  ├─ 8.3 Option Exercise Value
+├─ 9. Option Replication Using Put-Call Parity
+│  ├─ 9.1 Introduction
+│  ├─ 9.2 Put–Call Parity
+│  ├─ 9.3 Option Strategies Based on Put–Call Parity
+├─ 10. Valuing a Derivative Using a One-Period Binomial Model
+│  ├─ 10.1 Introduction
+│  ├─ 10.2 Binomial Valuation
+│  ├─ 10.3 The Binomial Model
 ```
 
----
+## 4. 跨模块依赖关系
 
-## 🔗 跨模块依赖关系
+- **M01 Derivative Instrument and Derivative Market Features**：承接 `本科目入口`，输出到 `Forward Commitment and Contingent Claim Features and Instruments`。
+- **M02 Forward Commitment and Contingent Claim Features and Instruments**：承接 `Derivative Instrument and Derivative Market Features`，输出到 `Derivative Benefits, Risks, and Issuer and Investor Uses`。
+- **M03 Derivative Benefits, Risks, and Issuer and Investor Uses**：承接 `Forward Commitment and Contingent Claim Features and Instruments`，输出到 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives`。
+- **M04 Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives**：承接 `Derivative Benefits, Risks, and Issuer and Investor Uses`，输出到 `Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities`。
+- **M05 Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities**：承接 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives`，输出到 `Pricing and Valuation of Futures Contracts`。
+- **M06 Pricing and Valuation of Futures Contracts**：承接 `Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities`，输出到 `Pricing and Valuation of Interest Rates and Other Swaps`。
+- **M07 Pricing and Valuation of Interest Rates and Other Swaps**：承接 `Pricing and Valuation of Futures Contracts`，输出到 `Pricing and Valuation of Options`。
+- **M08 Pricing and Valuation of Options**：承接 `Pricing and Valuation of Interest Rates and Other Swaps`，输出到 `Option Replication Using Put-Call Parity`。
+- **M09 Option Replication Using Put-Call Parity**：承接 `Pricing and Valuation of Options`，输出到 `Valuing a Derivative Using a One-Period Binomial Model`。
+- **M10 Valuing a Derivative Using a One-Period Binomial Model**：承接 `Option Replication Using Put-Call Parity`，输出到 `本科目总结`。
 
-```text
-M01-M04（基础概念）
-└── M04（无套利定价原则）←── Quant M02 TVM
-    ├── M05-M06（远期/期货）──► M07（互换 = 一系列FRA）
-    └── M08（期权基础）──► M09（Put-Call Parity）──► M10（二叉树）
+## 5. 核心对比专题
 
-🔗 跨科目：
-  M05 远期定价 ──► Quant M02 TVM（折现）
-  M04 无套利 ──► FI M06 估值
-  M08 期权 ──► Equity M08 认股权证
-```
+- **概念 vs 应用**：先确认官方定义，再把定义放入题干情境判断。
+- **计算 vs 解释**：计算结果只是中间步骤，CFA Level I 经常要求解释方向、限制和投资含义。
+- **静态知识 vs 决策流程**：把每个模块压缩成“输入 -> 工具 -> 输出 -> 陷阱”的流程。
+- **英文术语 vs 中文理解**：英文保留用于识题，中文解释用于防止机械背诵。
 
----
+## 6. 公式与框架速查
 
-## 🔑 核心对比专题
+| 编号 | 工具 / Formula | 中文用途 |
+|---|---|---|
+| F1 | `Forward value: Vt = St - PV(forward price)` | 远期合约价值随标的价格和折现变化。 |
+| F2 | `Put-call parity: c + PV(X) = p + S` | 欧式期权无套利关系，高频判断式。 |
+| F3 | `Option payoff: call = max(0, S - X), put = max(0, X - S)` | 先画到期收益，再考虑期权费。 |
 
-| 对比 | 🔑 区别 | 🎯 判断 |
-|------|---------|---------|
-| **远期 vs 期货** | OTC vs 交易所；到期结算 vs 每日MTM | 交易所交易→期货 |
-| **远期承诺 vs 期权** | 对称义务 vs 不对称权利 | 有权利无义务→期权 |
-| **欧式 vs 美式** | 到期行权 vs 到期前任意时间 | 美式≥欧式价值 |
-| **看涨 vs 看跌** | 买权(S↑获利) vs 卖权(S↓获利) | 看涨call，看跌put |
-| **内在 vs 时间价值** | 现在行权值 vs 未来溢价 | 期权价=内在+时间 |
-| **风险中性vs真实概率** | 二叉树用风险中性π，非真实 | 调整衍生品定价 |
+## 7. 高频考试陷阱
 
----
+- **模块名和旧笔记不一致**：以 2026 官方 module 名称、编号和顺序为准。
+- **只背公式不解释**：凡是 `calculate and interpret`，必须同时会算和解释。
+- **忽略 LOS 动词**：`describe`、`explain`、`compare`、`evaluate` 对答案深度要求不同。
+- **跨模块断裂**：做错题时记录它关联到哪个 MOC 节点，必要时触发 MOC gap review。
 
-## 📐 核心公式速查
+## 8. 通用分析框架
 
-| 公式 | 用途 | ⚠️ |
-|------|------|-----|
-| `F₀(T)=S₀(1+r)^T` | 无收益远期定价 | 基础公式 |
-| `F₀(T)=[S₀-PV(I)](1+r)^T` | 已知收入资产 | 股息调整 |
-| `Vt(long)=St-PVt(K)` | 存续期多头价值 | |
-| `c+PV(X)=p+S₀` | Put-Call Parity | 只对欧式 |
-| `c=max(0,S₀-X)` | 看涨到期收益 | 不含期权费 |
-| `p=max(0,X-S₀)` | 看跌到期收益 | |
-| `c=[πc⁺+(1-π)c⁻]/(1+r)` | 二叉树 | π是风险中性 |
-| `π=(1+r-d)/(u-d)` | 风险中性概率 | |
+1. **识别任务**：读 LOS 动词和题干问法。
+2. **定位节点**：回到 `## 3. 核心知识树` 的编号节点。
+3. **选择工具**：概念框架、公式、表格比较或合规流程。
+4. **输出结论**：中文结论 + 英文关键词 + 必要限制条件。
+5. **复盘缺口**：若错因重复出现，进入 `.system/events/` 和 `.system/memory/` 闭环。
 
----
+## 9. 学习路径建议
 
-## 🚨 高频陷阱速查
+- **第一轮：结构对齐**。按模块顺序读官方结构和 LOS，不急着刷难题。
+- **第二轮：主动回忆**。遮住解释，只看编号知识树说出定义、公式和陷阱。
+- **第三轮：题目驱动**。把错题回填到对应模块和 MOC 节点，形成可复用 fix rule。
+- **考前压缩**。只保留高频术语、公式/框架、易错点、跨模块依赖和错题触发点。
 
-| ❌ 错误 | ✅ 正确 | 🎯 |
-|---------|---------|-----|
-| 期货=远期价格相同 | 利率相关时可能不同（MTM） | ⭐⭐⭐ |
-| 期权价=内在价值 | 期权价=内在+时间价值 | ⭐⭐⭐ |
-| 平价公式对所有期权成立 | 只对**欧式** | ⭐⭐⭐ |
-| 二叉树用真实概率 | 用风险中性概率 | ⭐⭐ |
-| 远期期初有价值 | 期初价值=0（公平定价） | ⭐⭐⭐ |
+## 10. Legacy 内容治理
 
----
-
-## 💡 学习路径
-
-```
-阶段1 ─── M01→M02→M03→M04（基础概念+定价原则）
-阶段2 ─── M05→M06→M07（远期/期货/互换 定价计算）
-阶段3 ─── M08→M09→M10（期权定价/平价/二叉树）
-```
+- 本科目高置信 legacy 映射：14 条；中置信候选：27 条。
+- 详细来源与处理建议见 [[cfa-legacy-to-official-enrichment-map]]。
+- `_legacy` 只作为补强来源，不作为最终学习入口；若与官方 2026 LOS 冲突，以 registry 和官方 Topic Outline 为准。

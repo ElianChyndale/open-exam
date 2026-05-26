@@ -1,23 +1,29 @@
 ---
-title: "M04 — Real Estate and Infrastructure"
-description: "CFA Level I 2026 official module: Real Estate and Infrastructure"
-module: M04
+title: "M04: Real Estate and Infrastructure"
+description: "CFA Level I 2026 Alternative Investments 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Alternative Investments"
-topic_area: Alternative_Investments
-curriculum_year: 2026
+topic_area: "Alternative_Investments"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "7-10%"
+module: "M04"
 official_module: "Module 4: Real Estate and Infrastructure"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 4
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Alternative_Investments
   - official_2026
+  - Alternative_Investments
 ---
 
 # M04: Real Estate and Infrastructure
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：识别另类投资结构、绩效、私募、实物资产、对冲基金与数字资产特征。 本模块聚焦 **Real Estate and Infrastructure**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -30,260 +36,149 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain features and characteristics of real estate
+2. explain the investment characteristics of real estate investments
+3. explain features and characteristics of infrastructure
+4. explain the investment characteristics of infrastructure investments
 
-- explain features and characteristics of real estate
-- explain the investment characteristics of real estate investments
-- explain features and characteristics of infrastructure
-- explain the investment characteristics of infrastructure investments
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Alternative_Investments/M04-Real-Estate-and-Infrastructure.md`
+### 4.1 学习任务
+- **核心问题**：考试希望你用 `Real Estate and Infrastructure` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.40. Original official module field: Real Estate and Infrastructure._
+### 4.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M04: 房地产与基础设施 (Real Estate and Infrastructure)
+### 4.3 关键英文术语
+- **Real Estate and Infrastructure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Real Estate Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Real Estate Investment Characteristics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Infrastructure Investment Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Infrastructure Investment Characteristics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Real Estate（房地产）**：以不动产及相关现金流为基础的另类投资。
 
-##### 1. 核心知识点
+## 2. 官方 LOS 对应学习目标
 
-###### 4.1 房地产 (Real Estate)【考试核心】
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 4.1 | explain features and characteristics of real estate | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 4.2 | explain the investment characteristics of real estate investments | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 4.3 | explain features and characteristics of infrastructure | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 4.4 | explain the investment characteristics of infrastructure investments | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
 
-####### 投资形式
-
-| 方式 | 英文 | 说明 |
-|------|------|------|
-| 直接投资 | Direct Investment | 直接购买物业所有权 |
-| 间接投资 | Indirect Investment | 通过REITs等工具投资 |
-
-**REITs (房地产投资信托基金, Real Estate Investment Trusts)**:
-- **权益型REITs (Equity REITs)**: 拥有并经营物业，主要收入来自租金
-- **抵押型REITs (Mortgage REITs)**: 投资房地产抵押贷款/抵押支持证券
-- **混合型REITs (Hybrid REITs)**: 两者结合
-
-**流动性**: REITs > 直接房地产（公开交易 vs 非流动）
-
-####### 三种估值方法
-
-| 方法 | 英文 | 原理 |
-|------|------|------|
-| 收益法 | Income Approach | NOI / Cap Rate——最常用 |
-| 成本法 | Cost Approach | 土地价值 + 重置成本 - 折旧 |
-| 市场比较法 | Sales Comparison Approach | 参照类似物业近期交易价格调整 |
-
-**NOI (净营运收入, Net Operating Income)** = 租金收入 - 运营费用（**不含**折旧和利息）
-
-####### Cap Rate (资本化率) 驱动因素
-
-- **利率环境**: 利率↑ → Cap Rate↑ → 价值↓
-- **风险溢价**: 风险↑ → Cap Rate↑ → 价值↓
-- **增长预期**: 增长↑ → Cap Rate↓ → 价值↑
-
-####### 房地产周期
-
-复苏期 → 扩张期 → 过热期 → 衰退期，与宏观经济、利率、就业密切相关
-
-###### 4.2 基础设施 (Infrastructure)【考试核心】
-
-**定义**: 提供公共服务的长期实物资产（公路、港口、电网、通信塔等）
-
-**投资形式**: 直接投资 (Direct Ownership)、上市基础设施基金 (Listed Infrastructure Funds)、未上市基金/公私合营 (PPP)
-
-####### 棕地 (Brownfield) vs 绿地 (Greenfield) 对比
-
-| 维度 | 棕地 (Brownfield) | 绿地 (Greenfield) |
-|------|-------------------|-------------------|
-| 定义 | 收购现有运营资产 | 新建开发项目 |
-| 现金流 | 现有稳定现金流 | 建设期无现金流 |
-| 风险水平 | 低 | 高 |
-| 典型回报 | 8-10% | 12-15% |
-| 资本需求 | 收购对价 | 建设资本支出 |
-| 适用投资者 | 追求稳定收益、低风险偏好 | 追求高增长、高风险承受能力 |
-
-##### 2. 关键公式
-
-| 指标 | 公式 |
-|------|------|
-| NOI | 租金收入 - 运营费用（不含折旧和利息） |
-| Cap Rate | NOI / Property Value |
-| Property Value | NOI / Cap Rate |
-
-**核心关系**: Cap Rate与物业价值呈反向关系（Cap Rate↑ → Value↓）
-
-##### 3. 常见考点与解题思路
-
-1. **Cap Rate计算**: 给定NOI和物业价值，计算Cap Rate。**思路**: Cap Rate = NOI / Property Value。
-2. **估值计算**: 给定NOI和Cap Rate，计算物业价值。**思路**: Value = NOI / Cap Rate。
-3. **Cap Rate变化分析**: 判断利率/风险/增长预期变化对物业价值的影响。**思路**: Cap Rate↑ → Value↓（反向关系）。
-4. **棕地vs绿地区分**: 题干描述基础设施项目特征，判断类型。**思路**: 现有运营=棕地（低风险低回报）；新建=绿地（高风险高回报）。
-
-##### 4. 易错点提醒
-
-- **NOI不含折旧和利息**: 运营费用仅包括日常维护、管理费、税费等，不含折旧费用和利息支出
-- **Cap Rate与价值反向关系**: 常被误认为正向关系（Cap Rate↑ → Value↓）
-- **棕地回报不是更高**: 棕地风险低、回报低（8-10%），绿地风险高、回报高（12-15%）
-- **REITs不是都投物业**: 权益型投物业收租金，抵押型投贷款收利息
-- **收益法最常用**: 房地产估值三种方法中，收益法（Income Approach）最常见
-
-##### 5. 跨模块关联
-
-- 房地产周期 → [[M05-Natural-Resources.md]] (商品周期对比)
-- 基础设施收购 → [[M03-Private-Capital.md]] (LBO基础设施收购)
-- 收益平滑 → [[M02-Performance-Measurement.md]] (房地产估值与收益平滑)
-- Cap Rate → [[M01-Features-and-Structure.md]] (另类投资估值特征)
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 M04: Real Estate and Infrastructure（房地产与基础设施）
-│
-├── ⭐ 房地产投资形式 (Real Estate Forms) 🎯高频
-│   ├── 直接: 直接购买物业所有权（非流动）
-│   └── 间接: REITs等公开交易工具
-│
-├── ⭐ REITs类型 (REIT Types) 🎯超高頻
-│   ├── 权益型 (Equity REITs): 拥有物业、收租金
-│   ├── 抵押型 (Mortgage REITs): 投资按揭/MBS
-│   └── 混合型 (Hybrid REITs): 两者结合
-│       ⚠️ 权益型和抵押型风险收益特征完全不同
-│
-├── ⭐ 房地产估值方法 (Valuation Methods) 🎯超高頻
-│   ├── 📐 收益法 (Income Approach): NOI / Cap Rate（最常用）🎯高频
-│   ├── 成本法 (Cost Approach): 土地+重置成本-折旧
-│   └── 市场比较法 (Sales Comparison): 类似物业调整
-│
-├── ⭐ NOI与Cap Rate (Key Metrics) 🎯超高頻
-│   ├── 📐 NOI = 租金收入 - 运营费用（不含折旧和利息）
-│   ├── 📐 Cap Rate = NOI / Property Value
-│   ├── 📐 Property Value = NOI / Cap Rate
-│   └── Cap Rate驱动: 利率↑→Cap Rate↑→价值↓（反向关系）
-│
-├── ⭐ 房地产周期 (Real Estate Cycle)
-│   ├── 复苏→扩张→过热→衰退
-│   └── 与宏观经济、利率、就业密切相关
-│
-├── ⭐ 基础设施 (Infrastructure) 🎯高频
-│   ├── 定义: 公共服务的长期实物资产
-│   ├── 投资形式: 直接/上市基金/未上市基金(PPP)
-│   └── 棕地(Brownfield) vs 绿地(Greenfield) 🎯高频
-│       └── 棕地: 稳定现金流、低风险、8-10%回报
-│       └── 绿地: 建设期无现金流、高风险、12-15%回报
-│
-└── ⭐ 基础设施风险特征
-    ├── 长期稳定现金流、通胀对冲
-    ├── 需求非弹性（公用事业特征）
-    └── 政策/监管风险显著
+4. Real Estate and Infrastructure
+├─ 4.1 Introduction
+│  ├─ 4.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.1.2 应用/判断：把概念或公式转成解题动作
+├─ 4.2 Real Estate Features
+│  ├─ 4.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.2.2 应用/判断：把概念或公式转成解题动作
+├─ 4.3 Real Estate Investment Characteristics
+│  ├─ 4.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.3.2 应用/判断：把概念或公式转成解题动作
+├─ 4.4 Infrastructure Investment Features
+│  ├─ 4.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.4.2 应用/判断：把概念或公式转成解题动作
+├─ 4.5 Infrastructure Investment Characteristics
+│  ├─ 4.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：房地产投资形式与REITs类型（Real Estate Forms and REIT Types）
-**核心概念**：房地产投资可通过直接或间接方式参与。直接投资是直接购买物业所有权，投资者拥有完全控制权但需要大量资金和专业管理技能，且流动性极低。间接投资通过REITs等公开交易工具实现——流动性显著提高、投资门槛降低。REITs有三种类型：权益型REITs（Equity REITs）直接拥有并经营物业，收入来自租金，风险和回报特征更接近直接持有房地产；抵押型REITs（Mortgage REITs）投资房地产抵押贷款和抵押支持证券，收入来自利息，对利率更敏感；混合型REITs（Hybrid REITs）两者兼有。
-- 直接投资：直接购买物业，非流动，需专业管理
-- 间接投资：通过REITs等工具，流动性高，门槛低
-- 权益型REITs：拥有物业收租金，与房地产直接相关
-- 抵押型REITs：投资贷款收利息，对利率敏感
-- 混合型REITs：两者结合
-**考试应用**：REITs类型辨析是高频考点。权益型和抵押型的风险收益特征完全不同——权益型类似直接持有房地产，抵押型类似固定收益工具。
+### 4.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain features and characteristics of real estate`。
+- **核心词汇**：**Real Estate and Infrastructure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：房地产三种估值方法（Real Estate Valuation Methods）
-**核心概念**：房地产估值主要有三种方法。收益法（Income Approach）是最常用的方法，通过净营运收入（NOI）除以资本化率（Cap Rate）计算物业价值——适用于能产生稳定租金收入的物业。成本法（Cost Approach）计算土地价值加上建筑物重置成本减去累计折旧——适用于新建物业或保险评估。市场比较法（Sales Comparison Approach）参照类似物业的近期交易价格，根据面积、位置、条件等因素调整——适用于住宅房地产等有活跃可比交易的物业。
-- 📐 收益法：Property Value = NOI / Cap Rate（最常用）
-- 📐 成本法：土地价值 + 重置成本 - 折旧
-- 市场比较法：参照类似物业交易价格调整
-- 收益法最常用：因为房地产价值主要来自未来租金收入
-**考试应用**：Cap Rate计算是必考题。记住NOI/Cap Rate/Value三者的换算关系。收益法最常用——考试中优先考虑。
+### 4.2 Real Estate Features
+- **中文主线**：本节点解决 `Real Estate Features` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the investment characteristics of real estate investments`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：NOI与Cap Rate详解（NOI and Cap Rate）
-**核心概念**：净营运收入（NOI）是房地产估值的基础，等于租金收入减去运营费用——运营费用包括物业维护、管理费、房产税和保险费等，但**不包括**折旧费用和利息支出。资本化率（Cap Rate）等于NOI除以物业价值，反映了投资者的预期回报率。Cap Rate受三个因素驱动：利率环境（利率上升→Cap Rate上升→价值下降）、风险溢价（风险上升→Cap Rate上升→价值下降）、增长预期（租金增长预期上升→Cap Rate下降→价值上升）。
-- 📐 NOI = 租金收入 - 运营费用（不含折旧和利息）
-- 📐 Cap Rate = NOI / Property Value
-- 📐 Property Value = NOI / Cap Rate
-- Cap Rate与价值呈反向关系：Cap Rate↑ → Value↓
-- Cap Rate = 无风险利率 + 风险溢价 - 增长预期
-**考试应用**：NOI的组成是常考陷阱——"不含折旧和利息"反复出现。Cap Rate的变化方向题——利率上升时Cap Rate上升、价值下降。
+### 4.3 Real Estate Investment Characteristics
+- **中文主线**：本节点解决 `Real Estate Investment Characteristics` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain features and characteristics of infrastructure`。
+- **核心词汇**：**Real Estate Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点4：房地产周期（Real Estate Cycle）
-**核心概念**：房地产市场呈现明显的周期性波动，经历复苏、扩张、过热和衰退四个阶段。复苏期：空置率下降、租金稳定回升、新项目建设极少。扩张期：需求持续增长、租金加速上涨、新项目开工增加。过热期：过度建设导致供给超过需求、空置率开始上升、租金增长放缓。衰退期：空置率高企、租金下跌、物业价值下降。房地产周期与宏观经济、利率和就业市场密切相关——经济扩张推动商业地产需求，利率下降降低融资成本刺激建设。
-- 复苏期：需求回升，低供给，租金企稳
-- 扩张期：建设增加，租金上涨，市场活跃
-- 过热期：过度供给，空置上升，租金增长放缓
-- 衰退期：空置高企，租金下跌，价值下降
-**考试应用**：根据经济指标判断房地产周期所处阶段。注意房地产周期通常滞后于宏观经济周期。
+### 4.4 Infrastructure Investment Features
+- **中文主线**：本节点解决 `Infrastructure Investment Features` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the investment characteristics of infrastructure investments`。
+- **核心词汇**：**Real Estate Investment Characteristics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点5：基础设施投资（Infrastructure Investment）
-**核心概念**：基础设施包括公路、港口、电网、通信塔、水务等提供公共服务的长期实物资产。投资方式包括直接投资（购买或建设）、上市基础设施基金和未上市基金/公私合营（PPP）。棕地（Brownfield）投资收购已运营的资产——有现有稳定现金流、风险较低、典型回报8-10%。绿地（Greenfield）投资新建开发项目——建设期无现金流入、风险较高、典型回报12-15%。基础设施具有长期稳定现金流、通胀对冲、需求非弹性（公用事业特征）和显著政策/监管风险的特点。
-- 棕地（Brownfield）：收购现有运营资产，风险低回报8-10%
-- 绿地（Greenfield）：新建开发项目，风险高回报12-15%
-- 投资形式：直接/上市基金/未上市基金/PPP
-- 特征：长期稳定现金流、通胀对冲、需求非弹性
-- 风险：政策/监管风险、建设风险、需求风险
-**考试应用**：棕地vs绿地区分是常考题。核心区别——是否有现有现金流。棕地低风险低回报，绿地高风险高回报。
+### 4.5 Infrastructure Investment Characteristics
+- **中文主线**：本节点解决 `Infrastructure Investment Characteristics` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain features and characteristics of real estate`。
+- **核心词汇**：**Infrastructure Investment Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 📐 关键公式表
+### 4.9 Legacy 补强要点
+- 来自 `M04-Real-Estate-and-Infrastructure.md`：## 1. 核心知识点; ### 4.1 房地产 (Real Estate)【考试核心】; ### 4.2 基础设施 (Infrastructure)【考试核心】。
+- 来自 `00-Alternative-Investments-MOC.md`：## 最关键：非流动换低相关，复杂结构要高费; Alternative Investments 的核心是理解**非流动性溢价**与**低相关性**带来的分散化价值。掌握各类另类资产的特征、结构与费用，精通业绩衡量指标与估值方法，熟悉J曲线、杠杆与风险特征。; ## Alternative Investments 核心知识树 (Core Knowledge Tree)。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| NOI = 租金收入 - 运营费用 | 净营运收入 | 房地产估值基础 | ⚠️ 不含折旧和利息 |
-| Cap Rate = NOI / Property Value | 资本化率 | 房地产估值 | 与价值反向关系 |
-| Property Value = NOI / Cap Rate | 物业价值（收益法） | 最常用的房地产估值方法 | Cap Rate由市场决定 |
-| 收益率 (Cash-on-Cash) = Before-tax CF / Equity Invested | 现金回报率 | 衡量杠杆后的现金回报 | 不反映总回报 |
-| 总回报 = (NOI + Appreciation - CapEx) / Initial Value | 房地产总回报 | 综合衡量房地产投资回报 | 包括收入增值和资本增值 |
 
-### 🛠️ 常见考点与解题思路
+## 5. 关键公式与计算框架
 
-**Topic 1: Cap Rate计算**
-- 已知NOI和Property Value → Cap Rate = NOI / Value
-- 已知NOI和Cap Rate → Value = NOI / Cap Rate
-- Cap Rate与价值反向关系
+本模块以概念判断为主，无核心计算公式。复习时把 `Real Estate and Infrastructure` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-**Topic 2: REITs类型辨析**
-- Equity REITs：投资实物物业，收入来自租金
-- Mortgage REITs：投资贷款/MBS，收入来自利息
-- 混合型：两者兼有
+## 6. 常见考点与解题思路
 
-**Topic 3: 棕地vs绿地区分**
-- 棕地：已有运营资产，现金流稳定，低风险
-- 绿地：新建项目，建设期无现金流，高风险
-- 回报差异：棕地8-10%，绿地12-15%
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**Topic 4: 房地产周期识别**
-- 四个阶段的特征：复苏(低供给、需求回升)、扩张(建设增加)、过热(过度供给)、衰退(空置↑)
-- 与宏观经济周期关系密切
+## 7. 易错点与考试陷阱
 
-### 🚨 易错点与考试陷阱
+- **中英文错配**：看到 `Real Estate and Infrastructure` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| NOI包含折旧和利息 | NOI不含折旧和利息 | 运营费用仅含日常费用 |
-| Cap Rate与价值正向关系 | Cap Rate↑→Value↓（反向关系） | 折现率逻辑 |
-| 棕地回报更高 | 棕地风险低回报低（8-10%），绿地风险高回报高（12-15%） | 风险回报匹配 |
-| 所有REITs都投资实物物业 | Mortgage REITs投资贷款/MBS | 不同类型风险不同 |
-| 基础设施投资没有风险 | 有政策/监管/建设/需求风险 | 但通常比PE风险低 |
-| 房地产总是好的通胀对冲 | 长期看是，但短期可能不成立 | 租约调整有滞后 |
-| 收益法很少使用 | 收益法是最常用的房地产估值方法 | 成本法和市场比较法辅助使用 |
-| Cap Rate = 折现率 | Cap Rate近似但不等同于折现率 | Cap Rate不考虑未来增长 |
+## 8. 跨模块关联
 
-### 🔄 跨模块关联
+- **上游模块**：[[M03-Investments-in-Private-Capital-Equity-and-Debt]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M05-Natural-Resources]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- **房地产周期** → [[M05-Natural-Resources]]（商品周期与房地产周期对比）
-- **基础设施收购** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（LBO应用于基础设施）
-- **收益平滑** → [[M02-Alternative-Investment-Performance-and-Returns]]（房地产评估值与收益平滑）
-- **Cap Rate与利率** → Economics M04（利率环境对Cap Rate的影响）
-- **REITs指数** → Equity M02（另类投资指数）
-- **PPP与财政政策** → Economics M03（公私合营的财政含义）
+## 9. 复习与刷题提示
 
-### 📋 复习与刷题提示
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-- **Cap Rate计算是必考题**：掌握NOI/Cap Rate/Property Value三者的换算关系
-- **REITs类型区分**：Equity vs Mortgage vs Hybrid的特征差异
-- **NOI构成**：记住"不含折旧和利息"是常见陷阱
-- **棕地vs绿地**：核心区别——是否有现有现金流
-- **房地产周期四阶段**：复苏→扩张→过热→衰退
-- **收益法最常用**：三种估值方法的适用场景
-- **基础设施特征**：长期稳定、通胀对冲、政策风险
-- **刷题建议**：mock中Cap Rate计算和REITs类型辨析为最高频
+## 10. Legacy Notes Integrated
 
-## Review Hooks
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M04-Real-Estate-and-Infrastructure.md（confidence 0.773）
+- **可复用结构**：M04: 房地产与基础设施 (Real Estate and Infrastructure)；1. 核心知识点；4.1 房地产 (Real Estate)【考试核心】；投资形式；三种估值方法；Cap Rate (资本化率) 驱动因素
+- **高价值要点**：## 1. 核心知识点；### 4.1 房地产 (Real Estate)【考试核心】；### 4.2 基础设施 (Infrastructure)【考试核心】；**定义**: 提供公共服务的长期实物资产（公路、港口、电网、通信塔等）
+- **公式/计算线索**：**NOI (净营运收入, Net Operating Income)** = 租金收入 - 运营费用（**不含**折旧和利息）；## 2. 关键公式；1. **Cap Rate计算**: 给定NOI和物业价值，计算Cap Rate。**思路**: Cap Rate = NOI / Property Value。
+- **易错提示**：## 4. 易错点提醒
 
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+### 来源：00-Alternative-Investments-MOC.md（confidence 0.637）
+- **可复用结构**：00-Alternative-Investments-MOC；笔记属性；最关键：非流动换低相关，复杂结构要高费；Alternative Investments - 学习导航；科目概览；Alternative Investments 核心知识树 (Core Knowledge Tree)
+- **高价值要点**：## 最关键：非流动换低相关，复杂结构要高费；Alternative Investments 的核心是理解**非流动性溢价**与**低相关性**带来的分散化价值。掌握各类另类资产的特征、结构与费用，精通业绩衡量指标与估值方法，熟悉J曲线、杠杆与风险特征。；## Alternative Investments 核心知识树 (Core Knowledge Tree)；│ ├── 1.1 另类投资的六大特征 (Six Core Features of Alternative Investments)【考试核心】
+- **公式/计算线索**：│ │ ├── HIGH (High Return Potential): 高收益潜力——风险补偿 (高潜力)；│ │ ├── 核心公式 (English)；│ │ │ ├── `Management Fee = AUM × 管理费率`
+- **易错提示**：│ │ └── 注意: FOF有双重费用（底层基金费用 + FOF费用）；│ │ │ └── 注意: "Limited"指责任有限，不是权力有限 ↔ PP_P11 陷阱；│ │ ├── LP过度参与的后果【考试陷阱】
+
+### 来源：M02-Performance-Measurement.md（confidence 0.633）
+- **可复用结构**：M02: 另类投资业绩与回报 (Performance and Returns)；1. 核心知识点；2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】；2.2 J曲线 (J-Curve Dynamics)【考试核心】；2.3 收益平滑 (Smoothed Returns)【考试陷阱】；2. 关键公式
+- **高价值要点**：## 1. 核心知识点；### 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】；**核心指标一览**:；**关键关系**:
+- **公式/计算线索**：description: "另类投资业绩衡量指标（TVPI/DPI/RVPI/IRR）、风险调整收益指标（Sortino Ratio / Sharpe Ratio）、J曲线动态以及收益平滑现象"；official_module: "Alternative Investment Performance and Returns"；# M02: 另类投资业绩与回报 (Performance and Returns)
+- **易错提示**：### 2.3 收益平滑 (Smoothed Returns)【考试陷阱】；## 4. 易错点提醒

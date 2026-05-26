@@ -1,23 +1,29 @@
 ---
-title: "M02 — Alternative Investment Performance and Returns"
-description: "CFA Level I 2026 official module: Alternative Investment Performance and Returns"
-module: M02
+title: "M02: Alternative Investment Performance and Returns"
+description: "CFA Level I 2026 Alternative Investments 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Alternative Investments"
-topic_area: Alternative_Investments
-curriculum_year: 2026
+topic_area: "Alternative_Investments"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "7-10%"
+module: "M02"
 official_module: "Module 2: Alternative Investment Performance and Returns"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Alternative_Investments
   - official_2026
+  - Alternative_Investments
 ---
 
 # M02: Alternative Investment Performance and Returns
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：识别另类投资结构、绩效、私募、实物资产、对冲基金与数字资产特征。 本模块聚焦 **Alternative Investment Performance and Returns**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -28,228 +34,124 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the performance appraisal of alternative investments
+2. calculate and interpret alternative investment returns both before and after fees
 
-- describe the performance appraisal of alternative investments
-- calculate and interpret alternative investment returns both before and after fees
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Alternative_Investments/M02-Performance-Measurement.md`
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Alternative Investment Performance and Returns` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.46. Original official module field: Alternative Investment Performance and Returns._
+### 2.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M02: 另类投资业绩与回报 (Performance and Returns)
+### 2.3 关键英文术语
+- **Alternative Investment Performance and Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Alternative Investment Performance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Alternative Investment Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-##### 1. 核心知识点
+## 2. 官方 LOS 对应学习目标
 
-###### 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | describe the performance appraisal of alternative investments | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.2 | calculate and interpret alternative investment returns both before and after fees | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
 
-**核心指标一览**:
-
-| 指标 | 英文全称 | 公式 | 含义 |
-|------|----------|------|------|
-| TVPI | Total Value to Paid-In | (累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI | 总价值倍数 |
-| DPI | Distributed to Paid-In | 累计分配 / 实缴资本 | 现金回报倍数（已实现的） |
-| RVPI | Residual Value to Paid-In | 剩余价值 / 实缴资本 | 未实现回报倍数 |
-| IRR | Internal Rate of Return | NPV = 0 的折现率 | 内部收益率，考虑时间价值 |
-| Sortino | Sortino Ratio | (R_p - R_f) / σ_d | 下行风险调整收益 |
-| Sharpe | Sharpe Ratio | (R_p - R_f) / σ_p | 总风险调整收益 |
-
-**关键关系**:
-- TVPI = DPI + RVPI（**加法关系**，不是乘法）
-- **DPI > 0** 表示已有现金分配回LP；**RVPI > 0** 表示还有未退出的投资价值
-- **Sortino vs Sharpe**: Sortino只考虑下行波动 (σ_d)，Sharpe考虑总波动 (σ_p)。当资产收益分布不对称时，Sortino更准确
-
-###### 2.2 J曲线 (J-Curve Dynamics)【考试核心】
-
-J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
-
-**早期负收益原因**: 管理费持续收取（按承诺资本AUM）、初期交易成本与设立费用、投资尚未成熟退出
-
-**后期转正原因**: 投资标的成熟、价值增长、项目退出（IPO/并购/二级出售）、DPI上升而RVPI下降
-
-**不同策略的J曲线**:
-- **VC**: J曲线最深（早期投资，失败率高，回报周期长）
-- **LBO**: 相对较浅（成熟公司，有现金流，杠杆放大回报）
-- **Growth Equity**: 介于两者之间
-
-###### 2.3 收益平滑 (Smoothed Returns)【考试陷阱】
-
-**原因**: 非流动性资产按评估价值 (Appraisal Value) 而非市价 (Market Value) 估值
-
-**后果**:
-- 低估波动率 (Volatility)
-- 低估与市场的相关性 (Correlation)
-- 导致风险调整后收益被高估（Sharpe/Sortino偏高）
-
-**Unsmoothing调整**: 对评估收益进行去平滑处理，还原真实波动率，使数据更接近公开市场价格波动
-
-##### 2. 关键公式
-
-| 指标 | 公式 |
-|------|------|
-| TVPI | (累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI |
-| DPI | 累计分配 / 实缴资本 |
-| RVPI | 剩余价值 / 实缴资本 |
-| Sortino | (R_p - R_f) / σ_d |
-| Sharpe | (R_p - R_f) / σ_p |
-
-##### 3. 常见考点与解题思路
-
-1. **TVPI/DPI/RVPI计算**: 给定累计分配、剩余价值和实缴资本，计算三个指标。**思路**: 先分别算DPI和RVPI，再加总得TVPI。
-2. **J曲线阶段判断**: 给出基金成立年限和收益状态，判断处于J曲线的哪个阶段。**思路**: 早期（1-3年）= 负收益；中期 = 逐步转正；后期 = 正收益稳定。
-3. **Sortino vs Sharpe辨析**: 题干描述指标特征，要求选出正确的指标。**思路**: Sortino看下行，Sharpe看总波动。
-
-##### 4. 易错点提醒
-
-- **TVPI = DPI + RVPI（加法）**: 常被误认为乘法关系
-- **J曲线先负后正**: 不是全程亏损，最终转正
-- **收益平滑高估表现**: 评估估值导致波动率和相关性被低估，风险调整收益被高估
-- **DPI vs RVPI的含义**: DPI是已实现的现金回报，RVPI是未实现的账面价值，两者性质不同
-- **Sortino vs Sharpe**: 在另类投资中，Sortino通常更适用（收益分布不对称）
-
-##### 5. 跨模块关联
-
-- TVPI/DPI/RVPI → [[M03-Private-Capital.md]] (PE基金业绩报告)
-- J曲线 → [[M03-Private-Capital.md]] (PE基金生命周期)
-- 收益平滑 → [[M04-Real-Estate-and-Infrastructure.md]] (房地产估值)
-- 费用计算 → [[M01-Features-and-Structure.md]] (管理费和业绩提成)
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 M02: Alternative Investment Performance and Returns（另类投资业绩与回报）
-│
-├── ⭐ 业绩衡量指标 (Performance Metrics) 🎯超高頻
-│   ├── 📐 TVPI = (Distributions + Residual Value) / Paid-In = DPI + RVPI
-│   ├── 📐 DPI = Cumulative Distributions / Paid-In （已实现）
-│   ├── 📐 RVPI = Residual Value / Paid-In （未实现）
-│   ├── 📐 IRR = NPV=0的折现率（时间加权）
-│   ├── 📐 Sharpe = (R_p - R_f) / σ_p（总风险调整）
-│   └── 📐 Sortino = (R_p - R_f) / σ_d（下行风险调整）
-│
-├── ⭐ J曲线 (J-Curve Dynamics) 🎯超高頻
-│   ├── 早期负收益: 管理费+交易成本+投资未成熟
-│   ├── 中期转正: 投资项目成熟退出
-│   ├── 后期稳定: 持续产生正回报
-│   ├── VC: J曲线最深（失败率高、回报周期长）
-│   ├── LBO: 相对较浅（有现金流、杠杆放大）
-│   └── Growth Equity: 介于两者之间
-│
-├── ⭐ 收益平滑 (Smoothed Returns) 🎯高频
-│   ├── 原因: 非流动性资产按评估值而非市价估值
-│   ├── 后果: ⚠️ 低估波动 → 低估相关性 → 高估Sharpe
-│   └── 解决: Unsmoothing处理
-│
-└── ⭐ 费用对业绩的影响 (Impact of Fees)
-    ├── 管理费: 逐年侵蚀回报
-    ├── 业绩提成: 高水位线保护投资者
-    └── 净回报 vs 总回报: 费用差异显著
+2. Alternative Investment Performance and Returns
+├─ 2.1 Introduction
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Alternative Investment Performance
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 Alternative Investment Returns
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：业绩衡量指标体系（Performance Metrics: TVPI, DPI, RVPI, IRR）
-**核心概念**：另类投资的业绩衡量需要兼顾已实现和未实现的回报。TVPI（总价值倍数）衡量基金整体表现——包括已分配给LP的现金和基金中剩余的未实现价值。DPI（已分配倍数）反映LP实际收回的现金回报，DPI > 1表示LP已收回全部本金。RVPI（未实现倍数）反映基金尚未退出的投资价值。IRR（内部收益率）考虑货币时间价值，是另类投资最常用的年化回报指标。三者关系：TVPI = DPI + RVPI（加法关系，不是乘法）。
-- 📐 TVPI = (累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI
-- 📐 DPI = 累计分配 / 实缴资本（已实现的现金回报）
-- 📐 RVPI = 剩余价值 / 实缴资本（未实现的账面价值）
-- 📐 IRR = 使NPV=0的折现率（时间加权回报）
-- 📐 Sortino = (R_p - R_f) / σ_d（下行风险调整收益）
-- 📐 Sharpe = (R_p - R_f) / σ_p（总风险调整收益）
-**考试应用**：TVPI = DPI + RVPI是常考陷阱——常被误认为是乘法。DPI和RVPI性质不同——DPI是已实现现金，RVPI是未实现账面值。
+### 2.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the performance appraisal of alternative investments`。
+- **核心词汇**：**Alternative Investment Performance and Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：J曲线（J-Curve Dynamics）
-**核心概念**：J曲线描述私募股权基金在生命周期中先负后正的收益变化曲线。早期（通常1-3年）基金表现为负收益，原因包括管理费持续按承诺资本收取、交易成本和设立费用消耗、以及投资尚未成熟退出。中期（3-5年）随着投资项目逐步成熟和退出，收益逐步转正。后期（5-10年）项目大量退出，DPI上升而RVPI下降，基金持续产生正回报。不同策略的J曲线深度不同：VC的J曲线最深（早期失败率高、回报周期长），LBO相对较浅（成熟公司有现金流、杠杆放大回报），Growth Equity介于两者之间。
-- 早期负收益原因：管理费 + 交易成本 + 投资未成熟
-- 后期转正原因：项目成熟退出、价值增长
-- VC：J曲线最深（早期失败率高）
-- LBO：J曲线最浅（成熟公司，杠杆放大效应）
-- Growth Equity：介于VC和LBO之间
-**考试应用**：J曲线阶段判断——给定基金成立年限和收益状态，判断处于曲线哪个阶段。注意J曲线不是全程亏损，最终会转正。
+### 2.2 Alternative Investment Performance
+- **中文主线**：本节点解决 `Alternative Investment Performance` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret alternative investment returns both before and after fees`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：收益平滑（Smoothed Returns）
-**核心概念**：收益平滑是非流动性资产的估值特性——由于缺乏活跃市场交易，资产按评估价值（Appraisal Value）而非市场价值（Market Value）估值。评估值通常基于最近交易价格经调整后确定，导致报告收益的波动性被人为降低。这种平滑的后果是：低估真实波动率、低估与市场的相关性、高估风险调整后收益（如Sharpe Ratio看起来比实际更高）。Unsmoothing技术可以对评估收益进行去平滑处理，还原更接近市场价格的波动特征。
-- 原因：非流动性资产按评估值估值，而非市价
-- 后果：波动率↓ → 相关性↓ → Sharpe/Sortino被高估
-- 解决：Unsmoothing去平滑处理
-- 常见于：PE基金、房地产、基础设施等非流动性资产
-**考试应用**：收益平滑对指标的影响方向是常考题。记住三个"被低估"（波动、相关性）和一个"被高估"（风险调整收益）。
+### 2.3 Alternative Investment Returns
+- **中文主线**：本节点解决 `Alternative Investment Returns` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the performance appraisal of alternative investments`。
+- **核心词汇**：**Alternative Investment Performance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点4：费用对业绩的影响（Impact of Fees on Performance）
-**核心概念**：另类投资的费用对投资者净回报有显著侵蚀作用。管理费按年收取，无论基金表现如何都在消耗投资者的资本——即使基金总回报为正，扣除管理费后净回报可能很低。业绩提成在收益超过高水位线时收取，进一步降低净回报。2%的管理费在10年内可以侵蚀掉超过18%的初始投资价值（未考虑回报）。在评估基金业绩时，总回报（Gross Return）和净回报（Net Return）之间的差异反映了费用的真实成本。
-- 管理费：逐年收取，复利效应下侵蚀显著
-- 业绩提成：高水位线保护投资者，防止重复收费
-- 净回报 = 总回报 - 管理费 - 业绩提成
-- 费用差异：不同基金的费用结构差异显著影响长期净回报
-**考试应用**：给定总回报和费用结构求净回报是必考计算。注意HP复合效果——管理费不仅是当年的成本，还减少了可用于未来增长的本金。
+### 2.9 Legacy 补强要点
+- 来自 `M02-Performance-Measurement.md`：## 1. 核心知识点; ### 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】; **核心指标一览**:。
+- 来自 `00-Alternative-Investments-MOC.md`：## 最关键：非流动换低相关，复杂结构要高费; Alternative Investments 的核心是理解**非流动性溢价**与**低相关性**带来的分散化价值。掌握各类另类资产的特征、结构与费用，精通业绩衡量指标与估值方法，熟悉J曲线、杠杆与风险特征。; ## Alternative Investments 核心知识树 (Core Knowledge Tree)。
 
-### 📐 关键公式表
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| TVPI = (Distributions + RV) / Paid-In | 总价值倍数 | 衡量基金整体业绩 | 未考虑时间价值 |
-| DPI = Distributions / Paid-In | 已实现回报倍数 | 衡量LP已收回现金比例 | DPI > 1表示已收回全部本金 |
-| RVPI = Residual Value / Paid-In | 未实现回报倍数 | 衡量剩余投资价值 | 基于评估值可能被平滑 |
-| TVPI = DPI + RVPI | 三者加法关系 | 快速检查计算一致性 | ⚠️ 常被误认为乘法 |
-| IRR (Internal Rate of Return) | 内部收益率 | 考虑时间价值的回报率 | 多期现金流输入，需用计算器 |
-| Sortino Ratio = (R_p - R_f) / σ_d | 下行风险调整收益 | 非对称分布更适用 | σ_d只计算下行波动 |
-| Sharpe Ratio = (R_p - R_f) / σ_p | 总风险调整收益 | 对称分布适用 | 高估另类投资风险调整收益 |
+## 5. 关键公式与计算框架
 
-### 🛠️ 常见考点与解题思路
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Management fee | `fee base × fee rate` | 私募和对冲基金题要区分管理费和激励费。 |
+| NAV | `assets - liabilities` | 基金估值与费用计算的基础口径。 |
+| Cap rate | `NOI / property value` | 房地产估值中常用于收入资本化法。 |
 
-**Topic 1: TVPI/DPI/RVPI计算**
-- 已知累计分配金额、剩余价值和实缴资本
-- DPI = 分配/实缴；RVPI = 剩余/实缴；TVPI = DPI + RVPI
-- 注意：这是加法关系不是乘法
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**Topic 2: J曲线阶段判断**
-- 早期（1-3年）= 负收益（管理费消耗）
-- 中期（3-5年）= 逐步转正
-- 后期（5-10年）= 项目退出，正收益稳定
-- VC的J曲线最深，LBO较浅
+## 6. 常见考点与解题思路
 
-**Topic 3: Sortino vs Sharpe辨析**
-- 另类投资收益分布不对称 → Sortino更适合
-- Sharpe高估另类投资的风险调整收益
-- 解题：看题干描述的是"下行"还是"总"波动
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**Topic 4: 收益平滑影响**
-- 平滑导致：波动率↓、相关性↓、Sharpe↑（虚假）
-- 考试常问：收益平滑对业绩指标的影响方向
+## 7. 易错点与考试陷阱
 
-### 🚨 易错点与考试陷阱
+- **中英文错配**：看到 `Alternative Investment Performance and Returns` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| TVPI = DPI × RVPI | TVPI = DPI + RVPI（加法） | 常见记忆错误 |
-| J曲线是全程亏损的 | J曲线早期负收益后期转正 | 名称来自形状像J |
-| 收益平滑是好的（数据更平稳） | 平滑导致波动和相关性被低估 | 高估了风险调整收益 |
-| DPI = RVPI | DPI是已实现现金，RVPI是未实现账面价值 | 性质完全不同 |
-| Sharpe和Sortino在另类投资中同等适用 | Sortino更适合非对称分布的另类投资 | 下行风险更相关 |
-| IRR总是最高的回报指标 | IRR对现金流时点敏感 | 早期大额回报会推高IRR |
-| TVPI > 1一定赚钱 | TVPI > 1但时间很长可能年化回报低 | 未考虑货币时间价值 |
+## 8. 跨模块关联
 
-### 🔄 跨模块关联
+- **上游模块**：[[M01-Alternative-Investment-Features-Methods-and-Structures]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Investments-in-Private-Capital-Equity-and-Debt]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- **TVPI/DPI/RVPI的应用** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE基金业绩报告标准）
-- **J曲线** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE基金的生命周期阶段）
-- **收益平滑** → [[M04-Real-Estate-and-Infrastructure]]（房地产的评估估值）
-- **费用计算** → [[M01-Alternative-Investment-Features-Methods-and-Structures]]（管理费和业绩提成对净回报的影响）
-- **Sortino vs Sharpe** → [[M06-Hedge-Funds]]（对冲基金业绩评估）
-- **IRR计算方法** → Corporate Finance科目（NPV与IRR的关系）
+## 9. 复习与刷题提示
 
-### 📋 复习与刷题提示
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-- **TVPI/DPI/RVPI计算是必考题**：记住加法关系，注意区分已实现vs未实现
-- **J曲线是必考概念题**：三个阶段的特征、不同策略的J曲线差异
-- **收益平滑的影响方向**：波动被低估、相关性被低估、Sharpe被高估
-- **Sortino与Sharpe对比**：适用场景差异，另类投资中Sortino更优
-- **费用对业绩的影响**：理解净回报与总回报的差异来源
-- **IRR的局限性**：对现金流时点敏感，不直接可加
-- **刷题建议**：mock中TVPI计算最高频，J曲线概念其次
+## 10. Legacy Notes Integrated
 
-## Review Hooks
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M02-Performance-Measurement.md（confidence 0.456）
+- **可复用结构**：M02: 另类投资业绩与回报 (Performance and Returns)；1. 核心知识点；2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】；2.2 J曲线 (J-Curve Dynamics)【考试核心】；2.3 收益平滑 (Smoothed Returns)【考试陷阱】；2. 关键公式
+- **高价值要点**：## 1. 核心知识点；### 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】；**核心指标一览**:；**关键关系**:
+- **公式/计算线索**：description: "另类投资业绩衡量指标（TVPI/DPI/RVPI/IRR）、风险调整收益指标（Sortino Ratio / Sharpe Ratio）、J曲线动态以及收益平滑现象"；official_module: "Alternative Investment Performance and Returns"；# M02: 另类投资业绩与回报 (Performance and Returns)
+- **易错提示**：### 2.3 收益平滑 (Smoothed Returns)【考试陷阱】；## 4. 易错点提醒
 
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+### 来源：00-Alternative-Investments-MOC.md（confidence 0.433）
+- **可复用结构**：00-Alternative-Investments-MOC；笔记属性；最关键：非流动换低相关，复杂结构要高费；Alternative Investments - 学习导航；科目概览；Alternative Investments 核心知识树 (Core Knowledge Tree)
+- **高价值要点**：## 最关键：非流动换低相关，复杂结构要高费；Alternative Investments 的核心是理解**非流动性溢价**与**低相关性**带来的分散化价值。掌握各类另类资产的特征、结构与费用，精通业绩衡量指标与估值方法，熟悉J曲线、杠杆与风险特征。；## Alternative Investments 核心知识树 (Core Knowledge Tree)；│ ├── 1.1 另类投资的六大特征 (Six Core Features of Alternative Investments)【考试核心】
+- **公式/计算线索**：│ │ ├── HIGH (High Return Potential): 高收益潜力——风险补偿 (高潜力)；│ │ ├── 核心公式 (English)；│ │ │ ├── `Management Fee = AUM × 管理费率`
+- **易错提示**：│ │ └── 注意: FOF有双重费用（底层基金费用 + FOF费用）；│ │ │ └── 注意: "Limited"指责任有限，不是权力有限 ↔ PP_P11 陷阱；│ │ ├── LP过度参与的后果【考试陷阱】

@@ -1,23 +1,29 @@
 ---
-title: "M02 — Analyzing Income Statements"
-description: "CFA Level I 2026 official module: Analyzing Income Statements"
-module: M02
+title: "M02: Analyzing Income Statements"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Financial Statement Analysis"
-topic_area: Financial_Statement_Analysis
-curriculum_year: 2026
+topic_area: "Financial_Statement_Analysis"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M02"
 official_module: "Module 2: Analyzing Income Statements"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 5
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Financial_Statement_Analysis
   - official_2026
+  - Financial_Statement_Analysis
 ---
 
 # M02: Analyzing Income Statements
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Analyzing Income Statements**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -31,180 +37,145 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe general principles of revenue recognition, specific revenue recognition applications, and implications of revenue recognition choices for financial analysis
+2. describe general principles of expense recognition, specific expense recognition applications, implications of expense recognition choices for financial analysis and contrast costs that are capitalized versus those that are expensed in the period in which they are incurred
+3. describe the financial reporting treatment and analysis of non-recurring items (including discontinued operations, unusual or infrequent items) and changes in accounting policies
+4. describe how earnings per share is calculated and calculate and interpret a company’s basic and diluted earnings per share for companies with simple and complex capital structures including those with antidilutive securities
+5. evaluate a company’s financial performance using common-size income statements and financial ratios based on the income statement
 
-- describe general principles of revenue recognition, specific revenue recognition applications, and implications of revenue recognition choices for financial analysis
-- describe general principles of expense recognition, specific expense recognition applications, implications of expense recognition choices for financial analysis and contrast costs that are capitalized versus those that are expensed in the period in which they are incurred
-- describe the financial reporting treatment and analysis of non-recurring items (including discontinued operations, unusual or infrequent items) and changes in accounting policies
-- describe how earnings per share is calculated and calculate and interpret a company’s basic and diluted earnings per share for companies with simple and complex capital structures including those with antidilutive securities
-- evaluate a company’s financial performance using common-size income statements and financial ratios based on the income statement
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Analyzing Income Statements` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 2.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 2.3 关键英文术语
+- **Analyzing Income Statements（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Revenue Recognition（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Expense Recognition（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Non-Recurring Items（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Earnings per Share（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Income Statement Ratios and Common-Size Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Income Statement（利润表）**：解释收入、费用和盈利能力的期间报表。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | describe general principles of revenue recognition, specific revenue recognition applications, and implications of revenue recognition choices for financial analysis | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.2 | describe general principles of expense recognition, specific expense recognition applications, implications of expense recognition choices for financial analysis and contrast costs that are capitalized versus those that are expensed in the period in which they are incurred | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.3 | describe the financial reporting treatment and analysis of non-recurring items (including discontinued operations, unusual or infrequent items) and changes in accounting policies | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.4 | describe how earnings per share is calculated and calculate and interpret a company’s basic and diluted earnings per share for companies with simple and complex capital structures including those with antidilutive securities | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.5 | evaluate a company’s financial performance using common-size income statements and financial ratios based on the income statement | 评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 【利润表分析】
-│
-├── 🔷 收入确认（Revenue Recognition）
-│   ├── IFRS 15 / ASC 606 五步模型 🎯
-│   │   ├── 识别合同 → 识别履约义务 → 确定交易价格
-│   │   └── 分摊价格 → 履行义务时确认收入
-│   ├── 控制权转移（control transfer）是确认时点
-│   ├── 特定应用：
-│   │   ├── 长期工程合同：完工百分比法 vs 全部完工法
-│   │   ├── 分期收款销售：按收款进度确认毛利
-│   │   └── 捆绑销售：分摊交易价格至各履约义务
-│   └── ⚠️ 提前确认收入 → 高估当期利润、低估未来增长
-│
-├── 🔷 费用确认（Expense Recognition）
-│   ├── 配比原则（Matching Principle）：费用与收入的同期配比
-│   ├── 资本化 vs 费用化 🎯
-│   │   ├── 资本化：记为资产 → 使用年限内摊销
-│   │   └── 费用化：发生当期全额计入费用
-│   └── ⚠️ 资本化只是费用时点后移，不改变经济实质
-│       └── 前期利润更高 → 后期面临摊销压力
-│
-├── 🔷 非常项目与政策变更（Unusual Items）
-│   ├── 终止经营：与持续经营分开列报 🎯
-│   ├── 非常/偶发项目：性质特殊且不经常发生
-│   └── 会计政策变更：追溯调整（retrospective）
-│       └── 会计估计变更：未来适用法（prospective）⚠️
-│
-├── 🔷 每股收益（EPS）📐
-│   ├── Basic EPS = (NI - Pref Div) / Weighted Avg Shares
-│   ├── Diluted EPS 考虑可转债、期权、权证
-│   ├── 简单结构 → Basic EPS；复杂结构 → Diluted EPS
-│   └── ⚠️ 反稀释证券不纳入计算（转换后 EPS 上升则排除）
-│
-├── 🔷 同比例分析与利润表比率
-│   ├── 所有项目表示为收入的百分比 → 消除规模差异
-│   ├── 核心比率：毛利率 / 营业利润率 / 净利润率 📐
-│   └── 跨公司和跨期间比较的基础工具
-│
-│   💡 核心洞察：利润表的应计制性质意味着利润 ≠ 现金流
-│   🎯 高频考点：EPS 计算、收入确认时点、资本化 vs 费用化
+2. Analyzing Income Statements
+├─ 2.1 Introduction
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Revenue Recognition
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 Expense Recognition
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
+├─ 2.4 Non-Recurring Items
+│  ├─ 2.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.4.2 应用/判断：把概念或公式转成解题动作
+├─ 2.5 Earnings per Share
+│  ├─ 2.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：收入确认（Revenue Recognition）
+### 2.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe general principles of revenue recognition, specific revenue recognition applications, and implications of revenue recognition choices for financial analysis`。
+- **核心词汇**：**Analyzing Income Statements（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**一般确认原则 (General Recognition Principles)：**
-- IFRS 15 / ASC 606 五步模型(five-step model)：识别合同→识别履约义务→确定交易价格→分摊价格→履行义务时确认收入
-- 收入在商品或服务控制权(control)转移给客户时确认
+### 2.2 Revenue Recognition
+- **中文主线**：本节点解决 `Revenue Recognition` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe general principles of expense recognition, specific expense recognition applications, implications of expense recognition choices for financial analysis and contrast costs that are capitalized versus those that are expensed in the period in which they are incurred`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**特定应用改变确认时点 (Specific Applications Alter Timing)：**
-- 长期工程合同：完工百分比法(percentage-of-completion method) vs 全部完工法(completed-contract method)
-- 分期收款销售(installment sales)：按收款进度确认毛利
-- 捆绑销售(bundled sales)：需将交易价格分摊至各履约义务
+### 2.3 Expense Recognition
+- **中文主线**：本节点解决 `Expense Recognition` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the financial reporting treatment and analysis of non-recurring items (including discontinued operations, unusual or infrequent items) and changes in accounting policies`。
+- **核心词汇**：**Revenue Recognition（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**时点选择影响利润率与趋势解读 (Timing Choices Affect Margins and Trend Interpretation)：**
-- 提前确认收入会高估当期利润率和资产，低估未来增长率
-- 收入确认激进程度是财务报告质量分析的关键线索
+### 2.4 Non-Recurring Items
+- **中文主线**：本节点解决 `Non-Recurring Items` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`describe how earnings per share is calculated and calculate and interpret a company’s basic and diluted earnings per share for companies with simple and complex capital structures including those with antidilutive securities`。
+- **核心词汇**：**Expense Recognition（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：费用确认（Expense Recognition）
+### 2.5 Earnings per Share
+- **中文主线**：本节点解决 `Earnings per Share` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：评价优缺点、限制和决策含义；官方表述为：`evaluate a company’s financial performance using common-size income statements and financial ratios based on the income statement`。
+- **核心词汇**：**Non-Recurring Items（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **配比逻辑 (Matching Logic)**：费用应与所产生的收入在同一期间配比(matching principle)，包括直接费用(direct expenses)和期间费用(period costs)
-- **资本化 vs 费用化 (Capitalize vs Expense)**：资本化将支出记为资产并在使用年限内摊销；费用化则在发生当期全额计入费用
+### 2.9 Legacy 补强要点
+- 来自 `M02-Income-Statement.md`：description: "利润表全面解析：收入确认原则、费用配比、非常项目处理、每股收益计算及同比例分析，CFA L1 核心计算模块"; ## 1. 核心知识点; 收入确认激进程度是财务报告质量分析的关键线索。
 
-**【考试陷阱】** 资本化(capitalization)只是将费用时点后移，并非改变经济实质(economic reality)——前期利润更高但后期面临摊销压力。
 
-### 知识点3：非常项目与政策变更（Unusual Items and Policy Changes）
+## 5. 关键公式与计算框架
 
-- **终止经营 (Discontinued Operations)**：已处置或已分类为持有待售的业务单元，其经营成果需与持续经营业务分开列报
-- **非常/偶发项目 (Unusual / Infrequent Items)**：性质特殊或不经常发生的交易，需在利润表中单独列示
-- **会计政策变更 (Accounting Policy Changes)**：如存货计价方法从 FIFO 改为加权平均，需追溯调整(retrospective application)
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Current ratio | `current assets / current liabilities` | 衡量短期偿债能力，但不等于现金质量。 |
+| Gross margin | `gross profit / revenue` | 可用于比较定价能力和成本压力。 |
+| ROE | `net income / average equity` | 可用 DuPont 分解定位盈利、效率和杠杆来源。 |
 
-### 知识点4：每股收益（EPS）
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-#### 核心公式 (English)
-- `Basic EPS = (NI - Pref Div) / Weighted Avg Shares`
-- `Diluted EPS = Adjusted NI Available to Common / Adjusted Weighted Average Shares`
+## 6. 常见考点与解题思路
 
-- **简单资本结构 -> 基础每股收益 (Simple Capital Structure -> Basic EPS)**：仅有普通股(common stock)，无潜在稀释证券
-- **复杂资本结构 -> 稀释每股收益 (Complex Capital Structure -> Diluted EPS)**：存在可转换债券(convertible bonds)、期权(options)或认股权证(warrants)
-- **反稀释证券被排除 (Antidilutive Securities Excluded)**：如果转换后 EPS 反而上升，则该证券不计入稀释计算
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 知识点5：同比例利润表与利润表比率（Common-Size Income Statement and Income-Statement Ratios）
+## 7. 易错点与考试陷阱
 
-- 将所有项目表示为收入(revenue)的百分比，便于跨公司和跨期间比较
-- 核心比率：毛利率(gross margin)、营业利润率(operating margin)、净利润率(net margin)
+- **中英文错配**：看到 `Analyzing Income Statements` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 📐 关键公式表
+## 8. 跨模块关联
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `Basic EPS = (NI - Pref Div) / Weighted Avg Shares` | 基础每股收益 | 简单资本结构 | 使用**加权平均**流通股数，非期末数 |
-| `Diluted EPS = (NI - Pref Div + Conv. Interest(1-t)) / (WAS + Dilutive Shares)` | 稀释每股收益 | 复杂资本结构 | 分子分母**同步调整**；仅纳入稀释性证券 |
-| `Gross Margin = Gross Profit / Revenue` | 毛利率 | 核心盈利能力 | 受存货计价方法直接影响 |
-| `Operating Margin = Operating Income / Revenue` | 营业利润率 | 经营效率 | 排除融资和税务影响 |
-| `Net Margin = Net Income / Revenue` | 净利润率 | 最终盈利水平 | 包含所有项目（含非常项目） |
-| `Revenue - COGS = Gross Profit` | 毛利计算 | 基础盈利分析 | COGS 取决于存货方法（FIFO/LIFO） |
-| `EBIT = Revenue - COGS - Operating Expenses` | 息税前利润 | 利息覆盖率和经营分析 | 不包括利息和所得税 |
+- **上游模块**：[[M01-Introduction-to-Financial-Statement-Analysis]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Analyzing-Balance-Sheets]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🛠️ 常见考点与解题思路
+## 9. 复习与刷题提示
 
-### 主题1：EPS 计算（🎯 高频计算题）
-- **题型**：给出 NI、优先股股利、期初期末股数、可转债等数据，求 Basic/Diluted EPS
-- **解题步骤（Basic EPS）**：
-  1. 确认分子：NI - 优先股股利
-  2. 计算分母：期初和期末流通股数的**加权平均**（注意时间权重）
-  3. 分子 / 分母 = Basic EPS
-- **解题步骤（Diluted EPS）**：
-  1. 从 Basic EPS 出发
-  2. 对分子：加回可转债的税后利息（Interest × (1-t)）
-  3. 对分母：加回因期权/权证/可转债转换增加的股数（库藏股法）
-  4. 先**单独测试**每种潜在稀释证券 — 若转换后 EPS 上升则为反稀释，**排除**
-  5. 计算 Diluted EPS
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 主题2：收入确认时点的影响
-- **题型**：描述收入确认政策变化，问对报表和比率的影响
-- **解题思路**：
-  - 提前确认 → 当期收入↑、资产↑、利润↑ → 下期收入↓、增长放缓
-  - 延迟确认 → 当期收入↓、资产↓、利润↓ → 下期收入↑（累积释放）
-  - 对现金流：收入确认时点**不直接影响现金流**（仅影响应计项目）
+## 10. Legacy Notes Integrated
 
-### 主题3：资本化 vs 费用化的比率影响
-- **解题框架**：
-  | 比率 | 资本化（前期）| 费用化 |
-  |------|:----------:|:-----:|
-  | ROA / ROE | 更高 | 更低 |
-  | Asset Turnover | 更低 | 更高 |
-  | Interest Coverage | 更高 | 更低 |
-  | CFO | 更高（利息归类经营）| 不影响 |
-
-### 主题4：终止经营的分析处理
-- **题型**：问应如何分析包含终止经营的利润表
-- **解题思路**：持续经营业务和终止经营必须分开分析 — 估值时**仅使用**持续经营数据
-
-## 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 计算 EPS 使用期末流通股数 | 使用**加权平均**流通股数 | 股数在全年的变动需按时间权重调整 |
-| 所有稀释证券都纳入 Diluted EPS | 仅**稀释性**证券纳入，反稀释证券排除 | 反稀释证券转换后 EPS 反而上升 |
-| 资本化的费用比费用化的"更好" | 资本化仅延迟费用确认，不改变经济实质 | 后期面临更高的折旧/摊销费用 |
-| 终止经营的损失应计入估值模型 | 终止经营的业绩应从持续经营分析中**剔除** | 终止经营不代表未来持续业绩 |
-| 非常项目与终止经营可互换使用 | 两者性质不同 — 分类不可混淆 | 终止经营已处置/待售；非常项目偶发但仍在持续经营中 |
-| 收入确认时点影响现金流 | 收入确认是应计制概念，不直接影响现金流 | 现金流取决于实际收付，而非确认时点 |
-
-## 🔄 跨模块关联
-
-- **[[M03-Analyzing-Balance-Sheets]]** — 利润表中的净利润通过留存收益连接资产负债表；资本化/费用化决策影响资产账面价值
-- **[[M04-Analyzing-Statements-of-Cash-Flows-I]]** — 净利润是间接法计算 CFO 的起点；非现金费用（折旧摊销）在利润表中确认后在现金流量表中加回
-- **[[M06-Analysis-of-Inventories]]** — 存货计价方法（FIFO/LIFO）直接影响 COGS 和毛利率；存货减记影响当期利润
-- **[[M07-Analysis-of-Long-Term-Assets]]** — 资本化的资产通过折旧/摊销影响各期利润；减值损失直接计入利润表
-- **[[M10-Financial-Reporting-Quality]]** — 收入确认激进程度和费用资本化程度是盈利质量（earnings quality）的核心判断依据
-- **[[M11-Financial-Analysis-Techniques]]** — 利润表数据是盈利比率（profitability ratios）的输入；同比例利润表是跨期比较的基础工具
-
-## 📋 复习与刷题提示
-
-- **计算题优先**：Basic EPS 和 Diluted EPS 的计算是必考题型，务必熟练掌握加权平均股数的计算方法和稀释调整
-- **概念辨析**：区分 discontinued operations（终止经营）、unusual/infrequent items（非常项目）、accounting policy changes（会计政策变更）和 accounting estimate changes（会计估计变更）的处理方式差异
-- **比率分析**：掌握毛利率、营业利润率、净利润率的计算和解读，理解同比例利润表的编制方法
-- **情境判断**：能够判断收入确认政策是否激进、资本化决策对关键财务比率的影响方向
-- **跨准对比**：虽然本模块不强调 IFRS vs US GAAP 差异，但在收入确认（合同履约义务）和研发费用资本化方面存在差异
-- **反稀释测试**：务必理解"每项潜在稀释证券单独测试，反稀释则排除"的原则
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M02-Income-Statement.md（confidence 0.563）
+- **可复用结构**：M02: 利润表分析 (Income Statement Analysis)；1. 核心知识点；2.1 收入确认 (Revenue Recognition)；2.2 费用确认 (Expense Recognition)；2.3 非常项目与政策变更 (Unusual Items and Policy Changes)；2.4 每股收益 (EPS)
+- **高价值要点**：description: "利润表全面解析：收入确认原则、费用配比、非常项目处理、每股收益计算及同比例分析，CFA L1 核心计算模块"；## 1. 核心知识点；收入确认激进程度是财务报告质量分析的关键线索；#### 核心公式 (English)
+- **公式/计算线索**：**终止经营 (Discontinued Operations)**：已处置或已分类为持有待售的业务单元，其经营成果需与持续经营业务分开列报；#### 核心公式 (English)；`Basic EPS = (NI - Pref Div) / Weighted Avg Shares`
+- **易错提示**：**【考试陷阱】** 资本化(capitalization)只是将费用时点后移，并非改变经济实质(economic reality)——前期利润更高但后期面临摊销压力。；**考点4**：终止经营的处理。解题思路：注意终止经营的结果需从持续经营中分离，分析时应予以剔除；## 4. 易错点提醒

@@ -1,23 +1,29 @@
 ---
-title: "M07 — Analysis of Long-Term Assets"
-description: "CFA Level I 2026 official module: Analysis of Long-Term Assets"
-module: M07
+title: "M07: Analysis of Long-Term Assets"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Financial Statement Analysis"
-topic_area: Financial_Statement_Analysis
-curriculum_year: 2026
+topic_area: "Financial_Statement_Analysis"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M07"
 official_module: "Module 7: Analysis of Long-Term Assets"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Financial_Statement_Analysis
   - official_2026
+  - Financial_Statement_Analysis
 ---
 
 # M07: Analysis of Long-Term Assets
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Analysis of Long-Term Assets**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -30,167 +36,139 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination
+2. explain and evaluate how impairment and derecognition of property, plant, and equipment and intangible assets affect the financial statements and ratios
+3. analyze and interpret financial statement disclosures regarding property, plant, and equipment and intangible assets
 
-- compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination
-- explain and evaluate how impairment and derecognition of property, plant, and equipment and intangible assets affect the financial statements and ratios
-- analyze and interpret financial statement disclosures regarding property, plant, and equipment and intangible assets
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 7.1 学习任务
+- **核心问题**：考试希望你用 `Analysis of Long-Term Assets` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 7.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 7.3 关键英文术语
+- **Analysis of Long-Term Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Acquisition of Intangible Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Impairment and Derecognition of Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Presentation and Disclosure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Using Disclosures in Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 7.1 | compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+| 7.2 | explain and evaluate how impairment and derecognition of property, plant, and equipment and intangible assets affect the financial statements and ratios | 解释机制、原因和后果；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
+| 7.3 | analyze and interpret financial statement disclosures regarding property, plant, and equipment and intangible assets | 解释结果的投资含义 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 【长期资产分析】
-│
-├── 🔷 无形资产来源（Intangible Asset Origin）🎯
-│   ├── 外购（Purchased）
-│   │   └── 按购买成本确认入账
-│   ├── 内部开发（Internally Developed）⚠️
-│   │   ├── US GAAP：研发通常全部费用化
-│   │   │   └── 仅软件开发成本在技术可行性后资本化
-│   │   ├── IFRS：研究阶段费用化，开发阶段有条件资本化
-│   │   └── 内部品牌、客户名单不得确认为无形资产
-│   └── 企业合并取得（Business Combination）
-│       └── 按公允价值确认，通常高于被收购方账面值
-│
-├── 🔷 PP&E 减值（Impairment）📐🎯
-│   ├── IFRS 模型：
-│   │   ├── 账面价值 > 可收回金额 → 确认减值
-│   │   ├── 可收回金额 = max(公允价值-出售成本, 使用价值)
-│   │   └── 允许转回减值 ⚠️
-│   └── US GAAP 模型：
-│       ├── 第一步：比较账面价值 vs 未折现现金流
-│       ├── 第二步：账面价值 > 公允价值 → 确认减值
-│       └── 不允许转回 ⚠️
-│
-├── 🔷 无形资产减值
-│   ├── 有限寿命 → 类似 PP&E 减值
-│   └── 无限寿命 + 商誉 → 每年减值测试
-│
-├── 🔷 终止确认（Derecognition）📐
-│   ├── 出售：损益 = 出售收入 - 账面价值
-│   └── 报废：剩余账面价值一次性计入费用
-│
-├── 🔷 折旧方法 📐🎯
-│   ├── 直线法（SL）：(成本-残值) / 使用年限 → 各期相同
-│   ├── 双倍余额递减法（DDB）：2/寿命 × 期初账面值 → 前期高后期低
-│   └── 产量法（Units of Production）：按实际使用量
-│
-├── 🔷 披露分析要点
-│   ├── 折旧政策和方法选择
-│   ├── 使用寿命和残值估计 ⚠️
-│   └── 会计估计变更 → 未来适用法
-│
-│   💡 核心洞察：折旧是**非现金费用**，在 CFO 间接法中加回
-│   🎯 高频考点：资本化条件、IFRS vs US GAAP 减值差异、折旧方法影响
+7. Analysis of Long-Term Assets
+├─ 7.1 Introduction
+│  ├─ 7.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.1.2 应用/判断：把概念或公式转成解题动作
+├─ 7.2 Acquisition of Intangible Assets
+│  ├─ 7.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.2.2 应用/判断：把概念或公式转成解题动作
+├─ 7.3 Impairment and Derecognition of Assets
+│  ├─ 7.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.3.2 应用/判断：把概念或公式转成解题动作
+├─ 7.4 Presentation and Disclosure
+│  ├─ 7.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.4.2 应用/判断：把概念或公式转成解题动作
+├─ 7.5 Using Disclosures in Analysis
+│  ├─ 7.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：无形资产来源（Intangible Asset Origin）
+### 7.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination`。
+- **核心词汇**：**Analysis of Long-Term Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-无形资产的会计处理取决于其来源，不同来源的确认条件差异显著：
+### 7.2 Acquisition of Intangible Assets
+- **中文主线**：本节点解决 `Acquisition of Intangible Assets` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；评价优缺点、限制和决策含义；官方表述为：`explain and evaluate how impairment and derecognition of property, plant, and equipment and intangible assets affect the financial statements and ratios`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**外购 (Purchased)：**
-- 按购买成本(purchase cost)确认入账，符合资产确认条件(probable future economic benefits and reliable measurement)
-- 外购无形资产的成本包括购买价格和直接归属于使资产达到预定用途的支出
+### 7.3 Impairment and Derecognition of Assets
+- **中文主线**：本节点解决 `Impairment and Derecognition of Assets` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；官方表述为：`analyze and interpret financial statement disclosures regarding property, plant, and equipment and intangible assets`。
+- **核心词汇**：**Acquisition of Intangible Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**内部开发 (Internally Developed)：**
-- US GAAP：研发支出(research and development, R&D)通常全部费用化，仅有特定的软件开发成本(software development costs)在技术可行性确立后资本化
-- IFRS：研究阶段(research phase)支出费用化，开发阶段(development phase)支出在满足六项条件时资本化——分析师需注意这种准则差异导致的可比性问题
-- 内部开发品牌、客户名单等不得确认为无形资产
+### 7.4 Presentation and Disclosure
+- **中文主线**：本节点解决 `Presentation and Disclosure` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination`。
+- **核心词汇**：**Impairment and Derecognition of Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**企业合并取得 (Acquired in Business Combination)：**
-- 在企业合并(business combination)中，可辨认无形资产按公允价值(fair value)确认
-- 这些资产包括客户关系(customer relationships)、技术(technology)、品牌(brands)等
-- 合并中确认的无形资产往往比被收购方账面金额更高
+### 7.5 Using Disclosures in Analysis
+- **中文主线**：本节点解决 `Using Disclosures in Analysis` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination`。
+- **核心词汇**：**Presentation and Disclosure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：PP&E 与无形资产减值/终止确认（PP&E and Intangible Impairment / Derecognition）
+### 7.9 Legacy 补强要点
+- 来自 `M06-Long-Term-Assets.md`：## 1. 核心知识点; ## 2. 关键公式; [[M03-Balance-Sheet|资产负债表]]：长期资产是资产负债表非流动资产(non-current assets)的核心组成部分。
 
-- **PP&E 减值**：当资产的账面价值(carrying amount)超过可收回金额(recoverable amount)时确认减值损失
-  - IFRS：可收回金额为公允价值减出售成本与使用价值(value in use)两者中的较高者
-  - US GAAP：分两步测试——先比较账面价值与未折现现金流(un-discounted cash flows)，若低于则进行第二步测量减值金额
-  - IFRS 允许转回减值(reversal of impairment)，US GAAP 不允许
 
-- **无形资产减值**：有限寿命无形资产减值的处理与 PP&E 类似；无限寿命无形资产和商誉需每年进行减值测试(annual impairment test)
+## 5. 关键公式与计算框架
 
-- **终止确认 (Derecognition)**：
-  - 出售(disposal)：差额 = 出售收入 - 账面价值，计入利润表
-  - 报废(abandonment)：剩余账面价值一次性计入费用
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Current ratio | `current assets / current liabilities` | 衡量短期偿债能力，但不等于现金质量。 |
+| Gross margin | `gross profit / revenue` | 可用于比较定价能力和成本压力。 |
+| ROE | `net income / average equity` | 可用 DuPont 分解定位盈利、效率和杠杆来源。 |
 
-### 知识点3：披露分析（Disclosure Analysis）
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-- **折旧政策 (Depreciation Policy)**：折旧方法（直线法 straight-line、双倍余额递减法 DDB、产量法 units of production）的选择影响各期利润
-- **使用寿命估计 (Useful Life Estimates)**：管理层对使用寿命的估计直接影响年度折旧费用
-- **残值估计 (Residual Value Estimates)**：残值越高，年度折旧费用越低
-- **分析师调整**：当可比公司的折旧政策存在差异时，分析师需进行调整以实现同口径比较
+## 6. 常见考点与解题思路
 
-## 📐 关键公式表
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `SL Depreciation = (Cost - Residual Value) / Useful Life` | 直线法折旧 | 各期折旧相同 | 残值和使用寿命是**估计值** |
-| `DDB Depreciation = (2 / Useful Life) × NBV_Begin` | 双倍余额递减法 | 加速折旧 | 前期折旧高、后期低 |
-| `Units of Production = (Cost - RV) × (Actual Output / Total Est. Output)` | 产量法 | 按使用量折旧 | 适合与使用量相关的资产 |
-| `Carrying Amount = Historical Cost - Accum. Depr. - Impairment` | 账面价值 | 资产当前价值 | 不计提折旧的土地账面值 = 成本 |
-| `Recoverable Amount (IFRS) = max(FV - Selling Cost, Value in Use)` | 可收回金额 | IFRS 减值测试 | Value in Use 是**折现后**现金流 |
-| `Impairment Loss = CA - Recoverable Amount (or FV)` | 减值损失 | 资产减值确认 | IFRS 可转回；US GAAP 不可 |
-| `Gain/Loss on Disposal = Sale Proceeds - CA at Disposal` | 处置损益 | 资产出售 | 计入利润表 |
+## 7. 易错点与考试陷阱
 
-## 🛠️ 常见考点与解题思路
+- **中英文错配**：看到 `Analysis of Long-Term Assets` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 主题1：内部开发无形资产的资本化（🎯 必考）
-- **题型**：判断某项研发支出应资本化还是费用化
-- **IFRS 解题框架**：
-  1. 判断所处阶段 → 研究阶段（全部费用化）or 开发阶段（有条件资本化）
-  2. 开发阶段六条件：技术可行性、意图完成、有能力使用/出售、产生经济利益、资源充足、可靠计量
-  3. 满足全部六项 → 资本化；否则费用化
-- **US GAAP 解题框架**：
-  - 一般研发支出 → 全部费用化
-  - 例外：软件开发成本 → 技术可行性确立后资本化
+## 8. 跨模块关联
 
-### 主题2：资产减值测试（🎯 高频）
-- **IFRS**：一步法。比较 CA 与 Recoverable Amount（取 FV - Selling Cost 与 Value in Use 孰高）
-- **US GAAP**：两步法。先比较 CA 与 Undiscounted CF；若 CA > UCF，再计算减值金额 = CA - FV
+- **上游模块**：[[M06-Analysis-of-Inventories]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M08-Topics-in-Long-Term-Liabilities-and-Equity]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 主题3：折旧方法对报表的影响
-- **解题思路**：
-  | 特征 | 直线法 | 加速折旧法 |
-  |------|:------:|:----------:|
-  | 前期折旧 | 较低 | **较高** |
-  | 前期利润 | **较高** | 较低 |
-  | 后期利润 | 较低 | **较高** |
-  | 总折旧额 | 相同 | 相同 |
-  | 对 CFO 影响 | 无差异 | 无差异（折旧是非现金） |
+## 9. 复习与刷题提示
 
-## 🚨 易错点与考试陷阱
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 所有研发支出都可能资本化 | IFRS 要求区分研究/开发阶段；US GAAP 大部分研发需费用化 | 准则差异是关键考点 |
-| 减值测试中 IFRS 和 US GAAP 方法相同 | IFRS 用可收回金额（折现），US GAAP 先用未折现现金流测试 | US GAAP 两步法，IFRS 一步法 |
-| IFRS 不允许减值转回 | IFRS **允许**减值转回（但商誉减值不可转回），US GAAP 不允许 | 跨准则对比的重要差异 |
-| 折旧方法改变是会计政策变更 | 折旧方法改变**通常是会计估计变更**，使用未来适用法 | 仅追溯调整政策变更 |
-| 所有无形资产都摊销 | 无限寿命无形资产和商誉**不摊销**，每年做减值测试 | 有限寿命才摊销 |
-| 折旧产生现金 | 折旧是**非现金费用**，不产生现金 | 折旧加回 CFO 是为了消除对 NI 的影响 |
+## 10. Legacy Notes Integrated
 
-## 🔄 跨模块关联
-
-- **[[M03-Analyzing-Balance-Sheets]]** — 长期资产是资产负债表非流动资产的核心组成部分；累计折旧和减值影响资产总额
-- **[[M02-Analyzing-Income-Statements]]** — 折旧和摊销费用直接影响营业利润和净利润；资产处置损益属于非常/偶发项目
-- **[[M04-Analyzing-Statements-of-Cash-Flows-I]]** — 折旧加回是间接法 CFO 的关键调整项；资产购买（CFI 流出）和出售（CFI 流入）记录在投资活动中
-- **[[M06-Analysis-of-Inventories]]** — 存货减值的概念类似但准则不同（存货按成本与可变现净值孰低，长期资产用可收回金额测试）
-- **[[M09-Analysis-of-Income-Taxes]]** — 资产账面价值与计税基础的差异产生递延所得税；加速折旧法在税务上的使用（MACRS）与会计折旧不同
-- **[[M08-Topics-in-Long-Term-Liabilities-and-Equity]]** — 融资租赁的使用权资产折旧处理与本模块的 PP&E 折旧逻辑相同
-
-## 📋 复习与刷题提示
-
-- **概念辨析**：区分研究阶段 vs 开发阶段（IFRS）、费用化 vs 资本化的条件、外购 vs 内部开发无形资产的确认差异
-- **计算方法**：直线法、DDB、产量法折旧计算是基础题型。注意 DDB 不考虑残值直到最后一年
-- **减值两步法**：US GAAP 的两步法减值测试是常考内容，特别注意第一步使用**未折现**现金流
-- **跨准则比较**：IFRS vs US GAAP 在减值、研发资本化、转回机制三方面的差异是核心考点
-- **会计估计变更**：使用寿命和残值的变更是会计估计变更（未来适用法），不是政策变更（追溯调整）
-- **常见陷阱**：折旧不产生现金流、加速折旧法总折旧额与直线法相同、减值转回仅 IFRS 允许
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M06-Long-Term-Assets.md（confidence 0.51）
+- **可复用结构**：M07: 长期资产分析 (Long-Term Assets Analysis)；1. 核心知识点；7.1 无形资产来源 (Intangible Asset Origin)；7.2 PP&E 与无形资产减值/终止确认 (PP&E and Intangible Impairment / Derecognition)；7.3 披露分析 (Disclosure Analysis)；2. 关键公式
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；[[M03-Balance-Sheet|资产负债表]]：长期资产是资产负债表非流动资产(non-current assets)的核心组成部分；[[M04-Cash-Flow-Statements|现金流量表]]：折旧加回是间接法 CFO 的关键调整项；资产购买和处置属于投资活动现金流(CFI)
+- **公式/计算线索**：出售(disposal)：差额 = 出售收入 - 账面价值，计入利润表；## 2. 关键公式
+- **易错提示**：IFRS：研究阶段(research phase)支出费用化，开发阶段(development phase)支出在满足六项条件时资本化——分析师需注意这种准则差异导致的可比性问题；**考点1**：内部开发无形资产的资本化条件。解题思路：区分研究阶段(费用化)和开发阶段(有条件资本化)，注意 IFRS 和 US GAAP 对研发支出的不同处理；## 4. 易错点提醒

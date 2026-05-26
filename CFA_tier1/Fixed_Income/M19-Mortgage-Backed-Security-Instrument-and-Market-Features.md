@@ -1,23 +1,29 @@
 ---
-title: "M19 — Mortgage-Backed Security (MBS) Instrument and Market Features"
-description: "CFA Level I 2026 official module: Mortgage-Backed Security (MBS) Instrument and Market Features"
-module: M19
+title: "M19: Mortgage-Backed Security (MBS) Instrument and Market Features"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M19"
 official_module: "Module 19: Mortgage-Backed Security (MBS) Instrument and Market Features"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 4
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M19: Mortgage-Backed Security (MBS) Instrument and Market Features
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Mortgage-Backed Security (MBS) Instrument and Market Features**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -30,189 +36,128 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. define prepayment risk and describe time tranching structures in securitizations and their purpose
+2. describe fundamental features of residential mortgage loans that are securitized
+3. describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type
+4. describe characteristics and risks of commercial mortgage-backed securities
 
-- define prepayment risk and describe time tranching structures in securitizations and their purpose
-- describe fundamental features of residential mortgage loans that are securitized
-- describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type
-- describe characteristics and risks of commercial mortgage-backed securities
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 19.1 学习任务
+- **核心问题**：考试希望你用 `Mortgage-Backed Security (MBS) Instrument and Market Features` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 19.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 19.3 关键英文术语
+- **Mortgage-Backed Security (MBS) Instrument and Market Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Time Tranching（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Mortgage Loans and Their Characteristic Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Residential Mortgage-Backed Securities (RMBS)（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Commercial Mortgage-Backed Securities (CMBS)（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 19.1 | define prepayment risk and describe time tranching structures in securitizations and their purpose | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 19.2 | describe fundamental features of residential mortgage loans that are securitized | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 19.3 | describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 19.4 | describe characteristics and risks of commercial mortgage-backed securities | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M19: MBS Instrument and Market Features（抵押贷款支持证券）
-├─ ⭐ 19.1 抵押贷款基础
-│  ├─ 📐 固定利率 vs 可调利率抵押贷款
-│  ├─ 📐 摊还型 vs 气球还款型
-│  ├─ 📐 提前还款权 (Prepayment Option)：借款人可提前还款
-│  └─ 💡 抵押贷款是 MBS 的基础资产
-│
-├─ ⭐ 19.2 提前还款风险 (Prepayment Risk)
-│  ├─ 📐 收缩风险 (Contraction Risk)：利率↓ → 提前还款↑ → 资金需低利率再投资
-│  ├─ 📐 展期风险 (Extension Risk)：利率↑ → 提前还款↓ → 资金锁定时间延长
-│  ├─ 📐 CPR = 1 - (1 - SMM)^12（条件提前还款率）
-│  ├─ 📐 PSA 基准：100% PSA = 第1月 0.2% → 第30月 6% → 后保持 6%
-│  └─ ⚠️ MBS 呈现负凸性：利率↓时价格上涨受限
-│
-├─ ⭐ 19.3 RMBS 结构
-│  ├─ 📐 过手 MBS (Pass-Through)：按比例传递本息
-│  ├─ 📐 CMO：分层重新分配提前还款风险
-│  │  ├─ Sequential-Pay：按顺序偿还各层
-│  │  └─ PAC Tranche：有预先设定的偿还计划
-│  ├─ 💡 Agency MBS：Ginnie/Fannie/Freddie 担保
-│  └─ 💡 Non-Agency MBS：依赖信用增级
-│
-├─ ⭐ 19.4 CMBS 特征
-│  ├─ 📐 气球到期 (Balloon Maturity)：期末大额本金余额
-│  ├─ 📐 气球风险：到期无法再融资的风险
-│  ├─ 📐 提前还款保护：Lockout / Defeasance / Yield Maintenance
-│  ├─ 📐 物业类型：办公、零售、工业、多户住宅、酒店
-│  └─ ⚠️ 气球风险是 CMBS 独有的核心风险【考试核心】
-│
-└─ ⭐ 19.5 CMBS 信用分析
-   ├─ 📐 DSCR = NOI / Debt Service
-   ├─ 📐 LTV = Loan Amount / Property Value
-   ├─ 📐 Debt Yield = NOI / Loan Amount
-   └─ 💡 分层结构 + 信用增级
+19. Mortgage-Backed Security (MBS) Instrument and Market Features
+├─ 19.1 Introduction
+│  ├─ 19.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 19.1.2 应用/判断：把概念或公式转成解题动作
+├─ 19.2 Time Tranching
+│  ├─ 19.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 19.2.2 应用/判断：把概念或公式转成解题动作
+├─ 19.3 Mortgage Loans and Their Characteristic Features
+│  ├─ 19.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 19.3.2 应用/判断：把概念或公式转成解题动作
+├─ 19.4 Residential Mortgage-Backed Securities (RMBS)
+│  ├─ 19.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 19.4.2 应用/判断：把概念或公式转成解题动作
+├─ 19.5 Commercial Mortgage-Backed Securities (CMBS)
+│  ├─ 19.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 19.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：抵押贷款基础（Mortgage Loan Fundamentals）
-**核心概念**：抵押贷款是 MBS 的基础资产。理解抵押贷款的基本特征（利率类型、还款结构、提前还款权）是分析 MBS 的前提。
-- **固定利率 vs 可调利率抵押贷款**：固定利率抵押贷款的利率在贷款期内不变；可调利率抵押贷款（ARM）的利率随市场利率定期调整
-- **摊还型（amortizing）vs 气球还款型（balloon）**：摊还型贷款每期偿还部分本金，到期时余额为零；气球还款型贷款在到期时仍有大量未偿还本金余额
-- **提前还款权（Prepayment Option）**：借款人有权在任何时间提前偿还部分或全部贷款余额（相当于借款人持有的一份看涨期权）
-- 抵押贷款是美国最大规模的消费债务市场，是 MBS 的基础资产池
+### 19.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define prepayment risk and describe time tranching structures in securitizations and their purpose`。
+- **核心词汇**：**Mortgage-Backed Security (MBS) Instrument and Market Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分固定利率与可调利率抵押贷款、摊还型与气球还款型贷款的特征。
+### 19.2 Time Tranching
+- **中文主线**：本节点解决 `Time Tranching` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe fundamental features of residential mortgage loans that are securitized`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：提前还款风险（Prepayment Risk）
-**核心概念**：提前还款风险是 MBS 投资者面临的核心风险，由收缩风险和展期风险两部分组成。MBS 的提前还款特征导致其呈现负凸性。
-- **收缩风险（Contraction Risk）**：利率下降时，借款人倾向于再融资来提前还款，导致 MBS 投资者提前收回本金，只能以较低利率再投资
-- **展期风险（Extension Risk）**：利率上升时，借款人不会提前还款，MBS 投资者面临资金锁定在较低利率的期限被拉长
-- **CPR（Conditional Prepayment Rate）**：`CPR = 1 - (1 - SMM)^12`，衡量提前还款速度的年化指标
-- **PSA 基准模型**：100% PSA = 第 1 个月 0.2%，第 30 个月升至 6%，之后保持 6%。PSA 越高表示提前还款越快
-- ⚠️ **负凸性**：MBS 呈现负凸性——利率下降时价格上涨受限（因提前还款增加），利率上升时价格下跌无缓冲（因提前还款减少）
+### 19.3 Mortgage Loans and Their Characteristic Features
+- **中文主线**：本节点解决 `Mortgage Loans and Their Characteristic Features` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type`。
+- **核心词汇**：**Time Tranching（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分收缩风险与展期风险，理解利率变化对提前还款的影响方向，掌握 CPR 和 PSA 的概念。
+### 19.4 Residential Mortgage-Backed Securities (RMBS)
+- **中文主线**：本节点解决 `Residential Mortgage-Backed Securities (RMBS)` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe characteristics and risks of commercial mortgage-backed securities`。
+- **核心词汇**：**Mortgage Loans and Their Characteristic Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：RMBS 结构（Residential MBS Structures）
-**核心概念**：住宅 MBS 分为机构 MBS 和非机构 MBS 两大类。CMO（抵押贷款债务）通过分层重新分配提前还款风险。
-- **过手 MBS（Pass-Through）**：将抵押贷款池的本息按比例传递给投资者，结构简单
-- **CMO（Collateralized Mortgage Obligation）**：将 MBS 现金流切分为不同层级的证券，各层级有不同的本金偿还顺序
-- **Sequential-Pay Tranche**：按顺序偿还各层本金——优先级先收回本金，然后下一级再开始回收
-- **PAC Tranche（Planned Amortization Class）**：有预先设定的本金偿还计划，提供更可预测的现金流
-- **Agency MBS**：由 Ginnie Mae、Fannie Mae、Freddie Mac 发行或担保，有政府或政府机构的信用支持
-- **Non-Agency MBS**：没有政府担保，依赖信用增级（分层、超额抵押等）
-- ⚠️ CMO 不消除提前还款风险，只重新分配——所有层的总风险等于 MBS 池的总风险
+### 19.5 Commercial Mortgage-Backed Securities (CMBS)
+- **中文主线**：本节点解决 `Commercial Mortgage-Backed Securities (CMBS)` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define prepayment risk and describe time tranching structures in securitizations and their purpose`。
+- **核心词汇**：**Residential Mortgage-Backed Securities (RMBS)（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分 agency vs non-agency MBS，理解 CMO 分层如何重新分配提前还款风险。
 
-### 知识点4：CMBS 特征（Commercial MBS Characteristics）
-**核心概念**：商业 MBS 与住宅 MBS 有显著差异，包括气球风险、提前还款保护和物业类型集中度风险。
-- **气球到期（Balloon Maturity）**：商业抵押贷款通常有摊销期长于贷款期限的特点，导致到期时存在大量未偿还本金（气球款项）
-- **气球风险（Balloon Risk）**：借款人在贷款到期时无法偿还气球余额的风险，是 CMBS 独有的核心风险
-- **提前还款保护机制**：Lockout（最严格禁止）> Defeasance（替代抵押品）> Yield Maintenance（补偿现值）> Prepayment Penalty（固定罚金）
-- **物业类型**：办公楼、零售物业、工业物业、多户住宅、酒店。酒店风险最高，多户住宅风险最低
-- ⚠️ 气球风险是 CMBS 独有的核心风险来源——RMBS 通常没有气球风险
+## 5. 关键公式与计算框架
 
-**考试应用**：区分 CMBS 与 RMBS 的关键差异，理解不同提前还款保护机制的区别。
+本模块以概念判断为主，无核心计算公式。复习时把 `Mortgage-Backed Security (MBS) Instrument and Market Features` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-### 知识点5：CMBS 信用分析（CMBS Credit Analysis）
-**核心概念**：CMBS 的信用分析核心指标包括 DSCR、LTV 和 Debt Yield，这些指标衡量贷款的安全性和物业的现金流产生能力。
-- **DSCR（Debt Service Coverage Ratio）**：`DSCR = NOI / Debt Service`，衡量物业净收入覆盖债务支付的能力。DSCR < 1.0 意味着物业收入不足以覆盖债务支付
-- **LTV（Loan-to-Value Ratio）**：`LTV = Loan Amount / Property Value`，衡量贷款金额与物业价值的比率
-- **Debt Yield**：`Debt Yield = NOI / Loan Amount`，衡量贷款安全性的指标，不依赖资本化率
-- **分层结构 + 信用增级**：优先级层级获得最高评级，次级层吸收最先损失
-- CMBS 的贷款笔数通常较少（20-100 笔），集中度风险高于 RMBS
+## 6. 常见考点与解题思路
 
-**考试应用**：计算和解读 DSCR、LTV、Debt Yield 等信用指标，理解 CMBS 分层结构的作用。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-## 📐 关键公式表
+## 7. 易错点与考试陷阱
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `CPR = 1 - (1 - SMM)^12` | 条件提前还款率 | 提前还款速度 | SMM = 单月提前还款率 |
-| `100% PSA = 第1月0.2% → 第30月6%` | PSA 基准模型 | 提前还款假设 | 行业标准基准 |
-| `Prepayment Risk = 收缩风险 + 展期风险` | 提前还款风险拆分 | 风险分析 | 利率↑↓方向不同 |
-| `DSCR = NOI / Debt Service` | 偿债覆盖比率 | CMBS 信用分析 | < 1.0 表示不足 |
-| `LTV = Loan Amount / Property Value` | 贷款价值比 | CMBS 信用分析 | 越高风险越大 |
-| `Debt Yield = NOI / Loan Amount` | 债务收益率 | CMBS 信用分析 | 不依赖资本化率 |
+- **中英文错配**：看到 `Mortgage-Backed Security (MBS) Instrument and Market Features` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 🛠️ 常见考点与解题思路
+## 8. 跨模块关联
 
-### 考点 1：区分收缩风险与展期风险
-- **利率下降 → 提前还款增加 → 收缩风险**（好处变坏处：资金需低利率再投资）
-- **利率上升 → 提前还款减少 → 展期风险**（坏处加坏处：低利率锁定时间延长）
-- **记忆技巧**：Contraction = 资金"收缩"回来；Extension = 期限"延长"了
+- **上游模块**：[[M18-Asset-Backed-Security-Instrument-and-Market-Features]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 考点 2：理解 CMO 分层的作用
-- **CMO 不消除提前还款风险**，只重新分配
-- Sequential-Pay：A 层先收本金 → B 层 → C 层
-- PAC Tranche：有保护的本金偿还计划，但极端情况下保护可能失效
-- **考试常考**：判断给定分层结构对哪类投资者有利
+## 9. 复习与刷题提示
 
-### 考点 3：区分 CMBS 与 RMBS
-- **CMBS 独有的**：气球风险、提前还款保护（lockout/defeasance）、贷款笔数少、集中度高
-- **RMBS 特征**：无气球风险、提前还款灵活（可随时还款）、贷款笔数多
-- **Core difference**：气球到期 + 提前还款保护是 CMBS 的关键标识
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 考点 4：CMBS 提前还款保护机制排序
-- **严格程度**：Lockout > Defeasance > Yield Maintenance > Prepayment Penalty
-- **Lockout**：完全禁止提前还款（最严格）
-- **Defeasance**：以国债替代抵押（常见于 CMBS）
-- **Yield Maintenance**：补偿投资者利息损失
+## 10. Legacy Notes Integrated
 
-## 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| MBS 无凸性问题 | MBS 有负凸性（利率↓价格↑受限） | 提前还款行为的不对称性 |
-| CMO 消除提前还款风险 | 只重新分配，总量不变 | PAC 保护在极端下失效 |
-| CMBS 与 RMBS 提前还款风险相同 | CMBS 有更强保护机制（lockout/defeasance） | 商业 vs 住宅贷款差异 |
-| 气球风险在 RMBS 中也存在 | RMBS 通常 fully amortizing，无气球风险 | 住宅贷款 30 年摊还 |
-| CMBS 提前还款保护 = 无风险 | 保护机制在特定条件下可能失效 | 物业出售等因素 |
-
-## 🔄 跨模块关联
-
-- **提前还款与嵌入期权** → [[M01-Fixed-Income-Instrument-Features]] 的或有条款（隐含看涨期权）
-- **负凸性** → [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] 的凸性概念
-- **CMO 分层** → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的分层信用增级
-- **现金流分配** → [[M17-Fixed-Income-Securitization]] 的 SPV 结构
-- **时间分层** → time tranching 的概念
-
-## 📋 复习与刷题提示
-
-- **核心重点**：收缩风险 vs 展期风险的区分（最高频考点）
-  - 利率↓ → 提前还款↑ → 收缩风险（资金需低利率再投资）
-  - 利率↑ → 提前还款↓ → 展期风险（低利率锁定时间延长）
-  - 记忆：收缩 = 资金"缩"回来；展期 = 期限拉"长"
-- **关键概念**：
-  - 负凸性：MBS 在利率↓时价格↑受限（因为提前还款↑）
-  - PSA 模型：100% PSA = 第1月 0.2% CPR → 第30月 6% CPR
-  - CPR（年化提前还款率）：CPR = 1 - (1 - SMM)^12
-- **RMBS vs CMBS 核心差异**：
-  | 维度 | RMBS | CMBS |
-  |------|------|------|
-  | 气球风险 | 极少（fully amortizing） | 核心风险（balloon maturity）|
-  | 提前还款 | 灵活（随时可还） | 有保护（lockout/defeasance）|
-  | 贷款笔数 | 成百上千 | 20-100 笔 |
-  | 集中度风险 | 低 | 高 |
-  | 物业类型 | 住宅 | 商业（办公/零售/工业/酒店）|
-- **CMBS 提前还款保护排序（严格→宽松）**：
-  Lockout > Defeasance > Yield Maintenance > Prepayment Penalty
-- **CMBS 信用分析指标**：
-  - DSCR = NOI / Debt Service（< 1.0 = 不足）
-  - LTV = Loan Amount / Property Value
-  - Debt Yield = NOI / Loan Amount
-- **刷题建议**：
-  - 重点做收缩/展期风险判断题（给定利率变化方向 → 判断风险类型）
-  - CMBS vs RMBS 对比题（列表对比关键差异）
-  - 提前还款保护机制排序
-  - 负凸性分析题
-- **易混淆点**：
-  - CMO 不消除提前还款风险（只重新分配）
-  - CMBS 保护机制可能失效
-  - 气球风险是 CMBS 独有的
-  - MBS 的负凸性特征
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M14-MBS-and-CMO.md` (0.352), `M19-CMBS.md` (0.318), `M13-ABS-and-Credit-Enhancement.md` (0.28)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

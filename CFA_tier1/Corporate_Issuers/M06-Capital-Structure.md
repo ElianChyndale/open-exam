@@ -1,23 +1,29 @@
 ---
-title: "M06 — Capital Structure"
-description: "CFA Level I 2026 official module: Capital Structure"
-module: M06
+title: "M06: Capital Structure"
+description: "CFA Level I 2026 Corporate Issuers 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Corporate Issuers"
-topic_area: Corporate_Issuers
-curriculum_year: 2026
+topic_area: "Corporate_Issuers"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M06"
 official_module: "Module 6: Capital Structure"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 4
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Corporate_Issuers
   - official_2026
+  - Corporate_Issuers
 ---
 
 # M06: Capital Structure
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：理解公司组织、治理、营运资本、资本配置与商业模式如何影响价值创造。 本模块聚焦 **Capital Structure**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -30,161 +36,133 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. calculate and interpret the weighted-average cost of capital for a company
+2. explain factors affecting capital structure and the weighted-average cost of capital
+3. explain the Modigliani-Miller propositions regarding capital structure
+4. describe optimal and target capital structures
 
-- calculate and interpret the weighted-average cost of capital for a company
-- explain factors affecting capital structure and the weighted-average cost of capital
-- explain the Modigliani-Miller propositions regarding capital structure
-- describe optimal and target capital structures
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Corporate_Issuers/M06-Capital-Structure-and-Leverage.md`
+### 6.1 学习任务
+- **核心问题**：考试希望你用 `Capital Structure` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 1.00. Original official module field: Module 6: Capital Structure._
+### 6.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M07: Capital Structure and Leverage（资本结构与杠杆）
+### 6.3 关键英文术语
+- **Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Cost of Capital（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Factors Affecting Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Modigliani–Miller Capital Structure Propositions（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Optimal Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 6.1 | calculate and interpret the weighted-average cost of capital for a company | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 6.2 | explain factors affecting capital structure and the weighted-average cost of capital | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.3 | explain the Modigliani-Miller propositions regarding capital structure | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.4 | describe optimal and target capital structures | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 Corp M06: Capital Structure（资本结构与杠杆）
-│
-├── ⭐ 经营杠杆 (Operating Leverage)
-│   ├── 来自固定经营成本 → 销售变化放大 EBIT 变化
-│   ├── 📐 DOL = %ΔEBIT / %ΔSales
-│   ├── 📐 DOL = (Sales - VC) / EBIT
-│   └── 高 DOL → 盈亏平衡点高，销售波动显著影响利润
-│
-├── ⭐ 财务杠杆 (Financial Leverage)
-│   ├── 来自固定融资成本（债务利息）
-│   ├── 📐 DFL = %ΔEPS / %ΔEBIT
-│   ├── 📐 DFL = EBIT / (EBIT - Interest)
-│   └── EBIT 变化被固定利息放大为 EPS 更大变化
-│
-├── ⭐ 总杠杆 (Total Leverage)
-│   ├── 📐 DTL = DOL × DFL
-│   ├── 📐 DTL = %ΔEPS / %ΔSales
-│   └── 销售端波动经两级杠杆传导至 EPS
-│
-├── ⭐ 经营风险 vs 财务风险
-│   ├── 经营风险: 行业特性和成本结构（与融资无关）
-│   ├── 财务风险: 资本结构中的债务比例
-│   └── 两者叠加 = 公司整体风险
-│
-├── ⭐ 结构权衡
-│   ├── 债务税盾: 利息可税前扣除 → 增加公司价值
-│   ├── 财务困境成本: 违约风险 → 直接+间接成本
-│   ├── 灵活性损失: 高债务限制市场机会响应
-│   └── ⚠️ 债务税盾不是只有好处
-│
-├── ⭐ MM 理论
-│   ├── MM 无税: 资本结构不影响公司价值（理想世界）
-│   ├── MM 有税: 债务税盾增加公司价值 (VL = VU + tD)
-│   ├── 权衡理论: 平衡税盾与财务困境成本
-│   └── 优序融资理论: 内源 > 债务 > 股权
-│
-├── 💡 关键洞察
-│   ├── 高 ROE 可能只是高风险的伪装
-│   ├── DOL 来自成本结构，DFL 来自融资结构
-│   ├── DTL = DOL × DFL（乘法而非加法）
-│   └── 真实世界税收、破产成本、代理成本使资本结构至关重要
-│
-└── ⚠️ 考试陷阱总结
-    ├── 杠杆推高的 ROE 不代表更好的经营表现
-    ├── DOL 和 DFL 不可混淆
-    ├── MM 无税是理想基准，现实不同
-    ├── 债务税盾同时带来困境风险和灵活性损失
-    └── 总杠杆是乘数效应 — DTL = DOL × DFL
+6. Capital Structure
+├─ 6.1 Introduction
+│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
+├─ 6.2 The Cost of Capital
+│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
+├─ 6.3 Factors Affecting Capital Structure
+│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
+├─ 6.4 Modigliani–Miller Capital Structure Propositions
+│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
+├─ 6.5 Optimal Capital Structure
+│  ├─ 6.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：杠杆机制 (Leverage Mechanics)
+### 6.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the weighted-average cost of capital for a company`。
+- **核心词汇**：**Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：杠杆是使用固定成本放大收益和亏损的机制。经营杠杆来自固定经营成本，财务杠杆来自固定融资成本（债务利息）。总杠杆是两者的叠加乘数效应，将销售端的波动传导至每股收益（EPS）。
+### 6.2 The Cost of Capital
+- **中文主线**：本节点解决 `The Cost of Capital` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain factors affecting capital structure and the weighted-average cost of capital`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **经营杠杆度 (DOL)** = %ΔEBIT / %ΔSales，衡量销售额变动对EBIT的放大效应。高固定成本→高DOL→盈亏平衡点高
-- **财务杠杆度 (DFL)** = %ΔEPS / %ΔEBIT，衡量EBIT变动对EPS的放大效应。债务利息固定→EBIT变动被放大为更大的EPS变动
-- **总杠杆度 (DTL)** = DOL × DFL = %ΔEPS / %ΔSales。两级杠杆的乘数叠加效应
-- 📐 DOL = (Sales - VC) / EBIT；DFL = EBIT / (EBIT - Interest)；DTL = DOL × DFL
-- 💡 **核心区分**：DOL来自成本结构（卖什么、怎么卖），DFL来自融资结构（钱哪来的）。两者不可混淆
+### 6.3 Factors Affecting Capital Structure
+- **中文主线**：本节点解决 `Factors Affecting Capital Structure` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the Modigliani-Miller propositions regarding capital structure`。
+- **核心词汇**：**The Cost of Capital（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算DOL/DFL/DTL是必考题型。给定财务数据，用公式计算各级杠杆度。注意：高ROE可能只是高风险的伪装（杠杆推高ROE伴随更高风险）。
+### 6.4 Modigliani–Miller Capital Structure Propositions
+- **中文主线**：本节点解决 `Modigliani–Miller Capital Structure Propositions` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe optimal and target capital structures`。
+- **核心词汇**：**Factors Affecting Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：结构权衡 (Structure Trade-Offs)
+### 6.5 Optimal Capital Structure
+- **中文主线**：本节点解决 `Optimal Capital Structure` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the weighted-average cost of capital for a company`。
+- **核心词汇**：**Modigliani–Miller Capital Structure Propositions（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：最优资本结构不存在统一公式，需要在债务税盾、财务困境成本和灵活性损失之间权衡。MM理论提供了基准框架——无税时资本结构不影响公司价值，有税时债务税盾增加价值。
 
-- **债务税盾 (Debt Tax Shield)**：利息可税前扣除，减少税负，增加公司价值
-- **财务困境成本 (Financial Distress Cost)**：债务过高导致违约风险上升，产生直接（法律费用）和间接（客户流失、供应商收紧）成本
-- **灵活性损失 (Loss of Flexibility)**：高债务限制公司响应市场机会的能力
-- **MM理论**：
-  - MM无税：资本结构不影响公司价值（理想世界基准）
-  - MM有税：债务税盾增加公司价值
-  - 权衡理论 (Trade-Off Theory)：最优资本结构平衡税盾收益与困境成本
-  - 优序融资理论 (Pecking Order Theory)：公司偏好内部融资>债务>股权
-- 🎯 **高频考点**：影响债务容量的因素——经营风险越低、有形资产越多、盈利越稳定，债务容量越大
+## 5. 关键公式与计算框架
 
-**考试应用**：给定公司特征（如高税率、低经营风险），判断应多用债务还是权益。高税率→税盾价值大→适合债务；低经营风险→债务容量大→适合债务。
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| NPV | `NPV = Σ CFt / (1 + r)^t - initial investment` | NPV > 0 表示项目预计创造价值。 |
+| WACC | `WACC = wd rd(1 - t) + wp rp + we re` | 资本结构权重要用市场价值口径。 |
+| Operating cycle | `operating cycle = days inventory + days receivables` | 现金周转题要分清 operating cycle 和 cash conversion cycle。 |
 
-### 📐 关键公式表
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| 经营杠杆度 (DOL) | `%ΔEBIT / %ΔSales` 或 `(Sales-VC)/EBIT` | 衡量经营杠杆 |
-| 财务杠杆度 (DFL) | `%ΔEPS / %ΔEBIT` 或 `EBIT/(EBIT-Interest)` | 衡量财务杠杆 |
-| 总杠杆度 (DTL) | `DOL × DFL` 或 `%ΔEPS / %ΔSales` | 两级杠杆总效应 |
-| 盈亏平衡点 | `Fixed Costs / (Price - VC per unit)` | 利润为零的销售量 |
+## 6. 常见考点与解题思路
 
-### 🛠️ 常见考点与解题思路
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点1：计算 DOL、DFL、DTL**
-- 先算 EBIT = 销售额 - 变动成本 - 固定成本
-- DOL = (Sales - VC) / EBIT，DFL = EBIT / (EBIT - Interest)
+## 7. 易错点与考试陷阱
 
-**考点2：判断杠杆类型**
-- 销售→EBIT 的变化 = DOL；EBIT→EPS 的变化 = DFL
+- **中英文错配**：看到 `Capital Structure` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点3：理解 MM 理论**
-- MM 无税：资本结构不影响公司价值
-- MM 有税：债务税盾增加价值
+## 8. 跨模块关联
 
-**考点4：债务 vs 权益选择**
-- 高税率 → 税盾价值大 → 适合债务
-- 低经营风险 → 债务容量大 → 适合债务
+- **上游模块**：[[M05-Capital-Investments-and-Capital-Allocation]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M07-Business-Models]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 🚨 易错点与考试陷阱
+## 9. 复习与刷题提示
 
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| 高 ROE = 经营好 | 杠杆推高的 ROE 可能伴随更高风险 |
-| DOL 和 DFL 概念相同 | DOL 来自成本结构，DFL 来自融资结构 |
-| 现实与 MM 无税世界一致 | 税收/破产/代理等摩擦使资本结构重要 |
-| 债务税盾只有好处 | 同时带来困境风险和灵活性损失 |
-| 总杠杆是加法效应 | DTL = DOL × DFL（乘法效应）|
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 🔄 跨模块关联
+## 10. Legacy Notes Integrated
 
-- 资本结构影响 WACC → [[M05-Cost-of-Capital]]
-- DOL 与商业模式 → [[M07-Business-Models]]
-- 杠杆与资本预算 → [[M04-Capital-Investments]]
-- 治理影响杠杆选择 → [[M02-Corporate-Governance-and-ESG]]
-- 资本结构整合 → [[M08-Capital-Allocation-Integration]]
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
-
-## 📋 复习与刷题提示
-
-- **核心公式**：WACC = wd·rd(1-t) + we·re；MM有税VL=VU+tD
-- **高频考点**：MM定理（无税vs有税）、WACC计算、最优杠杆权衡
-- **跨科目链接**：权益成本Re→Quant M10 CAPM；税盾→FI M14 信用风险
-- **⏱ 时间管理**：WACC和MM定理相关计算题平均耗时3-5分钟，建议先做简单概念题
-- **考试策略**：MM命题多为概念理解题（无税VU=VL，有税VL=VU+tD），计算WACC时可交叉验证Quant M10的Beta推算
-
-### 跨科目学习链接
-- **Quantitative Methods M10**: 回归中的 Beta 用于估算权益成本 Re（CAPM）
-- **Fixed Income M14-M16**: 信用分析中的 D/E ratio、ICR 与资本结构选择直接关联
-- **Financial Statement Analysis M09**: 税盾概念源于 DTA/DTL 的所得税分析
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M06-Capital-Structure-and-Leverage.md` (0.394), `M05-Cost-of-Capital.md` (0.334), `M01-Corporate-Structures-and-Ownership.md` (0.267)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

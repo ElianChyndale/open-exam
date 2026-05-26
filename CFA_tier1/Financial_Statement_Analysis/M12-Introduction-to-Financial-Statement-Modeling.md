@@ -1,23 +1,29 @@
 ---
-title: "M12 — Introduction to Financial Statement Modeling"
-description: "CFA Level I 2026 official module: Introduction to Financial Statement Modeling"
-module: M12
+title: "M12: Introduction to Financial Statement Modeling"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Financial Statement Analysis"
-topic_area: Financial_Statement_Analysis
-curriculum_year: 2026
+topic_area: "Financial_Statement_Analysis"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M12"
 official_module: "Module 12: Introduction to Financial Statement Modeling"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 5
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Financial_Statement_Analysis
   - official_2026
+  - Financial_Statement_Analysis
 ---
 
 # M12: Introduction to Financial Statement Modeling
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Introduction to Financial Statement Modeling**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -31,191 +37,144 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. demonstrate the development of a sales-based pro forma company model
+2. explain how behavioral factors affect analyst forecasts and recommend remedial actions for analyst biases
+3. explain how the competitive position of a company based on a Porter’s five forces analysis affects prices and costs
+4. explain how to forecast industry and company sales and costs when they are subject to price inflation or deflation
+5. explain considerations in the choice of an explicit forecast horizon and an analyst’s choices in developing projections beyond the short-term forecast horizon
 
-- demonstrate the development of a sales-based pro forma company model
-- explain how behavioral factors affect analyst forecasts and recommend remedial actions for analyst biases
-- explain how the competitive position of a company based on a Porter’s five forces analysis affects prices and costs
-- explain how to forecast industry and company sales and costs when they are subject to price inflation or deflation
-- explain considerations in the choice of an explicit forecast horizon and an analyst’s choices in developing projections beyond the short-term forecast horizon
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Financial_Statement_Analysis/M11-Financial-Statement-Modeling.md`
+### 12.1 学习任务
+- **核心问题**：考试希望你用 `Introduction to Financial Statement Modeling` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.37. Original official module field: M12: Introduction to Financial Statement Modeling._
+### 12.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M12: 财务报表建模 (Financial Statement Modeling)
+### 12.3 关键英文术语
+- **Introduction to Financial Statement Modeling（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Building a Financial Statement Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Behavioral Finance and Analyst Forecasts（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Impact of Competitive Factors in Prices and Costs（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Modeling Inflation and Deflation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Forecast Horizon and Long-Term Forecasting（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 12.1 | demonstrate the development of a sales-based pro forma company model | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
+| 12.2 | explain how behavioral factors affect analyst forecasts and recommend remedial actions for analyst biases | 解释机制、原因和后果；给出符合约束的行动建议 | 写出结论、依据和限制条件。 |
+| 12.3 | explain how the competitive position of a company based on a Porter’s five forces analysis affects prices and costs | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 12.4 | explain how to forecast industry and company sales and costs when they are subject to price inflation or deflation | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 12.5 | explain considerations in the choice of an explicit forecast horizon and an analyst’s choices in developing projections beyond the short-term forecast horizon | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 FSA M12: Introduction to Financial Statement Modeling（财务报表建模）
-│
-├── ⭐ 基于销售的 Pro Forma 模型
-│   ├── 以销售预测为输入驱动变量
-│   ├── 销售百分比法: 假设部分项目与销售额固定比例
-│   ├── 固定项目: 长期债务、固定资产需单独预测
-│   └── 📐 预测项 = 预测销售 × (历史项目/历史销售)
-│
-├── ⭐ 模型结构
-│   ├── 利润表预测 → 资产负债表预测 → 现金流量表预测
-│   └── 融资缺口分析: 📐 Plug = 预测资产 - 预测负债 - 预测权益
-│
-├── ⭐ 分析师预测偏差
-│   ├── 过度乐观偏差: 高估收益增长
-│   ├── 选择性偏差: 只跟踪表现好的公司
-│   ├── 羊群效应: 维持接近共识的预测
-│   └── 自我归因偏差: 归功于己，归咎于外
-│
-├── ⭐ 偏差修正方法
-│   ├── 多情景分析: 基准/乐观/悲观
-│   ├── 预测与历史表现一致性检查
-│   ├── 交叉验证: 管理层指引 vs 卖方 vs 第三方
-│   └── 使用预测精确度指标跟踪历史记录
-│
-├── ⭐ 波特五力在预测中的应用
-│   ├── 供应商议价能力 → COGS 和利润率
-│   ├── 客户议价能力 → 定价能力和毛利率
-│   ├── 新进入者威胁 → 长期利润率假设
-│   ├── 替代品威胁 → 销量增长假设
-│   └── 行业竞争强度 → 投资回报率
-│
-├── ⭐ 通胀/通缩影响
-│   ├── 通胀: 考虑价格传导和工资/原材料上涨
-│   ├── 通缩: 定价能力下降，毛利率受压，存货减记
-│   └── 区分名义增长率和实际增长率
-│
-├── ⭐ 预测期与终值
-│   ├── 显式预测期: 通常 3-5 年
-│   ├── 📐 永续增长终值: TV = FCFF_{n+1} / (WACC - g)
-│   ├── 📐 退出倍数法: TV = EBITDA_n × 所选倍数
-│   └── ⚠️ 终值通常占估值 > 70%
-│
-├── 💡 关键洞察
-│   ├── 预测假设间必须逻辑一致
-│   ├── 永续增长率 g 不应显著超过经济长期增长
-│   ├── 终值假设对估值结果极其敏感
-│   └── 历史关系可能因环境变化而失效
-│
-└── ⚠️ 考试陷阱总结
-    ├── 终值占估值绝大部分 — 勿放松对终值假设的审视
-    ├── 永续增长率必须合理
-    ├── 循环引用需启用迭代计算
-    └── 历史关系可能会变 — 基于百分比法的假设未必持续
+12. Introduction to Financial Statement Modeling
+├─ 12.1 Introduction
+│  ├─ 12.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 12.1.2 应用/判断：把概念或公式转成解题动作
+├─ 12.2 Building a Financial Statement Model
+│  ├─ 12.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 12.2.2 应用/判断：把概念或公式转成解题动作
+├─ 12.3 Behavioral Finance and Analyst Forecasts
+│  ├─ 12.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 12.3.2 应用/判断：把概念或公式转成解题动作
+├─ 12.4 The Impact of Competitive Factors in Prices and Costs
+│  ├─ 12.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 12.4.2 应用/判断：把概念或公式转成解题动作
+├─ 12.5 Modeling Inflation and Deflation
+│  ├─ 12.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 12.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：基于销售的 Pro Forma 模型（Sales-Based Pro Forma Model）
+### 12.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`demonstrate the development of a sales-based pro forma company model`。
+- **核心词汇**：**Introduction to Financial Statement Modeling（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **核心原理**：以销售预测(sales forecast)作为输入驱动变量(input driver)，根据历史关系确定其他财务报表项目的预测值
-- **销售百分比法 (Percentage-of-Sales Method)**：假设某些项目（如 COGS、SG&A、流动资产、流动负债）与销售额保持固定比例关系
-- **固定项目**：不随销售变动的项目（如长期债务、固定资产/产能）需要单独预测
-- **迭代过程 (Iterative Process)**：预测的利息费用(interest expense)取决于预测的债务水平，而债务水平又取决于融资需求(funding needs)，需要通过循环引用(circular reference)解决
-- **模型结构**：利润表预测 → 资产负债表预测 → 现金流量表预测 → 融资缺口分析(plug/financing shortfall)
+### 12.2 Building a Financial Statement Model
+- **中文主线**：本节点解决 `Building a Financial Statement Model` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；给出符合约束的行动建议；官方表述为：`explain how behavioral factors affect analyst forecasts and recommend remedial actions for analyst biases`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：分析师预测偏差与修正（Analyst Forecast Bias and Remedies）
+### 12.3 Behavioral Finance and Analyst Forecasts
+- **中文主线**：本节点解决 `Behavioral Finance and Analyst Forecasts` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the competitive position of a company based on a Porter’s five forces analysis affects prices and costs`。
+- **核心词汇**：**Building a Financial Statement Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**常见偏差类型：**
-- **过度乐观偏差 (Optimism Bias)**：分析师倾向于高估收益增长，尤其是对热门行业和明星股票
-- **选择性偏差 (Selection Bias)**：分析师倾向于跟踪表现良好的公司，导致样本偏差(sample bias)
-- **羊群效应 (Herding)**：为不偏离同行共识(consensus)，分析师会倾向于维持接近市场预期的预测
-- **自我归因偏差 (Self-Attribution Bias)**：将成功归因于自身能力，失败归因于外部因素
+### 12.4 The Impact of Competitive Factors in Prices and Costs
+- **中文主线**：本节点解决 `The Impact of Competitive Factors in Prices and Costs` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how to forecast industry and company sales and costs when they are subject to price inflation or deflation`。
+- **核心词汇**：**Behavioral Finance and Analyst Forecasts（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**修正方法 (Remedies)：**
-- 使用多情景分析(multiple scenario analysis)——基准(base case)、乐观(bull case)和悲观(bear case)
-- 关注预测与历史表现的一致性——如果预测增长率远超历史趋势，需要充分的证据支持
-- 交叉验证(cross-validation)：比较公司指引(management guidance)、卖方分析师(sell-side analyst)预测和独立第三方预测
-- 使用预测精确度指标(forecast accuracy metrics)系统跟踪和分析预测历史记录
+### 12.5 Modeling Inflation and Deflation
+- **中文主线**：本节点解决 `Modeling Inflation and Deflation` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain considerations in the choice of an explicit forecast horizon and an analyst’s choices in developing projections beyond the short-term forecast horizon`。
+- **核心词汇**：**The Impact of Competitive Factors in Prices and Costs（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：波特效应：价格与成本影响（Porter Effects on Prices and Costs）
+### 12.9 Legacy 补强要点
+- 来自 `M11-Financial-Statement-Modeling.md`：## 1. 核心知识点; **核心原理**：以销售预测(sales forecast)作为输入驱动变量(input driver)，根据历史关系确定其他财务报表项目的预测值; **关键判断**：。
 
-- **波特五力模型 (Porter's Five Forces)** 在财务预测中的应用：
-  - 供应商议价能力(bargaining power of suppliers) → 影响 COGS 和利润率预测
-  - 客户议价能力(bargaining power of buyers) → 影响定价能力和毛利率
-  - 新进入者威胁(threat of new entrants) → 影响长期利润率假设
-  - 替代品威胁(threat of substitutes) → 影响销量增长假设
-  - 行业内部竞争(intensity of rivalry) → 影响投资回报率和盈利可持续性
 
-- **分析应用**：五力分析结果应转化为具体的预测假设——例如，供应商议价能力强意味着未来毛利率可能下降，预测时应反映这一趋势
+## 5. 关键公式与计算框架
 
-### 知识点4：通胀/通缩在销售与成本预测中的影响（Inflation / Deflation in Sales and Cost Forecasts）
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Current ratio | `current assets / current liabilities` | 衡量短期偿债能力，但不等于现金质量。 |
+| Gross margin | `gross profit / revenue` | 可用于比较定价能力和成本压力。 |
+| ROE | `net income / average equity` | 可用 DuPont 分解定位盈利、效率和杠杆来源。 |
 
-- **通胀环境 (Inflationary Environment)**：
-  - 在销售预测中反映价格增长(pass-through pricing)能力
-  - 在成本预测中考虑工资膨胀(wage inflation)和原材料成本上升
-  - 名义增长率(nominal growth rate)和实际增长率(real growth rate)的区分
-  - 通胀对不同成本项目的影响不同（如劳动成本 vs 原材料成本），需要单独分析
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-- **通缩环境 (Deflationary Environment)**：
-  - 定价能力下降，毛利率受压
-  - 存货减记风险上升（与 M05 存货分析关联）
-  - 固定成本负担加重（通缩下同样的固定成本需要更多的销量覆盖）
+## 6. 常见考点与解题思路
 
-### 知识点5：预测期与终值选择（Explicit Forecast Horizon and Terminal Projection Choices）
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-- **显式预测期 (Explicit Forecast Horizon)**：通常为 3-5 年，在此期间逐项详细预测各财务科目
-- **终值 (Terminal Value)**：预测期后的价值，通常占公司总价值的很大比例（有时 > 70%）
-- **终值计算方法**：
-  - **永续增长模型 (Perpetuity Growth Model / Gordon Growth Model)**：假设终值期后 FCFF/FCFE 以固定增长率(g)永续增长
-  - **退出倍数法 (Exit Multiple Approach)**：基于可比公司估值倍数(comparable multiples)估算终值
+## 7. 易错点与考试陷阱
 
-- **关键判断**：
-  - 预测期长度取决于公司是否处于稳定增长阶段——高增长公司需要更长的预测期
-  - 永续增长率(g)应合理，通常不超过经济长期增长率
-  - 终值假设对估值结果极其敏感，应进行敏感性分析(sensitivity analysis)
-  - 多情景分析：不同的终值假设对应不同的增长情景
+- **中英文错配**：看到 `Introduction to Financial Statement Modeling` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 📐 关键公式表
+## 8. 跨模块关联
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| 销售百分比预测 | `Forecast Item = Forecast Sales x (Historical Item / Historical Sales)` | 简单比例法 |
-| 永续增长终值 (FCFF) | `TV = FCFF_{n+1} / (WACC - g)` | FCFF 终值 |
-| 永续增长终值 (FCFE) | `TV = FCFE_{n+1} / (r - g)` | FCFE 终值 |
-| 退出倍数终值 | `TV = EBITDA_n x Selected Multiple` | 基于可比退出倍数 |
-| 融资缺口 (Plug) | `Forecast Assets - Forecast Liabilities - Forecast Equity` | 需外部融资或产生盈余 |
+- **上游模块**：[[M11-Financial-Analysis-Techniques]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 🛠️ 常见考点与解题思路
+## 9. 复习与刷题提示
 
-**考点1：销售百分比法预测财务报表**
-- 先预测销售，再将各项目分为随销售变动和固定项目。
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**考点2：预测偏差识别与修正**
-- 使用多情景分析和交叉验证方法修正。
+## 10. Legacy Notes Integrated
 
-**考点3：波特五力在预测中的运用**
-- 将行业竞争分析转化为具体预测假设。
-
-**考点4：终值计算与敏感性分析**
-- 应用永续增长模型或退出倍数法，在不同假设下敏感性测试。
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| 预测假设可独立设定 | 各假设必须逻辑一致 |
-| 详细预测了 3-5 年可忽视终值 | 终值通常占估值 > 70% |
-| 永续增长率可任意设定 | 不应显著超过经济长期增长率 |
-| 历史关系永远有效 | 经济/竞争/业务模式变化会使历史关系失效 |
-| 循环引用不可解决 | Excel 中需启用迭代计算 |
-
-### 🔄 跨模块关联
-
-- [[M10-Financial-Analysis-Techniques]]：比率分析和 DuPont 分解是模型假设设定基础
-- [[M02-Income-Statement]]：收入预测和利润率假设是 pro forma 模型起点
-- [[M03-Balance-Sheet]]：杠杆比率和营运资本效率影响融资需求预测
-- [[M04-Cash-Flow-Statements]]：FCFF/FCFE 预测是估值模型核心输入
-- [[M09-Financial-Reporting-Quality]]：报告质量影响预测假设可靠性
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
-
-## 📋 复习与刷题提示
-
-- **核心技能**：销售百分比法构建pro forma模型、情景分析
-- **高频考点**：预测假设合理性判断、行为偏差对预测的影响
-- **跨科目**：建模→Equity M07 公司预测、Corp M05 资本预算
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M11-Financial-Statement-Modeling.md（confidence 0.485）
+- **可复用结构**：M12: 财务报表建模 (Financial Statement Modeling)；1. 核心知识点；12.1 基于销售的 Pro Forma 模型 (Sales-Based Pro Forma Model)；12.2 分析师预测偏差与修正 (Analyst Forecast Bias and Remedies)；12.3 波特效应：价格与成本影响 (Porter Effects on Prices and Costs)；12.4 通胀/通缩在销售与成本预测中的影响 (Inflation / Deflation in Sales and Cost Forecasts)
+- **高价值要点**：## 1. 核心知识点；**核心原理**：以销售预测(sales forecast)作为输入驱动变量(input driver)，根据历史关系确定其他财务报表项目的预测值；**关键判断**：；## 2. 关键公式
+- **公式/计算线索**：## 2. 关键公式
+- **易错提示**：## 4. 易错点提醒；**终值的权重**: 终值通常占估值的绝大部分——不要因为详细预测了 3-5 年就放松对终值假设的审视

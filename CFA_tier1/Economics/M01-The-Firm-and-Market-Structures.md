@@ -1,23 +1,29 @@
 ---
-title: "M01 — The Firm and Market Structures"
-description: "CFA Level I 2026 official module: The Firm and Market Structures"
-module: M01
+title: "M01: The Firm and Market Structures"
+description: "CFA Level I 2026 Economics 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Economics"
-topic_area: Economics
-curriculum_year: 2026
+topic_area: "Economics"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M01"
 official_module: "Module 1: The Firm and Market Structures"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 5
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Economics
   - official_2026
+  - Economics
 ---
 
 # M01: The Firm and Market Structures
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用市场结构、周期、政策、贸易和汇率解释宏观环境对资产价格的影响。 本模块聚焦 **The Firm and Market Structures**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -31,196 +37,145 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. determine and interpret breakeven and shutdown points of production, as well as how economies and diseconomies of scale affect costs under perfect and imperfect competition
+2. describe characteristics of perfect competition, monopolistic competition, oligopoly, and pure monopoly
+3. explain supply and demand relationships under monopolistic competition, including the optimal price and output for firms as well as pricing strategy
+4. explain supply and demand relationships under oligopoly, including the optimal price and output for firms as well as pricing strategy
+5. identify the type of market structure within which a firm operates and describe the use and limitations of concentration measures
 
-- determine and interpret breakeven and shutdown points of production, as well as how economies and diseconomies of scale affect costs under perfect and imperfect competition
-- describe characteristics of perfect competition, monopolistic competition, oligopoly, and pure monopoly
-- explain supply and demand relationships under monopolistic competition, including the optimal price and output for firms as well as pricing strategy
-- explain supply and demand relationships under oligopoly, including the optimal price and output for firms as well as pricing strategy
-- identify the type of market structure within which a firm operates and describe the use and limitations of concentration measures
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md`
+### 1.1 学习任务
+- **核心问题**：考试希望你用 `The Firm and Market Structures` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 1.00. Original official module field: Module 1: The Firm and Market Structures._
+### 1.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M01: The Firm and Market Structures（企业与市场结构）
+### 1.3 关键英文术语
+- **The Firm and Market Structures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Profit Maximization: Production Breakeven, Shutdown and Economies of Scale（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Profit Maximization（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction to Market Structures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Monopolistic Competition（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Oligopoly（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Determining Market Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 1.1 | determine and interpret breakeven and shutdown points of production, as well as how economies and diseconomies of scale affect costs under perfect and imperfect competition | 解释结果的投资含义；根据条件判断正确结论 | 写出结论、依据和限制条件。 |
+| 1.2 | describe characteristics of perfect competition, monopolistic competition, oligopoly, and pure monopoly | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.3 | explain supply and demand relationships under monopolistic competition, including the optimal price and output for firms as well as pricing strategy | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 1.4 | explain supply and demand relationships under oligopoly, including the optimal price and output for firms as well as pricing strategy | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 1.5 | identify the type of market structure within which a firm operates and describe the use and limitations of concentration measures | 描述定义、流程和适用场景；识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M01: The Firm and Market Structures（企业与市场结构）
-│
-├── ⭐ 成本与利润基本概念 🎯超高頻
-│   ├── 会计利润 = TR − 显性成本
-│   ├── 经济利润 = TR − 显性成本 − 隐性成本 🎯超高頻
-│   ├── 正常利润 = 隐性成本（经济利润=0时的会计利润）
-│   └── 短期: 有固定成本; 长期: 所有成本可变
-│
-├── ⭐ 利润最大化 🎯高频
-│   └── MR = MC（所有市场结构通用）
-│
-├── ⭐ 四种市场结构 🎯超高頻
-│   ├── 完全竞争: 大量企业, 同质产品, 价格接受者, 长期零经济利润
-│   ├── 垄断竞争: 产品差异化, 非价格竞争, 长期零经济利润
-│   ├── 寡头: 少数企业, 策略互动, 博弈论, 纳什均衡
-│   └── 垄断: 唯一生产者, 极高壁垒, 价格歧视, 无谓损失
-│
-├── ⭐ 进入壁垒
-│   ├── 规模经济、品牌忠诚度、专利/许可
-│   ├── 高初始投资、网络效应
-│   └── ⚠️ 壁垒高度决定市场结构类型
-│
-├── ⭐ 集中度指标
-│   ├── N企业集中率: 前N家市场份额之和
-│   ├── HHI: 所有企业市场份额平方和 🎯高频
-│   └── ⚠️ 集中度不能完全替代竞争分析
-│
-└── ⭐ 盈亏平衡与停产点
-    ├── 盈亏平衡: P = ATC（经济利润=0）
-    ├── 停产点: P = AVC（短期）
-    └── ⚠️ 长期: P < ATC 时退出市场
+1. The Firm and Market Structures
+├─ 1.1 Introduction
+│  ├─ 1.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.1.2 应用/判断：把概念或公式转成解题动作
+├─ 1.2 Profit Maximization: Production Breakeven, Shutdown and Economies of Scale
+│  ├─ 1.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.2.2 应用/判断：把概念或公式转成解题动作
+├─ 1.3 Introduction to Market Structures
+│  ├─ 1.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.3.2 应用/判断：把概念或公式转成解题动作
+├─ 1.4 Monopolistic Competition
+│  ├─ 1.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.4.2 应用/判断：把概念或公式转成解题动作
+├─ 1.5 Oligopoly
+│  ├─ 1.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：成本与利润的基本概念（Cost and Profit Concepts）
+### 1.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；根据条件判断正确结论；官方表述为：`determine and interpret breakeven and shutdown points of production, as well as how economies and diseconomies of scale affect costs under perfect and imperfect competition`。
+- **核心词汇**：**The Firm and Market Structures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**会计利润与经济利润（Accounting Profit vs Economic Profit）**：
-- **会计利润（Accounting Profit）** = 总收益 − 显性成本（explicit costs），即账面利润。
-- **经济利润（Economic Profit）** = 总收益 − 显性成本 − 隐性成本（implicit costs），包括机会成本。
-- **正常利润（Normal Profit）** = 隐性成本部分，即经济利润为零时的会计利润水平。
+### 1.2 Profit Maximization: Production Breakeven, Shutdown and Economies of Scale
+- **中文主线**：本节点解决 `Profit Maximization: Production Breakeven, Shutdown and Economies of Scale` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe characteristics of perfect competition, monopolistic competition, oligopoly, and pure monopoly`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-一个重要结论：**经济利润为零时企业仍在盈利（有正常利润）**，这足以让资本留在该行业。
+### 1.3 Introduction to Market Structures
+- **中文主线**：本节点解决 `Introduction to Market Structures` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain supply and demand relationships under monopolistic competition, including the optimal price and output for firms as well as pricing strategy`。
+- **核心词汇**：**Profit Maximization: Production Breakeven, Shutdown and Economies of Scale（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**短期与长期（Short Run vs Long Run）**：
-- **短期（Short Run）**：至少有一种生产要素固定不变，存在固定成本（fixed cost）和可变成本（variable cost）。
-- **长期（Long Run）**：所有要素都可调整，所有成本都是可变的。
+### 1.4 Monopolistic Competition
+- **中文主线**：本节点解决 `Monopolistic Competition` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain supply and demand relationships under oligopoly, including the optimal price and output for firms as well as pricing strategy`。
+- **核心词汇**：**Profit Maximization（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**边际决策（Marginal Decision Rule）**：企业在边际收益（MR）等于边际成本（MC）时实现利润最大化。只要 MR > MC，企业就应该增加产量；若 MR < MC，则应减少产量。
+### 1.5 Oligopoly
+- **中文主线**：本节点解决 `Oligopoly` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；识别题干中的关键事实和触发条件；官方表述为：`identify the type of market structure within which a firm operates and describe the use and limitations of concentration measures`。
+- **核心词汇**：**Introduction to Market Structures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：四种市场结构（Four Market Structures）
+### 1.9 Legacy 补强要点
+- 来自 `M01-The-Firm-and-Market-Structures.md`：## 1. 核心知识点（中英双语讲解）; ## 2. 关键公式（公式+解释+场景）; 场景：判断盈利水平。如果 P > ATC，企业有正经济利润。。
 
-| 特征 | 完全竞争 | 垄断竞争 | 寡头 | 垄断 |
-|------|---------|---------|------|------|
-| 企业数量 | 非常多 | 较多 | 少数几家 | 一家 |
-| 产品差异化 | 同质 | 差异化 | 可同质可差异 | 唯一产品 |
-| 进入壁垒 | 无 | 较低 | 较高 | 非常高 |
-| 定价权 | 价格接受者 | 有限 | 相互依存 | 价格制定者 |
-| 长期利润 | 零经济利润 | 零经济利润 | 可能有 | 正经济利润 |
 
-**完全竞争（Perfect Competition）**：
-- 特点：大量小型企业，同质产品，完全信息，自由进入退出
-- 需求曲线为水平线（价格接受者）
-- 长期中经济利润为零
+## 5. 关键公式与计算框架
 
-**垄断竞争（Monopolistic Competition）**：
-- 特点：产品差异化（product differentiation），非价格竞争（广告、品牌）
-- 需求曲线向右下方倾斜但较为平坦
-- 短期可能有经济利润，长期为零
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Elasticity | `elasticity = %ΔQ / %ΔP` | 绝对值大于 1 表示富有弹性。 |
+| GDP identity | `Y = C + I + G + (X - M)` | 支出法 GDP 的基本分解。 |
+| Money multiplier | `money multiplier ≈ 1 / reserve requirement` | 考试更常考方向判断而非复杂推导。 |
 
-**寡头（Oligopoly）**：
-- 特点：少数企业主导市场，存在策略互动（strategic interaction）
-- 可能发生价格战或形成默契合谋（tacit collusion）
-- 博弈论（game theory）用于分析寡头行为
-- 纳什均衡（Nash Equilibrium）是重要分析工具
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**垄断（Monopoly）**：
-- 特点：唯一生产者，极高进入壁垒
-- 需求曲线即为市场需求曲线
-- 可通过价格歧视（price discrimination）增加利润
-- 导致无谓损失（deadweight loss）
+## 6. 常见考点与解题思路
 
-### 知识点3：进入壁垒（Barriers to Entry）
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-常见的进入壁垒包括：
-- 规模经济（economies of scale）：大企业成本优势
-- 品牌忠诚度（brand loyalty）
-- 专利与政府许可（patents and government licenses）
-- 高初始投资成本
-- 网络效应（network effects）
+## 7. 易错点与考试陷阱
 
-### 知识点4：集中度指标（Concentration Measures）
+- **中英文错配**：看到 `The Firm and Market Structures` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-- **N企业集中率（N-firm concentration ratio）**：前N家企业市场份额之和。值越高，市场越集中。
-- **赫芬达尔-赫希曼指数（HHI, Herfindahl-Hirschman Index）**：所有企业市场份额的平方和，对市场份额分布更敏感。
-- 注意：集中度指标不能完全替代竞争分析，还需要考虑进出口竞争、潜在进入等因素。
+## 8. 跨模块关联
 
-### 📐 关键公式表
+- **上游模块**：本科目起点。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M02-Understanding-Business-Cycles]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| 会计利润 = TR − Explicit Costs | 账面利润 | 财务报告 | 不包括机会成本 |
-| 经济利润 = TR − Explicit Costs − Implicit Costs | 考虑机会成本的利润 | 判断是否留在行业 | 经济利润=0时仍有正常利润 |
-| 正常利润 = Implicit Costs | 隐性成本总和 | 理解"零经济利润≠亏损" | 足以让资本留在行业 |
-| MR = MC | 利润最大化条件 | 所有市场结构最优产量 | 二阶条件需验证 |
-| ATC = TC / Q | 平均总成本 | 判断盈利: P > ATC 有正经济利润 | 长期均衡时P=ATC最小点 |
-| Breakeven: P = ATC | 盈亏平衡 | 短期最低价格要求 | 经济利润为零 |
-| Shutdown: P < AVC | 停产条件 | 短期是否继续生产 | 长期无固定成本所以P<ATC即退出 |
-| N-firm Concentration Ratio = ΣMS_i (i=1..N) | 前N家份额之和 | 判断市场集中度 | 不反映分布，N值选取影响结果 |
-| HHI = Σ(MS_i)² | 市场份额平方和 | 对合并更敏感 | 值越大市场越集中，HHI>2500高度集中 |
+## 9. 复习与刷题提示
 
-### 🛠️ 常见考点与解题思路
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**Topic 1: 市场结构判断**
-- 企业数量 → 极多（完全/垄断竞争），少数（寡头），一家（垄断）
-- 产品差异化 → 同质（完全竞争），差异（垄断竞争）
-- 进入壁垒 → 低（完全/垄断竞争），高（寡头/垄断）
-- 定价权 → 价格接受者（完全竞争）
-- 解题思路：逐层排除，先看企业数量，再看产品差异
+## 10. Legacy Notes Integrated
 
-**Topic 2: 完全竞争长期均衡**
-- P = MR = MC = ATC（最小点）→ 经济利润为零
-- 只赚取正常利润（会计利润为正）
-- 解题：确认所有条件同时满足 P = MR 和 P = ATC_min
-
-**Topic 3: 垄断的无谓损失**
-- 垄断定价 P > MC，产量 Q < 社会最优
-- 消费者剩余减少，部分→生产者剩余，部分→无谓损失
-- 解题：比较垄断产量与完全竞争产量之差
-
-**Topic 4: 寡头的策略行为**
-- 囚徒困境解释为何寡头选择非合作
-- 卡特尔不稳定，成员有作弊动机
-- 解题：用支付矩阵找纳什均衡
-
-**Topic 5: 集中度指标计算**
-- N企业集中率: 简单加总前N家市场份额
-- HHI: 平方后加总，对不平等更敏感
-- 解题：注意数据单位是百分比还是小数
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 经济利润为零代表企业亏损 | 经济利润为零企业仍有正常利润 | 混淆会计利润与经济利润 |
-| 完全竞争企业需求曲线向下倾斜 | 完全竞争企业需求曲线是水平线(价格接受者) | 行业需求曲线才是向下倾斜 |
-| 垄断竞争长期均衡与完全竞争相同 | 垄断竞争需求曲线与ATC相切但不在最低点 | 产品差异化导致超额产能 |
-| 集中率越高竞争越弱 | 还需考虑进出口竞争、潜在进入等因素 | 集中度指标不完全替代竞争分析 |
-| HHI对小合并和大合并敏感度相同 | 两个大企业合并对HHI影响远大于两个小企业 | HHI对分布敏感，平方效应 |
-| 长期经济利润为正时无新企业进入 | 经济利润>0吸引新企业进入，直到利润为零 | 自由进入假设 |
-| 垄断企业可以任意定价 | 垄断企业在需求约束下MR=MC定价 | 仍受需求曲线约束 |
-
-### 🔄 跨模块关联
-
-- **经济周期对不同市场结构的影响** → [[M02-Understanding-Business-Cycles]]（需求弹性差异导致不同周期表现）
-- **反垄断政策与政府干预** → [[M03-Fiscal-Policy]]（财政政策与市场监管）
-- **货币政策对市场的间接影响** → [[M04-Monetary-Policy]]（利率变化影响企业融资和定价）
-- **完全竞争市场价格机制** → [[M06-International-Trade]]（贸易中的价格传导）
-- **企业定价与汇率** → [[M08-Exchange-Rate-Calculations]]（跨国企业的汇率风险定价）
-
-### 📋 复习与刷题提示
-
-- **市场结构特征是必考题**：四种结构的对比表要熟练默写
-- **经济利润 vs 会计利润**：理解隐性成本/机会成本的概念，注意文中"Zero economic profit"的表述
-- **完全竞争长期均衡 P = MR = MC = ATC_min**：这个等式链是经典考点
-- **HHI计算**：掌握平方和的计算，考试可能给市场份额数据要求计算HHI
-- **垄断的无谓损失**：理解比较对象是完全竞争产出水平
-- **博弈论基础**：囚徒困境和纳什均衡的基本逻辑
-- **刷题建议**：mock中四种市场结构对比判断最高频，MR=MC计算次之
-- **进入壁垒识别**：区分自然垄断 vs 法定垄断的壁垒来源
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M01-The-Firm-and-Market-Structures.md（confidence 0.428）
+- **可复用结构**：M01: The Firm and Market Structures（企业与市场结构）；1. 核心知识点（中英双语讲解）；成本与利润的基本概念（Cost and Profit Concepts）；四种市场结构（Four Market Structures）；进入壁垒（Barriers to Entry）；集中度指标（Concentration Measures）
+- **高价值要点**：## 1. 核心知识点（中英双语讲解）；## 2. 关键公式（公式+解释+场景）；场景：判断盈利水平。如果 P > ATC，企业有正经济利润。；**考点1：判断市场结构**
+- **公式/计算线索**：**会计利润（Accounting Profit）** = 总收益 − 显性成本（explicit costs），即账面利润。；**经济利润（Economic Profit）** = 总收益 − 显性成本 − 隐性成本（implicit costs），包括机会成本。；**正常利润（Normal Profit）** = 隐性成本部分，即经济利润为零时的会计利润水平。
+- **易错提示**：注意：集中度指标不能完全替代竞争分析，还需要考虑进出口竞争、潜在进入等因素。；## 4. 易错点提醒

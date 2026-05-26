@@ -1,23 +1,29 @@
 ---
-title: "M06 — Hedge Funds"
-description: "CFA Level I 2026 official module: Hedge Funds"
-module: M06
+title: "M06: Hedge Funds"
+description: "CFA Level I 2026 Alternative Investments 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Alternative Investments"
-topic_area: Alternative_Investments
-curriculum_year: 2026
+topic_area: "Alternative_Investments"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "7-10%"
+module: "M06"
 official_module: "Module 6: Hedge Funds"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Alternative_Investments
   - official_2026
+  - Alternative_Investments
 ---
 
 # M06: Hedge Funds
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：识别另类投资结构、绩效、私募、实物资产、对冲基金与数字资产特征。 本模块聚焦 **Hedge Funds**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,232 +35,121 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain investment features of hedge funds and contrast them with other asset classes
+2. describe investment forms and vehicles used in hedge fund investments
+3. analyze sources of risk, return, and diversification among hedge fund investments
 
-- explain investment features of hedge funds and contrast them with other asset classes
-- describe investment forms and vehicles used in hedge fund investments
-- analyze sources of risk, return, and diversification among hedge fund investments
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Alternative_Investments/M06-Hedge-Funds.md`
+### 6.1 学习任务
+- **核心问题**：考试希望你用 `Hedge Funds` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.39. Original official module field: Hedge Funds._
+### 6.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M06: 对冲基金 (Hedge Funds)
+### 6.3 关键英文术语
+- **Hedge Funds（对冲基金）**：采用更灵活策略、杠杆和做空工具的集合投资工具。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Hedge Fund Investment Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Hedge Fund Investment Forms（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Hedge Fund Investment Risk, Return, and Diversification（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-##### 1. 核心知识点
+## 2. 官方 LOS 对应学习目标
 
-###### 6.1 对冲基金特征 (Hedge Fund Characteristics)
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 6.1 | explain investment features of hedge funds and contrast them with other asset classes | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.2 | describe investment forms and vehicles used in hedge fund investments | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 6.3 | analyze sources of risk, return, and diversification among hedge fund investments | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
 
-| 特征 | 说明 |
-|------|------|
-| 流动性 | 相对PE/VC较高，但有锁定期 (Lockup Period, 通常1-3年) + 通知期 (Notice Period, 30-90天) |
-| 透明度 | 相对其他另类投资较高（需定期披露持仓），但仍低于传统共同基金 |
-| 费用结构 | 通常2/20（2%管理费 + 20%业绩提成），部分新基金降低至1/10 |
-| 高水位线 | 普遍采用，保护投资者，只对新创造的收益收取提成 |
-
-###### 6.2 对冲基金策略 (Hedge Fund Strategies)【考试核心】
-
-| 策略 | 英文 | 运作方式 | 风险 | 回报 | 与股票相关性 |
-|------|------|----------|------|------|-------------|
-| 股票多空 | Equity Long/Short | 同时持有多头和空头头寸，降低市场风险敞口 | 中等 | 8-12% | 0.5-0.7 |
-| 全球宏观 | Global Macro | 基于宏观经济趋势，跨资产类别交易（外汇、利率、股指） | 高 | 10-15% | 0.2-0.4 |
-| 事件驱动 | Event Driven | 利用公司特定事件（并购、重组、破产） | 中高 | 10-14% | 0.4-0.6 |
-| 相对价值 | Relative Value | 利用相关资产定价偏差，市场中性策略 | 低 | 6-10% | 0.1-0.3 |
-
-###### 6.3 杠杆与风险 (Leverage and Risk)【考试核心】
-
-| 指标 | 公式 | 含义 |
-|------|------|------|
-| 总杠杆 (Gross Leverage) | (多头 + \|空头\|) / 资本 | 反映基金总敞口，包括多空双边 |
-| 净杠杆 (Net Leverage) | (多头 - \|空头\|) / 资本 | 反映市场风险敞口 |
-
-**关键区别**: Gross ≠ Net，两者完全不同。很多对冲基金是净多头 (Net Long)，并非完全对冲市场风险。市场中性策略的Net Leverage接近0。
-
-##### 2. 关键公式
-
-| 指标 | 公式 |
-|------|------|
-| 总杠杆 (Gross Leverage) | (Long + \|Short\|) / Capital |
-| 净杠杆 (Net Leverage) | (Long - \|Short\|) / Capital |
-
-##### 3. 常见考点与解题思路
-
-1. **策略类型判断**: 题干描述基金的投资方式和持仓特征，要求判断属于哪种策略。**思路**: 多空持仓=Equity L/S；宏观经济判断=Global Macro；公司事件套利=Event Driven；价差套利=Relative Value。
-2. **杠杆计算**: 给定多头和空头头寸及资本，计算总杠杆和净杠杆。**思路**: Gross = (多+|空|)/资本；Net = (多-|空|)/资本。
-3. **策略风险排序**: 要求按风险水平排序。**思路**: Relative Value (低) < Equity L/S (中) < Event Driven (中高) < Global Macro (高)。
-
-##### 4. 易错点提醒
-
-- **总杠杆 ≠ 净杠杆**: Gross=总敞口（多+|空|），Net=市场敞口（多-|空|），概念完全不同
-- **对冲基金并非完全对冲**: 名称中的"对冲"不代表完全对冲市场风险，很多基金是净多头
-- **策略风险水平**: 不能凭名称判断风险，Equity L/S实际风险中等
-- **锁定期+通知期**: 对冲基金的流动性限制包括锁定期和通知期两个概念
-- **高水位线普遍采用**: 是对冲基金保护投资者的重要机制
-
-##### 5. 跨模块关联
-
-- 费用结构 → [[M01-Features-and-Structure.md]] (2/20结构与高水位线)
-- 杠杆对比 → [[M03-Private-Capital.md]] (PE杠杆 vs 对冲基金杠杆)
-- 业绩衡量 → [[M02-Performance-Measurement.md]] (Sharpe/Sortino应用于对冲基金评估)
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 M06: Hedge Funds（对冲基金）
-│
-├── ⭐ 对冲基金特征 (HF Characteristics) 🎯高频
-│   ├── 流动性: 锁定期(1-3年) + 通知期(30-90天)
-│   ├── 透明度: 高于PE/VC，低于共同基金
-│   ├── 费用: 通常2/20（2%管理费+20%业绩提成）
-│   └── 高水位线: 普遍采用，保护投资者
-│
-├── ⭐ 四大策略 (HF Strategies) 🎯超高頻
-│   ├── Equity Long/Short (股票多空)
-│   │   ├── 同时持有多头和空头，降低市场风险
-│   │   └── 风险中等，与股票相关性0.5-0.7
-│   ├── Global Macro (全球宏观)
-│   │   ├── 基于宏观经济趋势跨资产交易
-│   │   └── 高风险，与股票相关性0.2-0.4
-│   ├── Event Driven (事件驱动)
-│   │   ├── 利用公司特定事件（并购、重组）
-│   │   └── 风险中高，与股票相关性0.4-0.6
-│   └── Relative Value (相对价值)
-│       ├── 利用定价偏差，市场中性
-│       └── 风险低，与股票相关性0.1-0.3
-│
-├── ⭐ 杠杆指标 (Leverage Metrics) 🎯超高頻
-│   ├── 📐 总杠杆 (Gross) = (Long + |Short|) / Capital
-│   └── 📐 净杠杆 (Net) = (Long - |Short|) / Capital
-│       ⚠️ Gross≠Net，概念完全不同
-│
-├── ⭐ 对冲基金风险
-│   ├── 策略风险: 不同策略风险水平差异大
-│   ├── 杠杆风险: 放大收益也放大亏损
-│   ├── 流动性风险: 锁定期和通知期限制赎回
-│   ├── 对手方风险: 衍生品交易对手违约
-│   └── 风格漂移: 偏离既定策略
-│
-└── ⭐ 对冲基金分散化
-    ├── 与传统资产低到中等相关性
-    ├── 不同策略之间互补性
-    └── ⚠️ 危机时相关性可能上升
+6. Hedge Funds
+├─ 6.1 Introduction
+│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
+├─ 6.2 Hedge Fund Investment Features
+│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
+├─ 6.3 Hedge Fund Investment Forms
+│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
+├─ 6.4 Hedge Fund Investment Risk, Return, and Diversification
+│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：对冲基金特征（Hedge Fund Characteristics）
-**核心概念**：对冲基金是面向合格投资者的私人投资基金，与传统共同基金相比有显著差异。流动性介于PE/VC和传统基金之间——通常设有锁定期（1-3年内不可赎回）和通知期（赎回需提前30-90天通知）。透明度高于PE/VC但低于共同基金——需要定期披露持仓但不完全公开。费用结构通常为2/20（2%管理费+20%业绩提成），部分新基金已降至1/10。高水位线（High Water Mark）被普遍采用——只有当基金净值超过历史最高水平时才能对超额收益收取业绩提成，防止重复收费。
-- 流动性：锁定期（1-3年）+ 通知期（30-90天），高于PE/VC低于共同基金
-- 透明度：定期披露持仓，高于PE/VC低于共同基金
-- 费用：通常2/20结构（2%管理费+20%业绩提成）
-- 高水位线：保护投资者，只对新收益收费
-**考试应用**：锁定期和通知期的区别——锁定期是最短持有期，通知期是赎回提前告知。高水位线机制是保护LP而非GP的重要设计。
+### 6.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain investment features of hedge funds and contrast them with other asset classes`。
+- **核心词汇**：**Hedge Funds（对冲基金）**：采用更灵活策略、杠杆和做空工具的集合投资工具。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：对冲基金四大策略（Hedge Fund Strategies）
-**核心概念**：对冲基金策略按其投资方式和风险特征可分为四大类。股票多空（Equity Long/Short）同时持有多头和空头头寸以降低市场风险，风险中等，与股票相关性较高（0.5-0.7）。全球宏观（Global Macro）基于对宏观经济趋势的判断跨资产类别（外汇、利率、商品、股票）交易，风险较高，与股票相关性低（0.2-0.4）。事件驱动（Event Driven）利用公司特定事件（并购、重组、破产、分拆）套利，风险中高。相对价值（Relative Value）利用相关资产之间的定价偏差进行市场中性套利，风险最低，与股票相关性最低（0.1-0.3）。
-- 股票多空（Equity Long/Short）：多+空仓位，降低市场Beta
-- 全球宏观（Global Macro）：跨资产宏观交易，高风险
-- 事件驱动（Event Driven）：利用公司事件套利，中高风险
-- 相对价值（Relative Value）：定价偏差套利，市场中性，低风险
-**考试应用**：四大策略的识别和风险排序是最高频考点。风险排序：Relative Value(低) < Equity L/S(中) < Event Driven(中高) < Global Macro(高)。
+### 6.2 Hedge Fund Investment Features
+- **中文主线**：本节点解决 `Hedge Fund Investment Features` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe investment forms and vehicles used in hedge fund investments`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：杠杆指标——总杠杆与净杠杆（Gross and Net Leverage）
-**核心概念**：对冲基金的杠杆通过两个指标衡量。总杠杆（Gross Leverage）= (多头 + |空头|) / 资本，反映基金的全部持仓头寸——包括多头和空头两边，衡量的是总交易规模。净杠杆（Net Leverage）= (多头 - |空头|) / 资本，反映基金的方向性市场敞口——净杠杆为正表示总体看涨（净多头），为负表示总体看跌（净空头），接近0表示市场中性。两者概念完全不同——一个基金可能总杠杆很高（大量多空配对交易）但净杠杆很低（市场中性策略）。
-- 📐 总杠杆（Gross）= (Long + |Short|) / Capital
-- 📐 净杠杆（Net）= (Long - |Short|) / Capital
-- Gross衡量总交易规模，Net衡量方向性风险
-- 市场中性策略：Gross高但Net≈0
-**考试应用**：Gross vs Net区分是常考陷阱。给定多头和空头头寸分别计算两个杠杆指标。注意：名称中的"对冲"不意味着完全对冲——很多对冲基金是净多头。
+### 6.3 Hedge Fund Investment Forms
+- **中文主线**：本节点解决 `Hedge Fund Investment Forms` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`analyze sources of risk, return, and diversification among hedge fund investments`。
+- **核心词汇**：**Hedge Fund Investment Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点4：对冲基金风险类型（Hedge Fund Risks）
-**核心概念**：对冲基金面临多重风险。策略风险是基金采用的投资策略本身固有的风险——不同策略风险水平差异大。杠杆风险指使用借贷放大头寸规模既放大收益也放大亏损。流动性风险来自锁定期和通知期——市场危机时基金可能暂停赎回（Gates），投资者资金被锁定。交易对手风险来自衍生品交易中对手方可能违约。风格漂移（Style Drift）风险指基金经理偏离既定策略——投资者根据某一策略选择基金，但基金经理可能逐渐改变投资方式。
-- 策略风险：策略本身的风险，四大策略风险水平不同
-- 杠杆风险：总杠杆和净杠杆代表的财务风险
-- 流动性风险：锁定期和通知期限制，危机时可能暂停赎回
-- 对手方风险：衍生品交易对手违约风险
-- 风格漂移：基金经理偏离既定策略的变化风险
-**考试应用**：区分不同类型风险及各自的含义。注意对冲基金的"对冲"不意味着低风险——某些策略（如Global Macro）风险很高。
+### 6.4 Hedge Fund Investment Risk, Return, and Diversification
+- **中文主线**：本节点解决 `Hedge Fund Investment Risk, Return, and Diversification` 在 Alternative Investments 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain investment features of hedge funds and contrast them with other asset classes`。
+- **核心词汇**：**Hedge Fund Investment Forms（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点5：对冲基金分散化价值（Diversification Benefits）
-**核心概念**：对冲基金通过与传统资产的低到中等相关性提供组合分散化价值。不同策略与股票的相关性差异显著：相对价值策略（相关性0.1-0.3）分散化效果最好，股票多空（相关性0.5-0.7）分散化效果有限。但有两个重要警告：第一，危机时期相关性趋于上升——当系统性事件发生时，几乎所有策略都同时亏损（如2008年金融危机）；第二，对冲基金的收益平滑（微笑估值、流动性较差的持仓按评估值估值）可能人为降低报告的相关性。
-- 与传统资产低到中等相关性：提供分散化
-- 不同策略分散化效果不同：Relative Value最好，Equity L/S最差
-- ⚠️ 危机时相关性上升：分散化收益可能消失
-- ⚠️ 收益平滑：可能人为降低报告的相关性
-**考试应用**：理解分散化价值的局限性。"危机时相关性上升"是重要考点——分散化在投资者最需要的时候可能失效。
 
-### 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| 总杠杆 = (Long + |Short|) / Capital | 总敞口杠杆 | 衡量总头寸规模 | 包括多空双边 |
-| 净杠杆 = (Long - |Short|) / Capital | 市场敞口杠杆 | 衡量方向性风险 | 市场中性≈0 |
-| 管理费 = AUM × 2% | 管理费 | 年度固定费用 | 无论盈亏都收取 |
-| 业绩提成 = 超额收益 × 20% | 激励费 | 收益分成 | 受High Water Mark约束 |
-| 净回报 = Gross Return - Fees | 投资者所得 | 真实投资回报 | 费用侵蚀显著 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Management fee | `fee base × fee rate` | 私募和对冲基金题要区分管理费和激励费。 |
+| NAV | `assets - liabilities` | 基金估值与费用计算的基础口径。 |
+| Cap rate | `NOI / property value` | 房地产估值中常用于收入资本化法。 |
 
-### 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**Topic 1: 四大策略辨析**
-- 题干描述基金的投资方式和持仓特征 → 判断策略类型
-- 多空持仓 → Equity L/S
-- 宏观经济判断 → Global Macro
-- 公司事件套利 → Event Driven
-- 价差套利 → Relative Value
+## 6. 常见考点与解题思路
 
-**Topic 2: 杠杆计算**
-- Gross Leverage = (Long + |Short|) / Capital
-- Net Leverage = (Long - |Short|) / Capital
-- 市场中性：Net ≈ 0
-- 解题：注意空头用绝对值
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**Topic 3: 策略风险排序**
-- 低风险：Relative Value
-- 中等风险：Equity Long/Short
-- 中高风险：Event Driven
-- 高风险：Global Macro
+## 7. 易错点与考试陷阱
 
-**Topic 4: 费用计算**
-- 管理费直接从AUM中扣除
-- 业绩提成需考虑Hurdle Rate和High Water Mark
-- 净回报 = 总回报 - 管理费 - 业绩提成
+- **中英文错配**：看到 `Hedge Funds` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 🚨 易错点与考试陷阱
+## 8. 跨模块关联
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 总杠杆 = 净杠杆 | 总杠杆=总敞口，净杠杆=市场敞口 | 概念完全不同 |
-| 对冲基金名称中的"对冲"=完全对冲市场风险 | 很多基金是净多头的 | 名称不反映实际风险 |
-| 策略风险水平仅由名称决定 | 同策略内也有差异 | 看具体持仓和管理人 |
-| 锁定期=通知期 | 锁定期是最短持有期，通知期是赎回提前通知 | 两个不同约束 |
-| Relative Value = 无风险 | 有模型风险和执行风险 | 价差可能扩大 |
-| Global Macro = 股票策略 | 跨资产类别交易 | 外汇、利率、商品、股票 |
-| 对冲基金总是提供分散化 | 危机时相关性上升 | 分散化是动态的 |
-| 高水位线保护GP | 高水位线保护LP | 防止重复收费 |
+- **上游模块**：[[M05-Natural-Resources]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M07-Introduction-to-Digital-Assets]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 🔄 跨模块关联
+## 9. 复习与刷题提示
 
-- **费用结构** → [[M01-Alternative-Investment-Features-Methods-and-Structures]]（2/20结构和高水位线）
-- **杠杆对比** → [[M03-Investments-in-Private-Capital-Equity-and-Debt]]（PE杠杆vs对冲基金杠杆）
-- **业绩衡量** → [[M02-Alternative-Investment-Performance-and-Returns]]（Sharpe/Sortino用于HF评估）
-- **对冲基金策略与市场效率** → Equity M03（套利与市场效率）
-- **基金结构** → [[M01-Alternative-Investment-Features-Methods-and-Structures]]（GP/LP角色）
-- **Global Macro与宏观经济** → Economics M02-M04（宏观策略的决策依据）
-- **EV/EBITDA与事件驱动** → Equity M08（并购套利的估值逻辑）
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 📋 复习与刷题提示
+## 10. Legacy Notes Integrated
 
-- **四大策略特征对比**：运作方式、风险水平、与股票相关性是最高频考点
-- **Gross vs Net Leverage计算**：区分总杠杆和净杠杆的计算和含义
-- **策略风险排序**：Relative Value < Equity L/S < Event Driven < Global Macro
-- **费用结构**：理解2/20和高水位线的保护机制
-- **对冲基金vs PE/VC对比**：流动性、透明度、费用结构差异
-- **风险类型**：策略风险、杠杆风险、流动性风险、对手方风险
-- **刷题建议**：mock中策略判断和杠杆计算最高频
-- **注意"对冲"的误导**：名称易引起误解，基金可能保留大量方向性风险
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M06-Hedge-Funds.md` (0.397), `M01-Features-and-Structure.md` (0.34), `00-Alternative-Investments-MOC.md` (0.275)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

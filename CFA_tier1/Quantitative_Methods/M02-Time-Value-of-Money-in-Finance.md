@@ -1,23 +1,29 @@
 ---
-title: "M02 — Time Value of Money in Finance"
-description: "CFA Level I 2026 official module: Time Value of Money in Finance"
-module: M02
+title: "M02: Time Value of Money in Finance"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M02"
 official_module: "Module 2: Time Value of Money in Finance"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M02: Time Value of Money in Finance
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Time Value of Money in Finance**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,192 +35,130 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows
+2. calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the present value (PV) and cash flows
+3. explain the cash flow additivity principle, its importance for the no-arbitrage condition, and its use in calculating implied forward interest rates, forward exchange rates, and option values
 
-- calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows
-- calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the present value (PV) and cash flows
-- explain the cash flow additivity principle, its importance for the no-arbitrage condition, and its use in calculating implied forward interest rates, forward exchange rates, and option values
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Time Value of Money in Finance` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 2.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 2.3 关键英文术语
+- **Time Value of Money in Finance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Time Value of Money in Fixed Income and Equity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Implied Return and Growth（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Cash Flow Additivity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Time Value of Money（货币时间价值）**：今天的一元钱与未来的一元钱价值不同，必须用折现或复利转换。
+- **Cash Flow（现金流）**：企业现金流入和流出的真实资金轨迹。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 2.2 | calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the present value (PV) and cash flows | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 2.3 | explain the cash flow additivity principle, its importance for the no-arbitrage condition, and its use in calculating implied forward interest rates, forward exchange rates, and option values | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M02: Time Value of Money in Finance（货币时间价值）
-│
-├── ⭐ 现金流时间轴 (Cash-Flow Map)
-│   ├── 📐 FV = PV × (1 + r)^n — TVM 核心关系
-│   ├── 四种基本模式：单笔、等额年金、永续年金、增长现金流
-│   ├── 先付年金 (Annuity Due)：期初支付 = 普通年金 × (1+r)
-│   └── ⚠️ 先画时间轴，再选公式，不要一上来就套公式
-│
-├── ⭐ 四种基本现金流模式 (Four Cash Flow Patterns)
-│   ├── Single Sum — 最简单，直接代入 FV/PV 公式
-│   ├── 📐 Ordinary Annuity: PV = A[1 - 1/(1+r)^n] / r
-│   ├── 📐 Perpetuity: PV = A / r — 分子必须是第一期现金流
-│   ├── 📐 Growing Perpetuity: PV = A₁/(r-g) — 要求 r > g
-│   └── 📐 Growing Annuity: PV = A₁/(r-g)[1 - ((1+g)/(1+r))^n]
-│
-├── ⭐ 工具现值应用 (Instrument PV Applications)
-│   ├── Fixed Income：债券价格 = 票息年金现值 + 本金现值
-│   ├── Equity：股票价值 = 未来股利现值 (DDM)
-│   └── 🎯 先识别现金流时点和模式，再选公式
-│
-├── ⭐ 隐含变量求解 (Implied Quantities)
-│   ├── 📐 戈登增长模型: r = D₁/P₀ + g
-│   ├── 已知 PV, FV, PMT, n 中任意三个 → 反求第四个
-│   ├── 债券 → 反求 YTM；股权 → 反求要求回报率
-│   └── 🎯 高频考点：用金融计算器反向求解
-│
-├── ⭐ 现金流可加性 (Cash-Flow Additivity)
-│   ├── 组合现值 = 各组成部分现值之和
-│   ├── 是套利定价和无套利条件的基础
-│   └── ⚠️ 多个现金流序列 → 分别折现再加总，不是单一公式
-│
-├── 💡 关键洞察
-│   ├── TVM 是所有资产定价的共同基础 — 债券、股票、衍生品
-│   ├── 先付年金 = 普通年金 × (1+r) — 记住这个简单倍数关系
-│   ├── Perpetuity 公式是从年金公式取 n→∞ 的极限
-│   └── Cash-flow additivity 是无套利定价的数学基础
-│
-└── ⚠️ 考试陷阱总结
-    ├── Perpetuity 分子必须是第一期现金流 A₁，不是 A₀
-    ├── Growing perpetuity 必须满足 r > g
-    ├── 计息频率与支付频率不一致 → 先统一利率口径
-    └── 画时间轴是最好的纠错方法
+2. Time Value of Money in Finance
+├─ 2.1 Introduction
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Time Value of Money in Fixed Income and Equity
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 Implied Return and Growth
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
+├─ 2.4 Cash Flow Additivity
+│  ├─ 2.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：现金流时间轴与核心关系（Cash-Flow Map and Core Relationship）
-**核心概念**：货币时间价值（TVM）的核心前提是今天的 1 元钱比未来的 1 元钱更值钱，因为今天的钱可以投资生息。理解现金流时间轴是解决 TVM 问题的第一步。
-- **核心关系**：FV = PV × (1 + r)^n，PV = FV / (1 + r)^n
-- **四种基本现金流模式**：单笔（Single Sum）、等额年金（Ordinary Annuity）、永续年金（Perpetuity）、增长现金流（Growing Stream）
-- **先付年金（Annuity Due）**：每期期初支付；普通年金（Ordinary Annuity）：每期期末支付。先付年金现值 = 普通年金现值 × (1 + r)
-- ⚠️ **画时间轴**：最有效的纠错手段——把每个现金流标在时间轴上，先识别模式再选公式
+### 2.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows`。
+- **核心词汇**：**Time Value of Money in Finance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：识别给定现金流的模式（单笔、年金、混合），选择正确的 TVM 公式。
+### 2.2 Time Value of Money in Fixed Income and Equity
+- **中文主线**：本节点解决 `Time Value of Money in Fixed Income and Equity` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the present value (PV) and cash flows`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：工具现值应用（Instrument PV Applications）
-**核心概念**：TVM 最基本的应用就是将未来现金流折现。无论债券还是股票，估值工作的本质都是把未来现金流折现到今天。
-- **固定收益**：债券价格 = 票息年金现值 + 到期本金现值
-- **股权**：股票内在价值 = 预期未来股利的现值（DDM）
-- 实际考试中，先识别现金流的时点和模式，再选择合适的公式
-- ⚠️ 计息频率和支付频率不一致时，必须先统一利率口径再做计算
+### 2.3 Implied Return and Growth
+- **中文主线**：本节点解决 `Implied Return and Growth` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the cash flow additivity principle, its importance for the no-arbitrage condition, and its use in calculating implied forward interest rates, forward exchange rates, and option values`。
+- **核心词汇**：**Time Value of Money in Fixed Income and Equity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：债券定价（票息年金+本金单笔），注意票息频率（半年付息时折半率、加倍期数）。
+### 2.4 Cash Flow Additivity
+- **中文主线**：本节点解决 `Cash Flow Additivity` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows`。
+- **核心词汇**：**Implied Return and Growth（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：隐含变量求解（Implied Quantities）
-**核心概念**：已知部分变量（PV、FV、PMT 等），反求未知变量（r、n、A）。这是金融计算器最常用的功能。
-- **戈登增长模型**：r = D₁/P₀ + g，从股价反推要求回报率，是 Perpetuity 与 TVM 结合的经典公式
-- **债券**：已知价格、票息、期限 → 反求 YTM
-- **股权**：已知价格、股利、增长率 → 反求要求回报率
-- **贷款**：已知贷款额、还款额、期数 → 反求隐含利率
+### 2.9 Legacy 补强要点
+- 来自 `M02-Time-Value-of-Money.md`：## 1. 核心知识点; TVM（Time Value of Money）的核心前提：**今天的 1 元钱比未来的 1 元钱更值钱**，因为今天的钱可以投资生息。; **核心关系（Core Relationship）**：。
 
-**考试应用**：使用金融计算器反求未知变量（YTM、隐含利率等），考试高频考点。
 
-### 知识点4：现金流可加性（Cash-Flow Additivity）
-**核心概念**：现金流可加性原则是一个投资组合的现值等于各组成部分现值的和。这是套利定价逻辑的基础，也是理解无套利条件的核心。
-- 一个投资组合的现值 = 各组成部分现值的和
-- 同一现金流不应因不同的"拆分方式"而得到不同的现值
-- 为远期利率、远期汇率和期权定价提供直觉基础
-- ⚠️ 考试会给出多个不同的现金流序列，要求分别折现再加总，而不是直接套单一的年金公式
+## 5. 关键公式与计算框架
 
-**考试应用**：将复杂现金流拆分为多个简单部分分别折现再加总。
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Present value | `PV = FV / (1 + r)^N` | 折现率越高，现值越低。 |
 
-### 📐 关键公式表
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `FV = PV(1+r)^n` | 终值公式 | 单笔投资未来价值 | r 和 n 必须同频率 |
-| `PV = FV/(1+r)^n` | 现值公式 | 未来单笔现金流折现 | 折现率与期数匹配 |
-| `PV_annuity = A[1-1/(1+r)^n]/r` | 普通年金现值 | 等额分期现金流 | 确认是期末支付 |
-| `PV_annuity_due = PV_ordinary × (1+r)` | 先付年金现值 | 期初支付场景(房租/保费) | 比普通年金多乘 (1+r) |
-| `PV_perpetuity = A/r` | 永续年金现值 | 永续债券、优先股 | 分子用 A₁ |
-| `PV_growing_perpetuity = A₁/(r-g)` | 永续增长年金 | DDM 股利折现模型 | 必须 r > g |
-| `PV_growing_annuity = A₁/(r-g)[1-((1+g)/(1+r))^n]` | 增长年金现值 | 有限期增长现金流 | g 可为 0 → 退化为普通年金 |
-| `r = D₁/P₀ + g` | 戈登增长模型 | 从股价反推要求回报率 | 股利增长率恒定的假设 |
-| `EAR = (1 + r_nom/m)^m - 1` | 有效年利率 | 比较不同计息频率 | m = 年复利次数 |
+## 6. 常见考点与解题思路
 
-### 🛠️ 常见考点与解题思路
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点1：现金流模式识别与分类（第一步最关键）**
-- 步骤 1：画现金流时间轴 — 将每个现金流标注在时间轴上
-- 步骤 2：判断支付时点 — 期初 = Annuity Due，期末 = Ordinary Annuity
-- 步骤 3：判断期限 — 有限期 = Annuity，无限期 = Perpetuity
-- 步骤 4：是否有增长 — 有增长 = Growing Annuity/Perpetuity
-- 步骤 5：代入对应公式，注意 r 与 n 的频率一致
-- ⚠️ 最常见错误：不画时间轴直接套公式；把 Annuity Due 当 Ordinary Annuity
-- 💡 时间轴是 TVM 问题最有效的纠错工具
+## 7. 易错点与考试陷阱
 
-**考点2：隐含利率反推（金融计算器必会）**
-- 已知：贷款额 (PV)、月还款额 (PMT)、期数 (n)
-- 金融计算器操作：输入 PV, PMT, n, FV=0 → 求解 I/Y
-- 解出的是每期利率（如月利率），需年化
-- 年化方法：名义年利率 = 月利率 × 12；EAR = (1+月利率)^12 - 1
-- 戈登增长模型反推: r = D₁/P₀ + g (已知股价、股利、增长率求回报率)
-- ⚠️ 注意还款频率 vs 计息频率的匹配 — 先统一再计算
+- **中英文错配**：看到 `Time Value of Money in Finance` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点3：不同计息频率比较与 EAR 计算**
-- 公式：EAR = (1 + r_nominal/m)^m - 1，m = 年复利次数
-- 计息频率越高 → EAR 越高（但增速递减）
-- 极端情况 — 连续复利: EAR = e^r - 1 (m → ∞)
-- 💡 EAR 用于比较不同计息频率下的真实年化收益率
-- ⚠️ 复利次数不同时不能直接比较名义利率，必须统一到 EAR
+## 8. 跨模块关联
 
-**考点4：债券定价 (TVM 在固收中的直接应用)**
-- 债券价格 = 未来各期票息的年金现值 + 到期本金的单笔现值
-- 票息 = 面值 × 票面利率 / 年付息次数
-- 半年付息的处理: 周期利率 = r/2，期数 = 2n
-- 到期收益率 (YTM) 是使债券价格等于现金流现值的折现率
-- ⚠️ 最易错：半年付息但不用 r/2 和 2n；或混淆票面利率和 YTM
+- **上游模块**：[[M01-Rates-and-Returns]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Statistical-Measures-of-Asset-Returns]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**考点5：现金流可加性 (Cash Flow Additivity) 的应用**
-- 原则：一个投资组合的现值 = 各组成部分现值的和
-- 应用场景：
-  - 混合现金流 → 分别折现再加总
-  - 远期利率计算 (利用不同期限债券价格)
-  - 套利定价中的无套利条件
-- ⚠️ 不要试图找"统一公式" — 逐一处理各子序列才是正确思路
-- 💡 这是无套利定价的数学基础 — 同一现金流不应因拆分方式不同而得到不同现值
+## 9. 复习与刷题提示
 
-**考点6：先付年金 vs 普通年金转换**
-- Annuity Due PV = Ordinary Annuity PV × (1+r)
-- Annuity Due FV = Ordinary Annuity FV × (1+r)
-- 核心逻辑：先付年金每笔付款早了一个计息期
-- ⚠️ 考试中常见陷阱：模糊描述支付时点，默认是 Ordinary Annuity
-- 💡 如果题目说"immediate"或"at the beginning" → Annuity Due
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 🚨 易错点与考试陷阱
+## 10. Legacy Notes Integrated
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| Perpetuity 用任意一期现金流做分子 | 必须用第一期现金流 A₁ 做分子 | 公式由等比级数求和推导，A₁ 对应第一期 |
-| Growing perpetuity 可接受 r ≤ g | 必须 r > g，否则现值无穷大 | r ≤ g 时级数发散，经济上不合理 |
-| Annuity Due 和 Ordinary Annuity 一样 | Annuity Due = Ordinary × (1+r) | 期初付款比期末付款早一期生息 |
-| 半年付息直接用年利率 | 半年付息用 r/2 做周期利率，2n 做期数 | 利率和期数必须同频率 |
-| 混合现金流可套单一公式 | 不同模式分别折现再加总 | 现金流可加性原则要求分别处理 |
-
-### 🔄 跨模块关联
-
-- **[[M01-Rates-and-Returns]]** — MWRR 本质就是 TVM 的 IRR 应用，"折现率"的概念从 M01 的利率解释延续而来。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 几何平均收益率与 TVM 中的复合增长概念相通。
-- **[[M05-Portfolio-Mathematics]]** — Sharpe Ratio、SFRatio 均涉及折现概念。
-- **Fixed Income** — 债券定价 = TVM 最直接的应用（票息年金 + 本金现值）。
-- **Equity** — DDM 戈登增长模型 = TVM 永续增长年金在股权中的应用。
-- **Corporate Issuers** — 资本预算中的 NPV、IRR、Payback Period 全部基于 TVM 框架。
-
-### 📋 复习与刷题提示
-
-- **核心能力**：快速识别四种现金流模式，熟练使用金融计算器求解隐含变量
-- **必考题型**：年金现值/终值计算、隐含利率反推、EAR 换算、债券定价计算
-- **最常犯错误**：年金模式误判、利率与期数频率不匹配、Perpetuity 分子用错
-- 记忆口诀：
-  - 时间轴画第一 — 现金流的时点决定一切
-  - 频率必须匹配 — 折半率配加倍期数
-  - Due 比 Ordinary 多乘 (1+r)
-- 刷题建议：重点练习年金模式识别题和金融计算器反求解题，这些是 CFA 必考
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M02-Time-Value-of-Money.md（confidence 0.901）
+- **可复用结构**：M02: Time Value of Money（货币时间价值）；1. 核心知识点；1.1 现金流时间轴（Cash-Flow Map）；1.2 工具现值应用（Instrument PV Applications）；1.3 隐含变量求解（Implied Quantities）；1.4 现金流可加性（Cash-Flow Additivity）
+- **高价值要点**：## 1. 核心知识点；TVM（Time Value of Money）的核心前提：**今天的 1 元钱比未来的 1 元钱更值钱**，因为今天的钱可以投资生息。；**核心关系（Core Relationship）**：；> **【考试陷阱】** 不要一上来就套公式 — 先画现金流时间轴，判断是单笔、年金还是混合模式。
+- **公式/计算线索**：calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows；calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the PV and cash flows；`FV = PV × (1 + r)^n`
+- **易错提示**：3. **永续年金（Perpetuity）**：等额现金流无限持续。公式最简单：`PV = A / r`，但注意必须分子为第一个现金流。；> **【考试陷阱】** 不要一上来就套公式 — 先画现金流时间轴，判断是单笔、年金还是混合模式。；> **【考试陷阱】** 考试会给你多个不同的现金流序列，要求你分别折现再加总，而不是直接套单一的年金公式。

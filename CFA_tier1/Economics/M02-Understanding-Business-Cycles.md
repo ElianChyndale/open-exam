@@ -1,23 +1,29 @@
 ---
-title: "M02 — Understanding Business Cycles"
-description: "CFA Level I 2026 official module: Understanding Business Cycles"
-module: M02
+title: "M02: Understanding Business Cycles"
+description: "CFA Level I 2026 Economics 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Economics"
-topic_area: Economics
-curriculum_year: 2026
+topic_area: "Economics"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M02"
 official_module: "Module 2: Understanding Business Cycles"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+案例判断"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Economics
   - official_2026
+  - Economics
 ---
 
 # M02: Understanding Business Cycles
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用市场结构、周期、政策、贸易和汇率解释宏观环境对资产价格的影响。 本模块聚焦 **Understanding Business Cycles**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,261 +35,124 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the business cycle and its phases
+2. describe credit cycles
+3. describe how resource use, consumer and business activity, housing sector activity, and external trade sector activity vary over the business cycle and describe their measurement using economic indicators
 
-- describe the business cycle and its phases
-- describe credit cycles
-- describe how resource use, consumer and business activity, housing sector activity, and external trade sector activity vary over the business cycle and describe their measurement using economic indicators
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Economics/M02-Understanding-Business-Cycles.md`
+### 2.1 学习任务
+- **核心问题**：考试希望你用 `Understanding Business Cycles` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 1.00. Original official module field: Module 2: Understanding Business Cycles._
+### 2.2 考试角色
+- **难度类型**：概念+案例判断。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M02: Understanding Business Cycles（经济周期）
+### 2.3 关键英文术语
+- **Understanding Business Cycles（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Overview of the Business Cycle（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Credit Cycles（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Economic Indicators over the Business Cycle（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Business Cycles（商业周期）**：经济活动围绕趋势扩张和收缩的阶段性波动。
 
-##### 1. 核心知识点（中英双语讲解）
+## 2. 官方 LOS 对应学习目标
 
-###### 经济周期阶段（Phases of the Business Cycle）
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 2.1 | describe the business cycle and its phases | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.2 | describe credit cycles | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 2.3 | describe how resource use, consumer and business activity, housing sector activity, and external trade sector activity vary over the business cycle and describe their measurement using economic indicators | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
 
-经济周期由四个阶段组成：
-1. **扩张（Expansion）**：经济活动上升，GDP增长，就业增加，企业利润改善
-2. **顶峰（Peak）**：经济活动达到周期最高点
-3. **收缩（Contraction）**：经济活动下降，GDP负增长通常构成衰退（recession）
-4. **谷底（Trough）**：经济活动最低点，之后转入下一轮扩张
-
-**衰退的常见定义**：连续两个季度GDP负增长，但NBER官方判定更综合（考虑深度、广度、持续时间）。
-
-###### 各经济变量的周期行为（Cyclical Behavior of Key Variables）
-
-| 变量 | 周期行为 | 时序 |
-|------|---------|------|
-| 库存（Inventory） | 销售下降时企业被动积累库存；预期改善时主动补库 | 领先 |
-| 劳动力（Labor） | 扩张期就业上升，收缩期失业上升；但就业是滞后指标 | 滞后 |
-| 住房（Housing） | 利率敏感，通常领先周期 | 领先 |
-| 信贷（Credit） | 扩张期信贷扩张，紧缩期信贷收缩 | 领先或同步 |
-| 企业利润（Profits） | 高度周期性，与GDP同向 | 同步 |
-
-**库存周期（Inventory Cycle）** 是短期经济波动的重要驱动因素。企业预期转弱时减少库存→订单下降→生产下降→GDP下降。反之亦然。
-
-###### 经济指标分类（Classes of Economic Indicators）
-
-**先行指标（Leading Indicators）**：在整体经济变化之前变动，用于预测周期拐点。
-- 包括：制造业平均每周工时、首次申请失业救济人数、新订单、消费者信心指数、房屋开工、股票价格、货币供应量、利差等
-
-**同步指标（Coincident Indicators）**：与整体经济同时变动，确认当前周期位置。
-- 包括：非农就业人数、个人收入、工业产值、制造业和贸易销售额
-
-**滞后指标（Lagging Indicators）**：在整体经济变化之后变动，确认周期已发生转变。
-- 包括：失业率（平均失业持续时间）、单位劳动成本、银行优惠利率、商业贷款余额
-
-###### 扩散指数与综合指数（Diffusion and Composite Indexes）
-
-- **扩散指数（Diffusion Index）**：衡量有多少成分指标在上升，反映经济变动的广度
-- **综合指数（Composite Index）**：将多个指标加权合并为一个数值
-
-使用多个指标而非单一指标可以避免单个数据噪声导致的误判。
-
-###### 信贷渠道与经济周期（Credit Channel and Business Cycles）
-
-信用市场在经济周期中扮演放大器角色：
-- **金融加速器（Financial Accelerator）**：经济下行→企业资产负债表恶化→银行惜贷→企业融资困难→投资进一步下降
-- 反之，经济上行时信贷扩张放大繁荣
-
-##### 2. 关键公式（公式+解释+场景）
-
-**产出缺口**：`Output Gap = (Actual GDP − Potential GDP) / Potential GDP`
-- 场景：判断当前周期位置。正缺口 → 过热阶段（接近顶峰）；负缺口 → 衰退阶段（接近谷底）
-
-**奥肯定律（Okun's Law）**（近似关系）：`ΔUnemployment ≈ −0.5 × (ΔReal GDP − Potential Growth)`
-- 场景：GDP增速超出潜在增长率时，失业率下降；反之失业率上升。注意不同国家系数不同，CFA考试中理解方向性关系即可。
-
-##### 3. 常见考点与解题思路
-
-**考点1：区分领先、同步、滞后指标**
-- 题干给出某指标的变化趋势，判断处于周期哪个阶段
-- 例如：首次申请失业救济人数上升通常领先衰退 → 先行指标
-- 失业率持续上升通常在衰退后期才达到峰值 → 滞后指标
-
-**考点2：周期阶段的资产配置含义**
-- 扩张早期：股票（cyclical sectors）表现较好
-- 扩张晚期：商品和通胀敏感资产
-- 衰退期：国债、防御型股票（defensive sectors）
-- 注意：CFA L1经济学侧重指标识别，资产配置更多在Portfolio Management中
-
-**考点3：库存周期逻辑**
-- 销售下降→库存意外增加→企业减少订单→生产下降→GDP下降
-- 销售回升→库存消化→企业增加订单→生产上升→GDP回升
-
-##### 4. 易错点提醒
-
-- **领先指标"领先"多少不确定**：领先时间从几个月到一两年不等，不是精确预测工具。
-- **滞后的失业率**：失业率通常在衰退结束后仍继续上升一段时间（lagging indicator），因为企业需要时间恢复招聘。
-- **不是所有先行指标都是领先的**：个别指标可能因特定原因给出错误信号（false signal），所以使用扩散指数和综合指数更可靠。
-- **库存投资是GDP的一部分**：存货投资变化对GDP有直接且放大效应。
-
-##### 5. 跨模块关联
-
-- 经济周期的政策应对涉及 **[[M03-Fiscal-Policy]]** 和 **[[M04-Monetary-Policy]]**
-- 周期不同阶段对汇率和资本流动的影响见 **[[M07-Capital-Flows-and-FX-Markets]]**
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 M02: Understanding Business Cycles（经济周期）
-│
-├── ⭐ 经济周期四阶段 (Four Phases) 🎯超高頻
-│   ├── 扩张 (Expansion): GDP↑, 就业↑, 利润↑
-│   ├── 顶峰 (Peak): 经济活动最高点
-│   ├── 收缩 (Contraction): GDP↓, 衰退(技术定义:连续两季负增长)
-│   └── 谷底 (Trough): 最低点→转入下一轮
-│
-├── ⭐ 经济变量周期行为 🎯高频
-│   ├── 库存: 销售↓→库存被动积累→主动去库存(领先)
-│   ├── 劳动力: 滞后指标(衰退结束后失业仍可能上升)
-│   ├── 住房: 利率敏感,领先周期(领先)
-│   ├── 信贷: 扩张期扩大,紧缩期收缩(同步)
-│   └── 企业利润: 高度周期性与GDP同向(同步)
-│
-├── ⭐ 经济指标分类 (Economic Indicators) 🎯超高頻
-│   ├── 领先指标 (Leading) 🎯超高頻
-│   │   ├── 制造业工时、首申失业救济、新订单
-│   │   ├── 消费者信心、房屋开工、股价、利差
-│   │   └── ⚠️ 领先时间不确定(数月到一两年)
-│   ├── 同步指标 (Coincident) 🎯高频
-│   │   └── 非农就业、个人收入、工业产值、销售额
-│   └── 滞后指标 (Lagging) 🎯高频
-│       └── 失业率、单位劳动成本、优惠利率、商业贷款
-│
-├── ⭐ 扩散指数与综合指数
-│   ├── 扩散指数: 多少成分在上升(反映广度)
-│   └── 综合指数: 多指标加权合并(降低噪音)
-│
-├── ⭐ 信贷渠道与经济周期
-│   ├── 金融加速器: 下行→资产负债表恶化→惜贷→投资↓→恶性循环
-│   └── 经济上行时信贷扩张放大繁荣
-│
-└── ⭐ 周期各阶段的资产配置
-    ├── 扩张早期: 股票(周期性行业)
-    ├── 扩张晚期: 商品和通胀敏感资产
-    └── 衰退期: 国债、防御型股票
+2. Understanding Business Cycles
+├─ 2.1 Introduction
+│  ├─ 2.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.1.2 应用/判断：把概念或公式转成解题动作
+├─ 2.2 Overview of the Business Cycle
+│  ├─ 2.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.2.2 应用/判断：把概念或公式转成解题动作
+├─ 2.3 Credit Cycles
+│  ├─ 2.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.3.2 应用/判断：把概念或公式转成解题动作
+├─ 2.4 Economic Indicators over the Business Cycle
+│  ├─ 2.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 2.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：经济周期阶段（Phases of the Business Cycle）
+### 2.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the business cycle and its phases`。
+- **核心词汇**：**Understanding Business Cycles（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-经济周期由四个阶段组成：
-1. **扩张（Expansion）**：经济活动上升，GDP增长，就业增加，企业利润改善
-2. **顶峰（Peak）**：经济活动达到周期最高点
-3. **收缩（Contraction）**：经济活动下降，GDP负增长通常构成衰退（recession）
-4. **谷底（Trough）**：经济活动最低点，之后转入下一轮扩张
+### 2.2 Overview of the Business Cycle
+- **中文主线**：本节点解决 `Overview of the Business Cycle` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe credit cycles`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**衰退的常见定义**：连续两个季度GDP负增长，但NBER官方判定更综合（考虑深度、广度、持续时间）。
+### 2.3 Credit Cycles
+- **中文主线**：本节点解决 `Credit Cycles` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe how resource use, consumer and business activity, housing sector activity, and external trade sector activity vary over the business cycle and describe their measurement using economic indicators`。
+- **核心词汇**：**Overview of the Business Cycle（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：各经济变量的周期行为（Cyclical Behavior of Key Variables）
+### 2.4 Economic Indicators over the Business Cycle
+- **中文主线**：本节点解决 `Economic Indicators over the Business Cycle` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the business cycle and its phases`。
+- **核心词汇**：**Credit Cycles（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-| 变量 | 周期行为 | 时序 |
-|------|---------|------|
-| 库存（Inventory） | 销售下降时企业被动积累库存；预期改善时主动补库 | 领先 |
-| 劳动力（Labor） | 扩张期就业上升，收缩期失业上升；但就业是滞后指标 | 滞后 |
-| 住房（Housing） | 利率敏感，通常领先周期 | 领先 |
-| 信贷（Credit） | 扩张期信贷扩张，紧缩期信贷收缩 | 领先或同步 |
-| 企业利润（Profits） | 高度周期性，与GDP同向 | 同步 |
+### 2.9 Legacy 补强要点
+- 来自 `M02-Understanding-Business-Cycles.md`：## 1. 核心知识点（中英双语讲解）; **衰退的常见定义**：连续两个季度GDP负增长，但NBER官方判定更综合（考虑深度、广度、持续时间）。; ## 2. 关键公式（公式+解释+场景）。
 
-**库存周期（Inventory Cycle）** 是短期经济波动的重要驱动因素。企业预期转弱时减少库存→订单下降→生产下降→GDP下降。反之亦然。
 
-### 知识点3：经济指标分类（Classes of Economic Indicators）
+## 5. 关键公式与计算框架
 
-**先行指标（Leading Indicators）**：在整体经济变化之前变动，用于预测周期拐点。
-- 包括：制造业平均每周工时、首次申请失业救济人数、新订单、消费者信心指数、房屋开工、股票价格、货币供应量、利差等
+本模块以概念判断为主，无核心计算公式。复习时把 `Understanding Business Cycles` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-**同步指标（Coincident Indicators）**：与整体经济同时变动，确认当前周期位置。
-- 包括：非农就业人数、个人收入、工业产值、制造业和贸易销售额
+## 6. 常见考点与解题思路
 
-**滞后指标（Lagging Indicators）**：在整体经济变化之后变动，确认周期已发生转变。
-- 包括：失业率（平均失业持续时间）、单位劳动成本、银行优惠利率、商业贷款余额
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 知识点4：扩散指数与综合指数（Diffusion and Composite Indexes）
+## 7. 易错点与考试陷阱
 
-- **扩散指数（Diffusion Index）**：衡量有多少成分指标在上升，反映经济变动的广度
-- **综合指数（Composite Index）**：将多个指标加权合并为一个数值
+- **中英文错配**：看到 `Understanding Business Cycles` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-使用多个指标而非单一指标可以避免单个数据噪声导致的误判。
+## 8. 跨模块关联
 
-### 知识点5：信贷渠道与经济周期（Credit Channel and Business Cycles）
+- **上游模块**：[[M01-The-Firm-and-Market-Structures]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M03-Fiscal-Policy]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-信用市场在经济周期中扮演放大器角色：
-- **金融加速器（Financial Accelerator）**：经济下行→企业资产负债表恶化→银行惜贷→企业融资困难→投资进一步下降
-- 反之，经济上行时信贷扩张放大繁荣
+## 9. 复习与刷题提示
 
-### 📐 关键公式表
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| 产出缺口 = (Actual GDP - Potential GDP) / Potential GDP | 经济产出偏离程度 | 判断周期位置：正=过热，负=衰退 | 潜在GDP不可直接观测 |
-| Okun's Law: ΔUnemp ≈ -0.5 × (ΔGDP - Potential Growth) | 失业与GDP关系 | 估计增长对失业的影响 | 系数因国家而异，CFA重在方向性理解 |
-| 衰退技术定义: 连续两个季度GDP负增长 | 简单判断标准 | 快速判断衰退 | NBER官方定义更综合(深度/广度/持续时间) |
-| 库存投资变化对GDP的影响 | GDP = C+I+G+(X-M) | 理解库存周期放大效应 | 库存变化是GDP的波动放大器 |
-| 先行指标综合指数(CLI) | 多指标加权 | 预测经济拐点 | 单一指标可能给错误信号 |
+## 10. Legacy Notes Integrated
 
-### 🛠️ 常见考点与解题思路
-
-**Topic 1: 领先/同步/滞后指标判断**
-- 题干给出某指标变化趋势 → 判断指标类别和周期位置
-- 首次申请失业救济上升 → 领先指标（预示衰退）
-- 失业率持续上升 → 滞后指标（衰退后期才达到峰值）
-- 解题：先判断指标相对周期的时序关系
-
-**Topic 2: 周期阶段的资产配置**
-- 扩张早期：周期性股票
-- 扩张晚期：商品、通胀敏感资产
-- 衰退期：国债、防御型股票
-- 注意：CFA L1侧重指标识别，配置在组合管理中详述
-
-**Topic 3: 库存周期逻辑链**
-- 销售↓ → 库存意外增加 → 减少订单 → 生产↓ → GDP↓
-- 销售↑ → 库存消化 → 增加订单 → 生产↑ → GDP↑
-- 库存是经济波动的放大器
-
-**Topic 4: 金融加速器效应**
-- 经济下行 → 企业资产负债表恶化 → 银行惜贷 → 投资进一步下降
-- 经济上行时反向效应 → 放大繁荣
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 领先指标精确预测拐点时间 | 领先时间从数月到一两年不等 | 不是精确预测工具 |
-| 失业率是先行指标 | 失业率是滞后指标 | 企业招聘和裁员的滞后性 |
-| 单一先行指标足够判断周期 | 需使用扩散指数和综合指数 | 单个指标可能有错误信号 |
-| 库存变化不重要 | 库存投资对GDP有直接且放大效应 | 是短期波动的重要驱动因素 |
-| NBER衰退定义=连续两季GDP负增长 | NBER更综合(深度/广度/持续时间) | 技术定义只是参考 |
-| 所有行业同步周期波动 | 周期性vs防御性行业差异大 | 取决于需求弹性 |
-| 扩张期所有资产都上涨 | 不同资产在周期不同阶段表现不同 | 资产配置需动态调整 |
-
-### 🔄 跨模块关联
-
-- **经济周期的政策应对** → [[M03-Fiscal-Policy]]（财政政策逆周期调节）
-- **经济周期的政策应对** → [[M04-Monetary-Policy]]（央行逆周期调节）
-- **汇率和资本流动与经济周期** → M07-Capital-Flows-and-FX-Markets（周期不同阶段汇率变化）
-- **行业周期性与经济周期** → Equity M06（周期性vs防御性行业的识别）
-- **企业盈利与经济周期** → Equity M05（历史盈利的正常化调整）
-- **库存与营运资金管理** → Equity M07（DSO/DIO/DPO的周期行为）
-- **固定收益与经济周期** → Economics M04（利率周期与债券价格）
-
-### 📋 复习与刷题提示
-
-- **领先/同步/滞后指标分类是必考题**：记住常见指标的类别归属
-- **经济周期四阶段特征**：每个阶段的GDP/就业/利润/库存特征
-- **产出缺口计算**：正缺口=过热，负缺口=衰退
-- **Okun's Law的理解**：关系方向（非数值）更重要
-- **库存周期**：理解库存对GDP波动的放大效应
-- **资产配置与周期**：不同阶段各类资产的表现差异
-- **刷题建议**：mock中指标分类判断最高频，产出缺口计算次之
-- **金融加速器**：理解信贷渠道在周期中的放大机制
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M02-Understanding-Business-Cycles.md（confidence 0.488）
+- **可复用结构**：M02: Understanding Business Cycles（经济周期）；1. 核心知识点（中英双语讲解）；经济周期阶段（Phases of the Business Cycle）；各经济变量的周期行为（Cyclical Behavior of Key Variables）；经济指标分类（Classes of Economic Indicators）；扩散指数与综合指数（Diffusion and Composite Indexes）
+- **高价值要点**：## 1. 核心知识点（中英双语讲解）；**衰退的常见定义**：连续两个季度GDP负增长，但NBER官方判定更综合（考虑深度、广度、持续时间）。；## 2. 关键公式（公式+解释+场景）；场景：判断当前周期位置。正缺口 → 过热阶段（接近顶峰）；负缺口 → 衰退阶段（接近谷底）
+- **公式/计算线索**：## 2. 关键公式（公式+解释+场景）；**产出缺口**：`Output Gap = (Actual GDP − Potential GDP) / Potential GDP`
+- **易错提示**：场景：GDP增速超出潜在增长率时，失业率下降；反之失业率上升。注意不同国家系数不同，CFA考试中理解方向性关系即可。；注意：CFA L1经济学侧重指标识别，资产配置更多在Portfolio Management中；## 4. 易错点提醒
