@@ -1,23 +1,29 @@
 ---
-title: "M01 — Ethics and Trust in the Investment Profession"
-description: "CFA Level I 2026 official module: Ethics and Trust in the Investment Profession"
-module: M01
+title: "M01: Ethics and Trust in the Investment Profession"
+description: "CFA Level I 2026 Ethical and Professional Standards 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Ethical and Professional Standards"
-topic_area: Ethical_and_Professional_Standards
-curriculum_year: 2026
+topic_area: "Ethical_and_Professional_Standards"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "15-20%"
+module: "M01"
 official_module: "Module 1: Ethics and Trust in the Investment Profession"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 8
+difficulty: "概念+案例判断"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Ethical_and_Professional_Standards
   - official_2026
+  - Ethical_and_Professional_Standards
 ---
 
 # M01: Ethics and Trust in the Investment Profession
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用 Code and Standards 判断专业行为、利益冲突、客户责任与合规边界。 本模块聚焦 **Ethics and Trust in the Investment Profession**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -33,166 +39,141 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
-
-- explain ethics
-- describe the role of a code of ethics in defining a profession
-- describe professions and how they establish trust
-- describe the need for high ethical standards in investment management
-- explain professionalism in investment management
-- identify challenges to ethical behavior
-- compare and contrast ethical standards with legal standards
-- describe a framework for ethical decision making
-
-## Local Study Notes
-
-### Migrated from `CFA_tier1/Ethical_and_Professional_Standards/M01-Ethics-Trust-and-Professionalism.md`
-
-_Alignment score: 0.49. Original official module field: Ethics and Trust in the Investment Profession._
-
-#### M01: 伦理、信任与职业精神 (Ethics, Trust, and Professionalism)
-
-### 🌳 核心知识树
-
-```text
-🏆 M01: Ethics and Trust in the Investment Profession（伦理、信任与职业精神）
-│
-├── ⭐ 职业的本质 (Nature of a Profession)
-│   ├── 专业知识 (specialized knowledge) — 从业者掌握普通人不具备的专业技能与知识体系
-│   ├── 服务导向 (service orientation) — 将客户利益和社会利益置于个人利益之上
-│   └── 信任 (trust) — 公众对行业的信任是资本市场有效运作的基石
-│
-├── ⭐ 道德与法律的边界 (Ethics vs. Law)
-│   ├── 法律回答"我可以做吗？"(may I)；道德追问"我应该做吗？"(should I)
-│   ├── 合法 (legal) 不等于合乎道德 (ethical)
-│   ├── CFA 标准常常要求高于法律底线 (higher than legal minimum)
-│   └── 道德行为 (ethical action) 可以超越法律最低要求
-│
-├── ⭐ 受托人心态 (Fiduciary Mindset)
-│   ├── 将客户利益置于首位
-│   ├── 避免利益冲突
-│   └── 以审慎、忠诚的态度行事
-│
-├── ⭐ 七条职业行为准则总纲 (Seven Standards Overview)
-│   ├── Standards I-VII 涵盖专业精神、市场诚信、客户义务、雇主义务、冲突管理
-│   ├── 是 M03-M07 的纲领性框架
-│   └── 资本市场运行依赖于可信行为与信息完整性
-│
-├── ⭐ 关键判断框架
-│   ├── Stricter Standard Rule: required conduct = max(applicable law, CFA Standards)
-│   ├── Priority Rule: client > market integrity > employer/self convenience
-│   └── 道德底线判断: 合法 + 合乎职业标准 + 可公开辩护
-│
-├── 💡 关键洞察
-│   ├── 资本市场的运行依赖于可信行为与信息完整性
-│   ├── 职业资格同时意味着道德义务，不仅代表技术水平
-│   ├── 受托人义务是 fiduciary 概念的核心 — 客户利益至上
-│   └── 资本市场失去信任，整个金融系统效率将大幅下降
-│
-└── ⚠️ 考试陷阱总结
-    ├── 合法不等于合乎道德 — 可能违反 CFA Standards 即使未违法
-    ├── 道德标准不是建议 — 对会员和考生具有强制约束力
-    ├── 职业资格同时意味着道德义务
-    └── 优先序：客户 > 市场诚信 > 雇主/个人便利
-```
-
-## 📖 知识点详解
-
-### 知识点1：职业的本质（Nature of a Profession）
-
-一个真正的职业 (profession) 具备三个核心特征：
-
-- **专业知识 (specialized knowledge)** — 从业者掌握普通人不具备的专业技能与知识体系
-- **服务导向 (service orientation)** — 将客户利益和社会利益置于个人利益之上
-- **信任 (trust)** — 公众对行业的信任是资本市场有效运作的基石
-
-资本市场 (capital markets) 的运行依赖于可信行为与信息完整性 (credible conduct and information integrity)。如果市场参与者失去信任，整个金融系统的效率将大幅下降。
-
-### 知识点2：道德与法律的边界（Ethics vs. Law）
-
-**核心区分**：法律回答"我可以做吗？" (may I)；道德常常追问"我应该做吗？" (should I)
-
-- 合法 (legal) 不等于合乎道德 (ethical)
-- CFA 标准常常要求高于法律底线 (higher than legal minimum)
-- 道德行为 (ethical action) 可以超越法律最低要求
-
-### 知识点3：受托人心态（Fiduciary Mindset）
-
-受托人 (fiduciary) 的核心义务：
-- 将客户利益置于首位
-- 避免利益冲突
-- 以审慎、忠诚的态度行事
-
-### 知识点4：七条职业行为准则总纲（Seven Standards Overview）
-
-Standards I-VII 涵盖了从专业精神、市场诚信到客户义务、雇主义务、冲突管理等全部职业道德领域，是 M03-M07 的纲领性框架。
-
-### 📐 关键公式表
-
-| 框架 | 内容 | 应用场景 |
-|------|------|----------|
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | 法律与标准冲突时 |
-| Priority Rule | `client > market integrity > employer/self convenience` | 利益冲突排序 |
-| 道德底线判断 | 合法 + 合乎职业标准 + 可公开辩护 | 情境题基本原则 |
-
-### 🛠️ 常见考点与解题思路
-
-**考点1：职业与普通工作的区别**
-- **典型问法**：下列哪项最符合 profession 的定义？
-- **解题思路**：关注 specialized knowledge + service orientation + trust 三个特征，缺一不可
-
-**考点2：道德 vs 法律**
-- **典型问法**：某行为合法但可能违反 CFA Standards，应如何处理？
-- **解题思路**：遵循 stricter standard；CFA 要求高于法律底线的场景常考
-
-**考点3：情境题判断逻辑**
-1. 先抽事实：谁做了什么
-2. 再找受影响方：client / employer / market / profession
-3. 再问触发哪个 Standard
-4. 最后问最佳做法是否比"最低合规"更严格
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| 合法就一定合乎道德 | CFA 常要求高于法律底线 |
-| 只要不违法就不会违规 | 可能违反 CFA Standards 即使未违法 |
-| 道德标准只是建议而非要求 | CFA Standards 对会员和考生具有强制约束力 |
-| 职业资格只代表技术水平 | 职业资格同时意味着道德义务 |
-
-### 🔄 跨模块关联
-
-- **[[M02-Code-of-Ethics-and-Standards-of-Professional-Conduct]]** — Code of Ethics 是 Standards 的总纲
-- **[[M03-Guidance-for-Standards-I-VII]]** — Standards I-VII 具体展开本模块的伦理原则
-- **[[M05-Ethics-Application]]** — 伦理框架在案例题中的综合应用
+1. explain ethics
+2. describe the role of a code of ethics in defining a profession
+3. describe professions and how they establish trust
+4. describe the need for high ethical standards in investment management
+5. explain professionalism in investment management
+6. identify challenges to ethical behavior
+7. compare and contrast ethical standards with legal standards
+8. describe a framework for ethical decision making
 
 ---
 
-## 复习与刷题提示
+## 1. 模块定位
 
-- **本模块以概念为主**（无计算），重点在于理解 ethics、profession、fiduciary 三个核心定义
-- 高频考点：职业的三大特征、道德 vs 法律边界、受托人义务的内涵
-- Standards 的详细判例不在此模块，集中于 M03 和 M05
-- 建议先理解本模块的基础概念，再进入 M03 学习具体标准
+### 1.1 学习任务
+- **核心问题**：考试希望你用 `Ethics and Trust in the Investment Profession` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-## Legacy Notes Integrated
+### 1.2 考试角色
+- **难度类型**：概念+案例判断。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-本模块整合了 `_legacy/2026-05-26-official-sync/` 中的：
-- **M01-Ethics-Trust-and-Professionalism.md** — 知识树、判断框架、陷阱表、跨模块关联（全部内容）
+### 1.3 关键英文术语
+- **Ethics and Trust in the Investment Profession（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ethics（伦理）**：专业行为、客户利益、市场诚信和合规责任的规范体系。
+- **Ethics and Professionalism（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Challenges to Ethical Conduct（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ethical vs. Legal Standards（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ethical Decision-Making Frameworks（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Conclusion（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
 
-旧链接已更新为当前官方模块文件名。
+## 2. 官方 LOS 对应学习目标
 
-## 📋 复习与刷题提示
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 1.1 | explain ethics | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 1.2 | describe the role of a code of ethics in defining a profession | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.3 | describe professions and how they establish trust | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.4 | describe the need for high ethical standards in investment management | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.5 | explain professionalism in investment management | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 1.6 | identify challenges to ethical behavior | 识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
+| 1.7 | compare and contrast ethical standards with legal standards | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+| 1.8 | describe a framework for ethical decision making | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
 
-- **核心能力**：理解 ethics、profession、fiduciary 三个核心定义
-- **常考题型**：职业三大特征选择题、道德 vs 法律边界判断题
-- **学习路径**：M01基础概念 → M02 Code → M03 Standards 判例 → M04 GIPS → M05案例
-- **跨科目**：受托人概念→Portfolio M04 IPS、法律遵循→Corp Issuers M03治理
-- **场景应用**：在实际分析中，法律责任只是一个起点，伦理责任是更高的职业要求
-- **受托人案例分析**：养老金受托人必须在 beneficiaries 利益和 sponsor 成本之间做出平衡判断
+## 3. 核心知识树
 
-### 跨科目学习链接
-- **Portfolio Management M04**: IPS 中的受托人义务源于 Ethics 的 fiduciary 概念
-- **Corporate Issuers M03**: 公司治理机制（董事会、薪酬、审计）是对代理问题的制度回应
-- **Quantitative Methods M08**: 假设检验中的 Type I/II error 概率与伦理决策中的不确定性概念有类比性
-- **Economics M05**: 地缘政治风险中的制裁合规涉及 I(A) Knowledge of the Law 的应用
+```text
+1. Ethics and Trust in the Investment Profession
+├─ 1.1 Introduction
+│  ├─ 1.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.1.2 应用/判断：把概念或公式转成解题动作
+├─ 1.2 Ethics
+│  ├─ 1.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.2.2 应用/判断：把概念或公式转成解题动作
+├─ 1.3 Ethics and Professionalism
+│  ├─ 1.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.3.2 应用/判断：把概念或公式转成解题动作
+├─ 1.4 Challenges to Ethical Conduct
+│  ├─ 1.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.4.2 应用/判断：把概念或公式转成解题动作
+├─ 1.5 Ethical vs. Legal Standards
+│  ├─ 1.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.5.2 应用/判断：把概念或公式转成解题动作
+```
+
+## 4. 知识点详解
+
+### 1.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain ethics`。
+- **核心词汇**：**Ethics and Trust in the Investment Profession（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+### 1.2 Ethics
+- **中文主线**：本节点解决 `Ethics` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the role of a code of ethics in defining a profession`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+### 1.3 Ethics and Professionalism
+- **中文主线**：本节点解决 `Ethics and Professionalism` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe professions and how they establish trust`。
+- **核心词汇**：**Ethics（伦理）**：专业行为、客户利益、市场诚信和合规责任的规范体系。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+### 1.4 Challenges to Ethical Conduct
+- **中文主线**：本节点解决 `Challenges to Ethical Conduct` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the need for high ethical standards in investment management`。
+- **核心词汇**：**Ethics and Professionalism（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+### 1.5 Ethical vs. Legal Standards
+- **中文主线**：本节点解决 `Ethical vs. Legal Standards` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain professionalism in investment management`。
+- **核心词汇**：**Challenges to Ethical Conduct（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+
+## 5. 关键公式与计算框架
+
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Ethics decision rule | `identify duty -> disclose conflicts -> protect client interests -> document action` | 伦理题更像判断流程，不是公式题。 |
+
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+
+## 6. 常见考点与解题思路
+
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+
+## 7. 易错点与考试陷阱
+
+- **中英文错配**：看到 `Ethics and Trust in the Investment Profession` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+
+## 8. 跨模块关联
+
+- **上游模块**：本科目起点。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M02-Code-of-Ethics-and-Standards-of-Professional-Conduct]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+
+## 9. 复习与刷题提示
+
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
+
+## 10. Legacy Notes Integrated
+
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M01-Ethics-Trust-and-Professionalism.md` (0.394), `M09-Ethics-Application.md` (0.387), `00-Ethical-and-Professional-Standards-MOC.md` (0.362)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

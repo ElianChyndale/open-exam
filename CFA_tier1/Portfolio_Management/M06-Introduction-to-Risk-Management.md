@@ -1,23 +1,29 @@
 ---
-title: "M06 — Introduction to Risk Management"
-description: "CFA Level I 2026 official module: Introduction to Risk Management"
-module: M06
+title: "M06: Introduction to Risk Management"
+description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Portfolio Management"
-topic_area: Portfolio_Management
-curriculum_year: 2026
+topic_area: "Portfolio_Management"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "8-12%"
+module: "M06"
 official_module: "Module 6: Introduction to Risk Management"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 7
+difficulty: "概念+案例判断"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Portfolio_Management
   - official_2026
+  - Portfolio_Management
 ---
 
 # M06: Introduction to Risk Management
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把风险收益、组合构建、行为偏差和风险管理连接成投资流程。 本模块聚焦 **Introduction to Risk Management**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -37,210 +43,135 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. define risk management
+2. describe features of a risk management framework
+3. define risk governance and describe elements of effective risk governance
+4. explain how risk tolerance affects risk management
+5. describe risk budgeting and its role in risk governance
+6. identify financial and non-financial sources of risk and describe how they may interact
+7. describe methods for measuring and modifying risk exposures and factors to consider in choosing among the methods
 
-- define risk management
-- describe features of a risk management framework
-- define risk governance and describe elements of effective risk governance
-- explain how risk tolerance affects risk management
-- describe risk budgeting and its role in risk governance
-- identify financial and non-financial sources of risk and describe how they may interact
-- describe methods for measuring and modifying risk exposures and factors to consider in choosing among the methods
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 6.1 学习任务
+- **核心问题**：考试希望你用 `Introduction to Risk Management` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 6.2 考试角色
+- **难度类型**：概念+案例判断。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 6.3 关键英文术语
+- **Introduction to Risk Management（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Risk Management Process（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Risk Management Framework（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Risk Governance - An Enterprise View（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Risk Tolerance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Risk Budgeting（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Identification of Risk - Financial Vs. Non-Financial Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 6.1 | define risk management | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
+| 6.2 | describe features of a risk management framework | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 6.3 | define risk governance and describe elements of effective risk governance | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 6.4 | explain how risk tolerance affects risk management | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 6.5 | describe risk budgeting and its role in risk governance | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 6.6 | identify financial and non-financial sources of risk and describe how they may interact | 描述定义、流程和适用场景；识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
+| 6.7 | describe methods for measuring and modifying risk exposures and factors to consider in choosing among the methods | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M06: 风险管理导论 (Introduction to Risk Management)
-│
-├── 🟢 核心主题：风险管理不是消灭风险
-│   └── 目标是使风险与回报目标匹配
-│
-├── ⭐ 风险管理五步骤
-│   ├── 🅰 风险治理 (Governance)
-│   │   ├── 建立组织结构、政策、角色职责
-│   │   ├── 独立性：风险管理职能与投资决策分离
-│   │   └── 董事会层面监督风险框架
-│   ├── 🅱 风险识别 (Identification)
-│   │   └── 找出影响目标实现的各类风险
-│   ├── 🅲 风险计量 (Measurement)
-│   │   ├── VaR (风险价值): 给定置信水平下的最小可能损失
-│   │   ├── P(ΔP ≤ -VaR) = 1 - α
-│   │   └── 其他: 久期、Beta、跟踪误差
-│   ├── 🅳 风险改变化 (Modification)
-│   │   ├── 规避 (Avoid): 不参与
-│   │   ├── 接受 (Accept): 自留风险
-│   │   ├── 转移 (Transfer): 保险、衍生品
-│   │   ├── 缓释 (Mitigate): 分散化、对冲
-│   │   └── 预防 (Prevention): 降低损失概率
-│   └── 🅴 风险监控 (Monitoring)
-│       └── 持续追踪和报告
-│
-├── ⭐ 风险分类
-│   ├── 金融风险 (Financial Risks)
-│   │   ├── 市场风险 (Market risk): 资产价格变动
-│   │   ├── 信用风险 (Credit risk): 交易对手违约
-│   │   ├── 流动性风险 (Liquidity risk): 无法合理价格交易
-│   │   └── 操作风险 (Operational risk): 流程/人员失误
-│   └── 非金融风险 (Non-Financial Risks)
-│       ├── 法律风险 (Legal risk)
-│       ├── 监管风险 (Regulatory risk)
-│       ├── 税务风险 (Tax risk)
-│       ├── 会计风险 (Accounting risk)
-│       ├── 模型风险 (Model risk)
-│       ├── 声誉风险 (Reputational risk)
-│       └── 尾部风险 (Tail risk)
-│
-├── ⭐ 风险预算 (Risk Budgeting)
-│   ├── 将总风险限额分配到不同资产类别/策略
-│   ├── 主动风险预算限制组合偏离基准的最大程度
-│   ├── 不是资本预算，关注风险敞口而非资本分配
-│   └── 应与投资者目标、资本实力一致
-│
-├── ⭐ 风险改变化方法比较
-│   ├── 规避: 不产生风险，但可能失去收益
-│   ├── 接受: 适用于可承受的小风险
-│   ├── 转移: 通过保险/衍生品，改变风险承担方
-│   ├── 缓释: 通过分散化降低非系统性风险
-│   └── 预防: 降低操作风险概率
-│
-├── 💡 关键洞察
-│   ├── 好的风险管理 = 赋能风险承担，不是消灭风险
-│   ├── 风险转移 ≠ 风险消失（只是改变承担方）
-│   ├── 风险预算 ≠ 资金预算
-│   ├── 各风险类型相互关联（如流动性危机常伴随信用危机）
-│
-└── ⚠️ 考试陷阱
-    ├── 风险管理目标不是把风险降到最低
-    ├── 风险转移不是风险消失
-    ├── 操作风险可能造成重大损失（不是小概率事件）
-    ├── VaR 不是最大可能损失
-    └── 流动性风险不仅在危机时存在
+6. Introduction to Risk Management
+├─ 6.1 Introduction
+│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
+├─ 6.2 Risk Management Process
+│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
+├─ 6.3 Risk Management Framework
+│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
+├─ 6.4 Risk Governance - An Enterprise View
+│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
+├─ 6.5 Risk Tolerance
+│  ├─ 6.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 6.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：风险管理框架 (Risk Management Framework)
+### 6.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`define risk management`。
+- **核心词汇**：**Introduction to Risk Management（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：风险管理是一个系统性的五步过程，涵盖风险治理、识别、计量、改变化和监控。有效的风险管理不是将风险降到最低，而是使风险与回报目标相匹配。这是确保投资目标可实现的基础设施。
+### 6.2 Risk Management Process
+- **中文主线**：本节点解决 `Risk Management Process` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe features of a risk management framework`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **风险治理 (Risk Governance)**：建立风险管理组织结构、政策、角色和职责。独立性原则——风险管理职能应与投资决策职能分离
-- **风险识别 (Risk Identification)**：找出影响投资目标实现的各类风险。包括已知风险和新兴风险
-- **风险计量 (Risk Measurement)**：量化风险敞口的大小和影响。使用 VaR、追踪误差、敏感性分析等工具
-- **风险改变化 (Risk Modification)**：通过规避、接受、转移、缓释等方式调整风险敞口
-- **风险监控 (Risk Monitoring)**：持续追踪风险变化并报告。确保风险不超出可承受范围
-- 💡 好的风险管理是"赋能"而非"限制"——它使投资者能够自信地承担经过评估的风险
+### 6.3 Risk Management Framework
+- **中文主线**：本节点解决 `Risk Management Framework` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define risk governance and describe elements of effective risk governance`。
+- **核心词汇**：**Risk Management Process（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：风险管理流程排序题是常见题型。正确顺序：治理 → 识别 → 计量 → 改变化 → 监控。常见陷阱：混淆计量和改变化的顺序。
+### 6.4 Risk Governance - An Enterprise View
+- **中文主线**：本节点解决 `Risk Governance - An Enterprise View` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how risk tolerance affects risk management`。
+- **核心词汇**：**Risk Management Framework（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：金融风险与非金融风险 (Financial vs Non-Financial Risks)
+### 6.5 Risk Tolerance
+- **中文主线**：本节点解决 `Risk Tolerance` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe risk budgeting and its role in risk governance`。
+- **核心词汇**：**Risk Governance - An Enterprise View（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：组织面临的风险分为金融风险和非金融风险两大类。金融风险直接与市场价格和交易对手相关，非金融风险来自于运营、法律和外部环境因素。理解每种风险的定义和来源是风险管理的基础。
 
-- **金融风险 (Financial Risks)**：
-  - **市场风险 (Market Risk)**：资产价格变动导致的损失风险。包括股票、利率、汇率、商品价格风险
-  - **信用风险 (Credit Risk)**：交易对手违约的风险。包括违约风险、降级风险、信用利差风险
-  - **流动性风险 (Liquidity Risk)**：无法以合理价格及时交易的风险。包括市场流动性风险和融资流动性风险
-  - **操作风险 (Operational Risk)**：内部流程、系统、人员失误或外部事件导致的风险
-- **非金融风险 (Non-Financial Risks)**：
-  - 法律风险、监管风险、税务风险、会计风险、模型风险、声誉风险、尾部风险
-- 🎯 **高频考点**：给定风险情景判断属于哪种风险类型
+## 5. 关键公式与计算框架
 
-**考试应用**：风险分类判断是高频情景题。关键区分：市场风险（价格变动）、信用风险（违约）、操作风险（流程/人员错误）、流动性风险（无法交易）。注意：流动性风险既是市场风险的结果，也是独立的风险类别。
+本模块以概念判断为主，无核心计算公式。复习时把 `Introduction to Risk Management` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-### 知识点3：风险改变化方式 (Risk Modification Methods)
+## 6. 常见考点与解题思路
 
-**核心概念**：识别和计量风险后，需要通过适当的工具和策略来改变化风险敞口。风险改变化有五种基本方式，选择哪种方式取决于风险的性质、成本效益分析和组织的风险承担能力。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-- **规避 (Avoid)**：不参与产生风险的活动。最简单但可能牺牲机会
-- **接受 (Accept / Self-Insure)**：承担风险，预留资本缓冲。适用于低影响、难以转移的风险
-- **转移 (Transfer)**：通过衍生品、保险或结构化产品将风险转移给另一方。注意：转移不是消灭
-- **缓释 (Mitigate)**：通过分散化、对冲等方式降低风险。分散化降低非系统性风险，对冲降低特定风险
-- **监控 (Monitor)**：持续观察较小的或难以量化的风险，准备应对方案
-- 💡 风险转移 ≠ 风险消失。系统性风险无法通过转移消除，只能重新分配
+## 7. 易错点与考试陷阱
 
-**考试应用**：给定风险情景，选择最合适的改变化方式。关键判断：规避（不参与）、接受（自留）、转移（保险/衍生品）、缓释（分散化/对冲）。常见陷阱：认为保险/衍生品能消除所有风险（实际转移了风险承担方，但总风险未变）。
+- **中英文错配**：看到 `Introduction to Risk Management` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 知识点4：风险预算与 VaR (Risk Budgeting and VaR)
+## 8. 跨模块关联
 
-**核心概念**：风险预算将总风险限额分配到不同资产类别、策略或部门，确保组合风险与投资者的风险承受能力一致。VaR（风险价值）是衡量市场风险的标准工具，描述给定置信水平下的最大损失。
+- **上游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- **风险预算 (Risk Budgeting)**：将总风险分解到不同资产类别/策略/部门。主动风险预算决定组合偏离基准的最大程度
-- **VaR (Value at Risk)**：P(ΔP ≤ -VaR) = 1 - α。在 1-α 置信水平下，最大损失不超过 VaR。如 95% VaR = -1.65σ
-- **追踪误差 (Tracking Error)**：σ(Rp - Rb)，衡量主动风险。信息比率 = (Rp-Rb)/TE
-- 💡 VaR 不是最大可能损失！它是给定置信水平下的分位点。VaR 之外还有尾部风险
-- 💡 风险预算分配的是风险限额，不是资金限额
+## 9. 复习与刷题提示
 
-**考试应用**：VaR 在 Level I 只要求基本理解，不要求计算。给定置信水平和分布，能解释 VaR 的含义即可。风险预算题：给定追踪误差和预算限额，判断是否需要调整。常见陷阱：混淆 VaR 与"最大可能损失"的概念。
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `P(ΔP ≤ -VaR) = 1 - α` | VaR 定义：在 1-α 置信水平下最大损失不超过 VaR | 衡量市场风险 | VaR 不是最大可能损失，是给定置信水平下的分位点 |
-| `Tracking Error = σ(Rp - Rb)` | 跟踪误差 = 主动风险 | 衡量主动管理的风险 | 信息比率 = (Rp-Rb)/TE |
-| `风险预算偏差 = 实际风险 - 预算限额` | 风险预算执行监控 | 确保主动风险不超限 | 正值为超出预算 |
-| `Sharpe = (Rp-Rf)/σp` | 夏普比率 | 风险调整后收益 | 用总风险衡量 |
+## 10. Legacy Notes Integrated
 
-### 🛠️ 常见考点与解题思路
-
-**考点1：风险分类判断**
-- **步骤**：给一个风险描述 → 判断属于哪类风险
-- **常见题型**：
-  - "市场价格下跌" → 市场风险
-  - "交易对手破产" → 信用风险
-  - "无法以合理价格平仓" → 流动性风险
-  - "交易员误操作" → 操作风险
-  - "法规变化" → 监管风险
-
-**考点2：风险管理流程排序**
-- **步骤**：给一系列风险管理动作 → 按正确顺序排列
-- **正确顺序**：治理 → 识别 → 计量 → 改变化 → 监控
-
-**考点3：风险改变化方式选择**
-- **步骤**：给定风险情景 → 选择最合适的方式
-- **关键判断**：
-  - 保险/衍生品 → 风险转移 (Transfer)
-  - 分散化 → 风险缓释 (Mitigate)
-  - 不参与 → 风险规避 (Avoid)
-  - 自留 → 风险接受 (Accept)
-
-**考点4：VaR 的理解**
-- **步骤**：VaR 是给定置信水平下的**最小可能损失**
-  - 例如：95% VaR = $1M 意味着有 5% 的概率损失超过 $1M
-  - 或者：有 95% 的概率损失不超过 $1M
-- **常见陷阱**：误以为 VaR 是最大可能损失
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| 风险管理目标 = 风险最小化 | 目标是使风险与回报目标匹配 | 风险承担才能获得收益 |
-| 风险转移 = 风险消失 | 风险转移只是改变了承担方，系统性风险无法转移 | 对手仍可能违约 |
-| 操作风险是次要的 | 操作风险（如交易员错误、系统故障）可能造成重大损失 | 巴塞尔协议重点监管 |
-| VaR 是最大损失 | VaR 是给定置信水平下的最小可能损失 | 尾部损失可能远大于 VaR |
-| 风险预算 = 资金预算 | 风险预算分配风险限额，不是资金 | 概念用途不同 |
-| 流动性风险只在危机时 | 流动性风险在正常市场也可能存在 | 某些资产本身流动性差 |
-| 风险管理只是风控部门的事 | 风险管理是每个投资决策的一部分 | 嵌入到全流程 |
-| 各种风险独立存在 | 风险之间相互关联（信用风险 → 流动性风险） | 风险传染效应 |
-
-### 🔄 跨模块关联
-
-- **[[M01-Portfolio-Risk-and-Return-Part-I]]** — 风险概念源于组合收益的波动性，分散化是风险缓释的核心方法
-- **[[M02-Portfolio-Risk-and-Return-Part-II]]** — 系统性风险是 CAPM 的定价基础，也是风险管理的重要维度
-- **[[M04-Basics-of-Portfolio-Planning-and-Construction]]** — 风险预算是组合构建的关键组成部分（修复旧链接 `[[M04-Market-Efficiency-and-Portfolio-Construction]]`）
-- **[[M05-The-Behavioral-Biases-of-Individuals]]** — 行为偏差可能误导风险判断（修复旧链接 `[[M06-Behavioral-Biases]]`）
-- **[[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]]** (Derivatives) — 衍生品作为风险转移工具
-- **[[00-Portfolio-Management-MOC]]** — 返回科目总览
-
-### 📋 复习与刷题提示
-
-- M06 是 Portfolio Management 的**最后一个模块**，以概念为主
-- **核心能力**：风险分类、风险管理流程理解、改变化方法选择
-- **必考题型**：风险类型判断、流程排序、风险改变化选择、VaR 理解
-- **最常犯错误**：风险管理目标理解偏差（以为最小化就是目标）、VaR 定义混淆
-- 记忆重点：
-  - 五步骤：治理 → 识别 → 计量 → 改变化 → 监控
-  - 金融风险四类: 市场、信用、流动性、操作
-  - 改变化五方式: 规避、接受、转移、缓释、预防
-  - VaR = "至少有 1-α 的把握损失不超过 X"
-- 核心原则：风险管理是赋能（enable），不是束缚（constrain）
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M07-Risk-Management.md` (0.312)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

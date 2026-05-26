@@ -1,206 +1,149 @@
 ---
-title: "M05 — Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities"
-description: "CFA Level I 2026 official module: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities"
-module: M05
+title: "M05: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities"
+description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Derivatives"
-topic_area: Derivatives
-curriculum_year: 2026
+topic_area: "Derivatives"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "5-8%"
+module: "M05"
 official_module: "Module 5: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Derivatives
   - official_2026
+  - Derivatives
 ---
 
 # M05: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用无套利、复制和工具结构理解远期、期货、互换、期权的风险转移。 本模块聚焦 **Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
-- Learning Outcomes: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities
+- Learning Outcomes: Pricing and Valuation of Forward Contracts and for an Underlying with Varying                  Maturities
 - 5.01 | Introduction
 - 5.02 | Pricing and Valuation of Forward Contracts
 - 5.03 | Pricing and Valuation of Interest Rate Forward Contracts
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration
+2. explain how forward rates are determined for interest rate forward contracts and describe the uses of these forward rates.
 
-- explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration
-- explain how forward rates are determined for interest rate forward contracts and describe the uses of these forward rates.
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 5.1 学习任务
+- **核心问题**：考试希望你用 `Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 5.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 5.3 关键英文术语
+- **Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Pricing and Valuation of Forward Contracts（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Pricing and Valuation of Interest Rate Forward Contracts（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forward（远期）**：双方约定未来按固定价格交易标的的合约。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 5.1 | explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 5.2 | explain how forward rates are determined for interest rate forward contracts and describe the uses of these forward rates. | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M05: 远期合约定价与估值 (Forward Pricing and Valuation)
-│
-├── 🟢 核心区分：Price (价格) vs Value (价值)
-│   ├── Price (F0(T))：新合约的公平交割价，期初价值为零
-│   └── Value (Vt)：现有合约的当前价值，可正可负
-│
-├── ⭐ 三种资产的远期定价 (Forward Pricing)
-│   ├── 🅰 无收益资产 (No-Income)
-│   │   └── F0(T) = S0(1+r)^T
-│   │   └── 💡 现货以无风险利率增长
-│   ├── 🅱 已知收入 (Known Income)
-│   │   └── F0(T) = [S0 - PV(I)](1+r)^T
-│   │   └── ⚠️ 收入必须先折现再扣减
-│   └── 🅲 已知收益率 (Known Yield)
-│       └── F0(T) = S0[(1+r)/(1+q)]^T 或 S0e^{(r-q)T}
-│       └── 💡 收益率 q 降低持有成本
-│
-├── ⭐ 合约价值 (Contract Value)
-│   ├── 期初价值 V0 = 0 (公平价格定义)
-│   ├── 存续期多头价值 Vt = St - PVt(K)
-│   │   └── 🎯 高频考点：区分期初 vs 存续期
-│   ├── 到期多头收益 = ST - K
-│   └── 到期空头收益 = K - ST
-│
-├── ⭐ 利率远期 (Interest Rate Forward / FRA)
-│   ├── FRA 是锁定未来借款/贷款利率的协议
-│   ├── 基于隐含远期利率 (implied forward rate)
-│   └── 结算基于 LIBOR 替代参考利率
-│
-├── 📐 公式速查
-│   ├── 无收益: F0(T) = S0(1+r)^T
-│   ├── 已知收入: F0(T) = [S0 - PV(I)](1+r)^T
-│   ├── 已知收益率: F0(T) = S0[(1+r)/(1+q)]^T
-│   ├── 存续期价值: Vt = St - PVt(K)
-│   ├── 多头到期收益: ST - K
-│   └── 空头到期收益: K - ST
-│
-├── 💡 关键洞察
-│   ├── Forward Price 不是预期未来价格，是无套利结果
-│   ├── FRA 的定价基础是隐含远期利率
-│   └── 三种资产类型覆盖 Level I 所有远期场景
-│
-└── ⚠️ 考试陷阱
-    ├── Forward Price ≠ Forward Value
-    ├── 已知收入必须折现
-    ├── 连续/离散复利不可混用
-    └── FRA 是 OTC 合约，不是交易所产品
+5. Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities
+├─ 5.1 Introduction
+│  ├─ 5.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.1.2 应用/判断：把概念或公式转成解题动作
+├─ 5.2 Pricing and Valuation of Forward Contracts
+│  ├─ 5.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.2.2 应用/判断：把概念或公式转成解题动作
+├─ 5.3 Pricing and Valuation of Interest Rate Forward Contracts
+│  ├─ 5.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.3.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：远期价格 vs 远期价值 (Forward Price vs Forward Value)
+### 5.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration`。
+- **核心词汇**：**Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：远期价格（price）和远期价值（value）是两个截然不同的概念。价格是合约约定的未来交割价，使合约在期初的价值为零。价值是现有合约在存续期内的当前价值，可正可负。混淆两者是考试中最常见的错误之一。
+### 5.2 Pricing and Valuation of Forward Contracts
+- **中文主线**：本节点解决 `Pricing and Valuation of Forward Contracts` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`explain how forward rates are determined for interest rate forward contracts and describe the uses of these forward rates.`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **远期价格 F0(T)**：期初确定的公平交割价格，由无套利条件决定。期初多头和空头都不需要支付任何费用，因此合约的初始价值 V0 = 0
-- **远期价值 Vt**：存续期内，随着标的资产价格变动，现有合约会产生正或负的价值。到期时价值等于现货价格与交割价之差
-- 📐 期初 V0 = 0；存续期 Vt = St - PVt(K)；到期 Vt = ST - K（多头）
-- 💡 Price 是合约条款，Value 是合约的经济价值
+### 5.3 Pricing and Valuation of Interest Rate Forward Contracts
+- **中文主线**：本节点解决 `Pricing and Valuation of Interest Rate Forward Contracts` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration`。
+- **核心词汇**：**Pricing and Valuation of Forward Contracts（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分 price 和 value 是 Derivatives 科目的核心能力。最常见的陷阱：题目问 value 但考生用 price 公式计算，或反之。解题时先确认问的是 price（新合约定价）还是 value（存续合约估值）。
+### 5.9 Legacy 补强要点
+- 来自 `00-Derivatives-MOC.md`：## 最关键：先画 payoff，再找复制组合，再看无套利价格; ## Derivatives 核心知识树 (Core Knowledge Tree); ├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features。
 
-### 知识点2：三种资产的远期定价 (Forward Pricing for Three Asset Types)
 
-**核心概念**：根据标的资产在持有期内的收益特征，远期定价公式分为三种情形。每种情形对应不同的持有成本调整方式，理解和区分这三种情形是计算题的基础。
+## 5. 关键公式与计算框架
 
-- **无收益资产 (No-Income Asset)**：F0(T) = S0(1+r)^T。适用于零息债券、无股利股票。现货价格以无风险利率复利增长至到期
-- **已知收入资产 (Known Income Asset)**：F0(T) = [S0 - PV(I)](1+r)^T。适用于付息债券、支付股利的股票。收入（如利息、股利）降低持有成本，但收入必须用现值扣减，不能直接用未来值
-- **已知收益率资产 (Known Yield Asset)**：F0(T) = S0[(1+r)/(1+q)]^T 或 S0e^{(r-q)T}。适用于股指（股利收益率 q）、外汇（外国利率 q）。收益率 q 作为连续或离散的持有收益降低远期价格
-- 🎯 高频考点：已知收入必须折现；连续与离散复利不能混用
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Forward value | `Vt = St - PV(forward price)` | 远期合约价值随标的价格和折现变化。 |
 
-**考试应用**：计算 fair forward price 是 Derivatives 科目最常见的计算题型。解题关键是：① 识别资产类型；② 选择对应公式；③ 确认复利频率（离散/连续）；④ 代入计算。已知收入必须用 PV(I) 而非 I。
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 知识点3：远期合约的存续期估值 (Valuation During Life)
+## 6. 常见考点与解题思路
 
-**核心概念**：在合约存续期内，持有远期合约的多头或空头会产生正或负的价值，取决于标的资产当前价格与合约交割价的相对关系。估值的基本思想是用当前现货价格减去交割价的现值。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-- **无收益资产多头远期价值**：Vt(long) = St - PVt(K) = St - K/(1+r)^{T-t}
-- **到期多头收益**：ST - K（标的价格减去交割价）
-- **到期空头收益**：K - ST（交割价减去标的价格）
-- 💡 存续期价值在期初为零，到期为 ST - K（多头的角度），存续期内可正可负
+## 7. 易错点与考试陷阱
 
-**考试应用**：估值题需要区分是期初还是存续期。存续期估值使用当前现货价格 St 和当前时间 t 的折现因子。常见陷阱：使用期初的折现因子或混淆交割价 K 与远期价格 F0(T)。
+- **中英文错配**：看到 `Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 知识点4：利率远期/远期利率协议 (FRA)
+## 8. 跨模块关联
 
-**核心概念**：远期利率协议（FRA）是锁定未来一段时间借款或贷款利率的 OTC 衍生品。FRA 的定价基于隐含远期利率（implied forward rate），该利率由无套利关系从即期利率曲线推导得出。FRA 到期以现金结算，结算金额基于市场参考利率与合约利率的差额。
+- **上游模块**：[[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M06-Pricing-and-Valuation-of-Futures-Contracts]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- FRA 合约锁定未来某段时期（如 3 个月后开始的 6 个月期）的利率
-- 隐含远期利率由即期利率的无套利关系决定
-- FRA 是 OTC 合约，到期现金结算
-- 🎯 注意：FRA 的固定利率不是预期未来利率，是由无套利关系决定的
+## 9. 复习与刷题提示
 
-**考试应用**：FRA 题型通常要求计算隐含远期利率或理解 FRA 的结算机制。给定即期利率曲线，用无套利条件计算远期利率。注意 FRA 不是交易所产品，不涉及保证金和每日盯市。
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `F0(T) = S0(1+r)^T` | 无收益资产远期公平价格 | 零息债券、无股利股票的远期定价 | r 为无风险利率，T 以年为单位 |
-| `F0(T) = [S0 - PV(I)](1+r)^T` | 已知收入资产远期公平价格 | 付息债券、股利支付股票的远期定价 | PV(I) = I/(1+r)^t，收入时间可能不等同于合约到期 |
-| `F0(T) = S0[(1+r)/(1+q)]^T` | 已知收益率资产（离散）远期价格 | 股指远期（股利收益率 q） | q 为连续或离散收益率 |
-| `F0(T) = S0 × e^{(r-q)T}` | 已知收益率资产（连续）远期价格 | 外汇远期 (r 和 q 为两国利率) | 连续复利版本 |
-| `Vt(long) = St - PVt(K)` | 无收益资产多头存续期价值 | 评估远期合约当前价值 | PVt(K) = K/(1+r)^{T-t} |
-| `Long payoff = ST - K` | 多头远期到期收益 | 计算合约到期价值 | K 为合约约定的交割价 |
-| `Short payoff = K - ST` | 空头远期到期收益 | 计算空头到期价值 | 与多头对称相反 |
+## 10. Legacy Notes Integrated
 
-### 🛠️ 常见考点与解题思路
-
-**考点1：定价题 (计算 fair forward price)**
-- **步骤**：
-  1. 识别标的资产类型（无收益/已知收入/已知收益率）
-  2. 选择对应公式
-  3. 确认复利频率（离散 `(1+r)^T` 或连续 `e^{rT}`）
-  4. 代入数值计算
-- **常见陷阱**：已知收入必须用现值 PV(I) 而不是未来值 I
-
-**考点2：估值题 (计算存续期合约价值)**
-- **步骤**：
-  1. 区分是期初还是存续期
-  2. 若是存续期，用当前现货价格 St
-  3. 计算交割价 K 的现值 PVt(K)
-  4. Vt(long) = St - PVt(K)
-- **关键**：估值时用当前时间 t 的折现因子，不是期初的
-
-**考点3：远期 vs 期货差异**
-- **步骤**：关注每日盯市的影响
-  - 远期：到期一次结算，存续期价值波动
-  - 期货：每日结算，存续期价值每日归零
-- **注意**：Level I 主要考概念区别，不要求期货估值计算
-
-**考点4：利率远期 (FRA) 理解**
-- **步骤**：
-  1. FRA 锁定未来一段时间的利率
-  2. 隐含远期利率基于无套利关系
-  3. 到期现金结算，基于市场利率与合约利率的差额
-- **常见题型**：给定即期利率曲线，计算隐含远期利率
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| Forward Price = Forward Value | Price 是新合约的交割价，Value 是现有合约的当前价值 | 定义不同，Price 使初始 Value=0 |
-| Forward Price 是预期未来价格 | Forward Price 是由无套利关系决定的 | 预期未来价格受风险偏好影响 |
-| 已知收入直接用未来值减 | 已知收入必须先折现再扣减 | 时间价值差异 |
-| 连续和离散公式可互换 | 两种公式对应不同利率口径，不能混用 | 数学形式不同 |
-| 存续期多头价值 = ST - K | 存续期多头价值 = St - PVt(K)，到期才是 ST - K | Vt 用当前 spot，到期用到期 spot |
-| FRA 的 fixed rate 是预期未来利率 | FRA 的 fixed rate 由无套利决定 | 远期利率不是预测，是无套利结果 |
-
-### 🔄 跨模块关联
-
-- **[[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]]** — M04 的 carry 关系是 M05 所有定价公式的基础
-- **[[M06-Pricing-and-Valuation-of-Futures-Contracts]]** — 期货与远期定价框架相同，但结算机制不同导致价格可能差异
-- **[[M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps]]** — 利率互换可视为一系列 FRA 的組合
-- **[[M00-Derivatives-MOC]]** — 返回科目总览
-
-### 📋 复习与刷题提示
-
-- M05 是 Derivatives 科目中计算题最密集的模块之一
-- **核心能力**：熟练掌握三种资产类型的定价公式，区分 Price 与 Value
-- **必考题型**：计算 fair forward price、计算存续期合约价值、区分远期 vs 期货
-- **最常犯错误**：忘记已知收入需折现、混淆 Price 和 Value、复利频率用错
-- 记忆技巧：将所有定价公式统一为 `F = S + Carry - Benefit`，再推导具体公式
-- 估值公式 `Vt = St - PVt(K)` 适用于无收益资产，有收益资产需加回收入的现值
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：00-Derivatives-MOC.md（confidence 0.422）
+- **可复用结构**：00-Derivatives-MOC；笔记属性；最关键：先画 payoff，再找复制组合，再看无套利价格；科目概览；Derivatives 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先画 payoff，再找复制组合，再看无套利价格；## Derivatives 核心知识树 (Core Knowledge Tree)；├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features；├── M02: 远期承诺与或有求偿 (Forward Commitments and Contingent Claims)【考试核心】↔ 2026 Outline: Forward Commitment and Contingent Claim Features
+- **公式/计算线索**：difficulty: payoff 直觉、复制组合与定价公式高度绑定；│ │ ├── 对冲现有敞口；转换久期、Beta、货币、商品风险 (hedge an existing exposure; transform duration, beta, currency, commodity risk) (风险管理)；│ │ ├── 杠杆、流动性、交易对手、基差、模型、操作风险 (leverage, liquidity, counterparty, basis, model, operational risk) (衍生品风险)
+- **易错提示**：│ └── 注意：derivative value can be small today while exposure is economically large【考试陷阱】；│ └── 注意：right vs obligation is the first fork before every payoff question；│ └── 注意：hedging reduces a chosen risk; it may introduce basis or counterparty risk

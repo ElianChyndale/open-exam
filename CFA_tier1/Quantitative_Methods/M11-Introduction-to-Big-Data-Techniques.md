@@ -1,23 +1,29 @@
 ---
-title: "M11 — Introduction to Big Data Techniques"
-description: "CFA Level I 2026 official module: Introduction to Big Data Techniques"
-module: M11
+title: "M11: Introduction to Big Data Techniques"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M11"
 official_module: "Module 11: Introduction to Big Data Techniques"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M11: Introduction to Big Data Techniques
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Introduction to Big Data Techniques**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,174 +35,125 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data
+2. describe Big Data, artificial intelligence, and machine learning
+3. describe applications of Big Data and Data Science to investment management
 
-- describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data
-- describe Big Data, artificial intelligence, and machine learning
-- describe applications of Big Data and Data Science to investment management
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 11.1 学习任务
+- **核心问题**：考试希望你用 `Introduction to Big Data Techniques` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 11.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 11.3 关键英文术语
+- **Introduction to Big Data Techniques（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **How Is Fintech used in Quantitative Investment Analysis?（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Advanced Analytical Tools: Artificial Intelligence and Machine Learning（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Advanced Analytical Tools（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Tackling Big Data with Data Science（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Big Data（大数据）**：用更高维、非结构化或高频数据改进投资判断。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 11.1 | describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 11.2 | describe Big Data, artificial intelligence, and machine learning | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 11.3 | describe applications of Big Data and Data Science to investment management | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M11: Introduction to Big Data Techniques（大数据与机器学习）
-│
-├── ⭐ 金融科技数据背景 (Fintech Data Context)
-│   ├── 结构化数据: 表格形式（股价、财务比率）— 易分析
-│   ├── 非结构化数据: 文本、图像、音频 — NLP/图像处理
-│   ├── 替代数据 (Alternative Data): 卫星图、信用卡、物流数据
-│   └── 四个 V: Volume(体量), Velocity(速度), Variety(多样性), Veracity(真实性)
-│
-├── ⭐ 三种机器学习类型 (Three ML Types)
-│   ├── 📌 监督学习 (Supervised): 有标签数据, X→Y
-│   │   ├── 回归: 预测连续值（线性回归）
-│   │   └── 分类: 预测类别（逻辑回归、SVM、决策树）
-│   ├── 📌 非监督学习 (Unsupervised): 无标签数据, 发现模式
-│   │   ├── 聚类: K-Means、层次聚类
-│   │   └── 降维: PCA
-│   └── 📌 强化学习 (Reinforcement): Agent+环境+奖励 → 最优策略
-│       └── 应用: 算法交易、游戏 AI
-│
-├── ⭐ 深度学习 (Deep Learning)
-│   ├── ML 子集，多层神经网络
-│   ├── 擅长非结构化数据（图像、文本、语音）
-│   └── 代表: CNN, RNN, Transformer
-│
-├── ⭐ 过拟合 (Overfitting)
-│   ├── 训练集好 + 验证集差 = 过拟合
-│   ├── 📌 本质: 学到噪声而非信号
-│   ├── 📌 原因: 模型复杂、样本少、特征多
-│   └── 📌 解决: 交叉验证、正则化、简化模型
-│
-├── ⭐ 投资应用 (Investment Applications)
-│   ├── 研究: NLP 分析财报情绪、因子挖掘
-│   ├── 风险管理: 欺诈检测、异常交易识别
-│   ├── 运营: 算法交易、自动化报告
-│   └── 客户分析: 细分、流失预测、个性化建议
-│
-├── 💡 关键洞察
-│   ├── 监督 vs 非监督: 决定因素是"是否有标签"
-│   ├── ML 预测能力强，但不揭示因果关系
-│   ├── 复杂模型 ≠ 好模型 — 过拟合是普遍问题
-│   ├── 数据量大 ≠ 决策好 — GIGO 原则始终适用
-│   └── 黑箱风险（不可解释）与过拟合（泛化差）是两个不同概念
-│
-└── ⚠️ 考试陷阱总结
-    ├── Big Data 不自动 = Better Decisions (GIGO)
-    ├── ML 不是因果分析（预测 ≠ 因果）
-    ├── 样本外验证不可或缺
-    ├── 黑箱风险 ≠ 过拟合 — 两个不同概念
-    ├── 数据隐私与伦理合规（GDPR 等）
-    └── 监督/非监督/强化学习的三分类
+11. Introduction to Big Data Techniques
+├─ 11.1 Introduction
+│  ├─ 11.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.1.2 应用/判断：把概念或公式转成解题动作
+├─ 11.2 How Is Fintech used in Quantitative Investment Analysis?
+│  ├─ 11.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.2.2 应用/判断：把概念或公式转成解题动作
+├─ 11.3 Advanced Analytical Tools: Artificial Intelligence and Machine Learning
+│  ├─ 11.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.3.2 应用/判断：把概念或公式转成解题动作
+├─ 11.4 Tackling Big Data with Data Science
+│  ├─ 11.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：金融科技数据背景（Fintech Data Context）
-**核心概念**：金融科技的发展产生了大量新型数据源，深刻改变了投资分析的方式。理解数据类型和大数据特征是运用现代数据分析技术的前提。
-- **结构化数据**：以表格形式组织的定量数据（股价、财务比率），易于存储和分析
-- **非结构化数据**：无预定义格式的文本、图像、音频（新闻文章、社交媒体帖子、电话会议记录）
-- **替代数据（Alternative Data）**：传统数据源之外的信息（卫星图像、信用卡交易、物流数据、网络搜索趋势）
-- **四个 V**：Volume（体量）、Velocity（速度）、Variety（多样性）、Veracity（真实性）
-- **应用领域**：研究（信号提取）、风险管理、运营（算法交易）、客户分析（个性化建议）
+### 11.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data`。
+- **核心词汇**：**Introduction to Big Data Techniques（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分数据类型（结构化/非结构化/替代数据），理解四个 V 的概念。
+### 11.2 How Is Fintech used in Quantitative Investment Analysis?
+- **中文主线**：本节点解决 `How Is Fintech used in Quantitative Investment Analysis?` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe Big Data, artificial intelligence, and machine learning`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：大数据/AI/ML 定义（Big Data, AI, and ML Definitions）
-**核心概念**：人工智能（AI）是让机器模拟人类智能的广义领域，机器学习（ML）是 AI 的子集，关注让机器从数据中学习模式和规律。
-- **监督学习（Supervised Learning）**：使用带标签的数据训练，任务包括回归（预测连续值）和分类（预测类别标签）
-- **非监督学习（Unsupervised Learning）**：使用无标签数据，让算法自行发现数据中的结构，任务包括聚类和降维
-- **强化学习（Reinforcement Learning）**：智能体通过与环境交互、奖励信号学习最优策略
-- **深度学习（Deep Learning）**：ML 的子集，使用多层神经网络，擅长处理非结构化数据
+### 11.3 Advanced Analytical Tools: Artificial Intelligence and Machine Learning
+- **中文主线**：本节点解决 `Advanced Analytical Tools: Artificial Intelligence and Machine Learning` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe applications of Big Data and Data Science to investment management`。
+- **核心词汇**：**How Is Fintech used in Quantitative Investment Analysis?（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定具体任务判断使用哪种学习方法（有标签 → 监督，无标签 → 非监督）。
+### 11.4 Tackling Big Data with Data Science
+- **中文主线**：本节点解决 `Tackling Big Data with Data Science` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data`。
+- **核心词汇**：**Advanced Analytical Tools: Artificial Intelligence and Machine Learning（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：过拟合与投资应用（Overfitting and Investment Applications）
-**核心概念**：过拟合是机器学习中最常见的问题，模型学到噪声而非信号。大数据技术在投资管理中有广泛的应用。
-- **过拟合表现**：训练集表现好 + 验证集差 = 过拟合；原因：模型复杂、样本少、特征多
-- **解决方法**：交叉验证、正则化、简化模型
-- **投资应用**：NLP 分析财报情绪、因子挖掘、欺诈检测、算法交易、客户细分
-- ⚠️ Big Data 不自动 = Better Decisions（GIGO 原则始终适用）
-- ⚠️ ML 预测能力强但不揭示因果关系——预测 ≠ 因果
-- ⚠️ 样本外验证不可或缺
+### 11.9 Legacy 补强要点
+- 来自 `M10-Big-Data-and-ML.md`：## 1. 核心知识点; **非结构化数据（Unstructured Data）**：无预定义格式的文本、图像、音频等（新闻文章、社交媒体帖子、电话会议记录）; ### 1.2 大数据 / AI / ML 定义。
 
-**考试应用**：识别过拟合迹象，理解交叉验证的作用，区分监督/非监督/强化学习。
 
-### 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 概念 | 解释 | 应用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| Supervised Learning | 带标签数据训练 X→Y | 股价预测（回归）、信用分类 | 需要高质量标签数据 |
-| Unsupervised Learning | 无标签数据发现模式 | 客户细分、异常检测 | 结果难以验证 |
-| Reinforcement Learning | Agent+环境+奖励学习策略 | 算法交易、组合优化 | 需要大量交互环境 |
-| Deep Learning | 多层神经网络 | 图像识别、NLP、语音 | 数据需求大，黑箱属性强 |
-| Overfitting | 学到噪声而非信号 | 所有 ML 模型的陷阱 | 用交叉验证诊断 |
-| Cross-Validation | 训练/验证数据分离 | 模型选择、超参数调优 | 防止数据泄露 |
+本模块以概念判断为主，无核心计算公式。复习时把 `Introduction to Big Data Techniques` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-### 🛠️ 常见考点与解题思路
+## 6. 常见考点与解题思路
 
-**考点1：监督 vs 非监督 vs 强化学习分类**
-- 规则：有标签 × 已知输出 → 监督学习
-- 无标签 × 发现模式 → 非监督学习
-- Agent × 环境 × 奖励 → 强化学习
-- ⚠️ 给定具体任务判断学习类型是 CFA 必考
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点2：过拟合识别与应对**
-- 症状：训练集表现好 + 验证集/测试集表现差
-- 诊断：学习曲线 (Learning Curve)、交叉验证
-- 应对：正则化、简化模型、更多训练数据
-- ⚠️ 过拟合是 ML 中最常见的问题
+## 7. 易错点与考试陷阱
 
-**考点3：结构化 vs 非结构化数据**
-- 数据库表格、CSV → 结构化
-- 新闻文章、社交媒体 → 非结构化
-- JSON、XML → 半结构化
-- ⚠️ 考试常给数据源让你判断结构类型
+- **中英文错配**：看到 `Introduction to Big Data Techniques` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点4：替代数据的投资应用**
-- 卫星图像 → 停车场车流量 → 零售收入预测
-- 信用卡交易 → 消费趋势分析
-- 物流数据 → 供应链效率判断
-- 网络搜索趋势 → 投资者情绪指标
+## 8. 跨模块关联
 
-**考点5：数据相关风险与伦理**
-- GIGO: 数据质量差 → 结论质量差
-- 预测 ≠ 因果: ML 不揭示因果关系
-- 黑箱风险: 复杂模型难以解释
-- 隐私合规: GDPR、数据伦理
+- **上游模块**：[[M10-Simple-Linear-Regression]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 🚨 易错点与考试陷阱
+## 9. 复习与刷题提示
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| Big Data 自动 = 更好决策 | 数据量大但质量差 → GIGO（垃圾进垃圾出） | 数据质量比数据量更重要 |
-| ML 模型揭示因果关系 | ML 预测能力强，但不一定揭示因果关系 | 相关性 ≠ 因果性 |
-| 黑箱风险 = 过拟合 | 黑箱风险是模型不可解释，过拟合是泛化差 | 两个不同问题：简单模型也可能过拟合 |
-| 模型越复杂越好 | 复杂模型更容易过拟合，简单模型往往是更好起点 | Occam's Razor: 简单优先 |
-| 非监督学习需要标签 | 非监督学习恰恰不需要标签 | 监督学习才需要标签 |
-| 替代数据 = 非结构化数据 | 替代数据可以是结构化或非结构化的 | 替代数据是按"来源"分类，不是按格式 |
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 🔄 跨模块关联
+## 10. Legacy Notes Integrated
 
-- **[[M10-Simple-Linear-Regression]]** — 线性回归是监督学习中最基础的模型。R²、F 检验、残差诊断等在 ML 中同样重要。
-- **[[M07-Estimation-and-Inference]]** — 样本外验证、交叉验证基于抽样理论。训练/验证/测试集拆分是估计方法论的延伸。
-- **[[M04-Probability-Trees-and-Conditional-Expectations]]** — 贝叶斯方法在 ML 中有广泛应用（朴素贝叶斯分类器）。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 过拟合诊断依赖于对偏差 (Bias) 和方差 (Variance) 的理解 — Bias-Variance Tradeoff。
-- **[[M06-Simulation-Methods]]** — Bootstrap 在 ML 集成学习中重要使用（如 Random Forest 的 Bagging）。
-
-### 📋 复习与刷题提示
-
-- **核心能力**：区分三种 ML 类型（监督/非监督/强化），理解过拟合的本质和应对方法
-- **必考题型**：ML 类型分类、过拟合识别、替代数据应用、数据结构判断
-- **最常犯错误**：监督/非监督/强化分类混淆、黑箱风险与过拟合混为一谈、认为 Big Data = 好决策
-- 记忆口诀：
-  - 有标签 = 监督，无标签 = 非监督，有环境+奖励 = 强化
-  - 过拟合：训练好，验证差 = 学噪声
-  - GIGO：垃圾进，垃圾出
-  - 预测 ≠ 因果：ML 找相关，不找原因
-- 刷题建议：本模块概念题为主，重点掌握 ML 三分类和过拟合的识别与应对
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M10-Big-Data-and-ML.md（confidence 0.643）
+- **可复用结构**：M11: Big Data and ML（大数据与机器学习）；1. 核心知识点；1.1 金融科技数据背景（Fintech Data Context）；1.2 大数据 / AI / ML 定义；1.3 投资应用（Investment Applications）；2. 关键公式
+- **高价值要点**：## 1. 核心知识点；**非结构化数据（Unstructured Data）**：无预定义格式的文本、图像、音频等（新闻文章、社交媒体帖子、电话会议记录）；### 1.2 大数据 / AI / ML 定义；核心概念：状态（State）、动作（Action）、奖励（Reward）
+- **公式/计算线索**：**运营（Operations）**：自动化流程、算法交易、降低成本；**运营（Operations）**：；## 2. 关键公式
+- **易错提示**：> **【考试陷阱】** 模型 sophistication（复杂程度）不能替代模型验证（Validation）和治理（Governance）。更复杂的模型需要有更严格的验证。；## 4. 易错点提醒

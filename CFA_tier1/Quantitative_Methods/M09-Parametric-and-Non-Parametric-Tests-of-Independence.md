@@ -1,23 +1,29 @@
 ---
-title: "M09 — Parametric and Non-Parametric Tests of Independence"
-description: "CFA Level I 2026 official module: Parametric and Non-Parametric Tests of Independence"
-module: M09
+title: "M09: Parametric and Non-Parametric Tests of Independence"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M09"
 official_module: "Module 9: Parametric and Non-Parametric Tests of Independence"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M09: Parametric and Non-Parametric Tests of Independence
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Parametric and Non-Parametric Tests of Independence**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -28,186 +34,112 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance
+2. explain tests of independence based on contingency table data
 
-- explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance
-- explain tests of independence based on contingency table data
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 9.1 学习任务
+- **核心问题**：考试希望你用 `Parametric and Non-Parametric Tests of Independence` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 9.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 9.3 关键英文术语
+- **Parametric and Non-Parametric Tests of Independence（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Tests Concerning Correlation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Tests of Independence Using Contingency Table Data（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Correlation（相关系数）**：衡量两个变量线性同向或反向变化的程度。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 9.1 | explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance | 解释机制、原因和后果；根据条件判断正确结论 | 写出结论、依据和限制条件。 |
+| 9.2 | explain tests of independence based on contingency table data | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M09: Parametric and Non-Parametric Tests of Independence（独立性检验）
-│
-├── ⭐ 相关系数 t 检验 — Pearson 参数检验
-│   ├── 📐 t = r × √[(n-2)/(1-r²)]
-│   ├── H₀: ρ = 0（无线性关系）；H₁: ρ ≠ 0（存在线性关系）
-│   ├── df = n-2
-│   ├── 假设：双变量正态分布 (Bivariate Normal)
-│   └── 🔗 与回归斜率系数的 t 检验完全等价
-│
-├── ⭐ Spearman 秩相关系数检验 — 非参数检验
-│   ├── 基于排序 (Rank) 而非原始数值
-│   ├── 无分布假设
-│   ├── 🎯 适用：数据不满足正态、有 outlier、有序数据
-│   └── ⚠️ Spearman 检测单调关系，不一定是线性
-│
-├── ⭐ Pearson vs Spearman 对比
-│   ├── Pearson: 连续变量、双变量正态、线性关系、对 outlier 敏感
-│   └── Spearman: 有序/连续变量、无分布假设、单调关系、对 outlier 不敏感
-│
-├── ⭐ 列联表卡方独立性检验 (Chi-Square Test of Independence)
-│   ├── H₀: 两分类变量独立；H₁: 两变量不独立
-│   ├── 📐 χ² = Σ[(O-E)²/E]
-│   ├── 📐 期望频数 E = (行合计 × 列合计) / n
-│   ├── 📐 df = (r-1)(c-1)
-│   ├── 卡方检验是右尾检验
-│   └── ⚠️ 所有期望频数 ≥ 5（否则卡方近似不可靠）
-│
-├── 💡 关键洞察
-│   ├── 相关性 t 检验与回归斜率 t 检验等价 — 两个视角一个检验
-│   ├── Spearman 是 Pearson 的非参数版本 — 适用不同数据条件
-│   ├── 卡方独立性检验只判断"是否关联"，不说明关联方向和强度
-│   ├── 相关 ≠ 因果 — 显著相关不代表因果关系
-│   └── 卡方检验用期望频数（独立假设下），不是观测频数
-│
-└── ⚠️ 考试陷阱总结
-    ├── 相关系数 t 检验 df = n-2，不是 n-1
-    ├── 卡方检验是右尾检验
-    ├── 期望频数基于独立假设计算，不要用观测频数
-    ├── 期望频数 ≥ 5 是卡方检验的适用条件
-    └── Spearman 检测单调关系，Pearson 检测线性关系
+9. Parametric and Non-Parametric Tests of Independence
+├─ 9.1 Introduction
+│  ├─ 9.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.1.2 应用/判断：把概念或公式转成解题动作
+├─ 9.2 Tests Concerning Correlation
+│  ├─ 9.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.2.2 应用/判断：把概念或公式转成解题动作
+├─ 9.3 Tests of Independence Using Contingency Table Data
+│  ├─ 9.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.3.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：相关系数检验（Test of Correlation）
-**核心概念**：相关系数检验用于检验总体相关系数是否为零，即两个变量之间是否存在线性关系。包括参数检验（Pearson）和非参数检验（Spearman）两种方法。
-- **Pearson 参数检验**：t = r × √[(n-2)/(1-r²)]，H₀: ρ = 0，df = n-2，假设双变量正态分布
-- **Spearman 非参数检验**：基于数据的排序而非原始数值，不要求正态分布假设，适用于有序数据或有异常值的情况
-- ⚠️ **自由度 = n-2**（不是 n-1），与单样本 t 检验的自由度混淆是 CFA 高频陷阱
-- Spearman 检测的是单调关系（不一定是线性关系），Pearson 检测线性关系
+### 9.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；根据条件判断正确结论；官方表述为：`explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance`。
+- **核心词汇**：**Parametric and Non-Parametric Tests of Independence（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定 r 和 n 计算 t 统计量，与临界值比较；根据数据条件选择 Pearson 或 Spearman 检验。
+### 9.2 Tests Concerning Correlation
+- **中文主线**：本节点解决 `Tests Concerning Correlation` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain tests of independence based on contingency table data`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：列联表卡方独立性检验（Chi-Square Test of Independence）
-**核心概念**：卡方独立性检验用于检验两个分类变量是否独立，基于观测频数与期望频数的差异。
-- **检验统计量**：χ² = Σ[(O-E)²/E]，其中期望频数 E = (行合计 × 列合计)/n
-- **自由度**：df = (r-1)(c-1)，r=行数，c=列数
-- **检验性质**：右尾检验（χ² 越大越拒绝 H₀）
-- ⚠️ 所有期望频数应 ≥ 5（否则卡方近似可能不可靠）
-- ⚠️ 卡方检验结果仅说明变量是否独立，不说明关联的强度或方向
-- ⚠️ **相关 ≠ 因果**：即使相关系数显著，也不意味着变量之间存在因果关系
+### 9.3 Tests of Independence Using Contingency Table Data
+- **中文主线**：本节点解决 `Tests of Independence Using Contingency Table Data` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；根据条件判断正确结论；官方表述为：`explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance`。
+- **核心词汇**：**Tests Concerning Correlation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：构建列联表，计算期望频数，计算 χ² 统计量，与临界值比较得出结论。
+### 9.9 Legacy 补强要点
+- 来自 `M09-Tests-of-Independence.md`：## 1. 核心知识点; ## 2. 关键公式; **考点四：Spearman 与 Pearson 核心区别总结**。
 
-### 📐 关键公式表
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `t = r√[(n-2)/(1-r²)]` | 相关系数 t 检验 | 检验 ρ = 0 | df = n-2 |
-| `χ² = Σ[(O-E)²/E]` | 卡方检验统计量 | 列联表独立性检验 | 右尾检验 |
-| `E = (行合计×列合计)/n` | 期望频数 | 列联表期望值 | 基于独立假设计算 |
-| `df = (r-1)(c-1)` | 卡方检验自由度 | 列联表自由度 | r=行数，c=列数 |
-| `df = n-2` | 相关系数 t 检验 df | Pearson 检验 | 不是 n-1 |
+## 5. 关键公式与计算框架
 
-### 🛠️ 常见考点与解题思路
+本模块以概念判断为主，无核心计算公式。复习时把 `Parametric and Non-Parametric Tests of Independence` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-**考点1：相关系数 t 检验计算（高频）**
-- 给定样本相关系数 r 和样本量 n，计算检验统计量:
-  - t = r√[(n-2)/(1-r²)]
-- H₀: ρ = 0 (总体相关系数为零，无线性关系)
-- H₁: ρ ≠ 0 (总体相关系数不为零，存在线性关系)
-- 与 t 临界值比较 (df = n-2，双尾检验)
-- 若 |t| > t_crit → 拒绝 H₀ → 相关性显著
-- ⚠️ df = n-2，不是 n-1 (最容易混淆的自由度陷阱)
-- 🔗 等价于回归中斜率系数的 t 检验 (完全相同的 t 统计量)
+## 6. 常见考点与解题思路
 
-**考点2：参数 vs 非参数检验选择标准**
-- 选择 Pearson (参数检验) 的条件:
-  - 数据为连续变量 (区间/比率尺度)
-  - 服从双变量正态分布 (Bivariate Normal)
-  - 无显著异常值
-  - 关注线性关系
-- 选择 Spearman (非参数检验) 的条件:
-  - 数据不满足正态分布
-  - 存在异常值
-  - 数据为有序变量 (Ordinal)
-  - 关注单调关系 (不一定是线性)
-- ⚠️ Spearman 检测单调关系，Pearson 检测线性关系 — 这是核心区别
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点3：列联表卡方检验全流程（必考）**
-- 步骤 1：建立假设
-  - H₀: 两个分类变量独立 (无关联)
-  - H₁: 两个分类变量不独立 (存在关联)
-- 步骤 2：计算期望频数
-  - E = (行合计 × 列合计) / 总样本量 n
-  - 每个单元格的 E 在"独立"假设下的理论频数
-- 步骤 3：计算卡方统计量
-  - χ² = Σ[(O-E)²/E]，对所有单元格求和
-- 步骤 4：确定拒绝域
-  - df = (r-1)(c-1)，其中 r=行数, c=列数
-  - 卡方检验是右尾检验 (χ² 越大越拒绝 H₀)
-- 步骤 5：比较并做结论
-  - χ² > 临界值 → 拒绝 H₀ → 变量不独立
-- ⚠️ 所有期望频数 ≥ 5 (否则卡方近似不可靠)
-- ⚠️ 仅判断是否存在关联，不说明关联方向或强度
+## 7. 易错点与考试陷阱
 
-**考点4：Pearson vs Spearman 核心区别总结**
-- Pearson:
-  - 数据: 原始值
-  - 假设: 双变量正态分布
-  - 检测: 线性关系
-  - 异常值: 敏感
-  - 类型: 参数检验
-- Spearman:
-  - 数据: 秩 (Rank) / 排序
-  - 假设: 无分布假设
-  - 检测: 单调关系
-  - 异常值: 不敏感
-  - 类型: 非参数检验
-- ⚠️ 考试常考: 给定场景选择正确方法
+- **中英文错配**：看到 `Parametric and Non-Parametric Tests of Independence` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点5：卡方独立性检验的注意事项**
-- 期望频数不能太小 (≥ 5 是经验规则)
-- 检验结果仅说明有无关联，不说明关联强度或方向
-- 如果是 2×2 表，可使用 Yates' correction (但 CFA 一级一般不要求)
-- 相关 ≠ 因果 — χ² 显著不代表一个变量导致另一个
-- ⚠️ 不要将期望频数与观测频数混淆 — 期望频数基于"独立"假设
+## 8. 跨模块关联
 
-### 🚨 易错点与考试陷阱
+- **上游模块**：[[M08-Hypothesis-Testing]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M10-Simple-Linear-Regression]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| 相关系数 t 检验 df = n-1 | df = n-2 | 回归有两个参数（截距和斜率），损失两个自由度 |
-| 卡方检验是双尾检验 | 卡方检验是右尾检验 | χ² 统计量总是非负，越远离 0 越拒绝 H₀ |
-| 期望频数 = 观测频数 | 期望频数基于独立假设计算 | 期望频数是"如果独立"的理论值 |
-| Spearman 检测线性关系 | Spearman 检测单调关系（不一定是线性） | 基于秩相关，检测秩的单调趋势 |
-| 卡方检验说明关联方向 | 卡方检验只判断是否关联，不说明方向或强度 | 如需方向强度用 Cramér's V 等指标 |
+## 9. 复习与刷题提示
 
-### 🔄 跨模块关联
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-- **[[M08-Hypothesis-Testing]]** — 本模块是 M08 假设检验框架的直接应用。相关性 t 检验是参数检验的具体实例，Spearman 检验是非参数检验的应用。
-- **[[M10-Simple-Linear-Regression]]** — 相关系数的 t 检验与简单线性回归中斜率系数的 t 检验完全等价。简单回归中 R² = r²。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 相关系数的概念在 M03 中引入，本模块将其扩展为正式统计检验。
-- **[[M05-Portfolio-Mathematics]]** — 协方差和相关系数是投资组合数学的核心概念，本模块的检验方法可用于检验资产收益相关性是否显著。
+## 10. Legacy Notes Integrated
 
-### 📋 复习与刷题提示
-
-- **核心能力**：区分 Pearson（参数、线性）和 Spearman（非参数、单调）的适用场景
-- **公式记忆**：相关系数 t 统计量公式和列联表 χ² 公式必须能默写
-- **易混点**：自由度注意是 n-2（相关系数检验）还是 (r-1)(c-1)（列联表检验）
-- **最常犯错误**：自由度记错、卡方检验方向弄反、期望频数与观测频数混淆
-- **跨科目接口**：检验方法与 Quant M08 假设检验框架、Equity 市场效率检验关联
-- 记忆口诀：
-  - Pearson 用原始值，Spearman 用秩
-  - 卡方右尾检验：χ² 越大越拒绝
-  - 期望频数 = 行合计 × 列合计 / n
-  - 相关系数 df = n-2
-- 刷题建议：重点做 Pearson/Spearman 场景判断题和列联表 χ² 计算题
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M09-Tests-of-Independence.md（confidence 0.828）
+- **可复用结构**：M09: Tests of Independence（独立性检验）；1. 核心知识点；1.1 相关系数检验（Test of Correlation）；1.2 列联表独立性检验（Contingency Table Independence Test）；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；**考点四：Spearman 与 Pearson 核心区别总结**；1. **相关系数 t 检验的自由度 = n-2**，不是 n-1 — 与单样本 t 检验的自由度 n-1 混淆是 CFA 高频陷阱。
+- **公式/计算线索**：`t = r × √[(n-2) / (1-r²)]`；H₀: ρ = 0 （总体相关系数为零，即两变量无线性关系）；自由度 df = n-2
+- **易错提示**：不要求正态分布假设；**注意事项**：；注意 Spearman 检测的是单调关系（不一定是线性关系）

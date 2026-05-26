@@ -1,225 +1,188 @@
 ---
-title: "M09 — Option Replication Using Put-Call Parity"
-description: "CFA Level I 2026 official module: Option Replication Using Put-Call Parity"
-module: M09
+title: "M09: Option Replication Using Put-Call Parity"
+description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Derivatives"
-topic_area: Derivatives
-curriculum_year: 2026
+topic_area: "Derivatives"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "5-8%"
+module: "M09"
 official_module: "Module 9: Option Replication Using Put-Call Parity"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Derivatives
   - official_2026
+  - Derivatives
 ---
 
 # M09: Option Replication Using Put-Call Parity
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用无套利、复制和工具结构理解远期、期货、互换、期权的风险转移。 本模块聚焦 **Option Replication Using Put-Call Parity**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
-- Learning Outcomes: Option Replication Using Put-Call Parity
+- Learning Outcomes: Option Replication Using Put–Call Parity
 - 9.01 | Introduction
-- 9.02 | Put-Call Parity
-- 9.03 | Option Strategies Based on Put-Call Parity
-- 9.04 | Put-Call Forward Parity and Option Applications
-- 9.05 | Put-Call Forward Parity
-- 9.06 | Option Put-Call Parity Applications: Firm Value
+- 9.02 | Put–Call Parity
+- 9.03 | Option Strategies Based on Put–Call Parity
+- 9.04 | Put–Call Forward Parity and Option Applications
+- 9.05 | Put–Call Forward Parity
+- 9.06 | Option Put–Call Parity Applications: Firm Value
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain put-call parity for European options
+2. explain put-call forward parity for European options
 
-- explain put-call parity for European options
-- explain put-call forward parity for European options
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 9.1 学习任务
+- **核心问题**：考试希望你用 `Option Replication Using Put-Call Parity` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 9.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 9.3 关键英文术语
+- **Option Replication Using Put-Call Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Put–Call Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Option Strategies Based on Put–Call Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Put–Call Forward Parity and Option Applications（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Put–Call Forward Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Option Put–Call Parity Applications: Firm Value（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Option Put–Call Parity Applications（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 9.1 | explain put-call parity for European options | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 9.2 | explain put-call forward parity for European options | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M09: 买卖权平价与期权复制 (Put-Call Parity and Option Replication)
-│
-├── 🟢 核心公式：c + PV(X) = p + S0
-│   └── 适用于：欧式期权（到期日相同、执行价相同）
-│   └── 💡 经济含义：保护性看跌 + 股票 = 看涨 + 无风险资产
-│
-├── ⭐ 标准平价公式 (Standard Put-Call Parity)
-│   ├── c + PV(X) = p + S0
-│   ├── 左侧：Fiduciary Call (看涨 + 无风险资产)
-│   ├── 右侧：Protective Put (看跌 + 标的资产)
-│   └── 🎯 本质：无套利关系的体现
-│
-├── ⭐ 有收入资产的调整
-│   ├── 已知现金收入: c + PV(X) + PV(I) = p + S0
-│   │   └── 在左侧加入股利现值（资产持有者获得股利）
-│   └── 连续收益率: c + PV(X) = p + S0e^{-qT}
-│       └── 收益率 q 降低标的资产的现值
-│
-├── ⭐ 合成头寸 (Synthetic Positions)
-│   ├── 合成看涨 (Synthetic Call): c = p + S0 - PV(X)
-│   ├── 合成看跌 (Synthetic Put): p = c - S0 + PV(X)
-│   ├── 合成股票 (Synthetic Stock): S0 = c + PV(X) - p
-│   ├── 合成无风险资产: PV(X) = c + S0 - p
-│   └── 🎯 高频考点：平价公式移项得到合成头寸
-│
-├── ⭐ 买卖权远期平价 (Put-Call Forward Parity)
-│   ├── c + PV(X) = p + PV(F)
-│   │   └── F 为远期合约价格
-│   └── 用远期代替现货：c + PV(X) = p + F0(T)/(1+r)^T
-│
-├── ⭐ 期权价值边界 (Option Value Bounds)
-│   ├── 看涨下限: c ≥ max(0, S0 - PV(X))
-│   ├── 看跌下限: p ≥ max(0, PV(X) - S0)
-│   └── 💡 可由平价公式推导
-│
-├── 📐 公式速查
-│   ├── c + PV(X) = p + S0               (标准平价)
-│   ├── c + PV(X) + PV(I) = p + S0       (有现金收入)
-│   ├── c + PV(X) = p + S0e^{-qT}        (有收益率)
-│   ├── c + PV(X) = p + PV(F)            (远期平价)
-│   └── c ≥ max(0, S0 - PV(X))           (看涨下限)
-│
-├── 💡 关键洞察
-│   ├── PCP 是无套利关系，不是预测模型
-│   ├── PCP 是精确等式（忽略交易成本）
-│   ├── PCP 可用于检测套利机会
-│   ├── 证券可以视为期权的组合 (期权视角看公司价值)
-│
-└── ⚠️ 考试陷阱
-    ├── PCP 仅适用于欧式期权
-    ├── 有收入资产必须调整公式
-    ├── 合成头寸是 PCP 的移项，不是新概念
-    └── Put-call-forward parity 只是用远期替代现货
+9. Option Replication Using Put-Call Parity
+├─ 9.1 Introduction
+│  ├─ 9.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.1.2 应用/判断：把概念或公式转成解题动作
+├─ 9.2 Put–Call Parity
+│  ├─ 9.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.2.2 应用/判断：把概念或公式转成解题动作
+├─ 9.3 Option Strategies Based on Put–Call Parity
+│  ├─ 9.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.3.2 应用/判断：把概念或公式转成解题动作
+├─ 9.4 Put–Call Forward Parity and Option Applications
+│  ├─ 9.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.4.2 应用/判断：把概念或公式转成解题动作
+├─ 9.5 Put–Call Forward Parity
+│  ├─ 9.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 9.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：买卖权平价公式 (Put-Call Parity)
+### 9.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain put-call parity for European options`。
+- **核心词汇**：**Option Replication Using Put-Call Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：买卖权平价（Put-Call Parity, PCP）是期权定价中最基本的无套利关系，建立了看涨期权、看跌期权、标的资产和无风险资产之间的精确等式。PCP 仅适用于到期日和行权价相同的欧式期权。该等式的经济含义是： fiduciary call（看涨 + 无风险资产）与 protective put（看跌 + 标的资产）的未来收益完全相同。
+### 9.2 Put–Call Parity
+- **中文主线**：本节点解决 `Put–Call Parity` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain put-call forward parity for European options`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **标准公式**：c + PV(X) = p + S0
-  - 左侧（fiduciary call）：买入看涨期权 + 持有行权价现值的无风险资产
-  - 右侧（protective put）：买入看跌期权 + 持有标的资产
-- **有现金收入的调整**：c + PV(X) + PV(I) = p + S0（左侧加入股利现值）
-- **有连续收益率的调整**：c + PV(X) = p + S0e^{-qT}（右侧乘以 e^{-qT}）
-- 💡 PCP 是无套利恒等式，不是预测模型。在无摩擦市场中，PCP 必须精确成立
+### 9.3 Option Strategies Based on Put–Call Parity
+- **中文主线**：本节点解决 `Option Strategies Based on Put–Call Parity` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain put-call parity for European options`。
+- **核心词汇**：**Put–Call Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：PCP 套利题是必考题型。给定 call 价、put 价、标的价格、无风险利率，代入公式检查是否相等。若不等则存在套利机会——买低卖高。必须确认期权是欧式且到期日和行权价相同。
+### 9.4 Put–Call Forward Parity and Option Applications
+- **中文主线**：本节点解决 `Put–Call Forward Parity and Option Applications` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain put-call parity for European options`。
+- **核心词汇**：**Option Strategies Based on Put–Call Parity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：合成头寸 (Synthetic Positions)
+### 9.5 Put–Call Forward Parity
+- **中文主线**：本节点解决 `Put–Call Forward Parity` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain put-call parity for European options`。
+- **核心词汇**：**Put–Call Forward Parity and Option Applications（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：通过移项 put-call parity 公式，可以用其他金融工具的组合来复制期权的收益。合成头寸是理解期权复制和套利的关键工具，也是考试高频考点。
+### 9.9 Legacy 补强要点
+- 来自 `M07-Options-and-Put-Call-Parity.md`：## 1. 核心知识点; **关键概念**; ## 2. 关键公式。
+- 来自 `00-Derivatives-MOC.md`：## 最关键：先画 payoff，再找复制组合，再看无套利价格; ## Derivatives 核心知识树 (Core Knowledge Tree); ├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features。
 
-- **合成看涨 (Synthetic Call)**：c = p + S0 - PV(X)。用看跌期权 + 标的资产 + 借款复制看涨期权
-- **合成看跌 (Synthetic Put)**：p = c - S0 + PV(X)。用看涨期权 + 卖空标的 + 投资复制看跌期权
-- **合成股票 (Synthetic Stock)**：S0 = c + PV(X) - p。用看涨期权 + 无风险投资 - 看跌期权复制股票
-- **合成无风险资产**：PV(X) = c + S0 - p
-- 🎯 **高频考点**：给定目标头寸，移项 PCP 公式得到合成方法。核心方法：将目标头寸移到等式左侧，其余移到右侧
 
-**考试应用**：合成头寸题步骤：① 写出标准 PCP 公式 c + PV(X) = p + S0；② 将要合成的头寸单独放在等式左侧；③ 其余项移到右侧。注意：需确认欧式期权条件，有股利时需调整公式。
+## 5. 关键公式与计算框架
 
-### 知识点3：买卖权远期平价 (Put-Call Forward Parity)
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Forward value | `Vt = St - PV(forward price)` | 远期合约价值随标的价格和折现变化。 |
+| Put-call parity | `c + PV(X) = p + S` | 欧式期权无套利关系，高频判断式。 |
+| Option payoff | `call = max(0, S - X), put = max(0, X - S)` | 先画到期收益，再考虑期权费。 |
 
-**核心概念**：买卖权远期平价是标准 PCP 的扩展，用远期合约替代标的资产。这一关系连接了期权市场和远期市场，适用于当标的资产不易直接交易或更适合用远期来复制的情况。
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-- **公式**：c + PV(X) = p + PV(F)，其中 F 为远期价格
-- **推导**：由 F = S0(1+r)^T 可知 PV(F) = S0，代入标准 PCP 即得
-- 💡 PCP 和 Put-Call Forward Parity 本质相同，只是表示形式不同
+## 6. 常见考点与解题思路
 
-**考试应用**：理解 Put-Call Forward Parity 的关键是认识到它只是标准 PCP 的变形，用远期替代了现货。题目给出远期价格时代入 PV(F) 即可。常见陷阱：认为这是一个全新的关系（实际只是换了一种表达方式）。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 知识点4：期权价值边界的推导 (Option Value Bounds from PCP)
+## 7. 易错点与考试陷阱
 
-**核心概念**：从 put-call parity 可以推导出欧式期权的价值边界。这些边界提供了期权价格的理论下限，是检测期权是否被错误定价的基础。
+- **中英文错配**：看到 `Option Replication Using Put-Call Parity` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-- **看涨下限**：c ≥ max(0, S0 - PV(X))。由 PCP 推导：因为 p ≥ 0，所以 c + PV(X) ≥ S0，即 c ≥ S0 - PV(X)；又 c ≥ 0，所以 c ≥ max(0, S0 - PV(X))
-- **看跌下限**：p ≥ max(0, PV(X) - S0)。类似推导
-- 💡 如果市场价格低于理论下限，套利者可以买入期权、卖空标的/无风险资产，锁定无风险利润
+## 8. 跨模块关联
 
-**考试应用**：价值边界题通常要求比较市场价格与理论下限。解题：先计算理论下限，再与市场价格比较。若市场价低于下限则存在套利机会。注意：理论下限仅适用于欧式期权。
+- **上游模块**：[[M08-Pricing-and-Valuation-of-Options]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `c + PV(X) = p + S0` | 标准买卖权平价（欧式期权） | 期权利率分析和套利识别 | 仅适用于欧式；到期日和行权价相同 |
-| `c + PV(X) + PV(I) = p + S0` | 有已知现金收入资产平价 | 股票期权（有股利） | PV(I) 是股利现值 |
-| `c + PV(X) = p + S0e^{-qT}` | 有连续收益率资产平价 | 股指期权 | q 为连续股利收益率 |
-| `c + PV(X) = p + PV(F)` | 买卖权远期平价 | 用远期替代现货 | F = S0(1+r)^T 代入即为标准平价 |
-| `c = p + S0 - PV(X)` | 合成看涨期权 | 用看跌+股票合成看涨 | 检查是否为欧式 |
-| `p = c - S0 + PV(X)` | 合成看跌期权 | 用看涨+做空股票合成看跌 | 需做空标的资产 |
-| `S0 = c + PV(X) - p` | 合成股票 | 用看涨+看跌合成股票 | 等价于 protective put |
-| `c ≥ max(0, S0 - PV(X))` | 欧式看涨下限 | 检测期权是否被低估 | 下限由无套利推导 |
+## 9. 复习与刷题提示
 
-### 🛠️ 常见考点与解题思路
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**考点1：检查 PCP 是否成立 / 识别套利机会**
-- **步骤**：
-  1. 写出标准平价公式
-  2. 代入已知数值计算左侧和右侧
-  3. 若左侧 ≠ 右侧 → 存在套利机会
-  4. 买低卖高 (buy the cheap side, sell the expensive side)
-  5. 检查是否需调整股利/收入
-- **陷阱**：必须确认是欧式期权，否则套利不成立
+## 10. Legacy Notes Integrated
 
-**考点2：推导合成头寸**
-- **步骤**：
-  1. 从标准平价公式出发: c + PV(X) = p + S0
-  2. 将要合成的头寸移到等式左侧
-  3. 其余项移到右侧
-- **示例**：要合成 call → c = p + S0 - PV(X)
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M07-Options-and-Put-Call-Parity.md（confidence 0.605）
+- **可复用结构**：M07: 期权与买卖权平价 (Options and Put-Call Parity)；1. 核心知识点；2. 关键公式；3. 常见考点与解题思路；4. 易错点提醒；5. 跨模块关联
+- **高价值要点**：## 1. 核心知识点；**关键概念**；## 2. 关键公式；【考纲内但无核心公式】moneyness、American vs European、option uses。
+- **公式/计算线索**：**内在价值 (Intrinsic Value)**：立即行权的经济价值，`= max(0, payoff driver)`；**买卖权平价公式 (Put-Call Parity)**：；c + PV(X) = p + S0
+- **易错提示**：## 4. 易错点提醒；不要将欧式平价关系直接套用到所有美式期权场景
 
-**考点3：有股利/收益的 PCP 调整**
-- **步骤**：
-  1. 确定标的资产是否有已知现金收益或连续收益率
-  2. 已知现金收入 → 左侧加 PV(I)
-  3. 连续收益率 → 右侧 S0 乘以 e^{-qT}
-- **高频陷阱**：忘记调整股利/收益是做 PCP 题最常见的错误
+### 来源：00-Derivatives-MOC.md（confidence 0.519）
+- **可复用结构**：00-Derivatives-MOC；笔记属性；最关键：先画 payoff，再找复制组合，再看无套利价格；科目概览；Derivatives 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先画 payoff，再找复制组合，再看无套利价格；## Derivatives 核心知识树 (Core Knowledge Tree)；├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features；├── M02: 远期承诺与或有求偿 (Forward Commitments and Contingent Claims)【考试核心】↔ 2026 Outline: Forward Commitment and Contingent Claim Features
+- **公式/计算线索**：difficulty: payoff 直觉、复制组合与定价公式高度绑定；│ │ ├── 对冲现有敞口；转换久期、Beta、货币、商品风险 (hedge an existing exposure; transform duration, beta, currency, commodity risk) (风险管理)；│ │ ├── 杠杆、流动性、交易对手、基差、模型、操作风险 (leverage, liquidity, counterparty, basis, model, operational risk) (衍生品风险)
+- **易错提示**：│ └── 注意：derivative value can be small today while exposure is economically large【考试陷阱】；│ └── 注意：right vs obligation is the first fork before every payoff question；│ └── 注意：hedging reduces a chosen risk; it may introduce basis or counterparty risk
 
-**考点4：Put-Call Forward Parity**
-- **步骤**：
-  1. 标准 PCP: c + PV(X) = p + S0
-  2. 已知远期价格 F = S0(1+r)^T
-  3. PV(F) = S0
-  4. 代入: c + PV(X) = p + PV(F)
-- **本质**：远期合约替代标的资产，概念和公式相同
-
-**考点5：期权价值边界判断**
-- **步骤**：
-  1. 从 PCP 推导看涨下限
-  2. 因为 p ≥ 0，所以 c + PV(X) ≥ S0
-  3. 移项: c ≥ S0 - PV(X)
-  4. 又因为 c ≥ 0，所以 c ≥ max(0, S0 - PV(X))
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| PCP 适用于所有期权 | PCP 仅适用于欧式期权 | 美式期权可提前行权，严格等式不成立 |
-| 忘记股利调整直接用标准公式 | 有股利时必须用调整版公式 | 股利影响标的资产的持有成本 |
-| Put-call-forward parity 是新概念 | 是标准 PCP 的变形，用远期替代现货 | 公式形式相同，只是代入不同 |
-| 合成头寸需要完全相同的 payoff | 合成头寸的 payoff 理论上与目标一致 | PCP 保证复制精确性 |
-| PCP 是预测工具 | PCP 是无套利恒等式，不是预测模型 | PCP 必须精确成立（无摩擦市场） |
-| p + S0 = c + PV(X) 永远成立 | 仅对相同到期日和执行价的欧式期权成立 | 条件不同公式不同 |
-
-### 🔄 跨模块关联
-
-- **[[M08-Pricing-and-Valuation-of-Options]]** — 期权利润和 moneyness 是 PCP 的前置知识
-- **[[M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives]]** — 无套利原则和复制定价是 PCP 的理论基础
-- **[[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]]** — 二叉树模型也可以推导平价关系
-- **[[M00-Derivatives-MOC]]** — 返回科目总览
-
-### 📋 复习与刷题提示
-
-- M09 是 Derivatives 科目中公式精确度要求最高的模块
-- **核心能力**：熟练运用 PCP 公式，能在有/无股利场景之间切换
-- **必考题型**：PCP 套利识别、合成头寸推导、期权价值边界判断
-- **最常犯错误**：忘记股利调整、没确认欧式期权条件、PCP 等式方向搞反
-- 记忆口诀：
-  - "c + PV(X) = p + S0" — 左侧是 fiduciary call，右侧是 protective put
-  - 合成头寸：移项使目标在左侧
-  - 有股利：左侧加 PV(I) 或右侧乘 e^{-qT}
-- 刷题建议：多做 PCP 套利和合成头寸题，这些是考试高频题
+### 来源：M08-Binomial-Valuation.md（confidence 0.465）
+- **可复用结构**：M08: 单期二叉树期权估值 (Binomial Valuation of Options)；1. 核心知识点；2. 关键公式；3. 常见考点与解题思路；4. 易错点提醒；5. 跨模块关联
+- **高价值要点**：## 1. 核心知识点；复制方法的核心是构建一个由标的资产和无风险借贷组成的组合，使其收益与期权完全一致。；## 2. 关键公式；【考纲内但无核心公式】risk-neutral probability 的含义、波动率对期权价值的方向影响。
+- **公式/计算线索**：description: "单期二叉树期权估值：对冲比率、复制组合、风险中性概率、期权价值 (One-Period Binomial Option Valuation: hedge ratio, replicating portfolio, risk-neutral probability, option value)"；**对冲比率 (Hedge Ratio)**：上涨与下跌状态下期权收益差除以股票价格差；h = (Cu - Cd)/(Su - Sd)
+- **易错提示**：## 4. 易错点提醒；不要忘记贴现步骤 —— 风险中性期望值需除以 `(1+r)` 得到现值

@@ -1,23 +1,29 @@
 ---
-title: "M05 — Analyzing Statements of Cash Flows II"
-description: "CFA Level I 2026 official module: Analyzing Statements of Cash Flows II"
-module: M05
+title: "M05: Analyzing Statements of Cash Flows II"
+description: "CFA Level I 2026 Financial Statement Analysis 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Financial Statement Analysis"
-topic_area: Financial_Statement_Analysis
-curriculum_year: 2026
+topic_area: "Financial_Statement_Analysis"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M05"
 official_module: "Module 5: Analyzing Statements of Cash Flows II"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Financial_Statement_Analysis
   - official_2026
+  - Financial_Statement_Analysis
 ---
 
 # M05: Analyzing Statements of Cash Flows II
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Analyzing Statements of Cash Flows II**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -30,233 +36,152 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. analyze and interpret both reported and common-size cash flow statements
+2. calculate and interpret free cash flow to the firm, free cash flow to equity, and performance and coverage cash flow ratios
 
-- analyze and interpret both reported and common-size cash flow statements
-- calculate and interpret free cash flow to the firm, free cash flow to equity, and performance and coverage cash flow ratios
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Financial_Statement_Analysis/M04-Cash-Flow-Statements.md`
+### 5.1 学习任务
+- **核心问题**：考试希望你用 `Analyzing Statements of Cash Flows II` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 0.45. Original official module field: M4: Analyzing Statements of Cash Flows I / M5: Analyzing Statements of Cash Flows II._
+### 5.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M04: 现金流量表分析 (Cash Flow Statement Analysis)
+### 5.3 关键英文术语
+- **Analyzing Statements of Cash Flows II（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Evaluating Sources and Uses of Cash（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Ratios and Common-Size Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Free Cash Flow Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Cash Flow Statement Analysis: Cash Flow Ratios（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Cash Flow Statement Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Cash Flow（现金流）**：企业现金流入和流出的真实资金轨迹。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
 
-```text
-🏆 FSA M04: Cash Flow Statement Analysis（现金流量表分析）
-│
-├── ⭐ 三大报表联动
-│   ├── 现金增减源于利润表和资产负债表变动
-│   ├── CFO: 经营活动 — 核心经营现金流
-│   ├── CFI: 投资活动 — 资本支出和资产买卖
-│   ├── CFF: 融资活动 — 负债和股权变动
-│   └── 净利润 + 非现金调整 + 营运资本变动 = CFO
-│
-├── ⭐ 间接法 (Indirect Method)
-│   ├── 从 NI 出发，调整非现金项目和营运资本变动
-│   ├── 加回: 折旧、摊销、减值损失
-│   ├── 营运资本: 应收↑ → 现金↓；应付↑ → 现金↑
-│   └── ⚠️ NI-to-CFO 桥接是调节表，非现金流量定义
-│
-├── ⭐ 直接法 (Direct Method)
-│   ├── 直接列示现金收入和支出
-│   ├── IFRS 鼓励；US GAAP 两者均可
-│   └── 现金收款 = 收入 - 应收增加；现金付款 = 费用 + 应付减少
-│
-├── ⭐ IFRS vs US GAAP 分类差异
-│   ├── 利息支付: IFRS 可选经营/融资；US GAAP 经营
-│   ├── 股利支付: IFRS 可选经营/融资；US GAAP 融资
-│   ├── 利息和股利收入: IFRS 可选经营/投资；US GAAP 经营
-│   └── 银行透支: IFRS 可视为现金等价物；US GAAP 融资
-│
-├── ⭐ 分析产出
-│   ├── 📐 CFO = NI + 折旧/摊销 - 利得/损失 +/- WC
-│   ├── 📐 FCFF = CFO + Interest(1-T) - FCInv
-│   ├── 📐 FCFE = CFO - FCInv + Net Borrowing
-│   └── 同比例分析: 各项目表示为收入或总现金流的%
-│
-├── 💡 关键洞察
-│   ├── 直接法和间接法 CFO 金额相同
-│   ├── 营运资本变动方向最易出错
-│   ├── FCFF 给所有资本提供者；FCFE 只给股东
-│   └── NI 到 CFO 桥接不是现金流量定义
-│
-└── ⚠️ 考试陷阱总结
-    ├── 非现金项目加回费用也要减去收益
-    ├── 流动资产增加是减项，流动负债增加是加项
-    ├── FCFF 加回税后利息；FCFE 不再加回
-    └── 注意 IFRS vs US GAAP 分类差异
-```
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 5.1 | analyze and interpret both reported and common-size cash flow statements | 解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 5.2 | calculate and interpret free cash flow to the firm, free cash flow to equity, and performance and coverage cash flow ratios | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
 
-## 📖 知识点详解
-
-### 知识点1：报告式与同比例现金流量表（Reported vs Common-Size Cash Flow Statements）
-
-- **报告式现金流量表 (Reported Cash Flow Statement)**：按 CFO、CFI、CFF 三大分类列示现金收支，反映企业现金的实际来源与运用
-- **同比例现金流量表 (Common-Size Cash Flow Statement)**：可将各项目表示为收入(revenue)或总现金流入/流出的百分比，便于跨期和跨公司比较
-- 同比例分析有助于识别现金流结构的异常变化，如经营现金流占比持续下降可能是盈利质量恶化的信号
-
-### 知识点2：自由现金流（Free Cash Flow）
-
-**公司自由现金流 (FCFF — Free Cash Flow to the Firm)：**
-- 定义：衡量公司对所有资本提供者（股东和债权人）的可供现金流
-- 特点：在满足经营和投资需求后，可供分配给所有资本提供者的剩余现金流
-- 用途：企业价值评估(DCF 模型)的输入变量
-
-**股权自由现金流 (FCFE — Free Cash Flow to Equity)：**
-- 定义：衡量公司对普通股股东的可供现金流
-- 特点：在满足经营、投资和偿债需求后，可供分配给股东的剩余现金流
-- 用途：股权价值评估的输入变量
-
-#### 核心公式 (English)
-- `FCFF = CFO + Interest(1 - T) - FCInv`
-- `FCFE = CFO - FCInv + Net Borrowing`
-
-### 知识点3：现金流比率分析（Cash Flow Ratio Analysis）
-
-**业绩现金流比率 (Performance Cash Flow Ratios)：**
-- 经营现金流比率 (CFO / Current Liabilities)：衡量经营现金流覆盖短期债务的能力
-- 现金流覆盖比率 (Cash Flow Coverage Ratio)：衡量经营现金流覆盖总债务的能力
-- 现金流利润率 (Cash Flow Margin)：CFO / Revenue，衡量每单位收入转化为经营现金流的效率
-
-**覆盖现金流比率 (Coverage Cash Flow Ratios)：**
-- 债务覆盖比率 (Debt Coverage Ratio)：CFO / Total Debt
-- 利息覆盖比率 (Cash Interest Coverage)：(CFO + Interest Paid + Taxes Paid) / Interest Paid
-
-**现金流趋势分析 (Cash Flow Trend Analysis)：**
-- 多期 CFO 趋势：CFO 增长应与利润增长趋势基本一致，显著背离可能暗示盈利质量下降
-- CFO 与 NI 的关系：CFO > NI 通常意味着盈利质量较高；CFO 持续低于 NI 可能反映激进的收入确认或营运资本恶化
-- 自由现金流趋势：FCFF/FCFE 长期为负可能表明公司需要外部融资
-
-### 📐 关键公式表
-
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| CFO (间接法) | `NI + 折旧/摊销 - 利得/损失 +/- WC 变动` | 核心现金流公式 |
-| FCFF | `CFO + Interest(1-T) - FCInv` | 公司自由现金流 |
-| FCFE | `CFO - FCInv + Net Borrowing` | 股权自由现金流 |
-| CFO / CL | `CFO / Current Liabilities` | 经营现金流比率 |
-
-### 🛠️ 常见考点与解题思路
-
-**考点1：间接法下 CFO 计算**
-- 从 NI 出发，加回非现金费用，调整营运资本变动。
-
-**考点2：FCFF/FCFE 计算与区别**
-- FCFF 给所有资本提供者，FCFE 只给股东。
-
-**考点3：IFRS vs US GAAP 分类差异**
-- 记住利息和股利的分类差异，IFRS 更灵活。
-
-**考点4：直接法编制**
-- 利用利润表和对应资产负债表科目倒推现金收付。
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| 只加回非现金费用 | 非现金收益也要减去 |
-| 所有资产增加 = 现金增加 | 流动资产增加是减项（用现金）|
-| FCFF 和 FCFE 相同 | FCFF 加回税后利息；FCFE 不加回 |
-| 直接法和间接法 CFO 不同 | 两者 CFO 金额应当相同 |
-| 营运资本变动方向全凭感觉 | 资产↑ 现金↓；负债↑ 现金↑ |
-
-### 🔄 跨模块关联
-
-- [[M02-Income-Statement]]：净利润是间接法起点
-- [[M03-Balance-Sheet]]：资产负债科目变动是 CFO 关键调整项
-- [[M10-Financial-Analysis-Techniques]]：现金流比率是偿债能力和盈利质量分析工具
-
-### Migrated from `CFA_tier1/Financial_Statement_Analysis/M05-Analyzing-Cash-Flows-II.md`
-
-_Alignment score: 0.61. Original official module field: M5: Analyzing Statements of Cash Flows II._
-
-#### M05: 现金流量表分析 II (Analyzing Statements of Cash Flows II)
-
-### 🌳 核心知识树
+## 3. 核心知识树
 
 ```text
-🏆 FSA M05: Analyzing Statements of Cash Flows II（现金流量表分析 II）
-│
-├── ⭐ 报告式 vs 同比例现金流量表
-│   ├── 报告式: CFO / CFI / CFF 三大分类
-│   ├── 同比例: 各项目表示为收入或总现金流的%
-│   └── 经营现金流占比持续下降 → 盈利质量恶化信号
-│
-├── ⭐ FCFF（公司自由现金流）
-│   ├── 📐 FCFF = CFO + Interest(1-T) - FCInv
-│   ├── 衡量对所有资本提供者的可供现金流
-│   └── 用途: 企业价值评估 DCF 模型输入
-│
-├── ⭐ FCFE（股权自由现金流）
-│   ├── 📐 FCFE = CFO - FCInv + Net Borrowing
-│   ├── 衡量对普通股股东的可供现金流
-│   └── 用途: 股权价值评估输入
-│
-├── ⭐ 现金流比率
-│   ├── CFO / CL: 经营现金流覆盖短期债务
-│   ├── CFO / Total Debt: 债务覆盖
-│   ├── 现金流利润率: CFO / Revenue
-│   └── ⚠️ 现金流比率不易被会计操纵，但波动更大
-│
-├── ⭐ 现金流趋势分析
-│   ├── CFO 增长应匹配利润增长 — 背离暗示盈利质量下降
-│   ├── CFO > NI → 盈利质量较高
-│   └── FCFF/FCFE 长期为负 → 可能需要外部融资
-│
-├── 💡 关键洞察
-│   ├── FCFF vs FCFE: FCFF 加回税后利息，FCFE 不加回
-│   ├── FCInv 在 FCFF 和 FCFE 中都需扣减
-│   ├── Net Borrowing 为正增加 FCFE，为负减少 FCFE
-│   └── CFO 与 NI 背离是盈利质量分析重要线索
-│
-└── ⚠️ 考试陷阱总结
-    ├── FCFF 加回税后利息；FCFE 不再加回
-    ├── FCInv 是必需资本支出，两者都需扣减
-    ├── 净借款方向: +新债 → +FCFE；-还债 → -FCFE
-    └── 现金流比率 vs 利润比率: 不易操纵但波动大
+5. Analyzing Statements of Cash Flows II
+├─ 5.1 Introduction
+│  ├─ 5.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.1.2 应用/判断：把概念或公式转成解题动作
+├─ 5.2 Evaluating Sources and Uses of Cash
+│  ├─ 5.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.2.2 应用/判断：把概念或公式转成解题动作
+├─ 5.3 Ratios and Common-Size Analysis
+│  ├─ 5.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.3.2 应用/判断：把概念或公式转成解题动作
+├─ 5.4 Free Cash Flow Measures
+│  ├─ 5.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.4.2 应用/判断：把概念或公式转成解题动作
+├─ 5.5 Cash Flow Statement Analysis: Cash Flow Ratios
+│  ├─ 5.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-### 📐 关键公式表
+## 4. 知识点详解
 
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| FCFF | `CFO + Interest(1-T) - FCInv` | 公司自由现金流 |
-| FCFE | `CFO - FCInv + Net Borrowing` | 股权自由现金流 |
-| CFO / CL | `CFO / Current Liabilities` | 经营现金流比率，短期偿债 |
-| Cash Flow Margin | `CFO / Revenue` | 现金流利润率 |
+### 5.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；官方表述为：`analyze and interpret both reported and common-size cash flow statements`。
+- **核心词汇**：**Analyzing Statements of Cash Flows II（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 🛠️ 常见考点与解题思路
+### 5.2 Evaluating Sources and Uses of Cash
+- **中文主线**：本节点解决 `Evaluating Sources and Uses of Cash` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret free cash flow to the firm, free cash flow to equity, and performance and coverage cash flow ratios`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考点1：FCFF/FCFE 计算与区别**
-- FCFF 给所有资本提供者，FCFE 只给股东。
+### 5.3 Ratios and Common-Size Analysis
+- **中文主线**：本节点解决 `Ratios and Common-Size Analysis` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；官方表述为：`analyze and interpret both reported and common-size cash flow statements`。
+- **核心词汇**：**Evaluating Sources and Uses of Cash（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考点2：现金流比率的计算与解读**
-- CFO 比率比利润比率更真实，不易被操纵。
+### 5.4 Free Cash Flow Measures
+- **中文主线**：本节点解决 `Free Cash Flow Measures` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；官方表述为：`analyze and interpret both reported and common-size cash flow statements`。
+- **核心词汇**：**Ratios and Common-Size Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考点3：同比例现金流量表分析**
-- 关注各分类现金流占比趋势，尤其是经营现金流。
+### 5.5 Cash Flow Statement Analysis: Cash Flow Ratios
+- **中文主线**：本节点解决 `Cash Flow Statement Analysis: Cash Flow Ratios` 在 Financial Statement Analysis 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释结果的投资含义；官方表述为：`analyze and interpret both reported and common-size cash flow statements`。
+- **核心词汇**：**Free Cash Flow Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考点4：现金流与盈利质量**
-- CFO 与 NI 长期背离是盈利质量分析的重要线索。
+### 5.9 Legacy 补强要点
+- 来自 `M05-Analyzing-Cash-Flows-II.md`：## 1. 核心知识点; 定义：衡量公司对所有资本提供者（股东和债权人）的可供现金流; 定义：衡量公司对普通股股东的可供现金流。
+- 来自 `00-Financial-Statement-Analysis-MOC.md`：## 最关键：先看交易怎么穿三表，再看会计政策怎样改结果; FRA 的关键不是背条文，而是把“交易→报表→比率→投资判断”连成一条线。; ## Financial Statement Analysis 核心知识树 (Core Knowledge Tree)。
 
-### 🚨 易错点与考试陷阱
 
-| ❌ 错误理解 | ✅ 正确理解 |
-|-----------|-----------|
-| FCFF 和 FCFE 调整相同 | FCFF 加回税后利息；FCFE 不加回 |
-| FCInv 只在 FCFF 中扣减 | 两者都需扣减 FCInv |
-| Net Borrowing 总是增加 FCFE | 偿还借款减少 FCFE |
-| 现金流比率和利润比率相同 | 现金流比率不易操纵但波动更大 |
+## 5. 关键公式与计算框架
 
-### 🔄 跨模块关联
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Current ratio | `current assets / current liabilities` | 衡量短期偿债能力，但不等于现金质量。 |
+| Gross margin | `gross profit / revenue` | 可用于比较定价能力和成本压力。 |
+| ROE | `net income / average equity` | 可用 DuPont 分解定位盈利、效率和杠杆来源。 |
 
-- [[M04-Analyzing-Cash-Flows-I]]：FCFF/FCFE 以 CFO 为基础
-- [[M11-Financial-Analysis-Techniques]]：现金流比率与 DuPont 分析互为补充
-## Review Hooks
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+## 6. 常见考点与解题思路
+
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+
+## 7. 易错点与考试陷阱
+
+- **中英文错配**：看到 `Analyzing Statements of Cash Flows II` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+
+## 8. 跨模块关联
+
+- **上游模块**：[[M04-Analyzing-Statements-of-Cash-Flows-I]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M06-Analysis-of-Inventories]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+
+## 9. 复习与刷题提示
+
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
+
+## 10. Legacy Notes Integrated
+
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M05-Analyzing-Cash-Flows-II.md（confidence 0.656）
+- **可复用结构**：M05: 现金流量表分析 II (Analyzing Statements of Cash Flows II)；1. 核心知识点；5.1 报告式与同比例现金流量表 (Reported vs Common-Size Cash Flow Statements)；5.2 自由现金流 (Free Cash Flow)；核心公式 (English)；5.3 现金流比率分析 (Cash Flow Ratio Analysis)
+- **高价值要点**：## 1. 核心知识点；定义：衡量公司对所有资本提供者（股东和债权人）的可供现金流；定义：衡量公司对普通股股东的可供现金流；#### 核心公式 (English)
+- **公式/计算线索**：#### 核心公式 (English)；`FCFF = CFO + Interest(1 - T) - FCInv`；`FCFE = CFO - FCInv + Net Borrowing`
+- **易错提示**：**考点3**：同比例现金流量表分析。解题思路：关注各分类现金流的占比趋势，尤其注意经营现金流占比的持续变化；## 4. 易错点提醒
+
+### 来源：00-Financial-Statement-Analysis-MOC.md（confidence 0.51）
+- **可复用结构**：00-Financial-Statement-Analysis-MOC；笔记属性；最关键：先看交易怎么穿三表，再看会计政策怎样改结果；科目概览（与 CFA 2026 L1 官方课程对齐）；Financial Statement Analysis 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先看交易怎么穿三表，再看会计政策怎样改结果；FRA 的关键不是背条文，而是把“交易→报表→比率→投资判断”连成一条线。；## Financial Statement Analysis 核心知识树 (Core Knowledge Tree)；│ ├── 1.1 Framework Steps (分析框架步骤)【考试核心】↔ Topic Outline P10
+- **公式/计算线索**：description: CFA Level I Financial Statement Analysis master MOC for statements, accounting effects, ratios, formulas, and traps.；│ │ ├── 终止经营 (discontinued operations)（非持续）；│ │ ├── 核心公式 (English)
+- **易错提示**：│ └── 注意：附注与 reporting choices 常是答案来源【考试陷阱】；│ │ └── 注意：capitalization shifts expense timing, not economic reality【考试陷阱】；│ │ └── 注意：NI-to-CFO bridge is a reconciliation, not a definition【考试陷阱】
+
+### 来源：M04-Cash-Flow-Statements.md（confidence 0.505）
+- **可复用结构**：M04: 现金流量表分析 (Cash Flow Statement Analysis)；1. 核心知识点；4.1 三大报表联动 (Three-Statement Linkage)；4.2 直接法与间接法编制 (Direct vs Indirect Preparation)；核心公式 (English)；4.3 IFRS vs US GAAP 现金流分类差异 (Cash Flow Classification)
+- **高价值要点**：## 1. 核心知识点；三表联动的核心逻辑：净利润 + 非现金调整 + 营运资本变动 = CFO；资产负债科目的跨期变化体现在现金流量表的各个分类中；注意：NI-to-CFO 桥接是调节表(reconciliation)，而非现金流量的定义；#### 核心公式 (English)
+- **公式/计算线索**：三表联动的核心逻辑：净利润 + 非现金调整 + 营运资本变动 = CFO；资产负债科目的跨期变化体现在现金流量表的各个分类中；### 4.2 直接法与间接法编制 (Direct vs Indirect Preparation)；#### 核心公式 (English)
+- **易错提示**：注意：NI-to-CFO 桥接是调节表(reconciliation)，而非现金流量的定义；**考点3**：IFRS vs US GAAP 分类差异。解题思路：记住利息和股利的分类差异，注意 IFRS 更灵活；## 4. 易错点提醒

@@ -1,23 +1,29 @@
 ---
-title: "M07 — Business Models"
-description: "CFA Level I 2026 official module: Business Models"
-module: M07
+title: "M07: Business Models"
+description: "CFA Level I 2026 Corporate Issuers 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Corporate Issuers"
-topic_area: Corporate_Issuers
-curriculum_year: 2026
+topic_area: "Corporate_Issuers"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M07"
 official_module: "Module 7: Business Models"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Corporate_Issuers
   - official_2026
+  - Corporate_Issuers
 ---
 
 # M07: Business Models
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：理解公司组织、治理、营运资本、资本配置与商业模式如何影响价值创造。 本模块聚焦 **Business Models**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -28,163 +34,118 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe key features of business models
+2. describe various types of business models
 
-- describe key features of business models
-- describe various types of business models
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 7.1 学习任务
+- **核心问题**：考试希望你用 `Business Models` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 7.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 7.3 关键英文术语
+- **Business Models（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Defining the Business Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Business Model Types（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 7.1 | describe key features of business models | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 7.2 | describe various types of business models | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 【商业模式】
-│
-├── 🔷 模型解剖（Model Anatomy）🎯
-│   ├── 价值主张（Value Proposition）
-│   │   └── 公司为客户解决什么问题或提供什么独特价值
-│   ├── 收入机制（Revenue Mechanism）🎯
-│   │   ├── 交易性收入（Transactional）：单次交易（零售商、餐厅）
-│   │   └── 经常性收入（Recurring）：订阅/续费（SaaS、会员制）
-│   │       └── 经常性收入因可预测性更高而更具价值
-│   └── 客户经济学（Customer Economics）
-│       ├── CAC（客户获取成本）= 总销售费用 / 新客户数 📐
-│       └── CLV（客户生命周期价值）= 每客户收入×年限 - 服务成本 📐
-│           └── CLV > CAC → 商业模式可持续 🎯
-│
-├── 🔷 资产密度（Asset Intensity）🎯
-│   ├── 轻资产（Asset-Light）
-│   │   ├── 不依赖大量固定资产（平台型公司）
-│   │   ├── 资本回报率通常较高
-│   │   └── ⚠️ 竞争壁垒可能较低
-│   └── 重资产（Asset-Heavy）
-│       ├── 需要大量资本投入（制造业、航空）
-│       ├── 资本回报率较低
-│       └── 对运营有更多控制
-│
-├── 🔷 成本结构与经营杠杆
-│   ├── 固定成本 vs 可变成本比例 → 可扩展性（Scalability）
-│   ├── 高固定成本（软件）：规模扩大后利润率快速提升 📐
-│   │   └── 初期亏损风险大，突破后利润率极高
-│   └── 高可变成本（咨询）：利润率稳定，规模效应有限
-│
-├── 🔷 风险地图 🎯
-│   ├── 网络模式：网络效应 + 监管风险（社交平台）
-│   ├── 平台模式：双边市场协调风险（电商平台）
-│   ├── 订阅模式：客户留存 / 流失率最关键（SaaS）
-│   ├── 制造模式：产能利用率 + 商品价格波动（汽车、化工）
-│   └── 金融中介：信用风险 + 流动性风险（银行、保险）
-│
-├── 🔷 模型质量指标
-│   ├── 高且稳定的毛利率和净利率
-│   ├── 负的现金转换周期（先收钱再付钱）
-│   └── 轻资产 → 再投资需求低 → 自由现金流充裕
-│
-│   💡 核心洞察：收入增长 ≠ 价值创造，需关注单位经济性
-│   🎯 高频考点：商业模式的识别、轻 vs 重资产、CLV/CAC
+7. Business Models
+├─ 7.1 Introduction
+│  ├─ 7.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.1.2 应用/判断：把概念或公式转成解题动作
+├─ 7.2 Defining the Business Model
+│  ├─ 7.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.2.2 应用/判断：把概念或公式转成解题动作
+├─ 7.3 Business Model Types
+│  ├─ 7.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.3.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：商业模式解剖 (Business Model Anatomy)
+### 7.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe key features of business models`。
+- **核心词汇**：**Business Models（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：商业模式描述公司如何创造价值、传递价值并从中获利。CFA要求从价值主张、收入机制、客户经济学和成本结构四个维度分析商业模式。理解商业模式对于评估公司的可持续竞争力和投资价值至关重要。
+### 7.2 Defining the Business Model
+- **中文主线**：本节点解决 `Defining the Business Model` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe various types of business models`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **价值主张 (Value Proposition)**：公司为客户解决什么问题或提供什么独特价值。如低价（沃尔玛）、便利（亚马逊）、品质（苹果）
-- **收入机制 (Revenue Mechanism)**：交易性收入（单次交易）vs 经常性收入（订阅/续费）。经常性收入可预测性更高，通常估值更高
-- **客户经济学 (Customer Economics)**：CAC（客户获取成本）vs CLV（客户生命周期价值）。CLV > CAC 时商业模式可持续，CLV/CAC > 3 为优
-- **资产密度 (Asset Intensity)**：轻资产（平台型）vs 重资产（制造型）。轻资产资本回报率通常较高，但竞争壁垒可能较低
+### 7.3 Business Model Types
+- **中文主线**：本节点解决 `Business Model Types` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe key features of business models`。
+- **核心词汇**：**Defining the Business Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：识别商业模式类型。订阅制→经常性收入；单次交易→交易性收入；连接买卖双方→平台模式。常见陷阱：快速收入增长≠价值创造（需关注单位经济性）。
+### 7.9 Legacy 补强要点
+- 来自 `00-Corporate-Issuers-MOC.md`：## 最关键：先看现金流创造价值，再看融资如何放大或拖累; ## Corporate Issuers 核心知识树 (Core Knowledge Tree); ├── M01: Corporate Structures and Ownership (公司结构与所有权)【考试核心】↔ 2026 Outline: Corporate Structures。
+- 来自 `M07-Business-Models.md`：## 1. 核心知识点; ## 2. 关键公式; 关键线索：订阅制 → 经常性收入；单次交易 → 交易性收入；连接买卖双方 → 平台模式。。
 
-### 知识点2：风险地图 (Risk Map by Business Model)
 
-**核心概念**：不同商业模式面临不同的风险特征。理解这些风险对于评估公司的可持续性和投资风险至关重要。
+## 5. 关键公式与计算框架
 
-- **网络模式 (Network)**：网络效应带来垄断但面临监管风险。如社交平台
-- **平台模式 (Platform)**：双边市场协调风险，信任与质量控制。如电商平台
-- **订阅模式 (Subscription)**：客户留存率（churn rate）最关键。高流失率侵蚀经常性收入价值
-- **制造模式 (Manufacturing)**：产能利用率、商品价格波动、供应链风险
-- **金融中介 (Financial Intermediation)**：信用风险、流动性风险、利率风险
-- 💡 模型质量指示：高且稳定的利润率、负现金转换周期、低再投资需求
+本模块以概念判断为主，无核心计算公式。复习时把 `Business Models` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-**考试应用**：给定商业模式类型，识别相应的风险特征。理解经常性收入 vs 交易性收入的风险差异——经常性收入可预测性更高但仍面临流失风险。
+## 6. 常见考点与解题思路
 
-### 知识点3：成本结构与经营杠杆 (Cost Structure and Operating Leverage)
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**核心概念**：固定成本与可变成本的比例决定了公司的可扩展性和经营杠杆水平。高固定成本模式在规模扩大后利润率快速提升，但初期亏损风险大。高可变成本模式利润率更稳定，但规模效应有限。
+## 7. 易错点与考试陷阱
 
-- **高固定成本模式**：如软件公司，研发成本高但边际成本低。规模扩大后利润率快速提升
-- **高可变成本模式**：如咨询公司，人力成本随规模线性增长。利润率稳定但扩展性有限
-- **经营杠杆度 (DOL)**：衡量盈利对销售变化的敏感性。DOL高的公司在收入增长时受益更大，在收入下降时受损也更严重
-- 💡 软件公司比咨询公司更有扩展性，因为软件的高固定成本/低边际成本结构创造了更大的经营杠杆效应
+- **中英文错配**：看到 `Business Models` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考试应用**：理解不同商业模式对DOL的影响。给定公司特征（固定/可变成本比例），判断DOL高低及其对盈利波动的影响。轻资产 vs 重资产对比也是高频考点。
-| `CLV = Avg Revenue per Customer × Relationship Years - Service Cost` | 客户生命周期价值 | 评估客户价值 | 需折现考虑时间价值 |
-| `CLV / CAC Ratio` | 客户价值比 | 商业模式可持续性 | CLV > CAC 才可持续；大于 3 为优 |
-| `Gross Margin = (Revenue - COGS) / Revenue` | 毛利率 | 核心盈利能力 | 轻资产模式通常毛利率更高 |
-| `Operating Margin = EBIT / Revenue` | 营业利润率 | 经营效率 | 经营杠杆高的公司收入增长时利润率快速提升 |
-| `DOL = %ΔEBIT / %ΔRevenue` | 经营杠杆度 | 衡量盈利对销售的敏感性 | 高固定成本 → 高 DOL |
-| `Churn Rate = Lost Customers / Total Customers` | 客户流失率 | 订阅模式健康度 | 高流失率侵蚀经常性收入价值 |
+## 8. 跨模块关联
 
-## 🛠️ 常见考点与解题思路
+- **上游模块**：[[M06-Capital-Structure]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 主题1：识别商业模式类型（🎯 必考）
-- **题型**：描述公司收入和价值创造方式，要求分类
-- **解题思路**：
-  - 订阅制/会员费 → 经常性收入模式（Recurring Revenue）
-  - 单次交易收费 → 交易性收入模式（Transactional Revenue）
-  - 连接买卖双方 → 平台模式（Platform）
-  - 出租闲置资产 → 共享经济模式（如 Airbnb）
-  - 提供免费服务 + 广告收费 → 注意力经济模式
+## 9. 复习与刷题提示
 
-### 主题2：轻资产 vs 重资产对比（🎯 高频）
-- **题型**：问哪些企业的资本回报率可能更高
-- **答案**：轻资产企业通常有更高的资本回报率（资本基数小）
-- **对比**：
-  | 特征 | 轻资产 | 重资产 |
-  |------|:------:|:------:|
-  | 资本回报率 | 高 | 低 |
-  | 再投资需求 | 低 | 高 |
-  | 自由现金流 | 充裕 | 有限 |
-  | 竞争壁垒 | 低（易复制） | 高（资本门槛）|
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 主题3：商业模式可持续性判断
-- **题型**：给出公司指标，判断商业模式是否可持续
-- **判断标准**：
-  - CLV / CAC 比率 > 3 → 强可持续性
-  - 正的营业利润 → 核心业务能自我维持
-  - 负的现金转换周期 → 占用供应商资金而非自有资金
-  - 低客户流失率（Churn Rate）→ 经常性收入稳定
+## 10. Legacy Notes Integrated
 
-### 主题4：固定成本与经营杠杆
-- **题型**：为什么软件公司比咨询公司更有扩展性
-- **答案**：软件公司有高固定成本（研发）但低边际成本，规模扩大后利润率快速提升；咨询公司的人力成本随规模线性增长
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：00-Corporate-Issuers-MOC.md（confidence 0.481）
+- **可复用结构**：00-Corporate-Issuers-MOC；笔记属性；最关键：先看现金流创造价值，再看融资如何放大或拖累；科目概览（与 CFA 2026 L1 官方课程对齐）；Corporate Issuers 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先看现金流创造价值，再看融资如何放大或拖累；## Corporate Issuers 核心知识树 (Core Knowledge Tree)；├── M01: Corporate Structures and Ownership (公司结构与所有权)【考试核心】↔ 2026 Outline: Corporate Structures；├── M02: Investors and Other Stakeholders (投资者与其他利益相关者)【考试核心】↔ 2026 Outline: Investors & Stakeholders
+- **公式/计算线索**：│ │ ├── 独资/合伙/公司/有限责任公司 (Sole Proprietorship / Partnership / Corporation / LLC)（企业类型）；│ │ ├── 核心公式 (English)；│ │ │ ├── `Operating cycle = DIO + DSO` 经营周期
+- **易错提示**：│ └── 注意：limited liability protects owners from some losses; it does not guarantee firm survival；│ └── 注意：governance is not decorative prose; it changes decisions and discount rates；│ └── 注意：shrinking DIO or DSO helps only if service, sales, and credit quality survive
 
-## 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 快速收入增长 = 价值创造 | 没有单位经济性的高增长仍可能**摧毁价值** | 以低于成本获客推动增长不可持续 |
-| 轻资产总是优于重资产 | 轻资产资本回报率高但竞争壁垒低 | 重资产的资本门槛是护城河 |
-| 经常性收入 = 高质量收入 | 如果客户流失率高，经常性收入持续性存疑 | 需结合 Churn Rate 分析 |
-| 商业模式分析是孤立的 | 需结合资本结构、融资能力和治理综合判断 | 商业模式只是企业分析的一个维度 |
-| 高毛利率 = 好商业模式 | 高毛利率但高运营费用仍可能不盈利 | 需看完整的利润表结构 |
-| CAC 越低越好 | CAC 过低可能意味着获客渠道狭窄或投入不足 | 需平衡获客成本和增长速度 |
-
-## 🔄 跨模块关联
-
-- **[[M04-Working-Capital-and-Liquidity]]** — 商业模式影响 CCC 特征（零售业 CCC 为负 vs 制造业 CCC 为正）；资产密度影响营运资本需求
-- **[[M06-Capital-Structure]]** — 商业模式决定经营杠杆（DOL）水平；高固定成本模式适合更高财务杠杆
-- **[[M05-Capital-Investments-and-Capital-Allocation]]** — 资产密度决定资本投资需求；轻资产模式的资本配置不同于重资产模式
-- **[[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]]** — 不同商业模式的风险特征影响治理需求（平台公司面临更复杂的利益相关者管理）
-- **[[M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership]]** — 企业形式选择受商业模式影响；轻资产模式和重资产模式的融资渠道不同
-- **[[M02-Investors-and-Other-Stakeholders]]** — 不同商业模式对各利益相关者的影响不同（平台模式对员工、客户、监管的影响更复杂）
-
-## 📋 复习与刷题提示
-
-- **概念题**：商业模式四要素（价值主张、收入机制、客户经济学、成本结构）
-- **分类题**：能够根据公司描述准确识别商业模式类型和收入机制
-- **对比题**：轻资产 vs 重资产、经常性收入 vs 交易性收入、高固定成本 vs 高可变成本
-- **计算题**：CAC、CLV、CLV/CAC Ratio 的计算和解读
-- **可持续性判断**：用 CLV/CAC、毛利率、CCC、Churn Rate 等指标综合判断
-- **风险识别**：不同商业模式面临的主要风险（平台→协调风险、订阅→留存风险、制造→产能风险）
-- **综合应用**：商业模式分析应结合资本结构、治理水平和融资能力，不能孤立看待
+### 来源：M07-Business-Models.md（confidence 0.456）
+- **可复用结构**：M08: Business Models（商业模式）；1. 核心知识点；1.1 模型解剖 (Model Anatomy)；1.2 风险地图 (Risk Map)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；关键线索：订阅制 → 经常性收入；单次交易 → 交易性收入；连接买卖双方 → 平台模式。；**商业模式分析不是孤立的**：需要结合公司的资本结构、融资能力和治理水平综合判断。
+- **公式/计算线索**：## 2. 关键公式；商业模式整合 → [[M08-Capital-Allocation-Integration]] 资本分配应与商业模式特征匹配
+- **易错提示**：## 4. 易错点提醒

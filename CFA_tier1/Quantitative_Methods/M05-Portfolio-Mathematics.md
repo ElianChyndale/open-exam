@@ -1,23 +1,29 @@
 ---
-title: "M05 — Portfolio Mathematics"
-description: "CFA Level I 2026 official module: Portfolio Mathematics"
-module: M05
+title: "M05: Portfolio Mathematics"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M05"
 official_module: "Module 5: Portfolio Mathematics"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M05: Portfolio Mathematics
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Portfolio Mathematics**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,173 +35,131 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns
+2. calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns
+3. define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion
 
-- calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns
-- calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns
-- define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 5.1 学习任务
+- **核心问题**：考试希望你用 `Portfolio Mathematics` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 5.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 5.3 关键英文术语
+- **Portfolio Mathematics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Expected Return and Variance of Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forecasting Correlation of Returns: Covariance Given a Joint Probability Function（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Forecasting Correlation of Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Risk Measures: Applications of the Normal Distribution（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Risk Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Correlation（相关系数）**：衡量两个变量线性同向或反向变化的程度。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 5.1 | calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 5.2 | calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 5.3 | define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion | 计算并解释数值结果；识别题干中的关键事实和触发条件 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M05: Portfolio Mathematics（投资组合数学）
-│
-├── ⭐ 组合期望收益率 (Portfolio Expected Return)
-│   ├── 📐 E(Rₚ) = Σ wᵢE(Rᵢ) — 各资产期望收益的加权平均
-│   ├── 权重 wᵢ 之和必须为 1（全额投资组合）
-│   └── 🎯 组合期望收益 = 各资产期望收益的线性组合
-│
-├── ⭐ 两资产组合方差 (Two-Asset Portfolio Variance)
-│   ├── 📐 σₚ² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂Cov(R₁,R₂)
-│   ├── 📐 相关系数形式: σₚ² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂σ₁σ₂ρ₁₂
-│   ├── ⚠️ 协方差项系数为 2，容易遗漏
-│   └── 💡 组合风险 ≠ 加权平均风险 — 协方差决定分散化效果
-│
-├── ⭐ 多资产组合方差 (Matrix Form)
-│   ├── 📐 σₚ² = ΣΣ wᵢwⱼCov(Rᵢ,Rⱼ)
-│   ├── 对角线 = 各资产方差项
-│   └── 非对角线 = 两两协方差项
-│
-├── ⭐ 联合概率与协方差 (Joint Probability & Covariance)
-│   ├── 📐 Cov(R₁,R₂) = Σ pᵢ[R₁ᵢ-E(R₁)][R₂ᵢ-E(R₂)]
-│   ├── 📐 ρ₁₂ = Cov(R₁,R₂) / (σ₁σ₂) — 范围 [-1,+1]
-│   ├── ρ=+1 → 无分散化；ρ=-1 → 完全对冲
-│   └── 🎯 联合概率表 → 边际期望 → 协方差 → 相关系数
-│
-├── ⭐ 分散化机制 (Diversification Mechanics)
-│   ├── ρ < 1 → 协方差项 < 方差项 → 组合风险降低
-│   ├── 📐 MVP 权重: w₁* = [σ₂² - Cov₁₂] / [σ₁²+σ₂²-2Cov₁₂]
-│   └── ⚠️ 分散化降低风险，不降低预期收益
-│
-├── ⭐ 短缺风险 (Shortfall Risk)
-│   ├── 📐 SFRatio = [E(Rₚ) - R_L] / σₚ
-│   ├── SFRatio 越大 → 跌破 R_L 的概率越低
-│   └── vs Sharpe Ratio: SR 用 R_f，SFRatio 用自定义 R_L
-│
-├── 💡 关键洞察
-│   ├── 组合收益是线性的，但组合风险不是
-│   ├── 低相关 ≠ 低收益 — 可以找到低相关且正期望收益的资产
-│   ├── ρ=+1 是组合风险最大情况；ρ=-1 是风险最小情况
-│   └── SFRatio 符合风险厌恶投资者的关注点（下行风险）
-│
-└── ⚠️ 考试陷阱总结
-    ├── 协方差公式中的离差乘积符号不要忽略
-    ├── 相关系数 ≠ 协方差 — 相关系数是标准化版本
-    ├── 组合方差公式协方差项系数 2 容易遗漏
-    ├── 权重必须先检查是否和为 1 — 不是则归一化
-    └── Roy's safety-first 假设组合收益服从正态分布
+5. Portfolio Mathematics
+├─ 5.1 Introduction
+│  ├─ 5.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.1.2 应用/判断：把概念或公式转成解题动作
+├─ 5.2 Portfolio Expected Return and Variance of Return
+│  ├─ 5.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.2.2 应用/判断：把概念或公式转成解题动作
+├─ 5.3 Forecasting Correlation of Returns: Covariance Given a Joint Probability Function
+│  ├─ 5.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.3.2 应用/判断：把概念或公式转成解题动作
+├─ 5.4 Portfolio Risk Measures: Applications of the Normal Distribution
+│  ├─ 5.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 5.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：组合期望收益率与方差（Portfolio Expected Return and Variance）
-**核心概念**：组合期望收益率是各资产期望收益率的加权平均，但组合方差不是各资产方差的简单加权平均。协方差项决定了分散化的效果。
-- **组合期望收益率**：E(Rₚ) = Σ wᵢE(Rᵢ)，权重之和必须为 1
-- **两资产组合方差**：σₚ² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂Cov(R₁,R₂)
-- **相关系数形式**：σₚ² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂σ₁σ₂ρ₁₂
-- ⚠️ **关键直觉**：组合风险不是资产风险的简单加权平均。协方差项决定了分散化的效果。公式中协方差项系数为 2，容易遗漏
+### 5.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns`。
+- **核心词汇**：**Portfolio Mathematics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算组合期望收益和方差，注意权重和为 1 的前提条件。
+### 5.2 Portfolio Expected Return and Variance of Return
+- **中文主线**：本节点解决 `Portfolio Expected Return and Variance of Return` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：联合概率与协方差（Joint Probability and Covariance）
-**核心概念**：通过联合概率函数可以计算各资产的期望收益、协方差和相关系数。这是理解和度量资产间关联性的基础。
-- **协方差**：Cov(R₁,R₂) = Σ pᵢ[R₁ᵢ-E(R₁)][R₂ᵢ-E(R₂)]，衡量两变量同向变动程度
-- **相关系数**：ρ₁₂ = Cov(R₁,R₂)/(σ₁σ₂)，范围 [-1,+1]，标准化后的协方差
-- ρ=+1 → 无分散化效果；ρ=-1 → 完全对冲可能；ρ=0 → 仍有分散化效果
-- **从联合概率表导出**：边际概率 → 期望收益 → 协方差 → 相关系数
-- ⚠️ 协方差公式中离差乘积的符号不要忽略——同号为正向变动，异号为反向变动
+### 5.3 Forecasting Correlation of Returns: Covariance Given a Joint Probability Function
+- **中文主线**：本节点解决 `Forecasting Correlation of Returns: Covariance Given a Joint Probability Function` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；识别题干中的关键事实和触发条件；官方表述为：`define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion`。
+- **核心词汇**：**Portfolio Expected Return and Variance of Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：从联合概率表计算协方差和相关系数，理解分散化的数学本质。
+### 5.4 Portfolio Risk Measures: Applications of the Normal Distribution
+- **中文主线**：本节点解决 `Portfolio Risk Measures: Applications of the Normal Distribution` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns`。
+- **核心词汇**：**Forecasting Correlation of Returns: Covariance Given a Joint Probability Function（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：分散化机制（Diversification Mechanics）
-**核心概念**：分散化的数学本质是当相关系数小于 1 时，组合风险低于加权平均风险。最小方差组合（MVP）是整个可行集中风险最小的组合。
-- 当 ρ < 1 时，协方差项小于方差项，组合风险降低
-- **MVP 权重公式**：w₁* = [σ₂² - Cov₁₂]/[σ₁²+σ₂²-2Cov₁₂]
-- ⚠️ 分散化降低风险，不必然降低预期收益——可以找到低相关且正期望收益的资产
+### 5.9 Legacy 补强要点
+- 来自 `M05-Portfolio-Mathematics.md`：## 1. 核心知识点; **关键直觉**：组合风险不是资产风险的简单加权平均。协方差项 Cov(R_1, R_2) 决定了分散化的效果。; Safety-First Ratio 使用投资者自定义的阈值 R_L（可能不等于 R_f）。
 
-**考试应用**：判断不同相关系数下的分散化效果，计算最小方差组合的权重。
 
-### 知识点4：短缺风险与 Safety-First Ratio（Shortfall Risk and Roy's Safety-First Ratio）
-**核心概念**：短缺风险衡量组合回报跌破最低可接受水平的概率。Roy's Safety-First Ratio 提供了量化选择工具。
-- **SFRatio**：[E(Rₚ) - R_L]/σₚ，其中 R_L 是投资者设定的阈值回报率
-- SFRatio 越大，跌破 R_L 的概率越低（假设正态分布）
-- 在所有候选组合中选择 SFRatio 最大的组合
-- **vs Sharpe Ratio**：Sharpe Ratio 用无风险利率 R_f，SFRatio 用自定义 R_L
-- ⚠️ Roy's safety-first 假设组合收益服从正态分布
+## 5. 关键公式与计算框架
 
-**考试应用**：计算 SFRatio，比较不同组合并选择最优者。
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Present value | `PV = FV / (1 + r)^N` | 折现率越高，现值越低。 |
+| Variance | `σ² = Σ(xi - xbar)² / (n - 1)` | 样本方差分母通常用 n-1。 |
 
-### 📐 关键公式表
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `E(Rₚ) = Σ wᵢE(Rᵢ)` | 组合期望收益 | 投资组合预期回报 | 权重和为 1 |
-| `σₚ² = w₁²σ₁²+w₂²σ₂²+2w₁w₂Cov₁₂` | 两资产组合方差 | 计算组合风险 | 协方差项系数为 2 |
-| `Cov₁₂ = Σ pᵢ[R₁ᵢ-E(R₁)][R₂ᵢ-E(R₂)]` | 协方差 | 两变量同向变动程度 | 注意离差乘积的符号 |
-| `ρ₁₂ = Cov₁₂/(σ₁σ₂)` | 相关系数 | 标准化协方差 | 范围 [-1,+1] |
-| `SFRatio = [E(Rₚ)-R_L]/σₚ` | 安全优先比率 | 评估跌破阈值风险 | 假设正态分布 |
-| `w₁* = (σ₂²-Cov₁₂)/(σ₁²+σ₂²-2Cov₁₂)` | MVP 权重 | 最小方差组合 | 两资产情况 |
+## 6. 常见考点与解题思路
 
-### 🛠️ 常见考点与解题思路
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点1：计算组合期望收益和方差**
-- 步骤 1：确认权重和各资产期望收益
-- 步骤 2：E(Rₚ) = Σ wᵢE(Rᵢ)
-- 步骤 3：代入两资产方差公式，注意协方差项 × 2
-- 步骤 4：开方得标准差
-- ⚠️ 两资产公式中的协方差项系数为 2 是最高频错误
+## 7. 易错点与考试陷阱
 
-**考点2：从联合概率表算协方差**
-- 步骤 1：从边际概率算各资产期望收益
-- 步骤 2：每个情景算离差乘积 × 联合概率
-- 步骤 3：加总得协方差
-- 步骤 4：代入相关系数公式 ρ = Cov/(σ₁σ₂)
+- **中英文错配**：看到 `Portfolio Mathematics` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点3：分散化效果判断**
-- ρ = +1 → 无分散化，组合标准差 = w₁σ₁ + w₂σ₂
-- ρ = -1 → 完全对冲可能，组合标准差 = |w₁σ₁ - w₂σ₂|
-- ρ 越接近 -1，分散化效果越好
+## 8. 跨模块关联
 
-**考点4：最小方差组合 (MVP) 权重计算**
-- 代入 w₁* 公式
-- w₂ = 1 - w₁*
-- 验证：该权重下组合方差最小
+- **上游模块**：[[M04-Probability-Trees-and-Conditional-Expectations]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M06-Simulation-Methods]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**考点5：Safety-First Ratio 选组合**
-- 计算所有候选组合的 SFRatio
-- 选 SFRatio 最大者（跌破阈值概率最低）
-- 区分 SR（用 R_f）和 SFR（用 R_L）
+## 9. 复习与刷题提示
 
-### 🚨 易错点与考试陷阱
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| 组合方差协方差项系数为 1 | 两资产公式协方差项系数为 2 | (a+b)² = a² + b² + 2ab |
-| 相关系数 = 协方差 | 相关系数 = 协方差/(标准差乘积) | 相关系数是标准化到 [-1,+1] 的协方差 |
-| 低相关 = 低预期收益 | 低相关降低方差，不影响期望收益 | 分散化降低风险，不必然降低收益 |
-| 组合风险 = 加权平均风险 | 组合风险 < 加权平均风险（当 ρ < 1） | 协方差项降低了总风险 |
-| SFRatio 越大越差 | SFRatio 越大越好 | 越大表示跌破阈值的概率越低 |
+## 10. Legacy Notes Integrated
 
-### 🔄 跨模块关联
-
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 方差、标准差、相关系数概念在 M03 铺好基础；M05 将其扩展到多变量组合场景。
-- **[[M04-Probability-Trees-and-Conditional-Expectations]]** — 联合概率函数是概率论在投资组合中的直接应用。
-- **[[M01-Rates-and-Returns]]** — 杠杆回报公式与组合权重和杠杆效应相关。
-- **[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]** — 协方差和相关系数在 M09 扩展为正式统计检验。
-
-### 📋 复习与刷题提示
-
-- **核心能力**：熟练两资产方差公式（含协方差项系数 2），掌握联合概率表到协方差的完整计算
-- **必考题型**：组合期望收益/方差计算、协方差/相关系数计算、MVP 权重、SFRatio 选组合
-- **最常犯错误**：方差公式遗漏协方差项系数 2、权重未归一化、相关系数与协方差混淆
-- 记忆口诀：
-  - 组合方差：w₁²σ₁² + w₂²σ₂² + 2w₁w₂Cov = (a+b)² 结构
-  - 分散化条件：ρ < 1 就有效果
-  - Safety-First: 越大越好（越大 = 越安全）
-- 刷题建议：联合概率表和组合方差计算题是绝对重点
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M05-Portfolio-Mathematics.md（confidence 0.86）
+- **可复用结构**：M05: Portfolio Mathematics（投资组合数学）；1. 核心知识点；1.1 收益率矩（Return Moments）；1.2 联合概率函数（Joint Probability Function）；1.3 分散化机制（Diversification Mechanics）；1.4 短缺风险（Shortfall Risk）
+- **高价值要点**：## 1. 核心知识点；**关键直觉**：组合风险不是资产风险的简单加权平均。协方差项 Cov(R_1, R_2) 决定了分散化的效果。；Safety-First Ratio 使用投资者自定义的阈值 R_L（可能不等于 R_f）；## 2. 关键公式
+- **公式/计算线索**：calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns；calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns；define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy's safety-first criterion
+- **易错提示**：> **【考试陷阱】** 低 correlation 不等于负 expected return。可以找到低相关甚至负相关的资产，各自都有正的期望收益。；步骤 3：代入方差公式，注意协方差项乘以 2；## 4. 易错点提醒

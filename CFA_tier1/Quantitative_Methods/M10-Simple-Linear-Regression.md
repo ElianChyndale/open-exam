@@ -1,23 +1,29 @@
 ---
-title: "M10 — Simple Linear Regression"
-description: "CFA Level I 2026 official module: Simple Linear Regression"
-module: M10
+title: "M10: Simple Linear Regression"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M10"
 official_module: "Module 10: Simple Linear Regression"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 6
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M10: Simple Linear Regression
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Simple Linear Regression**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -31,215 +37,147 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients
+2. explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated
+3. calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression
+4. describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression
+5. calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable
+6. describe different functional forms of simple linear regressions
 
-- describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients
-- explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated
-- calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression
-- describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression
-- calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable
-- describe different functional forms of simple linear regressions
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 10.1 学习任务
+- **核心问题**：考试希望你用 `Simple Linear Regression` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 10.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 10.3 关键英文术语
+- **Simple Linear Regression（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Estimation of the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Assumptions of the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Hypothesis Tests in the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Prediction in the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Functional Forms for Simple Linear Regression（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Regression（回归）**：用一个或多个解释变量估计因变量的平均变化关系。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 10.1 | describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 10.2 | explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 10.3 | calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
+| 10.4 | describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 10.5 | calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 10.6 | describe different functional forms of simple linear regressions | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M10: Simple Linear Regression（简单线性回归）
-│
-├── ⭐ 回归模型 (Regression Model)
-│   ├── 📐 Yᵢ = b₀ + b₁Xᵢ + eᵢ
-│   ├── b₀ (截距): X=0 时 Y 的期望值
-│   ├── b₁ (斜率): X 每增 1 单位，Y 的平均变化量
-│   ├── eᵢ (残差): Yᵢ - Ŷᵢ
-│   └── 💡 OLS 目标: 最小化 SSE = Σ(Yᵢ-Ŷᵢ)²
-│
-├── ⭐ OLS 估计
-│   ├── 📐 b₁ = Cov(X,Y)/Var(X)
-│   ├── 📐 b₀ = ȳ - b₁x̄
-│   └── 💡 Gauss-Markov: OLS 是 BLUE (Best Linear Unbiased Estimator)
-│
-├── ⭐ 四个关键假设 (Four OLS Assumptions)
-│   ├── 线性 (Linearity): Y 与 X 关系是线性的
-│   ├── 同方差性 (Homoskedasticity): 残差方差恒定
-│   ├── 独立性 (Independence): 残差相互独立
-│   └── 正态误差 (Normality of Errors): 残差服从正态（小样本推断需要）
-│
-├── ⭐ 回归诊断 — 残差图 (Residual Plot)
-│   ├── 随机散布 → 假设满足
-│   ├── 喇叭形 → 异方差 (Heteroskedasticity)
-│   ├── 曲线形 → 非线性 (Nonlinearity)
-│   └── 序列模式 → 序列相关 (Serial Correlation)
-│
-├── ⭐ 拟合优度与推断 (Fit & Inference)
-│   ├── 📐 R² = SSR/SST = 1 - SSE/SST — 模型解释力
-│   ├── 📐 SEE = √[SSE/(n-2)] — 回归预测精度
-│   ├── 📐 t = (b₁-β₁,₀)/SE(b₁) — 斜率显著性检验, df=n-2
-│   ├── 📐 F = MSR/MSE — 整体模型显著性检验
-│   ├── 💡 简单回归中: F = t², R² = r²
-│   └── ⚠️ R² 高 ≠ 因果关系
-│
-├── ⭐ 预测区间 (Prediction Interval)
-│   ├── 点估计: Ŷ = b₀ + b₁X
-│   ├── 预测区间比置信区间更宽
-│   └── ⚠️ X 距 x̄ 越远，预测区间越宽
-│
-├── 💡 关键洞察
-│   ├── b₁ = Cov(X,Y)/Var(X) = r × (sY/sX)
-│   ├── 回归 t 检验与 M09 相关系数 t 检验等价
-│   ├── 异方差不影响无偏性，但使标准误有偏 → t 检验失效
-│   ├── 预测区间 = 置信区间 + 残差不确定性
-│   └── R² 高可能是虚假回归，需要用经济理论验证
-│
-└── ⚠️ 考试陷阱总结
-    ├── R² 高 ≠ 因果关系（虚假回归）
-    ├── 相关系数 t 检验 df = n-2
-    ├── 预测区间比置信区间宽（包含残差不确定性）
-    ├── F = t² 在简单回归中成立，F 是单边，t 可是双边
-    ├── 异方差不破坏无偏性，但破坏标准误和 t 检验
-    └── 预测区间在 x̄ 处最窄
+10. Simple Linear Regression
+├─ 10.1 Introduction
+│  ├─ 10.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.1.2 应用/判断：把概念或公式转成解题动作
+├─ 10.2 Estimation of the Simple Linear Regression Model
+│  ├─ 10.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.2.2 应用/判断：把概念或公式转成解题动作
+├─ 10.3 Assumptions of the Simple Linear Regression Model
+│  ├─ 10.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.3.2 应用/判断：把概念或公式转成解题动作
+├─ 10.4 Hypothesis Tests in the Simple Linear Regression Model
+│  ├─ 10.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.4.2 应用/判断：把概念或公式转成解题动作
+├─ 10.5 Prediction in the Simple Linear Regression Model
+│  ├─ 10.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：简单线性回归模型（Simple Linear Regression Model）
-**核心概念**：简单线性回归分析一个自变量 X 对一个因变量 Y 的线性影响。OLS（普通最小二乘法）通过最小化残差平方和来估计回归系数。
-- **回归方程**：Yᵢ = b₀ + b₁Xᵢ + eᵢ，b₀ 为截距（X=0 时 Y 的期望值），b₁ 为斜率（X 每增加 1 单位 Y 的平均变化）
-- **OLS 估计**：b₁ = Cov(X,Y)/Var(X)，b₀ = ȳ - b₁x̄
-- **Gauss-Markov 定理**：在线性无偏估计量中，OLS 估计量具有最小方差（BLUE）
-- **四个关键假设**：线性（Linearity）、同方差性（Homoskedasticity）、独立性（Independence）、正态误差（Normality of Errors）
+### 10.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients`。
+- **核心词汇**：**Simple Linear Regression（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：解释回归系数含义，理解 OLS 估计原理和 Gauss-Markov 定理。
+### 10.2 Estimation of the Simple Linear Regression Model
+- **中文主线**：本节点解决 `Estimation of the Simple Linear Regression Model` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：回归诊断（Regression Diagnostics）
-**核心概念**：回归诊断通过残差图等工具检验 OLS 假设是否满足。假设违反会导致推断结果不可靠。
-- **残差图诊断**：随机散布 → 假设满足；喇叭形 → 异方差（Heteroskedasticity）；曲线形 → 非线性；序列模式 → 序列相关
-- **异方差后果**：标准误有偏 → t 检验失效，但系数无偏性不受影响
-- **序列相关后果**：时间序列数据中常见，标准误被低估
-- **诊断工具**：残差 vs 拟合值图是最常用的诊断方法
+### 10.3 Assumptions of the Simple Linear Regression Model
+- **中文主线**：本节点解决 `Assumptions of the Simple Linear Regression Model` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义；官方表述为：`calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression`。
+- **核心词汇**：**Estimation of the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：通过残差图判断假设违反情况，理解异方差和序列相关的后果。
+### 10.4 Hypothesis Tests in the Simple Linear Regression Model
+- **中文主线**：本节点解决 `Hypothesis Tests in the Simple Linear Regression Model` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression`。
+- **核心词汇**：**Assumptions of the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：拟合优度与推断（Fit and Inference）
-**核心概念**：R² 衡量模型解释力，t 检验检验单个系数的显著性，F 检验检验整体模型的显著性。
-- **R²（拟合优度）** = SSR/SST = 1 - SSE/SST，范围 [0,1]，越高模型解释力越强
-- **SEE（估计标准误）** = √[SSE/(n-2)]，衡量预测精度
-- **斜率 t 检验**：t = (b₁-β₁,₀)/SE(b₁)，H₀: β₁=0，df=n-2
-- **F 检验**：F = MSR/MSE，在简单回归中 F = t²
-- ⚠️ R² 高 ≠ 因果关系（虚假回归问题）
+### 10.5 Prediction in the Simple Linear Regression Model
+- **中文主线**：本节点解决 `Prediction in the Simple Linear Regression Model` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable`。
+- **核心词汇**：**Hypothesis Tests in the Simple Linear Regression Model（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：解读 ANOVA 表（SSR/SSE/SST），计算 R²、SEE、F 统计量，进行斜率 t 检验。
+### 10.9 Legacy 补强要点
+- 来自 `M09-Correlation-and-Regression.md`：## 1. 核心知识点; **四个关键假设（Four Key Assumptions of OLS）**：; ## 2. 关键公式。
 
-### 知识点4：预测区间（Prediction Interval）
-**核心概念**：预测区间给出了给定 X 值时 Y 的合理取值范围，它比置信区间更宽，因为包含了两种不确定性。
-- **点估计**：Ŷ = b₀ + b₁X
-- **预测区间 vs 置信区间**：预测区间比置信区间更宽，因为它包含了参数估计的不确定性和随机误差项的不确定性
-- **区间宽度**：X 距离 x̄ 越远，预测区间越宽（在均值处最窄）
-- ⚠️ 预测区间体现了预测的不确定性，不能简单等同于置信区间
 
-**考试应用**：计算给定 X 值的预测值，理解预测区间与置信区间的区别。
+## 5. 关键公式与计算框架
 
-### 📐 关键公式表
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Present value | `PV = FV / (1 + r)^N` | 折现率越高，现值越低。 |
+| Variance | `σ² = Σ(xi - xbar)² / (n - 1)` | 样本方差分母通常用 n-1。 |
+| Simple regression | `Yi = b0 + b1Xi + ei` | b1 表示 X 增加 1 单位时 Y 的预期变化。 |
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `Yᵢ = b₀ + b₁Xᵢ + eᵢ` | 回归方程 | 简单线性回归模型 | eᵢ = 残差 |
-| `b₁ = Cov(X,Y)/Var(X)` | 斜率估计 | OLS 斜率系数 | Cov 和 Var 都用样本计算 |
-| `b₀ = ȳ - b₁x̄` | 截距估计 | OLS 截距系数 | 回归线经过 (x̄, ȳ) |
-| `R² = SSR/SST = 1-SSE/SST` | 拟合优度 | 模型解释力比例 | 范围 [0,1]，高 ≠ 因果 |
-| `SEE = √[SSE/(n-2)]` | 估计标准误 | 回归预测精度 | df = n-2 |
-| `t = (b₁-β₁,₀)/SE(b₁)` | 斜率 t 检验 | X 对 Y 的线性影响 | df = n-2 |
-| `F = MSR/MSE` | ANOVA F 统计量 | 整体模型显著性 | 简单回归中 F = t² |
-| `Ŷ = b₀ + b₁X` | 点预测 | 给定 X 预测 Y | 预测区间更宽 |
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 🛠️ 常见考点与解题思路
+## 6. 常见考点与解题思路
 
-**考点1：ANOVA 表解读（高频必考）**
-- 给定 ANOVA 表，需要计算的三个关键指标：
-  - R² = SSR/SST = 1 - SSE/SST (模型解释力比例)
-  - SEE (Standard Error of Estimate) = √[SSE/(n-2)]
-  - F = MSR/MSE = [SSR/1] / [SSE/(n-2)]
-- ANOVA 表的关键行：
-  - SSR (回归平方和): 模型解释的变异
-  - SSE (残差平方和): 模型未解释的变异
-  - SST (总平方和): Y 的总变异 = SSR + SSE
-- ⚠️ R²、F、t 三者在简单回归中相互关联 (F=t², R²=r²)
-- 💡 高 R² 但低 F? 不可能 — 因为 F=MSR/MSE 与 R² 正相关
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点2：相关 vs 回归关系**
-- 斜率: b₁ = Cov(X,Y)/Var(X)
-- 相关系数: r = Cov(X,Y)/(σ_Xσ_Y)
-- 两者转换: b₁ = r × (s_Y/s_X)
-- R² = r² (仅在简单线性回归中成立！)
-- ⚠️ R² 和 r² 的数值相等关系只在简单回归中成立，多元回归中 R² ≠ r²
-- 💡 相关系数 t 检验 = 回归斜率 t 检验 (两者等价)
+## 7. 易错点与考试陷阱
 
-**考点3：残差图判断假设违反（图形分析题）**
-- 残差图 (Residual Plot): 横轴 = 拟合值(X)，纵轴 = 残差(e)
-- 四种常见模式：
-  - 散点随机散布在 0 附近 → 假设满足 ✓
-  - 扇形/喇叭形 (方差随 X 增大) → 异方差 (Heteroskedasticity)
-  - 有明显曲线趋势 → 非线性 (Nonlinearity)
-  - 残差正负交替有规律 → 序列相关 (Serial Correlation)
-- ⚠️ 考试常给残差图让你判断违反了哪个假设
+- **中英文错配**：看到 `Simple Linear Regression` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点4：置信区间 vs 预测区间**
-- 置信区间 (Confidence Interval):
-  - 对回归系数的区间估计 (如 β₁ 的 95% CI)
-  - 只包含参数估计的不确定性
-- 预测区间 (Prediction Interval):
-  - 对给定 X 值下 Y 的区间预测
-  - 包含两种不确定性: 参数估计 + 随机误差项 eᵢ
-  - 因此预测区间比置信区间更宽
-- 两个区间的共同点:
-  - 在 X = x̄ 处最窄
-  - X 距 x̄ 越远，区间越宽
-- ⚠️ 考试高频题: "为什么预测区间比置信区间宽？"
+## 8. 跨模块关联
 
-**考点5：回归假设违反的后果**
-- 异方差 (Heteroskedasticity):
-  - 系数仍然无偏 (Unbiased) ✓
-  - 但标准误有偏 → t 检验不可靠 ✗
-  - 常见于横截面数据
-- 序列相关 (Serial Correlation / Autocorrelation):
-  - 标准误被低估 → t 统计量被高估 → 更容易错误拒绝 H₀
-  - 常见于时间序列数据
-- 非线性 (Nonlinearity):
-  - 模型设定错误 → 预测有偏
-  - 需要使用非线性函数形式 (log, 二次项等)
+- **上游模块**：[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M11-Introduction-to-Big-Data-Techniques]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 🚨 易错点与考试陷阱
+## 9. 复习与刷题提示
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| R² 高 = X 导致 Y | R² 高 ≠ 因果关系 | 可能存在虚假回归或遗漏变量 |
-| 相关系数 t 检验 df = n-1 | df = n-2 | 回归估计了两个参数（截距+斜率） |
-| 预测区间 = 置信区间 | 预测区间比置信区间宽 | 预测区间含残差不确定性 |
-| 异方差使系数有偏 | 异方差下系数仍无偏，但标准误有偏 | OLS 无偏性不依赖同方差 |
-| 预测区间在各 X 值宽度相同 | 距 x̄ 越远越宽 | 斜率估计的不确定性在远端放大 |
-| F 检验可用单边或双边 | F 检验永远是单边（右尾） | F 值非负，大值才拒绝 H₀ |
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 🔄 跨模块关联
+## 10. Legacy Notes Integrated
 
-- **[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]** — 相关系数的 t 检验与回归斜率系数的 t 检验完全等价，R² = r²。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 相关系数的概念在 M03 中引入，在回归中扩展为正式斜率检验和 R² 解释。
-- **[[M05-Portfolio-Mathematics]]** — 协方差和相关系数是组合方差公式和回归分析的共同组件。
-- **[[M08-Hypothesis-Testing]]** — 回归中的 t 检验和 F 检验是 M08 假设检验框架的直接应用。
-- **[[M07-Estimation-and-Inference]]** — 回归系数标准误 SE(b₁) 是 M07 标准误概念在回归中的推广。
-- **[[M11-Introduction-to-Big-Data-Techniques]]** — 简单线性回归是 ML 中监督学习的最基础模型。
-
-### 📋 复习与刷题提示
-
-- **核心能力**：掌握 OLS 估计、ANOVA 表解读、残差图诊断、置信区间 vs 预测区间
-- **必考题型**：ANOVA 表计算、R² 和 SEE 计算、残差图判断、回归系数 t 检验
-- **最常犯错误**：相关系数 df 记错、预测区间与置信区间混淆、R² 误认为因果关系
-- 记忆口诀：
-  - OLS：b₁ = Cov/Var，b₀ = ȳ - b₁x̄
-  - R² = SSR/SST = 1 - SSE/SST
-  - 简单回归：F = t²，R² = r²
-  - 残差图诊断：喇叭 = 异方差，曲线 = 非线性，序列 = 自相关
-- 刷题建议：ANOVA 表计算题是 CFA 高频题，务必熟练掌握
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M09-Correlation-and-Regression.md（confidence 0.833）
+- **可复用结构**：M10: Simple Linear Regression（简单线性回归）；1. 核心知识点；1.1 简单线性回归模型（Simple Linear Regression Model）；1.2 回归诊断（Regression Diagnostics）；1.3 拟合与推断（Fit and Inference）；2. 关键公式
+- **高价值要点**：## 1. 核心知识点；**四个关键假设（Four Key Assumptions of OLS）**：；## 2. 关键公式；**考点三：残差图判断假设违反**
+- **公式/计算线索**：calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression；describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate；calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model
+- **易错提示**：> **【考试陷阱】** Prediction Interval 比 Point Estimate 更诚实地表达了预测的不确定性。考试可能问：为什么预测区间比置信区间宽？因为预测区间包含了个体观测值的误差。；## 4. 易错点提醒；4. **F 与 t 在简单回归中等价**：F = t²，但注意 F 是单边检验，t 可以是双边检验。

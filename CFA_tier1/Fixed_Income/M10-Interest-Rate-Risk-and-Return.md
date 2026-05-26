@@ -1,23 +1,29 @@
 ---
-title: "M10 — Interest Rate Risk and Return"
-description: "CFA Level I 2026 official module: Interest Rate Risk and Return"
-module: M10
+title: "M10: Interest Rate Risk and Return"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M10"
 official_module: "Module 10: Interest Rate Risk and Return"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M10: Interest Rate Risk and Return
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Interest Rate Risk and Return**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,159 +35,130 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. calculate and interpret the sources of return from investing in a fixed-rate bond;
+2. describe the relationships among a bond’s holding period return, its Macaulay duration, and the investment horizon;
+3. define, calculate, and interpret Macaulay duration.
 
-- calculate and interpret the sources of return from investing in a fixed-rate bond
-- describe the relationships among a bond's holding period return, its Macaulay duration, and the investment horizon
-- define, calculate, and interpret Macaulay duration
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 10.1 学习任务
+- **核心问题**：考试希望你用 `Interest Rate Risk and Return` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 10.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 10.3 关键英文术语
+- **Interest Rate Risk and Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Sources of Return from Investing in a Fixed-Rate Bond（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Investment Horizon and Interest Rate Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Macaulay Duration（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Duration（久期）**：衡量债券价格对利率变化敏感度的核心指标。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 10.1 | calculate and interpret the sources of return from investing in a fixed-rate bond; | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 10.2 | describe the relationships among a bond’s holding period return, its Macaulay duration, and the investment horizon; | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 10.3 | define, calculate, and interpret Macaulay duration. | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M10: Interest Rate Risk and Return（利率风险与回报）
-├─ ⭐ 10.1 回报分解 (Return Decomposition)
-│  ├─ 📐 HPR = (票息 + 再投资收入 + 售价 - 买价) / 买价
-│  ├─ 💡 回报三来源：
-│  │  ├─ 票息收入 (coupon income)
-│  │  ├─ 再投资收入 (reinvestment income)
-│  │  └─ 价格变动 (price change / capital gain or loss)
-│  ├─ 📐 回归面值 (Pull to Par)：折价债价格上升，溢价债价格下降
-│  └─ ⚠️ 已实现回报 ≠ YTM（再投资率变化或提前卖出时）
-│
-├─ ⭐ 10.2 持有期与利率风险
-│  ├─ 📐 Horizon < Macaulay Duration → 价格风险主导（利率↑ → 价格↓）
-│  ├─ 📐 Horizon > Macaulay Duration → 再投资风险主导（利率↓ → 再投资收益↓）
-│  ├─ 📐 Horizon = Macaulay Duration → 价格风险与再投资风险抵消（免疫）
-│  └─ 🎯 零息债券：无再投资风险，但价格风险最大
-│
-└─ ⭐ 10.3 Macaulay 久期
-   ├─ 📐 D_mac = Σ[t × PV(CF_t)] / Full Price
-   ├─ 💡 = 现金流回收时间的加权平均值（以 PV 为权重）
-   ├─ 💡 零息债券 D_mac = 期限；付息债券 D_mac < 期限
-   └─ 🎯 衡量债券的利率敏感度
+10. Interest Rate Risk and Return
+├─ 10.1 Introduction
+│  ├─ 10.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.1.2 应用/判断：把概念或公式转成解题动作
+├─ 10.2 Sources of Return from Investing in a Fixed-Rate Bond
+│  ├─ 10.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.2.2 应用/判断：把概念或公式转成解题动作
+├─ 10.3 Investment Horizon and Interest Rate Risk
+│  ├─ 10.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.3.2 应用/判断：把概念或公式转成解题动作
+├─ 10.4 Macaulay Duration
+│  ├─ 10.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 10.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：回报分解（Return Decomposition）
-**核心概念**：投资固定利率债券的总回报由三个来源构成。理解回报的来源有助于分析利率变化对实际投资收益的影响。
-- **票息收入（coupon income）**：持有期间收到的所有票息支付，是债券投资的基础回报
-- **再投资收入（reinvestment income）**：将收到的票息按市场利率再投资所产生的额外收益。当利率下降时再投资收入减少，利率上升时再投资收入增加
-- **价格变动（price change / capital gain or loss）**：卖出债券时的价格与买入价的差额。利率下降时债券价格上升，利率上升时价格下降
-- **回归面值（Pull to Par）**：随着到期日临近，折价债券价格逐渐上升趋近面值，溢价债券价格逐渐下降趋近面值。这一效应独立于利率变化
-- **持有期回报率（HPR）**：`HPR = (总票息 + 再投资收入 + 售价 - 买价) / 买价`
-- ⚠️ 已实现回报 ≠ YTM：如果投资者在到期前卖出债券，或市场利率变化导致再投资收入改变，实际实现的持有期回报将不同于 YTM
+### 10.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the sources of return from investing in a fixed-rate bond;`。
+- **核心词汇**：**Interest Rate Risk and Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：计算持有期回报（注意再投资收入的复利计算），分析利率变化方向对持有者回报的影响。
+### 10.2 Sources of Return from Investing in a Fixed-Rate Bond
+- **中文主线**：本节点解决 `Sources of Return from Investing in a Fixed-Rate Bond` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the relationships among a bond’s holding period return, its Macaulay duration, and the investment horizon;`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：持有期与利率风险（Horizon and Interest Rate Risk）
-**核心概念**：持有期长度决定了债券投资者面临的主要风险类型——价格风险还是再投资风险。这是利率风险管理的基础概念。
-- **价格风险（price risk）**：利率上升导致债券价格下跌的风险。持有期越短，价格风险的影响越大
-- **再投资风险（reinvestment risk）**：利率下降导致票息再投资收益减少的风险。持有期越长，再投资风险的影响越大
-- **持有期 < Macaulay 久期** → 价格风险占主导（利率上升导致价格下跌的影响超过再投资收入增加）
-- **持有期 > Macaulay 久期** → 再投资风险占主导（利率下降导致再投资收益减少的影响超过价格上涨）
-- **持有期 = Macaulay 久期** → 价格风险与再投资风险大致抵消（利率免疫）
-- **零息债券**：无再投资风险（因为没有期间现金流），但价格风险最大
+### 10.3 Investment Horizon and Interest Rate Risk
+- **中文主线**：本节点解决 `Investment Horizon and Interest Rate Risk` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret Macaulay duration.`。
+- **核心词汇**：**Sources of Return from Investing in a Fixed-Rate Bond（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：利用 Macaulay 久期判断免疫状态——若持有期等于 Macaulay 久期，价格风险与再投资风险大致抵消。
+### 10.4 Macaulay Duration
+- **中文主线**：本节点解决 `Macaulay Duration` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the sources of return from investing in a fixed-rate bond;`。
+- **核心词汇**：**Investment Horizon and Interest Rate Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：Macaulay 久期（Macaulay Duration）
-**核心概念**：Macaulay 久期是债券现金流回收时间的加权平均值，以每期现金流现值为权重。它是理解和管理利率风险的核心工具。
-- **计算公式**：`D_mac = Σ[t × PV(CF_t)] / Full Price`，其中 t 为现金流发生的时间，PV(CF_t) 为该现金流的现值
-- **经济含义**：以年为单位表示的加权平均回收期，也是价格风险与再投资风险平衡的临界持有期
-- **零息债券**：Macaulay 久期 = 期限（因为只有一笔现金流在到期时发生）
-- **付息债券**：Macaulay 久期 < 期限（因为期间票息缩短了平均回收时间）
-- **影响因素**：期限越长、票息越低、收益率越低 → Macaulay 久期越大
+### 10.9 Legacy 补强要点
+- 来自 `M07-Interest-Rate-Risk.md`：## 1. 核心知识点; **核心公式 (English)**; ## 2. 关键公式。
 
-**考试应用**：计算 Macaulay 久期，比较不同债券的久期大小，利用久期判断利率敏感度。
 
-## 📐 关键公式表
+## 5. 关键公式与计算框架
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `HPR = (总票息 + 再投资收入 + 售价 - 买价) / 买价` | 持有期回报率 | 计算实际回报 | 再投资收入需复利计算 |
-| `D_mac = Σ[t × PV(CF_t)] / Full Price` | Macaulay 久期 | 衡量利率敏感度 | 现金流时间加权平均 |
-| `Horizon < D_mac → 价格风险主导` | 久期 vs 持有期 | 判断风险类型 | Horizon > D_mac → 再投资风险主导 |
-| `Pull to Par: 折价↑/溢价↓ → Par` | 回归面值 | 到期前价格分析 | 速度非线性，到期前加快 |
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
+| Modified duration | `ModDur = MacDur / (1 + y/m)` | 近似衡量收益率变化 1 单位时价格百分比变化。 |
 
-## 🛠️ 常见考点与解题思路
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 考点 1：计算持有期回报 (HPR)
-- **步骤**：
-  1. 计算持有期间收到的所有票息
-  2. 计算票息再投资收入（按再投资利率复利）
-  3. 计算卖出时的资本利得/损失
-  4. HPR = (总票息 + 再投资收入 + 售价 - 买价) / 买价
-- **注意**：再投资收入的复利计算是易错点
+## 6. 常见考点与解题思路
 
-### 考点 2：利用 Macaulay 久期判断免疫状态
-- **思路**：投资者的持有期 = Macaulay Duration → 价格风险与再投资风险大致抵消
-- **应用**：保险公司等负债驱动型投资者使用久期匹配进行免疫
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 3：Pull-to-Par 效应分析
-- **题型**：给定折价/溢价债券和固定市场利率，计算到期前某时点的价格
-- **思路**：折价债券随时间推移价格上升趋近面值；溢价债券价格下降趋近面值
-- **速度**：非线性的，到期前加速
+## 7. 易错点与考试陷阱
 
-### 考点 4：利率变化对回报的影响
-- **利率下降** → 价格上升但再投资收入减少（price effect dominates short-term）
-- **利率上升** → 价格下降但再投资收入增加（reinvestment effect dominates long-term）
+- **中英文错配**：看到 `Interest Rate Risk and Return` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-## 🚨 易错点与考试陷阱
+## 8. 跨模块关联
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| Duration 匹配冻结价格 | 平衡价格和再投资效应，非冻结价格 | 两者抵消而非价格不变 |
-| 持有期回报 = YTM | YTM 假设持有至到期且再投资率=YTM | 提前卖出或再投资率不同时偏离 |
-| Pull-to-par 是线性的 | 速度随到期临近加快 | 价格路径是凸的 |
-| 零息债券无风险 | 没有再投资风险，但价格风险最大 | 久期最长 |
+- **上游模块**：[[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M11-Yield-Based-Bond-Duration-Measures-and-Properties]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🔄 跨模块关联
+## 9. 复习与刷题提示
 
-- **Macaulay 久期** → [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] 的修正久期
-- **持有期回报** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的 YTM 比较
-- **利率风险** → [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] 的 curve-based 风险
-- **凸性** → [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] 的凸性调整
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 📋 复习与刷题提示
+## 10. Legacy Notes Integrated
 
-- **核心重点**：Macaulay 久期的计算及其与持有期的关系
-- **回报分解**：理解 HPR 的三部分来源
-  - 票息收入 + 再投资收入 + 价格变动 = 持有期回报
-  - 再投资收入计算需注意复利
-- **免疫概念**：持有期 = Macaulay Duration 时的风险抵消机制
-  - Horizon < D_mac → 价格风险主导
-  - Horizon > D_mac → 再投资风险主导
-  - Horizon = D_mac → 免疫（大致抵消）
-- **Pull-to-par 分析**：
-  - 折价债券：价格随时间上升（C 形路径）
-  - 溢价债券：价格随时间下降（倒 C 形路径）
-  - 速度非线性，到期前加速
-- **Macaulay Duration 计算**：
-  - D_mac = Σ[t × PV(CF_t)] / Full Price
-  - 零息债券 D_mac = maturity
-  - 付息债券 D_mac < maturity
-  - 高票息 → 更短的久期
-- **典型计算流程**：
-  1. 计算每期现金流 PV
-  2. 计算 PV 权重
-  3. 权重 × 时间求和
-- **刷题建议**：
-  - 重点做 HPR 计算题（含再投资收入的复利计算）
-  - 久期-持有期关系分析题（判断风险主导类型）
-  - Pull-to-par 路径分析题
-- **易混淆点**：
-  - 持有期回报 ≠ YTM
-  - Duration 匹配不冻结价格（平衡价格和再投资效应）
-  - 零息债券：无再投资风险但有最大价格风险
-
-- **关键数值记忆**：
-  - D_mac 零息债券 = 期限
-  - D_mac 付息债券 < 期限
-  - 票息越高 → D_mac 越短
-  - Yield 越高 → D_mac 越短
-- **考试技巧**：
-  - HPR 计算中再投资收入需要用再投资利率复利计算（非 YTM）
-  - 免疫条件：Horizon = Macaulay Duration
-  - Pull-to-Par 路径不对称：折价 C 形 vs 溢价倒 C 形
-  - 零息债券的 Pull-to-Par 是指数型增长路径
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M07-Interest-Rate-Risk.md（confidence 0.478）
+- **可复用结构**：M10: 利率风险与回报 (Interest Rate Risk and Return)；1. 核心知识点；1.1 回报分解 (Return Decomposition)；1.2 持有期与 Macaulay 久期 (Horizon and Macaulay Duration)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；**核心公式 (English)**；## 2. 关键公式；**利用 Macaulay 久期判断免疫状态**：若投资者的持有期等于 Macaulay 久期，价格风险与再投资风险大致抵消（利率免疫）。
+- **公式/计算线索**：title: "M07 — Interest Rate Risk and Return"；official_module: "Module 10: Interest Rate Risk and Return"；# M10: 利率风险与回报 (Interest Rate Risk and Return)
+- **易错提示**：**计算持有期回报**：给定买入价格、卖出价格、票息收入和再投资利率，计算 HPR。注意再投资收入的复利计算。；## 4. 易错点提醒

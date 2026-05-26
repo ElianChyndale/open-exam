@@ -1,23 +1,29 @@
 ---
-title: "M04 — Basics of Portfolio Planning and Construction"
-description: "CFA Level I 2026 official module: Basics of Portfolio Planning and Construction"
-module: M04
+title: "M04: Basics of Portfolio Planning and Construction"
+description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Portfolio Management"
-topic_area: Portfolio_Management
-curriculum_year: 2026
+topic_area: "Portfolio_Management"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "8-12%"
+module: "M04"
 official_module: "Module 4: Basics of Portfolio Planning and Construction"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 8
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Portfolio_Management
   - official_2026
+  - Portfolio_Management
 ---
 
 # M04: Basics of Portfolio Planning and Construction
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把风险收益、组合构建、行为偏差和风险管理连接成投资流程。 本模块聚焦 **Basics of Portfolio Planning and Construction**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -35,206 +41,142 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the reasons for a written investment policy statement (IPS)
+2. describe the major components of an IPS
+3. describe risk and return objectives and how they may be developed for a client
+4. explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance
+5. describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets
+6. explain the specification of asset classes in relation to asset allocation
+7. describe the principles of portfolio construction and the role of asset allocation in relation to the IPS
+8. describe how environmental, social, and governance (ESG) considerations may be integrated into portfolio planning and construction
 
-- describe the reasons for a written investment policy statement (IPS)
-- describe the major components of an IPS
-- describe risk and return objectives and how they may be developed for a client
-- explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor's financial risk tolerance
-- describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets
-- explain the specification of asset classes in relation to asset allocation
-- describe the principles of portfolio construction and the role of asset allocation in relation to the IPS
-- describe how environmental, social, and governance (ESG) considerations may be integrated into portfolio planning and construction
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 4.1 学习任务
+- **核心问题**：考试希望你用 `Basics of Portfolio Planning and Construction` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 4.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 4.3 关键英文术语
+- **Basics of Portfolio Planning and Construction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Investment Policy Statement（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **IPS Risk and Return Objectives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **IPS Constraints（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Gathering Client Information（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Construction and Capital Market Expectations（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Strategic Asset Allocation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 4.1 | describe the reasons for a written investment policy statement (IPS) | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 4.2 | describe the major components of an IPS | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 4.3 | describe risk and return objectives and how they may be developed for a client | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 4.4 | explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 4.5 | describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 4.6 | explain the specification of asset classes in relation to asset allocation | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 4.7 | describe the principles of portfolio construction and the role of asset allocation in relation to the IPS | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 4.8 | describe how environmental, social, and governance (ESG) considerations may be integrated into portfolio planning and construction | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M04: 组合规划与构建基础 (Basics of Portfolio Planning and Construction)
-│
-├── 🟢 核心主题：从 IPS 到组合构建的完整流程
-│   └── IPS 是整个组合管理的蓝图
-│
-├── ⭐ IPS (Investment Policy Statement)
-│   ├── 重要性
-│   │   ├── 记录投资者的目标和约束
-│   │   ├── 决策框架，非法律合同
-│   │   └── 确保投资活动围绕客户需求
-│   └── 两大部分
-│       ├── 目标 (Objectives)
-│       │   ├── 收益目标
-│       │   │   ├── Required return (所需收益)
-│       │   │   ├── Return desire (期望收益)
-│       │   │   └── 两者冲突以 required 为准
-│       │   └── 风险目标
-│       │       ├── Risk willingness (意愿)
-│       │       ├── Risk ability (能力)
-│       │       └── 客观风险承受力 = min(willingness, ability)
-│       └── 约束 (Constraints) — L-T-T-L-U
-│           ├── Liquidity (流动性)
-│           ├── Time horizon (时间跨度)
-│           ├── Taxes (税收)
-│           ├── Legal/Regulatory (法律/监管)
-│           └── Unique circumstances (特殊情形)
-│
-├── ⭐ 市场有效性假说 (EMH)
-│   ├── 弱式有效: 价格反映历史信息 → 技术分析无效
-│   ├── 半强式有效: 价格反映公开信息 → 基本面分析无效
-│   ├── 强式有效: 价格反映所有信息 → 连内幕信息也无效
-│   └── 💡 市场越有效 → 被动管理越合适
-│
-├── ⭐ 主动 vs 被动管理
-│   ├── 主动管理
-│   │   ├── 追求 alpha (超额收益)
-│   │   ├── 选股 + 市场时机
-│   │   └── 需要信息优势 + 成本优势
-│   └── 被动管理
-│       ├── 跟踪指数，获取 beta
-│       ├── 费用低、透明度高
-│       └── 适合有效市场
-│
-├── ⭐ 战略 vs 战术资产配置
-│   ├── SAA (Strategic): 长期政策组合，决定 90%+ 风险收益
-│   └── TAA (Tactical): 短期系统性偏离 SAA
-│
-├── ⭐ 风险预算 (Risk Budgeting)
-│   ├── 总风险分解到各资产类别/策略
-│   ├── 主动风险预算限制偏离基准的幅度
-│   └── 不是资本预算
-│
-├── 💡 关键洞察
-│   ├── 收益目标必须可量化
-│   ├── Required vs Desired 必须明确区分
-│   ├── 风险承受力 = min(willingness, ability)
-│   ├── 战略配置决定绝大多数组合回报
-│   └── ESG 整合日益重要
-│
-└── ⚠️ 考试陷阱
-    ├── IPS 不是法律合同
-    ├── 收益目标必须可量化
-    ├── 风险意愿和能力必须都考虑
-    ├── 战术配置不是随意调整
-    └── 主动管理需要成本优势
+4. Basics of Portfolio Planning and Construction
+├─ 4.1 Introduction
+│  ├─ 4.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.1.2 应用/判断：把概念或公式转成解题动作
+├─ 4.2 The Investment Policy Statement
+│  ├─ 4.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.2.2 应用/判断：把概念或公式转成解题动作
+├─ 4.3 IPS Risk and Return Objectives
+│  ├─ 4.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.3.2 应用/判断：把概念或公式转成解题动作
+├─ 4.4 IPS Constraints
+│  ├─ 4.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.4.2 应用/判断：把概念或公式转成解题动作
+├─ 4.5 Gathering Client Information
+│  ├─ 4.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 4.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：市场有效性假说 (Efficient Market Hypothesis, EMH)
+### 4.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the reasons for a written investment policy statement (IPS)`。
+- **核心词汇**：**Basics of Portfolio Planning and Construction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：EMH 描述了市场对信息的反映效率，分为三个层次：弱式、半强式和强式有效。市场有效性的程度决定了主动管理和被动管理的适用性。理解 EMH 对于制定投资策略至关重要。
+### 4.2 The Investment Policy Statement
+- **中文主线**：本节点解决 `The Investment Policy Statement` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the major components of an IPS`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **弱式有效 (Weak-form)**：价格反映所有历史价格和交易量信息。技术分析无法持续获得超额收益。股价呈现随机游走特征
-- **半强式有效 (Semi-strong)**：价格反映所有公开信息（财务报表、新闻等）。基本面分析无法持续获得超额收益。信息公布后价格快速调整
-- **强式有效 (Strong-form)**：价格反映所有信息（包括内幕信息）。即使内幕信息也无法获得超额收益。在实际市场中极少成立
-- 💡 **核心含义**：市场越有效，被动管理越合理；市场越无效，主动管理越有机会
+### 4.3 IPS Risk and Return Objectives
+- **中文主线**：本节点解决 `IPS Risk and Return Objectives` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe risk and return objectives and how they may be developed for a client`。
+- **核心词汇**：**The Investment Policy Statement（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定市场现象判断属于哪种有效性形式。例如：技术分析能获利则反驳弱式有效；内幕交易能获利则反驳强式有效。常见陷阱：半强式有效包含弱式有效（弱式是半强式的子集）。
+### 4.4 IPS Constraints
+- **中文主线**：本节点解决 `IPS Constraints` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance`。
+- **核心词汇**：**IPS Risk and Return Objectives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：主动 vs 被动管理 (Active vs Passive Management)
+### 4.5 Gathering Client Information
+- **中文主线**：本节点解决 `Gathering Client Information` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets`。
+- **核心词汇**：**IPS Constraints（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：主动管理追求超额收益（Alpha），被动管理获取市场收益（Beta）。选择主动还是被动管理取决于市场效率程度、投资者的信息优势和成本约束。没有绝对的好坏，只有是否适合特定投资者。
 
-- **主动管理 (Active)**：通过选股和市场时机追求 Alpha。费用高、交易成本高。适合市场无效、有信息优势时
-- **被动管理 (Passive)**：跟踪指数获取 Beta。费用低、透明度高、税收效率高。适合市场有效或缺乏信息优势时
-- **决策框架**：考虑市场效率程度、信息优势、交易成本、税收、投资者目标
-- 🎯 **高频考点**：市场无效不自动意味着主动管理——还需考虑成本优势
+## 5. 关键公式与计算框架
 
-**考试应用**：分析市场特征（效率程度、交易成本、投资者知识），判断选择主动还是被动管理。常见陷阱：认为市场无效就自动选择主动管理（还需考虑成本和信息优势）。
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Portfolio return | `Rp = Σ wi Ri` | 组合收益是资产收益的加权平均。 |
+| Portfolio variance | `σp² = w1²σ1² + w2²σ2² + 2w1w2ρ12σ1σ2` | 相关性越低，分散化收益越明显。 |
 
-### 知识点3：IPS 的详细构成 (Detailed IPS Components)
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**核心概念**：IPS 是投资组合管理的核心指导文件，包含收益目标、风险目标和约束条件三大要素。理解 IPS 的详细构成是组合管理实务的基础，也是 PM 科目的高频考点。
+## 6. 常见考点与解题思路
 
-- **收益目标 (Return Objectives)**：Required return（必须达到）vs Return desire（希望达到）。以 required return 为准。目标必须可量化
-- **风险目标 (Risk Objectives)**：Risk willingness（意愿）vs Risk ability（能力）。客观风险承受力 = min(willingness, ability)
-- **约束条件 — L-T-T-L-U**：Liquidity（流动性）、Time horizon（时间跨度）、Taxes（税收）、Legal/Regulatory（法律/监管）、Unique circumstances（特殊情形）
-- 💡 IPS 不是法律合同，而是决策框架。需要定期回顾和更新
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考试应用**：IPS 情景题是 PM 科目最高频的题型之一。通常给定客户情景，要求写或分析 IPS 要素。常犯错误：混淆 required return 和 desire return；ips 约束条件遗漏某个 L-T-T-L-U 维度。
+## 7. 易错点与考试陷阱
 
-### 知识点4：战略与战术资产配置 (Strategic vs Tactical Asset Allocation)
+- **中英文错配**：看到 `Basics of Portfolio Planning and Construction` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**核心概念**：战略资产配置（SAA）是长期政策组合，决定组合绝大部分的收益波动。战术资产配置（TAA）是短期系统性偏离 SAA，旨在利用市场短期定价偏差。TAA 必须有预算约束和风险控制。
+## 8. 跨模块关联
 
-- **战略资产配置 (SAA)**：长期政策组合（policy portfolio），决定组合 90%+ 的风险收益波动
-- **战术资产配置 (TAA)**：短期系统性偏离 SAA，利用市场短期定价偏差
-- **风险预算 (Risk Budgeting)**：将总风险分解到不同类别，明确分配主动风险预算
-- 💡 **核心区别**：战略性是长期政策决定，战术性是短期偏离。TAA 需要有系统性框架和风险预算
+- **上游模块**：[[M03-Portfolio-Management-An-Overview]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**考试应用**：判断投资行为是战略还是战术。关键：战略性长期不变，战术性短期偏离。给定主动风险（追踪误差）与风险预算的比较，判断是否需要调整。
+## 9. 复习与刷题提示
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `Required return = 支出需求/可投资资产 + 通胀` | 所需收益计算 | Endowment/foundation 收益目标 | 实际收益 = 名义收益 - 通胀 |
-| `风险承受力 = min(willingness, ability)` | 客观风险承受力 | 确定客户风险目标 | 以较低者为准 |
-| `税后收益 = 税前收益 × (1 - 税率)` | 税后收益换算 | 有税收约束时的收益计算 | 税率取决于投资者情况 |
-| `Active return = Rp - Rb` | 主动收益 = 组合超基准收益 | 评估主动管理效果 | 正值为超越基准 |
-| `Active risk (TE) = σ(Rp - Rb)` | 跟踪误差 = 主动风险 | 衡量偏离基准的程度 | 信息比率 = (Rp-Rb)/TE |
-| `Information ratio = (Rp-Rb)/TE` | 信息比率 | 单位主动风险创造的主动收益 | 越高主动管理越有效 |
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-### 🛠️ 常见考点与解题思路
+## 10. Legacy Notes Integrated
 
-**考点1：撰写 Return Objective**
-- **步骤**：
-  1. 计算所需收益（支出率 + 通胀）
-  2. 与客户期望收益做对比
-  3. 以 required return 为基准
-  4. 用可量化语言表述
-- **示例**："在扣除通胀后实现每年 5% 的实际收益"
-
-**考点2：撰写 Risk Objective**
-- **步骤**：
-  1. 评估 willingness（问卷、投资经验、损失反应）
-  2. 评估 ability（财富、收入、支出、期限）
-  3. 两者取低 → 形成风险目标
-  4. 常见表述："可接受最大年度损失为 XX%"
-
-**考点3：按 L-T-T-L-U 写 Constraints**
-- **步骤**：逐项分析情景中的约束
-- **常见陷阱**：考生容易跳过 Liquidity 或 Unique circumstances
-
-**考点4：判断市场有效性形式**
-- **步骤**：给一个市场现象 → 判断属于哪种有效性
-- **常见题型**：给定测试结果（如技术分析能否获利）→ 判断支持/反对哪种形式
-
-**考点5：主动 vs 被动选择**
-- **步骤**：分析效率程度、交易成本、信息优势
-- **关键**：不自动选主动管理，即使市场略微无效也需要成本优势
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| IPS 先写约束再写目标无所谓 | 考试严格区分 objective 与 constraints | 分类不同 |
-| 收益目标越高越好 | 收益目标必须与风险目标一致 | 风险收益对等 |
-| 风险意愿高 = 设高风险组合 | 还要看风险能力是否支持 | 取较低者 |
-| Required = Desired | 必须区分"必须"和"希望" | 优先级不同 |
-| 市场无效 = 主动管理 | 还需信息优势、成本优势 | 条件缺一不可 |
-| 组合风险主要来自选股 | 战略配置决定 90%+ 的风险收益 | 配置主导 |
-| IPS 一旦写好不能改 | IPS 需定期回顾和更新 | 动态调整 |
-| 风险预算 = 资金预算 | 风险预算分配的是风险限额 | 概念不同 |
-| 被动管理 = 不需要判断 | 仍要选合适基准、考虑成本 | 被动也需要管理 |
-| 有效市场 = 没有交易理由 | 仍有配置和流动性需求 | 有区别 |
-
-### 🔄 跨模块关联
-
-- **[[M01-Portfolio-Risk-and-Return-Part-I]]** — 有效前沿和分散化概念贯穿组合构建（修复旧链接 `[[M01-Portfolio-Risk-and-Return]]` → 新链接）
-- **[[M02-Portfolio-Risk-and-Return-Part-II]]** — CAPM 市场均衡假设与有效市场概念相关
-- **[[M05-The-Behavioral-Biases-of-Individuals]]** — 行为偏差影响客户对自身风险意愿的判断
-- **[[M06-Introduction-to-Risk-Management]]** — 风险预算是风险管理在组合层面的应用
-- **[[M03-Portfolio-Management-An-Overview]]** — IPS 的整体框架在 M03中 介绍
-- **[[00-Portfolio-Management-MOC]]** — 返回科目总览
-
-### 📋 复习与刷题提示
-
-- M04 是 Portfolio Management 中**情景题最多**的模块，也是考试中 IPS 写作的核心
-- **核心能力**：能根据客户情景写出完整的 IPS 目标和约束
-- **必考题型**：IPS 目标/约束撰写、市场有效性判断、主动 vs 被动选择
-- **最常犯错误**：忘记区分 Required vs Desired return、风险评估只考虑意愿忽略能力
-- 记忆重点：
-  - L-T-T-L-U 五个约束维度
-  - Required return > Desired return
-  - Risk tolerance = min(willingness, ability)
-  - SAA 决定 90%+ 风险收益
-- IPS 题是 CFA L1 上午题/下午题的常客，需要熟练掌握
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M05-IPS.md` (0.309), `M04-Market-Efficiency-and-Portfolio-Construction.md` (0.297), `00-Portfolio-Management-MOC.md` (0.283)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

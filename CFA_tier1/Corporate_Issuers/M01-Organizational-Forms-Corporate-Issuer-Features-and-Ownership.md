@@ -1,23 +1,29 @@
 ---
-title: "M01 — Organizational Forms, Corporate Issuer Features, and Ownership"
-description: "CFA Level I 2026 official module: Organizational Forms, Corporate Issuer Features, and Ownership"
-module: M01
+title: "M01: Organizational Forms, Corporate Issuer Features, and Ownership"
+description: "CFA Level I 2026 Corporate Issuers 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Corporate Issuers"
-topic_area: Corporate_Issuers
-curriculum_year: 2026
+topic_area: "Corporate_Issuers"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M01"
 official_module: "Module 1: Organizational Forms, Corporate Issuer Features, and Ownership"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Corporate_Issuers
   - official_2026
+  - Corporate_Issuers
 ---
 
 # M01: Organizational Forms, Corporate Issuer Features, and Ownership
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：理解公司组织、治理、营运资本、资本配置与商业模式如何影响价值创造。 本模块聚焦 **Organizational Forms, Corporate Issuer Features, and Ownership**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,164 +35,123 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. compare the organizational forms of businesses
+2. describe key features of corporate issuers
+3. compare publicly and privately owned corporate issuers
 
-- compare the organizational forms of businesses
-- describe key features of corporate issuers
-- compare publicly and privately owned corporate issuers
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 1.1 学习任务
+- **核心问题**：考试希望你用 `Organizational Forms, Corporate Issuer Features, and Ownership` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 1.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 1.3 关键英文术语
+- **Organizational Forms, Corporate Issuer Features, and Ownership（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Organizational Forms of Businesses（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Key Features of Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Publicly vs. Privately Owned Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 1.1 | compare the organizational forms of businesses | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+| 1.2 | describe key features of corporate issuers | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 1.3 | compare publicly and privately owned corporate issuers | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 【企业组织形式、公司特征与所有权】
-│
-├── 🔷 企业法律形式（Organizational Forms）🎯
-│   ├── 独资企业（Sole Proprietorship）
-│   │   ├── 单人拥有，无限责任
-│   │   ├── 所得税由个人承担（穿透纳税）
-│   │   ├── 优势：简单、监管少、无双重征税
-│   │   └── ⚠️ 劣势：融资能力有限、业主承担全部风险
-│   │
-│   ├── 合伙企业（Partnership）
-│   │   ├── 普通合伙（GP）：无限连带责任
-│   │   ├── 有限合伙（LP）：LP 仅以出资额为限
-│   │   ├── 穿透纳税，非独立法律实体
-│   │   └── ⚠️ GP 承担无限连带责任是核心风险
-│   │
-│   ├── 公司（Corporation）
-│   │   ├── 独立法人实体，股东承担有限责任 🎯
-│   │   ├── 融资渠道广泛（可发股发债）
-│   │   ├── 所有权转让灵活
-│   │   └── ⚠️ 双重征税（公司层面 + 股东层面）
-│   │
-│   └── LLC（有限责任公司）
-│       ├── 结合公司有限责任 + 合伙企业税收穿透
-│       └── 近年来流行的混合结构
-│
-├── 🔷 债务索偿 vs 股权索偿 🎯
-│   ├── 债权人（Creditors）：固定合约性索偿权（Contractual Claims）
-│   │   └── 优先于股东获得偿付，风险较低
-│   └── 股东（Shareholders）：剩余索偿权（Residual Claims）
-│       └── 清偿所有债务后剩余资产归股东，风险较高
-│
-├── 🔷 所有权与控制权分离 🎯
-│   ├── 上市公司所有权分散但控制权在管理层
-│   ├── 代理问题（Principal-Agent Problem）的根源
-│   └── 管理层（代理人）可能追求自身利益而非股东（委托人）价值
-│
-├── 🔷 公众 vs 私人公司 🎯
-│   ├── 公众公司（Public）：可公开交易，更严格监管披露
-│   └── 私人公司（Private）：信息不公开，流动性较低
-│
-│   💡 核心洞察：企业形式选择影响责任、税务和融资能力
-│   🎯 高频考点：各形式的特征对比、双重征税、有限责任的含义
+1. Organizational Forms, Corporate Issuer Features, and Ownership
+├─ 1.1 Introduction
+│  ├─ 1.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.1.2 应用/判断：把概念或公式转成解题动作
+├─ 1.2 Organizational Forms of Businesses
+│  ├─ 1.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.2.2 应用/判断：把概念或公式转成解题动作
+├─ 1.3 Key Features of Corporate Issuers
+│  ├─ 1.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.3.2 应用/判断：把概念或公式转成解题动作
+├─ 1.4 Publicly vs. Privately Owned Corporate Issuers
+│  ├─ 1.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 1.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：企业法律形式 (Legal Forms of Business)
+### 1.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the organizational forms of businesses`。
+- **核心词汇**：**Organizational Forms, Corporate Issuer Features, and Ownership（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：企业存在多种法律形式，每种形式在责任承担、税务处理和所有权转让方面有本质区别。选择合适的法律形式是企业成立时的首要决策之一，直接影响股东的责任范围、税务负担和融资能力。
+### 1.2 Organizational Forms of Businesses
+- **中文主线**：本节点解决 `Organizational Forms of Businesses` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe key features of corporate issuers`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **独资企业 (Sole Proprietorship)**：单人拥有，无限责任，所得税由个人承担。优势是简单且监管少，劣势是融资能力有限且业主承担全部风险
-- **合伙企业 (Partnership)**：两人及以上共同经营。普通合伙人对债务承担无限连带责任，有限合伙人仅以出资额为限承担责任
-- **公司 (Corporation)**：独立法人实体，股东承担有限责任。公司自身纳税（双重征税），但融资渠道广泛，所有权转让灵活
-- **LLC (Limited Liability Company)**：结合公司有限责任与合伙企业税收穿透的优势
-- 💡 有限责任 ≠ 公司不会倒闭。有限责任保护股东个人资产，但公司本身仍可能破产
+### 1.3 Key Features of Corporate Issuers
+- **中文主线**：本节点解决 `Key Features of Corporate Issuers` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare publicly and privately owned corporate issuers`。
+- **核心词汇**：**Organizational Forms of Businesses（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给出一段描述判断企业法律形式。关键判断词：无限责任+单人→独资；无限连带+多人→普通合伙；有限责任+穿透纳税→LLC；有限责任+双重征税→公司。
+### 1.4 Publicly vs. Privately Owned Corporate Issuers
+- **中文主线**：本节点解决 `Publicly vs. Privately Owned Corporate Issuers` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare the organizational forms of businesses`。
+- **核心词汇**：**Key Features of Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：债务索偿 vs 股权索偿 (Debt Claims vs Equity Claims)
+### 1.9 Legacy 补强要点
+- 来自 `00-Corporate-Issuers-MOC.md`：## 最关键：先看现金流创造价值，再看融资如何放大或拖累; ## Corporate Issuers 核心知识树 (Core Knowledge Tree); ├── M01: Corporate Structures and Ownership (公司结构与所有权)【考试核心】↔ 2026 Outline: Corporate Structures。
 
-**核心概念**：公司的资本来自债权人和股东，两者对公司资产拥有不同性质的索偿权。债权人拥有合约性固定索偿权，优先获得偿付；股东拥有剩余索偿权，承担更高风险但享有上行收益空间。
 
-- **债权人 (Creditors / Debt Holders)**：拥有合约性固定索偿权（fixed contractual claims），优先于股东获得利息和本金偿付
-- **股东 (Shareholders / Equity Holders)**：拥有剩余索偿权（residual claims），在公司清偿所有债务后享有剩余资产。股东承担更高风险，但也享有公司价值增长的全部收益
-- 💡 股东是公司风险的最后承担者，因此股东拥有公司的控制权（投票权）
+## 5. 关键公式与计算框架
 
-**考试应用**：债权人与股东的根本区别是高频考点。债权人=固定索偿+优先偿付+无投票权；股东=剩余索偿+最后受偿+有投票权。
+本模块以概念判断为主，无核心计算公式。复习时把 `Organizational Forms, Corporate Issuer Features, and Ownership` 的定义、触发条件、优缺点和例外情形整理成判断清单。
 
-### 知识点3：所有权与控制权的分离 (Separation of Ownership and Control)
+## 6. 常见考点与解题思路
 
-**核心概念**：当公司通过公开市场上市后，所有权分散在大量股东手中，但日常控制权掌握在管理层手中。这一分离是代理问题（principal-agent problem）的根源——管理层可能追求自身利益而非股东价值最大化。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-- **所有权分散 (Dispersed Ownership)**：上市公司股东数量众多，单个股东持股比例小，缺乏监督管理层的激励
-- **控制权集中 (Centralized Control)**：管理层掌握公司日常经营决策权，拥有信息优势
-- **代理问题 (Principal-Agent Problem)**：管理层（代理人）可能追求个人利益（高薪、帝国建造、在职消费）而非股东（委托人）价值最大化
-- 💡 **核心洞察**：所有权与控制权的分离是公司治理问题的根源。治理机制旨在对齐管理层和股东的利益
+## 7. 易错点与考试陷阱
 
-**考试应用**：为什么上市公司股东不能直接指挥管理层？答案：所有权分散+代理问题。股东保留剩余索取权但将日常决策委托给管理层。这引出了公司治理的必要性。
+- **中英文错配**：看到 `Organizational Forms, Corporate Issuer Features, and Ownership` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 知识点4：利益相关者 (Stakeholders)
+## 8. 跨模块关联
 
-**核心概念**：企业的利益相关者远不止股东和债权人，还包括管理层、员工、客户、供应商、监管机构等。不同利益相关者的目标常常相互冲突，公司治理需要在这些冲突中寻求平衡。
+- **上游模块**：本科目起点。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M02-Investors-and-Other-Stakeholders]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- **股东 (Shareholders)**：追求公司价值最大化和股价上涨
-- **债权人 (Creditors)**：关注偿债能力和现金流稳定性，偏好稳健经营
-- **管理层 (Managers)**：关注薪酬、职业安全和声誉，可能追求短期业绩
-- **员工 (Employees)**：关心薪酬、工作稳定性和职业发展
-- **客户 (Customers)**：追求产品质量与价格合理
-- 💡 **利益相关者冲突举例**：股东偏好高风险高回报，债权人偏好稳健。股东追求利润可能导致裁员，与员工利益冲突
+## 9. 复习与刷题提示
 
-**考试应用**：给定决策情景，分析不同利益相关者的受益/受损情况。利益相关者目标冲突是 Corporate Issuers 科目的核心主题之一。
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 🛠️ 常见考点与解题思路
+## 10. Legacy Notes Integrated
 
-### 主题1：辨识企业法律形式特征（🎯 必考）
-- **题型**：给出一段描述，问属于哪种企业形式
-- **解题思路**：
-  - 无限责任 + 单人 → 独资企业
-  - 无限连带 + 多人 → 普通合伙
-  - 有限责任 + 穿透纳税 → LLC
-  - 有限责任 + 双重征税 → 公司（Corporation）
-  - GP 无限 + LP 有限 → 有限合伙
-
-### 主题2：所有权与控制权分离
-- **题型**：问为什么上市公司股东不能直接指挥管理层
-- **答案关键点**：
-  - 所有权分散在大量股东手中
-  - 日常控制权委托给管理层
-  - 委托代理问题的根源：激励不匹配 + 信息不对称
-
-### 主题3：债务索偿 vs 股权索偿
-- **题型**：债权人与股东的根本区别
-- **答案**：债权人拥有**固定合约性索偿权**（fixed contractual claims），股东拥有**剩余索偿权**（residual claims）
-
-### 主题4：公众 vs 私人公司比较
-- **题型**：对比两者的特点和优劣
-- **对比要点**：
-  - 公众公司：流动性好、信息披露更透明、监管更严格、代理问题更突出
-  - 私人公司：信息不公开、估值困难、控制权更集中、代理问题较轻
-
-## 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 有限责任 = 公司不会破产 | 有限责任保护**股东个人资产**，但公司本身仍可能破产 | 有限责任针对股东，不针对公司实体 |
-| 独资企业是独立法律实体 | 独资企业**不是独立法律实体**，与企业主是同一主体 | 这是与公司的根本区别 |
-| LLC 是 Corporation 的一种 | LLC 是**混合结构**，兼具公司有限责任和合伙企业税收穿透 | 不是所有司法管辖区视为独立法人 |
-| GP 和 LP 的责任相同 | GP 承担无限连带责任，LP 仅以出资额为限 | 有限合伙的核心结构 |
-| 所有企业形式都双重征税 | 仅 Corporation 存在双重征税；独资、合伙、LLC 穿透纳税 | 税务处理是企业形式选择的关键因素 |
-| 股东拥有公司所以拥有控制权 | 上市公司所有权与控制权分离，管理层掌握实际控制权 | 代理问题的根本原因 |
-
-## 🔄 跨模块关联
-
-- **[[M02-Investors-and-Other-Stakeholders]]** — 利益相关者理论建立在本模块的企业形式基础上；不同利益相关者的权利和索偿优先级源于企业法律结构
-- **[[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]]** — 本模块的所有权与控制权分离是代理问题的根源，M03 深入展开治理机制
-- **[[M06-Capital-Structure]]** — 不同法律形式影响融资渠道和资本成本；公司的融资渠道比独资/合伙企业更广泛
-- **[[M05-Capital-Investments-and-Capital-Allocation]]** — 公众公司的资本预算决策面临更复杂的委托代理考量
-- **[[M04-Working-Capital-and-Liquidity]]** — 不同企业形式的融资政策选择（激进 vs 保守）受法律形式影响
-
-## 📋 复习与刷题提示
-
-- **对比记忆**：5 种企业形式的责任、税务、所有权转让、融资能力四维度对比是必考内容
-- **概念辨析**：有限责任的含义、双重征税的逻辑、穿透纳税的机制
-- **关键区分**：债务索偿（合约性、固定、优先）与股权索偿（剩余、风险更高、享有上行收益）
-- **代理问题**：所有权与控制权分离 → 代理问题 → 治理需求是递进逻辑链
-- **公众 vs 私人**：记住公众公司信息披露更多、流动性更好、代理问题更突出
-- **数值题**：Market Cap 和 Shares Outstanding 的计算是可能出现的简单计算
-
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：00-Corporate-Issuers-MOC.md（confidence 0.474）
+- **可复用结构**：00-Corporate-Issuers-MOC；笔记属性；最关键：先看现金流创造价值，再看融资如何放大或拖累；科目概览（与 CFA 2026 L1 官方课程对齐）；Corporate Issuers 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先看现金流创造价值，再看融资如何放大或拖累；## Corporate Issuers 核心知识树 (Core Knowledge Tree)；├── M01: Corporate Structures and Ownership (公司结构与所有权)【考试核心】↔ 2026 Outline: Corporate Structures；├── M02: Investors and Other Stakeholders (投资者与其他利益相关者)【考试核心】↔ 2026 Outline: Investors & Stakeholders
+- **公式/计算线索**：│ │ ├── 独资/合伙/公司/有限责任公司 (Sole Proprietorship / Partnership / Corporation / LLC)（企业类型）；│ │ ├── 核心公式 (English)；│ │ │ ├── `Operating cycle = DIO + DSO` 经营周期
+- **易错提示**：│ └── 注意：limited liability protects owners from some losses; it does not guarantee firm survival；│ └── 注意：governance is not decorative prose; it changes decisions and discount rates；│ └── 注意：shrinking DIO or DSO helps only if service, sales, and credit quality survive

@@ -1,23 +1,29 @@
 ---
-title: "M08 — Hypothesis Testing"
-description: "CFA Level I 2026 official module: Hypothesis Testing"
-module: M08
+title: "M08: Hypothesis Testing"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Quantitative Methods"
-topic_area: Quantitative_Methods
-curriculum_year: 2026
+topic_area: "Quantitative_Methods"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M08"
 official_module: "Module 8: Hypothesis Testing"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Quantitative_Methods
   - official_2026
+  - Quantitative_Methods
 ---
 
 # M08: Hypothesis Testing
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Hypothesis Testing**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,252 +35,127 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test
+2. construct hypothesis tests and determine their statistical significance, the associated Type I and Type II errors, and power of the test given a significance level
+3. compare and contrast parametric and nonparametric tests, and describe situations where each is the more appropriate type of test
 
-- explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test
-- construct hypothesis tests and determine their statistical significance, the associated Type I and Type II errors, and power of the test given a significance level
-- compare and contrast parametric and nonparametric tests, and describe situations where each is the more appropriate type of test
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 8.1 学习任务
+- **核心问题**：考试希望你用 `Hypothesis Testing` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 8.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 8.3 关键英文术语
+- **Hypothesis Testing（假设检验）**：用样本证据判断总体命题是否应被拒绝。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Hypothesis Tests for Finance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Tests of Return and Risk in Finance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Parametric versus Nonparametric Tests（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 8.1 | explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 8.2 | construct hypothesis tests and determine their statistical significance, the associated Type I and Type II errors, and power of the test given a significance level | 根据条件判断正确结论 | 写出结论、依据和限制条件。 |
+| 8.3 | compare and contrast parametric and nonparametric tests, and describe situations where each is the more appropriate type of test | 比较相似概念的适用条件与差异；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M08: Hypothesis Testing（假设检验）
-│
-├── ⭐ 检验构件 (Test Components)
-│   ├── H₀ (原假设): 默认陈述，希望收集证据拒绝
-│   ├── H₁ (备择假设): H₀ 不成立时成立的情况
-│   ├── 📐 z = (x̄-μ₀)/(σ/√n) — 已知总体方差
-│   ├── 📐 t = (x̄-μ₀)/(s/√n) — 未知总体方差
-│   ├── p-value: H₀ 下观察到当前统计量的概率
-│   └── ⚠️ p-value 不是 H₀ 为真的概率
-│
-├── ⭐ 错误结构 (Error Architecture)
-│   ├── Type I Error (α): 拒绝真实 H₀
-│   ├── Type II Error (β): 未能拒绝错误 H₀
-│   ├── 📐 Power = 1 - β: 正确拒绝错误 H₀ 的概率
-│   ├── n↑ → Power↑; α↑ → Power↑; Effect Size↑ → Power↑
-│   └── ⚠️ 不能说"接受 H₀" — 只能说"不能拒绝 H₀"
-│
-├── ⭐ 参数 vs 非参数检验
-│   ├── 参数检验: 依赖分布假设（正态），效率更高
-│   └── 非参数检验: 少做或不做分布假设（序数数据、小样本）
-│
-├── ⭐ 双样本均值检验 (Two-Sample Mean Tests)
-│   ├── Pooled t-test (方差相等)
-│   │   ├── 📐 sₚ² = [(n₁-1)s₁²+(n₂-1)s₂²]/(n₁+n₂-2)
-│   │   ├── 📐 t = (x̄₁-x̄₂-d₀) / [sₚ√(1/n₁+1/n₂)], df=n₁+n₂-2
-│   │   └── 🎯 适用：两总体正态、方差相等但未知
-│   ├── Unequal Variance t-test (Welch, 方差不等)
-│   │   ├── 📐 t = [(x̄₁-x̄₂)-d₀] / √(s₁²/n₁+s₂²/n₂)
-│   │   └── 🎯 df 经 Satterthwaite 调整，介于 min(n₁-1,n₂-1) 和 n₁+n₂-2 之间
-│   ├── Paired Comparisons t-test (配对样本)
-│   │   ├── 📐 t = d̄ / (s_d/√n), df = n-1
-│   │   └── 💡 本质：对配对差值 dᵢ = X₁ᵢ-X₂ᵢ 做单样本 t 检验
-│   └── ⚠️ 配对检验 df = n-1（n=配对个数），不是 n₁+n₂-2
-│
-├── ⭐ 双样本方差与比例检验
-│   ├── F-test (方差齐性检验)
-│   │   ├── 📐 F = s₁²/s₂², df₁=n₁-1, df₂=n₂-1
-│   │   ├── H₀: σ₁²=σ₂²; 通常将较大 s² 放分子
-│   │   └── ⚠️ F 分布右偏、非负，对正态假设非常敏感
-│   └── 双样本比例 z-test
-│       ├── 📐 z = (p̂₁-p̂₂-d₀) / √[p̂(1-p̂)(1/n₁+1/n₂)]
-│       ├── p̂ = (x₁+x₂)/(n₁+n₂) 为合并比例
-│       └── 🎯 大样本近似正态
-│
-├── ⭐ 单样本方差检验 (Chi-Square Test)
-│   ├── 📐 χ² = (n-1)s²/σ₀², df = n-1
-│   ├── H₀: σ²=σ₀² (单总体方差等于某值)
-│   ├── 卡方分布右偏、非负、df↑→趋近正态
-│   ├── 🎯 拒绝域：右尾 χ²>χ²_α; 左尾 χ²<χ²_(1-α); 双边取两个临界值
-│   └── ⚠️ 对正态性假设极其敏感，偏离正态时结果不可靠
-│
-├── ⭐ 双样本检验方法总结表
-│   ├── Pooled t-test: μ₁-μ₂, t 分布, df=n₁+n₂-2, 方差相等
-│   ├── Welch t-test: μ₁-μ₂, 近似 t, df 调整, 方差不等
-│   ├── Paired t-test: μ_d, t(n-1), 配对样本
-│   ├── F-test: σ₁²/σ₂², F(n₁-1,n₂-1), 正态假设
-│   └── Proportion z-test: p₁-p₂, z, 大样本
-│
-├── 💡 关键洞察
-│   ├── 假设检验五步法: H₀/H₁ → 检验统计量 → 拒绝域 → 计算 → 结论
-│   ├── 置信区间与假设检验等价: μ₀ 在 CI 外 = 拒绝 H₀
-│   ├── Type I 和 Type II 是 trade-off: 减小 α → β↑ → Power↓
-│   ├── 增大样本量可同时降低 α 和 β（改善 Power）
-│   ├── p-value 越小，反对 H₀ 的证据越强
-│   ├── "assume equal variances" → Pooled; 未提及 → Welch (Unequal Variance)
-│   └── 配对检验比独立样本检验力更高（消除个体间差异）
-│
-└── ⚠️ 考试陷阱总结
-    ├── "不能拒绝" ≠ "接受" H₀ — 不拒绝只是证据不足
-    ├── p-value 不是 H₀ 为真的概率
-    ├── 单边/双边在假设阶段决定，不可事后优化
-    ├── z vs t: σ 已知用 z，σ 未知用 t
-    ├── 配对检验 df = n-1（n=配对个数），不是 n₁+n₂-2
-    ├── F 检验和 χ² 检验对正态假设极其敏感
-    └── 双样本比例检验用 z 分布（大样本近似正态）
+8. Hypothesis Testing
+├─ 8.1 Introduction
+│  ├─ 8.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 8.1.2 应用/判断：把概念或公式转成解题动作
+├─ 8.2 Hypothesis Tests for Finance
+│  ├─ 8.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 8.2.2 应用/判断：把概念或公式转成解题动作
+├─ 8.3 Tests of Return and Risk in Finance
+│  ├─ 8.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 8.3.2 应用/判断：把概念或公式转成解题动作
+├─ 8.4 Parametric versus Nonparametric Tests
+│  ├─ 8.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 8.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：假设检验基本构件（Test Components）
-**核心概念**：假设检验是根据样本数据对总体参数做出推断的统计方法，包括原假设、备择假设、检验统计量和拒绝域等要素。
-- **原假设 H₀**：需要检验的"默认"陈述，通常代表"无差异"
-- **备择假设 H₁**：原假设不成立时成立的情况，决定单边或双边检验
-- **检验统计量**：z = (x̄-μ₀)/(σ/√n)（σ 已知）或 t = (x̄-μ₀)/(s/√n)（σ 未知）
-- **p-value**：在 H₀ 下观察到当前统计量或更极端值的概率。p-value < α → 拒绝 H₀
-- ⚠️ 不能说"接受 H₀"——只能说"不能拒绝 H₀"
-- ⚠️ p-value 不是 H₀ 为真的概率
+### 8.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test`。
+- **核心词汇**：**Hypothesis Testing（假设检验）**：用样本证据判断总体命题是否应被拒绝。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：构建假设检验的五步法，解读 p-value，区分 z 检验与 t 检验。
+### 8.2 Hypothesis Tests for Finance
+- **中文主线**：本节点解决 `Hypothesis Tests for Finance` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：根据条件判断正确结论；官方表述为：`construct hypothesis tests and determine their statistical significance, the associated Type I and Type II errors, and power of the test given a significance level`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：错误结构（Error Architecture）
-**核心概念**：假设检验中的两类错误和检验力是评价检验方法质量的核心概念。
-- **Type I Error（α）**：拒绝真实的 H₀；**Type II Error（β）**：未能拒绝错误的 H₀
-- **Power（检验力）= 1-β**：正确拒绝错误 H₀ 的概率
-- **影响检验力的因素**：n↑ → Power↑；α↑ → Power↑；Effect Size↑ → Power↑
-- 减小 α（更严格）→ β 增大 → Power 减小
-- 增大样本量可以同时降低 α 和 β（唯一方法）
+### 8.3 Tests of Return and Risk in Finance
+- **中文主线**：本节点解决 `Tests of Return and Risk in Finance` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：比较相似概念的适用条件与差异；描述定义、流程和适用场景；官方表述为：`compare and contrast parametric and nonparametric tests, and describe situations where each is the more appropriate type of test`。
+- **核心词汇**：**Hypothesis Tests for Finance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：理解 Type I/II Error 的权衡关系，分析提高检验力的方法。
+### 8.4 Parametric versus Nonparametric Tests
+- **中文主线**：本节点解决 `Parametric versus Nonparametric Tests` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test`。
+- **核心词汇**：**Tests of Return and Risk in Finance（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：双样本检验（Two-Sample Tests）
-**核心概念**：双样本检验比较两个总体参数是否相等，包括均值比较、方差比较和比例比较。不同类型的检验适用于不同的数据条件和假设。
-- **Pooled t-test**：两总体正态、方差相等。合并方差 sₚ²，df = n₁+n₂-2
-- **Welch t-test（Unequal Variance）**：两总体正态、方差不等。不合并方差，df 经 Satterthwaite 调整
-- **Paired Comparisons t-test**：配对/相关样本，本质是对差值做单样本 t 检验，df = n-1
-- **F-test**：比较两个总体方差是否相等，F = s₁²/s₂²，对正态假设敏感
-- **双样本比例 z-test**：z = (p̂₁-p̂₂)/√[p̂(1-p̂)(1/n₁+1/n₂)]，大样本下近似正态
-- ⚠️ 配对检验 df = n-1（n=配对个数），不是 n₁+n₂-2
+### 8.9 Legacy 补强要点
+- 来自 `M08-Hypothesis-Testing.md`：## 1. 核心知识点; > **【考试核心】** 永远不要说"接受 H₀" — 只能说"不能拒绝 H₀"。两者不是同义词。不拒绝 H₀ 只是证据不足以拒绝，不代表 H₀ 一定成立。; F 检验是双样本 t 检验中判断"是否用 pooled"的前提依据之一。
 
-**考试应用**：判断使用哪种双样本检验方法（看方差假设、是否配对、数据类型）。
 
-### 知识点4：单样本方差检验（Chi-Square Test for Single Variance）
-**核心概念**：卡方检验用于检验单个总体的方差是否等于某个特定值。
-- **检验统计量**：χ² = (n-1)s²/σ₀²，df = n-1
-- 卡方分布是非对称的右偏分布，最小值 = 0，无负值
-- ⚠️ 卡方检验对正态性假设极其敏感，总体偏离正态时结果不可靠
+## 5. 关键公式与计算框架
 
-**考试应用**：构建卡方检验的假设、计算检验统计量、确定拒绝域。
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Test statistic | `test statistic = (sample statistic - hypothesized value) / standard error` | 先判断单尾/双尾，再与临界值或 p-value 比较。 |
 
-### 📐 关键公式表
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `z = (x̄-μ₀)/(σ/√n)` | z 检验统计量 | 总体方差已知的均值检验 | σ 必须已知 |
-| `t = (x̄-μ₀)/(s/√n)` | t 检验统计量 | 总体方差未知的均值检验 | df = n-1 |
-| `CI: x̄ ± z_(α/2) × σ/√n` | 置信区间（σ 已知） | 总体参数区间估计 | z 临界值查表 |
-| `CI: x̄ ± t_(α/2,n-1) × s/√n` | 置信区间（σ 未知） | 参数估计常用方法 | df = n-1 |
-| `sₚ² = [(n₁-1)s₁²+(n₂-1)s₂²]/(n₁+n₂-2)` | 合并方差估计量 | 方差相等的双样本 t 检验 | df = n₁+n₂-2 |
-| `t = (x̄₁-x̄₂-d₀)/(sₚ√(1/n₁+1/n₂))` | 双样本 t 检验（方差相等） | 比较两独立总体均值 | 确认方差相等条件 |
-| `t = [(x̄₁-x̄₂)-d₀]/√(s₁²/n₁+s₂²/n₂)` | 双样本 t 检验（方差不等） | 方差不等的均值比较 | df 需 Satterthwaite 调整 |
-| `t = d̄/(s_d/√n)` | 配对 t 检验 | 配对/相关样本均值比较 | df = n-1（n=配对个数） |
-| `F = s₁²/s₂²` | F 检验统计量 | 两总体方差是否相等 | 对正态假设敏感 |
-| `z = (p̂₁-p̂₂)/√[p̂(1-p̂)(1/n₁+1/n₂)]` | 双样本比例检验 | 两总体比例比较 | 大样本下近似正态 |
-| `χ² = (n-1)s²/σ₀²` | 卡方检验统计量 | 单总体方差检验 | df = n-1，对正态敏感 |
+## 6. 常见考点与解题思路
 
-### 🛠️ 常见考点与解题思路
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-**考点1：构建假设检验（五步法）**
-- 步骤 1：写 H₀ 和 H₁（判断单边还是双边）
-  - 双边: H₀: μ=μ₀ vs H₁: μ≠μ₀
-  - 右尾: H₀: μ≤μ₀ vs H₁: μ>μ₀
-  - 左尾: H₀: μ≥μ₀ vs H₁: μ<μ₀
-- 步骤 2：选择检验统计量（总体 σ 已知 → z；未知 → t）
-- 步骤 3：确定拒绝域（查临界值 — z_crit 或 t_crit, df=n-1）
-- 步骤 4：计算检验统计量值
-- 步骤 5：比较统计量与临界值 → reject (若在拒绝域) / fail to reject H₀
-- ⚠️ 单边/双边在步骤 1 决定，不可在看到数据后"优化选择"
+## 7. 易错点与考试陷阱
 
-**考点2：p-value 解读**
-- p-value 是在 H₀ 成立的条件下，观察到当前样本结果的概率
-- p-value ≤ α → 拒绝 H₀
-- p-value 越小，反对 H₀ 的证据越强
-- ⚠️ 不能把 p-value 理解为"H₀ 为真的概率"
+- **中英文错配**：看到 `Hypothesis Testing` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-**考点3：置信区间与假设检验的关系**
-- μ₀ 落在 (1-α)% 置信区间外 → 在 α 水平上拒绝 H₀
-- CI: x̄ ± z_(α/2) × σ/√n (σ 已知) 或 x̄ ± t_(α/2,n-1) × s/√n (σ 未知)
-- 两者等价 — 置信区间是假设检验的图形化方式
-- ⚠️ 置信区间和假设检验使用相同的临界值
+## 8. 跨模块关联
 
-**考点4：Type I / Type II Error 权衡**
-- Type I Error (α): 拒绝真实 H₀ — 由显著性水平控制
-- Type II Error (β): 未能拒绝错误 H₀ — 取决于效应量和样本量
-- Power = 1-β: 正确拒绝错误 H₀ 的概率
-- n↑ → SE↓ → Power↑; α↑ → 拒绝域变宽 → Power↑ (但 α 也↑)
-- Effect Size↑ → 真实差异更易检测 → Power↑
-- 💡 增大样本量是同时降低 α 和 β 的唯一方法
+- **上游模块**：[[M07-Estimation-and-Inference]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-**考点5：双样本均值检验方法选择**
-- 判断顺序：
-  1. 样本是否独立？ → 否 → Paired t-test (配对检验)
-  2. 方差是否相等？ → 是 → Pooled t-test (合并方差)
-  3. 方差不相等 → Unequal Variance t-test (Welch)
-- ⚠️ 判断依据："assume equal variances" → Pooled；未提及或不相等 → Welch
+## 9. 复习与刷题提示
 
-**考点6：Pooled t-test (合并方差双样本 t 检验)**
-- 步骤 1：计算 sₚ² = [(n₁-1)s₁²+(n₂-1)s₂²]/(n₁+n₂-2)
-- 步骤 2：计算 t = (x̄₁-x̄₂-d₀) / [sₚ√(1/n₁+1/n₂)]
-- 步骤 3：查 t 临界值，df = n₁+n₂-2
-- 步骤 4：比较并做结论
-- ⚠️ 前提条件：两总体方差相等
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**考点7：Paired Comparisons t-test (配对比较检验)**
-- 步骤 1：计算每对差值 dᵢ = X₁ᵢ - X₂ᵢ
-- 步骤 2：计算差值的均值 d̄ 和标准差 s_d
-- 步骤 3：计算 t = d̄ / (s_d/√n)，df = n-1 (n=配对个数)
-- 步骤 4：与 t 临界值比较
-- ⚠️ df = n-1，不是 n₁+n₂-2 (高频陷阱！)
-- 💡 配对检验消除个体间差异 → 检验力高于独立样本检验
+## 10. Legacy Notes Integrated
 
-**考点8：F-test (双样本方差齐性检验)**
-- H₀: σ₁² = σ₂²；H₁: σ₁² ≠ σ₂² (双边) 或 σ₁² > σ₂² (单边)
-- F = s₁²/s₂² (通常较大的 s² 放分子)
-- df₁ = n₁-1 (分子), df₂ = n₂-1 (分母)
-- F 分布右偏、非负，临界值查 F 分布表
-- ⚠️ F 检验对正态假设极其敏感
-
-**考点9：卡方单样本方差检验**
-- H₀: σ² = σ₀²；H₁: 取决于问题 (σ²≠σ₀²/σ²>σ₀²/σ²<σ₀²)
-- χ² = (n-1)s²/σ₀², df = n-1
-- 右尾检验: χ² > χ²_α；左尾: χ² < χ²_(1-α)；双边: 两个临界值
-- ⚠️ 对正态假设极其敏感
-- 💡 不同于 F 检验 (F 检验比较两个方差)
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| 假设检验中"接受 H₀" | "不能拒绝 H₀" — 证据不足以拒绝，不代表 H₀ 为真 | 统计检验只能反驳，不能证实 |
-| p-value = H₀ 为真的概率 | p-value = 在 H₀ 下观测到当前样本的极端概率 | p-value 是条件概率，不是 H₀ 的后验概率 |
-| z-test 和 t-test 可任意选择 | σ 已知 → z-test；σ 未知 → t-test | t 分布比 z 分布有更厚的尾部（小样本补偿） |
-| 配对检验 df = n₁+n₂-2 | 配对检验 df = n-1 (n=配对个数) | 本质是单样本 t 检验在差值上 |
-| 单边/双边可事后选择 | 必须在假设阶段决定 | 数据驱动选择会 inflate Type I error |
-| 大 n 时 t ≈ z 所以用 z | 即使 n 很大，σ 未知仍用 t | t 分布在大 n 时趋近正态，但理论正确性重要 |
-
-### 🔄 跨模块关联
-
-- **[[M07-Estimation-and-Inference]]** — 标准误 SE = σ/√n 是假设检验的基础构件。CLT 为 z-test 和 t-test 的正态近似提供理论依据。
-- **[[M09-Parametric-and-Non-Parametric-Tests-of-Independence]]** — 回归系数的 t 检验和整体 F 检验是假设检验框架的直接推广。
-- **[[M03-Statistical-Measures-of-Asset-Returns]]** — 检验统计量的分布依赖于样本统计量的性质。
-- **[[M04-Probability-Trees-and-Conditional-Expectations]]** — p-value 本质上是概率分布尾部概率的应用。
-- **[[M10-Simple-Linear-Regression]]** — 回归斜率的 t 检验是假设检验在回归中的具体应用。
-
-### 📋 复习与刷题提示
-
-- **核心能力**：掌握假设检验五步法，熟练区分 z/t/F/χ² 四种检验的适用场景
-- **必考题型**：单样本 z/t 检验、双样本检验方法选择、Type I/II Error 辨析、p-value 解读
-- **最常犯错误**："接受 H₀" 的表述、p-value 误解、配对检验自由度记错、z vs t 选择错误
-- 记忆口诀：
-  - 五步法：假设 → 统计量 → 拒绝域 → 计算 → 结论
-  - z vs t：σ 已知用 z，σ 未知用 t
-  - 配对做差：差值 dᵢ = X₁ᵢ - X₂ᵢ，对 d̄ 做 t 检验
-  - Pooled vs Unequal: 方差相等用 pooled，不等用 Welch
-- 刷题建议：重点多做假设检验全流程题（五步法）和双样本检验方法选择题
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M08-Hypothesis-Testing.md（confidence 0.872）
+- **可复用结构**：M08: Hypothesis Testing（假设检验）；1. 核心知识点；1.1 检验构件（Test Components）；1.2 错误结构（Error Architecture）；1.3 参数与非参数检验（Parametric vs Nonparametric）；1.4 双样本检验（Two-Sample Tests）
+- **高价值要点**：## 1. 核心知识点；> **【考试核心】** 永远不要说"接受 H₀" — 只能说"不能拒绝 H₀"。两者不是同义词。不拒绝 H₀ 只是证据不足以拒绝，不代表 H₀ 一定成立。；F 检验是双样本 t 检验中判断"是否用 pooled"的前提依据之一；**考试判断**：如果题目描述是同一组对象在不同条件下（如 before/after），或是显式的"matched pairs"，选 **paired comparisons test**
+- **公式/计算线索**：双边检验（Two-Tailed）：H₀: μ = μ₀ vs H₁: μ ≠ μ₀；常用 α = 0.05（5%）、0.01（1%）、0.10（10%）；`z = (x̄ - μ₀) / (σ/√n)` （已知总体方差）
+- **易错提示**：**注意**：p-value 不是 H₀ 为真的概率！它是"在 H₀ 下观察到当前样本的极端程度"；> **【考试核心】** 永远不要说"接受 H₀" — 只能说"不能拒绝 H₀"。两者不是同义词。不拒绝 H₀ 只是证据不足以拒绝，不代表 H₀ 一定成立。；**注意事项**：

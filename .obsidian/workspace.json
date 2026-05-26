@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b969e5727202b036",
+        "id": "db8ac65b27a53da4",
         "type": "tabs",
         "children": [
           {
-            "id": "b90affa7e2b886b0",
+            "id": "1f5bbfabcbd28cd6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,9 +183,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "b90affa7e2b886b0",
+  "active": "1f5bbfabcbd28cd6",
   "lastOpenFiles": [
+    "docs/cfa-knowledge-base-display-evolution.md",
+    "scripts/__pycache__/enrich_cfa_tier1_markdown_layout.cpython-313.pyc",
+    "scripts/enrich_cfa_tier1_markdown_layout.py",
+    "2026-05-26.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "CFA_tier1/Quantitative_Methods/_legacy/2026-05-26-official-sync/M09-Correlation-and-Regression.md",
     "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md",
+    "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
     "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
     "CFA_tier1/Quantitative_Methods/M11-Introduction-to-Big-Data-Techniques.md.tmp.24508.22795a147fed",
     "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md.tmp.24508.be6c934eafca",
@@ -195,10 +203,7 @@
     "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md.tmp.24508.49b52ca283cc",
     "CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md.tmp.24508.f915352ced19",
     "CFA_tier1/Quantitative_Methods/M04-Probability-Trees-and-Conditional-Expectations.md.tmp.24508.e70d1d4f19ec",
-    "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures-of-Asset-Returns.md.tmp.24508.c10032268d71",
-    "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md.tmp.24508.0afa5b1acc61",
     "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md",
-    "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
     "CFA_tier1/dashboard/今日新增错题.md",
     "AGENTS.md",
     "docs/moc-auto-patch-workflow.md",
@@ -217,8 +222,6 @@
     "skills/cfa-pattern-miner/SKILL.md",
     "skills/cfa-intent-router/SKILL.md",
     "skills/cfa-bias-detector/SKILL.md",
-    "skills/cfa-agent-auditor/SKILL.md",
-    "CFA_tier1/Economics/00-Economics-MOC.md",
-    "CFA_tier1/Economics/M03-Fiscal-Policy.md"
+    "skills/cfa-agent-auditor/SKILL.md"
   ]
 }

@@ -1,23 +1,29 @@
 ---
-title: "M11 — Yield-Based Bond Duration Measures and Properties"
-description: "CFA Level I 2026 official module: Yield-Based Bond Duration Measures and Properties"
-module: M11
+title: "M11: Yield-Based Bond Duration Measures and Properties"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M11"
 official_module: "Module 11: Yield-Based Bond Duration Measures and Properties"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 2
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M11: Yield-Based Bond Duration Measures and Properties
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Yield-Based Bond Duration Measures and Properties**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,171 +35,143 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)
+2. explain how a bond’s maturity, coupon, and yield level affect its interest rate risk
 
-- define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)
-- explain how a bond's maturity, coupon, and yield level affect its interest rate risk
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 11.1 学习任务
+- **核心问题**：考试希望你用 `Yield-Based Bond Duration Measures and Properties` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 11.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 11.3 关键英文术语
+- **Yield-Based Bond Duration Measures and Properties（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Modified Duration（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Money Duration and Price Value of a Basis Point（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Properties of Duration（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Yield（收益率）**：把债券价格与未来现金流连接起来的回报度量。
+- **Duration（久期）**：衡量债券价格对利率变化敏感度的核心指标。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 11.1 | define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP) | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 11.2 | explain how a bond’s maturity, coupon, and yield level affect its interest rate risk | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M11: Yield-Based Bond Duration Measures and Properties（基于收益率的久期）
-├─ ⭐ 11.1 修正久期 (Modified Duration)
-│  ├─ 📐 D_mod = D_mac / (1 + y/m)
-│  ├─ 🎯 估计收益率变动 1% 时债券价格变动的百分比
-│  ├─ 📐 %ΔP ≈ -D_mod × Δy（一阶近似）
-│  └─ ⚠️ 久期是局部的、基于收益率的，假设曲线平行移动
-│
-├─ ⭐ 11.2 货币久期 (Money Duration)
-│  ├─ 📐 Money Duration = D_mod × Full Price
-│  ├─ 🎯 以货币金额（而非百分比）表示利率敏感度
-│  └─ 💡 用于计算预期价格变化的具体金额
-│
-├─ ⭐ 11.3 PVBP / DV01
-│  ├─ 📐 PVBP ≈ Money Duration × 0.0001
-│  ├─ 📐 PVBP = (P_- - P_+)/2（精确计算）
-│  └─ 🎯 收益率变动 1bp 时的价格变化
-│
-└─ ⭐ 11.4 久期影响因素
-   ├─ 💡 期限越长 → 久期越大
-   ├─ 💡 票息越低 → 久期越大（零息债券久期最大）
-   ├─ 💡 收益率水平越高 → 久期越小
-   └─ ⚠️ Duration ≠ Maturity（付息债券 Duration < Maturity）
+11. Yield-Based Bond Duration Measures and Properties
+├─ 11.1 Introduction
+│  ├─ 11.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.1.2 应用/判断：把概念或公式转成解题动作
+├─ 11.2 Modified Duration
+│  ├─ 11.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.2.2 应用/判断：把概念或公式转成解题动作
+├─ 11.3 Money Duration and Price Value of a Basis Point
+│  ├─ 11.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.3.2 应用/判断：把概念或公式转成解题动作
+├─ 11.4 Properties of Duration
+│  ├─ 11.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 11.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：修正久期（Modified Duration）
-**核心概念**：修正久期衡量收益率变动 1% 时债券价格变动的百分比，是最常用的利率风险度量指标。它从 Macaulay 久期推导而来，适用于无期权固定利率债券。
-- **计算公式**：`D_mod = D_mac / (1 + y/m)`，其中 y 为到期收益率，m 为年复利次数
-- **经济含义**：收益率变动 1%（100bp）时，债券价格反向变动的百分比。例如 D_mod = 5.0 表示收益率上升 1% 时价格下降约 5%
-- **价格变化近似**：`%ΔP ≈ -D_mod × Δy`，负号表示价格与收益率反向变动
-- ⚠️ **局限性**：久期是局部的、基于收益率的，假设收益率曲线平行移动且变动幅度很小。对于非平行移动或大幅变动不准确
+### 11.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)`。
+- **核心词汇**：**Yield-Based Bond Duration Measures and Properties（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：用修正久期估计价格变化（%ΔP ≈ -D_mod × Δy）。注意 Δy 用小数表示（如 1% = 0.01）。
+### 11.2 Modified Duration
+- **中文主线**：本节点解决 `Modified Duration` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how a bond’s maturity, coupon, and yield level affect its interest rate risk`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：货币久期（Money Duration）
-**核心概念**：货币久期以货币金额（而非百分比）表示利率敏感度，适用于计算预期价格变化的具体金额。
-- **计算公式**：`Money Duration = D_mod × Full Price`
-- **含义**：收益率变动 1%（100bp）时债券价格变动的货币金额
-- **用途**：可用于计算特定收益率变动下的预期价格变化金额
-- **注意**：需使用 Full Price（全价）而非 Clean Price
+### 11.3 Money Duration and Price Value of a Basis Point
+- **中文主线**：本节点解决 `Money Duration and Price Value of a Basis Point` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)`。
+- **核心词汇**：**Modified Duration（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定货币久期和收益率变动幅度，计算价格变化的具体金额。
+### 11.4 Properties of Duration
+- **中文主线**：本节点解决 `Properties of Duration` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)`。
+- **核心词汇**：**Money Duration and Price Value of a Basis Point（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：PVBP / DV01（Price Value of a Basis Point）
-**核心概念**：PVBP 衡量收益率变动 1 个基点（0.01%）时债券价格的变化金额。是固定收益投资中常用的精细风险度量指标。
-- **近似公式**：`PVBP ≈ Money Duration × 0.0001`
-- **精确公式**：`PVBP = (P_- - P_+)/2`，其中 P_- 为收益率下降 1bp 后的价格，P_+ 为收益率上升 1bp 后的价格
-- **用途**：衡量微小利率变动对债券价值的影响，用于风险管理和对冲
-- PVBP 也称为 DV01（Dollar Value of 1 basis point）
+### 11.9 Legacy 补强要点
+- 来自 `M08-Duration-and-Convexity.md`：## 1. 核心知识点; **核心公式 (English)**; ## 2. 关键公式。
+- 来自 `00-Fixed-Income-MOC.md`：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险; ## Fixed Income 核心知识树 (Core Knowledge Tree); ├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18。
 
-**考试应用**：计算 PVBP（近似或精确方法），理解其在风险管理中的应用。
 
-### 知识点4：久期影响因素（Duration Properties）
-**核心概念**：债券的久期受期限、票息率和收益率水平三个主要因素的影响。理解这些关系有助于在不计算的情况下快速比较不同债券的利率敏感度。
-- **期限越长 → 久期越大**：但非线性关系，期限增加带来的久期增加递减
-- **票息越低 → 久期越大**：零息债券的久期最大（等于其期限）
-- **收益率水平越高 → 久期越小**：高收益率意味着未来现金流的贴现率更高，近期现金流权重更大
-- ⚠️ Duration ≠ Maturity：对于付息债券，Duration 严格小于 Maturity；零息债券二者相等
-- 高票息债券的久期更短，因为更多现金流在前期回收
+## 5. 关键公式与计算框架
 
-**考试应用**：比较两只债券的久期大小（无需计算）。考试常考期限、票息和收益率水平三个因素对久期的影响方向。
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
+| Full price | `full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
+| Modified duration | `ModDur = MacDur / (1 + y/m)` | 近似衡量收益率变化 1 单位时价格百分比变化。 |
 
-## 📐 关键公式表
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `D_mod = D_mac / (1 + y/m)` | 修正久期 | 百分比价格敏感度 | 来源 Macaulay 久期 |
-| `Money Duration = D_mod × Full Price` | 货币久期 | 金额价格变化 | 需用 Full Price |
-| `PVBP ≈ Money Duration × 0.0001` | 基点价值 | 1bp 敏感度 | 近似公式 |
-| `%ΔP ≈ -D_mod × Δy` | 价格变化近似 | 快速估计 | 仅小幅变动准确 |
-| `D_p = Σ w_i × D_i` | 组合久期 | 组合风险管理 | 仅平行移动有效 |
+## 6. 常见考点与解题思路
 
-## 🛠️ 常见考点与解题思路
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 1：用修正久期估计价格变化
-- **题型**：给定 D_mod 和 Δy，求 %ΔP
-- **公式**：`%ΔP ≈ -D_mod × Δy`
-- **注意**：Δy 用小数表示（如 1% = 0.01），符号为负（收益率↑ → 价格↓）
+## 7. 易错点与考试陷阱
 
-### 考点 2：计算 PVBP / DV01
-- **方法一**（近似）：`PVBP ≈ Money Duration × 0.0001`
-- **方法二**（精确）：`PVBP = (P_- - P_+)/2`（收益率 ±1bp 后的价格差除以 2）
-- **题型**：问收益率变动 1bp 时价格变化多少
+- **中英文错配**：看到 `Yield-Based Bond Duration Measures and Properties` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 考点 3：组合久期计算
-- **公式**：以各债券市场价值占组合总值的比例为权重，加权平均各债券的久期
-- **局限性**：仅适用于收益率曲线平行移动
+## 8. 跨模块关联
 
-### 考点 4：久期影响因素分析
-- **题型**：比较两只债券的久期大小
-- **思路**：期限长 > 短；票息低 > 高；收益率低 > 高；零息债券久期最大
+- **上游模块**：[[M10-Interest-Rate-Risk-and-Return]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-## 🚨 易错点与考试陷阱
+## 9. 复习与刷题提示
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| Duration = Maturity | 零息债券相等，付息债券 Duration < Maturity | 期间现金流缩短回收时间 |
-| 久期对所有变动都准确 | 仅小幅平行移动有效 | 大幅变动需凸性修正 |
-| PVBP 对所有债券相同 | 取决于久期和价格 | 不同债券 PVBP 不同 |
-| 组合久期无局限性 | 只适用于平行移动 | 非平行移动不准确 |
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-## 🔄 跨模块关联
+## 10. Legacy Notes Integrated
 
-- **D_mod 来自 D_mac** → [[M10-Interest-Rate-Risk-and-Return]] 的 Macaulay 久期
-- **有效久期** → [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] 的 option-aware 风险
-- **组合久期** → [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] 的凸性调整
-- **收益率分析** → [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] 的收益率概念
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M08-Duration-and-Convexity.md（confidence 0.59）
+- **可复用结构**：M11: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)；1. 核心知识点；1.1 久期家族 (Duration Family)；1.2 凸性 (Convexity)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；**核心公式 (English)**；## 2. 关键公式
+- **公式/计算线索**：title: "M08 — Duration and Convexity"；official_module: "Module 11: Yield-Based Bond Duration Measures and Properties, Module 12: Yield-Based Bond Convexity and Portfolio Properties"；# M11: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)
+- **易错提示**：## 4. 易错点提醒
 
-## 📋 复习与刷题提示
+### 来源：00-Fixed-Income-MOC.md（confidence 0.463）
+- **可复用结构**：00-Fixed-Income-MOC；笔记属性；最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；科目概览；Fixed Income 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；## Fixed Income 核心知识树 (Core Knowledge Tree)；├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18；├── M02: 现金流类型 (Cash Flows and Types)【考试核心】↔ 2026 Outline P18
+- **公式/计算线索**：description: CFA Level I Fixed Income master MOC for bond pricing, yield measures, duration, credit, structured products, and traps.；│ ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure) (回购融资)；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
+- **易错提示**：│ │ └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】(契约类型)；│ └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
 
-- **核心重点**：修正久期和 PVBP 的计算是最高频考点
-- **久期属性**：掌握期限、票息、收益率水平对久期的影响方向
-  - 期限 ↑ → 久期 ↑
-  - 票息 ↓ → 久期 ↑（零息债券久期最大）
-  - 收益率 ↓ → 久期 ↑
-- **三个概念区分**：
-  - Macaulay Duration：现金流回收时间的加权平均（年）
-  - Modified Duration：收益率变动 1% 的价格变动百分比
-  - Money Duration：收益率变动 1% 的价格变动金额
-- **PVBP 计算**：
-  - 近似：PVBP ≈ Money Duration × 0.0001
-  - 精确：PVBP = (P_- - P_+)/2
-  - PVBP = 收益率变动 1bp 的价格变化
-- **组合久期**：
-  - 公式：D_p = Σ w_i × D_i（价值权重）
-  - 局限性：仅适用于平行收益率曲线移动
-- **典型计算流程**：
-  1. 已知 D_mac = 7.5，y = 6%，m = 2
-  2. D_mod = 7.5 / (1 + 0.06/2) = 7.5 / 1.03 = 7.28
-  3. 若 Δy = 0.5%（上升50bp），%ΔP ≈ -7.28 × 0.005 = -3.64%
-- **刷题建议**：
-  - 重点做久期计算题（D_mod、Money Duration、PVBP）
-  - 久期属性分析题（比较两只债券的久期）
-  - 组合久期计算题
-- **易混淆点**：
-  - Duration ≠ Maturity（零息债除外）
-  - 久期是局部、一阶近似
-  - PVBP 因债券不同而不同
-
-- **关键数值记忆**：
-  - 修正久期 ≈ Macaulay 久期 / (1 + y/m)
-  - Money Duration = 修正久期 × Full Price
-  - PVBP ≈ Money Duration × 0.0001
-  - 精确 PVBP = (P_- - P_+) / 2（收益率 ±1bp）
-- **久期影响因素对比**：
-  - 期限 ↑ → 久期 ↑
-  - 票息 ↓ → 久期 ↑（零息债久期最大）
-  - 收益率 ↓ → 久期 ↑
-  - 零息债券的修正久期 = Macaulay 久期（因为 y = 0 时不影响）
-- **典型计算示例**：
-  - 已知 D_mac = 7.5，y = 6%，m = 2
-  - D_mod = 7.5 / (1 + 0.06/2) = 7.5/1.03 = 7.28
-  - Δy = +0.5%（上升 50bp）
-  - %ΔP ≈ -7.28 × 0.005 = -3.64%
-  - 若 Δy = -0.5%（下降 50bp），%ΔP ≈ +3.64%（对称，但实际因凸性不对称）
-- **考试技巧**：
-  - 比较久期大小看期限、票息、收益率三个维度
-  - PVBP 对小幅变动精确，对大幅变动需要凸性修正
-  - 组合久期只适用于平行移动
+### 来源：M04-Yield-and-Spread-Measures.md（confidence 0.439）
+- **可复用结构**：M07: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)；1. 核心知识点；1.1 收益率视角 (Yield Lens)；1.2 利差视角 (Spread Lens)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；【考纲内但无核心公式】利差成分解释：credit/liquidity/option/tax/technical。；**判断利差变化的含义**：利差走阔 → 债券价格下降（相对基准）；利差收窄 → 债券价格上升。
+- **公式/计算线索**：title: "M04 — Yield and Spread Measures"；official_module: "Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds"；# M07: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)
+- **易错提示**：## 4. 易错点提醒

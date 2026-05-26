@@ -1,23 +1,29 @@
 ---
-title: "M07 — Capital Flows and the FX Market"
-description: "CFA Level I 2026 official module: Capital Flows and the FX Market"
-module: M07
+title: "M07: Capital Flows and the FX Market"
+description: "CFA Level I 2026 Economics 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Economics"
-topic_area: Economics
-curriculum_year: 2026
+topic_area: "Economics"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "6-9%"
+module: "M07"
 official_module: "Module 7: Capital Flows and the FX Market"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 3
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Economics
   - official_2026
+  - Economics
 ---
 
 # M07: Capital Flows and the FX Market
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：用市场结构、周期、政策、贸易和汇率解释宏观环境对资产价格的影响。 本模块聚焦 **Capital Flows and the FX Market**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -29,196 +35,123 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the foreign exchange market, including its functions and participants, distinguish between nominal and real exchange rates, and calculate and interpret the percentage change in a currency relative to another currency
+2. describe exchange rate regimes and explain the effects of exchange rates on countries’ international trade and capital flows
+3. describe common objectives of capital restrictions imposed by governments
 
-- describe the foreign exchange market, including its functions and participants, distinguish between nominal and real exchange rates, and calculate and interpret the percentage change in a currency relative to another currency
-- describe exchange rate regimes and explain the effects of exchange rates on countries’ international trade and capital flows
-- describe common objectives of capital restrictions imposed by governments
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### Migrated from `CFA_tier1/Economics/M07-Capital-Flows-and-FX-Markets.md`
+### 7.1 学习任务
+- **核心问题**：考试希望你用 `Capital Flows and the FX Market` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
-_Alignment score: 1.00. Original official module field: Module 7: Capital Flows and the FX Market._
+### 7.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
 
-#### M07: Capital Flows and the FX Market（资本流动与外汇市场）
+### 7.3 关键英文术语
+- **Capital Flows and the FX Market（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **The Foreign Exchange Market and Exchange Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Exchange Rate Regimes: Ideals and Historical Perspective（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Exchange Rate Regimes（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Capital Restrictions（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Exchange Rates（汇率）**：两种货币之间的相对价格。
 
-### 🌳 核心知识树
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 7.1 | describe the foreign exchange market, including its functions and participants, distinguish between nominal and real exchange rates, and calculate and interpret the percentage change in a currency relative to another currency | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 7.2 | describe exchange rate regimes and explain the effects of exchange rates on countries’ international trade and capital flows | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 7.3 | describe common objectives of capital restrictions imposed by governments | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M07: Capital Flows and the FX Market（资本流动与外汇市场）
-│
-├── ⭐ 国际收支 (BOP) 🎯超高頻
-│   ├── 经常账户: 商品+服务+收入+转移
-│   ├── 资本与金融账户: 资本账户+金融账户(FDI+组合投资+其他+储备)
-│   └── BOP恒等式: CA + KA/FA + Reserves = 0 🎯高频
-│
-├── ⭐ 资本流动 🎯高频
-│   ├── S < I → 资本流入 → CA赤字
-│   ├── S > I → 资本流出 → CA盈余
-│   ├── 影响因素: 利差、增长前景、政治稳定、资本管制
-│   └── ⚠️ 贸易逆差不等于"坏"
-│
-├── ⭐ 汇率制度 🎯超高頻
-│   ├── 自由浮动: 美元/欧元/日元
-│   ├── 管理浮动: 多数新兴市场
-│   ├── 爬行钉住: 按预定速率调整
-│   ├── 固定钉住: 港币挂钩美元
-│   ├── 货币局: 100%外汇储备支持
-│   └── 美元化: 直接使用外国货币
-│
-├── ⭐ 三元悖论 🎯超高頻
-│   └── 固定汇率+资本自由流动+独立货币政策 → 三者不可兼得
-│
-├── ⭐ 外汇市场参与者
-│   ├── 商业银行(最大)、中央银行、跨国公司
-│   └── 对冲基金、投资经理、零售交易者
-│
-└── ⭐ 外汇交易工具
-    ├── 即期(T+2)、远期(锁定汇率)、掉期(即期+远期)
-    └── 套期保值 vs 投机: 相同工具，不同目的
+7. Capital Flows and the FX Market
+├─ 7.1 Introduction
+│  ├─ 7.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.1.2 应用/判断：把概念或公式转成解题动作
+├─ 7.2 The Foreign Exchange Market and Exchange Rates
+│  ├─ 7.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.2.2 应用/判断：把概念或公式转成解题动作
+├─ 7.3 Exchange Rate Regimes: Ideals and Historical Perspective
+│  ├─ 7.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.3.2 应用/判断：把概念或公式转成解题动作
+├─ 7.4 Capital Restrictions
+│  ├─ 7.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 7.4.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：国际收支（Balance of Payments, BOP）
+### 7.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`describe the foreign exchange market, including its functions and participants, distinguish between nominal and real exchange rates, and calculate and interpret the percentage change in a currency relative to another currency`。
+- **核心词汇**：**Capital Flows and the FX Market（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-国际收支记录一国居民与非居民之间的所有经济交易，分为两大账户：
+### 7.2 The Foreign Exchange Market and Exchange Rates
+- **中文主线**：本节点解决 `The Foreign Exchange Market and Exchange Rates` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；解释机制、原因和后果；官方表述为：`describe exchange rate regimes and explain the effects of exchange rates on countries’ international trade and capital flows`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**经常账户（Current Account）**：
-- 商品贸易（merchandise trade）
-- 服务贸易（services）
-- 收入（income）：投资收益、工资汇款
-- 单方面转移（unilateral transfers）：援助、汇款
+### 7.3 Exchange Rate Regimes: Ideals and Historical Perspective
+- **中文主线**：本节点解决 `Exchange Rate Regimes: Ideals and Historical Perspective` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe common objectives of capital restrictions imposed by governments`。
+- **核心词汇**：**The Foreign Exchange Market and Exchange Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**资本与金融账户（Capital and Financial Account）**：
-- 资本账户（Capital Account）：资产所有权转移（如债务减免、移民资产转移）
-- 金融账户（Financial Account）：直接投资（FDI）、证券投资（portfolio investment）、其他投资、储备资产
+### 7.4 Capital Restrictions
+- **中文主线**：本节点解决 `Capital Restrictions` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景；官方表述为：`describe the foreign exchange market, including its functions and participants, distinguish between nominal and real exchange rates, and calculate and interpret the percentage change in a currency relative to another currency`。
+- **核心词汇**：**Exchange Rate Regimes: Ideals and Historical Perspective（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**国际收支恒等式**：`Current Account + Capital and Financial Account + Reserves = 0`
 
-**经常账户赤字意味着什么**：
-- 进口 > 出口，相当于该国向国外借款来弥补差额
-- 贸易逆差不一定"坏"——例如进行高回报投资的增长经济体可能合理维持赤字
+## 5. 关键公式与计算框架
 
-### 知识点2：资本流动（Capital Flows）
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Elasticity | `elasticity = %ΔQ / %ΔP` | 绝对值大于 1 表示富有弹性。 |
+| GDP identity | `Y = C + I + G + (X - M)` | 支出法 GDP 的基本分解。 |
+| Money multiplier | `money multiplier ≈ 1 / reserve requirement` | 考试更常考方向判断而非复杂推导。 |
 
-资本流动连接国内储蓄、投资和汇率：
-- **国内储蓄 < 国内投资** → 需要国外资本流入 → 经常账户赤字
-- **国内储蓄 > 国内投资** → 资本流出 → 经常账户盈余
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-**影响资本流动的因素**：
-- 利率差异（interest rate differentials）
-- 经济增长前景
-- 政治和地缘政治稳定性
-- 资本管制程度
+## 6. 常见考点与解题思路
 
-### 知识点3：汇率制度（Exchange Rate Regimes）
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-汇率制度从完全浮动到完全固定形成一个光谱：
+## 7. 易错点与考试陷阱
 
-| 制度类型 | 特征 | 典型例子 |
-|---------|------|---------|
-| 自由浮动（Free Float） | 汇率完全由市场决定，央行不干预 | 美元、欧元、日元 |
-| 管理浮动（Managed Float） | 央行偶尔干预，但没有固定目标 | 多数新兴市场 |
-| 爬行钉住（Crawling Peg） | 汇率按预定速率调整 | 部分拉美国家 |
-| 固定钉住（Fixed Peg） | 汇率与主要货币挂钩 | 港币（挂钩美元） |
-| 货币局（Currency Board） | 法定货币100%以外汇储备支持 | 香港（实际运作类似） |
-| 美元化（Dollarization） | 直接使用外国货币 | 厄瓜多尔、萨尔瓦多 |
+- **中英文错配**：看到 `Capital Flows and the FX Market` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-### 知识点4：外汇市场参与者（FX Market Participants）
+## 8. 跨模块关联
 
-- **商业银行（Commercial Banks）**：最大参与者，为企业和个人提供外汇服务
-- **中央银行（Central Banks）**：管理外汇储备，干预汇率
-- **跨国公司（Corporations）**：对冲贸易和投资的外汇风险
-- **对冲基金和投资经理（Hedge Funds & Investment Managers）**：投机和资产配置
-- **零售交易者（Retail Traders）**：个人换汇需求
+- **上游模块**：[[M06-International-Trade]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M08-Exchange-Rate-Calculations]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-### 知识点5：外汇交易工具（FX Instruments）
+## 9. 复习与刷题提示
 
-- **即期交易（Spot Transaction）**：T+2交割，按当前市场汇率交易
-- **远期合约（Forward Contract）**：约定未来某日按约定汇率交易，用于锁定汇率
-- **外汇掉期（FX Swap）**：同时进行即期和远期交易，常用于融资和流动性管理
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**套期保值（Hedging）** vs **投机（Speculation）**：
-- 套期保值：降低或消除外汇风险，是远期市场的核心用途
-- 投机：主动承担风险以获取利润
-- 两者使用相同的金融工具，但目的截然不同
+## 10. Legacy Notes Integrated
 
-### 📐 关键公式表
-
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| CA + KA/FA + Reserve = 0 | 国际收支恒等式 | 已知CA推资本流动方向 | 储备是金融账户子项 |
-| Current Account = S − I | 国民储蓄与投资关系 | CA赤字 = S<I（需外资流入） | S是国民储蓄(私人+政府) |
-| Capital Inflow → 本币升值 | 资本流入增加本币需求 | 判断汇率走势 | 其他因素可能同时作用 |
-| 三元悖论 | 固定汇率+资本自由流动+独立货币政策 | 分析政策选择 | 三者只能选其二 |
-
-### 🛠️ 常见考点与解题思路
-
-**Topic 1: 经常账户与资本账户对应关系**
-- CA赤字 = 资本金融账户盈余（资本净流入）
-- CA盈余 = 资本金融账户赤字（资本净流出）
-- 解题：恒等式两边平衡，记住CA + FA = 0（忽略储备变动情况下）
-
-**Topic 2: 汇率制度分类**
-- 从自由浮动到完全固定形成光谱
-- 浮动：货币政策独立，但汇率波动大
-- 固定：汇率稳定，货币政策受制于维持汇率目标
-- 解题：根据央行干预程度和汇率灵活性判断制度类型
-
-**Topic 3: 三元悖论**
-- 固定汇率 + 资本自由流动 → 放弃独立货币政策
-- 固定汇率 + 独立货币政策 → 需资本管制
-- 资本自由流动 + 独立货币政策 → 需浮动汇率
-- 解题：题目给两个政策选择，判断第三个的必然结果
-
-**Topic 4: 资本流动对汇率影响**
-- 资本流入 → 本币需求↑ → 升值
-- 资本流出 → 本币需求↓ → 贬值
-- 解题：区分FDI和组合投资，两者对汇率影响机制不同
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|------------|------------|------|
-| 贸易逆差 alone 决定汇率走势 | 资本流动、利差、预期等多因素共同影响 | 经常账户只是BOP一部分 |
-| 股票/债券投资属于经常账户 | 证券投资属于金融账户 | 混淆收入流与资产变化 |
-| 储备资产在BOP中单独列示 | 储备资产是金融账户的子项 | 不是独立于两大账户之外的 |
-| 三元悖论中三者可以部分兼得 | 只能三者选其二，没有中间状态 | 这是理论原理，实证有近似但分析需严格 |
-| CA赤字一定是坏事 | 高回报投资的经济体可能合理维持赤字 | 增长投资需要外部融资 |
-| 固定汇率与盯住汇率相同 | 固定汇率包含多种(钉住/货币局/美元化等) | 不同制度中维持机制不同 |
-| 央行干预只影响固定汇率 | 管理浮动下央行也会干预 | 只是干预频率和透明度不同 |
-
-### 🔄 跨模块关联
-
-- **货币政策对资本流动和汇率的影响** → [[M04-Monetary-Policy]]（利差驱动资本流动）
-- **汇率计算与利率平价** → [[M08-Exchange-Rate-Calculations]]（CIP/UIP的数学实现）
-- **贸易政策对经常账户的影响** → [[M06-International-Trade]]（关税/配额影响贸易收支）
-- **经济周期对资本流动的影响** → [[M02-Understanding-Business-Cycles]]（不同周期阶段的资本流向）
-- **地缘政治对资本流动的影响** → [[M05-Introduction-to-Geopolitics]]（政治风险影响资本流动）
-
-### 📋 复习与刷题提示
-
-- **BOP账户分类是必考题**：区分经常账户和金融账户的具体项目
-- **三元悖论经典考点**：理解三个政策目标的不可兼得性
-- **汇率制度光谱**：从自由浮动到美元化的完整排序
-- **CA = S − I 关系**：推导资本流动方向
-- **资本管制目的**：减少汇率波动、防止资本外逃等
-- **刷题建议**：三元悖论和汇率制度分类最高频，BOP账户分类次之
-- **注意区分名义与实际汇率**：名义汇率是市场报价，实际汇率经物价调整
-- **套期保值 vs 投机**：使用相同工具但目的不同，这是概念考点
-## Review Hooks
-
-- Add mistake-driven traps only after they can be traced back to `.system/events/`.
-- Keep module naming and order locked to the official 2026 curriculum registry.
-
-### 📊 外汇市场常见题型速查
-
-| 常考场景 | 关键判断 | 易混点 |
-|----------|----------|--------|
-| BOP 账户分类 | 商品/服务/收入 → 经常账户；证券投资 → 金融账户 | 股息收入是经常账户，股票买卖是金融账户 |
-| 资本流动方向 | S < I → 资本流入 → CA 赤字 | 不要混淆 S 和 I 的大小关系与 CA 方向 |
-| 三元悖论应用 | 给定两个政策目标 → 第三个必然被放弃 | 只能三选二，没有中间状态 |
-| 汇率制度识别 | 看央行干预程度和汇率灵活性 | 固定 ≠ 盯住（固定是光谱上的连续区间） |
-| 实际 vs 名义汇率 | 实际汇率经物价调整 | 名义汇率是市场报价，实际汇率影响竞争力 |
+本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M07-Capital-Flows-and-FX-Markets.md` (0.385), `00-Economics-MOC.md` (0.285), `M08-Exchange-Rate-Calculations.md` (0.252)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。

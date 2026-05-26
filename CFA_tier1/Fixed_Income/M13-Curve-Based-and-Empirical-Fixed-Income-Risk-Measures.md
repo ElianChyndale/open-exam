@@ -1,23 +1,29 @@
 ---
-title: "M13 — Curve-Based and Empirical Fixed-Income Risk Measures"
-description: "CFA Level I 2026 official module: Curve-Based and Empirical Fixed-Income Risk Measures"
-module: M13
+title: "M13: Curve-Based and Empirical Fixed-Income Risk Measures"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Fixed Income"
-topic_area: Fixed_Income
-curriculum_year: 2026
+topic_area: "Fixed_Income"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "11-14%"
+module: "M13"
 official_module: "Module 13: Curve-Based and Empirical Fixed-Income Risk Measures"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 4
+difficulty: "计算+解释"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Fixed_Income
   - official_2026
+  - Fixed_Income
 ---
 
 # M13: Curve-Based and Empirical Fixed-Income Risk Measures
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Curve-Based and Empirical Fixed-Income Risk Measures**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -30,156 +36,151 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. explain why effective duration and effective convexity are the most appropriate measures of interest rate risk for bonds with embedded options
+2. calculate the percentage price change of a bond for a specified change in benchmark yield, given the bond’s effective duration and convexity
+3. define key rate duration and describe its use to measure price sensitivity of fixed-income instruments to benchmark yield curve changes
+4. describe the difference between empirical duration and analytical duration
 
-- explain why effective duration and effective convexity are the most appropriate measures of interest rate risk for bonds with embedded options
-- calculate the percentage price change of a bond for a specified change in benchmark yield, given the bond's effective duration and convexity
-- define key rate duration and describe its use to measure price sensitivity of fixed-income instruments to benchmark yield curve changes
-- describe the difference between empirical duration and analytical duration
+---
 
-## 🌳 核心知识树
+## 1. 模块定位
+
+### 13.1 学习任务
+- **核心问题**：考试希望你用 `Curve-Based and Empirical Fixed-Income Risk Measures` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 13.2 考试角色
+- **难度类型**：计算+解释。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 13.3 关键英文术语
+- **Curve-Based and Empirical Fixed-Income Risk Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Curve-Based Interest Rate Risk Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Bond Risk and Return Using Curve-Based Duration and Convexity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Key Rate Duration as a Measure of Yield Curve Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Empirical Duration（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
+- **Yield（收益率）**：把债券价格与未来现金流连接起来的回报度量。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 13.1 | explain why effective duration and effective convexity are the most appropriate measures of interest rate risk for bonds with embedded options | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 13.2 | calculate the percentage price change of a bond for a specified change in benchmark yield, given the bond’s effective duration and convexity | 计算并解释数值结果 | 写出结论、依据和限制条件。 |
+| 13.3 | define key rate duration and describe its use to measure price sensitivity of fixed-income instruments to benchmark yield curve changes | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 13.4 | describe the difference between empirical duration and analytical duration | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M13: Curve-Based and Empirical Fixed-Income Risk Measures（曲线与实证风险度量）
-├─ ⭐ 13.1 有效久期与有效凸性 (Option-Aware Risk)
-│  ├─ 📐 EffDur = (P_- - P_+) / (2 × P_0 × Δy)
-│  ├─ 📐 EffCon = (P_- + P_+ - 2P_0) / (P_0 × (Δy)^2)
-│  ├─ 🎯 适用于含嵌入期权债券（可赎回、可回售、MBS）
-│  ├─ 🎯 现金流随利率变化时使用（修正久期不适用）
-│  ├─ 💡 可赎回债券：利率↓时价格上涨受限（负凸性）
-│  └─ ⚠️ 有效久期 ≠ 修正久期（仅当现金流不随利率变化时才相等）
-│
-├─ ⭐ 13.2 关键利率久期 (Key Rate Duration)
-│  ├─ 📐 KRD_k = -(1/P) × (ΔP/Δy_k)（仅移动第 k 个期限点）
-│  ├─ 🎯 隔离单个期限区间的敏感度
-│  ├─ 💡 用于非平行曲线移动分析
-│  └─ ⚠️ 非平行移动是常态，不是例外
-│
-└─ ⭐ 13.3 实证久期 (Empirical Duration)
-   ├─ 📐 从历史数据回归得出
-   ├─ 💡 可能低于分析久期（利率变动与信用利差反向变动）
-   ├─ 💡 反映实际市场行为
-   └─ 📐 Δy_bond = Δy_benchmark + Δy_spread（收益率分解）
+13. Curve-Based and Empirical Fixed-Income Risk Measures
+├─ 13.1 Introduction
+│  ├─ 13.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 13.1.2 应用/判断：把概念或公式转成解题动作
+├─ 13.2 Curve-Based Interest Rate Risk Measures
+│  ├─ 13.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 13.2.2 应用/判断：把概念或公式转成解题动作
+├─ 13.3 Bond Risk and Return Using Curve-Based Duration and Convexity
+│  ├─ 13.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 13.3.2 应用/判断：把概念或公式转成解题动作
+├─ 13.4 Key Rate Duration as a Measure of Yield Curve Risk
+│  ├─ 13.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 13.4.2 应用/判断：把概念或公式转成解题动作
+├─ 13.5 Empirical Duration
+│  ├─ 13.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 13.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：有效久期与有效凸性（Option-Aware Risk Measures）
-**核心概念**：对于含嵌入期权（可赎回、可回售、MBS）的债券，现金流会随利率变化而改变，因此不能使用基于固定现金流的修正久期，而应使用有效久期和有效凸性。
-- **有效久期（Effective Duration）**：`EffDur = (P_- - P_+) / (2 × P_0 × Δy)`，适用于现金流随利率变化的情况
-- **有效凸性（Effective Convexity）**：`EffCon = (P_- + P_+ - 2P_0) / (P_0 × (Δy)^2)`
-- **适用场景**：含嵌入期权的债券（可赎回、可回售、MBS），以及现金流随利率变化的结构化产品
-- **可赎回债券**：利率下降时价格上涨受限（负凸性），因为发行人会选择赎回，价格被 cap 在赎回价附近
-- ⚠️ **有效久期 ≠ 修正久期**：只有当现金流不随利率变化时两者才相等。考试常考区分适用场景
+### 13.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain why effective duration and effective convexity are the most appropriate measures of interest rate risk for bonds with embedded options`。
+- **核心词汇**：**Curve-Based and Empirical Fixed-Income Risk Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：判断使用有效久期 vs 修正久期——含嵌入式期权 → 有效久期；无期权固定利率债券 → 修正久期。
+### 13.2 Curve-Based Interest Rate Risk Measures
+- **中文主线**：本节点解决 `Curve-Based Interest Rate Risk Measures` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：计算并解释数值结果；官方表述为：`calculate the percentage price change of a bond for a specified change in benchmark yield, given the bond’s effective duration and convexity`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：关键利率久期（Key Rate Duration）
-**核心概念**：关键利率久期衡量收益率曲线上特定期限点的利率变动对债券价格的影响，是分析非平行曲线移动风险的核心工具。
-- **定义**：`KRD_k = -(1/P) × (ΔP/Δy_k)`，仅移动第 k 个期限点，保持其他期限点不变
-- **用途**：识别债券在不同期限点上的利率风险暴露，用于非平行曲线移动分析
-- **优势**：比单一久期指标提供更精细的风险信息，可识别 twist 和 butterfly 变动的风险
-- ⚠️ **非平行移动是常态而非例外**：实际收益率曲线变动往往不是平行的（如长端上升幅度大于短端），此时需要关键利率久期
+### 13.3 Bond Risk and Return Using Curve-Based Duration and Convexity
+- **中文主线**：本节点解决 `Bond Risk and Return Using Curve-Based Duration and Convexity` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`define key rate duration and describe its use to measure price sensitivity of fixed-income instruments to benchmark yield curve changes`。
+- **核心词汇**：**Curve-Based Interest Rate Risk Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：给定曲线变化情境（flattening、steepening），判断哪种债券受影响最大。长端上升多 → 长久期债券受影响大。
+### 13.4 Key Rate Duration as a Measure of Yield Curve Risk
+- **中文主线**：本节点解决 `Key Rate Duration as a Measure of Yield Curve Risk` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the difference between empirical duration and analytical duration`。
+- **核心词汇**：**Bond Risk and Return Using Curve-Based Duration and Convexity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点3：实证久期（Empirical Duration）
-**核心概念**：实证久期通过历史数据回归得出，反映债券价格对基准利率变化的实际敏感度。它可能与基于模型的分析久期不同。
-- **定义**：从历史收益率和价格数据回归得出的久期，反映实际市场行为
-- **与分析久期的差异**：实证久期可能低于分析久期，因为现实中利率变动往往伴随信用利差反向变动，部分抵消了纯利率效应
-- **收益率分解**：`Δy_bond = Δy_benchmark + Δy_spread`，基准利率变动与信用利差变动由不同因素驱动
-- **Benchmark shift**：由宏观经济和货币政策驱动；**Spread shift**：由信用状况、流动性等因素驱动
+### 13.5 Empirical Duration
+- **中文主线**：本节点解决 `Empirical Duration` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain why effective duration and effective convexity are the most appropriate measures of interest rate risk for bonds with embedded options`。
+- **核心词汇**：**Key Rate Duration as a Measure of Yield Curve Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：区分 benchmark shift 与 spread shift 的驱动因素，理解实证久期与分析久期差异的原因。
+### 13.9 Legacy 补强要点
+- 来自 `M09-Curve-Based-and-Empirical-Risk.md`：description: 曲线与实证风险度量——有效久期、有效凸性、关键利率久期与曲线非平行移动（中英双语 CFA 备考）; ## 1. 核心知识点; **关键利率久期隔离期限区间的敏感度 (key rate duration isolates maturity-bucket sensitivity)**：关键利率久期 (key rate duration / partial duration) 衡量收益率曲线上特定期限点的利率变动对债券价格的影响，帮助识别非平行移动的风险暴露。。
+- 来自 `00-Fixed-Income-MOC.md`：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险; ## Fixed Income 核心知识树 (Core Knowledge Tree); ├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18。
 
-## 📐 关键公式表
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `EffDur = (P_- - P_+) / (2 × P_0 × Δy)` | 有效久期 | 含期权债券 | 考虑现金流变化 |
-| `EffCon = (P_- + P_+ - 2P_0) / (P_0 × (Δy)^2)` | 有效凸性 | 含期权债券 | 考虑现金流变化 |
-| `KRD_k = -(1/P) × (ΔP/Δy_k)` | 关键利率久期 | 非平行移动 | 仅移动第 k 个期限 |
-| `Δy_bond = Δy_benchmark + Δy_spread` | 收益率分解 | 风险归因 | benchmark vs spread 分开分析 |
+## 5. 关键公式与计算框架
 
-## 🛠️ 常见考点与解题思路
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
+| Full price | `full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
+| Modified duration | `ModDur = MacDur / (1 + y/m)` | 近似衡量收益率变化 1 单位时价格百分比变化。 |
+| Approximate convexity | `(V- + V+ - 2V0) / (V0 × Δy²)` | 凸性修正久期的一阶近似误差。 |
 
-### 考点 1：判断使用有效久期 vs 修正久期
-- **含嵌入期权**（可赎回、可回售、MBS）→ 有效久期
-- **无期权固定利率债券** → 修正久期
-- **判断标准**：现金流是否随利率变化而变化
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-### 考点 2：计算有效久期
-- **步骤**：
-  1. 计算利率向上移 Δy 后的价格 P_+
-  2. 计算利率向下移 Δy 后的价格 P_-
-  3. 代入公式 EffDur = (P_- - P_+) / (2 × P_0 × Δy)
-- **注意**：P_- 和 P_+ 的计算需考虑嵌入期权对现金流的影响
+## 6. 常见考点与解题思路
 
-### 考点 3：非平行移动分析
-- **题型**：给定曲线变化情境（flattening、steepening），判断哪只债券受影响最大
-- **思路**：长端上升多 → 长久期债券受影响大；短端上升多 → 短久期债券受影响大
-- **工具**：Key Rate Duration 用于定量分析
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 考点 4：Benchmark vs Spread Shift 区分
-- **Benchmark shift**：由宏观经济和货币政策驱动
-- **Spread shift**：由信用状况、流动性等因素驱动
-- **考试常考**：区分两种变动的驱动因素
+## 7. 易错点与考试陷阱
 
-## 🚨 易错点与考试陷阱
+- **中英文错配**：看到 `Curve-Based and Empirical Fixed-Income Risk Measures` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-------------|-------------|------|
-| 可赎回债券可用修正久期 | 修正久期高估利率↓时价格上涨 | 价格被 call price 封顶 |
-| Effective duration = modified duration | 仅当现金流不随利率变化时相等 | 含期权债券不相等 |
-| 平行移动是常态 | 非平行移动是常态 | 组合久期只有限适用 |
-| 分析久期 = 实证久期 | 实证久期可能更低 | 利率和利差常反向变动 |
+## 8. 跨模块关联
 
-## 🔄 跨模块关联
+- **上游模块**：[[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M14-Credit-Risk]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-- **有效久期 vs 修正久期** → [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] 的修正久期对比
-- **嵌入期权** → [[M01-Fixed-Income-Instrument-Features]] 的或有条款
-- **Spread shift** → [[M14-Credit-Risk]] 的信用利差分析
-- **负凸性 MBS** → [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] 的提前还款风险
+## 9. 复习与刷题提示
 
-## 📋 复习与刷题提示
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-- **核心重点**：何时使用有效久期 vs 修正久期的判断
-  - 含嵌入期权（可赎回、可回售、MBS）→ 有效久期
-  - 无期权固定利率债券 → 修正久期
-  - 判断标准：现金流是否随利率变化
-- **有效久期计算步骤**：
-  1. 计算利率向上移 Δy 后的价格 P_+（含期权对现金流的影响）
-  2. 计算利率向下移 Δy 后的价格 P_-（含期权对现金流的影响）
-  3. EffDur = (P_- - P_+) / (2 × P_0 × Δy)
-- **关键利率久期**：
-  - 用途：分析非平行曲线移动
-  - 如 steepening（短端↓+长端↑）：短 KRD 多头和长 KRD 空头
-  - 如 flattening（短端↑+长端↓）：短 KRD 空头和长 KRD 多头
-- **实证久期 vs 分析久期**：
-  - 分析久期：基于模型的理论值
-  - 实证久期：基于历史数据回归
-  - 差异原因：利率变动常伴随信用利差反向变动
-- **收益率分解**：
-  - Δy_bond = Δy_benchmark + Δy_spread
-  - Benchmark shift：宏观经济和货币政策驱动
-  - Spread shift：信用状况、流动性等因素驱动
-- **刷题建议**：
-  - 重点做有效久期计算题
-  - Curve risk 分析题（非平行移动的影响）
-  - 有效久期 vs 修正久期适用场景判断
-- **易混淆点**：
-  - 有效久期 ≠ 修正久期
-  - 非平行移动是常态
-  - 实证久期可能低于分析久期
+## 10. Legacy Notes Integrated
 
-- **关键数值记忆**：
-  - EffDur = (P_- - P_+) / (2 × P_0 × Δy)
-  - EffCon = (P_- + P_+ - 2P_0) / (P_0 × (Δy)^2)
-  - KRD_k = -(1/P) × (ΔP/Δy_k) — 仅移动第 k 个期限点
-  - Δy_bond = Δy_benchmark + Δy_spread（收益率分解）
-- **考试技巧**：
-  - 含嵌入期权 → 用有效久期（现金流随利率变化）
-  - 无期权 → 用修正久期
-  - KRD 适用于非平行移动分析（如 steepener / flattener）
-  - 实证久期 < 分析久期 → 利率和利差可能反向变动
-  - 含期权债券的有效久期可能远小于修正久期
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M09-Curve-Based-and-Empirical-Risk.md（confidence 0.529）
+- **可复用结构**：M12: 曲线与实证风险度量 (Curve-Based and Empirical Risk Measures)；1. 核心知识点；1.1 期权感知风险 (Option-Aware Risk)；1.2 曲线风险 (Curve Risk)；2. 关键公式；3. 常见考点与解题思路
+- **高价值要点**：description: 曲线与实证风险度量——有效久期、有效凸性、关键利率久期与曲线非平行移动（中英双语 CFA 备考）；## 1. 核心知识点；**关键利率久期隔离期限区间的敏感度 (key rate duration isolates maturity-bucket sensitivity)**：关键利率久期 (key rate duration / partial duration) 衡量收益率曲线上特定期限点的利率变动对债券价格的影响，帮助识别非平行移动的风险暴露。；## 2. 关键公式
+- **公式/计算线索**：**分析久期可能与观察到的经验久期不同 (analytical duration may differ from observed empirical duration)**：基于模型的久期（分析久期）可能不同于从历史数据回归得出的经验久期 (empirical duration)，原因包括模型假设误差、市场摩擦等。；**关键利率久期隔离期限区间的敏感度 (key rate duration isolates maturity-bucket sensitivity)**：关键利率久期 (key rate duration / partial duration) 衡量收益率曲线上特定期限点的利率变动对债券价格的影响，帮助识别非平行移动的风险暴露。；**非平行曲线移动打破单一久期直觉 (non-parallel curve shifts break single-duration intuition)**：实际收益率曲线变动往往不是平行的（如长端上升幅度大于短端），此时单一久期指标无法准确描述风险。
+- **易错提示**：## 4. 易错点提醒
+
+### 来源：00-Fixed-Income-MOC.md（confidence 0.43）
+- **可复用结构**：00-Fixed-Income-MOC；笔记属性；最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；科目概览；Fixed Income 核心知识树 (Core Knowledge Tree)；核心对比专题
+- **高价值要点**：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；## Fixed Income 核心知识树 (Core Knowledge Tree)；├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18；├── M02: 现金流类型 (Cash Flows and Types)【考试核心】↔ 2026 Outline P18
+- **公式/计算线索**：description: CFA Level I Fixed Income master MOC for bond pricing, yield measures, duration, credit, structured products, and traps.；│ ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure) (回购融资)；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
+- **易错提示**：│ │ └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】(契约类型)；│ └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)

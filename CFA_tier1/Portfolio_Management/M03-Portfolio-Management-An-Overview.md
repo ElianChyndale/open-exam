@@ -1,23 +1,29 @@
 ---
-title: "M03 — Portfolio Management: An Overview"
-description: "CFA Level I 2026 official module: Portfolio Management: An Overview"
-module: M03
+title: "M03: Portfolio Management: An Overview"
+description: "CFA Level I 2026 Portfolio Management 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
 subject: "Portfolio Management"
-topic_area: Portfolio_Management
-curriculum_year: 2026
+topic_area: "Portfolio_Management"
+level: "CFA Level I"
+exam_year: 2026
+exam_weight: "8-12%"
+module: "M03"
 official_module: "Module 3: Portfolio Management: An Overview"
-official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
-note_type: official_module_projection
+los_count: 6
+difficulty: "概念+应用"
+note_type: official_module_note
 status: active
+source: "CFA Institute Learning Ecosystem 2026 registry"
 tags:
   - CFA_L1
-  - Portfolio_Management
   - official_2026
+  - Portfolio_Management
 ---
 
 # M03: Portfolio Management: An Overview
 
-> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+> **模块定位**：把风险收益、组合构建、行为偏差和风险管理连接成投资流程。 本模块聚焦 **Portfolio Management: An Overview**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+
+---
 
 ## Official Module Structure
 
@@ -35,194 +41,146 @@ tags:
 
 ## Learning Outcome Statements
 
-The candidate should be able to:
+1. describe the portfolio approach to investing
+2. describe the steps in the portfolio management process
+3. describe types of investors and distinctive characteristics and needs of each
+4. describe defined contribution and defined benefit pension plans
+5. describe aspects of the asset management industry
+6. describe mutual funds and compare them with other pooled investment products
 
-- describe the portfolio approach to investing
-- describe the steps in the portfolio management process
-- describe types of investors and distinctive characteristics and needs of each
-- describe defined contribution and defined benefit pension plans
-- describe aspects of the asset management industry
-- describe mutual funds and compare them with other pooled investment products
+---
 
-## Local Study Notes
+## 1. 模块定位
 
-### 🌳 核心知识树
+### 3.1 学习任务
+- **核心问题**：考试希望你用 `Portfolio Management: An Overview` 解释什么、计算什么、或判断什么。
+- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+
+### 3.2 考试角色
+- **难度类型**：概念+应用。
+- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+
+### 3.3 关键英文术语
+- **Portfolio Management: An Overview（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Management（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Perspective: Diversification and Risk Reduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Perspective（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Portfolio Perspective: Risk-Return Trade-off, Downside Protection, Modern Portfolio Theory（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Steps in the Portfolio Management Process（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **Types of Investors（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+
+## 2. 官方 LOS 对应学习目标
+
+| LOS | 官方要求 | 中文学习动作 | 做题输出 |
+|---|---|---|---|
+| 3.1 | describe the portfolio approach to investing | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.2 | describe the steps in the portfolio management process | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.3 | describe types of investors and distinctive characteristics and needs of each | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.4 | describe defined contribution and defined benefit pension plans | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.5 | describe aspects of the asset management industry | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 3.6 | describe mutual funds and compare them with other pooled investment products | 比较相似概念的适用条件与差异；描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+
+## 3. 核心知识树
 
 ```text
-🏆 M03: 投资组合管理概述 (Portfolio Management: An Overview)
-│
-├── 🟢 核心主题：为何要采用组合方法
-│   └── 组合视角的核心：分散化降低风险
-│
-├── ⭐ 组合管理三阶段流程
-│   ├── 🅰 规划 (Planning)
-│   │   ├── 了解客户（目标、约束、偏好）
-│   │   ├── 撰写 IPS（投资策略说明书）
-│   │   └── 设定战略资产配置 (SAA)
-│   ├── 🅱 执行 (Execution)
-│   │   ├── 组合构建（选具体资产和权重）
-│   │   ├── 主动 vs 被动管理选择
-│   │   └── 证券选择
-│   └── 🅲 反馈 (Feedback)
-│       ├── 监控与再平衡
-│       ├── 业绩评估与归因
-│       └── IPS 调整
-│
-├── ⭐ 投资者类型
-│   ├── 个人投资者
-│   │   ├── 生命周期影响风险承受力
-│   │   ├── 行为偏差影响较大
-│   │   └── 退休储蓄为主要目标
-│   └── 机构投资者
-│       ├── 养老基金 (DB vs DC)
-│       │   ├── DB: 雇主承担投资风险
-│       │   └── DC: 员工承担投资风险 🎯
-│       ├── 捐赠基金/基金会
-│       └── 保险公司、主权财富基金
-│
-├── ⭐ 集合投资工具 (Pooled Investment Vehicles)
-│   ├── 共同基金 (Mutual Funds)
-│   │   ├── 开放式: 按 NAV 交易，份额不固定
-│   │   └── 封闭式: 按市场价交易，份额固定
-│   ├── ETF (交易所交易基金)
-│   │   ├── 场内交易，税收效率高
-│   │   ├── AP 套利维持价格接近 NAV
-│   │   └── 费用低，透明度高
-│   ├── SMA (单独管理账户)
-│   │   ├── 直接持有底层证券
-│   │   └── 个性化管理、税收优化
-│   ├── 对冲基金 (Hedge Funds)
-│   │   ├── 多空策略、事件驱动
-│   │   ├── 锁定期、高水位条款
-│   │   ├── "2 and 20" 费用结构
-│   │   └── 面向合格投资者
-│   └── 私募股权 (Private Equity)
-│       ├── LBO、VC、成长资本
-│       ├── J-curve 效应
-│       └── 长期锁定，流动性极低
-│
-├── 💡 关键洞察
-│   ├── 战略资产配置决定组合 90%+ 的风险收益
-│   ├── IPS 是决策框架，不是法律合同
-│   ├── ETF 的税收效率来自实物赎回机制
-│   └── 对冲基金的 alpha 可能被高费用抵消
-│
-└── ⚠️ 考试陷阱
-    ├── 开放式 vs 封闭式基金的定价区别
-    ├── DB vs DC 的风险承担方
-    ├── ETF ≠ 共同基金（交易方式和税收不同）
-    └── 封闭式基金可能折溢价
+3. Portfolio Management: An Overview
+├─ 3.1 Introduction
+│  ├─ 3.1.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.1.2 应用/判断：把概念或公式转成解题动作
+├─ 3.2 Portfolio Perspective: Diversification and Risk Reduction
+│  ├─ 3.2.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.2.2 应用/判断：把概念或公式转成解题动作
+├─ 3.3 Portfolio Perspective: Risk-Return Trade-off, Downside Protection, Modern Portfolio Theory
+│  ├─ 3.3.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.3.2 应用/判断：把概念或公式转成解题动作
+├─ 3.4 Steps in the Portfolio Management Process
+│  ├─ 3.4.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.4.2 应用/判断：把概念或公式转成解题动作
+├─ 3.5 Types of Investors
+│  ├─ 3.5.1 定义/识别：掌握题干关键词与适用条件
+│  └─ 3.5.2 应用/判断：把概念或公式转成解题动作
 ```
 
-## 📖 知识点详解
+## 4. 知识点详解
 
-### 知识点1：投资组合管理流程 (Portfolio Management Process)
+### 3.1 Introduction
+- **中文主线**：本节点解决 `Introduction` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the portfolio approach to investing`。
+- **核心词汇**：**Portfolio Management: An Overview（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：投资组合管理是一个系统性的三阶段循环过程：规划（Planning）→ 执行（Execution）→ 反馈（Feedback）。每个阶段都有明确的目标和产出，循环持续进行以适应市场变化和投资者情况变化。这个流程框架是所有组合管理活动的基础。
+### 3.2 Portfolio Perspective: Diversification and Risk Reduction
+- **中文主线**：本节点解决 `Portfolio Perspective: Diversification and Risk Reduction` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe the steps in the portfolio management process`。
+- **核心词汇**：**Portfolio Management（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-- **规划阶段 (Planning)**：了解客户（目标、约束、偏好）、撰写 IPS（投资策略说明书）、设定战略资产配置（SAA）。关键产出：IPS + SAA
-- **执行阶段 (Execution)**：组合构建、资产配置实施、证券选择。决定主动 vs 被动管理方式。关键产出：实际构建的投资组合
-- **反馈阶段 (Feedback)**：监控与再平衡、业绩评估、IPS 调整。关键产出：调整后的组合和更新后的 IPS
-- 💡 **核心逻辑**：规划 → 执行 → 反馈 → 再规划（持续循环）。组合管理不是一次性事件
+### 3.3 Portfolio Perspective: Risk-Return Trade-off, Downside Protection, Modern Portfolio Theory
+- **中文主线**：本节点解决 `Portfolio Perspective: Risk-Return Trade-off, Downside Protection, Modern Portfolio Theory` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe types of investors and distinctive characteristics and needs of each`。
+- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**考试应用**：流程排序题是基本题型。给定一系列步骤，按规划→执行→反馈排序。注意规划阶段产出 IPS，执行阶段构建组合，反馈阶段调整和再平衡。常见陷阱：混淆 IPS 撰写（规划阶段）和组合构建（执行阶段）的顺序。
+### 3.4 Steps in the Portfolio Management Process
+- **中文主线**：本节点解决 `Steps in the Portfolio Management Process` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe defined contribution and defined benefit pension plans`。
+- **核心词汇**：**Portfolio Perspective: Diversification and Risk Reduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 知识点2：投资者类型 (Types of Investors)
+### 3.5 Types of Investors
+- **中文主线**：本节点解决 `Types of Investors` 在 Portfolio Management 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
+- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe aspects of the asset management industry`。
+- **核心词汇**：**Portfolio Perspective（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-**核心概念**：投资者分为个人投资者和机构投资者两大类别，在投资目标、约束条件、投资期限和监管环境方面有显著差异。理解这些差异有助于设计适合特定投资者类型的投资策略。
+### 3.9 Legacy 补强要点
+- 来自 `M03-Portfolio-Management-Overview.md`：## 1. 核心知识点 (Core Knowledge Points); 关键产出：IPS + 战略资产配置; 关键产出：实际构建的投资组合。
 
-- **个人投资者 (Individual Investors)**：目标多样化（退休、教育、财富传承），受行为偏差影响较大，税收敏感度因账户类型而异，投资期限与生命周期相关
-- **机构投资者 (Institutional Investors)**：
-  - **养老基金 (Pension Funds)**：DB 计划（固定收益型）vs DC 计划（固定缴费型），长期负债匹配
-  - **捐赠基金/基金会 (Endowments/Foundations)**：永续存在，支出率约束
-  - **保险公司 (Insurance Companies)**：保费收入与理赔支出的匹配
-  - **主权财富基金 (SWFs)**：国家财富管理，投资期限极长
-  - **银行 (Banks)**：资本充足率与流动性约束
-- 💡 机构投资者通常有明确的受托责任和更严格的监管约束，但投资期限更长
 
-**考试应用**：给定情景描述判断投资者类型。关键区分维度：投资金额、投资期限、流动性需求、税收敏感性、监管约束。机构投资者的关键特征：受托责任、监管约束、长期投资。
+## 5. 关键公式与计算框架
 
-### 知识点3：集合投资工具 (Pooled Investment Vehicles)
+| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
+|---|---|---|
+| Portfolio return | `Rp = Σ wi Ri` | 组合收益是资产收益的加权平均。 |
+| Portfolio variance | `σp² = w1²σ1² + w2²σ2² + 2w1w2ρ12σ1σ2` | 相关性越低，分散化收益越明显。 |
 
-**核心概念**：集合投资工具将多个投资者的资金汇集，由专业投资经理管理。不同类型的集合投资工具在流动性、费用结构、透明度、税收效率和监管程度方面有本质区别。理解这些差异对于投资者选择和考试答题都至关重要。
+计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
 
-- **共同基金 (Mutual Funds)**：开放型按 NAV 交易，有管理费和申购/赎回费。适合零售投资者
-- **ETF (Exchange-Traded Funds)**：在交易所交易，价格接近 NAV（通过 AP 套利），税收效率高，费用低
-- **SMA (Separately Managed Accounts)**：直接持有底层证券，可个性化管理，适合高净值客户
-- **对冲基金 (Hedge Funds)**：策略灵活（多空、事件驱动等），有锁定期，费用结构"2 and 20"，监管较少
-- **私募股权 (Private Equity)**：投资非上市公司，长期锁定（5-10 年），有 J-curve 效应
-- 🎯 **高频考点**：ETFs vs 共同基金对比（税收效率、交易方式、费用）
+## 6. 常见考点与解题思路
 
-**考试应用**：给定投资者情景，选择最合适的集合投资工具。判断维度：投资金额、流动性需求、税收考虑、透明度要求。常见陷阱：零售投资者与对冲基金/私募股权不匹配；封闭式基金按市价交易可折价或溢价于 NAV。
+- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
+- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
+- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
+- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
 
-### 知识点4：投资策略说明书 (IPS) 简介
+## 7. 易错点与考试陷阱
 
-**核心概念**：IPS（Investment Policy Statement）是客户与投资经理之间的指导性文件，记录投资者的目标、约束和投资指导原则。IPS 不是法律合同，而是确保投资活动始终围绕客户需求展开的决策框架。
+- **中英文错配**：看到 `Portfolio Management: An Overview` 相关英文词，不要只按中文直觉判断，先回到官方定义。
+- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
+- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
+- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
 
-- **收益目标 (Return Objective)**：所需收益（required return）vs 期望收益（return desire）。以 required return 为准
-- **风险目标 (Risk Objective)**：风险意愿（willingness）vs 风险能力（ability）。取较低者
-- **约束条件 (Constraints)**：L-T-T-L-U——流动性（Liquidity）、时间跨度（Time horizon）、税收（Taxes）、法律（Legal）、特殊情形（Unique circumstances）
-- 💡 IPS 需要定期回顾和更新，不是静态文件
+## 8. 跨模块关联
 
-**考试应用**：IPS 题是 PM 科目的高频情景题。掌握 L-T-T-L-U 框架。注意：IPS 是决策框架不是法律合同；收益目标必须可量化；风险承受力取意愿和能力的较低者。
+- **上游模块**：[[M02-Portfolio-Risk-and-Return-Part-II]]。它提供本模块所需的定义、变量或基础框架。
+- **下游模块**：[[M04-Basics-of-Portfolio-Planning-and-Construction]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
+- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `NAV = (资产市值 - 负债) / 流通份额` | 净资产价值 | 共同基金和 ETF 定价基础 | 开放式按 NAV 交易，封闭式按市价 |
-| `费用率 = 总费用 / 总资产` | 费用率 Expense Ratio | 衡量基金运营成本 | 被动基金费用通常低于主动基金 |
-| `管理费 = AUM × 管理费率` | 管理费计算 | 所有集合投资工具 | 通常按年收取 |
-| `业绩报酬 = 超额收益 × 报酬率` | 业绩报酬计算 | 对冲基金、私募股权 | 受 high-water mark / hurdle rate 约束 |
+## 9. 复习与刷题提示
 
-### 🛠️ 常见考点与解题思路
+- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
+- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
-**考点1：组合管理流程排序**
-- **步骤**：给一系列步骤按 规划 → 执行 → 反馈 排序
-- **关键**：规划阶段产出 IPS 和 SAA；执行阶段构建组合；反馈阶段回顾和调整
+## 10. Legacy Notes Integrated
 
-**考点2：开放式 vs 封闭式基金**
-- **步骤**：
-  - 开放式：份额可变动，按 NAV 交易，由基金公司直接赎回
-  - 封闭式：份额固定，按市场价在交易所交易，可能折价或溢价于 NAV
-- **常见陷阱**：误认为封闭式基金按 NAV 交易
-
-**考点3：DB vs DC 养老金计划**
-- **步骤**：
-  - DB (Defined Benefit)：雇主承诺退休后按公式支付，雇主承担投资风险和长寿风险
-  - DC (Defined Contribution)：雇主和/或员工供款，员工承担投资风险
-- **高频考点**：风险承担方的区分
-
-**考点4：集合投资工具对比**
-- **步骤**：从流动性、费用、透明度、税收效率、最低投资额等维度对比
-- **常见题型**：给定投资者参数 → 选择最适合的工具
-
-### 🚨 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 原因 |
-|-----------|-----------|------|
-| IPS 是法律合同 | IPS 是指导性决策框架，非法律合同 | 角色定位不同 |
-| 开放式基金在交易所交易 | 开放式基金直接与基金公司交易，封闭式基金在交易所交易 | 交易机制不同 |
-| ETF 费用一定比共同基金低 | 大部分被动 ETF 费用低，但部分主动 ETF 费用可能较高 | 主动被动策略差异 |
-| 封闭式基金价格 = NAV | 封闭式基金按市场价交易，可能折价或溢价于 NAV | 供求决定交易价格 |
-| DB 和 DC 都是员工承担风险 | DB 雇主承担风险，DC 员工承担风险 | 制度设计不同 |
-| 对冲基金 = 高风险 | 部分对冲基金策略波动率低于股票（如市场中性） | 策略多样，风险各异 |
-| 私募股权立即产生正收益 | 私募股权有 J-curve 效应，早期通常负收益 | 投资节奏和费用结构 |
-
-### 🔄 跨模块关联
-
-- **[[M01-Portfolio-Risk-and-Return-Part-I]]** — 组合风险收益概念是所有投资工具评估的基础
-- **[[M04-Basics-of-Portfolio-Planning-and-Construction]]** — IPS 的目标和约束在 M04 中详细展开为组合构建步骤
-- **[[M05-The-Behavioral-Biases-of-Individuals]]** — 投资者行为偏差影响 IPS 设定和工具选择
-- **[[M06-Introduction-to-Risk-Management]]** — 风险偏好影响投资者类型分类
-- **[[00-Portfolio-Management-MOC]]** — 返回科目总览
-
-### 📋 复习与刷题提示
-
-- M03 是概念性模块，以定性理解为主
-- **核心能力**：理解组合管理流程、区分投资者类型、比较集合投资工具
-- **必考题型**：流程排序、开放式 vs 封闭式、DB vs DC、对冲基金费用结构
-- 记忆重点：
-  - 三阶段流程：规划 → 执行 → 反馈
-  - 开放式按 NAV 交易，封闭式按市价交易
-  - DB 雇主担风险，DC 员工担风险
-  - ETF 税收效率最高
-- 对考试影响：M03 为后续 IPS 和风险管理的概念基础
+以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
+### 来源：M03-Portfolio-Management-Overview.md（confidence 0.46）
+- **可复用结构**：M03: 投资组合管理概述 (Portfolio Management: An Overview)；1. 核心知识点 (Core Knowledge Points)；1.1 投资组合管理流程 (Portfolio Management Process)；1.2 投资者类型 (Types of Investors)；1.3 集合投资工具 (Pooled Investment Vehicles)；1.4 投资策略说明书简介 (Introduction to Investment Policy Statement)
+- **高价值要点**：## 1. 核心知识点 (Core Knowledge Points)；关键产出：IPS + 战略资产配置；关键产出：实际构建的投资组合；关键产出：调整后的组合和更新后的 IPS
+- **公式/计算线索**：1. **收益目标 (Return Objective)**：所需收益 vs 期望收益，可量化表述；## 2. 关键公式 (Key Formulas)；[[M01-Portfolio-Risk-and-Return]]：组合风险收益概念是所有投资工具评估的基础
+- **易错提示**：常见陷阱：零售投资者与对冲基金/私募股权不匹配；注意：管理费通常按年初/平均 AUM 计算；## 4. 易错点提醒 (Common Mistakes)
