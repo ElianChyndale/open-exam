@@ -76,17 +76,23 @@ tags:
 ```text
 2. Time Value of Money in Finance
 ├─ 2.1 现金流时间轴（Cash-Flow Map）
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 Single sum：`FV=PV(1+r)^n`，`PV=FV/(1+r)^n`
+│  ├─ 2.1.2 Ordinary annuity：期末现金流，`PV=A[1-1/(1+r)^n]/r`
+│  ├─ 2.1.3 Annuity due：期初现金流，在 ordinary annuity 结果上乘 `(1+r)`
+│  ├─ 2.1.4 Perpetuity/growing perpetuity：`PV=A/r`，`PV=A1/(r-g)` 且 `r>g`
+│  └─ 2.1.5 识题动作：先画时间轴，确认现金流时点、频率、增长率和折现率口径
 ├─ 2.2 工具现值应用（Instrument PV Applications）
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 Fixed Income：债券价格 = coupon annuity PV + par single-sum PV
+│  ├─ 2.2.2 Equity：股利折现，本质是 growing perpetuity 或多阶段现金流折现
+│  └─ 2.2.3 Corporate Issuers：NPV/IRR 使用同一 PV 加总原则
 ├─ 2.3 隐含变量求解（Implied Quantities）
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 Implied return：已知 PV 与未来现金流，反求 r/YTM/IRR
+│  ├─ 2.3.2 Implied growth：`g = r - D1/P0`，或由价格和现金流约束反推
+│  └─ 2.3.3 PMT/n 求解：贷款、养老金、储蓄目标题先统一频率再输入
 ├─ 2.4 现金流可加性（Cash-Flow Additivity）
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 原则：组合现值 = 各现金流现值之和，同一现金流不能有两个价格
+│  ├─ 2.4.2 No-arbitrage：复制组合与目标资产现金流相同，则价格必须相同
+│  └─ 2.4.3 应用：forward rate、forward FX、option payoff 的估值直觉都来自可加性
 ```
 
 ## 4. 知识点详解
@@ -164,6 +170,22 @@ CFA 考试中一个重要但容易被忽视的原则：
 | `PV_growing_perpetuity = A_1/(r-g)` | 永续增长年金现值 | 股利折现模型（DDM）基础 |
 | `PV_growing_annuity = A_1/(r-g)[1-((1+g)/(1+r))^n]` | 增长年金现值 | 有限期增长现金流 |
 | `r = D_1/P_0 + g` | 戈登增长模型 | 从股价反推要求回报率 |
+| `EAR = (1 + r_nominal/m)^m - 1` | 有效年利率 | 比较不同计息频率 |
+| `FV = PV e^(rt)` | 连续复利终值 | 题目明确 continuously compounded |
+| `PV = FV e^(-rt)` | 连续贴现现值 | 连续复利的逆运算 |
+| `PV_bond = Σ C/(1+y)^t + FV/(1+y)^N` | 债券现值 | 固收票息加本金折现 |
+
+### 5.2 公式选择树
+
+| 题干结构 | 先问 | 公式选择 | 对应节点 |
+|---|---|---|---|
+| 一笔现金流 | 求 PV 还是 FV | `PV=FV/(1+r)^n` 或 `FV=PV(1+r)^n` | `2.1.1` |
+| 等额、有限期、期末 | PMT 是否在期末 | ordinary annuity PV/FV | `2.1.2` |
+| 等额、有限期、期初 | 是否多滚一期 | ordinary result × `(1+r)` | `2.1.3` |
+| 无限期等额 | 是否增长 | `A/r` 或 `A1/(r-g)` | `2.1.4` |
+| 多个不规则现金流 | 能否拆成单笔/年金 | 分别折现后相加 | `2.4.1` |
+| 已知价格反求收益率 | 现金流给定 | IRR/YTM/financial calculator | `2.3.1` |
+| 不同计息频率 | nominal 还是 EAR | 先转统一周期或 EAR | `2.1.5` |
 
 ## 6. 常见考点与解题思路
 
@@ -205,8 +227,13 @@ CFA 考试中一个重要但容易被忽视的原则：
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Rates-and-Returns]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Statistical-Measures-of-Asset-Returns]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `2.1` 现金流时间轴 | Fixed Income、Equity、Corporate Issuers | 所有估值题先转换成现金流时间轴 | 利率周期与现金流周期不一致时必须先匹配。 |
+| `2.2` 工具现值 | Fixed Income | 债券价格 = 票息年金 + 本金现值 | 半年付息要折半 coupon rate、期数翻倍。 |
+| `2.2` 股权现值 | Equity | DDM/Gordon growth 是 growing perpetuity | 分子是下一期股利 `D1`，不是 `D0`。 |
+| `2.3` 隐含变量 | [[M01-Rates-and-Returns]]、Corporate Issuers | MWRR/IRR、hurdle rate、implied growth | 反求 r 时不要把现金流符号写反。 |
+| `2.4` 现金流可加性 | Derivatives、Fixed Income、Economics | forward、option、无套利复制 | 相同现金流必须相同价格，否则存在套利。 |
 
 ### Legacy 关联补充
 

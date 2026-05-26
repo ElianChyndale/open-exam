@@ -105,11 +105,15 @@ tags:
 ```text
 8. Equity Valuation: Concepts and Basic Tools
 ├─ 8.1 内在价值 (Intrinsic value)
-│  ├─ 8.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.1.1 Estimated value vs market price：投资判断来自价值估计与市场价格差异，但要考虑风险和成本。
+│  ├─ 8.1.2 DDM/GGM：价值等于未来股息现值；稳定永续增长且 `r > g` 时用 `P0 = D1/(r-g)`。
+│  ├─ 8.1.3 Required return：可由 CAPM、GGM implied return 或其他风险补偿逻辑估计。
+│  └─ 8.1.4 Justified multiples：从基本面推导合理 P/E、P/B、P/S，而不是直接复制同行均值。
 ├─ 8.2 相对估值 (Relative valuation)
-│  ├─ 8.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.2.1 Price multiples：P/E、P/B、P/S、P/CF 分别适合不同盈利、资产、收入和现金流场景。
+│  ├─ 8.2.2 Enterprise multiples：EV/EBITDA 用 enterprise value 口径，适合资本结构不同的经营可比公司。
+│  ├─ 8.2.3 Comparable selection：行业、规模、增长、风险、会计政策和周期位置都要可比。
+│  └─ 8.2.4 Signal validation：低倍数要用 growth、risk、quality 三重检验，避免 value trap。
 ```
 
 ## 4. 知识点详解
@@ -128,21 +132,22 @@ tags:
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| 戈登增长模型 (GGM) | `P_0 = D_1 / (r - g)`，必须 `r > g` |
-| 隐含必要收益率 | `r = D_1 / P_0 + g` |
-| 隐含增长率 | `g = r - D_1/P_0` |
-| 可持续增长率 | `g = Retention Ratio × ROE` |
-| 合理领先市盈率 (Justified Leading P/E) | `P_0 / E_1 = Payout Ratio / (r - g)` |
-| 合理 trailing 市盈率 | `P_0 / E_0 = Payout Ratio(1 + g) / (r - g)` |
-| 合理市净率 (Justified P/B) | `P_0/B_0 = (ROE - g)/(r - g)` |
-| 合理市销率 (Justified P/S) | `P_0/S_0 = Net Profit Margin × P_0/E_0` |
-| 企业价值 (EV) | `Equity + Debt + Preferred + Minority Interest - Cash` |
-| P/B 市净率 | `Price per Share / BVPS` |
-| P/S 市销率 | `Price per Share / Sales per Share` |
-| P/CF 市现率 | `Price per Share / Cash Flow per Share` |
-| EV/EBITDA | `Enterprise Value / EBITDA` |
+| 指标 | 公式 | 对应节点 | 考试说明 |
+|---|---|---|---|
+| Gordon growth model | `P_0 = D_1 / (r - g)` | 8.1.2 | 必须 `r > g` 且股息稳定永续增长。 |
+| Implied required return | `r = D_1 / P_0 + g` | 8.1.3 | dividend yield + growth。 |
+| Implied growth | `g = r - D_1/P_0` | 8.1.2 | 从市场价格反推长期增长假设。 |
+| Sustainable growth | `g = retention ratio x ROE` | 8.1.2 | 检查增长是否有基本面支撑。 |
+| Justified leading P/E | `P_0 / E_1 = payout ratio / (r - g)` | 8.1.4 | payout、risk、growth 联动。 |
+| Justified trailing P/E | `P_0 / E_0 = payout ratio(1 + g) / (r - g)` | 8.1.4 | trailing 分母差异。 |
+| Justified P/B | `P_0/B_0 = (ROE - g)/(r - g)` | 8.1.4 | ROE 越高、r 越低，合理 P/B 越高。 |
+| Justified P/S | `P_0/S_0 = net profit margin x P_0/E_0` | 8.1.4 | sales multiple 必须用 margin 校验。 |
+| P/E | `Price per share / EPS` | 8.2.1 | 盈利正常且可比时使用。 |
+| P/B | `Price per share / BVPS` | 8.2.1 | 金融或资产型公司常见。 |
+| P/S | `Price per share / sales per share` | 8.2.1 | 可用于暂时亏损公司，但要看 margin potential。 |
+| P/CF | `Price per share / cash flow per share` | 8.2.1 | 对 accrual 差异较敏感时有用。 |
+| Enterprise value | `Market value of equity + debt + preferred + minority interest - cash` | 8.2.2 | 企业价值口径。 |
+| EV/EBITDA | `Enterprise value / EBITDA` | 8.2.2 | 资本结构不同但经营可比时有用。 |
 
 **考纲标记**：
 - 【考纲重点】GGM、implied return/growth、sustainable growth、justified P/E/P/B/P/S、EV/EBITDA。
@@ -179,15 +184,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M07-Company-Analysis-Forecasting]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **估值依赖盈利预测** → [[M07-Company-Analysis-Forecasting]]
-- **公司质量与竞争优势支撑估值倍数** → [[M05-Company-Analysis-Past-and-Present]]
-- **行业特征影响估值参数选择** → [[M06-Industry-and-Competitive-Analysis]]
-- **指数作为估值比较基准** → [[M02-Security-Market-Indexes]]
+| 输入/输出 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Dividend / earnings / sales forecasts | [[M07-Company-Analysis-Forecasting]] | 估值模型的分子来自预测。 | 估值错误常是预测错误的放大。 |
+| Company quality / normalized earnings | [[M05-Company-Analysis-Past-and-Present]] | 盈利质量、ROE、现金流质量解释倍数差异。 | 低 P/E 可能是质量折价。 |
+| Industry peer group / life cycle | [[M06-Industry-and-Competitive-Analysis]] | 相对估值需要真可比公司和周期位置。 | growth-stage 与 mature 公司不能直接比。 |
+| Required return / WACC | Corporate Issuers / PM | 折现率来自风险和资本成本。 | r 变小会显著放大 GGM 价值。 |
+| Enterprise value | Corporate Issuers / FI | EV 口径纳入债务、优先股和少数股权。 | EV/EBITDA 与 P/E 分子分母口径不同。 |
 
 
 ## 9. 复习与刷题提示

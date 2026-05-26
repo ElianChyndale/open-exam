@@ -78,14 +78,21 @@ tags:
 ```text
 7. Introduction to Digital Assets
 ├─ 7.1 区块链与共识机制【考试核心】
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 DLT：多个参与方共享、同步和验证账本；blockchain 是 DLT 的一种实现。
+│  ├─ 7.1.2 Consensus：PoW 用算力竞争且能耗高；PoS 用质押验证且能耗低，但有集中化/治理风险。
+│  └─ 7.1.3 Smart contracts：按代码自动执行条款，提高效率但引入代码漏洞和 oracle risk。
 ├─ 7.2 数字资产类型 (Digital Asset Types)
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 Cryptocurrency：主要作为支付/价值转移媒介，价格波动大。
+│  ├─ 7.2.2 Utility token：提供网络或平台使用权，不必然代表所有权。
+│  ├─ 7.2.3 Security token/tokenized asset：代表资产权益、现金流或所有权，监管属性更强。
+│  └─ 7.2.4 Stablecoin：试图锚定法币或资产，但有储备、赎回和监管风险。
 ├─ 7.3 代币化 (Tokenization)【考试核心】
-│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.3.1 Tokenization 是把底层资产权利映射为链上 token，可提高 fractional ownership 和交易效率。
+│  ├─ 7.3.2 ICO 是融资事件，不等同于 tokenization 过程。
+│  └─ 7.3.3 风险：custody/private key、cybersecurity、liquidity、regulatory uncertainty、valuation。
+├─ 7.4 Risk, return, and diversification
+│  ├─ 7.4.1 Return 来源高度不稳定，可能来自 adoption、network effects、speculation 或服务使用。
+│  └─ 7.4.2 Diversification 不能只看历史相关性；压力期相关性、流动性和监管变化会重定价。
 ```
 
 ## 4. 知识点详解
@@ -145,13 +152,14 @@ tags:
 
 数字资产模块**无定量公式**，但需要掌握以下概念对比关系：
 
-| 对比组 | 核心考点 |
-|--------|----------|
-| 区块链 vs 比特币 | 区块链是底层技术，比特币是应用之一 |
-| 区块链 vs 代币化 | 区块链是底层技术，代币化是该技术上的应用过程 |
-| PoW vs PoS | 能耗、安全性、代表币种的差异 |
-| 代币化 vs ICO | 过程/技术 vs 融资事件 |
-| 加密货币 vs 证券型代币 | 支付功能 vs 所有权/投资功能 |
+| 对比组/框架 | 判断链 | 知识树节点 | 考试说明 |
+|--------|--------|------|------|
+| 区块链 vs 比特币 | `blockchain = technology; bitcoin = application/asset` | `7.1.1` | 经典概念陷阱 |
+| PoW vs PoS | `mining/energy-intensive -> PoW; staking/lower-energy -> PoS` | `7.1.2` | 安全、能耗和治理差异 |
+| Smart contract risk | `automated execution + code/oracle/cyber risk` | `7.1.3` | 自动化不等于无风险 |
+| Token classification | `function/right/claim -> cryptocurrency / utility / security / stablecoin / tokenized asset` | `7.2` | 按权利和用途判断 |
+| Tokenization vs ICO | `asset digitization process vs fundraising event` | `7.3.1/7.3.2` | 不要把过程和发行事件混同 |
+| Suitability screen | `volatility + liquidity + custody + regulation + client risk tolerance` | `7.3.3/7.4` | 与 Ethics/PM 连接 |
 
 ## 6. 常见考点与解题思路
 
@@ -184,14 +192,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Hedge-Funds]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 数字资产基础 → [[M01-Features-and-Structure.md]] (M01.6 数字资产基础结构)
-- 代币化与另类投资特征 → [[M01-Features-and-Structure.md]] (ILL-LOW-HIGH-COMPLEX-LIMIT-UNIQUE的特征体现)
-- 另类投资整体框架 → [[M02-Performance-Measurement.md]] (数字资产的业绩衡量适用性)
+- **来自 M01**：数字资产体现另类投资的 unique risk、regulatory uncertainty、custody complexity 和 liquidity fragmentation。
+- **来自 M02**：极端波动和估值口径使 risk-adjusted performance 更难稳定解释。
+- **到 Derivatives**：数字资产可通过期货、ETP、杠杆产品取得敞口，需理解 collateral 和 liquidation risk。
+- **到 PM**：配置规模取决于 volatility、相关性稳定性、流动性、再平衡和客户约束。
+- **到 Ethics**：推荐数字资产必须充分披露 custody、cyber、regulatory、liquidity 和 valuation 风险。
 
 
 ## 9. 复习与刷题提示

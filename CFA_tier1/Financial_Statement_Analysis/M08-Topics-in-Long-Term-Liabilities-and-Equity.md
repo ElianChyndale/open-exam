@@ -73,14 +73,18 @@ tags:
 ```text
 8. Topics in Long-Term Liabilities and Equity
 ├─ 8.1 租赁会计：出租人与承租人 (Lease Reporting: Lessor vs Lessee)
-│  ├─ 8.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.1.1 Lessee 初始确认：lease liability = PV of lease payments；ROU asset 从 lease liability 调整而来
+│  ├─ 8.1.2 Finance lease：depreciation + interest，前期总费用高、interest coverage 较弱
+│  ├─ 8.1.3 Operating lease：单一租赁费用较平滑，但资产负债表仍有 ROU asset 和 liability
+│  └─ 8.1.4 Lessor：sales-type/finance lease 可在开始日确认销售利润；operating lease 保留资产
 ├─ 8.2 确定缴费 vs 确定给付计划 (Defined Contribution vs Defined Benefit Plans)
-│  ├─ 8.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.2.1 DC plan：雇主缴费即当期费用，员工承担投资风险
+│  ├─ 8.2.2 DB plan：PBO 与 plan assets 形成 funded status；雇主承担精算和投资风险
+│  └─ 8.2.3 判断：discount rate、salary growth、expected return assumptions 会显著改变负债和费用
 ├─ 8.3 股权激励薪酬 (Stock-Based Compensation)
-│  ├─ 8.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 8.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 8.3.1 Grant-date fair value 在 vesting period 内确认 compensation expense
+│  ├─ 8.3.2 现金流：费用是 noncash charge，indirect CFO 加回
+│  └─ 8.3.3 EPS：options/RSUs 可能增加 diluted shares，影响 diluted EPS
 ```
 
 ## 4. 知识点详解
@@ -133,6 +137,9 @@ tags:
 | Funded Status | `Fair Value of Plan Assets - PBO` | 养老金融资状况，正值=资产，负值=负债 |
 | Periodic Pension Cost | `Service Cost + Interest Cost - Expected Return on Plan Assets` | 定期养老金成本 |
 | Compensation Expense | `Fair Value of Option at Grant Date / Vesting Period` | 股权激励费用 |
+| Lease Interest Expense | `Lease Liability x Discount Rate` | 融资租赁前期费用较高的来源 |
+| Lease Liability Ending | `Beginning Liability + Interest - Lease Payment` | 简化租赁负债滚动 |
+| Diluted EPS | `Adjusted NI Available to Common / Adjusted Weighted Average Shares` | 股权激励可能增加分母 |
 
 ## 6. 常见考点与解题思路
 
@@ -163,15 +170,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M07-Analysis-of-Long-Term-Assets]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M09-Analysis-of-Income-Taxes]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M03-Balance-Sheet|资产负债表]]：租赁负债和养老金负债是非流动负债的重要组成部分
-- [[M02-Income-Statement|利润表分析]]：融资租赁前期的利息和折旧费用影响利润；养老金成本影响营业利润
-- [[M04-Cash-Flow-Statements|现金流量表]]：租赁付款和养老金缴费归类于融资或经营活动现金流，取决于具体安排
-- [[M10-Financial-Analysis-Techniques|财务分析技术]]：租赁和养老金义务影响 solvency 比率的计算和解释
+- **连接 M02**：lease interest/depreciation、pension cost、stock compensation 都影响利润表费用。
+- **连接 M03**：lease liabilities、PBO funded status、equity compensation 分类改变 liabilities/equity。
+- **连接 M04/M05**：stock compensation 是 noncash add-back；lease payments 和 pension contributions 影响现金流分类与覆盖率。
+- **连接 M11/Credit**：租赁与养老金义务应纳入 leverage、fixed charge coverage 和 debt capacity 判断。
+- **连接 M10**：养老金假设和 non-GAAP 调整中排除 stock comp 是 reporting quality 检查点。
 
 
 ## 9. 复习与刷题提示

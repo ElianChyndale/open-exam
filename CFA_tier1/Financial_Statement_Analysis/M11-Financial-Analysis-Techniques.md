@@ -94,20 +94,26 @@ tags:
 ```text
 11. Financial Analysis Techniques
 ├─ 11.1 分析工具与局限 (Tools and Limitations)
-│  ├─ 11.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.1.1 工具：common-size、trend、cross-sectional、ratio、graph/regression
+│  ├─ 11.1.2 局限：accounting policy、seasonality、industry mix、historical data、inflation
+│  └─ 11.1.3 判断：先统一口径，再比较；单一 ratio 不足以下结论
 ├─ 11.2 营运/流动性/偿债/盈利比率 (Activity / Liquidity / Solvency / Profitability Ratios)
-│  ├─ 11.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.2.1 Liquidity：current、quick、cash ratio；看短期偿债但不等于资产效率
+│  ├─ 11.2.2 Activity：inventory/receivables/payables turnover 和 DIO/DSO/DPO；周转率用平均余额
+│  ├─ 11.2.3 Solvency：debt ratios、financial leverage、interest/fixed charge coverage
+│  └─ 11.2.4 Profitability：gross/operating/net margin、ROA、ROE、ROIC
 ├─ 11.3 比率联动与行业比率 (Ratio Relationships and Industry-Specific Ratios)
-│  ├─ 11.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.3.1 联动：CCC = DIO + DSO - DPO；working capital 改变 CFO
+│  ├─ 11.3.2 行业比率：银行、保险、零售、资源类行业使用不同关键指标
+│  └─ 11.3.3 判断：同一 ratio 在不同行业含义不同，必须带 context
 ├─ 11.4 杜邦分解 (DuPont Decomposition)
-│  ├─ 11.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.4.1 三因子：ROE = net margin x asset turnover x financial leverage
+│  ├─ 11.4.2 五因子：tax burden x interest burden x EBIT margin x asset turnover x leverage
+│  └─ 11.4.3 判断：杠杆驱动的 ROE 上升风险高于 margin/turnover 驱动
 ├─ 11.5 建模与预测中的比率分析 (Ratio Analysis for Modeling and Forecasting)
-│  ├─ 11.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.5.1 历史 ratio 是 forecast assumptions 起点，不是自动延续
+│  ├─ 11.5.2 预测一致性：margin、turnover、leverage、growth、cash conversion 要互相匹配
+│  └─ 11.5.3 判断：异常 ratio 先查 accounting choice 和 one-off，再用于模型
 ```
 
 ## 4. 知识点详解
@@ -229,6 +235,12 @@ ROE = (NI / Revenue) x (Revenue / Avg Assets) x (Avg Assets / Avg Equity)
 | ROE | `NI / Average Equity` | 股东回报核心指标 |
 | DuPont ROE | `Net Margin x Asset Turnover x Financial Leverage` | ROE 三因子分解 |
 | Five-Step DuPont | `(NI/EBT) x (EBT/EBIT) x (EBIT/Revenue) x (Revenue/Assets) x (Assets/Equity)` | 税负、利息、经营、效率、杠杆拆分 |
+| Receivables Turnover | `Revenue / Average Receivables` | 回款效率 |
+| Days Sales Outstanding | `365 / Receivables Turnover` | 应收账款天数 |
+| Payables Turnover | `Purchases or COGS / Average Payables` | 题干口径优先 |
+| Cash Ratio | `(Cash + Short-Term Investments) / Current Liabilities` | 最保守流动性 |
+| ROIC | `NOPAT / Average Invested Capital` | 经营资本回报 |
+| Cash Flow Ratio | `CFO / Current Liabilities` | 现金流覆盖短期负债 |
 
 **考纲标记**：
 - 【考纲重点】liquidity/activity/solvency/profitability ratios、DuPont、行业特定比率解释。
@@ -266,16 +278,11 @@ ROE = (NI / Revenue) x (Revenue / Avg Assets) x (Avg Assets / Avg Equity)
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M10-Financial-Reporting-Quality]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M12-Introduction-to-Financial-Statement-Modeling]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Income-Statement|利润表分析]]：盈利比率的数据来源，净利率和 EPS 是关键输入
-- [[M03-Balance-Sheet|资产负债表]]：流动性、营运和偿债比率的计算依赖于资产负债表数据
-- [[M04-Cash-Flow-Statements|现金流量表]]：现金流比率（CFO / Current Liabilities）提供现金流维度的偿债分析
-- [[M05-Inventory-Analysis|存货分析]]：存货计价方法直接影响存货周转率和毛利率
-- [[M11-Financial-Statement-Modeling|财务报表建模]]：比率分析结果是构建 pro forma 模型和预测的核心输入
+- **连接 M02/M03**：利润表提供 margin 分子，资产负债表提供 liquidity/activity/solvency 分母。
+- **连接 M04/M05**：cash flow ratios 提供现金视角，必须与 accrual-based ratios 交叉验证。
+- **连接 M06/M07/M08/M09**：存货方法、折旧估计、租赁确认、税项会同时改变多个 ratio，比较前先调整。
+- **连接 M10**：ratio 异常可能是质量信号，不一定是经营改善。
+- **连接 M12**：ratio trend 是 pro forma assumptions 的输入，但需要 quality-adjusted 和 industry-adjusted。
 
 
 ## 9. 复习与刷题提示

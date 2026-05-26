@@ -75,20 +75,23 @@ tags:
 ```text
 7. Capital Flows and the FX Market
 ├─ 7.1 国际收支（Balance of Payments, BOP）
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 Current account：goods、services、income、transfers；反映收入/支出流
+│  ├─ 7.1.2 Capital/financial account：FDI、portfolio flows、loans、reserves；反映资产负债变化
+│  └─ 7.1.3 BOP 恒等：current account + capital/financial account + reserves/errors = 0
 ├─ 7.2 资本流动（Capital Flows）
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 `Current Account = Saving - Investment`；S<I 需要资本净流入
+│  ├─ 7.2.2 资本流入通常增加本币需求，资本流出增加贬值压力
+│  └─ 7.2.3 驱动因素：利差、增长预期、风险偏好、政策可信度、资本管制
 ├─ 7.3 汇率制度（Exchange Rate Regimes）
-│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.3.1 Spectrum：free float -> managed float -> crawling peg -> fixed peg -> currency board/dollarization
+│  ├─ 7.3.2 Trilemma：fixed FX、free capital mobility、independent monetary policy 三选二
+│  └─ 7.3.3 制度影响：固定汇率降低 FX volatility 但牺牲货币政策独立性
 ├─ 7.4 外汇市场参与者（FX Market Participants）
-│  ├─ 7.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.4.1 Commercial banks 做市；corporations 对冲交易敞口；central banks 管理储备和干预
+│  └─ 7.4.2 Investors/speculators 通过 FX 表达利差、增长和风险偏好观点
 ├─ 7.5 外汇交易工具（FX Instruments）
-│  ├─ 7.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.5.1 Spot：当前汇率交易；forward：锁定未来汇率；FX swap：spot+forward 组合
+│  └─ 7.5.2 Hedging 与 speculation 可用同一工具，区别在原始暴露是否已存在
 ```
 
 ## 4. 知识点详解
@@ -167,6 +170,14 @@ tags:
 **国民储蓄与投资关系**：`Current Account = S − I`
 - 场景：S（国民储蓄）< I（国内投资）→ 经常账户赤字（S − I < 0）
 
+| 节点 | 公式/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 7.1 | `CA + KA/FA + Reserves + Errors = 0` | BOP 平衡题 | 经常账户赤字必须由资本净流入、储备变化或误差项平衡。 |
+| 7.2 | `Current Account = Saving - Investment` | 储蓄投资题 | S<I 表示需要外部融资，不自动等于货币贬值。 |
+| 7.1/7.2 | Capital inflow -> currency demand rises | 资本流方向题 | 汇率方向还需结合利差、风险、央行干预和制度。 |
+| 7.3 | Trilemma | 汇率制度题 | 固定汇率 + 资本自由流动时，独立货币政策受限。 |
+| 7.5 | Spot / forward / swap selection | FX 工具题 | 现时兑换用 spot；未来锁价用 forward；融资/滚动敞口常用 swap。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -204,14 +215,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-International-Trade]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M08-Exchange-Rate-Calculations]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 货币政策对资本流动和汇率的影响见 **[[M04-Monetary-Policy]]**
-- 汇率计算和利率平价的数学实现见 **[[M08-Exchange-Rate-Calculations]]**
-- 贸易政策变化影响经常账户，见 **[[M06-International-Trade]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M06 -> M07` | trade balance、TOT、trade restrictions | 解释 current account 和汇率压力背景。 |
+| `M04 -> M07` | interest differentials、monetary credibility | 判断资本流入/流出和汇率反应。 |
+| `M07 -> M08` | quote convention、spot/forward context、participants | 为 cross rate、forward points、CIP 计算提供语境。 |
+| `M07 -> Derivatives` | FX forwards/swaps、hedging motive | 连接衍生品中 FX 风险管理和远期定价。 |
+| `M07 -> PM` | currency exposure、capital restrictions | 判断国际投资组合可投资性和汇率风险。 |
 
 
 ## 9. 复习与刷题提示

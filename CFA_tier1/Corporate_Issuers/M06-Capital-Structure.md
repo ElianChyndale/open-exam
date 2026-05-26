@@ -77,11 +77,15 @@ tags:
 ```text
 6. Capital Structure
 ├─ 6.1 杠杆机制 (Leverage Mechanics)
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Cost of capital：debt、preferred、equity component costs 合成 WACC，服务资本预算折现率。
+│  ├─ 6.1.2 Operating leverage：固定经营成本放大 sales 对 EBIT 的影响。
+│  ├─ 6.1.3 Financial leverage：固定融资成本放大 EBIT 对 EPS 的影响。
+│  └─ 6.1.4 Total leverage：`DTL = DOL x DFL`，把 sales shock 传导到 EPS shock。
 ├─ 6.2 结构权衡 (Structure Trade-Offs)
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 Debt benefits：interest tax shield、discipline、低显性成本。
+│  ├─ 6.2.2 Debt costs：financial distress、agency cost、loss of flexibility、rollover/refinancing risk。
+│  ├─ 6.2.3 Debt capacity：现金流稳定、资产可抵押、低经营风险支持更多债务。
+│  └─ 6.2.4 MM benchmark：无税无摩擦时资本结构不影响价值；真实世界因税、破产、代理和信息不对称而重要。
 ```
 
 ## 4. 知识点详解
@@ -130,9 +134,17 @@ tags:
 
 | 指标 | 公式 | 说明 |
 |------|------|------|
+| After-tax cost of debt | `r_d(1 - T)` | 利息税盾后债务成本 |
+| Cost of preferred | `r_p = D_p/P_p` | 固定优先股股息口径 |
+| CAPM cost of equity | `r_e = r_f + β[E(R_M)-r_f]` | 股权必要收益率 |
+| Dividend growth cost of equity | `r_e = D_1/P_0 + g` | 稳定增长股息口径 |
+| WACC | `w_d r_d(1-T) + w_p r_p + w_e r_e` | 使用 market-value target weights |
 | 经营杠杆度 (DOL) | `%ΔEBIT / %ΔSales` | 衡量经营杠杆 |
+| DOL quantity form | `Q(P - V) / [Q(P - V) - F]` | 给单价/变动成本/固定成本时使用 |
 | 财务杠杆度 (DFL) | `%ΔEPS / %ΔEBIT` | 衡量财务杠杆 |
+| DFL EBIT form | `EBIT / (EBIT - Interest)` | 无优先股时常用 |
 | 总杠杆度 (DTL) | `DOL × DFL` 或 `%ΔEPS / %ΔSales` | 两级杠杆总效应 |
+| DTL quantity form | `Q(P - V) / [Q(P - V) - F - Interest]` | 经营和财务杠杆合并 |
 | 盈亏平衡点 | `Fixed Costs / (Price - Variable Cost per unit)` | 利润为零的销售量 |
 
 ## 6. 常见考点与解题思路
@@ -181,16 +193,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Capital-Investments-and-Capital-Allocation]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M07-Business-Models]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 资本结构影响 WACC → [[M05-Cost-of-Capital]] 债务权重和股权成本随杠杆变化
-- DOL 与商业模式 → [[M07-Business-Models]] 固定/变动成本结构决定经营杠杆水平
-- 杠杆与资本预算 → [[M04-Capital-Investments]] 项目选择应考虑其对整体杠杆水平的影响
-- 治理影响杠杆选择 → [[M02-Corporate-Governance-and-ESG]] 管理层可能选择次优杠杆以降低个人风险
-- 资本结构整合 → [[M08-Capital-Allocation-Integration]] 融资决策是资本配置的一部分
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| WACC / hurdle rate | [[M05-Capital-Investments-and-Capital-Allocation]] | 资本成本是项目 NPV 的折现率。 | 项目风险不同要调 hurdle rate。 |
+| Operating leverage | [[M07-Business-Models]] | 商业模式的固定/变动成本结构决定 DOL。 | 平台/订阅模式常有高 fixed cost 和高 scalability。 |
+| Creditor protection | [[M02-Investors-and-Other-Stakeholders]] | 债权人通过契约控制风险转移。 | 高杠杆改变股东-债权人冲突。 |
+| Governance | [[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]] | 管理层风险偏好和激励影响杠杆选择。 | 次优杠杆可能源于代理问题。 |
+| Equity valuation | Equity | 杠杆影响 required return、EPS volatility 和 EV/equity bridge。 | 高 ROE 可能只是高风险。 |
 
 
 ## 9. 复习与刷题提示

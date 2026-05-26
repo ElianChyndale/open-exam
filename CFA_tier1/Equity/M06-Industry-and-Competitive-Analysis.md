@@ -82,11 +82,14 @@ tags:
 ```text
 6. Industry and Competitive Analysis
 ├─ 6.1 行业视角 (Industry lens)
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 行业边界：按产品、客户、地理、价值链和替代品界定 universe；边界错会导致 peer group 错。
+│  ├─ 6.1.2 生命周期：embryonic/growth/shakeout/mature/decline 对增长、利润率、现金流和风险有不同含义。
+│  ├─ 6.1.3 供需与周期：需求增长、产能纪律、库存周期、监管和技术变化决定行业利润池。
+│  └─ 6.1.4 五力框架：进入壁垒、替代品、买方/供应商议价力、竞争强度共同决定 pricing power。
 ├─ 6.2 行业中的公司 (Company within industry)
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 竞争优势：成本优势、差异化、网络效应、转换成本、规模经济和监管牌照。
+│  ├─ 6.2.2 相对定位：同一行业内公司可因成本曲线、品牌、渠道和资本结构产生不同 ROIC。
+│  └─ 6.2.3 价值判断：市场份额增长只有在不牺牲利润率和资本回报时才创造价值。
 ```
 
 ## 4. 知识点详解
@@ -106,7 +109,14 @@ tags:
 
 ### 5.1 核心内容
 
-本模块概念为主，重点理解供需与竞争框架对企业盈利能力的定性判断。
+| 框架 | 检查点 | 对应节点 | 考试输出 |
+|---|---|---|---|
+| Industry classification | 产品、客户、地理、价值链、替代品 | 6.1.1 | 确定 peer group 和可比公司。 |
+| Life-cycle analysis | 增速、竞争者数量、利润率、现金流、再投资 | 6.1.2 | 判断行业处于 growth/mature/decline 等阶段。 |
+| Supply-demand analysis | 需求增长、产能、库存、替代品、监管 | 6.1.3 | 推导价格、销量和利润率方向。 |
+| Porter five forces | entry、substitutes、buyers、suppliers、rivalry | 6.1.4 | 判断行业长期盈利能力。 |
+| Competitive advantage test | durable、hard to copy、valuable、monetizable | 6.2.1 | 判断公司能否维持超额回报。 |
+| Share gain test | volume gain vs price/margin/capital intensity | 6.2.3 | 区分价值创造型份额增长和价格战。 |
 
 ## 6. 常见考点与解题思路
 
@@ -136,14 +146,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Company-Analysis-Past-and-Present]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M07-Company-Analysis-Forecasting]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **行业分析是公司分析的前置条件** → [[M05-Company-Analysis-Past-and-Present]]
-- **行业属性影响增长率和风险** → [[M07-Company-Analysis-Forecasting]]
-- **竞争优势影响估值倍数水平** → [[M08-Equity-Valuation-Concepts]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Peer group | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] | 相对估值必须从行业边界和商业模式相似性开始。 | 同行业不一定真可比。 |
+| Growth and margin drivers | [[M07-Company-Analysis-Forecasting]] | 生命周期、供需和五力进入收入与利润率预测。 | 高增长行业不必然高利润。 |
+| Business cycle sensitivity | Economics | cyclical vs defensive 决定宏观变量敏感度。 | 周期股估值要 normalized。 |
+| Competitive advantage | Corporate Issuers | 护城河影响 capital allocation、reinvestment 和 business model quality。 | 优势必须能转成 ROIC。 |
 
 
 ## 9. 复习与刷题提示

@@ -45,34 +45,62 @@ tags:
 ```text
 Ethical and Professional Standards (15-20%)
 ├─ 1. Ethics and Trust in the Investment Profession
-│  ├─ 1.1 职业的本质 (Nature of a Profession)
-│  ├─ 1.2 道德与法律的边界 (Ethics vs. Law)
-│  ├─ 1.3 受托人心态 (Fiduciary Mindset)
+│  ├─ 1.1 Ethics：用 shared beliefs、rules of conduct、professional judgment 解释为何投资行业需要高于法律底线的行为。
+│  ├─ 1.2 Profession and trust：specialized knowledge + service to others + code/standards + discipline process 建立公众信任。
+│  ├─ 1.3 Ethical vs legal：legal 是最低约束，ethical 可能更严格；冲突时用 stricter standard rule。
+│  └─ 1.4 Ethical decision framework：identify facts/stakeholders/duties/conflicts -> consider alternatives -> act -> reflect。
 ├─ 2. Code of Ethics and Standards of Professional Conduct
-│  ├─ 2.1 职业的本质 (Nature of a Profession)
-│  ├─ 2.2 道德与法律的边界 (Ethics vs. Law)
-│  ├─ 2.3 受托人心态 (Fiduciary Mindset)
+│  ├─ 2.1 Professional Conduct Program：调查、纪律、enforcement；考试常问 Code/Standards 为什么有约束力。
+│  ├─ 2.2 Six Code components：integrity/competence/diligence/respect、reasonable care、professionalism、capital market integrity、professional competence。
+│  └─ 2.3 Seven Standards map：I Professionalism, II Capital Markets, III Clients, IV Employers, V Analysis, VI Conflicts, VII CFA Responsibilities。
 ├─ 3. Guidance for Standards I-VII
-│  ├─ 3.1 Standard I: Professionalism
-│  ├─ 3.2 Standard I(A): Recommended Procedures
-│  ├─ 3.3 Standard I(A): Application of the Standard
+│  ├─ 3.1 Standard I Professionalism：law/standards、independence/objectivity、misrepresentation、misconduct、competence。
+│  ├─ 3.2 Standard II Market Integrity：MNPI gate = material AND nonpublic；market manipulation 包括 price/volume 和 information-based manipulation。
+│  ├─ 3.3 Standard III Duties to Clients：loyalty/prudence/care、fair dealing、suitability、performance presentation、confidentiality。
+│  ├─ 3.4 Standard IV-V：employer loyalty/additional compensation/supervision；diligence/reasonable basis/communication/record retention。
+│  └─ 3.5 Standard VI-VII：conflict disclosure、priority of transactions、referral fees、CFA Program conduct、designation references。
 ├─ 4. Introduction to the Global Investment Performance Standards (GIPS)
-│  ├─ 4.1 GIPS 的定位 (Purpose of GIPS)
-│  ├─ 4.2 关键概念 (Key Concepts)
-│  ├─ 4.3 九大组成部分 (Nine Major Sections)
+│  ├─ 4.1 Purpose：fair representation + full disclosure + global comparability；自愿但宣称合规后必须全面遵守。
+│  ├─ 4.2 Firm/composite/discretion：firm 不能选择性定义，composite 包含所有符合策略的 discretionary portfolios。
+│  ├─ 4.3 Fundamentals/compliant presentation：输入数据、计算方法、披露、报告、房地产/私募专项、verification。
+│  └─ 4.4 Verification：第三方检查 firm-level processes，不保证单个业绩数字正确。
 ├─ 5. Ethics Application
-│  ├─ 5.1 Introduction
-│  ├─ 5.2 Professionalism
-│  ├─ 5.3 Integrity of Capital Markets
+│  ├─ 5.1 Case triage：先锁定事实、角色、受影响方、时间顺序，再定位 Standards。
+│  ├─ 5.2 Violation test：行为是否违反 Code/Standards；若没有违反，是否仍有 recommended procedure。
+│  └─ 5.3 Best action：优先停止违规、披露/隔离冲突、升级监督、保护客户和市场诚信。
 ```
 
 ## 4. 跨模块依赖关系
 
-- **M01 Ethics and Trust in the Investment Profession**：承接 `本科目入口`，输出到 `Code of Ethics and Standards of Professional Conduct`。
-- **M02 Code of Ethics and Standards of Professional Conduct**：承接 `Ethics and Trust in the Investment Profession`，输出到 `Guidance for Standards I-VII`。
-- **M03 Guidance for Standards I-VII**：承接 `Code of Ethics and Standards of Professional Conduct`，输出到 `Introduction to the Global Investment Performance Standards (GIPS)`。
-- **M04 Introduction to the Global Investment Performance Standards (GIPS)**：承接 `Guidance for Standards I-VII`，输出到 `Ethics Application`。
-- **M05 Ethics Application**：承接 `Introduction to the Global Investment Performance Standards (GIPS)`，输出到 `本科目总结`。
+```text
+M01 Ethics foundation
+├─ feeds M02：为什么 Code and Standards 是 profession 的治理工具。
+├─ feeds M03/M05：所有案例题都用 ethics > minimum legal compliance 的判断底座。
+└─ interfaces 全科目：任何估值、推荐、交易、业绩展示题都可能触发 trust / duty / professional judgment。
+
+M02 Code and Standards map
+├─ feeds M03：给 Standards I-VII 的完整索引和职责边界。
+├─ feeds M05：案例题先用 M02 确认可能触发的 Standard，再用 M03 guidance 判断。
+└─ interfaces 合规/监管：CFA Standards 不替代法律；冲突时选择更严格行为。
+
+M03 Standards I-VII guidance
+├─ Standard I -> 法律合规、独立客观、虚假陈述、失当行为、能力边界。
+├─ Standard II -> MNPI、mosaic theory、market manipulation，连接 Equity/FI/Derivatives 交易和研究题。
+├─ Standard III -> client loyalty、fair dealing、suitability、performance presentation、confidentiality，连接 PM/Wealth/Alts suitability。
+├─ Standard IV-V -> employer duties、supervision、reasonable basis、communication、record retention，连接 Research/FSA/Portfolio recommendations。
+└─ Standard VI-VII -> conflicts、priority、referrals、CFA designation，连接所有客户沟通和营销材料。
+
+M04 GIPS
+├─ depends on III(D) Performance Presentation：诚实业绩陈述的具体全球标准。
+├─ interfaces PM：composites、discretionary accounts、strategy definitions 影响 manager selection。
+├─ interfaces Alts/FSA：real estate/private equity 估值与业绩展示需避免 cherry-picking 和不充分披露。
+└─ interfaces Compliance：verification 是 process-level assurance，不是 return guarantee。
+
+M05 Ethics Application
+├─ integrates M01-M04：把事实 -> Standards -> violation -> best action 串成判断链。
+├─ interfaces 全科目行为约束：研究报告、交易执行、客户推荐、业绩宣传、模型假设、考试/会员身份表述。
+└─ output：最保守、可执行、可披露、能保护客户和市场诚信的行动。
+```
 
 ## 5. 核心对比专题
 
@@ -88,13 +116,17 @@ Ethical and Professional Standards (15-20%)
 
 | 指标 | 公式/判断链 | 知识树节点 | 考试说明 |
 |------|---------------|------------|----------|
-| Ethics | 无核心数值公式 | `M01-M09` | 本科重在判断框架 |
-| Priority Rule | `client > market integrity > employer/self convenience` | `M05-M07` | 先守客户与市场 |
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `M03` | law 与 Standards 冲突时常考 |
-| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `M04` | 信息题第一闸 |
-| Suitability Gate | `client facts + portfolio context + risk/return fit` | `M05` | 不是单产品热度判断 |
-| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | `M07` | disclosure 不是橡皮擦 |
-| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | `M08` | 结构化记忆链 |
+| Ethics | 无核心数值公式 | `1-5` | 本科重在判断框架 |
+| Priority Rule | `client > market integrity > employer/self convenience` | `3.3/3.5/5.4` | 先守客户与市场 |
+| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `1.3/3.1` | law 与 Standards 冲突时常考 |
+| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `3.2/5.3` | 信息题第一闸 |
+| Suitability Gate | `client facts + portfolio context + risk/return fit` | `3.3/5.4` | 不是单产品热度判断 |
+| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | `3.5/5.6` | disclosure 不是橡皮擦 |
+| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | `4.2/4.3` | 结构化记忆链 |
+| Fair Dealing Gate | `investment action -> disseminate fairly -> allocate by documented policy` | `3.3/5.3` | 公平不等于所有客户同价同秒 |
+| Confidentiality Exceptions | `client authorization OR legal requirement OR illegal activity inquiry` | `3.3/5.3` | 保密有例外，但不能为了方便披露 |
+| Employer Loyalty Gate | `prepare to leave OK; solicit clients / take records / misuse property not OK` | `3.4/5.3` | 跳槽题按行为边界判断 |
+| Performance Presentation Gate | `not misleading + includes material facts + supports claims with records` | `3.4/4.3` | 连接 III(D)、V(B)、GIPS |
 
 ### 考纲范围标记
 
@@ -125,17 +157,26 @@ Ethical and Professional Standards (15-20%)
 
 ### 框架1：Ethics 情境题判断树
 
-1. 先抽事实：谁做了什么
-2. 再找受影响方：client / employer / market / profession
-3. 再问触发哪个 Standard
-4. 最后问最佳做法是否比“最低合规”更严格
+1. **抽事实**：谁做了什么、何时做、对谁说、用什么信息、是否有客户/雇主/市场影响。
+2. **定位责任对象**：client / prospective client / employer / market / profession / CFA Institute。
+3. **定位 Standard**：
+   - law、independence、misrepresentation、misconduct、competence -> Standard I
+   - MNPI 或 manipulation -> Standard II
+   - loyalty、fair dealing、suitability、performance、confidentiality -> Standard III
+   - employer loyalty、extra compensation、supervision -> Standard IV
+   - reasonable basis、communication、records -> Standard V
+   - conflicts、priority、referral fee -> Standard VI
+   - CFA Program/designation -> Standard VII
+4. **判定违规**：是否违反 required conduct；披露、同意或公司批准是否真的足够。
+5. **选最佳动作**：停止/拒绝违规 -> disclose/recuse/restrict list -> escalate supervisor/compliance -> document。
 
 ### 框架2：信息题判断树
 
 1. 信息是否 nonpublic？
 2. 是否 material？
 3. 如果两者都满足：不能交易、不能建议、不能传播
-4. 如果只是拼接公开信息：可能是 mosaic theory
+4. 如果只是拼接公开信息或 nonmaterial nonpublic 信息：可能是 mosaic theory
+5. 如果客户/雇主要求使用 MNPI：拒绝并隔离信息，必要时通知 compliance。
 
 ### 框架3：冲突题判断树
 
@@ -143,6 +184,14 @@ Ethical and Professional Standards (15-20%)
 2. 是否需要 disclosure？
 3. 披露后是否仍不足以消除不当影响？
 4. 若仍不当，则不能仅靠 disclosure 解决
+
+### 框架4：GIPS 判断树
+
+1. 谁能宣称合规？只有 firm，不是个人、单个 composite 或单个部门随意宣称。
+2. 是否全公司合规？不能只挑表现好的账户或策略。
+3. 账户是否 discretionary？符合 composite 定义的 discretionary portfolios 必须纳入。
+4. 展示是否 fair representation and full disclosure？不能 cherry-pick、不能遗漏 material disclosures。
+5. 是否 verification？verification 只说明流程被独立检查，不保证每个收益数字无误。
 
 ---
 

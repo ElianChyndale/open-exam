@@ -75,14 +75,22 @@ tags:
 ```text
 11. Introduction to Big Data Techniques
 ├─ 11.1 金融科技数据背景（Fintech Data Context）
-│  ├─ 11.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.1.1 数据类型：structured / semi-structured / unstructured，决定清洗和建模难度
+│  ├─ 11.1.2 Alternative data：卫星、交易、物流、搜索、文本等非传统信号
+│  ├─ 11.1.3 Four Vs：volume、velocity、variety、veracity
+│  └─ 11.1.4 数据治理：质量、隐私、许可、可重复性和 survivorship/look-ahead bias
 ├─ 11.2 大数据 / AI / ML 定义
-│  ├─ 11.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.2.1 AI：机器模拟智能的总称；ML 是 AI 子集
+│  ├─ 11.2.2 Supervised learning：有标签，做 regression 或 classification
+│  ├─ 11.2.3 Unsupervised learning：无标签，做 clustering、dimension reduction、anomaly detection
+│  ├─ 11.2.4 Reinforcement learning：agent 通过 reward 学策略，常见于交易/执行
+│  └─ 11.2.5 Deep learning：多层神经网络，适合文本、图像、语音等非结构化数据
 ├─ 11.3 投资应用（Investment Applications）
-│  ├─ 11.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.3.1 Research：NLP 情绪、factor mining、alternative data signal
+│  ├─ 11.3.2 Risk：欺诈检测、异常交易、压力场景和风险预警
+│  ├─ 11.3.3 Operations：algorithmic execution、自动报告、客户服务
+│  ├─ 11.3.4 Client analytics：segmentation、churn prediction、个性化建议
+│  └─ 11.3.5 Model risk：overfitting、data snooping、sample bias、解释性不足
 ```
 
 ## 4. 知识点详解
@@ -178,6 +186,23 @@ tags:
 | Reinforcement Learning | 通过奖励学习策略 | 算法交易机器人 |
 | Overfitting | 学习噪声而非信号 | 所有 ML 模型的通用陷阱 |
 | Cross-Validation | 训练/验证数据分离 | 模型选择与超参数调优 |
+| Structured Data | 表格化、字段稳定 | 财务报表、价格、交易量 |
+| Unstructured Data | 文本、图像、音频 | NLP、图像识别、会议纪要 |
+| Alternative Data | 传统金融数据外的信息 | 信号挖掘、宏观/行业 nowcasting |
+| Data Snooping | 反复试验直到显著 | 回测结果虚高 |
+| Out-of-Sample Test | 样本外验证 | 检查模型泛化能力 |
+
+### 5.2 技术选择框架
+
+| 题干任务 | 选择 | 对应节点 | 防错点 |
+|---|---|---|---|
+| 有标签、预测连续数值 | supervised regression | `11.2.2` | 线性回归是最基础形式。 |
+| 有标签、预测类别 | supervised classification | `11.2.2` | 输出类别概率不等于确定事实。 |
+| 无标签、找群组 | unsupervised clustering | `11.2.3` | 聚类结果需要业务解释。 |
+| 无标签、降维/提取因子 | PCA / dimensionality reduction | `11.2.3` | 主成分不一定有清晰经济含义。 |
+| 通过行动获得奖励 | reinforcement learning | `11.2.4` | 回测环境与真实交易成本要一致。 |
+| 训练集好、测试集差 | overfitting | `11.3.5` | 用交叉验证、正则化、简化模型。 |
+| 数据来源新颖 | alternative data | `11.1.2` | 检查许可、偏差、可持续性和隐私。 |
 
 ## 6. 常见考点与解题思路
 
@@ -218,8 +243,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M10-Simple-Linear-Regression]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `11.1` 数据类型/质量 | Ethics、Quant investing | 数据许可、隐私、误导性展示、可重复性 | Alternative data 不等于自动更好。 |
+| `11.2` supervised learning | [[M10-Simple-Linear-Regression]]、Equity research | 预测收益、评级、违约概率 | 样本内拟合不能替代样本外验证。 |
+| `11.2` unsupervised learning | Portfolio Management、Client analytics | 客户分群、风格识别、异常检测 | 聚类标签是模型产物，不是天然经济分类。 |
+| `11.3` risk/operations | Risk Management、Trading | 欺诈检测、算法执行、压力预警 | 模型需要治理和人工监督。 |
+| `11.3.5` model risk | [[M07-Estimation-and-Inference]]、M08 | overfitting、data snooping、验证集/测试集 | 复杂模型如果不可验证，投资结论更脆弱。 |
 
 ### Legacy 关联补充
 

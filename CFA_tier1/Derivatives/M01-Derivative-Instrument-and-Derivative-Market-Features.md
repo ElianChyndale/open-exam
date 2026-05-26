@@ -71,8 +71,10 @@ tags:
 ```text
 1. Derivative Instrument and Derivative Market Features
 ├─ 1.1 核心内容
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 Derivative definition：价值来自 underlying，合约可用于转移/重塑风险
+│  ├─ 1.1.2 Contract terms：underlying、notional、long/short、settlement date、delivery/cash settlement
+│  ├─ 1.1.3 Market venues：exchange-traded 标准化/清算/保证金；OTC 定制化/双边信用风险
+│  └─ 1.1.4 考试判断：notional 是敞口规模参照，不是初始投资额或最大损失
 ```
 
 ## 4. 知识点详解
@@ -93,9 +95,13 @@ tags:
 
 ### 5.1 核心内容
 
-该模块以概念为主，无核心计算公式。需理解以下关系：
-- 衍生品价值可远小于其名义敞口 (derivative value < notional exposure)
-- 合约价值取决于标的资产价格变化 (contract value depends on underlying price changes)
+| 节点 | 框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 1.1.1 | `Derivative value = function(underlying state)` | 定义题 | 合约本身不是标的资产所有权，价值随参照物变化。 |
+| 1.1.2 | Long/short map | 多空题 | long 受益方向取决于工具；long call 与 long forward 不同。 |
+| 1.1.2 | Notional vs market value | 风险敞口题 | market value 可很小，但 economic exposure 可能很大。 |
+| 1.1.3 | Exchange vs OTC table | 市场结构题 | exchange 降低 counterparty risk 但牺牲定制化；OTC 反之。 |
+| 1.1.3 | Settlement: physical vs cash | 交割题 | 指数类常现金结算，商品/外汇可实物或现金结算。 |
 
 ## 6. 常见考点与解题思路
 
@@ -124,14 +130,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Forward-Commitment-and-Contingent-Claim-Features-and-Instruments]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Forward-Commitments-and-Contingent-Claims]]：合约分类是 M02 的基础
-- [[M05-Forward-and-Futures-Pricing]]：交易所合约的保证金制度影响期货定价
-- [[M00-Derivatives-MOC]]：返回科目总览
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M01 -> M02` | underlying、long/short、settlement、venue | 分类 forward commitments 与 contingent claims。 |
+| `M01 -> M03` | notional、leverage、counterparty risk | 判断收益、风险和使用者目的。 |
+| `M01 -> M06` | exchange trading、margin、daily settlement | 解释 futures 与 forwards 的现金流时点差异。 |
+| `M01 -> PM/Risk Management` | exposure vs cash invested | 防止把 notional 当实际投入或最大亏损。 |
 
 
 ## 9. 复习与刷题提示

@@ -76,8 +76,12 @@ tags:
 ```text
 9. Option Replication Using Put-Call Parity
 ├─ 9.1 核心内容
-│  ├─ 9.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 9.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 9.1.1 Put-call parity：European options 且同一 underlying、strike、maturity
+│  ├─ 9.1.2 标准式：`c + PV(X) = p + S0`，两边到期现金流相同
+│  ├─ 9.1.3 有已知收入：`c + PV(X) + PV(I) = p + S0`
+│  ├─ 9.1.4 有连续收益率：`c + PV(X) = p + S0e^{-qT}`
+│  ├─ 9.1.5 Synthetic positions：移项得到 synthetic call/put/stock/bond
+│  └─ 9.1.6 Forward parity：用 forward exposure 替换 stock exposure 时必须匹配到期与交割价
 ```
 
 ## 4. 知识点详解
@@ -170,14 +174,13 @@ c + PV(X) = p + S0e^(-qT)            有连续收益率资产的平价
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M08-Pricing-and-Valuation-of-Options]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M04-Arbitrage-and-Replication]]：parity 本质是无套利关系的体现
-- [[M08-Binomial-Valuation]]：二项式模型为期权提供估值框架
-- [[M00-Derivatives-MOC]]：返回科目总览
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M08 -> M09` | call/put payoff、intrinsic value、exercise style | 判断 parity 是否适用，避免把 American 条件直接套入基础式。 |
+| `M04 -> M09` | no-arbitrage and replication | parity 两边现金流相同，所以价格必须相等。 |
+| `M09 -> M10` | synthetic replication | binomial 复制组合是 parity 思想的状态版本。 |
+| `Equity/Corporate -> M09` | firm value as option-like payoff | 理解股权/债务的期权式解释。 |
+| `FI -> M09` | PV(X)、discounting | 行权价现值必须用对应期限无风险贴现。 |
 
 
 ## 9. 复习与刷题提示

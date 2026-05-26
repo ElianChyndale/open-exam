@@ -95,20 +95,25 @@ tags:
 ```text
 10. Financial Reporting Quality
 ├─ 10.1 报告质量 vs 报告结果质量 (Reporting Quality vs Quality of Reported Results)
-│  ├─ 10.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.1.1 Reporting quality：是否合规、完整、透明、decision useful
+│  ├─ 10.1.2 Quality of reported results：earnings/cash flow/balance sheet items 是否可持续
+│  └─ 10.1.3 判断：高报告质量不等于高盈利质量；合规报表也可能显示不可持续利润
 ├─ 10.2 稳健 vs 激进会计政策 (Conservative vs Aggressive Accounting)
-│  ├─ 10.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.2.1 Conservative：延后收入、提前费用/损失，压低当期 NI/assets
+│  ├─ 10.2.2 Aggressive：提前收入、延后费用/损失，提高当期 NI/assets
+│  └─ 10.2.3 判断：关键不是“保守一定好”，而是政策是否一致、合理、披露充分
 ├─ 10.3 动机、机会与约束机制 (Motivation, Opportunity, Discipline Mechanisms)
-│  ├─ 10.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.3.1 动机：earnings targets、bonus、debt covenant、financing、M&A
+│  ├─ 10.3.2 机会：weak controls、complex transactions、subjective estimates
+│  └─ 10.3.3 约束：audit、regulator、governance、analysts，但都有局限
 ├─ 10.4 非 GAAP 列报选择与会计估计 (Non-GAAP Presentation Choices and Accounting Estimates)
-│  ├─ 10.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.4.1 Non-GAAP：adjusted EBITDA/EPS 要检查排除项目是否反复发生且有经济实质
+│  ├─ 10.4.2 Accounting estimates：useful life、residual value、bad debt、warranty、pension assumptions
+│  └─ 10.4.3 判断：估计变更若持续有利于利润，要回到附注找证据
 ├─ 10.5 预警信号与操纵识别 (Warning Signs and Manipulation Detection)
-│  ├─ 10.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.5.1 Cash red flags：CFO 持续低于 NI；accruals ratio 上升
+│  ├─ 10.5.2 Balance sheet red flags：AR/inventory 增速高于 sales，DTA valuation allowance 异常
+│  └─ 10.5.3 Disclosure red flags：auditor change、related-party transactions、fourth-quarter adjustments
 ```
 
 ## 4. 知识点详解
@@ -179,6 +184,9 @@ tags:
 | Accrual Ratio | `(Net Income - CFO) / Average Total Assets` | 应计比率，衡量利润中的应计成分 |
 | Beneish M-Score | 多变量综合模型 | 财务操纵概率（低于 -2.22 为正常，高于 -1.78 需警惕） |
 | Quality of Earnings | `CFO / Net Income` | 盈利质量比率，>1 说明利润有充足的现金流支撑 |
+| Revenue-to-Receivables Check | `Sales Growth vs Receivables Growth` | 应收增速显著高于收入是收入质量红旗 |
+| Inventory Quality Check | `Inventory Growth vs Sales Growth` | 存货增速过快提示过时、跌价或渠道压货 |
+| Non-GAAP Gap | `Non-GAAP Earnings - GAAP Earnings` | 差距扩大或调整项反复出现需还原 |
 
 ## 6. 常见考点与解题思路
 
@@ -211,16 +219,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M09-Analysis-of-Income-Taxes]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M11-Financial-Analysis-Techniques]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Income-Statement|利润表分析]]：收入确认政策和费用资本化选择是判断报告质量的核心依据
-- [[M04-Cash-Flow-Statements|现金流量表]]：CFO 与 NI 的对比是盈利质量分析的核心工具
-- [[M05-Inventory-Analysis|存货分析]]：存货跌价准备的计提和转回是操纵窗口之一
-- [[M06-Long-Term-Assets|长期资产]]：减值测试的时机选择和金额估计影响报告质量
-- [[M08-Income-Taxes|所得税]]：DTA 估价备抵的变动可能预示管理层对未来的预期
+- **连接 M02**：收入确认、费用资本化、non-recurring item 分类是 earnings quality 的首要证据。
+- **连接 M04/M05**：CFO 与 NI 的长期背离、FCF 不足但利润增长，是质量预警。
+- **连接 M06/M07**：inventory write-down、LIFO liquidation、impairment timing、depreciation estimates 都可被管理层影响。
+- **连接 M08/M09**：养老金假设、stock compensation 调整、DTA valuation allowance 是高判断空间项目。
+- **连接 M11/M12**：所有 ratio 和 forecast 在进入模型前都要先做 quality adjustment。
 
 
 ## 9. 复习与刷题提示

@@ -74,11 +74,13 @@ tags:
 ```text
 7. Yield and Yield Spread Measures for Fixed-Rate Bonds
 ├─ 7.1 收益率视角 (Yield Lens)
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 Current yield = annual coupon/price；只衡量 coupon income，不含资本利得和再投资
+│  ├─ 7.1.2 YTM：使 P = Σ CF_t/(1+YTM/m)^t 的 IRR；隐含持有至到期和再投资假设
+│  └─ 7.1.3 Annualization：BEY = periodic yield x periods；EAY = (1+periodic rate)^m - 1
 ├─ 7.2 利差视角 (Spread Lens)
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 Benchmark/G-spread：债券 YTM 减同期限或插值 government yield
+│  ├─ 7.2.2 I-spread/Z-spread：分别对 swap curve 和 spot curve；Z-spread 是加到每个 spot rate 的 constant spread
+│  └─ 7.2.3 Spread interpretation：credit、liquidity、tax、technical、option risk 都可推宽 spread
 ```
 
 ## 4. 知识点详解
@@ -143,13 +145,20 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| YTM/price | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] | yield as IRR | price-yield 互推 |
+| Spread decomposition | [[M14-Credit-Risk]] | G-spread/I-spread/Z-spread | 区分信用、流动性、期权、税收和技术面 |
+| Curve basis | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] | benchmark/swap/spot curve reference | 选择对应利差度量 |
+| Realized return | [[M10-Interest-Rate-Risk-and-Return]] | YTM assumptions | 解释 YTM 不等于 HPR |
+
 - **上游模块**：[[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
 - YTM → [[M03-Bond-Valuation]] 的定价逆运算
-- 利差分析 → [[M10-Credit-Risk]] 的信用风险度量
+- 利差分析 → [[M14-Credit-Risk]] 的信用风险度量
 - 年化转换 → [[M05-Floating-Rate-and-Money-Market]] 的货币市场指标
 
 

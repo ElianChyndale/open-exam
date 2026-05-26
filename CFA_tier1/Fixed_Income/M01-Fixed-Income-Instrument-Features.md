@@ -70,14 +70,17 @@ tags:
 ```text
 1. Fixed-Income Instrument Features
 ├─ 1.1 合同解剖 (Contract Anatomy)
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 基本条款：issuer、maturity、par value、coupon rate/frequency、currency 是后续现金流和折现口径
+│  ├─ 1.1.2 资本结构位置：senior/subordinated、secured/unsecured 决定违约时 recovery priority
+│  └─ 1.1.3 考试判断：先问“谁有权利、谁承担义务”，再判断该条款影响现金流、信用还是期权风险
 ├─ 1.2 债券契约 (Bond Indenture)
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 Indenture 是发行人与持有人之间的法律合同，包含支付条款、抵押品、违约事件和 trustee 角色
+│  ├─ 1.2.2 Affirmative covenants = 必须做，如按时披露、维持保险、缴税
+│  └─ 1.2.3 Negative covenants = 不得做，如限制新增债务、资产出售、股息支付；保护债权人 downside
 ├─ 1.3 或有条款 (Contingency Provisions)
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 Callable：发行人持有 call option；利率下降时再融资，价格上行被 call price 限制
+│  ├─ 1.3.2 Putable：投资者持有 put option；利率上升或信用恶化时获得保护，通常接受较低 yield
+│  └─ 1.3.3 Sinking fund/convertible：改变本金偿还或附带 equity upside；后续连接 effective duration 与 credit analysis
 ```
 
 ## 4. 知识点详解
@@ -135,6 +138,13 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| 现金流定义 | [[M02-Fixed-Income-Cash-Flows-and-Types]] | coupon、maturity、par、currency | 决定 CF_t 如何展开 |
+| 定价输入 | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] | cash-flow timing、day count、clean/full price 口径 | 选择 YTM/spot 折现前先确认合同条款 |
+| 含期权风险 | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | callable/putable/convertible | 判断是否用 effective duration |
+| 信用优先级 | [[M14-Credit-Risk]] / [[M16-Credit-Analysis-for-Corporate-Issuers]] | seniority、collateral、covenants | 判断 recovery 和 issue rating |
+
 - **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M02-Fixed-Income-Cash-Flows-and-Types]]。本模块输出会被后续更复杂题型调用。
 
@@ -142,7 +152,7 @@ tags:
 
 - 现金流结构 → [[M02-Fixed-Income-Cash-Flows]] 的完整现金流分类
 - 或有条款 → [[M09-Curve-Based-and-Empirical-Risk]] 的有效久期与凸性
-- 优先级与抵押品 → [[M11-Government-and-Corporate-Credit]] 的信用分析
+- 优先级与抵押品 → [[M14-Credit-Risk]] / [[M16-Credit-Analysis-for-Corporate-Issuers]] 的信用分析
 
 
 ## 9. 复习与刷题提示

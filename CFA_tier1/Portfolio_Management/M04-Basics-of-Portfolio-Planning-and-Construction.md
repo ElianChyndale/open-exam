@@ -92,17 +92,25 @@ tags:
 ```text
 4. Basics of Portfolio Planning and Construction
 ├─ 4.1 IPS 概述 (IPS Overview)
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 IPS role：把客户目标、约束和投资纪律写成可执行决策框架
+│  ├─ 4.1.2 IPS components：return objective、risk objective、constraints、asset allocation、review rules
+│  └─ 4.1.3 更新触发：客户目标、财富、负债、税法、市场环境或约束发生重大变化
 ├─ 4.2 收益目标 (Return Objectives)
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Required return：由支出、负债、通胀、税费和资产规模推导
+│  ├─ 4.2.2 Desired return：客户希望值，若与能力冲突不能直接采用
+│  ├─ 4.2.3 Absolute vs relative：绝对收益目标 vs 超越 benchmark
+│  └─ 4.2.4 写法要求：可量化、税后/通胀口径清楚、与风险目标一致
 ├─ 4.3 风险目标 (Risk Objectives)
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.3.1 Willingness：心理愿意承受的风险，受经验和行为偏差影响
+│  ├─ 4.3.2 Ability/capacity：财务上能承受的风险，由期限、财富、支出和收入稳定性决定
+│  ├─ 4.3.3 冲突规则：willingness 与 ability 冲突时，通常以 ability 为上限
+│  └─ 4.3.4 表述：最大损失、波动范围、shortfall tolerance 或相对 benchmark 风险
 ├─ 4.4 约束条件 (Constraints) — L-T-T-L-U
-│  ├─ 4.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.4.1 Liquidity：短期现金需求和无法长期锁定的资产
+│  ├─ 4.4.2 Time horizon：单阶段/多阶段，期限越短通常 capacity 越低
+│  ├─ 4.4.3 Taxes：税率、账户类型、未实现资本利得和税后目标
+│  ├─ 4.4.4 Legal/regulatory：受托责任、投资限制、法规约束
+│  └─ 4.4.5 Unique circumstances：ESG、集中持股、遗产规划、特殊偏好
 ```
 
 ## 4. 知识点详解
@@ -157,6 +165,17 @@ tags:
 
 *注：M05 题型以策略分析和情景题为主，无复杂数学公式。*
 
+### 5.2 IPS 决策树
+
+| 步骤 | 动作 | 对应节点 | 防错点 |
+|---|---|---|---|
+| 1 | 先量化 required return | `4.2.1` | 不要只写“high return”。 |
+| 2 | 判断 desired return 是否可行 | `4.2.2` | 愿望不能压倒风险能力。 |
+| 3 | 分开评估 willingness 和 ability | `4.3.1-4.3.2` | 题目常故意让两者冲突。 |
+| 4 | 风险目标取可执行上限 | `4.3.3` | ability 低时不能迎合高 willingness。 |
+| 5 | 按 L-T-T-L-U 写约束 | `4.4` | Liquidity 和 unique circumstances 最容易漏。 |
+| 6 | 约束转为 asset allocation / rebalancing | `4.1.2` | IPS 必须能改变组合动作。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -203,8 +222,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Portfolio-Management-An-Overview]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-The-Behavioral-Biases-of-Individuals]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `4.2` return objective | Quant M01/M02、PM M02 | required return、税后/通胀口径和 CAPM/discount rate | required 和 desired 不同。 |
+| `4.3` risk objective | PM M01、M05 Behavioral | risk aversion、willingness、ability | 高 willingness 不等于组合可高风险。 |
+| `4.4` constraints | Ethics、Wealth planning、Alternatives | suitability、流动性、税务、法律和特殊偏好 | 约束不是目标，不能混写。 |
+| `4.1` IPS workflow | M03 Overview、M06 Risk | 规划、执行、监控和更新 | IPS 必须可回溯到客户事实。 |
 
 ### Legacy 关联补充
 

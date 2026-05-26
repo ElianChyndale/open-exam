@@ -88,17 +88,23 @@ tags:
 ```text
 3. Portfolio Management: An Overview
 ├─ 3.1 投资组合管理流程 (Portfolio Management Process)
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Planning：了解客户、制定 IPS、设定 strategic asset allocation
+│  ├─ 3.1.2 Execution：资产配置实施、证券选择、主动/被动管理选择
+│  └─ 3.1.3 Feedback：监控、再平衡、绩效评估、更新 IPS
 ├─ 3.2 投资者类型 (Types of Investors)
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 Individual：生命周期、税务、行为偏差和突发流动性需求更突出
+│  ├─ 3.2.2 Institutional：受托责任、监管约束、负债匹配和治理流程更突出
+│  └─ 3.2.3 Suitability：工具和策略必须匹配 investor type、目标和约束
 ├─ 3.3 集合投资工具 (Pooled Investment Vehicles)
-│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.3.1 Mutual fund：开放型按 NAV 申赎，封闭型可折溢价交易
+│  ├─ 3.3.2 ETF：交易所实时交易，AP 套利使价格贴近 NAV，通常税效高
+│  ├─ 3.3.3 SMA：直接持有底层证券，可定制税务/ESG/限制
+│  ├─ 3.3.4 Hedge fund：策略灵活、锁定期、低透明度、管理费+业绩费
+│  └─ 3.3.5 Private equity：长期锁定、J-curve、流动性溢价
 ├─ 3.4 投资策略说明书简介 (Introduction to Investment Policy Statement)
-│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.4.1 IPS role：指导性决策框架，不是法律合同
+│  ├─ 3.4.2 Core elements：return objective、risk objective、constraints、guidelines、review rules
+│  └─ 3.4.3 Workflow：IPS 把客户信息翻译成资产配置和再平衡纪律
 ```
 
 ## 4. 知识点详解
@@ -249,6 +255,17 @@ tags:
 
 *注：M03 为概念性模块，以理解各类投资工具和流程为主，无复杂计算。*
 
+### 5.2 工具选择框架
+
+| 投资者/题干需求 | 倾向工具 | 知识树节点 | 判断理由 |
+|---|---|---|---|
+| 低门槛、每日 NAV、零售 | open-end mutual fund | `3.3.1` | 操作简单、监管透明。 |
+| 日内交易、低费率、税效 | ETF | `3.3.2` | 交易灵活，价格接近 NAV。 |
+| 高净值、税务定制、特殊限制 | SMA | `3.3.3` | 直接持有底层证券，可个性化。 |
+| 合格投资者、低流动性容忍、追求绝对收益 | hedge fund | `3.3.4` | 锁定期和费用高，透明度低。 |
+| 长期限、可承受极低流动性 | private equity | `3.3.5` | J-curve 和长期锁定。 |
+| 管理流程排序 | planning -> execution -> feedback | `3.1` | IPS 出现在 planning 阶段。 |
+
 ---
 
 ## 6. 常见考点与解题思路
@@ -304,8 +321,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Portfolio-Risk-and-Return-Part-II]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Basics-of-Portfolio-Planning-and-Construction]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `3.1` 管理流程 | [[M04-Basics-of-Portfolio-Planning-and-Construction]]、M06 Risk | IPS、执行、反馈和监控形成闭环 | 再平衡属于 feedback，不是初始 planning。 |
+| `3.2` 投资者类型 | Ethics、IPS、Behavioral | suitability、受托责任、客户沟通 | 机构也会有行为和治理问题。 |
+| `3.3` pooled vehicles | Alternatives、Wealth planning | 选择基金/ETF/SMA/hedge fund/PE | 流动性、费用、透明度和监管不能混同。 |
+| `3.4` IPS role | M04、M05、M06 | 目标、约束、偏差和风险治理的入口 | IPS 不是法律合同，但必须可执行。 |
 
 ### Legacy 关联补充
 

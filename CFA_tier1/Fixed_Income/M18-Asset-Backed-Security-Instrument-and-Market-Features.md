@@ -79,11 +79,13 @@ tags:
 ```text
 18. Asset-Backed Security (ABS) Instrument and Market Features
 ├─ 18.1 ABS 类型 (ABS Families)
-│  ├─ 18.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 18.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 18.1.1 Collateral families：auto loans、credit card receivables、student loans、equipment leases、trade receivables
+│  ├─ 18.1.2 Cash-flow pattern：amortizing collateral vs revolving receivables 决定本金分配和 trigger risk
+│  └─ 18.1.3 Covered bonds：dual recourse to issuer and cover pool，资产通常留在 issuer balance sheet
 ├─ 18.2 信用增级 (Credit Enhancement)
-│  ├─ 18.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 18.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 18.2.1 Internal enhancement：subordination、overcollateralization、excess spread、reserve account
+│  ├─ 18.2.2 External enhancement：guarantee、insurance、letter of credit；受支持方信用质量影响
+│  └─ 18.2.3 考试判断：信用增级重新分配损失吸收顺序，不等于消灭违约风险
 ```
 
 ## 4. 知识点详解
@@ -140,14 +142,21 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Securitization base | [[M17-Fixed-Income-Securitization]] | SPV/waterfall/servicer | 理解 ABS 结构来源 |
+| Credit enhancement | [[M14-Credit-Risk]] | subordination、overcollateralization、excess spread | 判断 loss absorption 和 tranche risk |
+| Cash-flow timing | [[M02-Fixed-Income-Cash-Flows-and-Types]] | amortizing/revolving collateral | 判断本金回收和 trigger risk |
+| MBS contrast | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] | non-mortgage ABS vs mortgage collateral | 区分普通 ABS 与 MBS 的 prepayment 机制 |
+
 - **上游模块**：[[M17-Fixed-Income-Securitization]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
-- 信用增级 → [[M12-Securitization-Foundations]] 的 SPV 结构
-- 分层设计 → [[M14-MBS-and-CMO]] 的 CMO 分层
-- Covered bond → [[M11-Government-and-Corporate-Credit]] 的发行人信用分析
+- 信用增级 → [[M17-Fixed-Income-Securitization]] 的 SPV 结构
+- 分层设计 → [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] 的 CMO 分层
+- Covered bond → [[M16-Credit-Analysis-for-Corporate-Issuers]] 的发行人信用分析
 
 
 ## 9. 复习与刷题提示

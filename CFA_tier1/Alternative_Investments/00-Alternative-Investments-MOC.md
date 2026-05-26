@@ -47,41 +47,80 @@ tags:
 ```text
 Alternative Investments (7-10%)
 ├─ 1. Alternative Investment Features, Methods, and Structures
-│  ├─ 1.1 Introduction
-│  ├─ 1.2 Alternative Investment Features
-│  ├─ 1.3 Alternative Investment Methods
+│  ├─ 1.1 另类投资特征：illiquidity、低透明度、高费用、复杂估值、监管限制、独特风险；考试先判断它们如何影响 required return 与 suitability。
+│  ├─ 1.2 投资方法：direct investment 控制强但集中/运营负担高；co-investment 降低 fee drag 但依赖 GP sourcing；fund investment 分散但有双层费用和流动性约束。
+│  └─ 1.3 结构与费用：LP/GP、closed-end/open-end、management fee、incentive fee/carried interest、hurdle、high-water mark；先识别 fee base 再算 net return。
 ├─ 2. Alternative Investment Performance and Returns
-│  ├─ 2.1 业绩衡量指标 (Performance Measurement Metrics)【考试核心】
-│  ├─ 2.2 J曲线 (J-Curve Dynamics)【考试核心】
-│  ├─ 2.3 收益平滑 (Smoothed Returns)【考试陷阱】
+│  ├─ 2.1 业绩倍数：TVPI = DPI + RVPI；PIC = paid-in / committed；IRR 受现金流时点影响，倍数不反映时间价值。
+│  ├─ 2.2 Fee impact：gross return 先扣 management fee，再按 hurdle/HWM 判断 incentive fee；FOF 可能有底层和母基金双重费用。
+│  ├─ 2.3 J-curve：早期 fee/成本使回报为负，退出后 DPI 上升；VC 通常更深更长，LBO 相对较浅。
+│  └─ 2.4 Smoothed returns：appraisal-based NAV 低估 volatility/correlation，可能高估 Sharpe/Sortino。
 ├─ 3. Investments in Private Capital: Equity and Debt
-│  ├─ 3.1 Introduction
-│  ├─ 3.2 Private Equity Investment Characteristics
-│  ├─ 3.3 Private Debt Investment Characteristics
+│  ├─ 3.1 Private equity：VC/growth/LBO/distressed；价值来源是 growth、operational improvement、multiple expansion、leverage。
+│  ├─ 3.2 Private debt：direct lending、mezzanine、distressed debt；收益来自 contractual yield + credit spread + covenants/structure。
+│  └─ 3.3 Diversification：低公开市场相关性常被 appraisal smoothing 夸大，考试要同时提 liquidity lockup 与 valuation lag。
 ├─ 4. Real Estate and Infrastructure
-│  ├─ 4.1 房地产 (Real Estate)【考试核心】
-│  ├─ 4.2 基础设施 (Infrastructure)【考试核心】
+│  ├─ 4.1 Real estate：NOI、cap rate、income/cost/sales comparison；Value = NOI / cap rate，cap rate 上升则价值下降。
+│  ├─ 4.2 REITs：equity REIT 收租金，mortgage REIT 收利息；公开 REIT 流动性高但市场相关性更高。
+│  └─ 4.3 Infrastructure：brownfield 现金流稳定/风险低，greenfield 建设风险高/预期回报高；常与 inflation-linked cash flow、PPP、regulatory risk 绑定。
 ├─ 5. Natural Resources
-│  ├─ 5.1 商品期货 (Commodity Futures)【考试核心】
+│  ├─ 5.1 Raw land/timberland/farmland：收益来自价格增值、产出现金流和通胀保护；风险含天气、政策、经营和流动性。
+│  ├─ 5.2 Commodities：spot、futures、commodity-linked equities；不能把实物商品收益和期货总收益混同。
+│  └─ 5.3 Futures return：total return = spot return + roll yield + collateral yield；contango 对多头 roll yield 通常为负。
 ├─ 6. Hedge Funds
-│  ├─ 6.1 对冲基金特征 (Hedge Fund Characteristics)
-│  ├─ 6.2 对冲基金策略 (Hedge Fund Strategies)【考试核心】
-│  ├─ 6.3 杠杆与风险 (Leverage and Risk)【考试核心】
+│  ├─ 6.1 Features：flexible mandate、leverage、shorting、derivatives、lockup/notice/redemption gates；名称含 hedge 不代表市场中性。
+│  ├─ 6.2 Strategies：equity long/short、global macro、event driven、relative value；按题干收益来源和风险因子分类。
+│  └─ 6.3 Exposure：gross exposure = long + |short|；net exposure = long - |short|；gross 看规模，net 看方向。
 ├─ 7. Introduction to Digital Assets
-│  ├─ 7.1 区块链与共识机制【考试核心】
-│  ├─ 7.2 数字资产类型 (Digital Asset Types)
-│  ├─ 7.3 代币化 (Tokenization)【考试核心】
+│  ├─ 7.1 DLT/blockchain：shared ledger、consensus、immutability、smart contracts；区块链是技术，比特币是应用。
+│  ├─ 7.2 Digital asset forms：cryptocurrency、utility token、security token、stablecoin、tokenized assets；按 claim/right/function 判断。
+│  └─ 7.3 Risk/return：high volatility、custody/private key、cybersecurity、regulation、liquidity fragmentation；tokenization 提高可分割性但不消除底层资产风险。
 ```
 
 ## 4. 跨模块依赖关系
 
-- **M01 Alternative Investment Features, Methods, and Structures**：承接 `本科目入口`，输出到 `Alternative Investment Performance and Returns`。
-- **M02 Alternative Investment Performance and Returns**：承接 `Alternative Investment Features, Methods, and Structures`，输出到 `Investments in Private Capital: Equity and Debt`。
-- **M03 Investments in Private Capital: Equity and Debt**：承接 `Alternative Investment Performance and Returns`，输出到 `Real Estate and Infrastructure`。
-- **M04 Real Estate and Infrastructure**：承接 `Investments in Private Capital: Equity and Debt`，输出到 `Natural Resources`。
-- **M05 Natural Resources**：承接 `Real Estate and Infrastructure`，输出到 `Hedge Funds`。
-- **M06 Hedge Funds**：承接 `Natural Resources`，输出到 `Introduction to Digital Assets`。
-- **M07 Introduction to Digital Assets**：承接 `Hedge Funds`，输出到 `本科目总结`。
+```text
+M01 结构/费用/流动性
+├─ feeds M02：费用结构决定 gross-to-net return；流动性和估值频率解释 smoothed returns。
+├─ feeds M03-M07：direct/co-invest/fund 是所有另类资产的进入方式。
+└─ interfaces PM：另类投资加入组合时先判断 liquidity、correlation、risk budget、rebalancing constraint。
+
+M02 绩效与回报
+├─ feeds M03：TVPI/DPI/RVPI、PIC、IRR、J-curve 是 private capital 的主要报告语言。
+├─ feeds M04：appraisal smoothing 常出现在 direct real estate 与 infrastructure NAV。
+├─ feeds M06：Sharpe/Sortino、net return、fee drag 用于 hedge fund 评价。
+└─ interfaces FSA/PM：NAV、valuation lag、fee accrual 影响业绩展示和风险统计。
+
+M03 Private Capital
+├─ depends on M01：LP/GP、closed-end fund、capital commitment、carried interest。
+├─ depends on M02：J-curve 与 PE multiples。
+├─ interfaces FSA/FI：LBO leverage、covenants、credit spread、cash flow coverage。
+└─ interfaces Ethics：valuation marks、performance presentation、conflict disclosure。
+
+M04 Real Estate and Infrastructure
+├─ depends on M01：illiquidity、direct vs fund ownership、unique operational/regulatory risk。
+├─ depends on M02：appraisal-based returns 与 smoothing。
+├─ interfaces FSA/Equity：NOI、cap rate、REIT income model、depreciation vs operating cash flow。
+└─ interfaces FI/PM：long-duration cash flows、inflation linkage、interest-rate sensitivity。
+
+M05 Natural Resources
+├─ depends on M01：direct ownership vs commodity funds/futures exposure。
+├─ interfaces Derivatives：futures pricing、cost of carry、roll yield、collateral yield。
+├─ interfaces Economics：inflation、supply shocks、business cycle、currency exposure。
+└─ interfaces PM：diversification may come from inflation beta, but futures roll can dominate spot intuition。
+
+M06 Hedge Funds
+├─ depends on M01：fee terms、lockups、redemption gates、manager discretion。
+├─ depends on M02：net return after management/incentive fees and risk-adjusted measures。
+├─ interfaces Derivatives/FI/Equity：shorting、leverage、event risk、relative value spreads。
+└─ interfaces PM：gross/net exposure, beta control, tail risk and liquidity risk。
+
+M07 Digital Assets
+├─ depends on M01：new asset form with custody, regulatory and market-structure risks。
+├─ interfaces Derivatives：futures/ETP exposure, leverage and collateral mechanics。
+├─ interfaces Ethics：client suitability, disclosure of custody/cyber/regulatory risks。
+└─ interfaces PM：high volatility, unstable correlations and liquidity fragmentation affect allocation sizing。
+```
 
 ## 5. 核心对比专题
 
@@ -109,6 +148,7 @@ Alternative Investments (7-10%)
 | Net Return | `Gross return - fees and expenses` | `1.3/2.1` | 费用结构会改变投资者回报 |
 | Sortino | `(R_p - R_f)/σ_d` | `2.1` | 下行风险调整收益 |
 | Sharpe | `(R_p - R_f)/σ_p` | `2.1` | 总风险调整收益 |
+| Fee drag | `Gross return - net return` | `1.3/2.2` | 分解管理费、激励费和双层费用影响 |
 
 ### 房地产
 
@@ -119,6 +159,7 @@ Alternative Investments (7-10%)
 | NOI | `租金收入 - 运营费用` | `4.1` | 净营运收入（不含折旧利息） |
 | Cap Rate, Growth Form | `Cap rate = r - g` | `4.1` | 【考纲重点】稳定增长房地产估值直觉 |
 | Property Value, Growth Form | `NOI_1 / (r - g)` | `4.1` | 与 Gordon growth 结构相同 |
+| REIT income logic | `Rental income -> NOI -> funds available for distribution` | `4.2` | Level I 以逻辑为主，别把 depreciation/interest 塞进 NOI |
 
 ### 商品期货
 
@@ -129,6 +170,7 @@ Alternative Investments (7-10%)
 | 持有成本 | `ln[F_0(T)/S_0]/T = r + s - y` | `5.1` | 连续复利口径下的 cost of carry |
 | Collateral Yield | `Return on collateral posted for futures exposure` | `5.1` | 商品期货总回报来源之一 |
 | Commodity Futures Total Return | `Spot return + roll yield + collateral yield` | `5.1` | 【考纲重点】方向判断常考 |
+| Contango / Backwardation gate | `Far > near -> contango -> long roll usually negative; near > far -> backwardation -> long roll usually positive` | `5.3` | 先看期限结构再判断 roll |
 
 ### 对冲基金
 
@@ -138,6 +180,15 @@ Alternative Investments (7-10%)
 | Net Leverage | `(Long - \|Short\|) / Capital` | `6.3` | 净杠杆 |
 | Long/Short Net Exposure | `Long exposure - Short exposure` | `6.3` | 市场方向性敞口 |
 | Long/Short Gross Exposure | `Long exposure + Short exposure` | `6.3` | 总风险规模 |
+| Market neutral check | `Net exposure ≈ 0, gross exposure can still be high` | `6.3` | 市场中性不等于低杠杆 |
+
+### 数字资产与通用判断框架
+
+| 框架 | 判断链 | 知识树节点 | 考试说明 |
+|------|--------|------------|----------|
+| Token classification | `claim/right/function -> cryptocurrency / utility token / security token / tokenized asset` | `7.2` | 按权利和用途分类，不按名称分类 |
+| DLT application | `shared ledger + consensus + smart contract -> settlement/custody/tokenization use case` | `7.1/7.3` | 区块链是基础设施，不等于所有数字资产 |
+| Suitability risk screen | `volatility + liquidity + custody + regulation + client constraints` | `7.3` | 与 Ethics/PM 联动，先看客户是否承受得住 |
 
 ### 考纲范围标记
 
@@ -166,7 +217,31 @@ Alternative Investments (7-10%)
 
 ## 8. 通用分析框架
 
-### 框架1: 另类投资费用计算
+### 框架1: 另类投资题目总决策树
+
+```text
+1. 先识别资产类型
+   ├─ Private capital -> 用 capital commitment、J-curve、TVPI/DPI/RVPI、IRR
+   ├─ Real estate/infrastructure -> 用 NOI/cap rate、brownfield/greenfield、regulatory/inflation risk
+   ├─ Natural resources/commodities -> 用 spot/roll/collateral、cost of carry、term structure
+   ├─ Hedge funds -> 用 strategy type、gross/net exposure、fee/HWM/liquidity terms
+   └─ Digital assets -> 用 DLT/token type/custody/regulatory/suitability screen
+2. 再判断投资方式
+   ├─ Direct -> control high, concentration and operational burden high, liquidity low
+   ├─ Co-investment -> fee lower, selection/access depends on GP, concentration higher
+   └─ Fund/FOF -> diversification and access higher, fee drag and transparency constraints higher
+3. 再选公式或框架
+   ├─ 题干给 paid-in/distribution/residual/commitment -> TVPI/DPI/RVPI/PIC
+   ├─ 题干给 gross return、fee base、hurdle/HWM -> gross-to-net fee waterfall
+   ├─ 题干给 NOI 与 cap rate -> Value = NOI / cap rate
+   ├─ 题干给 spot/futures/storage/convenience yield -> cost of carry / roll yield
+   └─ 题干给 long/short/capital -> gross and net exposure
+4. 最后输出考试判断
+   ├─ 说明方向：cap rate↑ value↓；contango long roll yield negative；gross≠net
+   └─ 补限制：估值滞后、流动性、费用、监管、集中度会改变表面结论
+```
+
+### 框架2: 另类投资费用计算
 
 ```
 另类投资费用计算
@@ -187,7 +262,7 @@ Alternative Investments (7-10%)
     └── Net Return = Gross Return - 总费用率
 ```
 
-### 框架2: 房地产估值分析
+### 框架3: 房地产估值分析
 
 ```
 房地产估值分析

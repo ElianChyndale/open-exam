@@ -78,23 +78,26 @@ tags:
 ```text
 4. Monetary Policy
 ├─ 4.1 中央银行的核心目标（Central Bank Objectives）
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Price stability 是核心；growth/employment 与 financial stability 是常见附属目标
+│  └─ 4.1.2 Lender of last resort 与 payment system oversight 属于央行金融稳定角色
 ├─ 4.2 货币政策工具（Monetary Policy Tools）
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Policy rate：短端利率锚，影响借贷成本和收益率曲线
+│  ├─ 4.2.2 Reserve requirements / OMOs：调节银行准备金和货币市场流动性
+│  └─ 4.2.3 QE/QT：零利率附近或市场压力下通过资产负债表影响长期利率
 ├─ 4.3 货币传导机制（Monetary Transmission Mechanism）
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.3.1 利率渠道：policy rate -> market rates -> consumption/investment
+│  ├─ 4.3.2 信贷渠道：bank lending standards 决定降息是否真的变成贷款
+│  ├─ 4.3.3 资产价格渠道：discount rate 和 wealth effect 改变估值与消费
+│  └─ 4.3.4 汇率渠道：利差变化影响资本流与 FX，进而影响净出口和通胀
 ├─ 4.4 可信度与独立性（Credibility and Independence）
-│  ├─ 4.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.4.1 Independence 降低政治周期导致的 inflation bias
+│  └─ 4.4.2 Credibility 让通胀预期更稳定，减少政策所需利率调整幅度
 ├─ 4.5 政策中性利率（Neutral Rate）
-│  ├─ 4.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.5.1 Real policy rate = nominal policy rate - expected inflation
+│  └─ 4.5.2 real policy rate > neutral rate 为紧缩；低于 neutral rate 为宽松
 ├─ 4.6 泰勒规则（Taylor Rule）
-│  ├─ 4.6.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.6.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.6.1 Policy rate 随 inflation gap 和 output gap 上升而上调
+│  └─ 4.6.2 Level I 更重方向判断，不把 Taylor rule 当精确预测模型
 ```
 
 ## 4. 知识点详解
@@ -167,6 +170,14 @@ tags:
 **实际利率与政策立场**：`Real Policy Rate = Policy Rate − Expected Inflation`
 - 场景：实际政策利率高于中性利率 = 紧缩；低于中性利率 = 宽松。
 
+| 节点 | 公式/框架 | 选择条件 | 考试判断 |
+|---|---|---|---|
+| 4.2 | Expansionary policy = lower policy rate / add reserves / asset purchases | output gap negative、credit stress | 降息是动作，传导是否有效要看银行与借款人。 |
+| 4.2 | Contractionary policy = raise policy rate / drain reserves / balance sheet reduction | inflation high、overheating | 增长通常放缓，通胀压力下降但有时滞。 |
+| 4.3 | Interest differential -> FX channel | 题干给 domestic/foreign rates | 转到 `F=S(1+i_d)/(1+i_f)` 判断 forward premium。 |
+| 4.5 | `Real Policy Rate = Nominal Policy Rate - Expected Inflation` | 判断 stance | 名义利率高不一定紧缩，关键是实际利率相对 neutral rate。 |
+| 4.6 | Taylor intuition: rate rises with inflation gap and output gap | 给通胀目标和产出缺口 | 方向判断优先，除非题干明确给公式参数。 |
+
 ## 6. 常见考点与解题思路
 
 | 重要性 | 考点 | 解题动作 |
@@ -204,14 +215,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Fiscal-Policy]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Introduction-to-Geopolitics]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 央行政策应对经济周期的时机在 **[[M02-Understanding-Business-Cycles]]** 中讨论
-- 财政与货币政策的配合对比见 **[[M03-Fiscal-Policy]]**
-- 货币政策通过利率渠道影响汇率，见 **[[M07-Capital-Flows-and-FX-Markets]]** 和 **[[M08-Exchange-Rate-Calculations]]**
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M02 -> M04` | inflation、output gap、credit cycle | 判断 policy stance 和传导有效性。 |
+| `M03 -> M04` | fiscal expansion/contraction、deficit | 判断政策组合是否互补或冲突。 |
+| `M04 -> M07/M08` | interest differential、capital flows | 连接货币政策、即期汇率和 CIP 远期汇率。 |
+| `M04 -> FI` | short rates、yield curve、inflation expectations | 连接债券价格和久期风险。 |
+| `M04 -> Equity/PM` | discount rate、liquidity、risk appetite | 判断估值倍数和宏观配置。 |
 
 
 ## 9. 复习与刷题提示

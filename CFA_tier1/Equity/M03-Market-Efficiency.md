@@ -89,11 +89,15 @@ tags:
 ```text
 3. Market Efficiency
 ├─ 3.1 信息集与有效形式 (Information set and forms)
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Weak form：价格反映历史价格和成交量；技术分析难以持续 after-cost 获利。
+│  ├─ 3.1.2 Semi-strong form：价格反映所有公开信息；公开财报、公告和新闻应快速进入价格。
+│  ├─ 3.1.3 Strong form：价格反映公开和私有信息；现实中通常因 insider trading 证据而最难成立。
+│  └─ 3.1.4 判断顺序：先识别 information set，再判断 abnormal return 是否可持续。
 ├─ 3.2 启示 (Implications)
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 有效性含义：不是价格永远正确，而是无法系统性利用信息赚取超额收益。
+│  ├─ 3.2.2 异常解释：可能来自行为偏差、风险补偿、数据挖掘、交易成本或套利限制。
+│  ├─ 3.2.3 主动/被动：市场越有效，被动投资越有吸引力；低效率市场给主动管理更多空间。
+│  └─ 3.2.4 考试陷阱：看到 anomaly 不要立刻否定效率，要问是否可持续、可交易、扣除成本后仍有效。
 ```
 
 ## 4. 知识点详解
@@ -110,14 +114,23 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 核心内容
+### 5.1 市场效率判断框架
 
-本模块无复杂数学公式，核心是概念判断。
+| 判断对象 | 识别信息 | 对应有效形式 | 考试输出 |
+|---|---|---|---|
+| Technical analysis | 历史价格、成交量 | Weak form | 若 weak-form efficient，技术分析难持续赚取 abnormal return。 |
+| Fundamental/public news analysis | 财报、公告、新闻、公开研究 | Semi-strong form | 若 semi-strong efficient，公开信息应快速反映在价格中。 |
+| Insider/private information | 非公开重大信息 | Strong form | strong form 要求私有信息也无法带来超额收益；现实最难成立。 |
+| Active manager skill | 扣费后持续跑赢基准 | Efficiency implication | 需要区分 skill、luck、risk exposure 和 data mining。 |
+| Anomaly | 规模、价值、动量、日历效应等 | Challenge/qualification | 先检查交易成本、风险补偿和样本偏差。 |
 
-| 概念 | 核心逻辑 |
-|------|----------|
-| 有效市场假设 (EMH) | 价格反映信息，超额收益不可持续 |
-| 异常回报 (Abnormal Return) | `实际收益 - 预期收益（如 CAPM）` |
+### 5.2 轻公式与流程
+
+| 工具 | 表达 | 用法 |
+|---|---|---|
+| Abnormal return | `Actual return - expected return` | expected return 可来自 CAPM 或合适 benchmark。 |
+| Active return | `Portfolio return - benchmark return` | 判断主动管理表现时要扣除费用和风险差异。 |
+| 三步判断 | `information set -> efficiency form -> after-cost implication` | 避免只背 weak/semi-strong/strong 名称。 |
 
 ## 6. 常见考点与解题思路
 
@@ -146,14 +159,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Security-Market-Indexes]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Overview-of-Equity-Securities]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **市场效率影响估值方法选择** → [[M08-Equity-Valuation-Concepts]]
-- **市场质量依赖微观结构** → [[M01-Market-Organization-and-Structure]]
-- **指数构建受市场效率理念影响** → [[M02-Security-Market-Indexes]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Benchmark / abnormal return | [[M02-Security-Market-Indexes]] | 市场效率判断需要可比 benchmark 和投资 universe。 | 选错指数会错判超额收益。 |
+| Trading costs / short constraints | [[M01-Market-Organization-and-Structure]] | 套利能否实施取决于市场摩擦。 | 有 mispricing 不等于有可实现利润。 |
+| Public company disclosure | [[M05-Company-Analysis-Past-and-Present]] | 半强有效假设公开财务信息已快速反映。 | 基本面分析价值取决于信息处理能力和成本。 |
+| Active vs passive | Portfolio Management | 市场效率影响组合管理方式和费用合理性。 | 考试常问 implication，不只问定义。 |
 
 
 ## 9. 复习与刷题提示

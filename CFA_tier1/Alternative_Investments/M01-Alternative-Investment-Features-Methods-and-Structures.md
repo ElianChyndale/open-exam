@@ -73,17 +73,22 @@ tags:
 ```text
 1. Alternative Investment Features, Methods, and Structures
 ├─ 1.1 Introduction
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 另类投资不是单一资产类别，而是一组有非传统收益来源、非标准交易结构和更复杂风险的投资。
+│  └─ 1.1.2 考试先问“它为什么不是传统股票/债券”，再落到 liquidity、valuation、fee、regulation、access。
 ├─ 1.2 Alternative Investment Features
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 Illiquidity：lockup、notice period、redemption gate、capital commitment；要求更高 liquidity premium。
+│  ├─ 1.2.2 Low transparency：持仓、估值、费用披露少于传统基金；尽调和 manager selection 更重要。
+│  ├─ 1.2.3 High fees：management fee + incentive fee/carried interest；费用能显著拉低 net return。
+│  ├─ 1.2.4 Complex valuation：缺少活跃市场价格，常用 appraisal/model/NAV；会造成 smoothed returns。
+│  └─ 1.2.5 Unique risks：operational、legal/regulatory、leverage、concentration、manager skill risk。
 ├─ 1.3 Alternative Investment Methods
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 Direct investment：控制权强、费用层级少；但集中度高、运营要求高、流动性低。
+│  ├─ 1.3.2 Co-investment：与 GP 一起投单个项目；费用通常更低但 selection risk 和 concentration 更高。
+│  └─ 1.3.3 Fund investment：分散和 access 更好；但有 manager selection、fee drag、透明度和赎回限制。
 ├─ 1.4 Alternative Investment Structures
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 LP/GP：LP 提供资本且责任有限，GP 管理投资并收取管理费和业绩报酬。
+│  ├─ 1.4.2 Closed-end vs open-end：closed-end 常见于 PE/VC，不随时赎回；open-end 更依赖 NAV 和赎回机制。
+│  └─ 1.4.3 Compensation：management fee 看 fee base；incentive fee 看 eligible profit、hurdle、high-water mark。
 ```
 
 ## 4. 知识点详解
@@ -110,51 +115,17 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 业绩衡量
+### 5.1 本模块判断框架
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| TVPI | `(累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI` | `2.1` | 总价值倍数 = 已分配 + 剩余价值 |
-| DPI | `累计分配 / 实缴资本` | `2.1` | 现金回报倍数 |
-| RVPI | `剩余价值 / 实缴资本` | `2.1` | 未实现回报倍数 |
-| PIC Multiple | `Paid-in Capital / Committed Capital` | `2.1` | 【考纲重点】资本调用进度 |
-| IRR | `0 = Σ_{t=0}^{N} CF_t/(1+IRR)^t` | `2.1` | 内部收益率 |
-| Management Fee | `Fee base x management fee rate` | `1.3` | AUM/committed capital/paid-in capital 读题 |
-| Incentive Fee / Carried Interest | `Eligible profit x incentive fee rate` | `1.3` | hurdle rate / high-water mark 先判断 |
-| Net Return | `Gross return - fees and expenses` | `1.3/2.1` | 费用结构会改变投资者回报 |
-| Sortino | `(R_p - R_f)/σ_d` | `2.1` | 下行风险调整收益 |
-| Sharpe | `(R_p - R_f)/σ_p` | `2.1` | 总风险调整收益 |
+| 框架/公式 | 内容 | 知识树节点 | 考试说明 |
+|---|---|---|---|
+| Liquidity premium logic | `lower liquidity -> higher required return / lower suitability for short horizon` | `1.2.1` | 不要把高预期收益和高适合度混同 |
+| Management fee | `fee base x management fee rate` | `1.4.3` | fee base 可能是 committed capital、paid-in capital 或 NAV/AUM |
+| Incentive fee / carried interest | `eligible profit x incentive fee rate` | `1.4.3` | 先判断 hurdle、catch-up、high-water mark 是否满足 |
+| Net return bridge | `gross return - management fee - incentive fee - expenses` | `1.4.3` | 本模块只要求理解 gross-to-net 方向和口径 |
+| Access method choice | `control need + diversification need + fee tolerance + operational ability` | `1.3` | direct/co-invest/fund 选择题的核心 |
 
-### 5.2 房地产
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Cap Rate | `NOI / Property Value` | `4.1` | 资本化率 |
-| Property Value | `NOI / Cap Rate` | `4.1` | 房地产估值 |
-| NOI | `租金收入 - 运营费用` | `4.1` | 净营运收入（不含折旧利息） |
-| Cap Rate, Growth Form | `Cap rate = r - g` | `4.1` | 【考纲重点】稳定增长房地产估值直觉 |
-| Property Value, Growth Form | `NOI_1 / (r - g)` | `4.1` | 与 Gordon growth 结构相同 |
-
-### 5.3 商品期货
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| 期货定价 | `F_0(T) = S_0e^((r + s - y)T)` | `5.1` | r=利率, s=存储, y=便利收益 |
-| Roll Yield | `(Near Future - Far Future) / Near Future` | `5.1` | 展期收益 |
-| 持有成本 | `ln[F_0(T)/S_0]/T = r + s - y` | `5.1` | 连续复利口径下的 cost of carry |
-| Collateral Yield | `Return on collateral posted for futures exposure` | `5.1` | 商品期货总回报来源之一 |
-| Commodity Futures Total Return | `Spot return + roll yield + collateral yield` | `5.1` | 【考纲重点】方向判断常考 |
-
-### 5.4 对冲基金
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Gross Leverage | `(Long + \|Short\|) / Capital` | `6.3` | 总杠杆 |
-| Net Leverage | `(Long - \|Short\|) / Capital` | `6.3` | 净杠杆 |
-| Long/Short Net Exposure | `Long exposure - Short exposure` | `6.3` | 市场方向性敞口 |
-| Long/Short Gross Exposure | `Long exposure + Short exposure` | `6.3` | 总风险规模 |
-
-### 5.5 考纲范围标记
+### 5.2 考纲范围标记
 
 | 标记 | 内容 |
 |------|------|
@@ -190,35 +161,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Alternative-Investment-Performance-and-Returns]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```
-M01 基础特征
-├── 六大特征 → M02-M07 各类资产的具体体现
-├── 费用结构 → M03 (PE/VC), M06 (Hedge Funds)
-└── 投资方法 → M03-M07 各类资产的参与方式
-
-M02 业绩衡量
-├── TVPI/DPI/RVPI → M03 (PE Fund 业绩报告)
-├── J曲线 → M03 (PE Fund 生命周期)
-└── 收益平滑 → M04 (房地产估值)
-
-M03 私人资本
-├── PE 杠杆 → M06 (Hedge Fund 杠杆对比)
-└── Private Debt → M01 (费用结构差异)
-
-M04 实物资产
-├── 房地产周期 → M05 (商品周期对比)
-└── 基础设施 → M03 (LBO基础设施收购)
-
-M05-M07 其他另类
-├── 商品期货 → Derivatives 科目联动
-├── 对冲基金 → M01-M02 (费用+业绩)
-└── 数字资产 → M01 (独特风险案例)
-```
+- **到 M02**：费用、估值频率和流动性限制会改变 reported return、net return 和 risk statistics。
+- **到 M03-M07**：direct/co-invest/fund、LP/GP、lockup、fee terms 是所有另类资产题目的底层语言。
+- **到 PM**：把另类加入组合前要检查 liquidity horizon、correlation reliability、allocation size、rebalancing constraint。
+- **到 Ethics**：低透明度和高费用使 disclosure、suitability、performance presentation 更容易被考到。
+- **到 FSA**：估值模型、NAV、费用确认和报表口径会影响投资业绩解释。
 
 ---
 

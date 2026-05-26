@@ -82,11 +82,15 @@ tags:
 ```text
 7. Company Analysis: Forecasting
 ├─ 7.1 预测主干 (Forecast spine)
-│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.1.1 Forecast objects：revenue、operating expenses、working capital、capex、capital structure、earnings/cash flow。
+│  ├─ 7.1.2 Top-down：macro -> industry -> market share -> company revenue，适合行业驱动强的公司。
+│  ├─ 7.1.3 Bottom-up：unit volume x price、customer count x ARPU、store count x sales/store，适合运营驱动清晰的公司。
+│  └─ 7.1.4 Forecast chain：revenue -> margin -> earnings/cash flow -> balance sheet needs -> valuation input。
 ├─ 7.2 预测纪律 (Forecast discipline)
-│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 7.2.1 Normalized base：从可持续的历史业绩出发，剔除一次性和周期异常。
+│  ├─ 7.2.2 Sustainable growth：`g = retention ratio x ROE`，检查增长是否由留存和回报支撑。
+│  ├─ 7.2.3 Scenario analysis：base/upside/downside 必须绑定关键假设、风险和催化剂。
+│  └─ 7.2.4 Horizon discipline：预测期应匹配竞争优势持续时间，不能为了估值结果随意拉长。
 ```
 
 ## 4. 知识点详解
@@ -106,11 +110,15 @@ tags:
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| 可持续增长率 (Sustainable Growth) | `g = Retention Ratio × ROE` |
-| 留存比率 (Retention Ratio) | `1 - Dividend Payout Ratio` |
-| 预期增长率 (Expected Growth) | `ROE × (1 - Payout Ratio)` |
+| 指标/框架 | 公式/步骤 | 对应节点 | 考试说明 |
+|---|---|---|---|
+| Sustainable growth | `g = retention ratio x ROE` | 7.2.2 | 不改变资本结构下的内生增长校验。 |
+| Retention ratio | `1 - dividend payout ratio` | 7.2.2 | 留存越多，其他条件不变可支持增长越高。 |
+| Expected growth | `ROE x (1 - payout ratio)` | 7.2.2 | 与 sustainable growth 同一逻辑。 |
+| Top-down revenue | `Industry sales x company market share` | 7.1.2 | 市场份额假设要与竞争分析一致。 |
+| Bottom-up revenue | `Units sold x average selling price` 或 `customers x ARPU` | 7.1.3 | 适合有明确运营驱动的数据。 |
+| Margin forecast | `Gross/operating margin assumptions` | 7.1.4 | 与 pricing power、cost inflation、scale economies 联动。 |
+| Scenario framework | `Base / upside / downside` | 7.2.3 | 每个情景要有触发条件，不是随意调数字。 |
 
 ## 6. 常见考点与解题思路
 
@@ -140,14 +148,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Industry-and-Competitive-Analysis]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M08-Equity-Valuation-Concepts-and-Basic-Tools]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **预测驱动估值输入** → [[M08-Equity-Valuation-Concepts]]
-- **历史分析为预测提供基准** → [[M05-Company-Analysis-Past-and-Present]]
-- **行业结构决定增长假设** → [[M06-Industry-and-Competitive-Analysis]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| Normalized base | [[M05-Company-Analysis-Past-and-Present]] | 历史分析提供预测起点。 | 异常年份不能机械外推。 |
+| Industry growth / pricing power | [[M06-Industry-and-Competitive-Analysis]] | 行业生命周期和五力决定收入与利润率假设。 | 增长假设要有行业证据。 |
+| Working capital / capex | Corporate Issuers / FSA | 增长需要营运资本和资本投入支持。 | 高增长但无资金来源不可持续。 |
+| Dividends/earnings/sales | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] | 预测输出进入 DDM、justified multiples 和 relative valuation。 | 估值错误常来自预测假设错误。 |
 
 
 ## 9. 复习与刷题提示

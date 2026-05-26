@@ -81,17 +81,20 @@ tags:
 ```text
 4. Introduction to the Global Investment Performance Standards (GIPS)
 ├─ 4.1 GIPS 的定位 (Purpose of GIPS)
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 GIPS 目标：fair representation and full disclosure，提高全球业绩可比性和可信度。
+│  └─ 4.1.2 GIPS 是自愿标准；但 firm 一旦 claim compliance，就必须按标准全面执行。
 ├─ 4.2 关键概念 (Key Concepts)
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 4.3 九大组成部分 (Nine Major Sections)
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Firm：只有 firm 能宣称合规，firm definition 必须清晰且不能为挑选业绩而随意改变。
+│  ├─ 4.2.2 Discretion：有全权管理权的 portfolios 才进入相应 composites；non-discretionary 不应混入。
+│  ├─ 4.2.3 Composite：相似策略/目标/限制的 portfolios 集合；必须包含所有符合条件的 discretionary portfolios。
+│  └─ 4.2.4 Compliant presentation：包含必要披露、计算口径、费用处理、货币和期间等信息。
+├─ 4.3 Fundamentals and major sections
+│  ├─ 4.3.1 Fundamentals：firm definition、policies/procedures、consistent input data、calculation methodology。
+│  ├─ 4.3.2 Major sections：input data、calculation、composite construction、disclosures、presentation/reporting。
+│  └─ 4.3.3 Asset-class sections：real estate、private equity 等专项章节处理非传统资产展示。
 ├─ 4.4 验证 (Verification)
-│  ├─ 4.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.4.1 Verification 是独立第三方评估 firm 是否按 GIPS 建立合规流程。
+│  └─ 4.4.2 Verification 不保证单个 composite 或每个 return number 正确。
 ```
 
 ## 4. 知识点详解
@@ -151,19 +154,13 @@ GIPS 是一套自愿遵守的全球投资业绩展示标准，旨在确保业绩
 
 ## 5. 关键公式与计算框架
 
-来自 legacy 核心知识点的公式/计算线索：
-
-| 部分 | 内容 |
-|------|------|
-| 0 | 基本原则 — 合规定义、公司定义 |
-| 1 | 输入数据 (Input Data) — 数据质量和一致性 |
-| 2 | 计算方法 (Calculation Methodology) — 收益率的计算标准 |
-| 3 | 组合组构建 (Composite Construction) |
-| 4 | 披露 (Disclosure) — 必须披露和鼓励披露的事项 |
-| 5 | 陈述与报告 (Presentation and Reporting) |
-| 6 | 房地产 (Real Estate) — 单独章节 |
-| 7 | 私募股权 (Private Equity) — 单独章节 |
-| 8 | 验证 (Verification) — 第三方评估公司合规流程 |
+| 框架/判断链 | 内容 | 知识树节点 | 考试说明 |
+|---|---|---|---|
+| Claim compliance gate | `claimant must be firm -> firm-wide compliance -> all requirements met` | `4.1/4.2.1` | 个人、单个账户或单个 composite 不能单独 claim |
+| Composite inclusion | `discretionary + meets strategy definition -> include in composite` | `4.2.2/4.2.3` | 防止 cherry-picking |
+| Fair presentation logic | `complete data + consistent method + required disclosures + no misleading selection` | `4.2.4/4.3` | 与 III(D) 业绩陈述连接 |
+| Verification logic | `independent review of firm policies/processes; not return guarantee` | `4.4` | 最常见陷阱 |
+| GIPS major sections memory | `fundamentals -> input -> calculation -> composite -> disclosure -> presentation -> real estate/private equity -> verification` | `4.3` | 以结构识别为主，无需深层审计技术 |
 
 ## 6. 常见考点与解题思路
 
@@ -199,14 +196,11 @@ GIPS 是一套自愿遵守的全球投资业绩展示标准，旨在确保业绩
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Guidance-for-Standards-I-VII]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Ethics-Application]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M05-Standard-III-Duties-to-Clients]] — III(D) Performance Presentation 与 GIPS 的衔接
-- [[M06-Standards-IV-and-V]] — V(C) 记录保留与 GIPS 记录要求一致
-- [[M04-Standard-II-Capital-Markets-Integrity]] — 市场诚信与 GIPS 提升业绩可信度的共同目标
+- **来自 M03**：Standard III(D) 要求业绩陈述公平、不误导；GIPS 提供更具体的全球展示标准。
+- **到 M05**：案例题中若出现 cherry-picking、部分合规、verification 误导，应回到本模块判断链。
+- **到 PM**：manager selection 需要看 composites、strategy definition、discretionary portfolio inclusion 和 compliant presentation。
+- **到 Alts/FSA**：real estate/private equity 估值和业绩展示需要额外披露，避免 appraisal/NAV 带来的误导。
+- **到 Compliance**：verification 是流程保证，不是收益保证；记录和政策程序必须可追溯。
 
 
 ## 9. 复习与刷题提示

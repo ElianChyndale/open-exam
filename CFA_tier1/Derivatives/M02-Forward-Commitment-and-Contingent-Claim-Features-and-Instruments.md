@@ -79,20 +79,22 @@ tags:
 ```text
 2. Forward Commitment and Contingent Claim Features and Instruments
 ├─ 2.1 Introduction
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 第一分叉：forward commitment 是 obligation，contingent claim 是 right/triggered claim
+│  └─ 2.1.2 payoff 形状：obligation 多为线性，option payoff 非线性且下行/上行不对称
 ├─ 2.2 Forwards, Futures, and Swaps
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 Forward：OTC、customized、single future exchange；到期多头 payoff=`S_T-K`
+│  ├─ 2.2.2 Futures：exchange-traded、standardized、daily settlement、margin
+│  └─ 2.2.3 Swap：series of forward-like cash-flow exchanges，常见 fixed-for-floating
 ├─ 2.3 Futures
-│  ├─ 2.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.3.1 Daily mark-to-market 将盈亏每日实现，改变现金流时点
+│  └─ 2.3.2 Margin 是履约保障，不是 option premium
 ├─ 2.4 Swaps
-│  ├─ 2.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.4.1 Interest rate swap 多数不交换 notional，只按 notional 计算净利息
+│  └─ 2.4.2 Currency swap 可能交换不同币种本金与利息，含 FX exposure
 ├─ 2.5 Options
-│  ├─ 2.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.5.1 Call holder has right to buy；put holder has right to sell；writer bears obligation
+│  ├─ 2.5.2 Call payoff=`max(0,S_T-X)`；put payoff=`max(0,X-S_T)`
+│  └─ 2.5.3 Profit = payoff - premium for long option；payoff 不是 profit
 ```
 
 ## 4. 知识点详解
@@ -208,24 +210,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Derivative-Instrument-and-Derivative-Market-Features]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
-└── Contingent claims -> option payoff asymmetry (中文)
-Uses and Risks
-├── issuer hedge -> financing/operating exposure control (中文)
-└── investor exposure -> capital efficiency + leverage discipline (中文)
-Pricing Spine
-├── no-arbitrage -> replication -> cost of carry (中文)
-├── forwards/futures -> forward value and daily settlement (中文)
-├── swaps -> bond pair / FRA strip intuition (中文)
-└── options -> parity -> binomial valuation (中文)
-```
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M01 -> M02` | venue、settlement、notional、underlying | 完成工具分类和合约特征比较。 |
+| `M02 -> M03` | hedge/speculate/arbitrage 可用工具 | 判断使用者选择工具的动机与风险。 |
+| `M02 -> M05/M06/M07` | forward/futures/swap 是线性义务 | 进入 price/value 和 daily settlement 计算。 |
+| `M02 -> M08/M09/M10` | options 是 contingent claims | 进入 payoff/profit、parity、binomial。 |
 
 ---
 

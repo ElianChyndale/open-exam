@@ -90,17 +90,17 @@ tags:
 ```text
 1. Ethics and Trust in the Investment Profession
 ├─ 1.1 职业的本质 (Nature of a Profession)
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 Profession = specialized knowledge + service to others + code/standards + discipline process。
+│  └─ 1.1.2 投资行业靠 trust 运作；损害信任的行为即使短期合法，也会提高资本市场摩擦。
 ├─ 1.2 道德与法律的边界 (Ethics vs. Law)
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 Law 是最低可执行规则；ethics 是判断应不应该做，通常高于最低法律要求。
+│  └─ 1.2.2 Stricter standard rule：当地法律、公司规则、CFA Standards 中取更严格行为。
 ├─ 1.3 受托人心态 (Fiduciary Mindset)
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 Client-first：loyalty、prudence、care，不把个人/雇主便利置于客户利益之前。
+│  └─ 1.3.2 不是所有题都写 fiduciary，但遇到 suitability、conflict、fair dealing 时要用这种优先级。
 ├─ 1.4 七条职业行为准则总纲 (Seven Standards Overview)
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 Standards I-VII 把 professional integrity 分解为法律/市场/客户/雇主/研究/冲突/CFA 身份责任。
+│  └─ 1.4.2 本模块只建判断底座，具体违规定位在 M03 和 M05 中完成。
 ```
 
 ## 4. 知识点详解
@@ -138,11 +138,13 @@ Standards I-VII 涵盖了从专业精神、市场诚信到客户义务、雇主�
 
 ### 5.1 核心内容
 
-| 框架 | 内容 | 应用场景 |
-|------|------|----------|
-| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | 法律与标准冲突时 |
-| Priority Rule | `client > market integrity > employer/self convenience` | 利益冲突排序 |
-| 道德底线判断 | 合法 + 合乎职业标准 + 可公开辩护 | 情境题基本原则 |
+| 框架 | 内容 | 知识树节点 | 应用场景 |
+|------|------|------|----------|
+| Profession trust chain | `specialized knowledge -> service orientation -> code/standards -> discipline -> public trust` | `1.1` | 判断 profession 与 ordinary occupation |
+| Stricter Standard Rule | `required conduct = most strict(applicable law, regulation, CFA Standards)` | `1.2` | 法律与标准冲突时 |
+| Ethical vs legal test | `legal? -> ethical? -> protects trust? -> defensible if public?` | `1.2/1.4` | 合法但不当的题干 |
+| Priority Rule | `client interest + market integrity > employer/self convenience` | `1.3` | 初步利益冲突排序 |
+| Ethical decision framework | `facts -> stakeholders -> duties/conflicts -> alternatives -> action -> reflection` | `1.4` | 情境题基本步骤 |
 
 ## 6. 常见考点与解题思路
 
@@ -179,14 +181,10 @@ Standards I-VII 涵盖了从专业精神、市场诚信到客户义务、雇主�
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Code-of-Ethics-and-Standards-of-Professional-Conduct]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Code-of-Ethics]] — Code of Ethics 是 Standards 的总纲
-- [[M03-Standard-I-Professionalism]] — Standard I 具体展开专业性要求
-- [[M05-Standard-III-Duties-to-Clients]] — 受托人义务的具体应用
+- **到 M02**：本模块解释为什么 profession 需要 Code、Standards 和 enforcement；M02 给出正式索引。
+- **到 M03**：ethics vs law、professionalism、fiduciary mindset 会落到 Standards I、III、VI 的具体判断。
+- **到 M05**：案例题先用本模块的 facts/stakeholders/duties 框架，再定位具体 Standard。
+- **到全科目**：研究报告、交易、客户推荐、业绩展示、模型假设和身份表述都受 trust 与 professional judgment 约束。
 
 
 ## 9. 复习与刷题提示

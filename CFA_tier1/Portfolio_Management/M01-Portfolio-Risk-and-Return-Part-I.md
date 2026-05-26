@@ -93,20 +93,24 @@ tags:
 ```text
 1. Portfolio Risk and Return: Part I
 ├─ 1.1 Introduction
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 Portfolio context：单个资产必须放入组合中判断 marginal contribution to risk/return
+│  └─ 1.1.2 Decision frame：收益、风险、流动性、税收和投资者目标共同决定配置
 ├─ 1.2 Historical Return and Risk
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 Historical return：arithmetic 用于单期预期，geometric 用于复合增长
+│  ├─ 1.2.2 Risk：standard deviation 衡量总波动，downside risk 衡量低于目标的结果
+│  └─ 1.2.3 Risk-adjusted judgment：只比较 return 不够，要看每单位风险补偿
 ├─ 1.3 Other Investment Characteristics
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 Liquidity：能否以合理价格及时交易，影响 required return
+│  ├─ 1.3.2 Taxes/fees：改变投资者实际到手收益
+│  └─ 1.3.3 Time horizon：期限越长通常越能承受短期波动
 ├─ 1.4 Risk Aversion and Portfolio Selection
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 Risk aversion：风险越高，要求的 expected return 越高
+│  ├─ 1.4.2 Utility：`U=E(R)-0.5Aσ²`，A 越大风险惩罚越重
+│  └─ 1.4.3 Portfolio choice：同一风险下选更高收益，同一收益下选更低风险
 ├─ 1.5 Utility Theory and Indifference Curves
-│  ├─ 1.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.5.1 Indifference curve：同一效用水平下风险/收益组合的集合
+│  ├─ 1.5.2 曲线斜率：越陡代表越风险厌恶
+│  └─ 1.5.3 最优点：最高可达 indifference curve 与 efficient frontier 相切
 ```
 
 ## 4. 知识点详解
@@ -163,6 +167,16 @@ tags:
 | Information Ratio | `(R_p - R_b) / Tracking Error` | `M05` | 【考纲重点】主动收益/主动风险 |
 | Required Excess Return | `β_i x (E(R_m)-R_f)` | `M04` | CAPM risk premium |
 
+### 5.2 本模块计算框架
+
+| 题干任务 | 使用工具 | 知识树节点 | 防错点 |
+|---|---|---|---|
+| 比较历史收益 | arithmetic / geometric mean | `1.2.1` | 长期复合用 geometric。 |
+| 比较风险 | standard deviation / downside risk | `1.2.2` | 标准差是总风险，不区分上下行。 |
+| 计算效用 | `U=E(R)-0.5Aσ²` | `1.4.2` | σ 要用小数，A 越大风险惩罚越重。 |
+| 组合选择 | 比较 utility 或 efficient frontier | `1.4-1.5` | 不只看最高 return。 |
+| 投资特征判断 | liquidity/tax/time horizon | `1.3` | 非收益特征会改变 suitability。 |
+
 ### 5.1 考纲范围标记
 
 | 标记 | 内容 |
@@ -200,8 +214,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Portfolio-Risk-and-Return-Part-II]]。本模块输出会被后续更复杂题型调用。
+| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
+|---|---|---|---|
+| `1.2` return/risk | Quant M01/M03、PM M02 | 后续 Sharpe、CAL、CAPM 都先需要收益和风险口径 | 历史收益不等于未来 required return。 |
+| `1.4` utility/risk aversion | [[M02-Portfolio-Risk-and-Return-Part-II]]、IPS | 决定风险资产与无风险资产配置 | 高 willingness 不等于高 ability。 |
+| `1.5` efficient frontier | PM M02/M04 | 最优组合和资产配置 | frontier 上方不可达，下方非有效。 |
+| `1.3` liquidity/taxes/time | [[M04-Basics-of-Portfolio-Planning-and-Construction]] | IPS constraints 和 suitability | 投资特征会让数学最优组合不可执行。 |
 
 ### Legacy 关联补充
 

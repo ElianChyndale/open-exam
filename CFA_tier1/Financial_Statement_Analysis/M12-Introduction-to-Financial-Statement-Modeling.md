@@ -81,20 +81,25 @@ tags:
 ```text
 12. Introduction to Financial Statement Modeling
 ├─ 12.1 基于销售的 Pro Forma 模型 (Sales-Based Pro Forma Model)
-│  ├─ 12.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.1.1 Sales forecast 是 driver：COGS、SG&A、working capital 常按 sales percentage 推
+│  ├─ 12.1.2 固定/阶梯项目：debt、interest、capacity-driven PP&E 不能机械按销售比例
+│  └─ 12.1.3 Plug：forecast assets - forecast liabilities - forecast equity 表示融资缺口或现金盈余
 ├─ 12.2 分析师预测偏差与修正 (Analyst Forecast Bias and Remedies)
-│  ├─ 12.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.2.1 Bias：optimism、selection、herding、anchoring/self-attribution
+│  ├─ 12.2.2 Remedy：base-rate、scenario analysis、cross-validation、forecast accuracy tracking
+│  └─ 12.2.3 判断：预测明显高于历史与行业时，必须给出结构性证据
 ├─ 12.3 波特效应：价格与成本影响 (Porter Effects on Prices and Costs)
-│  ├─ 12.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.3.1 Supplier power -> COGS/wage/raw material assumptions
+│  ├─ 12.3.2 Buyer power/substitutes/rivalry -> pricing power、volume growth、margin fade
+│  └─ 12.3.3 判断：五力必须转成 price、cost、reinvestment、terminal margin 的数字假设
 ├─ 12.4 通胀/通缩在销售与成本预测中的影响 (Inflation / Deflation in Sales and Cost Forecasts)
-│  ├─ 12.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.4.1 Nominal growth = (1 + real growth)(1 + inflation) - 1
+│  ├─ 12.4.2 通胀：看是否能 pass through price；成本项目要分 labor/material/fixed cost
+│  └─ 12.4.3 通缩：定价承压、inventory write-down 风险上升、固定成本吸收变差
 ├─ 12.5 预测期与终值选择 (Explicit Forecast Horizon and Terminal Projection Choices)
-│  ├─ 12.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.5.1 Forecast horizon：直到公司接近稳定增长/稳定 margin/稳定 reinvestment
+│  ├─ 12.5.2 Terminal value：Gordon growth 或 exit multiple，关键假设要敏感性测试
+│  └─ 12.5.3 判断：terminal growth 长期不应显著超过经济增长，terminal margin 要符合竞争格局
 ```
 
 ## 4. 知识点详解
@@ -170,6 +175,10 @@ tags:
 | 永续增长终值 (FCFE) | `TV = FCFE_{n+1} / (r - g)` | FCFE 终值 |
 | 退出倍数终值 | `TV = EBITDA_n x Selected Multiple` | 基于可比退出倍数 |
 | 融资缺口 (Plug) | `Forecast Assets - Forecast Liabilities - Forecast Equity` | 需外部融资或产生盈余 |
+| Nominal Growth | `(1 + Real Growth) x (1 + Inflation) - 1` | 区分销量增长和价格增长 |
+| Forecast COGS | `Forecast Sales x Historical COGS / Historical Sales` | 仅在成本率稳定时使用 |
+| Forecast Working Capital Item | `Forecast Sales x Historical WC Item / Historical Sales` | 应收、存货、应付可用销售百分比法起步 |
+| Sensitivity Table | `Value under different g / margin / multiple assumptions` | 终值和关键假设必须做情景检查 |
 
 ## 6. 常见考点与解题思路
 
@@ -202,16 +211,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M11-Financial-Analysis-Techniques]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M10-Financial-Analysis-Techniques|财务分析技术]]：比率分析和 DuPont 分解的结果是模型假设设定的基础
-- [[M02-Income-Statement|利润表分析]]：收入预测和利润率假设是 pro forma 模型的起点
-- [[M03-Balance-Sheet|资产负债表]]：杠杆比率和营运资本效率影响模型中的融资需求预测
-- [[M04-Cash-Flow-Statements|现金流量表]]：FCFF/FCFE 预测是估值模型的核心输入
-- [[M09-Financial-Reporting-Quality|财务报告质量]]：财务报告质量影响预测假设的可靠性和预测偏差的可控性
+- **连接 M02**：revenue growth、gross margin、operating margin 是 pro forma income statement 的起点。
+- **连接 M03/M11**：working capital、asset turnover、leverage ratios 决定 forecast balance sheet 和融资缺口。
+- **连接 M04/M05/Equity**：FCFF/FCFE forecasts 是估值输入，CFO 质量决定模型可信度。
+- **连接 M10**：低质量 earnings 不应直接外推；先 normalize earnings、cash flow 和 one-off items。
+- **连接 Corporate Issuers/Credit**：模型输出的 financing need、coverage、leverage 用于融资和偿债能力判断。
 
 
 ## 9. 复习与刷题提示

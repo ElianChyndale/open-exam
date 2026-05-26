@@ -72,20 +72,24 @@ tags:
 ```text
 5. Fixed-Income Markets for Government Issuers
 ├─ 5.1 主权债券 (Sovereign Bonds)
-│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.1.1 Sovereign bonds 是中央政府债务；发达市场常作 risk-free benchmark，新兴市场需看信用/外汇风险
+│  ├─ 5.1.2 Local currency vs foreign currency：本币债有货币政策灵活性，外币债依赖外汇收入与储备
+│  └─ 5.1.3 T-bills/notes/bonds 构成 benchmark curve，连接 M09 term structure
 ├─ 5.2 政府机构债券 (Government Agency Debt)
-│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.2.1 Agency/quasi-government debt 可能有显性担保、隐性支持或无政府担保
+│  ├─ 5.2.2 Spread 取决于支持强度、使命重要性、独立财务状况和流动性
+│  └─ 5.2.3 不要把所有 agency debt 直接当 sovereign risk-free
 ├─ 5.3 超国家债券 (Supranational Bonds)
-│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.3.1 Supranational issuers 由多个国家支持，如 World Bank、EIB、ADB
+│  ├─ 5.3.2 信用品质来自成员国资本承诺、preferred creditor status 和资产质量
+│  └─ 5.3.3 常作为高信用质量跨国债券，与 sovereign curve 仍可能有 spread
 ├─ 5.4 市政债券 (Municipal Bonds)
-│  ├─ 5.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.4.1 GO bonds 由一般税收支持；revenue bonds 由项目收入支持
+│  ├─ 5.4.2 Taxable equivalent yield = tax-exempt yield/(1 - tax rate)
+│  └─ 5.4.3 判断应税/免税收益率时，先确认投资者税率和收益是否 tax-exempt
 ├─ 5.5 国债期限结构 (Treasury Maturity Structure)
-│  ├─ 5.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 5.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 5.5.1 Bills/notes/bonds 区分短中长期政府融资，也提供 curve construction 的市场输入
+│  └─ 5.5.2 Inflation-linked：adjusted principal = original principal x current CPI/base CPI；保护 purchasing power
 ```
 
 ## 4. 知识点详解
@@ -164,16 +168,23 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Benchmark curve | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] | sovereign yield curve、T-bills/notes/bonds | 构造 spot/par/forward curve |
+| Government spread | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | government benchmark yield | 计算 benchmark/G-spread |
+| Sovereign credit | [[M15-Credit-Analysis-for-Government-Issuers]] | local vs foreign currency、agency support | 判断主权/准政府信用风险 |
+| 税收与通胀 | Portfolio Management / Economics | taxable equivalent yield、TIPS CPI adjustment | 比较 after-tax/real return |
+
 - **上游模块**：[[M04-Fixed-Income-Markets-for-Corporate-Issuers]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
 - 国债收益率基准 → [[M04-Yield-and-Spread-Measures]] 利差度量以国债为基准
-- 主权信用分析 → [[M11-Government-and-Corporate-Credit]] 主权评级因素
+- 主权信用分析 → [[M15-Credit-Analysis-for-Government-Issuers]] 主权评级因素
 - 通胀保护 → [[M02-Fixed-Income-Cash-Flows]] 通胀挂钩现金流结构
 - 短期国债 → [[M05-Floating-Rate-and-Money-Market]] 货币市场工具与收益率
-- 市政债税收 → [[M10-Credit-Risk]] 信用风险的税收维度
+- 市政债税收 → [[M14-Credit-Risk]] 信用风险与税收维度的区分
 
 
 ## 9. 复习与刷题提示

@@ -76,11 +76,13 @@ tags:
 ```text
 12. Yield-Based Bond Convexity and Portfolio Properties
 ├─ 12.1 久期家族 (Duration Family)
-│  ├─ 12.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.1.1 Convexity = (P_- + P_+ - 2P_0)/(P_0 x Δy^2)；用重估价格捕捉曲率
+│  ├─ 12.1.2 Convexity adjustment：%ΔP ≈ -D_mod x Δy + 0.5 x convexity x Δy^2
+│  └─ 12.1.3 正凸性让 price gain for yield decrease 大于 price loss for same yield increase
 ├─ 12.2 凸性 (Convexity)
-│  ├─ 12.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 12.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 12.2.1 Portfolio duration/convexity = Σ market value weight x security measure
+│  ├─ 12.2.2 组合加权适合小幅平行变动；barbell/bullet/ladder 改变 convexity 与 cash-flow timing
+│  └─ 12.2.3 Callable/MBS 可能出现 negative convexity；不能用 option-free 直觉直接判断
 ```
 
 ## 4. 知识点详解
@@ -143,6 +145,13 @@ tags:
 | ❌ 忽略：凸性用 decimals 计算时 Δy 也要用小数：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。 | ✅ 凸性用 decimals 计算时 Δy 也要用小数：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
+
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Convexity adjustment | [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] | second-order price effect | 修正 duration 低估/高估 |
+| Option risk | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | negative convexity intuition | callable/MBS 转向 effective convexity |
+| Portfolio construction | Portfolio Management | weighted duration/convexity | barbell/bullet/ladder 风险比较 |
+| MBS behavior | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] | negative convexity | 提前还款导致价格上行受限 |
 
 - **上游模块**：[[M11-Yield-Based-Bond-Duration-Measures-and-Properties]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]]。本模块输出会被后续更复杂题型调用。

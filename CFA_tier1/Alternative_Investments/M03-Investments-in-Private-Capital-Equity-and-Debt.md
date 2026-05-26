@@ -75,17 +75,20 @@ tags:
 ```text
 3. Investments in Private Capital: Equity and Debt
 ├─ 3.1 Introduction
-│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.1.1 Private capital = private equity + private debt，通常通过承诺资本、封闭期和 GP 管理实现。
+│  └─ 3.1.2 题干先分 equity upside 还是 contractual credit return，再判断风险和分散化来源。
 ├─ 3.2 Private Equity Investment Characteristics
-│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.2.1 VC：早期公司，失败率高、现金流弱、J-curve 深；回报来自少数成功退出。
+│  ├─ 3.2.2 Growth equity：扩张期企业，通常少数股权、杠杆较低，风险/回报介于 VC 与 LBO。
+│  ├─ 3.2.3 LBO：用较高债务收购成熟企业，回报来自 leverage、cash flow、operational improvement、exit multiple。
+│  └─ 3.2.4 Distressed/special situations：低价进入财务困境资产，风险来自重组结果和法律程序。
 ├─ 3.3 Private Debt Investment Characteristics
-│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.3.1 Direct lending：向非上市/中小企业贷款，收益来自 coupon + spread，风险看 covenants 和 collateral。
+│  ├─ 3.3.2 Mezzanine debt：介于 senior debt 和 equity，常带 warrants/equity kicker，收益高但次级风险高。
+│  └─ 3.3.3 Distressed debt：以折价买入困境债务，收益依赖 recovery 和 restructuring。
 ├─ 3.4 Diversification Benefits of Private Capital
-│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 3.4.1 低相关性可能来自真实不同风险因子，也可能来自 appraisal smoothing。
+│  └─ 3.4.2 考试输出要同时写 potential diversification benefit 和 liquidity/valuation/manager concentration cost。
 ```
 
 ## 4. 知识点详解
@@ -112,51 +115,17 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 业绩衡量
+### 5.1 本模块框架与公式
 
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| TVPI | `(累计分配 + 剩余价值) / 实缴资本 = DPI + RVPI` | `2.1` | 总价值倍数 = 已分配 + 剩余价值 |
-| DPI | `累计分配 / 实缴资本` | `2.1` | 现金回报倍数 |
-| RVPI | `剩余价值 / 实缴资本` | `2.1` | 未实现回报倍数 |
-| PIC Multiple | `Paid-in Capital / Committed Capital` | `2.1` | 【考纲重点】资本调用进度 |
-| IRR | `0 = Σ_{t=0}^{N} CF_t/(1+IRR)^t` | `2.1` | 内部收益率 |
-| Management Fee | `Fee base x management fee rate` | `1.3` | AUM/committed capital/paid-in capital 读题 |
-| Incentive Fee / Carried Interest | `Eligible profit x incentive fee rate` | `1.3` | hurdle rate / high-water mark 先判断 |
-| Net Return | `Gross return - fees and expenses` | `1.3/2.1` | 费用结构会改变投资者回报 |
-| Sortino | `(R_p - R_f)/σ_d` | `2.1` | 下行风险调整收益 |
-| Sharpe | `(R_p - R_f)/σ_p` | `2.1` | 总风险调整收益 |
+| 框架/公式 | 内容 | 知识树节点 | 考试说明 |
+|---|---|---|---|
+| Private equity value creation | `revenue/EBITDA growth + margin improvement + multiple expansion + leverage effect` | `3.2` | Level I 多为方向解释，不要求完整 LBO 建模 |
+| Capital call progress | `paid-in capital / committed capital` | `3.1` | 与 M02 PIC 连接；不是回报倍数 |
+| PE performance language | `TVPI = DPI + RVPI` | `3.2` | PE 题常从 M02 借用倍数 |
+| Private debt return | `contractual coupon + spread/fees + possible equity kicker - expected credit loss` | `3.3` | 用来区分 private debt 与 private equity upside |
+| Diversification screen | `correlation benefit - liquidity cost - valuation smoothing risk` | `3.4` | 不能只写低相关性 |
 
-### 5.2 房地产
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Cap Rate | `NOI / Property Value` | `4.1` | 资本化率 |
-| Property Value | `NOI / Cap Rate` | `4.1` | 房地产估值 |
-| NOI | `租金收入 - 运营费用` | `4.1` | 净营运收入（不含折旧利息） |
-| Cap Rate, Growth Form | `Cap rate = r - g` | `4.1` | 【考纲重点】稳定增长房地产估值直觉 |
-| Property Value, Growth Form | `NOI_1 / (r - g)` | `4.1` | 与 Gordon growth 结构相同 |
-
-### 5.3 商品期货
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| 期货定价 | `F_0(T) = S_0e^((r + s - y)T)` | `5.1` | r=利率, s=存储, y=便利收益 |
-| Roll Yield | `(Near Future - Far Future) / Near Future` | `5.1` | 展期收益 |
-| 持有成本 | `ln[F_0(T)/S_0]/T = r + s - y` | `5.1` | 连续复利口径下的 cost of carry |
-| Collateral Yield | `Return on collateral posted for futures exposure` | `5.1` | 商品期货总回报来源之一 |
-| Commodity Futures Total Return | `Spot return + roll yield + collateral yield` | `5.1` | 【考纲重点】方向判断常考 |
-
-### 5.4 对冲基金
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Gross Leverage | `(Long + \|Short\|) / Capital` | `6.3` | 总杠杆 |
-| Net Leverage | `(Long - \|Short\|) / Capital` | `6.3` | 净杠杆 |
-| Long/Short Net Exposure | `Long exposure - Short exposure` | `6.3` | 市场方向性敞口 |
-| Long/Short Gross Exposure | `Long exposure + Short exposure` | `6.3` | 总风险规模 |
-
-### 5.5 考纲范围标记
+### 5.2 考纲范围标记
 
 | 标记 | 内容 |
 |------|------|
@@ -192,35 +161,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Alternative-Investment-Performance-and-Returns]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M04-Real-Estate-and-Infrastructure]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```
-M01 基础特征
-├── 六大特征 → M02-M07 各类资产的具体体现
-├── 费用结构 → M03 (PE/VC), M06 (Hedge Funds)
-└── 投资方法 → M03-M07 各类资产的参与方式
-
-M02 业绩衡量
-├── TVPI/DPI/RVPI → M03 (PE Fund 业绩报告)
-├── J曲线 → M03 (PE Fund 生命周期)
-└── 收益平滑 → M04 (房地产估值)
-
-M03 私人资本
-├── PE 杠杆 → M06 (Hedge Fund 杠杆对比)
-└── Private Debt → M01 (费用结构差异)
-
-M04 实物资产
-├── 房地产周期 → M05 (商品周期对比)
-└── 基础设施 → M03 (LBO基础设施收购)
-
-M05-M07 其他另类
-├── 商品期货 → Derivatives 科目联动
-├── 对冲基金 → M01-M02 (费用+业绩)
-└── 数字资产 → M01 (独特风险案例)
-```
+- **来自 M01**：LP/GP、closed-end fund、capital commitment、fee terms 是 private capital 的基础结构。
+- **来自 M02**：J-curve、TVPI/DPI/RVPI、PIC、IRR 用于解释 PE fund performance。
+- **到 M04**：infrastructure acquisition 可通过 private equity/LBO 或 private debt 融资结构出现。
+- **到 FI/FSA**：private debt 连接 credit spread、covenants、recovery、cash flow coverage；LBO 连接 leverage 和 debt service。
+- **到 Ethics/PM**：估值、performance presentation、illiquidity suitability 和 manager due diligence 都是跨科接口。
 
 ---
 

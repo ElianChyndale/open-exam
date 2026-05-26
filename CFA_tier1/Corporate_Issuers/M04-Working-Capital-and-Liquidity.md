@@ -74,14 +74,18 @@ tags:
 ```text
 4. Working Capital and Liquidity
 ├─ 4.1 经营周期 (Operating Cycle) 与现金转换周期 (Cash Conversion Cycle)
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Operating cycle：`DIO + DSO`，从存货形成到销售回款的时间。
+│  ├─ 4.1.2 Cash conversion cycle：`DIO + DSO - DPO`，公司实际需要融资的经营天数。
+│  ├─ 4.1.3 Driver diagnosis：DIO 看库存，DSO 看信用和收款，DPO 看供应商付款条款。
+│  └─ 4.1.4 判断陷阱：CCC 下降可能是效率提高，也可能是过度压供应商或收紧信用。
 ├─ 4.2 融资政策 (Financing Policy)
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Aggressive policy：更多短期融资、低流动性缓冲、成本较低但 rollover risk 高。
+│  ├─ 4.2.2 Conservative policy：更多长期资金和现金缓冲，稳健但占用资本、拉低 ROA。
+│  └─ 4.2.3 选择条件：现金流越可预测，越能承受激进政策；季节性/周期性强则需要缓冲。
 ├─ 4.3 流动性比率 (Liquidity Ratios)
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.3.1 Current ratio：覆盖全部 current assets，但可能被低质量库存抬高。
+│  ├─ 4.3.2 Quick ratio：排除 inventory，更关注现金、证券和应收。
+│  └─ 4.3.3 Cash ratio：最保守，只看现金和短期证券。
 ```
 
 ## 4. 知识点详解
@@ -129,6 +133,12 @@ tags:
 | 应付账款周转天数 (DPO) | `(Average Payables / Purchases or COGS) x 365` | 付款平均天数，注意分母是 purchases |
 | 经营周期 | `DIO + DSO` | 从付出现金到收回现金的时间 |
 | 现金转换周期 | `DIO + DSO - DPO` | 实际需要融资的天数 |
+| Inventory turnover | `COGS / average inventory` | 与 DIO 方向相反，`DIO = 365 / turnover` |
+| Receivables turnover | `Revenue / average receivables` | 与 DSO 方向相反 |
+| Payables turnover | `Purchases or COGS / average payables` | 与 DPO 方向相反 |
+| Current ratio | `Current assets / current liabilities` | 高不一定好，可能资本占用低效 |
+| Quick ratio | `(Cash + marketable securities + receivables) / current liabilities` | 排除 inventory |
+| Cash ratio | `(Cash + marketable securities) / current liabilities` | 最保守流动性指标 |
 
 使用场景：CCC 分析帮助判断公司营运资本管理的效率。CCC 下降可能是好事（管理改善），也可能是坏事（过度挤压供应商或收紧信用导致销售下降）。
 
@@ -168,15 +178,12 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Capital-Investments-and-Capital-Allocation]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 营运资本效率 → [[M04-Capital-Investments]] 项目现金流中需包含营运资本变动
-- 融资政策 → [[M05-Cost-of-Capital]] 短期 vs 长期融资成本对应资本结构决策
-- 流动性与杠杆 → [[M06-Capital-Structure-and-Leverage]] 激进融资政策增加财务杠杆风险
-- 现金转换周期 → [[M07-Business-Models]] 不同商业模式的 CCC 特征不同（如零售业 CCC 通常为负）
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| NOWC investment | [[M05-Capital-Investments-and-Capital-Allocation]] | 项目初始现金流和终结现金流要包含营运资本投入与回收。 | 忘记 NOWC 是资本预算常见漏项。 |
+| Liquidity policy | [[M06-Capital-Structure]] | 短期融资比例影响 rollover risk 和财务灵活性。 | 激进政策不是单纯“更高效”。 |
+| CCC / cash conversion | [[M07-Business-Models]] | 商业模式质量体现在收款、库存和付款周期。 | 负 CCC 可能是模式优势，也可能不可持续。 |
+| Ratio data | FSA | 周转天数来自财报数据。 | 比率变化要结合业务原因解释。 |
 
 
 ## 9. 复习与刷题提示

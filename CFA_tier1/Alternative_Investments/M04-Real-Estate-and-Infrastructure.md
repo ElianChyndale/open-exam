@@ -78,11 +78,15 @@ tags:
 ```text
 4. Real Estate and Infrastructure
 ├─ 4.1 房地产 (Real Estate)【考试核心】
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 Investment forms：direct property 控制强但流动性低；REIT 流动性高但更受公开市场波动影响。
+│  ├─ 4.1.2 Valuation：income approach 用 Value = NOI / cap rate；cost 和 sales comparison 用于交叉验证。
+│  ├─ 4.1.3 NOI 口径：租金收入 - operating expenses，不扣 depreciation 和 interest。
+│  └─ 4.1.4 Cap rate：反映 required return - growth；cap rate 上升，property value 下降。
 ├─ 4.2 基础设施 (Infrastructure)【考试核心】
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Essential service assets：transport、utilities、energy、communication；现金流常长期、受监管或合同约束。
+│  ├─ 4.2.2 Brownfield：已有运营资产，现金流稳定，建设风险低，预期回报较低。
+│  ├─ 4.2.3 Greenfield：新建项目，建设/许可/成本超支风险高，预期回报较高。
+│  └─ 4.2.4 Risk screen：regulatory、political、leverage、demand、inflation linkage、ESG/operational risk。
 ```
 
 ## 4. 知识点详解
@@ -144,11 +148,13 @@ tags:
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| NOI | 租金收入 - 运营费用（不含折旧和利息） |
-| Cap Rate | NOI / Property Value |
-| Property Value | NOI / Cap Rate |
+| 指标/框架 | 公式或判断链 | 知识树节点 | 考试说明 |
+|------|------|------|------|
+| NOI | `rental income - operating expenses` | `4.1.3` | 不含折旧、利息和所得税 |
+| Cap Rate | `NOI / Property Value` | `4.1.2` | 用于 income approach |
+| Property Value | `NOI / Cap Rate` | `4.1.2` | cap rate 用小数；方向关系常考 |
+| Growth-form cap rate | `cap rate = required return - expected NOI growth` | `4.1.4` | 与 Gordon growth 直觉一致 |
+| Brownfield/greenfield gate | `existing operating cash flow -> brownfield; new construction -> greenfield` | `4.2.2/4.2.3` | 先看是否已有运营现金流 |
 
 **核心关系**: Cap Rate与物业价值呈反向关系（Cap Rate↑ → Value↓）
 
@@ -183,15 +189,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Investments-in-Private-Capital-Equity-and-Debt]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Natural-Resources]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 房地产周期 → [[M05-Natural-Resources.md]] (商品周期对比)
-- 基础设施收购 → [[M03-Private-Capital.md]] (LBO基础设施收购)
-- 收益平滑 → [[M02-Performance-Measurement.md]] (房地产估值与收益平滑)
-- Cap Rate → [[M01-Features-and-Structure.md]] (另类投资估值特征)
+- **来自 M01**：direct/fund ownership、illiquidity、appraisal valuation 和 unique operational risk 是本模块入口。
+- **来自 M02**：direct real estate/infrastructure 的 appraisal NAV 会带来 return smoothing。
+- **到 M05**：房地产周期与商品/自然资源周期都受宏观、通胀和供需影响，但现金流来源不同。
+- **到 FSA/Equity**：NOI、cap rate、REIT 收益模型、depreciation 与 operating cash flow 的口径容易联动。
+- **到 FI/PM**：基础设施现金流具有 duration、inflation linkage、regulatory risk 和 leverage sensitivity。
 
 
 ## 9. 复习与刷题提示

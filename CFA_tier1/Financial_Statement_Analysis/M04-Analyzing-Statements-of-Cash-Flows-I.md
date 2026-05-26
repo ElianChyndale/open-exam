@@ -82,14 +82,17 @@ tags:
 ```text
 4. Analyzing Statements of Cash Flows I
 ├─ 4.1 三大报表联动 (Three-Statement Linkage)
-│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.1.1 IS -> SCF：NI 是 indirect CFO 起点，noncash items 需要调整
+│  ├─ 4.1.2 BS -> SCF：资产负债跨期变动解释现金流入/流出
+│  └─ 4.1.3 判断：CFO/CFI/CFF 分别说明经营、投资、融资现金来源
 ├─ 4.2 直接法与间接法编制 (Direct vs Indirect Preparation)
-│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.2.1 Indirect CFO = NI + noncash charges - noncash gains/losses ± WC changes
+│  ├─ 4.2.2 Direct CFO：cash collected from customers、cash paid to suppliers、cash paid for expenses
+│  └─ 4.2.3 符号判断：current asset 增加减 CFO；current liability 增加加 CFO
 ├─ 4.3 IFRS vs US GAAP 现金流分类差异 (Cash Flow Classification)
-│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 4.3.1 US GAAP：interest paid/received、dividends received 通常 CFO；dividends paid CFF
+│  ├─ 4.3.2 IFRS：interest/dividends 有更多分类选择，但需保持一致
+│  └─ 4.3.3 判断：比较 CFO 前先把利息和股利分类调到同一口径
 ```
 
 ## 4. 知识点详解
@@ -137,6 +140,10 @@ tags:
 | 指标 | 公式 | 说明 |
 |------|------|------|
 | CFO (间接法) | `NI + Depreciation/Amortization - Gains/Losses +/- WC Changes` | 核心现金流公式 |
+| Cash Collected from Customers | `Revenue - ΔAccounts Receivable` | AR 增加表示收入未收现 |
+| Cash Paid to Suppliers | `COGS + ΔInventory - ΔAccounts Payable` | 存货增加和应付减少消耗现金 |
+| Cash Paid for Operating Expenses | `Operating Expense - Depreciation + ΔPrepaids - ΔAccrued Expenses` | 题干给简化项目时使用 |
+| Net Change in Cash | `CFO + CFI + CFF` | 三类现金流合计解释现金余额变化 |
 
 ## 6. 常见考点与解题思路
 
@@ -166,14 +173,10 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Analyzing-Balance-Sheets]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M05-Analyzing-Statements-of-Cash-Flows-II]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- [[M02-Income-Statement|利润表分析]]：净利润(NI)是间接法编制现金流量的起点，非现金费用来源于利润表
-- [[M03-Balance-Sheet|资产负债表]]：资产负债科目的变动(应收账款、存货、应付账款)是计算 CFO 的关键调整项
-- [[M05-Analyzing-Cash-Flows-II|现金流量表分析 II]]：自由现金流(FCFF/FCFE)和现金流比率的分析建立在 CFO 计算基础之上
+- **连接 M02**：NI、depreciation、gain/loss 等利润表项目决定 indirect CFO 调整。
+- **连接 M03**：AR、inventory、AP、prepaids、accruals 的期初期末差异决定 cash receipt/payment。
+- **连接 M05**：FCFF、FCFE 和 cash flow ratios 都从可靠的 CFO 开始；CFO 口径错则后续全错。
+- **连接 M10**：NI 与 CFO 背离是 reporting quality 的核心红旗；但需先排除正常营运资本季节性。
 
 
 ## 9. 复习与刷题提示

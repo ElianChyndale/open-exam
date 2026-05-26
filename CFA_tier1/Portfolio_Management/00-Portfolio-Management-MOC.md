@@ -46,39 +46,78 @@ tags:
 ```text
 Portfolio Management (8-12%)
 ├─ 1. Portfolio Risk and Return: Part I
-│  ├─ 1.1 Introduction
-│  ├─ 1.2 Historical Return and Risk
-│  ├─ 1.3 Other Investment Characteristics
+│  ├─ 1.1 投资组合视角：风险/收益必须放在 investor objective 和 portfolio context 下解释
+│  ├─ 1.2 历史收益与风险：`E(Rp)=Σw_iE(R_i)`，`σp` 由 variance、covariance、correlation 决定
+│  ├─ 1.3 分散化：关键不是资产数量，而是 `ρ<1`；低相关降低 unsystematic risk
+│  ├─ 1.4 风险厌恶：更高 `A` 要求同等风险有更高 expected return
+│  └─ 1.5 Utility / indifference curve：`U=E(R)-0.5Aσ²`，曲线越陡风险厌恶越强
 ├─ 2. Portfolio Risk and Return: Part II
-│  ├─ 2.1 资本资产定价模型 (Capital Asset Pricing Model, CAPM)
-│  ├─ 2.2 Beta 系数 (Beta Coefficient)
-│  ├─ 2.3 证券市场线 (Security Market Line, SML)
+│  ├─ 2.1 CAL / CML：无风险资产与最优风险组合的配置线，斜率是 Sharpe ratio
+│  ├─ 2.2 CAPM：`E(R_i)=R_f+β_i[E(R_M)-R_f]`，只补偿 systematic risk
+│  ├─ 2.3 Beta：`β_i=Cov(R_i,R_M)/Var(R_M)`，组合 beta 是加权平均
+│  └─ 2.4 SML 与 mispricing：实际/预期收益高于 required return 为 undervalued，反之 overvalued
 ├─ 3. Portfolio Management: An Overview
-│  ├─ 3.1 投资组合管理流程 (Portfolio Management Process)
-│  ├─ 3.2 投资者类型 (Types of Investors)
-│  ├─ 3.3 集合投资工具 (Pooled Investment Vehicles)
+│  ├─ 3.1 组合管理流程：planning -> execution -> feedback，IPS 是 planning 核心输出
+│  ├─ 3.2 投资者类型：individual / institutional 的目标、约束和税务不同
+│  ├─ 3.3 集合投资工具：mutual fund / ETF / hedge fund / PE 按流动性、费用、透明度区分
+│  └─ 3.4 Active vs passive：主动承担 active risk，是否值得看 alpha、cost、tracking error
 ├─ 4. Basics of Portfolio Planning and Construction
-│  ├─ 4.1 IPS 概述 (IPS Overview)
-│  ├─ 4.2 收益目标 (Return Objectives)
-│  ├─ 4.3 风险目标 (Risk Objectives)
+│  ├─ 4.1 IPS：连接目标、约束、资产配置和绩效评估，避免随市场情绪漂移
+│  ├─ 4.2 Return objective：required return 必须和 spending / liability / inflation / fees 对齐
+│  ├─ 4.3 Risk objective：risk tolerance = willingness + ability，冲突时以 ability 为硬约束
+│  ├─ 4.4 Constraints：liquidity、time horizon、taxes、legal/regulatory、unique circumstances
+│  └─ 4.5 Portfolio construction：strategic asset allocation 先于 security selection
 ├─ 5. The Behavioral Biases of Individuals
-│  ├─ 5.1 偏差总分类 (Bias Classification)
-│  ├─ 5.2 认知错误 (Cognitive Errors)
-│  ├─ 5.3 情绪偏差 (Emotional Biases)
+│  ├─ 5.1 分类：cognitive errors 可教育纠偏，emotional biases 往往要适度 accommodate
+│  ├─ 5.2 Cognitive：belief perseverance、information-processing、conservatism、confirmation 等
+│  ├─ 5.3 Emotional：loss aversion、overconfidence、self-control、status quo、endowment、regret aversion
+│  └─ 5.4 投资影响：错误 risk tolerance、过度交易、集中持仓、拒绝再平衡
 ├─ 6. Introduction to Risk Management
-│  ├─ 6.1 风险管理框架 (Risk Management Framework)
-│  ├─ 6.2 风险分类 (Risk Classification)
-│  ├─ 6.3 风险改变化方式 (Risk Modification Methods)
+│  ├─ 6.1 风险治理：define risk tolerance -> identify -> measure -> modify -> monitor
+│  ├─ 6.2 风险分类：market、credit、liquidity、operational、model、settlement、legal/regulatory
+│  ├─ 6.3 风险调整：avoid / prevent / transfer / retain / diversify / hedge
+│  └─ 6.4 绩效与风险：风险管理不是最小化风险，而是让风险服务目标收益
 ```
 
 ## 4. 跨模块依赖关系
 
-- **M01 Portfolio Risk and Return: Part I**：承接 `本科目入口`，输出到 `Portfolio Risk and Return: Part II`。
-- **M02 Portfolio Risk and Return: Part II**：承接 `Portfolio Risk and Return: Part I`，输出到 `Portfolio Management: An Overview`。
-- **M03 Portfolio Management: An Overview**：承接 `Portfolio Risk and Return: Part II`，输出到 `Basics of Portfolio Planning and Construction`。
-- **M04 Basics of Portfolio Planning and Construction**：承接 `Portfolio Management: An Overview`，输出到 `The Behavioral Biases of Individuals`。
-- **M05 The Behavioral Biases of Individuals**：承接 `Basics of Portfolio Planning and Construction`，输出到 `Introduction to Risk Management`。
-- **M06 Introduction to Risk Management**：承接 `The Behavioral Biases of Individuals`，输出到 `本科目总结`。
+```text
+Quant input layer
+├─ Quant M03-M05 -> PM M01: variance, covariance, correlation, safety-first
+├─ Quant M01-M02 -> PM M01/M02/M04: return measurement, discount rate, required return
+└─ Quant M08-M10 -> PM M03/M06: performance evidence, regression beta, model risk
+
+Portfolio construction layer
+├─ M01 Risk/Return Part I
+│  ├─ feeds M02: risk aversion, utility, diversification before CAPM
+│  ├─ feeds M04: risk objective and strategic allocation constraints
+│  └─ feeds M06: risk measures to monitor and modify
+├─ M02 Risk/Return Part II
+│  ├─ feeds Equity / Corporate Issuers: required return from CAPM
+│  ├─ feeds M03: active/passive and benchmark discussion
+│  └─ feeds M04: expected return and beta constraints in allocation
+├─ M03 Overview
+│  ├─ feeds M04: IPS workflow and pooled vehicle selection
+│  └─ feeds M06: governance, feedback, rebalancing discipline
+├─ M04 Planning and Construction
+│  ├─ consumes M01/M02: objective inputs and risk-return trade-off
+│  ├─ feeds M05: bias diagnosis when stated preferences conflict with rational IPS
+│  └─ feeds M06: risk tolerance, constraints, and monitoring triggers
+├─ M05 Behavioral Biases
+│  ├─ feeds M04: willingness vs ability adjustment
+│  └─ feeds Ethics: client communication, suitability, documentation
+└─ M06 Risk Management
+   ├─ consumes all PM modules: objectives, exposures, constraints, behavior
+   └─ feeds Derivatives / Fixed Income / Alternatives: hedging, liquidity and stress scenarios
+```
+
+| 依赖接口 | 输入模块 | 输出模块/科目 | 考试判断 |
+|---|---|---|---|
+| Risk-return math | Quant M03-M05 | PM M01/M02 | 先算组合风险，再解释 correlation 和 diversification。 |
+| Required return | Quant M01-M02, PM M02 | Equity, Corporate Issuers, Fixed Income | CAPM required return 可作为估值折现率或 hurdle rate。 |
+| IPS suitability | PM M03/M04/M05 | Ethics, Wealth planning | 客户偏好、约束和行为偏差都要写入 suitability 判断。 |
+| Benchmark/performance | PM M02/M03/M04 | Portfolio analytics | Sharpe 用 total risk，Treynor/Jensen 用 beta，IR 用 active risk。 |
+| Risk governance | PM M04/M06 | Derivatives, Alternatives, FI | 风险处理动作必须匹配目标：avoid、transfer、hedge、diversify 或 retain。 |
 
 ## 5. 核心对比专题
 
@@ -146,27 +185,31 @@ Portfolio Management (8-12%)
 
 ### 框架1：组合题 SOP
 
-1. 先算 expected return
-2. 再看 correlation/covariance
-3. 再判断 diversification effect
-4. 最后回到 investor objective
+1. 题目给资产权重和收益：先算 `E(Rp)=Σw_iE(R_i)`。
+2. 题目问风险：两资产用 `σp²=w1²σ1²+w2²σ2²+2w1w2σ1σ2ρ12`。
+3. 题目强调相关性：`ρ<1` 有分散化，`ρ=+1` 无分散化，`ρ=-1` 可能完全对冲。
+4. 题目给风险厌恶系数：用 `U=E(R)-0.5Aσ²` 比较效用。
+5. 题目给无风险资产和风险组合：用 CAL，`E(R_C)=R_f+y[E(R_P)-R_f]`，`σ_C=yσ_P`。
+6. 题目给 beta 和市场风险溢价：用 CAPM required return，再与 expected return 比较 mispricing。
+7. 结论必须回到 investor objective：风险能否承受、收益是否足够、约束是否允许。
 
 ### 框架2：IPS 题 SOP
 
-1. 先写 return objective
-2. 再写 risk objective
-3. 再按 `L-T-T-L-U` 写 constraints
-   - Liquidity
-   - Time horizon
-   - Taxes
-   - Legal/regulatory
-   - Unique circumstances
+1. 先识别投资者类型、liability、spending need、time horizon。
+2. Return objective：写 required return，不只写“maximize return”。
+3. Risk objective：分开写 willingness 和 ability；冲突时 ability 通常约束最终风险水平。
+4. Constraints 按 `L-T-T-L-U`：liquidity、time horizon、taxes、legal/regulatory、unique circumstances。
+5. 如果题目出现 concentrated position、tax lock-in、legal limit、ESG preference，要放入 unique 或 legal/tax，而不是 return objective。
+6. 最后把 IPS 翻译成 strategic asset allocation，并说明 rebalancing / monitoring 触发条件。
 
 ### 框架3：行为偏差题 SOP
 
-1. 判断是认知偏差还是情绪偏差
-2. 找偏差如何影响 asset allocation / trading / risk tolerance
-3. 再给出纠偏方式
+1. 先判断偏差来源：信息处理/信念坚持类多为 cognitive；恐惧、后悔、占有感多为 emotional。
+2. Cognitive bias：优先 educate、provide evidence、use checklist。
+3. Emotional bias：若客户目标仍可达，可 accommodate；若会破坏目标，必须 moderate。
+4. 判断影响路径：risk tolerance、asset allocation、trading frequency、diversification、rebalancing。
+5. 把偏差连接回 IPS：是否导致 stated willingness 偏离 true ability。
+6. 给纠偏动作时避免空话：例如预设再平衡规则、限制集中持仓、分阶段卖出、书面化决策标准。
 
 ---
 

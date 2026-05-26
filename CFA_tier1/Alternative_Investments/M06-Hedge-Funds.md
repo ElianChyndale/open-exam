@@ -73,14 +73,19 @@ tags:
 ```text
 6. Hedge Funds
 ├─ 6.1 对冲基金特征 (Hedge Fund Characteristics)
-│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.1.1 Flexible mandate：可做多/做空、用杠杆和 derivatives，目标通常是 absolute return 或低相关 alpha。
+│  ├─ 6.1.2 Liquidity terms：lockup、notice period、redemption frequency/gates；比 PE 流动但不等于每日流动。
+│  ├─ 6.1.3 Fee terms：management fee + incentive fee，常见 high-water mark 保护投资者。
+│  └─ 6.1.4 Transparency/manager risk：策略复杂且披露有限，due diligence 很关键。
 ├─ 6.2 对冲基金策略 (Hedge Fund Strategies)【考试核心】
-│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.2.1 Equity long/short：多头被低估股票，空头被高估股票；仍可能有 net long equity beta。
+│  ├─ 6.2.2 Global macro：根据利率、货币、股指、商品等宏观观点跨资产交易。
+│  ├─ 6.2.3 Event driven：并购、重组、破产等事件套利，核心风险是 deal/event failure。
+│  └─ 6.2.4 Relative value：利用相关证券价差，常用杠杆，表面 beta 低但 leverage/liquidity risk 可高。
 ├─ 6.3 杠杆与风险 (Leverage and Risk)【考试核心】
-│  ├─ 6.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 6.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 6.3.1 Gross exposure = long exposure + |short exposure|，衡量总风险规模。
+│  ├─ 6.3.2 Net exposure = long exposure - |short exposure|，衡量市场方向暴露。
+│  └─ 6.3.3 Market neutral 要求 net 近零，但 gross 可很高；不能把净敞口低等同于低风险。
 ```
 
 ## 4. 知识点详解
@@ -116,10 +121,13 @@ tags:
 
 ### 5.1 核心内容
 
-| 指标 | 公式 |
-|------|------|
-| 总杠杆 (Gross Leverage) | (Long + \|Short\|) / Capital |
-| 净杠杆 (Net Leverage) | (Long - \|Short\|) / Capital |
+| 指标/框架 | 公式或判断链 | 知识树节点 | 考试说明 |
+|------|------|------|------|
+| Gross leverage / exposure | `(long exposure + |short exposure|) / capital` | `6.3.1` | 总敞口规模，包含多空两边 |
+| Net leverage / exposure | `(long exposure - |short exposure|) / capital` | `6.3.2` | 市场方向性，可能接近 0 |
+| Long/short classification | `long undervalued + short overvalued -> equity L/S` | `6.2.1` | 仍可能是净多头 |
+| Strategy trigger | `macro view -> global macro; corporate event -> event driven; spread mispricing -> relative value` | `6.2` | 按收益来源分类 |
+| Incentive fee gate | `profit above HWM/hurdle x incentive fee rate` | `6.1.3` | 高水位线防止对恢复旧亏损收费 |
 
 ## 6. 常见考点与解题思路
 
@@ -150,14 +158,11 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Natural-Resources]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M07-Introduction-to-Digital-Assets]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 费用结构 → [[M01-Features-and-Structure.md]] (2/20结构与高水位线)
-- 杠杆对比 → [[M03-Private-Capital.md]] (PE杠杆 vs 对冲基金杠杆)
-- 业绩衡量 → [[M02-Performance-Measurement.md]] (Sharpe/Sortino应用于对冲基金评估)
+- **来自 M01**：高费用、lockup、低透明度和 manager discretion 是 hedge fund 的基础特征。
+- **来自 M02**：net return、Sharpe/Sortino、fee drag 和 high-water mark 决定业绩解释。
+- **到 M03**：hedge fund leverage 是交易敞口杠杆，区别于 PE/LBO 的 capital structure leverage。
+- **到 Derivatives/FI/Equity**：做空、期权、利率/信用价差和事件风险是策略题的常见接口。
+- **到 PM/Ethics**：market neutral、absolute return、low correlation 等营销表述必须结合 gross exposure、tail risk 和流动性披露。
 
 
 ## 9. 复习与刷题提示

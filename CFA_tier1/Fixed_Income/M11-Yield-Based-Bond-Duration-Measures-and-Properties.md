@@ -74,11 +74,13 @@ tags:
 ```text
 11. Yield-Based Bond Duration Measures and Properties
 ├─ 11.1 久期家族 (Duration Family)
-│  ├─ 11.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.1.1 Modified duration = Macaulay duration/(1+y/m)；估计小幅平行 YTM 变动下的 % price change
+│  ├─ 11.1.2 Money duration = modified duration x full price；把百分比敏感度转成货币金额
+│  └─ 11.1.3 PVBP ≈ money duration x 0.0001；也可用 (P_- - P_+)/2 估计 1bp price value
 ├─ 11.2 凸性 (Convexity)
-│  ├─ 11.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 11.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 11.2.1 Duration-only approximation：%ΔP ≈ -D_mod x Δy；Δy 用小数
+│  ├─ 11.2.2 Duration drivers：maturity 越长、coupon 越低、yield 越低，duration 通常越高
+│  └─ 11.2.3 Yield-based measures 假设现金流固定；含期权债券需转向 effective duration
 ```
 
 ## 4. 知识点详解
@@ -141,6 +143,13 @@ tags:
 | ❌ 忽略：凸性用 decimals 计算时 Δy 也要用小数：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。 | ✅ 凸性用 decimals 计算时 Δy 也要用小数：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
+
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Price sensitivity | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] | modified duration、PVBP | 估计 yield change 下的价格变化 |
+| Convexity correction | [[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]] | duration-only approximation | 大幅 yield move 时加 convexity |
+| Curve limitation | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | yield-based duration assumptions | 非平行曲线或含期权时改用 KRD/effective duration |
+| Portfolio risk | Portfolio Management | money duration/PVBP | 组合利率风险预算 |
 
 - **上游模块**：[[M10-Interest-Rate-Risk-and-Return]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]]。本模块输出会被后续更复杂题型调用。

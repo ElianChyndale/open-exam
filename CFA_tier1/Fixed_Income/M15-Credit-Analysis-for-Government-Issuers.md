@@ -69,11 +69,13 @@ tags:
 ```text
 15. Credit Analysis for Government Issuers
 ├─ 15.1 政府发行人 (Government Issuers)
-│  ├─ 15.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 15.1.2 应用/判断：再处理计算、比较、解释或情境选择
-├─ 15.2 公司发行人 (Corporate Issuers)
-│  ├─ 15.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 15.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 15.1.1 Sovereign credit：经济增长、财政收支、债务负担、外部头寸、货币政策、政治制度
+│  ├─ 15.1.2 Local-currency debt：有货币发行能力但可能转化为通胀/贬值风险
+│  └─ 15.1.3 Foreign-currency debt：受外汇储备、经常账户和外债再融资能力约束
+├─ 15.2 非主权政府相关发行人 (Non-sovereign Government Issuers)
+│  ├─ 15.2.1 Agency/local authority：看法律责任、政府支持意愿与支持能力
+│  ├─ 15.2.2 Revenue-backed issuer：还款来源来自项目或税费收入，不自动等同中央政府信用
+│  └─ 15.2.3 Supranational：成员国资本支持与 preferred creditor status 可改善信用质量
 ```
 
 ## 4. 知识点详解
@@ -129,14 +131,21 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Government markets | [[M05-Fixed-Income-Markets-for-Government-Issuers]] | sovereign/agency/supranational issuer type | 确认还款来源和支持假设 |
+| Credit risk | [[M14-Credit-Risk]] | default/downgrade/spread risk | 套用 PD/LGD/recovery 逻辑 |
+| Yield spread | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | sovereign spread over benchmark | 判断主权风险补偿 |
+| Macro interface | Economics | fiscal、external、monetary、political factors | 解释宏观变量如何影响信用 |
+
 - **上游模块**：[[M14-Credit-Risk]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M16-Credit-Analysis-for-Corporate-Issuers]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
-- 公司信用分析 → [[M10-Credit-Risk]] 的 PD/LGD 框架
+- 公司信用分析 → [[M14-Credit-Risk]] 的 PD/LGD 框架
 - 担保品与优先级 → [[M01-Instrument-Features]] 的合同要素
-- 发行人与债项评级 → [[M13-ABS-and-Credit-Enhancement]] 的结构化信用增级
+- 发行人与债项评级 → [[M18-Asset-Backed-Security-Instrument-and-Market-Features]] 的结构化信用增级
 
 
 ## 9. 复习与刷题提示

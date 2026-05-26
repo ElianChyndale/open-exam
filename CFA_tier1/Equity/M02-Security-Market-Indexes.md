@@ -97,11 +97,15 @@ tags:
 ```text
 2. Security Market Indexes
 ├─ 2.1 指数构建 (Index construction)
-│  ├─ 2.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.1.1 指数定义：代表一个 target market、asset class 或 investment strategy 的证券组合。
+│  ├─ 2.1.2 构建流程：target market -> constituent selection -> weighting -> rebalancing -> reconstitution。
+│  ├─ 2.1.3 加权方法：price-weighted 看股价，equal-weighted 看平均个股，value-weighted 看市值，fundamental-weighted 看基本面规模。
+│  └─ 2.1.4 管理问题：rebalancing 恢复目标权重，reconstitution 改变成分；二者都会带来 turnover 和交易成本。
 ├─ 2.2 指数收益 (Index return)
-│  ├─ 2.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 2.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 2.2.1 指数水平：price-weighted 用 divisor；market-cap index 用总市值/基期口径。
+│  ├─ 2.2.2 收益口径：price return 只含价格变化，total return 包含 income reinvestment。
+│  ├─ 2.2.3 用途：benchmark、market proxy、asset allocation input、index fund/ETF underlying。
+│  └─ 2.2.4 跨资产指数：equity、fixed income、alternative indexes 的可复制性和代表性问题不同。
 ```
 
 ## 4. 知识点详解
@@ -121,14 +125,27 @@ tags:
 
 ## 5. 关键公式与计算框架
 
-### 5.1 核心内容
+### 5.1 指数计算公式
 
-| 指标 | 公式 |
-|------|------|
-| 价格加权指数 (Price-weighted Index) | `Σ Price_i / Divisor` |
-| 等权指数收益率 (Equal-weighted Return) | `Σ_{i=1}^{N} R_i / N` |
-| 市值加权指数收益率 (Value-weighted Return) | `Σ_{i=1}^{N} w_i R_i` |
-| 总收益率 (Total Return) | `(Ending Value + Income - Beginning Value) / Beginning Value` |
+| 指标 | 公式 | 对应节点 | 考试说明 |
+|---|---|---|---|
+| Price-weighted index | `Σ price_i / divisor` | 2.2.1 | 高价股影响大。 |
+| Divisor after split/change | `New divisor = Σ adjusted prices / old index value` | 2.2.1 | 【高频】保持指数连续，不代表收益。 |
+| Equal-weighted return | `Σ R_i / N` | 2.1.3 | 每只股票同权；再平衡成本较高。 |
+| Market-cap weight | `Market cap_i / Σ market cap_i` | 2.1.3 | 大市值公司主导表现。 |
+| Float-adjusted market cap | `Price x shares outstanding x float factor` | 2.1.3 | 排除不可自由交易股份。 |
+| Value-weighted return | `Σ w_i R_i` | 2.1.3 | 权重通常用 market cap 或 float-adjusted market cap。 |
+| Price return | `(Ending price index - beginning price index) / beginning price index` | 2.2.2 | 不含 dividends/interest。 |
+| Total return | `(Ending value + income - beginning value) / beginning value` | 2.2.2 | 含 income reinvestment，更接近投资者体验。 |
+
+### 5.2 加权方法选择框架
+
+| 加权方法 | 最大影响来源 | 优点 | 主要陷阱 |
+|---|---|---|---|
+| Price-weighted | 高价格股票 | 简单 | 价格高不等于规模大；split 会机械改变权重。 |
+| Equal-weighted | 每个成分股 | 反映平均证券表现 | 需要频繁再平衡，交易成本高，小公司权重偏高。 |
+| Market-cap weighted | 大市值公司 | 代表投资者整体财富，低换手 | 高估股票权重可能更高。 |
+| Fundamental weighted | 营收、盈利、现金流等规模指标 | 降低价格驱动权重 | 指标选择本身带主观性。 |
 
 ## 6. 常见考点与解题思路
 
@@ -158,14 +175,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M01-Market-Organization-and-Structure]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M03-Market-Efficiency]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- **指数作为基准用于估值比较** → [[M08-Equity-Valuation-Concepts]]
-- **指数选择影响市场效率检验** → [[M03-Market-Efficiency]]
-- **指数加权与交易执行成本有关** → [[M01-Market-Organization-and-Structure]]
+| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
+|---|---|---|---|
+| 交易成本、流动性、rebalancing | [[M01-Market-Organization-and-Structure]] | 指数复制和再平衡依赖市场交易机制。 | equal-weighted 不是免费获得平均暴露。 |
+| benchmark / market proxy | [[M03-Market-Efficiency]] | 市场效率和 active return 都需要合适基准。 | 基准选错会错判 abnormal performance。 |
+| equity index types | [[M04-Overview-of-Equity-Securities]] | 不同国家、行业、风格、规模指数对应不同 equity universe。 | index label 不等于同一风险暴露。 |
+| fixed-income indexes | Fixed Income | 债券指数涉及 duration、credit quality、issue size 和流动性约束。 | FI index 往往比 equity index 更难复制。 |
+| alternative indexes | Alternative Investments | 不动产、商品、对冲基金指数可能有 appraisal smoothing 或 survivorship bias。 | 代表性与可投资性要分开。 |
 
 
 ## 9. 复习与刷题提示

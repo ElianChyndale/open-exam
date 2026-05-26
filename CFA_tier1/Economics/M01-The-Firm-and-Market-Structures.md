@@ -82,17 +82,21 @@ tags:
 ```text
 1. The Firm and Market Structures
 ├─ 1.1 成本与利润的基本概念（Cost and Profit Concepts）
-│  ├─ 1.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.1.1 收入口径：TR=P×Q；AR=TR/Q；MR=ΔTR/ΔQ，perfect competition 下 P=MR
+│  ├─ 1.1.2 利润口径：accounting profit=TR-explicit costs；economic profit=TR-explicit-implicit costs
+│  └─ 1.1.3 考试判断：zero economic profit 表示赚到 normal profit，不等于会计亏损
 ├─ 1.2 四种市场结构（Four Market Structures）
-│  ├─ 1.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.2.1 Perfect competition：many firms、homogeneous product、no barriers；长期 P=MC=min ATC
+│  ├─ 1.2.2 Monopolistic competition：product differentiation、some pricing power；长期需求曲线与 ATC 相切
+│  ├─ 1.2.3 Oligopoly：few firms、strategic interaction；看 kinked demand、collusion、game theory
+│  └─ 1.2.4 Monopoly：single seller、high barriers；MR=MC 定产量，需求曲线定价格
 ├─ 1.3 进入壁垒（Barriers to Entry）
-│  ├─ 1.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.3.1 壁垒来源：economies of scale、patents/licenses、network effects、brand loyalty、high fixed cost
+│  └─ 1.3.2 判断用途：壁垒越强，长期经济利润越可能维持，价格越可能高于边际成本
 ├─ 1.4 集中度指标（Concentration Measures）
-│  ├─ 1.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 1.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 1.4.1 CR_n=前 n 家企业市场份额之和；适合快速判断集中度但忽略分布
+│  ├─ 1.4.2 HHI=Σ market share_i^2；大企业合并对 HHI 影响更大
+│  └─ 1.4.3 限制：集中度不能捕捉进口竞争、潜在进入、产品差异和动态竞争
 ```
 
 ## 4. 知识点详解
@@ -163,14 +167,17 @@ tags:
 
 ### 5.1 核心内容
 
-**经济利润**：`Economic Profit = Total Revenue − Explicit Costs − Implicit Costs`
-- 场景：评估是否应留在行业。经济利润 > 0 吸引新企业进入；= 0 则维持现状；< 0 导致退出。
-
-**利润最大化条件**：`MR = MC`
-- 场景：企业在任何市场结构中都遵循此原则决定最优产量。
-
-**平均总成本**：`ATC = TC / Q`
-- 场景：判断盈利水平。如果 P > ATC，企业有正经济利润。
+| 节点 | 公式/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 1.1.1 | `TR = P x Q`; `AR = TR/Q`; `MR = ΔTR/ΔQ` | 收益、边际收益、表格补数 | perfect competition 下企业是 price taker，`P=MR`。 |
+| 1.1.2 | `Accounting Profit = TR - Explicit Costs` | 会计利润口径 | 不扣隐性机会成本。 |
+| 1.1.2 | `Economic Profit = TR - Explicit Costs - Implicit Costs` | 经济利润/进入退出判断 | `Economic profit = 0` 表示 normal profit 已被覆盖。 |
+| 1.2.4 | `MR = MC` | 所有市场结构的利润最大化产量 | 先定 Q，再用需求曲线读 P；不要用 P=MC 判断垄断产量。 |
+| 1.2.1 | `P = MC = minimum ATC` | 完全竞争长期均衡 | 长期经济利润为零，企业仍有正常利润。 |
+| 1.2.4 | `P > MC` | 垄断/垄断竞争定价权 | 产生 deadweight loss，价格不是由 MC 直接决定。 |
+| 1.3.1 | `ATC = TC/Q`; `AVC = TVC/Q` | breakeven 与 shutdown | 短期 `P < AVC` 关停；长期 `P < ATC` 退出。 |
+| 1.4.1 | `CR_n = Σ market share of largest n firms` | 集中率题 | 只看前 n 家，不能反映剩余企业分布。 |
+| 1.4.2 | `HHI = Σ market share_i^2` | HHI 题 | 市占率单位需统一；百分数口径与小数口径不可混用。 |
 
 ## 6. 常见考点与解题思路
 
@@ -215,14 +222,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：本科目起点。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M02-Understanding-Business-Cycles]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 不同市场结构对宏观经济的影响与 **[[M02-Understanding-Business-Cycles]]** 中的周期分析相连
-- 反垄断政策与 **[[M03-Fiscal-Policy]]** 中的政府干预相关
-- 市场结构影响企业定价行为，弹性分析内容已移至 _archive 供参考
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M01 -> M02 Business Cycles` | pricing power、cost pass-through、profit margin | 判断通胀冲击如何进入企业利润和周期行业表现。 |
+| `M01 -> M03 Fiscal Policy` | monopoly、natural monopoly、market failure | 解释监管、补贴、反垄断或政府干预的经济理由。 |
+| `M01 -> Equity` | competitive position、entry barriers、economic profit | 分析行业长期 ROIC 与估值可持续性。 |
+| `M01 -> Corporate Issuers` | economies of scale、fixed/variable cost | 连接 operating leverage 与 breakeven 分析。 |
+| `Quant -> M01` | concentration ratios、HHI、marginal changes | 计算集中度和边际量时注意单位一致。 |
 
 
 ## 9. 复习与刷题提示

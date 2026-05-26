@@ -74,20 +74,21 @@ tags:
 ```text
 10. Valuing a Derivative Using a One-Period Binomial Model
 ├─ 10.1 Introduction
-│  ├─ 10.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.1.1 One-period tree：标的从 S0 到 Su 或 Sd，期权价值由两个状态的 payoff 决定
+│  └─ 10.1.2 核心思想：用 stock + borrowing/lending 复制 option payoff，或用 risk-neutral probability 定价
 ├─ 10.2 Binomial Valuation
-│  ├─ 10.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.2.1 先算 terminal payoff：call `max(0,S-X)`，put `max(0,X-S)`
+│  ├─ 10.2.2 Hedge ratio：`h=(V_u-V_d)/(S_u-S_d)`
+│  └─ 10.2.3 Borrow/lend：`B=(V_d-hS_d)/(1+r)`，`V0=hS0+B`
 ├─ 10.3 The Binomial Model
-│  ├─ 10.3.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.3.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.3.1 Up/down factors：`S_u=S0u`，`S_d=S0d`，且无套利要求 d < 1+r < u
+│  └─ 10.3.2 波动越大，状态价差越大，option value 通常越高
 ├─ 10.4 Pricing a European Call Option
-│  ├─ 10.4.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.4.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.4.1 Risk-neutral probability：`p*=[(1+r)-d]/(u-d)`
+│  └─ 10.4.2 Value：`V0=[p*V_u+(1-p*)V_d]/(1+r)`
 ├─ 10.5 Risk Neutrality
-│  ├─ 10.5.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.5.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.5.1 p* 是定价概率，不是投资者真实预测概率
+│  └─ 10.5.2 风险中性世界下所有资产期望收益按无风险利率贴现
 ```
 
 ## 4. 知识点详解
@@ -118,6 +119,17 @@ tags:
 - **对应动作**：识别概念并应用到题干。
 
 ## 5. 关键公式与计算框架
+
+### 5.0 本模块公式选择
+
+| 知识树节点 | 公式/框架 | 使用条件 | 考试判断 |
+|---|---|---|---|
+| 10.2.1 | `V_u = max(0, S_u - X)` for call; `max(0, X - S_u)` for put | 上行状态 payoff | 第一步永远先算 terminal payoff。 |
+| 10.2.2 | `h = (V_u - V_d)/(S_u - S_d)` | replication/hedge ratio | hedge ratio 匹配两状态 payoff 差。 |
+| 10.2.3 | `B = (V_d - hS_d)/(1+r)` | 求借贷头寸 | B 为正是 lending，为负是 borrowing。 |
+| 10.2.3 | `V_0 = hS_0 + B` | 复制组合价值 | 期权价值等于复制组合成本。 |
+| 10.4.1 | `p* = [(1+r)-d]/(u-d)` | risk-neutral probability | 不是真实概率；无套利要求 `d < 1+r < u`。 |
+| 10.4.2 | `V_0 = [p*V_u + (1-p*)V_d]/(1+r)` | risk-neutral valuation | 用无风险利率折现风险中性期望 payoff。 |
 
 ### 5.1 M04-M06 Forward Commitments
 
@@ -203,24 +215,13 @@ tags:
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M09-Option-Replication-Using-Put-Call-Parity]]。先用它提供定义、变量或基础框架。
-- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-```text
-Instrument and Market Features
-├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
-└── Contingent claims -> option payoff asymmetry (中文)
-Uses and Risks
-├── issuer hedge -> financing/operating exposure control (中文)
-└── investor exposure -> capital efficiency + leverage discipline (中文)
-Pricing Spine
-├── no-arbitrage -> replication -> cost of carry (中文)
-├── forwards/futures -> forward value and daily settlement (中文)
-├── swaps -> bond pair / FRA strip intuition (中文)
-└── options -> parity -> binomial valuation (中文)
-```
+| 连接 | 传递内容 | 做题用途 |
+|---|---|---|
+| `M08 -> M10` | option payoff、moneyness | 先算 up/down terminal payoff。 |
+| `M09 -> M10` | replication logic | hedge ratio 是状态现金流复制。 |
+| `M04 -> M10` | no-arbitrage | 二叉树价格必须等于复制组合成本。 |
+| `Quant -> M10` | probability tree、expected value、discounting | risk-neutral probability 是定价工具，不是真实概率。 |
+| `FI -> M10` | risk-free rate | 折现率和 p* 都依赖无风险利率。 |
 
 ---
 

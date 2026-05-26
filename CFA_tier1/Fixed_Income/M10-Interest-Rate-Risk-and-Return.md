@@ -75,11 +75,13 @@ tags:
 ```text
 10. Interest Rate Risk and Return
 ├─ 10.1 回报分解 (Return Decomposition)
-│  ├─ 10.1.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.1.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.1.1 HPR = (coupon income + reinvestment income + sale price - purchase price)/purchase price
+│  ├─ 10.1.2 Return sources：coupon income、reinvestment income、price change；YTM 不等于 realized return
+│  └─ 10.1.3 Pull to par：discount bond 随到期趋向 par 上行，premium bond 趋向 par 下行，前提是 yield 不变
 ├─ 10.2 持有期与 Macaulay 久期 (Horizon and Macaulay Duration)
-│  ├─ 10.2.1 定义/识别：先说清概念、公式变量和适用条件
-│  └─ 10.2.2 应用/判断：再处理计算、比较、解释或情境选择
+│  ├─ 10.2.1 Macaulay duration = Σ[t x PV(CF_t)]/full price；现金流时间加权平均
+│  ├─ 10.2.2 Horizon < MacDur：price risk dominates；Horizon > MacDur：reinvestment risk dominates
+│  └─ 10.2.3 Immunization intuition：让投资期限接近 MacDur，用价格效应抵消再投资效应
 ```
 
 ## 4. 知识点详解
@@ -138,12 +140,19 @@ tags:
 
 ## 8. 跨模块关联
 
+| 接口 | 连接模块 | 本模块输出 | 做题用途 |
+|---|---|---|---|
+| Realized return | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | HPR vs YTM | 解释承诺收益率和实际持有期收益差异 |
+| Macaulay duration | [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] | cash-flow weighted average time | 修正久期的前置概念 |
+| Reinvestment risk | [[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]] | future/reinvestment rate assumption | 连接 forward/curve 变化 |
+| Immunization intuition | Portfolio Management | horizon vs MacDur | 资产负债匹配与利率风险控制 |
+
 - **上游模块**：[[M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves]]。先用它提供定义、变量或基础框架。
 - **下游模块**：[[M11-Yield-Based-Bond-Duration-Measures-and-Properties]]。本模块输出会被后续更复杂题型调用。
 
 ### Legacy 关联补充
 
-- Macaulay 久期 → [[M08-Duration-and-Convexity]] 的修正久期
+- Macaulay 久期 → [[M11-Yield-Based-Bond-Duration-Measures-and-Properties]] 的修正久期
 - 持有期回报 → [[M04-Yield-and-Spread-Measures]] 的 YTM 比较
 - 利率风险 → [[M09-Curve-Based-and-Empirical-Risk]] 的 curve-based 风险
 

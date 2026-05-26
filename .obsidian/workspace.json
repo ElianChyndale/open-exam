@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
+                "file": "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "M10-Simple-Linear-Regression"
-            }
-          },
-          {
-            "id": "a0b192fbd215b897",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CFA_tier1/Fixed_Income/M02-Fixed-Income-Cash-Flows-and-Types.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "M02-Fixed-Income-Cash-Flows-and-Types"
+              "title": "00-Fixed-Income-MOC"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,13 +183,29 @@
       "bases:Create new base": false
     }
   },
-  "active": "a0b192fbd215b897",
+  "active": "dc192fd6f15cf6b9",
   "lastOpenFiles": [
-    "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
+    "CFA_tier1/Fixed_Income/M01-Fixed-Income-Instrument-Features.md",
     "CFA_tier1/Fixed_Income/M02-Fixed-Income-Cash-Flows-and-Types.md",
+    "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
+    "CFA_tier1/Fixed_Income/M10-Interest-Rate-Risk-and-Return.md",
+    "CFA_tier1/Fixed_Income/M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties.md",
+    "CFA_tier1/Fixed_Income/M14-Credit-Risk.md",
+    "CFA_tier1/Fixed_Income/M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures.md",
+    "CFA_tier1/Fixed_Income/M16-Credit-Analysis-for-Corporate-Issuers.md",
+    "CFA_tier1/Fixed_Income/M15-Credit-Analysis-for-Government-Issuers.md",
+    "CFA_tier1/Fixed_Income/M17-Fixed-Income-Securitization.md",
+    "CFA_tier1/Fixed_Income/M18-Asset-Backed-Security-Instrument-and-Market-Features.md",
+    "CFA_tier1/Fixed_Income/M19-Mortgage-Backed-Security-Instrument-and-Market-Features.md",
+    "CFA_tier1/Financial_Statement_Analysis/M06-Analysis-of-Inventories.md",
+    "CFA_tier1/Financial_Statement_Analysis/M05-Analyzing-Statements-of-Cash-Flows-II.md",
+    "CFA_tier1/Financial_Statement_Analysis/M04-Analyzing-Statements-of-Cash-Flows-I.md",
+    "CFA_tier1/Financial_Statement_Analysis/M03-Analyzing-Balance-Sheets.md",
+    "CFA_tier1/Financial_Statement_Analysis/M02-Analyzing-Income-Statements.md",
+    "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
+    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
     "scripts/__pycache__/enrich_cfa_tier1_rich_layout.cpython-313.pyc",
     "scripts/enrich_cfa_tier1_rich_layout.py",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
     "CFA_tier1/Alternative_Investments/_legacy/2026-05-26-official-sync/00-Alternative-Investments-MOC.md",
     "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md",
     "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md",
@@ -221,22 +222,6 @@
     "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md.tmp.24508.8b04380e1cdb",
     "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md.tmp.24508.405b8de3802b",
     "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md.tmp.24508.49b52ca283cc",
-    "CFA_tier1/dashboard/今日新增错题.md",
-    "AGENTS.md",
-    "docs/moc-auto-patch-workflow.md",
-    "docs/cfa-scraping-workflow.md",
-    "docs/cfa-diagram-prompts.md",
-    "docs/cfa-l1-curriculum-overview.md",
-    "skills/experience-hub/SKILL.md",
-    "skills/experience-hub/review-checklist.md",
-    "skills/experience-hub/operating-rhythm.md",
-    "skills/experience-hub/_registry.md",
-    "skills/cfa-validation-guard/SKILL.md",
-    "skills/cfa-strategy-coach/SKILL.md",
-    "skills/cfa-screenshot-mistake-captor/SKILL.md",
-    "skills/cfa-review-synthesizer/SKILL.md",
-    "skills/cfa-question-captor/SKILL.md",
-    "skills/cfa-pattern-miner/SKILL.md",
-    "skills/cfa-intent-router/SKILL.md"
+    "CFA_tier1/dashboard/今日新增错题.md"
   ]
 }
