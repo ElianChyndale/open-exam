@@ -99,6 +99,23 @@ tags:
 │  └─ 8.5.3 判断陷阱：对正态性极其敏感，不适合严重非正态总体
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Hypothesis test"] --> B["State H0 and H1"]
+    B --> C{"H1 direction"}
+    C -->|not equal| D["Two-tailed"]
+    C -->|greater / less| E["One-tailed"]
+    B --> F["Choose statistic<br/>z / t / F / chi-square"]
+    F --> G{"Decision method"}
+    G -->|critical value| H["Reject if statistic in rejection region"]
+    G -->|p-value| I["Reject if p-value <= alpha"]
+    H --> J["Conclusion: reject or fail to reject"]
+    I --> J
+    J --> K["Never say accept H0"]
+```
+
 ## 4. 知识点详解
 
 ### 8.1 检验构件（Test Components）

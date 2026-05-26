@@ -89,6 +89,22 @@ tags:
 │  └─ 7.3.3 判断：bootstrap 适合复杂统计量，jackknife 计算较轻但信息较少
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Inference task"] --> B{"样本如何取得?"}
+    B -->|probability sampling| C["可支持总体推断"]
+    B -->|convenience / judgmental| D["bias risk high"]
+    A --> E{"问什么不确定性?"}
+    E -->|单个观测离散| F["Standard deviation"]
+    E -->|样本均值离散| G["Standard error = s / sqrt(n)"]
+    G --> H["CLT: sample mean approx normal when n large"]
+    A --> I{"解析 SE 困难?"}
+    I -->|是| J["Bootstrap for SE / sampling distribution"]
+    I -->|bias estimate| K["Jackknife"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 抽样方法（Sampling Methods）

@@ -164,6 +164,35 @@ Financial Statement Analysis (11-14%)
 │  └─ 12.5 Forecast horizon：到竞争优势稳定为止；terminal growth 不应长期超过经济增速
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Business transactions"] --> B["Income Statement: revenue - expenses = NI"]
+  A --> C["Balance Sheet: assets = liabilities + equity"]
+  A --> D["Cash Flow Statement: CFO + CFI + CFF"]
+  B --> E["Retained earnings -> equity"]
+  B --> F["NI starting point for indirect CFO"]
+  C --> G["Working capital changes -> CFO adjustments"]
+  C --> H["PP&E and intangibles -> depreciation, impairment, CFI"]
+  D --> I["Cash quality check: CFO vs NI"]
+  I --> J["Forecast and valuation inputs"]
+```
+
+```mermaid
+flowchart LR
+  A["Accounting choice or estimate"] --> B{"Cash changes now?"}
+  B -->|No| C["Timing or classification effect"]
+  B -->|Yes| D["Cash tax, capex, debt, lease payment"]
+  C --> E["Trace IS: revenue, expense, NI"]
+  C --> F["Trace BS: assets, liabilities, equity"]
+  C --> G["Trace SCF: add-back or classification"]
+  E --> H["Ratio impact"]
+  F --> H
+  G --> H
+  H --> I["Quality question: sustainable or accounting-driven?"]
+```
+
 ## 4. 跨模块依赖关系
 
 ### 4.1 三表主干关系图

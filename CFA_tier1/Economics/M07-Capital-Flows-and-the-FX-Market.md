@@ -94,6 +94,19 @@ tags:
 │  └─ 7.5.2 Hedging 与 speculation 可用同一工具，区别在原始暴露是否已存在
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    CA["Current account<br/>goods, services, income, transfers"] <--> FA["Capital / financial account<br/>FDI, portfolio, loans, reserves"]
+    SI["Saving - Investment"] --> CA
+    CA --> Balance["BOP balances through<br/>capital flows / reserves / errors"]
+    Drivers["Rates, growth, risk appetite, credibility"] --> FA
+    FA --> FX["FX pressure<br/>capital inflow -> local currency demand rises"]
+    Regime["Exchange-rate regime"] --> FX
+    Regime --> Tri["Trilemma<br/>fixed FX / free capital / independent policy: choose two"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 国际收支（Balance of Payments, BOP）

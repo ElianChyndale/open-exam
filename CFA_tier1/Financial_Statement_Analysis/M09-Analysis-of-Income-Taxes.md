@@ -96,6 +96,32 @@ tags:
 │  └─ 9.4.3 判断：披露变化可能影响 future cash taxes、NI quality 和 ratios
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Accounting profit vs taxable income difference"] --> B{"Will it reverse?"}
+  B -->|No| C["Permanent difference"]
+  C --> D["Affects effective tax rate only"]
+  B -->|Yes| E["Temporary difference"]
+  E --> F{"Current cash tax effect"}
+  F -->|Pay less tax now| G["DTL: future taxable amount"]
+  F -->|Pay more tax now| H["DTA: future deductible amount"]
+  H --> I{"Realization uncertain?"}
+  I -->|Yes| J["Valuation allowance lowers DTA and NI"]
+  I -->|No| K["Keep DTA"]
+```
+
+```mermaid
+flowchart LR
+  A["Statutory tax rate"] --> B["ETR = tax expense / pretax income"]
+  A --> C["Cash tax rate = cash taxes paid / pretax income"]
+  B --> D["Permanent differences and tax planning"]
+  C --> E["Temporary differences and cash timing"]
+  D --> F["Disclosure and sustainability check"]
+  E --> F
+```
+
 ## 4. 知识点详解
 
 ### 9.1 会计利润 vs 应税所得 (Accounting Profit vs Taxable Income)

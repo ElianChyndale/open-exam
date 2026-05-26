@@ -85,6 +85,20 @@ tags:
 │  └─ 6.2.3 Matrix pricing：用相似信用/期限债券插值 required yield，再贴现目标债券现金流
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["Identify CF_t"] --> B["Match y/m and coupon frequency"]
+  B --> C["Discount coupons + principal"]
+  C --> D["Full price"]
+  D --> E["Clean price = full price - accrued interest"]
+  C --> F["Price-yield relation"]
+  F --> F1["Coupon > YTM -> premium"]
+  F --> F2["Coupon = YTM -> par"]
+  F --> F3["Coupon < YTM -> discount"]
+```
+
 ## 4. 知识点详解
 
 ### 6.1 定价引擎 (Pricing Engine)

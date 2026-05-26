@@ -136,6 +136,19 @@ Fixed Income (11-14%)
    └─ 19.3 CMBS：DSCR = NOI/debt service，LTV = loan/property value，debt yield = NOI/loan；balloon risk 和 prepayment protection 高频
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["M01-M02 合同条款与现金流"] --> B["M06 定价引擎"]
+  B --> C["M07-M09 收益率/利差/曲线"]
+  C --> D["M10-M13 利率风险: HPR, duration, convexity, KRD"]
+  C --> E["M14-M16 信用风险: PD, LGD, spread, recovery"]
+  A --> F["M17-M19 证券化: SPV, ABS, MBS, tranche"]
+  F --> D
+  F --> E
+```
+
 ## 4. 跨模块依赖关系
 
 ### 4.1 固定收益内部依赖图

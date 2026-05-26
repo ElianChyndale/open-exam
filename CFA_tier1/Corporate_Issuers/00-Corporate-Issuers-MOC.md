@@ -83,6 +83,20 @@ Corporate Issuers (6-9%)
 │  └─ 7.4 与资本配置连接：高增长若 unit economics 差或再投资回报低，仍可能毁灭价值。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    M01["M01 组织形式/所有权<br/>liability, control, capital access"] --> M02["M02 投资者/利益相关者<br/>claims, motives, conflicts"]
+    M02 --> M03["M03 治理<br/>mechanisms reduce agency costs"]
+    M03 --> M05["M05 资本配置<br/>NPV discipline, avoid overinvestment"]
+    M04["M04 营运资本<br/>DIO + DSO - DPO"] --> M05
+    M04 --> M07["M07 商业模式<br/>cash conversion, scalability"]
+    M05 --> M06["M06 资本结构<br/>WACC, debt capacity, leverage"]
+    M06 --> M07
+    M07 --> Value["价值输出<br/>cash flow, growth, risk, cost of capital"]
+```
+
 ## 4. 跨模块依赖关系
 
 ### Corporate Issuers 内部依赖图

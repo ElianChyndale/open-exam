@@ -99,6 +99,33 @@ tags:
 │  └─ 3.4.3 判断：资产结构、资本结构和流动性要结合行业与会计政策解释
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Balance sheet item"] --> B{"Asset, liability, or equity?"}
+  B --> C["Asset"]
+  B --> D["Liability"]
+  B --> E["Equity"]
+  C --> F{"Intangible source?"}
+  F -->|Purchased| G["Capitalize at cost"]
+  F -->|Internally generated| H["Often expensed; IFRS development may qualify"]
+  F -->|Business combination| I["Recognize identifiable intangibles at fair value"]
+  C --> J["Goodwill = purchase price - FV identifiable net assets"]
+  D --> K["Current vs non-current affects liquidity"]
+  E --> L["Retained earnings links NI to equity"]
+```
+
+```mermaid
+flowchart LR
+  A["Financial asset classification"] --> B["Amortized cost"]
+  A --> C["FVOCI"]
+  A --> D["FVTPL"]
+  B --> E["Interest and amortization focus"]
+  C --> F["Fair value changes mainly OCI"]
+  D --> G["Fair value changes income"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 无形资产 (Intangible Assets)

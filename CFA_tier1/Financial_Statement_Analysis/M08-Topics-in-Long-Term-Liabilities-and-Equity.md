@@ -87,6 +87,31 @@ tags:
 │  └─ 8.3.3 EPS：options/RSUs 可能增加 diluted shares，影响 diluted EPS
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Lease contract"] --> B["Lessee recognizes ROU asset and lease liability"]
+  B --> C{"Lease expense pattern"}
+  C -->|Finance lease| D["Depreciation + interest; front-loaded total expense"]
+  C -->|Operating lease| E["Single lease expense; smoother pattern"]
+  D --> F["Higher leverage, lower asset turnover, coverage impact"]
+  E --> F
+  A --> G{"Lessor classification"}
+  G -->|Sales-type/finance| H["Recognize lease receivable; possible selling profit"]
+  G -->|Operating| I["Keep asset; recognize rental income"]
+```
+
+```mermaid
+flowchart LR
+  A["Postemployment or share-based plan"] --> B{"Plan type"}
+  B -->|DC plan| C["Employer contribution = expense"]
+  B -->|DB plan| D["Funded status = plan assets - PBO"]
+  B -->|Stock compensation| E["Grant-date fair value expensed over vesting"]
+  D --> F["Assumption-sensitive liability and cost"]
+  E --> G["Noncash expense; possible diluted EPS impact"]
+```
+
 ## 4. 知识点详解
 
 ### 8.1 租赁会计：出租人与承租人 (Lease Reporting: Lessor vs Lessee)

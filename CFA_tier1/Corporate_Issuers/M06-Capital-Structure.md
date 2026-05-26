@@ -88,6 +88,21 @@ tags:
 │  └─ 6.2.4 MM benchmark：无税无摩擦时资本结构不影响价值；真实世界因税、破产、代理和信息不对称而重要。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Capital["Capital structure decision"] --> WACC["Compute WACC<br/>market-value target weights"]
+    WACC --> Use["Use only for projects with similar risk"]
+    Capital --> Debt{"More debt?"}
+    Debt --> Benefit["Benefits<br/>tax shield, discipline, lower explicit cost"]
+    Debt --> Cost["Costs<br/>distress, agency, flexibility loss, rollover risk"]
+    Benefit --> Opt["Optimal / target structure<br/>marginal benefit = marginal cost"]
+    Cost --> Opt
+    Capital --> Lev["Leverage transmission<br/>sales -> EBIT via DOL -> EPS via DFL"]
+    Lev --> DTL["DTL = DOL x DFL"]
+```
+
 ## 4. 知识点详解
 
 ### 6.1 杠杆机制 (Leverage Mechanics)

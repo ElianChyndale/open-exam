@@ -90,6 +90,22 @@ tags:
 │  └─ 6.4.3 Trade diversion：高成本成员替代低成本非成员，降低效率
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Trade["贸易题"] --> Advantage{"判断优势类型"}
+    Advantage --> Abs["Absolute advantage<br/>same input -> more output"]
+    Advantage --> Comp["Comparative advantage<br/>lower opportunity cost"]
+    Comp --> Specialize["Specialization -> total output rises"]
+    Trade --> Restrict{"贸易限制?"}
+    Restrict --> Tariff["Tariff<br/>price rises, government revenue, DWL"]
+    Restrict --> Quota["Quota<br/>quantity limit, quota rent"]
+    Restrict --> Subsidy["Export subsidy<br/>export expands, welfare may fall"]
+    Trade --> Bloc["Integration ladder<br/>FTA -> customs union -> common market -> economic union -> monetary union"]
+    Bloc --> Welfare{"Trade creation exceeds diversion?"}
+```
+
 ## 4. 知识点详解
 
 ### 6.1 贸易基础理论（Foundations of Trade）

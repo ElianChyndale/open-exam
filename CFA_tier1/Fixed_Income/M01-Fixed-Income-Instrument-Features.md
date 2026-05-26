@@ -83,6 +83,21 @@ tags:
 │  └─ 1.3.3 Sinking fund/convertible：改变本金偿还或附带 equity upside；后续连接 effective duration 与 credit analysis
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Bond indenture"] --> B["Payment terms: coupon, par, maturity, currency"]
+  A --> C["Covenants"]
+  A --> D["Seniority and collateral"]
+  A --> E["Embedded options"]
+  C --> C1["Affirmative: must do"]
+  C --> C2["Negative: must not do"]
+  E --> E1["Callable: issuer benefits"]
+  E --> E2["Putable: investor benefits"]
+  D --> F["Recovery priority in default"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 合同解剖 (Contract Anatomy)

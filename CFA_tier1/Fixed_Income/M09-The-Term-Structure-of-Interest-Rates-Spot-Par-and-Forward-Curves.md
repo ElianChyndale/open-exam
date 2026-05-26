@@ -85,6 +85,21 @@ tags:
 │  └─ 9.2.3 选曲线：单笔 CF 用 spot，平价票息用 par，未来借贷锁价用 forward
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Spot curve"] --> A1["Discount each CF by matching maturity"]
+  A --> B["Discount factors"]
+  B --> C["Par curve"]
+  C --> C1["Coupon rate that prices bond at par"]
+  A --> D["Forward curve"]
+  D --> D1["Implied future period rate from no-arbitrage"]
+  E["Exam trigger"] --> E1["Price bond -> spot rates"]
+  E --> E2["Par coupon -> par curve"]
+  E --> E3["Future borrowing/lending -> forward rate"]
+```
+
 ## 4. 知识点详解
 
 ### 9.1 曲线词典 (Curve Dictionary)

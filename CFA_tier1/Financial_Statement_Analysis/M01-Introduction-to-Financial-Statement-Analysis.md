@@ -103,6 +103,22 @@ tags:
 │  └─ 1.5.3 Other sources：industry reports、economic data、company presentations 用来补充而非替代 filings
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Purpose and context"] --> B["Collect data"]
+  B --> C["Process data"]
+  C --> D["Analyze and interpret"]
+  D --> E["Report conclusions"]
+  E --> F["Update analysis"]
+  B --> G["Statements and notes"]
+  B --> H["MD&A and audit report"]
+  B --> I["Regulatory filings and external data"]
+  C --> J["Comparability checks: standard, policy, period, currency"]
+  D --> K["Decision-useful output with limitations"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 Introduction

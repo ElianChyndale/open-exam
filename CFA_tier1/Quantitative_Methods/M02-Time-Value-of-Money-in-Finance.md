@@ -95,6 +95,22 @@ tags:
 │  └─ 2.4.3 应用：forward rate、forward FX、option payoff 的估值直觉都来自可加性
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["先画 cash-flow timeline"] --> B{"现金流形态"}
+    B -->|单笔| C["PV <-> FV<br/>(1+r)^n"]
+    B -->|等额有限期| D{"付款时点"}
+    D -->|期末| E["Ordinary annuity"]
+    D -->|期初| F["Annuity due<br/>ordinary x (1+r)"]
+    B -->|无限期| G{"是否增长"}
+    G -->|不增长| H["Perpetuity: A / r"]
+    G -->|增长| I["Growing perpetuity: A1 / (r-g)"]
+    B -->|不规则| J["Cash flow additivity<br/>分别折现再加总"]
+    A --> K["反求变量<br/>r / g / PMT / n"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 现金流时间轴（Cash-Flow Map）

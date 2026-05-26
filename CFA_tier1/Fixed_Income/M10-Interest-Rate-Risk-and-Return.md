@@ -84,6 +84,18 @@ tags:
 │  └─ 10.2.3 Immunization intuition：让投资期限接近 MacDur，用价格效应抵消再投资效应
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["Holding period return"] --> B["Coupon income"]
+  A --> C["Reinvestment income"]
+  A --> D["Sale price - purchase price"]
+  E["Investment horizon vs Macaulay duration"] --> F["Horizon < MacDur: price risk dominates"]
+  E --> G["Horizon > MacDur: reinvestment risk dominates"]
+  E --> H["Horizon ~= MacDur: immunization intuition"]
+```
+
 ## 4. 知识点详解
 
 ### 10.1 回报分解 (Return Decomposition)

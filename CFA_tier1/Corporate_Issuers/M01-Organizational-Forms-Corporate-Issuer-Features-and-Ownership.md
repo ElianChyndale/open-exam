@@ -90,6 +90,22 @@ tags:
 │  └─ 1.4.2 Private：披露少、流动性低、控制更集中、估值和退出更困难。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Form["选择组织形式"] --> Liability{"需要 limited liability?"}
+    Liability -->|No| Sole["Sole proprietorship / general partnership<br/>控制强, 设立简单, owner risk high"]
+    Liability -->|Yes| Flex{"需要灵活税务/控制安排?"}
+    Flex -->|Yes| LLC["LLC / limited partnership<br/>混合责任保护和控制条款"]
+    Flex -->|No| Corp["Corporation<br/>separate legal entity, perpetual life, transferable shares"]
+    Corp --> Public{"公开融资和流动性优先?"}
+    Public -->|Yes| Pub["Public issuer<br/>capital access high, disclosure cost high"]
+    Public -->|No| Priv["Private issuer<br/>control concentrated, liquidity low"]
+    Pub --> Agency["Ownership-control separation -> governance need"]
+    Priv --> Agency
+```
+
 ## 4. 知识点详解
 
 ### 1.1 Introduction

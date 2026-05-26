@@ -95,6 +95,29 @@ tags:
 │  └─ 5.3.3 Forecast bridge：只有可解释、可持续的历史驱动因素才进入预测。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Company research report"] --> B["Business model"]
+  B --> C["Revenue drivers and pricing power"]
+  C --> D["Operating profitability"]
+  D --> E["Working capital and cash conversion"]
+  E --> F["Capital investment and capital structure"]
+  F --> G["Normalized earnings and cash flow"]
+  G --> H["Forecast inputs and valuation assumptions"]
+```
+
+```mermaid
+flowchart LR
+  A["Historical performance"] --> B{"Sustainable?"}
+  B -->|Recurring core operations| C["Use as forecast base"]
+  B -->|One-off, accounting, cycle peak/trough| D["Normalize or exclude"]
+  C --> E["DuPont: margin x turnover x leverage"]
+  D --> E
+  E --> F["Separate business quality from leverage effect"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 了解业务 (Understand the business)

@@ -84,6 +84,22 @@ tags:
 │  └─ 17.3.3 考试判断：先识别谁转移资产、谁持有资产、谁收款、谁承担 first-loss
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["Borrowers"] --> B["Asset pool cash flows"]
+  B --> C["Originator / seller"]
+  C --> D["SPV: bankruptcy remote"]
+  D --> E["Securities issued to investors"]
+  B --> F["Servicer collects and remits"]
+  F --> D
+  D --> G["Waterfall"]
+  G --> H["Senior tranche"]
+  G --> I["Subordinate / first-loss tranche"]
+  J["Trustee"] --> G
+```
+
 ## 4. 知识点详解
 
 ### 17.1 Introduction

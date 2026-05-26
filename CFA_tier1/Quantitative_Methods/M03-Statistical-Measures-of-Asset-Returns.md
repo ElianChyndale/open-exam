@@ -101,6 +101,22 @@ tags:
 │  └─ 3.4.3 判断陷阱：相关不是因果，高相关也不保证回归模型可用
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["描述收益分布"] --> B["中心<br/>mean / median / mode"]
+    A --> C["位置<br/>quantile / percentile"]
+    A --> D["离散<br/>variance / SD / CV"]
+    A --> E["形态<br/>skew / kurtosis"]
+    A --> F["联动<br/>correlation"]
+    B --> G{"偏态或 outlier?"}
+    G -->|是| H["Median 更稳健"]
+    G -->|否| I["Mean 可代表中心"]
+    E --> J["负偏 + 厚尾<br/>极端损失风险更高"]
+    F --> K["方向 + 线性强度<br/>不是因果"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 集中趋势与位置指标（Central Tendency and Location）

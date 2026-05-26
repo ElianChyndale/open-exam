@@ -88,6 +88,33 @@ tags:
 │  └─ 6.3.3 判断：inventory turnover 改善必须结合 gross margin，避免把减记后的低存货误判为效率提升
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Inventory question"] --> B{"Cost trend?"}
+  B -->|Inflation| C["FIFO: lower COGS, higher NI, higher inventory, higher tax"]
+  B -->|Inflation| D["LIFO: higher COGS, lower NI, lower inventory, lower tax, higher CFO"]
+  B -->|Deflation| E["Directions reverse"]
+  C --> F["Compare ratios after policy adjustment"]
+  D --> F
+  E --> F
+  F --> G["Use LIFO reserve for comparability"]
+```
+
+```mermaid
+flowchart LR
+  A["Ending inventory"] --> B{"Carrying value > NRV?"}
+  B -->|No| C["Keep at cost"]
+  B -->|Yes| D["Write down inventory"]
+  D --> E["Lower assets and NI"]
+  D --> F["Higher COGS or loss"]
+  D --> G["Turnover may rise mechanically"]
+  E --> H["Quality check before calling efficiency improved"]
+  F --> H
+  G --> H
+```
+
 ## 4. 知识点详解
 
 ### 6.1 计量基础 (Measurement Basis)

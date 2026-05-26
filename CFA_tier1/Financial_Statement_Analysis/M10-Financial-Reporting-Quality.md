@@ -116,6 +116,34 @@ tags:
 │  └─ 10.5.3 Disclosure red flags：auditor change、related-party transactions、fourth-quarter adjustments
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Financial report"] --> B{"Reporting quality"}
+  A --> C{"Quality of reported results"}
+  B -->|High| D["Compliant, complete, transparent"]
+  B -->|Low| E["Biased, non-GAAP misleading, or fraudulent"]
+  C -->|High| F["Sustainable earnings, cash flow, balance sheet"]
+  C -->|Low| G["Transitory or low-cash-quality results"]
+  D --> H["Still test sustainability"]
+  F --> I["Forecastable base"]
+  G --> J["Normalize before valuation"]
+```
+
+```mermaid
+flowchart LR
+  A["Potential manipulation"] --> B["Motivation"]
+  A --> C["Opportunity"]
+  A --> D["Weak discipline"]
+  B --> E["Targets, bonus, covenants, financing"]
+  C --> F["Complex transactions, subjective estimates"]
+  D --> G["Weak audit, governance, regulation"]
+  E --> H["Check red flags: CFO < NI, AR/inventory growth, non-GAAP gap"]
+  F --> H
+  G --> H
+```
+
 ## 4. 知识点详解
 
 ### 10.1 报告质量 vs 报告结果质量 (Reporting Quality vs Quality of Reported Results)

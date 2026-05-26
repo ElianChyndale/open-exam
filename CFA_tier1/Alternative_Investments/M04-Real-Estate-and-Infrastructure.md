@@ -89,6 +89,22 @@ tags:
 │  └─ 4.2.4 Risk screen：regulatory、political、leverage、demand、inflation linkage、ESG/operational risk。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Real assets"] --> B["Real estate"]
+  A --> C["Infrastructure"]
+  B --> B1["Income approach<br/>Value = NOI / cap rate"]
+  B --> B2["Sales comparison<br/>market comparables"]
+  B --> B3["Cost approach<br/>replacement cost less depreciation"]
+  B --> B4["REITs<br/>more liquidity, more public-market correlation"]
+  C --> C1["Brownfield<br/>operating assets, more stable cash flows"]
+  C --> C2["Greenfield<br/>construction risk, higher expected return"]
+  C --> C3["PPP/regulation<br/>political and concession risk"]
+  A --> D["Shared risks<br/>illiquidity, appraisal lag, rate sensitivity"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 房地产 (Real Estate)【考试核心】

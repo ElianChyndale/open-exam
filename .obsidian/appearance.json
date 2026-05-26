@@ -1,1 +1,5 @@
-{}
+{
+  "enabledCssSnippets": [
+    "cfa-mermaid-responsive"
+  ]
+}

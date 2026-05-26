@@ -80,6 +80,21 @@ tags:
 │  └─ 3.1.5 考试判断：hedging reduces a selected risk but can introduce basis/counterparty risk
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Derivative use"] --> B{"Primary motive?"}
+  B --> C["Hedging<br/>reduce target exposure"]
+  B --> D["Speculation<br/>take leveraged view"]
+  B --> E["Arbitrage<br/>exploit mispricing with offsetting trades"]
+  B --> F["Exposure transformation<br/>change duration, beta, currency, commodity exposure"]
+  C --> G["Residual risks<br/>basis, counterparty, liquidity"]
+  D --> H["Amplified gains/losses<br/>notional can exceed capital committed"]
+  E --> I["Requires same or replicable cash flows"]
+  F --> J["Check suitability and risk budget"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 核心内容

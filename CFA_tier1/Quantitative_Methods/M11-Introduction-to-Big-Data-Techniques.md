@@ -93,6 +93,22 @@ tags:
 │  └─ 11.3.5 Model risk：overfitting、data snooping、sample bias、解释性不足
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    A["Big data investment task"] --> B{"有标签?"}
+    B -->|有| C["Supervised learning"]
+    C --> D{"输出类型"}
+    D -->|连续数值| E["Regression"]
+    D -->|类别| F["Classification"]
+    B -->|无| G["Unsupervised learning"]
+    G --> H["Clustering / dimension reduction / anomaly detection"]
+    B -->|行动后有 reward| I["Reinforcement learning"]
+    A --> J["Governance checks"]
+    J --> K["data quality / bias / privacy / overfitting / validation"]
+```
+
 ## 4. 知识点详解
 
 ### 11.1 金融科技数据背景（Fintech Data Context）

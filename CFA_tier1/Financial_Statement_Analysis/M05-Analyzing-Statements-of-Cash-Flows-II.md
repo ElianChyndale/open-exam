@@ -88,6 +88,30 @@ tags:
 │  └─ 5.3.3 判断：现金流比率更接近偿债能力，但可能受 working capital timing 扰动
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Reported cash flow statement"] --> B{"Source of cash?"}
+  B --> C["CFO: core operating cash"]
+  B --> D["CFI: reinvestment or asset sales"]
+  B --> E["CFF: debt, equity, dividends"]
+  C --> F["Cash conversion and quality"]
+  D --> G["Capex and growth support"]
+  E --> H["Financing dependence and payout"]
+  F --> I["FCFF = CFO + Interest(1-T) - FCInv"]
+  F --> J["FCFE = CFO - FCInv + Net Borrowing"]
+```
+
+```mermaid
+flowchart LR
+  A["CFO vs NI"] --> B{"CFO supports earnings?"}
+  B -->|CFO >= NI| C["Stronger cash earnings signal"]
+  B -->|CFO < NI repeatedly| D["Check accruals, AR, inventory, one-offs"]
+  C --> E["Use cash flow ratios"]
+  D --> E
+```
+
 ## 4. 知识点详解
 
 ### 5.1 报告式与同比例现金流量表 (Reported vs Common-Size Cash Flow Statements)

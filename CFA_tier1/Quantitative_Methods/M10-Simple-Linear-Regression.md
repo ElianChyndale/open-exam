@@ -103,6 +103,22 @@ tags:
 │  └─ 10.3.6 Functional form：linear-log / log-linear 改变系数解释口径
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["Y = b0 + b1X + e"] --> B["OLS minimizes SSE"]
+    B --> C["Coefficient estimates<br/>b1 = Cov(X,Y)/Var(X)"]
+    C --> D["Interpret slope<br/>X +1 -> E(Y) changes by b1"]
+    B --> E["ANOVA<br/>SST = SSR + SSE"]
+    E --> F["Fit<br/>R2 / SEE"]
+    C --> G["Inference<br/>slope t-test, df=n-2"]
+    E --> H["Overall F-test<br/>simple regression: F=t^2"]
+    A --> I["Diagnostics<br/>residual plot"]
+    I --> J["curve / funnel / serial pattern -> assumptions risk"]
+    F --> K["Prediction<br/>Yhat and prediction interval"]
+```
+
 ## 4. 知识点详解
 
 ### 10.1 简单线性回归模型（Simple Linear Regression Model）

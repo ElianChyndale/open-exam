@@ -100,6 +100,22 @@ tags:
 │  └─ 4.6.2 Level I 更重方向判断，不把 Taylor rule 当精确预测模型
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    CB["Central bank<br/>price stability / growth / financial stability"] --> Tool["Tools<br/>policy rate / OMO / reserve requirements / QE-QT"]
+    Tool --> IR["Interest-rate channel<br/>market rates -> C and I"]
+    Tool --> Credit["Credit channel<br/>bank lending standards -> loans"]
+    Tool --> Asset["Asset-price channel<br/>discount rate / wealth effect"]
+    Tool --> FX["FX channel<br/>interest differential -> capital flows"]
+    IR --> Macro["AD, output gap, inflation"]
+    Credit --> Macro
+    Asset --> Macro
+    FX --> Macro
+    Macro --> Guard["Effectiveness check<br/>credibility, ZLB, weak banks, policy mix"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 中央银行的核心目标（Central Bank Objectives）

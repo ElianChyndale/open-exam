@@ -92,6 +92,33 @@ tags:
 │  └─ 6.2.3 价值判断：市场份额增长只有在不牺牲利润率和资本回报时才创造价值。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Define industry boundary"] --> B["Classify peer group"]
+  B --> C["Assess size, growth, profitability, share trends"]
+  C --> D["Industry life-cycle stage"]
+  D --> E["Porter five forces"]
+  E --> F["PESTLE external influences"]
+  F --> G["Company competitive position"]
+  G --> H["Forecast growth, margins, capex, risk"]
+```
+
+```mermaid
+flowchart LR
+  A["Porter force"] --> B["Threat of entry"]
+  A --> C["Threat of substitutes"]
+  A --> D["Buyer power"]
+  A --> E["Supplier power"]
+  A --> F["Rivalry"]
+  B --> G["Pricing power and long-run ROIC"]
+  C --> G
+  D --> G
+  E --> G
+  F --> G
+```
+
 ## 4. 知识点详解
 
 ### 6.1 行业视角 (Industry lens)

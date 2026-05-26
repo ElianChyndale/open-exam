@@ -87,6 +87,23 @@ tags:
 │  └─ 19.2.3 CMBS：DSCR = NOI/debt service，LTV = loan/property value，debt yield = NOI/loan；关注 balloon risk 和 prepayment protection
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Mortgage pool cash flow"] --> B["Scheduled interest"]
+  A --> C["Scheduled principal"]
+  A --> D["Prepayments"]
+  D --> E["Rates down -> faster prepay -> contraction risk"]
+  D --> F["Rates up -> slower prepay -> extension risk"]
+  A --> G["Pass-through: pro rata cash flow"]
+  A --> H["CMO: time tranching"]
+  H --> H1["Sequential-pay: principal by tranche order"]
+  H --> H2["PAC: more stable principal schedule"]
+  H --> H3["Support tranche: absorbs variability"]
+  I["CMBS"] --> I1["DSCR / LTV / debt yield + balloon risk"]
+```
+
 ## 4. 知识点详解
 
 ### 19.1 抵押贷款现金流风险 (Mortgage Cash-Flow Risk)

@@ -92,6 +92,19 @@ tags:
 │  └─ 2.5.2 政策接口：信贷紧缩会削弱货币传导，扩大财政稳定器需求
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    Expansion["Expansion<br/>output, sales, profits rise"] --> Peak["Peak<br/>capacity tight, inflation pressure"]
+    Peak --> Contraction["Contraction / recession<br/>orders, production, credit weaken"]
+    Contraction --> Trough["Trough<br/>slack high, policy support likely"]
+    Trough --> Expansion
+    Lead["Leading indicators<br/>new orders, housing, equity, initial claims"] -. predict .-> Peak
+    Coin["Coincident indicators<br/>production, employment, income, sales"] -. confirm .-> Expansion
+    Lag["Lagging indicators<br/>unemployment duration, unit labor cost, prime rate"] -. verify late .-> Contraction
+```
+
 ## 4. 知识点详解
 
 ### 2.1 经济周期阶段（Phases of the Business Cycle）

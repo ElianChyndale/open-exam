@@ -113,6 +113,21 @@ tags:
 │  └─ 1.5.3 最优点：最高可达 indifference curve 与 efficient frontier 相切
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+    A["Candidate assets"] --> B["Expected return"]
+    A --> C["Risk<br/>SD / covariance / correlation"]
+    C --> D{"rho < +1?"}
+    D -->|是| E["Diversification benefit"]
+    D -->|否, rho=+1| F["No diversification"]
+    B --> G["Efficient frontier"]
+    E --> G
+    G --> H["Investor utility<br/>U = E(R)-0.5A sigma^2"]
+    H --> I["Optimal portfolio<br/>highest reachable utility"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 Introduction

@@ -83,6 +83,21 @@ tags:
 │  └─ 7.2.3 Spread interpretation：credit、liquidity、tax、technical、option risk 都可推宽 spread
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Bond price + promised CF"] --> B["Yield measures"]
+  B --> B1["Current yield: coupon income only"]
+  B --> B2["YTM: IRR of promised CF"]
+  B --> B3["BEY / EAY: annualization"]
+  A --> C["Spread measures"]
+  C --> C1["G-spread: vs government"]
+  C --> C2["I-spread: vs swap"]
+  C --> C3["Z-spread: add to spot curve"]
+  C --> D["Spread drivers: credit + liquidity + tax + option + technical"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 收益率视角 (Yield Lens)

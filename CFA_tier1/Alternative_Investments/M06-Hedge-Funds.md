@@ -88,6 +88,23 @@ tags:
 │  └─ 6.3.3 Market neutral 要求 net 近零，但 gross 可很高；不能把净敞口低等同于低风险。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Hedge fund analysis"] --> B["Terms"]
+  A --> C["Strategy"]
+  A --> D["Exposure"]
+  B --> B1["Lockup / notice / gates<br/>liquidity is conditional"]
+  B --> B2["Management + incentive fee<br/>check HWM/hurdle"]
+  C --> C1["Equity long/short<br/>stock selection + possible beta"]
+  C --> C2["Global macro<br/>rates, FX, equity index, commodities"]
+  C --> C3["Event driven<br/>deal or restructuring risk"]
+  C --> C4["Relative value<br/>spread convergence + leverage/liquidity risk"]
+  D --> D1["Gross = long + abs(short)<br/>risk scale"]
+  D --> D2["Net = long - abs(short)<br/>directional exposure"]
+```
+
 ## 4. 知识点详解
 
 ### 6.1 对冲基金特征 (Hedge Fund Characteristics)

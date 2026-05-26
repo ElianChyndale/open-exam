@@ -86,17 +86,34 @@ tags:
 │  ├─ 1.1.2 利润口径：accounting profit=TR-explicit costs；economic profit=TR-explicit-implicit costs
 │  └─ 1.1.3 考试判断：zero economic profit 表示赚到 normal profit，不等于会计亏损
 ├─ 1.2 四种市场结构（Four Market Structures）
-│  ├─ 1.2.1 Perfect competition：many firms、homogeneous product、no barriers；长期 P=MC=min ATC
-│  ├─ 1.2.2 Monopolistic competition：product differentiation、some pricing power；长期需求曲线与 ATC 相切
-│  ├─ 1.2.3 Oligopoly：few firms、strategic interaction；看 kinked demand、collusion、game theory
+│  ├─ 1.2.1 Perfect competition：many firms、homogeneous product、no barriers；长期 P=MC=min ATC ↳ 笔记：Perfect competition 下 MC schedule = supply function，其他市场结构无唯一 supply function
+│  ├─ 1.2.2 Monopolistic competition：product differentiation、low barriers、some pricing power；长期需求曲线与 ATC 相切
+│  ├─ 1.2.3 Oligopoly：few firms、high barriers、strategic interaction；看 kinked demand、collusion、game theory
 │  └─ 1.2.4 Monopoly：single seller、high barriers；MR=MC 定产量，需求曲线定价格
 ├─ 1.3 进入壁垒（Barriers to Entry）
-│  ├─ 1.3.1 壁垒来源：economies of scale、patents/licenses、network effects、brand loyalty、high fixed cost
+│  ├─ 1.3.1 壁垒来源：economies of scale、patents/licenses、network effects、brand loyalty、high fixed cost ↳ 笔记：Economies of scale=单位成本↓，Diseconomies=单位成本↑，Constant returns=单位成本不变；Output↑→Cost per unit↓，LRAC 向下倾斜部分
 │  └─ 1.3.2 判断用途：壁垒越强，长期经济利润越可能维持，价格越可能高于边际成本
 ├─ 1.4 集中度指标（Concentration Measures）
-│  ├─ 1.4.1 CR_n=前 n 家企业市场份额之和；适合快速判断集中度但忽略分布
-│  ├─ 1.4.2 HHI=Σ market share_i^2；大企业合并对 HHI 影响更大
+│  ├─ 1.4.1 CR_n=前 n 家企业市场份额之和；monopoly 下单一企业 market share=100%，CR_1=100%；适合快速判断集中度但忽略分布
+│  ├─ 1.4.2 HHI=Σ market share_i^2；百分数口径下 monopoly HHI=10,000，小数口径下 HHI=1.0；大企业合并对 HHI 影响更大
 │  └─ 1.4.3 限制：集中度不能捕捉进口竞争、潜在进入、产品差异和动态竞争
+```
+
+## 核心图解
+
+```mermaid
+flowchart TD
+    Start["题干给市场特征"] --> Taker{"企业是 price taker?"}
+    Taker -->|Yes| PC["Perfect competition<br/>many firms, homogeneous product<br/>长期 P=MC=min ATC"]
+    Taker -->|No| Diff{"产品差异化且进入壁垒低?"}
+    Diff -->|Yes| MC["Monopolistic competition<br/>some pricing power<br/>长期需求曲线与 ATC 相切"]
+    Diff -->|No| Few{"少数企业且策略互动?"}
+    Few -->|Yes| Oligo["Oligopoly<br/>collusion / kinked demand / game theory"]
+    Few -->|No| Mono["Monopoly<br/>single seller, high barriers<br/>MR=MC 定 Q, demand 定 P"]
+    PC --> Check["再检查 CR_n / HHI 限制"]
+    MC --> Check
+    Oligo --> Check
+    Mono --> Check
 ```
 
 ## 4. 知识点详解
@@ -141,6 +158,8 @@ tags:
 - 可能发生价格战或形成默契合谋（tacit collusion）
 - 博弈论（game theory）用于分析寡头行为
 - 纳什均衡（Nash Equilibrium）是重要分析工具
+- 需求曲线口径：colluding 条件下先看 aggregate market demand 在参与企业间分配；non-colluding 条件下每家公司才面对自己的 individual demand curve。
+- 古诺假设（Cournot assumption）：每家企业选择自己的 profit-maximizing output，并假设 competitors' output will not change；这是 output competition，不是 price competition。
 
 **垄断（Monopoly）**：
 - 特点：唯一生产者，极高进入壁垒
@@ -161,6 +180,7 @@ tags:
 
 - **N企业集中率（N-firm concentration ratio）**：前N家企业市场份额之和。值越高，市场越集中。
 - **赫芬达尔-赫希曼指数（HHI, Herfindahl-Hirschman Index）**：所有企业市场份额的平方和，对市场份额分布更敏感。
+- **Monopoly market share 口径**：pure monopoly 只有一个卖方，因此单一企业 market share=100%，`CR_1=100%`。HHI 是 market share 的平方和；若用百分数，`HHI=100^2=10,000`；若用小数，`HHI=1.0^2=1.0`。两种口径含义一致，但不能在同一道题中混用。
 - 注意：集中度指标不能完全替代竞争分析，还需要考虑进出口竞争、潜在进入等因素。
 
 ## 5. 关键公式与计算框架
@@ -176,8 +196,8 @@ tags:
 | 1.2.1 | `P = MC = minimum ATC` | 完全竞争长期均衡 | 长期经济利润为零，企业仍有正常利润。 |
 | 1.2.4 | `P > MC` | 垄断/垄断竞争定价权 | 产生 deadweight loss，价格不是由 MC 直接决定。 |
 | 1.3.1 | `ATC = TC/Q`; `AVC = TVC/Q` | breakeven 与 shutdown | 短期 `P < AVC` 关停；长期 `P < ATC` 退出。 |
-| 1.4.1 | `CR_n = Σ market share of largest n firms` | 集中率题 | 只看前 n 家，不能反映剩余企业分布。 |
-| 1.4.2 | `HHI = Σ market share_i^2` | HHI 题 | 市占率单位需统一；百分数口径与小数口径不可混用。 |
+| 1.4.1 | `CR_n = Σ market share of largest n firms` | 集中率题 | 只看前 n 家，不能反映剩余企业分布；pure monopoly 下 `CR_1=100%`。 |
+| 1.4.2 | `HHI = Σ market share_i^2` | HHI 题 | 市占率单位需统一；百分数口径 monopoly `HHI=10,000`，小数口径 monopoly `HHI=1.0`，两者不可混用。 |
 
 ## 6. 常见考点与解题思路
 
@@ -219,6 +239,10 @@ tags:
 | ❌ 忽略：完全竞争企业的需求曲线是水平的，而不是向下倾斜的。行业需求曲线才是向下倾斜的。 | ✅ 完全竞争企业的需求曲线是水平的，而不是向下倾斜的。行业需求曲线才是向下倾斜的。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：垄断竞争与完全竞争的区别：垄断竞争有产品差异化，短期可能有经济利润，长期需求曲线与ATC相切但不在最小点。 | ✅ 垄断竞争与完全竞争的区别：垄断竞争有产品差异化，短期可能有经济利润，长期需求曲线与ATC相切但不在最小点。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：HHI对合并非常敏感：两个小企业合并对HHI的影响小于两个大企业合并。 | ✅ HHI对合并非常敏感：两个小企业合并对HHI的影响小于两个大企业合并。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 把 colluding 与 non-colluding 的需求曲线口径混在一起。 | ✅ colluding 看 aggregate market demand 的分配；non-colluding 才说每家公司面对 individual demand curve。 | 题干出现 colluding/non-colluding 时，先判断需求曲线归属层级。 |
+| ❌ 把 Cournot assumption 当成价格竞争或假设对手价格不变。 | ✅ Cournot assumption 假设对手产量不变，企业选择自己的利润最大化产量。 | 题干出现 Cournot/古诺时，先锁定 output competition。 |
+| ❌ 看到 monopoly 只想到定价权，忘记 concentration measure 的 market share 极值。 | ✅ pure monopoly 下单一企业 market share=100%，`CR_1=100%`；HHI 用百分数为 `10,000`，用小数为 `1.0`。 | CR/HHI 题先统一 market share 单位，再判断集中度含义与局限。 |
+| ❌ 把 monopolistic competition 的产品差异化误当作 high barriers to entry。 | ✅ monopolistic competition 通常是 low barriers；oligopoly 才是 fairly high barriers，monopoly 是 very high barriers。 | 问 barriers to entry 时先回忆壁垒阶梯，而不是先看产品是否差异化。 |
 
 ## 8. 跨模块关联
 

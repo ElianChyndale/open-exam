@@ -84,6 +84,20 @@ tags:
 │  └─ 3.2.3 Dealer/OTC 市场：流动性由做市商、bid-ask spread、issue size 和交易活跃度驱动
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Fixed-income market"] --> B["Money market: <= 1 year"]
+  A --> C["Capital market: > 1 year"]
+  A --> D["Primary market: new issue"]
+  A --> E["Secondary market: OTC/dealer trading"]
+  A --> F["Repo financing"]
+  F --> F1["Sell collateral today"]
+  F1 --> F2["Repurchase later"]
+  F2 --> F3["Repo rate + haircut"]
+```
+
 ## 4. 知识点详解
 
 ### 3.1 市场地图 (Market Map)

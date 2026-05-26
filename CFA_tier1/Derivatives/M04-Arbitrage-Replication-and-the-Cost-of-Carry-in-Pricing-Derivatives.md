@@ -78,6 +78,20 @@ tags:
 │  └─ 4.1.5 公式选择：无收益、已知现金收入、收益率/便利收益三类不能混用
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Derivative pricing"] --> B["Identify future cash flows"]
+  B --> C{"Can another portfolio replicate them?"}
+  C -->|Yes| D["Derivative value = replication cost"]
+  C -->|No| E["No simple no-arbitrage price"]
+  D --> F{"Observed price differs?"}
+  F -->|Derivative expensive| G["Sell derivative<br/>buy replicating portfolio"]
+  F -->|Derivative cheap| H["Buy derivative<br/>sell replicating portfolio"]
+  D --> I["Cost of carry<br/>spot + financing/storage - income/benefits"]
+```
+
 ## 4. 知识点详解
 
 ### 4.1 核心内容

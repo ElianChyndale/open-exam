@@ -108,6 +108,33 @@ tags:
 │  └─ 2.2.4 跨资产指数：equity、fixed income、alternative indexes 的可复制性和代表性问题不同。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Define target market"] --> B["Select constituents"]
+  B --> C{"Choose weighting"}
+  C -->|Price weighted| D["High-price stocks dominate"]
+  C -->|Equal weighted| E["Average stock dominates; more rebalancing"]
+  C -->|Market-cap weighted| F["Large-cap stocks dominate"]
+  C -->|Fundamental weighted| G["Accounting or fundamental scale dominates"]
+  D --> H["Calculate index value and return"]
+  E --> H
+  F --> H
+  G --> H
+  H --> I["Rebalance weights"]
+  I --> J["Reconstitute constituents"]
+```
+
+```mermaid
+flowchart LR
+  A["Index return"] --> B{"Income included?"}
+  B -->|No| C["Price return"]
+  B -->|Yes| D["Total return"]
+  E["Split or constituent change"] --> F["Adjust divisor"]
+  F --> G["Continuity, not investment return"]
+```
+
 ## 4. 知识点详解
 
 ### 2.1 指数构建 (Index construction)

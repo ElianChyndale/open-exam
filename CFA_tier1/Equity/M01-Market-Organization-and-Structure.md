@@ -119,6 +119,31 @@ tags:
 │  └─ 1.2.4 指令与监管：execution、validity、clearing instructions 约束交易；监管目标是公平、有序、透明和保护投资者。
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Investor objective"] --> B{"Order priority"}
+  B -->|Immediate execution| C["Market order"]
+  B -->|Control price| D["Limit order"]
+  B -->|Trigger after price move| E["Stop order"]
+  C --> F["Execution certainty, price uncertainty"]
+  D --> G["Price certainty, non-execution risk"]
+  E --> H["Trigger risk and slippage"]
+  F --> I["Best execution considers price, speed, size, cost"]
+  G --> I
+  H --> I
+```
+
+```mermaid
+flowchart LR
+  A["Leveraged position"] --> B{"Long or short?"}
+  B -->|Long margin| C["Equity = shares x price - loan"]
+  B -->|Short sale| D["Equity = proceeds + margin - shares x price"]
+  C --> E["Price down -> equity falls -> margin call risk"]
+  D --> F["Price up -> equity falls -> margin call risk"]
+```
+
 ## 4. 知识点详解
 
 ### 1.1 市场管道 (Market plumbing)

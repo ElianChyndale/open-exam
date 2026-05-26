@@ -89,6 +89,22 @@ tags:
 │  └─ 8.5.2 Carry trade 不是无风险套利，因为没有 forward 锁定换回汇率
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Start["FX 计算题"] --> Quote["先写报价<br/>A/B = 1A priced in B"]
+    Quote --> Direction{"要做什么?"}
+    Direction --> Invert["倒数报价<br/>bid and ask switch sides"]
+    Direction --> Cross["交叉汇率<br/>arrange chain so middle currency cancels"]
+    Direction --> Forward["远期题<br/>points = F - S<br/>premium = (F-S)/S"]
+    Direction --> CIP["CIP<br/>F = S x (1+i_d)/(1+i_f)"]
+    Cross --> Interpret["解释方向<br/>A/B rises -> A appreciates"]
+    Forward --> Interpret
+    CIP --> Interpret
+    Interpret --> Guard["防错<br/>premium is pricing, not forecast"]
+```
+
 ## 4. 知识点详解
 
 ### 8.1 汇率报价基础（Exchange Rate Quote Basics）

@@ -82,6 +82,20 @@ tags:
 │  └─ 7.3.3 市场固定利率上升时，固定利率支付方通常受益
 ```
 
+## 核心图解
+
+```mermaid
+flowchart LR
+  A["Interest rate swap"] --> B["Fixed-rate payer"]
+  A --> C["Fixed-rate receiver"]
+  B --> D["Pays fixed<br/>receives floating"]
+  C --> E["Receives fixed<br/>pays floating"]
+  D --> F["Value tends to rise when market fixed rate rises"]
+  E --> G["Value tends to rise when market fixed rate falls"]
+  A --> H["Net payment = Notional x rate difference x accrual"]
+  A --> I["Notional usually used for calculation, not exchanged"]
+```
+
 ## 4. 知识点详解
 
 ### 7.1 Introduction

@@ -88,6 +88,20 @@ tags:
 │  └─ 13.2.3 Benchmark yield shift 与 credit spread shift 分开看，避免把 spread widening 误判成 curve move
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart TD
+  A["Cash flows may change?"] -->|No| B["Yield-based duration"]
+  A -->|Yes: callable / putable / MBS| C["Effective duration and convexity"]
+  D["Yield curve move"] --> D1["Parallel shift: total duration useful"]
+  D --> D2["Non-parallel shift: key rate duration"]
+  D2 --> D3["Steepening / flattening / twist"]
+  E["Observed market history"] --> F["Empirical duration"]
+  G["Bond yield change"] --> G1["Benchmark shift"]
+  G --> G2["Spread shift"]
+```
+
 ## 4. 知识点详解
 
 ### 13.1 期权感知风险 (Option-Aware Risk)

@@ -91,6 +91,23 @@ Derivatives (5-8%)
 │  └─ 10.3 Risk-neutral pricing：`p*=[(1+r)-d]/(u-d)`，`V0=[p*Vu+(1-p*)Vd]/(1+r)`；p* 不是真实概率
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+  A["Derivative question"] --> B{"Instrument type?"}
+  B --> C["Forward commitment<br/>obligation, linear payoff"]
+  B --> D["Contingent claim<br/>right for holder, obligation for writer"]
+  C --> E["Forward/Futures<br/>price from cost of carry"]
+  C --> F["Swap<br/>strip of forward-like cash flows"]
+  D --> G["Option payoff/profit<br/>moneyness + premium"]
+  D --> H["Replication<br/>put-call parity + binomial"]
+  E --> I["No-arbitrage test<br/>buy cheap cash flows, sell expensive cash flows"]
+  F --> I
+  G --> I
+  H --> I
+```
+
 ## 4. 跨模块依赖关系
 
 ```text

@@ -106,6 +106,23 @@ tags:
 │  └─ 5.5.2 Hedging 可用 FX forwards、commodity futures、options，但有 basis 和成本
 ```
 
+## 核心图解
+
+```mermaid
+flowchart TD
+    Event["Geopolitical event<br/>conflict / sanctions / alliance shift"] --> Actor["Identify actor and tool"]
+    Actor --> Channel{"Transmission channel"}
+    Channel --> Trade["Trade / supply chain<br/>costs, quantities, TOT"]
+    Channel --> Finance["Financial channel<br/>risk premium, spreads, capital flight"]
+    Channel --> Commodity["Commodity shock<br/>energy / food prices"]
+    Channel --> Policy["Policy response<br/>fiscal, monetary, capital controls"]
+    Trade --> Asset["Asset impact<br/>cash flow, discount rate, FX, inflation"]
+    Finance --> Asset
+    Commodity --> Asset
+    Policy --> Asset
+    Asset --> Method["Use scenario analysis / stress test<br/>not single-point forecast"]
+```
+
 ## 4. 知识点详解
 
 ### 5.1 地缘政治风险的定义（Defining Geopolitical Risk）

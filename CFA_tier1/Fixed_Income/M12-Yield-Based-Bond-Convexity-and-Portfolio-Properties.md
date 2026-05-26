@@ -85,6 +85,20 @@ tags:
 │  └─ 12.2.3 Callable/MBS 可能出现 negative convexity；不能用 option-free 直觉直接判断
 ```
 
+## 3.5 核心图解
+
+```mermaid
+flowchart LR
+  A["Yield change"] --> B["Duration effect: -D_mod x dy"]
+  A --> C["Convexity effect: + 0.5 x Convexity x dy^2"]
+  B --> D["Estimated % price change"]
+  C --> D
+  E["Portfolio measure"] --> F["Market value weights"]
+  F --> G["Weighted duration"]
+  F --> H["Weighted convexity"]
+  G --> I["Works best for small parallel shifts"]
+```
+
 ## 4. 知识点详解
 
 ### 12.1 久期家族 (Duration Family)
