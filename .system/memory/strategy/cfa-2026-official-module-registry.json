@@ -1,0 +1,1967 @@
+{
+  "generated_at": "2026-05-26",
+  "official_source": "CFA Institute Learning Ecosystem scrape generated 2026-05-25",
+  "subjects": {
+    "Quantitative Methods": {
+      "directory": "Quantitative_Methods",
+      "course_id": "1645",
+      "exam_weight": "6-9%",
+      "module_count": 11,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Rates and Returns",
+          "filename": "M01-Rates-and-Returns.md",
+          "page_items": [
+            "Learning Outcomes: Rates and Returns",
+            "1.01 | Introduction",
+            "1.02 | Interest Rates and Time Value of Money",
+            "1.03 | Rates of Return",
+            "1.04 | Money-Weighted and Time-Weighted Return",
+            "1.05 | Annualized Return",
+            "1.06 | Other Major Return Measures and Their Applications"
+          ],
+          "los": [
+            "interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk",
+            "calculate and interpret different approaches to return measurement over time and describe their appropriate uses",
+            "compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures",
+            "calculate and interpret annualized return measures and continuously compounded returns, and describe their appropriate uses",
+            "calculate and interpret major return measures and describe their appropriate uses"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Time Value of Money in Finance",
+          "filename": "M02-Time-Value-of-Money-in-Finance.md",
+          "page_items": [
+            "Learning Outcomes: Time Value of Money in Finance",
+            "2.01 | Introduction",
+            "2.02 | Time Value of Money in Fixed Income and Equity",
+            "2.03 | Implied Return and Growth",
+            "2.04 | Cash Flow Additivity"
+          ],
+          "los": [
+            "calculate and interpret the present value (PV) of fixed-income and equity instruments based on expected future cash flows",
+            "calculate and interpret the implied return of fixed-income instruments and required return and implied growth of equity instruments given the present value (PV) and cash flows",
+            "explain the cash flow additivity principle, its importance for the no-arbitrage condition, and its use in calculating implied forward interest rates, forward exchange rates, and option values"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Statistical Measures of Asset Returns",
+          "filename": "M03-Statistical-Measures-of-Asset-Returns.md",
+          "page_items": [
+            "Learning Outcomes: Statistical Measures of Asset Returns",
+            "3.01 | Introduction",
+            "3.02 | Measures of Central Tendency and Location",
+            "3.03 | Measures of Dispersion",
+            "3.04 | Measures of Shape of a Distribution",
+            "3.05 | Correlation between Two Variables"
+          ],
+          "los": [
+            "calculate, interpret, and evaluate measures of central tendency and location to address an investment problem",
+            "calculate, interpret, and evaluate measures of dispersion to address an investment problem",
+            "interpret and evaluate measures of skewness and kurtosis to address an investment problem",
+            "interpret correlation between two variables to address an investment problem"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Probability Trees and Conditional Expectations",
+          "filename": "M04-Probability-Trees-and-Conditional-Expectations.md",
+          "page_items": [
+            "Learning Outcomes: Probability Trees and Conditional Expectations",
+            "4.01 | Introduction",
+            "4.02 | Expected Value and Variance",
+            "4.03 | Probability Trees and Conditional Expectations",
+            "4.04 | Bayes' Formula and Updating Probability Estimates"
+          ],
+          "los": [
+            "calculate expected values, variances, and standard deviations and demonstrate their application to investment problems",
+            "formulate an investment problem as a probability tree and explain the use of conditional expectations in investment application",
+            "calculate and interpret an updated probability in an investment setting using Bayes’ formula"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Portfolio Mathematics",
+          "filename": "M05-Portfolio-Mathematics.md",
+          "page_items": [
+            "Learning Outcomes: Portfolio Mathematics",
+            "5.01 | Introduction",
+            "5.02 | Portfolio Expected Return and Variance of Return",
+            "5.03 | Forecasting Correlation of Returns: Covariance Given a Joint Probability Function",
+            "5.04 | Portfolio Risk Measures: Applications of the Normal Distribution"
+          ],
+          "los": [
+            "calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns",
+            "calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns",
+            "define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Simulation Methods",
+          "filename": "M06-Simulation-Methods.md",
+          "page_items": [
+            "Learning Outcomes: Simulation Methods",
+            "6.01 | Introduction",
+            "6.02 | Lognormal Distribution and Continuous Compounding",
+            "6.03 | Monte Carlo Simulation",
+            "6.04 | Bootstrapping"
+          ],
+          "los": [
+            "explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns",
+            "describe Monte Carlo simulation and explain how it can be used in investment applications",
+            "describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Estimation and Inference",
+          "filename": "M07-Estimation-and-Inference.md",
+          "page_items": [
+            "Learning Outcomes: Estimation and Inference",
+            "7.01 | Introduction",
+            "7.02 | Sampling Methods",
+            "7.03 | Central Limit Theorem and Inference",
+            "7.04 | Bootstrapping and Empirical Sampling Distributions"
+          ],
+          "los": [
+            "compare and contrast simple random, stratified random, cluster, convenience, and judgmental sampling and their implications for sampling error in an investment problem",
+            "explain the central limit theorem and its importance for the distribution and standard error of the sample mean",
+            "describe the use of resampling (bootstrap, jackknife) to estimate the sampling distribution of a statistic"
+          ]
+        },
+        {
+          "module": "M08",
+          "official_module": "Module 8: Hypothesis Testing",
+          "filename": "M08-Hypothesis-Testing.md",
+          "page_items": [
+            "Learning Outcomes: Hypothesis Testing",
+            "8.01 | Introduction",
+            "8.02 | Hypothesis Tests for Finance",
+            "8.03 | Tests of Return and Risk in Finance",
+            "8.04 | Parametric versus Nonparametric Tests"
+          ],
+          "los": [
+            "explain hypothesis testing and its components, including statistical significance, Type I and Type II errors, and the power of a test",
+            "construct hypothesis tests and determine their statistical significance, the associated Type I and Type II errors, and power of the test given a significance level",
+            "compare and contrast parametric and nonparametric tests, and describe situations where each is the more appropriate type of test"
+          ]
+        },
+        {
+          "module": "M09",
+          "official_module": "Module 9: Parametric and Non-Parametric Tests of Independence",
+          "filename": "M09-Parametric-and-Non-Parametric-Tests-of-Independence.md",
+          "page_items": [
+            "Learning Outcomes: Parametric and Non-Parametric Tests of Independence",
+            "9.01 | Introduction",
+            "9.02 | Tests Concerning Correlation",
+            "9.03 | Tests of Independence Using Contingency Table Data"
+          ],
+          "los": [
+            "explain parametric and nonparametric tests of the hypothesis that the population correlation coefficient equals zero, and determine whether the hypothesis is rejected at a given level of significance",
+            "explain tests of independence based on contingency table data"
+          ]
+        },
+        {
+          "module": "M10",
+          "official_module": "Module 10: Simple Linear Regression",
+          "filename": "M10-Simple-Linear-Regression.md",
+          "page_items": [
+            "Learning Outcomes: Simple Linear Regression",
+            "10.01 | Introduction",
+            "10.02 | Estimation of the Simple Linear Regression Model",
+            "10.03 | Assumptions of the Simple Linear Regression Model",
+            "10.04 | Hypothesis Tests in the Simple Linear Regression Model",
+            "10.05 | Prediction in the Simple Linear Regression Model",
+            "10.06 | Functional Forms for Simple Linear Regression"
+          ],
+          "los": [
+            "describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients",
+            "explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated",
+            "calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression",
+            "describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression",
+            "calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable",
+            "describe different functional forms of simple linear regressions"
+          ]
+        },
+        {
+          "module": "M11",
+          "official_module": "Module 11: Introduction to Big Data Techniques",
+          "filename": "M11-Introduction-to-Big-Data-Techniques.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to Big Data Techniques",
+            "11.01 | Introduction",
+            "11.02 | How Is Fintech used in Quantitative Investment Analysis?",
+            "11.03 | Advanced Analytical Tools: Artificial Intelligence and Machine Learning",
+            "11.04 | Tackling Big Data with Data Science"
+          ],
+          "los": [
+            "describe aspects of “fintech” that are directly relevant for the gathering and analyzing of financial data",
+            "describe Big Data, artificial intelligence, and machine learning",
+            "describe applications of Big Data and Data Science to investment management"
+          ]
+        }
+      ]
+    },
+    "Economics": {
+      "directory": "Economics",
+      "course_id": "1646",
+      "exam_weight": "6-9%",
+      "module_count": 8,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: The Firm and Market Structures",
+          "filename": "M01-The-Firm-and-Market-Structures.md",
+          "page_items": [
+            "Learning Outcomes: The Firm and Market Structures",
+            "1.01 | Introduction",
+            "1.02 | Profit Maximization: Production Breakeven, Shutdown and Economies of Scale",
+            "1.03 | Introduction to Market Structures",
+            "1.04 | Monopolistic Competition",
+            "1.05 | Oligopoly",
+            "1.06 | Determining Market Structure"
+          ],
+          "los": [
+            "determine and interpret breakeven and shutdown points of production, as well as how economies and diseconomies of scale affect costs under perfect and imperfect competition",
+            "describe characteristics of perfect competition, monopolistic competition, oligopoly, and pure monopoly",
+            "explain supply and demand relationships under monopolistic competition, including the optimal price and output for firms as well as pricing strategy",
+            "explain supply and demand relationships under oligopoly, including the optimal price and output for firms as well as pricing strategy",
+            "identify the type of market structure within which a firm operates and describe the use and limitations of concentration measures"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Understanding Business Cycles",
+          "filename": "M02-Understanding-Business-Cycles.md",
+          "page_items": [
+            "Learning Outcomes: Understanding Business Cycles",
+            "2.01 | Introduction",
+            "2.02 | Overview of the Business Cycle",
+            "2.03 | Credit Cycles",
+            "2.04 | Economic Indicators over the Business Cycle"
+          ],
+          "los": [
+            "describe the business cycle and its phases",
+            "describe credit cycles",
+            "describe how resource use, consumer and business activity, housing sector activity, and external trade sector activity vary over the business cycle and describe their measurement using economic indicators"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Fiscal Policy",
+          "filename": "M03-Fiscal-Policy.md",
+          "page_items": [
+            "Learning Outcomes: Fiscal Policy",
+            "3.01 | Introduction",
+            "3.02 | Introduction to Monetary and Fiscal Policy",
+            "3.03 | Roles and Objectives of Fiscal Policy",
+            "3.04 | Fiscal Policy Tools",
+            "3.05 | Fiscal Policy Implementation"
+          ],
+          "los": [
+            "compare monetary and fiscal policy",
+            "describe roles and objectives of fiscal policy as well as arguments as to whether the size of a national debt relative to GDP matters",
+            "describe tools of fiscal policy, including their advantages and disadvantages",
+            "explain the implementation of fiscal policy and difficulties of implementation as well as whether a fiscal policy is expansionary or contractionary"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Monetary Policy",
+          "filename": "M04-Monetary-Policy.md",
+          "page_items": [
+            "Learning Outcomes: Monetary Policy",
+            "4.01 | Introduction",
+            "4.02 | Role of Central Banks",
+            "4.03 | Monetary Policy Tools and Monetary Transmission",
+            "4.04 | Monetary Policy Objectives",
+            "4.05 | Interaction of Monetary and Fiscal Policy"
+          ],
+          "los": [
+            "describe the roles and objectives of central banks",
+            "describe tools used to implement monetary policy tools and the monetary transmission mechanism, and explain the relationships between monetary policy and economic growth, inflation, interest, and exchange rates",
+            "describe qualities of effective central banks; contrast their use of inflation, interest rate, and exchange rate targeting in expansionary or contractionary monetary policy; and describe the limitations of monetary policy",
+            "explain the interaction of monetary and fiscal policy"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Introduction to Geopolitics",
+          "filename": "M05-Introduction-to-Geopolitics.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to Geopolitics",
+            "5.01 | Introduction",
+            "5.02 | National Governments and Political Cooperation",
+            "5.03 | Forces of Globalization",
+            "5.04 | International Trade Organizations",
+            "5.05 | Assessing Geopolitical Actors and Risk",
+            "5.06 | The Tools of Geopolitics",
+            "5.07 | Geopolitical Risk and the Investment Process"
+          ],
+          "los": [
+            "describe geopolitics from a cooperation versus competition perspective",
+            "describe geopolitics and its relationship with globalization",
+            "describe functions and objectives of the international organizations that facilitate trade, including the World Bank, the International Monetary Fund, and the World Trade Organization",
+            "describe geopolitical risk",
+            "describe tools of geopolitics and their impact on regions and economies",
+            "describe the impact of geopolitical risk on investments"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: International Trade",
+          "filename": "M06-International-Trade.md",
+          "page_items": [
+            "Learning Outcomes: International Trade",
+            "6.01 | Introduction",
+            "6.02 | Benefits and Costs of Trade",
+            "6.03 | Trade Restrictions and Agreements—Tariffs, Quotas, and Export Subsidies",
+            "6.04 | Trading Blocs and Regional Integration"
+          ],
+          "los": [
+            "describe the benefits and costs of international trade",
+            "compare types of trade restrictions, such as tariffs, quotas, and export subsidies, and their economic implications",
+            "explain motivations for and advantages of trading blocs, common markets, and economic unions"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Capital Flows and the FX Market",
+          "filename": "M07-Capital-Flows-and-the-FX-Market.md",
+          "page_items": [
+            "Learning Outcomes: Capital Flows and the FX Market",
+            "7.01 | Introduction",
+            "7.02 | The Foreign Exchange Market and Exchange Rates",
+            "7.03 | Exchange Rate Regimes: Ideals and Historical Perspective",
+            "7.04 | Capital Restrictions"
+          ],
+          "los": [
+            "describe the foreign exchange market, including its functions and participants, distinguish between nominal and real exchange rates, and calculate and interpret the percentage change in a currency relative to another currency",
+            "describe exchange rate regimes and explain the effects of exchange rates on countries’ international trade and capital flows",
+            "describe common objectives of capital restrictions imposed by governments"
+          ]
+        },
+        {
+          "module": "M08",
+          "official_module": "Module 8: Exchange Rate Calculations",
+          "filename": "M08-Exchange-Rate-Calculations.md",
+          "page_items": [
+            "Learning Outcomes: Exchange Rate Calculations",
+            "8.01 | Introduction",
+            "8.02 | Cross-Rate Calculations",
+            "8.03 | Forward Rate Calculations"
+          ],
+          "los": [
+            "calculate and interpret currency cross-rates",
+            "explain the arbitrage relationship between spot and forward exchange rates and interest rates, calculate a forward rate using points or in percentage terms, and interpret a forward discount or premium"
+          ]
+        }
+      ]
+    },
+    "Corporate Issuers": {
+      "directory": "Corporate_Issuers",
+      "course_id": "1647",
+      "exam_weight": "6-9%",
+      "module_count": 7,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Organizational Forms, Corporate Issuer Features, and Ownership",
+          "filename": "M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership.md",
+          "page_items": [
+            "Learning Outcomes: Organizational Forms, Corporate Issuer Features, and Ownership",
+            "1.01 | Introduction",
+            "1.02 | Organizational Forms of Businesses",
+            "1.03 | Key Features of Corporate Issuers",
+            "1.04 | Publicly vs. Privately Owned Corporate Issuers"
+          ],
+          "los": [
+            "compare the organizational forms of businesses",
+            "describe key features of corporate issuers",
+            "compare publicly and privately owned corporate issuers"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Investors and Other Stakeholders",
+          "filename": "M02-Investors-and-Other-Stakeholders.md",
+          "page_items": [
+            "Learning Outcomes: Investors and Other Stakeholders",
+            "2.01 | Introduction",
+            "2.02 | Financial Claims of Lenders and Shareholders",
+            "2.03 | Corporate Stakeholders and Governance",
+            "2.04 | Corporate ESG Considerations"
+          ],
+          "los": [
+            "compare the financial claims and motivations of lenders and shareholders",
+            "describe a company’s stakeholder groups and compare their interests",
+            "describe environmental, social, and governance factors of corporate issuers considered by investors"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Corporate Governance: Conflicts, Mechanisms, Risks, and Benefits",
+          "filename": "M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits.md",
+          "page_items": [
+            "Learning Outcomes: Corporate Governance: Conflicts, Mechanisms, Risks, and Benefits",
+            "3.01 | Introduction",
+            "3.02 | Stakeholder Conflicts and Management",
+            "3.03 | Corporate Governance Mechanisms",
+            "3.04 | Corporate Governance Risks and Benefits"
+          ],
+          "los": [
+            "describe the principal-agent relationship and conflicts that may arise between stakeholder groups",
+            "describe corporate governance and mechanisms to manage stakeholder relationships and mitigate associated risks",
+            "describe potential risks of poor corporate governance and stakeholder management and benefits of effective corporate governance and stakeholder management"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Working Capital and Liquidity",
+          "filename": "M04-Working-Capital-and-Liquidity.md",
+          "page_items": [
+            "Learning Outcomes: Working Capital and Liquidity",
+            "4.01 | Introduction",
+            "4.02 | Cash Conversion Cycle",
+            "4.03 | Liquidity",
+            "4.04 | Managing Working Capital and Liquidity"
+          ],
+          "los": [
+            "explain the cash conversion cycle and compare issuers’ cash conversion cycles",
+            "explain liquidity and compare issuers’ liquidity levels",
+            "describe issuers’ objectives and compare methods for managing working capital and liquidity"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Capital Investments and Capital Allocation",
+          "filename": "M05-Capital-Investments-and-Capital-Allocation.md",
+          "page_items": [
+            "Learning Outcomes: Capital Investments and Capital Allocation",
+            "5.01 | Introduction",
+            "5.02 | Capital Investments",
+            "5.03 | Capital Allocation",
+            "5.04 | Capital Allocation Principles and Pitfalls",
+            "5.05 | Real Options"
+          ],
+          "los": [
+            "describe types of capital investments",
+            "describe the capital allocation process, calculate net present value (NPV), internal rate of return (IRR), and return on invested capital (ROIC), and contrast their use in capital allocation",
+            "describe principles of capital allocation and common capital allocation pitfalls",
+            "describe types of real options relevant to capital investments"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Capital Structure",
+          "filename": "M06-Capital-Structure.md",
+          "page_items": [
+            "Learning Outcomes: Capital Structure",
+            "6.01 | Introduction",
+            "6.02 | The Cost of Capital",
+            "6.03 | Factors Affecting Capital Structure",
+            "6.04 | Modigliani–Miller Capital Structure Propositions",
+            "6.05 | Optimal Capital Structure"
+          ],
+          "los": [
+            "calculate and interpret the weighted-average cost of capital for a company",
+            "explain factors affecting capital structure and the weighted-average cost of capital",
+            "explain the Modigliani-Miller propositions regarding capital structure",
+            "describe optimal and target capital structures"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Business Models",
+          "filename": "M07-Business-Models.md",
+          "page_items": [
+            "Learning Outcomes: Business Models",
+            "7.01 | Introduction",
+            "7.02 | Defining the Business Model",
+            "7.03 | Business Model Types"
+          ],
+          "los": [
+            "describe key features of business models",
+            "describe various types of business models"
+          ]
+        }
+      ]
+    },
+    "Financial Statement Analysis": {
+      "directory": "Financial_Statement_Analysis",
+      "course_id": "1648",
+      "exam_weight": "11-14%",
+      "module_count": 12,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Introduction to Financial Statement Analysis",
+          "filename": "M01-Introduction-to-Financial-Statement-Analysis.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to Financial Statement Analysis",
+            "1.01 | Introduction",
+            "1.02 | Financial Statement Analysis Framework",
+            "1.03 | Scope of Financial Statement Analysis",
+            "1.04 | Regulated Sources of Information",
+            "1.05 | Comparison of IFRS with Alternative Financial Reporting Systems",
+            "1.06 | Other Sources of Information"
+          ],
+          "los": [
+            "describe the steps in the financial statement analysis framework",
+            "describe the roles of financial statement analysis",
+            "describe the importance of regulatory filings, financial statement notes and supplementary information, management’s commentary, and audit reports",
+            "describe implications for financial analysis of alternative financial reporting systems and the importance of monitoring developments in financial reporting standards",
+            "describe information sources that analysts use in financial statement analysis besides annual and interim financial reports"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Analyzing Income Statements",
+          "filename": "M02-Analyzing-Income-Statements.md",
+          "page_items": [
+            "Learning Outcomes: Analyzing Income Statements",
+            "2.01 | Introduction",
+            "2.02 | Revenue Recognition",
+            "2.03 | Expense Recognition",
+            "2.04 | Non-Recurring Items",
+            "2.05 | Earnings per Share",
+            "2.06 | Income Statement Ratios and Common-Size Analysis"
+          ],
+          "los": [
+            "describe general principles of revenue recognition, specific revenue recognition applications, and implications of revenue recognition choices for financial analysis",
+            "describe general principles of expense recognition, specific expense recognition applications, implications of expense recognition choices for financial analysis and contrast costs that are capitalized versus those that are expensed in the period in which they are incurred",
+            "describe the financial reporting treatment and analysis of non-recurring items (including discontinued operations, unusual or infrequent items) and changes in accounting policies",
+            "describe how earnings per share is calculated and calculate and interpret a company’s basic and diluted earnings per share for companies with simple and complex capital structures including those with antidilutive securities",
+            "evaluate a company’s financial performance using common-size income statements and financial ratios based on the income statement"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Analyzing Balance Sheets",
+          "filename": "M03-Analyzing-Balance-Sheets.md",
+          "page_items": [
+            "Learning Outcomes: Analyzing Balance Sheets",
+            "3.01 | Introduction",
+            "3.02 | Intangible Assets",
+            "3.03 | Goodwill",
+            "3.04 | Financial Instruments",
+            "3.05 | Non-Current Liabilities",
+            "3.06 | Ratios and Common-Size Analysis"
+          ],
+          "los": [
+            "explain the financial reporting and disclosures related to intangible assets",
+            "explain the financial reporting and disclosures related to goodwill",
+            "explain the financial reporting and disclosures related to financial instruments",
+            "explain the financial reporting and disclosures related to non-current liabilities",
+            "calculate and interpret common-size balance sheets and related financial ratios"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Analyzing Statements of Cash Flows I",
+          "filename": "M04-Analyzing-Statements-of-Cash-Flows-I.md",
+          "page_items": [
+            "Learning Outcomes: Analyzing Statements of Cash Flows I",
+            "4.01 | Introduction",
+            "4.02 | Linkages between the Financial Statements",
+            "4.03 | The Direct Method for Cash Flows from Operating Activities",
+            "4.04 | The Indirect Method for Cash Flows from Operating Activities",
+            "4.05 | Conversion from the Indirect to Direct Method",
+            "4.06 | Cash Flows from Investing Activities",
+            "4.07 | Cash Flows from Financing Activities",
+            "4.08 | Differences in Cash Flow Statements Prepared under US GAAP versus IFRS"
+          ],
+          "los": [
+            "describe how the cash flow statement is linked to the income statement and the balance sheet",
+            "describe the steps in the preparation of direct and indirect cash flow statements, including how cash flows can be computed using income statement and balance sheet data",
+            "demonstrate the conversion of cash flows from the indirect to direct method",
+            "contrast cash flow statements prepared under International Financial Reporting Standards (IFRS) and US generally accepted accounting principles (US GAAP)"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Analyzing Statements of Cash Flows II",
+          "filename": "M05-Analyzing-Statements-of-Cash-Flows-II.md",
+          "page_items": [
+            "Learning Outcomes: Analyzing Statements of Cash Flows II",
+            "5.01 | Introduction",
+            "5.02 | Evaluating Sources and Uses of Cash",
+            "5.03 | Ratios and Common-Size Analysis",
+            "5.04 | Free Cash Flow Measures",
+            "5.05 | Cash Flow Statement Analysis: Cash Flow Ratios"
+          ],
+          "los": [
+            "analyze and interpret both reported and common-size cash flow statements",
+            "calculate and interpret free cash flow to the firm, free cash flow to equity, and performance and coverage cash flow ratios"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Analysis of Inventories",
+          "filename": "M06-Analysis-of-Inventories.md",
+          "page_items": [
+            "Learning Outcomes: Analysis of Inventories",
+            "6.01 | Introduction",
+            "6.02 | Inventory Valuation",
+            "6.03 | The Effects of Inflation and Deflation on Inventories, Costs of Sales, and Gross Margin",
+            "6.04 | Presentation and Disclosure"
+          ],
+          "los": [
+            "describe the measurement of inventory at the lower of cost and net realisable value and its implications for financial statements and ratios",
+            "calculate and explain how inflation and deflation of inventory costs affect the financial statements and ratios of companies that use different inventory valuation methods",
+            "describe the presentation and disclosures relating to inventories and explain issues that analysts should consider when examining a company’s inventory disclosures and other sources of information"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Analysis of Long-Term Assets",
+          "filename": "M07-Analysis-of-Long-Term-Assets.md",
+          "page_items": [
+            "Learning Outcomes: Analysis of Long-Term Assets",
+            "7.01 | Introduction",
+            "7.02 | Acquisition of Intangible Assets",
+            "7.03 | Impairment and Derecognition of Assets",
+            "7.04 | Presentation and Disclosure",
+            "7.05 | Using Disclosures in Analysis"
+          ],
+          "los": [
+            "compare the financial reporting of the following types of intangible assets: purchased, internally developed, and acquired in a business combination",
+            "explain and evaluate how impairment and derecognition of property, plant, and equipment and intangible assets affect the financial statements and ratios",
+            "analyze and interpret financial statement disclosures regarding property, plant, and equipment and intangible assets"
+          ]
+        },
+        {
+          "module": "M08",
+          "official_module": "Module 8: Topics in Long-Term Liabilities and Equity",
+          "filename": "M08-Topics-in-Long-Term-Liabilities-and-Equity.md",
+          "page_items": [
+            "Learning Outcomes: Topics in Long-Term Liabilities and Equity",
+            "8.01 | Introduction",
+            "8.02 | Leases",
+            "8.03 | Financial Reporting for Postemployment and Share-Based Compensation Plans",
+            "8.04 | Presentation and Disclosure"
+          ],
+          "los": [
+            "explain the financial reporting of leases from the perspectives of lessors and lessees",
+            "explain the financial reporting of defined contribution, defined benefit, and stock-based compensation plans",
+            "describe the financial statement presentation of and disclosures relating to long-term liabilities and share-based compensation"
+          ]
+        },
+        {
+          "module": "M09",
+          "official_module": "Module 9: Analysis of Income Taxes",
+          "filename": "M09-Analysis-of-Income-Taxes.md",
+          "page_items": [
+            "Learning Outcomes: Analysis of Income Taxes",
+            "9.01 | Introduction",
+            "9.02 | Differences between Accounting Profit and Taxable Income",
+            "9.03 | Deferred Tax Assets and Liabilities",
+            "9.04 | Corporate Income Tax Rates",
+            "9.05 | Presentation and Disclosure"
+          ],
+          "los": [
+            "contrast accounting profit, taxable income, taxes payable, and income tax expense and temporary versus permanent differences between accounting profit and taxable income",
+            "explain how deferred tax liabilities and assets are created and the factors that determine how a company’s deferred tax liabilities and assets should be treated for the purposes of financial analysis",
+            "calculate, interpret, and contrast an issuer’s effective tax rate, statutory tax rate, and cash tax rate",
+            "analyze disclosures relating to deferred tax items and the effective tax rate reconciliation and explain how information included in these disclosures affects a company’s financial statements and financial ratios"
+          ]
+        },
+        {
+          "module": "M10",
+          "official_module": "Module 10: Financial Reporting Quality",
+          "filename": "M10-Financial-Reporting-Quality.md",
+          "page_items": [
+            "Learning Outcomes: Financial Reporting Quality",
+            "10.01 | Introduction",
+            "10.02 | Conceptual Overview",
+            "10.03 | GAAP, Decision Useful Financial Reporting",
+            "10.04 | Biased Accounting Choices",
+            "10.05 | Departures from GAAP",
+            "10.06 | Differentiate between Conservative and Aggressive Accounting",
+            "10.07 | Context for Assessing Financial Reporting Quality",
+            "10.08 | Mechanisms That Discipline Financial Reporting Quality",
+            "10.09 | Detection of Financial Reporting Quality Issues: Introduction and Presentation Choices",
+            "10.10 | Accounting Choices and Estimates",
+            "10.11 | Accounting Choices That Affect the Cash Flow Statement",
+            "10.12 | Accounting Choices that Affect Financial Reporting",
+            "10.13 | Warning Signs"
+          ],
+          "los": [
+            "compare financial reporting quality with the quality of reported results (including quality of earnings, cash flow, and balance sheet items)",
+            "describe a spectrum for assessing financial reporting quality",
+            "explain the difference between conservative and aggressive accounting",
+            "describe motivations that might cause management to issue financial reports that are not high quality and conditions that are conducive to issuing low-quality, or even fraudulent, financial reports",
+            "describe mechanisms that discipline financial reporting quality and the potential limitations of those mechanisms",
+            "describe presentation choices, including non-GAAP measures, that could be used to influence an analyst’s opinion",
+            "describe accounting methods (choices and estimates) that could be used to manage earnings, cash flow, and balance sheet items",
+            "describe accounting warning signs and methods for detecting manipulation of information in financial reports"
+          ]
+        },
+        {
+          "module": "M11",
+          "official_module": "Module 11: Financial Analysis Techniques",
+          "filename": "M11-Financial-Analysis-Techniques.md",
+          "page_items": [
+            "Learning Outcomes: Financial Analysis Techniques",
+            "11.01 | Introduction",
+            "11.02 | The Financial Analysis Process",
+            "11.03 | Analytical Tools and Techniques",
+            "11.04 | Financial Ratio Analysis",
+            "11.05 | Common Size Balance Sheets and Income Statements",
+            "11.06 | Cross-Sectional, Trend Analysis, and Relationships in Financial Statements",
+            "11.07 | The Use of Graphs and Regression Analysis",
+            "11.08 | Common Ratio Categories, Interpretation, and Context",
+            "11.09 | Activity Ratios",
+            "11.10 | Liquidity Ratios",
+            "11.11 | Solvency Ratios",
+            "11.12 | Profitability Ratios",
+            "11.13 | Integrated Financial Ratio Analysis",
+            "11.14 | DuPont Analysis—The Decomposition of ROE",
+            "11.15 | Industry-Specific Financial Ratios",
+            "11.16 | Model Building and Forecasting"
+          ],
+          "los": [
+            "describe tools and techniques used in financial analysis, including their uses and limitations",
+            "calculate and interpret activity, liquidity, solvency, and profitability ratios",
+            "describe relationships among ratios and evaluate a company using ratio analysis",
+            "demonstrate the application of DuPont analysis of return on equity and calculate and interpret effects of changes in its components",
+            "describe the uses of industry-specific ratios used in financial analysis",
+            "describe how ratio analysis and other techniques can be used to model and forecast earnings"
+          ]
+        },
+        {
+          "module": "M12",
+          "official_module": "Module 12: Introduction to Financial Statement Modeling",
+          "filename": "M12-Introduction-to-Financial-Statement-Modeling.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to Financial Statement Modeling",
+            "12.01 | Introduction",
+            "12.02 | Building a Financial Statement Model",
+            "12.03 | Behavioral Finance and Analyst Forecasts",
+            "12.04 | The Impact of Competitive Factors in Prices and Costs",
+            "12.05 | Modeling Inflation and Deflation",
+            "12.06 | The Forecast Horizon and Long-Term Forecasting"
+          ],
+          "los": [
+            "demonstrate the development of a sales-based pro forma company model",
+            "explain how behavioral factors affect analyst forecasts and recommend remedial actions for analyst biases",
+            "explain how the competitive position of a company based on a Porter’s five forces analysis affects prices and costs",
+            "explain how to forecast industry and company sales and costs when they are subject to price inflation or deflation",
+            "explain considerations in the choice of an explicit forecast horizon and an analyst’s choices in developing projections beyond the short-term forecast horizon"
+          ]
+        }
+      ]
+    },
+    "Equity Investments": {
+      "directory": "Equity",
+      "course_id": "1649",
+      "exam_weight": "11-14%",
+      "module_count": 8,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Market Organization and Structure",
+          "filename": "M01-Market-Organization-and-Structure.md",
+          "page_items": [
+            "Learning Outcomes: Market Organization and Structure",
+            "1.01 | Introduction",
+            "1.02 | The Functions of the Financial System",
+            "1.03 | Assets and Contracts",
+            "1.04 | Securities",
+            "1.05 | Currencies, Commodities, and Real Assets",
+            "1.06 | Contracts",
+            "1.07 | Financial Intermediaries",
+            "1.08 | Securitizers, Depository Institutions and Insurance Companies",
+            "1.09 | Settlement and Custodial Services and Summary",
+            "1.10 | Positions and Short Positions",
+            "1.11 | Leveraged Positions",
+            "1.12 | Orders and Execution Instructions",
+            "1.13 | Validity Instructions and Clearing Instructions",
+            "1.14 | Primary Security Markets",
+            "1.15 | Secondary Security Market and Contract Market Structures",
+            "1.16 | Well-functioning Financial Systems",
+            "1.17 | Market Regulation",
+            "1.18 | Summary"
+          ],
+          "los": [
+            "explain the main functions of the financial system",
+            "describe classifications of assets and markets",
+            "describe the major types of securities, currencies, contracts, commodities, and real assets that trade in organized markets, including their distinguishing characteristics and major subtypes",
+            "describe types of financial intermediaries and services that they provide",
+            "compare positions an investor can take in an asset",
+            "calculate and interpret the leverage ratio, the rate of return on a margin transaction, and the security price at which the investor would receive a margin call",
+            "compare execution, validity, and clearing instructions",
+            "compare market orders with limit orders",
+            "define primary and secondary markets and explain how secondary markets support primary markets",
+            "describe how securities, contracts, and currencies are traded in quote-driven, order-driven, and brokered markets",
+            "describe characteristics of a well-functioning financial system",
+            "describe objectives of market regulation"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Security Market Indexes",
+          "filename": "M02-Security-Market-Indexes.md",
+          "page_items": [
+            "Learning Outcomes: Security Market Indexes",
+            "2.01 | Introduction",
+            "2.02 | Index Definition and Calculations of Value and Returns",
+            "2.03 | Index Construction",
+            "2.04 | Index Management: Rebalancing and Reconstitution",
+            "2.05 | Uses of Market Indexes",
+            "2.06 | Equity indexes",
+            "2.07 | Fixed-income indexes",
+            "2.08 | Indexes for Alternative Investments",
+            "2.09 | Summary"
+          ],
+          "los": [
+            "describe a security market index",
+            "calculate and interpret the value, price return, and total return of an index",
+            "describe the choices and issues in index construction and management",
+            "compare the different weighting methods used in index construction",
+            "calculate and analyze the value and return of an index given its weighting method",
+            "describe rebalancing and reconstitution of an index",
+            "describe uses of security market indexes",
+            "describe types of equity indexes",
+            "compare types of security market indexes",
+            "describe types of fixed-income indexes",
+            "describe indexes representing alternative investments"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Market Efficiency",
+          "filename": "M03-Market-Efficiency.md",
+          "page_items": [
+            "Learning Outcomes: Market Efficiency",
+            "3.01 | Introduction",
+            "3.02 | The Concept of Market Efficiency",
+            "3.03 | Factors Affecting Market Efficiency Including Trading Costs",
+            "3.04 | Forms of Market Efficiency",
+            "3.05 | Implications of the Efficient Market Hypothesis",
+            "3.06 | Market Pricing Anomalies - Time Series and Cross-Sectional",
+            "3.07 | Other Anomalies, Implications of Market Pricing Anomalies",
+            "3.08 | Behavioral Finance",
+            "3.09 | Summary"
+          ],
+          "los": [
+            "describe market efficiency and related concepts, including their importance to investment practitioners",
+            "contrast market value and intrinsic value",
+            "explain factors that affect a market’s efficiency",
+            "contrast weak-form, semi-strong-form, and strong-form market efficiency",
+            "explain the implications of each form of market efficiency for fundamental analysis, technical analysis, and the choice between active and passive portfolio management",
+            "describe market anomalies",
+            "describe behavioral finance and its potential relevance to understanding market anomalies"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Overview of Equity Securities",
+          "filename": "M04-Overview-of-Equity-Securities.md",
+          "page_items": [
+            "Learning Outcomes: Overview of Equity Securities",
+            "4.01 | Importance of Equity Securities",
+            "4.02 | Characteristics of Equity Securities",
+            "4.03 | Private Versus Public Equity Securities",
+            "4.04 | Non-Domestic Equity Securities",
+            "4.05 | Risk and Return Characteristics",
+            "4.06 | Equity and Company Value",
+            "4.07 | Summary"
+          ],
+          "los": [
+            "describe characteristics of types of equity securities",
+            "describe differences in voting rights and other ownership characteristics among different equity classes",
+            "compare and contrast public and private equity securities",
+            "describe methods for investing in non-domestic equity securities",
+            "compare the risk and return characteristics of different types of equity securities",
+            "explain the role of equity securities in the financing of a company’s assets",
+            "contrast the market value and book value of equity securities",
+            "compare a company’s cost of equity, its (accounting) return on equity, and investors’ required rates of return"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Company Analysis: Past and Present",
+          "filename": "M05-Company-Analysis-Past-and-Present.md",
+          "page_items": [
+            "Learning Outcomes: Company Analysis: Past and Present",
+            "5.01 | Introduction",
+            "5.02 | Company Research Reports",
+            "5.03 | Determining the Business Model",
+            "5.04 | Revenue Analysis",
+            "5.05 | Operating Profitability and Working Capital Analysis",
+            "5.06 | Capital Investments and Capital Structure"
+          ],
+          "los": [
+            "describe the elements that should be covered in a thorough company research report",
+            "determine a company’s business model",
+            "evaluate a company’s revenue and revenue drivers, including pricing power",
+            "evaluate a company’s operating profitability and working capital using key measures",
+            "evaluate a company’s capital investments and capital structure"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Industry and Competitive Analysis",
+          "filename": "M06-Industry-and-Competitive-Analysis.md",
+          "page_items": [
+            "Learning Outcomes: Industry and Competitive Analysis",
+            "6.01 | Introduction",
+            "6.02 | Uses of Industry Analysis",
+            "6.03 | Industry Classification",
+            "6.04 | Industry Survey",
+            "6.05 | Industry Structure and External Influences",
+            "6.06 | Competitive Positioning"
+          ],
+          "los": [
+            "describe the purposes of, and steps involved in, industry and competitive analysis",
+            "describe industry classification methods and compare methods by which companies can be grouped",
+            "determine an industry’s size, growth characteristics, profitability, and market share trends",
+            "analyze an industry’s structure and external influences using Porter’s Five Forces and PESTLE frameworks",
+            "evaluate the competitive strategy and position of a company"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Company Analysis: Forecasting",
+          "filename": "M07-Company-Analysis-Forecasting.md",
+          "page_items": [
+            "Learning Outcomes: Company Analysis: Forecasting",
+            "7.01 | Introduction",
+            "7.02 | Forecast Objects, Principles, and Approaches",
+            "7.03 | Forecasting Revenues",
+            "7.04 | Forecasting Operating Expenses and Working Capital",
+            "7.05 | Forecasting Capital Investments and Capital Structure",
+            "7.06 | Scenario Analysis"
+          ],
+          "los": [
+            "explain principles and approaches to forecasting a company’s financial results and position",
+            "explain approaches to forecasting a company’s revenues",
+            "explain approaches to forecasting a company’s operating expenses and working capital",
+            "explain approaches to forecasting a company’s capital investments and capital structure",
+            "describe the use of scenario analysis in forecasting"
+          ]
+        },
+        {
+          "module": "M08",
+          "official_module": "Module 8: Equity Valuation: Concepts and Basic Tools",
+          "filename": "M08-Equity-Valuation-Concepts-and-Basic-Tools.md",
+          "page_items": [
+            "Learning Outcomes: Equity Valuation: Concepts and Basic Tools",
+            "8.01 | Introduction",
+            "8.02 | Estimated Value and Market Price",
+            "8.03 | Categories of Equity Valuation Models",
+            "8.04 | Background for the Dividend Discount Model",
+            "8.05 | Dividend Discount Model (DDM) and Free-Cash-Flow-to-Equity Model (FCFE)",
+            "8.06 | Preferred Stock Valuation",
+            "8.07 | The Gordon Growth Model",
+            "8.08 | Multistage Dividend Discount Models",
+            "8.09 | Multipler Models and Relationship Among Price Multiples, Present Value Models, and Fundamentals",
+            "8.10 | Method of Comparables and Valuation Based on Price Multiples",
+            "8.11 | Enterprise Value",
+            "8.12 | Asset-Based Valuation",
+            "8.13 | Summary"
+          ],
+          "los": [
+            "evaluate whether a security, given its current market price and a value estimate, is overvalued, fairly valued, or undervalued by the market",
+            "describe major categories of equity valuation models",
+            "describe regular cash dividends, extra dividends, stock dividends, stock splits, reverse stock splits, and share repurchases",
+            "describe dividend payment chronology",
+            "explain the rationale for using present value models to value equity and describe the dividend discount and free-cash-flow-to-equity models",
+            "explain advantages and disadvantages of each category of valuation model",
+            "calculate the intrinsic value of a non-callable, non-convertible preferred stock",
+            "calculate and interpret the intrinsic value of an equity security based on the Gordon (constant) growth dividend discount model or a two-stage dividend discount model, as appropriate",
+            "identify characteristics of companies for which the constant growth or a multistage dividend discount model is appropriate",
+            "explain the rationale for using price multiples to value equity, how the price to earnings multiple relates to fundamentals, and the use of multiples based on comparables",
+            "calculate and interpret the following multiples: price to earnings, price to an estimate of operating cash flow, price to sales, and price to book value",
+            "describe enterprise value multiples and their use in estimating equity value",
+            "describe asset-based valuation models and their use in estimating equity value"
+          ]
+        }
+      ]
+    },
+    "Fixed Income": {
+      "directory": "Fixed_Income",
+      "course_id": "1650",
+      "exam_weight": "11-14%",
+      "module_count": 19,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Fixed-Income Instrument Features",
+          "filename": "M01-Fixed-Income-Instrument-Features.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Instrument Features",
+            "1.01 | Introduction",
+            "1.02 | Features of Fixed-Income Securities",
+            "1.03 | Bond Indentures and Covenants"
+          ],
+          "los": [
+            "describe the features of a fixed-income security",
+            "describe the contents of a bond indenture and contrast affirmative and negative covenants"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Fixed-Income Cash Flows and Types",
+          "filename": "M02-Fixed-Income-Cash-Flows-and-Types.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Cash Flows and Types",
+            "2.01 | Introduction",
+            "2.02 | Fixed-Income Cash Flow Structures",
+            "2.03 | Fixed-Income Contingency Provisions",
+            "2.04 | Legal, Regulatory, and Tax Considerations"
+          ],
+          "los": [
+            "describe common cash flow structures of fixed-income instruments and contrast cash flow contingency provisions that benefit issuers and investors",
+            "describe how legal, regulatory, and tax considerations affect the issuance and trading of fixed-income securities"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Fixed-Income Issuance and Trading",
+          "filename": "M03-Fixed-Income-Issuance-and-Trading.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Issuance and Trading",
+            "3.01 | Introduction",
+            "3.02 | Fixed-Income Segments, Issuers, and Investors",
+            "3.03 | Fixed-Income Indexes",
+            "3.04 | Primary and Secondary Fixed-Income Markets"
+          ],
+          "los": [
+            "describe fixed-income market segments and their issuer and investor participants",
+            "describe types of fixed-income indexes",
+            "compare primary and secondary fixed-income markets to equity markets"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Fixed-Income Markets for Corporate Issuers",
+          "filename": "M04-Fixed-Income-Markets-for-Corporate-Issuers.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Markets for Corporate Issuers",
+            "4.01 | Introduction",
+            "4.02 | Short-Term Funding Alternatives",
+            "4.03 | Repurchase Agreements",
+            "4.04 | Long-Term Corporate Debt"
+          ],
+          "los": [
+            "compare short-term funding alternatives available to corporations and financial institutions",
+            "describe repurchase agreements (repos), their uses, and their benefits and risks",
+            "contrast the long-term funding of investment-grade versus high-yield corporate issuers"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Fixed-Income Markets for Government Issuers",
+          "filename": "M05-Fixed-Income-Markets-for-Government-Issuers.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Markets for Government Issuers",
+            "5.01 | Introduction",
+            "5.02 | Sovereign Debt",
+            "5.03 | Sovereign Debt Issuance and Trading",
+            "5.04 | Non-Sovereign, Quasi-Government, and Supranational Agency Debt"
+          ],
+          "los": [
+            "describe funding choices by sovereign and non-sovereign governments, quasi-government entities, and supranational agencies",
+            "contrast the issuance and trading of government and corporate fixed-income instruments"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Fixed-Income Bond Valuation: Prices and Yields",
+          "filename": "M06-Fixed-Income-Bond-Valuation-Prices-and-Yields.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Bond Valuation: Prices and Yields",
+            "6.01 | Introduction",
+            "6.02 | Bond Pricing and the Time Value of Money",
+            "6.03 | Relationships between Bond Prices and Bond Features",
+            "6.04 | Matrix Pricing"
+          ],
+          "los": [
+            "calculate a bond’s price given a yield-to-maturity on or between coupon dates",
+            "identify the relationships among a bond’s price, coupon rate, maturity, and yield-to-maturity",
+            "describe matrix pricing"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds",
+          "filename": "M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds.md",
+          "page_items": [
+            "Learning Outcomes: Yield and Yield Spread Measures for Fixed-Rate Bonds",
+            "7.01 | Introduction",
+            "7.02 | Periodicity and Annualized Yields",
+            "7.03 | Other Yield Measures, Conventions, and Accounting for Embedded Options",
+            "7.04 | Yield Spread Measures for Fixed-Rate Bonds and Matrix Pricing"
+          ],
+          "los": [
+            "calculate annual yield on a bond for varying compounding periods in a year",
+            "compare, calculate, and interpret yield and yield spread measures for fixed-rate bonds"
+          ]
+        },
+        {
+          "module": "M08",
+          "official_module": "Module 8: Yield and Yield Spread Measures for Floating-Rate Instruments",
+          "filename": "M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments.md",
+          "page_items": [
+            "Learning Outcomes: Yield and Yield Spread Measures for Floating-Rate Instruments",
+            "8.01 | Introduction",
+            "8.02 | Yield and Yield Spread Measures for Floating-Rate Notes",
+            "8.03 | Yield Measures for Money Market Instruments"
+          ],
+          "los": [
+            "calculate and interpret yield spread measures for floating-rate instruments",
+            "calculate and interpret yield measures for money market instruments"
+          ]
+        },
+        {
+          "module": "M09",
+          "official_module": "Module 9: The Term Structure of Interest Rates: Spot, Par, and Forward Curves",
+          "filename": "M09-The-Term-Structure-of-Interest-Rates-Spot-Par-and-Forward-Curves.md",
+          "page_items": [
+            "Learning Outcomes: The Term Structure of Interest Rates: Spot, Par, and Forward Curves",
+            "9.01 | Introduction",
+            "9.02 | Maturity Structure of Interest Rates and Spot Rates",
+            "9.03 | Par and Forward Rates",
+            "9.04 | Spot, Par, and Forward Yield Curves and Interpreting Their Relationship"
+          ],
+          "los": [
+            "define spot rates and the spot curve, and calculate the price of a bond using spot rates",
+            "define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates",
+            "compare the spot curve, par curve, and forward curve"
+          ]
+        },
+        {
+          "module": "M10",
+          "official_module": "Module 10: Interest Rate Risk and Return",
+          "filename": "M10-Interest-Rate-Risk-and-Return.md",
+          "page_items": [
+            "Learning Outcomes: Interest Rate Risk and Return",
+            "10.01 | Introduction",
+            "10.02 | Sources of Return from Investing in a Fixed-Rate Bond",
+            "10.03 | Investment Horizon and Interest Rate Risk",
+            "10.04 | Macaulay Duration"
+          ],
+          "los": [
+            "calculate and interpret the sources of return from investing in a fixed-rate bond;",
+            "describe the relationships among a bond’s holding period return, its Macaulay duration, and the investment horizon;",
+            "define, calculate, and interpret Macaulay duration."
+          ]
+        },
+        {
+          "module": "M11",
+          "official_module": "Module 11: Yield-Based Bond Duration Measures and Properties",
+          "filename": "M11-Yield-Based-Bond-Duration-Measures-and-Properties.md",
+          "page_items": [
+            "Learning Outcomes: Yield-Based Bond Duration Measures and Properties",
+            "11.01 | Introduction",
+            "11.02 | Modified Duration",
+            "11.03 | Money Duration and Price Value of a Basis Point",
+            "11.04 | Properties of Duration"
+          ],
+          "los": [
+            "define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)",
+            "explain how a bond’s maturity, coupon, and yield level affect its interest rate risk"
+          ]
+        },
+        {
+          "module": "M12",
+          "official_module": "Module 12: Yield-Based Bond Convexity and Portfolio Properties",
+          "filename": "M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties.md",
+          "page_items": [
+            "Learning Outcomes: Yield-Based Bond Convexity and Portfolio Properties",
+            "12.01 | Introduction",
+            "12.02 | Bond Convexity and Convexity Adjustment",
+            "12.03 | Bond Risk and Return Using Duration and Convexity",
+            "12.04 | Portfolio Duration and Convexity"
+          ],
+          "los": [
+            "calculate and interpret convexity and describe the convexity adjustment",
+            "calculate the percentage price change of a bond for a specified change in yield, given the bond’s duration and convexity",
+            "calculate portfolio duration and convexity and explain the limitations of these measures"
+          ]
+        },
+        {
+          "module": "M13",
+          "official_module": "Module 13: Curve-Based and Empirical Fixed-Income Risk Measures",
+          "filename": "M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures.md",
+          "page_items": [
+            "Learning Outcomes: Curve-Based and Empirical Fixed-Income Risk Measures",
+            "13.01 | Introduction",
+            "13.02 | Curve-Based Interest Rate Risk Measures",
+            "13.03 | Bond Risk and Return Using Curve-Based Duration and Convexity",
+            "13.04 | Key Rate Duration as a Measure of Yield Curve Risk",
+            "13.05 | Empirical Duration"
+          ],
+          "los": [
+            "explain why effective duration and effective convexity are the most appropriate measures of interest rate risk for bonds with embedded options",
+            "calculate the percentage price change of a bond for a specified change in benchmark yield, given the bond’s effective duration and convexity",
+            "define key rate duration and describe its use to measure price sensitivity of fixed-income instruments to benchmark yield curve changes",
+            "describe the difference between empirical duration and analytical duration"
+          ]
+        },
+        {
+          "module": "M14",
+          "official_module": "Module 14: Credit Risk",
+          "filename": "M14-Credit-Risk.md",
+          "page_items": [
+            "Learning Outcomes: Credit Risk",
+            "14.01 | Introduction",
+            "14.02 | Sources of Credit Risk",
+            "14.03 | Credit Rating Agencies and Credit Ratings",
+            "14.04 | Factors Impacting Yield Spreads"
+          ],
+          "los": [
+            "describe credit risk and its components, probability of default and loss given default",
+            "describe the uses of ratings from credit rating agencies and their limitations",
+            "describe macroeconomic, market, and issuer-specific factors that influence the level and volatility of yield spreads"
+          ]
+        },
+        {
+          "module": "M15",
+          "official_module": "Module 15: Credit Analysis for Government Issuers",
+          "filename": "M15-Credit-Analysis-for-Government-Issuers.md",
+          "page_items": [
+            "Learning Outcomes: Credit Analysis for Government Issuers",
+            "15.01 | Introduction",
+            "15.02 | Sovereign Credit Analysis",
+            "15.03 | Non-Sovereign Credit Risk"
+          ],
+          "los": [
+            "explain special considerations when evaluating the credit of sovereign and non-sovereign government debt issuers and issues"
+          ]
+        },
+        {
+          "module": "M16",
+          "official_module": "Module 16: Credit Analysis for Corporate Issuers",
+          "filename": "M16-Credit-Analysis-for-Corporate-Issuers.md",
+          "page_items": [
+            "Learning Outcomes: Credit Analysis for Corporate Issuers",
+            "16.01 | Introduction",
+            "16.02 | Assessing Corporate Creditworthiness",
+            "16.03 | Financial Ratios in Corporate Credit Analysis",
+            "16.04 | Seniority Rankings, Recovery Rates, and Credit Ratings"
+          ],
+          "los": [
+            "describe the qualitative and quantitative factors used to evaluate a corporate borrower’s creditworthiness",
+            "calculate and interpret financial ratios used in credit analysis",
+            "describe the seniority rankings of debt, secured versus unsecured debt and the priority of claims in bankruptcy, and their impact on credit ratings"
+          ]
+        },
+        {
+          "module": "M17",
+          "official_module": "Module 17: Fixed-Income Securitization",
+          "filename": "M17-Fixed-Income-Securitization.md",
+          "page_items": [
+            "Learning Outcomes: Fixed-Income Securitization",
+            "17.01 | Introduction",
+            "17.02 | The Benefits of Securitization",
+            "17.03 | The Securitization Process"
+          ],
+          "los": [
+            "explain benefits of securitization for issuers, investors, economies, and financial markets",
+            "describe securitization, including the parties and the roles they play"
+          ]
+        },
+        {
+          "module": "M18",
+          "official_module": "Module 18: Asset-Backed Security (ABS) Instrument and Market Features",
+          "filename": "M18-Asset-Backed-Security-Instrument-and-Market-Features.md",
+          "page_items": [
+            "Learning Outcomes: Asset-Backed Security (ABS) Instrument and Market Features",
+            "18.01 | Introduction",
+            "18.02 | Covered Bonds",
+            "18.03 | ABS Structures to Address Credit Risk",
+            "18.04 | Non-Mortgage Asset-Backed Securities",
+            "18.05 | Collateralized Debt Obligations"
+          ],
+          "los": [
+            "describe characteristics and risks of covered bonds and how they differ from other asset-backed securities",
+            "describe typical credit enhancement structures used in securitizations",
+            "describe types and characteristics of non-mortgage asset-backed securities, including the cash flows and risks of each type",
+            "describe collateralized debt obligations, including their cash flows and risks"
+          ]
+        },
+        {
+          "module": "M19",
+          "official_module": "Module 19: Mortgage-Backed Security (MBS) Instrument and Market Features",
+          "filename": "M19-Mortgage-Backed-Security-Instrument-and-Market-Features.md",
+          "page_items": [
+            "Learning Outcomes: Mortgage-Backed Security (MBS) Instrument and Market Features",
+            "19.01 | Introduction",
+            "19.02 | Time Tranching",
+            "19.03 | Mortgage Loans and Their Characteristic Features",
+            "19.04 | Residential Mortgage-Backed Securities (RMBS)",
+            "19.05 | Commercial Mortgage-Backed Securities (CMBS)"
+          ],
+          "los": [
+            "define prepayment risk and describe time tranching structures in securitizations and their purpose",
+            "describe fundamental features of residential mortgage loans that are securitized",
+            "describe types and characteristics of residential mortgage-backed securities, including mortgage pass-through securities and collateralized mortgage obligations, and explain the cash flows and risks for each type",
+            "describe characteristics and risks of commercial mortgage-backed securities"
+          ]
+        }
+      ]
+    },
+    "Derivatives": {
+      "directory": "Derivatives",
+      "course_id": "1651",
+      "exam_weight": "5-8%",
+      "module_count": 10,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Derivative Instrument and Derivative Market Features",
+          "filename": "M01-Derivative-Instrument-and-Derivative-Market-Features.md",
+          "page_items": [
+            "Learning Outcomes: Derivative Instrument and Derivative Market Features",
+            "1.01 | Introduction",
+            "1.02 | Derivative Features",
+            "1.03 | Derivative Underlyings",
+            "1.04 | Derivative Markets"
+          ],
+          "los": [
+            "define a derivative and describe basic features of a derivative instrument",
+            "describe the basic features of derivative markets, and contrast over-the-counter and exchange-traded derivative markets"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Forward Commitment and Contingent Claim Features and Instruments",
+          "filename": "M02-Forward-Commitment-and-Contingent-Claim-Features-and-Instruments.md",
+          "page_items": [
+            "Learning Outcomes: Forward Commitment and Contingent Claim Features and Instruments",
+            "2.01 | Introduction",
+            "2.02 | Forwards, Futures, and Swaps",
+            "2.03 | Futures",
+            "2.04 | Swaps",
+            "2.05 | Options",
+            "2.06 | Credit Derivatives",
+            "2.07 | Forward Commitments vs. Contingent Claims"
+          ],
+          "los": [
+            "define forward contracts, futures contracts, swaps, options (calls and puts), and credit derivatives and compare their basic characteristics",
+            "determine the value at expiration and profit from a long or a short position in a call or put option",
+            "contrast forward commitments with contingent claims"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Derivative Benefits, Risks, and Issuer and Investor Uses",
+          "filename": "M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses.md",
+          "page_items": [
+            "Learning Outcomes: Derivative Benefits, Risks, and Issuer and Investor Uses",
+            "3.01 | Introduction",
+            "3.02 | Derivative Benefits",
+            "3.03 | Derivative Risks",
+            "3.04 | Issuer Use of Derivatives",
+            "3.05 | Investor Use of Derivatives"
+          ],
+          "los": [
+            "describe benefits and risks of derivative instruments",
+            "compare the use of derivatives among issuers and investors"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives",
+          "filename": "M04-Arbitrage-Replication-and-the-Cost-of-Carry-in-Pricing-Derivatives.md",
+          "page_items": [
+            "Learning Outcomes: Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives",
+            "4.01 | Introduction",
+            "4.02 | Arbitrage",
+            "4.03 | Replication",
+            "4.04 | Costs and Benefits Associated with Owning the Underlying"
+          ],
+          "los": [
+            "explain how the concepts of arbitrage and replication are used in pricing derivatives",
+            "explain the difference between the spot and expected future price of an underlying and the cost of carry associated with holding the underlying asset"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities",
+          "filename": "M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities.md",
+          "page_items": [
+            "Learning Outcomes: Pricing and Valuation of Forward Contracts and for an Underlying with Varying                  Maturities",
+            "5.01 | Introduction",
+            "5.02 | Pricing and Valuation of Forward Contracts",
+            "5.03 | Pricing and Valuation of Interest Rate Forward Contracts"
+          ],
+          "los": [
+            "explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration",
+            "explain how forward rates are determined for interest rate forward contracts and describe the uses of these forward rates."
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Pricing and Valuation of Futures Contracts",
+          "filename": "M06-Pricing-and-Valuation-of-Futures-Contracts.md",
+          "page_items": [
+            "Learning Outcomes: Pricing and Valuation of Futures Contracts",
+            "6.01 | Introduction",
+            "6.02 | Pricing of Futures Contracts at Inception",
+            "6.03 | MTM Valuation: Forwards versus Futures",
+            "6.04 | Interest Rate Futures versus Forward Contracts",
+            "6.05 | Forward and Futures Price Differences",
+            "6.06 | Interest Rate Forward and Futures Price Differences",
+            "6.07 | Effect of Central Clearing of OTC Derivatives"
+          ],
+          "los": [
+            "compare the value and price of forward and futures contracts",
+            "explain why forward and futures prices differ"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Pricing and Valuation of Interest Rates and Other Swaps",
+          "filename": "M07-Pricing-and-Valuation-of-Interest-Rates-and-Other-Swaps.md",
+          "page_items": [
+            "Learning Outcomes: Pricing and Valuation of Interest Rates and Other Swaps",
+            "7.01 | Introduction",
+            "7.02 | Swaps vs. Forwards",
+            "7.03 | Swap Values and Prices"
+          ],
+          "los": [
+            "describe how swap contracts are similar to but different from a series of forward contracts",
+            "contrast the value and price of swaps"
+          ]
+        },
+        {
+          "module": "M08",
+          "official_module": "Module 8: Pricing and Valuation of Options",
+          "filename": "M08-Pricing-and-Valuation-of-Options.md",
+          "page_items": [
+            "Learning Outcomes: Pricing and Valuation of Options",
+            "8.01 | Introduction",
+            "8.02 | Option Value relative to the Underlying Spot Price",
+            "8.03 | Option Exercise Value",
+            "8.04 | Option Moneyness",
+            "8.05 | Option Time Value",
+            "8.06 | Arbitrage",
+            "8.07 | Replication",
+            "8.08 | Factors Affecting Option Value"
+          ],
+          "los": [
+            "explain the exercise value, moneyness, and time value of an option",
+            "contrast the use of arbitrage and replication concepts in pricing forward commitments and contingent claims",
+            "identify the factors that determine the value of an option and describe how each factor affects the value of an option"
+          ]
+        },
+        {
+          "module": "M09",
+          "official_module": "Module 9: Option Replication Using Put-Call Parity",
+          "filename": "M09-Option-Replication-Using-Put-Call-Parity.md",
+          "page_items": [
+            "Learning Outcomes: Option Replication Using Put–Call Parity",
+            "9.01 | Introduction",
+            "9.02 | Put–Call Parity",
+            "9.03 | Option Strategies Based on Put–Call Parity",
+            "9.04 | Put–Call Forward Parity and Option Applications",
+            "9.05 | Put–Call Forward Parity",
+            "9.06 | Option Put–Call Parity Applications: Firm Value"
+          ],
+          "los": [
+            "explain put-call parity for European options",
+            "explain put-call forward parity for European options"
+          ]
+        },
+        {
+          "module": "M10",
+          "official_module": "Module 10: Valuing a Derivative Using a One-Period Binomial Model",
+          "filename": "M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model.md",
+          "page_items": [
+            "Learning Outcomes: Valuing a Derivative Using a One-Period Binomial Model",
+            "10.01 | Introduction",
+            "10.02 | Binomial Valuation",
+            "10.03 | The Binomial Model",
+            "10.04 | Pricing a European Call Option",
+            "10.05 | Risk Neutrality"
+          ],
+          "los": [
+            "explain how to value a derivative using a one-period binomial model",
+            "describe the concept of risk neutrality in derivatives pricing"
+          ]
+        }
+      ]
+    },
+    "Alternative Investments": {
+      "directory": "Alternative_Investments",
+      "course_id": "1652",
+      "exam_weight": "7-10%",
+      "module_count": 7,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Alternative Investment Features, Methods, and Structures",
+          "filename": "M01-Alternative-Investment-Features-Methods-and-Structures.md",
+          "page_items": [
+            "Learning Outcomes: Alternative Investment Features, Methods, and Structures",
+            "1.01 | Introduction",
+            "1.02 | Alternative Investment Features",
+            "1.03 | Alternative Investment Methods",
+            "1.04 | Alternative Investment Structures"
+          ],
+          "los": [
+            "describe features and categories of alternative investments",
+            "compare direct investment, co-investment, and fund investment methods for alternative investments",
+            "describe investment ownership and compensation structures commonly used in alternative investments"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Alternative Investment Performance and Returns",
+          "filename": "M02-Alternative-Investment-Performance-and-Returns.md",
+          "page_items": [
+            "Learning Outcomes: Alternative Investment Performance and Returns",
+            "2.01 | Introduction",
+            "2.02 | Alternative Investment Performance",
+            "2.03 | Alternative Investment Returns"
+          ],
+          "los": [
+            "describe the performance appraisal of alternative investments",
+            "calculate and interpret alternative investment returns both before and after fees"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Investments in Private Capital: Equity and Debt",
+          "filename": "M03-Investments-in-Private-Capital-Equity-and-Debt.md",
+          "page_items": [
+            "Learning Outcomes: Investments in Private Capital: Equity and Debt",
+            "3.01 | Introduction",
+            "3.02 | Private Equity Investment Characteristics",
+            "3.03 | Private Debt Investment Characteristics",
+            "3.04 | Diversification Benefits of Private Capital"
+          ],
+          "los": [
+            "explain features of private equity and its investment characteristics",
+            "explain features of private debt and its investment characteristics",
+            "describe the diversification benefits that private capital can provide"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Real Estate and Infrastructure",
+          "filename": "M04-Real-Estate-and-Infrastructure.md",
+          "page_items": [
+            "Learning Outcomes: Real Estate and Infrastructure",
+            "4.01 | Introduction",
+            "4.02 | Real Estate Features",
+            "4.03 | Real Estate Investment Characteristics",
+            "4.04 | Infrastructure Investment Features",
+            "4.05 | Infrastructure Investment Characteristics"
+          ],
+          "los": [
+            "explain features and characteristics of real estate",
+            "explain the investment characteristics of real estate investments",
+            "explain features and characteristics of infrastructure",
+            "explain the investment characteristics of infrastructure investments"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Natural Resources",
+          "filename": "M05-Natural-Resources.md",
+          "page_items": [
+            "Learning Outcomes: Natural Resources",
+            "5.01 | Introduction",
+            "5.02 | Natural Resources Investment Features",
+            "5.03 | Commodity Investment Forms",
+            "5.04 | Natural Resource Investment Risk, Return, and Diversification"
+          ],
+          "los": [
+            "explain features of raw land, timberland, and farmland and their investment characteristics",
+            "describe features of commodities and their investment characteristics",
+            "analyze sources of risk, return, and diversification among natural resource investments"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Hedge Funds",
+          "filename": "M06-Hedge-Funds.md",
+          "page_items": [
+            "Learning Outcomes: Hedge Funds",
+            "6.01 | Introduction",
+            "6.02 | Hedge Fund Investment Features",
+            "6.03 | Hedge Fund Investment Forms",
+            "6.04 | Hedge Fund Investment Risk, Return, and Diversification"
+          ],
+          "los": [
+            "explain investment features of hedge funds and contrast them with other asset classes",
+            "describe investment forms and vehicles used in hedge fund investments",
+            "analyze sources of risk, return, and diversification among hedge fund investments"
+          ]
+        },
+        {
+          "module": "M07",
+          "official_module": "Module 7: Introduction to Digital Assets",
+          "filename": "M07-Introduction-to-Digital-Assets.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to Digital Assets",
+            "7.01 | Introduction",
+            "7.02 | Distributed Ledger Technology",
+            "7.03 | Digital Asset Investment Features",
+            "7.04 | Digital Asset Investment Forms",
+            "7.05 | Digital Asset Investment Risk, Return, and Diversification"
+          ],
+          "los": [
+            "describe financial applications of distributed ledger technology",
+            "explain investment features of digital assets and contrast them with other asset classes",
+            "describe investment forms and vehicles used in digital asset investments",
+            "analyze sources of risk, return, and diversification among digital asset investments"
+          ]
+        }
+      ]
+    },
+    "Portfolio Management": {
+      "directory": "Portfolio_Management",
+      "course_id": "1653",
+      "exam_weight": "8-12%",
+      "module_count": 6,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Portfolio Risk and Return: Part I",
+          "filename": "M01-Portfolio-Risk-and-Return-Part-I.md",
+          "page_items": [
+            "Learning Outcomes: Portfolio Risk and Return: Part I",
+            "1.01 | Introduction",
+            "1.02 | Historical Return and Risk",
+            "1.03 | Other Investment Characteristics",
+            "1.04 | Risk Aversion and Portfolio Selection",
+            "1.05 | Utility Theory and Indifference Curves",
+            "1.06 | Application of Utility Theory to Portfolio Selection",
+            "1.07 | Portfolio Risk & Portfolio of Two Risky Assets",
+            "1.08 | Portfolio of Many Risky Assets",
+            "1.09 | The Power of Diversification",
+            "1.10 | Efficient Frontier: Investment Opportunity Set & Minimum Variance                  Portfolios",
+            "1.11 | Efficient Frontier: A Risk-Free Asset and Many Risky Assets",
+            "1.12 | Efficient Frontier: Optimal Investor Portfolio",
+            "1.13 | Summary"
+          ],
+          "los": [
+            "describe characteristics of the major asset classes that investors consider in forming portfolios",
+            "explain risk aversion and its implications for portfolio selection",
+            "explain the selection of an optimal portfolio, given an investor’s utility (or risk aversion) and the capital allocation line",
+            "calculate and interpret the mean, variance, and covariance (or correlation) of asset returns based on historical data",
+            "calculate and interpret portfolio standard deviation",
+            "describe the effect on a portfolio’s risk of investing in assets that are less than perfectly correlated",
+            "describe and interpret the minimum-variance and efficient frontiers of risky assets and the global minimum-variance portfolio"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Portfolio Risk and Return: Part II",
+          "filename": "M02-Portfolio-Risk-and-Return-Part-II.md",
+          "page_items": [
+            "Learning Outcomes: Portfolio Risk and Return: Part II",
+            "2.01 | Introduction",
+            "2.02 | Capital Market Theory: Risk-Free and Risky Assets",
+            "2.03 | Capital Market Theory: The Capital Market Line",
+            "2.04 | Capital Market Theory: CML - Leveraged Portfolios",
+            "2.05 | Systematic and Nonsystematic Risk",
+            "2.06 | Return Generating Models",
+            "2.07 | Calculation and Interpretation of Beta",
+            "2.08 | Capital Asset Pricing Model: Assumptions and the Security Market Line",
+            "2.09 | Capital Asset Pricing Model: Applications",
+            "2.10 | Beyond CAPM: Limitations and Extensions of CAPM",
+            "2.11 | Portfolio Performance Appraisal Measures",
+            "2.12 | Applications of the CAPM in Portfolio Construction",
+            "2.13 | Summary"
+          ],
+          "los": [
+            "describe the implications of combining a risk-free asset with a portfolio of risky assets",
+            "explain the capital allocation line (CAL) and the capital market line (CML)",
+            "explain systematic and nonsystematic risk, including why an investor should not expect to receive additional return for bearing nonsystematic risk",
+            "explain return generating models (including the market model) and their uses",
+            "calculate and interpret beta",
+            "explain the capital asset pricing model (CAPM), including its assumptions, and the security market line (SML)",
+            "calculate and interpret the expected return of an asset using the CAPM",
+            "describe and demonstrate applications of the CAPM and the SML",
+            "calculate and interpret the Sharpe ratio, Treynor ratio, M 2, and Jensen’s alpha"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Portfolio Management: An Overview",
+          "filename": "M03-Portfolio-Management-An-Overview.md",
+          "page_items": [
+            "Learning Outcomes: Portfolio Management: An Overview",
+            "3.01 | Introduction",
+            "3.02 | Portfolio Perspective: Diversification and Risk Reduction",
+            "3.03 | Portfolio Perspective: Risk-Return Trade-off, Downside Protection, Modern Portfolio Theory",
+            "3.04 | Steps in the Portfolio Management Process",
+            "3.05 | Types of Investors",
+            "3.06 | The Asset Management Industry",
+            "3.07 | Pooled Interest - Mutual Funds",
+            "3.08 | Pooled Interest - Type of Mutual Funds",
+            "3.09 | Pooled Interest - Other Investment Products",
+            "3.10 | Summary"
+          ],
+          "los": [
+            "describe the portfolio approach to investing",
+            "describe the steps in the portfolio management process",
+            "describe types of investors and distinctive characteristics and needs of each",
+            "describe defined contribution and defined benefit pension plans",
+            "describe aspects of the asset management industry",
+            "describe mutual funds and compare them with other pooled investment products"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Basics of Portfolio Planning and Construction",
+          "filename": "M04-Basics-of-Portfolio-Planning-and-Construction.md",
+          "page_items": [
+            "Learning Outcomes: Basics of Portfolio Planning and Construction",
+            "4.01 | Introduction",
+            "4.02 | The Investment Policy Statement",
+            "4.03 | IPS Risk and Return Objectives",
+            "4.04 | IPS Constraints",
+            "4.05 | Gathering Client Information",
+            "4.06 | Portfolio Construction and Capital Market Expectations",
+            "4.07 | Strategic Asset Allocation",
+            "4.08 | Portfolio Construction Principles",
+            "4.09 | ESG Considerations in Portfolio Planning and Construction",
+            "4.10 | Summary"
+          ],
+          "los": [
+            "describe the reasons for a written investment policy statement (IPS)",
+            "describe the major components of an IPS",
+            "describe risk and return objectives and how they may be developed for a client",
+            "explain the difference between the willingness and the ability (capacity) to take risk in analyzing an investor’s financial risk tolerance",
+            "describe the investment constraints of liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances and their implications for the choice of portfolio assets",
+            "explain the specification of asset classes in relation to asset allocation",
+            "describe the principles of portfolio construction and the role of asset allocation in relation to the IPS",
+            "describe how environmental, social, and governance (ESG) considerations may be integrated into portfolio planning and construction"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: The Behavioral Biases of Individuals",
+          "filename": "M05-The-Behavioral-Biases-of-Individuals.md",
+          "page_items": [
+            "Learning Outcomes: The Behavioral Biases of Individuals",
+            "5.01 | Introduction",
+            "5.02 | Behavioral Bias Categories",
+            "5.03 | Cognitive Errors",
+            "5.04 | Emotional Biases",
+            "5.05 | Behavioral Finance and Market Behavior",
+            "5.06 | Summary"
+          ],
+          "los": [
+            "compare and contrast cognitive errors and emotional biases",
+            "discuss commonly recognized behavioral biases and their implications for financial decision making",
+            "describe how behavioral biases of investors can lead to market characteristics that may not be explained by traditional finance"
+          ]
+        },
+        {
+          "module": "M06",
+          "official_module": "Module 6: Introduction to Risk Management",
+          "filename": "M06-Introduction-to-Risk-Management.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to Risk Management",
+            "6.01 | Introduction",
+            "6.02 | Risk Management Process",
+            "6.03 | Risk Management Framework",
+            "6.04 | Risk Governance - An Enterprise View",
+            "6.05 | Risk Tolerance",
+            "6.06 | Risk Budgeting",
+            "6.07 | Identification of Risk - Financial Vs. Non-Financial Risk",
+            "6.08 | Interactions Between Risks",
+            "6.09 | Measuring and Modifying Risk: Drivers and Metrics",
+            "6.10 | Risk Modification: Prevention, Avoidance, and Acceptance",
+            "6.11 | Risk Modification: Transferring, Shifting, and How to Choose",
+            "6.12 | Summary"
+          ],
+          "los": [
+            "define risk management",
+            "describe features of a risk management framework",
+            "define risk governance and describe elements of effective risk governance",
+            "explain how risk tolerance affects risk management",
+            "describe risk budgeting and its role in risk governance",
+            "identify financial and non-financial sources of risk and describe how they may interact",
+            "describe methods for measuring and modifying risk exposures and factors to consider in choosing among the methods"
+          ]
+        }
+      ]
+    },
+    "Ethical and Professional Standards": {
+      "directory": "Ethical_and_Professional_Standards",
+      "course_id": "1654",
+      "exam_weight": "15-20%",
+      "module_count": 5,
+      "modules": [
+        {
+          "module": "M01",
+          "official_module": "Module 1: Ethics and Trust in the Investment Profession",
+          "filename": "M01-Ethics-and-Trust-in-the-Investment-Profession.md",
+          "page_items": [
+            "Learning Outcomes: Ethics and Trust in the Investment Profession",
+            "1.01 | Introduction",
+            "1.02 | Ethics",
+            "1.03 | Ethics and Professionalism",
+            "1.04 | Challenges to Ethical Conduct",
+            "1.05 | Ethical vs. Legal Standards",
+            "1.06 | Ethical Decision-Making Frameworks",
+            "1.07 | Conclusion",
+            "1.08 | Summary"
+          ],
+          "los": [
+            "explain ethics",
+            "describe the role of a code of ethics in defining a profession",
+            "describe professions and how they establish trust",
+            "describe the need for high ethical standards in investment management",
+            "explain professionalism in investment management",
+            "identify challenges to ethical behavior",
+            "compare and contrast ethical standards with legal standards",
+            "describe a framework for ethical decision making"
+          ]
+        },
+        {
+          "module": "M02",
+          "official_module": "Module 2: Code of Ethics and Standards of Professional Conduct",
+          "filename": "M02-Code-of-Ethics-and-Standards-of-Professional-Conduct.md",
+          "page_items": [
+            "Learning Outcomes: Code of Ethics and Standards of Professional Conduct",
+            "2.01 | Preface",
+            "2.02 | Ethics and the Investment Industry",
+            "2.03 | CFA Institute Code of Ethics and Standards of Professional Conduct"
+          ],
+          "los": [
+            "describe the structure of the CFA Institute Professional Conduct Program and the process for the enforcement of the Code and Standards",
+            "identify the six components of the Code of Ethics and the seven Standards of Professional Conduct",
+            "explain the ethical responsibilities required by the Code and Standards, including the sub-sections of each Standard"
+          ]
+        },
+        {
+          "module": "M03",
+          "official_module": "Module 3: Guidance for Standards I-VII",
+          "filename": "M03-Guidance-for-Standards-I-VII.md",
+          "page_items": [
+            "Learning Outcomes: Guidance for Standards I–VII",
+            "3.01 | Standard I: Professionalism",
+            "3.02 | Standard I(A): Recommended Procedures",
+            "3.03 | Standard I(A): Application of the Standard",
+            "3.04 | Standard I(B) Independence and Objectivity",
+            "3.05 | Standard I(B): Recommended Procedures",
+            "3.06 | Standard I(B): Application of the Standard",
+            "3.07 | Standard I(C) Misrepresentation",
+            "3.08 | Standard I(C): Recommended Procedures",
+            "3.09 | Standard I(C): Application of the Standard",
+            "3.10 | Standard I(D) Misconduct",
+            "3.11 | Standard I(D): Recommended Procedures",
+            "3.12 | Standard I(D): Application of the Standard",
+            "3.13 | Standard I(E) Competence",
+            "3.14 | Standard I(E): Recommended Procedures",
+            "3.15 | Standard I(E): Application of the Standard",
+            "3.16 | Standard II: Integrity of Capital Markets",
+            "3.17 | Standard II(A): Recommended Procedures",
+            "3.18 | Standard II(A): Application of the Standard",
+            "3.19 | Standard II(B) Market Manipulation",
+            "3.20 | Standard II(B): Application of the Standard",
+            "3.21 | Standard III: Duties to Clients",
+            "3.22 | Standard III(A): Recommended Procedures",
+            "3.23 | Standard III(A): Application of the Standard",
+            "3.24 | Standard III(B) Fair Dealing",
+            "3.25 | Standard III(B): Recommended Procedures",
+            "3.26 | Standard III(B): Application of the Standard",
+            "3.27 | Standard III(C) Suitability",
+            "3.28 | Standard III(C): Recommended Procedures",
+            "3.29 | Standard III(C): Application of the Standard",
+            "3.30 | Standard III(D) Performance Presentation",
+            "3.31 | Standard III(D): Recommended Procedures",
+            "3.32 | Standard III(D): Application of the Standard",
+            "3.33 | Standard III(E) Preservation of Confidentiality",
+            "3.34 | Standard III(E): Recommended Procedures",
+            "3.35 | Standard III(E): Application of the Standard",
+            "3.36 | Standard IV: Duties to Employers",
+            "3.37 | Standard IV(A): Recommended Procedures",
+            "3.38 | Standard IV(A): Application of the Standard",
+            "3.39 | Standard IV(B) Additional Compensation Arrangements",
+            "3.40 | Standard IV(B): Recommended Procedures",
+            "3.41 | Standard IV(B): Application of the Standard",
+            "3.42 | Standard IV(C) Responsibilities of Supervisors",
+            "3.43 | Standard IV(C): Recommended Procedures",
+            "3.44 | Standard IV(C): Application of the Standard",
+            "3.45 | Standard V: Investment Analysis, Recommendations, and Actions",
+            "3.46 | Standard V(A): Recommended Procedures",
+            "3.47 | Standard V(A): Application of the Standard",
+            "3.48 | Standard V(B) Communication with Clients and Prospective Clients",
+            "3.49 | Standard V(B): Recommended Procedures",
+            "3.50 | Standard V(B): Application of the Standard",
+            "3.51 | Standard V(C) Record Retention",
+            "3.52 | Standard V(C): Recommended Procedures",
+            "3.53 | Standard V(C): Application of the Standard",
+            "3.54 | Standard VI: Conflicts of Interest",
+            "3.55 | Standard VI(A): Application of the Standard",
+            "3.56 | Standard VI(B) Priority of Transactions",
+            "3.57 | Standard VI(B): Recommended Procedures",
+            "3.58 | Standard VI(B): Application of the Standard",
+            "3.59 | Standard VI(C) Referral Fees",
+            "3.60 | Standard VI(C): Recommended Procedures",
+            "3.61 | Standard VI(C): Application of the Standard",
+            "3.62 | Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate",
+            "3.63 | Standard VII(A): Application of the Standard",
+            "3.64 | Standard VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program",
+            "3.65 | Standard VII(B): Recommended Procedures",
+            "3.66 | Standard VII(B): Application of the Standard"
+          ],
+          "los": [
+            "demonstrate the application of the Code of Ethics and Standards of Professional Conduct to situations involving issues of professional integrity",
+            "recommend practices and procedures designed to prevent violations of the Code of Ethics and Standards of Professional Conduct",
+            "identify conduct that conforms to the Code and Standards and conduct that violates the Code and Standards"
+          ]
+        },
+        {
+          "module": "M04",
+          "official_module": "Module 4: Introduction to the Global Investment Performance Standards (GIPS)",
+          "filename": "M04-Introduction-to-the-Global-Investment-Performance-Standards.md",
+          "page_items": [
+            "Learning Outcomes: Introduction to the Global Investment Performance Standards (GIPS)",
+            "4.01 | Introduction",
+            "4.02 | Why Were the GIPS Standards Created, Who Can Claim Compliance, & Who",
+            "4.03 | Composites",
+            "4.04 | Fundamentals of Compliance",
+            "4.05 | Verification"
+          ],
+          "los": [
+            "explain why the GIPS standards were created, who can claim compliance, and who benefits from compliance",
+            "describe the key concepts of the GIPS Standards for Firms",
+            "explain the purpose of composites in performance reporting",
+            "describe the fundamentals of compliance, including the recommendations of the GIPS standards with respect to the definition of the firm and the firm’s definition of discretion",
+            "describe the concept of independent verification"
+          ]
+        },
+        {
+          "module": "M05",
+          "official_module": "Module 5: Ethics Application",
+          "filename": "M05-Ethics-Application.md",
+          "page_items": [
+            "Learning Outcomes: Ethics Application",
+            "5.01 | Introduction",
+            "5.02 | Professionalism",
+            "5.03 | Integrity of Capital Markets",
+            "5.04 | Duties to Clients",
+            "5.05 | Duties to Employers",
+            "5.06 | Investment Analysis, Recommendations, and Actions",
+            "5.07 | Conflicts of Interest",
+            "5.08 | Responsibilities as a CFA Institute Member or CFA Candidate"
+          ],
+          "los": [
+            "evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct",
+            "explain how the practices, policies, and conduct do or do not violate the CFA Institute Code of Ethics and Standards of Professional Conduct"
+          ]
+        }
+      ]
+    }
+  },
+  "official_weight_source": "CFA Institute Level I exam page, 2026 topic weights, verified 2026-05-26",
+  "official_outline_source": "CFA Institute 2026 Level I Topic Outlines combined PDF",
+  "official_outline_url": "https://www.cfainstitute.org/sites/default/files/docs/programs/cfa-program/2026-l1-topics-combined.pdf"
+}

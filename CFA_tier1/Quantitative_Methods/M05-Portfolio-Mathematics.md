@@ -1,20 +1,51 @@
 ---
 title: "M05 — Portfolio Mathematics"
-description: 投资组合数学 — 期望收益, 方差, 协方差, 相关系数, 分散化, 短缺风险
+description: "CFA Level I 2026 official module: Portfolio Mathematics"
 module: M05
+subject: "Quantitative Methods"
+topic_area: Quantitative_Methods
+curriculum_year: 2026
 official_module: "Module 5: Portfolio Mathematics"
-subject: Quantitative_Methods
-los:
-  - calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns
-  - calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns
-  - define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy's safety-first criterion
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Quantitative_Methods
+  - official_2026
 ---
 
-# M05: Portfolio Mathematics（投资组合数学）
+# M05: Portfolio Mathematics
 
-## 1. 核心知识点
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 1.1 收益率矩（Return Moments）
+## Official Module Structure
+
+- Learning Outcomes: Portfolio Mathematics
+- 5.01 | Introduction
+- 5.02 | Portfolio Expected Return and Variance of Return
+- 5.03 | Forecasting Correlation of Returns: Covariance Given a Joint Probability Function
+- 5.04 | Portfolio Risk Measures: Applications of the Normal Distribution
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns
+- calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns
+- define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md`
+
+_Alignment score: 1.00. Original official module field: Module 5: Portfolio Mathematics._
+
+#### M05: Portfolio Mathematics（投资组合数学）
+
+##### 1. 核心知识点
+
+###### 1.1 收益率矩（Return Moments）
 
 **组合期望收益率（Portfolio Expected Return）**：
 `E(R_p) = w_1 × E(R_1) + w_2 × E(R_2) + ... + w_n × E(R_n)`
@@ -33,7 +64,7 @@ los:
 - 对角线上是各资产自身的方差项
 - 非对角线上是资产两两之间的协方差项
 
-### 1.2 联合概率函数（Joint Probability Function）
+###### 1.2 联合概率函数（Joint Probability Function）
 
 **协方差（Covariance）**：衡量两个变量同向变动的程度。
 `Cov(R_1, R_2) = Σ p_i × [R_1,i - E(R_1)] × [R_2,i - E(R_2)]`
@@ -53,7 +84,7 @@ los:
 - 协方差（联合概率加权交叉乘积）
 - 相关系数
 
-### 1.3 分散化机制（Diversification Mechanics）
+###### 1.3 分散化机制（Diversification Mechanics）
 
 **分散化的数学本质**：当 ρ < 1 时，组合方差的协方差项 2w_1w_2Cov_12 小于 2w_1w_2σ_1σ_2，组合风险低于加权平均风险。
 
@@ -67,7 +98,7 @@ los:
 
 > **【考试陷阱】** 低 correlation 不等于负 expected return。可以找到低相关甚至负相关的资产，各自都有正的期望收益。
 
-### 1.4 短缺风险（Shortfall Risk）
+###### 1.4 短缺风险（Shortfall Risk）
 
 **罗伊安全优先比率（Roy's Safety-First Ratio, SFRatio）**：
 `SFRatio = [E(R_p) - R_L] / σ_p`
@@ -81,7 +112,7 @@ los:
 - Sharpe Ratio 使用无风险利率 R_f 作为基准
 - Safety-First Ratio 使用投资者自定义的阈值 R_L（可能不等于 R_f）
 
-## 2. 关键公式
+##### 2. 关键公式
 
 | 公式 | 解释 | 使用场景 |
 |------|------|----------|
@@ -91,7 +122,7 @@ los:
 | `ρ_12 = Cov_12/(σ_1σ_2)` | 相关系数 | 标准化协方差范围 [-1,+1] |
 | `SFRatio = [E(R_p)-R_L]/σ_p` | 安全优先比率 | 评估组合跌破阈值风险 |
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点一：计算组合期望收益和方差**
 - 步骤 1：确认权重（权重和为 1）
@@ -112,7 +143,7 @@ los:
 - 所有候选组合用 SFRatio 排序
 - 选最大者
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 1. **协方差公式中的符号**：离差乘积为正表示同向，负表示反向 — 不要忽略符号。
 2. **相关系数 ≠ 协方差**：相关系数标准化到 [-1, +1]，协方差无上下界。
@@ -121,9 +152,13 @@ los:
 5. **权重和为 1**：考试会给权重比例，检查是否和为 1。若不是，需要先归一化。
 6. **Roy's safety-first 的分布假设**：它假设 portfolio returns 服从正态分布，**不是** asset prices 服从正态分布。它关注的是下行风险 (downside risk)，关注收益在阈值之下的概率。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - **[[M03-Statistical-Measures]]**：方差、标准差、相关系数的概念在 M03 中铺好基础；M05 将其扩展到多变量的组合场景。
 - **[[M04-Probability-Concepts]]**：联合概率函数是概率论在投资组合中的直接应用 — 期望值框架从单变量扩展到双变量。
 - **[[M01-Rates-and-Returns]]**：杠杆回报公式 `R_p + (B/E)(R_p - r_D)` 在理解组合权重和杠杆效应时是重要扩展。
 - **Portfolio Management**：M05 的组合数学是 Markowitz 有效前沿和资产配置的理论基础。
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

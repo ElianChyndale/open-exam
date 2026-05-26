@@ -1,6 +1,6 @@
 ---
 bucket: Quant
-question_count: 10
+question_count: 12
 ---
 
 # Quant Mock Mistakes
@@ -103,4 +103,24 @@ question_count: 10
 - correct_resolution: 正确答案是 A. The mean of each resample。Bootstrap 估计 sample mean 的 standard error，本质上是看所有 resamples 产生的 sample means 的离散程度，因此需要先得到每个 resample 的 mean；原始样本的 mean 或 standard deviation 都不是这个题目所需的直接输入。
 - evidence_refs: chat-screenshot-2026-05-25-bootstrap-standard-error
 - evidence_assets: chat_image_1
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | M08 Hypothesis Testing - nonparametric tests (exact LOS not shown)
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: screenshot
+- wrong_choice_or_output: B. validity of the test depends on many assumptions.
+- correct_resolution: A. data consist of ranked values. Nonparametric tests are most appropriate for ranked or ordinal data; they are used when parametric-test assumptions are not appropriate.
+- evidence_refs: chat-2026-05-26-q18-nonparametric-test-screenshot
+- evidence_assets: inline-chat-image:q18-nonparametric-test-2026-05-26
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | M08 Hypothesis Testing - paired comparisons test (exact LOS not shown)
+- error_type: formula_misuse
+- question_source: unknown
+- source_type: screenshot
+- wrong_choice_or_output: C. accepted because the computed test statistic is less than 2.807.
+- correct_resolution: A. rejected because the computed test statistic exceeds 2.807. For paired observations, use t = (mean difference - hypothesized difference) / (sample standard deviation of differences / sqrt(n)) = (4.25 - 0) / (6.25 / sqrt(25)) = 3.40. Since 3.40 > 2.807, reject H0.
+- evidence_refs: chat-2026-05-26-q22-paired-comparisons-screenshot
+- evidence_assets: inline-chat-image:q22-paired-comparisons-2026-05-26
 - moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md

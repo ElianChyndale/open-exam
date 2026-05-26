@@ -52,15 +52,15 @@ Phase 4: 同步 — MOC 对比更新 → 模块笔记标注 → 差距分析 →
 - 中心：CFA Level I (2026)
 - 10 个一级分支，按权重排列：
   1. Ethical & Professional Standards (15-20%) — 5 模块
-  2. Financial Statement Analysis (13-17%) — 12 模块
-  3. Portfolio Management (11-15%) — 6 模块
-  4. Corporate Issuers (10-15%) — 7 模块
-  5. Equity (10-15%) — 8 模块
-  6. Fixed Income (10-15%) — 19 模块
+  2. Financial Statement Analysis (11-14%) — 12 模块
+  3. Portfolio Management (8-12%) — 6 模块
+  4. Corporate Issuers (6-9%) — 7 模块
+  5. Equity Investments (11-14%) — 8 模块
+  6. Fixed Income (11-14%) — 19 模块
   7. Alternative Investments (7-10%) — 7 模块
-  8. Economics (6-10%) — 8 模块
+  8. Economics (6-9%) — 8 模块
   9. Quantitative Methods (6-9%) — 11 模块
-  10. Derivatives (6-9%) — 10 模块
+  10. Derivatives (5-8%) — 10 模块
 
 **每个科目分支下标注核心关键词：**
 
@@ -72,7 +72,7 @@ Corporate: Org Forms | Stakeholders | Governance | Working Capital | Capital Bud
 
 FSA: 3 Statements | Income Tax | Inventories | Long-term Assets | CF Analysis | Financial Modeling
 
-Equity: Market Structure | Indices | EMH | Securities | Industry Analysis | Forecasting | DDM/Multiples
+Equity Investments: Market Structure | Indices | EMH | Securities | Industry Analysis | Forecasting | DDM/Multiples
 
 FI: Features | Cash Flows | Markets | Valuation | Yield | Duration/Convexity | Credit | Securitization | ABS/MBS
 

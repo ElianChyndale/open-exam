@@ -1,0 +1,111 @@
+---
+title: "M04 — Fixed-Income Markets for Corporate Issuers"
+description: "CFA Level I 2026 official module: Fixed-Income Markets for Corporate Issuers"
+module: M04
+subject: "Fixed Income"
+topic_area: Fixed_Income
+curriculum_year: 2026
+official_module: "Module 4: Fixed-Income Markets for Corporate Issuers"
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Fixed_Income
+  - official_2026
+---
+
+# M04: Fixed-Income Markets for Corporate Issuers
+
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
+
+## Official Module Structure
+
+- Learning Outcomes: Fixed-Income Markets for Corporate Issuers
+- 4.01 | Introduction
+- 4.02 | Short-Term Funding Alternatives
+- 4.03 | Repurchase Agreements
+- 4.04 | Long-Term Corporate Debt
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- compare short-term funding alternatives available to corporations and financial institutions
+- describe repurchase agreements (repos), their uses, and their benefits and risks
+- contrast the long-term funding of investment-grade versus high-yield corporate issuers
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Fixed_Income/M04-FI-Markets-Corp-Issuers.md`
+
+_Alignment score: 1.00. Original official module field: Module 4: Fixed-Income Markets for Corporate Issuers._
+
+#### M04: 公司发行人固定收益市场 (FI Markets: Corporate Issuers)
+
+##### 1. 核心知识点
+
+###### 1.1 公司债券市场 (Corporate Bond Markets)
+
+- **投资级债券 (investment-grade bonds)**：评级为 BBB-/Baa3 及以上的公司债券。信用风险较低，收益率较低，利差对经济周期敏感度相对较小。发债主体多为大型成熟企业。
+- **高收益债券 (high-yield bonds)**：评级低于投资级（BB+/Ba1 及以下）的公司债券。信用风险较高，收益率较高以补偿违约风险。利差对经济周期和公司特定事件高度敏感。也称"垃圾债券" (junk bonds)。
+- **公司债券的发行方式**：公开发行 (public offering) 需在证券监管机构注册，面向广大投资者；私募 (private placement) 无需注册，面向合格机构投资者，条款更灵活但流动性较低。
+- **公司债券的期限结构**：短期债券（1-5年）、中期债券（5-12年）、长期债券（12年以上）。不同期限满足不同投资者需求。
+
+###### 1.2 银行贷款 (Bank Loans)
+
+- **双边贷款 (bilateral loans)**：一家银行向借款人提供的贷款。条款简单，适合中小规模融资需求。银行评估借款人信用并按自身标准定价。
+- **银团贷款 (syndicated loans)**：多家银行联合向借款人提供的大额贷款。由牵头行 (lead arranger) 组织银团并分销贷款份额。银团贷款可分散信用风险，适用于大型融资项目。
+- **有担保贷款 (secured loans)**：以特定资产（如应收账款、存货、设备）作为抵押的贷款。担保贷款回收率高于无担保贷款。
+- **贷款与债券的关键区别**：贷款通常有浮动利率、更灵活的可协商条款和更严格的契约条款 (covenants)；债券通常有固定或浮动利率、标准化条款和二级市场交易。
+
+###### 1.3 商业票据 (Commercial Paper)
+
+- **商业票据 (commercial paper, CP)**：由大型优质公司发行的短期无担保承诺票据，期限通常不超过 270 天（在美国无需 SEC 注册）。主要用于满足短期流动性需求（如营运资金、季节性融资），以贴现方式发行。
+- **备用信贷额度 (backup credit lines)**：CP 发行人通常持有银行提供的备用信贷额度，作为 CP 到期时无法展期的应急流动性支持。这是 CP 评级的重要考量因素。
+- **CP 市场特征**：面额通常较大（如 $100,000 以上），主要投资者为货币市场基金、保险公司和养老基金。评级要求高，只有投资级以上企业可以进入 CP 市场。
+
+###### 1.4 中期票据 (Medium-Term Notes, MTNs)
+
+- **中期票据 (medium-term notes, MTNs)**：公司发行的债务工具，期限通常介于 2 到 10 年，但也有长达 30 年的品种。MTN 可以通过承销商持续发行 (continuous offering)，比传统债券发行更灵活。
+- **MTN 的优势**：发行人可根据市场条件和投资者需求灵活调整期限、金额和结构（如固定、浮动、结构性）。投资者可获得定制化的信用敞口和期限选择。
+- **MTN 与公司债券的区别**：公司债通常一次性发行、金额固定；MTN 通过持续发行计划分次销售，每次发行金额和条款可调整。
+
+###### 1.5 存款票据 (Deposit Notes)
+
+- **存款票据 (deposit notes)**：由银行发行的债务工具，期限通常为 18 个月至 10 年。与银行定期存款类似，但可在二级市场交易。存款票据通常由联邦存款保险部分承保（如 FDIC 承保上限内）。
+- **存款票据的特点**：具有银行信用支持但通常无担保，收益率高于同等期限的国债但低于公司债券。主要投资者为寻求银行信用敞口的机构投资者。
+
+##### 2. 关键公式
+
+| 指标 | 公式/关系 | 说明 |
+|------|-----------|------|
+| 信用评级分界 | `BBB-/Baa3 = 投资级/高收益分界线` | 标准普尔/穆迪评级体系 |
+| 利差与评级关系 | `评级越低 → 利差越高 → 融资成本越高` | 信用风险溢价随评级下降上升 |
+| CP 贴现基础 | `Price = FV × (1 - BDY × t/360)` | 商业票据的贴现定价 |
+
+##### 3. 常见考点与解题思路
+
+- **区分 investment-grade 与 high-yield 的特征**：投资级 = 低违约率、低收益率、利差稳定融资渠道广泛；高收益 = 高违约率、高收益率、利差敏感、融资渠道受限。
+- **理解 CP 发行必须有 backup line 支持**：考试中常将备用信贷额度与 CP 评级联系起来——无备用额度的 CP 风险显著更高。
+- **区分 MTN 与传统公司债券**：MTN 是持续发行、条款灵活；传统债券是一次发行、条款固定。
+- **识别不同融资工具的优先顺序**：有担保贷款 → 无担保债券 → 次级债券，破产清偿顺序决定了回收率。
+
+##### 4. 易错点提醒
+
+- **高收益债券的"高收益"不等于高回报【考试陷阱】**：高票息对应高风险，违约发生后本金损失可能远超补偿收益。
+- **CP 期限虽短，展期风险不可忽视**：如果市场冻结（如金融危机期间），CP 发行人无法展期可能需要依赖备用信贷额度甚至触发违约。
+- **银团贷款不一定是债券**：虽然银团贷款可以交易，但它本质上是贷款协议，发行和交易机制与债券不同。
+- **Deposit notes 有 FDIC 保险上限**：不是全部存款票据都受全额保护，只限承保额度内。
+- **同一公司可能有不同评级**：发行人评级与具体债项评级可能不同，取决于抵押品和清偿顺序。
+
+##### 5. 跨模块关联
+
+- 融资工具 → [[M03-Bond-Valuation]] 不同工具的价格计算
+- 信用评级 → [[M10-Credit-Risk]] PD/LGD与评级关系
+- 利差行为 → [[M04-Yield-and-Spread-Measures]] 固定利率利差度量
+- 公司信用分析 → [[M11-Government-and-Corporate-Credit]] 公司发行人的财务分析
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

@@ -1,16 +1,51 @@
 ---
 title: "M06 — Hedge Funds"
-description: "对冲基金的核心特征（流动性/透明度/费用结构/高水位线）、四大投资策略（股票多空/全球宏观/事件驱动/相对价值）以及杠杆指标（总杠杆与净杠杆）"
+description: "CFA Level I 2026 official module: Hedge Funds"
 module: M06
-subject: Alternative_Investments
-official_module: "Hedge Funds"
+subject: "Alternative Investments"
+topic_area: Alternative_Investments
+curriculum_year: 2026
+official_module: "Module 6: Hedge Funds"
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Alternative_Investments
+  - official_2026
 ---
 
-# M06: 对冲基金 (Hedge Funds)
+# M06: Hedge Funds
 
-## 1. 核心知识点
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 6.1 对冲基金特征 (Hedge Fund Characteristics)
+## Official Module Structure
+
+- Learning Outcomes: Hedge Funds
+- 6.01 | Introduction
+- 6.02 | Hedge Fund Investment Features
+- 6.03 | Hedge Fund Investment Forms
+- 6.04 | Hedge Fund Investment Risk, Return, and Diversification
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- explain investment features of hedge funds and contrast them with other asset classes
+- describe investment forms and vehicles used in hedge fund investments
+- analyze sources of risk, return, and diversification among hedge fund investments
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Alternative_Investments/M06-Hedge-Funds.md`
+
+_Alignment score: 0.39. Original official module field: Hedge Funds._
+
+#### M06: 对冲基金 (Hedge Funds)
+
+##### 1. 核心知识点
+
+###### 6.1 对冲基金特征 (Hedge Fund Characteristics)
 
 | 特征 | 说明 |
 |------|------|
@@ -19,7 +54,7 @@ official_module: "Hedge Funds"
 | 费用结构 | 通常2/20（2%管理费 + 20%业绩提成），部分新基金降低至1/10 |
 | 高水位线 | 普遍采用，保护投资者，只对新创造的收益收取提成 |
 
-### 6.2 对冲基金策略 (Hedge Fund Strategies)【考试核心】
+###### 6.2 对冲基金策略 (Hedge Fund Strategies)【考试核心】
 
 | 策略 | 英文 | 运作方式 | 风险 | 回报 | 与股票相关性 |
 |------|------|----------|------|------|-------------|
@@ -28,7 +63,7 @@ official_module: "Hedge Funds"
 | 事件驱动 | Event Driven | 利用公司特定事件（并购、重组、破产） | 中高 | 10-14% | 0.4-0.6 |
 | 相对价值 | Relative Value | 利用相关资产定价偏差，市场中性策略 | 低 | 6-10% | 0.1-0.3 |
 
-### 6.3 杠杆与风险 (Leverage and Risk)【考试核心】
+###### 6.3 杠杆与风险 (Leverage and Risk)【考试核心】
 
 | 指标 | 公式 | 含义 |
 |------|------|------|
@@ -37,20 +72,20 @@ official_module: "Hedge Funds"
 
 **关键区别**: Gross ≠ Net，两者完全不同。很多对冲基金是净多头 (Net Long)，并非完全对冲市场风险。市场中性策略的Net Leverage接近0。
 
-## 2. 关键公式
+##### 2. 关键公式
 
 | 指标 | 公式 |
 |------|------|
 | 总杠杆 (Gross Leverage) | (Long + \|Short\|) / Capital |
 | 净杠杆 (Net Leverage) | (Long - \|Short\|) / Capital |
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 1. **策略类型判断**: 题干描述基金的投资方式和持仓特征，要求判断属于哪种策略。**思路**: 多空持仓=Equity L/S；宏观经济判断=Global Macro；公司事件套利=Event Driven；价差套利=Relative Value。
 2. **杠杆计算**: 给定多头和空头头寸及资本，计算总杠杆和净杠杆。**思路**: Gross = (多+|空|)/资本；Net = (多-|空|)/资本。
 3. **策略风险排序**: 要求按风险水平排序。**思路**: Relative Value (低) < Equity L/S (中) < Event Driven (中高) < Global Macro (高)。
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 - **总杠杆 ≠ 净杠杆**: Gross=总敞口（多+|空|），Net=市场敞口（多-|空|），概念完全不同
 - **对冲基金并非完全对冲**: 名称中的"对冲"不代表完全对冲市场风险，很多基金是净多头
@@ -58,8 +93,12 @@ official_module: "Hedge Funds"
 - **锁定期+通知期**: 对冲基金的流动性限制包括锁定期和通知期两个概念
 - **高水位线普遍采用**: 是对冲基金保护投资者的重要机制
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - 费用结构 → [[M01-Features-and-Structure.md]] (2/20结构与高水位线)
 - 杠杆对比 → [[M03-Private-Capital.md]] (PE杠杆 vs 对冲基金杠杆)
 - 业绩衡量 → [[M02-Performance-Measurement.md]] (Sharpe/Sortino应用于对冲基金评估)
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.
