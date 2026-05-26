@@ -1,6 +1,6 @@
 ---
 title: "M08: Exchange Rate Calculations"
-description: "CFA Level I 2026 Economics 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Economics 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Economics"
 topic_area: "Economics"
 level: "CFA Level I"
@@ -42,14 +42,14 @@ tags:
 ## 1. 模块定位
 
 ### 8.1 学习任务
-- **核心问题**：考试希望你用 `Exchange Rate Calculations` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Exchange Rate Calculations` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 8.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 8.3 关键英文术语
 - **Exchange Rate Calculations（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -62,88 +62,180 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 8.1 | calculate and interpret currency cross-rates | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
-| 8.2 | explain the arbitrage relationship between spot and forward exchange rates and interest rates, calculate a forward rate using points or in percentage terms, and interpret a forward discount or premium | 计算并解释数值结果；解释结果的投资含义；解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 8.1 | calculate and interpret currency cross-rates | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
+| 8.2 | explain the arbitrage relationship between spot and forward exchange rates and interest rates, calculate a forward rate using points or in percentage terms, and interpret a forward discount or premium | 计算并解释数值结果；解释结果的投资含义；解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 8. Exchange Rate Calculations
-├─ 8.1 Introduction
-│  ├─ 8.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 8.1.2 应用/判断：把概念或公式转成解题动作
-├─ 8.2 Cross-Rate Calculations
-│  ├─ 8.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 8.2.2 应用/判断：把概念或公式转成解题动作
-├─ 8.3 Forward Rate Calculations
-│  ├─ 8.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 8.3.2 应用/判断：把概念或公式转成解题动作
+├─ 8.1 汇率报价基础（Exchange Rate Quote Basics）
+│  ├─ 8.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 8.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 8.2 交叉汇率（Cross Rate Calculation）
+│  ├─ 8.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 8.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 8.3 远期汇率（Forward Exchange Rate）
+│  ├─ 8.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 8.3.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 8.4 抛补利率平价（Covered Interest Parity, CIP）
+│  ├─ 8.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 8.4.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 8.5 无抛补利率平价（Uncovered Interest Parity, UIP）
+│  ├─ 8.5.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 8.5.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 8.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret currency cross-rates`。
-- **核心词汇**：**Exchange Rate Calculations（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 8.1 汇率报价基础（Exchange Rate Quote Basics）
 
-### 8.2 Cross-Rate Calculations
-- **中文主线**：本节点解决 `Cross-Rate Calculations` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；解释机制、原因和后果；官方表述为：`explain the arbitrage relationship between spot and forward exchange rates and interest rates, calculate a forward rate using points or in percentage terms, and interpret a forward discount or premium`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**报价方式（Quote Convention）**：
+- **直接报价（Direct Quote）**：一单位外币折合多少本币（DC/FC）。在中国，USD/CNY = 7.25 就是直接报价。
+- **间接报价（Indirect Quote）**：一单位本币折合多少外币（FC/DC）。
 
-### 8.3 Forward Rate Calculations
-- **中文主线**：本节点解决 `Forward Rate Calculations` 在 Economics 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret currency cross-rates`。
-- **核心词汇**：**Cross-Rate Calculations（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**基础货币与报价货币（Base Currency vs Price Currency）**：
+- 在 A/B 报价中：A 是**基础货币（base currency）**，B 是**报价货币（price currency）**
+- 汇率表示 1 单位基础货币可以兑换多少报价货币
 
-### 8.9 Legacy 补强要点
-- 来自 `M08-Exchange-Rate-Calculations.md`：## 1. 核心知识点（中英双语讲解）; 注意：必须先明确报价方向再判断升贬值！; ## 2. 关键公式（公式+解释+场景）。
+**升值与贬值（Appreciation and Depreciation）**：
+- A/B 上升 → A 升值（appreciates），B 贬值（depreciates）
+- 注意：必须先明确报价方向再判断升贬值！
 
+**买卖价差（Bid-Ask Spread）**：
+- **买入价（Bid）**：做市商愿意买入基础货币的价格
+- **卖出价（Ask/Offer）**：做市商愿意卖出基础货币的价格
+- 做市商低买高卖：Bid < Ask，差额 = 交易成本
+
+### 8.2 交叉汇率（Cross Rate Calculation）
+
+**交叉汇率概念**：通过第三种货币计算两种货币之间的汇率。
+
+`A/C = (A/B) × (B/C)`
+
+**计算步骤**：
+1. 确定目标配对（如 EUR/GBP）
+2. 找到两种货币与共同第三种货币的汇率
+3. 相乘约掉中间币种
+
+**买卖价差下的交叉汇率**：计算时要小心"哪个乘哪个"。计算买入价时取保守方向（乘 BID 或除 ASK 取决于方向）。
+
+### 8.3 远期汇率（Forward Exchange Rate）
+
+**远期升水/贴水（Forward Premium/Discount）**：
+- `Forward Premium = (Forward Rate − Spot Rate) / Spot Rate`（年化时需乘以 12/N）
+- 远期汇率 > 即期汇率 → 基础货币远期升水（forward premium）
+- 远期汇率 < 即期汇率 → 基础货币远期贴水（forward discount）
+
+**远期点数（Forward Points）** = Forward Rate − Spot Rate，通常以点数形式报价（1 point = 0.0001 或 0.01，视货币对而定）
+
+### 8.4 抛补利率平价（Covered Interest Parity, CIP）
+
+**CIP公式**：`F = S × (1 + i_d) / (1 + i_f)`
+
+其中：
+- F = 远期汇率（直接报价）
+- S = 即期汇率（直接报价）
+- i_d = 本币利率（domestic interest rate）
+- i_f = 外币利率（foreign interest rate）
+
+**CIP的含义**：通过远期合约锁定汇率后，国内外无风险投资收益应相等。如果偏离CIP，存在**套利（arbitrage）** 机会。
+
+### 8.5 无抛补利率平价（Uncovered Interest Parity, UIP）
+
+**UIP公式**：`E(S) = S × (1 + i_d) / (1 + i_f)`
+
+UIP假设投资者不通过远期对冲，而是根据预期的未来即期汇率做决策。预期汇率的变化由利差驱动。
+
+**套利交易（Carry Trade）**：借入低利率货币，投资高利率货币，赚取利差。但这面临汇率风险——高利率货币可能贬值。
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Interest parity | `forward premium/discount links interest rate differentials` | 汇率题要先确认 base/price currency。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+**倒数报价**：`B/A = 1 / (A/B)`
+- 场景：若 EUR/USD = 1.10，则 USD/EUR = 1/1.10 = 0.9091
+- 注意：买卖价差倒置时要交换 bid 和 ask：`(B/A)_bid = 1 / (A/B)_ask`
+
+**交叉汇率**：`A/C = (A/B) × (B/C)`
+- 场景：已知 EUR/USD = 1.10，USD/JPY = 110，则 EUR/JPY = 1.10 × 110 = 121
+
+**远期升水**：`Forward Premium = (F − S) / S × (360 / N) × 100%`
+- 场景：S = 1.10，F（90天）= 1.1088，则年化升水 = (1.1088 − 1.10) / 1.10 × 4 = 3.2%
+
+**远期点数**：`Forward Points = Forward Rate - Spot Rate`
+- 场景：F > S 时 forward points 为正；F < S 时为负。
+
+**抛补利率平价**：`F = S × (1 + i_d) / (1 + i_f)`
+- 场景：S = 7.25（USD/CNY），i_d = 2%，i_f = 5%，则 F = 7.25 × 1.02 / 1.05 = 7.0429（人民币远期升水）
+
+**交叉买卖价差**：
+- 若目标是 `A/C = (A/B) x (B/C)`：
+  - `bid(A/C) = bid(A/B) x bid(B/C)`
+  - `ask(A/C) = ask(A/B) x ask(B/C)`
+- 若需要倒数报价：`bid(B/A) = 1/ask(A/B)`，`ask(B/A) = 1/bid(A/B)`
+
+**考纲标记**：
+- 【考纲重点】倒数报价、交叉汇率、forward premium/discount、forward points、CIP。
+- 【考纲内但无核心公式】FX market participants、exchange-rate regime、capital flow intuition。
+- 【超纲/扩展】UIP 和 carry trade 是理解辅助；CFA L1 重点不是证明 UIP，而是区分它与 covered arbitrage。
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 8.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 8.2 Cross-Rate Calculations | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 8.3 Forward Rate Calculations | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+**考点1：判断升贬值方向**
+- 先确定报价方向：A/B上升时，A升值B贬值
+- 题干给的是直接报价还是间接报价？确定后再判断
+
+**考点2：交叉汇率计算**
+- 步骤：找出中间货币，将汇率配对方向调整一致，相乘
+- 如给 EUR/USD 和 USD/GBP，求 EUR/GBP → EUR/USD × USD/GBP
+
+**考点3：套利机会判断**
+- 计算CIP理论远期汇率，与市场远期汇率比较
+- 如果理论 ≠ 市场 → 可套利
+- 套利方向：从利率低的国家借钱，换汇后投资于利率高的国家，再换回
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Exchange Rate Calculations` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：最常见错误：报价方向搞反。大部分计算错误本质上是 quote-direction error，不是数学问题。 | ✅ 最常见错误：报价方向搞反。大部分计算错误本质上是 quote-direction error，不是数学问题。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：倒数报价的买卖价差：倒置时要交换 bid 和 ask 两个数字，不能简单地取倒数。 | ✅ 倒数报价的买卖价差：倒置时要交换 bid 和 ask 两个数字，不能简单地取倒数。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：远期升水≠未来即期汇率一定升值：远期汇率是今天的定价关系，不等于未来一定会实现。 | ✅ 远期升水≠未来即期汇率一定升值：远期汇率是今天的定价关系，不等于未来一定会实现。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：CIP在现实中可能不完美：存在交易成本、资本管制和对手方风险，但在CFA L1中假设完美市场。 | ✅ CIP在现实中可能不完美：存在交易成本、资本管制和对手方风险，但在CFA L1中假设完美市场。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：套利交易（carry trade）不是套利（arbitrage）：carry trade承担汇率风险，不是无风险。Arbitrage才是无风险的。 | ✅ 套利交易（carry trade）不是套利（arbitrage）：carry trade承担汇率风险，不是无风险。Arbitrage才是无风险的。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M07-Capital-Flows-and-the-FX-Market]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M07-Capital-Flows-and-the-FX-Market]]。先用它提供定义、变量或基础框架。
+- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- 汇率制度对计算背景的影响见 **[[M07-Capital-Flows-and-FX-Markets]]**
+- 利率差异对远期汇率的影响与 **[[M04-Monetary-Policy]]** 中的利率政策相连
+- 贸易和资本流动影响即期和远期汇率，见 **[[M06-International-Trade]]** 和 **[[M05-Introduction-to-Geopolitics]]**
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：M08-Exchange-Rate-Calculations.md（confidence 0.643）
-- **可复用结构**：M08: Exchange Rate Calculations（汇率计算）；1. 核心知识点（中英双语讲解）；汇率报价基础（Exchange Rate Quote Basics）；交叉汇率（Cross Rate Calculation）；远期汇率（Forward Exchange Rate）；抛补利率平价（Covered Interest Parity, CIP）
-- **高价值要点**：## 1. 核心知识点（中英双语讲解）；注意：必须先明确报价方向再判断升贬值！；## 2. 关键公式（公式+解释+场景）；【考纲内但无核心公式】FX market participants、exchange-rate regime、capital flow intuition。
-- **公式/计算线索**：**直接报价（Direct Quote）**：一单位外币折合多少本币（DC/FC）。在中国，USD/CNY = 7.25 就是直接报价。；做市商低买高卖：Bid < Ask，差额 = 交易成本；`A/C = (A/B) × (B/C)`
-- **易错提示**：注意：必须先明确报价方向再判断升贬值！；注意：买卖价差倒置时要交换 bid 和 ask：`(B/A)_bid = 1 / (A/B)_ask`；## 4. 易错点提醒
+- **主要 legacy 来源**：`M08-Exchange-Rate-Calculations.md` (high, 0.643)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

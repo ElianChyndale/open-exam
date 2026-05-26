@@ -1,6 +1,6 @@
 ---
 title: "M03: Statistical Measures of Asset Returns"
-description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Quantitative Methods 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Quantitative Methods"
 topic_area: "Quantitative_Methods"
 level: "CFA Level I"
@@ -46,14 +46,14 @@ tags:
 ## 1. 模块定位
 
 ### 3.1 学习任务
-- **核心问题**：考试希望你用 `Statistical Measures of Asset Returns` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Statistical Measures of Asset Returns` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 3.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 3.3 关键英文术语
 - **Statistical Measures of Asset Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -69,110 +69,172 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 3.1 | calculate, interpret, and evaluate measures of central tendency and location to address an investment problem | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
-| 3.2 | calculate, interpret, and evaluate measures of dispersion to address an investment problem | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
-| 3.3 | interpret and evaluate measures of skewness and kurtosis to address an investment problem | 解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
-| 3.4 | interpret correlation between two variables to address an investment problem | 解释结果的投资含义 | 写出结论、依据和限制条件。 |
+| 3.1 | calculate, interpret, and evaluate measures of central tendency and location to address an investment problem | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据、公式口径和限制条件。 |
+| 3.2 | calculate, interpret, and evaluate measures of dispersion to address an investment problem | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据、公式口径和限制条件。 |
+| 3.3 | interpret and evaluate measures of skewness and kurtosis to address an investment problem | 解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据、公式口径和限制条件。 |
+| 3.4 | interpret correlation between two variables to address an investment problem | 解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 3. Statistical Measures of Asset Returns
-├─ 3.1 Introduction
-│  ├─ 3.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 3.1.2 应用/判断：把概念或公式转成解题动作
-├─ 3.2 Measures of Central Tendency and Location
-│  ├─ 3.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 3.2.2 应用/判断：把概念或公式转成解题动作
-├─ 3.3 Measures of Dispersion
-│  ├─ 3.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 3.3.2 应用/判断：把概念或公式转成解题动作
-├─ 3.4 Measures of Shape of a Distribution
-│  ├─ 3.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 3.4.2 应用/判断：把概念或公式转成解题动作
-├─ 3.5 Correlation between Two Variables
-│  ├─ 3.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 3.5.2 应用/判断：把概念或公式转成解题动作
+├─ 3.1 集中趋势与位置指标（Central Tendency and Location）
+│  ├─ 3.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 3.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 3.2 离散程度（Dispersion）
+│  ├─ 3.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 3.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 3.3 分布形态（Distribution Shape）
+│  ├─ 3.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 3.3.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 3.4 相关性直觉（Correlation Intuition）
+│  ├─ 3.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 3.4.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 3.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义；官方表述为：`calculate, interpret, and evaluate measures of central tendency and location to address an investment problem`。
-- **核心词汇**：**Statistical Measures of Asset Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 3.1 集中趋势与位置指标（Central Tendency and Location）
 
-### 3.2 Measures of Central Tendency and Location
-- **中文主线**：本节点解决 `Measures of Central Tendency and Location` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义；官方表述为：`calculate, interpret, and evaluate measures of dispersion to address an investment problem`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**三种均值（Three Types of Mean）**：
+- **算术平均（Arithmetic Mean）**：所有观测值之和除以观测个数。最常用的均值，但对极端值（Outliers）敏感。
+- **几何平均（Geometric Mean）**：`[(1+R_1)×...×(1+R_n)]^(1/n) - 1`。适用于收益率等比率数据的平均。几何平均 ≤ 算术平均，差值反映波动率。
+- **调和平均（Harmonic Mean）**：`n / Σ(1/x_i)`。适用于平均价格倍数，如平均 P/E 或平均速度。调和平均 ≤ 几何平均 ≤ 算术平均。
 
-### 3.3 Measures of Dispersion
-- **中文主线**：本节点解决 `Measures of Dispersion` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释结果的投资含义；评价优缺点、限制和决策含义；官方表述为：`interpret and evaluate measures of skewness and kurtosis to address an investment problem`。
-- **核心词汇**：**Measures of Central Tendency and Location（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**中位数（Median）**：数据排序后的中间值。比均值更能抵抗极端值影响。当分布偏斜时，中位数比均值更代表"典型值"。
 
-### 3.4 Measures of Shape of a Distribution
-- **中文主线**：本节点解决 `Measures of Shape of a Distribution` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释结果的投资含义；官方表述为：`interpret correlation between two variables to address an investment problem`。
-- **核心词汇**：**Measures of Dispersion（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**众数（Mode）**：出现频率最高的值。
+- 单峰分布（Unimodal）：一个众数
+- 双峰分布（Bimodal）：两个众数
+- 多峰分布（Multimodal）：多个众数
 
-### 3.5 Correlation between Two Variables
-- **中文主线**：本节点解决 `Correlation between Two Variables` 在 Quantitative Methods 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义；官方表述为：`calculate, interpret, and evaluate measures of central tendency and location to address an investment problem`。
-- **核心词汇**：**Measures of Shape of a Distribution（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**分位数（Quantiles）**：
+- 四分位数（Quartiles）：Q1（25th）、Q2（50th = 中位数）、Q3（75th）
+- 百分位数（Percentiles）：第 p 百分位意味着 p% 的数据低于该值
+- 分位数位置公式：`L_p = (n+1) × p/100`
 
-### 3.9 Legacy 补强要点
-- 来自 `M03-Statistical-Measures.md`：## 1. 核心知识点; 判断左偏还是右偏：看**长尾方向**; > **【考试陷阱】** 左偏/右偏的判断常考：左偏意味着大量极端负值（左侧长尾），但 majority of data 在右侧。长尾方向决定了偏度的符号。。
+> **【考试陷阱】** Outlier 对算术平均的影响远大于对中位数的影响。看到股票收益率包含极端值时，优先考虑中位数。
 
+### 3.2 离散程度（Dispersion）
+
+**极差（Range）**：最大值 - 最小值。最简单的离散度度量，但完全依赖两端极端值。
+
+**平均绝对偏差（Mean Absolute Deviation, MAD）**：`Σ|x_i - x̄| / n`。衡量每个观测值与均值的平均距离，不易受极端值影响。
+
+**方差与标准差（Variance and Standard Deviation）**：
+- **总体方差（Population Variance）**：`σ² = Σ(x_i - μ)² / N`
+- **样本方差（Sample Variance）**：`s² = Σ(x_i - x̄)² / (n-1)`
+- 标准差（Standard Deviation）= √方差，与原始数据单位一致，更直观
+- 样本方差用 n-1（而不是 n）做分母是为了无偏估计（Unbiased Estimation）
+- 样本方差是无偏的（Unbiased），但样本标准差是有偏的（Biased）
+
+> **【考试陷阱】** 忘掉 n-1 是最常见的错误。题目给的是总体还是样本数据决定了分母是 n 还是 n-1。
+
+**下行偏差（Downside Deviation）**：只考虑低于目标收益率（或均值）的偏差。用于下行风险度量，如 Sortino Ratio。
+
+**变异系数（Coefficient of Variation, CV）**：`CV = s / x̄`
+- 衡量单位均值的风险（相对离散度）
+- 用于比较不同尺度（不同均值水平）的数据集的离散程度
+
+**夏普比率（Sharpe Ratio）的变体**：
+`CV = σ / μ` — 投资中用于比较不同预期收益率的资产的风险调整回报。
+
+### 3.3 分布形态（Distribution Shape）
+
+**偏度（Skewness）**：衡量分布不对称程度。
+- **正态分布（Normal Distribution）**：偏度为 0，完全对称
+- **右偏/正偏（Positively Skewed）**：长尾在右侧，均值 > 中位数 > 众数
+- **左偏/负偏（Negatively Skewed）**：长尾在左侧，均值 < 中位数 < 众数
+- 判断左偏还是右偏：看**长尾方向**
+- 偏度公式：`Skewness = E[(X - μ)³] / σ³`
+
+> **【考试陷阱】** 左偏/右偏的判断常考：左偏意味着大量极端负值（左侧长尾），但 majority of data 在右侧。长尾方向决定了偏度的符号。
+
+**峰度（Kurtosis）**：衡量尾部厚度（Tail Thickness）。
+- **正态分布峰度 = 3**（超额峰度 Excess Kurtosis = 0）
+- **尖峰厚尾（Leptokurtic）**：峰度 > 3，更多极端值，fat tails
+- **低峰薄尾（Platykurtic）**：峰度 < 3，更少极端值
+- 超额峰度（Excess Kurtosis）= 峰度 - 3
+- 厚尾（Fat Tails）意味着极端事件（损失或收益）的概率高于正态分布
+
+### 3.4 相关性直觉（Correlation Intuition）
+
+- **相关系数（Correlation Coefficient）**范围 [-1, +1]
+- 符号 = 方向（+ 同向变化，- 反向变化）
+- 大小 = 线性关联强度（绝对值越大，线性关系越强）
+- **相关 ≠ 因果（Correlation ≠ Causation）**：两个变量相关不代表一个导致另一个
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| HPR | `HPR = (P1 - P0 + D1) / P0` | 持有期收益率，注意价格变动和期间现金流都要纳入。 |
-| Effective annual rate | `EAR = (1 + periodic rate)^m - 1` | 不同复利频率比较时必须转成同一口径。 |
-| Present value | `PV = FV / (1 + r)^N` | 折现率越高，现值越低。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 公式 | 解释 | 使用场景 |
+|------|------|----------|
+| `μ = Σx_i/N` | 总体均值 | 已知总体的数据平均 |
+| `x̄ = Σx_i/n` | 样本均值 | 样本数据平均 |
+| `σ² = Σ(x_i-μ)²/N` | 总体方差 | 已知总体的离散度 |
+| `s² = Σ(x_i-x̄)²/(n-1)` | 样本方差 | 样本估计总体方差 |
+| `CV = s / x̄` | 变异系数 | 比较不同尺度的离散度 |
+| `Skewness = E[(X-μ)³]/σ³` | 偏度 | 判断分布不对称方向 |
+| `Excess Kurtosis = Kurtosis - 3` | 超额峰度 | 判断尾部厚度 |
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 3.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 3.2 Measures of Central Tendency and Location | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 3.3 Measures of Dispersion | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 3.4 Measures of Shape of a Distribution | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐ | 3.5 Correlation between Two Variables | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+**考点一：均值与中位数的选择**
+- 如果分布对称 → Mean = Median
+- 如果分布右偏 → Mean > Median
+- 如果分布左偏 → Mean < Median
+- 题目通常会问哪个统计量更能代表"typical value"
+
+**考点二：Chebyshev's Inequality（切比雪夫不等式）**
+- 任何分布中，至少有 1 - 1/k² 的数据落在均值 k 个标准差内
+- k=2：至少 75%；k=3：至少 89%
+
+**考点三：标准差 vs 半标准差**
+- 标准差衡量总波动（双侧）
+- 半标准差只衡量下行波动（单侧）
+- 考点：风险厌恶投资者更关注下行偏差
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Statistical Measures of Asset Returns` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：1. 样本方差用 n-1：考试最常见的统计陷阱 — 看到"sample"字样就要用 n-1。 | ✅ 1. 样本方差用 n-1：考试最常见的统计陷阱 — 看到"sample"字样就要用 n-1。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M02-Time-Value-of-Money-in-Finance]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M04-Probability-Trees-and-Conditional-Expectations]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M02-Time-Value-of-Money-in-Finance]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M04-Probability-Trees-and-Conditional-Expectations]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- **[[M01-Rates-and-Returns]]**：三种均值（算术/几何/调和）在 M01 收益率度量中首次出现。
+- **[[M04-Probability-Concepts]]**：统计量的概率版本 — 期望值 E(X) 是概率加权均值，Var(X) 是概率加权方差。
+- **[[M05-Portfolio-Mathematics]]**：组合方差公式是 M03 方差概念的延伸 — 从单变量到双变量。
+- **[[M09-Correlation-and-Regression]]**：相关系数在此引入直觉，在 M09 中扩展到回归框架的正式检验。
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：M03-Statistical-Measures.md（confidence 0.906）
-- **可复用结构**：M03: Statistical Measures（统计量与分布特征）；1. 核心知识点；1.1 集中趋势与位置指标（Central Tendency and Location）；1.2 离散程度（Dispersion）；1.3 分布形态（Distribution Shape）；1.4 相关性直觉（Correlation Intuition）
-- **高价值要点**：## 1. 核心知识点；判断左偏还是右偏：看**长尾方向**；> **【考试陷阱】** 左偏/右偏的判断常考：左偏意味着大量极端负值（左侧长尾），但 majority of data 在右侧。长尾方向决定了偏度的符号。；## 2. 关键公式
-- **公式/计算线索**：title: "M03 — Statistical Measures of Asset Returns"；official_module: "Module 3: Statistical Measures of Asset Returns"；calculate, interpret, and evaluate measures of central tendency and location to address an investment problem
-- **易错提示**：> **【考试陷阱】** Outlier 对算术平均的影响远大于对中位数的影响。看到股票收益率包含极端值时，优先考虑中位数。；> **【考试陷阱】** 忘掉 n-1 是最常见的错误。题目给的是总体还是样本数据决定了分母是 n 还是 n-1。；> **【考试陷阱】** 左偏/右偏的判断常考：左偏意味着大量极端负值（左侧长尾），但 majority of data 在右侧。长尾方向决定了偏度的符号。
+- **主要 legacy 来源**：`M03-Statistical-Measures.md` (high, 0.906)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

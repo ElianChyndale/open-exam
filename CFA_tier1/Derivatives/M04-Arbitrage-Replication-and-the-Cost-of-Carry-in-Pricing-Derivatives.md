@@ -1,6 +1,6 @@
 ---
 title: "M04: Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives"
-description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Derivatives"
 topic_area: "Derivatives"
 level: "CFA Level I"
@@ -43,14 +43,14 @@ tags:
 ## 1. 模块定位
 
 ### 4.1 学习任务
-- **核心问题**：考试希望你用 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 4.2 考试角色
 - **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 4.3 关键英文术语
 - **Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -63,85 +63,108 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 4.1 | explain how the concepts of arbitrage and replication are used in pricing derivatives | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 4.2 | explain the difference between the spot and expected future price of an underlying and the cost of carry associated with holding the underlying asset | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 4.1 | explain how the concepts of arbitrage and replication are used in pricing derivatives | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 4.2 | explain the difference between the spot and expected future price of an underlying and the cost of carry associated with holding the underlying asset | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 4. Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives
-├─ 4.1 Introduction
-│  ├─ 4.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.1.2 应用/判断：把概念或公式转成解题动作
-├─ 4.2 Arbitrage
-│  ├─ 4.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.2.2 应用/判断：把概念或公式转成解题动作
-├─ 4.3 Replication
-│  ├─ 4.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.3.2 应用/判断：把概念或公式转成解题动作
-├─ 4.4 Costs and Benefits Associated with Owning the Underlying
-│  ├─ 4.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.4.2 应用/判断：把概念或公式转成解题动作
+├─ 4.1 核心内容
+│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 4.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the concepts of arbitrage and replication are used in pricing derivatives`。
-- **核心词汇**：**Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 4.1 核心内容
 
-### 4.2 Arbitrage
-- **中文主线**：本节点解决 `Arbitrage` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the difference between the spot and expected future price of an underlying and the cost of carry associated with holding the underlying asset`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**无套利逻辑 (No-Arbitrage Logic)**
+- **一价定律 (Law of One Price)**：相同未来现金流的资产应有相同价格 (identical future cash flows must have the same price)
+- **复制组合 (Replication Portfolio)**：用现货+融资复制衍生品收益，确定公平价格 (replication portfolio pins fair derivative price)
+- **套利行为 (Arbitrage Action)**：错误定价时，套利者交易将价格推回公平关系 (arbitrage pushes mispriced contract back to fair relation)
 
-### 4.3 Replication
-- **中文主线**：本节点解决 `Replication` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the concepts of arbitrage and replication are used in pricing derivatives`。
-- **核心词汇**：**Arbitrage（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+**持有成本关系 (Carry Relation)**
 
-### 4.4 Costs and Benefits Associated with Owning the Underlying
-- **中文主线**：本节点解决 `Costs and Benefits Associated with Owning the Underlying` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the concepts of arbitrage and replication are used in pricing derivatives`。
-- **核心词汇**：**Replication（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+| 因素 | 对远期价格的影响 |
+|------|-----------------|
+| 融资成本 (Financing Cost) | 提高远期价格 (raises forward price) |
+| 已知收入 (Known Income) | 减少持有成本 (reduces net carry) |
+| 收益率/便利收益 (Yield/Convenience) | 减少持有成本 (reduces net carry) |
 
+**关键公式**
+- `Forward price = Spot + Carry - Benefit`
+- `Carry = Financing cost - Income/Yield/Convenience`
 
 ## 5. 关键公式与计算框架
 
-本模块以概念判断为主，无核心计算公式。复习时把 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives` 的定义、触发条件、优缺点和例外情形整理成判断清单。
+### 5.1 核心内容
+
+无收益资产远期价格：
+```
+F0(T) = S0(1+r)^T
+```
+
+已知收入资产远期价格：
+```
+F0(T) = [S0 - PV(I)](1+r)^T
+```
+
+已知收益率资产远期价格：
+```
+F0(T) = S0[(1+r)/(1+q)]^T    或连续口径：S0e^((r-q)T)
+```
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 4.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 4.2 Arbitrage | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 4.3 Replication | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 4.4 Costs and Benefits Associated with Owning the Underlying | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+1. 先判断资产的收益类型（无收益 / 已知收入 / 已知收益率）
+2. 代入对应 carry 公式计算 fair forward price
+3. 若市场价格偏离公平价格，设计套利策略：
+   - 价格偏高 → short forward + buy underlying + borrow (cash-and-carry)
+   - 价格偏低 → long forward + short underlying + invest (reverse cash-and-carry)
+4. 验证复制组合的现金流是否匹配
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：【考试陷阱】期初价格 (price at initiation) 与存续期价值 (value during life) 并非同一概念 —— 价格是使初始价值为零的公平交割价，价值… | ✅ 【考试陷阱】期初价格 (price at initiation) 与存续期价值 (value during life) 并非同一概念 —— 价格是使初始价值为零的公平交割价，价值… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：已知收入要先折现再扣除，不能直接用未来值相减 | ✅ 已知收入要先折现再扣除，不能直接用未来值相减 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：连续复利与离散复利公式不要混用，注意题目给的是年利率还是连续利率 | ✅ 连续复利与离散复利公式不要混用，注意题目给的是年利率还是连续利率 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M03-Derivative-Benefits-Risks-and-Issuer-and-Investor-Uses]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M05-Pricing-and-Valuation-of-Forward-Contracts-and-for-an-Underlying-with-Varying-Maturities]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- [[M05-Forward-and-Futures-Pricing]]：M04 的 carry 关系是 M05 定价的基础
+- [[M07-Options-and-Put-Call-Parity]]：无套利逻辑同样适用于期权平价关系
+- [[M08-Binomial-Valuation]]：二项式模型本质也是无套利复制
+- [[M00-Derivatives-MOC]]：返回科目总览
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M04-Arbitrage-and-Replication.md` (0.416), `00-Derivatives-MOC.md` (0.376), `M05-Forward-and-Futures-Pricing.md` (0.321)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M04-Arbitrage-and-Replication.md` (medium, 0.416)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

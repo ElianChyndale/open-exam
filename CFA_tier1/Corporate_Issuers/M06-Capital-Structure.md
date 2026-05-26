@@ -1,6 +1,6 @@
 ---
 title: "M06: Capital Structure"
-description: "CFA Level I 2026 Corporate Issuers 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Corporate Issuers 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Corporate Issuers"
 topic_area: "Corporate_Issuers"
 level: "CFA Level I"
@@ -46,14 +46,14 @@ tags:
 ## 1. 模块定位
 
 ### 6.1 学习任务
-- **核心问题**：考试希望你用 `Capital Structure` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Capital Structure` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 6.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 6.3 关键英文术语
 - **Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -67,102 +67,141 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 6.1 | calculate and interpret the weighted-average cost of capital for a company | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
-| 6.2 | explain factors affecting capital structure and the weighted-average cost of capital | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 6.3 | explain the Modigliani-Miller propositions regarding capital structure | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
-| 6.4 | describe optimal and target capital structures | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
+| 6.1 | calculate and interpret the weighted-average cost of capital for a company | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
+| 6.2 | explain factors affecting capital structure and the weighted-average cost of capital | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 6.3 | explain the Modigliani-Miller propositions regarding capital structure | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
+| 6.4 | describe optimal and target capital structures | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 6. Capital Structure
-├─ 6.1 Introduction
-│  ├─ 6.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.1.2 应用/判断：把概念或公式转成解题动作
-├─ 6.2 The Cost of Capital
-│  ├─ 6.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.2.2 应用/判断：把概念或公式转成解题动作
-├─ 6.3 Factors Affecting Capital Structure
-│  ├─ 6.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.3.2 应用/判断：把概念或公式转成解题动作
-├─ 6.4 Modigliani–Miller Capital Structure Propositions
-│  ├─ 6.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.4.2 应用/判断：把概念或公式转成解题动作
-├─ 6.5 Optimal Capital Structure
-│  ├─ 6.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 6.5.2 应用/判断：把概念或公式转成解题动作
+├─ 6.1 杠杆机制 (Leverage Mechanics)
+│  ├─ 6.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 6.2 结构权衡 (Structure Trade-Offs)
+│  ├─ 6.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 6.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 6.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the weighted-average cost of capital for a company`。
-- **核心词汇**：**Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 6.1 杠杆机制 (Leverage Mechanics)
 
-### 6.2 The Cost of Capital
-- **中文主线**：本节点解决 `The Cost of Capital` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain factors affecting capital structure and the weighted-average cost of capital`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+杠杆是指**使用固定成本放大收益和亏损**的机制。分为两类：
 
-### 6.3 Factors Affecting Capital Structure
-- **中文主线**：本节点解决 `Factors Affecting Capital Structure` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain the Modigliani-Miller propositions regarding capital structure`。
-- **核心词汇**：**The Cost of Capital（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **经营杠杆 (Operating Leverage)**：来自固定经营成本。固定成本占比越高，销售额的微小变化就会引起 EBIT 的大幅变化。
+  - **经营杠杆度 (Degree of Operating Leverage, DOL)** = `%ΔEBIT / %ΔSales`
+  - 高 DOL 意味着公司盈亏平衡点高，销售波动会显著影响利润。
 
-### 6.4 Modigliani–Miller Capital Structure Propositions
-- **中文主线**：本节点解决 `Modigliani–Miller Capital Structure Propositions` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe optimal and target capital structures`。
-- **核心词汇**：**Factors Affecting Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **财务杠杆 (Financial Leverage)**：来自固定融资成本（如债务利息）。EBIT 的变化会被固定利息费用放大为更大的 EPS 变化。
+  - **财务杠杆度 (Degree of Financial Leverage, DFL)** = `%ΔEPS / %ΔEBIT`
 
-### 6.5 Optimal Capital Structure
-- **中文主线**：本节点解决 `Optimal Capital Structure` 在 Corporate Issuers 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`calculate and interpret the weighted-average cost of capital for a company`。
-- **核心词汇**：**Modigliani–Miller Capital Structure Propositions（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **总杠杆 (Total Leverage)** = **DOL × DFL**
+  - **总杠杆度 (Degree of Total Leverage, DTL)** = `%ΔEPS / %ΔSales`
+  - 体现了**销售端的波动如何被两级杠杆传导至每股收益 (EPS)**。
 
+**经营风险 (Business Risk)** vs **财务风险 (Financial Risk)**：
+- 经营风险取决于行业特性和成本结构（与融资方式无关）
+- 财务风险取决于资本结构中的债务比例
+- 两者叠加决定公司的**整体风险 (total risk)**
+
+### 6.2 结构权衡 (Structure Trade-Offs)
+
+理论上最优资本结构不存在统一公式，但需要理解以下权衡：
+
+- **债务税盾 (Debt Tax Shield)**：利息可税前扣除，减少税负，增加公司价值。
+- **财务困境成本 (Financial Distress Cost)**：债务过高导致违约风险上升，产生直接（法律费用）和间接（客户流失、供应商收紧）成本。
+- **灵活性损失 (Loss of Flexibility)**：高债务水平限制公司响应市场机会的能力。
+
+**影响债务容量 (Debt Capacity) 的因素**：
+- **经营风险 (Business Risk)**：经营风险越高，债务容量越低
+- **资产类型**：有形资产多的公司更容易获得债务融资（可抵押）
+- **盈利稳定性**：现金流稳定可支撑更多债务
+
+**MM 理论 (Modigliani-Miller Propositions)** 提供了基准框架：
+- **MM 无税 (No Tax)**：资本结构不影响公司价值（理想世界）
+- **MM 有税 (With Tax)**：债务税盾增加公司价值
+- 真实世界中，权衡理论 (Trade-Off Theory) 和**优序融资理论 (Pecking Order Theory)** 提供了更现实的视角
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| NPV | `NPV = Σ CFt / (1 + r)^t - initial investment` | NPV > 0 表示项目预计创造价值。 |
-| WACC | `WACC = wd rd(1 - t) + wp rp + we re` | 资本结构权重要用市场价值口径。 |
-| Operating cycle | `operating cycle = days inventory + days receivables` | 现金周转题要分清 operating cycle 和 cash conversion cycle。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式 | 说明 |
+|------|------|------|
+| 经营杠杆度 (DOL) | `%ΔEBIT / %ΔSales` | 衡量经营杠杆 |
+| 财务杠杆度 (DFL) | `%ΔEPS / %ΔEBIT` | 衡量财务杠杆 |
+| 总杠杆度 (DTL) | `DOL × DFL` 或 `%ΔEPS / %ΔSales` | 两级杠杆总效应 |
+| 盈亏平衡点 | `Fixed Costs / (Price - Variable Cost per unit)` | 利润为零的销售量 |
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 6.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 6.2 The Cost of Capital | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 6.3 Factors Affecting Capital Structure | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 6.4 Modigliani–Miller Capital Structure Propositions | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐ | 6.5 Optimal Capital Structure | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+**考点 1：计算 DOL、DFL、DTL**
+- 给定财务数据（如销售额、变动成本、固定成本、利息费用），求各杠杆度。
+- 解题步骤：
+  1. 计算 EBIT = 销售额 - 变动成本 - 固定成本
+  2. 计算 EPS 或净利润
+  3. 用百分比变化公式计算 DOL、DFL、DTL
+  4. 或用公式：`DOL = (Sales - Variable Costs) / EBIT`，`DFL = EBIT / (EBIT - Interest)`
+
+**考点 2：判断杠杆类型**
+- 题目描述一种风险（如"销售下降 10% 导致 EBIT 下降 20%"），问这是何种杠杆。
+- 答案：DOL = 2，属于经营杠杆效应。
+
+**考点 3：理解 MM 理论**
+- 题目问：在无税无摩擦的世界中，增加债务比例有何影响？
+- 答案：不影响公司价值（MM Proposition I 无税）。但会提高股权成本和股权 β。
+
+**考点 4：债务 vs 权益选择**
+- 题目描述公司特征（如高盈利、高税率、低经营风险），问应多用债务还是权益。
+- 思路：高税率 → 税盾价值大 → 适合债务。低经营风险 → 债务容量大 → 适合债务。
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Capital Structure` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：高 ROE 可能只是高风险的伪装：杠杆推高的 ROE 可能伴随着更高的风险，并不一定代表更好的经营表现。 | ✅ 高 ROE 可能只是高风险的伪装：杠杆推高的 ROE 可能伴随着更高的风险，并不一定代表更好的经营表现。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：DOL 和 DFL 是两个不同的概念：一个来自成本结构（卖什么、怎么卖），一个来自融资结构（钱哪来的）。两者不可混淆。 | ✅ DOL 和 DFL 是两个不同的概念：一个来自成本结构（卖什么、怎么卖），一个来自融资结构（钱哪来的）。两者不可混淆。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：MM 无税世界中资本结构不重要：这只是理想世界的基准，真实世界中税收、破产成本、代理成本使资本结构至关重要。 | ✅ MM 无税世界中资本结构不重要：这只是理想世界的基准，真实世界中税收、破产成本、代理成本使资本结构至关重要。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：债务税盾不是只有好处：同时带来财务困境风险和灵活性损失。 | ✅ 债务税盾不是只有好处：同时带来财务困境风险和灵活性损失。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：DTL = DOL × DFL：总杠杆的乘数效应意味着两级杠杆叠加是乘法而非加法。 | ✅ DTL = DOL × DFL：总杠杆的乘数效应意味着两级杠杆叠加是乘法而非加法。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M05-Capital-Investments-and-Capital-Allocation]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M07-Business-Models]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M05-Capital-Investments-and-Capital-Allocation]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M07-Business-Models]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- 资本结构影响 WACC → [[M05-Cost-of-Capital]] 债务权重和股权成本随杠杆变化
+- DOL 与商业模式 → [[M07-Business-Models]] 固定/变动成本结构决定经营杠杆水平
+- 杠杆与资本预算 → [[M04-Capital-Investments]] 项目选择应考虑其对整体杠杆水平的影响
+- 治理影响杠杆选择 → [[M02-Corporate-Governance-and-ESG]] 管理层可能选择次优杠杆以降低个人风险
+- 资本结构整合 → [[M08-Capital-Allocation-Integration]] 融资决策是资本配置的一部分
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M06-Capital-Structure-and-Leverage.md` (0.394), `M05-Cost-of-Capital.md` (0.334), `M01-Corporate-Structures-and-Ownership.md` (0.267)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M06-Capital-Structure-and-Leverage.md` (medium, 0.394)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

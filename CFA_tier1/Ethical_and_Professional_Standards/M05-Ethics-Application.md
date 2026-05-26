@@ -1,6 +1,6 @@
 ---
 title: "M05: Ethics Application"
-description: "CFA Level I 2026 Ethical and Professional Standards 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Ethical and Professional Standards 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Ethical and Professional Standards"
 topic_area: "Ethical_and_Professional_Standards"
 level: "CFA Level I"
@@ -47,14 +47,14 @@ tags:
 ## 1. 模块定位
 
 ### 5.1 学习任务
-- **核心问题**：考试希望你用 `Ethics Application` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Ethics Application` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 5.2 考试角色
 - **难度类型**：概念+案例判断。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 5.3 关键英文术语
 - **Ethics Application（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -70,112 +70,136 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 5.1 | evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct | 评价优缺点、限制和决策含义 | 写出结论、依据和限制条件。 |
-| 5.2 | explain how the practices, policies, and conduct do or do not violate the CFA Institute Code of Ethics and Standards of Professional Conduct | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 5.1 | evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct | 评价优缺点、限制和决策含义 | 写出结论、依据、公式口径和限制条件。 |
+| 5.2 | explain how the practices, policies, and conduct do or do not violate the CFA Institute Code of Ethics and Standards of Professional Conduct | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 5. Ethics Application
 ├─ 5.1 Introduction
-│  ├─ 5.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 5.1.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 5.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 5.1.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 5.2 Professionalism
-│  ├─ 5.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 5.2.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 5.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 5.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 5.3 Integrity of Capital Markets
-│  ├─ 5.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 5.3.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 5.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 5.3.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 5.4 Duties to Clients
-│  ├─ 5.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 5.4.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 5.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 5.4.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 5.5 Duties to Employers
-│  ├─ 5.5.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 5.5.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 5.5.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 5.5.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
 ### 5.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：评价优缺点、限制和决策含义；官方表述为：`evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct`。
-- **核心词汇**：**Ethics Application（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Introduction` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：评价优缺点、限制和决策含义
 
 ### 5.2 Professionalism
-- **中文主线**：本节点解决 `Professionalism` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how the practices, policies, and conduct do or do not violate the CFA Institute Code of Ethics and Standards of Professional Conduct`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Professionalism` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：解释机制、原因和后果
 
 ### 5.3 Integrity of Capital Markets
-- **中文主线**：本节点解决 `Integrity of Capital Markets` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：评价优缺点、限制和决策含义；官方表述为：`evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct`。
-- **核心词汇**：**Professionalism（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Integrity of Capital Markets` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：识别概念并应用到题干。
 
 ### 5.4 Duties to Clients
-- **中文主线**：本节点解决 `Duties to Clients` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：评价优缺点、限制和决策含义；官方表述为：`evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct`。
-- **核心词汇**：**Integrity of Capital Markets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Duties to Clients` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：识别概念并应用到题干。
 
 ### 5.5 Duties to Employers
-- **中文主线**：本节点解决 `Duties to Employers` 在 Ethical and Professional Standards 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：评价优缺点、限制和决策含义；官方表述为：`evaluate practices, policies, and conduct relative to the CFA Institute Code of Ethics and Standards of Professional Conduct`。
-- **核心词汇**：**Duties to Clients（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 5.9 Legacy 补强要点
-- 来自 `00-Ethical-and-Professional-Standards-MOC.md`：difficulty: 情境边界、标准映射与最保守做法判断; ## 最关键：先看客户利益，再看标准触发，再看最保守做法; Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职业判断。。
-- 来自 `M09-Ethics-Application.md`：## 1. 核心知识点 (Core Knowledge Points); 伦理决策框架提供了一套**结构化方法**来应对道德困境，帮助从业者在复杂情境中做出可辩护的判断。; **关键检验标准**：决策是否能在"日光测试" (sunlight test / front-page test) 下站得住脚？即你是否愿意看到自己的决策登上新闻头条？。
-
+- **中文主线**：围绕 `Duties to Employers` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：识别概念并应用到题干。
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Ethics decision rule | `identify duty -> disclose conflicts -> protect client interests -> document action` | 伦理题更像判断流程，不是公式题。 |
+| 指标 | 公式/判断链 | 知识树节点 | 考试说明 |
+|------|---------------|------------|----------|
+| Ethics | 无核心数值公式 | `M01-M09` | 本科重在判断框架 |
+| Priority Rule | `client > market integrity > employer/self convenience` | `M05-M07` | 先守客户与市场 |
+| Stricter Standard Rule | `required conduct = max(applicable law, CFA Standards)` | `M03` | law 与 Standards 冲突时常考 |
+| MNPI Gate | `material AND nonpublic -> do not trade/recommend/disclose` | `M04` | 信息题第一闸 |
+| Suitability Gate | `client facts + portfolio context + risk/return fit` | `M05` | 不是单产品热度判断 |
+| Conflict Gate | `identify -> disclose -> avoid/mitigate if disclosure insufficient` | `M07` | disclosure 不是橡皮擦 |
+| GIPS Logic | `firm -> discretionary portfolios -> composites -> compliant presentation` | `M08` | 结构化记忆链 |
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+### 5.1 考纲范围标记
+
+| 标记 | 内容 |
+|------|------|
+| 【考纲重点】 | Code and Standards、duties to clients/employers/market/profession、conflicts、MNPI、suitability、GIPS、Ethics application cases |
+| 【考纲内但无核心公式】 | 本科几乎全部是判断链和合规流程，不要求数值公式 |
+| 【超纲/扩展】 | 具体国家证券法细则、法律案例判例、GIPS 深层审计技术不作为 Level I 必背内容 |
+
+---
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 5.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 5.2 Professionalism | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 5.3 Integrity of Capital Markets | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 5.4 Duties to Clients | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐ | 5.5 Duties to Employers | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Ethics Application` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 合法就一定合乎 Ethics | ✅ CFA 常要求高于法律底线 | 按官方定义和 LOS 口径核验。 |
+| ❌ 披露冲突后就什么都能做 | ✅ 有些冲突仅披露仍不充分 | 按官方定义和 LOS 口径核验。 |
+| ❌ mosaic theory 可以用内幕消息 | ✅ mosaic 不能包含 MNPI | 按官方定义和 LOS 口径核验。 |
+| ❌ fair dealing = 所有人必须完全同价同时成交 | ✅ 核心是合理、公平分配机会 | 按官方定义和 LOS 口径核验。 |
+| ❌ suitability = 推荐热门产品给所有客户 | ✅ 要匹配客户 objectives/constraints | 按官方定义和 LOS 口径核验。 |
+| ❌ confidentiality 永远不能破 | ✅ 法律要求、客户授权、违法调查时可例外 | 按官方定义和 LOS 口径核验。 |
+| ❌ employer 不允许跳槽前准备 | ✅ 可做有限准备，但不能挖客户/盗取资料 | 按官方定义和 LOS 口径核验。 |
+| ❌ referral fee 不用说，只要不影响建议 | ✅ 必须披露 | 按官方定义和 LOS 口径核验。 |
+| ❌ verification = GIPS 业绩一定没错 | ✅ verification 是 process-level assurance | 按官方定义和 LOS 口径核验。 |
+| ❌ 可以说自己“passed all CFA levels except charter pending”来营销 | ✅ 对 designation 引用要严格、不能夸大 | 按官方定义和 LOS 口径核验。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M04-Introduction-to-the-Global-Investment-Performance-Standards]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：本科目收束模块。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M04-Introduction-to-the-Global-Investment-Performance-Standards]]。先用它提供定义、变量或基础框架。
+- **下游模块**：本科目收束模块。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+```text
+道德准则 (Code of Ethics)
+├── 准则 I-VII (Standards I-VII)
+│   ├── 对客户的义务 (Duties to Clients)
+│   ├── 对雇主的义务 (Duties to Employers)
+│   ├── 资本市场诚信 (Capital Market Integrity)
+│   └── 冲突 / 沟通 / 记录 (Conflicts / Communication / Records)
+│       └── 全球投资业绩标准 (GIPS)
+│           └── 业绩陈述 (Performance Presentation)
+└── 道德应用 (Ethics Application) — 综合情境分析与决策框架
+    └── 涵盖上述全部内容的应用与案例
+```
+
+---
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：00-Ethical-and-Professional-Standards-MOC.md（confidence 0.515）
-- **可复用结构**：00-Ethical-and-Professional-Standards-MOC；笔记属性；最关键：先看客户利益，再看标准触发，再看最保守做法；科目概览；Ethical and Professional Standards 核心知识树 (Core Knowledge Tree)；核心对比专题
-- **高价值要点**：difficulty: 情境边界、标准映射与最保守做法判断；## 最关键：先看客户利益，再看标准触发，再看最保守做法；Ethics 的核心不是背条文，而是稳定地做出“最可辩护”的职业判断。；## Ethical and Professional Standards 核心知识树 (Core Knowledge Tree)
-- **公式/计算线索**：│ │ ├── 在职期间忠诚；离职准备与招揽/窃取界限 (loyalty while employed; transition preparation vs solicitation/theft boundary)；│ └── 不得夸大含义、保证或部分状态 (no exaggeration of meaning, guarantee, or partial status)；## 核心公式速查
-- **易错提示**：│ └── 注意：law answers "may I"; Ethics often asks "should I"；│ │ └── 注意：ignorance of law is not a comfortable exam defense【考试陷阱】；│ └── 注意：a clever trading story does not sanitize false market signals
-
-### 来源：M09-Ethics-Application.md（confidence 0.47）
-- **可复用结构**：M09: 道德应用 (Ethics Application)；1. 核心知识点 (Core Knowledge Points)；1.1 伦理决策框架 (Ethical Decision-Making Framework)；1.2 道德、法律与职业标准的三角关系 (Ethics, Law, and Professional Standards)；1.3 情境题方法论 (Scenario Analysis Methodology)；1.4 常见违规模式 (Common Violation Patterns)
-- **高价值要点**：## 1. 核心知识点 (Core Knowledge Points)；伦理决策框架提供了一套**结构化方法**来应对道德困境，帮助从业者在复杂情境中做出可辩护的判断。；**关键检验标准**：决策是否能在"日光测试" (sunlight test / front-page test) 下站得住脚？即你是否愿意看到自己的决策登上新闻头条？；**核心原则**：当法律与 CFA 标准冲突时，遵循更严格者 (stricter standard)。CFA 标准可能要求高于法律最低要求，但不能要求违反法律。
-- **易错提示**：**解题思路**：逐一比对事实与各标准。注意题目可能涉及**多个标准**的交叉，需要选出最直接的违规项；**解题思路**：不要只找一个违规点。列出所有可能的违规，再排除明显不成立的。特别注意：一个行为可能同时违反多个标准；## 4. 易错点提醒 (Common Pitfalls)
+- **主要 legacy 来源**：`00-Ethical-and-Professional-Standards-MOC.md` (high, 0.515)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

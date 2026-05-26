@@ -1,6 +1,6 @@
 ---
 title: "M11: Yield-Based Bond Duration Measures and Properties"
-description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Fixed Income"
 topic_area: "Fixed_Income"
 level: "CFA Level I"
@@ -43,14 +43,14 @@ tags:
 ## 1. 模块定位
 
 ### 11.1 学习任务
-- **核心问题**：考试希望你用 `Yield-Based Bond Duration Measures and Properties` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Yield-Based Bond Duration Measures and Properties` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 11.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 11.3 关键英文术语
 - **Yield-Based Bond Duration Measures and Properties（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -66,112 +66,101 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 11.1 | define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP) | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据和限制条件。 |
-| 11.2 | explain how a bond’s maturity, coupon, and yield level affect its interest rate risk | 解释机制、原因和后果 | 写出结论、依据和限制条件。 |
+| 11.1 | define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP) | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
+| 11.2 | explain how a bond’s maturity, coupon, and yield level affect its interest rate risk | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 11. Yield-Based Bond Duration Measures and Properties
-├─ 11.1 Introduction
-│  ├─ 11.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 11.1.2 应用/判断：把概念或公式转成解题动作
-├─ 11.2 Modified Duration
-│  ├─ 11.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 11.2.2 应用/判断：把概念或公式转成解题动作
-├─ 11.3 Money Duration and Price Value of a Basis Point
-│  ├─ 11.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 11.3.2 应用/判断：把概念或公式转成解题动作
-├─ 11.4 Properties of Duration
-│  ├─ 11.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 11.4.2 应用/判断：把概念或公式转成解题动作
+├─ 11.1 久期家族 (Duration Family)
+│  ├─ 11.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 11.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 11.2 凸性 (Convexity)
+│  ├─ 11.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 11.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 11.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)`。
-- **核心词汇**：**Yield-Based Bond Duration Measures and Properties（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 11.1 久期家族 (Duration Family)
 
-### 11.2 Modified Duration
-- **中文主线**：本节点解决 `Modified Duration` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：解释机制、原因和后果；官方表述为：`explain how a bond’s maturity, coupon, and yield level affect its interest rate risk`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **核心公式 (English)**
+  - 修正久期: `D_mod = D_mac/(1+y/m)`
+  - 货币久期: `Money Duration = D_mod x Full Price`
+  - PVBP: `PVBP ≈ Money Duration x 0.0001`
+  - 价格变化近似: `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2`
+- **修正久期估计价格对收益率变动的百分比敏感度 (modified duration estimates % price sensitivity to yield)**：修正久期 = Macaulay 久期 / (1 + y/m)，表示收益率变动 1% 时债券价格变动的百分比。
+- **货币久期估计每单位收益率变动的货币价格变化 (money duration estimates currency price change per yield unit)**：货币久期 = 修正久期 x 全价，以货币金额（而非百分比）表示利率敏感度。
+- **PVBP = 收益率变动 1bp 的价格变化 (PVBP = price change for 1 bp yield shift)**：PVBP (price value of a basis point) 也称为 DV01。
 
-### 11.3 Money Duration and Price Value of a Basis Point
-- **中文主线**：本节点解决 `Money Duration and Price Value of a Basis Point` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)`。
-- **核心词汇**：**Modified Duration（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 11.2 凸性 (Convexity)
 
-### 11.4 Properties of Duration
-- **中文主线**：本节点解决 `Properties of Duration` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：计算并解释数值结果；解释结果的投资含义；官方表述为：`define, calculate, and interpret modified duration, money duration, and the price value of a basis point (PVBP)`。
-- **核心词汇**：**Money Duration and Price Value of a Basis Point（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
-
-### 11.9 Legacy 补强要点
-- 来自 `M08-Duration-and-Convexity.md`：## 1. 核心知识点; **核心公式 (English)**; ## 2. 关键公式。
-- 来自 `00-Fixed-Income-MOC.md`：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险; ## Fixed Income 核心知识树 (Core Knowledge Tree); ├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18。
-
+- **凸性修正久期遗漏的曲率 (convexity corrects curvature missed by duration)**：久期是一阶线性近似，凸性补偿二阶曲率效应。当收益率变动较大时，凸性校正至关重要。
+- **正凸性有利于对称收益率变动 (positive convexity helps for symmetric yield moves)**：正凸性债券在利率下降时价格上升的幅度大于在利率等幅上升时价格下降的幅度。
+- **组合久期/凸性使用价值权重但有局限性 (portfolio duration/convexity use value weights with limitations)**：组合久期 = Σ 债券权重 x 债券久期，但仅适用于平行收益率曲线移动。
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
-| Full price | `full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
-| Modified duration | `ModDur = MacDur / (1 + y/m)` | 近似衡量收益率变化 1 单位时价格百分比变化。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式 |
+|------|------|
+| 修正久期 | `D_mod = D_mac / (1 + y/m)` |
+| 货币久期 | `Money Duration = D_mod x Full Price` |
+| PVBP | `PVBP = (P_- - P_+)/2` 或 `≈ Money Duration x 0.0001` |
+| 价格变化（含凸性） | `%ΔP ≈ -D_mod x Δy + 0.5 x Convexity x (Δy)^2` |
+| 凸性计算 | `Convexity = (P_- + P_+ - 2P_0) / (P_0 x (Δy)^2)` |
+| 组合久期 | `D_p = Σ w_i x D_i`（价值权重） |
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 11.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 11.2 Modified Duration | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 11.3 Money Duration and Price Value of a Basis Point | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 11.4 Properties of Duration | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+- **用修正久期估计价格变化**：给定 D_mod 和 Δy，计算 `%ΔP ≈ -D_mod x Δy`。
+- **用凸性改进估计**：收益率变动较大时（如 > 100bp），必须加入凸性项。
+- **计算 PVBP/DV01**：可用近似公式 `Money Duration x 0.0001`，或直接计算收益率上下移 1bp 后的价格差。
+- **组合久期计算**：以各债券市场价值占组合总价值的比例为权重，加权平均各债券的久期。
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Yield-Based Bond Duration Measures and Properties` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：久期是局部的、基于收益率的；勿将其视为完整曲线压力测试 (duration is local and yield-based; do not treat it as a full… | ✅ 久期是局部的、基于收益率的；勿将其视为完整曲线压力测试 (duration is local and yield-based; do not treat it as a full… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：Duration 和 maturity 不是一回事：零息债券的 Macaulay duration = maturity；但付息债券的 duration < maturity。高… | ✅ Duration 和 maturity 不是一回事：零息债券的 Macaulay duration = maturity；但付息债券的 duration < maturity。高… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：正凸性对投资者有利：但获得正凸性通常要付出代价（如放弃部分收益），市场不会免费提供正凸性。 | ✅ 正凸性对投资者有利：但获得正凸性通常要付出代价（如放弃部分收益），市场不会免费提供正凸性。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：凸性用 decimals 计算时 Δy 也要用小数：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。 | ✅ 凸性用 decimals 计算时 Δy 也要用小数：Δy = 0.01 表示 1%（不是 1）。常见错误是忘记将百分比转换为小数。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M10-Interest-Rate-Risk-and-Return]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M10-Interest-Rate-Risk-and-Return]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M12-Yield-Based-Bond-Convexity-and-Portfolio-Properties]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- D_mod 来自 D_mac → [[M07-Interest-Rate-Risk]] 的 Macaulay 久期
+- 有效久期 → [[M09-Curve-Based-and-Empirical-Risk]] 的 option-aware 风险
+- 组合久期 → [[M04-Yield-and-Spread-Measures]] 的收益率分析
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：M08-Duration-and-Convexity.md（confidence 0.59）
-- **可复用结构**：M11: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)；1. 核心知识点；1.1 久期家族 (Duration Family)；1.2 凸性 (Convexity)；2. 关键公式；3. 常见考点与解题思路
-- **高价值要点**：## 1. 核心知识点；**核心公式 (English)**；## 2. 关键公式
-- **公式/计算线索**：title: "M08 — Duration and Convexity"；official_module: "Module 11: Yield-Based Bond Duration Measures and Properties, Module 12: Yield-Based Bond Convexity and Portfolio Properties"；# M11: 基于收益率的久期与凸性 (Yield-Based Duration and Convexity)
-- **易错提示**：## 4. 易错点提醒
-
-### 来源：00-Fixed-Income-MOC.md（confidence 0.463）
-- **可复用结构**：00-Fixed-Income-MOC；笔记属性；最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；科目概览；Fixed Income 核心知识树 (Core Knowledge Tree)；核心对比专题
-- **高价值要点**：## 最关键：先贴现现金流，再拆收益率，再量化利率和信用风险；## Fixed Income 核心知识树 (Core Knowledge Tree)；├── M01: 工具特征 (Instrument Features)【考试核心】↔ 2026 Outline P18；├── M02: 现金流类型 (Cash Flows and Types)【考试核心】↔ 2026 Outline P18
-- **公式/计算线索**：description: CFA Level I Fixed Income master MOC for bond pricing, yield measures, duration, credit, structured products, and traps.；│ ├── 回购 = 附抵押融资，含 haircut 和交易对手风险 (repo = collateralized financing with haircut and counterparty exposure) (回购融资)；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
-- **易错提示**：│ │ └── 肯定性契约 vs 否定性契约 (affirmative covenants vs negative covenants)【考试陷阱】(契约类型)；│ └── 注意：coupon 的确定性不等于回报确定，价格、再投资和信用仍会变；│ └── 注意：高收益的"高收益"不等于高回报 (high-yield is not necessarily high-return)
-
-### 来源：M04-Yield-and-Spread-Measures.md（confidence 0.439）
-- **可复用结构**：M07: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)；1. 核心知识点；1.1 收益率视角 (Yield Lens)；1.2 利差视角 (Spread Lens)；2. 关键公式；3. 常见考点与解题思路
-- **高价值要点**：## 1. 核心知识点；## 2. 关键公式；【考纲内但无核心公式】利差成分解释：credit/liquidity/option/tax/technical。；**判断利差变化的含义**：利差走阔 → 债券价格下降（相对基准）；利差收窄 → 债券价格上升。
-- **公式/计算线索**：title: "M04 — Yield and Spread Measures"；official_module: "Module 7: Yield and Yield Spread Measures for Fixed-Rate Bonds"；# M07: 固定利率债收益率与利差 (Fixed-Rate Yield and Spread Measures)
-- **易错提示**：## 4. 易错点提醒
+- **主要 legacy 来源**：`M08-Duration-and-Convexity.md` (high, 0.59)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

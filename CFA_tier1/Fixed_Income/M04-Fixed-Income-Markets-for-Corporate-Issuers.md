@@ -1,6 +1,6 @@
 ---
 title: "M04: Fixed-Income Markets for Corporate Issuers"
-description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Fixed Income 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Fixed Income"
 topic_area: "Fixed_Income"
 level: "CFA Level I"
@@ -44,14 +44,14 @@ tags:
 ## 1. 模块定位
 
 ### 4.1 学习任务
-- **核心问题**：考试希望你用 `Fixed-Income Markets for Corporate Issuers` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Fixed-Income Markets for Corporate Issuers` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 4.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 4.3 关键英文术语
 - **Fixed-Income Markets for Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -65,92 +65,124 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 4.1 | compare short-term funding alternatives available to corporations and financial institutions | 比较相似概念的适用条件与差异 | 写出结论、依据和限制条件。 |
-| 4.2 | describe repurchase agreements (repos), their uses, and their benefits and risks | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 4.3 | contrast the long-term funding of investment-grade versus high-yield corporate issuers | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
+| 4.1 | compare short-term funding alternatives available to corporations and financial institutions | 比较相似概念的适用条件与差异 | 写出结论、依据、公式口径和限制条件。 |
+| 4.2 | describe repurchase agreements (repos), their uses, and their benefits and risks | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 4.3 | contrast the long-term funding of investment-grade versus high-yield corporate issuers | 识别概念、解释机制并应用到题干。 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 4. Fixed-Income Markets for Corporate Issuers
-├─ 4.1 Introduction
-│  ├─ 4.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.1.2 应用/判断：把概念或公式转成解题动作
-├─ 4.2 Short-Term Funding Alternatives
-│  ├─ 4.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.2.2 应用/判断：把概念或公式转成解题动作
-├─ 4.3 Repurchase Agreements
-│  ├─ 4.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.3.2 应用/判断：把概念或公式转成解题动作
-├─ 4.4 Long-Term Corporate Debt
-│  ├─ 4.4.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 4.4.2 应用/判断：把概念或公式转成解题动作
+├─ 4.1 公司债券市场 (Corporate Bond Markets)
+│  ├─ 4.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.1.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.2 银行贷款 (Bank Loans)
+│  ├─ 4.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.2.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.3 商业票据 (Commercial Paper)
+│  ├─ 4.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.3.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.4 中期票据 (Medium-Term Notes, MTNs)
+│  ├─ 4.4.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.4.2 应用/判断：再处理计算、比较、解释或情境选择
+├─ 4.5 存款票据 (Deposit Notes)
+│  ├─ 4.5.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 4.5.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
-### 4.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare short-term funding alternatives available to corporations and financial institutions`。
-- **核心词汇**：**Fixed-Income Markets for Corporate Issuers（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 4.1 公司债券市场 (Corporate Bond Markets)
 
-### 4.2 Short-Term Funding Alternatives
-- **中文主线**：本节点解决 `Short-Term Funding Alternatives` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe repurchase agreements (repos), their uses, and their benefits and risks`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **投资级债券 (investment-grade bonds)**：评级为 BBB-/Baa3 及以上的公司债券。信用风险较低，收益率较低，利差对经济周期敏感度相对较小。发债主体多为大型成熟企业。
+- **高收益债券 (high-yield bonds)**：评级低于投资级（BB+/Ba1 及以下）的公司债券。信用风险较高，收益率较高以补偿违约风险。利差对经济周期和公司特定事件高度敏感。也称"垃圾债券" (junk bonds)。
+- **公司债券的发行方式**：公开发行 (public offering) 需在证券监管机构注册，面向广大投资者；私募 (private placement) 无需注册，面向合格机构投资者，条款更灵活但流动性较低。
+- **公司债券的期限结构**：短期债券（1-5年）、中期债券（5-12年）、长期债券（12年以上）。不同期限满足不同投资者需求。
 
-### 4.3 Repurchase Agreements
-- **中文主线**：本节点解决 `Repurchase Agreements` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`contrast the long-term funding of investment-grade versus high-yield corporate issuers`。
-- **核心词汇**：**Short-Term Funding Alternatives（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+### 4.2 银行贷款 (Bank Loans)
 
-### 4.4 Long-Term Corporate Debt
-- **中文主线**：本节点解决 `Long-Term Corporate Debt` 在 Fixed Income 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：比较相似概念的适用条件与差异；官方表述为：`compare short-term funding alternatives available to corporations and financial institutions`。
-- **核心词汇**：**Repurchase Agreements（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+- **双边贷款 (bilateral loans)**：一家银行向借款人提供的贷款。条款简单，适合中小规模融资需求。银行评估借款人信用并按自身标准定价。
+- **银团贷款 (syndicated loans)**：多家银行联合向借款人提供的大额贷款。由牵头行 (lead arranger) 组织银团并分销贷款份额。银团贷款可分散信用风险，适用于大型融资项目。
+- **有担保贷款 (secured loans)**：以特定资产（如应收账款、存货、设备）作为抵押的贷款。担保贷款回收率高于无担保贷款。
+- **贷款与债券的关键区别**：贷款通常有浮动利率、更灵活的可协商条款和更严格的契约条款 (covenants)；债券通常有固定或浮动利率、标准化条款和二级市场交易。
 
+### 4.3 商业票据 (Commercial Paper)
+
+- **商业票据 (commercial paper, CP)**：由大型优质公司发行的短期无担保承诺票据，期限通常不超过 270 天（在美国无需 SEC 注册）。主要用于满足短期流动性需求（如营运资金、季节性融资），以贴现方式发行。
+- **备用信贷额度 (backup credit lines)**：CP 发行人通常持有银行提供的备用信贷额度，作为 CP 到期时无法展期的应急流动性支持。这是 CP 评级的重要考量因素。
+- **CP 市场特征**：面额通常较大（如 $100,000 以上），主要投资者为货币市场基金、保险公司和养老基金。评级要求高，只有投资级以上企业可以进入 CP 市场。
+
+### 4.4 中期票据 (Medium-Term Notes, MTNs)
+
+- **中期票据 (medium-term notes, MTNs)**：公司发行的债务工具，期限通常介于 2 到 10 年，但也有长达 30 年的品种。MTN 可以通过承销商持续发行 (continuous offering)，比传统债券发行更灵活。
+- **MTN 的优势**：发行人可根据市场条件和投资者需求灵活调整期限、金额和结构（如固定、浮动、结构性）。投资者可获得定制化的信用敞口和期限选择。
+- **MTN 与公司债券的区别**：公司债通常一次性发行、金额固定；MTN 通过持续发行计划分次销售，每次发行金额和条款可调整。
+
+### 4.5 存款票据 (Deposit Notes)
+
+- **存款票据 (deposit notes)**：由银行发行的债务工具，期限通常为 18 个月至 10 年。与银行定期存款类似，但可在二级市场交易。存款票据通常由联邦存款保险部分承保（如 FDIC 承保上限内）。
+- **存款票据的特点**：具有银行信用支持但通常无担保，收益率高于同等期限的国债但低于公司债券。主要投资者为寻求银行信用敞口的机构投资者。
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Bond price | `P = Σ C/(1+y)^t + FV/(1+y)^N` | 债券价格等于未来现金流现值。 |
-| Full price | `full price = clean price + accrued interest` | 报价通常是 clean price，结算用 full price。 |
-| Modified duration | `ModDur = MacDur / (1 + y/m)` | 近似衡量收益率变化 1 单位时价格百分比变化。 |
+### 5.1 核心内容
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式/关系 | 说明 |
+|------|-----------|------|
+| 信用评级分界 | `BBB-/Baa3 = 投资级/高收益分界线` | 标准普尔/穆迪评级体系 |
+| 利差与评级关系 | `评级越低 → 利差越高 → 融资成本越高` | 信用风险溢价随评级下降上升 |
+| CP 贴现基础 | `Price = FV × (1 - BDY × t/360)` | 商业票据的贴现定价 |
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 4.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 4.2 Short-Term Funding Alternatives | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 4.3 Repurchase Agreements | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 4.4 Long-Term Corporate Debt | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+
+### 6.9 ⭐⭐ Legacy 考点补充
+
+### 6.1 核心内容
+
+- **区分 investment-grade 与 high-yield 的特征**：投资级 = 低违约率、低收益率、利差稳定融资渠道广泛；高收益 = 高违约率、高收益率、利差敏感、融资渠道受限。
+- **理解 CP 发行必须有 backup line 支持**：考试中常将备用信贷额度与 CP 评级联系起来——无备用额度的 CP 风险显著更高。
+- **区分 MTN 与传统公司债券**：MTN 是持续发行、条款灵活；传统债券是一次发行、条款固定。
+- **识别不同融资工具的优先顺序**：有担保贷款 → 无担保债券 → 次级债券，破产清偿顺序决定了回收率。
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Fixed-Income Markets for Corporate Issuers` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ 忽略：高收益债券的"高收益"不等于高回报【考试陷阱】：高票息对应高风险，违约发生后本金损失可能远超补偿收益。 | ✅ 高收益债券的"高收益"不等于高回报【考试陷阱】：高票息对应高风险，违约发生后本金损失可能远超补偿收益。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：CP 期限虽短，展期风险不可忽视：如果市场冻结（如金融危机期间），CP 发行人无法展期可能需要依赖备用信贷额度甚至触发违约。 | ✅ CP 期限虽短，展期风险不可忽视：如果市场冻结（如金融危机期间），CP 发行人无法展期可能需要依赖备用信贷额度甚至触发违约。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：银团贷款不一定是债券：虽然银团贷款可以交易，但它本质上是贷款协议，发行和交易机制与债券不同。 | ✅ 银团贷款不一定是债券：虽然银团贷款可以交易，但它本质上是贷款协议，发行和交易机制与债券不同。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：Deposit notes 有 FDIC 保险上限：不是全部存款票据都受全额保护，只限承保额度内。 | ✅ Deposit notes 有 FDIC 保险上限：不是全部存款票据都受全额保护，只限承保额度内。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| ❌ 忽略：同一公司可能有不同评级：发行人评级与具体债项评级可能不同，取决于抵押品和清偿顺序。 | ✅ 同一公司可能有不同评级：发行人评级与具体债项评级可能不同，取决于抵押品和清偿顺序。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M03-Fixed-Income-Issuance-and-Trading]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M05-Fixed-Income-Markets-for-Government-Issuers]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M03-Fixed-Income-Issuance-and-Trading]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M05-Fixed-Income-Markets-for-Government-Issuers]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+- 融资工具 → [[M03-Bond-Valuation]] 不同工具的价格计算
+- 信用评级 → [[M10-Credit-Risk]] PD/LGD与评级关系
+- 利差行为 → [[M04-Yield-and-Spread-Measures]] 固定利率利差度量
+- 公司信用分析 → [[M11-Government-and-Corporate-Credit]] 公司发行人的财务分析
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-本次未发现可直接高置信合并的 legacy 内容。中置信候选已记录到 enrichment map：`M04-FI-Markets-Corp-Issuers.md` (0.402), `00-Fixed-Income-MOC.md` (0.348), `M02-Issuance-and-Trading.md` (0.303)。后续如需人工补强，应先核验其是否符合 2026 官方 LOS。
+- **主要 legacy 来源**：`M04-FI-Markets-Corp-Issuers.md` (medium, 0.402)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。

@@ -1,6 +1,6 @@
 ---
 title: "M07: Pricing and Valuation of Interest Rates and Other Swaps"
-description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、LOS 对齐"
+description: "CFA Level I 2026 Derivatives 官方模块笔记：中文主线、英文术语、编号知识树、公式/框架、考点与陷阱"
 subject: "Derivatives"
 topic_area: "Derivatives"
 level: "CFA Level I"
@@ -42,14 +42,14 @@ tags:
 ## 1. 模块定位
 
 ### 7.1 学习任务
-- **核心问题**：考试希望你用 `Pricing and Valuation of Interest Rates and Other Swaps` 解释什么、计算什么、或判断什么。
-- **输入信息**：题干事实、数据、定义、假设、限制条件。
+- **核心问题**：考试希望你用 `Pricing and Valuation of Interest Rates and Other Swaps` 解释什么、计算什么、比较什么，或判断什么。
+- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
 - **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
 
 ### 7.2 考试角色
 - **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；不要在还没识别题型时直接套公式。
+- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
+- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
 
 ### 7.3 关键英文术语
 - **Pricing and Valuation of Interest Rates and Other Swaps（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
@@ -63,88 +63,156 @@ tags:
 
 | LOS | 官方要求 | 中文学习动作 | 做题输出 |
 |---|---|---|---|
-| 7.1 | describe how swap contracts are similar to but different from a series of forward contracts | 描述定义、流程和适用场景 | 写出结论、依据和限制条件。 |
-| 7.2 | contrast the value and price of swaps | 识别概念、解释机制并应用到题干。 | 写出结论、依据和限制条件。 |
+| 7.1 | describe how swap contracts are similar to but different from a series of forward contracts | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| 7.2 | contrast the value and price of swaps | 识别概念、解释机制并应用到题干。 | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
 ```text
 7. Pricing and Valuation of Interest Rates and Other Swaps
 ├─ 7.1 Introduction
-│  ├─ 7.1.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 7.1.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 7.1.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 7.1.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 7.2 Swaps vs. Forwards
-│  ├─ 7.2.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 7.2.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 7.2.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 7.2.2 应用/判断：再处理计算、比较、解释或情境选择
 ├─ 7.3 Swap Values and Prices
-│  ├─ 7.3.1 定义/识别：掌握题干关键词与适用条件
-│  └─ 7.3.2 应用/判断：把概念或公式转成解题动作
+│  ├─ 7.3.1 定义/识别：先说清概念、公式变量和适用条件
+│  └─ 7.3.2 应用/判断：再处理计算、比较、解释或情境选择
 ```
 
 ## 4. 知识点详解
 
 ### 7.1 Introduction
-- **中文主线**：本节点解决 `Introduction` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe how swap contracts are similar to but different from a series of forward contracts`。
-- **核心词汇**：**Pricing and Valuation of Interest Rates and Other Swaps（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Introduction` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：描述定义、流程和适用场景
 
 ### 7.2 Swaps vs. Forwards
-- **中文主线**：本节点解决 `Swaps vs. Forwards` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：识别概念、解释机制并应用到题干。；官方表述为：`contrast the value and price of swaps`。
-- **核心词汇**：**Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
+
+- **中文主线**：围绕 `Swaps vs. Forwards` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：识别概念、解释机制并应用到题干。
 
 ### 7.3 Swap Values and Prices
-- **中文主线**：本节点解决 `Swap Values and Prices` 在 Derivatives 中的定义、适用条件和考试判断。先确认题干问的是概念识别、机制解释、数值计算还是优劣比较。
-- **对应 LOS 动作**：描述定义、流程和适用场景；官方表述为：`describe how swap contracts are similar to but different from a series of forward contracts`。
-- **核心词汇**：**Swaps vs. Forwards（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **解题输出**：用一句话写出结论，再补充计算口径、方向判断或限制条件，避免只背定义。
 
-### 7.9 Legacy 补强要点
-- 来自 `00-Derivatives-MOC.md`：## 最关键：先画 payoff，再找复制组合，再看无套利价格; ## Derivatives 核心知识树 (Core Knowledge Tree); ├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features。
-
+- **中文主线**：围绕 `Swap Values and Prices` 掌握定义、适用条件、公式/框架和考试判断。
+- **对应动作**：识别概念并应用到题干。
 
 ## 5. 关键公式与计算框架
 
-| 工具 / Formula | 公式或框架 | 中文解释与注意点 |
-|---|---|---|
-| Forward value | `Vt = St - PV(forward price)` | 远期合约价值随标的价格和折现变化。 |
+### 5.1 M04-M06 Forward Commitments
 
-计算题通用检查：单位一致、时间口径一致、现金流方向一致；解释题要说明结果代表的经济含义。
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Forward Price, No Income | `F_0(T) = S_0(1+r)^T` | `M05` | carry 主干 |
+| Forward Price, Continuous No Income | `F_0(T) = S_0e^{rT}` | `M05` | 连续复利口径 |
+| Forward Price, Known Income | `F_0(T) = [S_0 - PV(I)](1+r)^T` | `M05` | 先扣收入现值 |
+| Forward Price, Known Yield | `F_0(T) = S_0[(1+r)/(1+q)]^T` 或连续口径 `S_0e^{(r-q)T}` | `M05` | 看题目给的是离散收益率还是连续收益率 |
+| Forward Price, Storage/Convenience | `F_0(T) = S_0e^{(r + storage - convenience)T}` | `M04/M05` | 商品 forward/cost-of-carry 直觉 |
+| Long Forward Expiry Payoff | `S_T - K` | `M05` | `K` 是约定 delivery price |
+| Short Forward Expiry Payoff | `K - S_T` | `M05` | long/short 对称 |
+| Long Forward Value During Life | `V_t = S_t - PV_t(K)` | `M05` | 无 income 的简化直觉 |
+| Long Forward Value, Known Income | `V_t = S_t - PV_t(I) - PV_t(K)` | `M05` | 标的在剩余期有已知收入 |
+| Long Forward Value, Known Yield | `V_t = S_te^{-q(T-t)} - K e^{-r(T-t)}` | `M05` | 连续收益率口径 |
+| Net Swap Payment | `Notional x (Floating rate - Fixed rate) x accrual factor` | `M06` | payer/receiver 方向先读题 |
+| Fixed-rate Swap Value Intuition | `Value to fixed-rate payer = Floating-leg value - Fixed-leg value` | `M06` | 【考纲重点】方向判断多于完整手算 |
+
+### 5.2 M07 Options and Parity
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Call Payoff | `max(0, S_T - X)` | `M07` | payoff 不是 profit |
+| Put Payoff | `max(0, X - S_T)` | `M07` | 高频 |
+| Long Call Profit | `max(0, S_T - X) - c_0` | `M07` | premium 不能漏 |
+| Long Put Profit | `max(0, X - S_T) - p_0` | `M07` | premium 不能漏 |
+| Put-Call Parity | `c + PV(X) = p + S_0` | `M07` | European options |
+| Put-Call Parity with Known Income | `c + PV(X) + PV(I) = p + S_0` | `M07` | 有已知股利/收入时调整 |
+| Put-Call Parity with Yield | `c + PV(X) = p + S_0e^{-qT}` | `M07` | 连续收益率口径 |
+| Synthetic Long Call | `c = p + S_0 - PV(X)` | `M07` | 会移项比背图强 |
+| Synthetic Long Put | `p = c + PV(X) - S_0` | `M07` | parity 移项 |
+| Synthetic Long Stock | `S_0 = c - p + PV(X)` | `M07` | fiduciary call/protective put 等价 |
+| Synthetic Protective Put | `p + S_0 = c + PV(X)` | `M07` | 两边经济等价 |
+| Intrinsic Value | `max(0, payoff driver)` | `M07` | call/put 分别代入 |
+| European Call Lower Bound | `c >= max(0, S_0 - PV(X))` | `M07` | 【考纲重点】套利边界 |
+| European Put Lower Bound | `p >= max(0, PV(X) - S_0)` | `M07` | 套利边界 |
+| American Option Value Bound | `American option value >= European option value` | `M07` | 提前行权权利不降低价值 |
+
+### 5.3 M08 Binomial Valuation
+
+| 指标 | 公式 | 知识树节点 | 考试说明 |
+|------|------|------------|----------|
+| Hedge Ratio | `h = (C_u - C_d)/(S_u - S_d)` | `M08` | replication 核心 |
+| Risk-neutral Probability | `p* = [(1+r)-d]/(u-d)` | `M08` | 不是真实概率 |
+| One-Period Option Value | `V_0 = [p*V_u + (1-p*)V_d]/(1+r)` | `M08` | 先算 terminal payoff |
+| Replicating Portfolio Value | `V_0 = hS_0 + B` | `M08` | `B` 可为 borrowing |
+| Borrowing/Lending in Replication | `B = (C_d - hS_d)/(1+r)` | `M08` | 用下行状态求无风险借贷头寸 |
+
+### 5.4 考纲范围标记
+
+| 标记 | 内容 |
+|------|------|
+| 【考纲重点】 | Forwards/futures pricing and value、swap net payment and value direction、option payoff/profit/moneyness、put-call parity/synthetics/bounds、one-period binomial valuation |
+| 【考纲内但无核心公式】 | Market features, uses/risks, exchange vs OTC, hedge/speculation/arbitrage distinctions |
+| 【超纲/扩展】 | Black-Scholes 公式、Greeks 全套计算、多期树完整回溯、复杂 swap curve bootstrapping 不作为 Level I 必背公式 |
+
+---
 
 ## 6. 常见考点与解题思路
 
-- **考点 1：定义与边界**。看到英文术语时，先翻译成中文含义，再判断它解决的是收益、风险、估值、披露、治理还是合规问题。
-- **考点 2：方向判断**。如果题干改变一个变量，先写出经济直觉，再用公式或框架验证方向。
-- **考点 3：比较题**。用“适用条件 - 优点 - 局限 - 典型陷阱”四列比较，不要只背定义。
-- **考点 4：解释题**。答案必须包含结果含义，例如“更高/更低意味着什么”，以及是否需要补充假设。
+| 重要性 | 考点 | 解题动作 |
+|---|---|---|
+| ⭐⭐⭐ | 7.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐⭐ | 7.2 Swaps vs. Forwards | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| ⭐⭐ | 7.3 Swap Values and Prices | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 
 ## 7. 易错点与考试陷阱
 
-- **中英文错配**：看到 `Pricing and Valuation of Interest Rates and Other Swaps` 相关英文词，不要只按中文直觉判断，先回到官方定义。
-- **LOS 动词误读**：`calculate` 要算并解释，`compare` 要列差异，`evaluate` 要给判断依据。
-- **口径混用**：时间、收益率、现金流、报告期、组合权重或会计口径不一致时，结论很容易反向。
-- **孤立背诵**：本模块知识点通常会与前后模块联动，刷题时记录它触发了哪个上游概念。
+| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+|---|---|---|
+| ❌ option holder 一定会行权 | ✅ 只有在经济上有利时才行权 | 按官方定义和 LOS 口径核验。 |
+| ❌ payoff 就是 profit | ✅ profit 还要减 premium/融资成本 | 按官方定义和 LOS 口径核验。 |
+| ❌ futures 和 forwards 完全一样 | ✅ futures 有 daily settlement 和 margining | 按官方定义和 LOS 口径核验。 |
+| ❌ forward pricing 可以不看 income | ✅ 分红/收益率会改变 fair forward price | 按官方定义和 LOS 口径核验。 |
+| ❌ call 越贵越差 | ✅ 价格要结合波动率、到期日、内在值判断 | 按官方定义和 LOS 口径核验。 |
+| ❌ put-call parity 适用于所有期权 | ✅ 基础版本用于 European options | 按官方定义和 LOS 口径核验。 |
+| ❌ binomial 先求 risk-neutral p 就够了 | ✅ terminal payoff 和 hedge ratio 同样关键 | 按官方定义和 LOS 口径核验。 |
+| ❌ swap 会凭空创造收益 | ✅ swap 本质是交换现金流暴露 | 按官方定义和 LOS 口径核验。 |
+| ❌ long forward 和 long call 一样 | ✅ 一个是 obligation，一个是 right | 按官方定义和 LOS 口径核验。 |
+| ❌ 衍生品题都先代公式 | ✅ 先画 payoff 往往能救整题 | 按官方定义和 LOS 口径核验。 |
 
 ## 8. 跨模块关联
 
-- **上游模块**：[[M06-Pricing-and-Valuation-of-Futures-Contracts]]。它提供本模块所需的定义、变量或基础框架。
-- **下游模块**：[[M08-Pricing-and-Valuation-of-Options]]。它通常会把本模块工具用于更复杂的估值、风险或情境判断。
-- **跨科连接**：与 Portfolio Management 的风险收益框架、Financial Statement Analysis 的证据质量、Ethics 的合规判断保持连接。
+- **上游模块**：[[M06-Pricing-and-Valuation-of-Futures-Contracts]]。先用它提供定义、变量或基础框架。
+- **下游模块**：[[M08-Pricing-and-Valuation-of-Options]]。本模块输出会被后续更复杂题型调用。
+
+### Legacy 关联补充
+
+```text
+Instrument and Market Features
+├── Forward commitments -> forward/futures/swaps cash-flow obligations (中文)
+└── Contingent claims -> option payoff asymmetry (中文)
+Uses and Risks
+├── issuer hedge -> financing/operating exposure control (中文)
+└── investor exposure -> capital efficiency + leverage discipline (中文)
+Pricing Spine
+├── no-arbitrage -> replication -> cost of carry (中文)
+├── forwards/futures -> forward value and daily settlement (中文)
+├── swaps -> bond pair / FRA strip intuition (中文)
+└── options -> parity -> binomial valuation (中文)
+```
+
+---
+
 
 ## 9. 复习与刷题提示
 
 - 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义和用途。
+- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
 - 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
 - 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
 
 ## 10. Legacy Notes Integrated
 
-以下内容来自高置信 legacy 映射，已作为补强入口保留；若与官方 2026 LOS 冲突，以官方内容为准。
-### 来源：00-Derivatives-MOC.md（confidence 0.539）
-- **可复用结构**：00-Derivatives-MOC；笔记属性；最关键：先画 payoff，再找复制组合，再看无套利价格；科目概览；Derivatives 核心知识树 (Core Knowledge Tree)；核心对比专题
-- **高价值要点**：## 最关键：先画 payoff，再找复制组合，再看无套利价格；## Derivatives 核心知识树 (Core Knowledge Tree)；├── M01: 衍生品工具与市场 (Derivative Instruments and Markets)【考试核心】↔ 2026 Outline: Derivative Instrument and Market Features；├── M02: 远期承诺与或有求偿 (Forward Commitments and Contingent Claims)【考试核心】↔ 2026 Outline: Forward Commitment and Contingent Claim Features
-- **公式/计算线索**：difficulty: payoff 直觉、复制组合与定价公式高度绑定；│ │ ├── 对冲现有敞口；转换久期、Beta、货币、商品风险 (hedge an existing exposure; transform duration, beta, currency, commodity risk) (风险管理)；│ │ ├── 杠杆、流动性、交易对手、基差、模型、操作风险 (leverage, liquidity, counterparty, basis, model, operational risk) (衍生品风险)
-- **易错提示**：│ └── 注意：derivative value can be small today while exposure is economically large【考试陷阱】；│ └── 注意：right vs obligation is the first fork before every payoff question；│ └── 注意：hedging reduces a chosen risk; it may introduce basis or counterparty risk
+- **主要 legacy 来源**：`00-Derivatives-MOC.md` (high, 0.539)
+- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
+- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
