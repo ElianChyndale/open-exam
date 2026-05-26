@@ -1,0 +1,44 @@
+{
+  "skill_name": "cfa-note-annotator",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Prediction interval：X离X̄越远，区间越宽；SEE越大，区间越宽",
+      "expected_output": "Annotation appended to node 10.3.5 in Quant MOC and M10 module knowledge trees",
+      "files": [],
+      "expectations": [
+        "Annotation is placed at node 10.3.5 or equivalent in the Quantitative Methods MOC knowledge tree",
+        "Annotation is placed at the same node in the M10 Simple Linear Regression module knowledge tree",
+        "Annotation text includes the concept 'X离X̄越远' or '区间越宽' or 'SEE越大'",
+        "Annotation uses the ↳ 笔记： format",
+        "Knowledge tree structure is preserved after edit"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "记一下：callable bond 在利率下降时价格涨不上去因为有赎回权 cap 住 upside",
+      "expected_output": "Annotation appended to the callable bond / 或有条款 node in Fixed Income MOC and module",
+      "files": [],
+      "expectations": [
+        "Annotation targets a Fixed Income knowledge tree node related to callable bonds or 或有条款",
+        "Annotation is placed in both FI MOC and the relevant module file",
+        "Annotation explicitly references 'callable' or '赎回权' or 'cap'",
+        "Annotation uses the ↳ 笔记： format",
+        "Knowledge tree structure is preserved after edit"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "权益里 Gordon growth model 陷阱：r = D1/P0 + g，P0 是 current price 不是 book value",
+      "expected_output": "Annotation appended to the Gordon growth model node in Equity MOC and module",
+      "files": [],
+      "expectations": [
+        "Annotation targets an Equity MOC node related to Gordon growth model or equity valuation",
+        "Annotation is placed in both Equity MOC and the relevant module file",
+        "Annotation mentions P0 being current price, not book value",
+        "Annotation uses the ↳ 笔记： format",
+        "Knowledge tree structure is preserved after edit"
+      ]
+    }
+  ]
+}

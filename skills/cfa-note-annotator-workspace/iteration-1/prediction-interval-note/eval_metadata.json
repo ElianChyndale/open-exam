@@ -1,0 +1,27 @@
+{
+  "eval_id": 0,
+  "eval_name": "prediction-interval-note",
+  "prompt": "Prediction interval：X离X̄越远，区间越宽；SEE越大，区间越宽",
+  "assertions": [
+  {
+    "text": "Annotation is placed at node 10.3.5 or equivalent in the Quantitative Methods MOC knowledge tree",
+    "expectation": "The node line for 'Prediction' or '10.3.5' in Quant MOC has the annotation appended"
+  },
+  {
+    "text": "Annotation is placed at the same node in the M10 Simple Linear Regression module knowledge tree",
+    "expectation": "The same annotation appears in the M10 module's knowledge tree"
+  },
+  {
+    "text": "Annotation text includes the concept 'X离X̄越远' or '区间越宽' or 'SEE越大'",
+    "expectation": "The user's original note content is preserved in the annotation"
+  },
+  {
+    "text": "Annotation uses the ↳ 笔记： format",
+    "expectation": "The annotation prefix is exactly '↳ 笔记：' or similar standardized format"
+  },
+  {
+    "text": "Knowledge tree structure is preserved after edit",
+    "expectation": "The indentation, ├─, └─, │ characters in the tree are not disrupted"
+  }
+]
+}

@@ -1,0 +1,33 @@
+Summary: CFA Note Annotator — Gordon Growth Model Trap
+====================================================================
+
+User Note:
+  "权益里 Gordon growth model 陷阱：r = D1/P0 + g，P0 是 current price 不是 book value"
+
+1. Matched Node — MOC (00-Equity-MOC.md)
+   - Node: 8.2 DDM/Gordon
+   - Rationale: This node covers the Gordon Growth Model formulas including P0 = D1/(r-g)
+     and its rearrangement r = D1/P0 + g. The user's trap note about P0 being current
+     price rather than book value is a direct annotation on this GGM formula node.
+   - Line: 88, inside the ## 3. 核心知识树 ````text` code block.
+   - Annotation appended: " ↳ 笔记：r = D1/P0 + g 中 P0 是 current price，不是 book value"
+
+2. Matched Node — Module (M08-Equity-Valuation-Concepts-and-Basic-Tools.md)
+   - Node: 8.1.2 DDM/GGM
+   - Rationale: This is the module tree node that covers the core GGM formula
+     P0 = D1/(r-g). The implied required return formula r = D1/P0 + g is a direct
+     algebraic rearrangement. The trap that P0 is current market price (not book value)
+     applies here at the formula's source.
+   - Line: 109, inside the ## 3. 核心知识树 ````text` code block.
+   - Annotation appended: " ↳ 笔记：r = D1/P0 + g 中 P0 是 current price，不是 book value"
+
+3. Ambiguity Assessment
+   - No ambiguity. Keywords "权益" and "Gordon growth model" uniquely identify the
+     Equity subject (M08). Within the module tree, both 8.1.2 (DDM/GGM) and 8.1.3
+     (Required return / GGM implied return) could host this annotation, but 8.1.2
+     was chosen because the trap is about the GGM formula's P0 meaning itself, not
+     about the required return concept. The MOC uses a single node (8.2) covering
+     all GGM sub-topics, so there was no ambiguity there.
+   - The alternative node 8.1.3 (Required return) also references "GGM implied return"
+     (i.e., r = D1/P0 + g), but placing the annotation on 8.1.2 keeps it at the GGM
+     formula's primary location in the tree.

@@ -1,0 +1,7 @@
+```
+├─ 8. Equity Valuation: Concepts and Basic Tools
+│  ├─ 8.1 估值入口：market price vs intrinsic value；投资判断看 mispricing 是否足以覆盖风险和成本。
+│  ├─ 8.2 DDM/Gordon：稳定分红、长期 `r > g`、股息与增长可持续时使用；`P0 = D1/(r-g)`。 ↳ 笔记：r = D1/P0 + g 中 P0 是 current price，不是 book value
+│  ├─ 8.3 Justified multiples：P/E、P/B、P/S 把 payout、ROE、margin、growth、required return 连成基本面逻辑。
+│  └─ 8.4 Relative valuation：先找真可比公司，再统一 trailing/forward、会计口径、资本结构和周期位置。
+```

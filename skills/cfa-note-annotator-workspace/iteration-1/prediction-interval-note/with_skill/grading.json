@@ -1,0 +1,39 @@
+{
+  "expectations": [
+    {
+      "text": "Annotation is placed at node 10.3.5 or equivalent in the Quantitative Methods MOC knowledge tree",
+      "passed": true,
+      "evidence": "MOC modified output shows node '10.4 预测' with appended annotation: '↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽'"
+    },
+    {
+      "text": "Annotation is placed at the same node in the M10 Simple Linear Regression module knowledge tree",
+      "passed": true,
+      "evidence": "Module modified output shows node '10.3.5 Prediction' with same annotation appended"
+    },
+    {
+      "text": "Annotation text includes the concept 'X离X̄越远' or '区间越宽' or 'SEE越大'",
+      "passed": true,
+      "evidence": "Annotation reads: 'X离X̄越远区间越宽；SEE越大区间越宽'"
+    },
+    {
+      "text": "Annotation uses the ↳ 笔记： format",
+      "passed": true,
+      "evidence": "Format is exactly '↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽'"
+    },
+    {
+      "text": "Knowledge tree structure is preserved after edit",
+      "passed": true,
+      "evidence": "All ├─, └─, │ characters intact. No indentation changes. Tree remains valid."
+    }
+  ],
+  "summary": {"passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0},
+  "execution_metrics": {
+    "tool_calls": {"Read": 8, "Write": 3, "Glob": 2, "Grep": 2},
+    "total_tool_calls": 15,
+    "total_steps": 6,
+    "errors_encountered": 0,
+    "output_chars": 5600,
+    "transcript_chars": 0
+  },
+  "timing": {"executor_duration_seconds": 79.6, "grader_duration_seconds": 0, "total_duration_seconds": 79.6}
+}

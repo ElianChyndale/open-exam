@@ -1,0 +1,12 @@
+{
+  "expectations": [
+    {"text": "Annotation targets a Fixed Income knowledge tree node related to callable bonds or 或有条款", "passed": false, "evidence": "Baseline provided educational explanation of callable bonds, negative convexity, YTC, OAS. No MOC edits."},
+    {"text": "Annotation is placed in both FI MOC and the relevant module file", "passed": false, "evidence": "No module file edits were made."},
+    {"text": "Annotation explicitly references 'callable' or '赎回权' or 'cap'", "passed": false, "evidence": "No annotation was created. Terms appeared only in explanation text."},
+    {"text": "Annotation uses the ↳ 笔记： format", "passed": false, "evidence": "No annotation was recorded."},
+    {"text": "Knowledge tree structure is preserved after edit", "passed": true, "evidence": "No edits were made, so structure is trivially preserved."}
+  ],
+  "summary": {"passed": 1, "failed": 4, "total": 5, "pass_rate": 0.2},
+  "execution_metrics": {"total_tool_calls": 7, "total_steps": 3, "errors_encountered": 0, "output_chars": 1900, "transcript_chars": 0},
+  "timing": {"executor_duration_seconds": 25.6, "total_duration_seconds": 25.6}
+}

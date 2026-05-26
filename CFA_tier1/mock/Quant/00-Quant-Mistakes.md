@@ -1,6 +1,6 @@
 ---
 bucket: Quant
-question_count: 12
+question_count: 13
 ---
 
 # Quant Mock Mistakes
@@ -123,4 +123,14 @@ question_count: 12
 - correct_resolution: A. rejected because the computed test statistic exceeds 2.807. For paired observations, use t = (mean difference - hypothesized difference) / (sample standard deviation of differences / sqrt(n)) = (4.25 - 0) / (6.25 / sqrt(25)) = 3.40. Since 3.40 > 2.807, reject H0.
 - evidence_refs: chat-2026-05-26-q22-paired-comparisons-screenshot
 - evidence_assets: inline-chat-image:q22-paired-comparisons-2026-05-26
+- moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | M10 Simple Linear Regression
+- error_type: formula_misuse
+- question_source: custom_drill
+- source_type: typed
+- wrong_choice_or_output: Prediction interval 公式少了根号下的 "+1" 项。遗漏的完整结构是：√(1 + 1/n + (X - X̄)² / ((n-1)sₓ²)) 中的 "1"（代表单个新观测值的预测误差）。如果不加这个 "+1"，算出来的区间其实是 confidence interval for mean response，而不是 prediction interval。
+- correct_resolution: 完整 Prediction interval 公式：Ŷ ± t_c × SEE × √(1 + 1/n + (X - X̄)² / ((n-1) × sₓ²))。关键区别：(1) Prediction interval = CI for mean response 的公式基础上，多了一个 "+1" 项。(2) "+1" 代表单个新观测值的残差项方差，因为新观测值不仅有估计参数的不确定性，还有自身残差扰动的不确定性。(3) X 离 X̄ 越远 → (X-X̄)² 越大 → 区间越宽；(4) SEE 越大 → 区间越宽。
+- evidence_refs: chat-2026-05-26-regression-prediction-q28
+- evidence_assets: 
 - moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md

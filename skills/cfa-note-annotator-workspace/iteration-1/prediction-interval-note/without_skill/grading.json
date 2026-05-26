@@ -1,0 +1,12 @@
+{
+  "expectations": [
+    {"text": "Annotation is placed at node 10.3.5 or equivalent in the Quantitative Methods MOC knowledge tree", "passed": false, "evidence": "Baseline provided educational explanation only. No MOC file edits were made."},
+    {"text": "Annotation is placed at the same node in the M10 Simple Linear Regression module knowledge tree", "passed": false, "evidence": "No module file edits were made."},
+    {"text": "Annotation text includes the concept 'X离X̄越远' or '区间越宽' or 'SEE越大'", "passed": false, "evidence": "No annotation was created. Explanation was given in natural language instead."},
+    {"text": "Annotation uses the ↳ 笔记： format", "passed": false, "evidence": "No annotation was recorded."},
+    {"text": "Knowledge tree structure is preserved after edit", "passed": true, "evidence": "No edits were made, so structure is trivially preserved."}
+  ],
+  "summary": {"passed": 1, "failed": 4, "total": 5, "pass_rate": 0.2},
+  "execution_metrics": {"total_tool_calls": 12, "total_steps": 4, "errors_encountered": 0, "output_chars": 2800, "transcript_chars": 0},
+  "timing": {"executor_duration_seconds": 31.0, "total_duration_seconds": 31.0}
+}

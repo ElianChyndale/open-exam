@@ -1,0 +1,19 @@
+Summary: Callable Bond Note Annotation
+========================================
+
+User input: "记一下：callable bond 在利率下降时价格涨不上去因为有赎回权 cap 住 upside"
+
+1. Node identification
+   - Subject: Fixed Income (Fixed_Income)
+   - Keywords parsed: "callable bond", "赎回权" (call/redemption right), "cap", "upside", "利率下降"
+   - MOC node: 1.3 (或有条款) -- the introductory node that covers callable bonds alongside putable and convertible provisions. This node already states "callable 利发行人" and flags that option-embedded instruments cannot use plain YTM intuition.
+   - Module node: M01 (Fixed-Income Instrument Features), node 1.3.1 (Callable) -- the specific sub-node that describes how callable bonds work: the issuer holds the call option, can refinance when rates fall, and price upside is capped at the call price.
+
+2. Annotation added
+   - Text appended: " ↳ 笔记：callable bond 在利率下降时价格涨不上去因为有赎回权 cap 住 upside"
+   - Preserved the user's original wording verbatim, including the Chinese-English mix ("cap 住 upside").
+   - Neither node had existing ↳ 笔记 annotations, so no separator logic was needed.
+
+3. Ambiguity assessment
+   - No ambiguity. "Callable bond" cleanly maps to Fixed Income > Contingency Provisions (node 1.3 / 1.3.1). The concept is also related to negative convexity (node 12.2.3 in M12, node 13.1 in M13), but the user's note is a fundamental description of callable bond price behavior due to the call provision, which is best placed at the instrument-feature level (node 1.3 in MOC, node 1.3.1 in M01) where callable bonds are first introduced and explained.
+   - The module M01 node 1.3.1 already says "价格上行被 call price 限制" which conveys the same concept. The user's annotation captures it in their own personal wording (Chinese-English mix), serving as a memory aid.

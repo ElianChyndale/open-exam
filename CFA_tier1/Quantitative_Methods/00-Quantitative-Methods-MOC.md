@@ -94,10 +94,10 @@ Quantitative Methods (6-9%)
 │  ├─ 9.1 Correlation test：检验 `ρ=0` 用 `t=r√[(n-2)/(1-r²)]`，df=`n-2`
 │  └─ 9.2 Contingency table：expected cell=`row total × column total / n`，df=`(r-1)(c-1)`
 ├─ 10. Simple Linear Regression
-│  ├─ 10.1 模型设定：`Y_i=b0+b1X_i+ε_i`，slope 是 X 每变 1 单位的 Y 期望变化
+│  ├─ 10.1 模型设定：`Y_i=b0+b1X_i+ε_i`，slope 是 X 每变 1 单位的 Y 期望变化 ↳ 笔记：ε 假设：不相关、方差恒定、正态分布（不是 Y 正态）
 │  ├─ 10.2 ANOVA 与拟合：SST=SSR+SSE，`R²=SSR/SST` 只说明样本解释度
 │  ├─ 10.3 斜率与整体检验：slope 用 t，整体模型用 F，简单回归中 `F=t²`
-│  └─ 10.4 预测：点预测 `Ŷ=b0+b1X`，prediction interval 宽于 confidence interval
+│  └─ 10.4 预测：点预测 `Ŷ=b0+b1X`，prediction interval 宽于 confidence interval ↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽
 ├─ 11. Introduction to Big Data Techniques
 │  ├─ 11.1 Fintech 数据：volume / velocity / variety，非结构化数据需要清洗和特征提取
 │  ├─ 11.2 AI/ML 类型：supervised / unsupervised / reinforcement，先看有无标签
@@ -254,7 +254,7 @@ Portfolio and inference layer
 | Slope t-stat | `t = (b_1 - β_{1,0})/SE(b_1)` | `10.3` | 检验 slope |
 | F-stat | `F = MSR/MSE` | `10.3` | 检验整体模型 |
 | Predicted Value | `Ŷ = b_0 + b_1X` | `10.3` | 【考纲重点】预测因变量点估计 |
-| Prediction Interval | `Ŷ ± t_c x s_f` | `10.3` | 【考纲重点】CFA L1 常给 `s_f` 或软件输出，不要求手推完整 `s_f` |
+| Prediction Interval | `Ŷ ± t_c × SEE × √(1 + 1/n + (X - X̄)² / ((n-1) × sₓ²))` | `10.3` | 【考纲重点】根号下 `+1` 区分 prediction interval vs confidence interval；X 离 X̄ 越远区间越宽；SEE 越大区间越宽 |
 
 ### 考纲范围标记
 
