@@ -96,6 +96,56 @@ _Alignment score: 0.53. Original official module field: M9: Analysis of Income T
     └── 税率变动时 DTA/DTL 需按新税率重计量
 ```
 
+## 📖 知识点详解
+
+### 知识点1：会计利润 vs 应税所得（Accounting Profit vs Taxable Income）
+
+- **应付税款 vs 所得税费用 (Taxes Payable vs Income Tax Expense)**：
+  - 应付税款(taxes payable) = 应税所得(taxable income) x 法定税率，是实际应缴给税务局的金额
+  - 所得税费用(income tax expense) = 会计利润(accounting profit) x 法定税率基础上的调整，是财报中确认的费用
+  - 两者的差异源于会计准则与税法规则的不同——这就产生了递延所得税
+
+- **暂时性差异 (Temporary Differences)**：
+  - 当资产或负债的账面价值(carrying amount)与计税基础(tax base)不同时产生
+  - 预期在未来转回(reversal)，产生 DTA 或 DTL
+  - 常见来源：折旧方法差异、收入确认时点差异、准备金的税前扣除差异
+  - 例子：税法加速折旧(accelerated depreciation)导致前期计税基础低于账面价值 → 产生 DTL
+
+- **永久性差异 (Permanent Differences)**：
+  - 不会在未来期间转回，因此不影响递延所得税
+  - 常见来源：罚款(fines and penalties)、某些免税收入(tax-exempt income)
+  - 影响有效税率(effective tax rate)但不产生 DTA/DTL
+
+### 知识点2：递延所得税资产与负债（Deferred Tax Assets and Liabilities）
+
+**递延所得税负债 (Deferred Tax Liability, DTL)：**
+- 产生原因：会计利润 > 应税所得（当期少交税，未来多交税）
+- 常见场景：固定资产加速折旧、收入分期确认
+
+**递延所得税资产 (Deferred Tax Asset, DTA)：**
+- 产生原因：会计利润 < 应税所得（当期多交税，未来少交税）
+- 常见场景：保修费用(warranty expense)计提、坏账准备(bad debt provision)、经营亏损结转(operating loss carryforward)
+- DTA 的估价备抵(valuation allowance)：若未来很可能没有足够应税收入实现 DTA，需计提估价备抵
+
+**分类与列报：**
+- IFRS：DTA/DTL 通常分类为非流动(non-current)
+- US GAAP：按相关资产/负债的分类确定流动性
+- DTA/DTL 不能简单以净额列示(netting)，需满足特定条件
+
+### 知识点3：有效/法定/现金税率（Effective / Statutory / Cash Tax Rates）
+
+- **有效税率 (Effective Tax Rate)** = `Income Tax Expense / Pretax Income`——财报中呈现的实际税率
+- **法定税率 (Statutory Tax Rate)** = 公司所在司法管辖区的企业法定税率——用于计算所得税费用的基准
+- **现金税率 (Cash Tax Rate)** = `Cash Taxes Paid / Pretax Income`——实际现金缴税率
+
+三者差异的分析意义：有效税率与法定税率的差异提示永久性差异的存在；现金税率低于有效税率可能说明大量 DTL 转回或存在税务优惠
+
+### 知识点4：税务披露与有效税率调节（Tax Disclosures and Effective-Rate Reconciliation）
+
+- 公司需要提供有效税率与法定税率的调节表(reconciliation)
+- 调节项目包括：永久性差异、不同税率辖区的影响、税率变动、DTA 估价备抵变动
+- 分析师应关注：有效税率趋势异常、税率波动巨大、DTA 估价备抵的突然变动
+
 ### 📐 关键公式表
 
 | 指标 | 公式 | 说明 |

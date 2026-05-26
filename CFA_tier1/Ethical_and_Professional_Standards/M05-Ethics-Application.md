@@ -100,6 +100,62 @@ _Alignment score: 1.00. Original official module field: Module 5: Ethics Applica
     └── 非 GAAP 指标可能在 Ethics 情境中被用于误导
 ```
 
+## 📖 知识点详解
+
+### 知识点1：伦理决策框架（Ethical Decision-Making Framework）
+
+伦理决策框架提供了一套**结构化方法**来应对道德困境，帮助从业者在复杂情境中做出可辩护的判断。
+
+**CFA 协会推荐的 7 步伦理决策框架：**
+
+| 步骤 | 内容 | 关键问题 |
+|------|------|----------|
+| 1 | 识别事实与情境 (Identify facts and context) | 谁做了什么？在什么情况下？ |
+| 2 | 界定利益相关方与道德问题 (Define stakeholders and ethical issue) | 谁会受影响？核心道德问题是什么？ |
+| 3 | 确定法律与标准中的相关义务 (Identify relevant obligations) |适用哪些法律法规、CFA 标准或公司政策？|
+| 4 | 考虑可用的行动方案 (Consider available alternatives) |有哪些选择？每种方案的后果？|
+| 5 | 做出决策并检验其合理性 (Make and test the decision) |能否向客户、雇主或公众公开辩护？|
+| 6 | 实施决策 (Act) |采取与决策一致的行动 |
+| 7 | 反思结果 (Reflect on the outcome) |从结果中学到了什么？未来如何改进？|
+
+**关键检验标准**：决策是否能在"日光测试" (sunlight test / front-page test) 下站得住脚？即你是否愿意看到自己的决策登上新闻头条？
+
+### 知识点2：道德、法律与职业标准的三角关系（Ethics, Law, and Professional Standards）
+
+| 层面 | 来源 | 约束力 | 典型关系 |
+|------|------|--------|----------|
+| 法律 (Law) | 立法机构/监管机构 | 强制 | 行为的最低底线 |
+| CFA 标准 (CFA Standards) | CFA 协会 | 对会员/考生强制 | 高于法律底线的职业要求 |
+| 道德 (Ethics) | 职业价值观 | 自我约束 | 指导"应该做什么" |
+
+**核心原则**：当法律与 CFA 标准冲突时，遵循更严格者 (stricter standard)。CFA 标准可能要求高于法律最低要求，但不能要求违反法律。
+
+### 知识点3：情境题方法论（Scenario Analysis Methodology）
+
+**Ethics 情境题的标准化解题流程：**
+
+1. **提取事实**：确定谁做了什么、在什么时间、涉及哪些信息
+2. **识别受影响方**：客户 (client) / 雇主 (employer) / 市场 (market) / 职业 (profession)
+3. **映射标准**：判断触发哪些 Code of Ethics 或 Standards
+4. **评估更严格标准**：是否有法律或公司政策比 CFA Standard 更严格？
+5. **选择最保守行动**：以 client > market integrity > employer > personal 为优先级
+6. **验证公开可辩护性**：决策能否通过"日光测试"？
+
+### 知识点4：常见违规模式（Common Violation Patterns）
+
+| 模式 | 典型场景 | 触发的标准 |
+|------|----------|-----------|
+| 信息优势滥用 | 利用未公开的重大信息交易 | II(A) MNPI |
+| 利益冲突未披露 | 持有推荐证券但未告知客户 | VI(A) Disclosure |
+| 推荐不匹配 | 向保守客户推荐高风险产品 | III(C) Suitability |
+| 疏忽勤勉 | 使用第三方研究未独立验证 | V(A) Diligence |
+| 陈述夸大 | 声称过往业绩保证未来收益 | I(C) Misrepresentation |
+| 客户保密泄露 | 未经授权透露客户交易信息 | III(E) Confidentiality |
+| 交易优先错误 | 先执行个人交易再处理客户订单 | VI(B) Priority |
+| 监督缺失 | 未建立合规流程导致下属违规 | IV(C) Supervision |
+
+---
+
 ### 📐 关键公式表
 
 | 优先级 | 义务对象 | 对应标准 |

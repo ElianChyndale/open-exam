@@ -81,6 +81,52 @@ The candidate should be able to:
         └── 资产减值：IFRS 可转回，US GAAP 不可转回
 ```
 
+## 📖 知识点详解
+
+### 知识点1：分析框架步骤（Framework Steps）
+
+财务报表分析是一个四步骤的系统化过程：
+
+**第一步：阐明目的与背景 (Articulate Purpose and Context)**
+- 明确分析目的：股权估值(equity valuation)、信用分析(credit analysis)、并购评估(merger and acquisition assessment) 等
+- 了解受众(audience)需求：内部管理层、外部投资者还是监管机构
+- 确定分析的时间范围：短期交易(trading horizon)还是长期持有(investment holding)
+
+**第二步：收集数据 / 处理数据 / 分析数据 (Collect Data / Process Data / Analyze Data)**
+- 收集原始数据：年度报表(annual reports)、中期报表(interim statements)、监管文件(regulatory filings)
+- 数据处理：调整会计政策差异(accounting policy differences)、标准化财务报表以增强可比性
+- 数据分析：计算财务比率(financial ratios)、进行同比例分析(common-size analysis)、趋势分析(trend analysis)和行业对比
+
+**第三步：解释与分析结果 (Interpret and Analyze Results)**
+- 将分析结果置于行业(industry)和宏观经济(macroeconomic)背景下解读
+- 识别关键驱动因素(key drivers)和风险因素(risk factors)
+- 运用敏感性分析(sensitivity analysis)检验假设稳健性
+
+**第四步：更新结论与建议 (Update Conclusions and Recommendations)**
+- 根据新信息(information)动态更新分析结论
+- 形成具体的投资建议(investment recommendations)
+- 持续监控(ongoing monitoring)关键财务指标的变化趋势
+
+### 知识点2：信息层级（Information Hierarchy）
+
+财务分析的信息来源具有明确的层级结构，理解各层级的用途和可靠性至关重要：
+
+**主要来源 (Primary Sources)：**
+- 年度与中期报表 (Annual and Interim Statements)：包括利润表(income statement)、资产负债表(balance sheet)、现金流量表(cash flow statement)及股东权益变动表(statement of changes in equity)
+- 监管文件 (Regulatory Filings)：如 SEC 的 10-K 年度申报和 10-Q 季度申报
+- 附注与补充信息 (Notes and Supplementary Information)：提供会计政策(accounting policies)、估计方法(estimation methods)和或有事项(contingencies)的详细说明
+
+**补充来源 (Supplementary Sources)：**
+- 管理层评论与审计报告 (Management Commentary and Audit Reports)：MD&A 部分包含管理层对经营成果的定性讨论；审计报告可揭示内控缺陷
+- 报告以外的其他分析师来源 (Other Analyst Sources)：行业报告(industry reports)、经济数据(economic data)、竞争者分析(competitor analysis)和专家访谈(专家访谈)
+
+### 知识点3：报告体系（Reporting Systems）
+
+- **准则差异改变可比性 (Standards Differences Alter Comparability)**：IFRS 原则导向(principle-based)，US GAAP 规则导向(rule-based)，两者的差异直接影响跨公司比较
+- 分析师需要识别特定项目（如存货计价、研发费用、资产减值）的准则差异，在分析时进行适当调整
+
+**【考试陷阱】** 附注(notes)与报告选择(reporting choices)常是单选题答案来源——会计政策变更的披露位置和具体内容往往决定分析方向。
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

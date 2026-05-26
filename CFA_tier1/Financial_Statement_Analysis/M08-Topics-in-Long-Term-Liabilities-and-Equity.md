@@ -75,6 +75,45 @@ The candidate should be able to:
 │   🎯 高频考点：融资 vs 经营租赁对比、DB 养老金、股权激励费用处理
 ```
 
+## 📖 知识点详解
+
+### 知识点1：租赁会计：出租人与承租人（Lease Reporting: Lessor vs Lessee）
+
+**承租人会计 (Lessee Accounting)：**
+- US GAAP (ASC 842) / IFRS 16：两类租赁均要求承租人在资产负债表确认使用权资产(right-of-use asset)和租赁负债(lease liability)
+- 融资租赁(finance lease)：承租人同时确认折旧费用(depreciation expense)和利息费用(interest expense)，总费用前期更高
+- 经营租赁(operating lease)：承租人确认单一租赁费用(straight-line lease expense)
+- 对利润表的影响：融资租赁前期费用更高、后期费用更低；经营租赁费用在各期相对均匀
+
+**出租人会计 (Lessor Accounting)：**
+- 融资租赁(finance/sales-type lease) vs 经营租赁(operating lease)
+- 出租人分类取决于所有权风险报酬是否转移给承租人
+- 销售型租赁(sales-type lease)在租赁开始日确认销售利润
+
+### 知识点2：确定缴费 vs 确定给付计划（Defined Contribution vs Defined Benefit Plans）
+
+**确定缴费计划 (Defined Contribution Plan)：**
+- 雇主按固定比例缴费(contribution)，员工承担投资风险(investment risk)
+- 会计处理简单：当期缴费确认为费用，无后续养老金负债(pension liability)
+
+**确定给付计划 (Defined Benefit Plan)：**
+- 雇主义务按预定公式支付退休福利，雇主承担投资风险和精算风险(actuarial risk)
+- 关键概念：养老金负债(PBO, projected benefit obligation)、计划资产公允价值(fair value of plan assets)、净养老金融资状况(net pension funded status)
+- 定期养老金成本(periodic pension cost)包括服务成本(service cost)、利息成本(interest cost)、计划资产预期回报(expected return on plan assets)
+
+**分析注意事项：**
+- DB 计划对财务报表的影响复杂，分析师需关注精算假设(actuarial assumptions)（折现率、工资增长率、死亡率）的变化
+- 计划资产与 PBO 之间的缺口(gap)即净负债或净资产
+
+### 知识点3：股权激励薪酬（Stock-Based Compensation）
+
+- 员工期权(employee stock options, ESOs)和限制性股票(restricted stock units, RSUs)
+- 确认原则：按授予日公允价值(fair value at grant date)确认薪酬费用(compensation expense)，在服务期(vesting period)内分摊
+- 对分析师的意义：期权费用降低报告利润，但不会减少现金流；稀释(dilution)影响 EPS 计算
+- 注意：股权激励费用是 non-cash charge，在间接法 CFO 中应加回
+
+**【考试陷阱】** 负债/权益列报方式的选择(liability/equity presentation choices)会改变杠杆解读(leverage reading)——例如优先股的分类直接影响 debt-to-equity 比率的计算。
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

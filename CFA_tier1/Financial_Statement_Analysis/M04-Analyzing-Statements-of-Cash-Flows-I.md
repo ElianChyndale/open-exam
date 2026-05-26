@@ -79,6 +79,44 @@ The candidate should be able to:
 │   🎯 高频考点：间接法调整项、IFRS vs US GAAP 分类、营运资本符号
 ```
 
+## 📖 知识点详解
+
+### 知识点1：三大报表联动（Three-Statement Linkage）
+
+- **现金流量表连接利润表与资产负债表变动 (Cash Flow Statement Links Income Statement to Balance Sheet Changes)**：现金的增减变化源于利润表中的经营活动以及资产负债表项目的变动
+- **CFO/CFI/CFF 分类现金变动来源 (CFO / CFI / CFF Classify the Source of Cash Movement)**：经营活动现金流(CFO)、投资活动现金流(CFI)、融资活动现金流(CFF)三大分类反映企业现金循环的不同侧面
+- 三表联动的核心逻辑：净利润 + 非现金调整 + 营运资本变动 = CFO；资产负债科目的跨期变化体现在现金流量表的各个分类中
+
+### 知识点2：直接法与间接法编制（Direct vs Indirect Preparation）
+
+**间接法 (Indirect Method)：**
+- 从净利润出发，调整非现金项目(noncash charges)和营运资本变动(working capital changes)
+- 非现金项目加回：折旧(depreciation)、摊销(amortization)、减值损失(impairment losses)
+- 营运资本调整：应收账款增加减少现金，应付账款增加增加现金
+
+**直接法 (Direct Method)：**
+- 直接列示现金收入(cash collected from customers)和现金支出(cash paid to suppliers, employees, etc.)
+- IFRS 鼓励直接法，US GAAP 两种均可但在实务中间接法更常见
+- 注意：NI-to-CFO 桥接是调节表(reconciliation)，而非现金流量的定义
+
+#### 核心公式 (English)
+- `CFO = NI + Noncash Charges - Noncash Gains/Losses +/- WC Changes`
+
+**从利润表和资产负债表数据计算现金流 (Compute Cash Flows from Income Statement and Balance Sheet Data)：**
+- 通过应收账款的变动来推算现金收款：现金收款 = 收入 - 应收账款增加额
+- 通过应付账款的变动来推算现金付款：现金付款 = 费用 + 应付账款减少额
+
+**将间接法 CFO 转换为直接法 (Convert Indirect CFO to Direct Method)：**
+- 逐项将应计制(accrual basis)下的收入和费用调整为收付实现制(cash basis)
+- 需要利润表项目和对应资产负债表科目的期初期末余额
+
+### 知识点3：IFRS vs US GAAP 现金流分类差异（Cash Flow Classification）
+
+- 利息支付(interest paid)：IFRS 可选经营或融资；US GAAP 要求归于经营
+- 股利支付(dividends paid)：IFRS 可选经营或融资；US GAAP 归于融资
+- 利息和股利收入(interest and dividends received)：IFRS 可选经营或投资；US GAAP 归于经营
+- 银行透支(bank overdrafts)：IFRS 可视为现金等价物的一部分；US GAAP 通常归类为融资
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

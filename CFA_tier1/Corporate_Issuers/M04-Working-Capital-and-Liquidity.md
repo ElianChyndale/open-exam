@@ -79,16 +79,41 @@ The candidate should be able to:
 │   🎯 高频考点：CCC 计算、激进 vs 保守政策、流动性比率含义
 ```
 
-## 📐 关键公式表
+## 📖 知识点详解
 
-| 公式 | 解释 | 使用场景 | ⚠️ 注意 |
-|------|------|----------|---------|
-| `DIO = (Avg Inventory / COGS) × 365` | 存货周转天数 | 衡量存货出售速度 | 越低越好，但过低可能缺货 |
-| `DSO = (Avg Receivables / Revenue) × 365` | 应收账款天数 | 衡量收款速度 | 越高说明收款越慢 |
-| `DPO = (Avg Payables / Purchases) × 365` | 应付账款天数 | 衡量付款速度 | 分母是 Purchases，非 COGS ⚠️ |
-| `Operating Cycle = DIO + DSO` | 经营周期 | 从采购到收款的完整周期 | 越长说明营运资本需求越大 |
-| `CCC = DIO + DSO - DPO` | 现金转换周期 | 实际需融资天数 | 越短越好；负值更优 |
-| `Current Ratio = CA / CL` | 流动比率 | 短期偿债能力 | 包含存货，可能虚高 |
+### 知识点1：经营周期与现金转换周期 (Operating Cycle and Cash Conversion Cycle)
+
+**核心概念**：营运资本管理的核心是管理短期资产与短期负债之间的匹配，确保公司有足够流动性维持日常运营。经营周期代表公司从采购存货到收回现金的完整周期，现金转换周期代表公司实际需要外部融资的天数。
+
+- **经营周期 (Operating Cycle)** = DIO + DSO。从采购存货到收回现金的完整时间
+- **现金转换周期 (CCC)** = DIO + DSO - DPO。公司实际需要融资的天数
+- **DIO (Days of Inventory Outstanding)** = (Avg Inventory / COGS) × 365。存货售出平均天数
+- **DSO (Days of Sales Outstanding)** = (Avg Receivables / Revenue) × 365。应收账款回收天数
+- **DPO (Days of Payables Outstanding)** = (Avg Payables / Purchases) × 365。应付账款支付天数
+- 💡 CCC 越短越好。负的 CCC（如零售业先收钱再付供应商）是最优的营运资本模式
+
+**考试应用**：CCC计算是必考题型。注意DPO分母是Purchases非COGS。缩短CCC并非总是好事——过度压缩DSO可能流失客户，过度延长DPO可能激怒供应商。
+
+### 知识点2：融资政策 (Financing Policy)
+
+**核心概念**：公司为营运资本融资可分为激进和保守两种策略。激进政策使用更多短期债务，成本较低但展期风险高；保守政策使用更多长期资金，更稳健但降低资产回报率。
+
+- **激进政策 (Aggressive Policy)**：更多短期债务，流动性缓冲小。优势是融资成本低（短期利率通常低于长期），劣势是展期风险（rollover risk）高
+- **保守政策 (Conservative Policy)**：更多长期资金和权益融资，持有较大流动性缓冲。更稳健但降低ROA
+- 💡 现金流可预测性越强，越适合采用激进政策；反之则宜保守
+
+**考试应用**：给定融资行为描述，判断政策类型。短期融资占比高→激进；长期融资占比高+高流动性缓冲→保守。展期风险是激进政策的主要风险。
+
+### 知识点3：流动性比率 (Liquidity Ratios)
+
+**核心概念**：流动性比率衡量公司偿还短期债务的能力。不同比率从宽到严提供了多角度的流动性评估，但每个比率都有其局限性。
+
+- **流动比率 (Current Ratio)** = CA / CL。最宽泛的流动性指标，但包含不易变现的存货
+- **速动比率 (Quick Ratio)** = (Cash + Marketable Securities + Receivables) / CL。排除存货，更严格
+- **现金比率 (Cash Ratio)** = (Cash + Marketable Securities) / CL。最保守，极少单独使用
+- 💡 流动比率高不一定意味着流动性好——如果大量资产是滞销存货，则无法快速变现
+
+**考试应用**：流动性比率的解读陷阱是常见考点。高流动比率可能源于大量滞销存货而非真实现金充足。速动比率比流动比率更能反映短期流动性。
 | `Quick Ratio = (Cash + ST Inv + AR) / CL` | 速动比率 | 严格流动性 | 排除存货 |
 | `Cash Ratio = (Cash + ST Inv) / CL` | 现金比率 | 最保守流动性 | 很少单独使用 |
 | `Net Working Capital = CA - CL` | 净营运资本 | 流动性缓冲 | 正值为传统模式 |

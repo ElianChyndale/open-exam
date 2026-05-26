@@ -69,6 +69,44 @@ The candidate should be able to:
    └─ ⚠️ 为投资者提供更精细的信用风险区分
 ```
 
+## 📖 知识点详解
+
+### 知识点1：三支柱框架（Three Pillars of Credit Analysis）
+**核心概念**：公司信用分析从商业风险、财务风险和治理结构三个维度评估借款人的偿债能力。这三个支柱共同构成了全面的信用评估框架。
+- **商业风险（Business Risk）**：行业特征（周期型 vs 防御型、进入壁垒、监管环境）和竞争地位（市场份额、定价能力、产品多元化）
+- **财务风险（Financial Risk）**：杠杆率（Debt/EBITDA）、覆盖率（EBITDA/Interest、EBIT/Interest）、现金流稳定性（FCF、营运资金管理）
+- **治理与结构（Governance & Structure）**：管理层质量、所有权结构、关联交易、股东友好度（股息政策）、财务报告透明度
+
+**考试应用**：综合运用三支柱框架评估公司信用质量，区分各支柱下的关键分析因素。
+
+### 知识点2：核心定量指标（Core Quantitative Metrics）
+**核心概念**：财务比率是公司信用分析的定量核心，用以衡量杠杆水平、偿债能力和财务灵活性。
+- **利息覆盖率（ICR）**：`ICR = EBIT / Interest Expense` 或 `EBITDA / Interest Expense`，衡量公司用经营利润支付利息的能力。ICR 越低信用风险越高
+- **杠杆率**：`Debt / EBITDA`，衡量债务负担相对于经营现金流的大小。比率越低越好
+- **债务资本比**：`Total Debt / (Total Debt + Total Equity)`，衡量资本结构中的债务比例
+- **自由现金流（FCF）**：`FCF = CFO - CapEx - Preferred Dividends`，衡量财务灵活性和偿债能力
+- ⚠️ ICR 使用 EBIT 还是 EBITDA 影响很大——EBITDA 通常大于 EBIT，EBITDA-based ICR 更高。题目没有明确时，留意上下文提示
+
+**考试应用**：计算和解读财务比率，注意 ICR 的分子是 EBIT 还是 EBITDA。
+
+### 知识点3：优先级与清偿顺序（Seniority Rankings and Bankruptcy Priority）
+**核心概念**：不同债项的优先级决定了公司破产时的受偿顺序，直接影响回收率和信用评级。
+- **担保债务（Secured）**：以特定资产作为抵押品，破产时优先从抵押品价值中受偿，回收率最高
+- **优先级无担保债务（Senior Unsecured）**：无特定抵押品，但在受偿顺序上优先于次级债务
+- **次级债务（Subordinated）**：在破产时仅在所有优先级债务完全受偿后才能获得偿还，回收率最低
+- **Issuer rating ≠ Issue rating**：同一发行人的不同债项因担保和优先级不同可能有不同评级（notching）
+
+**考试应用**：判断不同优先级在破产清偿中的顺序，理解担保/无担保对回收率和评级的影响。
+
+### 知识点4：评级差异化（Notching）
+**核心概念**：评级差异性（notching）是评级机构对同一发行人的不同债项给予不同评级的过程，反映了优先级和担保情况的差异。
+- 根据担保、优先级、回收率预期，债项评级可在发行人评级基础上调整 1-3 级
+- 优先级担保债项的评级可能高于发行人评级（notch up）
+- 次级债项的评级可能低于发行人评级（notch down）
+- Notching 为投资者提供更精细的信用风险区分，有助于精准定价
+
+**考试应用**：理解 notching 的概念和原理，区分 issuer rating 与 issue rating。
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

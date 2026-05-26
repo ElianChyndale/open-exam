@@ -105,6 +105,68 @@ _Alignment score: 0.37. Original official module field: M12: Introduction to Fin
     └── 历史关系可能会变 — 基于百分比法的假设未必持续
 ```
 
+## 📖 知识点详解
+
+### 知识点1：基于销售的 Pro Forma 模型（Sales-Based Pro Forma Model）
+
+- **核心原理**：以销售预测(sales forecast)作为输入驱动变量(input driver)，根据历史关系确定其他财务报表项目的预测值
+- **销售百分比法 (Percentage-of-Sales Method)**：假设某些项目（如 COGS、SG&A、流动资产、流动负债）与销售额保持固定比例关系
+- **固定项目**：不随销售变动的项目（如长期债务、固定资产/产能）需要单独预测
+- **迭代过程 (Iterative Process)**：预测的利息费用(interest expense)取决于预测的债务水平，而债务水平又取决于融资需求(funding needs)，需要通过循环引用(circular reference)解决
+- **模型结构**：利润表预测 → 资产负债表预测 → 现金流量表预测 → 融资缺口分析(plug/financing shortfall)
+
+### 知识点2：分析师预测偏差与修正（Analyst Forecast Bias and Remedies）
+
+**常见偏差类型：**
+- **过度乐观偏差 (Optimism Bias)**：分析师倾向于高估收益增长，尤其是对热门行业和明星股票
+- **选择性偏差 (Selection Bias)**：分析师倾向于跟踪表现良好的公司，导致样本偏差(sample bias)
+- **羊群效应 (Herding)**：为不偏离同行共识(consensus)，分析师会倾向于维持接近市场预期的预测
+- **自我归因偏差 (Self-Attribution Bias)**：将成功归因于自身能力，失败归因于外部因素
+
+**修正方法 (Remedies)：**
+- 使用多情景分析(multiple scenario analysis)——基准(base case)、乐观(bull case)和悲观(bear case)
+- 关注预测与历史表现的一致性——如果预测增长率远超历史趋势，需要充分的证据支持
+- 交叉验证(cross-validation)：比较公司指引(management guidance)、卖方分析师(sell-side analyst)预测和独立第三方预测
+- 使用预测精确度指标(forecast accuracy metrics)系统跟踪和分析预测历史记录
+
+### 知识点3：波特效应：价格与成本影响（Porter Effects on Prices and Costs）
+
+- **波特五力模型 (Porter's Five Forces)** 在财务预测中的应用：
+  - 供应商议价能力(bargaining power of suppliers) → 影响 COGS 和利润率预测
+  - 客户议价能力(bargaining power of buyers) → 影响定价能力和毛利率
+  - 新进入者威胁(threat of new entrants) → 影响长期利润率假设
+  - 替代品威胁(threat of substitutes) → 影响销量增长假设
+  - 行业内部竞争(intensity of rivalry) → 影响投资回报率和盈利可持续性
+
+- **分析应用**：五力分析结果应转化为具体的预测假设——例如，供应商议价能力强意味着未来毛利率可能下降，预测时应反映这一趋势
+
+### 知识点4：通胀/通缩在销售与成本预测中的影响（Inflation / Deflation in Sales and Cost Forecasts）
+
+- **通胀环境 (Inflationary Environment)**：
+  - 在销售预测中反映价格增长(pass-through pricing)能力
+  - 在成本预测中考虑工资膨胀(wage inflation)和原材料成本上升
+  - 名义增长率(nominal growth rate)和实际增长率(real growth rate)的区分
+  - 通胀对不同成本项目的影响不同（如劳动成本 vs 原材料成本），需要单独分析
+
+- **通缩环境 (Deflationary Environment)**：
+  - 定价能力下降，毛利率受压
+  - 存货减记风险上升（与 M05 存货分析关联）
+  - 固定成本负担加重（通缩下同样的固定成本需要更多的销量覆盖）
+
+### 知识点5：预测期与终值选择（Explicit Forecast Horizon and Terminal Projection Choices）
+
+- **显式预测期 (Explicit Forecast Horizon)**：通常为 3-5 年，在此期间逐项详细预测各财务科目
+- **终值 (Terminal Value)**：预测期后的价值，通常占公司总价值的很大比例（有时 > 70%）
+- **终值计算方法**：
+  - **永续增长模型 (Perpetuity Growth Model / Gordon Growth Model)**：假设终值期后 FCFF/FCFE 以固定增长率(g)永续增长
+  - **退出倍数法 (Exit Multiple Approach)**：基于可比公司估值倍数(comparable multiples)估算终值
+
+- **关键判断**：
+  - 预测期长度取决于公司是否处于稳定增长阶段——高增长公司需要更长的预测期
+  - 永续增长率(g)应合理，通常不超过经济长期增长率
+  - 终值假设对估值结果极其敏感，应进行敏感性分析(sensitivity analysis)
+  - 多情景分析：不同的终值假设对应不同的增长情景
+
 ### 📐 关键公式表
 
 | 指标 | 公式 | 说明 |

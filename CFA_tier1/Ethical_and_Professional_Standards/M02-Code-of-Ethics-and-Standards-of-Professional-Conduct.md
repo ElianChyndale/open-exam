@@ -86,6 +86,38 @@ _Alignment score: 0.46. Original official module field: Code of Ethics and Stand
     └── 理解 Code 才能准确判断 Standards 的边界
 ```
 
+## 📖 知识点详解
+
+### 知识点1：道德准则的定位（Role of the Code of Ethics）
+
+Code of Ethics 是 CFA 职业道德体系的**总纲 (umbrella framework)**，为 Standards I-VII 提供价值基础。它描述的是精神 (spirit) 而非具体规则 (specific rules)，但具有同等的约束力。
+
+### 知识点2：七条道德准则详解（Seven Principles）
+
+| 准则 | 英文 | 核心含义 |
+|------|------|----------|
+| 1 | Integrity | 始终保持正直与诚信 |
+| 2 | Competence | 维持并提升专业能力 |
+| 3 | Diligence | 以勤勉尽责的态度开展工作 |
+| 4 | Respect | 尊重他人（客户、同事、市场参与者） |
+| 5 | Client Interests First | 客户利益与职业诚信高于个人利益 |
+| 6 | Independent Judgment | 做出独立专业判断，不受不当影响 |
+| 7 | Market Integrity | 维护资本市场诚信与声誉 |
+
+### 知识点3：关键解读（Key Interpretations）
+
+**客户利益优先 (Client Interests Above Personal Interest)**
+- 这不是绝对的——在违法或违背公共利益时，客户利益不优先
+- 客户利益 > 雇主利益 > 个人利益是一般排序
+
+**独立专业判断 (Independent Professional Judgment)**
+- 即使客户要求，也不能做出违反职业标准的判断
+- 外部压力（雇主、客户、市场）不能成为放弃独立判断的借口
+
+**市场诚信意识 (Market Integrity Mindset)**
+- 保护市场整体利益是每个从业者的责任
+- 即使单笔交易看似无害，若损害市场信任也是不可接受的
+
 ### 📐 关键公式表
 
 | 框架 | 说明 |

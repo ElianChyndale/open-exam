@@ -187,6 +187,56 @@ _Alignment score: 1.00. Original official module field: Module 5: Introduction t
     └── 动态配置 (Dynamic Allocation)
 ```
 
+## 📖 知识点详解
+
+### 知识点1：地缘政治风险的定义（Defining Geopolitical Risk）
+
+**地缘政治风险（Geopolitical Risk）**：指因国家间政治关系、军事冲突、外交政策变化、制裁或恐怖主义活动等对经济环境和金融市场产生不确定性的风险。
+
+地缘政治风险与一般政治风险的区别在于：
+- **政治风险（Political Risk）**：关注一国国内的政府政策变化（如选举、监管变化、税收改革）
+- **地缘政治风险（Geopolitical Risk）**：关注国家间互动、国际关系变化对跨境经济活动的冲击
+
+### 知识点2：地缘政治冲击的传导渠道（Transmission Channels of Geopolitical Shocks）
+
+地缘政治冲击通过以下渠道影响经济和金融市场：
+
+1. **供应链中断（Supply Chain Disruption）**：战争、制裁、贸易摩擦打断全球供应链，导致生产瓶颈和成本上升。
+2. **风险溢价上升（Risk Premium Increase）**：不确定性增加导致资产风险溢价上升，股票估值下降，信用利差扩大。
+3. **政策路径变化（Policy Path Changes）**：地缘政治事件可能改变央行和政府的政策优先序（如国防支出增加、能源政策调整）。
+4. **贸易转向（Trade Diversion）**：从高效但高风险地区转向低效但安全的地区，改变全球贸易格局。
+5. **资本流动逆转（Capital Flow Reversals）**：投资者避险情绪上升，资金从风险地区流向安全港（safe haven）。
+6. **大宗商品价格冲击（Commodity Price Shocks）**：地缘政治冲突常导致能源、粮食等关键商品价格剧烈波动。
+
+### 知识点3：地缘政治风险对资产价格的影响（Impact on Asset Prices）
+
+不同资产类别对地缘政治冲击的敏感性不同：
+
+| 资产类别 | 典型影响 | 敏感因素 |
+|---------|---------|---------|
+| 股票 | 估值下降（风险溢价上升） | 冲突地区暴露、供应链依赖 |
+| 政府债券 | 安全港流入，收益率下降 | 避险情绪强度 |
+| 信用利差 | 扩大，尤其是高风险地区发行人 | 违约风险担忧 |
+| 汇率 | 避险货币升值，风险货币贬值 | 经常账户、资本流动 |
+| 大宗商品 | 能源/粮食价格上涨 | 供应中断风险 |
+| 黄金 | 通常上涨（避险需求） | 实际利率和不确定性 |
+
+### 知识点4：地缘政治风险分析框架（Geopolitical Risk Analysis Framework）
+
+分析地缘政治风险时关注以下维度：
+- **概率（Probability）**：特定地缘政治事件发生的可能性
+- **影响（Impact）**：事件发生后的经济和市场影响程度
+- **时间范围（Time Horizon）**：短期冲击 vs 长期结构性变化
+- **传导渠道（Transmission Channel）**：通过哪种路径影响投资组合
+
+### 知识点5：投资组合中的地缘政治风险管理（Managing Geopolitical Risk in Portfolios）
+
+管理地缘政治风险的方法包括：
+- **分散化（Diversification）**：跨国家、跨资产类别的分散
+- **对冲（Hedging）**：使用期权、期货等工具对冲尾部风险
+- **情景分析（Scenario Analysis）**：模拟不同地缘政治情景下的投资组合表现
+- **动态配置（Dynamic Allocation）**：根据地缘政治风险评估调整资产配置
+
 ### 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |
