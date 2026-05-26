@@ -1,0 +1,68 @@
+## 3. 核心知识树
+
+```text
+1. Rates and Returns
+│  ├─ 1.1 利率三重身份：required return / discount rate / opportunity cost，先定折现口径
+│  ├─ 1.2 名义利率分解：real risk-free + inflation + default + liquidity + maturity premium
+│  ├─ 1.3 收益率口径：HPR、gross/net、arithmetic/geometric/harmonic，按单期/多期/倍数选择
+│  ├─ 1.4 MWRR vs TWRR：现金流由投资者控制用 MWRR，评价经理表现用 TWRR
+│  ├─ 1.5 年化与连续复利：普通复利用 `(1+r)^c-1`，连续复利用 `ln(1+HPR)`
+│  ├─ 1.6 费率结构：管理费 `AUM × %`，绩效费 `(R-R_b)×20%`，high-water mark 防重复收费
+│  ├─ 1.7 杠杆回报：`R_p + (B/E)(R_p - r_D)`，B>0 时放大收益和亏损
+│  └─ 1.8 税后回报：`R_pre × (1 - t)`，先杠杆后税前回报再扣税
+├─ 2. Time Value of Money
+│  ├─ 2.1 核心：`N=I/Y+PMT+PV/FV`，现金流方向决定正负号
+│  ├─ 2.2 年金：ordinary annuity 期末付，annuity due 期初付，先调 BGN/END 模式
+│  ├─ 2.3 永续年金：`PV=PMT / (I/Y)`，固定增长率时 `PV=PMT₁ / (r - g)`
+│  └─ 2.4 NPV 判据：`NPV₊` 项目可行，`NPV=0` 即 IRR
+├─ 3. Statistical Measures of Asset Returns
+│  ├─ 3.1 data types：cross-sectional（同一时点不同个体）/ time-series（不同时点同一个体）/ panel（混合）
+│  ├─ 3.2 数据尺度：nominal / ordinal / interval / ratio，越靠右能做的计算越多
+│  ├─ 3.3 集中趋势：mean（适合对称）、median（适合偏态）、mode（分类数据）
+│  ├─ 3.4 分位数：`L_y=(n+1)×(y/100)`，位置在整数间用线性插值
+│  ├─ 3.5 离散度：range / MAD / variance / SD，单位与数据一致用 SD
+│  ├─ 3.6 偏度与峰度：skewness≠0 不对称，excess kurtosis>3 厚尾
+│  └─ 3.7 协方差与相关：`Cov(X,Y)=E[(X-μₓ)(Y-μᵧ)]`，`ρ=Cov/(σₓσᵧ)`，-1~+1
+├─ 4. Probability
+│  ├─ 4.1 概率类型：empirical（历史）、subjective（主观）、prior（先验）
+│  ├─ 4.2 条件概率与独立：`P(A│B)=P(AB)/P(B)`，独立时 `P(A│B)=P(A)`
+│  ├─ 4.3 全概率与贝叶斯：用树状图分解，后验 = 先验 × 似然 / 边缘
+│  ├─ 4.4 随机变量与期望：离散用 Σ，连续用 ∫，`Var(X)=E(X²)-[E(X)]²`
+│  ├─ 4.5 组合与排列：顺序相关用 permutation，无关用 combination
+│  ├─ 4.6 二项分布：n 次独立试验，每次成功概率 p，`E=np`，`Var=np(1-p)`
+│  └─ 4.7 正态分布：对称钟形，`68-95-99` 规则，线性组合仍为正态
+├─ 5. Portfolio Mathematics
+│  ├─ 5.1 双资产组合：`E(R_p)=w₁R₁+w₂R₂`，`σ²ₚ=w²₁σ²₁+w²₂σ²₂+2w₁w₂Cov(R₁,R₂)`
+│  ├─ 5.2 n 资产组合：矩阵形式 `σ²ₚ=w'Σw`，covariance matrix 对角线是方差
+│  ├─ 5.3 分散化：ρ 越低分散越好，ρ=-1 可完全对冲，ρ=+1 无分散
+│  └─ 5.4 最小方差前沿：有效边界上的组合对给定风险有最大收益
+├─ 6. Sampling and Estimation
+│  ├─ 6.1 抽样方法：simple random / stratified / cluster / systematic，先识别偏差来源
+│  ├─ 6.2 样本统计量：sample mean、sample variance `s²=Σ(Xᵢ-x̄)²/(n-1)`，分母 n-1 因自由度
+│  ├─ 6.3 CLT 与 SE：样本均值近似正态，`SE=s/√n` 决定区间宽度
+│  ├─ 6.4 置信区间：σ 已知或大样本可用 z，σ 未知且小样本用 t
+│  └─ 6.5 Bootstrap / jackknife：用重抽样估计估计量分布和标准误
+├─ 7. Estimation and Inference
+│  ├─ 7.1 抽样方法：simple random / stratified / cluster / systematic，先识别偏差来源
+│  ├─ 7.2 CLT 与 SE：样本均值近似正态，`SE=s/√n` 决定区间宽度
+│  ├─ 7.3 置信区间：σ 已知或大样本可用 z，σ 未知且小样本用 t
+│  └─ 7.4 Bootstrap / jackknife：用重抽样估计估计量分布和标准误
+├─ 8. Hypothesis Testing
+│  ├─ 8.1 检验构件：H0/H1、test statistic、critical value、p-value、significance level
+│  ├─ 8.2 错误结构：Type I=错拒真 H0，Type II=未拒假 H0；power=1-Type II
+│  ├─ 8.3 均值/方差/比例检验：按样本数、独立/配对、方差是否已知选 z/t/F/χ²
+│  └─ 8.4 参数 vs 非参数：分布假设不可靠或数据为 ranks 时转非参数
+├─ 9. Parametric and Non-Parametric Tests of Independence
+│  ├─ 9.1 Correlation test：检验 `ρ=0` 用 `t=r√[(n-2)/(1-r²)]`，df=`n-2`
+│  └─ 9.2 Contingency table：expected cell=`row total × column total / n`，df=`(r-1)(c-1)`
+├─ 10. Simple Linear Regression
+│  ├─ 10.1 模型设定：`Y_i=b0+b1X_i+ε_i`，slope 是 X 每变 1 单位的 Y 期望变化
+│  ├─ 10.2 ANOVA 与拟合：SST=SSR+SSE，`R²=SSR/SST` 只说明样本解释度
+│  ├─ 10.3 斜率与整体检验：slope 用 t，整体模型用 F，简单回归中 `F=t²`
+│  └─ 10.4 预测：点预测 `Ŷ=b0+b1X`，prediction interval 宽于 confidence interval ↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽
+├─ 11. Introduction to Big Data Techniques
+│  ├─ 11.1 Fintech 数据：volume / velocity / variety，非结构化数据需要清洗和特征提取
+│  ├─ 11.2 AI/ML 类型：supervised / unsupervised / reinforcement，先看有无标签
+│  ├─ 11.3 投资应用：文本情绪、风险监控、组合构建、交易执行
+│  └─ 11.4 模型风险：overfitting、data snooping、sample bias、解释性不足
+```

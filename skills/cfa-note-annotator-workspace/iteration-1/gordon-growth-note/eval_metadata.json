@@ -1,0 +1,27 @@
+{
+  "eval_id": 2,
+  "eval_name": "gordon-growth-note",
+  "prompt": "权益里 Gordon growth model 陷阱：r = D1/P0 + g，P0 是 current price 不是 book value",
+  "assertions": [
+  {
+    "text": "Annotation targets an Equity MOC node related to Gordon growth model or equity valuation",
+    "expectation": "The selected node is relevant to GGM or DDM in the Equity MOC"
+  },
+  {
+    "text": "Annotation is placed in both Equity MOC and the relevant module file",
+    "expectation": "Both MOC and module knowledge trees receive the annotation"
+  },
+  {
+    "text": "Annotation mentions P0 being current price, not book value",
+    "expectation": "The user's key insight about P0 meaning is preserved"
+  },
+  {
+    "text": "Annotation uses the ↳ 笔记： format",
+    "expectation": "The annotation prefix is standardized"
+  },
+  {
+    "text": "Knowledge tree structure is preserved after edit",
+    "expectation": "Tree formatting is intact"
+  }
+]
+}

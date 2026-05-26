@@ -70,14 +70,14 @@ tags:
 
 ## 2. 官方 LOS 对应学习目标
 
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 10.1 | describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 10.2 | explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated | 描述定义、流程和适用场景；解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 10.3 | calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据、公式口径和限制条件。 |
-| 10.4 | describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 10.5 | calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 10.6 | describe different functional forms of simple linear regressions | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+| LOS  | 官方要求                                                                                                                                                                                          | 中文学习动作                            | 做题输出               |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- | ------------------ |
+| 10.1 | describe a simple linear regression model, how the least squares criterion is used to estimate regression coefficients, and the interpretation of these coefficients                          | 描述定义、流程和适用场景                      | 写出结论、依据、公式口径和限制条件。 |
+| 10.2 | explain the assumptions underlying the simple linear regression model, and describe how residuals and residual plots indicate if these assumptions may have been violated                     | 描述定义、流程和适用场景；解释机制、原因和后果           | 写出结论、依据、公式口径和限制条件。 |
+| 10.3 | calculate and interpret measures of fit and formulate and evaluate tests of fit and of regression coefficients in a simple linear regression                                                  | 计算并解释数值结果；解释结果的投资含义；评价优缺点、限制和决策含义 | 写出结论、依据、公式口径和限制条件。 |
+| 10.4 | describe the use of analysis of variance (ANOVA) in regression analysis, interpret ANOVA results, and calculate and interpret the standard error of estimate in a simple linear regression    | 计算并解释数值结果；解释结果的投资含义；描述定义、流程和适用场景  | 写出结论、依据、公式口径和限制条件。 |
+| 10.5 | calculate and interpret the predicted value for the dependent variable, and a prediction interval for it, given an estimated linear regression model and a value for the independent variable | 计算并解释数值结果；解释结果的投资含义               | 写出结论、依据、公式口径和限制条件。 |
+| 10.6 | describe different functional forms of simple linear regressions                                                                                                                              | 描述定义、流程和适用场景                      | 写出结论、依据、公式口径和限制条件。 |
 
 ## 3. 核心知识树
 
@@ -88,7 +88,7 @@ tags:
 │  ├─ 10.1.2 Slope：`b1=Cov(X,Y)/Var(X)`，解释为 X 增加 1 单位时 Y 的平均变化
 │  ├─ 10.1.3 Intercept：`b0=ȳ-b1x̄`，X=0 时的预测值，未必有经济意义
 │  └─ 10.1.4 OLS objective：最小化 `SSE=Σ(Y_i-Ŷ_i)²`
-├─ 10.2 回归诊断（Regression Diagnostics）
+├─ 10.2 回归诊断（Regression Diagnostics） ↳ 笔记：ε 假设：不相关、方差恒定、正态分布（不是 Y 正态）
 │  ├─ 10.2.1 Linearity：残差图若有曲线模式，线性设定不合适
 │  ├─ 10.2.2 Homoskedasticity：残差方差恒定；喇叭形提示 heteroskedasticity
 │  ├─ 10.2.3 Independence：时间序列残差若有趋势/交替模式，可能 serial correlation
@@ -99,7 +99,7 @@ tags:
 │  ├─ 10.3.2 SEE：`√[SSE/(n-2)]`，衡量预测误差尺度
 │  ├─ 10.3.3 Slope t-test：`t=(b1-β1,0)/SE(b1)`，df=`n-2`
 │  ├─ 10.3.4 F-test：`F=MSR/MSE`，简单回归中 `F=t²`
-│  ├─ 10.3.5 Prediction：`Ŷ=b0+b1X`，prediction interval 宽于 confidence interval
+│  ├─ 10.3.5 Prediction：`Ŷ=b0+b1X`，prediction interval = `Ŷ ± t_c × SEE × √(1 + 1/n + (X - X̄)² / ((n-1)sₓ²))`，宽于 confidence interval ↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽
 │  └─ 10.3.6 Functional form：linear-log / log-linear 改变系数解释口径
 ```
 
@@ -184,6 +184,7 @@ tags:
 | `SST = SSR + SSE` | ANOVA 分解 | 总变异=解释变异+残差变异 |
 | `R² = 1 - SSE/SST` | 拟合优度 | 样本内解释比例 |
 | `Ŷ = b₀ + b₁X` | 点预测 | 给定 X 预测 Y |
+| `Ŷ ± t_c × SEE × √(1 + 1/n + (X - X̄)² / ((n-1)sₓ²))` | Prediction interval | 单个新观测值的预测区间，含 `+1` 项 |
 | `b₁ = r(s_Y/s_X)` | 斜率与相关系数 | 简单回归中连接 correlation |
 | `R² = r²` | 简单回归关系 | 仅限一个解释变量 |
 

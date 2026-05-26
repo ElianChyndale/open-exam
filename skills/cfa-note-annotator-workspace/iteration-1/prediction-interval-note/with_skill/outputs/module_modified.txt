@@ -1,0 +1,23 @@
+## 3. 核心知识树
+
+```text
+10. Simple Linear Regression
+├─ 10.1 简单线性回归模型（Simple Linear Regression Model）
+│  ├─ 10.1.1 Model：`Y_i=b0+b1X_i+e_i`，Y 是 dependent，X 是 independent
+│  ├─ 10.1.2 Slope：`b1=Cov(X,Y)/Var(X)`，解释为 X 增加 1 单位时 Y 的平均变化
+│  ├─ 10.1.3 Intercept：`b0=ȳ-b1x̄`，X=0 时的预测值，未必有经济意义
+│  └─ 10.1.4 OLS objective：最小化 `SSE=Σ(Y_i-Ŷ_i)²`
+├─ 10.2 回归诊断（Regression Diagnostics）
+│  ├─ 10.2.1 Linearity：残差图若有曲线模式，线性设定不合适
+│  ├─ 10.2.2 Homoskedasticity：残差方差恒定；喇叭形提示 heteroskedasticity
+│  ├─ 10.2.3 Independence：时间序列残差若有趋势/交替模式，可能 serial correlation
+│  ├─ 10.2.4 Normal errors：小样本推断需要，影响 t/F 检验可靠性
+│  └─ 10.2.5 诊断后果：标准误错会让显著性结论失真
+├─ 10.3 拟合与推断（Fit and Inference）
+│  ├─ 10.3.1 ANOVA：`SST=SSR+SSE`，`R²=SSR/SST=1-SSE/SST`
+│  ├─ 10.3.2 SEE：`√[SSE/(n-2)]`，衡量预测误差尺度
+│  ├─ 10.3.3 Slope t-test：`t=(b1-β1,0)/SE(b1)`，df=`n-2`
+│  ├─ 10.3.4 F-test：`F=MSR/MSE`，简单回归中 `F=t²`
+│  ├─ 10.3.5 Prediction：`Ŷ=b0+b1X`，prediction interval = `Ŷ ± t_c × SEE × √(1 + 1/n + (X - X̄)² / ((n-1)sₓ²))`，宽于 confidence interval ↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽
+│  └─ 10.3.6 Functional form：linear-log / log-linear 改变系数解释口径
+```

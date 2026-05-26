@@ -1,0 +1,17 @@
+## 3. 核心知识树
+
+```text
+1. Fixed-Income Instrument Features
+├─ 1.1 合同解剖 (Contract Anatomy)
+│  ├─ 1.1.1 基本条款：issuer、maturity、par value、coupon rate/frequency、currency 是后续现金流和折现口径
+│  ├─ 1.1.2 资本结构位置：senior/subordinated、secured/unsecured 决定违约时 recovery priority
+│  └─ 1.1.3 考试判断：先问"谁有权利、谁承担义务"，再判断该条款影响现金流、信用还是期权风险
+├─ 1.2 债券契约 (Bond Indenture)
+│  ├─ 1.2.1 Indenture 是发行人与持有人之间的法律合同，包含支付条款、抵押品、违约事件和 trustee 角色
+│  ├─ 1.2.2 Affirmative covenants = 必须做，如按时披露、维持保险、缴税
+│  └─ 1.2.3 Negative covenants = 不得做，如限制新增债务、资产出售、股息支付；保护债权人 downside
+├─ 1.3 或有条款 (Contingency Provisions)
+│  ├─ 1.3.1 Callable：发行人持有 call option；利率下降时再融资，价格上行被 call price 限制 ↳ 笔记：callable bond 在利率下降时价格涨不上去因为有赎回权 cap 住 upside
+│  ├─ 1.3.2 Putable：投资者持有 put option；利率上升或信用恶化时获得保护，通常接受较低 yield
+│  └─ 1.3.3 Sinking fund/convertible：改变本金偿还或附带 equity upside；后续连接 effective duration 与 credit analysis
+```

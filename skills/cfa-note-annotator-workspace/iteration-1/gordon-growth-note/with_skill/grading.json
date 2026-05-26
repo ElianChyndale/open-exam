@@ -1,0 +1,39 @@
+{
+  "expectations": [
+    {
+      "text": "Annotation targets an Equity MOC node related to Gordon growth model or equity valuation",
+      "passed": true,
+      "evidence": "MOC modified output shows node '8.2 DDM/Gordon' with annotation appended"
+    },
+    {
+      "text": "Annotation is placed in both Equity MOC and the relevant module file",
+      "passed": true,
+      "evidence": "Module modified output shows node '8.1.2 DDM/GGM' with same annotation"
+    },
+    {
+      "text": "Annotation mentions P0 being current price, not book value",
+      "passed": true,
+      "evidence": "Annotation reads: 'r = D1/P0 + g 中 P0 是 current price，不是 book value'"
+    },
+    {
+      "text": "Annotation uses the ↳ 笔记： format",
+      "passed": true,
+      "evidence": "Format is correct '↳ 笔记：...'"
+    },
+    {
+      "text": "Knowledge tree structure is preserved after edit",
+      "passed": true,
+      "evidence": "Tree formatting intact in both files"
+    }
+  ],
+  "summary": {"passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0},
+  "execution_metrics": {
+    "tool_calls": {"Read": 6, "Write": 3, "Glob": 2, "Grep": 4},
+    "total_tool_calls": 15,
+    "total_steps": 6,
+    "errors_encountered": 0,
+    "output_chars": 4900,
+    "transcript_chars": 0
+  },
+  "timing": {"executor_duration_seconds": 57.3, "grader_duration_seconds": 0, "total_duration_seconds": 57.3}
+}

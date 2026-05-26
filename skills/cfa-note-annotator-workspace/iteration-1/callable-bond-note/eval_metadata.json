@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "callable-bond-note",
+  "prompt": "记一下：callable bond 在利率下降时价格涨不上去因为有赎回权 cap 住 upside",
+  "assertions": [
+  {
+    "text": "Annotation targets a Fixed Income knowledge tree node related to callable bonds or 或有条款",
+    "expectation": "The selected node in FI MOC is relevant to callable bonds or contingent provisions"
+  },
+  {
+    "text": "Annotation is placed in both FI MOC and the relevant module file",
+    "expectation": "Both the MOC and module knowledge trees receive the annotation"
+  },
+  {
+    "text": "Annotation explicitly references 'callable' or '赎回权' or 'cap'",
+    "expectation": "The user's note about callable bond price behavior is preserved"
+  },
+  {
+    "text": "Annotation uses the ↳ 笔记： format",
+    "expectation": "The annotation prefix is standardized"
+  },
+  {
+    "text": "Knowledge tree structure is preserved after edit",
+    "expectation": "Tree formatting is intact"
+  }
+]
+}

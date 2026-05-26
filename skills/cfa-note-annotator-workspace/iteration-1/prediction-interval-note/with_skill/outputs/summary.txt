@@ -1,0 +1,26 @@
+Summary: Prediction Interval Annotation
+
+## Node Identified
+- **Subject:** Quantitative Methods (confirmed via CFA official module registry and keyword matching)
+- **Module:** M10 — Simple Linear Regression
+- **MOC Node:** `10.4 预测` in the MOC knowledge tree (`00-Quantitative-Methods-MOC.md`)
+- **Module Node:** `10.3.5 Prediction` in the module knowledge tree (`M10-Simple-Linear-Regression.md`)
+
+## Keywords Used for Matching
+- "Prediction interval" (English term from the note)
+- "SEE" (standard error of estimate, a regression concept)
+- "X̄" (sample mean of X, regression context)
+
+## Annotation Added
+- ` ↳ 笔记：X离X̄越远区间越宽；SEE越大区间越宽`
+- Appended to the end of the matching node line in both files
+
+## Ambiguity Assessment
+None. The mapping was unambiguous because:
+1. "Prediction interval" is a highly specific term unique to regression analysis in the CFA curriculum
+2. "SEE" (Standard Error of Estimate) is a regression-specific measure
+3. The CFA registry confirms M10 = Simple Linear Regression in Quantitative Methods
+4. The skill itself provides this exact scenario as its primary Example 1
+
+## Numbering Discrepancy Note
+The MOC file uses flat numbering (`10.4`) while the module file uses hierarchical numbering (`10.3.5`). Both refer to the same concept (Prediction in Simple Linear Regression). The annotation was applied to the correct node in each file according to its own numbering scheme.
