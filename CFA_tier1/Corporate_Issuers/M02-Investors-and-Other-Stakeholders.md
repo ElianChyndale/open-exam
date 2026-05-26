@@ -1,22 +1,125 @@
 ---
 title: "M02 — Investors and Other Stakeholders"
-description: 投资者类型, 利益相关者关系, 信息不对称, 分析师角色
+description: "CFA Level I 2026 official module: Investors and Other Stakeholders"
 module: M02
+subject: "Corporate Issuers"
+topic_area: Corporate_Issuers
+curriculum_year: 2026
 official_module: "Module 2: Investors and Other Stakeholders"
-subject: Corporate_Issuers
-los:
-  - describe different types of investors (institutional vs retail, equity vs debt holders) and their investment objectives
-  - compare the objectives of various stakeholders and identify potential conflicts among stakeholder groups
-  - explain information asymmetry and its effects on stakeholder relationships in a corporate context
-  - describe the role of financial analysts in reducing information asymmetry between companies and investors
-  - describe stakeholder impacts and ESG considerations from an investor perspective
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Corporate_Issuers
+  - official_2026
 ---
 
-# M02: Investors and Other Stakeholders（投资者与其他利益相关者）
+# M02: Investors and Other Stakeholders
 
-## 1. 核心知识点
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 1.1 投资者类型 (Types of Investors)
+## Official Module Structure
+
+- Learning Outcomes: Investors and Other Stakeholders
+- 2.01 | Introduction
+- 2.02 | Financial Claims of Lenders and Shareholders
+- 2.03 | Corporate Stakeholders and Governance
+- 2.04 | Corporate ESG Considerations
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- compare the financial claims and motivations of lenders and shareholders
+- describe a company’s stakeholder groups and compare their interests
+- describe environmental, social, and governance factors of corporate issuers considered by investors
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Corporate_Issuers/M01-Corporate-Structures-and-Ownership.md`
+
+_Alignment score: 0.34. Original official module field: 1._
+
+#### M01: Corporate Structures and Ownership（公司结构与所有权）
+
+##### 1. 核心知识点
+
+###### 1.1 法律形式与权益类型 (Legal Form & Claims)
+
+企业存在多种法律形式，每种形式在 **责任承担 (liability)**、**税务处理 (taxation)** 和 **所有权转让 (transferability of ownership)** 方面有本质区别：
+
+- **独资企业 (Sole Proprietorship)**：单人拥有，无限责任，所得税由个人承担。优势是简单且监管少，劣势是融资能力有限且业主承担全部风险。
+- **合伙企业 (Partnership)**：两人及以上共同经营，分为 **普通合伙 (General Partnership)** 和 **有限合伙 (Limited Partnership)**。普通合伙人对债务承担无限连带责任，有限合伙人仅以出资额为限承担责任。
+- **公司 (Corporation)**：独立法人实体，股东承担有限责任。公司自身纳税（双重征税问题），但融资渠道广泛（可发股发债），所有权转让灵活。
+- **有限责任公司 (Limited Liability Company, LLC)**：结合公司有限责任与合伙企业税收穿透的优势，是近年来流行的结构。
+
+**债务合约索偿权 vs 股权剩余索偿权 (Debt Contract Claims vs Equity Residual Claims)**：
+- **债权人 (creditors)** 拥有合约性的固定索偿权，优先于股东获得偿付。
+- **股东 (shareholders)** 拥有剩余索偿权，即公司清偿所有债务后剩余的资产归股东所有。这意味着股东承担更高的风险，但也享有上行收益空间。
+
+###### 1.2 公众所有权与控制分离 (Public Ownership Separates Capital from Control)
+
+当公司通过公开市场上市 (IPO) 后，所有权分散在大量股东手中，但日常控制权掌握在管理层手中。这一分离是 **代理问题 (principal-agent problem)** 的根源：管理层（代理人）可能追求自身利益而非股东（委托人）价值最大化。
+
+###### 1.3 利益相关者 (Stakeholders)
+
+企业的利益相关者远不止股东和债权人，还包括：
+
+- **股东 (Shareholders)**：追求公司价值最大化
+- **债权人 (Creditors)**：关注公司偿债能力和现金流稳定性
+- **管理层 (Managers)**：可能关注薪酬、职业安全和声誉
+- **员工 (Employees)**：关心薪酬、工作稳定性和职业发展
+- **客户 (Customers)**：追求产品或服务的质量与价格合理
+- **监管机构 (Regulators)**：确保合规运营和市场公平
+
+这些利益相关者的目标常常相互冲突，例如股东可能希望公司承担更高风险以获取更高回报，而债权人则偏好稳健经营。**利益相关者目标冲突 → 治理问题 (Stakeholder Conflicts → Governance Problems)** 是 [[M02-Corporate-Governance-and-ESG]] 的核心主题。
+
+##### 2. 关键公式
+
+本模块以概念为主，无定量计算公式。但以下比率常用于评估企业法律结构与所有权形式的经济影响：
+
+| 指标 | 公式 | 说明 |
+|------|------|------|
+| 股权比率 (Equity Ratio) | `Total Equity / Total Assets` | 衡量公司自有资本占比，反映财务稳健性 |
+| 债务权益比 (Debt-to-Equity) | `Total Debt / Total Equity` | 衡量财务杠杆水平，独资企业通常不能发债 |
+
+##### 3. 常见考点与解题思路
+
+**考点 1：辨识企业法律形式特征**
+- 题目给出一段描述（如"业主承担无限责任且个人纳税"），问你属于哪种形式。
+- 解题：记住无限责任 → 独资/普通合伙；有限责任 → 公司/LLC。
+
+**考点 2：理解所有权与控制权的分离**
+- 题目问：为什么上市公司的股东不能直接指挥管理层？
+- 核心答案：所有权分散 + 代理问题。股东保留剩余索取权，但将日常决策委托给管理层。
+
+**考点 3：区分债务索偿与股权索偿**
+- 典型选择题：债权人与股东的根本区别是什么？
+- 答案：债权人拥有**固定合约性索偿权 (fixed contractual claims)**，股东拥有**剩余索偿权 (residual claims)**。
+
+##### 4. 易错点提醒
+
+- **有限责任 ≠ 公司不会倒闭**：有限责任保护股东的个人资产免受公司债务追索，但公司本身仍可能破产。
+- **独资企业不是法律实体**：在法律上，独资企业与企业主是同一主体，这是与公司的根本区别。
+- **LLC 不是 Corporation**：LLC 兼具合伙企业税收穿透和公司有限责任的优点，但并非所有司法管辖区都将其视为独立法人实体。
+
+##### 5. 跨模块关联
+
+- 所有权与控制权分离 → [[M02-Corporate-Governance-and-ESG]] 代理问题的根源
+- 利益相关者冲突 → [[M02-Corporate-Governance-and-ESG]] 公司治理需要协调这些冲突
+- 不同法律形式影响融资能力 → [[M05-Cost-of-Capital]] 融资渠道与资本成本的关系
+- 公众公司的决策机制 → [[M04-Capital-Investments]] 资本预算决策中的委托代理考量
+
+### Migrated from `CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md`
+
+_Alignment score: 1.00. Original official module field: Module 2: Investors and Other Stakeholders._
+
+#### M02: Investors and Other Stakeholders（投资者与其他利益相关者）
+
+##### 1. 核心知识点
+
+###### 1.1 投资者类型 (Types of Investors)
 
 公司从多种渠道获得资本，不同类型的投资者在**风险承担 (risk bearing)**、**回报形式 (return form)** 和**信息需求 (information needs)** 方面有本质区别：
 
@@ -39,7 +142,7 @@ los:
 - **受托责任 (Fiduciary Duty)**：机构投资者对最终受益人负有受托责任，必须将受益人利益置于首位。
 - **代理投票 (Proxy Voting)**：机构投资者代表受益人行使投票权，在股东大会上对董事选举、薪酬政策、并购等事项表决。
 
-### 1.2 利益相关者目标与冲突 (Stakeholder Objectives and Conflicts)
+###### 1.2 利益相关者目标与冲突 (Stakeholder Objectives and Conflicts)
 
 **利益相关者 (Stakeholders)** 是受公司活动影响的任何个人或团体。不同利益相关者的目标常不一致：
 
@@ -59,7 +162,7 @@ los:
 2. **股东 vs 管理层 (Principal-Agent Conflict)**：所有权与控制权分离导致管理层可能追求自身利益而非股东价值。详见 [[M03-Corporate-Governance-and-ESG]]。
 3. **股东 vs 其他利益相关者 (Shareholder vs Other Stakeholders)**：利润最大化目标可能与员工福利、环境保护、客户利益等产生冲突。
 
-### 1.3 信息不对称 (Information Asymmetry)
+###### 1.3 信息不对称 (Information Asymmetry)
 
 **信息不对称 (Information Asymmetry)** 是指公司内部人（管理层）比外部人（投资者、债权人）掌握更多关于公司真实状况的信息。这是公司金融中最核心的市场不完美之一。
 
@@ -77,7 +180,7 @@ los:
 - **对管理层**：利用信息优势获取不当利益（内幕交易、自利交易）
 - **对公司整体**：信息不对称导致资本错配，增加融资成本
 
-### 1.4 金融分析师的角色 (The Role of Financial Analysts)
+###### 1.4 金融分析师的角色 (The Role of Financial Analysts)
 
 **金融分析师 (Financial Analysts)** 在资本市场中扮演**信息中介 (information intermediary)** 的关键角色，通过以下方式减少信息不对称：
 
@@ -96,7 +199,7 @@ los:
 - 分析师可能存在**利益冲突 (conflicts of interest)**：卖方分析师可能面临投行业务关系带来的偏倚压力。
 - 中国墙 (Chinese Wall) 是投行内部隔离研究部门和投行部门的信息屏障，旨在防止信息不当流动。
 
-### 1.5 ESG 与利益相关者视角 (ESG from a Stakeholder Perspective)
+###### 1.5 ESG 与利益相关者视角 (ESG from a Stakeholder Perspective)
 
 ESG 议题天然具有利益相关者维度：
 
@@ -113,11 +216,11 @@ ESG 议题天然具有利益相关者维度：
 2. **现金流路径**：良好的 ESG 实践（如节能降耗）降低运营成本、提升员工效率。
 3. **资本成本路径**：投资者将 ESG 风险纳入定价，ESG 表现差的公司面临更高的资本成本。
 
-## 2. 关键公式
+##### 2. 关键公式
 
 本模块以概念为主，无定量计算公式。掌握以下**利益相关者比较框架**：
 
-### 利益相关者比较表
+###### 利益相关者比较表
 
 | 维度 | 股权投资者 | 债权投资者 | 管理层 | 员工 | 客户 |
 |------|-----------|-----------|--------|------|------|
@@ -127,7 +230,7 @@ ESG 议题天然具有利益相关者维度：
 | **风险敞口** | 业务风险 + 市场风险 | 信用/违约风险 | 失业风险 + 声誉风险 | 失业风险 | 产品/服务风险 |
 | **治理参与度** | 投票权、提案权 | 契约条款、违约后控制权 | 日常经营控制权 | 工会谈判（部分） | 消费者保护法规 |
 
-### 信息不对称分析框架
+###### 信息不对称分析框架
 
 | 概念 | 定义 | 对资本市场的影响 | 缓解机制 |
 |------|------|-----------------|----------|
@@ -135,7 +238,7 @@ ESG 议题天然具有利益相关者维度：
 | 道德风险 | 交易后一方改变行为 | 代理成本、契约成本 | 监督机制、激励相容、治理结构 |
 | 信号传递 | 高质量公司发送可信信号 | 分离均衡、降低信息成本 | 股息、资本结构选择、管理层持股 |
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点 1：区分投资者类型及其目标**
 - 题型：描述一个投资者的特征（如"代表退休基金管理资产，关注长期稳定回报"），问属于哪类。
@@ -163,7 +266,7 @@ ESG 议题天然具有利益相关者维度：
 - 题型：问某个ESG议题（如碳排放）主要影响哪些利益相关者。
 - 解题：环境议题影响最广泛的利益相关者群体（社区、监管、投资者、员工），社会议题影响员工和客户，治理议题主要影响股东和债权人。
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 - **"所有投资者都有相同的信息获取能力"**（错）：机构投资者通常能获得更多信息（与管理层直接沟通、雇佣专业分析师），而散户投资者主要依赖公开信息。
 - **"股东价值最大化等同于所有利益相关者利益最大化"**（错）：股东价值最大化是公司财务的标准假设，但这一目标可能与债权人（风险偏好冲突）、员工（裁员）、客户（降低成本牺牲质量）的利益产生冲突。
@@ -173,10 +276,14 @@ ESG 议题天然具有利益相关者维度：
 - **"ESG是独立的非财务议题"**（错）：ESG因素可能通过风险、现金流和资本成本路径直接影响公司财务表现。
 - **"机构投资者必然比散户投资者更理性"**（错）：机构投资者也有行为偏差和利益冲突（如短期业绩压力导致短视行为）。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - **[[M01-Corporate-Structures-and-Ownership]]**：M01 介绍利益相关者类别（股东、债权人、管理层等），本模块深入分析其目标差异与信息不对称。所有权与控制权分离是信息不对称的根源。
 - **[[M03-Corporate-Governance-and-ESG]]**：信息不对称是代理问题的核心驱动因素。治理机制（董事会监督、薪酬设计、审计）旨在缓解信息不对称和激励冲突。ESG 披露是减少利益相关者信息不对称的关键工具。
 - **[[M06-Capital-Structure-and-Leverage]]**：信号传递理论通过资本结构选择传递管理层对公司前景的判断。信息不对称影响公司在债务和股权之间的融资选择。
 - **[[M05-Cost-of-Capital]]**：信息不对称程度直接影响公司的股权和债务融资成本。分析师覆盖和披露质量可以降低信息风险溢价。
 - **Portfolio M05 (Basics of Portfolio Planning and Construction)**：机构投资者在构建投资组合时须考虑 ESG 因素和受托责任。投资者目标与 IPS 中的风险偏好直接相关。
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

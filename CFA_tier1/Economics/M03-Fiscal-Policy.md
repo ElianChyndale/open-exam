@@ -1,16 +1,53 @@
 ---
 title: "M03 — Fiscal Policy"
-description: 财政政策 — 政府支出、税收、乘数效应、赤字与债务可持续性
+description: "CFA Level I 2026 official module: Fiscal Policy"
 module: M03
-subject: Economics
+subject: "Economics"
+topic_area: Economics
+curriculum_year: 2026
 official_module: "Module 3: Fiscal Policy"
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Economics
+  - official_2026
 ---
 
-# M03: Fiscal Policy（财政政策）
+# M03: Fiscal Policy
 
-## 1. 核心知识点（中英双语讲解）
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 财政政策工具（Fiscal Policy Tools）
+## Official Module Structure
+
+- Learning Outcomes: Fiscal Policy
+- 3.01 | Introduction
+- 3.02 | Introduction to Monetary and Fiscal Policy
+- 3.03 | Roles and Objectives of Fiscal Policy
+- 3.04 | Fiscal Policy Tools
+- 3.05 | Fiscal Policy Implementation
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- compare monetary and fiscal policy
+- describe roles and objectives of fiscal policy as well as arguments as to whether the size of a national debt relative to GDP matters
+- describe tools of fiscal policy, including their advantages and disadvantages
+- explain the implementation of fiscal policy and difficulties of implementation as well as whether a fiscal policy is expansionary or contractionary
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Economics/M03-Fiscal-Policy.md`
+
+_Alignment score: 1.00. Original official module field: Module 3: Fiscal Policy._
+
+#### M03: Fiscal Policy（财政政策）
+
+##### 1. 核心知识点（中英双语讲解）
+
+###### 财政政策工具（Fiscal Policy Tools）
 
 政府通过调整**支出（spending）**和**税收（taxation）** 来影响经济活动。
 
@@ -19,14 +56,14 @@ official_module: "Module 3: Fiscal Policy"
 - **转移支付（Transfers）**：社保、失业救济等，改变收入分配但不计入GDP的政府购买部分
 - **自动稳定器（Automatic Stabilizers）**：如累进税制和失业救济，在经济下行时自动提供缓冲，无需政策决策
 
-### 扩张性与紧缩性财政政策（Expansionary vs Contractionary Fiscal Policy）
+###### 扩张性与紧缩性财政政策（Expansionary vs Contractionary Fiscal Policy）
 
 | 类型 | 措施 | 目的 |
 |------|------|------|
 | 扩张性 | 增加支出、减税 | 刺激总需求，应对衰退 |
 | 紧缩性 | 减少支出、增税 | 抑制总需求，控制通胀 |
 
-### 财政乘数（Fiscal Multiplier）
+###### 财政乘数（Fiscal Multiplier）
 
 **乘数效应（Multiplier Effect）**：初始财政支出的增加会通过消费循环产生大于初始值的总产出增量。
 
@@ -37,7 +74,7 @@ official_module: "Module 3: Fiscal Policy"
 
 简单乘数公式：`Multiplier = 1 / (1 − MPC)`，其中MPC为边际消费倾向。
 
-### 财政政策的约束（Constraints on Fiscal Policy）
+###### 财政政策的约束（Constraints on Fiscal Policy）
 
 **赤字与债务（Deficits and Debt）**：
 - **赤字（Deficit）**：某一财年支出 > 收入
@@ -48,14 +85,14 @@ official_module: "Module 3: Fiscal Policy"
 
 **实施时滞（Implementation Lag）**：财政政策从决策到生效需要时间，可能错过最佳经济时机。这一点上不如货币政策灵活。
 
-### 供给侧效应（Supply-Side Effects）
+###### 供给侧效应（Supply-Side Effects）
 
 财政政策不仅影响总需求，也影响长期供给：
 - 减税可以激励劳动供给和投资
 - 基础设施支出提升长期生产力
 - 过度监管和税收可能抑制经济增长潜力
 
-## 2. 关键公式（公式+解释+场景）
+##### 2. 关键公式（公式+解释+场景）
 
 **财政乘数（简单形式）**：`Multiplier = 1 / (1 − MPC)`
 - 场景：MPC = 0.8，政府增加100亿支出，乘数 = 1/(1−0.8) = 5，理论上带动GDP增长500亿。但实际中要考虑漏出。
@@ -67,7 +104,7 @@ official_module: "Module 3: Fiscal Policy"
 - 其中 r = 实际利率，g = 实际GDP增长率，PB = 基础财政盈余（primary balance）
 - 场景：判断债务可持续性。若 r < g，即使有基础赤字，债务率也可能下降。
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点1：乘数效应计算**
 - 区分政府支出乘数和税收乘数
@@ -81,14 +118,18 @@ official_module: "Module 3: Fiscal Policy"
 - 不需要政策决策，自动运作
 - 减小经济波动幅度，但不消除波动
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 - **财政政策有内部时滞（internal lag）和外部时滞（external lag）**：决策需要立法程序（内部时滞长），但实施后效果相对直接（外部时滞短于货币政策）。
 - **结构性赤字 vs 周期性赤字**：结构性赤字是经济处于潜在产出水平时的赤字；周期性赤字是经济衰退导致的额外赤字。考试中常考区分。
 - **李嘉图等价（Ricardian Equivalence）**：一些经济学家认为，减税不会刺激消费，因为消费者预期未来增税来偿还债务，因而增加储蓄。这是财政政策有效性的重要辩论点。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - 财政政策与经济周期的配合见 **[[M02-Understanding-Business-Cycles]]**
 - 财政政策与货币政策的配合对比在 **[[M04-Monetary-Policy]]** 中讨论
 - 财政政策对利率和汇率的影响延伸至 **[[M07-Capital-Flows-and-FX-Markets]]**
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

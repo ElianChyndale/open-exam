@@ -1,22 +1,55 @@
 ---
 title: "M01 — Rates and Returns"
-description: 收益率与回报 — HPR, MWRR, TWRR, 年化收益率, 连续复利
+description: "CFA Level I 2026 official module: Rates and Returns"
 module: M01
+subject: "Quantitative Methods"
+topic_area: Quantitative_Methods
+curriculum_year: 2026
 official_module: "Module 1: Rates and Returns"
-subject: Quantitative_Methods
-los:
-  - interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums
-  - calculate and interpret different approaches to return measurement over time and describe their appropriate uses
-  - compare the money-weighted and time-weighted rates of return and evaluate portfolio performance based on these measures
-  - calculate and interpret annualized return measures and continuously compounded returns and describe their appropriate uses
-  - calculate and interpret major return measures and describe their appropriate uses
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Quantitative_Methods
+  - official_2026
 ---
 
-# M01: Rates and Returns（收益率与回报）
+# M01: Rates and Returns
 
-## 1. 核心知识点
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 1.1 利率的三种解释（Three Interpretations of Interest Rate）
+## Official Module Structure
+
+- Learning Outcomes: Rates and Returns
+- 1.01 | Introduction
+- 1.02 | Interest Rates and Time Value of Money
+- 1.03 | Rates of Return
+- 1.04 | Money-Weighted and Time-Weighted Return
+- 1.05 | Annualized Return
+- 1.06 | Other Major Return Measures and Their Applications
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- interpret interest rates as required rates of return, discount rates, or opportunity costs and explain an interest rate as the sum of a real risk-free rate and premiums that compensate investors for bearing distinct types of risk
+- calculate and interpret different approaches to return measurement over time and describe their appropriate uses
+- compare the money-weighted and time-weighted rates of return and evaluate the performance of portfolios based on these measures
+- calculate and interpret annualized return measures and continuously compounded returns, and describe their appropriate uses
+- calculate and interpret major return measures and describe their appropriate uses
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md`
+
+_Alignment score: 1.00. Original official module field: Module 1: Rates and Returns._
+
+#### M01: Rates and Returns（收益率与回报）
+
+##### 1. 核心知识点
+
+###### 1.1 利率的三种解释（Three Interpretations of Interest Rate）
 
 利率（Interest Rate）在 CFA 考试中有三种等价解释：
 
@@ -26,7 +59,7 @@ los:
 
 这三种解释相通 — 折现率就是投资者对该投资的要求回报率，也就是放弃其他机会的成本。
 
-### 1.2 利率分解（Interest Rate Decomposition）
+###### 1.2 利率分解（Interest Rate Decomposition）
 
 名义利率可分解为多个组成部分：
 
@@ -40,7 +73,7 @@ los:
 
 > **【考试核心】** 高名义利率可能来自高通胀，也可能来自高违约风险或低流动性，不能简单归因于单一因素。
 
-### 1.3 收益率度量阶梯（Return Measurement Ladder）
+###### 1.3 收益率度量阶梯（Return Measurement Ladder）
 
 **持有期收益率（Holding Period Return, HPR）**：
 `HPR = (P_1 - P_0 + D_1) / P_0`
@@ -59,7 +92,7 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 
 **调和平均（Harmonic Mean）**：适用于价格倍数（Price Multiple）的平均，如平均市盈率（P/E）计算，因为调和平均对极端值更不敏感。
 
-### 1.4 MWRR vs TWRR
+###### 1.4 MWRR vs TWRR
 
 **资金加权收益率（Money-Weighted Rate of Return, MWRR）**本质上是投资组合的内部收益率（IRR），对现金流进出时点敏感。MWRR 衡量的是**投资者实际体验** — 相同投资组合业绩下，在不同时点追加或赎回资金的投资者会得到不同的 MWRR。
 
@@ -67,7 +100,7 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 
 > **【考试陷阱】** 当客户在业绩差的时候追加资金、业绩好的时候赎回资金时，MWRR 会显著低于 TWRR，这不代表基金经理表现差。
 
-### 1.5 年化与连续复利（Annualization and Continuous Compounding）
+###### 1.5 年化与连续复利（Annualization and Continuous Compounding）
 
 **年化收益率（Annualized Return）**：
 `Annualized Return = (1 + R_period)^c - 1`
@@ -84,14 +117,14 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 
 > **【考试核心】** 当题目所给利率是连续复利口径时，必须使用 e^(rt) 而不是 (1+r)^n。
 
-### 1.6 总回报 vs 净回报（Gross Return vs Net Return）
+###### 1.6 总回报 vs 净回报（Gross Return vs Net Return）
 
 - **总回报（Gross Return）**：`(P_1 + D_1) / P_0 = 1 + HPR`，已在价格中扣除交易费用（Trading Expenses），但不扣除管理费和行政费。
 - **净回报（Net Return）**：`Gross Return - Management/Admin Fees`，投资者实际到手的回报。
 
 > **【考试陷阱】** Gross Return 已经包含了交易费用（Trading Expenses），不需要再额外扣除交易费用！净回报只额外扣除管理费和行政费。
 
-### 1.7 杠杆与税后回报（Leveraged and After-Tax Return）
+###### 1.7 杠杆与税后回报（Leveraged and After-Tax Return）
 
 **杠杆回报（Leveraged Return）**：
 `Leveraged Return = R_p + (B/E)(R_p - r_D)`
@@ -105,7 +138,7 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 
 > **【考试陷阱】** 计算顺序至关重要：**Gross Return → Net Return → Leveraged Return → After-Tax Return**。不可以先扣税再算杠杆。
 
-## 2. 关键公式
+##### 2. 关键公式
 
 | 公式 | 解释 | 使用场景 |
 |------|------|----------|
@@ -120,7 +153,7 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 | `Leveraged Return = R_p + (B/E)(R_p - r_D)` | 杠杆回报 | 借款投资时的回报计算 |
 | `After-Tax Return = Pre-tax × (1 - t)` | 税后回报 | 考虑税收后的净回报 |
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点一：计算 HPR 并区分其组成部分**
 - 给定期初价格、期末价格和期间收入（股息/利息），直接代入 HPR 公式
@@ -147,7 +180,7 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 - After-tax 在 Leveraged Return 基础上乘以 `(1 - t)`
 - **常见错误**：在 Gross Return 阶段多减 trading expenses，或在 Leverage 之前扣税
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 1. **Gross Return 含 trading expenses，trading expenses 不重复扣除**：Gross Return 已经扣除了交易费用（trading expenses 直接贡献于回报计算），计算 Net Return 时只额外扣除管理费和行政费，不要重复扣减 trading expenses。
 2. **顺序不可逆**：Leverage 和 Tax 的计算顺序为 Gross → Net → Leverage → Tax。
@@ -156,9 +189,13 @@ HPR 是基础收益率度量，不考虑投资期限长短，直接计算整个�
 5. **Harmonic Mean 的特殊用途**：计算平均价格倍数（如平均 P/E）时要用调和平均。
 6. **几何平均 ≤ 算术平均**：两者差距反映波动率，差距越大说明波动越大。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - **[[M02-Time-Value-of-Money]]**：TVM 是 HPR 和 MWRR（本质就是 IRR）的基础。MWRR = 0 = ΣCF/(1+r)^t 正是 TVM 的反向应用。
 - **[[M03-Statistical-Measures]]**：三种均值（算术/几何/调和）在此首次出现，在 M03 中会进一步展开为 general 统计量。
 - **[[M05-Portfolio-Mathematics]]**：杠杆回报公式是 Portfolio return 的延伸，组合方差中的权重逻辑也在此预热。
 - **M07**：年化收益率涉及的"periodicity 转换"与 EAR 概念在固收中也反复出现。
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

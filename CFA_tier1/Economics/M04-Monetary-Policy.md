@@ -1,16 +1,53 @@
 ---
 title: "M04 — Monetary Policy"
-description: 货币政策 — 中央银行设计、政策工具、传导机制、可信度与独立性
+description: "CFA Level I 2026 official module: Monetary Policy"
 module: M04
-subject: Economics
+subject: "Economics"
+topic_area: Economics
+curriculum_year: 2026
 official_module: "Module 4: Monetary Policy"
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Economics
+  - official_2026
 ---
 
-# M04: Monetary Policy（货币政策）
+# M04: Monetary Policy
 
-## 1. 核心知识点（中英双语讲解）
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 中央银行的核心目标（Central Bank Objectives）
+## Official Module Structure
+
+- Learning Outcomes: Monetary Policy
+- 4.01 | Introduction
+- 4.02 | Role of Central Banks
+- 4.03 | Monetary Policy Tools and Monetary Transmission
+- 4.04 | Monetary Policy Objectives
+- 4.05 | Interaction of Monetary and Fiscal Policy
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- describe the roles and objectives of central banks
+- describe tools used to implement monetary policy tools and the monetary transmission mechanism, and explain the relationships between monetary policy and economic growth, inflation, interest, and exchange rates
+- describe qualities of effective central banks; contrast their use of inflation, interest rate, and exchange rate targeting in expansionary or contractionary monetary policy; and describe the limitations of monetary policy
+- explain the interaction of monetary and fiscal policy
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Economics/M04-Monetary-Policy.md`
+
+_Alignment score: 1.00. Original official module field: Module 4: Monetary Policy._
+
+#### M04: Monetary Policy（货币政策）
+
+##### 1. 核心知识点（中英双语讲解）
+
+###### 中央银行的核心目标（Central Bank Objectives）
 
 央行的核心目标通常包括：
 - **价格稳定（Price Stability）**—— 最核心目标，通常设定通胀目标（如2%）
@@ -18,7 +55,7 @@ official_module: "Module 4: Monetary Policy"
 - **经济增长（Economic Growth）**
 - **金融稳定（Financial Stability）**
 
-### 货币政策工具（Monetary Policy Tools）
+###### 货币政策工具（Monetary Policy Tools）
 
 **主要工具**：
 1. **政策利率（Policy Rate）**：通过调整短期利率（如联邦基金利率）影响整个利率体系
@@ -30,7 +67,7 @@ official_module: "Module 4: Monetary Policy"
 - **扩张性（Expansionary / Easy）**：降低政策利率、增加准备金 → 降低借贷成本 → 刺激支出
 - **紧缩性（Contractionary / Tight）**：提高政策利率、减少准备金 → 提高借贷成本 → 抑制通胀
 
-### 货币传导机制（Monetary Transmission Mechanism）
+###### 货币传导机制（Monetary Transmission Mechanism）
 
 货币政策影响实体经济的路径：
 
@@ -44,7 +81,7 @@ official_module: "Module 4: Monetary Policy"
 3. **资产价格渠道（Asset Price Channel）**：利率变化影响股票和房地产价格 → 财富效应 → 消费变化
 4. **汇率渠道（Exchange Rate Channel）**：利率变化影响汇率 → 进出口价格 → 净出口变化
 
-### 可信度与独立性（Credibility and Independence）
+###### 可信度与独立性（Credibility and Independence）
 
 **央行独立性（Central Bank Independence）**至关重要：
 - 独立央行更能执行长期稳定的政策，避免政治周期的干扰
@@ -54,21 +91,21 @@ official_module: "Module 4: Monetary Policy"
 - 用较小的利率变动影响通胀预期
 - 在衰退时更有效地刺激经济
 
-### 政策中性利率（Neutral Rate）
+###### 政策中性利率（Neutral Rate）
 
 - **中性利率（Neutral Rate / r\*）**：既不刺激也不抑制经济增长的利率水平
 - 实际政策利率 = 政策利率 − 预期通胀
 - 实际政策利率 > 中性利率 → 紧缩性
 - 实际政策利率 < 中性利率 → 扩张性
 
-### 泰勒规则（Taylor Rule）
+###### 泰勒规则（Taylor Rule）
 
 泰勒规则描述央行如何调整政策利率：
 `Policy Rate = Neutral Rate + 1.5 × (Actual Inflation − Target Inflation) + 0.5 × Output Gap`
 
 - 场景：给定通胀偏差和产出缺口估算合理政策利率水平。考试中理解逻辑为主。
 
-## 2. 关键公式（公式+解释+场景）
+##### 2. 关键公式（公式+解释+场景）
 
 **名义利率与费雪效应**：`i = r + π^e`
 - 场景：名义利率 = 实际利率 + 预期通胀。央行调整名义利率时需考虑通胀预期。
@@ -76,7 +113,7 @@ official_module: "Module 4: Monetary Policy"
 **实际利率与政策立场**：`Real Policy Rate = Policy Rate − Expected Inflation`
 - 场景：实际政策利率高于中性利率 = 紧缩；低于中性利率 = 宽松。
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点1：扩张性/紧缩性政策效果**
 - 降息 → 融资成本降低 → 投资和消费增加 → 总需求增加 → 通胀压力上升
@@ -90,15 +127,19 @@ official_module: "Module 4: Monetary Policy"
 - 独立央行通常有更低的通胀和更稳定的政策
 - 政治干预央行往往导致通胀偏差（inflation bias）
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 - **利率降低是"动作"（action），效果（effectiveness）取决于传导机制是否通畅**。在信贷紧缩时期，即使降息也可能无法刺激经济（即"推绳子"问题）。
 - **扩张性货币政策可能导致通胀，但不一定**：在产出缺口为负时，扩张性政策主要影响产出而非价格。
 - **区分名义利率和实际利率**：货币政策立场取决于实际利率而非名义利率。
 - **收益率曲线倒挂（inverted yield curve）** 通常被视为衰退先行信号，但CFA L1不深入讨论该细节。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - 央行政策应对经济周期的时机在 **[[M02-Understanding-Business-Cycles]]** 中讨论
 - 财政与货币政策的配合对比见 **[[M03-Fiscal-Policy]]**
 - 货币政策通过利率渠道影响汇率，见 **[[M07-Capital-Flows-and-FX-Markets]]** 和 **[[M08-Exchange-Rate-Calculations]]**
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

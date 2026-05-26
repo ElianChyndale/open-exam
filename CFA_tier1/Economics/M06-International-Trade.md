@@ -1,16 +1,51 @@
 ---
 title: "M06 — International Trade"
-description: 国际贸易 — 绝对优势与比较优势、贸易限制、区域经济一体化
+description: "CFA Level I 2026 official module: International Trade"
 module: M06
-subject: Economics
+subject: "Economics"
+topic_area: Economics
+curriculum_year: 2026
 official_module: "Module 6: International Trade"
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Economics
+  - official_2026
 ---
 
-# M06: International Trade（国际贸易）
+# M06: International Trade
 
-## 1. 核心知识点（中英双语讲解）
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 贸易基础理论（Foundations of Trade）
+## Official Module Structure
+
+- Learning Outcomes: International Trade
+- 6.01 | Introduction
+- 6.02 | Benefits and Costs of Trade
+- 6.03 | Trade Restrictions and Agreements—Tariffs, Quotas, and Export Subsidies
+- 6.04 | Trading Blocs and Regional Integration
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- describe the benefits and costs of international trade
+- compare types of trade restrictions, such as tariffs, quotas, and export subsidies, and their economic implications
+- explain motivations for and advantages of trading blocs, common markets, and economic unions
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Economics/M06-International-Trade.md`
+
+_Alignment score: 1.00. Original official module field: Module 6: International Trade._
+
+#### M06: International Trade（国际贸易）
+
+##### 1. 核心知识点（中英双语讲解）
+
+###### 贸易基础理论（Foundations of Trade）
 
 **绝对优势（Absolute Advantage）**：一个国家用更少的资源生产同一种商品的能力。
 
@@ -20,7 +55,7 @@ official_module: "Module 6: International Trade"
 
 **贸易收益（Gains from Trade）**：专业化生产 → 全球总产出增加 → 贸易各方通过交换分享收益。
 
-### 贸易限制（Trade Restrictions）
+###### 贸易限制（Trade Restrictions）
 
 **关税（Tariffs）**：对进口商品征收税收。
 - 效果：政府获得收入；国内生产者剩余增加；消费者剩余减少；产生无谓损失
@@ -35,13 +70,13 @@ official_module: "Module 6: International Trade"
 
 **非关税壁垒（Non-Tariff Barriers）**：包括监管标准、卫生检疫要求、海关程序等，间接增加进口难度。
 
-### 贸易条件（Terms of Trade）
+###### 贸易条件（Terms of Trade）
 
 **贸易条件（Terms of Trade, TOT）** = 出口价格指数 / 进口价格指数
 - TOT上升：每单位出口能换取更多进口 → 对该国有利
 - TOT下降：出口购买力下降 → 对该国不利
 
-### 区域经济一体化（Regional Economic Integration）
+###### 区域经济一体化（Regional Economic Integration）
 
 区域经济一体化从低到高分五个层级：
 
@@ -63,7 +98,7 @@ official_module: "Module 6: International Trade"
 - 贸易转移：从低成本非成员国进口转向高成本成员国 → 降低效率
 - 区域一体化在贸易创造 > 贸易转移时对成员国有利
 
-## 2. 关键公式（公式+解释+场景）
+##### 2. 关键公式（公式+解释+场景）
 
 **机会成本计算**：`Opportunity Cost of Good A = Units of Good B Given Up / Units of Good A Gained`
 - 场景：给定两国生产两种商品的产量表，计算各自的机会成本，判断比较优势。
@@ -71,7 +106,7 @@ official_module: "Module 6: International Trade"
 **贸易条件**：`Terms of Trade = Export Price Index / Import Price Index`
 - 场景：判断一国贸易条件是否改善。指数上升表示贸易条件改善。
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点1：绝对优势 vs 比较优势的判断**
 - 绝对优势：看单位投入产出更多（或单位产出需要投入更少）
@@ -86,7 +121,7 @@ official_module: "Module 6: International Trade"
 - 根据特征描述判断属于哪类一体化组织
 - 记忆技巧：Free Trade → Customs → Common → Economic → Monetary（从低到高）
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 - **贸易政策可以帮助特定群体但仍降低总福利**。例如关税保护国内特定行业就业，但消费者支付更高价格，整体福利下降。
 - **比较优势是动态的**：随时间推移，要素积累和技术进步会改变一国的比较优势。
@@ -94,9 +129,13 @@ official_module: "Module 6: International Trade"
 - **自由贸易区vs关税同盟的区别**：自由贸易区需原产地规则（rules of origin）防止贸易偏转（trade deflection）。
 - **贸易创造 vs 贸易转移**：区域一体化的净福利效应取决于贸易创造是否超过贸易转移。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - 贸易净出口是GDP组成部分，见 **[[M03-Fiscal-Policy]]** 中的支出法核算
 - 贸易差额对汇率的影响在 **[[M07-Capital-Flows-and-FX-Markets]]** 中讨论
 - 关税等贸易政策作为财政政策的一部分见 **[[M03-Fiscal-Policy]]**
 - 贸易摩擦和供应链调整可能源于地缘政治风险，见 **[[M05-Introduction-to-Geopolitics]]**
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

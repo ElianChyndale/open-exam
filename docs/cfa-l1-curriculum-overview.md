@@ -19,14 +19,14 @@
 │                                                                  │
 │  ┌──────────┬──────────┬──────────┬──────────┬──────────┐       │
 │  │  Quant   │  Econ    │  FSA     │  Corp    │  Equity  │       │
-│  │  (6-9%)  │ (6-10%)  │(13-17%)  │(10-15%)  │(10-15%)  │       │
+│  │  (6-9%)  │ (6-9%)  │(11-14%)  │ (6-9%) │(11-14%) │       │
 │  │  11 模块  │  8 模块  │ 12 模块  │  7 模块  │  8 模块  │       │
 │  └──────────┴──────────┴──────────┴──────────┴──────────┘       │
 │                                                                  │
 │  ┌──────────┬──────────┬──────────┬──────────┬──────────┐       │
 │  │  Fixed   │  Deriv   │  Alt     │  PM      │          │       │
-│  │  Income  │  (6-9%)  │  (7-10%) │(11-15%)  │          │       │
-│  │ (10-15%) │  10 模块 │  7 模块  │  6 模块  │          │       │
+│  │  Income  │  (5-8%)  │  (7-10%) │ (8-12%) │          │       │
+│  │ (11-14%) │  10 模块 │  7 模块  │  6 模块  │          │       │
 │  │ 19 模块  │          │          │          │          │       │
 │  └──────────┴──────────┴──────────┴──────────┘          │       │
 │                                                                  │
@@ -51,7 +51,7 @@
 | M10: Simple Linear Regression | 模型设定, 诊断, 拟合, 预测 |
 | M11: Big Data Techniques | Fintech, AI/ML, 数据科学 |
 
-### 02 Economics (6-10%)
+### 02 Economics (6-9%)
 **核心：宏观与微观经济分析对投资的影响**
 | 模块 | 内容 |
 |------|------|
@@ -64,7 +64,7 @@
 | M7: Capital Flows and FX | 国际收支, 汇率制度 |
 | M8: Exchange Rate Calculations | 交叉汇率, 远期汇率, PPP |
 
-### 03 Corporate Issuers (10-15%)
+### 03 Corporate Issuers (6-9%)
 **核心：公司决策与治理如何影响投资价值**
 | 模块 | 内容 |
 |------|------|
@@ -76,7 +76,7 @@
 | M6: Capital Structure | 债务/权益融资, 杠杆, WACC |
 | M7: Business Models | 商业模式, 价值创造 |
 
-### 04 Financial Statement Analysis (13-17%)
+### 04 Financial Statement Analysis (11-14%)
 **核心：读懂财务报表，识别会计质量**
 | 模块 | 内容 |
 |------|------|
@@ -93,7 +93,7 @@
 | M11: Financial Analysis Techniques | 比率分析, DuPont, 同型分析 |
 | M12: Financial Statement Modeling | 预测, 敏感性分析 |
 
-### 05 Equity (10-15%)
+### 05 Equity Investments (11-14%)
 **核心：股票市场结构、分析和估值**
 | 模块 | 内容 |
 |------|------|
@@ -106,7 +106,7 @@
 | M7: Company Analysis: Forecasting | 收入预测, 估值输入 |
 | M8: Equity Valuation | DDM, FCF, 市盈率/市净率 |
 
-### 06 Fixed Income (10-15%)
+### 06 Fixed Income (11-14%)
 **核心：固定收益工具定价与风险分析**
 | 模块 | 内容 |
 |------|------|
@@ -119,7 +119,7 @@
 | M13-M14: Credit | 信用风险, 评级, 利差 |
 | M17-M19: Securitization | ABS, MBS, CDO |
 
-### 07 Derivatives (6-9%)
+### 07 Derivatives (5-8%)
 **核心：衍生品定价与对冲应用**
 | 模块 | 内容 |
 |------|------|
@@ -141,7 +141,7 @@
 | M6: Hedge Funds | 策略, 费用 |
 | M7: Digital Assets | 加密货币, 区块链 |
 
-### 09 Portfolio Management (11-15%)
+### 09 Portfolio Management (8-12%)
 **核心：组合构建理论与风险管理**
 | 模块 | 内容 |
 |------|------|

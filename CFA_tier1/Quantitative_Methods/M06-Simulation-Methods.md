@@ -1,20 +1,51 @@
 ---
 title: "M06 — Simulation Methods"
-description: 模拟方法 — 对数正态分布, 蒙特卡洛模拟, 自助重抽样
+description: "CFA Level I 2026 official module: Simulation Methods"
 module: M06
+subject: "Quantitative Methods"
+topic_area: Quantitative_Methods
+curriculum_year: 2026
 official_module: "Module 6: Simulation Methods"
-subject: Quantitative_Methods
-los:
-  - explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns
-  - describe Monte Carlo simulation and explain how it can be used in investment applications
-  - describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Quantitative_Methods
+  - official_2026
 ---
 
-# M06: Simulation Methods（模拟方法）
+# M06: Simulation Methods
 
-## 1. 核心知识点
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 1.1 分布联动（Distribution Link）
+## Official Module Structure
+
+- Learning Outcomes: Simulation Methods
+- 6.01 | Introduction
+- 6.02 | Lognormal Distribution and Continuous Compounding
+- 6.03 | Monte Carlo Simulation
+- 6.04 | Bootstrapping
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- explain the relationship between normal and lognormal distributions and why the lognormal distribution is used to model asset prices when using continuously compounded asset returns
+- describe Monte Carlo simulation and explain how it can be used in investment applications
+- describe the use of bootstrap resampling in conducting a simulation based on observed data in investment applications
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md`
+
+_Alignment score: 1.00. Original official module field: Module 6: Simulation Methods._
+
+#### M06: Simulation Methods（模拟方法）
+
+##### 1. 核心知识点
+
+###### 1.1 分布联动（Distribution Link）
 
 一个重要的分布关系链：
 
@@ -29,7 +60,7 @@ los:
 - 对数正态分布天然保证价格非负
 - 收益率用正态，价格用对数正态 — 这是经典的金融建模框架
 
-### 1.2 蒙特卡洛模拟（Monte Carlo Simulation）
+###### 1.2 蒙特卡洛模拟（Monte Carlo Simulation）
 
 蒙特卡洛模拟是一种通过生成大量随机样本来近似复杂系统行为的计算方法。
 
@@ -50,7 +81,7 @@ los:
 - 计算量大，需要大量随机抽样才能获得稳定结果
 - 抽样误差（Sampling Error）随模拟次数增加而降低，但永远不能完全消除
 
-### 1.3 自助重抽样（Bootstrap Resampling）
+###### 1.3 自助重抽样（Bootstrap Resampling）
 
 自助法是一种从已有数据中通过有放回重复抽样来估计统计量分布的方法。
 
@@ -75,7 +106,7 @@ los:
 | 主要用途 | 预测未知的未来情景 | 估计已知样本的统计量精度 |
 | 分布假设 | 需要指定分布形式和参数 | 几乎无分布假设（非参数） |
 
-## 2. 关键公式
+##### 2. 关键公式
 
 本模块以概念理解为主，不涉及复杂公式。
 
@@ -85,7 +116,7 @@ los:
 | 价格 ~ Lognormal | 价格对数正态 | 资产价格建模 |
 | 有放回重抽样 n 次 | Bootstrap 抽样 | 估计统计量分布 |
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点一：正态回报 → 对数正态价格的关系**
 - 给定连续复利收益率的均值和标准差
@@ -100,7 +131,7 @@ los:
 - 优点：不依赖分布假设、适用于复杂统计量
 - 缺点：继承原始数据局限、不适用于小样本的极端情况
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 1. **蒙特卡洛不是优化方法**：它不告诉你"应该怎么做"，而是告诉你"如果这样做可能有什么结果"。需要结合 What-If 分析使用。
 2. **GIGO 原则（Garbage In, Garbage Out）**：输入分布的准确度决定了模拟结果的价值。
@@ -108,10 +139,14 @@ los:
 4. **增加模拟次数不改善输入质量**：10 万次模拟 + 错误假设 ≠ 正确结果。
 5. **正态 vs 对数正态**：收益率（含负值可能）用正态；价格（只能非负）用对数正态。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - **[[M01-Rates-and-Returns]]**：连续复利收益率 `r_cc = ln(1+HPR)` 是分布联动基础的起点。
 - **[[M03-Statistical-Measures]]**：模拟输出的分布分析（均值、方差、偏度、峰度）是 M03 统计量的直接应用。
 - **[[M04-Probability-Concepts]]**：蒙特卡洛模拟的本质就是概率论的迭代扩展 — 从已知分布抽样并汇总。
 - **[[M07-Sampling-and-Estimation]]**：Bootstrap 是重抽样估计的核心方法，与 CLT 提供互补的推断路径。
 - **[[M08-Hypothesis-Testing]]**：Bootstrap 可以用于构建非参数假设检验（如 Bootstrap Confidence Interval）。
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

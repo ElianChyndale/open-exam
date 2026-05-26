@@ -1,16 +1,49 @@
 ---
-title: "M08 — Business Models"
-description: 商业模式 — 价值主张、收入机制、成本结构、风险地图
-module: M08
+title: "M07 — Business Models"
+description: "CFA Level I 2026 official module: Business Models"
+module: M07
+subject: "Corporate Issuers"
+topic_area: Corporate_Issuers
+curriculum_year: 2026
 official_module: "Module 7: Business Models"
-subject: Corporate_Issuers
+official_source: CFA Institute Learning Ecosystem scrape, generated 2026-05-25
+note_type: official_module_projection
+status: active
+tags:
+  - CFA_L1
+  - Corporate_Issuers
+  - official_2026
 ---
 
-# M08: Business Models（商业模式）
+# M07: Business Models
 
-## 1. 核心知识点
+> This file is aligned to the CFA Institute 2026 Level I module name and order. Legacy local notes were migrated below when a reliable match was found.
 
-### 1.1 模型解剖 (Model Anatomy)
+## Official Module Structure
+
+- Learning Outcomes: Business Models
+- 7.01 | Introduction
+- 7.02 | Defining the Business Model
+- 7.03 | Business Model Types
+
+## Learning Outcome Statements
+
+The candidate should be able to:
+
+- describe key features of business models
+- describe various types of business models
+
+## Local Study Notes
+
+### Migrated from `CFA_tier1/Corporate_Issuers/M07-Business-Models.md`
+
+_Alignment score: 1.00. Original official module field: Module 7: Business Models._
+
+#### M08: Business Models（商业模式）
+
+##### 1. 核心知识点
+
+###### 1.1 模型解剖 (Model Anatomy)
 
 商业模式描述公司如何**创造价值、传递价值并从中获利**。CFA L1 要求从以下维度分析：
 
@@ -30,7 +63,7 @@ subject: Corporate_Issuers
 - 高固定成本模式（如软件公司）在规模扩大后利润率快速提升，但初期亏损风险大。
 - 高可变成本模式（如咨询公司）利润率更稳定，但规模效应有限。
 
-### 1.2 风险地图 (Risk Map)
+###### 1.2 风险地图 (Risk Map)
 
 不同商业模式面临的风险特征不同：
 
@@ -47,7 +80,7 @@ subject: Corporate_Issuers
 - **现金转换 (Cash Conversion)**：负的现金转换周期（先收钱再付钱）是优质信号
 - **再投资需求 (Reinvestment Needs)**：轻资产模式再投资需求低，自由现金流更充裕
 
-## 2. 关键公式
+##### 2. 关键公式
 
 | 指标 | 公式 | 说明 |
 |------|------|------|
@@ -56,7 +89,7 @@ subject: Corporate_Issuers
 | 毛利率 (Gross Margin) | `(收入 - COGS) / 收入` | 反映核心产品和服务的盈利能力 |
 | 经营利润率 (Operating Margin) | `EBIT / 收入` | 反映整体经营效率 |
 
-## 3. 常见考点与解题思路
+##### 3. 常见考点与解题思路
 
 **考点 1：识别商业模式类型**
 - 题目描述公司的收入和价值创造方式，要求分类。
@@ -74,17 +107,21 @@ subject: Corporate_Issuers
 - 问：为什么软件公司比咨询公司更有扩展性？
 - 答案：软件公司有高固定成本（研发）但低边际成本，规模扩大后利润率快速提升；咨询公司的人力成本随规模线性增长。
 
-## 4. 易错点提醒
+##### 4. 易错点提醒
 
 - **快速收入增长 ≠ 价值创造**：**没有经济单位价值的高增长仍然可能摧毁价值**。例如，以低于成本的价格获取客户来推动收入增长。
 - **轻资产不总是优于重资产**：轻资产虽资本回报率高，但可能面临竞争壁垒低的问题。
 - **经常性收入 ≠ 高质量收入**：如果客户流失率高，经常性收入的持续性也存疑。
 - **商业模式分析不是孤立的**：需要结合公司的资本结构、融资能力和治理水平综合判断。
 
-## 5. 跨模块关联
+##### 5. 跨模块关联
 
 - 成本结构与经营杠杆 → [[M06-Capital-Structure-and-Leverage]] 商业模式决定 DOL
 - 现金转换周期 → [[M03-Working-Capital-and-Liquidity]] 商业模式影响 CCC 特征
 - 资本需求 → [[M04-Capital-Investments]] 资产密度决定资本投资需求
 - 商业模式风险 → [[M02-Corporate-Governance-and-ESG]] 风险特征影响治理需求
 - 商业模式整合 → [[M08-Capital-Allocation-Integration]] 资本分配应与商业模式特征匹配
+## Review Hooks
+
+- Add mistake-driven traps only after they can be traced back to `.system/events/`.
+- Keep module naming and order locked to the official 2026 curriculum registry.

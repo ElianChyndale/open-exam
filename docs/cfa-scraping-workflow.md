@@ -1,7 +1,7 @@
 # CFA Institute 官网数据爬取工作流总结
 
 > 日期: 2026-05-25
-> 目标: 从 CFA Institute Learning Ecosystem (learn.cfainstitute.org) 提取 CFA 2026 Level I 全部课程内容并同步到 Obsidian 知识库
+> 目标: 从 CFA Institute Learning Ecosystem (learn.cfainstitute.org) 提取 CFA 2026 Level I 页面目录；再用 CFA Institute 公开 2026 Topic Outlines 校验并补齐官方 module / weight / LOS；最终同步到 Obsidian 知识库
 
 ---
 
@@ -10,7 +10,8 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    数据源层 (Data Source)                     │
-│  learn.cfainstitute.org (Canvas LMS + Azure AD B2C 认证)     │
+│  主源: CFA Institute 2026 Level I Topic Outlines PDF          │
+│  辅源: learn.cfainstitute.org (Canvas LMS + Azure AD B2C)     │
 │  ┌─────────────────────────────────────────────────────┐   │
 │  │  REST API (/api/v1/courses/{cid}/modules)           │   │
 │  │  Pages API (/api/v1/courses/{cid}/pages/{url})      │   │
@@ -40,7 +41,7 @@
                     ┌─────────────────┐
                     │  数据提取结果    │
                     │  10门课程大纲    │
-                    │  90+模块结构    │
+                    │  93个官方模块   │
                     │  ~1200页面项    │
                     └─────────────────┘
                              │
@@ -72,11 +73,17 @@ Phase 1: 认证与发现
   → 提取 cookies → 注入 gstack browse session
   → 访问 Course Dashboard → 发现所有课程 ID
   
-Phase 2: 课程结构提取
+Phase 2: 课程结构提取（辅助源）
   Canvas API (/api/v1/courses/{cid}/modules?per_page=50)
   → 获取模块列表 (module_id, name, items_count)
   → 获取模块项目 (items_url → type=Page, url)
   → 获取页面内容 (Pages API → body HTML)
+
+Phase 2B: 官方考纲校验（主源）
+  下载 CFA Institute 2026 Level I Topic Outlines combined PDF
+  → 解析 10 科 module name / exam weight / LOS
+  → 覆盖本地 registry 中的官方考纲字段
+  → Canvas raw 只作为 page items 辅助，不再作为 LOS 主源
   
 Phase 3: 数据转换
   HTML 清洗 (去 script/style, 标签→文本)
@@ -101,6 +108,7 @@ Phase 4: 知识库同步
 | **异步 fetch 限制** | `$B js` 不支持 async/await | 使用同步 `XMLHttpRequest` 替代 |
 | **JS eval 路径限制** | `$B eval` 只接受 /tmp 目录文件 | 将 JS 文件写入 `C:\tmp` |
 | **内容量过大** | 10 门课程约 1200 页面，逐页导航需 100+ 分钟 | 改用 Canvas REST API + XHR 批量并行请求 |
+| **Raw 抓取不完整** | Canvas/SSO/CORS 会导致部分课程只有模块导航或页面目录，LOS 和正文不完整 | 以 CFA Institute 公开 `2026-l1-topics-combined.pdf` 为官方主源；运行 `scripts/apply_cfa_2026_topic_outline_pdf.py` 补齐 module / weight / LOS |
 
 ## 四、关键工具与命令
 
@@ -117,6 +125,9 @@ $B cookie-import <json>  # 导入 cookies
 GET /api/v1/courses/{cid}/modules?per_page=50
 GET /api/v1/courses/{cid}/modules/{mid}/items?per_page=50
 GET /api/v1/courses/{cid}/pages/{page_url}?include[]=body
+
+# 官方 2026 考纲补齐
+python scripts/apply_cfa_2026_topic_outline_pdf.py
 ```
 
 ## 五、数据统计
@@ -124,10 +135,10 @@ GET /api/v1/courses/{cid}/pages/{page_url}?include[]=body
 | 指标 | 数据 |
 |------|------|
 | 提取课程数 | 10 门主科 + 2 PSM |
-| 模块总数 | 90+ |
+| 模块总数 | 93 个官方 2026 content modules |
 | 页面项总数 | ~1200 |
-| 爬取方式 | Canvas REST API (最快) / 浏览器导航 (备用) |
-| 输出文件 | 10 个课程全文本 + 1 个综合 Markdown 大纲 |
+| 爬取方式 | Topic Outlines PDF（主源）+ Canvas REST API（页面目录辅助）/ 浏览器导航（备用） |
+| 输出文件 | 10 个课程全文本 + 1 个官方 registry + 1 个综合 Markdown 大纲 |
 | 处理时间 | 结构提取 (~10s) + 页面内容 (~5min 全量 / ~30s 精选) |
 
 ## 六、局限性
@@ -135,4 +146,23 @@ GET /api/v1/courses/{cid}/pages/{page_url}?include[]=body
 1. **Canvas API 无公开 API Token**：必须依赖浏览器 session 认证
 2. **Azure AD B2C 反爬限制**：Azure AD 检测 headless 浏览器并拒绝登录
 3. **跨课程 SSO 限制**：Canvas 阻止程序化跨课程导航（需 XHR 或新 tab）
-4. **内容版权**：提取内容仅用于个人学习
+4. **Raw 完整性不可假设**：`all_courses_data.json` 和 `*_full.txt` 可能缺科、缺正文或缺 LOS；不能直接作为官方考纲主源
+5. **内容版权**：提取内容仅用于个人学习
+
+## 七、当前权威同步规则
+
+固定主源优先级：
+
+1. CFA Institute 公开 `2026 Level I Topic Outlines combined PDF`
+2. `.system/memory/strategy/cfa-2026-official-module-registry.json`
+3. Learning Ecosystem raw 抓取页面目录
+4. `CFA_tier1/` 投影页面
+
+当前本地已保存官方 PDF：
+
+- `.system/memory/strategy/official-sources/2026-l1-topics-combined.pdf`
+
+同步脚本：
+
+- `scripts/apply_cfa_2026_topic_outline_pdf.py`
+- 输出 93 个官方模块、365 条 LOS，并回写 registry 与 `CFA_tier1/` 模块页
