@@ -170,6 +170,53 @@ _Alignment score: 1.00. Original official module field: Module 3: Fiscal Policy.
     └── 过度监管和税收→抑制增长
 ```
 
+## 📖 知识点详解
+
+### 知识点1：财政政策工具（Fiscal Policy Tools）
+
+政府通过调整**支出（spending）**和**税收（taxation）** 来影响经济活动。
+
+- **政府支出（Government Spending）**：购买商品和服务（基础设施、国防、教育等），直接影响总需求
+- **税收（Taxation）**：调整税率影响可支配收入和消费、投资决策
+- **转移支付（Transfers）**：社保、失业救济等，改变收入分配但不计入GDP的政府购买部分
+- **自动稳定器（Automatic Stabilizers）**：如累进税制和失业救济，在经济下行时自动提供缓冲，无需政策决策
+
+### 知识点2：扩张性与紧缩性财政政策（Expansionary vs Contractionary Fiscal Policy）
+
+| 类型 | 措施 | 目的 |
+|------|------|------|
+| 扩张性 | 增加支出、减税 | 刺激总需求，应对衰退 |
+| 紧缩性 | 减少支出、增税 | 抑制总需求，控制通胀 |
+
+### 知识点3：财政乘数（Fiscal Multiplier）
+
+**乘数效应（Multiplier Effect）**：初始财政支出的增加会通过消费循环产生大于初始值的总产出增量。
+
+**影响乘数大小的因素**：
+- **漏出（Leakages）**：储蓄、税收、进口——漏出越大，乘数越小
+- **闲置产能（Slack）**：经济有闲置资源时，乘数效应更大
+- **政策时机（Policy Timing）**：识别时滞（recognition lag）、执行时滞（implementation lag）、效果时滞（impact lag）
+
+简单乘数公式：`Multiplier = 1 / (1 − MPC)`，其中MPC为边际消费倾向。
+
+### 知识点4：财政政策的约束（Constraints on Fiscal Policy）
+
+**赤字与债务（Deficits and Debt）**：
+- **赤字（Deficit）**：某一财年支出 > 收入
+- **债务（Debt）**：历年赤字累积
+- 可持续性取决于经济增长率与利率的关系：若经济增长率 > 利率，即使有赤字，债务/GDP比率也可能下降
+
+**挤出效应（Crowding Out）**：政府借款增加→利率上升→私人投资减少→部分抵消财政刺激效果。
+
+**实施时滞（Implementation Lag）**：财政政策从决策到生效需要时间，可能错过最佳经济时机。这一点上不如货币政策灵活。
+
+### 知识点5：供给侧效应（Supply-Side Effects）
+
+财政政策不仅影响总需求，也影响长期供给：
+- 减税可以激励劳动供给和投资
+- 基础设施支出提升长期生产力
+- 过度监管和税收可能抑制经济增长潜力
+
 ### 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

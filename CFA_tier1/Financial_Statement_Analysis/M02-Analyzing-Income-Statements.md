@@ -84,6 +84,51 @@ The candidate should be able to:
 │   🎯 高频考点：EPS 计算、收入确认时点、资本化 vs 费用化
 ```
 
+## 📖 知识点详解
+
+### 知识点1：收入确认（Revenue Recognition）
+
+**一般确认原则 (General Recognition Principles)：**
+- IFRS 15 / ASC 606 五步模型(five-step model)：识别合同→识别履约义务→确定交易价格→分摊价格→履行义务时确认收入
+- 收入在商品或服务控制权(control)转移给客户时确认
+
+**特定应用改变确认时点 (Specific Applications Alter Timing)：**
+- 长期工程合同：完工百分比法(percentage-of-completion method) vs 全部完工法(completed-contract method)
+- 分期收款销售(installment sales)：按收款进度确认毛利
+- 捆绑销售(bundled sales)：需将交易价格分摊至各履约义务
+
+**时点选择影响利润率与趋势解读 (Timing Choices Affect Margins and Trend Interpretation)：**
+- 提前确认收入会高估当期利润率和资产，低估未来增长率
+- 收入确认激进程度是财务报告质量分析的关键线索
+
+### 知识点2：费用确认（Expense Recognition）
+
+- **配比逻辑 (Matching Logic)**：费用应与所产生的收入在同一期间配比(matching principle)，包括直接费用(direct expenses)和期间费用(period costs)
+- **资本化 vs 费用化 (Capitalize vs Expense)**：资本化将支出记为资产并在使用年限内摊销；费用化则在发生当期全额计入费用
+
+**【考试陷阱】** 资本化(capitalization)只是将费用时点后移，并非改变经济实质(economic reality)——前期利润更高但后期面临摊销压力。
+
+### 知识点3：非常项目与政策变更（Unusual Items and Policy Changes）
+
+- **终止经营 (Discontinued Operations)**：已处置或已分类为持有待售的业务单元，其经营成果需与持续经营业务分开列报
+- **非常/偶发项目 (Unusual / Infrequent Items)**：性质特殊或不经常发生的交易，需在利润表中单独列示
+- **会计政策变更 (Accounting Policy Changes)**：如存货计价方法从 FIFO 改为加权平均，需追溯调整(retrospective application)
+
+### 知识点4：每股收益（EPS）
+
+#### 核心公式 (English)
+- `Basic EPS = (NI - Pref Div) / Weighted Avg Shares`
+- `Diluted EPS = Adjusted NI Available to Common / Adjusted Weighted Average Shares`
+
+- **简单资本结构 -> 基础每股收益 (Simple Capital Structure -> Basic EPS)**：仅有普通股(common stock)，无潜在稀释证券
+- **复杂资本结构 -> 稀释每股收益 (Complex Capital Structure -> Diluted EPS)**：存在可转换债券(convertible bonds)、期权(options)或认股权证(warrants)
+- **反稀释证券被排除 (Antidilutive Securities Excluded)**：如果转换后 EPS 反而上升，则该证券不计入稀释计算
+
+### 知识点5：同比例利润表与利润表比率（Common-Size Income Statement and Income-Statement Ratios）
+
+- 将所有项目表示为收入(revenue)的百分比，便于跨公司和跨期间比较
+- 核心比率：毛利率(gross margin)、营业利润率(operating margin)、净利润率(net margin)
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

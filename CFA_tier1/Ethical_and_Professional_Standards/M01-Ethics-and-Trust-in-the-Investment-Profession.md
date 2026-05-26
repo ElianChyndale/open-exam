@@ -96,6 +96,37 @@ _Alignment score: 0.49. Original official module field: Ethics and Trust in the 
     └── 优先序：客户 > 市场诚信 > 雇主/个人便利
 ```
 
+## 📖 知识点详解
+
+### 知识点1：职业的本质（Nature of a Profession）
+
+一个真正的职业 (profession) 具备三个核心特征：
+
+- **专业知识 (specialized knowledge)** — 从业者掌握普通人不具备的专业技能与知识体系
+- **服务导向 (service orientation)** — 将客户利益和社会利益置于个人利益之上
+- **信任 (trust)** — 公众对行业的信任是资本市场有效运作的基石
+
+资本市场 (capital markets) 的运行依赖于可信行为与信息完整性 (credible conduct and information integrity)。如果市场参与者失去信任，整个金融系统的效率将大幅下降。
+
+### 知识点2：道德与法律的边界（Ethics vs. Law）
+
+**核心区分**：法律回答"我可以做吗？" (may I)；道德常常追问"我应该做吗？" (should I)
+
+- 合法 (legal) 不等于合乎道德 (ethical)
+- CFA 标准常常要求高于法律底线 (higher than legal minimum)
+- 道德行为 (ethical action) 可以超越法律最低要求
+
+### 知识点3：受托人心态（Fiduciary Mindset）
+
+受托人 (fiduciary) 的核心义务：
+- 将客户利益置于首位
+- 避免利益冲突
+- 以审慎、忠诚的态度行事
+
+### 知识点4：七条职业行为准则总纲（Seven Standards Overview）
+
+Standards I-VII 涵盖了从专业精神、市场诚信到客户义务、雇主义务、冲突管理等全部职业道德领域，是 M03-M07 的纲领性框架。
+
 ### 📐 关键公式表
 
 | 框架 | 内容 | 应用场景 |

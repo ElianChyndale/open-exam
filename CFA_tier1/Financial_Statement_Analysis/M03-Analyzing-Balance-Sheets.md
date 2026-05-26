@@ -85,6 +85,36 @@ _Alignment score: 0.69. Original official module field: M3: Analyzing Balance Sh
     └── 注意资产负债表表外项目
 ```
 
+## 📖 知识点详解
+
+### 知识点1：无形资产（Intangible Assets）
+
+**外购 vs 内部产生 (Purchased vs Internally Generated)：**
+- 外购无形资产(purchased intangibles)按购买成本确认，符合资产确认条件
+- 内部产生无形资产(internally generated intangibles)的会计处理因准则而异：US GAAP 下研发支出(research and development)通常全部费用化；IFRS 下开发阶段支出符合条件的可资本化
+- 对分析师而言，内部产生的无形资产往往被低估，导致资产回报率(ROA)被高估
+
+**有限寿命 vs 无限寿命的分析含义 (Finite-Life vs Indefinite-Life Analysis Implications)：**
+- 有限寿命无形资产(finite-life intangibles)需在预计使用寿命内摊销(amortization)，摊销费用影响利润
+- 无限寿命无形资产(indefinite-life intangibles)不摊销，但需每年进行减值测试(impairment test)
+- 分类直接影响报告利润：无限寿命无形资产无周期性摊销费用，利润波动更小
+
+### 知识点2：商誉（Goodwill）
+
+- **收购剩余 (Acquisition Residual)**：商誉是收购价格超过可辨认净资产公允价值(fair value of net identifiable assets)的部分
+- **减值风险 (Impairment Risk)**：IFRS 和 US GAAP 均采用减值测试法(impairment approach)，而非系统摊销。减值发生时直接计入当期损失
+
+### 知识点3：金融工具与非流动负债（Financial Instruments and Non-Current Liabilities）
+
+- 金融资产分类：按摊余成本(amortized cost)、FVOCI(公允价值计入其他综合收益)、FVTPL(公允价值计入当期损益)
+- 金融负债的确认和计量，包括债券(bonds)的溢价(premium)和折价(discount)摊销
+- 负债的流动性分类(liquidity classification)影响流动比率(current ratio)等短期偿债指标
+
+### 知识点4：同比例资产负债表与相关比率（Common-Size Balance Sheet and Related Ratios）
+
+- 同比例资产负债表将所有项目表示为总资产(total assets)的百分比
+- 核心分析维度：资产结构(asset composition)、资本结构(capital structure)、营运资本(working capital)效率
+
 ### 📐 关键公式表
 
 | 指标 | 公式 | 说明 |

@@ -84,6 +84,46 @@ The candidate should be able to:
 │   🎯 高频考点：资本化条件、IFRS vs US GAAP 减值差异、折旧方法影响
 ```
 
+## 📖 知识点详解
+
+### 知识点1：无形资产来源（Intangible Asset Origin）
+
+无形资产的会计处理取决于其来源，不同来源的确认条件差异显著：
+
+**外购 (Purchased)：**
+- 按购买成本(purchase cost)确认入账，符合资产确认条件(probable future economic benefits and reliable measurement)
+- 外购无形资产的成本包括购买价格和直接归属于使资产达到预定用途的支出
+
+**内部开发 (Internally Developed)：**
+- US GAAP：研发支出(research and development, R&D)通常全部费用化，仅有特定的软件开发成本(software development costs)在技术可行性确立后资本化
+- IFRS：研究阶段(research phase)支出费用化，开发阶段(development phase)支出在满足六项条件时资本化——分析师需注意这种准则差异导致的可比性问题
+- 内部开发品牌、客户名单等不得确认为无形资产
+
+**企业合并取得 (Acquired in Business Combination)：**
+- 在企业合并(business combination)中，可辨认无形资产按公允价值(fair value)确认
+- 这些资产包括客户关系(customer relationships)、技术(technology)、品牌(brands)等
+- 合并中确认的无形资产往往比被收购方账面金额更高
+
+### 知识点2：PP&E 与无形资产减值/终止确认（PP&E and Intangible Impairment / Derecognition）
+
+- **PP&E 减值**：当资产的账面价值(carrying amount)超过可收回金额(recoverable amount)时确认减值损失
+  - IFRS：可收回金额为公允价值减出售成本与使用价值(value in use)两者中的较高者
+  - US GAAP：分两步测试——先比较账面价值与未折现现金流(un-discounted cash flows)，若低于则进行第二步测量减值金额
+  - IFRS 允许转回减值(reversal of impairment)，US GAAP 不允许
+
+- **无形资产减值**：有限寿命无形资产减值的处理与 PP&E 类似；无限寿命无形资产和商誉需每年进行减值测试(annual impairment test)
+
+- **终止确认 (Derecognition)**：
+  - 出售(disposal)：差额 = 出售收入 - 账面价值，计入利润表
+  - 报废(abandonment)：剩余账面价值一次性计入费用
+
+### 知识点3：披露分析（Disclosure Analysis）
+
+- **折旧政策 (Depreciation Policy)**：折旧方法（直线法 straight-line、双倍余额递减法 DDB、产量法 units of production）的选择影响各期利润
+- **使用寿命估计 (Useful Life Estimates)**：管理层对使用寿命的估计直接影响年度折旧费用
+- **残值估计 (Residual Value Estimates)**：残值越高，年度折旧费用越低
+- **分析师调整**：当可比公司的折旧政策存在差异时，分析师需进行调整以实现同口径比较
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

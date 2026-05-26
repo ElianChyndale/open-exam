@@ -103,7 +103,59 @@ The candidate should be able to:
     └── 美式期权可能有更高价值 (提前行权)
 ```
 
-### 📐 关键公式表
+## 📖 知识点详解
+
+### 知识点1：期权收益与利润 (Option Payoff and Profit)
+
+**核心概念**：期权的到期收益（payoff）和利润（profit）是理解期权价值的基础。Payoff 是行权时的经济价值，不包括权利金成本；profit 是扣除权利金后的净盈亏。考生必须严格区分这两者，因为考试中混淆 payoff 和 profit 是最常见的错误之一。
+
+- **Call payoff** = max(0, ST - X)：当标的价格 ST 高于行权价 X 时行权，收益为 ST - X；否则不行权，收益为零
+- **Put payoff** = max(0, X - ST)：当标的价格 ST 低于行权价 X 时行权，收益为 X - ST；否则不行权，收益为零
+- **Long call profit** = max(0, ST - X) - c0：payoff 减去支付的权利金
+- **Long put profit** = max(0, X - ST) - p0：payoff 减去支付的权利金
+- **Short position profit** 与 long 对称相反：short call profit = c0 - max(0, ST - X)
+- 🎯 **高频考点**：payoff ≠ profit。Payoff 不包括权利金，考试中经常故意混淆
+
+**考试应用**：计算 payoff/profit 是 Derivatives 科目必考题。解题步骤：① 判断 call/put；② 判断 long/short；③ 代入 payoff 公式 max(0, ...)；④ 若求 profit 则加减权利金。注意 short call 的 payoff 是 -max(0, ST-X)，不是 max(0, X-ST)。
+
+### 知识点2：期权的内在价值、时间价值与实值状态 (Intrinsic Value, Time Value, and Moneyness)
+
+**核心概念**：期权价格由内在价值和时间价值两部分组成。内在价值是立即行权的经济价值，时间价值反映未来不确定性的价值。实值状态（moneyness）描述当前标的价格与行权价的关系，决定期权是否处于有利可图的状态。
+
+- **内在价值 (Intrinsic Value / Exercise Value)**：Call 的内在价值 = max(0, S - X)；Put 的内在价值 = max(0, X - S)。深度实值期权的价格接近内在价值
+- **时间价值 (Time Value)** = 期权价格 - 内在价值。到期时间越长、波动率越高，时间价值越大。到期时时间价值归零
+- **实值状态 (Moneyness)**：
+  - ITM (实值, In-the-Money)：Call 的 S > X；Put 的 S < X
+  - ATM (平值, At-the-Money)：S = X
+  - OTM (虚值, Out-of-the-Money)：Call 的 S < X；Put 的 S > X
+- 💡 ITM 不一定盈利（profit 还需考虑已支付的权利金）。Moneyness 取决于当前价格，非到期价格
+
+**考试应用**：判断 moneyness 是期权的基本功。给定 S 和 X，判断是 ITM/ATM/OTM。注意：Call 和 Put 的 ITM 条件相反。常见陷阱：ITM 期权 = 行权有利，但 profit 可能仍为负（因已支付权利金）。
+
+### 知识点3：影响期权价值的六因素 (Six Factors Affecting Option Value)
+
+**核心概念**：期权价值受六个因素的影响，其中标的资产价格、行权价、到期时间、波动率、无风险利率和持有收益/股利。理解每个因素对看涨和看跌期权的不同影响方向是期权定价的核心。
+
+- **标的资产价格 S**：S↑ → Call↑, Put↓（Call 随标的价格上涨而增值）
+- **行权价 X**：X↑ → Call↓, Put↑（高价行权价降低 Call 价值）
+- **到期时间 T**：T↑ → Call↑, Put↑（美式期权；欧式期权不确定，因股利可能降低价值）
+- **波动率 σ**：σ↑ → Call↑, Put↑ ⭐ 波动率是唯一对 Call 和 Put 都有正向影响的因素
+- **无风险利率 r**：r↑ → Call↑, Put↓（高利率降低行权价现值）
+- **持有收益/股利**：div↑ → Call↓, Put↑（股利降低持有标的资产的吸引力）
+- 🎯 **高频考点**：波动率对 Call 和 Put 都是正向影响，其他因素方向相反
+
+**考试应用**：六因素分析是高频概念题。给定因素变化方向，判断对 Call/Put 价值的影响。记忆口诀：Call 六因素 S↑(+) X↑(-) T↑(+) σ↑(+) r↑(+) div(-)；Put 与 Call 在 S、X、r、div 方向相反。波动率 σ 是唯一双向正向的因素。
+
+### 知识点4：期权价值边界 (Option Value Bounds)
+
+**核心概念**：欧式期权的价格存在理论下限。如果市场价格低于下限，就存在套利机会。价值边界由无套利条件推导得出，是理解和应用 put-call parity 的基础。
+
+- **欧式看涨下限**：c ≥ max(0, S0 - PV(X))。看涨期权的价格至少不低于标的资产现价减去行权价现值
+- **欧式看跌下限**：p ≥ max(0, PV(X) - S0)。看跌期权的价格至少不低于行权价现值减去标的资产现价
+- 美式期权的价值通常不低于对应欧式期权，因为提前行权的权利不会降低价值
+- 💡 如果市场价格低于理论下限，套利者可以买入期权并卖空标的资产/无风险资产，锁定无风险利润
+
+**考试应用**：价值边界题通常要求比较市场价格与理论下限，判断是否存在套利机会。注意：下限仅适用于欧式期权。常见陷阱：忘记期权价格包含时间价值，价格高于内在价值是正常的，但低于理论下限则不正常。
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |
 |------|------|----------|---------|

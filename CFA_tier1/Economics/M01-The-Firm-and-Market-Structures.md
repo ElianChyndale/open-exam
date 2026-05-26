@@ -83,6 +83,70 @@ _Alignment score: 1.00. Original official module field: Module 1: The Firm and M
     └── ⚠️ 长期: P < ATC 时退出市场
 ```
 
+## 📖 知识点详解
+
+### 知识点1：成本与利润的基本概念（Cost and Profit Concepts）
+
+**会计利润与经济利润（Accounting Profit vs Economic Profit）**：
+- **会计利润（Accounting Profit）** = 总收益 − 显性成本（explicit costs），即账面利润。
+- **经济利润（Economic Profit）** = 总收益 − 显性成本 − 隐性成本（implicit costs），包括机会成本。
+- **正常利润（Normal Profit）** = 隐性成本部分，即经济利润为零时的会计利润水平。
+
+一个重要结论：**经济利润为零时企业仍在盈利（有正常利润）**，这足以让资本留在该行业。
+
+**短期与长期（Short Run vs Long Run）**：
+- **短期（Short Run）**：至少有一种生产要素固定不变，存在固定成本（fixed cost）和可变成本（variable cost）。
+- **长期（Long Run）**：所有要素都可调整，所有成本都是可变的。
+
+**边际决策（Marginal Decision Rule）**：企业在边际收益（MR）等于边际成本（MC）时实现利润最大化。只要 MR > MC，企业就应该增加产量；若 MR < MC，则应减少产量。
+
+### 知识点2：四种市场结构（Four Market Structures）
+
+| 特征 | 完全竞争 | 垄断竞争 | 寡头 | 垄断 |
+|------|---------|---------|------|------|
+| 企业数量 | 非常多 | 较多 | 少数几家 | 一家 |
+| 产品差异化 | 同质 | 差异化 | 可同质可差异 | 唯一产品 |
+| 进入壁垒 | 无 | 较低 | 较高 | 非常高 |
+| 定价权 | 价格接受者 | 有限 | 相互依存 | 价格制定者 |
+| 长期利润 | 零经济利润 | 零经济利润 | 可能有 | 正经济利润 |
+
+**完全竞争（Perfect Competition）**：
+- 特点：大量小型企业，同质产品，完全信息，自由进入退出
+- 需求曲线为水平线（价格接受者）
+- 长期中经济利润为零
+
+**垄断竞争（Monopolistic Competition）**：
+- 特点：产品差异化（product differentiation），非价格竞争（广告、品牌）
+- 需求曲线向右下方倾斜但较为平坦
+- 短期可能有经济利润，长期为零
+
+**寡头（Oligopoly）**：
+- 特点：少数企业主导市场，存在策略互动（strategic interaction）
+- 可能发生价格战或形成默契合谋（tacit collusion）
+- 博弈论（game theory）用于分析寡头行为
+- 纳什均衡（Nash Equilibrium）是重要分析工具
+
+**垄断（Monopoly）**：
+- 特点：唯一生产者，极高进入壁垒
+- 需求曲线即为市场需求曲线
+- 可通过价格歧视（price discrimination）增加利润
+- 导致无谓损失（deadweight loss）
+
+### 知识点3：进入壁垒（Barriers to Entry）
+
+常见的进入壁垒包括：
+- 规模经济（economies of scale）：大企业成本优势
+- 品牌忠诚度（brand loyalty）
+- 专利与政府许可（patents and government licenses）
+- 高初始投资成本
+- 网络效应（network effects）
+
+### 知识点4：集中度指标（Concentration Measures）
+
+- **N企业集中率（N-firm concentration ratio）**：前N家企业市场份额之和。值越高，市场越集中。
+- **赫芬达尔-赫希曼指数（HHI, Herfindahl-Hirschman Index）**：所有企业市场份额的平方和，对市场份额分布更敏感。
+- 注意：集中度指标不能完全替代竞争分析，还需要考虑进出口竞争、潜在进入等因素。
+
 ### 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

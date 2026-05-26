@@ -79,6 +79,72 @@ _Alignment score: 1.00. Original official module field: Module 7: Capital Flows 
     └── 套期保值 vs 投机: 相同工具，不同目的
 ```
 
+## 📖 知识点详解
+
+### 知识点1：国际收支（Balance of Payments, BOP）
+
+国际收支记录一国居民与非居民之间的所有经济交易，分为两大账户：
+
+**经常账户（Current Account）**：
+- 商品贸易（merchandise trade）
+- 服务贸易（services）
+- 收入（income）：投资收益、工资汇款
+- 单方面转移（unilateral transfers）：援助、汇款
+
+**资本与金融账户（Capital and Financial Account）**：
+- 资本账户（Capital Account）：资产所有权转移（如债务减免、移民资产转移）
+- 金融账户（Financial Account）：直接投资（FDI）、证券投资（portfolio investment）、其他投资、储备资产
+
+**国际收支恒等式**：`Current Account + Capital and Financial Account + Reserves = 0`
+
+**经常账户赤字意味着什么**：
+- 进口 > 出口，相当于该国向国外借款来弥补差额
+- 贸易逆差不一定"坏"——例如进行高回报投资的增长经济体可能合理维持赤字
+
+### 知识点2：资本流动（Capital Flows）
+
+资本流动连接国内储蓄、投资和汇率：
+- **国内储蓄 < 国内投资** → 需要国外资本流入 → 经常账户赤字
+- **国内储蓄 > 国内投资** → 资本流出 → 经常账户盈余
+
+**影响资本流动的因素**：
+- 利率差异（interest rate differentials）
+- 经济增长前景
+- 政治和地缘政治稳定性
+- 资本管制程度
+
+### 知识点3：汇率制度（Exchange Rate Regimes）
+
+汇率制度从完全浮动到完全固定形成一个光谱：
+
+| 制度类型 | 特征 | 典型例子 |
+|---------|------|---------|
+| 自由浮动（Free Float） | 汇率完全由市场决定，央行不干预 | 美元、欧元、日元 |
+| 管理浮动（Managed Float） | 央行偶尔干预，但没有固定目标 | 多数新兴市场 |
+| 爬行钉住（Crawling Peg） | 汇率按预定速率调整 | 部分拉美国家 |
+| 固定钉住（Fixed Peg） | 汇率与主要货币挂钩 | 港币（挂钩美元） |
+| 货币局（Currency Board） | 法定货币100%以外汇储备支持 | 香港（实际运作类似） |
+| 美元化（Dollarization） | 直接使用外国货币 | 厄瓜多尔、萨尔瓦多 |
+
+### 知识点4：外汇市场参与者（FX Market Participants）
+
+- **商业银行（Commercial Banks）**：最大参与者，为企业和个人提供外汇服务
+- **中央银行（Central Banks）**：管理外汇储备，干预汇率
+- **跨国公司（Corporations）**：对冲贸易和投资的外汇风险
+- **对冲基金和投资经理（Hedge Funds & Investment Managers）**：投机和资产配置
+- **零售交易者（Retail Traders）**：个人换汇需求
+
+### 知识点5：外汇交易工具（FX Instruments）
+
+- **即期交易（Spot Transaction）**：T+2交割，按当前市场汇率交易
+- **远期合约（Forward Contract）**：约定未来某日按约定汇率交易，用于锁定汇率
+- **外汇掉期（FX Swap）**：同时进行即期和远期交易，常用于融资和流动性管理
+
+**套期保值（Hedging）** vs **投机（Speculation）**：
+- 套期保值：降低或消除外汇风险，是远期市场的核心用途
+- 投机：主动承担风险以获取利润
+- 两者使用相同的金融工具，但目的截然不同
+
 ### 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

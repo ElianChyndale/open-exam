@@ -76,6 +76,59 @@ The candidate should be able to:
    └─ 💡 分层结构 + 信用增级
 ```
 
+## 📖 知识点详解
+
+### 知识点1：抵押贷款基础（Mortgage Loan Fundamentals）
+**核心概念**：抵押贷款是 MBS 的基础资产。理解抵押贷款的基本特征（利率类型、还款结构、提前还款权）是分析 MBS 的前提。
+- **固定利率 vs 可调利率抵押贷款**：固定利率抵押贷款的利率在贷款期内不变；可调利率抵押贷款（ARM）的利率随市场利率定期调整
+- **摊还型（amortizing）vs 气球还款型（balloon）**：摊还型贷款每期偿还部分本金，到期时余额为零；气球还款型贷款在到期时仍有大量未偿还本金余额
+- **提前还款权（Prepayment Option）**：借款人有权在任何时间提前偿还部分或全部贷款余额（相当于借款人持有的一份看涨期权）
+- 抵押贷款是美国最大规模的消费债务市场，是 MBS 的基础资产池
+
+**考试应用**：区分固定利率与可调利率抵押贷款、摊还型与气球还款型贷款的特征。
+
+### 知识点2：提前还款风险（Prepayment Risk）
+**核心概念**：提前还款风险是 MBS 投资者面临的核心风险，由收缩风险和展期风险两部分组成。MBS 的提前还款特征导致其呈现负凸性。
+- **收缩风险（Contraction Risk）**：利率下降时，借款人倾向于再融资来提前还款，导致 MBS 投资者提前收回本金，只能以较低利率再投资
+- **展期风险（Extension Risk）**：利率上升时，借款人不会提前还款，MBS 投资者面临资金锁定在较低利率的期限被拉长
+- **CPR（Conditional Prepayment Rate）**：`CPR = 1 - (1 - SMM)^12`，衡量提前还款速度的年化指标
+- **PSA 基准模型**：100% PSA = 第 1 个月 0.2%，第 30 个月升至 6%，之后保持 6%。PSA 越高表示提前还款越快
+- ⚠️ **负凸性**：MBS 呈现负凸性——利率下降时价格上涨受限（因提前还款增加），利率上升时价格下跌无缓冲（因提前还款减少）
+
+**考试应用**：区分收缩风险与展期风险，理解利率变化对提前还款的影响方向，掌握 CPR 和 PSA 的概念。
+
+### 知识点3：RMBS 结构（Residential MBS Structures）
+**核心概念**：住宅 MBS 分为机构 MBS 和非机构 MBS 两大类。CMO（抵押贷款债务）通过分层重新分配提前还款风险。
+- **过手 MBS（Pass-Through）**：将抵押贷款池的本息按比例传递给投资者，结构简单
+- **CMO（Collateralized Mortgage Obligation）**：将 MBS 现金流切分为不同层级的证券，各层级有不同的本金偿还顺序
+- **Sequential-Pay Tranche**：按顺序偿还各层本金——优先级先收回本金，然后下一级再开始回收
+- **PAC Tranche（Planned Amortization Class）**：有预先设定的本金偿还计划，提供更可预测的现金流
+- **Agency MBS**：由 Ginnie Mae、Fannie Mae、Freddie Mac 发行或担保，有政府或政府机构的信用支持
+- **Non-Agency MBS**：没有政府担保，依赖信用增级（分层、超额抵押等）
+- ⚠️ CMO 不消除提前还款风险，只重新分配——所有层的总风险等于 MBS 池的总风险
+
+**考试应用**：区分 agency vs non-agency MBS，理解 CMO 分层如何重新分配提前还款风险。
+
+### 知识点4：CMBS 特征（Commercial MBS Characteristics）
+**核心概念**：商业 MBS 与住宅 MBS 有显著差异，包括气球风险、提前还款保护和物业类型集中度风险。
+- **气球到期（Balloon Maturity）**：商业抵押贷款通常有摊销期长于贷款期限的特点，导致到期时存在大量未偿还本金（气球款项）
+- **气球风险（Balloon Risk）**：借款人在贷款到期时无法偿还气球余额的风险，是 CMBS 独有的核心风险
+- **提前还款保护机制**：Lockout（最严格禁止）> Defeasance（替代抵押品）> Yield Maintenance（补偿现值）> Prepayment Penalty（固定罚金）
+- **物业类型**：办公楼、零售物业、工业物业、多户住宅、酒店。酒店风险最高，多户住宅风险最低
+- ⚠️ 气球风险是 CMBS 独有的核心风险来源——RMBS 通常没有气球风险
+
+**考试应用**：区分 CMBS 与 RMBS 的关键差异，理解不同提前还款保护机制的区别。
+
+### 知识点5：CMBS 信用分析（CMBS Credit Analysis）
+**核心概念**：CMBS 的信用分析核心指标包括 DSCR、LTV 和 Debt Yield，这些指标衡量贷款的安全性和物业的现金流产生能力。
+- **DSCR（Debt Service Coverage Ratio）**：`DSCR = NOI / Debt Service`，衡量物业净收入覆盖债务支付的能力。DSCR < 1.0 意味着物业收入不足以覆盖债务支付
+- **LTV（Loan-to-Value Ratio）**：`LTV = Loan Amount / Property Value`，衡量贷款金额与物业价值的比率
+- **Debt Yield**：`Debt Yield = NOI / Loan Amount`，衡量贷款安全性的指标，不依赖资本化率
+- **分层结构 + 信用增级**：优先级层级获得最高评级，次级层吸收最先损失
+- CMBS 的贷款笔数通常较少（20-100 笔），集中度风险高于 RMBS
+
+**考试应用**：计算和解读 DSCR、LTV、Debt Yield 等信用指标，理解 CMBS 分层结构的作用。
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |

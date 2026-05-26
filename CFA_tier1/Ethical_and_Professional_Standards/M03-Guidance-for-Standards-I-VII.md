@@ -144,6 +144,279 @@ Standard VII: Responsibilities as CFA Institute Members or Candidates
 
 ---
 
+## 📖 知识点详解
+
+### 知识点1：I(A) 了解法律（Knowledge of the Law）
+
+**核心义务**：
+- 了解与自身职责相关的适用法律 (know applicable law)
+- 当法律与 CFA Standards 冲突时，遵循更严格的规则 (follow stricter rule)
+- 发现违规行为时必须远离 (dissociate from violations)
+
+**关键场景**：
+- 所在国家法律允许但 CFA Standards 禁止 → 遵循 CFA Standards
+- 所在国家法律禁止但雇主鼓励 → 必须遵守法律
+- 发现同事违规 → 先向 supervisor 或 compliance 报告；若无改善则考虑离职
+
+**【考试陷阱】**：ignorance of law is not a comfortable exam defense。不知道法律不是免责理由。
+
+### 知识点2：I(B) 独立性与客观性（Independence and Objectivity）
+
+**核心义务**：在提供投资分析、推荐或行动时保持独立判断，不受外部因素影响。
+
+**影响独立性的典型因素**：
+- 礼物与款待 (gifts, issuer-paid travel) — 价值微小且公开的礼品可接受
+- 雇主压力 (pressure from employer)
+- 利益分配中的偏好 (allocation of benefits)
+- 投行业务关系对研究部门的影响
+
+**关键原则**：在冲突影响推荐之前保护判断 (protect judgment before conflict becomes recommendation)。
+
+### 知识点3：I(C) 虚假陈述（Misrepresentation）
+
+**核心义务**：不得做出任何关于投资分析、推荐、资质或服务的虚假或误导性陈述。
+
+**常见形式**：
+- **剽窃 (plagiarism)** — 未注明来源使用他人研究成果
+- **保证 (guarantees)** — 承诺收益或保证不亏损
+- **资质 (credentials)** — 夸大或虚假陈述个人资质
+- **模型/来源陈述 (model/source representation)** — 误导性地陈述分析模型或数据来源的准确性
+
+**特别注意**：使用第三方研究时仍需注明来源；口头陈述和书面材料同样适用。
+
+### 知识点4：I(D) 不当行为（Misconduct）
+
+**核心义务**：不得从事对职业诚信 (professional integrity) 或资本市场声誉产生负面影响的不诚实行为。
+
+**适用范围**：不限于工作中的行为。个人生活中若存在与职业诚信严重不符的行为（如欺诈、盗窃），同样可能违反本条款。
+
+**判断标准**：行为是否"reflects adversely on professional integrity"。
+
+### 知识点5：II(A) 重大非公开信息（Material Nonpublic Information, MNPI）
+
+**核心禁止**：拥有重大非公开信息的人不得交易、推荐交易或传播该信息。
+
+**"重大" (Material)** 的判断标准：
+- 如果合理投资者在做出投资决定时**会关注**该信息，则该信息是重大的
+- 如果信息可能导致证券价格**显著变化**，则为重大
+- 信息的重大性可以从内容（定性）和影响（定量）两个维度评估
+
+**"非公开" (Nonpublic)** 的判断标准：
+- 信息在广泛传播 (disseminated) 之前是非公开的
+- 面向公众的媒体发布、监管文件归档、公开会议等可视为公开
+- 仅在一小部分人群中流通不能视为公开
+
+**信息传播前的禁止行为**：
+- 不得交易 (do not trade)
+- 不得推荐 (do not recommend)
+- 不得传播 (do not disclose)
+
+### 知识点6：马赛克理论（Mosaic Theory）
+
+**定义**：将公开信息 (public information) 和非重大非公开信息 (nonmaterial nonpublic information) 拼接起来形成投资结论的过程。
+
+**合法性边界**：
+- 马赛克理论是合法的研究方式
+- 关键在于信息源不能包含 MNPI
+- 不能将 MNPI 伪装成马赛克理论
+
+**防火墙与限制清单 (Firewall / Restricted List)**：
+- 投行与研究部门之间的信息隔离墙
+- 限制清单防止公司自身交易卷入
+- 合规文化降低 MNPI 滥用风险
+
+### 知识点7：II(B) 市场操纵（Market Manipulation）
+
+**两种类型**：
+
+1. **基于信息的扭曲 (information-based distortion)** — 散布虚假信息影响价格
+2. **基于交易的虚假价格/成交量假象 (transaction-based false price/volume impression)** — 通过交易行为制造虚假市场信号（如洗售 wash sales、对倒 matched orders）
+
+**关键判断**：一个听起来聪明的交易故事并不能洗白虚假市场信号 (a clever trading story does not sanitize false market signals)。
+
+### 知识点8：III(A) 忠诚、审慎与谨慎（Loyalty, Prudence, and Care）
+
+**核心义务**：以客户利益为首要考虑，以受托人 (fiduciary) 身份行事。
+
+**关键维度**：
+- **客户利益 (client benefit)** — 所有行动应从客户最佳利益出发
+- **受托人意识 (fiduciary mindset)** — 高于普通合同义务的法律标准
+- **软美元 (soft dollars)** — 必须合理使用且使客户受益
+- **代理投票 (proxy voting)** — 必须按照客户最佳利益行使投票权
+
+### 知识点9：III(B) 公平交易（Fair Dealing）
+
+**核心义务**：在推荐传播和交易分配中公平对待所有客户。
+
+**关键要点**：
+- 不是要求完全同时同价成交，而是合理的、公平的分配机制
+- 推荐必须公平地向所有客户传播，不能给特定客户提前通知
+- 交易分配必须公平，特别是 IPO 和限量配售
+
+**常见场景**：
+- 限价单未全部成交 → 按比例分配
+- 利好消息 → 所有客户同时知情，不能提前通知大客户
+
+### 知识点10：III(C) 适当性（Suitability）
+
+**核心义务**：在了解客户的投资目标、约束和风险承受能力的基础上做出推荐。
+
+**两个层次**：
+1. **了解客户 (Know Your Client, KYC)** — 调查客户的 objectives 和 constraints
+2. **投资组合背景 (portfolio context)** — 不能孤立看待单一产品，要在整体投资组合中评估适当性
+
+**判断标准**：不是单一产品的热度或收益潜力，而是是否匹配客户的具体情况 (not a single-product popularity judgment)。
+
+### 知识点11：III(D) 业绩陈述（Performance Presentation）
+
+**核心义务**：公平、准确、完整地沟通投资业绩信息。
+
+**关键要求**：
+- 不能选择性展示最佳业绩
+- 必须披露计算方法和假设
+- 不能做虚假或误导性的业绩陈述
+
+### 知识点12：III(E) 保密义务（Preservation of Confidentiality）
+
+**核心义务**：保护客户信息机密性。
+
+**例外情形 (exceptions)**：
+1. **客户许可 (client permission)** — 客户授权披露
+2. **法律要求 (law requirement)** — 法院传票或监管要求
+3. **违法活动处理 (illegal activity handling)** — 涉及违法活动的防范和调查
+
+**注意**：保密义务是持续的，即使客户关系终止后仍然存在。
+
+### 知识点13：Standard IV: 对雇主的义务（Duties to Employers）
+
+### 知识点14：IV(A) 在职忠诚（Loyalty）
+
+**核心义务**：在职期间，在遵守 CFA 职业标准的前提下，对雇主负有忠诚义务。
+
+**关键场景与边界**：
+
+- **离职准备 (transition preparation)** — 可以有限度准备离职，如更新简历、安排面试
+- **客户招揽 (solicitation)** — 在职期间不能招揽雇主客户
+- **资料窃取 (theft of records)** — 不能复制或带走雇主专有信息
+- **竞争行为** — 在职期间不能从事与雇主竞争的业务
+
+**核心区分**：有限准备离职是允许的，但挖客户和盗资料是不允许的。
+
+### 知识点15：IV(B) 额外报酬（Additional Compensation）
+
+**核心义务**：从非雇主渠道获得的额外报酬必须获得各方的书面同意。
+
+**适用范围**：
+- 董事会成员费用、咨询费、佣金等
+- 必须披露给雇主并获得书面许可
+- **各方书面同意**是关键：包括雇主和提供报酬的第三方
+
+### 知识点16：IV(C) 监督责任（Responsibilities of Supervisors）
+
+**核心义务**：监督者有责任建立并执行合理的合规程序，以防止违规行为。
+
+**关键要求**：
+- 必须建立合理的合规程序 (reasonable compliance procedures)
+- 必须有合理的监督和跟进 (follow-up)
+- 发现违规时必须及时处理
+
+**注意**：如果公司没有合规程序，监督者不能以"没有程序"为由免除责任，而应当推动建立。
+
+### 知识点17：Standard V: 投资分析（Investment Analysis, Recommendations, and Actions）
+
+### 知识点18：V(A) 勤勉与合理依据（Diligence and Reasonable Basis）
+
+**核心义务**：在做出投资推荐或行动之前，必须有充分的勤勉和合理依据。
+
+**关键要求**：
+- 独立评估研究质量和适用性
+- **使用第三方研究不能外包合理依据义务** (using third-party research does not outsource all reasonable-basis duty)
+- 需要记录分析过程和结论依据
+
+### 知识点19：V(B) 沟通（Communication with Clients and Prospective Clients）
+
+**核心义务**：与客户沟通时必须区分事实和观点、披露风险和局限性。
+
+**关键要求**：
+- **区分事实/观点 (distinguish fact/opinion)**
+- **披露风险/局限性 (disclose risk/limitation)**
+- **告知流程变更 (process changes)** — 投资过程发生重大变化时需告知客户
+
+### 知识点20：V(C) 记录保留（Records Retention）
+
+**核心义务**：保留支持投资分析和沟通的记录。
+
+**关键要求**：
+- 保留所有支持分析和建议的记录
+- 保留内部和外部沟通记录
+- 记录需要按照适用的法律和规定保存（通常为 5-7 年）
+
+### 知识点21：Standard VI: 利益冲突（Conflicts of Interest）
+
+### 知识点22：VI(A) 冲突披露（Disclosure of Conflicts）
+
+**核心义务**：必须完整披露所有可能损害独立性、客观性或受托人义务的利益冲突。
+
+**需要披露的事项**：
+- **实益所有权 (beneficial ownership)** — 持有与推荐相关的证券的直接或间接利益
+- **报酬安排 (compensation)** — 从第三方获得的与推荐相关的报酬
+- **关系 (relationships)** — 与发行公司的董事、高管或其他重要关系
+- **发行人关联 (issuer ties)** — 担任发行人职务或有重大商业关系
+
+**披露时间**：必须在做出推荐或服务之前或同时披露，不能事后补报。
+
+### 知识点23：VI(B) 交易优先顺序（Priority of Transactions）
+
+**核心义务**：客户交易必须优先于雇主交易和个人交易。
+
+**优先顺序**：
+```
+客户 (client) > 雇主 (employer) > 个人 (personal)
+```
+
+**具体要求**：
+- 客户的订单必须在个人交易之前执行
+- 不允许以个人交易抢占更好的价格
+- 如果个人交易与客户订单可能冲突，客户优先
+
+### 知识点24：VI(C) 介绍费（Referral Fees）
+
+**核心义务**：因推荐客户或服务而获得的经济利益必须向客户或雇主充分披露。
+
+**关键要求**：
+- 在服务受影响前披露 (disclose before service impact)
+- 披露内容包括存在利益安排和具体形式
+- 不限于现金，包括非现金利益（如推荐换推荐）
+
+### 知识点25：Standard VII: CFA 项目责任（Responsibilities as CFA Institute Members or Candidates）
+
+### 知识点26：VII(A) CFA 项目参与者行为（Conduct as Participants in CFA Programs）
+
+**核心义务**：不得从事任何损害 CFA 考试、项目或协会声誉的行为。
+
+**禁止行为**：
+- 泄露考试内容（包括题目、答案、公式）
+- 分享或传播考试材料
+- 违反考试规则
+- 在考试成绩公布前讨论考试体验或题目
+
+### 知识点27：VII(B) 引用 CFA 协会、项目、称号（Reference to CFA Institute, Program, Designation）
+
+**核心义务**：在引用 CFA 称号时必须准确、不得夸大，且不能误导他人。
+
+**允许的表述**：
+- "I have passed Level I"（若事实如此）
+- "I am a CFA charterholder"（仅限获得 charter 后）
+- "CFA"（仅限 active 的 charterholder）
+
+**禁止的表述**：
+- "CFA Level II passed" 暗示比实际更高的资格
+- "I am a CFA"（charterholder 不能简写为 CFA）
+- 暗示部分通过考试等同于专业认证
+- 预测或保证 CFA 头衔将带来更好的投资表现
+
+**核心原则**：不能夸大含义、保证或部分状态 (no exaggeration of meaning, guarantee, or partial status)。
+
 ## 核心概念与判断规则
 
 ### 整体伦理决策框架

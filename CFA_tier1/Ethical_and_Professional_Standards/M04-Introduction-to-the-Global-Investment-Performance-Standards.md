@@ -105,6 +105,61 @@ _Alignment score: 0.39. Original official module field: Introduction to GIPS._
     └── GIPS 涵盖股票、债券、房地产、私募股权等
 ```
 
+## 📖 知识点详解
+
+### 知识点1：GIPS 的定位（Purpose of GIPS）
+
+GIPS 是一套自愿遵守的全球投资业绩展示标准，旨在确保业绩信息的**公平展示和充分披露 (fair representation and full disclosure)**。
+
+**核心理念**：
+- 增强全球投资业绩报告的可比性 (comparability) 和可信度 (credibility)
+- 消除业绩展示中的偏差和选择性呈现
+- 建立行业最佳实践标准
+
+### 知识点2：关键概念（Key Concepts）
+
+**公司 (Firm)**：
+- GIPS 合规的公司定义必须是清晰的、可验证的
+- 公司界定为投资管理业务单元，不能随意改变定义来包含或排除业绩
+- 一旦宣称合规，必须涵盖公司全部 discretionary 账户
+
+**组合组 (Composite)**：
+- 按照相似投资策略、目标或限制分组的账户集合
+- 不能选择性组合业绩（cherry-picking）
+- 每个组合组必须包含所有符合条件的账户
+
+**自由裁量权 (Discretion)**：
+- 必须明确区分全权委托 (discretionary) 和限制性非全权 (non-discretionary) 账户
+- 全权委托账户必须包含在相应组合组中
+- 非全权账户不能包含在 GIPS 合规组合组中
+
+**合规陈述 (Compliant Presentation)**：
+- 所有 GIPS 合规的业绩展示必须包含特定披露和报告要件
+- 包括计算方法的说明、费用处理方式、货币单位等
+
+### 知识点3：九大组成部分（Nine Major Sections）
+
+| 部分 | 内容 |
+|------|------|
+| 0 | 基本原则 — 合规定义、公司定义 |
+| 1 | 输入数据 (Input Data) — 数据质量和一致性 |
+| 2 | 计算方法 (Calculation Methodology) — 收益率的计算标准 |
+| 3 | 组合组构建 (Composite Construction) |
+| 4 | 披露 (Disclosure) — 必须披露和鼓励披露的事项 |
+| 5 | 陈述与报告 (Presentation and Reporting) |
+| 6 | 房地产 (Real Estate) — 单独章节 |
+| 7 | 私募股权 (Private Equity) — 单独章节 |
+| 8 | 验证 (Verification) — 第三方评估公司合规流程 |
+
+### 知识点4：验证（Verification）
+
+**核心区分**：
+- 验证 (verification) 评估公司整体的 GIPS 合规流程 (firm-level compliance process)
+- 验证不保证单项业绩的正确性 (not a magic performance guarantee)
+- 验证是针对流程的保证，不是针对数字的担保
+
+**GIPS and Standard III(D) 的关系**：两者都关乎诚实的业绩沟通 (honest performance communication)，但 GIPS 提供了更具体的展示标准和全球可比性。
+
 ### 📐 关键公式表
 
 | 概念 | 含义 | 考试重点 |

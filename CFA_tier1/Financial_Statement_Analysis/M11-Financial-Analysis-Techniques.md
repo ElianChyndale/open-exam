@@ -96,6 +96,100 @@ The candidate should be able to:
 │   🎯 高频考点：四大类比率计算、杜邦分解、CCC、比率联动
 ```
 
+## 📖 知识点详解
+
+### 知识点1：分析工具与局限（Tools and Limitations）
+
+**主要分析工具：**
+- **同比例分析 (Common-Size Analysis)**：将报表各项目表示为基准（收入或总资产）的百分比，消除规模影响
+- **趋势分析 (Trend Analysis)**：分析同一公司跨期财务数据的变化方向和幅度
+- **交叉截面分析 (Cross-Sectional Analysis)**：比较同行业不同公司的财务指标
+- **比率分析 (Ratio Analysis)**：通过财务比率衡量公司的各个方面表现
+
+**局限性 (Limitations)：**
+- 历史数据导向(historical orientation)——比率反映过去，不保证未来
+- 会计政策差异影响可比性(comparability)
+- 行业多样性使得行业平均未必代表正常水平
+- 单一比率无法反映全貌，需要综合运用
+
+### 知识点2：营运/流动性/偿债/盈利比率（Activity / Liquidity / Solvency / Profitability Ratios）
+
+**流动性比率 (Liquidity Ratios)——短期偿债能力：**
+
+| 比率 | 公式 | 说明 |
+|------|------|------|
+| Current Ratio | `Current Assets / Current Liabilities` | 流动比率，衡量短期偿债能力 |
+| Quick Ratio | `(Cash + ST Investments + Receivables) / Current Liabilities` | 速动比率，排除存货影响 |
+| Cash Ratio | `(Cash + ST Investments) / Current Liabilities` | 现金比率，最保守的流动性指标 |
+
+**营运比率 (Activity Ratios)——运营效率：**
+
+| 比率 | 公式 | 说明 |
+|------|------|------|
+| Inventory Turnover | `COGS / Average Inventory` | 存货周转率 |
+| Days of Inventory on Hand (DOH) | `365 / Inventory Turnover` | 存货持有天数 |
+| Receivables Turnover | `Revenue / Average Receivables` | 应收账款周转率 |
+| Days of Sales Outstanding (DSO) | `365 / Receivables Turnover` | 应收账款天数 |
+| Payables Turnover | `COGS / Average Payables` | 应付账款周转率 |
+| Total Asset Turnover | `Revenue / Average Total Assets` | 总资产周转率 |
+
+**偿债比率 (Solvency Ratios)——长期偿债和资本结构：**
+
+| 比率 | 公式 | 说明 |
+|------|------|------|
+| Debt-to-Equity | `Total Debt / Total Equity` | 债务权益比 |
+| Debt-to-Assets | `Total Debt / Total Assets` | 债务资产比 |
+| Financial Leverage | `Average Total Assets / Average Equity` | 财务杠杆 |
+| Interest Coverage | `EBIT / Interest Expense` | 利息覆盖倍数 |
+| Fixed Charge Coverage | `(EBIT + Lease Payments) / (Interest + Lease Payments)` | 固定费用覆盖 |
+
+**盈利比率 (Profitability Ratios)——盈利能力：**
+
+| 比率 | 公式 | 说明 |
+|------|------|------|
+| Gross Profit Margin | `Gross Profit / Revenue` | 毛利率 |
+| Operating Margin | `Operating Income / Revenue` | 营业利润率 |
+| Net Profit Margin | `Net Income / Revenue` | 净利润率 |
+| ROA | `Net Income / Average Total Assets` | 资产收益率 |
+| ROE | `Net Income / Average Total Equity` | 权益收益率 |
+| Return on Common Equity | `(NI - Preferred Dividends) / Average Common Equity` | 普通股权益收益率 |
+
+#### 核心公式 (English)
+- `Current ratio = CA / CL`
+- `Quick ratio = (Cash + ST Inv + Receivables) / CL`
+- `Inventory turnover = COGS / Avg Inventory`
+- `ROE = NI / Avg Equity`
+
+### 知识点3：比率联动与行业比率（Ratio Relationships and Industry-Specific Ratios）
+
+- **比率联动关系**：各比率之间存在内在逻辑联动——例如存货周转率下降(效率恶化)可能导致毛利率上升(可能因提价或产品组合变化)，需综合解读
+- **行业特定比率 (Industry-Specific Ratios)**：银行业关注净息差(net interest margin)；零售业关注同店销售增长(same-store sales growth)和每平方英尺销售额(sales per square foot)
+- **比率分析的三角验证**：单个比率的变化应与其他相关比率的变化一致，否则可能存在操纵或误解
+
+### 知识点4：杜邦分解（DuPont Decomposition）
+
+**三因式杜邦分解：**
+```
+ROE = Net Profit Margin x Total Asset Turnover x Financial Leverage
+ROE = (NI / Revenue) x (Revenue / Avg Assets) x (Avg Assets / Avg Equity)
+```
+
+- **净利率 (Net Profit Margin)**：反映经营效率(efficiency)和成本控制
+- **资产周转率 (Asset Turnover)**：反映资产使用效率(utilization)
+- **财务杠杆 (Financial Leverage)**：反映资本结构风险(risk)
+
+**分析意义：**
+- 分解 ROE 的来源，判断增长驱动因素
+- 相同 ROE 的背后可能是完全不同的商业策略（高利润率低周转 vs 低利润高周转）
+- 财务杠杆驱动的 ROE 增长不可持续——分析师需要关注盈利增长的"质量"
+
+### 知识点5：建模与预测中的比率分析（Ratio Analysis for Modeling and Forecasting）
+
+- 历史比率是构建财务预测模型(forecasting model)的基础输入
+- 关键假设：未来的比率预计会维持、改善还是恶化？
+- 比率趋势分析帮助识别拐点(turning point)和异常
+- 一个比率的预测需与其他比率保持一致——例如预测毛利率上升的同时预测资产周转率不变需要合理解释
+
 ## 📐 关键公式表
 
 | 公式 | 解释 | 使用场景 | ⚠️ 注意 |
