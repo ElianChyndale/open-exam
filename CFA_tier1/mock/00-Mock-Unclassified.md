@@ -1,0 +1,270 @@
+---
+question_count: 259
+source_root: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Mock5套及答案"
+---
+
+# Mock Unclassified Questions
+
+- 这些题目暂时没被高置信地映射到单一科目。
+- 保留原题干和源页码，后续可以继续细分到具体科目页。
+
+## Questions
+- CFA L1 1-1 Q05 | p.1 | A portfolio manager is hired by an executive manager of a trust. The duty of loyalty is owed to the:
+- CFA L1 1-1 Q28 | p.7 | Countries who are global leaders and use their economic influence to control resources are best described as:
+- CFA L1 1-1 Q30 | p.7 | Nomalized earnings are best defined as the:
+- CFA L1 1-1 Q37 | p.9 | Which of the following expense recognition choices is least consistent with conservative accounting of reported net income?
+- CFA L1 1-1 Q45 | p.10 | The regulation of economic activity over time is associated with:
+- CFA L1 1-1 Q52 | p.11 | Under a franchise model, the franchisee:
+- CFA L1 1-1 Q55 | p.12 | A positive movement in a lagging indicator would least likely be used to:
+- CFA L1 1-1 Q63 | p.14 | An investor plans to contribute $10,000 each year into an account that earns an annual interest rate of 5%. If the first contribution is made one year from today, the value of the account immediately after the 10th contribution is closest to:
+- CFA L1 1-1 Q65 | p.14 | In a small country, an export subsidy for a good most likely results in a decrease in the good's domestic:
+- CFA L1 1-1 Q67 | p.15 | An analyst is comparing the solvency of a company over the past two years using the information below: The best conclusion the analyst can make about Year 2 is that compared with Year 1, the company's solvency has:
+- CFA L1 1-1 Q68 | p.15 | Which action is most likely considered a secondary source of liquidity?
+- CFA L1 1-1 Q69 | p.15 | The returns of a fund are as follows: The mean absolute deviation (MAD) of returns for the fund is closest to:
+- CFA L1 1-1 Q71 | p.16 | An analyst gathers the following information about a company: Which of the following increased from Year 1 to Year 2?
+- CFA L1 1-1 Q77 | p.17 | A researcher wants to measure the level of consumer confidence in a country by interviewing a simple random sample of ten consumers from three randomly selected cities. This method is an example of:
+- CFA L1 1-1 Q78 | p.17 | The following data apply to a firm operating in perfect competition. The firm's profit maximizing output (in units) is most likely:
+- CFA L1 1-1 Q81 | p.18 | The following information is available for a company: Compared with Year 1,which of the following ratios most likely indicates an improvement in the creditworthiness of the company? The change in the company's:
+- CFA L1 1-1 Q82 | p.18 | When considering ESG factors, energy efficiency is best described as a(n):
+- CFA L1 1-1 Q90 | p.20 | Conflicts of interest between shareholders and management most likely occur when:
+- CFA L1 1-2 Q04 | p.1 | Investors are least likely to use derivatives to:
+- CFA L1 1-2 Q07 | p.2 | A security is most likely undervalued if its estimated intrinsic value is higher than its:
+- CFA L1 1-2 Q11 | p.3 | An analyst gathers the following information (in $billions) about a company: The balance (in $billions) of the company's cash and short-term investments is:
+- CFA L1 1-2 Q17 | p.4 | A key catalyst for the relative growth of passive investing compared to active investing is most likely the:
+- CFA L1 1-2 Q20 | p.4 | An American waterfall distributes performance fees on a(n):
+- CFA L1 1-2 Q21 | p.5 | All else being equal, non-cumulative preference shares are more risky for investors than:
+- CFA L1 1-2 Q22 | p.5 | Which of the following statements is most likely correct regarding the spot and forward curves. The spot curve:
+- CFA L1 1-2 Q29 | p.6 | An analyst gathers the following information about returns for an equity index: The index's total return over three years is closest to:
+- CFA L1 1-2 Q32 | p.7 | In an order-driven market, if the trade price is determined by the limit price of an order, the market most likely operates under the:
+- CFA L1 1-2 Q38 | p.9 | Which of the following statements is most accurate? In derivatives pricing:
+- CFA L1 1-2 Q41 | p.9 | Which investment will most likely expose investors to the greatest level of extension risk?
+- CFA L1 1-2 Q48 | p.11 | Investing in correctional facilities to be constructed and sold to the government is best described as a(n):
+- CFA L1 1-2 Q52 | p.11 | The multiple of invested capital (MOIC) measure takes into account.
+- CFA L1 1-2 Q57 | p.12 | Which of the following statements regarding certificates of deposit (CDs) is most accurate?
+- CFA L1 1-2 Q58 | p.13 | Which of the following lines is depicted on a graph using systematic risk on the horizontal axis?
+- CFA L1 1-2 Q59 | p.13 | Which of the following investors is least likely to be concerned about liquidity risk?
+- CFA L1 1-2 Q60 | p.13 | Information-motivated traders are most likely to differ from pure investors in that they:
+- CFA L1 1-2 Q61 | p.13 | An investor bears more risk than initially thought because of the failure to consider the interaction of credit risk and market risk. This type of risk interaction is best described as:
+- CFA L1 1-2 Q63 | p.13 | A high-quality and a high-yield corporation are each issuing subordinated debt with similar characteristics. Compared to the high-yield issuer, the notching adjustment for the high-quality issuer will most likely be:
+- CFA L1 1-2 Q64 | p.14 | The holders of common shares of a company are legally entitled to:
+- CFA L1 1-2 Q65 | p.14 | Which of the following categories of private debt most likely has the highest level of risk for an investor?
+- CFA L1 1-2 Q78 | p.16 | In contrast to a contingent claim, a forward commitment creates counterparty risk for.
+- CFA L1 1-2 Q80 | p.16 | Which of the following offers the flexibility of delaying harvests when their prices are down?
+- CFA L1 1-2 Q82 | p.17 | An investor who prefers an asset with an uncertain expected payoff of $50 to a guaranteed payoff of $50 is best described as:
+- CFA L1 1-2 Q86 | p.17 | Which of the following asset-backed securities provides the highest level of protection against prepayment risk?
+- CFA L1 1-2 Q89 | p.18 | Which type of index does not use market capitalization as a weighting method?
+- CFA L1 2-1 Q12 | p.4 | Reliable Data Corp offered to pay all the expenses of Lindsey Robinson, CFA, an equity analyst who covers the company, to attend the company's upcoming annual shareholder meeting. Robinson declined their offer and explained to the company that if she had accepted their offer she would most likely be in violation of:
+- CFA L1 2-1 Q30 | p.8 | When forecasting earnings, an analyst's best approach is to:
+- CFA L1 2-1 Q31 | p.8 | The creditors of a company most likely.
+- CFA L1 2-1 Q34 | p.8 | Which of the following most likely increases a manufacturing company's operating income? A decrease in.
+- CFA L1 2-1 Q35 | p.8 | Which of the following events is most likely to lead management to make biased accounting choices?
+- CFA L1 2-1 Q38 | p.9 | Frequent changes to commercial bank reserve requirements most likely.
+- CFA L1 2-1 Q40 | p.9 | Which of the following measures best expresses the amount of a portfolio's risk per unit of mean return?
+- CFA L1 2-1 Q41 | p.10 | Under US GAAP, a valuation allowance is a reserve created against
+- CFA L1 2-1 Q45 | p.10 | Which of the following statements is most accurate? Network effects:
+- CFA L1 2-1 Q50 | p.11 | Which category of financial ratios is most likely used to measure how efficiently a company performs day-to-day tasks?
+- CFA L1 2-1 Q52 | p.12 | An unqualified audit opinion:
+- CFA L1 2-1 Q56 | p.13 | An investor is considering three investments: ·Investment 1 makes 20 annual payments of $50,000, starting one year from today. ·Investment 2 makes 25 annual payments of $45,000, starting today. ·Investment 3 makes annual payments of $40,000 indefinitely, starting one year from today. If the investor's discount rate is 10% per year, which investment has the highest present value':
+- CFA L1 2-1 Q59 | p.13 | Double taxation of income occurs when a corporation pays taxes on its profits, and additional taxes are paid by the.
+- CFA L1 2-1 Q63 | p.14 | Fully automated robo-advisers are most likely.
+- CFA L1 2-1 Q64 | p.15 | A disadvantage of using the concentration ratio to measure market power is that it:
+- CFA L1 2-1 Q66 | p.15 | Capital restrictions most likely.
+- CFA L1 2-1 Q69 | p.15 | Under US GAAP, material income items that are unusual and infrequent are shown as part of.
+- CFA L1 2-1 Q72 | p.16 | Which of the following is a common source of financing for an early-stage start-up with minimal revenue?
+- CFA L1 2-1 Q73 | p.16 | When conducting an executive remuneration policy review, one warming sign that warrants additional scrutiny is most likely.
+- CFA L1 2-1 Q75 | p.16 | The tendency to classify information based on past experiences and known classifications best defines:
+- CFA L1 2-1 Q78 | p.17 | Which of the following is a secondary source of liquidity for a company?
+- CFA L1 2-1 Q79 | p.17 | The liquidity premium is 2% and the real risk-free interest rate is 4%. According to economic theory, the rate that only reflects the time preferences of individuals for current versus future real consumption is:
+- CFA L1 2-1 Q82 | p.18 | Which of the following statements about the use of financial ratios is most accurate?
+- CFA L1 2-1 Q83 | p.18 | Which of the following stakeholders in a mature company would most likely tolerate higher risks in return for higher return potential?
+- CFA L1 2-1 Q89 | p.20 | In a test of independence based on contingency table data, the nonparametric test statistic to be used is:
+- CFA L1 2-2 Q01 | p.1 | According to the CAPM, the priced risk of an individual security is:
+- CFA L1 2-2 Q07 | p.2 | Which of the following is best described as a relative risk objective?
+- CFA L1 2-2 Q11 | p.2 | Investing in private debt most likely is:
+- CFA L1 2-2 Q12 | p.3 | Investing in an existing solar power plant is best categorized as a:
+- CFA L1 2-2 Q13 | p.3 | Insurance on a portfolio of risky assets is most likely:
+- CFA L1 2-2 Q22 | p.4 | Which of the following is not a credit enhancement in asset-backed securities?
+- CFA L1 2-2 Q25 | p.5 | When a bank invests its excess reserves, which of the following best describes the bank's return objective? To earn a return that exceeds the:
+- CFA L1 2-2 Q28 | p.5 | Equity style indexes most likely represent groups of securities classified by:
+- CFA L1 2-2 Q29 | p.5 | With respect to index construction, which method of grouping companies most likely experiences the highest turnover in its constituents? Grouping by:
+- CFA L1 2-2 Q33 | p.6 | A multi-boutique asset manager firm is best described as a(n):
+- CFA L1 2-2 Q34 | p.6 | An overreaction in the financial markets causes a security s price to experience a significant loss during a short period. If this overreaction is caused by investors that sell because other investors are selling, the behavior is best described as:
+- CFA L1 2-2 Q39 | p.7 | Statutory voting means that shareholders:
+- CFA L1 2-2 Q44 | p.8 | As one moves to the right along an investor's efficient frontier, a set increase in risk is most likely to lead to:
+- CFA L1 2-2 Q46 | p.9 | Knowledge about the degree of risk aversion of investors is most likely needed for.
+- CFA L1 2-2 Q47 | p.9 | If an investor wants to protect a short position from adverse price movements while also providing the opportunity for gains in the future, the investor should most likely use a:
+- CFA L1 2-2 Q48 | p.9 | The lead underwriter in an IPO most likely.
+- CFA L1 2-2 Q49 | p.9 | A company has an issuer rating of B. Which of the following types of debt issued by this company is most likely to carry a rating of BB-?
+- CFA L1 2-2 Q53 | p.10 | A company that is required to raise equity capital to continue to operate as a going concern is most likely doing so to:
+- CFA L1 2-2 Q54 | p.10 | The average life of a mortgage pass-through security is two years. Six months ago, its average life was five years. Over the last six months, investors in the security have most likely experienced:
+- CFA L1 2-2 Q56 | p.11 | Management of a price-weighted index most likely entails:
+- CFA L1 2-2 Q57 | p.11 | Electronic trading in cryptocurrencies on centralized exchanges is most likely:
+- CFA L1 2-2 Q61 | p.11 | A reason for a company's management to repurchase its shares is to signal a belief that the company's shares are:
+- CFA L1 2-2 Q63 | p.12 | Only the seller can default on a(n):
+- CFA L1 2-2 Q67 | p.13 | An efficient market is best described as one in which
+- CFA L1 2-2 Q69 | p.13 | With respect to derivatives, which of the following is a second-order risk?
+- CFA L1 2-2 Q70 | p.13 | Risk management is a process that can most likely be best described as:
+- CFA L1 2-2 Q75 | p.14 | The decision to divest from fossil fuels in a portfolio is most consistent with which of the following approaches to ESG investing?
+- CFA L1 2-2 Q80 | p.15 | Compared to the total return version of an index, the value of the price version of the index at inception is:
+- CFA L1 2-2 Q81 | p.15 | When presented with new information, if an analyst asks themselves the question "how much does this information change my forecast?" then which of the following biases is the analyst most likely trying to overcome?
+- CFA L1 2-2 Q82 | p.15 | Which of the following is not a source of return from investing in equities?
+- CFA L1 2-2 Q86 | p.16 | Convenience yield is primarily associated with which of the following assets?
+- CFA L1 2-2 Q88 | p.16 | A market where buyers and sellers trade only with dealers is most likely a(n):
+- CFA L1 2-2 Q89 | p.17 | A non-recourse residential mortgage loan:
+- CFA L1 3-1 Q32 | p.8 | Substantial government borrowing is less likely to be of concern when:
+- CFA L1 3-1 Q34 | p.8 | Which of the following most accurately describes a distribution that is more peaked than normal?
+- CFA L1 3-1 Q35 | p.8 | Which of the following statements about dispersion measures is most accurate?
+- CFA L1 3-1 Q36 | p.9 | Which pricing model combines multiple products so that customers are incentivized to buy them together?
+- CFA L1 3-1 Q37 | p.9 | The correction of a material error for a prior period is handled by:
+- CFA L1 3-1 Q38 | p.9 | Which of the following is not generally considered one of the three key characteristics of Big Data?
+- CFA L1 3-1 Q40 | p.9 | When constructing a forecast, an analyst with a conservatism bias is most likely to:
+- CFA L1 3-1 Q41 | p.10 | An investment pays $1,000 at the end of each year in perpetuity, with the first payment occurring six years from today. If the discount rate is 9% per year, the present value of the investment today is closest to:
+- CFA L1 3-1 Q46 | p.10 | When estimating the average return of an investment over multiple consecutive periods, it is most appropriate to use the:
+- CFA L1 3-1 Q47 | p.11 | A well-defined supply function is most likely available to:
+- CFA L1 3-1 Q55 | p.12 | Which of the following best describes a principal-agent conflict? A company's management puts their own interests above those of
+- CFA L1 3-1 Q58 | p.13 | In contrast to the Herfindahl-Hirschman index (HHI), the concentration ratio:
+- CFA L1 3-1 Q62 | p.14 | Which of the following is most likely a benefit of globalization?
+- CFA L1 3-1 Q64 | p.14 | The continuously compounded return:
+- CFA L1 3-1 Q65 | p.14 | A characteristic of a dollarized exchange regime is:
+- CFA L1 3-1 Q70 | p.15 | Which of the following is best described as a non-cooperative economic tool?
+- CFA L1 3-1 Q71 | p.15 | Which of the following statements is most accurate?
+- CFA L1 3-1 Q72 | p.16 | In the context of considering ESG factors, "stranded asset" risk most likely applies to companies in which sector?
+- CFA L1 3-1 Q80 | p.17 | A firm operating in a perfectly competitive market will most likely shut down in the short run when:
+- CFA L1 3-1 Q85 | p.18 | When a company's payables turnover ratio is lower compared to its peers, the company is most likely.
+- CFA L1 3-1 Q86 | p.18 | A company acquires 100% of a target company for a purchase price of $4.5 million. The net identifiable assets of the target company have a fair value of $5 million. In the period the acquisition occurs, the acquiring company most likely reports:
+- CFA L1 3-1 Q87 | p.19 | Costs incurred related to the search of alternative materials to use in a production process:
+- CFA L1 3-1 Q88 | p.19 | Which of the following statements is most accurate? The role of financial reporting is to:
+- CFA L1 3-1 Q89 | p.19 | Which of the following is an example of a liquidity ratio?
+- CFA L1 3-2 Q02 | p.1 | Which of the following index types has the most significant potential to suffer from survivorship bias?
+- CFA L1 3-2 Q05 | p.1 | An analyst assumes that a company's market share gains will decline smoothly to zero over the next five years. Which of the following best describes this forecast approach and object?
+- CFA L1 3-2 Q06 | p.2 | An analyst gathers the following information: Risk-free rate 4% Expected return on a security 7% Expected return on the market 14% According to the CAPM, the security's beta is closest to:
+- CFA L1 3-2 Q07 | p.2 | Cryptocurrency exchange-traded funds:
+- CFA L1 3-2 Q09 | p.2 | Two years ago, a homeowner took out a $1 million home mortgage from a bank. The current principal on the loan is $750,000, and the homeowner has defaulted on the loan. Following foreclosure proceedings, the bank sells the property for $600,000 and is only entitled to use these funds to satisfy the loan obligation. The homeowner most likely had a:
+- CFA L1 3-2 Q12 | p.3 | When a company issues common shares:
+- CFA L1 3-2 Q13 | p.3 | Common shares are riskier than preference shares because common shares:
+- CFA L1 3-2 Q15 | p.3 | Base-rate neglect is a type of.
+- CFA L1 3-2 Q17 | p.4 | Which of the following factors is least likely to affect an individual's ability to take risk?
+- CFA L1 3-2 Q18 | p.4 | The value of a European put is:
+- CFA L1 3-2 Q24 | p.5 | A protective put strategy consists of a:
+- CFA L1 3-2 Q28 | p.5 | Accrued interest:
+- CFA L1 3-2 Q35 | p.7 | Replication is most likely used to:
+- CFA L1 3-2 Q37 | p.7 | Making a minority equity investment in a mature company that plans to expand operations best describes:
+- CFA L1 3-2 Q38 | p.7 | In which scenario would yields most likely narrow?
+- CFA L1 3-2 Q39 | p.7 | An analyst gathers the following information about an equal-weighted index with three securities: Security Shares Outstanding (Millions) Beginning-of-Period Price End-of-Period Price 1 15 $5 $6 2 20 $2 $2 3 25 $3 $4 The price return of the index is closest to:
+- CFA L1 3-2 Q48 | p.9 | The daily settlement of mark-to-market gains and losses in exchange-traded derivatives most likely reduces:
+- CFA L1 3-2 Q50 | p.9 | Trading in the secondary market most likely helps identify the proper price for
+- CFA L1 3-2 Q62 | p.11 | Which of the following statements about robo-advisers is most accurate?
+- CFA L1 3-2 Q66 | p.12 | In semi-strong-form efficient markets, the use of fundamental analysis most likely allows investors to:
+- CFA L1 3-2 Q69 | p.13 | If a risk-free asset with zero expected return is added to the investable universe of risky assets, the investors' risk-return trade-off most likely.
+- CFA L1 3-2 Q70 | p.13 | Which of the following is best classified as financial risk?
+- CFA L1 3-2 Q71 | p.13 | With respect to the portfolio management process, which of the following statements is most accurate?
+- CFA L1 3-2 Q72 | p.13 | Which of the following debt categories has the highest loss severity?
+- CFA L1 3-2 Q74 | p.14 | According to the size effect anomaly:
+- CFA L1 3-2 Q85 | p.16 | A successful portfolio risk budget will most likely.
+- CFA L1 3-2 Q89 | p.17 | A repo is best defined as a:
+- CFA L1 4-1 Q32 | p.9 | In which of the following business structures do owners share all risk and business liability?
+- CFA L1 4-1 Q37 | p.10 | The following table summarizes income statement data for a manufacturing company: Year 2 (in € Thousands) Year 1 (in € Thousands) Net revenue 2,611 2,325 Cost of goods sold 1,700 1,550 Gross profit 930 775 Selling, general & administrative expense 295 260 Operating income 635 515 Interest expense 55 55 Pre-tax income 580 460 Income tax 155 120 Net income 425 340 Compared with Year 1, the Year 2 common-size income statement most likely indicates:
+- CFA L1 4-1 Q41 | p.11 | Which of the following is most likely a leading indicator for an economy?
+- CFA L1 4-1 Q42 | p.11 | Which of the following changes to compensation packages would most likely result in management becoming more risk averse in its corporate decision making?
+- CFA L1 4-1 Q46 | p.12 | The demand curve of a perfectly competitive firm is:
+- CFA L1 4-1 Q51 | p.13 | An investment makes ten payments of $10,000 per year, with the first payment today. If the annual discount rate is 6%, the present value of the investment is closest to:
+- CFA L1 4-1 Q54 | p.14 | Which of the following is most likely a primary source of liquidity?
+- CFA L1 4-1 Q55 | p.14 | If a company raises its prices to consumers, which of the following is most likely to result in an increase in total revenue of the company?
+- CFA L1 4-1 Q56 | p.14 | Which type of market structure best describes many firms supplying differentiated products?
+- CFA L1 4-1 Q62 | p.15 | A company's purchases can be estimated as cost of sales plus:
+- CFA L1 4-1 Q64 | p.16 | Which of the following represents the difference between the observed value of a statistic and the quantity it is intended to estimate as a result of using subsets of a population?
+- CFA L1 4-1 Q67 | p.16 | The archetype of country behavior most likely characterized by globalization and cooperation is:
+- CFA L1 4-1 Q72 | p.17 | Earthquakes most likely expose a country to:
+- CFA L1 4-1 Q76 | p.18 | Firms in monopolistic competition most likely have:
+- CFA L1 4-1 Q77 | p.18 | Which of the following statements about the acquisition of a target company with tax loss carryforwards is most accurate? If the acquirer is profitable:
+- CFA L1 4-1 Q84 | p.20 | Which of the following strategies is most common in business-to-business markets where the universe of potential customers is relatively small and easily reached?
+- CFA L1 4-1 Q90 | p.21 | In company analysis, which of the following is most likely a solvency ratio?
+- CFA L1 4-2 Q01 | p.1 | Which of the following statements is most accurate?
+- CFA L1 4-2 Q02 | p.1 | With respect to the portfolio management process, the execution step most likely includes:
+- CFA L1 4-2 Q03 | p.1 | Which of the following types of mutual funds most likely places the highest pressure on the portfolio manager to manage liquidity?
+- CFA L1 4-2 Q04 | p.1 | A limit order is an example of a(n):
+- CFA L1 4-2 Q10 | p.2 | An analyst gathers the following information about a security and the market for a 12-month period: Realized Return Beta Security 10.5% 0.8 Market 12.0% 1.0 The risk-free rate is 2.0%. According to the market model, the security's abnormal return for the period is closest to:
+- CFA L1 4-2 Q12 | p.3 | Which of the following best describes the risk of having to make a significant price concession when selling an asset?
+- CFA L1 4-2 Q18 | p.4 | Which of the following measures is an example of a top-down driver for forecasting a fim's revenue?
+- CFA L1 4-2 Q22 | p.4 | A company's cost of equity is a proxy for the:
+- CFA L1 4-2 Q23 | p.5 | The focus strategy is most likely used to defend against which of Porter's five forces?
+- CFA L1 4-2 Q37 | p.7 | At maturity, the buyer faces the counterparty credit risk of the seller in:
+- CFA L1 4-2 Q40 | p.8 | The value of bitcoin is most likely based on:
+- CFA L1 4-2 Q41 | p.8 | Which of the following types of private debt is expected to be the riskiest?
+- CFA L1 4-2 Q42 | p.8 | Which of the following securities is most likely subject to the highest prepayment risk?
+- CFA L1 4-2 Q47 | p.9 | According to the capital asset pricing model (CAPM), the difference in the expected returns for two securities is determined by the securities':
+- CFA L1 4-2 Q49 | p.10 | Which of the following best describes a feature unique to the co-investing method? A limited partner.
+- CFA L1 4-2 Q55 | p.11 | Short positions have the potential for:
+- CFA L1 4-2 Q56 | p.11 | With respect to behavioral finance, an explanation for the overreaction anomaly is:
+- CFA L1 4-2 Q58 | p.11 | The two-fund separation theorem states that all investors will hold a combination of the:
+- CFA L1 4-2 Q60 | p.12 | An analyst gathers the following information (in $ millions) about three companies: Company 1 Company 2 Company 3 Total Debt 1,125 1,360 1,562 EBITDA 590 680 750 Interest Expense 71 60 63 Which company's leverage contributes most adversely to its credit risk?
+- CFA L1 4-2 Q62 | p.12 | The pass-through rate of a mortgage-pass through security is:
+- CFA L1 4-2 Q63 | p.12 | Which of the following are most likely traded in traditional investment markets?
+- CFA L1 4-2 Q68 | p.13 | Individual investors most likely bear investment risk when participating in:
+- CFA L1 4-2 Q69 | p.13 | With respect to risk management, determining how risk is taken by an organization best describes:
+- CFA L1 4-2 Q73 | p.14 | Which of the following best describes the intrinsic value of a security? The intrinsic value of a security is:
+- CFA L1 4-2 Q76 | p.15 | Which of the following best describes an advantage of the EV/EBITDA multiple for valuing equity? An advantage is that:
+- CFA L1 4-2 Q79 | p.15 | In the private debt market, a hybrid loan structure that combines secured and unsecured debt into a single loan with a blended interest rate is best described as:
+- CFA L1 4-2 Q80 | p.15 | The financial systems that are operationally efficient are most likely characterized by:
+- CFA L1 4-2 Q86 | p.16 | In order to take advantage of short-term capital market expectations, a fund manager holds less of her portfolio inequities than the policy weights prescribe. This action is best described as:
+- CFA L1 4-2 Q87 | p.17 | Enterprise value equals the market value of a company's debt and equity reduced by the company's:
+- CFA L1 5-1 Q30 | p.8 | With respect to ESG analysis, which of the following is most likely categorized as a social issue?
+- CFA L1 5-1 Q33 | p.9 | All else being equal, in which life cycle stage is a company most likely able to maintain the highest leverage?
+- CFA L1 5-1 Q36 | p.9 | Monitoring company compliance with applicable laws and regulations is most likely a responsibility of the:
+- CFA L1 5-1 Q40 | p.10 | Which of the following statements relating to information asymmetry is most accurate?
+- CFA L1 5-1 Q43 | p.11 | An analyst gathers the following information (in € millions) about a company. Average total equity 50 Average total assets 150 Based only on this information, the financial leverage ratio is closest to:
+- CFA L1 5-1 Q49 | p.12 | Accounts payable are:
+- CFA L1 5-1 Q51 | p.12 | In a perfectly competitive market, the demand curve faced by each individual firm is most likely:
+- CFA L1 5-1 Q53 | p.13 | Which of the following is an example of cooperative country behavior?
+- CFA L1 5-1 Q54 | p.13 | Which of the following areas is most likely to apply natural language processing?
+- CFA L1 5-1 Q55 | p.13 | When preparing a common-sized income statement, the appropriate denominator for converting the reported cost of sales is:
+- CFA L1 5-1 Q60 | p.14 | Which of the following combinations of actions is most likely expansionary? A government:
+- CFA L1 5-1 Q63 | p.15 | Which of the following best describes a lin-log model?
+- CFA L1 5-1 Q64 | p.15 | Which of the following is best classified as a secondary source of liquidity?
+- CFA L1 5-1 Q65 | p.15 | A company spends €10 million on start-up costs that are expensed for accounting purposes and fully amortized over five years using the straight-line method for tax purposes. If the start-up costs will result in future economic benefits, the tax base at the end of Year 1 is:
+- CFA L1 5-1 Q67 | p.15 | In the capital allocation process, companies should:
+- CFA L1 5-1 Q68 | p.15 | Which of the following characteristics of a corporation most likely allows it to access capital more easily than other business structures?
+- CFA L1 5-1 Q72 | p.16 | Under the indirect method, a US GAAP -compliant company reported the following financial data: Total revenue $35 million Net income $35 million Decrease in income tax payable $16 million Increase in interest expense payable $22 million Based on this information, converting to the direct method would result in total cash operating expenses of:
+- CFA L1 5-1 Q73 | p.16 | Credit cycles are most likely:
+- CFA L1 5-1 Q75 | p.17 | In a fixed parity currency regime, excess private demand for the domestic currency:
+- CFA L1 5-1 Q77 | p.17 | Which of the following best represents the difference between the observed value of a statistic and the quantity it is intended to estimate as a result of using subsets of the population?
+- CFA L1 5-1 Q78 | p.17 | A significant increase in which of the following most likely indicates that a company's solvency has strengthened?
+- CFA L1 5-1 Q79 | p.17 | Over a period of 16 months, an investor has earned a return of 12%. The investor's annualized return is closest to:
+- CFA L1 5-1 Q80 | p.18 | Which of the following lists of terms is ordered from thinner to fatter tails compared with a normal distribution?
+- CFA L1 5-1 Q84 | p.18 | The most appropriate test to determine whether performance of a group of analysts differed between two consecutive 10-year periods is a:
+- CFA L1 5-1 Q85 | p.18 | A characteristic of monopolistic competition is most likely:
+- CFA L1 5-1 Q88 | p.19 | An analyst gathers the following return data: 1.4% 2.7% 4.1% 4.8% 6.1% 6.9% 8.3% 9.0% The 30h percentile is closest to:
+- CFA L1 5-1 Q89 | p.19 | If wages and prices are rigid, which of the following policy combinations most likely leads to an increase in aggregate demand from the private sector relative to the public sector?
+- CFA L1 5-1 Q90 | p.20 | An analyst gathers the following quarterly returns for an investment fund: Quarter Return Q1 2% Q2 6% Q3 -4% Q4 8% If the target return is 5%, the target downside deviation is closest to:
+- CFA L1 5-2 Q03 | p.1 | A European waterfall distributes performance fees on a(n):
+- CFA L1 5-2 Q09 | p.2 | A company's depository receipts most likely trade:
+- CFA L1 5-2 Q12 | p.3 | A financial system is best described as operationally efficient when:
+- CFA L1 5-2 Q14 | p.3 | A strategy that seeks to profit from investing in companies that are likely to be acquired is best described as a(n):
+- CFA L1 5-2 Q18 | p.4 | Which of the following pooled investment products is most likely to trade at a price furthest from its NAV?
+- CFA L1 5-2 Q20 | p.4 | Return-generating models are best used to estimate the:
+- CFA L1 5-2 Q23 | p.5 | All else being equal, which of the following portfolios should have the lowest risk profile? A portfolio consisting of
+- CFA L1 5-2 Q24 | p.5 | Which of the following performance measures is most appropriate for an investor who holds a well-diversified portfolio?
+- CFA L1 5-2 Q25 | p.5 | Which of the following is most likely an application of the CAPM?
+- CFA L1 5-2 Q26 | p.5 | In the context of venture capital financing, seed-stage financing most likely supports:
+- CFA L1 5-2 Q28 | p.5 | A company has an obligation to pay a certain amount each month to each of its employees after they retire. This obligation is a characteristic of a(n):
+- CFA L1 5-2 Q29 | p.6 | Which of the following statements is most accurate? Venture debt is private debt funding provided to:
+- CFA L1 5-2 Q30 | p.6 | A closed-end fund is trading at a premium to its NAV. This scenario most likely reflects:
+- CFA L1 5-2 Q32 | p.6 | A waterfall structure in asset-backed securities is most likely associated with:
+- CFA L1 5-2 Q35 | p.7 | Which of the following is most likely a consequence of the overconfidence bias? An investor who:
+- CFA L1 5-2 Q37 | p.7 | Which of the following statements about distributed ledger technology (DLT) is most accurate?
+- CFA L1 5-2 Q38 | p.7 | With respect to risk management, risk budgeting applies to:
+- CFA L1 5-2 Q41 | p.8 | A company announces an unexpected improvement in its earnings forecast for the coming year. The announcement most likely immediately impacts:
+- CFA L1 5-2 Q42 | p.8 | The rating agency notching adjustment applied to the subordinated debt rating of speculative grade issuers is most likely.
+- CFA L1 5-2 Q45 | p.9 | An analyst gathers the following information about a company (in $thousands): Year 1 Year 2 Operating income 168 217 Depreciation and amortization 422 416 Interest expense 120 155 Based on the interest coverage ratio using EBITDA, the company's creditworthiness has:
+- CFA L1 5-2 Q51 | p.10 | Which of the following statements is least accurate? A firm's FCFE:
+- CFA L1 5-2 Q54 | p.11 | Which of the following is most likely part of the feedback step in the portfolio management process?
+- CFA L1 5-2 Q55 | p.11 | Which of the following is most likely a cross-sectional anomaly in financial markets?
+- CFA L1 5-2 Q59 | p.12 | Market prices are most likely accepted as accurately reflecting intrinsic values in:
+- CFA L1 5-2 Q60 | p.12 | If a market is semi-strong-form efficient, fundamental analysis most likely.
+- CFA L1 5-2 Q61 | p.12 | According to portfolio theory, combinations of the risk-free asset and a risky asset result in:
+- CFA L1 5-2 Q65 | p.13 | A company seeking to raise capital with minimal public disclosure of information most likely pursues a:
+- CFA L1 5-2 Q74 | p.14 | Issuers' disclosures about operating costs are most likely
+- CFA L1 5-2 Q75 | p.14 | A net investment hedge occurs when a derivative is used to:
+- CFA L1 5-2 Q81 | p.15 | Compared to exchange-traded derivatives, the relative transparency of over-the-counter derivatives is:
+- CFA L1 5-2 Q83 | p.16 | Which of the following statements about Porter's Five Forces is most accurate?
+- CFA L1 5-2 Q88 | p.17 | If a general partner exits successful deals early in a fund's life but incurs losses on deals later, which of the following most likely allows a limited partner to reclaim some of the general partner's fees?

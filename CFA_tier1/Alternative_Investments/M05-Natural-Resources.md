@@ -39,6 +39,30 @@ tags:
 2. describe features of commodities and their investment characteristics
 3. analyze sources of risk, return, and diversification among natural resource investments
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 5: Natural Resources`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Natural Resources Investment Features
+- 2.1. Land Investments vs. Real Estate
+- 2.2. Features and Forms of Farmland and Timberland Investment
+- 3. Commodity Investment Forms
+- 3.1. Commodity Investment Features
+- 3.2. Distinguishing Characteristics of Commodity Investments
+- 3.3. Basics of Commodity Pricing
+- 4. Natural Resource Investment Risk, Return, and Diversification
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -149,6 +173,19 @@ Roll Yield = (近期期货 - 远期期货) / 近期期货
 - **被动投资 (Passive)**: 指数跟踪，需考虑期限结构影响
 - **主动投资 (Active)**: 期限结构套利、现货-期货套利
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Natural Resources Investment Features | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Natural Resources Investment Features`；`NRIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Land Investments vs. Real Estate | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Land Investments vs. Real Estate`；`LIVRE`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Features and Forms of Farmland and Timberland Investment | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Features and Forms of Farmland and Timberland Investment`；`FFFTI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Commodity Investment Forms | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Commodity Investment Forms`；`CIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Commodity Investment Features | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Commodity Investment Features`；`CIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Distinguishing Characteristics of Commodity Investments | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Distinguishing Characteristics of Commodity Investments`；`DCCI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Basics of Commodity Pricing | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Basics of Commodity Pricing`；`BCP`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Natural Resource Investment Risk, Return, and Diversification | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Natural Resource Investment Risk, Return, and Diversification`；`NRIRRD`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -179,6 +216,16 @@ Roll Yield = (近期期货 - 远期期货) / 近期期货
 3. **便利收益影响分析**: 现货稀缺时便利收益高，导致Backwardation。**思路**: 便利收益高 → Backwardation → 正Roll Yield。
 4. **期货定价计算**: 给定现货价格、利率、存储成本、便利收益和期限，计算期货价格。**思路**: 使用持有成本公式F = S × e^{(r+s-y)T}。
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Natural Resources Investment Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Land Investments vs. Real Estate`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Features and Forms of Farmland and Timberland Investment`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Commodity Investment Forms`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Commodity Investment Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -188,6 +235,16 @@ Roll Yield = (近期期货 - 远期期货) / 近期期货
 | ❌ 忽略：便利收益是持有成本的对冲项: 公式中便利收益(y)降低期货价格，而非增加 | ✅ 便利收益是持有成本的对冲项: 公式中便利收益(y)降低期货价格，而非增加 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：商品现货实物持有: 商品期货定价基础是实物商品的持有成本，与金融期货不同 | ✅ 商品现货实物持有: 商品期货定价基础是实物商品的持有成本，与金融期货不同 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：被动投资也有主动决策: 即使是被动指数跟踪，也需要考虑展期策略 | ✅ 被动投资也有主动决策: 即使是被动指数跟踪，也需要考虑展期策略 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Natural Resources Investment Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Natural Resources Investment Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Land Investments vs. Real Estate | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Land Investments vs. Real Estate`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Features and Forms of Farmland and Timberland Investment | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Features and Forms of Farmland and Timberland Investment`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Commodity Investment Forms | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Commodity Investment Forms`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Commodity Investment Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Commodity Investment Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

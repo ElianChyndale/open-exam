@@ -2,6 +2,23 @@
 
 ---
 
+## 官方教材入口
+
+- 原版教材目录索引：`.system/memory/strategy/cfa-2026-epub-textbook-index.md`
+- 结构化教材索引：`.system/memory/strategy/cfa-2026-epub-textbook-index.json`
+- 各科主框架：`CFA_tier1/*/00-*-MOC.md`
+- 各模块正文：`CFA_tier1/*/M01...Mxx...md`
+- 基础题入口：`CFA_tier1/dashboard/Subject-Question-Banks.md`
+- Mock 入口：`CFA_tier1/mock/00-Mock-Source-Index.md`
+
+现在的使用顺序建议固定为：
+
+1. 先看科目 `00-*-MOC.md` 抓主框架。
+2. 再进对应 `Mxx-*` 模块页，看 `Textbook Signal Topics` 对齐教材小节。
+3. 刷基础题和 mock 时，再回到对应模块页核对定义边界、公式触发词和例外条件。
+
+---
+
 ## 数量 Quantitative Methods
 
 - **前半部分**：描述性统计、概率基础 → **简单**，快速过

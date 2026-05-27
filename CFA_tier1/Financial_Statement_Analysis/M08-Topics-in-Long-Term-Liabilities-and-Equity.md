@@ -9,7 +9,7 @@ exam_weight: "11-14%"
 module: "M08"
 official_module: "Module 8: Topics in Long-Term Liabilities and Equity"
 los_count: 3
-difficulty: "概念+应用"
+difficulty: "计算+解释"
 note_type: official_module_note
 status: active
 source: "CFA Institute Learning Ecosystem 2026 registry"
@@ -21,196 +21,79 @@ tags:
 
 # M08: Topics in Long-Term Liabilities and Equity
 
-> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Topics in Long-Term Liabilities and Equity**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+> **模块定位 Module role**: analyze leases, postemployment plans, and share-based compensation as hidden or complex financing and compensation claims.
 
----
+## 0. Reading Contract 阅读契约
 
-## Official Module Structure
+**Official module**: Module 8: Topics in Long-Term Liabilities and Equity
+**Exam task**: explain lease reporting from lessor/lessee perspectives, financial reporting for defined contribution/defined benefit/share-based compensation, and disclosures for long-term liabilities and equity compensation.
 
-- Learning Outcomes: Topics in Long-Term Liabilities and Equity
-- 8.01 | Introduction
-- 8.02 | Leases
-- 8.03 | Financial Reporting for Postemployment and Share-Based Compensation Plans
-- 8.04 | Presentation and Disclosure
+Learning outcome actions:
 
-## Learning Outcome Statements
+- Explain financial reporting of leases for lessors and lessees.
+- Explain defined contribution, defined benefit, and stock-based compensation reporting.
+- Describe presentation and disclosures for long-term liabilities and share-based compensation.
 
-1. explain the financial reporting of leases from the perspectives of lessors and lessees
-2. explain the financial reporting of defined contribution, defined benefit, and stock-based compensation plans
-3. describe the financial statement presentation of and disclosures relating to long-term liabilities and share-based compensation
+## 1. Module Brief 模块定位
 
----
+M08 turns contractual claims into balance sheet and income statement effects. The exam likes to test whether a financing-like obligation is recognized, how expense timing differs, and how analysts adjust leverage, coverage, and compensation cost.
 
-## 1. 模块定位
+Core English anchors: leases, right-of-use asset, lease liability, finance lease, operating lease, lessor accounting, defined contribution, defined benefit obligation, pension plan assets, share-based compensation, stock options.
 
-### 8.1 学习任务
-- **核心问题**：考试希望你用 `Topics in Long-Term Liabilities and Equity` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+## 2. Curriculum Spine 教材主线
 
-### 8.2 考试角色
-- **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
+1. **Leases**: requirements, classification, lessee accounting under IFRS and US GAAP, lessor accounting.
+2. **Postemployment compensation**: defined contribution versus defined benefit plans, IFRS/US GAAP pension accounting and disclosures.
+3. **Share-based compensation**: stock grants, stock options, option expense, disclosure.
+4. **Presentation/disclosure**: maturity schedules, assumptions, plan status, fair value assumptions, expense components.
 
-### 8.3 关键英文术语
-- **Topics in Long-Term Liabilities and Equity（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Leases（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Financial Reporting for Postemployment and Share-Based Compensation Plans（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Presentation and Disclosure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+## 3. Exam Translation 考试翻译
 
-## 2. 官方 LOS 对应学习目标
+| Prompt Signal | Translate To | Answer Move |
+|---|---|---|
+| Lessee lease | ROU asset and lease liability | Increase assets/liabilities; analyze leverage and expense pattern |
+| Finance vs operating classification | expense and cash flow presentation | Check standard and classification; economics may be financing-like |
+| Defined contribution | employer contribution obligation | Expense contribution owed; less actuarial complexity |
+| Defined benefit | future benefit obligation | Analyze assumptions, plan assets, funded status, pension expense |
+| Stock options | share-based compensation | Expense fair value over service period; potential dilution |
 
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 8.1 | explain the financial reporting of leases from the perspectives of lessors and lessees | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 8.2 | explain the financial reporting of defined contribution, defined benefit, and stock-based compensation plans | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 8.3 | describe the financial statement presentation of and disclosures relating to long-term liabilities and share-based compensation | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+## 4. Formula & Decision Bench 公式与判断台
 
-## 3. 核心知识树
+| Formula / Framework | Use |
+|---|---|
+| Lease liability initial measurement = PV of lease payments | Recognize financing obligation |
+| Lease expense pattern | Finance lease front-loaded; operating lease may be straight-line under US GAAP presentation |
+| Funded status = fair value of plan assets - defined benefit obligation | Pension surplus/deficit indicator |
+| Pension assumptions | Discount rate, expected return, salary growth affect obligation/expense |
+| Share-based comp expense | Recognize compensation cost over service/vesting period |
+| Dilution link | Options may affect diluted EPS through treasury stock method |
+
+Decision bench:
 
 ```text
-8. Topics in Long-Term Liabilities and Equity
-├─ 8.1 租赁会计：出租人与承租人 (Lease Reporting: Lessor vs Lessee)
-│  ├─ 8.1.1 Lessee 初始确认：lease liability = PV of lease payments；ROU asset 从 lease liability 调整而来
-│  ├─ 8.1.2 Finance lease：depreciation + interest，前期总费用高、interest coverage 较弱
-│  ├─ 8.1.3 Operating lease：单一租赁费用较平滑，但资产负债表仍有 ROU asset 和 liability
-│  └─ 8.1.4 Lessor：sales-type/finance lease 可在开始日确认销售利润；operating lease 保留资产
-├─ 8.2 确定缴费 vs 确定给付计划 (Defined Contribution vs Defined Benefit Plans)
-│  ├─ 8.2.1 DC plan：雇主缴费即当期费用，员工承担投资风险
-│  ├─ 8.2.2 DB plan：PBO 与 plan assets 形成 funded status；雇主承担精算和投资风险
-│  └─ 8.2.3 判断：discount rate、salary growth、expected return assumptions 会显著改变负债和费用
-├─ 8.3 股权激励薪酬 (Stock-Based Compensation)
-│  ├─ 8.3.1 Grant-date fair value 在 vesting period 内确认 compensation expense
-│  ├─ 8.3.2 现金流：费用是 noncash charge，indirect CFO 加回
-│  └─ 8.3.3 EPS：options/RSUs 可能增加 diluted shares，影响 diluted EPS
+Contract/plan -> Recognition -> Expense timing -> Cash flow classification -> Leverage/dilution/coverage effect
 ```
 
-## 核心图解
+## 5. Practice & Mock Evidence 题库证据
 
-```mermaid
-flowchart TD
-  A["Lease contract"] --> B["Lessee recognizes ROU asset and lease liability"]
-  B --> C{"Lease expense pattern"}
-  C -->|Finance lease| D["Depreciation + interest; front-loaded total expense"]
-  C -->|Operating lease| E["Single lease expense; smoother pattern"]
-  D --> F["Higher leverage, lower asset turnover, coverage impact"]
-  E --> F
-  A --> G{"Lessor classification"}
-  G -->|Sales-type/finance| H["Recognize lease receivable; possible selling profit"]
-  G -->|Operating| I["Keep asset; recognize rental income"]
-```
+- EOC anchor: `CFA2425-eorq-q.xhtml` / solutions `CFA2425-eorq-a.xhtml`.
+- Evidence tags: `FSA-M08-leases`, `FSA-M08-pensions`, `FSA-M08-share-based-compensation`.
+- Log mistakes when you ignore lease liabilities in leverage, treat defined benefit like defined contribution, or miss option dilution links to M02 EPS.
 
-```mermaid
-flowchart LR
-  A["Postemployment or share-based plan"] --> B{"Plan type"}
-  B -->|DC plan| C["Employer contribution = expense"]
-  B -->|DB plan| D["Funded status = plan assets - PBO"]
-  B -->|Stock compensation| E["Grant-date fair value expensed over vesting"]
-  D --> F["Assumption-sensitive liability and cost"]
-  E --> G["Noncash expense; possible diluted EPS impact"]
-```
+## 6. Trap Ledger 易错账本
 
-## 4. 知识点详解
+| Trap | Fix Rule |
+|---|---|
+| Lease treated as off-balance-sheet by default | Lessees generally recognize ROU asset and lease liability |
+| Defined contribution and defined benefit mixed | DC expense is contribution-based; DB requires obligation/assets/assumptions |
+| Pension funded status sign reversed | Plan assets minus obligation; negative means deficit |
+| Share-based comp ignored because noncash | It is compensation expense and can dilute shareholders |
+| Lease accounting answer stops at statements | Add leverage, coverage, ROA, and cash flow classification implications |
 
-### 8.1 租赁会计：出租人与承租人 (Lease Reporting: Lessor vs Lessee)
+## 7. Final Recall Sheet 终局速记
 
-**承租人会计 (Lessee Accounting)：**
-- US GAAP (ASC 842) / IFRS 16：两类租赁均要求承租人在资产负债表确认使用权资产(right-of-use asset)和租赁负债(lease liability)
-- 融资租赁(finance lease)：承租人同时确认折旧费用(depreciation expense)和利息费用(interest expense)，总费用前期更高
-- 经营租赁(operating lease)：承租人确认单一租赁费用(straight-line lease expense)
-- 对利润表的影响：融资租赁前期费用更高、后期费用更低；经营租赁费用在各期相对均匀
-
-**出租人会计 (Lessor Accounting)：**
-- 融资租赁(finance/sales-type lease) vs 经营租赁(operating lease)
-- 出租人分类取决于所有权风险报酬是否转移给承租人
-- 销售型租赁(sales-type lease)在租赁开始日确认销售利润
-
-### 8.2 确定缴费 vs 确定给付计划 (Defined Contribution vs Defined Benefit Plans)
-
-**确定缴费计划 (Defined Contribution Plan)：**
-- 雇主按固定比例缴费(contribution)，员工承担投资风险(investment risk)
-- 会计处理简单：当期缴费确认为费用，无后续养老金负债(pension liability)
-
-**确定给付计划 (Defined Benefit Plan)：**
-- 雇主义务按预定公式支付退休福利，雇主承担投资风险和精算风险(actuarial risk)
-- 关键概念：养老金负债(PBO, projected benefit obligation)、计划资产公允价值(fair value of plan assets)、净养老金融资状况(net pension funded status)
-- 定期养老金成本(periodic pension cost)包括服务成本(service cost)、利息成本(interest cost)、计划资产预期回报(expected return on plan assets)
-
-**分析注意事项：**
-- DB 计划对财务报表的影响复杂，分析师需关注精算假设(actuarial assumptions)（折现率、工资增长率、死亡率）的变化
-- 计划资产与 PBO 之间的缺口(gap)即净负债或净资产
-
-### 8.3 股权激励薪酬 (Stock-Based Compensation)
-
-- 员工期权(employee stock options, ESOs)和限制性股票(restricted stock units, RSUs)
-- 确认原则：按授予日公允价值(fair value at grant date)确认薪酬费用(compensation expense)，在服务期(vesting period)内分摊
-- 对分析师的意义：期权费用降低报告利润，但不会减少现金流；稀释(dilution)影响 EPS 计算
-- 注意：股权激励费用是 non-cash charge，在间接法 CFO 中应加回
-
-**【考试陷阱】** 负债/权益列报方式的选择(liability/equity presentation choices)会改变杠杆解读(leverage reading)——例如优先股的分类直接影响 debt-to-equity 比率的计算。
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| Lease Liability (期初) | `Present Value of Lease Payments` | 租赁负债初始计量 |
-| Right-of-Use Asset (期初) | `Lease Liability + Initial Direct Costs + Prepayments - Incentives` | 使用权资产初始计量 |
-| Funded Status | `Fair Value of Plan Assets - PBO` | 养老金融资状况，正值=资产，负值=负债 |
-| Periodic Pension Cost | `Service Cost + Interest Cost - Expected Return on Plan Assets` | 定期养老金成本 |
-| Compensation Expense | `Fair Value of Option at Grant Date / Vesting Period` | 股权激励费用 |
-| Lease Interest Expense | `Lease Liability x Discount Rate` | 融资租赁前期费用较高的来源 |
-| Lease Liability Ending | `Beginning Liability + Interest - Lease Payment` | 简化租赁负债滚动 |
-| Diluted EPS | `Adjusted NI Available to Common / Adjusted Weighted Average Shares` | 股权激励可能增加分母 |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
-|---|---|---|
-| ⭐⭐⭐ | 8.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 8.2 Leases | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 8.3 Financial Reporting for Postemployment and Share-Based Compensation Plans | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 8.4 Presentation and Disclosure | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-
-### 6.9 ⭐⭐ Legacy 考点补充
-
-### 6.1 核心内容
-
-- **考点1**：融资租赁 vs 经营租赁的报表影响对比。解题思路：两者区别在于费用的时间分布——融资租赁前期总费用高，经营租赁各期均匀
-- **考点2**：DB 养老金计划的会计处理。解题思路：理解 PBO 和计划资产的关系，掌握 funded status 的计算
-- **考点3**：股权激励对 EPS 的影响。解题思路：确认费用降低净利润 → 基本 EPS 下降；期权行权增加股数 → 稀释 EPS 进一步下降
-- **考点4**：负债 vs 权益分类对比率的影响。解题思路：优先股分类为负债时增加杠杆，分类为权益时不影响杠杆
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
-|---|---|---|
-| ❌ 忽略：使用权资产也是资产: 经营租赁上表后，资产负债表同时确认资产和负债，导致 asset turnover 和 ROA 恶化 | ✅ 使用权资产也是资产: 经营租赁上表后，资产负债表同时确认资产和负债，导致 asset turnover 和 ROA 恶化 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：养老金假设是分析重点: 折现率(discount rate)每变动 1% 会显著改变 PBO 和定期养老金成本——管理层可能通过假设操纵利润 | ✅ 养老金假设是分析重点: 折现率(discount rate)每变动 1% 会显著改变 PBO 和定期养老金成本——管理层可能通过假设操纵利润 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：期权费用非现金: 尽管期权费用降低报告利润，但它是非现金费用(non-cash expense)，不影响 CFO | ✅ 期权费用非现金: 尽管期权费用降低报告利润，但它是非现金费用(non-cash expense)，不影响 CFO | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：DB vs DC 的核心区别: DB 由雇主承担投资和长寿风险(longevity risk)，DC 由员工承担——这个本质差异决定了会计处理的复杂性 | ✅ DB vs DC 的核心区别: DB 由雇主承担投资和长寿风险(longevity risk)，DC 由员工承担——这个本质差异决定了会计处理的复杂性 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-
-## 8. 跨模块关联
-
-- **连接 M02**：lease interest/depreciation、pension cost、stock compensation 都影响利润表费用。
-- **连接 M03**：lease liabilities、PBO funded status、equity compensation 分类改变 liabilities/equity。
-- **连接 M04/M05**：stock compensation 是 noncash add-back；lease payments 和 pension contributions 影响现金流分类与覆盖率。
-- **连接 M11/Credit**：租赁与养老金义务应纳入 leverage、fixed charge coverage 和 debt capacity 判断。
-- **连接 M10**：养老金假设和 non-GAAP 调整中排除 stock comp 是 reporting quality 检查点。
-
-
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M07-Long-Term-Liabilities-and-Equity.md` (high, 0.63)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Lessee lease recognition generally creates ROU asset and lease liability.
+- DC plan: contribution obligation. DB plan: actuarial obligation and plan assets.
+- Pension assumptions change obligation and expense.
+- Share-based compensation is an expense and a dilution issue.
+- Always connect long-term liabilities to leverage and coverage.

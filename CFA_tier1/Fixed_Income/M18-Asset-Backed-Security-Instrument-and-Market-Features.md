@@ -21,169 +21,60 @@ tags:
 
 # M18: Asset-Backed Security (ABS) Instrument and Market Features
 
-> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **Asset-Backed Security (ABS) Instrument and Market Features**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+> **Module job**：识别 covered bonds, credit enhancement, credit tranching, non-mortgage ABS, and CDO/CLO structures。重点是 collateral cash flows and credit priority。
 
----
+## 0. Reading Contract 阅读契约
 
-## Official Module Structure
+- **Official LOS**：describe covered bonds and differences from ABS；describe credit enhancement structures；describe non-mortgage ABS cash flows and risks；describe CDOs, cash flows, and risks。
+- **Textbook anchors**：Covered Bonds；Credit Enhancement；Credit Tranching；Credit Card Receivable ABS；Solar ABS；Collateralized Debt Obligations；Generic CLO Structure。
+- **Output standard**：能判断 investor has claim on asset pool only, issuer balance sheet, or tranche waterfall。
 
-- Learning Outcomes: Asset-Backed Security (ABS) Instrument and Market Features
-- 18.01 | Introduction
-- 18.02 | Covered Bonds
-- 18.03 | ABS Structures to Address Credit Risk
-- 18.04 | Non-Mortgage Asset-Backed Securities
-- 18.05 | Collateralized Debt Obligations
+## 1. Module Brief 模块定位
 
-## Learning Outcome Statements
+M18 是 securitization 的 ABS 应用。考试常比较 covered bond vs ABS，或问 subordination, overcollateralization, reserve account, and excess spread 如何增强信用。
 
-1. describe characteristics and risks of covered bonds and how they differ from other asset-backed securities
-2. describe typical credit enhancement structures used in securitizations
-3. describe types and characteristics of non-mortgage asset-backed securities, including the cash flows and risks of each type
-4. describe collateralized debt obligations, including their cash flows and risks
+## 2. Curriculum Spine 教材主线
 
----
+1. **Covered bonds**：dual recourse to issuer and cover pool, usually remain on issuer balance sheet。
+2. **Credit enhancement**：internal or external methods reduce senior tranche credit risk。
+3. **Credit tranching**：senior tranche protected by subordinate tranche absorbing first losses。
+4. **Non-mortgage ABS**：credit card, auto, student loan, solar or other receivables have distinct cash-flow risks。
+5. **CDO/CLO**：tranches backed by debt instruments or leveraged loans。
 
-## 1. 模块定位
+## 3. Exam Translation 考试翻译
 
-### 18.1 学习任务
-- **核心问题**：考试希望你用 `Asset-Backed Security (ABS) Instrument and Market Features` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+- If dual recourse appears, think covered bond。
+- If first-loss protection appears, think subordination/credit tranching。
+- If collateral cash flows are receivables, classify ABS type and risk。
+- If loan portfolio and tranches appear, think CLO/CDO waterfall。
 
-### 18.2 考试角色
-- **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
+## 4. Formula & Decision Bench 公式与决策台
 
-### 18.3 关键英文术语
-- **Asset-Backed Security (ABS) Instrument and Market Features（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Covered Bonds（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **ABS Structures to Address Credit Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Non-Mortgage Asset-Backed Securities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Collateralized Debt Obligations（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
-- **Credit Risk（信用风险）**：发行人无法按时足额履约的风险。
+| Structure | Decision rule |
+|---|---|
+| Covered bond | Investor has claim on issuer and cover pool |
+| Overcollateralization | Collateral value exceeds issued securities |
+| Excess spread | Asset yield exceeds security payments and fees |
+| Reserve account | Cash support for shortfalls |
+| Senior tranche | Paid first, lower risk/lower yield |
+| Subordinate tranche | Absorbs first losses, higher risk/higher yield |
+| CLO/CDO | Debt collateral cash flows allocated by tranche priority |
 
-## 2. 官方 LOS 对应学习目标
+## 5. Practice & Mock Evidence 练习与模考证据
 
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 18.1 | describe characteristics and risks of covered bonds and how they differ from other asset-backed securities | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 18.2 | describe typical credit enhancement structures used in securitizations | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 18.3 | describe types and characteristics of non-mortgage asset-backed securities, including the cash flows and risks of each type | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 18.4 | describe collateralized debt obligations, including their cash flows and risks | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
+- **EOC anchor**：`CFA2449-eorq-q.xhtml` / `CFA2449-eorq-a.xhtml`。
+- **Evidence to capture**：covered bond vs ABS confused；enhancement type missed；senior/subordinate risk reversed；ABS collateral risk ignored。
+- **Review tag**：`Fixed Income / ABS / credit enhancement tranching`。
 
-## 3. 核心知识树
+## 6. Trap Ledger 陷阱账本
 
-```text
-18. Asset-Backed Security (ABS) Instrument and Market Features
-├─ 18.1 ABS 类型 (ABS Families)
-│  ├─ 18.1.1 Collateral families：auto loans、credit card receivables、student loans、equipment leases、trade receivables
-│  ├─ 18.1.2 Cash-flow pattern：amortizing collateral vs revolving receivables 决定本金分配和 trigger risk
-│  └─ 18.1.3 Covered bonds：dual recourse to issuer and cover pool，资产通常留在 issuer balance sheet
-├─ 18.2 信用增级 (Credit Enhancement)
-│  ├─ 18.2.1 Internal enhancement：subordination、overcollateralization、excess spread、reserve account
-│  ├─ 18.2.2 External enhancement：guarantee、insurance、letter of credit；受支持方信用质量影响
-│  └─ 18.2.3 考试判断：信用增级重新分配损失吸收顺序，不等于消灭违约风险
-```
+- Covered bonds have dual recourse; typical ABS rely on asset pool/SPE structure。
+- Senior tranche is safer because subordinate tranche absorbs losses first。
+- Credit enhancement improves credit profile, not liquidity guarantee。
+- Different ABS collateral types have different timing/default/prepayment behavior。
 
-## 3.5 核心图解
+## 7. Final Recall Sheet 最终速记
 
-```mermaid
-flowchart TD
-  A["ABS collateral"] --> B["Amortizing assets: auto loans / equipment leases"]
-  A --> C["Revolving receivables: credit cards / trade receivables"]
-  A --> D["CDO collateral: debt instruments"]
-  E["Credit enhancement"] --> F["Internal"]
-  E --> G["External"]
-  F --> F1["Subordination"]
-  F --> F2["Overcollateralization"]
-  F --> F3["Excess spread / reserve account"]
-  G --> G1["Guarantee / insurance / letter of credit"]
-  H["Covered bond"] --> H1["Dual recourse: issuer + cover pool"]
-```
-
-## 4. 知识点详解
-
-### 18.1 ABS 类型 (ABS Families)
-
-- **汽车贷款、信用卡、应收账款、其他非抵押担保品 (auto loans, credit cards, receivables, other non-mortgage collateral)**：ABS (asset-backed securities) 的抵押品范围广泛。汽车贷款 ABS 有明确的摊销计划；信用卡 ABS 通常为循环结构（本金可重新投资于新应收账款）；应收账款 ABS 依赖商业交易的付款周期。
-- **担保品现金流模式决定摊还与触发风险 (collateral cash flow pattern determines amortization and trigger risk)**：不同类型 ABS 的现金流模式不同。摊还型 (amortizing) 如汽车贷款有固定还款计划；循环型 (revolving) 如信用卡允许借款人在额度内循环使用。
-- **有担保债券保持双重追索权，不同于典型 ABS 隔离 (covered bond keeps dual recourse unlike typical ABS isolation)**：Covered bond（有担保债券）与 ABS 的关键区别：covered bond 投资者同时拥有对担保池和发行人的双重追索权 (dual recourse)；而 ABS 投资者仅对 SPV 中的资产池有追索权。
-
-### 18.2 信用增级 (Credit Enhancement)
-
-- **分层、超额抵押、超额利差、准备金账户 (subordination, overcollateralization, excess spread, reserve accounts)**：内部增级方式。分层 (subordination/tranching) 让优先级吸收次级层的保护；超额抵押 (overcollateralization) 指资产池价值超过发行的债券金额；超额利差 (excess spread) 是资产池收益超过证券支付和费用的部分；准备金账户 (reserve account) 作为现金缓冲。
-- **担保/保险作为外部支持 (guarantees/insurance as external support)**：外部增级来自第三方机构，如保险公司提供的债券保险 (bond insurance)、银行开立的信用证 (letter of credit) 或公司担保 (corporate guarantee)。
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 指标 | 公式/概念 |
-|------|-----------|
-| 超额抵押 | `Overcollateralization = (资产池面值 - 证券面值) / 证券面值` |
-| 超额利差 | `Excess Spread = 资产池加权平均利率 - 证券加权平均利率 - 费用` |
-| 信用增级水平 | `Credit Enhancement Level = 次级层 + 准备金 + 超额利差现值` |
-| 双重追索权 | `Covered Bond: 资产池 + 发行人信用` |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
-|---|---|---|
-| ⭐⭐⭐ | 18.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 18.2 Covered Bonds | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 18.3 ABS Structures to Address Credit Risk | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 18.4 Non-Mortgage Asset-Backed Securities | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐ | 18.5 Collateralized Debt Obligations | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-
-### 6.9 ⭐⭐ Legacy 考点补充
-
-### 6.1 核心内容
-
-- **区分内部与外部信用增级**：内部（分层、超额抵押、超额利差、准备金账户）vs 外部（保险、信用证、第三方担保）。
-- **理解 covered bond 的双重追索权**：covered bond 投资者在发行人违约时，既可以追索担保资产池，也可以追索发行人的其他资产。这与 ABS 的单一追索权不同。
-- **ABS 的摊销类型判断**：给定抵押品特征（如汽车贷款、信用卡应收款），判断是摊还型还是循环型结构。
-- **分析超额利差的缓冲作用**：当资产池中部分贷款违约时，超额利差可以吸收损失，保护优先级证券投资者。
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
-|---|---|---|
-| ❌ 忽略：信用增级重新分配损失吸收，而非免费收益 (credit enhancement reallocates loss absorption; it is not free yield… | ✅ 信用增级重新分配损失吸收，而非免费收益 (credit enhancement reallocates loss absorption; it is not free yield… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：Covered bond 不是 ABS：两者最大区别在于法律结构——covered bond 不出售资产给 SPV，资产仍留在发行人资产负债表上，投资者有双重追索权。 | ✅ Covered bond 不是 ABS：两者最大区别在于法律结构——covered bond 不出售资产给 SPV，资产仍留在发行人资产负债表上，投资者有双重追索权。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：Excess spread 不是永久性保护：如果资产池中的贷款大规模违约，超额利差可能迅速耗尽。 | ✅ Excess spread 不是永久性保护：如果资产池中的贷款大规模违约，超额利差可能迅速耗尽。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：Trigger events（触发事件） ：许多 ABS 设有信用触发机制（如超额利差降至阈值以下），一旦触发会改变现金流分配方式，如强制提前摊还。 | ✅ Trigger events（触发事件） ：许多 ABS 设有信用触发机制（如超额利差降至阈值以下），一旦触发会改变现金流分配方式，如强制提前摊还。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-
-## 8. 跨模块关联
-
-| 接口 | 连接模块 | 本模块输出 | 做题用途 |
-|---|---|---|---|
-| Securitization base | [[M17-Fixed-Income-Securitization]] | SPV/waterfall/servicer | 理解 ABS 结构来源 |
-| Credit enhancement | [[M14-Credit-Risk]] | subordination、overcollateralization、excess spread | 判断 loss absorption 和 tranche risk |
-| Cash-flow timing | [[M02-Fixed-Income-Cash-Flows-and-Types]] | amortizing/revolving collateral | 判断本金回收和 trigger risk |
-| MBS contrast | [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] | non-mortgage ABS vs mortgage collateral | 区分普通 ABS 与 MBS 的 prepayment 机制 |
-
-- **上游模块**：[[M17-Fixed-Income-Securitization]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- 信用增级 → [[M17-Fixed-Income-Securitization]] 的 SPV 结构
-- 分层设计 → [[M19-Mortgage-Backed-Security-Instrument-and-Market-Features]] 的 CMO 分层
-- Covered bond → [[M16-Credit-Analysis-for-Corporate-Issuers]] 的发行人信用分析
-
-
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M13-ABS-and-Credit-Enhancement.md` (medium, 0.401)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Covered bond = issuer + cover pool recourse。
+- Credit enhancement = subordination, overcollateralization, excess spread, reserve account。
+- Tranching reallocates credit risk; it does not erase collateral risk。

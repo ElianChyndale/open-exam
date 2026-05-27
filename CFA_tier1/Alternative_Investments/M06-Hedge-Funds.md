@@ -39,6 +39,30 @@ tags:
 2. describe investment forms and vehicles used in hedge fund investments
 3. analyze sources of risk, return, and diversification among hedge fund investments
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 6: Hedge Funds`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Hedge Fund Investment Features
+- 2.1. Equity Hedge Fund Strategies
+- 2.2. Event-Driven Strategies
+- 2.3. Relative Value Strategies
+- 2.4. Opportunistic Strategies
+- 2.5. Distinguishing Characteristics of Hedge Fund Investments
+- 3. Hedge Fund Investment Forms
+- 3.1. Direct Hedge Fund Investment Forms
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -134,6 +158,19 @@ flowchart TD
 
 **关键区别**: Gross ≠ Net，两者完全不同。很多对冲基金是净多头 (Net Long)，并非完全对冲市场风险。市场中性策略的Net Leverage接近0。
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Hedge Fund Investment Features | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Hedge Fund Investment Features`；`HFIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Equity Hedge Fund Strategies | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Equity Hedge Fund Strategies`；`EHFS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Event-Driven Strategies | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Event-Driven Strategies`；`EDS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Relative Value Strategies | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Relative Value Strategies`；`RVS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Opportunistic Strategies | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Opportunistic Strategies`；`OS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Distinguishing Characteristics of Hedge Fund Investments | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Distinguishing Characteristics of Hedge Fund Investments`；`DCHFI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Hedge Fund Investment Forms | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Hedge Fund Investment Forms`；`HFIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Direct Hedge Fund Investment Forms | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Direct Hedge Fund Investment Forms`；`DHFIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -163,6 +200,16 @@ flowchart TD
 2. **杠杆计算**: 给定多头和空头头寸及资本，计算总杠杆和净杠杆。**思路**: Gross = (多+|空|)/资本；Net = (多-|空|)/资本。
 3. **策略风险排序**: 要求按风险水平排序。**思路**: Relative Value (低) < Equity L/S (中) < Event Driven (中高) < Global Macro (高)。
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Hedge Fund Investment Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Equity Hedge Fund Strategies`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Event-Driven Strategies`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Relative Value Strategies`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Opportunistic Strategies`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -172,6 +219,16 @@ flowchart TD
 | ❌ 忽略：策略风险水平: 不能凭名称判断风险，Equity L/S实际风险中等 | ✅ 策略风险水平: 不能凭名称判断风险，Equity L/S实际风险中等 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：锁定期+通知期: 对冲基金的流动性限制包括锁定期和通知期两个概念 | ✅ 锁定期+通知期: 对冲基金的流动性限制包括锁定期和通知期两个概念 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：高水位线普遍采用: 是对冲基金保护投资者的重要机制 | ✅ 高水位线普遍采用: 是对冲基金保护投资者的重要机制 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Hedge Fund Investment Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Hedge Fund Investment Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Equity Hedge Fund Strategies | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Equity Hedge Fund Strategies`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Event-Driven Strategies | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Event-Driven Strategies`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Relative Value Strategies | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Relative Value Strategies`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Opportunistic Strategies | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Opportunistic Strategies`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

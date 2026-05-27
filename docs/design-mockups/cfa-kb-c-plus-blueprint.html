@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CFA Knowledge Base C+ Blueprint</title>
+  <style>
+    :root {
+      --ink: #20262c;
+      --muted: #60707d;
+      --paper: #f6f7f4;
+      --panel: #ffffff;
+      --line: #d7dee4;
+      --accent: #246a73;
+      --accent2: #7a5130;
+      --accent3: #8f3f4b;
+      --soft: #eef4f2;
+      --soft2: #f5f0ea;
+      --soft3: #f7eeee;
+      --shadow: 0 14px 38px rgba(32, 38, 44, 0.09);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      padding: 34px 46px 24px;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 8px; font-size: 31px; line-height: 1.18; }
+    .lead { max-width: 1060px; color: var(--muted); font-size: 15px; margin-bottom: 0; }
+    main { padding: 26px 46px 60px; display: grid; gap: 24px; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .grid2 {
+      display: grid;
+      grid-template-columns: minmax(310px, 0.85fr) minmax(430px, 1.15fr);
+      gap: 20px;
+      align-items: start;
+    }
+    .tag {
+      display: inline-flex;
+      min-height: 25px;
+      align-items: center;
+      padding: 2px 9px;
+      border-radius: 5px;
+      color: #ffffff;
+      background: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .tag.brown { background: var(--accent2); }
+    .tag.red { background: var(--accent3); }
+    .note {
+      border-left: 3px solid var(--accent);
+      padding-left: 11px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .page {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fbfcfc;
+    }
+    .page-head {
+      padding: 13px 15px;
+      background: var(--soft);
+      border-bottom: 1px solid var(--line);
+      font-weight: 750;
+    }
+    .page-body { display: grid; gap: 9px; padding: 13px; }
+    .block {
+      background: #ffffff;
+      border: 1px solid #e3e9ee;
+      border-radius: 6px;
+      padding: 11px 12px;
+      font-size: 13px;
+    }
+    .block b { color: var(--ink); }
+    .block small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .three {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 16px;
+    }
+    .card h3 { margin-bottom: 8px; font-size: 17px; }
+    .card p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+    th { background: var(--soft2); font-size: 12px; }
+    tr:last-child td { border-bottom: 0; }
+    ul { margin-bottom: 0; padding-left: 20px; color: var(--muted); }
+    li { margin: 6px 0; }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #ffffff;
+      padding: 12px;
+      min-height: 104px;
+      font-size: 13px;
+    }
+    .step b { display: block; margin-bottom: 5px; }
+    @media (max-width: 1080px) {
+      header, main { padding-left: 22px; padding-right: 22px; }
+      .grid2, .three, .flow { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>C+ Blueprint: Curriculum Playbook Complete</h1>
+    <p class="lead">这套设计把每个知识点放到它该在的位置：先跟随原版教材讲清楚，再把它翻译成考试动作，最后把基础题、mock、错题反思和复盘规则回填到对应知识点。中文负责理解，English terms 负责精确识题。</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <span class="tag">Design Principle</span>
+      <h2>核心原则</h2>
+      <div class="three">
+        <div class="card">
+          <h3>教材是骨架</h3>
+          <p>每个 Module 的主顺序来自原版教材 chapter sections，不再把教材锚点孤立放表格。教材小节直接成为正文知识块。</p>
+        </div>
+        <div class="card">
+          <h3>考试是翻译层</h3>
+          <p>每个知识块都要转成 question trigger、formula choice、decision rule、trap check，而不是停在定义解释。</p>
+        </div>
+        <div class="card">
+          <h3>题库是证据层</h3>
+          <p>Practice 和 mock 进入对应知识块的 Evidence，不再漂浮成孤立题目列表；错题规则继续回到 .system/memory。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel grid2">
+      <div>
+        <span class="tag brown">MOC C+</span>
+        <h2>MOC 是科目地图</h2>
+        <p class="note">MOC 不承担大段讲解。它负责导航、优先级、跨模块关系、公式地图、题库入口和复习路线。你打开 MOC 应该马上知道“先去哪一页、为什么、做什么”。</p>
+        <ul>
+          <li>删除机械的“教材锚点表”感，改成 Module Atlas。</li>
+          <li>每个模块显示：教材章节、核心任务、最高频考点、题型、链接到 Practice/Mock。</li>
+          <li>新增 Subject Routes：首轮学习、刷题补洞、mock 前冲刺、错题回炉。</li>
+        </ul>
+      </div>
+      <div class="page">
+        <div class="page-head">00-Subject-MOC.md 新页面结构</div>
+        <div class="page-body">
+          <div class="block"><b>1. Subject Brief 科目定位</b><small>一句话主线、考试权重、最重要的 learning output。</small></div>
+          <div class="block"><b>2. Module Atlas 模块地图</b><small>每个 Module 的 textbook chapter、核心任务、难度、题型、Practice/Mock 入口。</small></div>
+          <div class="block"><b>3. Curriculum Spine 教材主线</b><small>把官方教材小节按概念层、计算层、解释层、跨科目接口分组。</small></div>
+          <div class="block"><b>4. Exam Route 做题路线</b><small>definition route / calculation route / interpretation route / comparison route。</small></div>
+          <div class="block"><b>5. Formula & Framework Map</b><small>公式不是堆表，而是按触发条件与禁止条件分类。</small></div>
+          <div class="block"><b>6. Practice & Mock Evidence Map</b><small>基础题、mock、unclassified mock 后续都能落到模块和知识块。</small></div>
+          <div class="block"><b>7. Review Routes 复习路线</b><small>首轮、二轮、mock 前、错题回炉各自看哪些模块和段落。</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel grid2">
+      <div>
+        <span class="tag red">Module C+</span>
+        <h2>Module 是完整学习章节</h2>
+        <p class="note">Module 会变长，但更有秩序。它不再是“前面旧笔记 + 后面补表格”，而是一章从教材到考试的双语学习材料。</p>
+        <ul>
+          <li>按教材小节展开正文，每节都讲到它该讲的位置。</li>
+          <li>每个知识块固定包含：中文解释、English term、考试问法、公式/判断规则、陷阱、题库证据。</li>
+          <li>原来的公式、考点、陷阱不删除，重排进对应知识块和最后的速查区。</li>
+        </ul>
+      </div>
+      <div class="page">
+        <div class="page-head">Mxx-Module.md 新页面结构</div>
+        <div class="page-body">
+          <div class="block"><b>0. Reading Contract 学习契约</b><small>本模块你最后必须会解释什么、计算什么、判断什么。</small></div>
+          <div class="block"><b>1. Module Brief 模块定位</b><small>LOS、prerequisites、跨科目接口、考试角色。</small></div>
+          <div class="block"><b>2. Curriculum Spine 教材正文主线</b><small>按 2.1 / 2.2 / 3.1 等教材小节逐段重写。</small></div>
+          <div class="block"><b>3. Exam Translation 考试翻译</b><small>把教材每节转成题干触发词、题型、步骤、判断规则。</small></div>
+          <div class="block"><b>4. Formula & Decision Bench 公式与决策台</b><small>公式变量、使用条件、不要用的场景、单位/时点检查。</small></div>
+          <div class="block"><b>5. Practice Evidence 题库证据</b><small>基础题和 mock 按知识块回填：考什么、怎么问、易错口径。</small></div>
+          <div class="block"><b>6. Trap Ledger 陷阱账本</b><small>把常见陷阱按知识块编号，和错题卡/fix rule 对接。</small></div>
+          <div class="block"><b>7. Final Recall Sheet 最后回忆页</b><small>90 秒主动回忆、公式选择、常见误判、next drill。</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <span class="tag">Knowledge Block</span>
+      <h2>每个知识块的内部模板</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>块内字段</th>
+            <th>作用</th>
+            <th>示例：M01 Rates and Returns</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Textbook Position</td>
+            <td>告诉这个点来自教材哪一节</td>
+            <td>2.1 Determinants of Interest Rates</td>
+          </tr>
+          <tr>
+            <td>Concept in Chinese</td>
+            <td>用中文讲清真正含义</td>
+            <td>利率不是单一数字，而是时间价值和不同风险补偿的总和。</td>
+          </tr>
+          <tr>
+            <td>English Terms</td>
+            <td>保留考试识题语言</td>
+            <td>real risk-free rate, inflation premium, default risk premium, liquidity premium, maturity premium</td>
+          </tr>
+          <tr>
+            <td>Exam Translation</td>
+            <td>把知识点翻译成题目动作</td>
+            <td>看到 “higher required return” 不能只说 risk higher，要判断是哪一种 premium 变化。</td>
+          </tr>
+          <tr>
+            <td>Formula / Rule</td>
+            <td>公式、口径、限制条件</td>
+            <td>nominal rate ≈ real risk-free + expected inflation + risk premiums</td>
+          </tr>
+          <tr>
+            <td>Practice Evidence</td>
+            <td>基础题/mock 如何考</td>
+            <td>题目常给一个情境，让你识别 required return、discount rate 或 opportunity cost。</td>
+          </tr>
+          <tr>
+            <td>Trap & Fix Rule</td>
+            <td>把易错点变成下次动作</td>
+            <td>不要把所有高利率都归因于 default risk；先逐项排 premium。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <span class="tag">Implementation Route</span>
+      <h2>建议实施路线</h2>
+      <div class="flow">
+        <div class="step"><b>1. 清理模板痕迹</b>移除或重排机械的 Textbook Signal Topics / 教材驱动补强表格。</div>
+        <div class="step"><b>2. 建 C+ 模板</b>定义 MOC 和 Module 的新标准结构，保留中英双语。</div>
+        <div class="step"><b>3. 先做 Quant 样板</b>用 M01 和 MOC 打样，确认阅读体验。</div>
+        <div class="step"><b>4. 批量扩散</b>脚本按 93 个现役模块重排，不碰 _legacy / _archive。</div>
+        <div class="step"><b>5. 质量审计</b>检查教材小节覆盖、题库证据回填、双语保留和链接完整性。</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

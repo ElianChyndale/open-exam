@@ -39,6 +39,30 @@ tags:
 2. compare direct investment, co-investment, and fund investment methods for alternative investments
 3. describe investment ownership and compensation structures commonly used in alternative investments
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 1: Alternative Investment Features, Methods, and Structures`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Alternative Investment Features
+- 2.1. Alternative Investments: Features and Categories
+- 2.2. Private Capital
+- 2.3. Real Assets
+- 2.4. Hedge Funds
+- 3. Alternative Investment Methods
+- 3.1. Alternative Investment Methods
+- 3.2. Fund Investment
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -128,6 +152,19 @@ flowchart TD
 - **中文主线**：围绕 `Alternative Investment Structures` 掌握定义、适用条件、公式/框架和考试判断。
 - **对应动作**：识别概念并应用到题干。
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Alternative Investment Features | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Alternative Investment Features`；`AIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Alternative Investments: Features and Categories | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Alternative Investments: Features and Categories`；`AIFC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Private Capital | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Private Capital`；`PC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Real Assets | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Real Assets`；`RA`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Hedge Funds | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Hedge Funds`；`HF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Alternative Investment Methods | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Alternative Investment Methods`；`AIM`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Alternative Investment Methods | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Alternative Investment Methods`；`AIM`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Fund Investment | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Fund Investment`；`FI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 本模块判断框架
@@ -159,6 +196,16 @@ flowchart TD
 | ⭐⭐ | 1.3 Alternative Investment Methods | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 | ⭐⭐ | 1.4 Alternative Investment Structures | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Alternative Investment Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Alternative Investments: Features and Categories`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Private Capital`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Real Assets`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Hedge Funds`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -173,6 +220,16 @@ flowchart TD
 | ❌ ❌ Contango = 正Roll Yield | ✅ 正向市场收益为正 | ✅ Contango（期货>现货）= 负 Roll Yield |
 | ❌ ❌ Backwardation = 负Roll Yield | ✅ 反向市场收益为负 | ✅ Backwardation（期货<现货）= 正 Roll Yield |
 | ❌ ❌ 对冲基金总是对冲市场风险 | ✅ 名称误导 | ✅ 很多对冲基金是净多头，并非完全对冲 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Alternative Investment Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Alternative Investment Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Alternative Investments: Features and Categories | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Alternative Investments: Features and Categories`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Private Capital | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Private Capital`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Real Assets | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Real Assets`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Hedge Funds | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Hedge Funds`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

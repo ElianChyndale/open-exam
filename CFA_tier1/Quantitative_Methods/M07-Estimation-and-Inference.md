@@ -21,248 +21,67 @@ tags:
 
 # M07: Estimation and Inference
 
-> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Estimation and Inference**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+## 0. Reading Contract 学习契约
 
----
+- **Official module**: Module 7: Estimation and Inference.
+- **Official pages**: Learning Outcomes; 7.01 Introduction; 7.02 Sampling Methods; 7.03 Central Limit Theorem and Inference; 7.04 Bootstrapping and Empirical Sampling Distributions.
+- **LOS contract**: compare sampling methods and sampling error; explain CLT and standard error; describe bootstrap/jackknife resampling.
+- **Evidence rule**: tag misses by sample design, CLT scope, SE/SD confusion, or resampling method.
 
-## Official Module Structure
+## 1. Module Brief 模块定位
 
-- Learning Outcomes: Estimation and Inference
-- 7.01 | Introduction
-- 7.02 | Sampling Methods
-- 7.03 | Central Limit Theorem and Inference
-- 7.04 | Bootstrapping and Empirical Sampling Distributions
+M07 is the bridge from sample evidence to population claims. 中文上它先问“样本是否能代表总体”，再问“样本均值有多不确定”，最后问“没有解析公式时如何重抽样估计”。
 
-## Learning Outcome Statements
+## 2. Curriculum Spine 教材正文主线
 
-1. compare and contrast simple random, stratified random, cluster, convenience, and judgmental sampling and their implications for sampling error in an investment problem
-2. explain the central limit theorem and its importance for the distribution and standard error of the sample mean
-3. describe the use of resampling (bootstrap, jackknife) to estimate the sampling distribution of a statistic
+1. **Sampling Methods**: simple random, stratified random, cluster, convenience, and judgmental sampling differ in representativeness, cost, and bias risk.
+2. **Sampling from Different Distributions**: population shape matters, but inference often focuses on the sampling distribution of the mean.
+3. **Central Limit Theorem and Inference**: for sufficiently large samples, the sample mean is approximately normal even if the population is not.
+4. **Bootstrapping and Empirical Sampling Distributions**: bootstrap and jackknife estimate sampling distributions, standard errors, and bias when analytical formulas are difficult.
 
----
+## 3. Exam Translation 考试翻译
 
-## 1. 模块定位
-
-### 7.1 学习任务
-- **核心问题**：考试希望你用 `Estimation and Inference` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
-
-### 7.2 考试角色
-- **难度类型**：概念+案例判断。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
-
-### 7.3 关键英文术语
-- **Estimation and Inference（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Sampling Methods（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Central Limit Theorem and Inference（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Bootstrapping and Empirical Sampling Distributions（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-
-## 2. 官方 LOS 对应学习目标
-
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 7.1 | compare and contrast simple random, stratified random, cluster, convenience, and judgmental sampling and their implications for sampling error in an investment problem | 比较相似概念的适用条件与差异 | 写出结论、依据、公式口径和限制条件。 |
-| 7.2 | explain the central limit theorem and its importance for the distribution and standard error of the sample mean | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 7.3 | describe the use of resampling (bootstrap, jackknife) to estimate the sampling distribution of a statistic | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-
-## 3. 核心知识树
-
-```text
-7. Estimation and Inference
-├─ 7.1 抽样方法（Sampling Methods）
-│  ├─ 7.1.1 Probability sampling：每个成员有已知非零抽中概率，是推断的基础
-│  ├─ 7.1.2 Simple random：概率相等；stratified：分层后抽样，提升各层代表性
-│  ├─ 7.1.3 Cluster：抽群再调查群内成员，节省成本但可能提高 sampling error
-│  ├─ 7.1.4 Non-probability：convenience/judgmental 快但偏误高
-│  └─ 7.1.5 Bias：data snooping、look-ahead、selection bias 不能靠增加 n 自动消除
-├─ 7.2 CLT 和标准误（Central Limit Theorem and Standard Error）
-│  ├─ 7.2.1 CLT：总体非正态也可在大样本下让样本均值近似正态
-│  ├─ 7.2.2 Standard error：`SE=σ/√n` 或 `s/√n`，衡量样本均值不确定性
-│  ├─ 7.2.3 Standard deviation vs SE：前者衡量单个观测，后者衡量样本均值
-│  └─ 7.2.4 样本量效应：SE 减半需要样本量变为 4 倍
-├─ 7.3 重抽样估计量（Resampling Estimators）
-│  ├─ 7.3.1 Bootstrap：有放回重抽 n 个观测，估计统计量抽样分布和 SE
-│  ├─ 7.3.2 Jackknife：每次删去一个观测，估计 bias 和 variance
-│  └─ 7.3.3 判断：bootstrap 适合复杂统计量，jackknife 计算较轻但信息较少
-```
-
-## 核心图解
-
-```mermaid
-flowchart TD
-    A["Inference task"] --> B{"样本如何取得?"}
-    B -->|probability sampling| C["可支持总体推断"]
-    B -->|convenience / judgmental| D["bias risk high"]
-    A --> E{"问什么不确定性?"}
-    E -->|单个观测离散| F["Standard deviation"]
-    E -->|样本均值离散| G["Standard error = s / sqrt(n)"]
-    G --> H["CLT: sample mean approx normal when n large"]
-    A --> I{"解析 SE 困难?"}
-    I -->|是| J["Bootstrap for SE / sampling distribution"]
-    I -->|bias estimate| K["Jackknife"]
-```
-
-## 4. 知识点详解
-
-### 7.1 抽样方法（Sampling Methods）
-
-**概率抽样（Probability Sampling）**：每个总体成员有已知的非零概率被抽中。
-
-- **简单随机抽样（Simple Random Sampling）**：每个成员被抽中的概率相等。最基础的方法，但不一定总适用。
-- **分层抽样（Stratified Random Sampling）**：先将总体分成若干层（Stratum，如按行业、市值分组），再在每层内随机抽样。**优势**：保证每层都有代表性，降低抽样误差。
-- **整群抽样（Cluster Sampling）**：将总体分成若干群（如地理区域），随机抽取几个群，对群内全部成员调查。
-
-**非概率抽样（Non-Probability Sampling）**：某些成员被选中的概率未知或为零。
-
-- **便利抽样（Convenience Sampling）**：选取最容易获得的样本。速度快但代表性差。
-- **判断抽样（Judgmental Sampling）**：基于研究者的主观判断选择样本。容易引入个人偏误。
-
-**抽样误差与偏误（Sampling Error and Bias）**：
-- 抽样误差（Sampling Error）：样本统计量与总体参数之间的差异，是随机性的自然结果
-- 抽样偏误（Sampling Bias）：系统性的偏离，通常来自有缺陷的抽样设计
-- 增大样本量可以降低抽样误差，但不能消除抽样偏误
-
-**数据 snooping（Data Snooping / Data Mining Bias）**：
-- 反复分析同一数据集直到发现"显著"模式 — 本质上是在挖掘随机噪声
-- 解决方法：样本外检验（Out-of-Sample Test）
-
-**前视偏误（Look-Ahead Bias）**：
-- 使用在分析时点尚不可得的信息进行回测
-- 例：用全年财务数据在年中做策略回测（Q2 时 Q4 数据尚未公布）
-
-### 7.2 CLT 和标准误（Central Limit Theorem and Standard Error）
-
-**中心极限定理（Central Limit Theorem, CLT）**：
-- 如果样本容量 n 足够大（一般 n ≥ 30），样本均值的抽样分布近似服从正态分布
-- 这个结论**不依赖于总体分布的形状**（即使总体是非正态的！）
-- 样本均值的均值 ≈ 总体均值 μ
-- 样本均值的标准差（即标准误）= σ / √n
-
-**标准误（Standard Error of the Mean）**：
-`SE = σ / √n` （已知总体标准差时）
-`SE = s / √n` （未知总体标准差时，用样本标准差估计）
-
-**标准误的含义**：标准误衡量的是样本均值的"不确定性" — 如果从同一总体重复抽样，样本均值之间的波动幅度。
-
-> **【考试核心】** CLT 是统计推断的基石：它让我们即使在总体分布未知的情况下，也可以用正态分布进行区间估计和假设检验。
-
-**标准误 vs 标准差**：
-- 标准差（σ）：衡量单个观测值的离散度
-- 标准误（σ/√n）：衡量样本均值的离散度
-- 标准误 < 标准差，且随 n 增大而减小
-
-### 7.3 重抽样估计量（Resampling Estimators）
-
-**自助法（Bootstrap）**：
-- 从样本中有放回重复抽样，每次抽取 n 个观测值，重复大量次数
-- 对每个自助样本计算统计量，形成该统计量的经验抽样分布
-- 详见 [[M06-Simulation-Methods]] 中 1.3 节的展开
-
-**刀切法（Jackknife）**：
-- 每次从样本中**剔除一个观测值**（Leave-One-Out），计算统计量
-- 对所有 n 个可能的剔除组合做平均
-- 主要用于估计统计量的偏误（Bias）和方差
-- 计算成本比 Bootstrap 低（只需要 n 次计算），但信息量较少
-
-> **【Bootstrap vs Jackknife 辨析】**
-> - **Bootstrap**：有放回重抽原始数据（每次抽取 n 个），用各次重抽样本的 mean 的分布来估计标准误（Standard Error），而非直接从原始数据计算 SD。
-> - **Jackknife**：逐次删除一个观测值，重新计算统计量，通过 n 次结果的变化幅度估计偏误（Bias），不是用于去除异常值。
-> - **区分要点**：Bootstrap 估标准误（SE）；Jackknife 估偏误（Bias）。
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 公式 | 解释 | 使用场景 |
-|------|------|----------|
-| `SE = σ/√n` | 标准误（已知总体 σ） | CLT 应用 |
-| `SE = s/√n` | 标准误（用样本 s 估计） | 常见考试场景 |
-| `Sampling Error = x̄ - μ` | 抽样误差 | 评估样本估计精度 |
-| `n = (zσ/E)²` | 所需样本量 | E = 期望的 margin of error |
-| `CI = x̄ ± z_(α/2)σ/√n` | z 置信区间 | σ 已知或题目指定 z |
-| `CI = x̄ ± t_(α/2,n-1)s/√n` | t 置信区间 | σ 未知，用样本 s |
-| `SE_new = SE_old/2 -> n_new = 4n_old` | 样本量与 SE | 标准误缩小一半需四倍样本 |
-
-### 5.2 推断前置决策树
-
-| 题干触发 | 决策 | 对应节点 | 防错点 |
-|---|---|---|---|
-| 样本设计题 | 先判 probability vs non-probability | `7.1` | convenience sample 不能支持强总体推断。 |
-| 总体非正态但 n 大 | 可用 CLT 近似样本均值正态 | `7.2.1` | CLT 作用于 sample mean，不是原始数据。 |
-| 问样本均值不确定性 | 用 SE | `7.2.2` | 不要把标准差当标准误。 |
-| 要区间估计 | 先判断 σ 已知/未知，再选 z/t | `7.2` | 小样本且 σ 未知用 t。 |
-| 无解析 SE 或复杂统计量 | bootstrap | `7.3.1` | 原样本有偏时 bootstrap 也有偏。 |
-| 问 bias estimate | jackknife | `7.3.2` | 不是删除异常值的方法。 |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
+| Prompt trigger | Exam action | Output language |
 |---|---|---|
-| ⭐⭐⭐ | 7.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 7.2 Sampling Methods | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 7.3 Central Limit Theorem and Inference | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 7.4 Bootstrapping and Empirical Sampling Distributions | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| every member equal known chance | simple random sampling | "Probability sample supports inference if implemented correctly." |
+| population divided into strata | stratified random sampling | "Improves representation of key subgroups." |
+| groups sampled first | cluster sampling | "Cost efficient but may raise sampling error." |
+| easy-to-access observations | convenience sampling | "Fast but high bias risk." |
+| expert-selected observations | judgmental sampling | "Subjective and not strongly generalizable." |
+| sample mean uncertainty | use SE | "SE measures dispersion of sample means." |
+| complex statistic, no analytic SE | bootstrap/jackknife | "Use empirical resampling distribution." |
 
-### 6.9 ⭐⭐ Legacy 考点补充
+## 4. Formula & Decision Bench 公式与决策台
 
-### 6.1 核心内容
-
-**考点一：CLT 的应用条件**
-- 问：何时样本均值的抽样分布为正态？
-- 答：(1) 总体本身就是正态分布，或 (2) 样本容量足够大（n ≥ 30）
-- 注意：CLT 不要求总体服从正态分布
-
-**考点二：计算标准误**
-- 给总体标准差 σ 和样本大小 n → SE = σ/√n
-- 给样本标准差 s 和样本大小 n → SE = s/√n
-- 注意区分总体标准差 σ 和样本标准差 s
-
-**考点三：判断抽样方法优劣**
-- 一个研究采用了 convenience sample → 指出潜在的偏误
-- 怎样的样本设计可以减少偏误 → 推荐 stratified random sampling
-
-**考点四：标准误与样本量的关系**
-- SE 与 √n 成反比
-- 要将 SE 减半，需要将样本量增至 4 倍
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+| Formula / framework | Use | Trap check |
 |---|---|---|
-| ❌ 只背 Estimation and Inference 的英文名，不解释中文含义 | ✅ 用中文说清定义、适用条件和考试动作 | 术语题和情境题都会考定义边界。 |
-| ❌ 看到公式就直接套，不检查口径 | ✅ 先检查时间、单位、现金流方向、会计口径或统计假设 | CFA 常把错误藏在输入口径里。 |
-| ❌ 把显著性、相关性或高分数直接当成好结论 | ✅ 还要看经济含义、限制条件和跨模块证据 | 数量结果必须回到投资解释。 |
+| `SE=sigma/sqrt(n)` | known population sigma | SE is not SD. |
+| `SE=s/sqrt(n)` | sigma unknown, sample s used | Common exam setting. |
+| CLT | sample mean approximately normal for large n | Applies to `xbar`, not raw observations. |
+| `n=(z sigma/E)^2` | required sample size | E is margin of error; halving E needs 4x n. |
+| Bootstrap | resample with replacement | Inherits bias in the original sample. |
+| Jackknife | leave-one-out resampling | Often estimates bias/variance; not outlier deletion. |
 
-## 8. 跨模块关联
+## 5. Practice & Mock Evidence 题库证据
 
-| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
-|---|---|---|---|
-| `7.1` 抽样与偏误 | Big Data、Equity research、Economics | 评价数据是否支持结论 | 增大样本量降低 sampling error，但不消除 sampling bias。 |
-| `7.2` CLT/SE | [[M08-Hypothesis-Testing]] | 检验统计量分母、置信区间宽度 | SE 是样本均值的标准差，不是样本中个体的标准差。 |
-| `7.2` 样本量 | Research design | margin of error 控制 | 样本量与误差平方成反比。 |
-| `7.3` Bootstrap/jackknife | [[M06-Simulation-Methods]]、M08 | 非参数区间、统计量分布估计 | Bootstrap 估 SE，jackknife 常用于 bias/variance。 |
-| `7.1` bias | Ethics、Quant investing | 回测和研究陈述是否误导 | Look-ahead 和 data snooping 会让策略表现虚高。 |
+- Official textbook index marks practice and solutions as available.
+- Evidence tags: `sampling_method`, `sampling_bias`, `standard_error`, `clt_scope`, `bootstrap`, `jackknife`.
+- Future records should quote the sample-design language because terms like convenience, stratified, and cluster drive the answer.
 
-### Legacy 关联补充
+## 6. Trap Ledger 陷阱账本
 
-- **[[M03-Statistical-Measures]]**：样本方差 `s² = Σ(x_i-x̄)²/(n-1)` 的标准误概念在这里应用。
-- **[[M06-Simulation-Methods]]**：Bootstrap 在此作为重抽样估计量出现，与 M06 的模拟方法形成完整的方法链条。
-- **[[M08-Hypothesis-Testing]]**：标准误是假设检验中检验统计量的分母。CLT 使 z-test 和 t-test 成为可能。
-- **[[M09-Correlation-and-Regression]]**：回归系数的标准误（SE of slope coefficient）是 M07 标准误概念在回归框架中的推广。
+| Trap | Correct rule |
+|---|---|
+| Increasing n assumed to remove bias | Larger n lowers sampling error, not systematic bias. |
+| CLT applied to raw data | CLT concerns the sampling distribution of the sample mean. |
+| SE and SD used interchangeably | SD is individual observation dispersion; SE is sample-mean uncertainty. |
+| Convenience sample treated as strong evidence | Non-probability sampling limits inference. |
+| Jackknife described as outlier removal | Jackknife recalculates statistics after deleting one observation at a time. |
 
+## 7. Final Recall Sheet 最后回忆页
 
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M07-Sampling-and-Estimation.md` (high, 0.787)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Probability sampling supports stronger inference than convenience/judgmental sampling.
+- Stratified improves subgroup representation; cluster saves cost but may increase error.
+- `SE = s/sqrt(n)`; SE halves only when sample size quadruples.
+- CLT: sample mean, not observations, becomes approximately normal.
+- Bootstrap estimates SE/distribution; jackknife often estimates bias/variance.

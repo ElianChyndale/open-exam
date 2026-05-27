@@ -1,66 +1,31 @@
 ---
 title: "CFA L1 Subject Question Banks"
-description: 各科目练习题库索引，来源于 CFA Institute Practice Tool
-generated: 2026-05-25
-source: cfa-practi-pdx-prod.insproserv.net
+description: 本地基础题与题库承接页索引
+generated: 2026-05-27
+source: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题"
 ---
 
 # CFA L1 Subject Question Banks
 
-> 本文件汇总各科目 Practice 工具中可用题目数量及记录链接。
-> 使用 Edge 浏览器登录 [Practice Tool](https://learn.cfainstitute.org/accounts/1/external_tools/261) 可直接练习。
+> 本页汇总本地 Pack1000 基础题承接页。题干来自本地 PDF，答案解析保持对源 PDF 的引用，不把整份答案全文写进仓库。
 
-## 题目数量概览
+## 基础题概览
 
-| 科目 | 模块数 | 总题数 | 题库文件 |
-|------|--------|--------|----------|
-| 📊 Quantitative Methods | 11 | ~212 | [[00-Quant-Practice-Questions]] |
-| 🏛️ Economics | 8 | TBD | 待创建 |
-| 🏢 Corporate Issuers | 7 | TBD | 待创建 |
-| 📋 Financial Statement Analysis | 12 | TBD | 待创建 |
-| 📈 Equity | 8 | TBD | 待创建 |
-| 💰 Fixed Income | 19 | TBD | 待创建 |
-| 🔀 Derivatives | 10 | TBD | 待创建 |
-| 🏠 Alternative Investments | 7 | TBD | 待创建 |
-| 📊 Portfolio Management | 6 | TBD | 待创建 |
-| ⚖️ Ethics | 5 | TBD | 待创建 |
+| 科目 | 基础题数 | 题库文件 |
+|------|----------|----------|
+| Financial Statement Analysis | 130 | [[00-Financial-Statement-Analysis-Practice-Questions]] |
+| Corporate Issuers | 67 | [[00-Corporate-Issuers-Practice-Questions]] |
+| Equity | 154 | [[00-Equity-Practice-Questions]] |
+| Fixed Income | 106 | [[00-Fixed-Income-Practice-Questions]] |
+| Economics | 76 | [[00-Economics-Practice-Questions]] |
+| Alternative Investments | 61 | [[00-Alternative-Investments-Practice-Questions]] |
+| Quantitative Methods | 93 | [[00-Quant-Practice-Questions]] |
+| Derivatives | 65 | [[00-Derivatives-Practice-Questions]] |
+| Ethical and Professional Standards | 148 | [[00-Ethics-Practice-Questions]] |
+| Portfolio Management | 100 | [[00-Portfolio-Practice-Questions]] |
 
-## 如何使用 Edge 提取更多题目
+## 说明
 
-1. 确保 Edge 浏览器已登录 CFA Institute (learn.cfainstitute.org)
-2. 导航到 Practice 工具 (全局导航 → Practice)
-3. 选择科目 → 选择模块 → 点击 `Take`
-4. 题目加载后，运行以下 CDP 命令提取：
-
-```python
-# 通过 Edge CDP 提取当前页面题目
-python -c "
-import json, requests, websocket
-pages = requests.get('http://127.0.0.1:9222/json').json()
-target = [p for p in pages if 'panda_token' in p['url']][0]
-ws = websocket.create_connection(target['webSocketDebuggerUrl'], timeout=15)
-# ... 提取逻辑
-ws.close()
-"
-```
-
-## 题目记录模板
-
-每个模块使用以下格式记录题目：
-
-```markdown
-### Q[N]: [题目简述]
-**知识点**: [相关知识点]
-**题型**: Multiple Choice
-
-**题干**:
-...
-
-**选项**:
-A. ...
-B. ...
-C. ...
-
-**答案**: [A/B/C]
-**解析**: ...
-```
+- `基础题数` 以对应答案 PDF 的题号容量为准。
+- 各科题库页记录题号、题干摘要和源页码，便于后续把高频题型回填到 MOC 或 drill。
+- 若后续要把某题升级为错题事件，请再走 `record-mistake`，不要直接把基础题索引当成个人错题本。

@@ -1,0 +1,144 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - 'heading "C+ Blueprint: Curriculum Playbook Complete" [level=1] [ref=e3]'
+    - paragraph [ref=e4]: 这套设计把每个知识点放到它该在的位置：先跟随原版教材讲清楚，再把它翻译成考试动作，最后把基础题、mock、错题反思和复盘规则回填到对应知识点。中文负责理解，English terms 负责精确识题。
+  - main [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Design Principle
+      - heading "核心原则" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - heading "教材是骨架" [level=3] [ref=e11]
+          - paragraph [ref=e12]: 每个 Module 的主顺序来自原版教材 chapter sections，不再把教材锚点孤立放表格。教材小节直接成为正文知识块。
+        - generic [ref=e13]:
+          - heading "考试是翻译层" [level=3] [ref=e14]
+          - paragraph [ref=e15]: 每个知识块都要转成 question trigger、formula choice、decision rule、trap check，而不是停在定义解释。
+        - generic [ref=e16]:
+          - heading "题库是证据层" [level=3] [ref=e17]
+          - paragraph [ref=e18]: Practice 和 mock 进入对应知识块的 Evidence，不再漂浮成孤立题目列表；错题规则继续回到 .system/memory。
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: MOC C+
+        - heading "MOC 是科目地图" [level=2] [ref=e22]
+        - paragraph [ref=e23]: MOC 不承担大段讲解。它负责导航、优先级、跨模块关系、公式地图、题库入口和复习路线。你打开 MOC 应该马上知道“先去哪一页、为什么、做什么”。
+        - list [ref=e24]:
+          - listitem [ref=e25]: 删除机械的“教材锚点表”感，改成 Module Atlas。
+          - listitem [ref=e26]: 每个模块显示：教材章节、核心任务、最高频考点、题型、链接到 Practice/Mock。
+          - listitem [ref=e27]: 新增 Subject Routes：首轮学习、刷题补洞、mock 前冲刺、错题回炉。
+      - generic [ref=e28]:
+        - generic [ref=e29]: 00-Subject-MOC.md 新页面结构
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - text: 1. Subject Brief 科目定位
+            - generic [ref=e32]: 一句话主线、考试权重、最重要的 learning output。
+          - generic [ref=e33]:
+            - text: 2. Module Atlas 模块地图
+            - generic [ref=e34]: 每个 Module 的 textbook chapter、核心任务、难度、题型、Practice/Mock 入口。
+          - generic [ref=e35]:
+            - text: 3. Curriculum Spine 教材主线
+            - generic [ref=e36]: 把官方教材小节按概念层、计算层、解释层、跨科目接口分组。
+          - generic [ref=e37]:
+            - text: 4. Exam Route 做题路线
+            - generic [ref=e38]: definition route / calculation route / interpretation route / comparison route。
+          - generic [ref=e39]:
+            - text: 5. Formula & Framework Map
+            - generic [ref=e40]: 公式不是堆表，而是按触发条件与禁止条件分类。
+          - generic [ref=e41]:
+            - text: 6. Practice & Mock Evidence Map
+            - generic [ref=e42]: 基础题、mock、unclassified mock 后续都能落到模块和知识块。
+          - generic [ref=e43]:
+            - text: 7. Review Routes 复习路线
+            - generic [ref=e44]: 首轮、二轮、mock 前、错题回炉各自看哪些模块和段落。
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e47]: Module C+
+        - heading "Module 是完整学习章节" [level=2] [ref=e48]
+        - paragraph [ref=e49]: Module 会变长，但更有秩序。它不再是“前面旧笔记 + 后面补表格”，而是一章从教材到考试的双语学习材料。
+        - list [ref=e50]:
+          - listitem [ref=e51]: 按教材小节展开正文，每节都讲到它该讲的位置。
+          - listitem [ref=e52]: 每个知识块固定包含：中文解释、English term、考试问法、公式/判断规则、陷阱、题库证据。
+          - listitem [ref=e53]: 原来的公式、考点、陷阱不删除，重排进对应知识块和最后的速查区。
+      - generic [ref=e54]:
+        - generic [ref=e55]: Mxx-Module.md 新页面结构
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - text: 0. Reading Contract 学习契约
+            - generic [ref=e58]: 本模块你最后必须会解释什么、计算什么、判断什么。
+          - generic [ref=e59]:
+            - text: 1. Module Brief 模块定位
+            - generic [ref=e60]: LOS、prerequisites、跨科目接口、考试角色。
+          - generic [ref=e61]:
+            - text: 2. Curriculum Spine 教材正文主线
+            - generic [ref=e62]: 按 2.1 / 2.2 / 3.1 等教材小节逐段重写。
+          - generic [ref=e63]:
+            - text: 3. Exam Translation 考试翻译
+            - generic [ref=e64]: 把教材每节转成题干触发词、题型、步骤、判断规则。
+          - generic [ref=e65]:
+            - text: 4. Formula & Decision Bench 公式与决策台
+            - generic [ref=e66]: 公式变量、使用条件、不要用的场景、单位/时点检查。
+          - generic [ref=e67]:
+            - text: 5. Practice Evidence 题库证据
+            - generic [ref=e68]: 基础题和 mock 按知识块回填：考什么、怎么问、易错口径。
+          - generic [ref=e69]:
+            - text: 6. Trap Ledger 陷阱账本
+            - generic [ref=e70]: 把常见陷阱按知识块编号，和错题卡/fix rule 对接。
+          - generic [ref=e71]:
+            - text: 7. Final Recall Sheet 最后回忆页
+            - generic [ref=e72]: 90 秒主动回忆、公式选择、常见误判、next drill。
+    - generic [ref=e73]:
+      - generic [ref=e74]: Knowledge Block
+      - heading "每个知识块的内部模板" [level=2] [ref=e75]
+      - table [ref=e76]:
+        - rowgroup [ref=e77]:
+          - row "块内字段 作用 示例：M01 Rates and Returns" [ref=e78]:
+            - columnheader "块内字段" [ref=e79]
+            - columnheader "作用" [ref=e80]
+            - columnheader "示例：M01 Rates and Returns" [ref=e81]
+        - rowgroup [ref=e82]:
+          - row "Textbook Position 告诉这个点来自教材哪一节 2.1 Determinants of Interest Rates" [ref=e83]:
+            - cell "Textbook Position" [ref=e84]
+            - cell "告诉这个点来自教材哪一节" [ref=e85]
+            - cell "2.1 Determinants of Interest Rates" [ref=e86]
+          - row "Concept in Chinese 用中文讲清真正含义 利率不是单一数字，而是时间价值和不同风险补偿的总和。" [ref=e87]:
+            - cell "Concept in Chinese" [ref=e88]
+            - cell "用中文讲清真正含义" [ref=e89]
+            - cell "利率不是单一数字，而是时间价值和不同风险补偿的总和。" [ref=e90]
+          - row "English Terms 保留考试识题语言 real risk-free rate, inflation premium, default risk premium, liquidity premium, maturity premium" [ref=e91]:
+            - cell "English Terms" [ref=e92]
+            - cell "保留考试识题语言" [ref=e93]
+            - cell "real risk-free rate, inflation premium, default risk premium, liquidity premium, maturity premium" [ref=e94]
+          - row "Exam Translation 把知识点翻译成题目动作 看到 “higher required return” 不能只说 risk higher，要判断是哪一种 premium 变化。" [ref=e95]:
+            - cell "Exam Translation" [ref=e96]
+            - cell "把知识点翻译成题目动作" [ref=e97]
+            - cell "看到 “higher required return” 不能只说 risk higher，要判断是哪一种 premium 变化。" [ref=e98]
+          - row "Formula / Rule 公式、口径、限制条件 nominal rate ≈ real risk-free + expected inflation + risk premiums" [ref=e99]:
+            - cell "Formula / Rule" [ref=e100]
+            - cell "公式、口径、限制条件" [ref=e101]
+            - cell "nominal rate ≈ real risk-free + expected inflation + risk premiums" [ref=e102]
+          - row "Practice Evidence 基础题/mock 如何考 题目常给一个情境，让你识别 required return、discount rate 或 opportunity cost。" [ref=e103]:
+            - cell "Practice Evidence" [ref=e104]
+            - cell "基础题/mock 如何考" [ref=e105]
+            - cell "题目常给一个情境，让你识别 required return、discount rate 或 opportunity cost。" [ref=e106]
+          - row "Trap & Fix Rule 把易错点变成下次动作 不要把所有高利率都归因于 default risk；先逐项排 premium。" [ref=e107]:
+            - cell "Trap & Fix Rule" [ref=e108]
+            - cell "把易错点变成下次动作" [ref=e109]
+            - cell "不要把所有高利率都归因于 default risk；先逐项排 premium。" [ref=e110]
+    - generic [ref=e111]:
+      - generic [ref=e112]: Implementation Route
+      - heading "建议实施路线" [level=2] [ref=e113]
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e116]: 1. 清理模板痕迹
+          - text: 移除或重排机械的 Textbook Signal Topics / 教材驱动补强表格。
+        - generic [ref=e117]:
+          - generic [ref=e118]: 2. 建 C+ 模板
+          - text: 定义 MOC 和 Module 的新标准结构，保留中英双语。
+        - generic [ref=e119]:
+          - generic [ref=e120]: 3. 先做 Quant 样板
+          - text: 用 M01 和 MOC 打样，确认阅读体验。
+        - generic [ref=e121]:
+          - generic [ref=e122]: 4. 批量扩散
+          - text: 脚本按 93 个现役模块重排，不碰 _legacy / _archive。
+        - generic [ref=e123]:
+          - generic [ref=e124]: 5. 质量审计
+          - text: 检查教材小节覆盖、题库证据回填、双语保留和链接完整性。

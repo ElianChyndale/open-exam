@@ -41,6 +41,30 @@ tags:
 3. explain features and characteristics of infrastructure
 4. explain the investment characteristics of infrastructure investments
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 4: Real Estate and Infrastructure`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Real Estate Features
+- 2.1. Real Estate Investments
+- 2.2. Real Estate Investment Structures
+- 2.2.1. Direct Real Estate Investment
+- 2.2.2. Indirect Real Estate Investment
+- 3. Real Estate Investment Characteristics
+- 3.1. Source of Returns
+- 3.2. Real Estate Investment Diversification Benefits
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -160,6 +184,19 @@ flowchart TD
 | 资本需求 | 收购对价 | 建设资本支出 |
 | 适用投资者 | 追求稳定收益、低风险偏好 | 追求高增长、高风险承受能力 |
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Real Estate Features | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Real Estate Features`；`REF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Real Estate Investments | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Real Estate Investments`；`REI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Real Estate Investment Structures | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Real Estate Investment Structures`；`REIS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Direct Real Estate Investment | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Direct Real Estate Investment`；`DREI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Indirect Real Estate Investment | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Indirect Real Estate Investment`；`IREI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Real Estate Investment Characteristics | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Real Estate Investment Characteristics`；`REIC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Source of Returns | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Source of Returns`；`SR`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Real Estate Investment Diversification Benefits | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Real Estate Investment Diversification Benefits`；`REIDB`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -193,6 +230,16 @@ flowchart TD
 3. **Cap Rate变化分析**: 判断利率/风险/增长预期变化对物业价值的影响。**思路**: Cap Rate↑ → Value↓（反向关系）。
 4. **棕地vs绿地区分**: 题干描述基础设施项目特征，判断类型。**思路**: 现有运营=棕地（低风险低回报）；新建=绿地（高风险高回报）。
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Real Estate Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Real Estate Investments`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Real Estate Investment Structures`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Direct Real Estate Investment`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Indirect Real Estate Investment`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -202,6 +249,16 @@ flowchart TD
 | ❌ 忽略：棕地回报不是更高: 棕地风险低、回报低（8-10%），绿地风险高、回报高（12-15%） | ✅ 棕地回报不是更高: 棕地风险低、回报低（8-10%），绿地风险高、回报高（12-15%） | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：REITs不是都投物业: 权益型投物业收租金，抵押型投贷款收利息 | ✅ REITs不是都投物业: 权益型投物业收租金，抵押型投贷款收利息 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：收益法最常用: 房地产估值三种方法中，收益法（Income Approach）最常见 | ✅ 收益法最常用: 房地产估值三种方法中，收益法（Income Approach）最常见 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Real Estate Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Real Estate Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Real Estate Investments | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Real Estate Investments`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Real Estate Investment Structures | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Real Estate Investment Structures`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Direct Real Estate Investment | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Direct Real Estate Investment`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Indirect Real Estate Investment | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Indirect Real Estate Investment`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 
