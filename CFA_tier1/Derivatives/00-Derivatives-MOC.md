@@ -45,6 +45,31 @@ tags:
 | M09 | Option Replication Using Put-Call Parity | 概念+应用 | Introduction / Put–Call Parity | [[M09-Option-Replication-Using-Put-Call-Parity]] |
 | M10 | Valuing a Derivative Using a One-Period Binomial Model | 概念+应用 | Introduction / Binomial Valuation | [[M10-Valuing-a-Derivative-Using-a-One-Period-Binomial-Model]] |
 
+## 2.5 原版教材章节锚点
+
+- 教材卷册：`V7`
+- 主教材：`D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V7.ePub`
+- 用法：做题时先按模块定位，再用教材锚点回到具体定义、比较口径、公式应用和例外条件。
+
+| Module | 教材章节 | 高频细节锚点 |
+|---|---|---|
+| M01 | Module 1: Derivative Instrument and Derivative Market Features | 2. Derivative Features；2.1. Definition and Features of a Derivative；3. Derivative Underlyings；3.1. Equities；3.2. Fixed-Income Instruments；3.3. Currencies |
+| M02 | Module 2: Forward Commitment and Contingent Claim Features and Instruments | 2. Forwards, Futures, and Swaps；3. Futures；4. Swaps；5. Options；5.1. Scenario 1: Transact (ST > X)；5.2. Scenario 2: Do Not Transact (ST < X) |
+| M03 | Module 3: Derivative Benefits, Risks, and Issuer and Investor Uses | 2. Derivative Benefits；3. Derivative Risks；4. Issuer Use of Derivatives；5. Investor Use of Derivatives |
+| M04 | Module 4: Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives | 2. Arbitrage；3. Replication；4. Costs and Benefits Associated with Owning the Underlying |
+| M05 | Module 5: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities | 2. Pricing and Valuation of Forward Contracts；2.1. Pricing versus Valuation of Forward Contracts；2.1.1. Pricing and Valuation of Forward Contracts at Initiation；2.1.2. Pricing and Valuation of Forward Contracts at Maturity；2.1.3. Pricing and Valuation of Forward Contracts during the Life of the Contract；2.1.4. Pricing and Valuation of Forward Contracts with Additional Costs or Benefits |
+| M06 | Module 6: Pricing and Valuation of Futures Contracts | 2. Pricing of Futures Contracts at Inception；3. MTM Valuation: Forwards versus Futures；4. Interest Rate Futures versus Forward Contracts；5. Forward and Futures Price Differences；6. Interest Rate Forward and Futures Price Differences；7. Effect of Central Clearing of OTC Derivatives |
+| M07 | Module 7: Pricing and Valuation of Interest Rates and Other Swaps | 2. Swaps vs. Forwards；3. Swap Values and Prices |
+| M08 | Module 8: Pricing and Valuation of Options | 2. Option Value relative to the Underlying Spot Price；3. Option Exercise Value；4. Option Moneyness；5. Option Time Value；6. Arbitrage；7. Replication |
+| M09 | Module 9: Option Replication Using Put-Call Parity | 2. Put–Call Parity；3. Option Strategies Based on Put–Call Parity；4. Put–Call Forward Parity and Option Applications；5. Put–Call Forward Parity；6. Option Put–Call Parity Applications: Firm Value |
+| M10 | Module 10: Valuing a Derivative Using a One-Period Binomial Model | 2. Binomial Valuation；3. The Binomial Model；4. Pricing a European Call Option；5. Risk Neutrality |
+
+### 教材使用规则
+
+- 先用 MOC 的模块框架回忆，再回到教材锚点补定义边界、步骤顺序和题干触发词。
+- `Practice Problems` 和 `Solutions` 说明每个模块都能直接连到教材内题目与答案层，后续错题可回链到对应模块。
+- 若 MOC、题库页和教材表述有冲突，优先以原版教材和官方 registry 对齐，再决定是否改写长期笔记。
+
 ## 3. 核心知识树
 
 ```text

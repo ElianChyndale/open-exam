@@ -21,170 +21,59 @@ tags:
 
 # M09: The Term Structure of Interest Rates: Spot, Par, and Forward Curves
 
-> **模块定位**：从债券现金流、收益率曲线、久期凸性、信用和证券化拆解固定收益风险回报。 本模块聚焦 **The Term Structure of Interest Rates: Spot, Par, and Forward Curves**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+> **Module job**：把一条 yield curve 拆成 spot, par, and forward 三种语言。考试要你知道哪个 curve 用来 price cash flows, 哪个 curve 是 par coupon, 哪个 curve 是 implied future rate。
 
----
+## 0. Reading Contract 阅读契约
 
-## Official Module Structure
+- **Official LOS**：define spot rates and price a bond using spot rates；define par and forward rates and calculate among par, forward, and spot rates；compare spot, par, and forward curves。
+- **Textbook anchors**：Maturity Structure and Spot Rates；Bond Pricing Using Spot Rates；Par Rates from Spot Rates；Forward Rates from Spot Rates；Spot Rates from Forward Rates；Curve Comparisons。
+- **Output standard**：能从题目 wording 选择 spot pricing, par coupon solving, or forward rate extraction。
 
-- Learning Outcomes: The Term Structure of Interest Rates: Spot, Par, and Forward Curves
-- 9.01 | Introduction
-- 9.02 | Maturity Structure of Interest Rates and Spot Rates
-- 9.03 | Par and Forward Rates
-- 9.04 | Spot, Par, and Forward Yield Curves and Interpreting Their Relationship
+## 1. Module Brief 模块定位
 
-## Learning Outcome Statements
+M09 是固定收益曲线模块。它把单一 YTM 拆成 maturity-specific discount rates，连接 Quant 的 no-arbitrage and cash-flow additivity。
 
-1. define spot rates and the spot curve, and calculate the price of a bond using spot rates
-2. define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates
-3. compare the spot curve, par curve, and forward curve
+## 2. Curriculum Spine 教材主线
 
----
+1. **Spot curve**：zero-coupon rates by maturity。
+2. **Bond pricing with spot rates**：each cash flow discounted at matching spot rate。
+3. **Par curve**：coupon rates that price bonds at par。
+4. **Forward curve**：future rates implied by current spot rates。
+5. **Curve interpretation**：upward/downward shape affects relative spot, par, and forward rates。
 
-## 1. 模块定位
+## 3. Exam Translation 考试翻译
 
-### 9.1 学习任务
-- **核心问题**：考试希望你用 `The Term Structure of Interest Rates: Spot, Par, and Forward Curves` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+- If pricing coupon bond with spot rates, discount each cash flow separately。
+- If solving par rate, set price equal to par and solve coupon。
+- If deriving forward rate, connect cumulative spot returns across maturities。
+- If comparing curves, upward spot curve usually implies forward rates above spot rates for longer maturities。
 
-### 9.2 考试角色
-- **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
+## 4. Formula & Decision Bench 公式与决策台
 
-### 9.3 关键英文术语
-- **The Term Structure of Interest Rates: Spot, Par, and Forward Curves（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **The Term Structure of Interest Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Maturity Structure of Interest Rates and Spot Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Par and Forward Rates（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Spot, Par, and Forward Yield Curves and Interpreting Their Relationship（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Fixed Income（固定收益）**：以约定现金流为核心的债务类证券。
-- **Yield（收益率）**：把债券价格与未来现金流连接起来的回报度量。
+| Task | Formula / rule |
+|---|---|
+| Spot pricing | `P = sum CF_t / (1 + s_t)^t` |
+| Par rate | Coupon rate that makes `P = par` |
+| Forward from spots | `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)` |
+| Spot from forwards | Chain one-period forward rates into cumulative discount rate |
+| Bootstrap | Use known short spot rates, solve next spot from coupon bond price |
+| Curve role | Spot prices, par quotes at par, forward implies future rates |
 
-## 2. 官方 LOS 对应学习目标
+## 5. Practice & Mock Evidence 练习与模考证据
 
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 9.1 | define spot rates and the spot curve, and calculate the price of a bond using spot rates | 计算并解释数值结果 | 写出结论、依据、公式口径和限制条件。 |
-| 9.2 | define par and forward rates, and calculate par rates, forward rates from spot rates, spot rates from forward rates, and the price of a bond using forward rates | 计算并解释数值结果 | 写出结论、依据、公式口径和限制条件。 |
-| 9.3 | compare the spot curve, par curve, and forward curve | 比较相似概念的适用条件与差异 | 写出结论、依据、公式口径和限制条件。 |
+- **EOC anchor**：`CFA2439-eorq-q.xhtml` / `CFA2439-eorq-a.xhtml`。
+- **Evidence to capture**：used YTM instead of spot rates；par/spot/forward definitions swapped；forward exponent wrong；bootstrap order wrong。
+- **Review tag**：`Fixed Income / term structure / spot par forward`。
 
-## 3. 核心知识树
+## 6. Trap Ledger 陷阱账本
 
-```text
-9. The Term Structure of Interest Rates: Spot, Par, and Forward Curves
-├─ 9.1 曲线词典 (Curve Dictionary)
-│  ├─ 9.1.1 Spot curve：每个 maturity 的零息折现率；P = Σ CF_t/(1+s_t)^t
-│  ├─ 9.1.2 Par curve：使不同期限债券按 par 发行的 coupon rate；par rate = (1-DF_N)/ΣDF_t
-│  └─ 9.1.3 Forward curve：由今天 spot curve 隐含的未来区间利率，不是确定预测
-├─ 9.2 曲线计算 (Curve Calculations)
-│  ├─ 9.2.1 Discount factor：DF_t = 1/(1+s_t)^t；先转 DF 再算 par rate 最稳
-│  ├─ 9.2.2 Forward from spot：(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)
-│  └─ 9.2.3 选曲线：单笔 CF 用 spot，平价票息用 par，未来借贷锁价用 forward
-```
+- Spot rate is not coupon bond YTM unless special conditions hold。
+- Par curve is not the same as spot curve。
+- Forward rate is implied by no-arbitrage, not a guaranteed future spot rate。
+- Always match cash-flow date to discount rate maturity。
 
-## 3.5 核心图解
+## 7. Final Recall Sheet 最终速记
 
-```mermaid
-flowchart TD
-  A["Spot curve"] --> A1["Discount each CF by matching maturity"]
-  A --> B["Discount factors"]
-  B --> C["Par curve"]
-  C --> C1["Coupon rate that prices bond at par"]
-  A --> D["Forward curve"]
-  D --> D1["Implied future period rate from no-arbitrage"]
-  E["Exam trigger"] --> E1["Price bond -> spot rates"]
-  E --> E2["Par coupon -> par curve"]
-  E --> E3["Future borrowing/lending -> forward rate"]
-```
-
-## 4. 知识点详解
-
-### 9.1 曲线词典 (Curve Dictionary)
-
-- **核心公式 (English)**
-  - 即期定价公式: `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t`
-  - 远期利率推导: `(1+s_n)^n = (1+s_m)^m(1+f_{m,n})^(n-m)`
-  - 平价利率公式: `Par rate = (1 - DF_N)/Σ_{t=1}^{N} DF_t`
-- **即期曲线以各期限匹配的即期利率贴现单笔现金流 (spot curve discounts a single cash flow at each maturity)**：即期利率 (spot rate) 是单一期限的零息收益率，每个期限对应一个即期利率。
-- **平价曲线给出使债券价格等于面值的票息率 (par curve gives coupon rate making a bond price equal par)**：平价利率 (par rate) 是使债券按面值交易的票息率，用于构建互换曲线等参考基准。
-- **远期曲线隐含从当前曲线推算的未来借贷利率 (forward curve implies future borrowing/lending rates from today's curve)**：远期利率 (forward rate) 是当前即期曲线隐含的未来区间利率，反映无套利条件。
-
-### 9.2 曲线计算 (Curve Calculations)
-
-- **即期定价：每笔现金流使用其期限匹配的即期利率 (spot pricing: each CF gets its maturity-matched spot rate)**：与使用单一 YTM 不同，即期定价将每笔现金流按其到期期限对应的即期利率分别贴现。
-- **从即期推导远期；从链式远期推导即期 (forward from spot; spot from chained forwards)**：二者可互为推导。`(1+s_n)^n = (1+s_m)^m x (1+f_{m,n})^(n-m)`。
-- **从贴现因子求解平价利率 (par rate solved from discount factors)**：贴现因子 `DF_n = 1/(1+s_n)^n`，平价利率可由贴现因子序列计算得出。
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 指标 | 公式 |
-|------|------|
-| 即期定价 | `P = Σ_{t=1}^{N} CF_t/(1+s_t)^t` |
-| 远期利率 (从即期) | `(1+s_n)^n = (1+s_m)^m x (1+f_{m,n})^(n-m)` |
-| 贴现因子 | `DF_t = 1/(1+s_t)^t` |
-| 平价利率 | `Par rate_n = (1 - DF_n)/Σ_{t=1}^{n} DF_t` |
-| 即期利率 (从远期) | `(1+s_n)^n = (1+f_0,1)(1+f_1,2)...(1+f_{n-1,n})` |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
-|---|---|---|
-| ⭐⭐⭐ | 9.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 9.2 Maturity Structure of Interest Rates and Spot Rates | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 9.3 Par and Forward Rates | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 9.4 Spot, Par, and Forward Yield Curves and Interpreting Their Relationship | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-
-### 6.9 ⭐⭐ Legacy 考点补充
-
-### 6.1 核心内容
-
-- **即期曲线折价计算**：给定即期利率序列，计算债券价格。将每期现金流用对应的即期利率贴现后求和。
-- **远期利率计算**：给定 `s_1` 和 `s_2`，计算 `f_1,2`。使用公式 `(1+s_2)^2 = (1+s_1)(1+f_1,2)`。
-- **从即期构建平价曲线**：利用贴现因子求解各期限的平价利率。
-- **比较不同曲线形态**：即期曲线上升（正常）vs 下降（倒挂）对远期利率的影响。上升曲线中远期利率高于即期利率。
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
-|---|---|---|
-| ❌ 忽略：远期利率是隐含的无套利利率，非确定性预测 (forward rate is an implied no-arbitrage rate, not a guaranteed fore… | ✅ 远期利率是隐含的无套利利率，非确定性预测 (forward rate is an implied no-arbitrage rate, not a guaranteed fore… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：Spot rate vs YTM 的区别：YTM 是单一贴现率适用于所有现金流；spot rate 是每期现金流使用匹配期限的贴现率。两者在平坦曲线下相等，但在倾斜曲线下不同。 | ✅ Spot rate vs YTM 的区别：YTM 是单一贴现率适用于所有现金流；spot rate 是每期现金流使用匹配期限的贴现率。两者在平坦曲线下相等，但在倾斜曲线下不同。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：Par rate 不是即期利率：平价利率是使债券按面值交易的票息率，通常介于即期利率之间。 | ✅ Par rate 不是即期利率：平价利率是使债券按面值交易的票息率，通常介于即期利率之间。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：曲线间的关系依赖于无套利假设：如果市场存在摩擦或套利限制，实际关系可能偏离理论值。 | ✅ 曲线间的关系依赖于无套利假设：如果市场存在摩擦或套利限制，实际关系可能偏离理论值。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-
-## 8. 跨模块关联
-
-| 接口 | 连接模块 | 本模块输出 | 做题用途 |
-|---|---|---|---|
-| Spot pricing | [[M06-Fixed-Income-Bond-Valuation-Prices-and-Yields]] | spot rates、discount factors | 每笔现金流用匹配期限折现 |
-| Spread models | [[M07-Yield-and-Yield-Spread-Measures-for-Fixed-Rate-Bonds]] | benchmark/swap/spot curve | 计算或解释 G-spread/I-spread/Z-spread |
-| Curve risk | [[M13-Curve-Based-and-Empirical-Fixed-Income-Risk-Measures]] | key maturity rates | 非平行移动和 KRD 的输入 |
-| Portfolio horizon | [[M10-Interest-Rate-Risk-and-Return]] | forward/reinvestment rate intuition | 解释未来收益率变化与 realized return |
-
-- **上游模块**：[[M08-Yield-and-Yield-Spread-Measures-for-Floating-Rate-Instruments]]。先用它提供定义、变量或基础框架。
-- **下游模块**：[[M10-Interest-Rate-Risk-and-Return]]。本模块输出会被后续更复杂题型调用。
-
-### Legacy 关联补充
-
-- Spot/forward 推导 → [[M03-Bond-Valuation]] 的定价框架
-- YTM vs spot → [[M04-Yield-and-Spread-Measures]] 的收益率概念
-- 远期利率 → [[M07-Interest-Rate-Risk]] 的预期利率路径
-
-
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M06-Spot-Par-and-Forward-Curves.md` (high, 0.61)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Spot = zero rate；Par = coupon makes price par；Forward = implied future rate。
+- Price with spot curve cash flow by cash flow。
+- Bootstrap moves from short maturity to long maturity。

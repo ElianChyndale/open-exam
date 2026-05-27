@@ -39,6 +39,26 @@ tags:
 1. describe benefits and risks of derivative instruments
 2. compare the use of derivatives among issuers and investors
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V7`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V7.ePub`
+- Textbook chapter: `Module 3: Derivative Benefits, Risks, and Issuer and Investor Uses`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Derivative Benefits
+- 3. Derivative Risks
+- 4. Issuer Use of Derivatives
+- 5. Investor Use of Derivatives
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -120,6 +140,15 @@ flowchart TD
 - **发行方 (Issuers)**：使用对冲稳定融资/经营现金流 (stabilize financing/operating cash flows)
 - **投资者 (Investors)**：使用衍生品进行风险控制、战术性敞口调整、套利 (risk control, tactical exposure, arbitrage)
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Derivative Benefits | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Derivative Benefits`；`DB`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Derivative Risks | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Derivative Risks`；`DR`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Issuer Use of Derivatives | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Issuer Use of Derivatives`；`IUD`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Investor Use of Derivatives | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Investor Use of Derivatives`；`IUD`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -150,6 +179,15 @@ flowchart TD
 - 理解衍生品的**双重作用**：既可用于风险管理，也可用于建立投机头寸
 - 对冲不一定消灭所有风险，可能引入基差风险或交易对手风险
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Derivative Benefits`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Derivative Risks`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Issuer Use of Derivatives`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Investor Use of Derivatives`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -157,6 +195,15 @@ flowchart TD
 | ❌ 忽略：对冲降低的是特定风险，可能引入新的风险类型 (basis, counterparty) | ✅ 对冲降低的是特定风险，可能引入新的风险类型 (basis, counterparty) | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：杠杆是双刃剑：放大收益也放大损失 | ✅ 杠杆是双刃剑：放大收益也放大损失 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：衍生品用于风险转移而非风险消灭 (risk transfer, not risk elimination) | ✅ 衍生品用于风险转移而非风险消灭 (risk transfer, not risk elimination) | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Derivative Benefits | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Derivative Benefits`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Derivative Risks | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Derivative Risks`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Issuer Use of Derivatives | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Issuer Use of Derivatives`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Investor Use of Derivatives | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Investor Use of Derivatives`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

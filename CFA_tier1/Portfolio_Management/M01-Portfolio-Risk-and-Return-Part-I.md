@@ -21,246 +21,66 @@ tags:
 
 # M01: Portfolio Risk and Return: Part I
 
-> **模块定位**：把风险收益、组合构建、行为偏差和风险管理连接成投资流程。 本模块聚焦 **Portfolio Risk and Return: Part I**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+## 0. Reading Contract 阅读契约
 
----
+- **Official spine**：Historical return/risk, asset characteristics, risk aversion, utility, two risky assets, many risky assets, diversification, efficient frontier.
+- **LOS contract**：describe asset classes; explain risk aversion and optimal portfolios; calculate/interpret mean, variance, covariance/correlation and portfolio standard deviation; describe diversification and efficient frontier.
+- **Evidence rule**：错题标 `return_measure`, `real_nominal`, `portfolio_variance`, `utility`, or `diversification`。
 
-## Official Module Structure
+## 1. Module Brief 模块定位
 
-- Learning Outcomes: Portfolio Risk and Return: Part I
-- 1.01 | Introduction
-- 1.02 | Historical Return and Risk
-- 1.03 | Other Investment Characteristics
-- 1.04 | Risk Aversion and Portfolio Selection
-- 1.05 | Utility Theory and Indifference Curves
-- 1.06 | Application of Utility Theory to Portfolio Selection
-- 1.07 | Portfolio Risk & Portfolio of Two Risky Assets
-- 1.08 | Portfolio of Many Risky Assets
-- 1.09 | The Power of Diversification
-- 1.10 | Efficient Frontier: Investment Opportunity Set & Minimum Variance                  Portfolios
-- 1.11 | Efficient Frontier: A Risk-Free Asset and Many Risky Assets
-- 1.12 | Efficient Frontier: Optimal Investor Portfolio
-- 1.13 | Summary
+Part I builds the risk-return toolkit before CAPM. 本模块必须掌握：return can be averaged by weights, but risk depends on covariance and correlation; real return answers purchasing power; utility connects expected return to risk aversion。
 
-## Learning Outcome Statements
+## 2. Curriculum Spine 教材主线
 
-1. describe characteristics of the major asset classes that investors consider in forming portfolios
-2. explain risk aversion and its implications for portfolio selection
-3. explain the selection of an optimal portfolio, given an investor’s utility (or risk aversion) and the capital allocation line
-4. calculate and interpret the mean, variance, and covariance (or correlation) of asset returns based on historical data
-5. calculate and interpret portfolio standard deviation
-6. describe the effect on a portfolio’s risk of investing in assets that are less than perfectly correlated
-7. describe and interpret the minimum-variance and efficient frontiers of risky assets and the global minimum-variance portfolio
-
----
-
-## 1. 模块定位
-
-### 1.1 学习任务
-- **核心问题**：考试希望你用 `Portfolio Risk and Return: Part I` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
-
-### 1.2 考试角色
-- **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
-
-### 1.3 关键英文术语
-- **Portfolio Risk and Return: Part I（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Portfolio Risk and Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Historical Return and Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Other Investment Characteristics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Risk Aversion and Portfolio Selection（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Utility Theory and Indifference Curves（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Application of Utility Theory to Portfolio Selection（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-
-## 2. 官方 LOS 对应学习目标
-
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 1.1 | describe characteristics of the major asset classes that investors consider in forming portfolios | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 1.2 | explain risk aversion and its implications for portfolio selection | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 1.3 | explain the selection of an optimal portfolio, given an investor’s utility (or risk aversion) and the capital allocation line | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 1.4 | calculate and interpret the mean, variance, and covariance (or correlation) of asset returns based on historical data | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 1.5 | calculate and interpret portfolio standard deviation | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 1.6 | describe the effect on a portfolio’s risk of investing in assets that are less than perfectly correlated | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 1.7 | describe and interpret the minimum-variance and efficient frontiers of risky assets and the global minimum-variance portfolio | 解释结果的投资含义；描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-
-## 3. 核心知识树
-
-```text
-1. Portfolio Risk and Return: Part I
-├─ 1.1 Introduction
-│  ├─ 1.1.1 Portfolio context：单个资产必须放入组合中判断 marginal contribution to risk/return
-│  └─ 1.1.2 Decision frame：收益、风险、流动性、税收和投资者目标共同决定配置
-├─ 1.2 Historical Return and Risk
-│  ├─ 1.2.1 Historical return：arithmetic 用于单期预期，geometric 用于复合增长
-│  ├─ 1.2.2 Risk：standard deviation 衡量总波动，downside risk 衡量低于目标的结果
-│  └─ 1.2.3 Risk-adjusted judgment：只比较 return 不够，要看每单位风险补偿
-├─ 1.3 Other Investment Characteristics
-│  ├─ 1.3.1 Liquidity：能否以合理价格及时交易，影响 required return
-│  ├─ 1.3.2 Taxes/fees：改变投资者实际到手收益
-│  └─ 1.3.3 Time horizon：期限越长通常越能承受短期波动
-├─ 1.4 Risk Aversion and Portfolio Selection
-│  ├─ 1.4.1 Risk aversion：风险越高，要求的 expected return 越高
-│  ├─ 1.4.2 Utility：`U=E(R)-0.5Aσ²`，A 越大风险惩罚越重
-│  └─ 1.4.3 Portfolio choice：同一风险下选更高收益，同一收益下选更低风险
-├─ 1.5 Utility Theory and Indifference Curves
-│  ├─ 1.5.1 Indifference curve：同一效用水平下风险/收益组合的集合
-│  ├─ 1.5.2 曲线斜率：越陡代表越风险厌恶
-│  └─ 1.5.3 最优点：最高可达 indifference curve 与 efficient frontier 相切
-```
-
-## 核心图解
-
-```mermaid
-flowchart LR
-    A["Candidate assets"] --> B["Expected return"]
-    A --> C["Risk<br/>SD / covariance / correlation"]
-    C --> D{"rho < +1?"}
-    D -->|是| E["Diversification benefit"]
-    D -->|否, rho=+1| F["No diversification"]
-    B --> G["Efficient frontier"]
-    E --> G
-    G --> H["Investor utility<br/>U = E(R)-0.5A sigma^2"]
-    H --> I["Optimal portfolio<br/>highest reachable utility"]
-```
-
-## 4. 知识点详解
-
-### 1.1 Introduction
-
-- **中文主线**：围绕 `Introduction` 掌握定义、适用条件、公式/框架和考试判断。
-- **对应动作**：描述定义、流程和适用场景
-
-### 1.2 Historical Return and Risk
-
-- **中文主线**：围绕 `Historical Return and Risk` 掌握定义、适用条件、公式/框架和考试判断。
-- **对应动作**：解释机制、原因和后果
-
-### 1.3 Other Investment Characteristics
-
-- **中文主线**：围绕 `Other Investment Characteristics` 掌握定义、适用条件、公式/框架和考试判断。
-- **对应动作**：解释机制、原因和后果
-
-### 1.4 Risk Aversion and Portfolio Selection
-
-- **中文主线**：围绕 `Risk Aversion and Portfolio Selection` 掌握定义、适用条件、公式/框架和考试判断。
-- **对应动作**：计算并解释数值结果；解释结果的投资含义
-
-### 1.5 Utility Theory and Indifference Curves
-
-- **中文主线**：围绕 `Utility Theory and Indifference Curves` 掌握定义、适用条件、公式/框架和考试判断。
-- **对应动作**：计算并解释数值结果；解释结果的投资含义
-
-## 5. 关键公式与计算框架
-
-| 指标 | 公式 | 知识树节点 | 考试说明 |
-|------|------|------------|----------|
-| Portfolio Return | `Σ wiE(Ri)` | `M01` | 组合期望收益 |
-| Two-asset Variance | `w1²σ1²+w2²σ2²+2w1w2Cov12` | `M01` | 分散化核心 |
-| Two-asset Variance, Correlation Form | `w1²σ1² + w2²σ2² + 2w1w2σ1σ2ρ12` | `M01` | 题目给 correlation 时使用 |
-| Correlation | `Corr(R_1,R_2) = Cov(R_1,R_2)/(σ_1σ_2)` | `M01` | 判断分散化来源 |
-| Minimum-Variance Weight | `w_1* = (σ_2² - Cov_12)/(σ_1² + σ_2² - 2Cov_12)` | `M01` | 【扩展/谨慎】Level I 可能考直觉，复杂计算不强行背 |
-| Utility | `E(Rp)-0.5Aσp²` | `M02` | 风险厌恶框架 |
-| CAL | `E(R_C) = R_f + [(E(R_P)-R_f)/σ_P] x σ_C` | `M02` | 风险资产与无风险资产组合 |
-| Risky Asset Weight on CAL | `y = [E(R_C) - R_f] / [E(R_P) - R_f]` | `M02` | 【考纲重点】目标收益反推风险组合权重 |
-| Portfolio on CAL Return | `E(R_C) = yE(R_P) + (1-y)R_f` | `M02` | 借入时 `y > 1` |
-| Portfolio on CAL Risk | `σ_C = yσ_P` | `M02` | 无风险资产标准差为 0 |
-| Pooled Vehicle NAV | `(资产市值 - 负债) / 流通份额` | `M03` | 基金定价基础 |
-| CAPM | `E(R_i) = R_f + β_i[E(R_M)-R_f]` | `M04` | required return |
-| Beta | `β_i = Cov(R_i,R_M)/Var(R_M)` | `M04` | systematic risk |
-| Portfolio Beta | `β_p = Σw_iβ_i` | `M04` | 组合系统性风险 |
-| Security Market Line | `Required return = R_f + β_i Market Risk Premium` | `M04` | CAPM 图像语言 |
-| Sharpe | `(Rp-Rf)/σp` | `M04` | total risk-adjusted performance |
-| Treynor | `(Rp-Rf)/βp` | `M04` | beta-adjusted performance |
-| Jensen Alpha | `α_p = R_p-[R_f+β_p(E(R_M)-R_f)]` | `M04` | CAPM 偏离度 |
-| M-squared | `M^2 = R_f + Sharpe_p x σ_M - R_M` | `M04` | 【考纲重点】把 Sharpe 差异换算成收益率差 |
-| Tracking Error | `σ(R_p - R_b)` | `M05` | 主动风险 |
-| Information Ratio | `(R_p - R_b) / Tracking Error` | `M05` | 【考纲重点】主动收益/主动风险 |
-| Required Excess Return | `β_i x (E(R_m)-R_f)` | `M04` | CAPM risk premium |
-
-### 5.2 本模块计算框架
-
-| 题干任务 | 使用工具 | 知识树节点 | 防错点 |
-|---|---|---|---|
-| 比较历史收益 | arithmetic / geometric mean | `1.2.1` | 长期复合用 geometric。 |
-| 比较风险 | standard deviation / downside risk | `1.2.2` | 标准差是总风险，不区分上下行。 |
-| 计算效用 | `U=E(R)-0.5Aσ²` | `1.4.2` | σ 要用小数，A 越大风险惩罚越重。 |
-| 组合选择 | 比较 utility 或 efficient frontier | `1.4-1.5` | 不只看最高 return。 |
-| 投资特征判断 | liquidity/tax/time horizon | `1.3` | 非收益特征会改变 suitability。 |
-
-### 5.1 考纲范围标记
-
-| 标记 | 内容 |
-|------|------|
-| 【考纲重点】 | Portfolio risk/return, utility/CAL, pooled vehicle NAV, CAPM/beta/SML, performance ratios, IPS objective/constraint classification |
-| 【考纲内但无核心公式】 | Portfolio management process, IPS constraints, behavioral biases, risk management governance 多为判断和分类 |
-| 【超纲/扩展】 | Markowitz optimization 矩阵形式、Black-Litterman、VaR 模型推导、完整绩效归因不作为 Level I 必背公式 |
-
----
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
+| Spine | English trigger | 中文任务 |
 |---|---|---|
-| ⭐⭐⭐ | 1.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 1.2 Historical Return and Risk | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 1.3 Other Investment Characteristics | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 1.4 Risk Aversion and Portfolio Selection | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐ | 1.5 Utility Theory and Indifference Curves | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| Historical return/risk | arithmetic, geometric, nominal, real | 判断收益口径。 |
+| Asset characteristics | liquidity, volatility, inflation exposure | 连接资产类别特征。 |
+| Risk aversion | utility, indifference curves | 判断更高风险需要更高收益补偿。 |
+| Two risky assets | covariance, correlation, portfolio variance | 计算组合风险。 |
+| Many risky assets | diversification, efficient frontier, GMV | 解释低相关和有效组合。 |
 
-## 7. 易错点与考试陷阱
+## 3. Exam Translation 考试翻译
 
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+1. 问 purchasing power：用 real return，不用 nominal return。
+2. 给 weights and returns：`E(R_p)` 直接加权。
+3. 给 risk/correlation：使用 variance formula，不把标准差直接加权。
+4. 给 risk aversion `A`：算 utility 并选择最高 utility。
+5. 问 diversification：重点是 `rho < +1`，不是资产数量本身。
+
+## 4. Formula & Decision Bench 公式与决策台
+
+| Item | Formula / rule | Use |
 |---|---|---|
-| ❌ 多买几个资产就完成分散化 | ✅ 关键是低相关，而不是数量本身 | 按官方定义和 LOS 口径核验。 |
-| ❌ beta 高说明总风险一定高 | ✅ beta 只反映 systematic risk | 按官方定义和 LOS 口径核验。 |
-| ❌ utility 只是抽象概念 | ✅ 它决定风险资产与无风险资产配置 | 按官方定义和 LOS 口径核验。 |
-| ❌ active 管理 = 更专业 | ✅ active 只是更主动承担 tracking/selection risk | 按官方定义和 LOS 口径核验。 |
-| ❌ passive 管理 = 不用判断市场 | ✅ 仍要判断目标、基准与成本 | 按官方定义和 LOS 口径核验。 |
-| ❌ IPS 先写约束再写目标也无所谓 | ✅ 考试常严格区分 objective 与 constraints | 按官方定义和 LOS 口径核验。 |
-| ❌ 高 return objective 必然合理 | ✅ 还要看 risk capacity / risk tolerance 是否支持 | 按官方定义和 LOS 口径核验。 |
-| ❌ behavioral bias 是心理学边角料 | ✅ 它直接影响配置和交易错误 | 按官方定义和 LOS 口径核验。 |
-| ❌ risk management 的目标是把风险压到最低 | ✅ 目标是使风险与回报目标匹配 | 按官方定义和 LOS 口径核验。 |
-| ❌ Sharpe 和 Treynor 可以随便替换 | ✅ 一个基于 total risk，一个基于 beta risk | 按官方定义和 LOS 口径核验。 |
+| Real return exact | `(1+nominal)/(1+inflation)-1` | Purchasing power. |
+| Real return approx | `nominal - inflation` | Quick estimate when rates small. |
+| Portfolio return | `E(R_p)=sum w_iE(R_i)` | Weighted average return. |
+| Covariance | `Cov_12 = rho_12 sigma_1 sigma_2` | Link correlation to variance. |
+| Two-asset variance | `w_1^2sigma_1^2 + w_2^2sigma_2^2 + 2w_1w_2rho_12sigma_1sigma_2` | Core risk calculation. |
+| Utility | `U = E(R) - 0.5 A sigma^2` | Risk-aversion choice. |
+| Diversification | lower `rho` lowers portfolio risk | Risk reduction framework. |
 
-## 8. 跨模块关联
+## 5. Practice & Mock Evidence 题库证据
 
-| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
-|---|---|---|---|
-| `1.2` return/risk | Quant M01/M03、PM M02 | 后续 Sharpe、CAL、CAPM 都先需要收益和风险口径 | 历史收益不等于未来 required return。 |
-| `1.4` utility/risk aversion | [[M02-Portfolio-Risk-and-Return-Part-II]]、IPS | 决定风险资产与无风险资产配置 | 高 willingness 不等于高 ability。 |
-| `1.5` efficient frontier | PM M02/M04 | 最优组合和资产配置 | frontier 上方不可达，下方非有效。 |
-| `1.3` liquidity/taxes/time | [[M04-Basics-of-Portfolio-Planning-and-Construction]] | IPS constraints 和 suitability | 投资特征会让数学最优组合不可执行。 |
+- Track `risk_weighted_average` when standard deviation is incorrectly averaged.
+- Track `real_return` when inflation adjustment is skipped.
+- Track `correlation_effect` when `rho=+1` and `rho<+1` are treated alike.
+- Track `utility_units` when returns/variance are mixed in percent vs decimal units.
 
-### Legacy 关联补充
+## 6. Trap Ledger 陷阱账本
 
-```text
-投资组合管理概述 (Portfolio Management Overview) [M03]
-├── 投资组合风险与收益 (Portfolio Risk/Return) [M01]
-│   └── 效用与资本配置线 (Utility and CAL) [M02]
-│       └── CAPM与Beta (CAPM and Beta) [M04]
-│           └── 主动与被动选择 (Active vs Passive Choice) [M05]
-└── 投资政策说明书 (IPS) [M06]
-    ├── 行为偏差 (Behavioral Biases) [M07]
-    └── 风险管理 (Risk Management) [M08]
-```
+| Trap | Fix rule |
+|---|---|
+| Portfolio risk = weighted average standard deviation | Only true under special perfect-correlation cases; use variance formula. |
+| More assets always means diversification | Low correlation is the source of diversification. |
+| Highest expected return is optimal | Check risk and investor utility. |
+| Nominal return answers all return questions | Real return answers purchasing power. |
 
----
+## 7. Final Recall Sheet 最终回忆单
 
-
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`00-Portfolio-Management-MOC.md` (medium, 0.37)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Return weighted average; risk covariance-driven.
+- Exact real return = `(1+nominal)/(1+inflation)-1`.
+- Two-asset variance formula is the core calculation.
+- `rho < +1` creates diversification benefit.
+- Utility = expected return minus risk penalty.

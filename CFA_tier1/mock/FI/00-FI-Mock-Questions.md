@@ -1,0 +1,94 @@
+---
+bucket: FI
+question_count: 82
+source_root: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Mock5套及答案"
+---
+
+# Fixed Income Mock Questions
+
+- 这里记录的是本地 mock 题源，不是个人错题事件。
+- 科目归类以题干关键词和题目顺序做启发式划分，后续可继续校正。
+
+## Questions
+- CFA L1 1-2 Q03 | p.1 | A zero coupon bond is priced at 90 and has three years to maturity. Based on a compounding periodicity of 4, the bond's annual yield-to-maturity is closest to:
+- CFA L1 1-2 Q15 | p.3 | The current yield for a coupon-paying bond trading at a premium is:
+- CFA L1 1-2 Q18 | p.4 | An analyst gathers the following information about a bond: If the bond currently trades at a price of 103.67 with a yield-to-maturity of 3.5%, the approximate convexity is closest to:
+- CFA L1 1-2 Q33 | p.7 | An analyst gathers the following information on three investors. Each investor holds a bond with a Macaulay duration of 5.5 years in his portfolio: All else equal, which investor is currently most vulnerable to an increase in interest rates?
+- CFA L1 1-2 Q36 | p.8 | For an option-free bond, effective duration:
+- CFA L1 1-2 Q40 | p.9 | The portion of a bond's value that an investor loses in an event of default best defines:
+- CFA L1 1-2 Q47 | p.10 | At the initiation of a securitization, the primary role of the special purpose entity is to:
+- CFA L1 1-2 Q49 | p.11 | On 1 January, an investor purchases an option-free bond that pays an annual coupon rate of 10% on Dec 31 and matures in ten years at its par value of $100.The investor plans to sell the bond immediately after receiving the seventh coupon. If the coupons are reinvested at an annual interest rate of 8% over the investor's holding period, the future value of the reinvested coupon payments at the end of the investor's holding period is closest to:
+- CFA L1 1-2 Q67 | p.14 | After issuance, the coupon rate of a floating-rate bond is most likely influenced by changes in:
+- CFA L1 1-2 Q70 | p.15 | An analyst calculates the duration of a portfolio containing only fixed-rate bonds, callable bonds, and asset-backed securities. Which duration measure is the most appropriate to use?
+- CFA L1 1-2 Q73 | p.15 | All else equal, interest rate risk is lowest for which of the following non-callable bonds?
+- CFA L1 1-2 Q85 | p.17 | In a positive interest rate environment, the modified duration of an option-free bond is most likely:
+- CFA L1 2-1 Q55 | p.13 | An analyst gathers the following exchange rate information: USD/EUR spot rate 1.0351 1-week USD/EUR forward points -1.1 USD/EUR is the amount of USD per 1 EUR The 1-week USD/EUR forward rate is closest to:
+- CFA L1 2-2 Q02 | p.1 | An analyst uses a valuation model to estimate the value of an option-free bond at 92.733 to yield 11%. If the value is 94.474 for a 60 bps decrease in yield and 91.041 for a 60 bps increase in yield, the approximate modified duration of the bond is closest to:
+- CFA L1 2-2 Q08 | p.2 | Which of the following statements about a forward rate agreement is accurate?
+- CFA L1 2-2 Q09 | p.2 | Empirical duration:
+- CFA L1 2-2 Q14 | p.3 | Which bond is most likely to exhibit a reduction in duration as time to maturity increases? A bond priced at:
+- CFA L1 2-2 Q17 | p.3 | An analyst gathers the following information about a semiannual pay bond: Price 102 Years to maturity 3 Yield to maturity (semiannual basis) 5.27% Coupon 6.00% The annual yield to maturity based on quarterly compounding is closest to:
+- CFA L1 2-2 Q18 | p.4 | For a non-callable bond with an approximate annual modified duration of 15.213 and an approximate annual convexity of 350.32, if the bond's yield increases by 100 bps, the estimated percentage decline in the price of the bond is closest to:
+- CFA L1 2-2 Q19 | p.4 | The duration statistic that best measures the interest rate risk of a bond that does not have a well-defined internal rate of return is:
+- CFA L1 2-2 Q35 | p.7 | An analyst observes the following information about a bond: Yield to Maturity Full Price 1.35% 97.5 1.50% 97.0 1.65% 96.8 1.35% 97.5 If the initial price of the bond is 97.0, the approximate convexity is closest to:
+- CFA L1 2-2 Q36 | p.7 | A bond covenant that prevents the issuance of debt that would be senior to existing bondholders' debt is best described as a:
+- CFA L1 2-2 Q38 | p.7 | A bond issued by a local government is best described as a(n):
+- CFA L1 2-2 Q45 | p.9 | In a rising interest rate environment, the effective duration of a putable bond relative to an otherwise identical non-putable bond, will most likely be:
+- CFA L1 2-2 Q58 | p.11 | An investor purchases a 30-year, 5% annual pay bond at 86.24 and plans to sell it in 11 years. Immediately after purchase, interest rates increase by 1%, and they remain at that level until maturity. Assuming coupons are reinvested at the new yield, the investor's realized horizon yield is closest to:
+- CFA L1 2-2 Q59 | p.11 | Which of the following is the best example of an embedded option granted to bondholders?
+- CFA L1 2-2 Q62 | p.12 | The option-free bonds of Argus Corporation have a duration of eight years. When interest rates rise by 100 bps, the bond's price declines by 7.9%. When interest rates fall by 100 bps, however, the price rises by 8.2%.The asymmetrical price change is most likely caused by the:
+- CFA L1 2-2 Q66 | p.12 | If the annual market discount rate is 6%, the value of a 3-year bond that has a 7% coupon rate, has a maturity (par) value of $1,000, and pays interest annually is closest to:
+- CFA L1 2-2 Q74 | p.14 | An analyst gathers the following information about spot rates: Time to Maturity Sequence 1 Sequence 2 1 year 2.0% 4.7% 2 years 3.5% 3.5% 3 years 4.7% 2.0% For a 3-year,2%annual coupon payment bond, the price using Sequence 1 is:
+- CFA L1 2-2 Q87 | p.16 | For a bond investment, loss severity is:
+- CFA L1 3-1 Q56 | p.12 | An analyst gathers the following information about a currency pair. Currency Pair Spot Rate Expected Spot Rate in One Year USD/EUR 1.1800 1.1650 USD/EUR is the amount of USD per one EUR The expected change in value of the dollar relative to the euro over the next year is closest to a(n)
+- CFA L1 3-2 Q04 | p.1 | The price/yield relationship for option-free bonds is best described as:
+- CFA L1 3-2 Q16 | p.3 | In a rising interest rate environment, the difference in effective duration between a callable bond and a non-callable bond would most likely.
+- CFA L1 3-2 Q19 | p.4 | Compared with an otherwise identical option-free bond, when interest rates fall, the price of a callable bond will:
+- CFA L1 3-2 Q21 | p.4 | A covered bond most likely.
+- CFA L1 3-2 Q25 | p.5 | Compared to a US bond, Eurobonds are most likely:
+- CFA L1 3-2 Q27 | p.5 | A measure of the sensitivity of a bond's price to a change in a specific maturity segment of the benchmark yield curve best defines:
+- CFA L1 3-2 Q31 | p.3 | A valuation model estimates the price will fall to 101.12 if interest rates increase by 20 bps and rise to 103.74 if interest rates decrease by 20 bps. Using these estimates, the effective duration of the bond is closest to:
+- CFA L1 3-2 Q44 | p.8 | The semiannual bond equivalent yield spot rates for US Treasury yields are provided below. Period Years Spot Rate 1 0.5 1.20% 2 1.0 2.10% 3 1.5 2.80% 4 2.0 3.30% On a semiannual bond equivalent yield (BEY) basis, the six-month forward rate one year from now is closest to:
+- CFA L1 3-2 Q56 | p.10 | A disadvantage of computing the duration of a bond portfolio as a weighted average of time to receipt of the aggregate cash flows is that it
+- CFA L1 3-2 Q58 | p.11 | A convertible bond arbitrage hedge fund is most likely to focus on buying:
+- CFA L1 3-2 Q67 | p.12 | One source of return for an investor in a fixed-rate corporate bond is most likely the:
+- CFA L1 3-2 Q73 | p.13 | If a quarterly pay bond has an effective annual rate of 10%, the semiannual bond equivalent yield for this bond is closest to:
+- CFA L1 3-2 Q76 | p.14 | Using the following information and assuming coupons are paid annually, the G-spread of the Steel Co. bond is closest to: Bond Maturity Coupon Price Steel Co. 2 Years 5.00% 101.70 Treasury bond 2 Years 4.00% 100.50
+- CFA L1 3-2 Q81 | p.15 | In a rising interest rate environment, the risk of a lower bond price is greater than the coupon reinvestment risk when the Macaulay duration of the bond is:
+- CFA L1 3-2 Q84 | p.16 | If the Macaulay duration and time-to-maturity of a bond are equal, the bond is most likely a:
+- CFA L1 3-2 Q88 | p.17 | An analyst gathers the following information about a bond: Annual modified duration 7.534 Flat price (per 100 of par value) 92.084 Accrued interest (per 100 of par value) 1.458 The bond's money duration per 100 of par value is closest to:
+- CFA L1 4-1 Q48 | p.12 | An analyst gathers the following exchange rate information: USD/EUR spot rate 1.0993 USD/EUR 6-month forward points 11.7 USD/EUR is the amount of USD per 1 EUR. The USD/EUR 6-month forward rate is closest to:
+- CFA L1 4-1 Q71 | p.17 | If a company purchases, at a premium, bonds that it expects to hold until maturity, they are most likely measured on the balance sheet at:
+- CFA L1 4-2 Q06 | p.1 | The bond equivalent yield for a semiannual pay bond is most likely.
+- CFA L1 4-2 Q11 | p.2 | Following an increase in interest rates, the point in time at which a bondholder's gain on reinvested coupons equals the loss on the sale price is best measured by:
+- CFA L1 4-2 Q16 | p.3 | An annual-pay bond with a ￡1,000 face value has a coupon rate of 4% and matures in three years. If the yield to maturity is 3%, the current value of the bond is closest to:
+- CFA L1 4-2 Q19 | p.4 | The money duration of a bond is best defined as:
+- CFA L1 4-2 Q25 | p.5 | An example of a negative bond covenant is a:
+- CFA L1 4-2 Q29 | p.6 | The methodology used by a credit rating agency to adjust a specific bond issue rating is best described as:
+- CFA L1 4-2 Q33 | p.7 | Which of the following is an underlying assumption of yield to maturity as a measure of expected return for a bond?
+- CFA L1 4-2 Q50 | p.10 | A bond portfolio manager is considering three bonds-1, 2, and 3-for his portfolio. Bond 1 allows the issuer to call the bond before the stated maturity, Bond 2 allows the investor to put the bond back to the issuer before the stated maturity, and Bond 3 contains no embedded options. The bonds are otherwise identical. The manager tells his assistant, “Bond 1 and Bond 2 should have larger nominal yield spreads to a US Treasury than Bond 3 to compensate for their embedded options." Is the manager most likely correct?
+- CFA L1 4-2 Q51 | p.10 | An analyst gathers the following information: Time to Maturity Yield to Maturity Bond 1 4 years 3.3% Bond 2 7 years 5.1% Based only on this information, the estimated market discount rate for a 6-year bond with similar credit quality is:
+- CFA L1 4-2 Q52 | p.10 | A portfolio manager holds the following three option-free bonds: Bond Par Value Owned Market Value Owned Duration 1 $8 million $12 million 3 2 $8 million $6 million 7 3 $4 million $6 million 6 The portfolio's duration is closest to:
+- CFA L1 4-2 Q59 | p.12 | All else being equal, credit spreads most likely widen:
+- CFA L1 4-2 Q67 | p.13 | Zet Bank has entered into a contract with Louly Corporation in which Zet agrees to buy a 2.5%US Treasury bond maturing in ten years and promises to sell it back next month at an agreed-on price. From Zet Bank's perspective, this contract is best described as a:
+- CFA L1 4-2 Q71 | p.14 | The sensitivity of a bond's price to a change in the benchmark yield curve is best described as.
+- CFA L1 4-2 Q74 | p.14 | Which of the following duration measures is most appropriate for a callable bond?
+- CFA L1 4-2 Q75 | p.8 | If the bond's yield-to-maturity decreases 50 bps, the expected percentage price change is closest to:
+- CFA L1 4-2 Q82 | p.16 | An analyst observes the following series of 1-year forward rates: Time Period Forward Rate 0y1y 0.1% 1y1y 0.3% 2y1y 0.6% Based on only this information, the price per 100 of par value of a 3-year 0.2% annual coupon bond is closest to:
+- CFA L1 4-2 Q84 | p.16 | Analytical duration:
+- CFA L1 4-2 Q85 | p.16 | In contrast to investors in otherwise-similar mortgage-backed securities, investors in covered bonds most likely.
+- CFA L1 5-2 Q01 | p.1 | The Macaulay duration of a non-callable perpetual bond with a yield in perpetuity of 8%is closest to:
+- CFA L1 5-2 Q02 | p.1 | An analyst gathers the following information about zero rates: Years to Maturity Zero Rate 1 1.50% 2 2.00% 3 2.25% The 2-year implied forward rate in one year's time is closest to:
+- CFA L1 5-2 Q04 | p.1 | If interest rates are increasing, the effective duration of a bond with an embedded put option is:
+- CFA L1 5-2 Q08 | p.2 | The price of an option-free bond increases by 5%when the yield to maturity decreases by 200 basis points. If the price of this bond decreases by 5%,the yield to maturity most likely increases by:
+- CFA L1 5-2 Q15 | p.3 | An investor purchased a 5-year bond at issuance for 98 per 100 of par value and held the bond for two years. Coupon payments were reinvested at the original yield to maturity. If the realized horizon yield is equal to the original yield to maturity, the investor most likely sold the bond at a price:
+- CFA L1 5-2 Q39 | p.8 | An analyst gathers the following information about forward rates: Time Period Forward Rate 0y1y 2.31% 1y1y 2.82% 2y1y 2.97% The 2-year implied spot rate is closest to:
+- CFA L1 5-2 Q40 | p.8 | For parallel shifts in the benchmark yield curve, key rate durations indicate the same interest rate sensitivity as:
+- CFA L1 5-2 Q44 | p.9 | If a semiannual pay bond has a yield-to-maturity of 4.3%, the yield-to-maturity based on quarterly compounding is closest to:
+- CFA L1 5-2 Q49 | p.10 | A portfolio consists of four bonds with the following characteristics: Bond Market Value Duration A $1.2 million 3.2 B $3.4 million 7.6 C $2.9 million 12.4 D $1.6 million 1.5 The duration of the portfolio is closest to:
+- CFA L1 5-2 Q63 | p.12 | The price value of a basis point for a 30-year, 1% annual coupon payment bond with a par value of €1,000 and a yield-to-maturity of 0.8% is closest to:
+- CFA L1 5-2 Q67 | p.13 | Over a given holding period, performance of credit-risky bonds will most likely benefit from:
+- CFA L1 5-2 Q68 | p.13 | An analyst gathers the following information about Canadian bonds: Bond Coupon Rate Price Years to Maturity Canadian government benchmark bond 3.0% 101 2 Canadian corporate bond 5.0% 102 2 Assuming annual compounding, the G-spread is closest to:
+- CFA L1 5-2 Q73 | p.14 | All else being equal, which of the following bonds most likely has the highest yield to maturity?
+- CFA L1 5-2 Q78 | p.15 | A South Korean electronics company issued bonds denominated in US dollars in the United States and registered with the Securities and Exchange Commission (SEC). These bonds are most likely known as:
+- CFA L1 5-2 Q84 | p.16 | An analyst observes the following information about a bond: Price if benchmark curve increases by 25 bps 127.66 Current price per 100 of par value 130.00 Price if benchmark curve decreases by 25 bps 132.41 The effective duration for the bond is closest to:

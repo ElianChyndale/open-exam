@@ -38,6 +38,25 @@ tags:
 1. explain how the concepts of arbitrage and replication are used in pricing derivatives
 2. explain the difference between the spot and expected future price of an underlying and the cost of carry associated with holding the underlying asset
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V7`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V7.ePub`
+- Textbook chapter: `Module 4: Arbitrage, Replication, and the Cost of Carry in Pricing Derivatives`
+- Practice / Solutions: `not listed` / `not listed`
+
+### High-Signal Anchors
+
+- 2. Arbitrage
+- 3. Replication
+- 4. Costs and Benefits Associated with Owning the Underlying
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -113,6 +132,14 @@ flowchart TD
 - `Forward price = Spot + Carry - Benefit`
 - `Carry = Financing cost - Income/Yield/Convenience`
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Arbitrage | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Arbitrage`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Replication | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Replication`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Costs and Benefits Associated with Owning the Underlying | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Costs and Benefits Associated with Owning the Underlying`；`CBAOU`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -161,6 +188,13 @@ F0(T) = S0[(1+r)/(1+q)]^T    或连续口径：S0e^((r-q)T)
    - 价格偏低 → long forward + short underlying + invest (reverse cash-and-carry)
 4. 验证复制组合的现金流是否匹配
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Arbitrage`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Replication`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Costs and Benefits Associated with Owning the Underlying`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -168,6 +202,14 @@ F0(T) = S0[(1+r)/(1+q)]^T    或连续口径：S0e^((r-q)T)
 | ❌ 忽略：【考试陷阱】期初价格 (price at initiation) 与存续期价值 (value during life) 并非同一概念 —— 价格是使初始价值为零的公平交割价，价值… | ✅ 【考试陷阱】期初价格 (price at initiation) 与存续期价值 (value during life) 并非同一概念 —— 价格是使初始价值为零的公平交割价，价值… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：已知收入要先折现再扣除，不能直接用未来值相减 | ✅ 已知收入要先折现再扣除，不能直接用未来值相减 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：连续复利与离散复利公式不要混用，注意题目给的是年利率还是连续利率 | ✅ 连续复利与离散复利公式不要混用，注意题目给的是年利率还是连续利率 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Arbitrage | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Arbitrage`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Replication | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Replication`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Costs and Benefits Associated with Owning the Underlying | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Costs and Benefits Associated with Owning the Underlying`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

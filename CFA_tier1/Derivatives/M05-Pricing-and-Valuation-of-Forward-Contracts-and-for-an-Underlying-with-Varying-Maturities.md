@@ -37,6 +37,30 @@ tags:
 1. explain how the value and price of a forward contract are determined at initiation, during the life of the contract, and at expiration
 2. explain how forward rates are determined for interest rate forward contracts and describe the uses of these forward rates.
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V7`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V7.ePub`
+- Textbook chapter: `Module 5: Pricing and Valuation of Forward Contracts and for an Underlying with Varying Maturities`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Pricing and Valuation of Forward Contracts
+- 2.1. Pricing versus Valuation of Forward Contracts
+- 2.1.1. Pricing and Valuation of Forward Contracts at Initiation
+- 2.1.2. Pricing and Valuation of Forward Contracts at Maturity
+- 2.1.3. Pricing and Valuation of Forward Contracts during the Life of the Contract
+- 2.1.4. Pricing and Valuation of Forward Contracts with Additional Costs or Benefits
+- 3. Pricing and Valuation of Interest Rate Forward Contracts
+- 3.1. Interest Rate Forward Contracts
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -113,6 +137,19 @@ flowchart TD
 - **中文主线**：围绕 `Pricing and Valuation of Interest Rate Forward Contracts` 掌握定义、适用条件、公式/框架和考试判断。
 - **对应动作**：识别概念并应用到题干。
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Pricing and Valuation of Forward Contracts | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Pricing and Valuation of Forward Contracts`；`PVFC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Pricing versus Valuation of Forward Contracts | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Pricing versus Valuation of Forward Contracts`；`PVVFC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Pricing and Valuation of Forward Contracts at Initiation | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Pricing and Valuation of Forward Contracts at Initiation`；`PVFCAI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Pricing and Valuation of Forward Contracts at Maturity | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Pricing and Valuation of Forward Contracts at Maturity`；`PVFCAM`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Pricing and Valuation of Forward Contracts during the Life of the Contract | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Pricing and Valuation of Forward Contracts during the Life of the Contract`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Pricing and Valuation of Forward Contracts with Additional Costs or Benefits | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Pricing and Valuation of Forward Contracts with Additional Costs or Benefits`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Pricing and Valuation of Interest Rate Forward Contracts | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Pricing and Valuation of Interest Rate Forward Contracts`；`PVIRFC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Interest Rate Forward Contracts | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Interest Rate Forward Contracts`；`IRFC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 M04-M06 Forward Commitments
@@ -180,6 +217,16 @@ flowchart TD
 | ⭐⭐⭐ | 5.2 Pricing and Valuation of Forward Contracts | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 | ⭐⭐ | 5.3 Pricing and Valuation of Interest Rate Forward Contracts | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Pricing and Valuation of Forward Contracts`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Pricing versus Valuation of Forward Contracts`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Pricing and Valuation of Forward Contracts at Initiation`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Pricing and Valuation of Forward Contracts at Maturity`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Pricing and Valuation of Forward Contracts during the Life of the Contract`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -194,6 +241,16 @@ flowchart TD
 | ❌ swap 会凭空创造收益 | ✅ swap 本质是交换现金流暴露 | 按官方定义和 LOS 口径核验。 |
 | ❌ long forward 和 long call 一样 | ✅ 一个是 obligation，一个是 right | 按官方定义和 LOS 口径核验。 |
 | ❌ 衍生品题都先代公式 | ✅ 先画 payoff 往往能救整题 | 按官方定义和 LOS 口径核验。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Pricing and Valuation of Forward Contracts | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Pricing and Valuation of Forward Contracts`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Pricing versus Valuation of Forward Contracts | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Pricing versus Valuation of Forward Contracts`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Pricing and Valuation of Forward Contracts at Initiation | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Pricing and Valuation of Forward Contracts at Initiation`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Pricing and Valuation of Forward Contracts at Maturity | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Pricing and Valuation of Forward Contracts at Maturity`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Pricing and Valuation of Forward Contracts during the Life of the Contract | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Pricing and Valuation of Forward Contracts during the Life of the Contract`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

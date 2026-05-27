@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CFA Knowledge Base Redesign Options</title>
+  <style>
+    :root {
+      --ink: #1d2329;
+      --muted: #5c6975;
+      --line: #d6dde3;
+      --paper: #f7f8f5;
+      --panel: #ffffff;
+      --blue: #1f5f8b;
+      --green: #28705f;
+      --red: #a5483f;
+      --amber: #8b6425;
+      --shadow: 0 14px 40px rgba(29, 35, 41, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+    header {
+      padding: 32px 44px 22px;
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 8px;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 720;
+    }
+    .lead {
+      max-width: 980px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    main {
+      padding: 24px 44px 56px;
+      display: grid;
+      gap: 26px;
+    }
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .option {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      min-height: 330px;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 650;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .blue { background: var(--blue); }
+    .green { background: var(--green); }
+    .red { background: var(--red); }
+    .amber { background: var(--amber); }
+    .option h2 { font-size: 19px; margin-bottom: 8px; }
+    .option p { color: var(--muted); font-size: 14px; }
+    .mini-page {
+      margin-top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fbfcfd;
+    }
+    .bar {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--line);
+      background: #edf2f5;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .rows { padding: 10px; display: grid; gap: 7px; }
+    .row {
+      padding: 8px 9px;
+      border: 1px solid #e3e8ec;
+      border-radius: 5px;
+      background: #ffffff;
+      font-size: 12px;
+    }
+    .row strong { display: block; font-size: 12px; margin-bottom: 2px; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+    .band {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.85fr) minmax(420px, 1.15fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .checklist {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+    .checklist li { margin: 6px 0; }
+    .wire {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fbfcfd;
+    }
+    .wire-head {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: #eef2f1;
+      font-weight: 700;
+    }
+    .wire-body {
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+    }
+    .wide-row {
+      border: 1px solid #e2e8ed;
+      border-radius: 6px;
+      padding: 11px;
+      background: #ffffff;
+      font-size: 13px;
+    }
+    .wide-row b { color: var(--ink); }
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      border-left: 3px solid var(--blue);
+      padding-left: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eef2f1; font-size: 12px; }
+    tr:last-child td { border-bottom: 0; }
+    @media (max-width: 1000px) {
+      header, main { padding-left: 22px; padding-right: 22px; }
+      .option-grid, .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CFA L1 Knowledge Base Redesign Options</h1>
+    <p class="lead">目标不是再塞一张“补强表格”，而是把原版教材 Official Curriculum 的结构、LOS、例题逻辑、做题动作自然融入 MOC 和 Module。保留中英双语：中文解释负责理解，English terms 负责识题和精确命名。</p>
+  </header>
+
+  <main>
+    <section class="option-grid" aria-label="Three redesign options">
+      <article class="option">
+        <span class="tag blue">Option A</span>
+        <h2>Textbook Walkthrough 教材导读型</h2>
+        <p>每个 Module 按原版教材小节顺序重写。适合“我想像读教材一样学习，但更清楚、更短、更可复习”。</p>
+        <div class="mini-page">
+          <div class="bar">Module Page</div>
+          <div class="rows">
+            <div class="row"><strong>1. Why This Module Matters</strong>模块在考试和跨科目中的作用</div>
+            <div class="row"><strong>2. Textbook Map</strong>按 2.1, 2.2, 3.1 展开教材小节</div>
+            <div class="row"><strong>3. Core Explanations</strong>每节中文讲透 + English term</div>
+            <div class="row"><strong>4. Worked Logic</strong>教材例题逻辑和变量口径</div>
+            <div class="row"><strong>5. Exam Traps</strong>按教材小节归属的陷阱</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="option">
+        <span class="tag green">Option B</span>
+        <h2>Exam Playbook 考试作战型</h2>
+        <p>每个 Module 按题型和答题动作组织。适合“我已经学过，想快速知道题目问什么、怎么做、哪里容易错”。</p>
+        <div class="mini-page">
+          <div class="bar">Module Page</div>
+          <div class="rows">
+            <div class="row"><strong>1. Question Triggers</strong>题干触发词和 LOS 动词</div>
+            <div class="row"><strong>2. Decision Tree</strong>看到条件后选公式/框架</div>
+            <div class="row"><strong>3. Knowledge Capsules</strong>每个考点压缩成定义-条件-动作</div>
+            <div class="row"><strong>4. Practice Reflection</strong>基础题和 mock 暴露的误区</div>
+            <div class="row"><strong>5. Final Checklist</strong>考前 90 秒检查清单</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="option">
+        <span class="tag red">Option C 推荐</span>
+        <h2>Curriculum Playbook 教材作战混合型</h2>
+        <p>上半部分按教材讲清楚，下半部分按考试动作压缩。适合长期维护，也最符合你的“每个知识点讲到该讲的地方”。</p>
+        <div class="mini-page">
+          <div class="bar">Module Page</div>
+          <div class="rows">
+            <div class="row"><strong>1. Module Brief</strong>定位、LOS、跨科目接口</div>
+            <div class="row"><strong>2. Curriculum Spine</strong>教材小节作为主骨架</div>
+            <div class="row"><strong>3. Exam Translation</strong>每节转成题型、公式、判断规则</div>
+            <div class="row"><strong>4. Practice Evidence</strong>基础题 + mock 回填到对应小节</div>
+            <div class="row"><strong>5. Memory Layer</strong>易错、fix rule、next drill</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="band">
+      <div class="split">
+        <div>
+          <span class="tag red">Recommended MOC</span>
+          <h2>MOC 新结构</h2>
+          <p class="note">MOC 应该是“科目地图”，不是正文仓库。它负责告诉你每个 Module 在教材、考试、题库、错题闭环中的位置。</p>
+          <ul class="checklist">
+            <li>保留官方模块导航，但把“教材锚点表”改成可读的 subject map。</li>
+            <li>每个 Module 一行包含：教材章节、核心任务、最高频题型、连接到题库和 mock。</li>
+            <li>新增一页级别的 study route：先学什么、哪些模块一起复盘、哪些跨科目接口要连。</li>
+          </ul>
+        </div>
+        <div class="wire">
+          <div class="wire-head">00-Quantitative-Methods-MOC.md</div>
+          <div class="wire-body">
+            <div class="wide-row"><b>Subject Brief 科目定位</b><br>Quant turns investment questions into return, probability, inference, and model evidence.</div>
+            <div class="wide-row"><b>Module Atlas 模块地图</b><br>M01 Rates and Returns: return measurement, compounding, MWRR vs TWRR, gross/net/leverage/tax.</div>
+            <div class="wide-row"><b>Curriculum Spine 教材主线</b><br>V1 Modules 1-11 grouped into return layer, probability layer, inference layer, model-risk layer.</div>
+            <div class="wide-row"><b>Exam Routes 做题路线</b><br>Calculation route, interpretation route, hypothesis-test route, model-output route.</div>
+            <div class="wide-row"><b>Evidence Links 证据入口</b><br>Official ePub index, Practice Questions, Mock Questions, mistake cards, dashboard.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="split">
+        <div>
+          <span class="tag red">Recommended Module</span>
+          <h2>Module 新结构</h2>
+          <p class="note">Module 页应该像一章“教材驱动的考试笔记”：先讲懂，再翻译成会做题的动作。删除机械的补强表格，把它们融入每个知识点段落。</p>
+          <ul class="checklist">
+            <li>每个教材小节变成一个知识块，而不是挂在末尾。</li>
+            <li>每个知识块固定包含：中文解释、English term、公式或判断规则、题干触发词、常见陷阱。</li>
+            <li>基础题和 mock 不独立漂浮，回填到对应知识块的 “Practice Evidence”。</li>
+          </ul>
+        </div>
+        <div class="wire">
+          <div class="wire-head">M01-Rates-and-Returns.md</div>
+          <div class="wire-body">
+            <div class="wide-row"><b>1. Module Brief</b><br>本章解决什么问题 / LOS / exam role / prerequisites.</div>
+            <div class="wide-row"><b>2. Curriculum Spine</b><br>2.1 Determinants of Interest Rates: 中文解释 + required return / discount rate / opportunity cost.</div>
+            <div class="wide-row"><b>3. Exam Translation</b><br>题干出现 HPR, annualized, time-weighted, money-weighted 时，如何选择口径。</div>
+            <div class="wide-row"><b>4. Formula Bench</b><br>公式不再孤立列出，而是带变量口径、使用条件、不要使用的条件。</div>
+            <div class="wide-row"><b>5. Practice Evidence</b><br>基础题和 mock 题按 HPR / mean return / MWRR vs TWRR / fees-tax-leverage 分类。</div>
+            <div class="wide-row"><b>6. Reflection Hooks</b><br>易错点、fix rule、next drill，连接 .system/memory。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <h2>方案对比</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>方案</th>
+            <th>最适合</th>
+            <th>优点</th>
+            <th>代价</th>
+            <th>我的建议</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Option A 教材导读型</td>
+            <td>第一轮系统学习</td>
+            <td>最贴原版教材，覆盖感强</td>
+            <td>做题动作不够突出，复习时偏长</td>
+            <td>适合作为正文上半部分</td>
+          </tr>
+          <tr>
+            <td>Option B 考试作战型</td>
+            <td>刷题和 mock 前</td>
+            <td>很快，动作明确</td>
+            <td>容易牺牲教材小节的完整性</td>
+            <td>适合作为正文下半部分</td>
+          </tr>
+          <tr>
+            <td>Option C 混合型</td>
+            <td>长期知识库</td>
+            <td>教材覆盖 + 考试动作 + 错题闭环都能放对位置</td>
+            <td>重构脚本更复杂，需要分批验证</td>
+            <td>推荐选这个</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

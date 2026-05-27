@@ -4,6 +4,18 @@
 
 This document contains the official CFA 2026 Level I topic areas, learning modules, and Learning Outcome Statements (LOS).
 
+## Active Knowledge-Base Alignment
+
+- 原版教材章节索引：`.system/memory/strategy/cfa-2026-epub-textbook-index.md`
+- 科目主框架：`CFA_tier1/*/00-*-MOC.md`
+- 模块正文：`CFA_tier1/*/M01...Mxx...md`
+
+使用原则：
+
+1. 这个文件负责保留官方课程全景和 LOS 原文。
+2. 教材章节锚点放在教材索引与各科 MOC 中。
+3. 真正用于做题和复习的落地内容，以各模块正文中的 `Textbook Signal Topics` 和 `知识点详解` 为主。
+
 ---
 
 ## Table of Contents

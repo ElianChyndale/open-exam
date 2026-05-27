@@ -1,0 +1,147 @@
+---
+title: "Financial Statement Analysis Practice Questions"
+source_type: "local_question_pack"
+source_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf"
+answer_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\财务报表.pdf"
+question_count: 130
+source_pages: 1-29
+---
+
+# Financial Statement Analysis Practice Questions
+
+- Source question pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf`
+- Source answer pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\财务报表.pdf`
+- Question count target: 130
+- Extracted question stems: 130
+
+## Questions
+- Q001 | p.1 | Which of the following companies would most likely be considered to have the lowest financial reporting quality, other things equal?
+- Q002 | p.1 | Which of the following is lowest in quality on the spectrum of GAAP conforming financial reports?
+- Q003 | p.1 | An analyst would most likely conduct additional analysis when faced with which of the following financial presentations?
+- Q004 | p.1 | Under International Financial Reporting Standards (IFRS), reported operating cash flows are most likely to be increased by the classification choice made for.
+- Q005 | p.1 | In the Porter's five forces framework, a company is most likely to have the greatest profitability if:
+- Q006 | p.2 | Which of the following conditions conducive to issuing low-quality financial reports is most likely a result of poor internal controls?
+- Q007 | p.2 | Maintaining prior views or forecasts by inadequately incorporating new information best describes:
+- Q008 | p.2 | For a company in a cyclical industry, normalized earnings are best described as:
+- Q009 | p.2 | Porter's five forces analysis is used to estimate a company's future profit margin relative to:
+- Q010 | p.2 | An analyst uses the following information to forecast a company's gross profit margin: Current Amount (in $ millions) Forecasted Growth Sales 1,200 8% Cost of sales 300 4% The analyst's forecasted gross profit margin should be closest to a(n):
+- Q011 | p.2 | If the price elasticity of demand for a product is 0.8 and its unit cost remains constant, a 10% increase in its selling price will most likely result in:
+- Q012 | p.3 | All else being equal, forecasting an increase in which of the following will most likely increase forecasted EPS for a company?
+- Q013 | p.3 | An analyst gathers the following information (in € millions) relating to a company's merchandise inventory as of 31 December of Year 1: Cost 65 Net realizable value 60 Current replacement cost 58 On 31 December of Year 2, the net realizable value of the inventory is € 7 million higher than its carrying value. Under US GAAP, the amount (in € millions) of the reversal of the prior write-down is:
+- Q014 | p.3 | An analyst gathers the following year-end information from a company's financial statements: Year 2 Year 1 Accounts receivable ￡3 million ￡1 million Accounts payable ￡2 million ￡5 million Based only on this information, if Year 2 net income is ￡3 million and the Year 1 ending cash balance is ￡10 million, the Year 2 ending cash balance is:
+- Q015 | p.3 | A company incurred the following expenditures (in € millions) to internally develop intangible asset: Costs incurred during the research phase 900 Costs incurred during the development phase 600 If the recognition criteria for an intangible asset have been met, the maximum amount of capitalized costs (in € millions) is:
+- Q016 | p.4 | Compared to the industry average, which of the following financial ratios most likely indicates a company has a highly efficient credit and collection process? A relatively low:
+- Q017 | p.4 | Under the indirect method of reporting cash flow from operating activities, a decrease in deferred income tax liabilities is:
+- Q018 | p.4 | With respect to company analysis, measures of inventory management are best described as:
+- Q019 | p.4 | A disclaimer of opinion is issued when an auditor:
+- Q020 | p.4 | Which of the following most likely indicates improved efficiency of a company's credit and collection policy? An increase in:
+- Q021 | p.5 | An analyst gathers the following information (in $ millions) about a manufacturing company: Cost of sales 150 Gross profit 100 Selling, general, and administrative expenses 30 Based only on this information, applying vertical common-size analysis to the income statement, selling, general, and administrative expenses are:
+- Q022 | p.5 | Which of the following is most likely added back to net income when preparing a cash flow statement under the indirect method?
+- Q023 | p.5 | With respect to the statement of cash flows under the indirect method, which of the following will increase net cash provided by operating activities compared to net income? An increase in:
+- Q024 | p.5 | Ignoring income taxes, acquiring an intangible asset would most likely result in:
+- Q025 | p.5 | Which of the following is most accurate with respect to inherent limitations of audits?
+- Q026 | p.6 | An analyst gathers the following information about a company for its fiscal year ended 31 December. Net income €80,000 Common dividends declared and paid €16,000 Preferred dividends declared and paid €10,000 Weighted average common shares outstanding 150,000 Common shares outstanding at year end 130,000 Basic EPS is closest to
+- Q027 | p.6 | Which of the following opinions is the best indication that the auditor believes that the financial statements depart materially from accounting standards and are not fairly presented?
+- Q028 | p.6 | An analyst gathers the following information about a company: Payables turnover 8 Inventory turnover 2 Receivables turnover 10 If all purchases and sales were made on credit, the cash conversion cycle (based on a 360-day year) is:
+- Q029 | p.6 | An analyst gathers the following information (in $ thousands) about a company. Net income 10,000 Gain on debt retirement 500 Decrease in working capital 2,000 Cash flow from operating activities (in $ thousands) is:
+- Q030 | p.7 | Which of the following may be reported using the modified retrospective method?
+- Q031 | p.7 | An analyst gathers the following information (in € millions) about a company before any revaluations: Average total assets 20 Average total liabilities 8 Average total equity 12 An initial revaluation increases the carrying value of the asset valued under the revaluation model ignoring taxes, the financial leverage ratio most likely.
+- Q032 | p.7 | An analyst gathers the following information (in € thousands) about a company: Net income 143 Gain on sale of equipment 20 Decrease in accounts receivable 38 Cash flow from operating activities (in € thousands) is.
+- Q033 | p.7 | Under US GAAP and all else being equal, in a period of stable inventory quantities and rising inventory unit costs, which inventory valuation method is least likely to incur inventory write-downs?
+- Q034 | p.7 | Which of the following analyses can be used to compare a company's financial ratios with those of its major competitors?
+- Q035 | p.8 | An analyst gathers the following information about a company's fiscal year ended 31 December. Net income $210.000 Common shares outstanding on 1 January 50,000 Common shares repurchased on 1 April 20,000 If a 2-for-1 stock split took effect on 1 July, basic EPS for the year is:
+- Q036 | p.8 | An analyst gathers the following information about two companies (in ¥ thousands): Company 1 Company 2 Revenue 7,586,000 9,445,000 Cost of goods sold 3,413,700 4,533,600 Research and development expense 1,800,000 1,800,000 Advertising expense 531,020 755,600 Based only on the companies' common-size income statements, it appears that.
+- Q037 | p.8 | A deferred tax liability could arise when:
+- Q038 | p.8 | An analyst gathers the following information (in￡millions)about a company's fiscal year. Cost of goods sold 6,000 Increase in inventory 3,000 Increase in accounts payable 2,500 Cash paid to suppliers (in￡millions)is:
+- Q039 | p.9 | An analyst gathers the following information about a company for its fiscal year ended 31 December. Net income €3,000,000 Common shares outstanding,1 January 3,500,000 Common shares issued,1 April 1,000,000 Common shares outstanding,31 December 4,500,000 Convertible preferred shares outstanding 400,000 Convertible preferred dividend per share €1.00 Each convertible preferred share is convertible into two common shares. If there are no other potentially dilutive securities outstanding, reported diluted EPS is closest to:
+- Q040 | p.9 | An analyst gathers the following information (in € thousands) about a company: Cash flow from operating activities 80 Capital expenditures 15 Interest paid and expensed 10 If interest paid is classified as a cash flow from operating activities and the income tax rate is 20%, FCFF (in € thousands) is
+- Q041 | p.9 | A qualified audit opinion is most likely issued when financial statements are prepared:
+- Q042 | p.9 | Common-size statements are most likely the output of which of the following phases of the financial statement analysis framework?
+- Q043 | p.10 | An analyst gathers the following information about a company's fiscal year ended 31 December. Interest payable on 1 January ￡45,000 Cash interest paid during the year ￡15,000 Interest expense during the year ￡50,000 Interest payable on 31 December is:
+- Q044 | p.10 | An analyst gathers the following information (in￡thousands) about a company. FCFF 2,500 FCFE 1,300 Interest paid 260 If interest paid is classified as a cash flow from operating activities and the income tax rate is 40%,net debt repayment (in￡thousands) is closest to:
+- Q045 | p.10 | Deferred tax assets could arise when:
+- Q046 | p.10 | Under US GAAP, in the second year of a multi-year lease, a lessee with an operating lease most likely reports a:
+- Q047 | p.10 | In a common-size analysis of the cash flow statement, each line item of cash inflow may be stated as a percentage of:
+- Q048 | p.11 | Under US GAAP, which of the following is a required financial statement disclosure concerning inventory?
+- Q049 | p.11 | An analyst gathers the following information about a company's non-depreciable asset reported under the revaluation model Original cost €25,000 Reported value after initial revaluation €27,50 Reported value after second revaluation €22,50 The revaluation surplus after the second revaluation is:
+- Q050 | p.11 | An analyst gathers the following information about an electronics manufacturing company's inventory: Year 2 Year 1 Cost €100,000 €100,000 Net realizable value €105,000 €97,000 As a result of the reversal of the write-down, the company's Year 2 financial statements should report a decrease in cost of sales of:
+- Q051 | p.11 | An analyst gathers the following information about a company: ROE 10% Financial leverage 2.0 Net profit margin 4% EBIT margin 5% Interest burden 85% The total asset turnover ratio is closest to:
+- Q052 | p.12 | All else being equal, in a period of stable inventory quantities and declining inventory unit costs, using the LIFO inventory valuation method will result in a lower.
+- Q053 | p.12 | An analyst collects the following information (in € millions) about a manufacturing company's inventory. Original cost 22,000 Net realizable value at end of Year 1 1,700 Net realizable value at end of Year 2 2,500 At the end of Year 2, the balance sheet should reflect inventory (in € millions) of.
+- Q054 | p.12 | In an environment of steadily increasing prices and quantities, reported ending inventory most closely reflects current replacement value under the:
+- Q055 | p.12 | An analyst gathers the following information (in € thousands) about a company's non-depreciable asset. Historical cost 50 Carrying value after impairment,31 December of Year 1 40 Recoverable amount,31 December of Year 2 60 The maximum allowable carrying amount (in € thousands) on the Year 2 balance sheet is:
+- Q056 | p.12 | All else being equal, a write-down of inventory by a manufacturing company most likely results in a:
+- Q057 | p.13 | On the statement of cash flows, interest paid should be classified as:
+- Q058 | p.13 | An analyst gathers the following information (in € millions) about an automobile manufacturer's inventory: Year 2 Year 1 Cost of goods sold 600 700 Cost of inventory 100 90 Net realizable value of inventory 120 80 The inventory turnover (calculated using average inventory) in Year 2 is closest to:
+- Q059 | p.13 | An analyst gathers the following information (in € thousands) about an electronics manufacturing company's inventory: Cost of ending inventory 3,600 Net realizable value 3,300 Current replacement cost 3,200 Net realizable value less a normal profit margin 3,100 The inventory (in € thousands) is carried on the balance sheet at:
+- Q060 | p.13 | For leases with a term of twelve months or less, the lessee:
+- Q061 | p.13 | According to the converged standards for revenue recognition, a receivable is recognized on the seller's balance sheet when:
+- Q062 | p.14 | An analyst gathers the following information about a company's equipment: Carrying value prior to impairment €20,000 Undiscounted expected future cash flows €22,000 Value in use €17,400 Fair value if sold €19,100 Costs to sell €1,900 The carrying value of the equipment should be:
+- Q063 | p.14 | Which of the following ratios would most likely be positively affected by an inventory write-down compared to its value absent the write-down?
+- Q064 | p.14 | A deferred tax asset has been previously recognized. At the current balance sheet date, the criteria for economic benefits are not met but the tax differences are still expected to be temporary. As a result:
+- Q065 | p.14 | An analyst gathers the following information (in € thousands) about a company. Revenue 5,000 Cash balance, beginning of year 2,000 Cash balance, end of year 2,000 Increase in accounts receivable 1,200 Cash received from customers (in € thousands) is:
+- Q066 | p.15 | Which of the following is an inventory-related financial statement disclosure required under US GAAP?
+- Q067 | p.15 | All else being equal, in a period of declining inventory unit costs and constant inventory quantities, which of the following inventory valuation methods most likely allocates a higher amount of the total cost of goods available for sale to cost of sales on the income statement?
+- Q068 | p.15 | The adjustments related to changes in the estimated residual value of a long-lived asset should be:
+- Q069 | p.15 | Which of the following might indicate that a company uses aggressive accounting choices to increase its reported performance and financial position in the current period?
+- Q070 | p.15 | An analyst gathers the following information about a company's equipment base: Beginning balance accumulated depreciation €7,000,000 Ending balance accumulated depreciation €8,000,000 Depreciation expense of equipment €4,000,000 The company sold equipment having a historical cost of €5,000,000 and reported a loss on sale of €250,000. The cash received from the sale of equipment is:
+- Q071 | p.16 | An analyst gathers the following information (in € millions) about a company: EBIT 150 Earnings before taxes 130 Net income 110 Total average assets 1,000 ROA is:
+- Q072 | p.16 | In calculating basic and diluted EPS, if the numerators are the same but the denominators are different, the company.
+- Q073 | p.16 | An analyst gathers the following information about a company's given fiscal year ended 31 December. Net income $1,200,000 Number of common shares outstanding on 1 January 1,000,000 Number of common shares issued on 1 April 100,000 Number of common shares outstanding on 31 December 1,100,000 Face value of convertible bonds outstanding for the year $2,000,000 Coupon rate on convertible bonds 8% Tax rate 30% If the bonds are convertible into 200,000 common shares and there are no other potentially dilutive securities outstanding, the company's reported diluted EPS is closest to:
+- Q074 | p.16 | An analyst gathers the following information about a company: Net profit margin 3.0% Total asset turnover 1.8 Financial leverage 1.5 Tax burden 0.85 ROE is closest to:
+- Q075 | p.17 | An analyst gathers the following information (in € thousands) about equipment Carrying amount prior to testing for impairment 10,000 Fair value 9,000 Present value of expected future cash flows 7,000 Costs to sell 200 The equipment's carrying amount (in € thousands) after impairment is:
+- Q076 | p.17 | Which of the following ratios is most appropriate in measuring a company's ability to cover its debt payments?
+- Q077 | p.17 | Under which of the following classifications of leases will a lessor derecognize the leased asset and recognize a lease receivable on the balance sheet at lease inception?
+- Q078 | p.17 | Ignoring income taxes, which of the following ratios decreases as a result of an impairment charge?
+- Q079 | p.17 | An analyst gathers the following information about a company: Short-term interest bearing debt 700 Current portion of long-term interest bearing debt 500 Non-current portion of long-term interest bearing debt 800 Total shareholders' equity 7,500 Based only on this information, the company's debt-to-capital ratio is closest to:
+- Q080 | p.18 | According to the converged standards for revenue recognition, which of the following might indicate that a seller has transferred control of an asset to a buyer at a point in time? The seller has:
+- Q081 | p.18 | A company incurred research costs which were all expensed in the current fiscal year for financial reporting purposes. Applicable tax laws require research costs to be expensed over a 5-year period. If taxable profit will be available against which the deductible temporary differences can be utilized, in the current fiscal year the company will most likely record:
+- Q082 | p.18 | All else being equal, the cash conversion cycle most likely shortens if:
+- Q083 | p.18 | On the statement of cash flows, interest payments may be classified as a financing cash flow under
+- Q084 | p.18 | An analyst gathers the following information (in € thousands) about a company whose fiscal year ends on 31 December: Earnings for the six months ended 30 June of Year 1 2,000 Earnings for the year ended 31 December of Year 1 1,500 Earnings for the six months ended 30 June of Year 2 2,200 The company's trailing 12 month earnings (in € thousands) for the period ended 30 June of Year 2 is:
+- Q085 | p.19 | An analyst gathers the following information about three companies (in $ millions): Company 1 Company 2 Company 3 Total assets 100 200 400 Total debt 20 50 80 Total equity 80 150 320 Earnings before interest and taxes (EBIT) 8 10 12 Interest payments 4 4 4 Based on this information, which company is most solvent?
+- Q086 | p.19 | The carrying amount of an asset being higher than its tax base may be considered a:
+- Q087 | p.19 | A debt-to-equity ratio of 1.0 most likely results in a debt-to-capital ratio of.
+- Q088 | p.19 | Which of the following financial statement disclosures concerning PP&E is required under US GAAP?
+- Q089 | p.19 | All else being equal, a company with older assets has a fixed asset turnover ratio that is:
+- Q090 | p.20 | An analyst gathers the following information (in € thousands) about a manufacturing company: Year 2 Year 1 Average total assets 500 450 Average total liabilities 400 330 Average total shareholders' equity 100 120 EBIT 35 40 Interest payments 5 8 Based only on this information, which of the following ratio (s) may indicate improved solvency from Year 1 to Year 2?
+- Q091 | p.20 | If a company sold PP&E with a carrying amount of￡75,000 and reported a gain of￡2,000,cash flow from investing activities is:
+- Q092 | p.20 | A company acquires a 5-year license for a product it plans to continue selling for the foreseeable future. The license can be renewed at minimal cost. The license should be:
+- Q093 | p.20 | An analyst gathers the following information (in € thousands) about a company's sale of equipment. Selling price 58 Historical cost 50 Accumulated depreciation 5 The gain on the sale (in € thousands) is:
+- Q094 | p.21 | An analyst gathers the following information (in € thousands) about a manufacturing company's inventory: Cost of ending inventory 750 Estimated selling price in the ordinary course of business 1,100 Estimated costs necessary to sell the inventory 50 Estimated costs to get the inventory in condition for sale 50 The net realizable value of the inventory (in € thousands) is:
+- Q095 | p.21 | Which of the following is most likely a measure of a company's ability to meet its short-term obligations?
+- Q096 | p.21 | An analyst gathers the following information (in￡thousands) about a company's current assets and liabilities: Cash and equivalents 800 Short-term marketable securities 500 Inventory 700 Accounts receivable 2,000 Current liabilities 10,000 The company's quick ratio is:
+- Q097 | p.21 | An analyst gathers the following information (in￡millions) about a company: Total assets 400 Total liabilities 200 Total debt 100 Total equity 200 The total debt ratio is:
+- Q098 | p.22 | For a mature company, the primary source of cash flows is most likely from
+- Q099 | p.22 | A company entered into a 5-year construction contract with a total sales price of ￡3,000,000.The estimated total costs are￡2,000,000 and the company incurred ￡500,000 actual costs in the first year. The company has extensive experience with similar types of contracts. Costs incurred provide an appropriate measure of progress toward completing the contract. Assuming it is highly probable that revenue will not be subsequently reversed, revenue recognized under the contract in Year 1 is most likely：
+- Q100 | p.22 | Which of the following could motivate a lessee to lease a high-value, long-lived asset rather than to purchase it? Lease contracts:
+- Q101 | p.22 | An analyst gathers the following information (in $ millions) about a company: Other operating expenses 4,500 Decrease in prepaid expenses 200 Increase in other accrued liabilities 300 Cash paid for other operating expenses (in $ millions) is:
+- Q102 | p.22 | An analyst gathers the following information (in € thousands) about a company's equipment: Purchase price of the equipment 1,000 Accumulated depreciation 250 Gain on sale of the equipment 400 Ignoring taxes, proceeds from sale of the equipment (in € thousands) is:
+- Q103 | p.23 | For a company reporting on a calendar year basis, the receipt of a payment from a client in Year 1 for the delivery of services in Year 2 most likely increases:
+- Q104 | p.23 | An analyst gathers the following information (in € millions) about a manufacturing company's land reported under the revaluation model: Purchase price and fair value on 1 January Year 1 20 Fair value at initial revaluation on 31 December Year 1 26 All else being equal and ignoring taxes, the revaluation at 31 December Year 1 leads to a:
+- Q105 | p.23 | On the statement of cash flows, cash dividends paid may be classified as an operating activity under.
+- Q106 | p.23 | According to the converged accounting standards for revenue recognition, which of the following is the first of five steps in recognizing revenue?
+- Q107 | p.23 | The financial leverage ratio may be calculated as:
+- Q108 | p.23 | Which of the following is defined as how long a company can continue to pay its daily cash expenditures from its existing liquid assets without receiving additional cash inflow?
+- Q109 | p.24 | Accounting goodwill arising from acquisitions is:
+- Q110 | p.24 | An analyst gathers the following information (in € millions) about a company: Net cash flow from operating activities (750) Total cash inflows 1,500 Total cash outflows 2,500 Net increase (decrease) in cash (1,000) On a common-size statement of cash flows presented using the indirect method, net operating cash flow is:
+- Q111 | p.24 | A company establishes a plan to dispose of one of its material lines of business and will have no further involvement in its operation. The income statement most likely reports the results of this line of business as:
+- Q112 | p.24 | An analyst gathers the following information (in € thousands) about a company's equipment reported under the cost model: Carrying amount before impairment 2,000 Undiscounted expected future cash flows 1,800 Fair value 1,700 Value in use 1,500 Costs to sell 50 The impairment loss (in € thousands) is:
+- Q113 | p.25 | An analyst gathers the following information about PP&E that is abandoned and accounted for using the cost model: Carrying value ￡10 million Fair value at time of abandonment ￡1 million Assuming no impairment, the abandonment of PP&E on the financial statements will result in a:
+- Q114 | p.25 | An analyst gathers the following information about a company: ROE 15% Interest burden 0.85 EBIT margin 30% Total asset turnover 1.1 Financial leverage 1.25 The average tax rate is closest to:
+- Q115 | p.25 | Which of the following disclosures is required for each class of PP&E carried under the cost model?
+- Q116 | p.25 | Which of the following components of change in the net pension asset or liability of a defined-benefit pension plan is recognized in other comprehensive income?
+- Q117 | p.26 | An analyst gathers the following information about a company: Interest payments $30,000 Capital expenditures $82,000 Net borrowing $18,000 Income tax rate 40% Under U.S. GAAP, free cash flow to equity is most likely.
+- Q118 | p.26 | A manufacturing company reporting under US GAAP using the FIFO inventory valuation method should measure its finished goods' inventory at the lower of.
+- Q119 | p.26 | A company reporting under US GAAP purchases an equity security issued by another company. If the equity security represents less than 1% of the outstanding equity of the issuing company and the acquiring company owns no other equity stake in the issuing company, the investment is most likely carried on the acquiring company's balance sheet at
+- Q120 | p.26 | An analyst gathers the following information about a company's fiscal year ended 31 December. Net income €2,500,000 Weighted average common shares outstanding during the year 2,000,000 Convertible preferred shares outstanding 1,000,000 Dividend per convertible preferred share €1 One convertible preferred share is convertible into two common shares. If the tax rate is 40% and there are no other potentially dilutive securities outstanding, reported diluted EPS is closest to:
+- Q121 | p.27 | An analyst gathers the following information about a company's fiscal year ended 31 December. Net income €5,000,000 Common dividends declared and paid €500,000 Weighted average common shares outstanding during the year 2,000,000 Convertible preferred shares outstanding 400,000 Dividend per convertible preferred share €2 One convertible preferred share is convertible into six common shares. If there are no other potentially dilutive securities outstanding, reported diluted EPS should be closest to:
+- Q122 | p.27 | An analyst gathers the following information (in € millions) about a company: Cash and cash equivalents 40 Total current assets 125 Total non-current assets 35 Revenue 200 Applying vertical common-size analysis to the company's balance sheet, cash and cash equivalents are:
+- Q123 | p.27 | An analyst gathers the following information (in € thousands) about a company: Year 2 Year 1 Revenue 2,400 2,000 Cost of sales 1,800 1,400 Ending accounts payable 180 220 Based only on this information, the payables turnover ratio for Year 2 is:
+- Q124 | p.28 | An analyst gathers the following information about a company: Year 2 Year 1 Days of inventory on hand 11 13 Days of sales outstanding 24 22 Payables turnover 36 18 Based only on the cash conversion cycle, the company's liquidity position from Year 1 to Year 2 has:
+- Q125 | p.28 | The role of financial reporting is best described as:
+- Q126 | p.28 | An analyst gathers the following information (in $ millions) about a company: EBIT 16 Net income 8 Interest payments 6 Lease payments 4 The fixed charge coverage ratio is closest to:
+- Q127 | p.28 | Under US GAAP, the recognition of a valuation allowance for deferred tax assets impacts
+- Q128 | p.28 | A copyright, for which an active market exists, has a set finite life and is used in a company's operations over more than one fiscal period. Under U.S. GAAP, this copyright is reported using:
+- Q129 | p.29 | Compared to purchasing an asset using debt, leasing an asset is most likely to:
+- Q130 | p.29 | An analyst gathers the following information (in $ millions) about a company: Year 2 Year 1 Revenues 2,100 2,000 Accounts receivable 230 200 Cash 70 50 Cash received from customers (in $ millions) in Year 2 is:

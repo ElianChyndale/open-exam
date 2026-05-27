@@ -21,178 +21,60 @@ tags:
 
 # M07: Company Analysis: Forecasting
 
-> **模块定位**：理解股票市场结构、行业公司分析和权益估值工具。 本模块聚焦 **Company Analysis: Forecasting**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+## 0. Reading Contract 阅读契约
 
----
+- **Official scope**: forecast objects, principles and approaches; revenues; operating expenses and working capital; capital investments and capital structure; scenario analysis.
+- **C+ output**: 能把 qualitative drivers 转成 forecast line items and scenario assumptions。
+- **Evidence anchor**: V5 Module 7, practice and solutions available in the 2026 ePub index.
 
-## Official Module Structure
+## 1. Module Brief 模块定位
 
-- Learning Outcomes: Company Analysis: Forecasting
-- 7.01 | Introduction
-- 7.02 | Forecast Objects, Principles, and Approaches
-- 7.03 | Forecasting Revenues
-- 7.04 | Forecasting Operating Expenses and Working Capital
-- 7.05 | Forecasting Capital Investments and Capital Structure
-- 7.06 | Scenario Analysis
+Forecasting bridges analysis and valuation. 考试重点不是写完整模型，而是选对 forecasting approach、识别 line item driver，并解释 scenario change。
 
-## Learning Outcome Statements
+## 2. Curriculum Spine 教材主线
 
-1. explain principles and approaches to forecasting a company’s financial results and position
-2. explain approaches to forecasting a company’s revenues
-3. explain approaches to forecasting a company’s operating expenses and working capital
-4. explain approaches to forecasting a company’s capital investments and capital structure
-5. describe the use of scenario analysis in forecasting
+1. Forecast objects: disclosed revenue, costs, working capital, capex, capital structure.
+2. Forecast principles: consistency, materiality, horizon selection, link to business and industry drivers.
+3. Approaches: historical trend, base rates and convergence, management guidance, analyst discretionary forecast.
+4. Revenue forecast: recurring vs non-recurring, price/volume/mix, market share, segment drivers.
+5. Expense and working capital forecast: margins, cost behavior, working capital ratios/days.
+6. Capital investment and structure forecast: capex needs, financing mix, leverage.
+7. Scenario analysis: base, upside, downside with explicit assumptions.
 
----
+## 3. Exam Translation 考试转译
 
-## 1. 模块定位
+- `mature stable firm` -> historical trend and convergence may be reasonable.
+- `new product/regime change` -> pure historical extrapolation may be weak.
+- `management guidance` -> useful input but not automatically unbiased.
+- `scenario analysis` -> change assumptions/drivers, then output changes.
+- `forecast horizon` -> should match competitive advantage period and data reliability.
 
-### 7.1 学习任务
-- **核心问题**：考试希望你用 `Company Analysis: Forecasting` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+## 4. Formula & Decision Bench 公式与决策台
 
-### 7.2 考试角色
-- **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
-
-### 7.3 关键英文术语
-- **Company Analysis: Forecasting（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Company Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Forecast Objects, Principles, and Approaches（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Forecasting Revenues（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Forecasting Operating Expenses and Working Capital（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Forecasting Capital Investments and Capital Structure（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Scenario Analysis（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-
-## 2. 官方 LOS 对应学习目标
-
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 7.1 | explain principles and approaches to forecasting a company’s financial results and position | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 7.2 | explain approaches to forecasting a company’s revenues | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 7.3 | explain approaches to forecasting a company’s operating expenses and working capital | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 7.4 | explain approaches to forecasting a company’s capital investments and capital structure | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 7.5 | describe the use of scenario analysis in forecasting | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-
-## 3. 核心知识树
-
-```text
-7. Company Analysis: Forecasting
-├─ 7.1 预测主干 (Forecast spine)
-│  ├─ 7.1.1 Forecast objects：revenue、operating expenses、working capital、capex、capital structure、earnings/cash flow。
-│  ├─ 7.1.2 Top-down：macro -> industry -> market share -> company revenue，适合行业驱动强的公司。
-│  ├─ 7.1.3 Bottom-up：unit volume x price、customer count x ARPU、store count x sales/store，适合运营驱动清晰的公司。
-│  └─ 7.1.4 Forecast chain：revenue -> margin -> earnings/cash flow -> balance sheet needs -> valuation input。
-├─ 7.2 预测纪律 (Forecast discipline)
-│  ├─ 7.2.1 Normalized base：从可持续的历史业绩出发，剔除一次性和周期异常。
-│  ├─ 7.2.2 Sustainable growth：`g = retention ratio x ROE`，检查增长是否由留存和回报支撑。
-│  ├─ 7.2.3 Scenario analysis：base/upside/downside 必须绑定关键假设、风险和催化剂。
-│  └─ 7.2.4 Horizon discipline：预测期应匹配竞争优势持续时间，不能为了估值结果随意拉长。
-```
-
-## 核心图解
-
-```mermaid
-flowchart TD
-  A["Normalized historical base"] --> B{"Forecast approach"}
-  B -->|Top-down| C["Macro -> industry -> market share -> revenue"]
-  B -->|Bottom-up| D["Units/customers/stores x price or ARPU"]
-  C --> E["Revenue forecast"]
-  D --> E
-  E --> F["Margin forecast"]
-  F --> G["Earnings and cash flow"]
-  G --> H["Working capital and capex"]
-  H --> I["Capital structure and financing need"]
-  I --> J["Valuation input"]
-```
-
-```mermaid
-flowchart LR
-  A["Growth assumption"] --> B["Retention ratio x ROE check"]
-  A --> C["Industry and competitive evidence"]
-  A --> D["Scenario: base / upside / downside"]
-  B --> E{"Supported?"}
-  C --> E
-  D --> E
-  E -->|Yes| F["Use with sensitivity"]
-  E -->|No| G["Revise growth, financing, or risk assumption"]
-```
-
-## 4. 知识点详解
-
-### 7.1 预测主干 (Forecast spine)
-- **自上而下 (top-down)**：从宏观经济 → 行业增长 → 公司市场份额，推导收入
-- **自下而上 (bottom-up)**：从产品线销量×价格 → 汇总收入，叠加运营驱动因素
-- **逻辑链条**：**收入 (revenue)** → **利润率 (margin)** → **盈利/现金流 (earnings/cash flow)** → **资产负债表需求 (balance-sheet needs)**
-- **情景分析 (scenario analysis)**：**基准 (base)**、**乐观 (upside)**、**悲观 (downside)** 三种情景，搭配**催化剂 (catalyst)** 与**风险 (risk)** 地图
-
-### 7.2 预测纪律 (Forecast discipline)
-- **增长的资金来源**：**留存收益 (retention)**、**资本回报率 (returns on capital)** 或**外部资本 (external capital)** — 增长必须有融资逻辑
-- **预测期选择 (forecast horizon)**：应与**竞争优势持续时间 (competitive advantage durability)** 匹配 — 护城河越宽预测期越长
-- **可持续增长率 (sustainable growth rate)**：`g = Retention Ratio × ROE`，反映不改变资本结构下的最大增长率
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 指标/框架 | 公式/步骤 | 对应节点 | 考试说明 |
-|---|---|---|---|
-| Sustainable growth | `g = retention ratio x ROE` | 7.2.2 | 不改变资本结构下的内生增长校验。 |
-| Retention ratio | `1 - dividend payout ratio` | 7.2.2 | 留存越多，其他条件不变可支持增长越高。 |
-| Expected growth | `ROE x (1 - payout ratio)` | 7.2.2 | 与 sustainable growth 同一逻辑。 |
-| Top-down revenue | `Industry sales x company market share` | 7.1.2 | 市场份额假设要与竞争分析一致。 |
-| Bottom-up revenue | `Units sold x average selling price` 或 `customers x ARPU` | 7.1.3 | 适合有明确运营驱动的数据。 |
-| Margin forecast | `Gross/operating margin assumptions` | 7.1.4 | 与 pricing power、cost inflation、scale economies 联动。 |
-| Scenario framework | `Base / upside / downside` | 7.2.3 | 每个情景要有触发条件，不是随意调数字。 |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
+| Trigger | Framework | Check |
 |---|---|---|
-| ⭐⭐⭐ | 7.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 7.2 Forecast Objects, Principles, and Approaches | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 7.3 Forecasting Revenues | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 7.4 Forecasting Operating Expenses and Working Capital | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐ | 7.5 Forecasting Capital Investments and Capital Structure | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| Revenue forecast | top-down market size/share or bottom-up price x volume | Separate recurring and non-recurring revenue. |
+| Expense forecast | percentage of sales, margin targets, fixed/variable cost behavior | Costs may not scale linearly. |
+| Working capital forecast | days receivable/inventory/payable or percent of sales | Must be consistent with revenue growth and operations. |
+| Capex forecast | maintenance vs growth capex; capacity needs | Capex supports future revenue but consumes cash. |
+| Scenario analysis | base/upside/downside assumptions | Scenarios must be internally consistent. |
 
-### 6.9 ⭐⭐ Legacy 考点补充
+## 5. Practice & Mock Evidence 题库证据
 
-### 6.1 核心内容
+- Expected item types: select forecast approach, identify revenue/expense/WC driver, evaluate management guidance, choose scenario assumption.
+- Review tag: `Equity-M07-forecasting`.
+- Miss log fields: forecast object, approach, driver, horizon, scenario variable.
 
-- **增长融资逻辑题**：公司增长是否可持续 → 检查 g vs ROE × Retention Ratio
-- **情景敏感性分析**：关键假设变化（市占率、毛利率）对估值的影响
-- **预测起点**：通常从最近一年的正常化盈利开始，而非将某异常年份外推
+## 6. Trap Ledger 易错账本
 
-## 7. 易错点与考试陷阱
+- Forecasting is not copying the past; it is conditional on drivers。
+- Management guidance is an input, not proof。
+- High revenue growth can require higher working capital and capex。
+- Scenario analysis changes assumptions, not just final value。
 
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
-|---|---|---|
-| ❌ 忽略：没有假设质量的预测精度只是装饰：模型越复杂不代表预测越准确 | ✅ 没有假设质量的预测精度只是装饰：模型越复杂不代表预测越准确 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：增长必须被融资：高增长但无融资来源就不可持续 | ✅ 增长必须被融资：高增长但无融资来源就不可持续 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：不要混淆历史增长率与可持续增长率：历史增长可能来自杠杆扩张而非内生增长 | ✅ 不要混淆历史增长率与可持续增长率：历史增长可能来自杠杆扩张而非内生增长 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+## 7. Final Recall Sheet 终局速记
 
-## 8. 跨模块关联
-
-| 输出概念 | 连接模块 | 怎么连接 | 做题提醒 |
-|---|---|---|---|
-| Normalized base | [[M05-Company-Analysis-Past-and-Present]] | 历史分析提供预测起点。 | 异常年份不能机械外推。 |
-| Industry growth / pricing power | [[M06-Industry-and-Competitive-Analysis]] | 行业生命周期和五力决定收入与利润率假设。 | 增长假设要有行业证据。 |
-| Working capital / capex | Corporate Issuers / FSA | 增长需要营运资本和资本投入支持。 | 高增长但无资金来源不可持续。 |
-| Dividends/earnings/sales | [[M08-Equity-Valuation-Concepts-and-Basic-Tools]] | 预测输出进入 DDM、justified multiples 和 relative valuation。 | 估值错误常来自预测假设错误。 |
-
-
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M07-Company-Analysis-Forecasting.md` (high, 0.427)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Forecast chain: business model -> industry driver -> line item -> cash flow.
+- Use historical trend only when business conditions are stable.
+- Working capital and capex are cash-flow bridges.
+- Scenario = explicit driver set, not vague optimism/pessimism.

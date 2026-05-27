@@ -21,263 +21,69 @@ tags:
 
 # M02: Portfolio Risk and Return: Part II
 
-> **模块定位**：把风险收益、组合构建、行为偏差和风险管理连接成投资流程。 本模块聚焦 **Portfolio Risk and Return: Part II**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+## 0. Reading Contract 阅读契约
 
----
+- **Official spine**：Risk-free plus risky assets, CAL/CML, leveraged portfolios, systematic and nonsystematic risk, return models, beta, CAPM/SML, CAPM applications, performance appraisal.
+- **LOS contract**：explain risk-free/risky combinations, CAL/CML, systematic risk, return models, beta, CAPM/SML, CAPM expected return, SML applications and performance measures.
+- **Evidence rule**：错题标 `cal_cml`, `beta`, `capm_required_return`, `sml_mispricing`, or `performance_metric`。
 
-## Official Module Structure
+## 1. Module Brief 模块定位
 
-- Learning Outcomes: Portfolio Risk and Return: Part II
-- 2.01 | Introduction
-- 2.02 | Capital Market Theory: Risk-Free and Risky Assets
-- 2.03 | Capital Market Theory: The Capital Market Line
-- 2.04 | Capital Market Theory: CML - Leveraged Portfolios
-- 2.05 | Systematic and Nonsystematic Risk
-- 2.06 | Return Generating Models
-- 2.07 | Calculation and Interpretation of Beta
-- 2.08 | Capital Asset Pricing Model: Assumptions and the Security Market Line
-- 2.09 | Capital Asset Pricing Model: Applications
-- 2.10 | Beyond CAPM: Limitations and Extensions of CAPM
-- 2.11 | Portfolio Performance Appraisal Measures
-- 2.12 | Applications of the CAPM in Portfolio Construction
-- 2.13 | Summary
+Part II prices risk. 本模块把 M01 的 diversification 推到结论：market only compensates systematic risk, so beta and CAPM become the required-return engine。
 
-## Learning Outcome Statements
+## 2. Curriculum Spine 教材主线
 
-1. describe the implications of combining a risk-free asset with a portfolio of risky assets
-2. explain the capital allocation line (CAL) and the capital market line (CML)
-3. explain systematic and nonsystematic risk, including why an investor should not expect to receive additional return for bearing nonsystematic risk
-4. explain return generating models (including the market model) and their uses
-5. calculate and interpret beta
-6. explain the capital asset pricing model (CAPM), including its assumptions, and the security market line (SML)
-7. calculate and interpret the expected return of an asset using the CAPM
-8. describe and demonstrate applications of the CAPM and the SML
-9. calculate and interpret the Sharpe ratio, Treynor ratio, M 2, and Jensen’s alpha
-
----
-
-## 1. 模块定位
-
-### 2.1 学习任务
-- **核心问题**：考试希望你用 `Portfolio Risk and Return: Part II` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
-
-### 2.2 考试角色
-- **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
-
-### 2.3 关键英文术语
-- **Portfolio Risk and Return: Part II（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Portfolio Risk and Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Capital Market Theory: Risk-Free and Risky Assets（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Capital Market Theory（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Capital Market Theory: The Capital Market Line（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Capital Market Theory: CML - Leveraged Portfolios（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Systematic and Nonsystematic Risk（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-
-## 2. 官方 LOS 对应学习目标
-
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 2.1 | describe the implications of combining a risk-free asset with a portfolio of risky assets | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 2.2 | explain the capital allocation line (CAL) and the capital market line (CML) | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 2.3 | explain systematic and nonsystematic risk, including why an investor should not expect to receive additional return for bearing nonsystematic risk | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 2.4 | explain return generating models (including the market model) and their uses | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 2.5 | calculate and interpret beta | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 2.6 | explain the capital asset pricing model (CAPM), including its assumptions, and the security market line (SML) | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-| 2.7 | calculate and interpret the expected return of an asset using the CAPM | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 2.8 | describe and demonstrate applications of the CAPM and the SML | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 2.9 | calculate and interpret the Sharpe ratio, Treynor ratio, M 2, and Jensen’s alpha | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-
-## 3. 核心知识树
-
-```text
-2. Portfolio Risk and Return: Part II
-├─ 2.1 资本资产定价模型 (Capital Asset Pricing Model, CAPM)
-│  ├─ 2.1.1 CAPM required return：`E(Ri)=Rf+βi[E(Rm)-Rf]`
-│  ├─ 2.1.2 风险补偿：只补偿 systematic risk，不补偿可分散的 unsystematic risk
-│  └─ 2.1.3 假设边界：无税费、可无风险借贷、同质预期，现实应用要谨慎
-├─ 2.2 Beta 系数 (Beta Coefficient)
-│  ├─ 2.2.1 Formula：`βi=Cov(Ri,Rm)/Var(Rm)=ρimσi/σm`
-│  ├─ 2.2.2 Interpretation：β>1 aggressive，β<1 defensive，β<0 反市场
-│  └─ 2.2.3 Portfolio beta：`βp=Σw_iβ_i`，系统性风险可线性加权
-├─ 2.3 证券市场线 (Security Market Line, SML)
-│  ├─ 2.3.1 SML：截距 `Rf`，斜率 market risk premium，横轴 beta
-│  ├─ 2.3.2 Mispricing：expected return > required return 在 SML 上方，undervalued
-│  └─ 2.3.3 Jensen alpha：实际/预期收益相对 CAPM required return 的偏离
-├─ 2.4 绩效评估指标 (Performance Evaluation Measures)
-│  ├─ 2.4.1 Sharpe：`(Rp-Rf)/σp`，完整组合用 total risk
-│  ├─ 2.4.2 Treynor：`(Rp-Rf)/βp`，充分分散组合用 systematic risk
-│  ├─ 2.4.3 M²：把 Sharpe 调整成收益率差，方便与市场比较
-│  ├─ 2.4.4 Jensen alpha：`Rp-[Rf+βp(E(Rm)-Rf)]`
-│  └─ 2.4.5 IR/TE：主动收益相对 benchmark，用 tracking error 衡量主动风险
-```
-
-## 核心图解
-
-```mermaid
-flowchart TD
-    A["Risk in portfolio"] --> B{"Can diversify away?"}
-    B -->|yes| C["Unsystematic risk<br/>no expected return compensation"]
-    B -->|no| D["Systematic risk"]
-    D --> E["Beta<br/>Cov(Ri,Rm)/Var(Rm)"]
-    E --> F["CAPM required return<br/>Rf + beta x market risk premium"]
-    F --> G{"Expected return vs required"}
-    G -->|higher| H["Undervalued / positive alpha"]
-    G -->|lower| I["Overvalued / negative alpha"]
-    F --> J["Performance measures<br/>Sharpe / Treynor / Jensen / M2"]
-```
-
-## 4. 知识点详解
-
-### 2.1 资本资产定价模型 (Capital Asset Pricing Model, CAPM)
-
-- **CAPM 公式**：
-  - `E(Ri) = Rf + βi × [E(Rm) - Rf]`
-  - 必要回报率 (required return) = 无风险利率 + 风险溢价
-  - 风险溢价 = Beta × 市场风险溢价
-
-- **CAPM 基本假设**：
-  - 投资者是风险厌恶的均值-方差优化者
-  - 可以以无风险利率自由借贷
-  - 所有投资者有相同的预期（同质预期 homogeneous expectations）
-  - 无交易成本、无税收、资产无限可分
-
-- **系统性风险定价**：只有系统性风险 (systematic risk) 获得预期收益补偿
-  - 非系统性风险 (unsystematic risk) 可通过分散化消除，因此不获得风险溢价
-
-### 2.2 Beta 系数 (Beta Coefficient)
-
-- **Beta 计算公式**：`βi = Cov(Ri, Rm) / Var(Rm)`
-- **Beta 的含义**：
-  - `β = 1`：资产与市场同步波动
-  - `β > 1`：资产比市场波动更大（进攻型 aggressive）
-  - `β < 1`：资产比市场波动更小（防御型 defensive）
-  - `β = 0`：与市场无相关性
-  - `β < 0`：与市场反向波动（极少数资产）
-
-### 2.3 证券市场线 (Security Market Line, SML)
-
-- **SML**：图形化 CAPM，横轴为 Beta，纵轴为期望收益
-- SML 的截距 = Rf，斜率 = 市场风险溢价 `[E(Rm)-Rf]`
-- **定价判断**：
-  - 资产点在 SML 上方 → 被低估 (undervalued) → 正 alpha
-  - 资产点在 SML 下方 → 被高估 (overvalued) → 负 alpha
-  - 资产点在 SML 上 → 合理定价 (fairly priced)
-
-### 2.4 绩效评估指标 (Performance Evaluation Measures)
-
-| 指标 | 公式 | 风险类型 | 适用场景 |
-|------|------|----------|----------|
-| 夏普比率 (Sharpe ratio) | `(Rp-Rf)/σp` | 总风险 | 评价完整组合 |
-| 特雷诺比率 (Treynor ratio) | `(Rp-Rf)/βp` | 系统性风险 | 评价组合中分散化部分 |
-| 詹森阿尔法 (Jensen's alpha) | `αp = Rp - [Rf+βp(E(Rm)-Rf)]` | 系统性风险 | CAPM 超额收益 |
-| M 平方 (M-squared) | `(Rp-Rf)×(σm/σp) + Rf` | 总风险 | 风险调整到市场风险水平 |
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| CAPM | `E(Ri) = Rf + βi × [E(Rm)-Rf]` | 必要回报率 |
-| Beta | `βi = Cov(Ri,Rm) / σm²` | 市场敏感度 |
-| Beta, Correlation Form | `βi = ρim × σi/σm` | 给相关系数和标准差时使用 |
-| Portfolio Beta | `βp = Σwiβi` | 组合系统性风险 |
-| 市场风险溢价 | `E(Rm) - Rf` | 市场组合超额收益 |
-| SML Required Return | `Rf + βi × Market Risk Premium` | 证券市场线 |
-| 夏普比率 | `Sharpe = (Rp-Rf)/σp` | 每单位总风险超额收益 |
-| 特雷诺比率 | `Treynor = (Rp-Rf)/βp` | 每单位系统性风险超额收益 |
-| 詹森阿尔法 | `α = Rp - [Rf+βp(E(Rm)-Rf)]` | 实际 vs CAPM 基准 |
-| M-squared | `M² = Rf + Sharpe_p × σm - Rm` | 把 Sharpe 差异转成收益率差 |
-| Tracking Error | `σ(Rp - Rb)` | 主动风险 |
-| Information Ratio | `(Rp - Rb)/Tracking Error` | 主动收益/主动风险 |
-| 必要超额收益 | `βi × (E(Rm)-Rf)` | CAPM 的风险溢价 |
-
-### 5.2 公式选择框架
-
-| 题干目标 | 使用公式 | 知识树节点 | 判断句 |
-|---|---|---|---|
-| 求 required return | CAPM | `2.1.1` | 确认题目给的是 market return 还是 market risk premium。 |
-| 求 beta | `Cov/Var` 或 `ρσi/σm` | `2.2.1` | Beta 不是总风险。 |
-| 判断高估/低估 | expected return vs CAPM required return | `2.3.2` | 上方 undervalued，下方 overvalued。 |
-| 完整组合绩效 | Sharpe | `2.4.1` | 使用 total risk。 |
-| 充分分散组合/经理绩效 | Treynor / Jensen alpha | `2.4.2-2.4.4` | 使用 beta risk。 |
-| 主动管理相对基准 | Information ratio / tracking error | `2.4.5` | 分母是主动风险，不是 total risk。 |
-
-**考纲标记**：
-- 【考纲重点】CAPM、Beta、SML、Sharpe/Treynor/Jensen alpha、M-squared、tracking error/information ratio。
-- 【考纲内但无核心公式】CAPM assumptions、systematic vs unsystematic risk、active/passive suitability。
-- 【超纲/扩展】多因子模型、Alpha 显著性回归检验、完整绩效归因不作为 Level I 必背公式。
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
+| Spine | English trigger | 中文任务 |
 |---|---|---|
-| ⭐⭐⭐ | 2.1 考点1：计算必要回报率 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 2.2 考点2：计算 Beta | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 2.3 考点3：SML 定价判断 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 2.4 考点4：绩效指标选择 | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| Risk-free + risky | capital allocation line, borrowing/lending | 计算目标组合收益和风险。 |
+| CML | market portfolio, Sharpe slope | 判断最优风险组合与配置线。 |
+| Systematic risk | diversifiable vs nondiversifiable | 解释为什么非系统风险不被补偿。 |
+| Return models | market model, alpha, beta | 连接回归和预期收益。 |
+| CAPM/SML | required return, beta, market risk premium | 计算 required return and mispricing。 |
+| Performance | Sharpe, Treynor, Jensen alpha, M-squared | 选对风险口径。 |
 
-### 6.9 ⭐⭐ Legacy 考点补充
+## 3. Exam Translation 考试翻译
 
-### 6.1 考点1：计算必要回报率
-- **步骤**：给定 β、Rf、E(Rm) → CAPM 公式直接计算
-- 常见陷阱：确认 E(Rm) 是市场期望收益还是市场风险溢价
+1. 给 risk-free plus risky portfolio：用 `y` 权重和 CAL。
+2. 给 beta/covariance：算 systematic risk, not total risk。
+3. 给 expected return and required return：高于 SML required return = undervalued/positive alpha。
+4. Performance metric：Sharpe 用 total risk；Treynor/Jensen 用 beta。
 
-### 6.2 考点2：计算 Beta
-- **步骤**：给定协方差与市场方差 → `β = Cov / Var(Rm)`
-- 或给定相关系数：`β = ρim × σi / σm`
+## 4. Formula & Decision Bench 公式与决策台
 
-### 6.3 考点3：SML 定价判断
-- **步骤**：计算 CAPM 必要收益 → 比较实际预期收益 → 判断低估/高估
-- 正 alpha = 实际收益 > CAPM 必要收益 → 被低估
-
-### 6.4 考点4：绩效指标选择
-- **步骤**：分析组合为完整组合还是子组合 → 选 Sharpe（总风险）或 Treynor（系统风险）
-- 常见陷阱：对充分分散化的组合，Sharpe 和 Treynor 排序通常一致
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+| Item | Formula / rule | Use |
 |---|---|---|
-| ❌ Beta 高说明总风险一定高 | ✅ Beta 只衡量系统性风险，总风险还要考虑非系统性风险 | 按官方定义和 LOS 口径核验。 |
-| ❌ Sharpe 和 Treynor 可以互换使用 | ✅ Sharpe 用总风险，Treynor 用系统性风险 | 按官方定义和 LOS 口径核验。 |
-| ❌ SML 上方的资产被高估 | ✅ SML 上方的资产被低估（正 alpha） | 按官方定义和 LOS 口径核验。 |
-| ❌ CAPM 适用于任何市场 | ✅ CAPM 依赖于苛刻的假设，实际应用需谨慎 | 按官方定义和 LOS 口径核验。 |
-| ❌ 高风险一定带来高回报 | ✅ CAPM 中只有系统性风险获得补偿 | 按官方定义和 LOS 口径核验。 |
-| ❌ alpha 为正就说明组合表现好 | ✅ alpha 需要考虑统计显著性（t 检验） | 按官方定义和 LOS 口径核验。 |
+| CAL return | `E(R_C)=R_f + y[E(R_P)-R_f]` | Combined portfolio return. |
+| CAL risk | `sigma_C = y sigma_P` | Risk-free asset has zero standard deviation. |
+| Risky weight | `y=[E(R_C)-R_f]/[E(R_P)-R_f]` | Target return allocation. |
+| Beta | `beta_i = Cov(R_i,R_M)/Var(R_M)` | Systematic risk. |
+| Portfolio beta | `beta_p=sum w_i beta_i` | Portfolio systematic risk. |
+| CAPM | `E(R_i)=R_f + beta_i[E(R_M)-R_f]` | Required return. |
+| Sharpe | `(R_p-R_f)/sigma_p` | Total-risk performance. |
+| Treynor | `(R_p-R_f)/beta_p` | Systematic-risk performance. |
+| Jensen alpha | `R_p-[R_f+beta_p(R_M-R_f)]` | CAPM abnormal return. |
+| M-squared | `R_f + Sharpe_p x sigma_M - R_M` | Sharpe in return units. |
 
-## 8. 跨模块关联
+## 5. Practice & Mock Evidence 题库证据
 
-| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
-|---|---|---|---|
-| `2.1` CAPM required return | Equity、Corporate Issuers、Fixed Income | 估值折现率、hurdle rate、required return | CAPM 只补偿 systematic risk。 |
-| `2.2` Beta | Quant regression、PM performance | 市场敏感度和 portfolio beta | 高 beta 不等于高 total risk。 |
-| `2.3` SML/alpha | Market efficiency、Active management | 判断是否有 mispricing 和主动机会 | SML 上方是低估。 |
-| `2.4` Performance ratios | [[M03-Portfolio-Management-An-Overview]]、M04 | 选择 active/passive、评估经理 | Sharpe、Treynor、IR 分母不同。 |
+- Track `beta_total_risk` when beta is interpreted as total volatility.
+- Track `sharpe_treynor_swap` when metric risk denominator is wrong.
+- Track `sml_direction` when over/undervaluation sign is reversed.
+- Track `leveraged_cal` when `y > 1` borrowing is missed.
 
-### Legacy 关联补充
+## 6. Trap Ledger 陷阱账本
 
-- [[M01-Portfolio-Risk-and-Return]]：CAPM 建立在前序风险收益概念基础上
-- [[M02-Utility-and-CAL]]：CML 是 CAL 在 CAPM 市场均衡下的特例
-- [[M04-Market-Efficiency-and-Portfolio-Construction]]：CAPM 与市场有效性共同决定主动/被动策略
-- [[M06-Behavioral-Biases]]：行为偏差可能导致市场价格偏离 CAPM 定价
-- [[00-Portfolio-Management-MOC]]
+| Trap | Fix rule |
+|---|---|
+| Investors are paid for all risk | Only systematic risk earns expected compensation in CAPM. |
+| CML and SML are interchangeable | CML uses total risk for efficient portfolios; SML uses beta for any asset. |
+| High beta means high total risk | Beta is market sensitivity only. |
+| Positive alpha equals high raw return | Alpha is return above CAPM required return. |
 
+## 7. Final Recall Sheet 最终回忆单
 
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M03-CAPM-and-Beta.md` (medium, 0.369)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- CAL: combine risk-free asset and risky portfolio.
+- CML: efficient portfolios with market portfolio.
+- SML/CAPM: required return by beta.
+- Sharpe = total risk; Treynor/Jensen = beta risk.
+- Expected return above required return = undervalued / positive alpha.

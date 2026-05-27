@@ -39,6 +39,30 @@ tags:
 2. explain features of private debt and its investment characteristics
 3. describe the diversification benefits that private capital can provide
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 3: Investments in Private Capital: Equity and Debt`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Private Equity Investment Characteristics
+- 2.1. Private Equity Investment Categories
+- 2.2. Private Equity Exit Strategies
+- 2.2.1. Trade Sale
+- 2.2.2. Public Listing
+- 2.2.3. Other Exit Strategies
+- 2.3. Risk–Return from Private Equity Investments
+- 3. Private Debt Investment Characteristics
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -129,6 +153,19 @@ flowchart TD
 - **中文主线**：围绕 `Diversification Benefits of Private Capital` 掌握定义、适用条件、公式/框架和考试判断。
 - **对应动作**：识别概念并应用到题干。
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Private Equity Investment Characteristics | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Private Equity Investment Characteristics`；`PEIC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Private Equity Investment Categories | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Private Equity Investment Categories`；`PEIC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Private Equity Exit Strategies | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Private Equity Exit Strategies`；`PEES`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Trade Sale | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Trade Sale`；`TS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Public Listing | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Public Listing`；`PL`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Other Exit Strategies | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Other Exit Strategies`；`ES`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Risk–Return from Private Equity Investments | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Risk–Return from Private Equity Investments`；`RRFPEI`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Private Debt Investment Characteristics | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Private Debt Investment Characteristics`；`PDIC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 本模块框架与公式
@@ -160,6 +197,16 @@ flowchart TD
 | ⭐⭐ | 3.3 Private Debt Investment Characteristics | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 | ⭐⭐ | 3.4 Diversification Benefits of Private Capital | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Private Equity Investment Characteristics`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Private Equity Investment Categories`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Private Equity Exit Strategies`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Trade Sale`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Public Listing`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -174,6 +221,16 @@ flowchart TD
 | ❌ ❌ Contango = 正Roll Yield | ✅ 正向市场收益为正 | ✅ Contango（期货>现货）= 负 Roll Yield |
 | ❌ ❌ Backwardation = 负Roll Yield | ✅ 反向市场收益为负 | ✅ Backwardation（期货<现货）= 正 Roll Yield |
 | ❌ ❌ 对冲基金总是对冲市场风险 | ✅ 名称误导 | ✅ 很多对冲基金是净多头，并非完全对冲 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Private Equity Investment Characteristics | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Private Equity Investment Characteristics`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Private Equity Investment Categories | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Private Equity Investment Categories`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Private Equity Exit Strategies | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Private Equity Exit Strategies`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Trade Sale | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Trade Sale`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Public Listing | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Public Listing`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

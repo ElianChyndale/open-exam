@@ -1,0 +1,158 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - heading "CFA L1 Knowledge Base Redesign Options" [level=1] [ref=e3]
+    - paragraph [ref=e4]: 目标不是再塞一张“补强表格”，而是把原版教材 Official Curriculum 的结构、LOS、例题逻辑、做题动作自然融入 MOC 和 Module。保留中英双语：中文解释负责理解，English terms 负责识题和精确命名。
+  - main [ref=e5]:
+    - region "Three redesign options" [ref=e6]:
+      - article [ref=e7]:
+        - generic [ref=e8]: Option A
+        - heading "Textbook Walkthrough 教材导读型" [level=2] [ref=e9]
+        - paragraph [ref=e10]: 每个 Module 按原版教材小节顺序重写。适合“我想像读教材一样学习，但更清楚、更短、更可复习”。
+        - generic [ref=e11]:
+          - generic [ref=e12]: Module Page
+          - generic [ref=e13]:
+            - generic [ref=e14]:
+              - strong [ref=e15]: 1. Why This Module Matters
+              - text: 模块在考试和跨科目中的作用
+            - generic [ref=e16]:
+              - strong [ref=e17]: 2. Textbook Map
+              - text: 按 2.1, 2.2, 3.1 展开教材小节
+            - generic [ref=e18]:
+              - strong [ref=e19]: 3. Core Explanations
+              - text: 每节中文讲透 + English term
+            - generic [ref=e20]:
+              - strong [ref=e21]: 4. Worked Logic
+              - text: 教材例题逻辑和变量口径
+            - generic [ref=e22]:
+              - strong [ref=e23]: 5. Exam Traps
+              - text: 按教材小节归属的陷阱
+      - article [ref=e24]:
+        - generic [ref=e25]: Option B
+        - heading "Exam Playbook 考试作战型" [level=2] [ref=e26]
+        - paragraph [ref=e27]: 每个 Module 按题型和答题动作组织。适合“我已经学过，想快速知道题目问什么、怎么做、哪里容易错”。
+        - generic [ref=e28]:
+          - generic [ref=e29]: Module Page
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - strong [ref=e32]: 1. Question Triggers
+              - text: 题干触发词和 LOS 动词
+            - generic [ref=e33]:
+              - strong [ref=e34]: 2. Decision Tree
+              - text: 看到条件后选公式/框架
+            - generic [ref=e35]:
+              - strong [ref=e36]: 3. Knowledge Capsules
+              - text: 每个考点压缩成定义-条件-动作
+            - generic [ref=e37]:
+              - strong [ref=e38]: 4. Practice Reflection
+              - text: 基础题和 mock 暴露的误区
+            - generic [ref=e39]:
+              - strong [ref=e40]: 5. Final Checklist
+              - text: 考前 90 秒检查清单
+      - article [ref=e41]:
+        - generic [ref=e42]: Option C 推荐
+        - heading "Curriculum Playbook 教材作战混合型" [level=2] [ref=e43]
+        - paragraph [ref=e44]: 上半部分按教材讲清楚，下半部分按考试动作压缩。适合长期维护，也最符合你的“每个知识点讲到该讲的地方”。
+        - generic [ref=e45]:
+          - generic [ref=e46]: Module Page
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - strong [ref=e49]: 1. Module Brief
+              - text: 定位、LOS、跨科目接口
+            - generic [ref=e50]:
+              - strong [ref=e51]: 2. Curriculum Spine
+              - text: 教材小节作为主骨架
+            - generic [ref=e52]:
+              - strong [ref=e53]: 3. Exam Translation
+              - text: 每节转成题型、公式、判断规则
+            - generic [ref=e54]:
+              - strong [ref=e55]: 4. Practice Evidence
+              - text: 基础题 + mock 回填到对应小节
+            - generic [ref=e56]:
+              - strong [ref=e57]: 5. Memory Layer
+              - text: 易错、fix rule、next drill
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]: Recommended MOC
+        - heading "MOC 新结构" [level=2] [ref=e62]
+        - paragraph [ref=e63]: MOC 应该是“科目地图”，不是正文仓库。它负责告诉你每个 Module 在教材、考试、题库、错题闭环中的位置。
+        - list [ref=e64]:
+          - listitem [ref=e65]: 保留官方模块导航，但把“教材锚点表”改成可读的 subject map。
+          - listitem [ref=e66]: 每个 Module 一行包含：教材章节、核心任务、最高频题型、连接到题库和 mock。
+          - listitem [ref=e67]: 新增一页级别的 study route：先学什么、哪些模块一起复盘、哪些跨科目接口要连。
+      - generic [ref=e68]:
+        - generic [ref=e69]: 00-Quantitative-Methods-MOC.md
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - text: Subject Brief 科目定位
+            - text: Quant turns investment questions into return, probability, inference, and model evidence.
+          - generic [ref=e72]:
+            - text: Module Atlas 模块地图
+            - text: "M01 Rates and Returns: return measurement, compounding, MWRR vs TWRR, gross/net/leverage/tax."
+          - generic [ref=e73]:
+            - text: Curriculum Spine 教材主线
+            - text: V1 Modules 1-11 grouped into return layer, probability layer, inference layer, model-risk layer.
+          - generic [ref=e74]:
+            - text: Exam Routes 做题路线
+            - text: Calculation route, interpretation route, hypothesis-test route, model-output route.
+          - generic [ref=e75]:
+            - text: Evidence Links 证据入口
+            - text: Official ePub index, Practice Questions, Mock Questions, mistake cards, dashboard.
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]: Recommended Module
+        - heading "Module 新结构" [level=2] [ref=e80]
+        - paragraph [ref=e81]: Module 页应该像一章“教材驱动的考试笔记”：先讲懂，再翻译成会做题的动作。删除机械的补强表格，把它们融入每个知识点段落。
+        - list [ref=e82]:
+          - listitem [ref=e83]: 每个教材小节变成一个知识块，而不是挂在末尾。
+          - listitem [ref=e84]: 每个知识块固定包含：中文解释、English term、公式或判断规则、题干触发词、常见陷阱。
+          - listitem [ref=e85]: 基础题和 mock 不独立漂浮，回填到对应知识块的 “Practice Evidence”。
+      - generic [ref=e86]:
+        - generic [ref=e87]: M01-Rates-and-Returns.md
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - text: 1. Module Brief
+            - text: 本章解决什么问题 / LOS / exam role / prerequisites.
+          - generic [ref=e90]:
+            - text: 2. Curriculum Spine
+            - text: "2.1 Determinants of Interest Rates: 中文解释 + required return / discount rate / opportunity cost."
+          - generic [ref=e91]:
+            - text: 3. Exam Translation
+            - text: 题干出现 HPR, annualized, time-weighted, money-weighted 时，如何选择口径。
+          - generic [ref=e92]:
+            - text: 4. Formula Bench
+            - text: 公式不再孤立列出，而是带变量口径、使用条件、不要使用的条件。
+          - generic [ref=e93]:
+            - text: 5. Practice Evidence
+            - text: 基础题和 mock 题按 HPR / mean return / MWRR vs TWRR / fees-tax-leverage 分类。
+          - generic [ref=e94]:
+            - text: 6. Reflection Hooks
+            - text: 易错点、fix rule、next drill，连接 .system/memory。
+    - generic [ref=e95]:
+      - heading "方案对比" [level=2] [ref=e96]
+      - table [ref=e97]:
+        - rowgroup [ref=e98]:
+          - row "方案 最适合 优点 代价 我的建议" [ref=e99]:
+            - columnheader "方案" [ref=e100]
+            - columnheader "最适合" [ref=e101]
+            - columnheader "优点" [ref=e102]
+            - columnheader "代价" [ref=e103]
+            - columnheader "我的建议" [ref=e104]
+        - rowgroup [ref=e105]:
+          - row "Option A 教材导读型 第一轮系统学习 最贴原版教材，覆盖感强 做题动作不够突出，复习时偏长 适合作为正文上半部分" [ref=e106]:
+            - cell "Option A 教材导读型" [ref=e107]
+            - cell "第一轮系统学习" [ref=e108]
+            - cell "最贴原版教材，覆盖感强" [ref=e109]
+            - cell "做题动作不够突出，复习时偏长" [ref=e110]
+            - cell "适合作为正文上半部分" [ref=e111]
+          - row "Option B 考试作战型 刷题和 mock 前 很快，动作明确 容易牺牲教材小节的完整性 适合作为正文下半部分" [ref=e112]:
+            - cell "Option B 考试作战型" [ref=e113]
+            - cell "刷题和 mock 前" [ref=e114]
+            - cell "很快，动作明确" [ref=e115]
+            - cell "容易牺牲教材小节的完整性" [ref=e116]
+            - cell "适合作为正文下半部分" [ref=e117]
+          - row "Option C 混合型 长期知识库 教材覆盖 + 考试动作 + 错题闭环都能放对位置 重构脚本更复杂，需要分批验证 推荐选这个" [ref=e118]:
+            - cell "Option C 混合型" [ref=e119]
+            - cell "长期知识库" [ref=e120]
+            - cell "教材覆盖 + 考试动作 + 错题闭环都能放对位置" [ref=e121]
+            - cell "重构脚本更复杂，需要分批验证" [ref=e122]
+            - cell "推荐选这个" [ref=e123]

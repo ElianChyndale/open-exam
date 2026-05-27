@@ -1,0 +1,122 @@
+---
+title: "Fixed Income Practice Questions"
+source_type: "local_question_pack"
+source_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf"
+answer_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\固定收益.pdf"
+question_count: 106
+source_pages: 69-90
+---
+
+# Fixed Income Practice Questions
+
+- Source question pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf`
+- Source answer pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\固定收益.pdf`
+- Question count target: 106
+- Extracted question stems: 105
+
+## Questions
+- Q001 | p.69 | If an issuer is required to retire a specified portion of the bond's principal each year, the bond most likely:
+- Q002 | p.69 | A five-year semiannual bond has a yield to maturity of 8%. Converted to a quarterly periodicity, the yield to maturity is closest to:
+- Q003 | p.69 | The key rate duration best measures a bond's sensitivity to a change in the:
+- Q004 | p.69 | A bond priced at 99.4 has a modified duration of 6.9 and an annual convexity statistic of-212.If the market yield increases by 75 basis points, the price of this bond is closest to:
+- Q005 | p.69 | If interest rates rise over the holding period, the total return of a coupon bond held until maturity is most likely to be:
+- Q006 | p.69 | A bond that allows the issuer to pay interest in the form of additional amounts of the existing bond issue rather than a cash payment best describes a:
+- Q007 | p.70 | In the event of default, investors in covered bonds most likely have recourse against:
+- Q008 | p.70 | In the securitization process, the trustee most likely:
+- Q009 | p.70 | The coupon of a residential mortgage-backed security is the:
+- Q010 | p.70 | The stated annual yield to maturity on a semiannual bond basis is 3.66%. The effective annual yield is closest to:
+- Q011 | p.70 | In a securitization, the purchase agreement between the seller of the collateral and the special purpose entity most likely provides:
+- Q012 | p.70 | An analyst gathers the following information about a bond: Price 96.00 Price with yield to maturity 10 basis points higher 95.80 Price with yield to maturity 10 basis points lower 96.30 The approximate convexity of this bond is closest to:
+- Q013 | p.71 | A break-even reinvestment rate is most likely equivalent to a(n):
+- Q014 | p.71 | A bond trading at its no-arbitrage value is priced at a premium. The sum of the present value of the bond's cash flows discounted at spot rates is:
+- Q015 | p.71 | An analyst gathers the following information about a company that only has senior unsecured debt: Type Total Amount Outstanding Time to Maturity Floating-rate note (FRN) $50 million 12 years Fixed-rate bond $10 million 2 years In a bankruptcy scenario, if the priority of claims is enforced, it is most likely that:
+- Q016 | p.71 | All else being equal, reinvestment risk is greatest for:
+- Q017 | p.71 | An analyst is concerned that a bond might be downgraded one category by Standard &Poor's and become non-investment grade. The current rating of this bond is most likely.
+- Q018 | p.72 | A corporation with a holding company structure has debt at both its parent holding company and operating subsidiaries. Debt at the operating level must be serviced before funds can be upstreamed to pay debt at the holding company. This arrangement best describes:
+- Q019 | p.72 | For an option-free fixed-rate bond trading at a premium, as the coupon payment date approaches, Macaulay duration most likely.
+- Q020 | p.72 | Using the rating scale from Standard &Poor's or Fitch, the lowest rating for an investment-grade bond is:
+- Q021 | p.72 | The EBITDA/interest expense ratio is best classified as a:
+- Q022 | p.72 | Which of the following statements is most accurate? US commercial paper typically:
+- Q023 | p.72 | The current yield for a 4.5% coupon,10-year bond, with a maturity par value of $100 and currently priced at $85.70 is closest to:
+- Q024 | p.73 | Which of the following types of collateralized debt obligations (CDOs) are most likely backed by asset-backed Securities?
+- Q025 | p.73 | An analyst gathers the following information about a 6% coupon bond currently trading at par: Benchmark Rate Price per 100 of Par Value 5.9% 100.75 6.0% 100.00 6.1% 99.26 The bond's effective duration is closest to:
+- Q026 | p.73 | An analyst gathers the following information about a pension plan's liabilities: Interest Rate Assumption Present Value of Liabilities (in $Millions) 0.5% 198 1.0% 186 1.5% 174 If interest rates are currently 1.0%, the effective duration of the liabilities is closest to:
+- Q027 | p.73 | Which of the following is a curve duration measure?
+- Q028 | p.73 | Bonds issued in the Eurobond market are most likely:
+- Q029 | p.74 | For a coupon bond with a negative yield, compounding more frequently within the year results in a yield-to-maturity that is:
+- Q030 | p.74 | All else being equal, expected loss for a debt instrument:
+- Q031 | p.74 | Matrix pricing is most likely used to estimate the price of a bond that:
+- Q032 | p.74 | All else being equal, the risk of a strategic default for a non-recourse mortgage is most likely:
+- Q033 | p.74 | For bonds with embedded options, the most appropriate measure of price sensitivity to interest rate changes is:
+- Q034 | p.74 | For a bond with an embedded option, effective duration is the most appropriate measure of interest rate risk because the bond's:
+- Q035 | p.75 | An analyst gathers the following information about a spot curve: Term to Maturity Spot Rate 1year 6% 2years 5% 3yaers 4% If the coupon rate of a 3-year annual-pay bond is 4%, the price of the bond is closest to:
+- Q036 | p.75 | The price of an option-free bond increases by 7% when the yield to maturity decreases by 100 basis points. If the price of this bond decreases by 7%,the yield to maturity most likely increases by:
+- Q037 | p.75 | All else being equal, the absolute value of the percentage price change for an option-free bond is most likely:
+- Q038 | p.75 | An analyst gathers the following information about three option-free bonds: Bond 1 Bond 2 Bond 3 Coupon rate 5% 3% 3% Maturity (years) 15 10 15 All else being equal, if the market discount rate decreases by 50 basis points, the bond most likely to experience the greatest percentage price change is:
+- Q039 | p.76 | Implied forward rates are best defined as the:
+- Q040 | p.76 | Effective duration is the most appropriate measure of interest rate risk for a bond with an embedded option because the bond does not have a well-defined:
+- Q041 | p.76 | When interest rates increase, mortgage-backed securities most likely exhibit increased:
+- Q042 | p.76 | Tightening corporate bond yield spreads are most likely associated with:
+- Q043 | p.76 | In a repurchase agreement:
+- Q044 | p.76 | With respect to a bond with an embedded option, for parallel shifts in the benchmark yield curve, effective duration most likely indicates the same interest rate sensitivity as:
+- Q045 | p.77 | In a securitization, a senior/subordinated structure is most likely a form of:
+- Q046 | p.77 | Modified duration is the most appropriate measure of interest rate risk for which of the following securities?
+- Q047 | p.77 | The percentage price change for a bond, given a change in its yield to maturity, is best estimated by:
+- Q048 | p.77 | An analyst gathers the following information about an annual-pay bond: Coupon rate 6.0% Yield to maturity 4.5% Macaulay duration 10.0 If the yield to maturity decreases by 100 basis points, the expected percentage change in the bond's price is closest to:
+- Q049 | p.77 | Which of the following is most likely a negative covenant?
+- Q050 | p.78 | An analyst gathers the following information about a 4% annual-payment bond with a current yield-to-maturity of 4.0%: Annualized Yield to Maturity Bond Price 3.9% 100.45 4.0% 100.00 4.1% 99.56 The bond's annualized Macaulay duration is closest to:
+- Q051 | p.78 | An analyst gathers the following information about a company (in $ millions): < Operating income 120 Net income 85 Interest expense 15 Depreciation and amortization 15 Interest coverage using EBIT is closest to:
+- Q052 | p.78 | Which of the following duration statistics best measures the sensitivity of a bond's price to a flattening of the yield curve?
+- Q053 | p.78 | All else being equal, an investment-grade bond issuer most likely has:
+- Q054 | p.79 | An analyst gathers the following information about an option-free bond: Par value $1,000,000 Current market value $912,575 Duration 2.4 If yields are expected to decrease by 50 basis points, the expected price change for the bond is closest to:
+- Q055 | p.79 | The price value of a basis point (PVBP) for a bond with a full price of 103.50 and a modified duration of 6.2 is closest to:
+- Q056 | p.79 | An analyst gathers the following details about a bond portfolio: Bond Market Price (per 100 of par value) Money Duration (per 100 of par value) 1 95 730 2 120 515 If each bond has a par value of ￡25 million, the modified duration of this bond portfolio is closest to:
+- Q057 | p.79 | With respect to the credit rating agencies' practice of notching, the size of a notching adjustment:
+- Q058 | p.79 | Which of the following is most likely a key factor in the credit analysis of revenue-backed non-sovereign government bonds?
+- Q059 | p.80 | An analyst observes the following yields to maturity on zero-coupon government bonds: Maturity Yield to Maturity 1 year 1.5% 2 years 2.5% 3 years 3.5% The 2y1y implied forward rate is closest to:
+- Q060 | p.80 | An analyst gathers the following information: Time to Maturity Yield to Maturity Bond 1 Three years 3.4% Bond 2 Eight years 5.4% Based only on this information, the estimated market discount rate for a 5-year bond with similar credit quality is:
+- Q061 | p.80 | Compared to an otherwise similar option-free bond, investors require a higher yield for a corporate bond with a:
+- Q062 | p.80 | The price of a bond issued in the United Kingdom by a US-based company and denominated in British pounds most likely changes when:
+- Q063 | p.81 | A floating-rate note makes semiannual interest payments and has a coupon rate equal to the six-month market reference rate plus 45 basis points. The interest payments are made in June and December. If the six-month market reference rate was 1.95% in June and 2.25% in December of the same year, the coupon rate paid in December of that year was closest to:
+- Q064 | p.81 | An analyst observes the following price-yield relationship for an option-free bond: Price per 100 of Par Value Yield to Maturity 100.95 7.45% 101.80 6.75% 103.40 6.05% If the bond trades at 101.80 per 100 of par value, its approximate modified duration is closest to:
+- Q065 | p.81 | An analyst gathers the following information about a bond which is currently trading at 95.35 per 100 par: Benchmark Yield Bond Price 3.50% 99.50 4.00% 95.35 4.50% 92.25 The effective duration of the bond is closest to:
+- Q066 | p.82 | An analyst gathers the following information about a bond: Par value 100 Coupon rate 5.50% Coupon frequency Annual Time to maturity 5 years Holding period 3 years If the market discount rate is 4.75% for the holding period, the future value of reinvested coupons at the end of the holding period is closest to:
+- Q067 | p.82 | Bonds are quoted using the:
+- Q068 | p.82 | Which of the following does not depend on the market discount rate? A bond's:
+- Q069 | p.82 | An investor determines the following information about the price sensitivity of an option-free bond: Rate Change Price 75 basis point increase 104.0 75 basis point decrease 108.5 If the current price is 106, the duration of this bond is closest to:
+- Q070 | p.82 | The number of common shares a convertible bond can be converted into is the:
+- Q071 | p.83 | A credit card receivable asset-backed security most likely:
+- Q072 | p.83 | An analyst gathers the following information about a bond currently trading at par: Change in Benchmark Curve Price per 100 of Par Value +25 bps 98 -25 bps 103 The effective duration of this bond is closest to:
+- Q073 | p.83 | An analyst gathers the following spot and forward rates: 2-year spot rate 1.0% 4-year spot rate 2.5% 4-year forward rate, two years from today 3.0% The 2-year forward rate, four years from today is closest to:
+- Q074 | p.83 | A bond issuer has a credit rating of BBB. Based only on this information, the rating of a senior unsecured bond from this issuer is most likely to be:
+- Q075 | p.83 | An analyst gathers the following information about a zero-coupon bond: Time to maturity 5 years Annual convexity 28.835 Annual yield to maturity 2% If the yield decreases by 1%, the bond's percentage change in price is closest to:
+- Q076 | p.84 | The Macaulay duration of a zero-coupon bond is most likely:
+- Q077 | p.84 | US municipal bonds are best described as:
+- Q078 | p.84 | A bond portfolio consists of the following option-free annual-pay coupon bonds: Bond 1 Bond 2 Par value $300,000 $450,000 Market value $200,000 $400,000 Yield to maturity 4% 3% Macaulay duration 7.5 5.4 The modified duration of this portfolio is closest to:
+- Q079 | p.84 | An analyst gathers the following information about forward rates: Time Period Forward Rate 0y1y 1% 1y1y 2% 2y1y 4% Using only this information, the price per 100 of par value of a 3-year, 1% annual coupon bond is closest to:
+- Q080 | p.84 | With respect to interest rate risk, an investor who sells a fixed-rate bond after the first coupon is received and before its maturity is exposed to:
+- Q081 | p.85 | For an option-free fixed-rate corporate bond, the duration and convexity statistics are most likely relevant for a change in:
+- Q082 | p.85 | An analyst gathers the following information about a callable bond that pays interest annually: Current price 105 per 100 of par value Time-to-maturity 4 years Coupon rate 4% Call price at year 2 103 per 100 of par value Call price at year 3 101 per 100 of par value This bond's yield to worst is the:
+- Q083 | p.85 | An analyst gathers the following information about three option-free bonds, each trading at a premium: Coupon Yield To Maturity Time to Maturity Bond 1 4% 4% 10 years Bond 2 4% 5% 11 years Bond 3 5% 5% 9 years All else being equal, the bond with the lowest Macaulay duration is most likely:
+- Q084 | p.85 | An analyst gathers the following information about a bond: Clean price (per 100 of par value) 114.75 Annual modified duration 4.8250 Macaulay duration (years) 4.9469 Accrued interest (per 100 of par value) 1.6250 The bond's money duration (per 100 of par value) is closest to:
+- Q085 | p.86 | Effective duration is:
+- Q086 | p.86 | An investor gathers the following information about a bond portfolio comprised of two option-free bonds: Bond Par Value Market Value Duration 1 $100,000 $120,000 5 2 $200,000 $180,000 4 The duration of the portfolio is closest to:
+- Q087 | p.86 | An analyst gathers the following information about a bond that pays interest annually: Coupon rate 4% Time-to-maturity 3 years Par value $100,000 If the market discount rate is 5%, the market value of this bond is closest to:
+- Q088 | p.86 | Which of the following mortgage features most likely benefits the lender?
+- Q089 | p.86 | With respect to the notching process adopted by credit rating agencies, a corporate's subordinated debt is most likely.
+- Q090 | p.87 | Money market yields are:
+- Q091 | p.87 | A portfolio manager gathers the following information about an option-free bond that was held to maturity: Realized horizon yield 4.2% Reinvestment rate 4.1% The yield to maturity at purchase was most likely:
+- Q093 | p.87 | The yield spread of a specific bond over the standard swap rate in that currency of the same tenor best describes the:
+- Q094 | p.87 | For a fixed-rate bond, when interest rates decrease, the future value of reinvested coupon payments most likely:
+- Q095 | p.87 | Which of the following debt categories has the highest ranking in terms of priority of payment?
+- Q096 | p.88 | The yield spread over an interpolated sovereign bond is best described as a(n):
+- Q097 | p.88 | In a securitization, time tranching most likely refers to differences in:
+- Q098 | p.88 | For a floating-rate note, the specified yield spread over the reference rate best defines the:
+- Q099 | p.88 | An investor holds a bond with the following characteristics: Yield to maturity 9% Modified duration 7.4 If the duration gap is zero, the investment horizon is closest to:
+- Q100 | p.88 | All else being equal, when the market interest rate falls below a bond's coupon rate, potential price appreciation is most limited for a:
+- Q101 | p.88 | Callable bonds exhibit:
+- Q102 | p.89 | An investors sells a fixed-rate bond originally purchased at a discount. The resulting capital gain or loss should be measured by comparing the bond's selling price with its:
+- Q103 | p.89 | An investor gathers the following information about an investment in a bond with a 10-year tenor: Purchase price 95.27 Sale price 102.06 Sum of reinvested coupon payments 24.28 If the holding period was seven years, the horizon yield is closest to:
+- Q104 | p.89 | A commercial paper has the following characteristics: Redemption value $5,000,000 Interest earned $140,500 Days to maturity 160 For a 365-day year, the discount rate is closest to:
+- Q105 | p.89 | Two par bonds have the same duration but different convexity. All else being equal, if yields to maturity increase by 10 basis points, it is most likely that.
+- Q106 | p.90 | A bond has the following characteristics: Time to maturity 3 years Coupon rate 12% Payment period Semiannual For a yield to maturity of 4%, the price of the bond per 100 of par value is closest to:

@@ -9,7 +9,7 @@ exam_weight: "11-14%"
 module: "M04"
 official_module: "Module 4: Analyzing Statements of Cash Flows I"
 los_count: 4
-difficulty: "概念+案例判断"
+difficulty: "计算+解释"
 note_type: official_module_note
 status: active
 source: "CFA Institute Learning Ecosystem 2026 registry"
@@ -21,203 +21,84 @@ tags:
 
 # M04: Analyzing Statements of Cash Flows I
 
-> **模块定位**：把三张报表转成可比较、可预测、可质疑的经营证据。 本模块聚焦 **Analyzing Statements of Cash Flows I**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+> **模块定位 Module role**: convert accrual accounting into cash movements and classify cash flows under IFRS and US GAAP.
 
----
+## 0. Reading Contract 阅读契约
 
-## Official Module Structure
+**Official module**: Module 4: Analyzing Statements of Cash Flows I
+**Exam task**: describe statement linkages, prepare direct/indirect CFO, convert indirect to direct method, and contrast IFRS versus US GAAP cash flow classification.
 
-- Learning Outcomes: Analyzing Statements of Cash Flows I
-- 4.01 | Introduction
-- 4.02 | Linkages between the Financial Statements
-- 4.03 | The Direct Method for Cash Flows from Operating Activities
-- 4.04 | The Indirect Method for Cash Flows from Operating Activities
-- 4.05 | Conversion from the Indirect to Direct Method
-- 4.06 | Cash Flows from Investing Activities
-- 4.07 | Cash Flows from Financing Activities
-- 4.08 | Differences in Cash Flow Statements Prepared under US GAAP versus IFRS
+Learning outcome actions:
 
-## Learning Outcome Statements
+- Describe how the cash flow statement links to income statement and balance sheet.
+- Prepare direct and indirect CFO using income statement and balance sheet data.
+- Demonstrate conversion from indirect CFO to direct CFO.
+- Contrast IFRS and US GAAP cash flow statement classification.
 
-1. describe how the cash flow statement is linked to the income statement and the balance sheet
-2. describe the steps in the preparation of direct and indirect cash flow statements, including how cash flows can be computed using income statement and balance sheet data
-3. demonstrate the conversion of cash flows from the indirect to direct method
-4. contrast cash flow statements prepared under International Financial Reporting Standards (IFRS) and US generally accepted accounting principles (US GAAP)
+## 1. Module Brief 模块定位
 
----
+This is a sign-discipline module. The exam usually gives accrual numbers and balance sheet changes, then asks you to compute or classify cash flows. The most valuable habit is to separate **income statement accrual line** from **balance sheet working-capital change**.
 
-## 1. 模块定位
+Core English anchors: CFO, CFI, CFF, direct method, indirect method, cash collected from customers, cash paid to suppliers, cash paid to employees, working capital changes, IFRS vs US GAAP.
 
-### 4.1 学习任务
-- **核心问题**：考试希望你用 `Analyzing Statements of Cash Flows I` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
+## 2. Curriculum Spine 教材主线
 
-### 4.2 考试角色
-- **难度类型**：概念+案例判断。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
+1. **Statement linkages**: income statement explains performance; balance sheet explains positions; cash flow explains cash change.
+2. **Direct CFO**: cash received from customers and cash paid for operating inputs.
+3. **Indirect CFO**: start with net income, adjust noncash items and working capital changes.
+4. **Indirect-to-direct conversion**: derive cash collected/paid from revenue, expenses, and balance sheet changes.
+5. **CFI/CFF**: investing includes long-term asset and investment transactions; financing includes debt/equity financing and dividends.
+6. **IFRS vs US GAAP**: classification choices can change CFO/CFI/CFF but not total cash flow.
 
-### 4.3 关键英文术语
-- **Analyzing Statements of Cash Flows I（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Linkages between the Financial Statements（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **The Direct Method for Cash Flows from Operating Activities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **The Indirect Method for Cash Flows from Operating Activities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Conversion from the Indirect to Direct Method（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Cash Flows from Investing Activities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Cash Flows from Financing Activities（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
+## 3. Exam Translation 考试翻译
 
-## 2. 官方 LOS 对应学习目标
+| Prompt Signal | Translate To | Answer Move |
+|---|---|---|
+| AR increased | revenue not fully collected | Cash collected = revenue - increase in AR |
+| Inventory increased | purchases exceed COGS | Usually subtract in indirect CFO |
+| AP increased | cash payment delayed | Usually add in indirect CFO |
+| Depreciation | noncash expense | Add back in indirect CFO |
+| Gain on sale | included in NI, investing cash separately | Subtract gain from CFO; proceeds in CFI |
+| Interest/dividends under IFRS | classification flexibility | Check paid vs received and standard stated |
 
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 4.1 | describe how the cash flow statement is linked to the income statement and the balance sheet | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 4.2 | describe the steps in the preparation of direct and indirect cash flow statements, including how cash flows can be computed using income statement and balance sheet data | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 4.3 | demonstrate the conversion of cash flows from the indirect to direct method | 识别概念、解释机制并应用到题干。 | 写出结论、依据、公式口径和限制条件。 |
-| 4.4 | contrast cash flow statements prepared under International Financial Reporting Standards (IFRS) and US generally accepted accounting principles (US GAAP) | 识别概念、解释机制并应用到题干。 | 写出结论、依据、公式口径和限制条件。 |
+## 4. Formula & Decision Bench 公式与判断台
 
-## 3. 核心知识树
+| Formula / Framework | Use |
+|---|---|
+| Indirect CFO = NI + noncash charges - gains + losses +/- working capital changes | Fast CFO computation |
+| Cash collected from customers = revenue - increase in AR or + decrease in AR | Direct method conversion |
+| Cash paid to suppliers = COGS + increase in inventory - increase in AP | Direct method supplier cash |
+| Cash paid for expenses = expense - increase in related payable + increase in prepaid | Convert accrual expense to cash |
+| Ending cash = beginning cash + CFO + CFI + CFF + FX effect if given | Cash flow statement check |
+
+Decision bench for working capital:
 
 ```text
-4. Analyzing Statements of Cash Flows I
-├─ 4.1 三大报表联动 (Three-Statement Linkage)
-│  ├─ 4.1.1 IS -> SCF：NI 是 indirect CFO 起点，noncash items 需要调整
-│  ├─ 4.1.2 BS -> SCF：资产负债跨期变动解释现金流入/流出
-│  └─ 4.1.3 判断：CFO/CFI/CFF 分别说明经营、投资、融资现金来源
-├─ 4.2 直接法与间接法编制 (Direct vs Indirect Preparation)
-│  ├─ 4.2.1 Indirect CFO = NI + noncash charges - noncash gains/losses ± WC changes
-│  ├─ 4.2.2 Direct CFO：cash collected from customers、cash paid to suppliers、cash paid for expenses
-│  └─ 4.2.3 符号判断：current asset 增加减 CFO；current liability 增加加 CFO
-├─ 4.3 IFRS vs US GAAP 现金流分类差异 (Cash Flow Classification)
-│  ├─ 4.3.1 US GAAP：interest paid/received、dividends received 通常 CFO；dividends paid CFF
-│  ├─ 4.3.2 IFRS：interest/dividends 有更多分类选择，但需保持一致
-│  └─ 4.3.3 判断：比较 CFO 前先把利息和股利分类调到同一口径
+Operating asset up -> subtract from CFO
+Operating asset down -> add to CFO
+Operating liability up -> add to CFO
+Operating liability down -> subtract from CFO
 ```
 
-## 核心图解
+## 5. Practice & Mock Evidence 题库证据
 
-```mermaid
-flowchart TD
-  A["Net income"] --> B["Add noncash charges"]
-  B --> C["Subtract noncash gains"]
-  C --> D{"Working capital change"}
-  D -->|Current asset increases| E["Subtract from CFO"]
-  D -->|Current asset decreases| F["Add to CFO"]
-  D -->|Current liability increases| G["Add to CFO"]
-  D -->|Current liability decreases| H["Subtract from CFO"]
-  E --> I["CFO"]
-  F --> I
-  G --> I
-  H --> I
-```
+- EOC anchor: `CFA2420-eorq-q.xhtml` / solutions `CFA2420-eorq-a.xhtml`.
+- Evidence tags: `FSA-M04-direct-indirect-CFO`, `FSA-M04-cash-flow-classification`.
+- Log mistakes when signs flip on AR/inventory/AP, when gains are left in CFO, or when IFRS/US GAAP classification is assumed without checking the prompt.
 
-```mermaid
-flowchart LR
-  A["Accrual revenue and expenses"] --> B["Adjust related BS accounts"]
-  B --> C["Cash collected from customers"]
-  B --> D["Cash paid to suppliers"]
-  B --> E["Cash paid for operating expenses"]
-  C --> F["Direct CFO"]
-  D --> F
-  E --> F
-  G["Indirect CFO"] --> H["Same total CFO, different presentation"]
-  F --> H
-```
+## 6. Trap Ledger 易错账本
 
-## 4. 知识点详解
+| Trap | Fix Rule |
+|---|---|
+| Add AR increase to cash collected | AR increase means revenue not collected; subtract |
+| Forget gain adjustment | Subtract gains and add losses in indirect CFO |
+| Treat depreciation as cash outflow | Depreciation is noncash; add back in indirect CFO |
+| Mix total cash flow with classification | IFRS/US GAAP classification may move category, not total cash |
+| Ignore AP in supplier cash | Supplier cash requires COGS, inventory, and AP together |
 
-### 4.1 三大报表联动 (Three-Statement Linkage)
+## 7. Final Recall Sheet 终局速记
 
-- **现金流量表连接利润表与资产负债表变动 (Cash Flow Statement Links Income Statement to Balance Sheet Changes)**：现金的增减变化源于利润表中的经营活动以及资产负债表项目的变动
-- **CFO/CFI/CFF 分类现金变动来源 (CFO / CFI / CFF Classify the Source of Cash Movement)**：经营活动现金流(CFO)、投资活动现金流(CFI)、融资活动现金流(CFF)三大分类反映企业现金循环的不同侧面
-- 三表联动的核心逻辑：净利润 + 非现金调整 + 营运资本变动 = CFO；资产负债科目的跨期变化体现在现金流量表的各个分类中
-
-### 4.2 直接法与间接法编制 (Direct vs Indirect Preparation)
-
-**间接法 (Indirect Method)：**
-- 从净利润出发，调整非现金项目(noncash charges)和营运资本变动(working capital changes)
-- 非现金项目加回：折旧(depreciation)、摊销(amortization)、减值损失(impairment losses)
-- 营运资本调整：应收账款增加减少现金，应付账款增加增加现金
-
-**直接法 (Direct Method)：**
-- 直接列示现金收入(cash collected from customers)和现金支出(cash paid to suppliers, employees, etc.)
-- IFRS 鼓励直接法，US GAAP 两种均可但在实务中间接法更常见
-- 注意：NI-to-CFO 桥接是调节表(reconciliation)，而非现金流量的定义
-
-#### 4.2.1 核心公式 (English)
-- `CFO = NI + Noncash Charges - Noncash Gains/Losses +/- WC Changes`
-
-**从利润表和资产负债表数据计算现金流 (Compute Cash Flows from Income Statement and Balance Sheet Data)：**
-- 通过应收账款的变动来推算现金收款：现金收款 = 收入 - 应收账款增加额
-- 通过应付账款的变动来推算现金付款：现金付款 = 费用 + 应付账款减少额
-
-**将间接法 CFO 转换为直接法 (Convert Indirect CFO to Direct Method)：**
-- 逐项将应计制(accrual basis)下的收入和费用调整为收付实现制(cash basis)
-- 需要利润表项目和对应资产负债表科目的期初期末余额
-
-### 4.3 IFRS vs US GAAP 现金流分类差异 (Cash Flow Classification)
-
-- 利息支付(interest paid)：IFRS 可选经营或融资；US GAAP 要求归于经营
-- 股利支付(dividends paid)：IFRS 可选经营或融资；US GAAP 归于融资
-- 利息和股利收入(interest and dividends received)：IFRS 可选经营或投资；US GAAP 归于经营
-- 银行透支(bank overdrafts)：IFRS 可视为现金等价物的一部分；US GAAP 通常归类为融资
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 指标 | 公式 | 说明 |
-|------|------|------|
-| CFO (间接法) | `NI + Depreciation/Amortization - Gains/Losses +/- WC Changes` | 核心现金流公式 |
-| Cash Collected from Customers | `Revenue - ΔAccounts Receivable` | AR 增加表示收入未收现 |
-| Cash Paid to Suppliers | `COGS + ΔInventory - ΔAccounts Payable` | 存货增加和应付减少消耗现金 |
-| Cash Paid for Operating Expenses | `Operating Expense - Depreciation + ΔPrepaids - ΔAccrued Expenses` | 题干给简化项目时使用 |
-| Net Change in Cash | `CFO + CFI + CFF` | 三类现金流合计解释现金余额变化 |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
-|---|---|---|
-| ⭐⭐⭐ | 4.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 4.2 Linkages between the Financial Statements | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 4.3 The Direct Method for Cash Flows from Operating Activities | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 4.4 The Indirect Method for Cash Flows from Operating Activities | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐ | 4.5 Conversion from the Indirect to Direct Method | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-
-### 6.9 ⭐⭐ Legacy 考点补充
-
-### 6.1 核心内容
-
-- **考点1**：间接法下 CFO 的计算。解题思路：从 NI 出发，加回非现金费用，调整营运资本变动（资产增加为现金流出、负债增加为现金流入）
-- **考点2**：IFRS vs US GAAP 分类差异。解题思路：记住利息和股利的分类差异，注意 IFRS 更灵活
-- **考点3**：直接法编制。解题思路：利用利润表项目和对应资产负债科目的期初期末余额倒推现金收付
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
-|---|---|---|
-| ❌ 忽略：非现金项目的双向调整: 不仅要加回费用(折旧)，还要减去非现金收益(如资产出售利得) | ✅ 非现金项目的双向调整: 不仅要加回费用(折旧)，还要减去非现金收益(如资产出售利得) | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：营运资本变动的符号: 流动资产增加(用现金)是减项，流动负债增加(收到现金)是加项——方向最易出错 | ✅ 营运资本变动的符号: 流动资产增加(用现金)是减项，流动负债增加(收到现金)是加项——方向最易出错 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：NI 到 CFO 桥接: 这是调节表(reconciliation)而非现金流量定义——直接法和间接法的 CFO 金额应当相同 | ✅ NI 到 CFO 桥接: 这是调节表(reconciliation)而非现金流量定义——直接法和间接法的 CFO 金额应当相同 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-
-## 8. 跨模块关联
-
-- **连接 M02**：NI、depreciation、gain/loss 等利润表项目决定 indirect CFO 调整。
-- **连接 M03**：AR、inventory、AP、prepaids、accruals 的期初期末差异决定 cash receipt/payment。
-- **连接 M05**：FCFF、FCFE 和 cash flow ratios 都从可靠的 CFO 开始；CFO 口径错则后续全错。
-- **连接 M10**：NI 与 CFO 背离是 reporting quality 的核心红旗；但需先排除正常营运资本季节性。
-
-
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M04-Analyzing-Cash-Flows-I.md` (high, 0.437)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Direct CFO shows cash receipts/payments; indirect CFO reconciles NI to CFO.
+- Operating asset up subtract; operating liability up add.
+- Gains/losses on investing assets are removed from CFO; cash proceeds go to CFI.
+- Classification differences affect CFO/CFI/CFF presentation, not total cash change.

@@ -41,6 +41,30 @@ tags:
 3. describe investment forms and vehicles used in digital asset investments
 4. analyze sources of risk, return, and diversification among digital asset investments
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 7: Introduction to Digital Assets`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Distributed Ledger Technology
+- 2.1. Proof of Work vs. Proof of Stake
+- 2.1.1. The Proof of Work (PoW) Protocol
+- 2.1.2. The Proof of Stake (PoS) Protocol
+- 2.2. Permissioned and Permissionless Networks
+- 2.3. Types of Digital Assets
+- 2.3.1. Cryptocurrencies
+- 2.3.2. Tokens
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -163,6 +187,19 @@ flowchart TD
 - 流动性风险（市场深度不足）
 - 托管与安全风险（私钥管理）
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Distributed Ledger Technology | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Distributed Ledger Technology`；`DLT`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Proof of Work vs. Proof of Stake | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Proof of Work vs. Proof of Stake`；`PWVPS`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| The Proof of Work (PoW) Protocol | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `The Proof of Work (PoW) Protocol`；`PWPP`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| The Proof of Stake (PoS) Protocol | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `The Proof of Stake (PoS) Protocol`；`PSPP`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Permissioned and Permissionless Networks | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Permissioned and Permissionless Networks`；`PPN`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Types of Digital Assets | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Types of Digital Assets`；`TDA`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Cryptocurrencies | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Cryptocurrencies`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Tokens | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Tokens`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -197,6 +234,16 @@ flowchart TD
 3. **区块链概念辨析**: 选择题常见概念混淆。**思路**: 区块链≠比特币；区块链≠代币化。
 4. **代币化优势分析**: 多选题考查代币化对传统资产市场的影响。**思路**: 流动性↑、成本↓、24/7交易、透明度↑。
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Distributed Ledger Technology`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Proof of Work vs. Proof of Stake`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `The Proof of Work (PoW) Protocol`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `The Proof of Stake (PoS) Protocol`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Permissioned and Permissionless Networks`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -206,6 +253,16 @@ flowchart TD
 | ❌ 忽略：数字资产并非完全匿名: 而是伪匿名 (Pseudonymous)，交易记录在链上可追溯 | ✅ 数字资产并非完全匿名: 而是伪匿名 (Pseudonymous)，交易记录在链上可追溯 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：所有代币都是加密货币?: 错误，加密货币是支付型代币，还有效用代币和证券型代币 | ✅ 所有代币都是加密货币?: 错误，加密货币是支付型代币，还有效用代币和证券型代币 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：PoW安全性更高但能耗高: PoW的51%攻击成本远高于PoS | ✅ PoW安全性更高但能耗高: PoW的51%攻击成本远高于PoS | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Distributed Ledger Technology | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Distributed Ledger Technology`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Proof of Work vs. Proof of Stake | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Proof of Work vs. Proof of Stake`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| The Proof of Work (PoW) Protocol | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `The Proof of Work (PoW) Protocol`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| The Proof of Stake (PoS) Protocol | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `The Proof of Stake (PoS) Protocol`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Permissioned and Permissionless Networks | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Permissioned and Permissionless Networks`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

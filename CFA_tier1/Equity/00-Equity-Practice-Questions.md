@@ -1,0 +1,169 @@
+---
+title: "Equity Practice Questions"
+source_type: "local_question_pack"
+source_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf"
+answer_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\股权投资.pdf"
+question_count: 154
+source_pages: 41-68
+---
+
+# Equity Practice Questions
+
+- Source question pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf`
+- Source answer pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\股权投资.pdf`
+- Question count target: 154
+- Extracted question stems: 152
+
+## Questions
+- Q001 | p.41 | A firm reports negative earnings for the year just ended. The price multiple of the firm's stock that is least likely to be meaningful is:
+- Q002 | p.41 | Which of the following dates in the dividend chronology can fall on a weekend?
+- Q003 | p.41 | An investor writes a put option on FTSE 100 Index futures. Which of the following best describes the investor's position with respect to the put contract and her exposure to the underlying index future, respectively?
+- Q004 | p.41 | Which of the following financial intermediaries is most likely to provide liquidity service to its clients?
+- Q005 | p.41 | The value effect market-pricing anomaly most likely occurs when stocks that have below-average price-to-earnings and market-to-book ratios, as well as above-average dividend yields, consistently outperform:
+- Q006 | p.41 | Depreciation expense is best used in forecasting:
+- Q007 | p.42 | Which of the following forecast objects for a bank's revenue is best classified as a top-down driver?
+- Q008 | p.42 | Which of the following statements about scenario analysis is most accurate?
+- Q009 | p.42 | Which financial statement forecasting approach is best suited for companies in highly cyclical industries?
+- Q010 | p.42 | Downside and upside risk factors are most likely included in:
+- Q011 | p.42 | A natural resources company having access to cheap energy most likely will be able to sell its output:
+- Q012 | p.43 | An investor considers the following certificates of deposit (CDs) available for purchase at face value: CD Interest Rate 1 2.2% 2 3.3% 3 4.4% If each CD has the same maturity and default risk, the opportunity cost of investing in CD 1 is closest to:
+- Q013 | p.43 | Clearing instructions for an order most likely indicate:
+- Q014 | p.43 | Which of the following statements about forecasting selling, general and administrative (SG&A)expenses is most accurate?
+- Q015 | p.43 | Preference shares most likely rank above common shares with respect to:
+- Q016 | p.43 | A free-cash-flow-to-equity model is a(n):
+- Q017 | p.44 | An analyst gathers the following information about an equal-weighted index composed of three securities: Security Beginning of Period Price (€) End of Period Price (€) Total Dividends (€) 1 20 18 1 2 10 15 3 3 15 0 The price return of the index is closest to:
+- Q018 | p.44 | A limit order book (in € per share) has the following order prices: Bids Asks - 48.20 - 48.00 47.85 - 47.70 - A sell order is behind the market at a price of.
+- Q019 | p.44 | All else being equal, the preference share with the lowest certainty of future cash flows and the greatest potential risk for investors is most likely.
+- Q020 | p.44 | The index weighting method that under represents securities that constitute the largest fraction of the target market value is most likely the:
+- Q021 | p.45 | An analyst gathers the following information about a company: Estimated forward P/E ratio 8 Retention rate 45% If the investor's required rate of return is 10%, the company's ROE is closest to:
+- Q022 | p.45 | Which of the following is least likely to directly affect a company's book value?
+- Q023 | p.45 | With respect to behavioral biases, when investors tend to be slow to react to new information and continue to maintain their prior views, this is best described as:
+- Q024 | p.45 | If a stock index's constituents make no distributions to their shareholders, the total return of the index is:
+- Q025 | p.45 | A trader gathers the following limit order information about a stock: Bid Size (number of shares) Share Price ($) Offer Size (number of shares) 10 75.70 -- 20 75.80 -- -- 75.90 5 -- 76.00 10 -- 76.10 15 If the trader submits a fill or kill buy order for 20 shares at a limit price of $76.00, the trader's average price per share for this trade will be closest to:
+- Q026 | p.46 | An instruction that indicates when an order may be filled is most likely a(n):
+- Q027 | p.46 | A stock dividend:
+- Q028 | p.46 | Common shares that are tradeable on different stock exchanges in different currencies are best described as:
+- Q029 | p.46 | A sell order that instructs the broker to obtain the best price immediately available without specifying a minimum price is a:
+- Q030 | p.46 | All else being equal, a reverse stock split results in:
+- Q031 | p.46 | All else being equal, which of the following has the same effect on shareholders' wealth as a cash dividend?
+- Q032 | p.46 | Sponsored depository receipts most likely differ from unsponsored ones in terms of whether
+- Q033 | p.47 | All else being equal, which of the following are equivalent to stock dividends in terms of the economic effect on the company and shareholders?
+- Q034 | p.47 | Asset-based valuation most likely uses estimates of the company's:
+- Q035 | p.47 | The dividend discount model assumes that dividends are paid:
+- Q036 | p.47 | An analyst gathers the following information about a company and its common stock: Forward P/E 8 Required rate of return 12% Dividend growth rate 4% Using the Gordon growth model, the company's dividend payout ratio is closest to:
+- Q037 | p.47 | Asset-based valuation models are most appropriate for companies with a high proportion of.
+- Q038 | p.47 | Both equity and fixed income indexes can be categorized according to the:
+- Q039 | p.48 | Trading by arbitrageurs most likely.
+- Q040 | p.48 | A feature of an efficient market is that:
+- Q041 | p.48 | Decreased market efficiency is most likely associated with an increase in:
+- Q042 | p.48 | Which of the following is most likely a demographic influence on industry growth?
+- Q043 | p.48 | Fixed-income indexes most likely.
+- Q044 | p.48 | As time passes after inception, the value of the price version of an index is:
+- Q045 | p.48 | With respect to behavioral finance, which of the following is least likely a behavioral bias used to explain pricing anomalies?
+- Q046 | p.49 | Companies issue equity securities for which of the following purpose(s)?
+- Q047 | p.49 | The voting method that allows shareholders to cast all their votes for a single candidate is best described as:
+- Q048 | p.49 | Convertible preference shares most likely.
+- Q049 | p.49 | Industries whose revenues and profits are least affected by fluctuations in the overall economy are most likely:
+- Q050 | p.49 | If it is difficult to find a buyer or a seller for an asset, the asset most likely trades on:
+- Q051 | p.49 | A disadvantage of using price multiples to value stocks is that:
+- Q052 | p.50 | All else being equal, an increase in which of the following most likely increases a company's enterprise value?
+- Q053 | p.50 | The Global Industry Classification Standard (GICS) classifies industries based on:
+- Q054 | p.50 | Which of the following indexes is composed of futures contracts?
+- Q055 | p.50 | External factors affecting an industry's growth most likely include:
+- Q056 | p.50 | Which of the following is most likely used to raise funds for a capital project?
+- Q057 | p.50 | In dividend payment chronology, the ex-dividend date most likely comes after the:
+- Q058 | p.51 | An analyst gathers the following information about an industry and three comparable companies within the industry: Company 1 Company 2 Company 3 Industry Average Price/sales 8.9 3.2 5.7 6.2 Price/book 5.7 2.6 2.3 4.7 Based only on this information, the most overvalued company is
+- Q059 | p.51 | Which of the following industries or sectors is most likely classified as cyclical?
+- Q060 | p.51 | An increase in shares held by controlling shareholders most likely impacts the constituent weightings of a(n):
+- Q061 | p.51 | Free-cash-flow-to-equity is equal to cash flow from operations:
+- Q062 | p.51 | Over time, which of the following indexes most likely has portfolio weights that shift away from securities that have increased in relative value and toward securities that have fallen in relative value? A:
+- Q063 | p.52 | An analyst gathers the following data for three companies in the same industry (in millions): Company Enterprise Value (EV) Earnings Before Interest, Taxes, Depreciation, &Amortization (EBITDA) 1 $100 $8 2 $150 $10 3 $200 $15 Based on enterprise value multiples, which of the three companies is likely the most undervalued?
+- Q064 | p.52 | Which of the following statements best describes hedge fund indexes?
+- Q065 | p.52 | A market where security prices fully reflect all publicly known and available information, but not private information, is:
+- Q066 | p.52 | In a highly efficient market, a passive investment strategy most likely has:
+- Q067 | p.52 | Fundamental analysis most likely.
+- Q068 | p.52 | Which of the following is considered an external influence on industry growth?
+- Q069 | p.53 | In a weak-form efficient market, which of the following information is reflected in security prices?
+- Q070 | p.53 | Security market indices most likely serve as proxies for.
+- Q071 | p.53 | When constructing an equity index, each company's weight in the index is dependent on its number of shares outstanding if the index is:
+- Q072 | p.53 | All else being equal, which of the following preference shares pays the lowest dividend?
+- Q073 | p.53 | When an investment bank guarantees the sale of an entire issue at a negotiated offering price, this best describes a(n):
+- Q074 | p.53 | Management is more likely to focus on short-term results instead of long-term earnings growth if a company raises equity through:
+- Q075 | p.54 | An analyst gathers the following information about a security index: Period Return (%) 1 12 2 -8 3 2 If the index's value is 100 at the beginning of Period 1, the index's value at the end of Period 3 is closest to:
+- Q076 | p.54 | If the cost to fill trades increases, the market's informational efficiency most likely.
+- Q077 | p.54 | An analyst gathers the following information about a company and the economy: Current share price €36 P/E ratio 22 Nominal risk-free rate 2.5% Risk premium 6.0% Expected retention rate 60% The best estimate of the company's dividend growth rate is:
+- Q078 | p.54 | Financial intermediaries that help their clients arrange seasoned securities offerings are best known as:
+- Q079 | p.54 | Over the long run, if a market is semi-strong-form efficient, which of the following investment strategies should result in the highest return to investors? A(n):
+- Q080 | p.55 | A multi-market index is most appropriately used as a benchmark:
+- Q081 | p.55 | Industry classification systems are developed and used by:
+- Q082 | p.55 | An investor gathers the following information about a company and its common stock: Current dividend per share (D0) $1.00 Dividend payout ratio 60% ROE 12% If the required rate of return is 10%, using the Gordon growth model, the intrinsic value per share of the stock is closest to:
+- Q083 | p.55 | According to the efficient market hypothesis, if market prices reflect private information, the market is most likely
+- Q084 | p.55 | The Global Industry Classification Standard's broadest level of classification is a(n):
+- Q085 | p.55 | In which of the following forms of market efficiency are investors able to consistently outperform the market using fundamental analysis?
+- Q086 | p.56 | Which of the following indexes are regularly rebalanced by the index provider?
+- Q087 | p.56 | Which of the following best describes an industry-level force in a thorough industry analysis?
+- Q088 | p.56 | An analyst gathers the following information about a price-weighted index composed of three stocks: Stock Outstanding Shares Beginning of Period Price Dividends per Share End of Period Price 1 10,000 $25.00 $2.00 $20.00 2 40,000 $10.00 $0.50 $13.50 3 50,000 $10.00 $0.00 $14.00 The index's price return is closest to:
+- Q089 | p.56 | Commercial industry classification systems are most likely updated:
+- Q090 | p.56 | A company's net income available to ordinary shareholders divided by the average total book value of equity is best described the:
+- Q091 | p.56 | A world equity index is most likely considered a:
+- Q092 | p.57 | All else being equal, which of the following preference share characteristics may contain provisions that entitle shareholders to an additional distribution of the company's assets upon liquidation, above the par value?
+- Q093 | p.57 | A three-stage dividend discount model is most appropriate for valuing a company that is:
+- Q094 | p.57 | A company's management is most likely able to directly influence the company's:
+- Q095 | p.57 | In contrast to the market value of an equity security, intrinsic value is most likely.
+- Q096 | p.57 | Short sellers are most likely exposed to:
+- Q097 | p.57 | In which markets are government bills most likely traded?
+- Q098 | p.57 | Enterprise value is most likely associated with:
+- Q099 | p.58 | A characteristic of real assets is that they most likely:
+- Q100 | p.58 | If a European investor believes the US equity market will decline in the next three months, the transaction most likely to allow the investor to profit from this view is the purchase of a:
+- Q101 | p.58 | If the ability of clients to identify competent agents increases, the need for regulation most likely.
+- Q102 | p.58 | An analyst gathers the following book value information about a company and its common shares: Inventories €20 million Net fixed assets €80 million Total assets €150 million Total liabilities €90 million Shares outstanding 4 million The analyst estimates the market value of net fixed assets to be 125% of book value and the market value of inventories to be 90% of book value. If the stock is currently trading at €19.50 per share, the asset-based value per share is most likely.
+- Q103 | p.58 | The book value of a company's equity is:
+- Q104 | p.59 | A company's ROE most likely decreases if shareholders' equity increases at:
+- Q105 | p.59 | An equity index representing groups of securities classified on the basis of market capitalization is most likely a:
+- Q106 | p.59 | An analyst gathers the following information about common shares: Company Peer Group Dividend payout ratio 40% 50% Estimated future dividend growth rate 5% 4% If the investor's required rate of return is 9%, the company's justified forward P/E is:
+- Q107 | p.59 | An analyst gathers the following information about a company's shares: Dividend payable per share $0.50 Ex-date 20 August Closing share price on 19 August $29.00 All else being equal, at the beginning of trading on 20 August, the company's shares will most likely trade at
+- Q108 | p.59 | An analyst gathers the following information about a company's dividend payment chronology. Ex-dividend date 2 August Holder-of-record date 5 August 5 August The last date an investor can purchase the company's stock and be entitled to receive the dividend is most likely:
+- Q109 | p.60 | The January effect is an example of.
+- Q110 | p.60 | An investor gathers the following data regarding three stocks: Stock Expected Rate of Return Investor's Required Rate of Return 1 9% 9% 2 13% 11% 3 15% 16% All else being equal, the investor should purchase:
+- Q111 | p.60 | Behavioral finance:
+- Q112 | p.60 | An analyst gathers and estimates the following information about a company's stock: Current dividend per share (D0) $4 Current EPS $5 Dividend growth rate 4% If the estimated stock value using the Gordon growth model is $92 per share, the required return on this stock is closest to:
+- Q113 | p.60 | The first date that a share trades without the declared dividend is the:
+- Q114 | p.61 | A $25 par value non-callable, non-convertible preferred share pays an annual dividend rate of 5%. If the required rate of return is 4%, the preferred share's intrinsic value is closest to:
+- Q115 | p.61 | An investor buys a security on margin posting 50% of the initial price as equity. All else being equal, if the price declines 25%, the investor's new leverage ratio is closest to:
+- Q116 | p.61 | When using a multiplier model, the fundamental variable is stated on:
+- Q117 | p.61 | For a security position purchased on margin, the leverage ratio is the ratio of the value of the position to:
+- Q120 | p.62 | If securities are purchased on margin with a maximum leverage ratio of 1.75, the minimum margin requirement is closest to:
+- Q121 | p.62 | Which of the following market anomalies is best described as a time-series anomaly?
+- Q122 | p.62 | An analyst gathers the following information about a company: Dividend payout ratio 40% Required rate of return on equity 15% Return on equity 20% The justified forward P/E ratio for the company's stock is closest to:
+- Q123 | p.62 | A trader uses margin to purchase a stock for $50 by posting 30% equity. If the first margin call occurs when the price falls below $43.75, the maintenance margin requirement is closest to.
+- Q124 | p.62 | A trader buys a stock on margin with the following conditions: Purchase price per share $50 Equity per share $25 Maintenance margin requirement 25% If the share price declines, the highest price at which the trader will receive a margin call is closest to:
+- Q125 | p.63 | The observation that a large-capitalization company's stock price is inflated after the company releases unexpected good news at year end is most likely related to the:
+- Q126 | p.63 | Order matching rules in order-driven trading systems are used to:
+- Q127 | p.63 | Which of the following is an objective of market regulation?
+- Q128 | p.63 | An analyst gathers the following information about a company and its historical price multiples: Current Historical EPS $3.00 --- Cash flow per share $4.00 --- Book value per share $40.00 --- P/B --- 0.6 P/E --- 12.0 P/CF --- 8.0 Based only on this information, if the share price is $30, the company's shares are most likely overvalued based on:
+- Q129 | p.63 | Porter's five determinants of the intensity of competition in an industry do not include the
+- Q130 | p.64 | A trader reports the following information about an equity investment which was sold after 1 year: Number of shares purchased 2,000 Leverage ratio 3 Purchase price per share $12.00 Sale price per share $9.50 Call money rate per year 3% The trader's equity value as a result of the trade is closest to:
+- Q131 | p.64 | If a security's intrinsic value is $55 per share and is currently selling for $50 per share, the security is:
+- Q132 | p.64 | Convertible preference shares:
+- Q133 | p.64 | If the price of a stock bought on 30% margin increases by 40%, the return on equity to the buyer is closest to:
+- Q134 | p.64 | The size effect anomaly results when it is observed that on a risk-adjusted basis small cap companies tend to:
+- Q135 | p.65 | Within Porter's five forces framework, the power of buyers within an industry is most likely influenced by the:
+- Q136 | p.65 | An investor purchases 1,000 shares of a non-dividend paying stock on margin and sells them after one year as follows: Purchase price per share $25 Sale price per share $20 Annual call money rate 5% Leverage ratio 2 Ignoring commissions, the investor's holding period return is closest to:
+- Q137 | p.65 | An analyst gathers the following information about a market-capitalization-weighted index and one of its four constituent stocks: Total Market Capitalization (in $billions) Stock 20 Index 57 If the stock price is $30 per share and the index value is 100, the stock's weight in the index is closest to:
+- Q138 | p.65 | The beginning value for an index is 1540 and the ending value is 1575. If the income for the period is 55, the total return of the index is closest to:
+- Q139 | p.65 | If investors can successfully predict future asset prices based on past prices, markets are most likely.
+- Q140 | p.66 | A company's current dividend (D0) of $3 per share is expected to grow 20% per year for three years, then 5% per year thereafter. If the required rate of return is 10%, using a multistage dividend discount model, the intrinsic value of the stock at the end of Year 3 is closest to:
+- Q141 | p.66 | A disadvantage of an equal-weighted index is that.
+- Q142 | p.66 | An analyst gathers the following information about a company's non-callable, non-convertible preferred stock: Par value per share €100 Required rate of return 7.2% Maturity 5 years If the stock's intrinsic value is €125, the company's semi-annual dividend on the preferred stock is closest to:
+- Q143 | p.66 | In contrast to a public company, a company that has gone private most likely.
+- Q144 | p.67 | An analyst gathers the following information about an equal-weighted index composed of three stocks: Stock Beginning-of-Period Price End-of-Period Price 1 $10 $8 2 $20 $24 3 $30 $30 If there is a 2% return from dividends for each of the three stocks, the total return of the index is:
+- Q145 | p.67 | Which of the following factors would most likely increase market efficiency? Limits on:
+- Q146 | p.67 | Which of the following index weighting schemes most likely causes a bias in the index when high-priced stocks split?
+- Q147 | p.67 | In the secondary market, funds flow from:
+- Q148 | p.67 | When issuers sell securities to investors:
+- Q149 | p.67 | In a well-functioning financial system, changes in asset prices primarily reflect changes in
+- Q150 | p.68 | When a company raises common equity capital in the public market, the company most likely.
+- Q151 | p.68 | Preference shares are less risky than common shares because preference shares have:
+- Q152 | p.68 | The Gordon growth model assumes a dividend growth rate:
+- Q153 | p.68 | Private equity securities most likely.
+- Q154 | p.68 | The Gordon growth model is most appropriate for valuing the equity of a dividend-paying:

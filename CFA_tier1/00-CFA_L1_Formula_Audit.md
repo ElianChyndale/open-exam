@@ -18,8 +18,15 @@ tags:
 本审计按 2026 CFA Level I topic outlines / LOS 与本地 `CFA_2026_L1_Complete_Curriculum.md` 对齐。
 
 - 官方范围：CFA Institute 2026 Level I Topic Outlines。
+- 教材锚点：`.system/memory/strategy/cfa-2026-epub-textbook-index.md`。
 - 本地范围：`CFA_tier1/` 下 10 个科目 MOC 与高频计算模块。
 - 补写原则：只补 Level I LOS 可支持的核心公式；概念型 LOS 标记为“考纲内但无核心公式”；明显超出 Level I 的模型标记为“超纲/扩展”。
+
+配套使用方式：
+
+1. 先用教材索引确认某个公式属于哪一模块、哪组小节。
+2. 再回到对应 `00-*-MOC.md` 和 `Mxx-*` 模块页检查公式是否已经落到正文。
+3. 若刷题暴露缺口，再决定是补公式表、补模块正文，还是只补错题规则。
 
 ## Coverage Labels
 

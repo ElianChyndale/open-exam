@@ -42,6 +42,28 @@ tags:
 | M06 | Hedge Funds | 计算+解释 | Introduction / Hedge Fund Investment Features | [[M06-Hedge-Funds]] |
 | M07 | Introduction to Digital Assets | 计算+解释 | Introduction / Distributed Ledger Technology | [[M07-Introduction-to-Digital-Assets]] |
 
+## 2.5 原版教材章节锚点
+
+- 教材卷册：`V8`
+- 主教材：`D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- 用法：做题时先按模块定位，再用教材锚点回到具体定义、比较口径、公式应用和例外条件。
+
+| Module | 教材章节 | 高频细节锚点 |
+|---|---|---|
+| M01 | Module 1: Alternative Investment Features, Methods, and Structures | 2. Alternative Investment Features；2.1. Alternative Investments: Features and Categories；2.2. Private Capital；2.3. Real Assets；2.4. Hedge Funds；3. Alternative Investment Methods |
+| M02 | Module 2: Alternative Investment Performance and Returns | 2. Alternative Investment Performance；2.1. Alternative Investment Performance Appraisal；2.2. Comparability with Traditional Asset Classes；2.3. Performance Appraisal and Alternative Investment Features；2.3.1. Investment Life Cycle；2.3.2. Use of Borrowed Funds |
+| M03 | Module 3: Investments in Private Capital: Equity and Debt | 2. Private Equity Investment Characteristics；2.1. Private Equity Investment Categories；2.2. Private Equity Exit Strategies；2.2.1. Trade Sale；2.2.2. Public Listing；2.2.3. Other Exit Strategies |
+| M04 | Module 4: Real Estate and Infrastructure | 2. Real Estate Features；2.1. Real Estate Investments；2.2. Real Estate Investment Structures；2.2.1. Direct Real Estate Investment；2.2.2. Indirect Real Estate Investment；3. Real Estate Investment Characteristics |
+| M05 | Module 5: Natural Resources | 2. Natural Resources Investment Features；2.1. Land Investments vs. Real Estate；2.2. Features and Forms of Farmland and Timberland Investment；3. Commodity Investment Forms；3.1. Commodity Investment Features；3.2. Distinguishing Characteristics of Commodity Investments |
+| M06 | Module 6: Hedge Funds | 2. Hedge Fund Investment Features；2.1. Equity Hedge Fund Strategies；2.2. Event-Driven Strategies；2.3. Relative Value Strategies；2.4. Opportunistic Strategies；2.5. Distinguishing Characteristics of Hedge Fund Investments |
+| M07 | Module 7: Introduction to Digital Assets | 2. Distributed Ledger Technology；2.1. Proof of Work vs. Proof of Stake；2.1.1. The Proof of Work (PoW) Protocol；2.1.2. The Proof of Stake (PoS) Protocol；2.2. Permissioned and Permissionless Networks；2.3. Types of Digital Assets |
+
+### 教材使用规则
+
+- 先用 MOC 的模块框架回忆，再回到教材锚点补定义边界、步骤顺序和题干触发词。
+- `Practice Problems` 和 `Solutions` 说明每个模块都能直接连到教材内题目与答案层，后续错题可回链到对应模块。
+- 若 MOC、题库页和教材表述有冲突，优先以原版教材和官方 registry 对齐，再决定是否改写长期笔记。
+
 ## 3. 核心知识树
 
 ```text

@@ -21,212 +21,64 @@ tags:
 
 # M03: Fiscal Policy
 
-> **模块定位**：用市场结构、周期、政策、贸易和汇率解释宏观环境对资产价格的影响。 本模块聚焦 **Fiscal Policy**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+## 0. Reading Contract 阅读契约
 
----
+- **Official spine**：Monetary vs fiscal policy, fiscal objectives, deficits and national debt, fiscal tools, multipliers, fiscal stance, implementation difficulties.
+- **LOS contract**：compare monetary/fiscal policy; describe roles, objectives and debt arguments; describe fiscal tools; explain implementation, difficulties and policy stance.
+- **Evidence rule**：错题标 `policy_actor`, `multiplier`, `fiscal_stance`, `debt_sustainability`, or `implementation_lag`。
 
-## Official Module Structure
+## 1. Module Brief 模块定位
 
-- Learning Outcomes: Fiscal Policy
-- 3.01 | Introduction
-- 3.02 | Introduction to Monetary and Fiscal Policy
-- 3.03 | Roles and Objectives of Fiscal Policy
-- 3.04 | Fiscal Policy Tools
-- 3.05 | Fiscal Policy Implementation
+Fiscal policy is government action through spending, taxation, transfers and automatic stabilizers. 本模块的核心是把经济状态翻译成 expansionary/contractionary stance，再用 multiplier, lag, debt and crowding-out 判断限制。
 
-## Learning Outcome Statements
+## 2. Curriculum Spine 教材主线
 
-1. compare monetary and fiscal policy
-2. describe roles and objectives of fiscal policy as well as arguments as to whether the size of a national debt relative to GDP matters
-3. describe tools of fiscal policy, including their advantages and disadvantages
-4. explain the implementation of fiscal policy and difficulties of implementation as well as whether a fiscal policy is expansionary or contractionary
-
----
-
-## 1. 模块定位
-
-### 3.1 学习任务
-- **核心问题**：考试希望你用 `Fiscal Policy` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
-
-### 3.2 考试角色
-- **难度类型**：概念+应用。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
-
-### 3.3 关键英文术语
-- **Fiscal Policy（财政政策）**：政府通过税收、支出和赤字影响总需求与资源配置。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction to Monetary and Fiscal Policy（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Roles and Objectives of Fiscal Policy（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Fiscal Policy Tools（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Fiscal Policy Implementation（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-
-## 2. 官方 LOS 对应学习目标
-
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 3.1 | compare monetary and fiscal policy | 比较相似概念的适用条件与差异 | 写出结论、依据、公式口径和限制条件。 |
-| 3.2 | describe roles and objectives of fiscal policy as well as arguments as to whether the size of a national debt relative to GDP matters | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 3.3 | describe tools of fiscal policy, including their advantages and disadvantages | 描述定义、流程和适用场景 | 写出结论、依据、公式口径和限制条件。 |
-| 3.4 | explain the implementation of fiscal policy and difficulties of implementation as well as whether a fiscal policy is expansionary or contractionary | 解释机制、原因和后果 | 写出结论、依据、公式口径和限制条件。 |
-
-## 3. 核心知识树
-
-```text
-3. Fiscal Policy
-├─ 3.1 财政政策工具（Fiscal Policy Tools）
-│  ├─ 3.1.1 Government spending：直接进入 AD，乘数通常大于税收乘数
-│  ├─ 3.1.2 Taxes：影响 disposable income、labor supply、investment incentives
-│  ├─ 3.1.3 Transfers：改变家庭收入和自动稳定器强度，但不是政府购买
-│  └─ 3.1.4 Automatic stabilizers：累进税和失业救济无需新立法即可平滑周期
-├─ 3.2 扩张性与紧缩性财政政策（Expansionary vs Contractionary Fiscal Policy）
-│  ├─ 3.2.1 Expansionary：increase G / cut T，应对 recession 或负 output gap
-│  ├─ 3.2.2 Contractionary：cut G / raise T，应对 overheating 或 inflation pressure
-│  └─ 3.2.3 考试判断：政策方向看对 AD 的净影响，不只看某一个税种或支出项目
-├─ 3.3 财政乘数（Fiscal Multiplier）
-│  ├─ 3.3.1 Spending multiplier=`1/(1-MPC)`；MPC 越高，乘数越大
-│  ├─ 3.3.2 Tax multiplier=`-MPC/(1-MPC)`；绝对值通常小于支出乘数
-│  └─ 3.3.3 Leakages：saving、taxes、imports、capacity constraints 都会削弱乘数
-├─ 3.4 财政政策的约束（Constraints on Fiscal Policy）
-│  ├─ 3.4.1 Time lags：recognition、action/implementation、impact lag
-│  ├─ 3.4.2 Crowding out：政府借款推高利率，挤出私人投资
-│  └─ 3.4.3 Debt sustainability：关注 debt/GDP、primary balance、r 与 g 的关系
-├─ 3.5 供给侧效应（Supply-Side Effects）
-│  ├─ 3.5.1 税收改变劳动供给、储蓄、投资和创业激励
-│  └─ 3.5.2 基础设施/教育支出可能提高长期 potential GDP
-```
-
-## 核心图解
-
-```mermaid
-flowchart TD
-    State["识别宏观状态"] --> Gap{"Output gap / inflation?"}
-    Gap -->|Negative gap / unemployment high| Exp["Expansionary fiscal<br/>increase G / cut T / higher transfers"]
-    Gap -->|Positive gap / inflation high| Con["Contractionary fiscal<br/>cut G / raise T"]
-    Exp --> AD1["AD rises<br/>multiplier depends on MPC and leakages"]
-    Con --> AD2["AD falls<br/>inflation pressure eases with lag"]
-    AD1 --> Limits["检查约束<br/>recognition/action/impact lag<br/>crowding out / debt sustainability"]
-    AD2 --> Limits
-    Limits --> Output["考试输出<br/>growth, inflation, rates, deficit, debt/GDP"]
-```
-
-## 4. 知识点详解
-
-### 3.1 财政政策工具（Fiscal Policy Tools）
-
-政府通过调整**支出（spending）**和**税收（taxation）** 来影响经济活动。
-
-- **政府支出（Government Spending）**：购买商品和服务（基础设施、国防、教育等），直接影响总需求
-- **税收（Taxation）**：调整税率影响可支配收入和消费、投资决策
-- **转移支付（Transfers）**：社保、失业救济等，改变收入分配但不计入GDP的政府购买部分
-- **自动稳定器（Automatic Stabilizers）**：如累进税制和失业救济，在经济下行时自动提供缓冲，无需政策决策
-
-### 3.2 扩张性与紧缩性财政政策（Expansionary vs Contractionary Fiscal Policy）
-
-| 类型 | 措施 | 目的 |
-|------|------|------|
-| 扩张性 | 增加支出、减税 | 刺激总需求，应对衰退 |
-| 紧缩性 | 减少支出、增税 | 抑制总需求，控制通胀 |
-
-### 3.3 财政乘数（Fiscal Multiplier）
-
-**乘数效应（Multiplier Effect）**：初始财政支出的增加会通过消费循环产生大于初始值的总产出增量。
-
-**影响乘数大小的因素**：
-- **漏出（Leakages）**：储蓄、税收、进口——漏出越大，乘数越小
-- **闲置产能（Slack）**：经济有闲置资源时，乘数效应更大
-- **政策时机（Policy Timing）**：识别时滞（recognition lag）、执行时滞（implementation lag）、效果时滞（impact lag）
-
-简单乘数公式：`Multiplier = 1 / (1 − MPC)`，其中MPC为边际消费倾向。
-
-### 3.4 财政政策的约束（Constraints on Fiscal Policy）
-
-**赤字与债务（Deficits and Debt）**：
-- **赤字（Deficit）**：某一财年支出 > 收入
-- **债务（Debt）**：历年赤字累积
-- 可持续性取决于经济增长率与利率的关系：若经济增长率 > 利率，即使有赤字，债务/GDP比率也可能下降
-
-**挤出效应（Crowding Out）**：政府借款增加→利率上升→私人投资减少→部分抵消财政刺激效果。
-
-**实施时滞（Implementation Lag）**：财政政策从决策到生效需要时间，可能错过最佳经济时机。这一点上不如货币政策灵活。
-
-### 3.5 供给侧效应（Supply-Side Effects）
-
-财政政策不仅影响总需求，也影响长期供给：
-- 减税可以激励劳动供给和投资
-- 基础设施支出提升长期生产力
-- 过度监管和税收可能抑制经济增长潜力
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-**财政乘数（简单形式）**：`Multiplier = 1 / (1 − MPC)`
-- 场景：MPC = 0.8，政府增加100亿支出，乘数 = 1/(1−0.8) = 5，理论上带动GDP增长500亿。但实际中要考虑漏出。
-
-**税收乘数**：`Tax Multiplier = −MPC / (1 − MPC)`
-- 场景：同样减税100亿，乘数为 −0.8/(1−0.8) = −4，即减税100亿带动GDP增长400亿（绝对值小于政府支出乘数）。
-
-**债务/GDP比率变化**：`Δ(D/Y) = (r − g) × (D/Y) − PB/Y`
-- 其中 r = 实际利率，g = 实际GDP增长率，PB = 基础财政盈余（primary balance）
-- 场景：判断债务可持续性。若 r < g，即使有基础赤字，债务率也可能下降。
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
+| Spine | English trigger | 中文任务 |
 |---|---|---|
-| ⭐⭐⭐ | 3.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 3.2 Introduction to Monetary and Fiscal Policy | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 3.3 Roles and Objectives of Fiscal Policy | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 3.4 Fiscal Policy Tools | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐ | 3.5 Fiscal Policy Implementation | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| Monetary vs fiscal | central bank vs government | 先分清政策主体。 |
+| Fiscal objectives | stabilize AD, redistribution, resource allocation | 识别政策目的。 |
+| Deficits/debt | debt/GDP, sustainability, crowding out | 判断债务是否影响政策空间。 |
+| Tools | spending, taxes, transfers, automatic stabilizers | 工具方向与 AD 方向对应。 |
+| Multipliers | MPC, spending multiplier, tax multiplier | 计算或比较影响大小。 |
+| Implementation | recognition/action/impact lags | 解释政策不精准原因。 |
 
-### 6.9 ⭐⭐ Legacy 考点补充
+## 3. Exam Translation 考试翻译
 
-### 6.1 核心内容
+1. 看到 money supply, reserves, policy rate：排除 fiscal。
+2. 看到 high unemployment/output gap：通常 expansionary fiscal。
+3. 看到 high inflation/overheating：通常 contractionary fiscal。
+4. 题干给 MPC：先判断是 spending, tax, or balanced-budget multiplier。
 
-**考点1：乘数效应计算**
-- 区分政府支出乘数和税收乘数
-- 注意MPC与MPS（边际储蓄倾向）的关系：MPC + MPS = 1
+## 4. Formula & Decision Bench 公式与决策台
 
-**考点2：挤出效应**
-- 扩张性财政→政府借款增加→利率上升→私人投资减少→总需求增加被部分抵消
-- 在充分就业时挤出效应更显著
-
-**考点3：自动稳定器的作用**
-- 不需要政策决策，自动运作
-- 减小经济波动幅度，但不消除波动
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+| Item | Formula / rule | Use |
 |---|---|---|
-| ❌ 忽略：财政政策有内部时滞（internal lag）和外部时滞（external lag）：决策需要立法程序（内部时滞长），但实施后效果相对直接（外部时滞短于货币政策）。 | ✅ 财政政策有内部时滞（internal lag）和外部时滞（external lag）：决策需要立法程序（内部时滞长），但实施后效果相对直接（外部时滞短于货币政策）。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：结构性赤字 vs 周期性赤字：结构性赤字是经济处于潜在产出水平时的赤字；周期性赤字是经济衰退导致的额外赤字。考试中常考区分。 | ✅ 结构性赤字 vs 周期性赤字：结构性赤字是经济处于潜在产出水平时的赤字；周期性赤字是经济衰退导致的额外赤字。考试中常考区分。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
-| ❌ 忽略：李嘉图等价（Ricardian Equivalence）：一些经济学家认为，减税不会刺激消费，因为消费者预期未来增税来偿还债务，因而增加储蓄。这是财政政策有效性的重要辩论点。 | ✅ 李嘉图等价（Ricardian Equivalence）：一些经济学家认为，减税不会刺激消费，因为消费者预期未来增税来偿还债务，因而增加储蓄。这是财政政策有效性的重要辩论点。 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+| Spending multiplier | `1 / (1 - MPC)` | Government spending impact on AD. |
+| Tax multiplier | `-MPC / (1 - MPC)` | Tax change impact; smaller absolute value than spending multiplier. |
+| Balanced budget multiplier | `1` | Equal increase in G and T raises AD. |
+| Expansionary fiscal | increase G/transfers or cut taxes | Raises AD. |
+| Contractionary fiscal | cut G/transfers or raise taxes | Lowers AD. |
+| Debt risk | growth, interest rate, primary balance, credibility | Conceptual sustainability check. |
 
-## 8. 跨模块关联
+## 5. Practice & Mock Evidence 题库证据
 
-| 连接 | 传递内容 | 做题用途 |
-|---|---|---|
-| `M02 -> M03` | output gap、unemployment、cycle phase | 判断财政政策应扩张还是紧缩。 |
-| `M03 -> M04` | deficit financing、policy mix、inflation pressure | 财政扩张可能迫使央行紧缩或影响利率路径。 |
-| `M03 -> M07/M08` | debt credibility、interest rates、capital flows | 财政赤字和债务风险影响 FX pressure 与 forward rates。 |
-| `M03 -> FI` | government borrowing、sovereign risk | 连接收益率、信用利差和债务可持续性。 |
-| `M03 -> PM` | fiscal impulse、automatic stabilizers | 连接宏观情景和资产配置。 |
+- Track `fiscal_vs_monetary` when central-bank tools are misclassified.
+- Track `tax_multiplier_sign` when tax multiplier sign or magnitude is wrong.
+- Track `balanced_budget` when equal G/T changes are treated as zero effect.
+- Track `crowding_out` when expansionary fiscal is assumed to lower rates automatically.
 
+## 6. Trap Ledger 陷阱账本
 
-## 9. 复习与刷题提示
+| Trap | Fix rule |
+|---|---|
+| Fiscal includes money supply | Fiscal = government budget/taxes/spending; money supply = monetary. |
+| Tax and spending multipliers equal | Tax effect is filtered through MPC. |
+| Balanced-budget multiplier = 0 | It is usually positive because spending enters AD directly. |
+| Expansionary fiscal always helps | Check lags, crowding out, debt and credibility. |
 
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
+## 7. Final Recall Sheet 最终回忆单
 
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M03-Fiscal-Policy.md` (high, 0.46)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Fiscal actor = government.
+- Tools = G, T, transfers, automatic stabilizers.
+- `k_G = 1/(1-MPC)`; `k_T = -MPC/(1-MPC)`; balanced budget multiplier = `1`.
+- Stance follows macro state, but implementation lags and debt can weaken result.

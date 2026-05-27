@@ -40,6 +40,27 @@ tags:
 1. explain put-call parity for European options
 2. explain put-call forward parity for European options
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V7`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V7.ePub`
+- Textbook chapter: `Module 9: Option Replication Using Put-Call Parity`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Put–Call Parity
+- 3. Option Strategies Based on Put–Call Parity
+- 4. Put–Call Forward Parity and Option Applications
+- 5. Put–Call Forward Parity
+- 6. Option Put–Call Parity Applications: Firm Value
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -139,6 +160,16 @@ c + PV(X) = p + S0
 - 看跌下限：`p >= max(0, PV(X) - S0)`
 - 美式期权价值通常不低于对应欧式期权，因为提前行权权利不会降低价值。
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Put–Call Parity | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Put–Call Parity`；`PCP`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Option Strategies Based on Put–Call Parity | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Option Strategies Based on Put–Call Parity`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Put–Call Forward Parity and Option Applications | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Put–Call Forward Parity and Option Applications`；`PCFPOA`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Put–Call Forward Parity | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Put–Call Forward Parity`；`PCFP`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Option Put–Call Parity Applications: Firm Value | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Option Put–Call Parity Applications: Firm Value`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -175,6 +206,16 @@ c + PV(X) = p + S0e^(-qT)            有连续收益率资产的平价
 3. **parity 题**：写标准 parity → 移项得到目标合成头寸 → 检查是否欧式期权条件
 4. **套利题**：若 parity 两边不等，买入便宜方、卖出贵方
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Put–Call Parity`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Option Strategies Based on Put–Call Parity`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Put–Call Forward Parity and Option Applications`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Put–Call Forward Parity`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Option Put–Call Parity Applications: Firm Value`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -184,6 +225,16 @@ c + PV(X) = p + S0e^(-qT)            有连续收益率资产的平价
 | ❌ 忽略：基础版 put-call parity 仅适用于欧式期权 (European options)，美式期权因其可提前行权需要更复杂的处理 | ✅ 基础版 put-call parity 仅适用于欧式期权 (European options)，美式期权因其可提前行权需要更复杂的处理 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：不要将欧式平价关系直接套用到所有美式期权场景 | ✅ 不要将欧式平价关系直接套用到所有美式期权场景 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：期权价格受波动率影响，不是越贵越差 | ✅ 期权价格受波动率影响，不是越贵越差 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Put–Call Parity | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Put–Call Parity`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Option Strategies Based on Put–Call Parity | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Option Strategies Based on Put–Call Parity`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Put–Call Forward Parity and Option Applications | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Put–Call Forward Parity and Option Applications`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Put–Call Forward Parity | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Put–Call Forward Parity`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Option Put–Call Parity Applications: Firm Value | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Option Put–Call Parity Applications: Firm Value`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

@@ -37,6 +37,30 @@ tags:
 1. describe the performance appraisal of alternative investments
 2. calculate and interpret alternative investment returns both before and after fees
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V8`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V8.ePub`
+- Textbook chapter: `Module 2: Alternative Investment Performance and Returns`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Alternative Investment Performance
+- 2.1. Alternative Investment Performance Appraisal
+- 2.2. Comparability with Traditional Asset Classes
+- 2.3. Performance Appraisal and Alternative Investment Features
+- 2.3.1. Investment Life Cycle
+- 2.3.2. Use of Borrowed Funds
+- 2.3.3. Valuation
+- 2.3.4. Fees
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -142,6 +166,19 @@ J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
 
 **Unsmoothing调整**: 对评估收益进行去平滑处理，还原真实波动率，使数据更接近公开市场价格波动
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Alternative Investment Performance | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Alternative Investment Performance`；`AIP`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Alternative Investment Performance Appraisal | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Alternative Investment Performance Appraisal`；`AIPA`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Comparability with Traditional Asset Classes | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Comparability with Traditional Asset Classes`；`CTAC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Performance Appraisal and Alternative Investment Features | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Performance Appraisal and Alternative Investment Features`；`PAAIF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Investment Life Cycle | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Investment Life Cycle`；`ILC`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Use of Borrowed Funds | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Use of Borrowed Funds`；`UBF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Valuation | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Valuation`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Fees | 重点回看分类边界、步骤顺序、输入输出变量，以及容易被题目改口径的细节。 | `Fees`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -173,6 +210,16 @@ J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
 2. **J曲线阶段判断**: 给出基金成立年限和收益状态，判断处于J曲线的哪个阶段。**思路**: 早期（1-3年）= 负收益；中期 = 逐步转正；后期 = 正收益稳定。
 3. **Sortino vs Sharpe辨析**: 题干描述指标特征，要求选出正确的指标。**思路**: Sortino看下行，Sharpe看总波动。
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Alternative Investment Performance`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Alternative Investment Performance Appraisal`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Comparability with Traditional Asset Classes`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Performance Appraisal and Alternative Investment Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Investment Life Cycle`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -182,6 +229,16 @@ J曲线描述PE基金生命周期中**先负后正**的收益变化曲线。
 | ❌ 忽略：收益平滑高估表现: 评估估值导致波动率和相关性被低估，风险调整收益被高估 | ✅ 收益平滑高估表现: 评估估值导致波动率和相关性被低估，风险调整收益被高估 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：DPI vs RVPI的含义: DPI是已实现的现金回报，RVPI是未实现的账面价值，两者性质不同 | ✅ DPI vs RVPI的含义: DPI是已实现的现金回报，RVPI是未实现的账面价值，两者性质不同 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：Sortino vs Sharpe: 在另类投资中，Sortino通常更适用（收益分布不对称） | ✅ Sortino vs Sharpe: 在另类投资中，Sortino通常更适用（收益分布不对称） | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Alternative Investment Performance | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Alternative Investment Performance`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Alternative Investment Performance Appraisal | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Alternative Investment Performance Appraisal`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Comparability with Traditional Asset Classes | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Comparability with Traditional Asset Classes`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Performance Appraisal and Alternative Investment Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Performance Appraisal and Alternative Investment Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Investment Life Cycle | 记住了主标题，却忽略该细分小节真正考的是步骤顺序、分类条件或变量口径。 | 看到相关题干先回到 `Investment Life Cycle`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

@@ -38,6 +38,30 @@ tags:
 1. define a derivative and describe basic features of a derivative instrument
 2. describe the basic features of derivative markets, and contrast over-the-counter and exchange-traded derivative markets
 
+
+## Textbook Signal Topics
+
+- Textbook volume: `V7`
+- Source ePub: `D:\BaiduNetdiskDownload\CFA2026一级原版书\cfa-program2026L1V7.ePub`
+- Textbook chapter: `Module 1: Derivative Instrument and Derivative Market Features`
+- Practice / Solutions: `available` / `available`
+
+### High-Signal Anchors
+
+- 2. Derivative Features
+- 2.1. Definition and Features of a Derivative
+- 3. Derivative Underlyings
+- 3.1. Equities
+- 3.2. Fixed-Income Instruments
+- 3.3. Currencies
+- 3.4. Commodities
+- 3.5. Credit
+
+### How To Use These Anchors
+
+- 先用题干关键词匹配到最接近的教材锚点，再回到正文确认定义边界、顺序条件和例外。
+- 计算题优先看公式触发段；概念题优先看对比、分类和限制条件段。
+- 若一道题同时触发多个锚点，先处理 LOS 主动作对应的那个，再补其余支持细节。
 ---
 
 ## 1. 模块定位
@@ -104,6 +128,19 @@ flowchart TD
 - **场外交易 (OTC)**：定制化条款、双边交易对手风险、无中央清算 (customization, counterparty exposure, bilateral terms)
 - **名义金额 (Notional Amount)**：放大风险敞口但不等于实际在险现金 (scales exposure but not automatically cash at risk)
 
+### 教材驱动补强（按原版教材回看）
+
+| 教材锚点 | 回看重点 | 题干触发词 |
+|---|---|---|
+| Derivative Features | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Derivative Features`；`DF`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Definition and Features of a Derivative | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Definition and Features of a Derivative`；`DFAD`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Derivative Underlyings | 重点回看定义、核心结论和它在本模块中的用途，避免只记标题不记动作。 | `Derivative Underlyings`；`DU`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Equities | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Equities`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Fixed-Income Instruments | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Fixed-Income Instruments`；`FII`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Currencies | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Currencies`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Commodities | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Commodities`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+| Credit | 重点回看这一层的主干结论、比较口径和公式适用条件，再往下接次级细节。 | `Credit`；题干里出现同义词、定义反问、比较口径或一步计算时回到这一节。 |
+
 ## 5. 关键公式与计算框架
 
 ### 5.1 核心内容
@@ -133,6 +170,16 @@ flowchart TD
 - **判断结算方式**：实物交割多用于商品/外汇；现金结算多用于指数/利率
 - **名义金额的理解**：名义金额不是实际投入资金，而是计算回报的参照基数
 
+### 教材驱动解题动作
+
+- 先按 `Textbook Signal Topics` 找最接近的教材小节，不要直接凭熟词下结论。
+- 遇到 `Derivative Features`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Definition and Features of a Derivative`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Derivative Underlyings`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Equities`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 遇到 `Fixed-Income Instruments`` 相关题型时，先复原该小节的定义边界，再决定是套公式、做比较还是判断例外。
+- 做完一轮后，回到教材内 `Practice Problems / Solutions` 检查自己是否漏掉了变量口径、顺序条件或例外。
+
 ## 7. 易错点与考试陷阱
 
 | ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
@@ -140,6 +187,16 @@ flowchart TD
 | ❌ 忽略：【考试陷阱】衍生品当前价值很小，但经济敞口可能非常大 (derivative value can be small today while exposure is economi… | ✅ 【考试陷阱】衍生品当前价值很小，但经济敞口可能非常大 (derivative value can be small today while exposure is economi… | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：不要将名义金额 (notional) 误认为最大损失 —— 名义金额是规模参照，不是风险上限 | ✅ 不要将名义金额 (notional) 误认为最大损失 —— 名义金额是规模参照，不是风险上限 | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
 | ❌ 忽略：OTC 衍生品不意味着"更危险"，而是风险类型不同（交易对手风险 vs 流动性风险） | ✅ OTC 衍生品不意味着"更危险"，而是风险类型不同（交易对手风险 vs 流动性风险） | 题干通常会用口径、顺序、定义边界或例外条件设置干扰。 |
+
+### 教材驱动易错清单
+
+| 易错来源 | 常见误判 | 回正动作 |
+|---|---|---|
+| Derivative Features | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Derivative Features`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Definition and Features of a Derivative | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Definition and Features of a Derivative`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Derivative Underlyings | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Derivative Underlyings`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Equities | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Equities`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
+| Fixed-Income Instruments | 把标题当成会做题，忽略定义边界和相邻概念差异。 | 看到相关题干先回到 `Fixed-Income Instruments`，用一句话说清“它是什么、什么时候用、最容易和什么混”。 |
 
 ## 8. 跨模块关联
 

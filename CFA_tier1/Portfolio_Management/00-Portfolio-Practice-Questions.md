@@ -1,0 +1,115 @@
+---
+title: "Portfolio Management Practice Questions"
+source_type: "local_question_pack"
+source_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf"
+answer_pdf: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\组合管理.pdf"
+question_count: 100
+source_pages: 184-202
+---
+
+# Portfolio Management Practice Questions
+
+- Source question pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\CFA L1 付费1000题.pdf`
+- Source answer pack: `D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题\1000题答案\组合管理.pdf`
+- Question count target: 100
+- Extracted question stems: 98
+
+## Questions
+- Q001 | p.184 | Which of the following statements about pension plans is most accurate?
+- Q002 | p.184 | The process of risk management is best described as the set of decisions that maximizes a company's value while:
+- Q003 | p.184 | Which of the following is least consistent with effective risk governance?
+- Q004 | p.184 | With regard to an investment policy statement, which of the following statements about return objectives is most accurate?
+- Q005 | p.184 | The correlation between the risk-free asset and the optimal risky portfolio is expected to be:
+- Q006 | p.185 | An investor who can lend and borrow at the risk-free rate builds a portfolio using the risk-free asset and the market portfolio. The risk-free rate is 3% and the expected market return is 15%. If the expected portfolio return is 18%, the investor's portfolio is:
+- Q007 | p.185 | An analyst gathers the following information about a company: If all purchases and sales were made on credit, the cash conversion cycle (based on a 360-day year) is:
+- Q008 | p.185 | A risk-neutral investor most likely seeks to maximize:
+- Q009 | p.185 | The market has a return of 8% and a standard deviation of returns of 12%. The risk-free rate is 2%. If a portfolio has a Sharpe ratio of 0.8, the portfolio's M2 alpha is closest to:
+- Q010 | p.185 | Which of the following is most likely a consequence of overconfidence bias? Investors:
+- Q011 | p.186 | Failing to act in pursuit of long-term goals in favor of short-term satisfaction best describes which of the following emotional biases?
+- Q012 | p.186 | When creating a long-only portfolio, which of the following correlation coefficients between assets would be most effective at reducing portfolio risk?
+- Q013 | p.186 | Which of the following can best be explained by overconfidence when predicting companies' earnings growth rates?
+- Q014 | p.186 | Which of the following is most likely developed by combining a client's investment objectives and constraints with long-term capital market expectations?
+- Q015 | p.186 | The diversification ratio of a portfolio is best described as the ratio of the:
+- Q016 | p.186 | In regard to the asset allocation process, a top-down analysis most likely begins with an examination of：
+- Q017 | p.187 | Which of the following is most likely a consequence of the illusion of control bias?
+- Q018 | p.187 | Which of the following is best classified as a non-financial risk?
+- Q019 | p.187 | Portfolio rebalancing is best described as a process aimed at:
+- Q020 | p.187 | The risk-return trade-off of a portfolio of only risky assets most likely improves when a risk-free asset is added to the portfolio because:
+- Q021 | p.187 | Which of the following best describes a potential consequence of the regret-aversion bias for financial market participants?
+- Q022 | p.187 | Cognitive errors:
+- Q023 | p.188 | Exchange-traded funds (ETFs):
+- Q024 | p.188 | Two assets have the following characteristics: The variance of returns for an equally weighted portfolio of the two assets is closest to:
+- Q025 | p.188 | With respect to return-generating models, statistical factor models:
+- Q026 | p.188 | Which of the following statements about asset allocation is most accurate?
+- Q027 | p.188 | An analyst gathers the following information about a portfolio and the market. Jensen's alpha for the portfolio is:
+- Q028 | p.189 | Which of the following behavioral biases is most likely the hardest to correct?
+- Q029 | p.189 | Momentum, defined as relative past stock returns, is most likely a factor in:
+- Q030 | p.189 | Which of the following measures uses only systematic risk to evaluate portfolio performance?
+- Q031 | p.189 | When evaluating the return distribution of an asset class, the probability of extreme returns is best assessed by the distribution's:
+- Q032 | p.189 | Robo-advisers most likely.
+- Q033 | p.189 | Which of the following is most closely associated with representativeness bias?
+- Q034 | p.190 | Which of the following statements about different types of investors is most accurate?
+- Q035 | p.190 | Which of the following is most likely undertaken during the risk budgeting process?
+- Q036 | p.190 | The portfolio approach to investing most likely.
+- Q037 | p.190 | A client's time horizon is most appropriately used by an investment adviser to determine the client's:
+- Q038 | p.190 | Which of the following sections of an investment policy statement most likely provides guidance on obtaining feedback on investment results?
+- Q039 | p.190 | The security market line plots the expected return of a portfolio against a measure of the portfolio's:
+- Q040 | p.191 | An analyst estimates the standard deviation of returns for the market portfolio to be 15% and the standard deviation of returns for a stock to be 25%. If the correlation of returns between the stock and the market portfolio is 0.6, the stock has:
+- Q041 | p.191 | Risk-averse investors make investment decisions that maximize:
+- Q042 | p.191 | Sovereign wealth funds are best described as investment funds:
+- Q043 | p.191 | Which of the following lines is plotted on a graph with the excess return of a security on the y-axis and the excess return of the market on the x-axis?
+- Q044 | p.191 | According to capital market theory, the only type of risk that is priced is:
+- Q045 | p.191 | Which of the following is most accurate regarding an investment policy statement (IPS)?
+- Q046 | p.192 | An investor's ability to take risk:
+- Q047 | p.192 | The capital market line most likely consists of portfolios that:
+- Q048 | p.192 | The Markowitz efficient frontier is best described as a curve that.
+- Q049 | p.192 | Which of the following most likely affects a client's ability to take risk? The client's:
+- Q050 | p.192 | The expected return for a security is equal to the market's risk premium. If the risk-free rate is positive and the CAPM holds, the beta of the security is:
+- Q051 | p.192 | Which of the following characteristics is most likely used to determine an investor's ability to take risk? The investor's:
+- Q052 | p.193 | An analyst gathers the following information: According to the CAPM, the expected return of the security is closest to:
+- Q054 | p.193 | An analyst gathers the following information about an asset and the market: Based on the CAPM, the asset's beta is closest to:
+- Q055 | p.193 | Long-term historical data on the risk-return trade-off of securities show that investors are most likely:
+- Q056 | p.194 | Information regarding the permissible use of derivatives in a portfolio is most likely found in which of the following sections of an investment policy statement?
+- Q057 | p.194 | In the portfolio management process, the feedback step most likely involves:
+- Q058 | p.194 | Which of the following investment principles best explains the use of strategic asset allocation in portfolio construction?
+- Q059 | p.194 | In the investment policy statement of a pension fund, a countrywide limit on the proportion of high-risk assets that can be held in long-term pension portfolios is most likely a:
+- Q060 | p.194 | The global minimum-variance portfolio is a portfolio that lies:
+- Q061 | p.195 | Which of the following principles best explains the focus on a strategic asset allocation when constructing a client's IPS?
+- Q062 | p.195 | Which of the following sections of an investment policy statement (IPS) most likely explain show and when the IPS should be reviewed?
+- Q063 | p.195 | Which of the following best describes a characteristic of defined contribution pension plans?
+- Q064 | p.195 | The market model is most likely used to predict
+- Q065 | p.195 | Open-end mutual funds typically:
+- Q066 | p.196 | A portfolio consists of two securities with the following characteristics: If the portfolio has an expected return of 12.6% and the returns of the two securities are uncorrelated, the portfolio's standard deviation is closest to:
+- Q067 | p.196 | An equally weighted portfolio is composed of two risky assets. If the correlation of asset returns is equal to zero, the portfolio standard deviation is:
+- Q068 | p.196 | If all investors have homogeneous expectations, the total risk and expected return of portfolios consisting of the risk-free asset and the optimal risky portfolio are plotted on the:
+- Q069 | p.196 | The risk-return profile of a portfolio's strategic asset allocation is most likely determined by the expected returns and risks of the individual asset classes and the:
+- Q070 | p.196 | A portfolio has an annual return of 15.2% and a standard deviation of returns of 11.7%. If the risk-free rate is 3.1%, the portfolio's Sharpe ratio is closest to:
+- Q071 | p.197 | Which of the following is best classified as a financial risk?
+- Q072 | p.197 | The risk management measure that captures the sensitivity of a derivative's delta to a change in the value of the underlying best describes:
+- Q073 | p.197 | The intercept on the y-axis of the security characteristic line is:
+- Q074 | p.197 | With respect to an investment policy statement, which of the following is most closely linked to the client's distinctive needs?
+- Q075 | p.193 | If the covariance of retuns is 5.5%², the standard deviation of returns for each security is closest to:
+- Q076 | p.197 | Which of the following performance measures is equal to the slope of the capital allocation line?
+- Q077 | p.198 | Which of the following sections of an investment policy statement for a pension plan most likely specifies the discretion that portfolio managers have with respect to executing the investment strategy?
+- Q078 | p.198 | Which of the following measures is most appropriate to evaluate the performance of a portfolio that is not fully diversified?
+- Q079 | p.198 | An analyst gathers the following information about three stocks: If the standard deviation of market returns is equal to 10%, the stock with the highest nonsystematic risk is:
+- Q080 | p.198 | Which of the following metrics is most appropriate to estimate a bond's average extreme loss?
+- Q081 | p.199 | An analyst gathers the following information about the security market line (SML) and a stock: According to capital market theory, if the analyst believes the stock will have a return of 7%, the stock is:
+- Q082 | p.199 | Relative to passive market-cap-weighted strategies, smart beta strategies typically have:
+- Q083 | p.199 | When defining asset classes for a strategic asset allocation, which of the following pairwise correlations between asset class returns is most preferable?
+- Q084 | p.199 | According to capital market theory, an efficient market does not reward investors for taking on:
+- Q085 | p.199 | Which of the following is most likely a legal and regulatory constraint in an investment policy statement?
+- Q086 | p.200 | When defining asset classes, the paired correlations of assets within an asset class should be.
+- Q087 | p.200 | An investor gathers the following information about a security and the market: The correlation between the security's returns and the market's returns is closest to:
+- Q088 | p.200 | A bank determines that its value at risk (VaR) is ￡5 million at 5% for one day. The bank is expecting a minimum loss of ￡5 million once every:
+- Q089 | p.200 | A good risk management process should:
+- Q090 | p.200 | A portfolio consisting of two securities has the following characteristics: If the correlation of returns between the two securities is 0.20, the portfolio's standard deviation of returns is closest to:
+- Q091 | p.201 | An investor has a 15-year time horizon but needs to withdraw funds from her portfolio in one year's time to pay for tuition fees. Which of the following investments is most suitable to cover the investor's liquidity requirement due to the tuition fees?
+- Q092 | p.201 | With respect to capital market theory, which of the following statements is most accurate?
+- Q093 | p.201 | An analyst gathers the following information: The covariance between the returns of the asset and the market is closest to:
+- Q094 | p.201 | A security with a beta of 1.5 has an expected return of 11% according to the CAPM. If the risk-free rate is 2%, the market risk premium is closest to:
+- Q095 | p.201 | An analyst gathers the following information about a portfolio and the market: The portfolio's Treynor ratio is closest to:
+- Q096 | p.202 | For an equally weighted portfolio, an increase in the correlations between asset returns most likely decreases the:
+- Q097 | p.202 | An adviser gathers the following information about a client's retirement income needs: l The current balance of the client's retirement fund is $150,000. l The client plans to retire in 15 years' time. l $500,000 in today's money is needed to fund retirement. l No further retirement fund contributions will be made. Inflation is expected to average 2% per year over the next 15 years. Based only on the above information and ignoring taxes, the minimum annual rate of return required to meet the client's retirement income objective is closest to:
+- Q098 | p.202 | As the number of assets in an equally weighted portfolio becomes large, the portfolio's variance of returns most likely approaches:
+- Q099 | p.202 | In risk management, which of the following should be taken into account when determining an enterprise's risk tolerance?

@@ -21,256 +21,66 @@ tags:
 
 # M05: Portfolio Mathematics
 
-> **模块定位**：把投资问题翻译成收益率、现金流、统计推断和模型检验。 本模块聚焦 **Portfolio Mathematics**，要求把官方 LOS 转成可执行的判断、计算或解释动作。
+## 0. Reading Contract 学习契约
 
----
+- **Official module**: Module 5: Portfolio Mathematics.
+- **Official pages**: Learning Outcomes; 5.01 Introduction; 5.02 Portfolio Expected Return and Variance of Return; 5.03 Forecasting Correlation of Returns: Covariance Given a Joint Probability Function; 5.04 Portfolio Risk Measures: Applications of the Normal Distribution.
+- **LOS contract**: calculate and interpret portfolio expected return, variance, standard deviation, covariance, correlation; use joint probability functions; define shortfall risk and apply Roy's safety-first criterion.
+- **Evidence rule**: every miss must state whether the failed input was weight, covariance/correlation, joint probability, or threshold return.
 
-## Official Module Structure
+## 1. Module Brief 模块定位
 
-- Learning Outcomes: Portfolio Mathematics
-- 5.01 | Introduction
-- 5.02 | Portfolio Expected Return and Variance of Return
-- 5.03 | Forecasting Correlation of Returns: Covariance Given a Joint Probability Function
-- 5.04 | Portfolio Risk Measures: Applications of the Normal Distribution
+M05 turns single-asset risk into portfolio risk. 中文上它的核心不是“收益加权平均”，而是“风险为什么不能简单加权平均”：covariance and correlation determine diversification.
 
-## Learning Outcome Statements
+## 2. Curriculum Spine 教材正文主线
 
-1. calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns
-2. calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns
-3. define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion
+1. **Portfolio Expected Return and Variance of Return**: expected return is weighted average; variance includes own-risk and cross-risk terms.
+2. **Covariance and Correlation**: covariance measures co-movement with units; correlation standardizes it into `[-1,+1]`.
+3. **Joint Probability Function**: joint probabilities are the raw evidence for covariance/correlation when scenario returns for two assets are given.
+4. **Portfolio Risk Measures: Applications of the Normal Distribution**: shortfall risk and Roy's safety-first ratio compare portfolios against a minimum acceptable return.
 
----
+## 3. Exam Translation 考试翻译
 
-## 1. 模块定位
-
-### 5.1 学习任务
-- **核心问题**：考试希望你用 `Portfolio Mathematics` 解释什么、计算什么、比较什么，或判断什么。
-- **输入信息**：题干事实、数据、假设、时间口径、单位、约束条件。
-- **输出结果**：中文结论 + 英文关键术语 + 必要公式/框架 + 限制条件。
-
-### 5.2 考试角色
-- **难度类型**：计算+解释。
-- **高频题型**：定义辨析、情境判断、计算解释、表格补数、跨模块比较。
-- **答题原则**：先判断 LOS 动词，再选择工具；计算后必须解释结果含义。
-
-### 5.3 关键英文术语
-- **Portfolio Mathematics（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Introduction（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Portfolio Expected Return and Variance of Return（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Forecasting Correlation of Returns: Covariance Given a Joint Probability Function（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Forecasting Correlation of Returns（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Portfolio Risk Measures: Applications of the Normal Distribution（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Portfolio Risk Measures（核心术语）**：本模块关键词，用于定位 LOS、题干条件和解题动作。
-- **Correlation（相关系数）**：衡量两个变量线性同向或反向变化的程度。
-
-## 2. 官方 LOS 对应学习目标
-
-| LOS | 官方要求 | 中文学习动作 | 做题输出 |
-|---|---|---|---|
-| 5.1 | calculate and interpret the expected value, variance, standard deviation, covariances, and correlations of portfolio returns | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 5.2 | calculate and interpret the covariance and correlation of portfolio returns using a joint probability function for returns | 计算并解释数值结果；解释结果的投资含义 | 写出结论、依据、公式口径和限制条件。 |
-| 5.3 | define shortfall risk, calculate the safety-first ratio, and identify an optimal portfolio using Roy’s safety-first criterion | 计算并解释数值结果；识别题干中的关键事实和触发条件 | 写出结论、依据、公式口径和限制条件。 |
-
-## 3. 核心知识树
-
-```text
-5. Portfolio Mathematics
-├─ 5.1 收益率矩（Return Moments）
-│  ├─ 5.1.1 Portfolio expected return：`E(Rp)=Σw_iE(R_i)`，权重和应为 1
-│  ├─ 5.1.2 Two-asset variance：`w1²σ1²+w2²σ2²+2w1w2Cov12`
-│  ├─ 5.1.3 Correlation form：`2w1w2σ1σ2ρ12`，题目给 ρ 时先转 covariance 项
-│  └─ 5.1.4 Standard deviation：开方后才是与收益率同单位的风险
-├─ 5.2 联合概率函数（Joint Probability Function）
-│  ├─ 5.2.1 Joint probability table：同时给两资产状态和概率，是 covariance 的原始证据
-│  ├─ 5.2.2 Covariance：`Σp_i[R1_i-E(R1)][R2_i-E(R2)]`
-│  ├─ 5.2.3 Correlation：`ρ12=Cov12/(σ1σ2)`，标准化到 `[-1,+1]`
-│  └─ 5.2.4 判断：Cov 符号看同向/反向，ρ 大小看分散化强弱
-├─ 5.3 分散化机制（Diversification Mechanics）
-│  ├─ 5.3.1 `ρ=+1`：无分散化，组合标准差为加权平均
-│  ├─ 5.3.2 `ρ<+1`：开始有分散化，风险低于加权平均风险
-│  ├─ 5.3.3 `ρ=-1`：可能完全消除风险，取决于权重与标准差
-│  └─ 5.3.4 MVP：风险最小组合，不一定是收益最高组合
-├─ 5.4 短缺风险（Shortfall Risk）
-│  ├─ 5.4.1 Shortfall risk：收益低于阈值 `R_L` 的风险
-│  ├─ 5.4.2 Roy's safety-first：`SFRatio=[E(Rp)-R_L]/σp`
-│  └─ 5.4.3 选择规则：在候选组合中选择 SFRatio 最大者
-```
-
-## 核心图解
-
-```mermaid
-flowchart LR
-    A["Asset inputs<br/>E(R), sigma, covariance"] --> B["Portfolio return<br/>weighted average"]
-    A --> C["Portfolio variance<br/>own risk + covariance terms"]
-    C --> D{"Correlation rho"}
-    D -->|rho = +1| E["No diversification"]
-    D -->|rho < +1| F["Diversification benefit"]
-    D -->|rho = -1| G["Potential full hedge"]
-    C --> H["Portfolio SD = sqrt(variance)"]
-    H --> I["Roy safety-first<br/>(E(Rp)-RL)/sigma_p"]
-    I --> J["Choose highest SFRatio"]
-```
-
-## 4. 知识点详解
-
-### 5.1 收益率矩（Return Moments）
-
-**组合期望收益率（Portfolio Expected Return）**：
-`E(R_p) = w_1 × E(R_1) + w_2 × E(R_2) + ... + w_n × E(R_n)`
-- 组合期望收益率为各资产期望收益率的加权平均
-- 权重 w_i 之和必须为 1（全额投资组合，Fully Invested Portfolio）
-
-**两资产组合方差（Two-Asset Portfolio Variance）**：
-`σ_p² = w_1²σ_1² + w_2²σ_2² + 2w_1w_2Cov(R_1, R_2)`
-- 或者用相关系数形式：`σ_p² = w_1²σ_1² + w_2²σ_2² + 2w_1w_2σ_1σ_2ρ_12`
-- 组合标准差 = `√σ_p²`
-
-**关键直觉**：组合风险不是资产风险的简单加权平均。协方差项 Cov(R_1, R_2) 决定了分散化的效果。
-
-**多资产组合方差（列成矩阵形式）**：
-`σ_p² = ΣΣ w_iw_jCov(R_i, R_j)`
-- 对角线上是各资产自身的方差项
-- 非对角线上是资产两两之间的协方差项
-
-### 5.2 联合概率函数（Joint Probability Function）
-
-**协方差（Covariance）**：衡量两个变量同向变动的程度。
-`Cov(R_1, R_2) = Σ p_i × [R_1,i - E(R_1)] × [R_2,i - E(R_2)]`
-- Cov > 0：同向变动
-- Cov < 0：反向变动
-- Cov = 0：没有线性关系
-
-**相关系数（Correlation Coefficient）**：
-`ρ_12 = Cov(R_1, R_2) / (σ_1 × σ_2)`
-- 范围 [-1, +1]，标准化后的协方差
-- ρ = +1：完全正相关，无分散化效果
-- ρ = -1：完全负相关，可完全消除风险
-- ρ = 0：无线性相关，仍有分散化效果
-
-**联合概率表（Joint Probability Table）**：考试常用 2×2 或 3×3 概率表给出不同情景下两只股票的收益率和概率。从这张表可以算出：
-- 各资产的期望收益（边际概率加权）
-- 协方差（联合概率加权交叉乘积）
-- 相关系数
-
-### 5.3 分散化机制（Diversification Mechanics）
-
-**分散化的数学本质**：当 ρ < 1 时，组合方差的协方差项 2w_1w_2Cov_12 小于 2w_1w_2σ_1σ_2，组合风险低于加权平均风险。
-
-**极端情况**：
-- ρ = +1：组合标准差 = w_1σ_1 + w_2σ_2（无分散化）
-- ρ = -1：组合标准差 = |w_1σ_1 - w_2σ_2|（完全对冲可能）
-- ρ = 0：组合方差 = w_1²σ_1² + w_2²σ_2²（有限度分散）
-
-**最小方差组合（Minimum Variance Portfolio, MVP）**：整个组合可行集（Feasible Set）中风险最小的权重组合。对于两资产组合：
-`w_1* = [σ_2² - Cov_12] / [σ_1² + σ_2² - 2Cov_12]`
-
-> **【考试陷阱】** 低 correlation 不等于负 expected return。可以找到低相关甚至负相关的资产，各自都有正的期望收益。
-
-### 5.4 短缺风险（Shortfall Risk）
-
-**罗伊安全优先比率（Roy's Safety-First Ratio, SFRatio）**：
-`SFRatio = [E(R_p) - R_L] / σ_p`
-- R_L = 阈值回报率（Threshold Return），投资者设定的最低可接受回报
-- SFRatio 衡量组合期望回报超出阈值多少个标准差
-- 在收益服从正态分布的假设下，SFRatio 越大的组合，跌破 R_L 的概率越低
-
-**选择规则**：在所有候选组合中，选择 SFRatio 最大的组合。这等价于最小化跌破 R_L 的概率。
-
-**与夏普比率（Sharpe Ratio）的区别**：
-- Sharpe Ratio 使用无风险利率 R_f 作为基准
-- Safety-First Ratio 使用投资者自定义的阈值 R_L（可能不等于 R_f）
-
-## 5. 关键公式与计算框架
-
-### 5.1 核心内容
-
-| 公式 | 解释 | 使用场景 |
-|------|------|----------|
-| `E(R_p) = Σ w_iE(R_i)` | 组合期望收益 | 投资组合的预期回报 |
-| `σ_p² = w_1²σ_1²+w_2²σ_2²+2w_1w_2Cov_12` | 两资产组合方差 | 计算组合风险 |
-| `Cov_12 = Σ p_i[R_1,i-E(R_1)][R_2,i-E(R_2)]` | 协方差 | 衡量两变量同向变动 |
-| `ρ_12 = Cov_12/(σ_1σ_2)` | 相关系数 | 标准化协方差范围 [-1,+1] |
-| `SFRatio = [E(R_p)-R_L]/σ_p` | 安全优先比率 | 评估组合跌破阈值风险 |
-| `σ_p = √σ_p²` | 组合标准差 | 风险解释必须开方 |
-| `w_1* = (σ_2²-Cov_12)/(σ_1²+σ_2²-2Cov_12)` | 两资产 MVP 权重 | Level I 以直觉为主，若题给公式可代入 |
-
-### 5.2 计算框架
-
-| 题型 | 步骤 | 对应节点 | 防错点 |
-|---|---|---|---|
-| 组合期望收益 | 检查权重和 -> `Σw_iE(R_i)` | `5.1.1` | 权重可能含现金或杠杆。 |
-| 两资产组合风险 | 先算 covariance 或由 ρ 转换 -> 代入方差 -> 开方 | `5.1.2-5.1.4` | 协方差项前有 `2w1w2`。 |
-| 联合概率表 | 算各资产 EV -> 每状态离差乘积×概率 -> 加总 | `5.2` | 用联合概率，不是边际概率。 |
-| 分散化判断 | 比较 ρ 与 +1、0、-1 | `5.3` | 资产数量不是分散化充分条件。 |
-| Safety-first | 每个组合算 SFRatio -> 选最大 | `5.4` | 阈值是 `R_L`，不是必然等于 `R_f`。 |
-
-## 6. 常见考点与解题思路
-
-| 重要性 | 考点 | 解题动作 |
+| Prompt trigger | Exam action | Output language |
 |---|---|---|
-| ⭐⭐⭐ | 5.1 Introduction | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐⭐ | 5.2 Portfolio Expected Return and Variance of Return | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 5.3 Forecasting Correlation of Returns: Covariance Given a Joint Probability Function | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
-| ⭐⭐ | 5.4 Portfolio Risk Measures: Applications of the Normal Distribution | 先定位题干触发词，再写公式/框架，最后解释结果或判断陷阱。 |
+| weights and expected returns | calculate `E(Rp)` | "Portfolio expected return is weighted average." |
+| two assets with SD and correlation | calculate variance using correlation form | "Portfolio risk includes covariance term." |
+| joint probability table | compute each asset EV, covariance, correlation | "Use joint probabilities, not only marginal probabilities." |
+| correlation lower than +1 | explain diversification benefit | "Risk falls below weighted average risk when rho is below +1." |
+| threshold return `R_L` | calculate Roy safety-first ratio | "Choose the portfolio with the highest safety-first ratio." |
 
-### 6.9 ⭐⭐ Legacy 考点补充
+## 4. Formula & Decision Bench 公式与决策台
 
-### 6.1 核心内容
-
-**考点一：计算组合期望收益和方差**
-- 步骤 1：确认权重（权重和为 1）
-- 步骤 2：算 E(R_p) = 加权平均
-- 步骤 3：代入方差公式，注意协方差项乘以 2
-- 步骤 4：开方得标准差
-
-**考点二：从联合概率表算协方差**
-- 步骤 1：从边际概率算各资产期望收益
-- 步骤 2：对每个情景，算离差乘积 × 联合概率
-- 步骤 3：加总
-
-**考点三：分散化效果判断**
-- 给定相关系数，判断组合风险 vs 加权平均风险
-- 计算最小方差组合的权重
-
-**考点四：Safety-First Ratio 选组合**
-- 所有候选组合用 SFRatio 排序
-- 选最大者
-
-## 7. 易错点与考试陷阱
-
-| ❌ 错误理解 | ✅ 正确理解 | 为什么错 / 考试提醒 |
+| Formula / framework | Use | Trap check |
 |---|---|---|
-| ❌ 只背 Portfolio Mathematics 的英文名，不解释中文含义 | ✅ 用中文说清定义、适用条件和考试动作 | 术语题和情境题都会考定义边界。 |
-| ❌ 看到公式就直接套，不检查口径 | ✅ 先检查时间、单位、现金流方向、会计口径或统计假设 | CFA 常把错误藏在输入口径里。 |
-| ❌ 把显著性、相关性或高分数直接当成好结论 | ✅ 还要看经济含义、限制条件和跨模块证据 | 数量结果必须回到投资解释。 |
+| `E(Rp)=sum w_iE(R_i)` | portfolio expected return | Weights should sum to 1 unless leverage/cash is stated. |
+| `sigma_p^2=w1^2sigma1^2+w2^2sigma2^2+2w1w2Cov12` | two-asset variance | Do not omit the `2w1w2` covariance term. |
+| `sigma_p^2=w1^2sigma1^2+w2^2sigma2^2+2w1w2sigma1sigma2rho12` | correlation form | Use when rho is given. |
+| `Cov12=sum p_i[R1_i-E(R1)][R2_i-E(R2)]` | joint-probability covariance | Use joint probabilities for each paired state. |
+| `rho12=Cov12/(sigma1 sigma2)` | correlation | Standardized co-movement; unitless. |
+| `SFRatio=[E(Rp)-R_L]/sigma_p` | Roy safety-first | Highest value is preferred for fixed threshold. |
+| `rho=+1 / 0 / -1` | diversification interpretation | +1 no benefit; -1 may hedge fully depending on weights. |
 
-## 8. 跨模块关联
+## 5. Practice & Mock Evidence 题库证据
 
-| 输出节点 | 连接模块/科目 | 如何被调用 | 易错接口 |
-|---|---|---|---|
-| `5.1` 组合收益/方差 | Portfolio Management M01/M02 | Markowitz、efficient frontier、CAL/CAPM 的数学前置 | 组合风险不是标准差的简单加权平均。 |
-| `5.2` Cov/ρ | [[M03-Statistical-Measures-of-Asset-Returns]]、M10 Regression | 相关性从描述统计进入组合和回归 | Covariance 单位不直观，比较强度用 correlation。 |
-| `5.3` Diversification | PM、Risk Management | unsystematic risk 可通过低相关资产降低 | 低相关不等于低风险资产本身。 |
-| `5.4` Safety-first | PM investor objectives | 有最低可接受收益时选择组合 | SFRatio 只在给定阈值和风险尺度下比较。 |
-| `5.1-5.3` 风险分布 | [[M06-Simulation-Methods]] | 模拟组合收益分布需要收益、波动和相关输入 | 输入相关结构错会使模拟风险失真。 |
+- Official textbook index marks practice and solutions as available.
+- Evidence tags: `portfolio_variance`, `covariance_term`, `joint_probability`, `correlation_interpretation`, `safety_first`.
+- Future records should include weights, standard deviations, covariance/correlation, and the threshold return if safety-first is involved.
 
-### Legacy 关联补充
+## 6. Trap Ledger 陷阱账本
 
-- **[[M03-Statistical-Measures]]**：方差、标准差、相关系数的概念在 M03 中铺好基础；M05 将其扩展到多变量的组合场景。
-- **[[M04-Probability-Concepts]]**：联合概率函数是概率论在投资组合中的直接应用 — 期望值框架从单变量扩展到双变量。
-- **[[M01-Rates-and-Returns]]**：杠杆回报公式 `R_p + (B/E)(R_p - r_D)` 在理解组合权重和杠杆效应时是重要扩展。
-- **Portfolio Management**：M05 的组合数学是 Markowitz 有效前沿和资产配置的理论基础。
+| Trap | Correct rule |
+|---|---|
+| Portfolio risk treated as weighted average of SDs | Portfolio variance includes covariance/correlation terms. |
+| Correlation sign interpreted as risk level | Sign shows direction; risk effect depends on weight and volatility too. |
+| Joint probability table replaced by marginal probabilities | Covariance needs paired outcomes and joint probabilities. |
+| SFRatio compared with Sharpe ratio | SFRatio uses threshold `R_L`, not necessarily risk-free rate. |
+| Low correlation treated as low-risk asset | Low correlation helps diversification but does not make the asset safe. |
 
+## 7. Final Recall Sheet 最后回忆页
 
-## 9. 复习与刷题提示
-
-- 第一轮：按 `Official Module Structure` 逐节过概念，把每个 LOS 改写成中文任务。
-- 第二轮：对照 `## 3. 核心知识树` 做主动回忆，能说出每个编号节点的定义、公式/框架和陷阱。
-- 第三轮：刷题后记录错因，如果暴露 MOC 缺口，按 `docs/moc-auto-patch-workflow.md` 进入补强流程。
-- 考前：只看术语、公式/框架、易错点和本模块错题，避免重新铺开所有正文。
-
-## 10. Legacy Notes Integrated
-
-- **主要 legacy 来源**：`M05-Portfolio-Mathematics.md` (high, 0.86)
-- **整合规则**：高置信内容已合入 `知识点详解`、`公式与计算框架`、`常见考点`、`易错陷阱` 和 `跨模块关联`。
-- **边界**：若 legacy 内容与 2026 官方 LOS 冲突，以官方 module 名称、LOS 和 registry 为准。
+- Return is weighted average; variance is not.
+- Covariance sign = co-movement; correlation magnitude = standardized linear strength.
+- `rho < +1` creates diversification benefit.
+- Joint probability table -> EVs -> covariance -> correlation.
+- Roy: maximize `[E(Rp)-R_L]/sigma_p`.
