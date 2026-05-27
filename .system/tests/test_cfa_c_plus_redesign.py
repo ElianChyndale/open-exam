@@ -57,3 +57,7 @@ End stays.
     assert "Formula stays." in cleaned
     assert "Trap stays." in cleaned
     assert "End stays." in cleaned
+    assert cleaned.index("## 1. 模块定位") < cleaned.index("Body stays.")
+    assert cleaned.index("Body stays.") < cleaned.index("## 5. 关键公式与计算框架")
+    assert cleaned.index("Formula stays.") < cleaned.index("## 7. 易错点与考试陷阱")
+    assert cleaned.index("Trap stays.") < cleaned.index("## 8. 复习安排")
