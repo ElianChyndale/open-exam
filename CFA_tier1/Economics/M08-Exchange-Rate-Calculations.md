@@ -56,9 +56,9 @@ This is the calculation endpoint of Economics. 本模块所有题都先从 quote
 | Cross rate | `A/C = (A/B) x (B/C)` | Middle currency cancels. |
 | Inversion | `B/A = 1/(A/B)` | Bid/ask inversion: bid becomes `1/ask`, ask becomes `1/bid`. |
 | Forward points | `F - S` | Positive/negative depends on quote direction. |
-| Forward premium | `(F - S) / S` | Period premium/discount. |
+| Forward premium / interest rate | `F > S` → base at forward premium → `i_price > i_base` (base has lower rate) | CIP 核心推论：远期升水的货币利率更低。 |
 | Annualized premium | `[(F - S) / S] x periods per year` | Match question maturity. |
-| Covered interest parity | `F = S x (1+i_domestic)/(1+i_foreign)` | No-arbitrage forward. |
+| Covered interest parity | `F = S x (1+i_price)/(1+i_base)` | No-arbitrage forward. |
 | Arbitrage test | quoted F vs CIP F | Borrow low, convert, invest high, lock forward; verify cash flows. |
 
 ## 5. Practice & Mock Evidence 题库证据
@@ -74,7 +74,7 @@ This is the calculation endpoint of Economics. 本模块所有题都先从 quote
 |---|---|
 | Forward premium means future appreciation guaranteed | It is no-arbitrage pricing, not a forecast guarantee. |
 | Bid/ask can be averaged | Use executable bid/ask; no mid unless question asks. |
-| High interest currency has forward premium | Under CIP, high interest currency usually trades at forward discount. |
+| High interest currency has forward premium | Under CIP, high interest currency usually trades at forward discount. Base at forward premium → base has lower rate. |
 | Cross rate can be multiplied in any order | Currency units must cancel. |
 
 ## 7. Final Recall Sheet 最终回忆单
@@ -83,4 +83,5 @@ This is the calculation endpoint of Economics. 本模块所有题都先从 quote
 - Cross: arrange units to cancel.
 - Invert: bid = `1/ask`, ask = `1/bid`.
 - Premium = `(F-S)/S`; annualize by period.
-- CIP = `F = S(1+i_d)/(1+i_f)`.
+- CIP = `F = S(1+i_price)/(1+i_base)`.
+- **Base at forward premium → base has lower interest rate**（F>S → i_price > i_base）。

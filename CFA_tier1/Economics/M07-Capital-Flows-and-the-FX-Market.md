@@ -39,14 +39,18 @@ This module is the bridge from macro flows to FX mechanics. 本模块不只是�
 | Participants | banks, corporations, investors, governments, central banks | 判断交易动机。 |
 | Quotes | base/price currency, direct/indirect | 先定义报价方向。 |
 | Nominal vs real | relative price level adjustment | 判断贸易竞争力。 |
-| Regimes | floating, managed, fixed, currency board, monetary union | 判断政策独立性与稳定性。 |
+| Real exchange rate formula | `RER = S_{d/f} × P_f / P_d` | 关键公式：名义汇率 × 国内外价格比。 |
+| Real ER approximate Δ | `%ΔRER ≈ %ΔS + π_f - π_d` | 快速估算，注意 domestic inflation 压低 RER。 |
+| Real ER exact Δ | `%ΔRER = (1+%ΔS) × (1+π_f)/(1+π_d) - 1` | 精确计算，通胀率差异大时必须用。 |
+| Base currency appreciation | `new / old = 1 + r` | new 已知时求 old → 除法。 |
+| Regimes | floating, managed, fixed peg, currency board, monetary union | 判断政策独立性与稳定性。区分 fixed peg（有 discretion）vs currency board（hard peg + full reserve backing + no lender of last resort）。 |
 | Capital restrictions | controls on inflows/outflows | 判断政策目标和成本。 |
 
 ## 3. Exam Translation 考试翻译
 
 1. 写下 `A/B = 1 A costs B`，再判断升贬值。
 2. 问 real exchange rate：加入 relative price level，不只看 nominal quote。
-3. Regime 题：固定汇率提高稳定性但降低货币政策独立性。
+3. Regime 题：fixed peg（有 discretion，lender of last resort）vs currency board（hard peg + full reserve backing + no traditional lender of last resort）。
 4. Capital restriction 题：说明保护 reserves/降低波动，也可能降低效率和信心。
 
 ## 4. Formula & Decision Bench 公式与决策台
@@ -55,9 +59,39 @@ This module is the bridge from macro flows to FX mechanics. 本模块不只是�
 |---|---|---|
 | Quote meaning | `A/B` means 1 unit of A costs B | If A/B rises, A appreciates versus B. |
 | Percentage change | `(new - old) / old` for quoted rate | Interpret relative to base/price currency. |
-| Real exchange rate | nominal rate adjusted for relative price levels | Competitiveness. |
+| Real exchange rate | `RER = S_{d/f} × P_f / P_d` | 名义汇率调整国内外价格水平。S_{d/f} = domestic/foreign。 |
+| Real ER approximate Δ | `%ΔRER ≈ %ΔS_{d/f} + π_f - π_d` | 快速算：名义涨幅 + foreign通胀 - domestic通胀。 |
+| Real ER exact Δ | `%ΔRER = (1+%ΔS) × (1+π_f)/(1+π_d) - 1` | 通胀差大时必须用精确公式，不能用近似。 |
+| Base currency appreciation | `new / old = 1 + r` → `old = new / (1+r)` | base 在分母（price/base），升值 → 除法。 |
 | Central bank buys foreign currency | sells domestic currency; domestic money supply rises | Can lower domestic interest rates. |
-| Fixed vs floating | stability vs policy independence | Regime trade-off. |
+| Fixed peg vs currency board | fixed peg: discretion, lender of last resort. currency board: hard peg + full reserve backing + no traditional lender of last resort. | Stability vs independence trade-off. Currency board is stricter。 |
+
+### Real exchange rate 公式详解
+
+**定义**：`RER = S_{d/f} × P_f / P_d`
+- `S_{d/f}` = domestic currency per foreign currency（名义汇率）
+- `P_f` = foreign price level，`P_d` = domestic price level
+
+**近似变化率**：`%ΔRER ≈ %ΔS_{d/f} + π_f - π_d`
+- 名义汇率上涨 → RER 上涨（本币实际购买力下降）
+- foreign inflation 更高 → RER 上涨
+- domestic inflation 更高 → RER 被压低
+
+**精确变化率**：`%ΔRER = (1+%ΔS_{d/f}) × (1+π_f)/(1+π_d) - 1`
+- 例：%ΔS = +7.5%, π_f = -4%, π_d = +2.5%
+- 近似：7.5% + (-4%) - 2.5% = **1.0%**
+- 精确：(1.075 × 0.96 / 1.025) - 1 = **0.7%**
+- 通胀率差异大时，近似值有偏差，用精确公式。
+
+### Base currency appreciation 公式详解
+
+`A/B = 1.4500` → 1 unit of A (base) = 1.4500 of B (price)
+
+Base currency A 升值 8%：`new_rate = old_rate × (1 + 0.08)`
+
+已知 new=1.45 求 old：`old = 1.45 / 1.08 = 1.3426`
+
+> **关键直觉**：base currency 在分母，升值 → 分数值增大 → new = old × (1+r) → 求 old 用除法。不要把 base 当成分子直接乘。
 
 ## 5. Practice & Mock Evidence 题库证据
 
@@ -74,10 +108,11 @@ This module is the bridge from macro flows to FX mechanics. 本模块不只是�
 | Nominal appreciation always improves purchasing power | Real rate depends on relative inflation. |
 | Peg removes currency risk at no cost | Peg requires reserves and sacrifices policy flexibility. |
 | Capital controls only help | They may reduce liquidity, confidence and market efficiency. |
+| Currency board = regular fixed peg | Currency board = hard peg + full reserve backing + no traditional lender of last resort. CBS is not discretionary. |
 
 ## 7. Final Recall Sheet 最终回忆单
 
 - `A/B` up = A appreciates, B depreciates.
 - FX functions: exchange, hedging, speculation, arbitrage, settlement.
-- Fixed regime = stability plus reserve/policy-independence cost.
+- Fixed peg = stability plus reserve/policy-independence cost (has discretion). Currency board = hard peg + full reserve backing + no traditional lender of last resort.
 - Capital controls protect policy/reserves but reduce efficiency and confidence.

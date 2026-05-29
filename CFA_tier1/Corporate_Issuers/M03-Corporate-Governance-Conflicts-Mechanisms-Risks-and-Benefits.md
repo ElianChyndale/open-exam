@@ -44,6 +44,7 @@ Governance is the control system around corporate power. 考试重点不是背�
 ## 3. Exam Translation 考试转译
 
 - `manager perks, empire building` -> principal-agent conflict with shareholders.
+- `manager does not maximize shareholder value` -> look for insufficient effort, excessive perks, avoiding appropriate risk, or protecting the manager's own job.
 - `controlling shareholder expropriates minority` -> need minority protection/transparency.
 - `bond covenant` -> creditor protection mechanism.
 - `audit committee` -> reporting integrity and internal control.
@@ -59,6 +60,15 @@ Governance is the control system around corporate power. 考试重点不是背�
 | Reporting risk | audit committee, transparency, internal controls | Reduce information asymmetry. |
 | Poor governance | higher operational/legal/reputation/financial risk | Can increase cost of capital. |
 
+### Manager-Shareholder Agency Conflict Examples
+
+| Manager behavior | Why it conflicts with shareholders | Mitigating mechanism |
+|---|---|---|
+| Insufficient effort | Managers enjoy private time/comfort while shareholders bear lower performance | Independent board monitoring; performance evaluation |
+| Excessive perquisites | Corporate jets, elaborate offices, or perks transfer value from shareholders to managers | Compensation committee; expense controls; disclosure |
+| Failure to take appropriate risk | Managers may avoid positive-NPV risk to protect their careers | Equity-based compensation; board challenge |
+| Job protection / entrenchment | Managers may invest or restructure to safeguard their jobs rather than maximize value | Independent board; takeover discipline; shareholder voting |
+
 ## 5. Practice & Mock Evidence 题库证据
 
 - Expected item types: identify conflict, choose mechanism, classify governance risk/benefit, explain committee role.
@@ -71,6 +81,7 @@ Governance is the control system around corporate power. 考试重点不是背�
 - A takeover can discipline management but may not protect every stakeholder。
 - More disclosure improves transparency but may impose costs or reveal strategic information。
 - Good governance can lower risk/cost of capital; it is not only a compliance topic。
+- If a prompt asks why managers may not act for shareholders, answer principal-agent first before discussing broader stakeholder trade-offs。
 
 ## 7. Final Recall Sheet 终局速记
 
@@ -78,3 +89,4 @@ Governance is the control system around corporate power. 考试重点不是背�
 - Shareholder tools: vote, meet, sue, activate, takeover.
 - Creditor tools: indenture, covenant, committee.
 - Board tools: monitor, audit, nominate, compensate.
+- Manager agency conflict = effort, perks, risk avoidance, job protection; mitigation = independent board + aligned compensation.

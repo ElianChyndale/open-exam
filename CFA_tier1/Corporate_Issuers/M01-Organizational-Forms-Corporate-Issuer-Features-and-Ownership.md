@@ -45,6 +45,7 @@ This module defines the issuer before analyzing its stakeholders or financing. �
 - `owner-manager separation` -> enables scale but creates agency problems.
 - `publicly listed` -> liquidity, price transparency and disclosure obligations.
 - `private issuer` -> less disclosure and liquidity; ownership often concentrated.
+- `complex ownership structure` -> not just tax planning; often combines control retention, outside capital access, liability limits, and separation of economic ownership from management control.
 
 ## 4. Formula & Decision Bench 公式与决策台
 
@@ -55,6 +56,7 @@ This module defines the issuer before analyzing its stakeholders or financing. �
 | Limited company | separate legal identity, limited liability, easier external capital | Agency and disclosure issues emerge. |
 | Public issuer | listed shares, liquid secondary market, more disclosure | Public market access raises transparency demands. |
 | Private issuer | negotiated ownership, less liquid, fewer public disclosures | Valuation and exit routes are less observable. |
+| Complex structure | combine control rights, economic ownership, liability protection and external capital | Ask which objective the structure is optimizing before choosing an answer. |
 
 ## 5. Practice & Mock Evidence 题库证据
 
@@ -68,9 +70,11 @@ This module defines the issuer before analyzing its stakeholders or financing. �
 - Public ownership improves liquidity but increases regulatory and disclosure requirements。
 - Owner-manager separation is both a scaling benefit and agency conflict source。
 - Going private reduces public disclosure but does not remove business risk。
+- Complex structures are rarely only about tax; test answers often hinge on control, capital raising, liability, or who controls the underlying assets。
 
 ## 7. Final Recall Sheet 终局速记
 
 - Legal form drives liability, tax, continuity and capital access.
 - Corporation = separate legal person + limited liability + external financing.
 - Public = liquid/transparent/disclosed; private = concentrated/negotiated/illiquid.
+- Complex structure = control + capital + liability + separated ownership/management, not tax alone.

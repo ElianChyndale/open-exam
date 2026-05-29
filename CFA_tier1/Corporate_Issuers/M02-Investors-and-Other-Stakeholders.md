@@ -44,6 +44,9 @@ Corporate decisions affect different claimholders differently. 本模块把 debt
 - `debt holder` -> priority claim, fixed return, covenant protection.
 - `shareholder` -> residual claim, voting/control rights, upside exposure.
 - `higher leverage or risky project` -> may benefit shareholders while harming creditors.
+- `supplier with payment terms` -> short-term credit exposure to the company.
+- `supplier with integrated systems` -> long-term relationship-specific investment that depends on the company's survival.
+- `high leverage` -> can hurt suppliers through delayed/defaulted payments and loss of value in relationship-specific investments.
 - `ESG risk` -> can affect cash flows, reputation, regulation and cost of capital.
 - `stakeholder conflict` -> name both parties before choosing governance response.
 
@@ -55,7 +58,16 @@ Corporate decisions affect different claimholders differently. 本模块把 debt
 | Equity claim | residual cash flows and control rights | Higher upside and last claim. |
 | Shareholder-creditor conflict | shareholders may favor riskier projects or higher payouts | Covenants can limit wealth transfer. |
 | Stakeholder mapping | identify interest: returns, wages, product quality, payment terms, tax/regulation | Interests can align or conflict. |
+| Supplier stakeholder | short-term payment terms plus long-term relationship-specific investment | High leverage raises payment risk and relationship-continuity risk. |
 | ESG factor | classify E, S or G and state financial channel | Avoid moralizing without investment effect. |
+
+### Supplier Stakeholder Relationship
+
+| Supplier interest | Evidence in prompt | Why high leverage conflicts |
+|---|---|---|
+| Short-term credit exposure | Payment due within 30 days after goods are delivered | Leveraged firms have higher default/liquidity risk, so payment may be delayed or missed. |
+| Long-term relationship value | Supplier built systems integrated with the company | Financial distress or failure can impair the supplier's relationship-specific investment. |
+| Ongoing commercial stability | Supplier benefits from the company's survival and operating continuity | High leverage increases financial risk and can disrupt orders, payments, and future cooperation. |
 
 ## 5. Practice & Mock Evidence 题库证据
 
@@ -67,6 +79,7 @@ Corporate decisions affect different claimholders differently. 本模块把 debt
 
 - Debt is safer than equity because of priority, not because it has no risk。
 - Shareholders and creditors can both provide capital but have different incentives。
+- Suppliers are stakeholders when they provide trade credit or make relationship-specific investments, not only when they are unpaid creditors。
 - ESG is investment-relevant when it affects risk, cash flows, regulation or valuation。
 - Board and managers are not always the same stakeholder group。
 
@@ -75,3 +88,4 @@ Corporate decisions affect different claimholders differently. 本模块把 debt
 - Debt = contract + priority + capped upside.
 - Equity = residual + control + upside.
 - Conflict answer always names who gains, who bears risk, and what mechanism can help.
+- Supplier conflict = payment risk now + relationship-specific investment risk later.

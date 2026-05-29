@@ -32,12 +32,13 @@ tags:
 
 ### A. Organizational Forms / Ownership
 
-| Tool | Framework | Exam use |
-|---|---|---|
-| Organizational form | sole trader/proprietorship, partnership, limited company/corporation | 比较 liability, tax, capital access, continuity, control。 |
-| Corporate issuer features | separate legal identity, owner-manager separation, limited liability, external financing, taxation | 解释为什么公司能大规模融资，也为什么会产生 agency conflicts。 |
+| Tool                        | Framework                                                                                                                             | Exam use                                                           |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Organizational form         | sole trader/proprietorship, partnership, limited company/corporation                                                                  | 比较 liability, tax, capital access, continuity, control。            |
+| Corporate issuer features   | separate legal identity, owner-manager separation, limited liability, external financing, taxation                                    | 解释为什么公司能大规模融资，也为什么会产生 agency conflicts。                            |
 | Public vs private ownership | public: listing, liquidity, price transparency, disclosure; private: restricted liquidity, negotiated capital, concentrated ownership | 题干出现 IPO, take-private, disclosure, liquidity 时先判 ownership state。 |
-| Ownership varieties | founders, families, strategic investors, institutional investors, governments, employees | 控制权和少数股东保护是治理题入口。 |
+| Ownership varieties         | founders, families, strategic investors, institutional investors, governments, employees                                              | 控制权和少数股东保护是治理题入口。                                                  |
+| Complex ownership structures | maintain control, raise outside capital, limit personal liability, separate economic ownership from management control, allow public participation without direct asset control | 不要把复杂结构默认简化成避税；先判断结构在优化 control, capital, liability, disclosure or investor access。 |
 
 ### B. Debt vs Equity Claims / Stakeholders
 
@@ -46,6 +47,7 @@ tags:
 | Debt claim | contractual interest/principal, priority in liquidation, covenants, limited upside | lenders prefer lower risk and cash-flow protection。 |
 | Equity claim | residual cash flows, voting/control rights, unlimited upside, last claim | shareholders may prefer higher-risk positive-NPV projects。 |
 | Conflict map | shareholders vs creditors, majority vs minority, managers vs owners, company vs employees/customers/suppliers/government | 先定位 stakeholder pair，再选 mechanism。 |
+| Supplier relationship | payment terms create short-term credit exposure; integrated systems create relationship-specific investment | high leverage can conflict with supplier interests through payment risk and loss of long-term relationship value。 |
 | ESG lens | environmental, social, governance risks/opportunities | ESG is risk/opportunity input, not automatically good or bad。 |
 
 ### C. Governance Mechanisms
@@ -53,6 +55,7 @@ tags:
 | Tool | Framework | Exam use |
 |---|---|---|
 | Principal-agent relation | principal delegates to agent; agent may optimize own incentives | 识别 agency cost source。 |
+| Manager-shareholder agency examples | insufficient effort, excessive perks, avoiding appropriate risk, job protection | 先回答 principal-agent，再给 independent board and compensation alignment。 |
 | Shareholder mechanisms | meetings, voting, activism, litigation, takeovers | 用于 discipline board/management or protect minority shareholders。 |
 | Creditor mechanisms | bond indenture, covenants, creditor committees | 用于 limit asset substitution, underinvestment, cash leakage。 |
 | Board mechanisms | independent directors, audit, nomination/governance, compensation committees | 把 monitoring, disclosure, incentives 连接到 risk mitigation。 |
@@ -93,6 +96,7 @@ tags:
 | Top-down factors | interest rates, tax rates, market conditions, regulation, macro risk | affect both cost of debt and equity。 |
 | Issuer-specific factors | profitability, cash flow stability, collateral, governance, credit quality | stronger issuer -> lower financing cost。 |
 | MM intuition | no taxes: capital structure irrelevant; taxes: debt tax shield raises value; distress/agency costs create optimum | know direction and assumptions before applying。 |
+| Financial leverage and ROE variance | debt adds fixed interest expense and reduces equity base | leverage can raise ROE sharply in good revenue states and make ROE negative in weak revenue states; high ROE may be higher risk, not better operations。 |
 
 ### G. Business Model Features / Pricing / Revenue Models
 
@@ -119,6 +123,7 @@ tags:
 ## 4. Curriculum Spine 教材主线
 
 1. **Issuer identity**: choose organizational form -> define legal liability/control/tax/capital access -> determine public/private disclosure and liquidity.
+   Complex structures should be read as multi-objective designs: control retention, outside capital, liability limits, separated ownership/control and investor access can all matter.
 2. **Stakeholder claims**: map lenders, shareholders and other stakeholders -> identify priorities and motivations -> anticipate conflicts.
 3. **Governance response**: locate agency conflict -> select mechanism -> state operational/legal/financial effect.
 4. **Liquidity management**: compute CCC and liquidity ratios -> interpret drags/pulls -> choose working-capital response.

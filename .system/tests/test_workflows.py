@@ -568,6 +568,178 @@ def test_obsidian_export_updates_existing_pages_instead_of_duplication(tmp_path:
     assert text.count("Fixed Income") == 1
 
 
+def test_daily_review_pack_uses_due_cards_and_recent_cache(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### Capital Investments",
+            "| Tool | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| NPV | `NPV = sum CFt/(1+r)^t - initial outlay` | accept if positive; best wealth-maximizing rule. |",
+            "| IRR | discount rate making `NPV = 0` | can mislead for mutually exclusive projects. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Economics/00-Economics-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### FX Calculations",
+            "| Trigger | Formula / framework | Exam action |",
+            "|---|---|---|",
+            "| Quote convention | `A/B` means 1 unit of A costs B | `A/B` up = A appreciates versus B. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+
+    payload = {
+        "source_layer": "question",
+        "topic": "Economics",
+        "los": "ECO.FX",
+        "prompt_or_question": "FX quote-direction question. A. USD appreciates B. EUR appreciates C. no change",
+        "wrong_choice_or_output": "Read USD/EUR backwards",
+        "correct_resolution": "Read the base and price currency before judging appreciation.",
+        "error_type": "careless_reading",
+        "confidence": 1,
+        "time_spent": 90,
+        "evidence_refs": ["study-cache-1"],
+        "created_at": "2026-05-27T10:00:00+00:00",
+    }
+
+    run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+    exit_code = run_cli(
+        [
+            "daily-review-pack",
+            "--date",
+            "2100-01-01",
+            "--days-back",
+            "30000",
+            "--focus-topic",
+            "Corporate Issuers",
+        ],
+        repo_root=tmp_path,
+    )
+
+    assert exit_code == 0
+    strategy = tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md"
+    assert strategy.exists()
+    text = strategy.read_text(encoding="utf-8")
+    assert "今日复习资料" in text
+    assert "到期复习" in text
+    assert "近期低信心 2026-05-27" in text
+    assert "Corporate Issuers" in text
+    assert "## 一、知识点和公式" in text
+    assert "## 二、错题" in text
+    assert "NPV = sum CFt" in text
+    assert "**Trigger:** Tool" not in text
+    assert "**先问自己：**" in text
+    assert "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md" in text
+    assert "Read the base and price currency" in text
+    assert "- retrieval_prompt:" not in text
+    assert "#### 题目" in text
+    assert "#### 正确理解 / 解法" in text
+    assert "> A. USD appreciates" in text
+    assert "> B. EUR appreciates" in text
+
+    dashboard = tmp_path / "CFA_tier1" / "dashboard" / "今日复习资料.md"
+    assert dashboard.exists()
+    dashboard_text = dashboard.read_text(encoding="utf-8")
+    assert "## 一、知识点和公式" in dashboard_text
+    assert "## 二、错题" in dashboard_text
+    assert "Bedtime: only mental replay" not in dashboard_text
+
+
+def test_daily_review_pack_promotes_repeated_patterns(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### Capital Investments",
+            "| Tool | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| NPV | `NPV = sum CFt/(1+r)^t - initial outlay` | best wealth-maximizing rule. |",
+            "| IRR | discount rate making `NPV = 0` | can mislead with mutually exclusive projects. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Corporate Issuers",
+        "los": "CI.5",
+        "prompt_or_question": "Capital allocation ranking question.",
+        "correct_resolution": "NPV is the preferred criterion for mutually exclusive projects.",
+        "error_type": "concept_confusion",
+        "confidence": 4,
+        "time_spent": 120,
+        "evidence_refs": ["corp-cache"],
+        "created_at": "2026-05-25T10:00:00+00:00",
+    }
+
+    for wrong in ["A", "B", "C"]:
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    exit_code = run_cli(
+        ["daily-review-pack", "--date", "2026-05-28", "--focus-topic", "Corporate Issuers"],
+        repo_root=tmp_path,
+    )
+
+    assert exit_code == 0
+    strategy = tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md"
+    text = strategy.read_text(encoding="utf-8")
+    assert "重复错误 3 次" in text
+    assert "Corporate Issuers | CI.5 | concept_confusion" in text
+    assert "连续 3 次以上出错" in text
+
+
+def test_write_todo_archives_existing_file_and_writes_task_level_list(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    existing = tmp_path / "today_todo.md"
+    existing.write_text("# 旧 Todo\n\n- [ ] 检查椅子是否稳固、螺丝是否拧紧\n", encoding="utf-8")
+
+    payload = {
+        "date": "2026-05-28",
+        "title": "今日 Todo",
+        "focus": "完成 Corporate Issuers 学习并保留足够做题时间",
+        "tasks": [
+            "完成 Corporate Issuers 主学习",
+            "完成今日复习资料",
+            "做 Corporate Issuers 练习题",
+            "处理今天新增错题",
+            "整理学习区和设备",
+        ],
+        "time_blocks": [
+            "上午：Corporate Issuers 主学习",
+            "下午：练习题和错题",
+            "晚上：轻复盘",
+        ],
+    }
+
+    exit_code = run_cli(["write-todo", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    assert exit_code == 0
+    archives = list((tmp_path / "schedule" / "todo_archive").glob("2026-05-28-todo*.md"))
+    assert len(archives) == 1
+    assert "检查椅子是否稳固" in archives[0].read_text(encoding="utf-8")
+
+    text = existing.read_text(encoding="utf-8")
+    assert "focus: 完成 Corporate Issuers 学习并保留足够做题时间" in text
+    assert "- [ ] 完成 Corporate Issuers 主学习" in text
+    assert "- [ ] 处理今天新增错题" in text
+    assert "## Review" in text
+    assert "检查椅子是否稳固" not in text
+
+
 def test_workflow_releases_catalog_before_temporary_repo_cleanup() -> None:
     from app.cli import run_cli
 
