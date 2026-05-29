@@ -8,17 +8,31 @@
         "type": "tabs",
         "children": [
           {
+            "id": "64110e3b4e3794ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CFA_tier1/dashboard/今日复习资料.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "今日复习资料"
+            }
+          },
+          {
             "id": "75ea4f1e6625cb71",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA_tier1/Equity/M01-Market-Organization-and-Structure.md",
+                "file": "today_todo.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "M01-Market-Organization-and-Structure"
+              "title": "today_todo"
             }
           }
         ]
@@ -73,12 +87,23 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "2a8a31e8104e67d4",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "fe70c5ee0d32b929",
@@ -94,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CFA_tier1/Economics/00-Economics-MOC.md",
+                "file": "CFA_tier1/dashboard/今日复习资料.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 00-Economics-MOC"
+              "title": "Backlinks for 今日复习资料"
             }
           },
           {
@@ -156,20 +181,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CFA_tier1/Economics/00-Economics-MOC.md",
+                "file": "CFA_tier1/dashboard/今日复习资料.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 00-Economics-MOC"
+              "title": "Outline of 今日复习资料"
+            }
+          },
+          {
+            "id": "0d96a9f9f55fbec7",
+            "type": "leaf",
+            "state": {
+              "type": "nutstore-sync-chatbox",
+              "state": {},
+              "icon": "bot",
+              "title": "Chatbox"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -180,49 +216,55 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "publish:Publish changes...": false,
+      "notebook-navigator:Notebook Navigator": false,
+      "nutstore-sync:Start sync": false,
+      "nutstore-sync:Stop sync": false,
+      "nutstore-sync:Open chatbox": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "75ea4f1e6625cb71",
+  "active": "64110e3b4e3794ff",
   "lastOpenFiles": [
-    "CFA_tier1/Equity/00-Equity-MOC.md",
-    "CFA_tier1/Economics/00-Economics-MOC.md",
-    "CFA_tier1/Derivatives/00-Derivatives-MOC.md",
-    "CFA_tier1/Ethical_and_Professional_Standards/M05-Ethics-Application.md.tmp.25620.64cce96e5f01",
-    "CFA_tier1/Ethical_and_Professional_Standards/M04-Introduction-to-the-Global-Investment-Performance-Standards.md.tmp.25620.084a72638817",
-    "CFA_tier1/Ethical_and_Professional_Standards/M03-Guidance-for-Standards-I-VII.md.tmp.25620.fe9182862b8b",
-    "CFA_tier1/Ethical_and_Professional_Standards/M02-Code-of-Ethics-and-Standards-of-Professional-Conduct.md.tmp.25620.9f5d02b55844",
-    "CFA_tier1/Ethical_and_Professional_Standards/M01-Ethics-and-Trust-in-the-Investment-Profession.md.tmp.25620.0d436994d009",
-    "CFA_tier1/Ethical_and_Professional_Standards/00-Ethical-and-Professional-Standards-MOC.md.tmp.25620.1f922149a00a",
-    "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+    "today_todo.md",
+    "CFA_tier1/dashboard/今日复习资料.md",
+    "schedule/todo_archive/2026-05-29-todo.md",
     "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-Practice-Questions.md",
-    "CFA_tier1/Alternative_Investments/M02-Alternative-Investment-Performance-and-Returns.md",
-    "CFA_tier1/Alternative_Investments/00-Alternative-Investments-Practice-Questions.md",
-    "CFA_tier1/Alternative_Investments/00-Alternative-Investments-MOC.md",
-    "CFA_tier1/Economics/M06-International-Trade.md",
-    "CFA_tier1/Economics/M05-Introduction-to-Geopolitics.md",
+    "CFA_tier1/Corporate_Issuers/M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership.md",
+    "CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md",
+    "CFA_tier1/Corporate_Issuers/M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits.md",
+    "CFA_tier1/Corporate_Issuers/M04-Working-Capital-and-Liquidity.md",
     "CFA_tier1/Economics/M03-Fiscal-Policy.md",
-    "CFA_tier1/Economics/M04-Monetary-Policy.md",
+    "CFA_tier1/Economics/M02-Understanding-Business-Cycles.md",
     "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md",
+    "CFA_tier1/Economics/00-Economics-MOC.md",
     "CFA_tier1/Economics/00-Economics-Practice-Questions.md",
-    "CFA_tier1/Quantitative_Methods/00-Quant-Practice-Questions.md",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
-    "scripts/cfa_c_plus_redesign.py",
-    "scripts/__pycache__/cfa_c_plus_redesign.cpython-313.pyc",
-    "docs/superpowers/plans/2026-05-27-cfa-kb-c-plus-redesign.md",
-    "docs/superpowers/specs/2026-05-27-cfa-kb-c-plus-redesign-design.md",
+    "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+    "CFA_tier1/mock/CorpIss/00-CorpIss-Mistakes.md",
+    "AGENTS.md",
+    "2026-05-26.md",
     "cfa-kb-c-plus-blueprint.png",
-    "docs/design-mockups/cfa-kb-c-plus-blueprint.html",
     "cfa-kb-redesign-options.png",
-    "docs/design-mockups/cfa-kb-redesign-options.html",
-    "CFA_tier1/Economics/_archive/ARCH03-Geopolitics-and-Trade.md",
-    "CFA_tier1/Economics/_archive/ARCH02-Aggregate-Output-Prices-and-Growth.md",
-    "CFA_tier1/Economics/_archive/ARCH01-Demand-Supply-and-Elasticity.md",
-    "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md",
-    "CFA_tier1/mock/Portfolio/00-Portfolio-Mistakes.md",
-    "CFA_tier1/mock/Portfolio/00-Portfolio-Mock-Questions.md",
-    "CFA_tier1/mock/Quant/00-Quant-Mock-Questions.md",
-    "CFA_tier1/mock/Quant/00-Quant-Mistakes.md",
+    "schedule/todo_archive/2026-05-28-todo.md",
+    "schedule/todo_archive",
+    "skills/cfa-daily-todo-planner/SKILL.md",
+    "skills/cfa-daily-todo-planner",
+    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md",
+    "Untitled.base",
+    "skills/cfa-review-pack-builder/evals/evals.json",
+    "skills/cfa-review-pack-builder/evals",
+    "skills/cfa-review-pack-builder/SKILL.md",
+    "skills/cfa-review-pack-builder",
+    "CFA_tier1/dashboard/Subject-Question-Banks.md",
+    "CFA_tier1/dashboard/Topic弱点页.md",
+    "CFA_tier1/dashboard/今日新增错题.md",
+    "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md",
+    "CFA_tier1/Quantitative_Methods/M11-Introduction-to-Big-Data-Techniques.md",
+    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md.tmp.25620.c9a458887b85",
+    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md.tmp.25620.573d99a2e9c0",
+    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md.tmp.25620.2f4479cd63a7",
+    "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md.tmp.25620.1d2b0c84170b",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]

@@ -59,6 +59,19 @@ Capital structure asks how a company should finance assets. 债务带来 tax shi
 | Top-down factors | rates, taxes, market conditions, regulation, macro risk | Affect financing costs. |
 | Issuer factors | cash-flow stability, collateral, profitability, governance, credit quality | Affect debt capacity and WACC. |
 
+### Leverage and ROE Variance Example 杠杆放大 ROE 波动
+
+This example isolates the effect of debt financing. Debt adds a fixed interest expense and reduces the equity base, so ROE becomes more sensitive to revenue changes.
+
+| Revenue scenario | Financing | Revenue | Operating expenses | Interest expense | Net income | Total equity | ROE |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 20% increase | Equity-financed | 240 | -140 | 0 | 100 | 200 | 50% |
+| 20% increase | Debt- and equity-financed | 240 | -140 | -32 | 68 | 40 | 170% |
+| 20% decrease | Equity-financed | 160 | -140 | 0 | 20 | 200 | 10% |
+| 20% decrease | Debt- and equity-financed | 160 | -140 | -32 | -12 | 40 | -30% |
+
+**Exam decision**: debt can make ROE look much better in good states and much worse in bad states. Higher levered ROE is not automatically better operating performance; it may simply be higher financial risk.
+
 ## 5. Practice & Mock Evidence 题库证据
 
 - Expected item types: WACC calculation, after-tax debt, interpret MM proposition, identify capital structure factor, target structure implication.
@@ -69,6 +82,7 @@ Capital structure asks how a company should finance assets. 债务带来 tax shi
 
 - Use market value weights when possible; book values can be stale。
 - Debt is cheaper partly because of priority and tax shield, but too much debt raises risk。
+- Debt financing magnifies ROE variance: good revenue states can produce very high ROE, while weak revenue states can turn ROE negative。
 - WACC is for projects with similar risk to the firm; project risk mismatch matters。
 - MM propositions depend on assumptions; do not mix no-tax and tax conclusions。
 
@@ -76,5 +90,6 @@ Capital structure asks how a company should finance assets. 债务带来 tax shi
 
 - WACC = weighted cost of debt after tax + preferred + equity.
 - More debt: tax shield up, distress risk up, equity risk up.
+- Leverage raises upside and downside ROE sensitivity.
 - Target structure guides weights.
 - Optimal structure balances benefits and costs.

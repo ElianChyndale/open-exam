@@ -121,6 +121,7 @@ CFA_learning/
 ├── scripts/
 ├── log/
 ├── schedule/
+│   └── todo_archive/
 ├── skills/
 │   ├── cfa-intent-router/
 │   ├── cfa-question-captor/
@@ -129,6 +130,8 @@ CFA_learning/
 │   ├── cfa-review-synthesizer/
 │   ├── cfa-pattern-miner/
 │   ├── cfa-strategy-coach/
+│   ├── cfa-review-pack-builder/
+│   ├── cfa-daily-todo-planner/
 │   ├── cfa-validation-guard/
 │   └── experience-hub/
 ```
@@ -161,6 +164,8 @@ CFA_learning/
 | `cfa-review-synthesizer` | 输出单次复盘结论 |
 | `cfa-pattern-miner` | 识别高频错误模式 |
 | `cfa-strategy-coach` | 生成复习顺序、mock 节奏、补强建议 |
+| `cfa-review-pack-builder` | 生成和审校当日复习资料、公式/知识点 warm start 与题目排版 |
+| `cfa-daily-todo-planner` | 把每日安排压缩成任务级 todo，并归档旧 todo |
 | `cfa-validation-guard` | 生成反幻觉和防漏检校验规则 |
 | `experience-hub` | 管理经验晋升、去重、淘汰和跨层连接 |
 
@@ -189,6 +194,8 @@ CFA_learning/
 | `review-session` | 记录学习偏差 / 卡壳点 |
 | `audit-agent` | 审计 agent 失误 |
 | `mine-patterns` | 识别重复模式 |
+| `daily-review-pack` | 基于最近学习缓存和到期错题生成当日复习资料 |
+| `write-todo` | 写入今日任务清单并归档旧 todo |
 | `pre-mock-brief` | 生成考前简报 |
 | `post-mock-retro` | 生成 mock 后复盘 |
 
@@ -199,6 +206,8 @@ python scripts/cfa.py record-mistake --payload "{...}"
 python scripts/cfa.py review-session --payload "{...}"
 python scripts/cfa.py audit-agent --payload "{...}"
 python scripts/cfa.py mine-patterns
+python scripts/cfa.py daily-review-pack --focus-topic "Corporate Issuers"
+python scripts/cfa.py write-todo --payload "{...}"
 python scripts/cfa.py pre-mock-brief
 python scripts/cfa.py post-mock-retro --session-id mock-2
 ```
@@ -269,6 +278,12 @@ python scripts/cfa.py post-mock-retro --session-id mock-2
 - 今天的错误主要是知识问题，还是过程问题？
 - 今天是否出现可复用 fix rule？
 - 今天是否出现需要升级为 validation 的 agent 失误？
+
+每天进入新学习块前，应先执行一次：
+
+- `daily-review-pack --focus-topic <today-main-topic>`
+
+该工作流从 `.system/events/` 与 `.system/memory/` 中提取最近低信心事件、到期错题卡和高频 pattern，生成当日主动回忆材料；它属于 Decision Layer，并投影到 `CFA_tier1/dashboard/今日复习资料.md`。
 
 ### 3. Mock 层
 
@@ -349,6 +364,7 @@ Obsidian 页面的目标是“便于回看”，不是“承载主逻辑”。
 固定导出以下页面：
 
 - `今日新增错题.md`
+- `今日复习资料.md`
 - `高频错因榜.md`
 - `Topic弱点页.md`
 - `Agent失误页.md`
@@ -374,6 +390,8 @@ MOC 缺口建议不属于 dashboard 导出页，它属于治理和补强决策�
 | “这题我又做错了” | `record-mistake` |
 | “我最近总在某类题上卡住” | `review-session` 或 `mine-patterns` |
 | “帮我看下我为什么总失分” | `mine-patterns` |
+| “今天该先复习什么 / 给我今天复习资料” | `daily-review-pack` |
+| “今天安排 / 帮我写 todo / 更新 today_todo” | `write-todo` |
 | “我明天要做 mock，先给我重点” | `pre-mock-brief` |
 | “这次 mock 帮我系统复盘” | `post-mock-retro` |
 | “你刚才的解释有问题” | `audit-agent` |

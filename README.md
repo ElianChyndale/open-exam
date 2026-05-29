@@ -45,6 +45,20 @@ python scripts/cfa.py moc-gap-review
 
 This produces a controlled review artifact under `.system/memory/strategy/` so repeated mistakes can suggest MOC improvements without automatically rewriting the subject framework.
 
+Generate a daily spaced-review pack from recent learning cache and due cards:
+
+```powershell
+python scripts/cfa.py daily-review-pack --focus-topic "Corporate Issuers"
+```
+
+This writes `.system/memory/strategy/daily-review-pack.md` and projects `CFA_tier1/dashboard/今日复习资料.md`.
+
+Write a concise task-level daily todo and archive the previous one:
+
+```powershell
+python scripts/cfa.py write-todo --payload "{\"date\":\"2026-05-28\",\"focus\":\"完成 Corporate Issuers 学习\",\"tasks\":[\"完成 Corporate Issuers 主学习\",\"做练习题\",\"处理新增错题\"]}"
+```
+
 ## OpenAI API note
 
 The repository contains an OpenAI Agents SDK integration scaffold. Live agent runs require a valid `OPENAI_API_KEY`. The local file, memory, export, and eval workflows work without live API access.

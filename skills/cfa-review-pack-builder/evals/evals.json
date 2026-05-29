@@ -1,0 +1,34 @@
+{
+  "skill_name": "cfa-review-pack-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate today's CFA review pack from recent Quant and Economics mistakes, with Corporate Issuers as the focus topic.",
+      "expected_output": "A daily-review-pack artifact with `一、知识点和公式` before `二、错题`, MOC-backed Corporate Issuers preview items, and readable question cards.",
+      "files": [
+        ".system/events/question/question-events.jsonl",
+        ".system/memory/question-errors/",
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Fix the daily review pack because multiple-choice questions are hard to read and choices are being collapsed into metadata bullets.",
+      "expected_output": "Question prompts are rendered under `题目` with A/B/C options on separate quoted lines, not in retrieval_prompt bullets.",
+      "files": [
+        ".system/memory/strategy/daily-review-pack.md"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Audit whether the review pack is choosing formulas and concepts based on memory timing rather than random summary.",
+      "expected_output": "A traceable audit that checks due cards, repeated patterns, low-confidence recent events, and focus-topic MOC rows.",
+      "files": [
+        ".system/memory/strategy/daily-review-pack.md",
+        ".system/memory/patterns/",
+        "CFA_tier1/Economics/00-Economics-MOC.md",
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    }
+  ]
+}

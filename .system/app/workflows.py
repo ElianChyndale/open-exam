@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter, defaultdict
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule, stable_id
@@ -61,6 +63,87 @@ MOCK_BUCKETS = {
     "Portfolio_Management": "Portfolio",
     "Quantitative Methods": "Quant",
     "Quantitative_Methods": "Quant",
+}
+
+CARD_DOMAINS = {
+    "question-errors": "question",
+    "cognitive-bias": "bias",
+    "agent-failures": "agent",
+}
+
+REVIEW_SOURCE_WEIGHTS = {
+    "question": 8,
+    "bias": 6,
+    "agent": 5,
+}
+
+SUBJECT_MOC_PATHS = {
+    "Alternative Investments": "CFA_tier1/Alternative_Investments/00-Alternative-Investments-MOC.md",
+    "Corporate Issuers": "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+    "Derivatives": "CFA_tier1/Derivatives/00-Derivatives-MOC.md",
+    "Economics": "CFA_tier1/Economics/00-Economics-MOC.md",
+    "Equity": "CFA_tier1/Equity/00-Equity-MOC.md",
+    "Ethical and Professional Standards": "CFA_tier1/Ethical_and_Professional_Standards/00-Ethical-and-Professional-Standards-MOC.md",
+    "Financial Statement Analysis": "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md",
+    "Fixed Income": "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md",
+    "Portfolio Management": "CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md",
+    "Quantitative Methods": "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
+}
+
+SUBJECT_ALIASES = {
+    "alternative investments": "Alternative Investments",
+    "alternative_investments": "Alternative Investments",
+    "altinv": "Alternative Investments",
+    "corporate issuers": "Corporate Issuers",
+    "corporate_issuers": "Corporate Issuers",
+    "corpiss": "Corporate Issuers",
+    "economics": "Economics",
+    "eco": "Economics",
+    "quantitative methods": "Quantitative Methods",
+    "quantitative_methods": "Quantitative Methods",
+    "quant": "Quantitative Methods",
+    "fixed income": "Fixed Income",
+    "fixed_income": "Fixed Income",
+    "fi": "Fixed Income",
+    "financial statement analysis": "Financial Statement Analysis",
+    "financial_statement_analysis": "Financial Statement Analysis",
+    "financial reporting and analysis": "Financial Statement Analysis",
+    "fra": "Financial Statement Analysis",
+    "portfolio management": "Portfolio Management",
+    "portfolio_management": "Portfolio Management",
+    "derivatives": "Derivatives",
+    "equity": "Equity",
+    "equity investments": "Equity",
+    "ethical and professional standards": "Ethical and Professional Standards",
+    "ethical_and_professional_standards": "Ethical and Professional Standards",
+    "ethics": "Ethical and Professional Standards",
+}
+
+STOPWORDS = {
+    "and",
+    "the",
+    "with",
+    "from",
+    "into",
+    "under",
+    "when",
+    "using",
+    "based",
+    "most",
+    "likely",
+    "question",
+    "screenshot",
+    "approx",
+    "approximate",
+    "exact",
+    "shown",
+    "does",
+    "doesn",
+    "level",
+    "method",
+    "methods",
+    "test",
+    "tests",
 }
 
 
@@ -163,6 +246,585 @@ def mock_bucket_for_event(event: MistakeEvent) -> str | None:
             if subject_dir in MOCK_BUCKETS:
                 return MOCK_BUCKETS[subject_dir]
     return MOCK_BUCKETS.get(event.topic)
+
+
+def parse_date(value: str) -> date | None:
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(value[:10])
+    except ValueError:
+        return None
+
+
+def parse_datetime_date(value: str) -> date | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).date()
+    except ValueError:
+        return None
+
+
+def parse_frontmatter(text: str) -> dict[str, str]:
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return {}
+
+    data: dict[str, str] = {}
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        data[key.strip()] = clean_scalar(value)
+    return data
+
+
+def clean_scalar(value: str) -> str:
+    cleaned = value.strip()
+    if len(cleaned) >= 2 and cleaned[0] == cleaned[-1] and cleaned[0] in {'"', "'"}:
+        return cleaned[1:-1]
+    return cleaned
+
+
+def extract_markdown_section(text: str, heading: str) -> str:
+    marker = f"## {heading}"
+    start = text.find(marker)
+    if start == -1:
+        return ""
+    content_start = start + len(marker)
+    next_heading = text.find("\n## ", content_start)
+    if next_heading == -1:
+        return text[content_start:].strip()
+    return text[content_start:next_heading].strip()
+
+
+def add_review_item(items: dict[str, dict], key: str, candidate: dict) -> None:
+    if key not in items:
+        candidate["reasons"] = list(candidate.get("reasons", []))
+        items[key] = candidate
+        return
+
+    current = items[key]
+    current["priority"] = max(current.get("priority", 0), candidate.get("priority", 0))
+    for reason in candidate.get("reasons", []):
+        if reason not in current["reasons"]:
+            current["reasons"].append(reason)
+    for field in ("next_drill", "fix_rule", "correct_resolution", "evidence_refs", "prompt", "wrong_output"):
+        if not current.get(field) and candidate.get(field):
+            current[field] = candidate[field]
+
+
+def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dict]:
+    items: dict[str, dict] = {}
+    for domain, source_layer in CARD_DOMAINS.items():
+        for path in (repo.memory_root / domain).glob("*.md"):
+            text = path.read_text(encoding="utf-8")
+            frontmatter = parse_frontmatter(text)
+            due_at = parse_date(frontmatter.get("review_due_at", ""))
+            if not due_at or due_at > review_date:
+                continue
+
+            topic = frontmatter.get("topic", "Unknown Topic")
+            los = frontmatter.get("los", "Unknown LOS")
+            root_cause = frontmatter.get("root_cause", "unknown")
+            days_overdue = max((review_date - due_at).days, 0)
+            key = f"{source_layer}::{topic}::{los}::{root_cause}"
+            evidence = extract_markdown_section(text, "Evidence")
+            add_review_item(
+                items,
+                key,
+                {
+                    "source_layer": source_layer,
+                    "topic": topic,
+                    "los": los,
+                    "error_type": root_cause,
+                    "priority": 100 + days_overdue * 2 + REVIEW_SOURCE_WEIGHTS.get(source_layer, 0),
+                    "reasons": [f"review_due_at: {due_at.isoformat()}"],
+                    "prompt": extract_markdown_section(text, "Prompt"),
+                    "wrong_output": extract_markdown_section(text, "Wrong Output"),
+                    "correct_resolution": frontmatter.get("correct_resolution", ""),
+                    "fix_rule": frontmatter.get("fix_rule", ""),
+                    "next_drill": frontmatter.get("next_drill", ""),
+                    "evidence_refs": evidence,
+                },
+            )
+    return items
+
+
+def collect_recent_low_confidence_items(repo: Repository, review_date: date, days_back: int) -> dict[str, dict]:
+    cutoff = review_date - timedelta(days=days_back)
+    items: dict[str, dict] = {}
+    for event in repo.load_events():
+        event_date = parse_datetime_date(event.created_at)
+        if not event_date or event_date < cutoff or event_date > review_date:
+            continue
+        if event.confidence > 2 and event.source_layer == "question":
+            continue
+
+        key = f"{event.source_layer}::{event.topic}::{event.los}::{event.error_type}"
+        priority = 60 + REVIEW_SOURCE_WEIGHTS.get(event.source_layer, 0)
+        if event.confidence <= 1:
+            priority += 15
+        add_review_item(
+            items,
+            key,
+            {
+                "source_layer": event.source_layer,
+                "topic": event.topic,
+                "los": event.los,
+                "error_type": event.error_type,
+                "priority": priority,
+                "reasons": [f"recent_low_confidence: {event.created_at[:10]}"],
+                "prompt": event.prompt_or_question,
+                "wrong_output": event.wrong_choice_or_output,
+                "correct_resolution": event.correct_resolution,
+                "fix_rule": default_fix_rule(event.error_type),
+                "next_drill": next_drill_for(event),
+                "evidence_refs": ", ".join(event.evidence_refs),
+            },
+        )
+    return items
+
+
+def collect_pattern_items(repo: Repository) -> dict[str, dict]:
+    items: dict[str, dict] = {}
+    for path in (repo.memory_root / "patterns").glob("*.md"):
+        text = path.read_text(encoding="utf-8")
+        frontmatter = parse_frontmatter(text)
+        pattern_key = frontmatter.get("pattern_key", "")
+        parts = pattern_key.split("::")
+        if len(parts) != 3:
+            continue
+        topic, los, error_type = parts
+        recurrence = int(frontmatter.get("recurrence", "0") or 0)
+        severity = frontmatter.get("severity", "medium")
+        priority = 85 + recurrence * 3 + (10 if severity == "high" else 0)
+        key = f"question::{topic}::{los}::{error_type}"
+        add_review_item(
+            items,
+            key,
+            {
+                "source_layer": "question",
+                "topic": topic,
+                "los": los,
+                "error_type": error_type,
+                "priority": priority,
+                "reasons": [f"pattern_recurrence: {recurrence}", f"severity: {severity}"],
+                "prompt": "先闭卷说出这个 LOS 最容易错的判断边界，再看原错题。",
+                "wrong_output": "",
+                "correct_resolution": extract_markdown_section(text, "Recommended Intervention"),
+                "fix_rule": default_fix_rule(error_type),
+                "next_drill": extract_markdown_section(text, "Recommended Intervention"),
+                "evidence_refs": frontmatter.get("pattern_id", ""),
+            },
+        )
+    return items
+
+
+def merge_review_sources(*sources: dict[str, dict]) -> list[dict]:
+    merged: dict[str, dict] = {}
+    for source in sources:
+        for key, item in source.items():
+            add_review_item(merged, key, item)
+    return sorted(
+        merged.values(),
+        key=lambda item: (-item.get("priority", 0), item.get("topic", ""), item.get("los", "")),
+    )
+
+
+def normalize_subject(value: str) -> str:
+    normalized = value.replace("_", " ").strip().lower()
+    if normalized in SUBJECT_ALIASES:
+        return SUBJECT_ALIASES[normalized]
+    for alias, subject in SUBJECT_ALIASES.items():
+        if alias in normalized:
+            return subject
+    for subject in SUBJECT_MOC_PATHS:
+        if subject.lower() in normalized:
+            return subject
+    return value.strip()
+
+
+def subject_moc_path(repo: Repository, subject: str) -> Path | None:
+    normalized = normalize_subject(subject)
+    relative = SUBJECT_MOC_PATHS.get(normalized)
+    if not relative:
+        return None
+    path = repo.root / relative
+    return path if path.exists() else None
+
+
+def extract_numbered_section(text: str, section_prefix: str) -> str:
+    lines = text.splitlines()
+    start_index: int | None = None
+    for index, line in enumerate(lines):
+        if line.startswith(section_prefix):
+            start_index = index
+            break
+    if start_index is None:
+        return ""
+
+    collected: list[str] = []
+    for line in lines[start_index + 1 :]:
+        if line.startswith("## ") and not line.startswith(section_prefix):
+            break
+        collected.append(line)
+    return "\n".join(collected).strip()
+
+
+def parse_moc_table_row(line: str) -> list[str] | None:
+    stripped = line.strip()
+    if not stripped.startswith("|") or "---" in stripped:
+        return None
+    parts = [part.strip() for part in stripped.strip("|").split("|")]
+    if len(parts) < 3:
+        return None
+    first = parts[0].lower()
+    last = parts[-1].lower()
+    if first in {"trigger", "tool", "metric", "indicator", "formula", "framework"}:
+        return None
+    if last in {"exam use", "exam action", "exam decision", "decision", "说明", "应用场景"}:
+        return None
+    if len(parts) == 3:
+        return parts
+    return [parts[0], " | ".join(parts[1:-1]), parts[-1]]
+
+
+def extract_moc_atoms(repo: Repository, subject: str) -> list[dict]:
+    path = subject_moc_path(repo, subject)
+    if not path:
+        return []
+
+    text = path.read_text(encoding="utf-8")
+    section = extract_numbered_section(text, "## 2.")
+    if not section:
+        return []
+
+    atoms: list[dict] = []
+    current_heading = "Formula & Framework Map"
+    for line in section.splitlines():
+        if line.startswith("### "):
+            current_heading = line.removeprefix("### ").strip()
+            continue
+        cells = parse_moc_table_row(line)
+        if cells:
+            atoms.append(
+                {
+                    "subject": normalize_subject(subject),
+                    "heading": current_heading,
+                    "trigger": cells[0],
+                    "formula": cells[1],
+                    "decision": cells[2],
+                    "source": path.relative_to(repo.root).as_posix(),
+                    "text": " | ".join(cells),
+                }
+            )
+    return atoms
+
+
+def tokenize_for_matching(*values: str) -> set[str]:
+    raw = " ".join(value or "" for value in values).lower()
+    tokens = set(re.findall(r"[a-z][a-z0-9-]{2,}", raw))
+    tokens.update(token.lower() for token in re.findall(r"\bM\d{2}\b", " ".join(values)))
+    return {token for token in tokens if token not in STOPWORDS}
+
+
+def score_atom(atom: dict, review_item: dict, focus_subject: str) -> int:
+    subject = normalize_subject(review_item.get("topic", ""))
+    score = 0
+    if atom["subject"] == subject:
+        score += 30
+    if focus_subject and atom["subject"] == focus_subject:
+        score += 10
+
+    tokens = tokenize_for_matching(
+        review_item.get("topic", ""),
+        review_item.get("los", ""),
+        review_item.get("prompt", ""),
+        review_item.get("correct_resolution", ""),
+        review_item.get("fix_rule", ""),
+        review_item.get("error_type", ""),
+    )
+    atom_text = f"{atom['heading']} {atom['text']}".lower()
+    score += sum(6 for token in tokens if token in atom_text)
+
+    error_type = review_item.get("error_type", "")
+    if error_type == "formula_misuse" and "`" in atom["formula"]:
+        score += 12
+    if error_type == "concept_confusion" and "`" not in atom["formula"]:
+        score += 5
+    return score
+
+
+def build_warm_start_items(repo: Repository, review_items: list[dict], focus_topic: str, max_items: int = 64) -> list[dict]:
+    focus_subject = normalize_subject(focus_topic) if focus_topic else ""
+    subjects = []
+    if focus_subject:
+        subjects.append(focus_subject)
+    for item in review_items:
+        subject = normalize_subject(item.get("topic", ""))
+        if subject in SUBJECT_MOC_PATHS and subject not in subjects:
+            subjects.append(subject)
+
+    atoms_by_subject = {subject: extract_moc_atoms(repo, subject) for subject in subjects}
+    selected: dict[str, dict] = {}
+
+    if focus_subject:
+        for atom in atoms_by_subject.get(focus_subject, []):
+            key = f"{atom['subject']}::{atom['heading']}::{atom['trigger']}"
+            selected[key] = {
+                **atom,
+                "reason": f"today_focus: {focus_subject}",
+                "priority": 80,
+            }
+
+    for item in review_items:
+        subject = normalize_subject(item.get("topic", ""))
+        candidates = atoms_by_subject.get(subject, [])
+        ranked = sorted(candidates, key=lambda atom: score_atom(atom, item, focus_subject), reverse=True)
+        for atom in ranked[:2]:
+            atom_score = score_atom(atom, item, focus_subject)
+            if atom_score < 30:
+                continue
+            key = f"{atom['subject']}::{atom['heading']}::{atom['trigger']}"
+            reason = "; ".join(item.get("reasons", [])[:2]) or "review_queue"
+            current = selected.get(key)
+            if current:
+                current["priority"] = max(current["priority"], atom_score)
+                if reason not in current["reason"]:
+                    current["reason"] = f"{current['reason']}; {reason}"
+            else:
+                selected[key] = {
+                    **atom,
+                    "reason": reason,
+                    "priority": atom_score,
+                }
+
+    return sorted(
+        selected.values(),
+        key=lambda item: (-item.get("priority", 0), item.get("subject", ""), item.get("heading", "")),
+    )[:max_items]
+
+
+def normalize_question_text(text: str) -> str:
+    cleaned = (text or "").strip()
+    labels = [(match.group(1), match.start()) for match in re.finditer(r"\b([A-E])\.\s", cleaned)]
+    positions = {label: position for label, position in labels}
+    has_choice_sequence = (
+        "A" in positions
+        and (("B" in positions and positions["A"] < positions["B"]) or ("C" in positions and positions["A"] < positions["C"]))
+    )
+    if has_choice_sequence:
+        cleaned = re.sub(r"\s+([A-E]\.\s)", r"\n\1", cleaned)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned
+
+
+def quote_block(text: str) -> list[str]:
+    cleaned = clean_display_text(normalize_question_text(text))
+    if not cleaned:
+        return ["> _No text captured._"]
+    return [">" if not line.strip() else f"> {line}" for line in cleaned.splitlines()]
+
+
+def clean_display_text(text: str) -> str:
+    cleaned = re.sub(r"\s*[\ufffd]+\s*", " - ", text or "")
+    return re.sub(r"\s{2,}", " ", cleaned).strip()
+
+
+def human_reason(reason: str) -> str:
+    if reason.startswith("review_due_at:"):
+        return f"到期复习 {reason.split(':', 1)[1].strip()}"
+    if reason.startswith("recent_low_confidence:"):
+        return f"近期低信心 {reason.split(':', 1)[1].strip()}"
+    if reason.startswith("pattern_recurrence:"):
+        return f"重复错误 {reason.split(':', 1)[1].strip()} 次"
+    if reason.startswith("severity:"):
+        return f"严重度 {reason.split(':', 1)[1].strip()}"
+    if reason.startswith("today_focus:"):
+        return f"今日主线 {reason.split(':', 1)[1].strip()}"
+    return reason
+
+
+def human_reasons(reasons: list[str]) -> str:
+    readable = []
+    for reason in reasons:
+        text = human_reason(reason)
+        if text and text not in readable:
+            readable.append(text)
+    return "；".join(readable) if readable else "今日复习队列"
+
+
+def compact_list(values: list[str], limit: int = 5) -> str:
+    cleaned = []
+    for value in values:
+        text = clean_display_text(value)
+        if text and text not in cleaned:
+            cleaned.append(text)
+    if len(cleaned) <= limit:
+        return "；".join(cleaned)
+    shown = "；".join(cleaned[:limit])
+    return f"{shown}；另有 {len(cleaned) - limit} 项"
+
+
+def boundary_lines_for_group(items: list[dict], limit: int = 3) -> list[str]:
+    cues = []
+    patterns = (
+        "not ",
+        "not automatically",
+        "unless",
+        "but ",
+        "can mislead",
+        "ignores",
+        "excludes",
+        "不要",
+        "不是",
+        "不能",
+        "先判",
+        "先判断",
+        "先定位",
+        "only",
+    )
+    for item in items:
+        decision = clean_display_text(item.get("decision", ""))
+        if not decision:
+            continue
+        lowered = decision.lower()
+        if any(pattern in lowered or pattern in decision for pattern in patterns):
+            trigger = clean_display_text(item.get("trigger", ""))
+            cue = f"{trigger}: {decision}" if trigger else decision
+            if cue not in cues:
+                cues.append(cue)
+        if len(cues) >= limit:
+            break
+    return cues
+
+
+def grouped_warm_start_items(warm_start_items: list[dict]) -> list[list[dict]]:
+    groups: list[list[dict]] = []
+    grouped: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
+    order: list[tuple[str, str, str]] = []
+    for item in warm_start_items:
+        key = (item.get("subject", ""), item.get("heading", ""), item.get("source", ""))
+        if key not in grouped:
+            order.append(key)
+        grouped[key].append(item)
+    for key in order:
+        groups.append(grouped[key])
+    return groups
+
+
+def render_warm_start(lines: list[str], warm_start_items: list[dict]) -> None:
+    lines.append("## 一、知识点和公式")
+    if not warm_start_items:
+        lines.extend(
+            [
+                "",
+                "今天没有从 MOC 中匹配到明确的知识点或公式。先直接做下面的错题复习。",
+            ]
+        )
+        return
+
+    for index, group in enumerate(grouped_warm_start_items(warm_start_items), start=1):
+        first = group[0]
+        reason_parts = [
+            part.strip()
+            for item in group
+            for part in item.get("reason", "").split(";")
+            if part.strip()
+        ]
+        triggers = [item.get("trigger", "") for item in group]
+        boundaries = boundary_lines_for_group(group)
+        lines.extend(
+            [
+                "",
+                f"### {index}. {clean_display_text(first['subject'])} | {clean_display_text(first['heading'])}",
+                f"- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？{compact_list(triggers)}",
+                f"- **今天为什么看：** {human_reasons(reason_parts)}",
+                "",
+                "#### 核心知识点 / 公式",
+            ]
+        )
+        for item in group:
+            lines.append(
+                f"- **{clean_display_text(item['trigger'])}:** {clean_display_text(item['formula'])} -> {clean_display_text(item['decision'])}"
+            )
+        if boundaries:
+            lines.extend(["", "#### 易错边界"])
+            lines.extend(f"- {boundary}" for boundary in boundaries)
+        lines.append(f"- **来源：** {first['source']}")
+
+
+def render_review_pack(
+    review_items: list[dict],
+    warm_start_items: list[dict],
+    review_date: date,
+    days_back: int,
+    focus_topic: str,
+    source_event_count: int,
+) -> str:
+    lines = [
+        "---",
+        f"generated_for: {review_date.isoformat()}",
+        f"days_back: {days_back}",
+        f"focus_topic: {focus_topic or 'unspecified'}",
+        f"source_event_count: {source_event_count}",
+        f"review_item_count: {len(review_items)}",
+        "---",
+        "",
+        "# 今日复习资料",
+        "",
+    ]
+
+    render_warm_start(lines, warm_start_items)
+    lines.extend(
+        [
+            "",
+            "## 二、错题",
+        ]
+    )
+
+    if not review_items:
+        lines.extend(
+            [
+                "",
+                "今天没有到期错题。用第一部分做主动回忆即可：遮住答案，讲出定义、公式、适用条件和容易混淆的地方。",
+            ]
+        )
+        return "\n".join(lines)
+
+    for index, item in enumerate(review_items, start=1):
+        reasons = human_reasons(item.get("reasons", []))
+        prompt = item.get("prompt") or "先闭卷说出定义、公式或判断边界。"
+        wrong_output = item.get("wrong_output") or "_No previous wrong output captured._"
+        correct_resolution = item.get("correct_resolution") or "见原错题卡或模式卡。"
+        lines.extend(
+            [
+                "",
+                f"### {index}. {clean_display_text(item['topic'])} | {clean_display_text(item['los'])} | {clean_display_text(item['error_type'])}",
+                f"- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？",
+                f"- **今天为什么看：** {reasons}",
+                "",
+                "#### 题目",
+                *quote_block(prompt),
+                "",
+                "#### 我上次错在",
+                *quote_block(wrong_output),
+                "",
+                "#### 正确理解 / 解法",
+                *quote_block(correct_resolution),
+                "",
+                "#### 下次规则",
+                f"- **纠偏规则：** {clean_display_text(item.get('fix_rule') or default_fix_rule(item['error_type']))}",
+                f"- **下一步练习：** {clean_display_text(item.get('next_drill') or '做 2 道同类题并记录错因。')}",
+                f"- **证据：** {clean_display_text(item.get('evidence_refs') or 'memory cache')}",
+            ]
+        )
+
+    return "\n".join(lines)
 
 
 def build_strategy_rule(events: list[MistakeEvent]) -> StrategyRule:
@@ -381,6 +1043,133 @@ def pre_mock_brief(repo: Repository) -> StrategyRule:
     moc_gap_review(repo)
     refresh_learning_outputs(repo)
     return rule
+
+
+def daily_review_pack(
+    repo: Repository,
+    review_date: date | None = None,
+    days_back: int = 7,
+    max_items: int = 20,
+    focus_topic: str = "",
+) -> Path:
+    target_date = review_date or datetime.now().date()
+    days_back = max(days_back, 1)
+    max_items = max(max_items, 1)
+
+    mine_patterns(repo)
+    due_items = collect_due_card_items(repo, target_date)
+    recent_items = collect_recent_low_confidence_items(repo, target_date, days_back)
+    pattern_items = collect_pattern_items(repo)
+    review_items = merge_review_sources(due_items, pattern_items, recent_items)[:max_items]
+    warm_start_items = build_warm_start_items(repo, review_items, focus_topic)
+    events = repo.load_events()
+
+    body = render_review_pack(
+        review_items=review_items,
+        warm_start_items=warm_start_items,
+        review_date=target_date,
+        days_back=days_back,
+        focus_topic=focus_topic,
+        source_event_count=len(events),
+    )
+    strategy_path = repo.memory_root / "strategy" / "daily-review-pack.md"
+    repo.write_markdown(strategy_path, body, "daily_review_pack", "daily-review-pack")
+    repo.write_obsidian_page("今日复习资料.md", body.splitlines())
+    return strategy_path
+
+
+def coerce_task_list(value: object) -> list[str]:
+    if isinstance(value, list):
+        raw_items = [str(item) for item in value]
+    elif isinstance(value, str):
+        raw_items = re.split(r"[\n;；]+", value)
+    else:
+        raw_items = []
+
+    tasks: list[str] = []
+    seen: set[str] = set()
+    for item in raw_items:
+        task = re.sub(r"^\s*[-*]\s*\[[ xX]\]\s*", "", item).strip()
+        task = re.sub(r"^\s*[-*]\s*", "", task).strip()
+        if not task:
+            continue
+        key = task.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        tasks.append(task)
+    return tasks
+
+
+def archive_today_todo(repo: Repository, archive_date: str) -> Path | None:
+    today_path = repo.root / "today_todo.md"
+    if not today_path.exists():
+        return None
+
+    text = today_path.read_text(encoding="utf-8")
+    if not text.strip():
+        return None
+
+    archive_root = repo.schedule_root / "todo_archive"
+    archive_root.mkdir(parents=True, exist_ok=True)
+    base_path = archive_root / f"{archive_date}-todo.md"
+    archive_path = base_path
+    counter = 2
+    while archive_path.exists():
+        archive_path = archive_root / f"{archive_date}-todo-{counter}.md"
+        counter += 1
+    archive_path.write_text(text, encoding="utf-8")
+    return archive_path
+
+
+def render_todo(payload: dict, plan_date: str, tasks: list[str]) -> str:
+    title = payload.get("title") or "今日 Todo"
+    focus = payload.get("focus") or payload.get("theme") or "完成今天最重要的任务"
+    time_blocks = coerce_task_list(payload.get("time_blocks", []))
+
+    lines = [
+        "---",
+        f"date: {plan_date}",
+        f"focus: {focus}",
+        "status: active",
+        "---",
+        "",
+        f"# {title}",
+        "",
+        f"> Focus: {focus}",
+        "",
+        "## Tasks",
+    ]
+    if tasks:
+        lines.extend(f"- [ ] {task}" for task in tasks)
+    else:
+        lines.append("- [ ] 明确今天最重要的 3-5 个任务")
+
+    if time_blocks:
+        lines.extend(["", "## Time Blocks"])
+        lines.extend(f"- {block}" for block in time_blocks)
+
+    lines.extend(
+        [
+            "",
+            "## Review",
+            "- 完成了什么：",
+            "- 卡住或调整：",
+            "- 明天保留：",
+        ]
+    )
+    return "\n".join(lines).strip() + "\n"
+
+
+def write_todo(repo: Repository, payload: dict) -> Path:
+    plan_date = str(payload.get("date") or datetime.now().date().isoformat())
+    tasks = coerce_task_list(payload.get("tasks", []))
+    archive_today_todo(repo, plan_date)
+
+    path = repo.root / "today_todo.md"
+    body = render_todo(payload, plan_date, tasks)
+    path.write_text(body, encoding="utf-8")
+    return path
 
 
 def post_mock_retro(repo: Repository, session_id: str) -> Path:

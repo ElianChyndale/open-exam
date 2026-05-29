@@ -61,18 +61,18 @@ tags:
 
 ### Probability, statistics, and portfolio spine
 
-| Trigger | Formula / Framework | Exam decision |
-|---|---|---|
-| Expected value | `E(X) = sum(p_i x_i)` | Probability-weighted mean, not most likely outcome. |
-| Variance from probabilities | `Var(X)=sum p_i[x_i-E(X)]^2 = E(X^2)-[E(X)]^2` | Use shortcut for scenario tables. |
-| Conditional probability | `P(A|B)=P(A and B)/P(B)` | The condition is the denominator. |
-| Total probability | `P(A)=sum P(A|B_i)P(B_i)` | Required before Bayes; include all mutually exclusive states. |
-| Bayes formula | `P(B_j|A)=P(A|B_j)P(B_j)/sum[P(A|B_i)P(B_i)]` | Prior x likelihood / total probability. New information updates old probability. |
-| Portfolio expected return | `E(Rp)=sum w_iE(R_i)` | Return is weighted average; risk is not. |
-| Covariance | `Cov12=sum p_i[R1_i-E(R1)][R2_i-E(R2)]` | Sign gives co-movement direction. |
-| Correlation | `rho12 = Cov12/(sigma1 sigma2)` | Standardized strength in `[-1,+1]`; not causation. |
-| Two-asset portfolio variance | `sigma_p^2=w1^2sigma1^2+w2^2sigma2^2+2w1w2Cov12` | Must include covariance term; use `2w1w2sigma1sigma2rho12` when rho is given. |
-| Roy safety-first | `SFRatio=[E(Rp)-R_L]/sigma_p` | Choose the highest SFRatio when the threshold return is fixed. |
+| Trigger                      | Formula / Framework                              | Exam decision                                                                 |                                                               |              |                                                                                  |
+| ---------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------ | -------------------------------------------------------------------------------- |
+| Expected value               | `E(X) = sum(p_i x_i)`                            | Probability-weighted mean, not most likely outcome.                           |                                                               |              |                                                                                  |
+| Variance from probabilities  | `Var(X)=sum p_i[x_i-E(X)]^2 = E(X^2)-[E(X)]^2`   | Use shortcut for scenario tables.                                             |                                                               |              |                                                                                  |
+| Conditional probability      | `P(A                                             | B)=P(A and B)/P(B)`                                                           | The condition is the denominator.                             |              |                                                                                  |
+| Total probability            | `P(A)=sum P(A                                    | B_i)P(B_i)`                                                                   | Required before Bayes; include all mutually exclusive states. |              |                                                                                  |
+| Bayes formula                | `P(B_j                                           | A)=P(A                                                                        | B_j)P(B_j)/sum[P(A                                            | B_i)P(B_i)]` | Prior x likelihood / total probability. New information updates old probability. |
+| Portfolio expected return    | `E(Rp)=sum w_iE(R_i)`                            | Return is weighted average; risk is not.                                      |                                                               |              |                                                                                  |
+| Covariance                   | `Cov12=sum p_i[R1_i-E(R1)][R2_i-E(R2)]`          | Sign gives co-movement direction.                                             |                                                               |              |                                                                                  |
+| Correlation                  | `rho12 = Cov12/(sigma1 sigma2)`                  | Standardized strength in `[-1,+1]`; not causation.                            |                                                               |              |                                                                                  |
+| Two-asset portfolio variance | `sigma_p^2=w1^2sigma1^2+w2^2sigma2^2+2w1w2Cov12` | Must include covariance term; use `2w1w2sigma1sigma2rho12` when rho is given. |                                                               |              |                                                                                  |
+| Roy safety-first             | `SFRatio=[E(Rp)-R_L]/sigma_p`                    | Choose the highest SFRatio when the threshold return is fixed.                |                                                               |              |                                                                                  |
 
 ### Simulation and resampling spine
 

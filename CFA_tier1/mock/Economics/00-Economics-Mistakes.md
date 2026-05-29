@@ -1,6 +1,6 @@
 ---
 bucket: Economics
-question_count: 13
+question_count: 17
 ---
 
 # Economics Mock Mistakes
@@ -125,12 +125,52 @@ question_count: 13
 - evidence_assets: 
 - moc_target: CFA_tier1/Economics/00-Economics-MOC.md
 
-## Economics - Geopolitics - Event Risk vs Thematic Risk | M05 LOS 5.4/5.6: describe geopolitical risk and its impact on investments
-- error_type: geopolitical_risk_type_confusion
-- question_source: CFA Institute Learning Ecosystem
-- source_type: screenshot
-- wrong_choice_or_output: C. An ongoing civil war
-- correct_resolution: B. An election. Event risk evolves around set dates such as elections, new legislation, holidays, or political anniversaries known in advance. An earthquake is an exogenous risk because the outcome/date cannot be known in advance. An ongoing civil war is a thematic risk because it is continuing rather than tied to a set date.
-- evidence_refs: chat_screenshot_2026-05-27_question_6_event_risk_election_vs_civil_war
+## Economics | M08: Exchange Rate Calculations �� depreciation/appreciation asymmetry
+- error_type: formula_misuse
+- question_source: unknown
+- source_type: manual
+- wrong_choice_or_output: A. 12 percent �� incorrectly assumed symmetric offset.
+- correct_resolution: C. More than 12 percent. [1/(1-0.12)]-1 = 1/0.88-1 = 0.1364 = 13.64%. Depreciation/appreciation are not symmetric.
+- evidence_refs: 
 - evidence_assets: 
+- moc_target: CFA_tier1/Economics/00-Economics-MOC.md
+
+## Economics | M08: Exchange Rate Calculations �� initial rate from appreciation percentage
+- error_type: formula_misuse
+- question_source: unknown
+- source_type: manual
+- wrong_choice_or_output: C. 1.5660 �� multiplied 1.45 x 1.08 instead of dividing.
+- correct_resolution: B. 1.3426. 1.4500/X = 1.08 �� X = 1.45/1.08 = 1.3426. Base currency appreciated 8% means new = old x (1+r), so old = new/(1+r).
+- evidence_refs: 
+- evidence_assets: 
+- moc_target: CFA_tier1/Economics/00-Economics-MOC.md
+
+## Economics | M07: Capital Flows and the FX Market �� capital restrictions purpose
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: manual
+- wrong_choice_or_output: C. stabilize production capacity �� confused FDI effect with policy reason.
+- correct_resolution: A. prevent capital flight. Restricting liquid asset investment prevents hot money sudden reversal. FDI improves capacity but that is not the reason for the restriction structure.
+- evidence_refs: 
+- evidence_assets: 
+- moc_target: CFA_tier1/Economics/00-Economics-MOC.md
+
+## Economics | M08 Exchange Rate Calculations - forward premium/discount quote direction
+- error_type: formula_misuse
+- question_source: CFA Learning Ecosystem
+- source_type: screenshot
+- wrong_choice_or_output: B. The US dollar is trading at a forward premium of 49 points.
+- correct_resolution: Correct answer is A. In a USD/EUR quote, EUR is the base currency and USD is the price currency. Because the forward quote 1.3001 is higher than the spot quote 1.2952, one EUR costs more USD forward than spot, so EUR is trading at a forward premium. Forward points = 1.3001 - 1.2952 = 0.0049 = 49 points.
+- evidence_refs: chat-screenshot-2026-05-28-forward-premium-usd-eur
+- evidence_assets: conversation-image-2026-05-28-forward-premium-usd-eur
+- moc_target: CFA_tier1/Economics/00-Economics-MOC.md
+
+## Economics | M08 Exchange Rate Calculations - covered interest arbitrage quote direction
+- error_type: formula_misuse
+- question_source: CFA Learning Ecosystem
+- source_type: screenshot
+- wrong_choice_or_output: A. -BRL6,327.
+- correct_resolution: Correct answer is B. BRL/AUD = 2.1128 means 1 AUD costs 2.1128 BRL, so converting BRL500,000 to AUD requires dividing by 2.1128: AUD236,653. Invest AUD at 3.1% to get AUD243,989. Convert back using the 1-year forward BRL/AUD 2.1388: BRL521,844. The BRL short grows at the BRL rate to BRL500,000 x 1.041 = BRL520,500. Arbitrage profit = BRL521,844 - BRL520,500 = BRL1,344.
+- evidence_refs: chat-screenshot-2026-05-28-brl-aud-covered-interest-arbitrage
+- evidence_assets: conversation-image-2026-05-28-brl-aud-cia-q16
 - moc_target: CFA_tier1/Economics/00-Economics-MOC.md

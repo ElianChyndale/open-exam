@@ -19,6 +19,7 @@ class Repository:
         self.vault_root = root / "CFA_tier1"
         self.obsidian_root = self.vault_root / "dashboard"
         self.obsidian_config_root = root / ".obsidian"
+        self.schedule_root = root / "schedule"
         self.skills_root = root / "skills"
         self.evals_root = self.system_root / "evals"
         self.catalog_path = self.events_root / "catalog.sqlite3"
@@ -57,6 +58,7 @@ class Repository:
             self.vault_root / "mock" / "Quant",
             self.obsidian_root,
             self.obsidian_config_root,
+            self.schedule_root / "todo_archive",
             self.skills_root,
             self.evals_root / "results",
         ]
