@@ -31,6 +31,8 @@ class MistakeEvent:
     source_type: str = ""
     evidence_assets: list[str] = field(default_factory=list)
     moc_target: str = ""
+    question_format: str = ""
+    choices: list[str] = field(default_factory=list)
     event_id: str | None = None
     created_at: str = field(default_factory=lambda: utc_now().isoformat())
 
@@ -72,6 +74,8 @@ class MistakeCard:
     source_type: str
     evidence_assets: list[str]
     moc_target: str
+    question_format: str
+    choices: list[str]
 
     @classmethod
     def from_event(cls, event: MistakeEvent, fix_rule: str, next_drill: str) -> "MistakeCard":
@@ -94,6 +98,8 @@ class MistakeCard:
             source_type=event.source_type,
             evidence_assets=event.evidence_assets,
             moc_target=event.moc_target,
+            question_format=event.question_format,
+            choices=event.choices,
         )
 
 

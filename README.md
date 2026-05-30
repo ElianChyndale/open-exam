@@ -1,64 +1,83 @@
-# CFA Tier 1 Local Agent Mistake System
+# ExamOS
 
-This repository implements a local-first CFA Tier 1 mistake workflow.
+ExamOS is a local-first CFA Level I exam operating system: a FastAPI backend, a Next.js cockpit, cognitive-science study engines, and the existing `.system/` evidence kernel in one project.
 
-The Obsidian-facing vault is organized by subject folders such as `Quantitative_Methods/`, `Ethical_and_Professional_Standards/`, and `Financial_Statement_Analysis/`, with generated review pages written into `CFA_tier1/dashboard/`. Each subject folder keeps one master `00-*-MOC.md` knowledge framework as its reading entrypoint.
+It is not a generic AI study assistant. The product goal is to turn question attempts into diagnosis, review scheduling, daily planning, mock retros, and measurable progress toward passing.
 
-Core layout:
+## Project Layout
 
-- `CFA_tier1/` stores Obsidian-readable study notes and exported projection pages.
-- `.obsidian/` stores Obsidian vault configuration only.
-- `.system/events/` stores raw question, bias, and agent event logs.
-- `.system/memory/` stores durable markdown cards and strategy artifacts.
-- `skills/` stores reusable local agent skills.
-- `.system/evals/` stores local evaluation fixtures.
-- `.system/app/` contains the CLI, workflows, storage layer, and Agents SDK scaffolding.
-- `scripts/` stores runnable entrypoint helpers for the hidden system layer.
+- `apps/api/` - FastAPI backend for attempts, diagnosis, review packs, study plans, mock retros, dashboards, and institution reports.
+- `apps/web/` - Next.js frontend cockpit.
+- `packages/exam-core/` - exam-agnostic domain models.
+- `packages/study-science/` - retrieval, spacing, interleaving, worked-example fading, self-explanation, calibration, and energy planning engines.
+- `packages/agent-runtime/` - six role boundaries: orchestrator, mistake_recorder, review_coach, pattern_miner, strategy_coach, validator.
+- `.system/` - canonical local event, memory, workflow, and test kernel.
+- `CFA_tier1/` - Obsidian/Markdown projection layer.
 
-## Quick start
+## Start Backend
 
-Run the local tests:
+Simplest option, one command:
+
+```powershell
+.\start-examos.ps1
+```
+
+This starts the API and web app, opens `http://localhost:3000`, and stops both when you press `Ctrl+C` in that terminal.
+
+## Start Backend Manually
+
+```powershell
+.\start-api.ps1
+```
+
+Manual equivalent:
+
+```powershell
+$env:PYTHONPATH = ".system;apps\api;packages\exam-core\src;packages\study-science\src;packages\agent-runtime\src"
+python -m uvicorn main:app --app-dir apps\api --host 0.0.0.0 --port 8000
+```
+
+Health check:
+
+```powershell
+Invoke-RestMethod http://localhost:8000/api/health
+```
+
+## Start Frontend Manually
+
+```powershell
+.\start-web.ps1
+```
+
+The frontend runs at `http://localhost:3000` and uses `NEXT_PUBLIC_API_URL` when set, otherwise `http://localhost:8000`.
+
+## Tests And Builds
+
+Run Python tests:
 
 ```powershell
 pytest
 ```
 
-Record a question mistake:
+Run frontend checks:
+
+```powershell
+cd apps\web
+npm install
+npm run typecheck
+npm run build
+```
+
+Current verified Python coverage includes the legacy `.system/tests`, API smoke tests, and package model instantiation tests.
+
+## CLI Still Works
 
 ```powershell
 python scripts/cfa.py record-mistake --payload "{\"source_layer\":\"question\",\"topic\":\"Ethics\",\"los\":\"I.A\",\"prompt_or_question\":\"...\",\"wrong_choice_or_output\":\"A\",\"correct_resolution\":\"B\",\"error_type\":\"concept_confusion\",\"confidence\":2,\"time_spent\":100,\"evidence_refs\":[\"mock-1\"]}"
-```
-
-Screenshot-based capture works through Codex rather than local OCR. When you send a wrong-question screenshot, Codex can normalize it into a structured `record-mistake` payload and preserve richer provenance fields such as `question_source`, `source_type`, `evidence_assets`, and `moc_target`.
-
-Generate a mock review summary:
-
-```powershell
+python scripts/cfa.py daily-review-pack --focus-topic "Fixed Income"
 python scripts/cfa.py post-mock-retro --session-id mock-1
 ```
 
-Generate a framework feedback review from repeated question mistakes:
+## Source Of Truth
 
-```powershell
-python scripts/cfa.py moc-gap-review
-```
-
-This produces a controlled review artifact under `.system/memory/strategy/` so repeated mistakes can suggest MOC improvements without automatically rewriting the subject framework.
-
-Generate a daily spaced-review pack from recent learning cache and due cards:
-
-```powershell
-python scripts/cfa.py daily-review-pack --focus-topic "Corporate Issuers"
-```
-
-This writes `.system/memory/strategy/daily-review-pack.md` and projects `CFA_tier1/dashboard/今日复习资料.md`.
-
-Write a concise task-level daily todo and archive the previous one:
-
-```powershell
-python scripts/cfa.py write-todo --payload "{\"date\":\"2026-05-28\",\"focus\":\"完成 Corporate Issuers 学习\",\"tasks\":[\"完成 Corporate Issuers 主学习\",\"做练习题\",\"处理新增错题\"]}"
-```
-
-## OpenAI API note
-
-The repository contains an OpenAI Agents SDK integration scaffold. Live agent runs require a valid `OPENAI_API_KEY`. The local file, memory, export, and eval workflows work without live API access.
+The frontend is a cockpit, not the source of truth. Canonical learning evidence remains in `.system/events/` and `.system/memory/`; `CFA_tier1/` is a projection layer for reading and review.

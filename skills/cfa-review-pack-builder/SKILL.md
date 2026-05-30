@@ -9,6 +9,11 @@ Use this skill when generating or auditing `daily-review-pack` outputs.
 
 The review pack is a Decision Layer artifact. It should decide what the learner reviews next, while keeping every item traceable to `.system/events/`, `.system/memory/`, or active `CFA_tier1/*/00-*-MOC.md` pages.
 
+Standard CLI:
+
+- `python scripts/cfa.py record-progress --payload "{...}"`
+- `python scripts/cfa.py daily-review-pack --date YYYY-MM-DD --focus-topic "<topic>" --max-items 30 --knowledge-depth expanded`
+
 ## Output Standard
 
 A good review pack must be readable as one human study file, not as an agent work log. Its visible content has this order:
@@ -28,6 +33,7 @@ Prefer items in this order:
 2. Repeated patterns with recurrence >= 3.
 3. Recent low-confidence events.
 4. Today's focus topic MOC, so new learning has a preview scaffold.
+5. Progress ledger entries from `.system/memory/progress/`, especially completed daily review and focus overrides.
 
 Use memory theory directly:
 
@@ -44,6 +50,8 @@ Questions must be readable as questions, not as metadata.
 - Render the prompt as a blockquote or fenced block so option lines stay aligned.
 - Preserve blank lines between stem and choices.
 - Keep choices on separate lines.
+- Render choices under a separate `#### 选项` section when available.
+- If a multiple-choice card lacks choices, show `options_missing` rather than inventing options.
 - Put answer/explanation under `#### 正确理解 / 解法`.
 - Put the old wrong answer under `#### 我上次错在` when available.
 - Keep `fix_rule`, `next_drill`, and evidence as short bullets under `#### 下次规则`.
@@ -60,6 +68,7 @@ The warm start should not be generic. It should include:
 - Group related rows by MOC heading so the learner sees the full local framework, not isolated one-line fragments.
 - Keep English terms and formula notation intact. Add Chinese only where it clarifies the decision rule or common trap.
 - Each grouped warm-start block should include concise core rows and the most important easy-miss boundaries; avoid replacing the source MOC with a long essay.
+- In `expanded` mode, include active module-note classifier/trap/recall sections for the focus topic only; non-focus subjects may still appear from due cards or MOCs but should not dominate the warm start.
 
 When exact MOC matching is imperfect, prefer conservative broad subject-level rows rather than inventing formulas.
 

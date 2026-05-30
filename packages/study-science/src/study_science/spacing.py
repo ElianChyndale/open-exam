@@ -1,0 +1,136 @@
+"""Spacing Scheduler — optimal review intervals.
+
+Based on spaced practice research (Dunlosky 2013, Nature Reviews Psych 2022).
+Schedules review based on confidence, correctness, time spent, and exam date.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from datetime import date, datetime, timedelta
+from enum import IntEnum
+from typing import Protocol
+
+
+class ConfidenceLevel(IntEnum):
+    GUESS = 0
+    UNSURE = 1
+    MODERATE = 2
+    CONFIDENT = 3
+    VERY_CONFIDENT = 4
+
+
+@dataclass(slots=True)
+class SpacingInput:
+    """Input data for spacing calculation."""
+    topic: str
+    los: str
+    error_type: str
+    confidence: int = 1                    # 0-4
+    is_correct: bool = False
+    time_spent_seconds: int = 60
+    previous_reviews: int = 0              # how many times already reviewed
+    last_reviewed_at: str = ""             # ISO date
+    exam_date: str = ""                    # ISO date, for urgency scaling
+
+
+@dataclass(slots=True)
+class SpacingDecision:
+    """Output of spacing calculation."""
+    next_review_date: str = ""             # ISO date
+    interval_days: int = 1
+    priority: int = 50                     # 0-100
+    urgency_multiplier: float = 1.0
+    reasoning: str = ""
+
+
+class SpacingScheduler:
+    """Calculate optimal review intervals and priorities.
+
+    Core rules:
+    - Low confidence + wrong → review tomorrow (interval = 1)
+    - Medium confidence + wrong → review in 3 days
+    - High confidence + wrong → review in 7 days (highest priority — calibration failure)
+    - Correct + any confidence → increasing intervals (1→3→7→14→30)
+    - Closer to exam date → compress intervals
+    """
+
+    # Base intervals by confidence and correctness
+    BASE_INTERVALS = {
+        # (is_correct, confidence): days
+        (False, 0): 1,    # guess + wrong → tomorrow
+        (False, 1): 1,    # unsure + wrong → tomorrow
+        (False, 2): 2,    # moderate + wrong → 2 days
+        (False, 3): 5,    # confident + wrong → 5 days (calibration danger)
+        (False, 4): 7,    # very confident + wrong → 7 days (worst calibration)
+        (True, 0): 1,     # guess + right → still review soon (lucky guess)
+        (True, 1): 3,     # unsure + right → 3 days
+        (True, 2): 7,     # moderate + right → 7 days
+        (True, 3): 14,    # confident + right → 14 days
+        (True, 4): 30,    # very confident + right → 30 days
+    }
+
+    # Successive review multipliers — expands interval each successful review
+    EXPANSION_FACTORS = [1.0, 2.0, 3.5, 5.0, 7.0]  # review #0, #1, #2, #3, #4+
+
+    @classmethod
+    def schedule(cls, input_: SpacingInput) -> SpacingDecision:
+        """Compute optimal next review date and priority."""
+        # Base interval
+        key = (input_.is_correct, min(input_.confidence, 4))
+        base_days = cls.BASE_INTERVALS.get(key, 7)
+
+        # Expansion for repeated reviews
+        review_idx = min(input_.previous_reviews, len(cls.EXPANSION_FACTORS) - 1)
+        expansion = cls.EXPANSION_FACTORS[review_idx]
+        interval = int(base_days * expansion)
+
+        # Urgency: compress if exam is approaching
+        urgency = 1.0
+        if input_.exam_date:
+            try:
+                exam_date = date.fromisoformat(input_.exam_date[:10])
+                days_until_exam = max((exam_date - date.today()).days, 1)
+                if days_until_exam < 7:
+                    urgency = 0.5
+                elif days_until_exam < 14:
+                    urgency = 0.6
+                elif days_until_exam < 30:
+                    urgency = 0.8
+                elif days_until_exam < 60:
+                    urgency = 0.9
+                interval = max(1, int(interval * urgency))
+            except (ValueError, TypeError):
+                pass
+
+        # Priority: high-confidence errors get highest priority
+        priority = 50
+        if not input_.is_correct:
+            if input_.confidence >= 3:
+                priority = 95   # calibration failure — most dangerous
+            elif input_.confidence >= 2:
+                priority = 80
+            else:
+                priority = 70
+        else:
+            if input_.confidence <= 1:
+                priority = 65   # lucky guess — needs review
+            else:
+                priority = 40
+
+        # Time spent penalty: very fast wrong answers may be careless
+        if not input_.is_correct and input_.time_spent_seconds < 30:
+            priority = min(100, priority + 10)
+
+        next_date = (date.today() + timedelta(days=interval)).isoformat()
+
+        return SpacingDecision(
+            next_review_date=next_date,
+            interval_days=interval,
+            priority=priority,
+            urgency_multiplier=urgency,
+            reasoning=(
+                f"Base={base_days}d, expansion={expansion}x, "
+                f"urgency={urgency}, priority={priority}"
+            ),
+        )

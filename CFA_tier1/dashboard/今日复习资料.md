@@ -1,16 +1,30 @@
 ---
-generated_for: 2026-05-28
+generated_for: 2026-05-30
 days_back: 7
-focus_topic: Corporate Issuers
-source_event_count: 36
+focus_topic: unspecified
+source_event_count: 44
 review_item_count: 20
 ---
 
 # 今日复习资料
 
+## 复习进度
+
+- 已完成复习: 2026-05-29
+
 ## 一、知识点和公式
 
-### 1. Economics | M02 Business Cycles and Indicators
+### 1. Economics | M01 Firm, Cost, Shutdown, Market Structure
+- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Market structures；Profit maximization；Breakeven
+- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26；到期复习 2026-05-29
+
+#### 核心知识点 / 公式
+- **Market structures:** Perfect competition: many, homogeneous, no pricing power; monopolistic competition: many differentiated, low barriers; oligopoly: few, strategic interdependence, high barriers; monopoly: one, very high barriers -> 题干通常用 barriers、product differentiation、number of sellers、pricing power 组合识别。
+- **Profit maximization:** `MR = MC` -> 所有市场结构先定 quantity，再从 demand/price rule 找 price。
+- **Breakeven:** Breakeven where `TR = TC` or `P = ATC` -> `P > ATC` positive economic profit; `P = ATC` normal profit; `P < ATC` economic loss.
+- **来源：** CFA_tier1/Economics/00-Economics-MOC.md
+
+### 2. Economics | M02 Business Cycles and Indicators
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Cycle phases；Indicators；Business behavior
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -23,7 +37,7 @@ review_item_count: 20
 - Indicators: 预测题优先 leading；不要用 unemployment duration 这类 lagging 指标预测未来。
 - **来源：** CFA_tier1/Economics/00-Economics-MOC.md
 
-### 2. Economics | M04 Monetary Policy
+### 3. Economics | M04 Monetary Policy
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Transmission；Tools；Central bank roles；Limitations
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27；到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -34,7 +48,7 @@ review_item_count: 20
 - **Limitations:** Zero lower bound, liquidity trap, impaired banking channel, uncertain lags -> QE 不等于所有低利率情境都有效。
 - **来源：** CFA_tier1/Economics/00-Economics-MOC.md
 
-### 3. Quantitative Methods | Estimation, CLT, confidence interval, and hypothesis-testing spine
+### 4. Quantitative Methods | Estimation, CLT, confidence interval, and hypothesis-testing spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Standard error；t confidence interval；CLT
 - **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -47,7 +61,7 @@ review_item_count: 20
 - CLT: Applies to sample mean, not to raw observations.
 - **来源：** CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
 
-### 4. Economics | M03 Fiscal Policy
+### 5. Economics | M03 Fiscal Policy
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Policy actor
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -55,144 +69,15 @@ review_item_count: 20
 - **Policy actor:** Government spending, taxation, transfers, automatic stabilizers -> Money supply / policy rate 属于 monetary policy。
 - **来源：** CFA_tier1/Economics/00-Economics-MOC.md
 
-### 5. Corporate Issuers | A. Organizational Forms / Ownership
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Organizational form；Corporate issuer features；Public vs private ownership；Ownership varieties；Complex ownership structures
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **Organizational form:** sole trader/proprietorship, partnership, limited company/corporation -> 比较 liability, tax, capital access, continuity, control。
-- **Corporate issuer features:** separate legal identity, owner-manager separation, limited liability, external financing, taxation -> 解释为什么公司能大规模融资，也为什么会产生 agency conflicts。
-- **Public vs private ownership:** public: listing, liquidity, price transparency, disclosure; private: restricted liquidity, negotiated capital, concentrated ownership -> 题干出现 IPO, take-private, disclosure, liquidity 时先判 ownership state。
-- **Ownership varieties:** founders, families, strategic investors, institutional investors, governments, employees -> 控制权和少数股东保护是治理题入口。
-- **Complex ownership structures:** maintain control, raise outside capital, limit personal liability, separate economic ownership from management control, allow public participation without direct asset control -> 不要把复杂结构默认简化成避税；先判断结构在优化 control, capital, liability, disclosure or investor access。
-
-#### 易错边界
-- Public vs private ownership: 题干出现 IPO, take-private, disclosure, liquidity 时先判 ownership state。
-- Complex ownership structures: 不要把复杂结构默认简化成避税；先判断结构在优化 control, capital, liability, disclosure or investor access。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 6. Corporate Issuers | B. Debt vs Equity Claims / Stakeholders
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Debt claim；Equity claim；Conflict map；Supplier relationship；ESG lens
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **Debt claim:** contractual interest/principal, priority in liquidation, covenants, limited upside -> lenders prefer lower risk and cash-flow protection。
-- **Equity claim:** residual cash flows, voting/control rights, unlimited upside, last claim -> shareholders may prefer higher-risk positive-NPV projects。
-- **Conflict map:** shareholders vs creditors, majority vs minority, managers vs owners, company vs employees/customers/suppliers/government -> 先定位 stakeholder pair，再选 mechanism。
-- **Supplier relationship:** payment terms create short-term credit exposure; integrated systems create relationship-specific investment -> high leverage can conflict with supplier interests through payment risk and loss of long-term relationship value。
-- **ESG lens:** environmental, social, governance risks/opportunities -> ESG is risk/opportunity input, not automatically good or bad。
-
-#### 易错边界
-- Conflict map: 先定位 stakeholder pair，再选 mechanism。
-- ESG lens: ESG is risk/opportunity input, not automatically good or bad。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 7. Corporate Issuers | C. Governance Mechanisms
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Principal-agent relation；Manager-shareholder agency examples；Shareholder mechanisms；Creditor mechanisms；Board mechanisms；另有 1 项
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **Principal-agent relation:** principal delegates to agent; agent may optimize own incentives -> 识别 agency cost source。
-- **Manager-shareholder agency examples:** insufficient effort, excessive perks, avoiding appropriate risk, job protection -> 先回答 principal-agent，再给 independent board and compensation alignment。
-- **Shareholder mechanisms:** meetings, voting, activism, litigation, takeovers -> 用于 discipline board/management or protect minority shareholders。
-- **Creditor mechanisms:** bond indenture, covenants, creditor committees -> 用于 limit asset substitution, underinvestment, cash leakage。
-- **Board mechanisms:** independent directors, audit, nomination/governance, compensation committees -> 把 monitoring, disclosure, incentives 连接到 risk mitigation。
-- **Risk/benefit frame:** operational, legal/regulatory/reputational, financial -> governance failure 不是只影响 ethics，也影响 cost of capital and valuation。
-
-#### 易错边界
-- Risk/benefit frame: governance failure 不是只影响 ethics，也影响 cost of capital and valuation。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 8. Corporate Issuers | D. Working Capital / Liquidity
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Operating cycle；Cash conversion cycle；Current ratio；Quick ratio；Cash ratio；另有 2 项
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **Operating cycle:** `days inventory on hand + days sales outstanding` -> 现金被存货和应收款占用的时间。
-- **Cash conversion cycle:** `DIO + DSO - days payables outstanding` -> shorter CCC usually improves liquidity, but aggressive payables/collections may damage relationships。
-- **Current ratio:** `current assets / current liabilities` -> static liquidity cushion。
-- **Quick ratio:** `(cash + marketable securities + receivables) / current liabilities` -> excludes inventory; stricter than current ratio。
-- **Cash ratio:** `(cash + marketable securities) / current liabilities` -> most conservative short-term liquidity。
-- **Working capital management:** inventory, receivables, payables, short-term funding -> optimize liquidity vs profitability/risk, not maximize every ratio。
-- **Liquidity sources:** primary: cash flows, cash balances, trade credit; secondary: asset sales, debt/equity issuance -> primary sources are normal operations; secondary sources may be costly or signal stress。
-
-#### 易错边界
-- Cash conversion cycle: shorter CCC usually improves liquidity, but aggressive payables/collections may damage relationships。
-- Quick ratio: excludes inventory; stricter than current ratio。
-- Working capital management: optimize liquidity vs profitability/risk, not maximize every ratio。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 9. Corporate Issuers | E. Capital Investments / Capital Allocation
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？NPV；IRR；Payback；Profitability index；ROIC；另有 2 项
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **NPV:** `NPV = sum CFt/(1+r)^t - initial outlay` -> accept if positive; best wealth-maximizing rule。
-- **IRR:** discount rate making `NPV = 0` -> accept if IRR > required return; can mislead with nonconventional cash flows or mutually exclusive projects。
-- **Payback:** time to recover initial investment -> liquidity/risk screen; ignores time value and later cash flows unless discounted payback specified。
-- **Profitability index:** `PI = PV future cash flows / initial investment` -> useful under capital rationing; choose highest value per dollar when projects divisible/limited budget。
-- **ROIC:** operating profit after tax / invested capital -> performance measure, not a full replacement for NPV。
-- **Capital rationing:** hard/soft budget constraints -> rank by NPV under unlimited capital, by PI or optimization under constrained capital。
-- **Real options:** expand, delay, abandon, switch -> managerial flexibility can increase project value。
-
-#### 易错边界
-- IRR: accept if IRR > required return; can mislead with nonconventional cash flows or mutually exclusive projects。
-- Payback: liquidity/risk screen; ignores time value and later cash flows unless discounted payback specified。
-- ROIC: performance measure, not a full replacement for NPV。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 10. Corporate Issuers | F. Cost of Capital / Capital Structure / Lifecycle
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？WACC；Cost of debt after tax；Target weights；Lifecycle financing；Top-down factors；另有 3 项
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **WACC:** `WACC = wd rd(1 - t) + wp rp + we re` -> use market value weights when available; after-tax cost for debt。
-- **Cost of debt after tax:** `rd(1 - tax rate)` -> interest tax shield lowers effective debt cost。
-- **Target weights:** based on target/optimal structure, not historical book weights -> WACC should match financing policy and project risk。
-- **Lifecycle financing:** start-up/growth often equity; mature firms can support more debt; declining firms reduce leverage/flexibility -> business risk and asset tangibility affect debt capacity。
-- **Top-down factors:** interest rates, tax rates, market conditions, regulation, macro risk -> affect both cost of debt and equity。
-- **Issuer-specific factors:** profitability, cash flow stability, collateral, governance, credit quality -> stronger issuer -> lower financing cost。
-- **MM intuition:** no taxes: capital structure irrelevant; taxes: debt tax shield raises value; distress/agency costs create optimum -> know direction and assumptions before applying。
-- **Financial leverage and ROE variance:** debt adds fixed interest expense and reduces equity base -> leverage can raise ROE sharply in good revenue states and make ROE negative in weak revenue states; high ROE may be higher risk, not better operations。
-
-#### 易错边界
-- Financial leverage and ROE variance: leverage can raise ROE sharply in good revenue states and make ROE negative in weak revenue states; high ROE may be higher risk, not better operations。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 11. Corporate Issuers | G. Business Model Features / Pricing / Revenue Models
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Business model spine；Pricing models；Revenue models；Network effects/platforms；Business model innovation
-- **今天为什么看：** 今日主线 Corporate Issuers
-
-#### 核心知识点 / 公式
-- **Business model spine:** who customer, what offering, where channel, how much pricing, why value proposition -> 先 describe model，再 infer economics。
-- **Pricing models:** one-time sale, subscription, usage-based, freemium, razor-and-blade, bundling -> pricing determines revenue timing and customer behavior。
-- **Revenue models:** transaction, recurring, advertising, licensing, marketplace/platform, data/services -> compare stability, scalability, margin and working-capital needs。
-- **Network effects/platforms:** value increases with users; two-sided market may subsidize one side -> strong growth potential but may require high early investment。
-- **Business model innovation:** new channels, new pricing, new capabilities, new customer segment -> assess sustainability, not just novelty。
-
-#### 易错边界
-- Network effects/platforms: strong growth potential but may require high early investment。
-- Business model innovation: assess sustainability, not just novelty。
-- **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
-
-### 12. Economics | M01 Firm, Cost, Shutdown, Market Structure
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Market structures；Breakeven
-- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
-#### 核心知识点 / 公式
-- **Market structures:** Perfect competition: many, homogeneous, no pricing power; monopolistic competition: many differentiated, low barriers; oligopoly: few, strategic interdependence, high barriers; monopoly: one, very high barriers -> 题干通常用 barriers、product differentiation、number of sellers、pricing power 组合识别。
-- **Breakeven:** Breakeven where `TR = TC` or `P = ATC` -> `P > ATC` positive economic profit; `P = ATC` normal profit; `P < ATC` economic loss.
-- **来源：** CFA_tier1/Economics/00-Economics-MOC.md
-
-### 13. Economics | M07 FX Market, Quotes, Regimes
+### 6. Economics | M07 FX Market, Quotes, Regimes
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Capital restrictions
-- **今天为什么看：** 近期低信心 2026-05-27
+- **今天为什么看：** 到期复习 2026-05-29
 
 #### 核心知识点 / 公式
 - **Capital restrictions:** Limit inflows/outflows, reduce volatility, protect reserves or policy autonomy -> 也可能 lower market efficiency and investor confidence。
 - **来源：** CFA_tier1/Economics/00-Economics-MOC.md
 
-### 14. Quantitative Methods | Independence, regression, and ML-risk spine
+### 7. Quantitative Methods | Independence, regression, and ML-risk spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Spearman rank correlation
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -200,9 +85,9 @@ review_item_count: 20
 - **Spearman rank correlation:** rank-based nonparametric correlation -> Use for ordinal, nonnormal, or outlier-prone data; detects monotonic relation.
 - **来源：** CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
 
-### 15. Economics | M08 Cross Rates, Forward Premiums, Arbitrage
+### 8. Economics | M08 Cross Rates, Forward Premiums, Arbitrage
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Covered interest parity；Cross rate；Inverted quote
-- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
+- **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-29
 
 #### 核心知识点 / 公式
 - **Covered interest parity:** `F = S x (1 + i_domestic)/(1 + i_foreign)` -> 高利率货币通常 forward discount。
@@ -210,44 +95,61 @@ review_item_count: 20
 - **Inverted quote:** `bid(B/A)=1/ask(A/B)`; `ask(B/A)=1/bid(A/B)` -> 倒数报价 bid/ask 要换边。
 - **来源：** CFA_tier1/Economics/00-Economics-MOC.md
 
-### 16. Economics | M05 Geopolitics
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Investment channels
-- **今天为什么看：** 近期低信心 2026-05-27
-
-#### 核心知识点 / 公式
-- **Investment channels:** Supply chain, commodity prices, sanctions, risk premium, capital flows, FX pressure -> 输出到 PM scenario analysis, country risk, currency exposure。
-- **来源：** CFA_tier1/Economics/00-Economics-MOC.md
-
-### 17. Quantitative Methods | Simulation and resampling spine
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Bootstrap
+### 9. Quantitative Methods | Simulation and resampling spine
+- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Bootstrap；Lognormal price
 - **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；近期低信心 2026-05-25
 
 #### 核心知识点 / 公式
 - **Bootstrap:** sample with replacement from observed data, compute statistic repeatedly -> Estimates sampling distribution/SE without a strong parametric distribution, but inherits sample bias.
+- **Lognormal price:** if `r_cc` is normal, `P_t=P_0e^r` is lognormal -> Prices cannot be negative; returns and prices use different distributions.
 
 #### 易错边界
 - Bootstrap: Estimates sampling distribution/SE without a strong parametric distribution, but inherits sample bias.
+- Lognormal price: Prices cannot be negative; returns and prices use different distributions.
 - **来源：** CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
 
-### 18. Quantitative Methods | Return and compounding spine
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Arithmetic mean
-- **今天为什么看：** 到期复习 2026-05-24；重复错误 4 次
+### 10. Quantitative Methods | Return and compounding spine
+- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Arithmetic mean；Continuously compounded return；Holding-period total return
+- **今天为什么看：** 到期复习 2026-05-24；重复错误 4 次；到期复习 2026-05-28；近期低信心 2026-05-25
 
 #### 核心知识点 / 公式
 - **Arithmetic mean:** `AM = sum(R_i) / n` -> Best for one-period expected return. It is not the long-run compounded wealth rate.
+- **Continuously compounded return:** `r_cc = ln(1+HPR)`; convert back with `e^(r_cc)-1` -> Continuous returns add across periods; ordinary returns compound multiplicatively.
+- **Holding-period total return:** `HPR = (P1 - P0 + D1) / P0`; `Gross return = 1 + HPR = (P1 + D1) / P0` -> Use for one holding period. Check whether income is already included in ending value.
 
 #### 易错边界
 - Arithmetic mean: Best for one-period expected return. It is not the long-run compounded wealth rate.
+- **来源：** CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+### 11. Portfolio Management | M03 Portfolio Management Process
+- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Process；Pooled vehicles
+- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-25
+
+#### 核心知识点 / 公式
+- **Process:** Planning -> execution -> feedback -> IPS is planning output; rebalancing and performance review are feedback.
+- **Pooled vehicles:** Mutual funds, ETFs, hedge funds, private equity, separately managed accounts -> Compare by liquidity, fees, transparency, regulation and strategy.
+- **来源：** CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md
+
+### 12. Quantitative Methods | Probability, statistics, and portfolio spine
+- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Total probability；Expected value
+- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-25
+
+#### 核心知识点 / 公式
+- **Total probability:** `P(A)=sum P(A | B_i)P(B_i)` | Required before Bayes; include all mutually exclusive states. | -> 
+- **Expected value:** `E(X) = sum(p_i x_i)` | Probability-weighted mean, not most likely outcome. | | -> 
 - **来源：** CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
 
 ## 二、错题
 
 ### 1. Quantitative Methods | QM.Rates and Returns | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-24；重复错误 4 次；严重度 high；近期低信心 2026-05-21
+- **今天为什么看：** 到期复习 2026-05-24；重复错误 4 次；严重度 high
 
 #### 题目
 > The price of a stock at t=0 is USD208.25 and at t=1 is USD186.75. The continuously compounded rate of return, r1,T for the stock from t=0 to t=1 is closest to:
+
+#### 选项
+> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
 
 #### 我上次错在
 > B. -10.32% (holding period return formula used instead of continuously compounded return)
@@ -262,10 +164,13 @@ review_item_count: 20
 
 ### 2. Quantitative Methods | unknown_from_screenshot | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；重复错误 3 次；严重度 medium；近期低信心 2026-05-21；近期低信心 2026-05-25
+- **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；重复错误 3 次；严重度 medium；近期低信心 2026-05-25
 
 #### 题目
 > Which of the following is required to compute the standard error of a sample mean using the bootstrap resampling method? 你选了 C. The standard deviation of the original sample。题目给出的正确答案是 A. The mean of each resample。
+
+#### 选项
+> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
 
 #### 我上次错在
 > 选择了 C. The standard deviation of the original sample。错误点在于把 bootstrap 下 sample mean 的 standard error，误解成依赖原始样本的标准差，而没有抓住它是由各次 resample 产生的均值分布来估计。
@@ -302,6 +207,8 @@ review_item_count: 20
 
 #### 题目
 > Each oligopoly firm faces an individual demand curve under:
+
+#### 选项
 > A. colluding market conditions only.
 > B. non-colluding market conditions only.
 > C. both colluding and non-colluding market conditions.
@@ -323,6 +230,8 @@ review_item_count: 20
 
 #### 题目
 > Aquarius, Inc. is the dominant company and the price leader in its market. One of the other companies in the market attempts to gain market share by undercutting the price set by Aquarius. The market share of Aquarius will most likely:
+
+#### 选项
 > A. increase.
 > B. decrease.
 > C. stay the same.
@@ -344,6 +253,8 @@ review_item_count: 20
 
 #### 题目
 > A nonparametric test is most appropriate when the:
+
+#### 选项
 > A. data consist of ranked values.
 > B. validity of the test depends on many assumptions.
 > C. sample sizes are large but are drawn from a population that may be non-normal.
@@ -366,6 +277,9 @@ review_item_count: 20
 #### 题目
 > Using sample results drawn as 25 paired observations, test whether the mean returns of two portfolios differ at the 1% level of statistical significance. Mean returns: Portfolio 1 = 17.00, Portfolio 2 = 21.25, Difference = 4.25. Standard deviation of differences = 6.25. t-statistic critical value for 24 degrees of freedom at 1% significance = 2.807. H0: mean difference of returns = 0. Based on the paired comparisons test, should H0 be rejected or accepted?
 
+#### 选项
+> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
+
 #### 我上次错在
 > C. accepted because the computed test statistic is less than 2.807.
 
@@ -383,6 +297,8 @@ review_item_count: 20
 
 #### 题目
 > Current economic statistics indicating little change in services inflation, rising residential building permits, and increasing average duration of unemployment are best interpreted as:
+
+#### 选项
 > A. conflicting evidence about the direction of the economy.
 > B. evidence that a cyclical upturn is expected to occur in the future.
 > C. evidence that a cyclical downturn is expected to occur in the future.
@@ -404,6 +320,8 @@ review_item_count: 20
 
 #### 题目
 > Based on typical labor utilization patterns across the business cycle, productivity (output per hours worked) is most likely to be highest:
+
+#### 选项
 > A. at the peak of a boom.
 > B. into a maturing expansion.
 > C. at the bottom of a recession.
@@ -425,6 +343,8 @@ review_item_count: 20
 
 #### 题目
 > Fiscal policy refers to the government's decisions about:
+
+#### 选项
 > A. taxation only.
 > B. taxation and spending only.
 > C. taxation, spending, and the quantity of money in the economy.
@@ -446,6 +366,8 @@ review_item_count: 20
 
 #### 题目
 > The least likely limitation to the effectiveness of monetary policy is that central banks cannot:
+
+#### 选项
 > A. accurately determine the neutral rate of interest.
 > B. regulate the willingness of financial institutions to lend.
 > C. control amounts that economic agents deposit into banks.
@@ -467,6 +389,8 @@ review_item_count: 20
 
 #### 题目
 > As a monetary policy tool, quantitative easing (QE) will most likely help revive an ailing economy in which of the following environments?
+
+#### 选项
 > A. Deflationary trap.
 > B. Declining bank reserves and economic activity.
 > C. Liquidity trap.
@@ -488,6 +412,8 @@ review_item_count: 20
 
 #### 题目
 > Over the past month, the Swiss franc (CHF) has depreciated 12 percent against the British pound (GBP). How much has the pound sterling appreciated against the Swiss franc?
+
+#### 选项
 > A. 12 percent
 > B. Less than 12 percent
 > C. More than 12 percent
@@ -509,6 +435,8 @@ review_item_count: 20
 
 #### 题目
 > An exchange rate between two currencies has increased to 1.4500. If the base currency has appreciated by 8 percent against the price currency, the initial exchange rate between the two currencies was closest to:
+
+#### 选项
 > A. 1.3340
 > B. 1.3426
 > C. 1.5660
@@ -530,6 +458,8 @@ review_item_count: 20
 
 #### 题目
 > Which of the following statements is true in the use of ML: 你选了
+
+#### 选项
 > A. some techniques are termed "black box" due to data biases. 题目给出的正确答案是
 > C. training data can be learned too precisely, resulting in inaccurate predictions when used with different datasets.
 
@@ -598,38 +528,48 @@ review_item_count: 20
 - **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / unknown_from_user_note 同类题。
 - **证据：** chat-note-2026-05-25-skewness-axis
 
-### 19. Economics | M07: Capital Flows and the FX Market - capital restrictions purpose | concept_confusion
+### 19. Economics | M01 The Firm and Market Structures | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 近期低信心 2026-05-27
+- **今天为什么看：** 到期复习 2026-05-29；近期低信心 2026-05-26
 
 #### 题目
-> The most likely reason for a country to encourage FDI while heavily restricting foreign investment in liquid domestic assets is to:
+> Companies most likely have a well-defined supply function when the market structure is:
+
+#### 选项
+> A. oligopoly.
+> B. perfect competition.
+> C. monopolistic competition.
 
 #### 我上次错在
-> C. stabilize production capacity - confused FDI effect with policy reason.
+> A. oligopoly
 
 #### 正确理解 / 解法
-> A. prevent capital flight. Restricting liquid asset investment prevents hot money sudden reversal. FDI improves capacity but that is not the reason for the restriction structure.
+> B. perfect competition. 在 perfect competition 下，企业的 MC schedule 就是其 supply function。因为 price taker 只能接受市场价格，按 P=MC 决定产量，因此 MC 曲线直接定义了价格与供给量的关系。其他市场结构（oligopoly、monopolistic competition）下不存在唯一的 supply function — oligopoly 有 strategic interdependence，产量决策受对手影响；monopoly 有定价权，可以按需求弹性设定价格而非单纯由 MC 决定。
 
 #### 下次规则
 - **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M07: Capital Flows and the FX Market - capital restrictions purpose 同类题。
-- **证据：** memory cache
+- **下一步练习：** 24 小时内重做 2 道 Economics / M01 The Firm and Market Structures 同类题。
+- **证据：** chat-2026-05-26-economics-supply-function-mistake
 
-### 20. Economics | M08: Exchange Rate Calculations - depreciation/appreciation asymmetry | formula_misuse
+### 20. Economics | M07: Capital Flows and the FX Market — capital restrictions purpose (capital flight prevention vs production capacity) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 近期低信心 2026-05-27
+- **今天为什么看：** 到期复习 2026-05-29
 
 #### 题目
-> Over the past month, the Swiss franc (CHF) has depreciated 12 percent against the British pound (GBP). How much has the pound sterling appreciated against the Swiss franc?
+> The most likely reason for a country to encourage foreign direct investment while heavily restricting foreign investment in liquid domestic assets is to:
+
+#### 选项
+> A. prevent capital flight.
+> B. generate an increase in the domestic interest rate.
+> C. stabilize the production capacity of the domestic country.
 
 #### 我上次错在
-> A. 12 percent - incorrectly assumed symmetric offset.
+> C. stabilize the production capacity — confused the effect of FDI (which does increase capacity) with the reason for the restriction structure.
 
 #### 正确理解 / 解法
-> C. More than 12 percent. [1/(1-0.12)]-1 = 1/0.88-1 = 0.1364 = 13.64%. Depreciation/appreciation are not symmetric.
+> A. prevent capital flight. Restricting foreign investment in liquid assets (easily sold/repatriated) prevents sudden outflows. FDI is illiquid and stable. C is wrong because FDI (not the restriction) stabilizes production capacity.
 
 #### 下次规则
-- **纠偏规则：** 先画结构或时间轴，再代入公式或计算器。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M08: Exchange Rate Calculations - depreciation/appreciation asymmetry 同类题。
+- **纠偏规则：** Restricting foreign investment in liquid assets ≠ restricting all foreign investment. 限制 liquid assets（股债等热钱）防 capital flight；鼓励 FDI（illiquid 长期实体投资）保产能。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M07 Capital Flows and the FX Market 同类题。
 - **证据：** memory cache
