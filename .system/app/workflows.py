@@ -16,6 +16,9 @@ FIX_RULES = {
     "time_misallocation": "把整场拆成前中后三段，每段设置剩余时间警戒线。",
     "hallucinated_rule": "所有规则性结论都要回到 CFA/IFRS/GAAP 原始约束重新核对。",
     "missed_root_cause": "先列现象，再单独写 root cause，不允许只总结表层现象。",
+    "constructed_response_weak_structure": "Essay 先按题干动词搭框架：identify/list 先列对象，discuss 每一点必须补 relationship type、incentive/conflict 或 financial impact。",
+    "constraint_miss": "表格题先圈出 governing criterion / hurdle / constraint，再比较 NPV、IRR 或 ROIC；不能只看最显眼的正 NPV。",
+    "table_overload_constraint_miss": "图表信息过载时先做 10 秒门槛扫描：minimum、target、required、criterion、constraint、hurdle，再读项目数据。",
 }
 
 FORMULA_DENSE_SUBJECTS = {
@@ -37,6 +40,9 @@ FORMULA_DENSE_SUBJECTS = {
     "Quantitative Methods",
     "Quantitative_Methods",
 }
+
+DAILY_REVIEW_TASK = "完成今日复习资料"
+DAILY_REVIEW_DEADLINE = "20:00"
 
 CONCEPT_FIRST_SUBJECTS = {
     "Ethical and Professional Standards",
@@ -346,6 +352,8 @@ def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dic
                     "prompt": extract_markdown_section(text, "Prompt"),
                     "wrong_output": extract_markdown_section(text, "Wrong Output"),
                     "correct_resolution": frontmatter.get("correct_resolution", ""),
+                    "question_format": frontmatter.get("question_format", ""),
+                    "choices": normalize_choices(extract_markdown_section(text, "Choices")),
                     "fix_rule": frontmatter.get("fix_rule", ""),
                     "next_drill": frontmatter.get("next_drill", ""),
                     "evidence_refs": evidence,
@@ -381,6 +389,8 @@ def collect_recent_low_confidence_items(repo: Repository, review_date: date, day
                 "prompt": event.prompt_or_question,
                 "wrong_output": event.wrong_choice_or_output,
                 "correct_resolution": event.correct_resolution,
+                "question_format": event.question_format,
+                "choices": event.choices,
                 "fix_rule": default_fix_rule(event.error_type),
                 "next_drill": next_drill_for(event),
                 "evidence_refs": ", ".join(event.evidence_refs),
@@ -484,7 +494,16 @@ def parse_moc_table_row(line: str) -> list[str] | None:
         return None
     first = parts[0].lower()
     last = parts[-1].lower()
-    if first in {"trigger", "tool", "metric", "indicator", "formula", "framework"}:
+    if first in {
+        "trigger",
+        "tool",
+        "metric",
+        "indicator",
+        "formula",
+        "framework",
+        "project type",
+        "real option type",
+    }:
         return None
     if last in {"exam use", "exam action", "exam decision", "decision", "说明", "应用场景"}:
         return None
@@ -523,6 +542,127 @@ def extract_moc_atoms(repo: Repository, subject: str) -> list[dict]:
                 }
             )
     return atoms
+
+
+def subject_module_paths(repo: Repository, subject: str) -> list[Path]:
+    normalized = normalize_subject(subject)
+    relative = SUBJECT_MOC_PATHS.get(normalized)
+    if not relative:
+        return []
+    subject_dir = (repo.root / relative).parent
+    if not subject_dir.exists():
+        return []
+    return sorted(path for path in subject_dir.glob("M*.md") if path.is_file())
+
+
+def extract_expanded_module_atoms(repo: Repository, subject: str) -> list[dict]:
+    atoms: list[dict] = []
+    for path in subject_module_paths(repo, subject):
+        text = path.read_text(encoding="utf-8")
+        current_heading = path.stem
+        include_heading = False
+        for line in text.splitlines():
+            if line.startswith("### ") or line.startswith("## "):
+                current_heading = line.lstrip("#").strip()
+                lowered = current_heading.lower()
+                include_heading = any(
+                    token in lowered
+                    for token in (
+                        "classifier",
+                        "formula",
+                        "decision",
+                        "trap",
+                        "recall",
+                    )
+                )
+                continue
+            if not include_heading:
+                continue
+            cells = parse_moc_table_row(line)
+            if cells:
+                atoms.append(
+                    {
+                        "subject": normalize_subject(subject),
+                        "heading": current_heading,
+                        "trigger": cells[0],
+                        "formula": cells[1],
+                        "decision": cells[2],
+                        "source": path.relative_to(repo.root).as_posix(),
+                        "text": " | ".join(cells),
+                        "reason": "expanded_module_note",
+                        "priority": 75,
+                    }
+                )
+                continue
+            stripped = line.strip()
+            if stripped.startswith("- "):
+                content = stripped.removeprefix("- ").strip()
+                if content:
+                    atoms.append(
+                        {
+                            "subject": normalize_subject(subject),
+                            "heading": current_heading,
+                            "trigger": content.split(":", 1)[0].strip("`* ")[:80],
+                            "formula": content,
+                            "decision": "module note easy-miss boundary",
+                            "source": path.relative_to(repo.root).as_posix(),
+                            "text": content,
+                            "reason": "expanded_module_note",
+                            "priority": 65,
+                        }
+                    )
+    return atoms
+
+
+def build_expanded_warm_start_items(repo: Repository, review_items: list[dict], focus_topic: str, max_items: int = 40) -> list[dict]:
+    focus_subject = normalize_subject(focus_topic) if focus_topic else ""
+    if focus_subject:
+        subjects = [focus_subject]
+    else:
+        subjects = []
+        for item in review_items:
+            subject = normalize_subject(item.get("topic", ""))
+            if subject in SUBJECT_MOC_PATHS and subject not in subjects:
+                subjects.append(subject)
+
+    selected: dict[str, dict] = {}
+    for subject in subjects:
+        for atom in extract_expanded_module_atoms(repo, subject):
+            score = atom.get("priority", 0)
+            atom_text = f"{atom['heading']} {atom['text']}".lower()
+            if subject == focus_subject:
+                score += 15
+            for item in review_items:
+                if normalize_subject(item.get("topic", "")) != subject:
+                    continue
+                tokens = tokenize_for_matching(
+                    item.get("los", ""),
+                    item.get("prompt", ""),
+                    item.get("correct_resolution", ""),
+                    item.get("error_type", ""),
+                )
+                score += sum(4 for token in tokens if token in atom_text)
+            key = f"{atom['subject']}::{atom['heading']}::{atom['trigger']}"
+            selected[key] = {**atom, "priority": score}
+
+    return sorted(
+        selected.values(),
+        key=lambda item: (-item.get("priority", 0), item.get("subject", ""), item.get("heading", "")),
+    )[:max_items]
+
+
+def merge_warm_start_items(*sources: list[dict]) -> list[dict]:
+    merged: dict[str, dict] = {}
+    for source in sources:
+        for item in source:
+            key = f"{item.get('subject', '')}::{item.get('heading', '')}::{item.get('trigger', '')}"
+            current = merged.get(key)
+            if not current or item.get("priority", 0) > current.get("priority", 0):
+                merged[key] = item
+    return sorted(
+        merged.values(),
+        key=lambda item: (-item.get("priority", 0), item.get("subject", ""), item.get("heading", "")),
+    )
 
 
 def tokenize_for_matching(*values: str) -> set[str]:
@@ -628,6 +768,16 @@ def quote_block(text: str) -> list[str]:
     if not cleaned:
         return ["> _No text captured._"]
     return [">" if not line.strip() else f"> {line}" for line in cleaned.splitlines()]
+
+
+def question_display_parts(item: dict) -> tuple[str, list[str], bool]:
+    prompt = item.get("prompt") or "先闭卷说出定义、公式或判断边界。"
+    explicit_choices = normalize_choices(item.get("choices", []))
+    stem, parsed_choices = split_prompt_choices(prompt)
+    choices = explicit_choices or parsed_choices
+    question_format = infer_question_format(prompt, item.get("wrong_output", ""), choices, item.get("question_format", ""))
+    options_missing = question_format == "multiple_choice" and not choices
+    return stem or prompt, choices, options_missing
 
 
 def clean_display_text(text: str) -> str:
@@ -765,6 +915,7 @@ def render_review_pack(
     days_back: int,
     focus_topic: str,
     source_event_count: int,
+    progress_events: list[dict] | None = None,
 ) -> str:
     lines = [
         "---",
@@ -778,6 +929,7 @@ def render_review_pack(
         "# 今日复习资料",
         "",
     ]
+    lines.extend(progress_summary_lines(progress_events or [], focus_topic))
 
     render_warm_start(lines, warm_start_items)
     lines.extend(
@@ -798,7 +950,7 @@ def render_review_pack(
 
     for index, item in enumerate(review_items, start=1):
         reasons = human_reasons(item.get("reasons", []))
-        prompt = item.get("prompt") or "先闭卷说出定义、公式或判断边界。"
+        prompt, choices, options_missing = question_display_parts(item)
         wrong_output = item.get("wrong_output") or "_No previous wrong output captured._"
         correct_resolution = item.get("correct_resolution") or "见原错题卡或模式卡。"
         lines.extend(
@@ -811,6 +963,20 @@ def render_review_pack(
                 "#### 题目",
                 *quote_block(prompt),
                 "",
+            ]
+        )
+        if choices:
+            lines.extend(["#### 选项", *quote_block("\n".join(choices)), ""])
+        elif options_missing:
+            lines.extend(
+                [
+                    "#### 选项",
+                    "> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_",
+                    "",
+                ]
+            )
+        lines.extend(
+            [
                 "#### 我上次错在",
                 *quote_block(wrong_output),
                 "",
@@ -839,9 +1005,11 @@ def build_strategy_rule(events: list[MistakeEvent]) -> StrategyRule:
 
 
 def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
-    event = MistakeEvent.from_payload(payload)
+    if mode == "record-mistake":
+        payload = hydrate_question_fields(payload)
     expected = {"record-mistake": "question", "review-session": "bias", "audit-agent": "agent"}[mode]
-    event.source_layer = expected
+    payload = {**payload, "source_layer": expected}
+    event = MistakeEvent.from_payload(payload)
     repo.append_event(event)
 
     card = MistakeCard.from_event(event, default_fix_rule(event.error_type), next_drill_for(event))
@@ -1045,12 +1213,62 @@ def pre_mock_brief(repo: Repository) -> StrategyRule:
     return rule
 
 
+def progress_log_path(repo: Repository) -> Path:
+    return repo.memory_root / "progress" / "progress-events.jsonl"
+
+
+def record_progress(repo: Repository, payload: dict) -> Path:
+    payload = dict(payload)
+    payload.setdefault("created_at", datetime.now().isoformat())
+    payload.setdefault("record_type", "module_progress")
+    payload.setdefault("status", "recorded")
+    path = progress_log_path(repo)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    return path
+
+
+def load_progress_events(repo: Repository) -> list[dict]:
+    path = progress_log_path(repo)
+    if not path.exists():
+        return []
+    events: list[dict] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            events.append(json.loads(line))
+    return events
+
+
+def progress_summary_lines(progress_events: list[dict], focus_topic: str) -> list[str]:
+    if not progress_events:
+        return []
+
+    focus_subject = normalize_subject(focus_topic) if focus_topic else ""
+    completed = []
+    for event in progress_events:
+        if event.get("record_type") != "daily_review_completed":
+            continue
+        if event.get("status") not in {"completed", "done"}:
+            continue
+        event_focus = normalize_subject(str(event.get("focus_topic", "")))
+        if focus_subject and event_focus and event_focus != focus_subject:
+            continue
+        date_text = str(event.get("date") or event.get("created_at", "")[:10])
+        if date_text and date_text not in completed:
+            completed.append(date_text)
+    if not completed:
+        return []
+    return ["## 复习进度", "", f"- 已完成复习: {', '.join(completed[-3:])}", ""]
+
+
 def daily_review_pack(
     repo: Repository,
     review_date: date | None = None,
     days_back: int = 7,
     max_items: int = 20,
     focus_topic: str = "",
+    knowledge_depth: str = "standard",
 ) -> Path:
     target_date = review_date or datetime.now().date()
     days_back = max(days_back, 1)
@@ -1062,7 +1280,13 @@ def daily_review_pack(
     pattern_items = collect_pattern_items(repo)
     review_items = merge_review_sources(due_items, pattern_items, recent_items)[:max_items]
     warm_start_items = build_warm_start_items(repo, review_items, focus_topic)
+    if knowledge_depth == "expanded":
+        warm_start_items = merge_warm_start_items(
+            warm_start_items,
+            build_expanded_warm_start_items(repo, review_items, focus_topic),
+        )
     events = repo.load_events()
+    progress_events = load_progress_events(repo)
 
     body = render_review_pack(
         review_items=review_items,
@@ -1071,6 +1295,7 @@ def daily_review_pack(
         days_back=days_back,
         focus_topic=focus_topic,
         source_event_count=len(events),
+        progress_events=progress_events,
     )
     strategy_path = repo.memory_root / "strategy" / "daily-review-pack.md"
     repo.write_markdown(strategy_path, body, "daily_review_pack", "daily-review-pack")
@@ -1101,6 +1326,74 @@ def coerce_task_list(value: object) -> list[str]:
     return tasks
 
 
+def normalize_deadline(value: object) -> str:
+    if value is None:
+        return ""
+
+    raw = str(value).strip()
+    if not raw:
+        return ""
+
+    match = re.fullmatch(r"(\d{1,2})(?::(\d{2}))?\s*([aApP][mM])?", raw)
+    if not match:
+        return raw
+
+    hour = int(match.group(1))
+    minute = int(match.group(2) or "00")
+    meridiem = match.group(3)
+    if meridiem:
+        if meridiem.lower() == "pm" and hour != 12:
+            hour += 12
+        if meridiem.lower() == "am" and hour == 12:
+            hour = 0
+    return f"{hour:02d}:{minute:02d}"
+
+
+def normalize_todo_tasks(value: object) -> list[dict[str, str]]:
+    if isinstance(value, list):
+        raw_items = value
+    elif isinstance(value, str):
+        raw_items = re.split(r"[\n;；]+", value)
+    else:
+        raw_items = []
+
+    tasks: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for item in raw_items:
+        deadline = ""
+        if isinstance(item, dict):
+            task_text = str(item.get("task") or item.get("title") or item.get("text") or item.get("name") or "").strip()
+            deadline = normalize_deadline(item.get("deadline") or item.get("due") or item.get("time"))
+        else:
+            task_text = str(item).strip()
+
+        task_text = re.sub(r"^\s*[-*]\s*\[[ xX]\]\s*", "", task_text).strip()
+        task_text = re.sub(r"^\s*[-*]\s*", "", task_text).strip()
+        if not task_text:
+            continue
+
+        key = task_text.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        tasks.append({"task": task_text, "deadline": deadline})
+    return tasks
+
+
+def ensure_daily_review_task(tasks: list[dict[str, str]]) -> list[dict[str, str]]:
+    for task in tasks:
+        if task["task"].strip().lower() == DAILY_REVIEW_TASK.lower():
+            task["deadline"] = DAILY_REVIEW_DEADLINE
+            return tasks
+
+    daily_review = {"task": DAILY_REVIEW_TASK, "deadline": DAILY_REVIEW_DEADLINE}
+    for index, task in enumerate(tasks):
+        deadline = task.get("deadline", "")
+        if deadline and deadline > DAILY_REVIEW_DEADLINE:
+            return [*tasks[:index], daily_review, *tasks[index:]]
+    return [*tasks, daily_review]
+
+
 def archive_today_todo(repo: Repository, archive_date: str) -> Path | None:
     today_path = repo.root / "today_todo.md"
     if not today_path.exists():
@@ -1122,7 +1415,7 @@ def archive_today_todo(repo: Repository, archive_date: str) -> Path | None:
     return archive_path
 
 
-def render_todo(payload: dict, plan_date: str, tasks: list[str]) -> str:
+def render_todo(payload: dict, plan_date: str, tasks: list[dict[str, str]]) -> str:
     title = payload.get("title") or "今日 Todo"
     focus = payload.get("focus") or payload.get("theme") or "完成今天最重要的任务"
     time_blocks = coerce_task_list(payload.get("time_blocks", []))
@@ -1141,7 +1434,10 @@ def render_todo(payload: dict, plan_date: str, tasks: list[str]) -> str:
         "## Tasks",
     ]
     if tasks:
-        lines.extend(f"- [ ] {task}" for task in tasks)
+        for task in tasks:
+            deadline = task.get("deadline", "")
+            suffix = f"（deadline: {deadline}）" if deadline else ""
+            lines.append(f"- [ ] {task['task']}{suffix}")
     else:
         lines.append("- [ ] 明确今天最重要的 3-5 个任务")
 
@@ -1163,7 +1459,7 @@ def render_todo(payload: dict, plan_date: str, tasks: list[str]) -> str:
 
 def write_todo(repo: Repository, payload: dict) -> Path:
     plan_date = str(payload.get("date") or datetime.now().date().isoformat())
-    tasks = coerce_task_list(payload.get("tasks", []))
+    tasks = ensure_daily_review_task(normalize_todo_tasks(payload.get("tasks", [])))
     archive_today_todo(repo, plan_date)
 
     path = repo.root / "today_todo.md"
@@ -1208,3 +1504,90 @@ def post_mock_retro(repo: Repository, session_id: str) -> Path:
 
 def load_payload(raw: str) -> dict:
     return json.loads(raw)
+
+
+def normalize_choice_line(label: str, text: str) -> str:
+    return f"{label.upper()}. {clean_display_text(text)}".strip()
+
+
+def split_prompt_choices(text: str) -> tuple[str, list[str]]:
+    cleaned = (text or "").strip()
+    matches = list(re.finditer(r"(?:^|\s)([A-E])\.\s+", cleaned))
+    if len(matches) < 2:
+        return cleaned, []
+    labels = [match.group(1) for match in matches]
+    positions = {match.group(1): match.start() for match in matches}
+    has_choice_sequence = (
+        "A" in positions
+        and (
+            ("B" in positions and positions["A"] < positions["B"])
+            or ("C" in positions and positions["A"] < positions["C"])
+        )
+    )
+    if not has_choice_sequence or labels[0] != "A":
+        return cleaned, []
+
+    stem = cleaned[: matches[0].start()].strip()
+    choices: list[str] = []
+    for index, match in enumerate(matches):
+        label = match.group(1)
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(cleaned)
+        choice_text = cleaned[start:end].strip()
+        if choice_text:
+            choices.append(normalize_choice_line(label, choice_text))
+    return stem, choices
+
+
+def normalize_choices(value: object) -> list[str]:
+    if isinstance(value, list):
+        raw_items = value
+    elif isinstance(value, str):
+        raw_items = [line for line in value.splitlines() if line.strip()]
+    else:
+        raw_items = []
+
+    choices: list[str] = []
+    for index, item in enumerate(raw_items):
+        text = clean_display_text(str(item))
+        if not text:
+            continue
+        match = re.match(r"^([A-E])\.\s*(.*)$", text)
+        if match:
+            choices.append(normalize_choice_line(match.group(1), match.group(2)))
+        else:
+            label = chr(ord("A") + index)
+            choices.append(normalize_choice_line(label, text))
+    return choices
+
+
+def infer_question_format(prompt: str, wrong_output: str, choices: list[str], explicit: str = "") -> str:
+    if explicit:
+        return explicit
+    if choices:
+        return "multiple_choice"
+    if re.match(r"^\s*[A-E](?:\.|\b)", wrong_output or ""):
+        return "multiple_choice"
+    if len(re.findall(r"\b[A-E]\.\s", prompt or "")) >= 2:
+        return "multiple_choice"
+    return ""
+
+
+def hydrate_question_fields(payload: dict) -> dict:
+    prompt = str(payload.get("prompt_or_question") or "")
+    stem, parsed_choices = split_prompt_choices(prompt)
+    choices = normalize_choices(payload.get("choices") or parsed_choices)
+    question_format = infer_question_format(
+        prompt,
+        str(payload.get("wrong_choice_or_output") or ""),
+        choices,
+        str(payload.get("question_format") or ""),
+    )
+    if choices:
+        payload = dict(payload)
+        payload["prompt_or_question"] = stem or prompt
+        payload["choices"] = choices
+    if question_format:
+        payload = dict(payload)
+        payload["question_format"] = question_format
+    return payload

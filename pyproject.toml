@@ -17,4 +17,16 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
-testpaths = [".system/tests"]
+testpaths = [
+  ".system/tests",
+  "apps/api/tests",
+  "packages/exam-core/tests",
+]
+pythonpath = [
+  ".",
+  ".system",
+  "apps/api",
+  "packages/exam-core/src",
+  "packages/study-science/src",
+  "packages/agent-runtime/src",
+]

@@ -14,6 +14,7 @@ The todo file is an execution surface, not a detailed study note. Keep it fast, 
 - Current active todo: `today_todo.md` at the repository root.
 - Archive folder: `schedule/todo_archive/`.
 - Standard CLI workflow: `python scripts/cfa.py write-todo --payload "{...}"`.
+- Task deadlines are written inline as `（deadline: HH:MM）` using 24-hour local system time.
 
 ## Task Granularity
 
@@ -51,8 +52,8 @@ status: active
 > Focus: one-line focus
 
 ## Tasks
-- [ ] task
-- [ ] task
+- [ ] task（deadline: HH:MM）
+- [ ] task（deadline: HH:MM）
 
 ## Time Blocks
 - morning: ...
@@ -71,8 +72,9 @@ status: active
 1. Read the existing `today_todo.md` before modifying it.
 2. Archive the existing file through the workflow before writing the new one.
 3. Convert the user's plan into 3-8 task-level checkboxes.
-4. Keep review short. Do not create a long journal.
-5. If the day includes CFA study, prefer task names that match the learning system: study, review pack, practice questions, record mistakes, mock/retro.
+4. Always include `完成今日复习资料` with deadline `20:00`; this is a daily required task even if the user does not mention it.
+5. Keep review short. Do not create a long journal.
+6. If the day includes CFA study, prefer task names that match the learning system: study, review pack, practice questions, record mistakes, mock/retro.
 
 ## Payload Pattern
 
@@ -82,9 +84,9 @@ status: active
   "title": "今日 Todo",
   "focus": "今天的主目标",
   "tasks": [
-    "完成 Corporate Issuers 主学习",
-    "做 Corporate Issuers 练习题",
-    "处理今天新增错题"
+    {"task": "完成 Corporate Issuers 主学习", "deadline": "17:30"},
+    {"task": "做 Corporate Issuers 练习题", "deadline": "19:00"},
+    {"task": "处理今天新增错题", "deadline": "21:00"}
   ],
   "time_blocks": [
     "上午：主学习",

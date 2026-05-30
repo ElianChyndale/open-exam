@@ -1,0 +1,15 @@
+[project]
+name = "agent-runtime"
+version = "0.1.0"
+description = "Agent runtime — orchestration, mistake recording, review coaching, pattern mining, strategy coaching, validation"
+requires-python = ">=3.11"
+dependencies = [
+    "openai-agents>=0.2.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

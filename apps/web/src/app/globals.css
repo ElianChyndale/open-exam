@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cockpit-bg: #0b0f14;
+  --cockpit-card: #121821;
+  --cockpit-border: #24313d;
+  --cockpit-accent: #14b8a6;
+  --cockpit-success: #22c55e;
+  --cockpit-warning: #f59e0b;
+  --cockpit-danger: #ef4444;
+  --cockpit-muted: #94a3b8;
+  --cockpit-text: #e5edf5;
+}
+
+body {
+  background: var(--cockpit-bg);
+  color: var(--cockpit-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* Card component */
+.card {
+  background: var(--cockpit-card);
+  border: 1px solid var(--cockpit-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+/* Status colors */
+.text-success { color: var(--cockpit-success); }
+.text-warning { color: var(--cockpit-warning); }
+.text-danger { color: var(--cockpit-danger); }
+.text-muted { color: var(--cockpit-muted); }
+.text-accent { color: var(--cockpit-accent); }
+
+/* Metric number */
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--cockpit-muted);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1023px) {
+  .card {
+    padding: 1rem;
+  }
+}

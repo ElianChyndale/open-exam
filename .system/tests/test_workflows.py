@@ -13,6 +13,12 @@ def write_moc(tmp_path: Path, relative_path: str, lines: list[str]) -> None:
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def write_note(tmp_path: Path, relative_path: str, lines: list[str]) -> None:
+    path = tmp_path / relative_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
 def test_record_question_mistake_creates_event_and_card(tmp_path: Path) -> None:
     from app.cli import run_cli
 
@@ -654,6 +660,161 @@ def test_daily_review_pack_uses_due_cards_and_recent_cache(tmp_path: Path) -> No
     assert "Bedtime: only mental replay" not in dashboard_text
 
 
+def test_record_progress_writes_progress_ledger(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    payload = {
+        "date": "2026-05-29",
+        "record_type": "daily_review_completed",
+        "status": "completed",
+        "focus_topic": "Corporate Issuers",
+        "note": "今日复习资料完成",
+    }
+
+    exit_code = run_cli(["record-progress", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    assert exit_code == 0
+    progress_log = tmp_path / ".system" / "memory" / "progress" / "progress-events.jsonl"
+    assert progress_log.exists()
+    text = progress_log.read_text(encoding="utf-8")
+    assert "daily_review_completed" in text
+    assert "Corporate Issuers" in text
+
+
+def test_daily_review_pack_renders_choices_in_separate_section(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### Capital Investments",
+            "| Tool | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| NPV | `NPV = sum CFt/(1+r)^t - initial outlay` | accept if positive. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+    payload = {
+        "source_layer": "question",
+        "topic": "Corporate Issuers",
+        "los": "M05 NPV",
+        "prompt_or_question": "The NPV is closest to: A. 578. B. 605. C. 636.",
+        "wrong_choice_or_output": "A. 578.",
+        "correct_resolution": "C. 636. CF0 is not discounted.",
+        "error_type": "formula_misuse",
+        "confidence": 1,
+        "time_spent": 60,
+        "evidence_refs": ["npv-choice"],
+        "created_at": "2026-05-29T10:00:00+00:00",
+    }
+
+    run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+    exit_code = run_cli(
+        ["daily-review-pack", "--date", "2026-05-30", "--focus-topic", "Corporate Issuers"],
+        repo_root=tmp_path,
+    )
+
+    assert exit_code == 0
+    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md").read_text(encoding="utf-8")
+    assert "#### 题目" in text
+    assert "#### 选项" in text
+    assert "> The NPV is closest to:" in text
+    assert "> A. 578." in text
+    assert "> B. 605." in text
+    assert "> C. 636." in text
+
+
+def test_daily_review_pack_expanded_uses_module_note_and_progress(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### Capital Investments",
+            "| Tool | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| NPV | `NPV = sum CFt/(1+r)^t - initial outlay` | accept if positive. |",
+            "| IRR | discount rate making `NPV = 0` | compare with required return. |",
+            "| ROIC | operating profit after tax / invested capital | performance metric, not a full replacement for NPV. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+    write_note(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/M05-Capital-Investments-and-Capital-Allocation.md",
+        [
+            "# M05",
+            "### Project Type Classifier 项目类型识别",
+            "| Project type | Core meaning | Exam trigger | Not this when... |",
+            "|---|---|---|---|",
+            "| Compliance project | Required by third parties to meet safety or regulatory standards | improved safety standards | not expansion |",
+            "### Real Option Classifier 实物期权识别",
+            "| Real option type | Core meaning | Exam trigger | Common trap |",
+            "|---|---|---|---|",
+            "| Sizing option | Change project scale after investment | abandon project, expand capacity | Abandonment is sizing. |",
+        ],
+    )
+    write_note(
+        tmp_path,
+        "CFA_tier1/Economics/M04-Monetary-Policy.md",
+        [
+            "# M04",
+            "## 4. Formula & Decision Bench 公式与决策台",
+            "| Trigger | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| QE | central bank asset purchases | non-focus expanded note should not lead the pack |",
+        ],
+    )
+    progress_payload = {
+        "date": "2026-05-29",
+        "record_type": "daily_review_completed",
+        "status": "completed",
+        "focus_topic": "Corporate Issuers",
+    }
+    run_cli(["record-progress", "--payload", json.dumps(progress_payload, ensure_ascii=False)], repo_root=tmp_path)
+    economics_payload = {
+        "source_layer": "question",
+        "topic": "Economics",
+        "los": "M04 Monetary Policy",
+        "prompt_or_question": "QE question. A. reserves rise B. reserves fall C. no effect",
+        "wrong_choice_or_output": "B",
+        "correct_resolution": "QE expands reserves.",
+        "error_type": "concept_confusion",
+        "confidence": 1,
+        "time_spent": 60,
+        "evidence_refs": ["econ-qe"],
+        "created_at": "2026-05-29T10:00:00+00:00",
+    }
+    run_cli(["record-mistake", "--payload", json.dumps(economics_payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    exit_code = run_cli(
+        [
+            "daily-review-pack",
+            "--date",
+            "2026-05-30",
+            "--focus-topic",
+            "Corporate Issuers",
+            "--knowledge-depth",
+            "expanded",
+        ],
+        repo_root=tmp_path,
+    )
+
+    assert exit_code == 0
+    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md").read_text(encoding="utf-8")
+    assert "### 1. Corporate Issuers" in text
+    assert "Project Type Classifier" in text
+    assert "Compliance project" in text
+    assert "Real Option Classifier" in text
+    assert "Sizing option" in text
+    assert "non-focus expanded note should not lead the pack" not in text
+    assert "已完成复习: 2026-05-29" in text
+
+
 def test_daily_review_pack_promotes_repeated_patterns(tmp_path: Path) -> None:
     from app.cli import run_cli
 
@@ -735,9 +896,36 @@ def test_write_todo_archives_existing_file_and_writes_task_level_list(tmp_path: 
     text = existing.read_text(encoding="utf-8")
     assert "focus: 完成 Corporate Issuers 学习并保留足够做题时间" in text
     assert "- [ ] 完成 Corporate Issuers 主学习" in text
+    assert "- [ ] 完成今日复习资料（deadline: 20:00）" in text
     assert "- [ ] 处理今天新增错题" in text
     assert "## Review" in text
     assert "检查椅子是否稳固" not in text
+
+
+def test_write_todo_supports_deadlines_and_adds_daily_review_by_default(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    payload = {
+        "date": "2026-05-29",
+        "title": "今日 Todo",
+        "focus": "完成上线任务",
+        "tasks": [
+            {"task": "完成 Corporate Issuers 主学习", "deadline": "5:30pm"},
+            {"task": "完成 Laptop 上线", "deadline": "18:30"},
+            {"task": "完成微信小程序上线", "deadline": "8:30pm"},
+            {"task": "在微信小程序发布并分享一条内容", "deadline": "21:00"},
+        ],
+    }
+
+    exit_code = run_cli(["write-todo", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    assert exit_code == 0
+    text = (tmp_path / "today_todo.md").read_text(encoding="utf-8")
+    assert "- [ ] 完成今日复习资料（deadline: 20:00）" in text
+    assert "- [ ] 完成 Corporate Issuers 主学习（deadline: 17:30）" in text
+    assert "- [ ] 完成 Laptop 上线（deadline: 18:30）" in text
+    assert "- [ ] 完成微信小程序上线（deadline: 20:30）" in text
+    assert "- [ ] 在微信小程序发布并分享一条内容（deadline: 21:00）" in text
 
 
 def test_workflow_releases_catalog_before_temporary_repo_cleanup() -> None:

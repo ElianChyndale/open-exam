@@ -6,3 +6,7 @@ __pycache__/
 .system/events/catalog.sqlite3
 .system/evals/results/
 .gstack/
+node_modules/
+.next/
+apps/web/node_modules/
+apps/web/.next/

@@ -47,6 +47,26 @@ Capital allocation decides whether scarce capital should be committed to project
 - `payback` -> liquidity/risk screen, not value-maximizing.
 - `real option` -> flexibility can increase project value.
 
+### Project Type Classifier 项目类型识别
+
+| Project type | Core meaning | Exam trigger | Not this when... |
+|---|---|---|---|
+| Going concern project | Required to continue current operations and maintain the existing business size | maintain current operations, replace/repair existing assets, keep the business running | The project is driven by new regulation or safety standards. |
+| Compliance project | Required by third parties to meet legal, safety, environmental, or regulatory standards | government/regulator requirement, improved safety standards, mandatory technology upgrade | The project mainly increases business size or adds new products/services. |
+| Expansion project | Increases business size, product/service scope, capacity, market reach, or may involve acquisitions | new products/services, larger capacity, entering/acquiring markets | The project only preserves current operations or satisfies compliance. |
+
+Fast rule: if the stem says `new technology to meet improved safety standards`, classify it as `compliance project`, not expansion.
+
+### Real Option Classifier 实物期权识别
+
+| Real option type | Core meaning | Exam trigger | Common trap |
+|---|---|---|---|
+| Sizing option | Change project scale after investment | abandon project, expand capacity, growth option | Abandonment is sizing, not operating flexibility. |
+| Timing option | Delay or sequence investment decisions | delay investment, wait for better information, invest in stages | It is about when to invest, not how to operate current capacity. |
+| Flexibility option | Alter operations using current capacity | overtime, add shifts, change production mix, adjust inputs | Operational adjustment is flexibility; exiting or expanding the project is sizing. |
+
+Fast rule: `abandoning after poor financial results` = sizing option, because the company changes the scale/existence of the investment.
+
 ## 4. Formula & Decision Bench 公式与决策台
 
 | Trigger | Formula / Decision rule | Check |
@@ -71,6 +91,9 @@ Capital allocation decides whether scarce capital should be committed to project
 - IRR assumes conventional cash flows; multiple IRRs can occur with sign changes。
 - PI can help capital rationing but may not solve indivisible project sets alone。
 - Sunk costs should be excluded; opportunity costs and externalities included。
+- New technology is not automatically expansion; if the purpose is improved safety/regulatory standards, it is a compliance project。
+- Abandoning or expanding a project changes project size, so it is a sizing option; overtime/shifts are flexibility options。
+- In table-heavy capital allocation items, first identify the governing criterion: if management sets a minimum ROIC/target return, a positive NPV alone may not satisfy the stated criterion。
 
 ## 7. Final Recall Sheet 终局速记
 
@@ -78,3 +101,6 @@ Capital allocation decides whether scarce capital should be committed to project
 - IRR > hurdle works only when cash flows are conventional and projects are not conflicting.
 - Payback = risk/liquidity screen.
 - Real option = managerial flexibility.
+- Safety/regulatory requirement = compliance project; current operation maintenance = going concern; business-size increase = expansion.
+- Real option classifier: sizing = abandon/expand; timing = delay/sequence; flexibility = operate differently within current capacity.
+- Table scan: circle `minimum / target / criterion / hurdle / required` before ranking projects by NPV or IRR.

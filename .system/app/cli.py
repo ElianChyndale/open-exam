@@ -5,7 +5,7 @@ from datetime import date
 from pathlib import Path
 
 from app.storage import Repository
-from app.workflows import daily_review_pack, load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event, refresh_learning_outputs, write_todo
+from app.workflows import daily_review_pack, load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event, record_progress, refresh_learning_outputs, write_todo
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -25,6 +25,10 @@ def build_parser() -> argparse.ArgumentParser:
     review.add_argument("--days-back", type=int, default=7)
     review.add_argument("--max-items", type=int, default=20)
     review.add_argument("--focus-topic", default="")
+    review.add_argument("--knowledge-depth", choices=("standard", "expanded"), default="standard")
+
+    progress = subparsers.add_parser("record-progress")
+    progress.add_argument("--payload", required=True)
 
     todo = subparsers.add_parser("write-todo")
     todo.add_argument("--payload", required=True)
@@ -61,7 +65,10 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         return 0
     if args.command == "daily-review-pack":
         review_date = date.fromisoformat(args.date) if args.date else None
-        daily_review_pack(repo, review_date, args.days_back, args.max_items, args.focus_topic)
+        daily_review_pack(repo, review_date, args.days_back, args.max_items, args.focus_topic, args.knowledge_depth)
+        return 0
+    if args.command == "record-progress":
+        record_progress(repo, load_payload(args.payload))
         return 0
     if args.command == "write-todo":
         write_todo(repo, load_payload(args.payload))

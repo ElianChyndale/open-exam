@@ -5,9 +5,12 @@ import sqlite3
 from contextlib import closing
 from dataclasses import asdict
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable
 
 from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule
+
+
+MISTAKE_EVENT_LAYERS = ("question", "bias", "agent")
 
 
 class Repository:
@@ -30,12 +33,15 @@ class Repository:
             self.events_root / "question",
             self.events_root / "bias",
             self.events_root / "agent",
+            self.events_root / "attempt",
+            self.events_root / "energy",
             self.memory_root / "question-errors",
             self.memory_root / "cognitive-bias",
             self.memory_root / "agent-failures",
             self.memory_root / "patterns",
             self.memory_root / "strategy",
             self.memory_root / "validation",
+            self.memory_root / "progress",
             self.vault_root / "Alternative_Investments",
             self.vault_root / "Corporate_Issuers",
             self.vault_root / "Derivatives",
@@ -119,11 +125,47 @@ class Repository:
 
     def load_events(self) -> list[MistakeEvent]:
         rows: list[MistakeEvent] = []
-        for log_path in self.events_root.glob("*/*.jsonl"):
+        for source_layer in MISTAKE_EVENT_LAYERS:
+            log_path = self.event_log_path(source_layer)
+            if not log_path.exists():
+                continue
             for line in log_path.read_text(encoding="utf-8").splitlines():
                 if line.strip():
                     rows.append(MistakeEvent.from_payload(json.loads(line)))
         return sorted(rows, key=lambda item: item.created_at)
+
+    def jsonl_event_path(self, stream: str) -> Path:
+        return self.events_root / stream / f"{stream}-events.jsonl"
+
+    def append_jsonl_event(self, stream: str, payload: dict[str, Any]) -> Path:
+        path = self.jsonl_event_path(stream)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+        return path
+
+    def load_jsonl_events(self, stream: str) -> list[dict[str, Any]]:
+        path = self.jsonl_event_path(stream)
+        if not path.exists():
+            return []
+
+        rows: list[dict[str, Any]] = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                rows.append(json.loads(line))
+        return rows
+
+    def append_attempt_record(self, payload: dict[str, Any]) -> Path:
+        return self.append_jsonl_event("attempt", payload)
+
+    def load_attempt_records(self) -> list[dict[str, Any]]:
+        return self.load_jsonl_events("attempt")
+
+    def append_energy_event(self, payload: dict[str, Any]) -> Path:
+        return self.append_jsonl_event("energy", payload)
+
+    def load_energy_events(self) -> list[dict[str, Any]]:
+        return self.load_jsonl_events("energy")
 
     def write_markdown(self, path: Path, body: str, artifact_type: str, artifact_id: str, source_event_id: str | None = None) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -152,6 +194,8 @@ class Repository:
             extra_fields.append(f"evidence_assets: {', '.join(card.evidence_assets)}")
         if card.moc_target:
             extra_fields.append(f"moc_target: {card.moc_target}")
+        if card.question_format:
+            extra_fields.append(f"question_format: {card.question_format}")
         lines = [
             "---",
             f"card_id: {card.card_id}",
@@ -170,6 +214,9 @@ class Repository:
             f"## Prompt\n{card.prompt_or_question}",
             "",
             f"## Wrong Output\n{card.wrong_choice_or_output}",
+            "",
+            "## Choices",
+            *(card.choices or []),
             "",
             f"## Evidence\n{', '.join(card.evidence_refs)}",
         ]
