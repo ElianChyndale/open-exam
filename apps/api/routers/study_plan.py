@@ -130,3 +130,11 @@ def _map_to_task_type(error_type: str) -> str:
         "agent_failure": "mistake_review",
     }
     return mapping.get(error_type, "mistake_review")
+
+
+@router.get("/weekly-focus")
+async def get_weekly_focus(repo=Depends(get_repo)):
+    """Get weekly study focus recommendation."""
+    from app.workflows import weekly_focus_recommendation
+    result = weekly_focus_recommendation(repo)
+    return {"recommendation": result}

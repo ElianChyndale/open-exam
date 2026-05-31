@@ -63,6 +63,8 @@ def build_parser() -> argparse.ArgumentParser:
     set_exam = subparsers.add_parser("set-exam")
     set_exam.add_argument("--date", required=True, help="考试日期 YYYY-MM-DD")
 
+    subparsers.add_parser("weekly-focus", help="生成本周学习重点建议")
+
     return parser
 
 
@@ -160,6 +162,12 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         exam_path = repo.root / ".system" / "exam_date.txt"
         exam_path.write_text(args.date, encoding="utf-8")
         print(f"✅ 考试日期已设置为 {args.date}")
+        return 0
+    if args.command == "weekly-focus":
+        from app.workflows import weekly_focus_recommendation
+        result = weekly_focus_recommendation(repo)
+        print(result)
+        print(f"\n📄 已保存到 .system/memory/strategy/")
         return 0
     parser.error(f"unsupported command: {args.command}")
     return 2

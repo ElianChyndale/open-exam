@@ -1700,3 +1700,99 @@ def hydrate_question_fields(payload: dict) -> dict:
         payload = dict(payload)
         payload["question_format"] = question_format
     return payload
+
+
+def weekly_focus_recommendation(repo: Repository) -> str:
+    """Generate a weekly focus recommendation based on last 7 days of data.
+
+    Returns the markdown content written to strategy/weekly-focus-*.md
+    """
+    from collections import Counter, defaultdict
+    from datetime import date, timedelta
+
+    today = date.today()
+    week_ago = today - timedelta(days=7)
+
+    events = repo.load_events()
+    question_events = [e for e in events if e.source_layer == "question"]
+    recent = [e for e in question_events if e.created_at[:10] >= week_ago.isoformat()]
+
+    if not recent:
+        return "过去 7 天没有记录错题。建议先做一套练习题再安排本周重点。"
+
+    # Most problematic topics
+    topic_errors: dict[str, list] = defaultdict(list)
+    for e in recent:
+        topic_errors[e.topic].append(e)
+
+    # Score each topic: errors + high-confidence errors + recurrence
+    topic_scores: dict[str, float] = {}
+    for topic, errs in topic_errors.items():
+        score = len(errs) * 2  # error count
+        score += sum(3 for e in errs if e.confidence >= 3 and not e.is_correct)  # high-conf penalty
+        # LOS variety
+        los_set = set(e.los for e in errs)
+        score += len(los_set) * 1.5
+        topic_scores[topic] = score
+
+    ranked = sorted(topic_scores.items(), key=lambda x: -x[1])
+
+    lines = [
+        "---",
+        f"generated_at: {datetime.now(timezone.utc).isoformat()}",
+        f"period: {week_ago.isoformat()} to {today.isoformat()}",
+        "---",
+        "",
+        "# 本周学习重点建议",
+        "",
+        f"**分析周期:** {week_ago.isoformat()} ~ {today.isoformat()}",
+        f"**本周错误总数:** {len(recent)}",
+        "",
+    ]
+
+    if ranked:
+        top = ranked[0]
+        lines.extend([
+            "## 最需关注的 Topic",
+            "",
+            f"**{top[0]}** (得分 {top[1]:.0f}) — 过去 7 天出现 {len(topic_errors[top[0]])} 次错误",
+            "",
+        ])
+
+        # List high-confidence errors in top topic
+        high_conf = [e for e in topic_errors[top[0]] if e.confidence >= 3 and not e.is_correct]
+        if high_conf:
+            lines.extend([
+                "### 高信心错误（最危险）",
+                "",
+                *[f"- {e.los}: 信心 {e.confidence}/4 但做错 → {e.correct_resolution[:80]}..." for e in high_conf[:3]],
+                "",
+            ])
+
+        # Top 3 topics to focus
+        lines.append("## 本周推荐优先级")
+        lines.append("")
+        for i, (topic, score) in enumerate(ranked[:3], 1):
+            err_count = len(topic_errors[topic])
+            pct = int(score / max(topic_scores.values(), default=1) * 100)
+            lines.append(f"{i}. **{topic}** — {err_count} 次错误，建议分配 {pct}% 的复习时间")
+        lines.append("")
+
+        # Review completion
+        from app.workflows import load_progress_events
+        progress = load_progress_events(repo)
+        week_reviews = sum(1 for p in progress if p.get("record_type") == "daily_review_completed"
+                          and p.get("status") in {"completed", "done"}
+                          and p.get("date", "")[:10] >= week_ago.isoformat())
+        lines.extend([
+            "## 本周复习情况",
+            "",
+            f"- 完成复习包: {week_reviews} 次",
+            f"- {'✅ 继续保持' if week_reviews >= 3 else '⚠️ 建议增加复习频率，目标每周至少 5 次'}",
+            "",
+        ])
+
+    output = "\n".join(lines)
+    path = repo.memory_root / "strategy" / f"weekly-focus-{today.isoformat()}.md"
+    repo.write_markdown(path, output, "weekly_focus", f"weekly-focus-{today.isoformat()}")
+    return output

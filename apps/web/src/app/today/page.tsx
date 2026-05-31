@@ -42,9 +42,16 @@ const taskLabels: Record<string, string> = {
 export default function TodayCockpit() {
   const [plan, setPlan] = useState<PlanData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [weeklyFocus, setWeeklyFocus] = useState('');
 
   useEffect(() => {
     studyPlanApi.getToday().then(setPlan).finally(() => setLoading(false));
+  }, []);
+
+  useEffect(() => {
+    studyPlanApi.getWeeklyFocus().then((data: any) => {
+      setWeeklyFocus(data.recommendation || '');
+    }).catch(() => {});
   }, []);
 
   const EnergyIcon = plan
@@ -111,6 +118,16 @@ export default function TodayCockpit() {
           )}
         </div>
       </div>
+
+      {/* Weekly Focus */}
+      {weeklyFocus && (
+        <div className="card col-span-2">
+          <h3 className="text-sm font-semibold mb-2">📋 本周重点建议</h3>
+          <pre className="text-xs text-muted whitespace-pre-wrap font-sans leading-relaxed">
+            {weeklyFocus.split('\n').slice(4, 12).join('\n')}
+          </pre>
+        </div>
+      )}
 
       {/* Tasks by energy tier */}
       <div className="grid grid-cols-3 gap-4">
