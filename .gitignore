@@ -14,3 +14,4 @@ apps/web/.next/
 .playwright-mcp/
 apps/web/storybook-static/
 .system/private/
+docs/superpowers/
