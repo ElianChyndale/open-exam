@@ -35,6 +35,7 @@ class MistakeEvent:
     choices: list[str] = field(default_factory=list)
     event_id: str | None = None
     created_at: str = field(default_factory=lambda: utc_now().isoformat())
+    is_correct: bool = False
 
     @classmethod
     def from_payload(cls, payload: dict[str, Any]) -> "MistakeEvent":
