@@ -89,7 +89,7 @@ export default function InstitutionConsole() {
         </div>
         <button
           onClick={() => setShowCreate(!showCreate)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-accent text-white hover:bg-accent-strong rounded-lg text-sm transition-colors"
         >
           <Plus size={14} /> 新建班级
         </button>
@@ -103,23 +103,23 @@ export default function InstitutionConsole() {
             <input
               value={newCohort.cohort_name}
               onChange={(e) => setNewCohort({ ...newCohort, cohort_name: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-sunken border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="班级名称"
             />
             <input
               value={newCohort.exam_date}
               onChange={(e) => setNewCohort({ ...newCohort, exam_date: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-sunken border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="考试日期 YYYY-MM-DD"
             />
             <input
               value={newCohort.learner_ids}
               onChange={(e) => setNewCohort({ ...newCohort, learner_ids: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-sunken border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="学员 ID (逗号分隔)"
             />
           </div>
-          <button onClick={createCohort} className="px-4 py-1.5 bg-[#22c55e]/20 text-success rounded-lg text-sm">
+          <button onClick={createCohort} className="px-4 py-1.5 bg-success/10 text-success rounded-lg text-sm">
             创建
           </button>
         </div>
@@ -141,8 +141,8 @@ export default function InstitutionConsole() {
                   onClick={() => loadRiskReport(c.cohort_id)}
                   className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${
                     selectedCohort === c.cohort_id
-                      ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                      : 'hover:bg-[#14141f]'
+                      ? 'bg-accent/10 border border-accent/25'
+                      : 'hover:bg-surface-hover'
                   }`}
                 >
                   <div className="font-medium">{c.cohort_name}</div>
@@ -177,7 +177,7 @@ export default function InstitutionConsole() {
                 ) : (
                   <div className="space-y-1">
                     {riskReport.at_risk_learners.slice(0, 10).map((l, i) => (
-                      <div key={i} className="flex items-center justify-between text-xs bg-[#0a0a0f] rounded-lg px-3 py-2">
+                      <div key={i} className="flex items-center justify-between text-xs bg-surface-sunken rounded-lg px-3 py-2">
                         <span className="font-medium">{l.learner_id}</span>
                         <div className="flex items-center gap-3 text-muted">
                           <span>风险分 {l.risk_score}</span>
@@ -194,7 +194,7 @@ export default function InstitutionConsole() {
 
               {/* Dropout warnings */}
               {riskReport.dropout_warnings.length > 0 && (
-                <div className="card border-[#f59e0b]/30">
+                <div className="card border-warning/25">
                   <h3 className="text-sm font-semibold mb-3 flex items-center gap-2 text-warning">
                     <UserX size={14} /> 掉队预警
                   </h3>
@@ -206,7 +206,7 @@ export default function InstitutionConsole() {
 
               {/* Instructor recommendations */}
               {riskReport.instructor_recommendations.length > 0 && (
-                <div className="card border-[#6366f1]/30">
+                <div className="card border-accent/25">
                   <h3 className="text-sm font-semibold mb-3 flex items-center gap-2 text-accent">
                     <FileText size={14} /> 老师干预建议
                   </h3>

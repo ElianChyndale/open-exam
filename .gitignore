@@ -10,3 +10,6 @@ node_modules/
 .next/
 apps/web/node_modules/
 apps/web/.next/
+apps/web/storybook-static/
+apps/web/tsconfig.tsbuildinfo
+.system/private/

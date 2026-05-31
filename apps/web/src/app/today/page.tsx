@@ -78,9 +78,9 @@ export default function TodayCockpit() {
 
       {/* Warnings */}
       {plan?.warnings && plan.warnings.length > 0 && (
-        <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded-lg p-4">
+        <div className="bg-warning/10 border border-warning/25 rounded-lg p-4">
           {plan.warnings.map((w, i) => (
-            <p key={i} className="text-sm text-[#f59e0b] flex items-center gap-2">
+            <p key={i} className="text-sm text-warning flex items-center gap-2">
               <AlertTriangle size={14} /> {w}
             </p>
           ))}
@@ -189,7 +189,7 @@ function QuickAction({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
-      className="px-4 py-2 rounded-lg bg-[#6366f1]/10 border border-[#6366f1]/30 text-sm text-[#818cf8] hover:bg-[#6366f1]/20 transition-colors"
+      className="px-4 py-2 rounded-lg bg-accent/10 border border-accent/25 text-sm text-accent hover:bg-accent/15 transition-colors"
     >
       {label}
     </a>
