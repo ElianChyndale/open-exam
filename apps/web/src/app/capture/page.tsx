@@ -3,12 +3,8 @@
 import { useState } from 'react';
 import { attemptsApi } from '@/lib/api';
 import { Upload, Camera, Check, AlertCircle } from 'lucide-react';
-
-const SUBJECTS = [
-  'Quantitative Methods', 'Economics', 'Financial Statement Analysis',
-  'Corporate Issuers', 'Equity', 'Fixed Income', 'Derivatives',
-  'Alternative Investments', 'Portfolio Management', 'Ethical and Professional Standards',
-];
+import QuestionBankImportConsole from '@/components/capture/QuestionBankImportConsole';
+import { useProfileSubjects } from '@/lib/profiles';
 
 const ERROR_TYPES = [
   { value: 'concept_confusion', label: '概念混淆' },
@@ -30,6 +26,7 @@ const CONFIDENCE_LEVELS = [
 ];
 
 export default function QuestionCapture() {
+  const subjects = useProfileSubjects();
   const [form, setForm] = useState({
     topic: '',
     los: '',
@@ -97,7 +94,7 @@ export default function QuestionCapture() {
       </div>
 
       {/* Screenshot upload zone */}
-      <div className="card border-dashed border-2 border-[#1e1e2e] hover:border-[#6366f1]/50 transition-colors">
+      <div className="card border-dashed border-2 border-line hover:border-accent-soft transition-colors">
         <label className="flex flex-col items-center gap-3 py-8 cursor-pointer">
           <Camera size={32} className="text-muted" />
           <span className="text-sm text-muted">点击上传错题截图（AI 自动提取结构化信息）</span>
@@ -117,17 +114,17 @@ export default function QuestionCapture() {
         </h3>
 
         {/* Row 1: Topic + LOS */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="text-xs text-muted block mb-1">科目</label>
             <select
               value={form.topic}
               onChange={(e) => setForm({ ...form, topic: e.target.value })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               required
             >
               <option value="">选择科目</option>
-              {SUBJECTS.map((s) => (
+              {subjects.map((s) => (
                 <option key={s} value={s}>{s}</option>
               ))}
             </select>
@@ -138,7 +135,7 @@ export default function QuestionCapture() {
               type="text"
               value={form.los}
               onChange={(e) => setForm({ ...form, los: e.target.value })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="例如: CI.3, FI.8"
             />
           </div>
@@ -150,21 +147,21 @@ export default function QuestionCapture() {
           <textarea
             value={form.prompt_or_question}
             onChange={(e) => setForm({ ...form, prompt_or_question: e.target.value })}
-            className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm min-h-[80px]"
+            className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm min-h-[80px]"
             placeholder="粘贴题目或简要描述..."
             required
           />
         </div>
 
         {/* Wrong + Correct */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="text-xs text-muted block mb-1">你的错误答案</label>
             <input
               type="text"
               value={form.wrong_choice_or_output}
               onChange={(e) => setForm({ ...form, wrong_choice_or_output: e.target.value })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="A / B / C / D 或你的答案"
             />
           </div>
@@ -174,7 +171,7 @@ export default function QuestionCapture() {
               type="text"
               value={form.correct_resolution}
               onChange={(e) => setForm({ ...form, correct_resolution: e.target.value })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="正确答案和简要解释"
               required
             />
@@ -182,13 +179,13 @@ export default function QuestionCapture() {
         </div>
 
         {/* Error type + Confidence + Time */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="text-xs text-muted block mb-1">错因</label>
             <select
               value={form.error_type}
               onChange={(e) => setForm({ ...form, error_type: e.target.value })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
             >
               {ERROR_TYPES.map((et) => (
                 <option key={et.value} value={et.value}>{et.label}</option>
@@ -200,7 +197,7 @@ export default function QuestionCapture() {
             <select
               value={form.confidence}
               onChange={(e) => setForm({ ...form, confidence: Number(e.target.value) })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
             >
               {CONFIDENCE_LEVELS.map((cl) => (
                 <option key={cl.value} value={cl.value}>{cl.label}</option>
@@ -213,7 +210,7 @@ export default function QuestionCapture() {
               type="number"
               value={form.time_spent}
               onChange={(e) => setForm({ ...form, time_spent: Number(e.target.value) })}
-              className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
             />
           </div>
         </div>
@@ -221,7 +218,7 @@ export default function QuestionCapture() {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full py-2.5 bg-[#6366f1] hover:bg-[#5558e6] disabled:opacity-50 rounded-lg text-sm font-medium transition-colors"
+          className="w-full py-2.5 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm font-medium transition-colors"
         >
           {submitting ? '提交中...' : '记录错题'}
         </button>
@@ -229,7 +226,7 @@ export default function QuestionCapture() {
 
       {/* Result */}
       {result && (
-        <div className="card border-[#22c55e]/30">
+        <div className="card border-success-soft">
           <div className="flex items-center gap-2 mb-2">
             <Check size={16} className="text-success" />
             <span className="text-sm font-semibold text-success">记录成功</span>
@@ -239,13 +236,15 @@ export default function QuestionCapture() {
       )}
 
       {error && (
-        <div className="card border-[#ef4444]/30">
+        <div className="card border-danger-soft">
           <div className="flex items-center gap-2">
             <AlertCircle size={16} className="text-danger" />
             <span className="text-sm text-danger">{error}</span>
           </div>
         </div>
       )}
+
+      <QuestionBankImportConsole />
     </div>
   );
 }

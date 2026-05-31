@@ -85,9 +85,9 @@ export default function TodayCockpit() {
 
       {/* Warnings */}
       {plan?.warnings && plan.warnings.length > 0 && (
-        <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded-lg p-4">
+        <div className="bg-warning-soft border border-warning-soft rounded-lg p-4">
           {plan.warnings.map((w, i) => (
-            <p key={i} className="text-sm text-[#f59e0b] flex items-center gap-2">
+            <p key={i} className="text-sm text-warning flex items-center gap-2">
               <AlertTriangle size={14} /> {w}
             </p>
           ))}
@@ -95,7 +95,7 @@ export default function TodayCockpit() {
       )}
 
       {/* Focus + Danger */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="card">
           <div className="flex items-center gap-2 mb-2">
             <Target size={16} className="text-accent" />
@@ -121,7 +121,7 @@ export default function TodayCockpit() {
 
       {/* Weekly Focus */}
       {weeklyFocus && (
-        <div className="card col-span-2">
+        <div className="card sm:col-span-2">
           <h3 className="text-sm font-semibold mb-2">📋 本周重点建议</h3>
           <pre className="text-xs text-muted whitespace-pre-wrap font-sans leading-relaxed">
             {weeklyFocus.split('\n').slice(4, 12).join('\n')}
@@ -130,7 +130,7 @@ export default function TodayCockpit() {
       )}
 
       {/* Tasks by energy tier */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <TaskColumn
           title="高精力任务"
           icon={<BatteryFull size={16} className="text-success" />}
@@ -206,7 +206,7 @@ function QuickAction({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
-      className="px-4 py-2 rounded-lg bg-[#6366f1]/10 border border-[#6366f1]/30 text-sm text-[#818cf8] hover:bg-[#6366f1]/20 transition-colors"
+      className="px-4 py-2 rounded-lg bg-accent-soft border border-accent-soft text-sm text-accent hover:bg-accent-soft transition-colors"
     >
       {label}
     </a>

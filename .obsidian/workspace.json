@@ -4,49 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "93ead605550bceb8",
+        "id": "1fa319cece99993f",
         "type": "tabs",
         "children": [
           {
-            "id": "64110e3b4e3794ff",
+            "id": "c1c5b285aa3514e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CFA_tier1/dashboard/今日复习资料.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "今日复习资料"
-            }
-          },
-          {
-            "id": "75ea4f1e6625cb71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "today_todo.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "today_todo"
-            }
-          },
-          {
-            "id": "57d9dde71731c019",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CFA_tier1/Corporate_Issuers/M04-Working-Capital-and-Liquidity.md",
+                "file": "PLAN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "M04-Working-Capital-and-Liquidity"
+              "title": "PLAN"
             }
           }
         ]
@@ -108,16 +80,15 @@
             "state": {
               "type": "notebook-navigator",
               "state": {},
-              "icon": "notebook-navigator",
-              "title": "Notebook Navigator"
+              "icon": "lucide-ghost",
+              "title": "notebook-navigator"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "fe70c5ee0d32b929",
@@ -210,8 +181,8 @@
             "state": {
               "type": "nutstore-sync-chatbox",
               "state": {},
-              "icon": "bot",
-              "title": "Chatbox"
+              "icon": "lucide-ghost",
+              "title": "nutstore-sync-chatbox"
             }
           }
         ],
@@ -239,46 +210,54 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "64110e3b4e3794ff",
+  "active": "c1c5b285aa3514e1",
   "lastOpenFiles": [
-    "1.md",
-    "today_todo.md",
-    "CFA_tier1/Corporate_Issuers/M04-Working-Capital-and-Liquidity.md",
+    "packages/study-science/src/study_science/__pycache__/energy_planner.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/calibration.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/self_explanation.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/worked_example.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/interleaving.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/spacing.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/retrieval.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__/__init__.cpython-313.pyc",
+    "packages/study-science/src/study_science/__pycache__",
     "CFA_tier1/dashboard/今日复习资料.md",
-    "CFA_tier1/Corporate_Issuers/M05-Capital-Investments-and-Capital-Allocation.md",
-    "CFA_tier1/Corporate_Issuers/M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits.md",
-    "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md",
-    "schedule/todo_archive/2026-05-29-todo-2.md",
-    "schedule/todo_archive/2026-05-29-todo.md",
-    "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-Practice-Questions.md",
-    "CFA_tier1/Corporate_Issuers/M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership.md",
-    "CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md",
-    "CFA_tier1/Economics/M03-Fiscal-Policy.md",
-    "CFA_tier1/Economics/M02-Understanding-Business-Cycles.md",
-    "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md",
-    "CFA_tier1/Economics/00-Economics-MOC.md",
-    "CFA_tier1/Economics/00-Economics-Practice-Questions.md",
-    "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
-    "CFA_tier1/mock/CorpIss/00-CorpIss-Mistakes.md",
-    "AGENTS.md",
-    "2026-05-26.md",
-    "cfa-kb-c-plus-blueprint.png",
-    "cfa-kb-redesign-options.png",
-    "schedule/todo_archive/2026-05-28-todo.md",
-    "schedule/todo_archive",
-    "skills/cfa-daily-todo-planner/SKILL.md",
-    "skills/cfa-daily-todo-planner",
-    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md",
-    "Untitled.base",
-    "skills/cfa-review-pack-builder/evals/evals.json",
-    "skills/cfa-review-pack-builder/evals",
-    "skills/cfa-review-pack-builder/SKILL.md",
-    "skills/cfa-review-pack-builder",
-    "CFA_tier1/dashboard/Subject-Question-Banks.md",
-    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md.tmp.25620.c9a458887b85",
-    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md.tmp.25620.573d99a2e9c0",
-    "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md.tmp.25620.2f4479cd63a7",
-    "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md.tmp.25620.1d2b0c84170b",
+    "docs/superpowers/plans/2026-05-31-examos-phase1-implementation.md",
+    "docs/superpowers/plans/2026-05-31-examos-phase1-implementation.md.tmp.32220.b60be7524a8d",
+    "docs/superpowers/specs/2026-05-31-examos-product-strategy.md",
+    "docs/superpowers/specs/2026-05-31-examos-product-strategy.md.tmp.32220.d4e04ddbd133",
+    "docs/superpowers/specs/2026-05-31-examos-system-enhancement-design.md",
+    "CFA_tier1/dashboard/今日新增错题.md",
+    "apps/web/storybook-static/sb-common-assets/favicon.svg",
+    "apps/web/storybook-static/favicon.svg",
+    "apps/web/storybook-static/favicon-wrapper.svg",
+    "apps/web/storybook-static/sb-common-assets/favicon-wrapper.svg",
+    "apps/web/node_modules/axe-core/locales/README.md",
+    "apps/web/node_modules/@babel/helper-validator-option/README.md",
+    "apps/web/node_modules/@babel/compat-data/README.md",
+    "apps/web/node_modules/why-is-node-running/README.md",
+    "apps/web/node_modules/tinyspy/README.md",
+    "apps/web/node_modules/statuses/README.md",
+    "apps/web/node_modules/statuses/HISTORY.md",
+    "apps/web/node_modules/stackback/README.md",
+    "apps/web/node_modules/siginfo/README.md",
+    "apps/web/node_modules/min-indent/readme.md",
+    "apps/web/node_modules/fast-string-truncated-width/readme.md",
+    "apps/web/node_modules/detect-libc/README.md",
+    "apps/web/node_modules/ansi-styles/readme.md",
+    "apps/web/node_modules/@babel/helper-globals/README.md",
+    "apps/web/node_modules/globrex/readme.md",
+    "apps/web/node_modules/universalify/README.md",
+    "apps/web/node_modules/@blazediff/core/README.md",
+    "apps/web/node_modules/@blazediff/core/LICENSE.md",
+    "apps/web/node_modules/@polka/url/readme.md",
+    "apps/web/node_modules/sirv/readme.md",
+    "release1-curriculum-map.png",
+    "apps/web/src/app/icon.svg",
+    "apps/web/node_modules/@storybook/icons/dist/public/logo.png",
+    "apps/web/node_modules/@storybook/icons/dist/public/cover.jpg",
+    "apps/web/node_modules/@supabase/phoenix/priv/static/phoenix.png",
+    "apps/web/node_modules/@supabase/phoenix/priv/static/phoenix-orange.png",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]

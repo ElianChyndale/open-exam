@@ -7,13 +7,17 @@ import { Calendar, ChevronLeft, ChevronRight, AlertTriangle } from 'lucide-react
 export default function CalendarPage() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [examDate, setExamDate] = useState('');
   const [currentMonth, setCurrentMonth] = useState(() => {
     const d = new Date();
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
   });
 
   useEffect(() => {
-    dashboardApi.getCalendarData(currentMonth).then(setData).finally(() => setLoading(false));
+    dashboardApi.getCalendarData(currentMonth).then((next: any) => {
+      setData(next);
+      setExamDate(next.exam_date || '');
+    }).finally(() => setLoading(false));
   }, [currentMonth]);
 
   const [year, month] = currentMonth.split('-').map(Number);
@@ -46,14 +50,14 @@ export default function CalendarPage() {
           <button onClick={() => {
             const d = new Date(year, month - 2, 1);
             setCurrentMonth(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
-          }} className="p-2 hover:bg-[#14141f] rounded-lg transition-colors">
+          }} className="p-2 hover:bg-surface-hover rounded-lg transition-colors">
             <ChevronLeft size={18} />
           </button>
           <span className="text-lg font-semibold">{year}年{month}月</span>
           <button onClick={() => {
             const d = new Date(year, month, 1);
             setCurrentMonth(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
-          }} className="p-2 hover:bg-[#14141f] rounded-lg transition-colors">
+          }} className="p-2 hover:bg-surface-hover rounded-lg transition-colors">
             <ChevronRight size={18} />
           </button>
         </div>
@@ -77,12 +81,12 @@ export default function CalendarPage() {
 
             return (
               <div key={day} className={`aspect-square rounded-lg p-1 flex flex-col items-center justify-center text-sm border transition-colors ${
-                isToday ? 'border-[#6366f1] bg-[#6366f1]/10' : 'border-transparent hover:border-[#1e1e2e]'
+                isToday ? 'border-accent bg-accent-soft' : 'border-transparent hover:border-line'
               }`}>
-                <span className={isToday ? 'text-[#6366f1] font-bold' : ''}>{day}</span>
+                <span className={isToday ? 'text-accent font-bold' : ''}>{day}</span>
                 <div className="flex gap-0.5 mt-0.5">
-                  {errors > 0 && <span className="w-1.5 h-1.5 rounded-full bg-danger" title={`${errors} 错题`} />}
-                  {reviewed && <span className="w-1.5 h-1.5 rounded-full bg-success" title="已复习" />}
+                  {errors > 0 && <span className="w-1.5 h-1.5 rounded-full bg-danger-solid" title={`${errors} 错题`} />}
+                  {reviewed && <span className="w-1.5 h-1.5 rounded-full bg-success-solid" title="已复习" />}
                 </div>
               </div>
             );
@@ -92,16 +96,30 @@ export default function CalendarPage() {
 
       <div className="card flex items-center gap-6 text-xs text-muted">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-danger" /> 有错题
+          <span className="w-2 h-2 rounded-full bg-danger-solid" /> 有错题
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-success" /> 已完成复习
+          <span className="w-2 h-2 rounded-full bg-success-solid" /> 已完成复习
         </div>
         {data?.exam_date && (
           <div>
             考试日: {data.exam_date} ({data.countdown_days} 天后)
           </div>
         )}
+      </div>
+
+      <div className="card flex flex-wrap items-end gap-3">
+        <label className="space-y-1 text-xs text-muted">
+          <span className="block">考试日期</span>
+          <input type="date" value={examDate} onChange={(event) => setExamDate(event.target.value)}
+            className="rounded-lg border border-line bg-surface-field px-3 py-2 text-sm text-ink" />
+        </label>
+        <button onClick={() => dashboardApi.updateCalendarSettings(examDate).then(() => {
+          setLoading(true);
+          return dashboardApi.getCalendarData(currentMonth).then(setData).finally(() => setLoading(false));
+        })} className="rounded-lg bg-accent-solid px-4 py-2 text-sm text-white hover:bg-accent-strong">
+          保存日历设置
+        </button>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ status: active
 
 ## Tasks
 - [x] 完成 Corporate Issuers 主学习（deadline: 19:30）
-- [x] 完成今日复习资料（deadline: 20:00）
+- [x] 完成 Daily Review（deadline: 20:00）
 - [x] 完成微信小程序上线（deadline: 20:30）
 - [x] 在微信小程序发布并分享一条内容（deadline: 21:00）
 - [x] 前三项完成后，打 2 局 CS2 作为奖励

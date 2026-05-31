@@ -1,0 +1,10 @@
+{
+  "name": "OpenExam",
+  "short_name": "OpenExam",
+  "description": "Local-first exam study workspace",
+  "start_url": "/today",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#f5f5f7",
+  "icons": []
+}

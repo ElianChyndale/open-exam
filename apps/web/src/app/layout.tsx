@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './globals.css';
 import { Sidebar } from '@/components/cockpit/Sidebar';
 import QuickCapture from '@/components/capture/QuickCapture';
+import OfflineCaptureRegistration from '@/components/capture/OfflineCaptureRegistration';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [quickOpen, setQuickOpen] = useState(false);
@@ -24,11 +25,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="zh-CN">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className="min-h-screen lg:flex">
         <Sidebar />
-        <main className="min-h-screen flex-1 p-4 pt-24 lg:ml-60 lg:p-6 lg:pt-6 overflow-auto">
+        <main className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto">
           {children}
         </main>
+        <OfflineCaptureRegistration />
         <QuickCapture isOpen={quickOpen} onClose={() => setQuickOpen(false)} />
       </body>
     </html>

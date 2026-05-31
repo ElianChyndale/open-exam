@@ -14,6 +14,13 @@ from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, 
 MISTAKE_EVENT_LAYERS = ("question", "bias", "agent")
 
 
+def _set_frontmatter_value(text: str, key: str, value: object) -> str:
+    line = f"{key}: {value}"
+    if re.search(rf"^{re.escape(key)}:.*$", text, flags=re.MULTILINE):
+        return re.sub(rf"^{re.escape(key)}:.*$", line, text, flags=re.MULTILINE)
+    return text.replace("\n---\n", f"\n{line}\n---\n", 1)
+
+
 class Repository:
     def __init__(self, root: Path) -> None:
         self.root = root
@@ -36,6 +43,7 @@ class Repository:
             self.events_root / "agent",
             self.events_root / "attempt",
             self.events_root / "energy",
+            self.events_root / "review",
             self.memory_root / "question-errors",
             self.memory_root / "cognitive-bias",
             self.memory_root / "agent-failures",
@@ -43,6 +51,7 @@ class Repository:
             self.memory_root / "strategy",
             self.memory_root / "validation",
             self.memory_root / "progress",
+            self.memory_root / "review" / "daily",
             self.vault_root / "Alternative_Investments",
             self.vault_root / "Corporate_Issuers",
             self.vault_root / "Derivatives",
@@ -72,7 +81,18 @@ class Repository:
         for path in directories:
             path.mkdir(parents=True, exist_ok=True)
 
+        self._initialize_catalog()
+
+    def _initialize_catalog(self) -> None:
         with closing(sqlite3.connect(self.catalog_path)) as connection:
+            connection.execute(
+                """
+                CREATE TABLE IF NOT EXISTS catalog_metadata (
+                    key TEXT PRIMARY KEY,
+                    value TEXT NOT NULL
+                )
+                """
+            )
             connection.execute(
                 """
                 CREATE TABLE IF NOT EXISTS mistake_events (
@@ -96,6 +116,12 @@ class Repository:
                 )
                 """
             )
+            connection.execute(
+                """
+                INSERT OR REPLACE INTO catalog_metadata (key, value)
+                VALUES ('schema_version', '1')
+                """
+            )
             connection.commit()
 
     def event_log_path(self, source_layer: str) -> Path:
@@ -105,6 +131,10 @@ class Repository:
         payload = event.as_dict()
         with self.event_log_path(event.source_layer).open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+        self._index_event(event)
+
+    def _index_event(self, event: MistakeEvent) -> None:
+        payload = event.as_dict()
         with closing(sqlite3.connect(self.catalog_path)) as connection:
             connection.execute(
                 """
@@ -123,6 +153,24 @@ class Repository:
                 ),
             )
             connection.commit()
+
+    def rebuild_catalog(self) -> dict[str, int]:
+        """Rebuild the disposable SQLite query index from canonical JSONL streams."""
+        self._initialize_catalog()
+        with closing(sqlite3.connect(self.catalog_path)) as connection:
+            connection.execute("DELETE FROM mistake_events")
+            connection.execute("DELETE FROM artifacts")
+            connection.commit()
+
+        events = self.load_events()
+        for event in events:
+            self._index_event(event)
+        return {"mistake_events": len(events), "artifacts": 0}
+
+    def migrate_catalog(self) -> dict[str, int]:
+        """Apply local catalog schema migrations without changing canonical JSONL."""
+        self._initialize_catalog()
+        return {"schema_version": 1}
 
     def load_events(self) -> list[MistakeEvent]:
         rows: list[MistakeEvent] = []
@@ -208,10 +256,14 @@ class Repository:
             f"fix_rule: {card.fix_rule}",
             f"next_drill: {card.next_drill}",
             f"review_due_at: {card.review_due_at}",
+            "review_status: Not reviewed",
             f"spacing_interval_days: {card.spacing_interval_days}",
             f"spacing_priority: {card.spacing_priority}",
             f"previous_reviews: {card.previous_reviews}",
+            f"last_reviewed_at: {card.last_reviewed_at}",
             f"exam_date: {card.exam_date}",
+            f"spacing_reasoning: {card.spacing_reasoning}",
+            f"confidence_before: {card.confidence_before}",
             f"linked_patterns: {', '.join(card.linked_patterns)}",
             f"correct_resolution: {card.correct_resolution}",
             "---",
@@ -230,18 +282,35 @@ class Repository:
 
     def update_card_review(self, domain: str, card_id: str, previous_reviews: int,
                             review_due_at: str, spacing_interval_days: int,
-                            spacing_priority: int) -> Path:
+                            spacing_priority: int, last_reviewed_at: str = "",
+                            spacing_reasoning: str = "", confidence_before: int = 0,
+                            exam_date: str = "") -> Path:
         """Update a card's review metadata after a review session."""
         path = self.memory_root / domain / f"{card_id}.md"
         if not path.exists():
             raise FileNotFoundError(f"Card not found: {path}")
 
         text = path.read_text(encoding="utf-8")
-        text = re.sub(rf"^previous_reviews:.*$", f"previous_reviews: {previous_reviews}", text, flags=re.MULTILINE)
-        text = re.sub(rf"^review_due_at:.*$", f"review_due_at: {review_due_at}", text, flags=re.MULTILINE)
-        text = re.sub(rf"^spacing_interval_days:.*$", f"spacing_interval_days: {spacing_interval_days}", text, flags=re.MULTILINE)
-        text = re.sub(rf"^spacing_priority:.*$", f"spacing_priority: {spacing_priority}", text, flags=re.MULTILINE)
+        text = _set_frontmatter_value(text, "previous_reviews", previous_reviews)
+        text = _set_frontmatter_value(text, "review_due_at", review_due_at)
+        text = _set_frontmatter_value(text, "spacing_interval_days", spacing_interval_days)
+        text = _set_frontmatter_value(text, "spacing_priority", spacing_priority)
+        text = _set_frontmatter_value(text, "last_reviewed_at", last_reviewed_at)
+        text = _set_frontmatter_value(text, "spacing_reasoning", spacing_reasoning)
+        text = _set_frontmatter_value(text, "confidence_before", confidence_before)
+        text = _set_frontmatter_value(text, "exam_date", exam_date)
 
+        path.write_text(text, encoding="utf-8")
+        return path
+
+    def update_card_status(self, domain: str, card_id: str, status: str) -> Path:
+        """Project the latest review exposure status into card frontmatter."""
+        path = self.memory_root / domain / f"{card_id}.md"
+        if not path.exists():
+            raise FileNotFoundError(f"Card not found: {path}")
+
+        text = path.read_text(encoding="utf-8")
+        text = _set_frontmatter_value(text, "review_status", status)
         path.write_text(text, encoding="utf-8")
         return path
 

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import date, datetime
 from typing import Any
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -87,6 +88,7 @@ class ReviewPackRequest(BaseModel):
 
 class ReviewPackResponse(BaseModel):
     """Daily review pack output."""
+    review_id: str = ""
     generated_for: str
     focus_topic: str
     review_item_count: int
@@ -94,6 +96,25 @@ class ReviewPackResponse(BaseModel):
     source_event_count: int
     markdown_content: str
     items: list[dict] = Field(default_factory=list)
+
+
+class DailyReviewCompleteResponse(BaseModel):
+    """Idempotent Daily Review completion result."""
+    review_id: str
+    completed: bool
+    newly_reviewed_items: int
+
+
+class CardReviewRequest(BaseModel):
+    """Explicit recall outcome for one mistake card."""
+    outcome: Literal["recalled", "struggled", "forgot"]
+    confidence_after: int = Field(0, ge=0, le=4)
+
+
+class FixRuleFeedbackRequest(BaseModel):
+    """Learner vote on whether a correction rule changed the next decision."""
+    helpful: bool
+    note: str = ""
 
 
 # ── Energy ───────────────────────────────────────────────────────────────────
@@ -139,6 +160,7 @@ class StudyPlanResponse(BaseModel):
     low_energy_tasks: list[dict]
     danger_los_list: list[str]
     warnings: list[str]
+    interleaving_composition: dict[str, int] = Field(default_factory=dict)
 
 
 # ── Mock ─────────────────────────────────────────────────────────────────────
@@ -146,7 +168,7 @@ class StudyPlanResponse(BaseModel):
 class MockSessionCreate(BaseModel):
     """Create a mock exam session."""
     session_id: str = Field(...)
-    exam_name: str = Field("CFA Level I")
+    exam_name: str = Field("")
     session_label: str = Field("Mock 1")
     scheduled_date: str = Field("")
     total_minutes: int = Field(180)
@@ -196,7 +218,7 @@ class CohortCreate(BaseModel):
     """Create an institution cohort."""
     institution_id: str = Field(...)
     cohort_name: str = Field(...)
-    exam_target: str = Field("CFA Level I")
+    exam_target: str = Field("")
     exam_date: str = Field("")
     learner_ids: list[str] = Field(default_factory=list)
 

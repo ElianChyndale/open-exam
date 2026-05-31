@@ -21,31 +21,12 @@ async def record_attempt(req: QuestionAttemptRequest, repo=Depends(get_repo)):
     This is the primary learning event entry point.
     Returns the event ID, card ID, fix rule, next drill, and review due date.
     """
-    from app.models import stable_id
-    from app.workflows import default_fix_rule, next_drill_for, parse_frontmatter, record_event
+    from app.workflows import default_fix_rule, next_drill_for, parse_frontmatter, record_question_attempt
 
-    created_at = datetime.now(UTC).isoformat()
-    request_payload = req.model_dump()
-    attempt_id = stable_id(
-        "attempt",
-        request_payload.get("topic", ""),
-        request_payload.get("los", ""),
-        request_payload.get("prompt_or_question", ""),
-        request_payload.get("wrong_choice_or_output", ""),
-        ",".join(request_payload.get("evidence_refs", [])),
-        created_at,
-    )
-    attempt_record = {
-        "attempt_id": attempt_id,
-        "is_correct": req.is_correct,
-        "created_at": created_at,
-        **request_payload,
-    }
-    repo.append_attempt_record(attempt_record)
-
-    if req.is_correct:
+    result = record_question_attempt(repo, req.model_dump())
+    if result["event"] is None:
         return AttemptResponse(
-            attempt_id=attempt_id,
+            attempt_id=result["attempt_id"],
             event_id="",
             card_id="",
             error_type="",
@@ -54,15 +35,8 @@ async def record_attempt(req: QuestionAttemptRequest, repo=Depends(get_repo)):
             review_due_at="",
         )
 
-    payload = {
-        key: value
-        for key, value in request_payload.items()
-        if key != "is_correct"
-    }
-    payload["source_layer"] = "question"
-    event = record_event(repo, payload, mode="record-mistake")
-
-    card_id = stable_id("card", event.event_id or "", event.topic, event.los)
+    event = result["event"]
+    card_id = result["card_id"]
     card_path = repo.memory_root / "question-errors" / f"{card_id}.md"
     frontmatter = parse_frontmatter(card_path.read_text(encoding="utf-8")) if card_path.exists() else {}
     fix_rule = frontmatter.get("fix_rule") or default_fix_rule(event.error_type)
@@ -70,7 +44,7 @@ async def record_attempt(req: QuestionAttemptRequest, repo=Depends(get_repo)):
     review_due_at = frontmatter.get("review_due_at", "")
 
     return AttemptResponse(
-        attempt_id=attempt_id,
+        attempt_id=result["attempt_id"],
         event_id=event.event_id or "",
         card_id=card_id,
         error_type=event.error_type,
@@ -119,23 +93,23 @@ async def upload_screenshot(req: ScreenshotUploadRequest, repo=Depends(get_repo)
 @router.get("/recent")
 async def list_recent_attempts(limit: int = 20, repo=Depends(get_repo)):
     """List recent question attempts."""
-    events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
-    recent = question_events[-limit:]
+    attempts = repo.load_attempt_records()
+    recent = attempts[-limit:]
 
     return {
         "count": len(recent),
-        "total": len(question_events),
+        "total": len(attempts),
         "attempts": [
             {
-                "event_id": e.event_id,
-                "topic": e.topic,
-                "los": e.los,
-                "error_type": e.error_type,
-                "confidence": e.confidence,
-                "created_at": e.created_at,
+                "attempt_id": attempt.get("attempt_id", ""),
+                "topic": attempt.get("topic", ""),
+                "los": attempt.get("los", ""),
+                "error_type": attempt.get("error_type", ""),
+                "confidence": attempt.get("confidence", 0),
+                "is_correct": attempt.get("is_correct", False),
+                "created_at": attempt.get("created_at", ""),
             }
-            for e in reversed(recent)
+            for attempt in reversed(recent)
         ],
     }
 
@@ -143,11 +117,13 @@ async def list_recent_attempts(limit: int = 20, repo=Depends(get_repo)):
 @router.post("/batch-import")
 async def batch_import(req: list[QuestionAttemptRequest], repo=Depends(get_repo)):
     """Batch import multiple question attempts."""
-    from app.workflows import batch_import_events
+    from app.workflows import batch_import_attempts
 
     payloads = [r.model_dump() for r in req]
-    event_ids = batch_import_events(repo, payloads, "api-batch-import")
+    result = batch_import_attempts(repo, payloads, "api-batch-import")
     return {
-        "imported_count": len(event_ids),
-        "event_ids": event_ids,
+        "attempt_count": len(result["attempt_ids"]),
+        "mistake_count": len(result["event_ids"]),
+        "attempt_ids": result["attempt_ids"],
+        "event_ids": result["event_ids"],
     }

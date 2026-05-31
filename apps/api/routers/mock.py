@@ -14,10 +14,11 @@ router = APIRouter()
 async def create_mock_session(req: MockSessionCreate, repo=Depends(get_repo)):
     """Create a new mock exam session record."""
     from datetime import datetime, UTC
+    from app.exam_profile import get_profile
 
     session_data = {
         "session_id": req.session_id,
-        "exam_name": req.exam_name,
+        "exam_name": req.exam_name or get_profile(repo.root).name,
         "session_label": req.session_label,
         "scheduled_date": req.scheduled_date,
         "total_minutes": req.total_minutes,

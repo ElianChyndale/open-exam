@@ -10,3 +10,7 @@ node_modules/
 .next/
 apps/web/node_modules/
 apps/web/.next/
+*.tsbuildinfo
+.playwright-mcp/
+apps/web/storybook-static/
+.system/private/

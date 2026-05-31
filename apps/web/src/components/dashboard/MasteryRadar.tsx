@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import { dashboardApi } from '@/lib/api';
+import {
+  PolarAngleAxis,
+  PolarGrid,
+  Radar,
+  RadarChart,
+  ResponsiveContainer,
+} from 'recharts';
 
 interface TopicMastery {
   topic: string;
@@ -23,19 +30,19 @@ export default function MasteryRadar() {
 
   const statusColor = (status: string) => {
     switch (status) {
-      case 'critical': return 'bg-danger text-danger';
-      case 'needs_work': return 'bg-warning text-warning';
-      case 'ready': return 'bg-success text-success';
-      default: return 'bg-muted text-muted';
+      case 'critical': return 'bg-danger-soft text-danger';
+      case 'needs_work': return 'bg-warning-soft text-warning';
+      case 'ready': return 'bg-success-soft text-success';
+      default: return 'bg-surface-hover text-muted';
     }
   };
 
   const statusBg = (status: string) => {
     switch (status) {
-      case 'critical': return 'bg-danger/10 border-danger/30';
-      case 'needs_work': return 'bg-warning/10 border-warning/30';
-      case 'ready': return 'bg-success/10 border-success/30';
-      default: return 'bg-[#0a0a0f] border-[#1e1e2e]';
+      case 'critical': return 'bg-danger-soft border-danger-soft';
+      case 'needs_work': return 'bg-warning-soft border-warning-soft';
+      case 'ready': return 'bg-success-soft border-success-soft';
+      default: return 'bg-surface-field border-line';
     }
   };
 
@@ -53,11 +60,27 @@ export default function MasteryRadar() {
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-sm font-semibold">Topic 掌握度雷达</h3>
         <div className="text-xs text-muted">
-          综合掌握度: <span className="text-lg font-bold text-[#6366f1]">{data.overall_mastery}%</span>
+          综合掌握度: <span className="text-lg font-bold text-accent">{data.overall_mastery}%</span>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
+      <div className="h-72 w-full" aria-label="Topic mastery radar chart">
+        <ResponsiveContainer width="100%" height="100%">
+          <RadarChart data={data.topics} outerRadius="72%">
+            <PolarGrid stroke="var(--line)" />
+            <PolarAngleAxis dataKey="topic" tick={{ fill: 'var(--muted)', fontSize: 10 }} />
+            <Radar
+              dataKey="mastery"
+              fill="var(--accent)"
+              fillOpacity={0.2}
+              stroke="var(--accent)"
+              strokeWidth={2}
+            />
+          </RadarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {data.topics.map((t) => (
           <div key={t.topic} className={`rounded-lg p-3 border ${statusBg(t.status)}`}>
             <div className="flex items-center justify-between mb-1">
@@ -66,10 +89,10 @@ export default function MasteryRadar() {
                 {statusLabel(t.status)}
               </span>
             </div>
-            <div className="w-full h-1.5 bg-[#0a0a0f] rounded-full overflow-hidden">
+            <div className="w-full h-1.5 bg-surface-field rounded-full overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all ${
-                  t.mastery >= 60 ? 'bg-success' : t.mastery >= 30 ? 'bg-warning' : 'bg-danger'
+                  t.mastery >= 60 ? 'bg-success-solid' : t.mastery >= 30 ? 'bg-warning-solid' : 'bg-danger-solid'
                 }`}
                 style={{ width: `${t.mastery}%` }}
               />

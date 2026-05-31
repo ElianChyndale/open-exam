@@ -3,39 +3,68 @@
 @tailwind utilities;
 
 :root {
-  --cockpit-bg: #0b0f14;
-  --cockpit-card: #121821;
-  --cockpit-border: #24313d;
-  --cockpit-accent: #14b8a6;
-  --cockpit-success: #22c55e;
-  --cockpit-warning: #f59e0b;
-  --cockpit-danger: #ef4444;
-  --cockpit-muted: #94a3b8;
-  --cockpit-text: #e5edf5;
+  --surface-canvas: #f5f5f7;
+  --surface-raised: rgba(255, 255, 255, 0.78);
+  --surface-field: rgba(255, 255, 255, 0.92);
+  --surface-hover: rgba(15, 23, 42, 0.055);
+  --line: rgba(15, 23, 42, 0.12);
+  --accent: #007aff;
+  --accent-strong: #0066d6;
+  --accent-soft: rgba(0, 122, 255, 0.12);
+  --accent-muted: rgba(0, 122, 255, 0.58);
+  --success: #248a3d;
+  --success-soft: rgba(36, 138, 61, 0.12);
+  --warning: #b25000;
+  --warning-soft: rgba(178, 80, 0, 0.12);
+  --danger: #d70015;
+  --danger-soft: rgba(215, 0, 21, 0.12);
+  --muted: #667085;
+  --ink: #1d1d1f;
 }
 
 body {
-  background: var(--cockpit-bg);
-  color: var(--cockpit-text);
+  background: var(--surface-canvas);
+  color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
-/* Card component */
 .card {
-  background: var(--cockpit-card);
-  border: 1px solid var(--cockpit-border);
-  border-radius: 8px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: 14px;
   padding: 1.25rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.055);
+  backdrop-filter: blur(18px);
 }
 
-/* Status colors */
-.text-success { color: var(--cockpit-success); }
-.text-warning { color: var(--cockpit-warning); }
-.text-danger { color: var(--cockpit-danger); }
-.text-muted { color: var(--cockpit-muted); }
-.text-accent { color: var(--cockpit-accent); }
+.bg-surface-canvas { background: var(--surface-canvas); }
+.bg-surface-raised { background: var(--surface-raised); }
+.bg-surface-field { background: var(--surface-field); }
+.bg-surface-hover, .hover\:bg-surface-hover:hover { background: var(--surface-hover); }
+.bg-accent-solid, .hover\:bg-accent-solid:hover { background: var(--accent); }
+.hover\:bg-accent-strong:hover { background: var(--accent-strong); }
+.bg-accent-soft, .hover\:bg-accent-soft:hover { background: var(--accent-soft); }
+.bg-accent-muted { background: var(--accent-muted); }
+.bg-success-solid { background: var(--success); }
+.bg-success-soft { background: var(--success-soft); }
+.bg-warning-solid { background: var(--warning); }
+.bg-warning-soft { background: var(--warning-soft); }
+.bg-danger-solid { background: var(--danger); }
+.bg-danger-soft { background: var(--danger-soft); }
+.border-line { border-color: var(--line); }
+.border-accent { border-color: var(--accent); }
+.border-accent-soft { border-color: var(--accent-soft); }
+.hover\:border-accent-soft:hover { border-color: var(--accent-soft); }
+.border-success-soft { border-color: var(--success-soft); }
+.border-warning-soft { border-color: var(--warning-soft); }
+.border-danger-soft { border-color: var(--danger-soft); }
+.text-ink { color: var(--ink); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-danger { color: var(--danger); }
+.text-muted { color: var(--muted); }
+.text-accent { color: var(--accent); }
 
-/* Metric number */
 .metric-value {
   font-size: 1.75rem;
   font-weight: 700;
@@ -44,9 +73,57 @@ body {
 
 .metric-label {
   font-size: 0.75rem;
-  color: var(--cockpit-muted);
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 3px var(--accent-soft), 0 0 0 1px var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-canvas: #101114;
+    --surface-raised: rgba(30, 32, 36, 0.82);
+    --surface-field: rgba(42, 44, 49, 0.9);
+    --surface-hover: rgba(255, 255, 255, 0.075);
+    --line: rgba(255, 255, 255, 0.13);
+    --accent: #0a84ff;
+    --accent-strong: #409cff;
+    --accent-soft: rgba(10, 132, 255, 0.18);
+    --accent-muted: rgba(10, 132, 255, 0.62);
+    --success: #30d158;
+    --success-soft: rgba(48, 209, 88, 0.16);
+    --warning: #ff9f0a;
+    --warning-soft: rgba(255, 159, 10, 0.16);
+    --danger: #ff453a;
+    --danger-soft: rgba(255, 69, 58, 0.16);
+    --muted: #a5adbb;
+    --ink: #f5f5f7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 @media (max-width: 1023px) {

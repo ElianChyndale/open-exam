@@ -36,6 +36,9 @@ class MistakeEvent:
     event_id: str | None = None
     created_at: str = field(default_factory=lambda: utc_now().isoformat())
     is_correct: bool = False
+    schema_version: int = 1
+    event_type: str = "mistake.recorded"
+    learner_id: str = "local"
 
     @classmethod
     def from_payload(cls, payload: dict[str, Any]) -> "MistakeEvent":
@@ -82,9 +85,11 @@ class MistakeCard:
     spacing_priority: int = 50
     last_reviewed_at: str = ""
     exam_date: str = ""
+    spacing_reasoning: str = ""
+    confidence_before: int = 0
 
     @classmethod
-    def from_event(cls, event: MistakeEvent, fix_rule: str, next_drill: str) -> "MistakeCard":
+    def from_event(cls, event: MistakeEvent, fix_rule: str, next_drill: str, exam_date: str = "") -> "MistakeCard":
         from study_science.spacing import SpacingInput, SpacingScheduler
 
         input_data = SpacingInput(
@@ -96,7 +101,7 @@ class MistakeCard:
             time_spent_seconds=event.time_spent,
             previous_reviews=0,
             last_reviewed_at="",
-            exam_date="",
+            exam_date=exam_date,
         )
         decision = SpacingScheduler.schedule(input_data)
 
@@ -124,7 +129,9 @@ class MistakeCard:
             spacing_interval_days=decision.interval_days,
             spacing_priority=decision.priority,
             last_reviewed_at="",
-            exam_date="",
+            exam_date=exam_date,
+            spacing_reasoning=decision.reasoning,
+            confidence_before=event.confidence,
         )
 
 

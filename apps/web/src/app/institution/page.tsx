@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { institutionApi } from '@/lib/api';
+import { institutionApi, profilesApi } from '@/lib/api';
 import {
   Building2, Users, AlertTriangle, GraduationCap,
   UserX, FileText, TrendingDown, Plus,
@@ -49,7 +49,7 @@ export default function InstitutionConsole() {
   const [newCohort, setNewCohort] = useState({
     institution_id: 'inst-001',
     cohort_name: '',
-    exam_target: 'CFA Level I',
+    exam_target: '',
     exam_date: '',
     learner_ids: '',
   });
@@ -58,6 +58,9 @@ export default function InstitutionConsole() {
     institutionApi.listCohorts().then((data: any) => {
       setCohorts(data.cohorts || []);
     }).finally(() => setLoading(false));
+    profilesApi.getActive().then(({ profile }: any) => {
+      setNewCohort((current) => ({ ...current, exam_target: profile.name }));
+    }).catch(() => undefined);
   }, []);
 
   const createCohort = async () => {
@@ -89,7 +92,7 @@ export default function InstitutionConsole() {
         </div>
         <button
           onClick={() => setShowCreate(!showCreate)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-accent-solid hover:bg-accent-strong rounded-lg text-sm transition-colors"
         >
           <Plus size={14} /> 新建班级
         </button>
@@ -99,33 +102,33 @@ export default function InstitutionConsole() {
       {showCreate && (
         <div className="card space-y-3">
           <h3 className="text-sm font-semibold">创建班级</h3>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             <input
               value={newCohort.cohort_name}
               onChange={(e) => setNewCohort({ ...newCohort, cohort_name: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="班级名称"
             />
             <input
               value={newCohort.exam_date}
               onChange={(e) => setNewCohort({ ...newCohort, exam_date: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="考试日期 YYYY-MM-DD"
             />
             <input
               value={newCohort.learner_ids}
               onChange={(e) => setNewCohort({ ...newCohort, learner_ids: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="学员 ID (逗号分隔)"
             />
           </div>
-          <button onClick={createCohort} className="px-4 py-1.5 bg-[#22c55e]/20 text-success rounded-lg text-sm">
+          <button onClick={createCohort} className="px-4 py-1.5 bg-success-soft text-success rounded-lg text-sm">
             创建
           </button>
         </div>
       )}
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {/* Cohort list */}
         <div className="card">
           <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
@@ -141,8 +144,8 @@ export default function InstitutionConsole() {
                   onClick={() => loadRiskReport(c.cohort_id)}
                   className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${
                     selectedCohort === c.cohort_id
-                      ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                      : 'hover:bg-[#14141f]'
+                      ? 'bg-accent-soft border border-accent-soft'
+                      : 'hover:bg-surface-hover'
                   }`}
                 >
                   <div className="font-medium">{c.cohort_name}</div>
@@ -156,11 +159,11 @@ export default function InstitutionConsole() {
         </div>
 
         {/* Risk report */}
-        <div className="col-span-2 space-y-4">
+        <div className="space-y-4 lg:col-span-2">
           {riskReport ? (
             <>
               {/* Summary metrics */}
-              <div className="grid grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
                 <MiniCard icon={<Users size={14} className="text-accent" />} label="总学员" value={String(riskReport.total_learners)} />
                 <MiniCard icon={<AlertTriangle size={14} className="text-danger" />} label="风险学员" value={String(riskReport.at_risk_count)} />
                 <MiniCard icon={<UserX size={14} className="text-warning" />} label="掉队预警" value={String(riskReport.dropout_warning_count)} />
@@ -177,7 +180,7 @@ export default function InstitutionConsole() {
                 ) : (
                   <div className="space-y-1">
                     {riskReport.at_risk_learners.slice(0, 10).map((l, i) => (
-                      <div key={i} className="flex items-center justify-between text-xs bg-[#0a0a0f] rounded-lg px-3 py-2">
+                      <div key={i} className="flex items-center justify-between text-xs bg-surface-field rounded-lg px-3 py-2">
                         <span className="font-medium">{l.learner_id}</span>
                         <div className="flex items-center gap-3 text-muted">
                           <span>风险分 {l.risk_score}</span>
@@ -194,7 +197,7 @@ export default function InstitutionConsole() {
 
               {/* Dropout warnings */}
               {riskReport.dropout_warnings.length > 0 && (
-                <div className="card border-[#f59e0b]/30">
+                <div className="card border-warning-soft">
                   <h3 className="text-sm font-semibold mb-3 flex items-center gap-2 text-warning">
                     <UserX size={14} /> 掉队预警
                   </h3>
@@ -206,7 +209,7 @@ export default function InstitutionConsole() {
 
               {/* Instructor recommendations */}
               {riskReport.instructor_recommendations.length > 0 && (
-                <div className="card border-[#6366f1]/30">
+                <div className="card border-accent-soft">
                   <h3 className="text-sm font-semibold mb-3 flex items-center gap-2 text-accent">
                     <FileText size={14} /> 老师干预建议
                   </h3>
@@ -219,7 +222,7 @@ export default function InstitutionConsole() {
               {/* Delivery proof metrics */}
               <div className="card">
                 <h3 className="text-sm font-semibold mb-2">交付证明</h3>
-                <div className="grid grid-cols-3 gap-2 text-xs">
+                <div className="grid grid-cols-1 gap-2 text-xs sm:grid-cols-3">
                   <div>
                     <span className="text-muted">平均复习完成率:</span>{' '}
                     <span className="font-medium">{(riskReport.avg_review_completion * 100).toFixed(0)}%</span>
@@ -274,7 +277,7 @@ function WeakLosSection({ cohortId }: { cohortId: string }) {
   return (
     <div className="space-y-2">
       {data.weakest_los.map((item: any, i: number) => (
-        <div key={i} className="bg-[#0a0a0f] rounded-lg px-3 py-2">
+        <div key={i} className="bg-surface-field rounded-lg px-3 py-2">
           <div className="flex items-center justify-between text-sm">
             <span className="font-medium">{i + 1}. {item.los}</span>
             <span className="text-danger">{item.error_count} 次错误</span>

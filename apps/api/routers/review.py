@@ -7,7 +7,7 @@ from datetime import date, datetime
 from fastapi import APIRouter, Depends, Query
 
 from deps import get_repo
-from schemas import ReviewPackRequest, ReviewPackResponse
+from schemas import DailyReviewCompleteResponse, ReviewPackRequest, ReviewPackResponse
 
 router = APIRouter()
 
@@ -44,12 +44,16 @@ async def get_today_review_pack(
     if result_path and result_path.exists():
         content = result_path.read_text(encoding="utf-8")
     else:
-        content = "# 今日复习资料\n\n暂无复习内容。"
+        content = "# Daily Review\n\n暂无复习内容。"
+
+    from app.workflows import load_daily_review_snapshot
+    snapshot = load_daily_review_snapshot(repo)
 
     # Count items
     item_count = content.count("### ") - content.count("### 1. ")  # rough count
 
     return ReviewPackResponse(
+        review_id=snapshot["review_id"],
         generated_for=(review_date or datetime.now().date()).isoformat(),
         focus_topic=focus_topic or "unspecified",
         review_item_count=content.count("#### 下次规则"),
@@ -58,6 +62,14 @@ async def get_today_review_pack(
         markdown_content=content,
         items=[],  # parsed by frontend from markdown
     )
+
+
+@router.post("/{review_id}/complete", response_model=DailyReviewCompleteResponse)
+async def complete_review(review_id: str, repo=Depends(get_repo)):
+    """Mark all items in a generated Daily Review as reviewed once."""
+    from app.workflows import complete_daily_review
+
+    return DailyReviewCompleteResponse(**complete_daily_review(repo, review_id))
 
 
 @router.get("/due")

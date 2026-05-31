@@ -5,7 +5,7 @@ from __future__ import annotations
 from collections import Counter
 from datetime import date, datetime, timedelta
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 
 from deps import get_repo
 from schemas import EffectivenessResponse
@@ -39,12 +39,17 @@ async def get_effectiveness_dashboard(
     period_end = today.isoformat()
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    attempts = repo.load_attempt_records()
 
     # Filter to period
     recent_events = [
         e for e in question_events
         if e.created_at[:10] >= period_start[:10]
+    ]
+    recent_attempts = [
+        attempt for attempt in attempts
+        if str(attempt.get("created_at", ""))[:10] >= period_start[:10]
     ]
 
     # Due review completion rate
@@ -65,19 +70,21 @@ async def get_effectiveness_dashboard(
     # High-confidence error count
     calibration_records: list[CalibrationRecord] = []
     high_conf_errors = 0
-    for e in recent_events:
-        state = ConfidenceCalibration.classify(e.confidence, is_correct=False)
+    for attempt in recent_attempts:
+        confidence = int(attempt.get("confidence", 0) or 0)
+        is_correct = bool(attempt.get("is_correct", False))
+        state = ConfidenceCalibration.classify(confidence, is_correct=is_correct)
         record = CalibrationRecord(
-            attempt_id=e.event_id or "",
-            topic=e.topic,
-            los=e.los,
-            confidence=e.confidence,
-            is_correct=False,
+            attempt_id=str(attempt.get("attempt_id", "")),
+            topic=str(attempt.get("topic", "")),
+            los=str(attempt.get("los", "")),
+            confidence=confidence,
+            is_correct=is_correct,
             state=state,
-            created_at=e.created_at,
+            created_at=str(attempt.get("created_at", "")),
         )
         calibration_records.append(record)
-        if ConfidenceCalibration.is_dangerous(e.confidence, is_correct=False):
+        if ConfidenceCalibration.is_dangerous(confidence, is_correct=is_correct):
             high_conf_errors += 1
 
     # Calibration summary
@@ -107,18 +114,23 @@ async def get_effectiveness_dashboard(
     ]
 
     # Interleaving accuracy (approximation: accuracy on non-primary-topic items)
-    topic_counts = Counter(e.topic for e in recent_events)
+    topic_counts = Counter(str(attempt.get("topic", "")) for attempt in recent_attempts)
     primary_topic = topic_counts.most_common(1)[0][0] if topic_counts else ""
-    non_primary = [e for e in recent_events if e.topic != primary_topic]
-    interleaving_acc = 0.0  # We don't have is_correct in MistakeEvent ATM
+    non_primary = [attempt for attempt in recent_attempts if attempt.get("topic", "") != primary_topic]
+    interleaving_acc = (
+        sum(1 for attempt in non_primary if attempt.get("is_correct")) / len(non_primary)
+        if non_primary else 0.0
+    )
 
     # Predicted pass probability (multi-factor model)
     from study_science.prediction import PassPredictor, PredictionInput
+    from app.exam_profile import get_profile
 
+    profile = get_profile(repo.root)
     pred_input = PredictionInput(
-        total_events=len(question_events),
+        total_events=len(attempts),
         topics_attempted=len(topic_counts),
-        total_topics=10,
+        total_topics=len(profile.subjects),
         high_conf_errors=high_conf_errors,
         pattern_recurrence_rate=recurrence_rate,
         review_completion_rate=completion_rate,
@@ -172,7 +184,8 @@ async def get_summary(repo=Depends(get_repo)):
     from collections import Counter
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    attempts = repo.load_attempt_records()
 
     total_questions = len(question_events)
     topic_counts = Counter(e.topic for e in question_events)
@@ -189,6 +202,11 @@ async def get_summary(repo=Depends(get_repo)):
     return {
         "total_events": len(events),
         "total_questions_recorded": total_questions,
+        "total_attempts": len(attempts),
+        "accuracy": round(
+            sum(1 for attempt in attempts if attempt.get("is_correct")) / len(attempts),
+            3,
+        ) if attempts else 0.0,
         "total_bias_events": sum(1 for e in events if e.source_layer == "bias"),
         "total_agent_failures": sum(1 for e in events if e.source_layer == "agent"),
         "top_topics": [
@@ -236,6 +254,10 @@ async def get_streaks(repo=Depends(get_repo)):
         "active_today": active_today,
         "longest_streak": streak,  # simplified: tracks current as longest
         "weekly_goal": weekly,
+        "recovery": {
+            "needed": not active_today,
+            "recommended_action": "完成一个 10 分钟 Daily Review 恢复节奏" if not active_today else "保持当前节奏",
+        },
     }
 
 
@@ -249,11 +271,13 @@ async def get_calendar_data(
     from app.workflows import load_progress_events
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
 
     daily_errors: dict[str, int] = Counter()
     for e in question_events:
-        day = e.created_at[:7] if month else e.created_at[:10]
+        day = e.created_at[:10]
+        if month and not day.startswith(month):
+            continue
         daily_errors[day] += 1
 
     progress = load_progress_events(repo)
@@ -285,14 +309,30 @@ async def get_calendar_data(
     }
 
 
+@router.put("/calendar/settings")
+async def update_calendar_settings(payload: dict, repo=Depends(get_repo)):
+    """Persist learner calendar settings used by spacing and countdown views."""
+    exam_date = str(payload.get("exam_date", "")).strip()
+    if exam_date:
+        try:
+            date.fromisoformat(exam_date[:10])
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail="exam_date must use YYYY-MM-DD") from exc
+    path = repo.root / ".system" / "exam_date.txt"
+    path.write_text(exam_date[:10], encoding="utf-8")
+    return {"exam_date": exam_date[:10]}
+
+
 @router.post("/what-if")
 async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
     """Run a 'what if' simulation on pass probability."""
     from study_science.prediction import PassPredictor, PredictionInput
     from collections import Counter
+    from app.exam_profile import get_profile
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    attempts = repo.load_attempt_records()
 
     from app.workflows import (
         collect_pattern_items,
@@ -301,24 +341,26 @@ async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
     )
     from study_science.calibration import ConfidenceCalibration, CalibrationRecord
 
-    topic_counts = Counter(e.topic for e in question_events)
+    topic_counts = Counter(str(attempt.get("topic", "")) for attempt in attempts)
     recent_events = question_events
 
     calibration_records: list[CalibrationRecord] = []
     high_conf_errors = 0
-    for e in recent_events:
-        state = ConfidenceCalibration.classify(e.confidence, is_correct=False)
+    for attempt in attempts:
+        confidence = int(attempt.get("confidence", 0) or 0)
+        is_correct = bool(attempt.get("is_correct", False))
+        state = ConfidenceCalibration.classify(confidence, is_correct=is_correct)
         record = CalibrationRecord(
-            attempt_id=e.event_id or "",
-            topic=e.topic,
-            los=e.los,
-            confidence=e.confidence,
-            is_correct=False,
+            attempt_id=str(attempt.get("attempt_id", "")),
+            topic=str(attempt.get("topic", "")),
+            los=str(attempt.get("los", "")),
+            confidence=confidence,
+            is_correct=is_correct,
             state=state,
-            created_at=e.created_at,
+            created_at=str(attempt.get("created_at", "")),
         )
         calibration_records.append(record)
-        if ConfidenceCalibration.is_dangerous(e.confidence, is_correct=False):
+        if ConfidenceCalibration.is_dangerous(confidence, is_correct=is_correct):
             high_conf_errors += 1
 
     cal_summary = ConfidenceCalibration.summarize(calibration_records)
@@ -334,9 +376,9 @@ async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
     completion_rate = completed_reviews / max(len(due_items), 1)
 
     input_ = PredictionInput(
-        total_events=len(question_events),
+        total_events=len(attempts),
         topics_attempted=len(topic_counts),
-        total_topics=10,
+        total_topics=len(get_profile(repo.root).subjects),
         high_conf_errors=high_conf_errors,
         pattern_recurrence_rate=recurrence_rate,
         review_completion_rate=completion_rate,
@@ -364,7 +406,7 @@ async def get_weekly_trend(repo=Depends(get_repo)):
     last_week_end = this_week_start - timedelta(days=1)
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
 
     this_week = [e for e in question_events if this_week_start.isoformat() <= e.created_at[:10] <= today.isoformat()]
     last_week = [e for e in question_events if last_week_start.isoformat() <= e.created_at[:10] <= last_week_end.isoformat()]
@@ -416,13 +458,10 @@ async def get_topic_mastery(repo=Depends(get_repo)):
     from app.workflows import collect_due_card_items
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
 
-    SUBJECTS = [
-        "Quantitative Methods", "Economics", "Financial Statement Analysis",
-        "Corporate Issuers", "Equity", "Fixed Income", "Derivatives",
-        "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards",
-    ]
+    from app.exam_profile import get_profile
+    subjects = [subject["name"] for subject in get_profile(repo.root).subjects]
 
     topic_events: dict[str, list] = defaultdict(list)
     for e in question_events:
@@ -442,7 +481,7 @@ async def get_topic_mastery(repo=Depends(get_repo)):
         exam_date_str = exam_setting_path.read_text(encoding="utf-8").strip()[:10]
 
     topics = []
-    for subject in SUBJECTS:
+    for subject in subjects:
         t_events = topic_events.get(subject, [])
         if not t_events:
             topics.append({"topic": subject, "mastery": 0, "errors": 0, "status": "no_data"})

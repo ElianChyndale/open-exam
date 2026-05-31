@@ -10,6 +10,43 @@ from pathlib import Path
 from app.storage import Repository
 
 
+def collect_due_print_cards(
+    repo: Repository,
+    topic: str = "",
+    limit: int = 20,
+    review_date: str | date | None = None,
+) -> list[dict]:
+    """Collect due mistake cards for PDF rendering."""
+    from app.workflows import clean_display_text, extract_markdown_section, parse_date, parse_frontmatter
+
+    target_date = date.fromisoformat(review_date) if isinstance(review_date, str) else review_date or date.today()
+    cards: list[dict] = []
+    for path in sorted((repo.memory_root / "question-errors").glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        fm = parse_frontmatter(text)
+        card_topic = fm.get("topic", "")
+        due_at = parse_date(fm.get("review_due_at", ""))
+        if not due_at or due_at > target_date:
+            continue
+        if topic and topic.lower() not in card_topic.lower():
+            continue
+
+        cards.append({
+            "card_id": path.stem,
+            "topic": card_topic,
+            "los": fm.get("los", ""),
+            "prompt": clean_display_text((extract_markdown_section(text, "Prompt") or "No prompt captured")[:200]),
+            "wrong": clean_display_text((extract_markdown_section(text, "Wrong Output") or "")[:100]),
+            "correct": clean_display_text(fm.get("correct_resolution", "")[:200]),
+            "fix_rule": clean_display_text(fm.get("fix_rule", "")[:150]),
+            "next_drill": clean_display_text(fm.get("next_drill", "")[:150]),
+            "review_due_at": due_at.isoformat(),
+        })
+        if len(cards) >= limit:
+            break
+    return cards
+
+
 def generate_print_cards(
     repo: Repository,
     topic: str = "",
@@ -39,38 +76,7 @@ def generate_print_cards(
     except ImportError:
         raise ImportError("ReportLab required. Install: pip install reportlab")
 
-    from app.workflows import parse_frontmatter, extract_markdown_section, clean_display_text
-
-    # Collect cards from question-errors
-    cards: list[dict] = []
-    for path in sorted((repo.memory_root / "question-errors").glob("*.md")):
-        text = path.read_text(encoding="utf-8")
-        fm = parse_frontmatter(text)
-        card_topic = fm.get("topic", "")
-
-        if topic and topic.lower() not in card_topic.lower():
-            continue
-
-        prompt = extract_markdown_section(text, "Prompt") or "No prompt captured"
-        wrong = extract_markdown_section(text, "Wrong Output") or ""
-        correct = fm.get("correct_resolution", "")
-        fix_rule = fm.get("fix_rule", "")
-        next_drill = fm.get("next_drill", "")
-        los = fm.get("los", "")
-
-        cards.append({
-            "card_id": path.stem,
-            "topic": card_topic,
-            "los": los,
-            "prompt": clean_display_text(prompt[:200]),
-            "wrong": clean_display_text(wrong[:100]),
-            "correct": clean_display_text(correct[:200]),
-            "fix_rule": clean_display_text(fix_rule[:150]),
-            "next_drill": clean_display_text(next_drill[:150]),
-        })
-
-        if len(cards) >= limit:
-            break
+    cards = collect_due_print_cards(repo, topic=topic, limit=limit)
 
     if not cards:
         raise ValueError("No cards found matching the criteria")
@@ -90,56 +96,69 @@ def generate_print_cards(
     c = canvas.Canvas(str(out_path), pagesize=landscape(letter))
     c.setTitle(f"ExamOS Review Cards - {today_str}")
 
-    for index, card in enumerate(cards):
-        page_index = index // 15  # 15 cards per page (3×5)
-        pos_in_page = index % 15
-        col = pos_in_page % 3
-        row = pos_in_page // 3
+    for page_start in range(0, len(cards), 15):
+        page_cards = cards[page_start : page_start + 15]
+        for pos_in_page, card in enumerate(page_cards):
+            col = pos_in_page % 3
+            row = pos_in_page // 3
+            x = margin_x + col * card_w
+            y = page_h - margin_y - (row + 1) * card_h
+            _draw_card_front(c, colors, card, x, y, card_w, card_h)
+        c.showPage()
 
-        x = margin_x + col * card_w
-        y = page_h - margin_y - (row + 1) * card_h
-
-        if pos_in_page == 0 and index > 0:
+        # Mirror columns so each back aligns after duplex printing on the long edge.
+        for pos_in_page, card in enumerate(page_cards):
+            col = 2 - (pos_in_page % 3)
+            row = pos_in_page // 3
+            x = margin_x + col * card_w
+            y = page_h - margin_y - (row + 1) * card_h
+            _draw_card_back(c, colors, card, x, y, card_w, card_h)
+        if page_start + 15 < len(cards):
             c.showPage()
-
-        # Card border
-        c.setStrokeColor(colors.HexColor("#CCCCCC"))
-        c.setLineWidth(0.5)
-        c.rect(x, y, card_w, card_h)
-
-        # Front content
-        c.setFont("Helvetica-Bold", 7)
-        c.setFillColor(colors.HexColor("#333333"))
-        c.drawString(x + 4, y + card_h - 10, f"{card['topic']} | {card['los']}")
-
-        c.setFont("Helvetica", 6)
-        c.setFillColor(colors.HexColor("#666666"))
-        # Wrap prompt text
-        prompt_lines = _wrap_text(c, card["prompt"], card_w - 8, 6)
-        for li, line in enumerate(prompt_lines[:6]):
-            c.drawString(x + 4, y + card_h - 22 - li * 8, line)
-
-        # Card ID at bottom
-        c.setFont("Helvetica", 5)
-        c.setFillColor(colors.HexColor("#999999"))
-        short_id = card["card_id"][-8:] if len(card["card_id"]) > 8 else card["card_id"]
-        c.drawString(x + 4, y + 2, f"#{short_id}")
-
-        # Draw BACK of card (on the right side of same card space)
-        # Since we can't do double-sided easily in ReportLab without knowing printer,
-        # we put a small "back" indicator and the fix rule
-        if card["fix_rule"]:
-            c.setFont("Helvetica", 5)
-            c.setFillColor(colors.HexColor("#22c55e"))
-            c.drawString(x + 4, y + card_h - 72, f"✓ {card['fix_rule'][:60]}")
-
-        if card["next_drill"]:
-            c.setFont("Helvetica", 5)
-            c.setFillColor(colors.HexColor("#6366f1"))
-            c.drawString(x + 4, y + card_h - 82, f"→ {card['next_drill'][:60]}")
 
     c.save()
     return out_path
+
+
+def _draw_card_front(c, colors, card: dict, x: float, y: float, card_w: float, card_h: float) -> None:
+    c.setStrokeColor(colors.HexColor("#CCCCCC"))
+    c.setLineWidth(0.5)
+    c.rect(x, y, card_w, card_h)
+    c.setFont("Helvetica-Bold", 7)
+    c.setFillColor(colors.HexColor("#333333"))
+    c.drawString(x + 4, y + card_h - 10, f"{card['topic']} | {card['los']}")
+    c.setFont("Helvetica", 6)
+    c.setFillColor(colors.HexColor("#666666"))
+    for index, line in enumerate(_wrap_text(c, card["prompt"], card_w - 8, 6)[:7]):
+        c.drawString(x + 4, y + card_h - 22 - index * 8, line)
+    _draw_card_id(c, colors, card, x, y)
+
+
+def _draw_card_back(c, colors, card: dict, x: float, y: float, card_w: float, card_h: float) -> None:
+    c.setStrokeColor(colors.HexColor("#CCCCCC"))
+    c.setLineWidth(0.5)
+    c.rect(x, y, card_w, card_h)
+    c.setFont("Helvetica-Bold", 7)
+    c.setFillColor(colors.HexColor("#333333"))
+    c.drawString(x + 4, y + card_h - 10, "Correct solution")
+    c.setFont("Helvetica", 6)
+    c.setFillColor(colors.HexColor("#444444"))
+    lines = _wrap_text(c, card["correct"] or "See source evidence.", card_w - 8, 6)
+    for index, line in enumerate(lines[:4]):
+        c.drawString(x + 4, y + card_h - 22 - index * 8, line)
+    c.setFont("Helvetica", 5)
+    c.setFillColor(colors.HexColor("#16803A"))
+    c.drawString(x + 4, y + 19, f"Rule: {card['fix_rule'][:70]}")
+    c.setFillColor(colors.HexColor("#4F46E5"))
+    c.drawString(x + 4, y + 11, f"Next: {card['next_drill'][:70]}")
+    _draw_card_id(c, colors, card, x, y)
+
+
+def _draw_card_id(c, colors, card: dict, x: float, y: float) -> None:
+    c.setFont("Helvetica", 5)
+    c.setFillColor(colors.HexColor("#999999"))
+    short_id = card["card_id"][-8:] if len(card["card_id"]) > 8 else card["card_id"]
+    c.drawString(x + 4, y + 2, f"#{short_id}")
 
 
 def _wrap_text(canvas_obj, text: str, max_width: float, font_size: int) -> list[str]:

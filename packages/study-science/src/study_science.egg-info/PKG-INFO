@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: study-science
+Version: 0.1.0
+Summary: Cognitive science engines — retrieval, spacing, interleaving, worked examples, self-explanation, calibration, energy-aware planning
+Requires-Python: >=3.11

@@ -1,14 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { X, Upload } from 'lucide-react';
+import { Mic, X, Upload } from 'lucide-react';
 import { attemptsApi } from '@/lib/api';
-
-const SUBJECTS = [
-  'Quantitative Methods', 'Economics', 'Financial Statement Analysis',
-  'Corporate Issuers', 'Equity', 'Fixed Income', 'Derivatives',
-  'Alternative Investments', 'Portfolio Management', 'Ethical and Professional Standards',
-];
+import { queueAttempt } from '@/lib/offline';
+import { useProfileSubjects } from '@/lib/profiles';
 
 const ERROR_TYPES = [
   { value: 'concept_confusion', label: '概念混淆' },
@@ -30,6 +26,8 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
   const [correct, setCorrect] = useState('');
   const [errorType, setErrorType] = useState('concept_confusion');
   const [submitting, setSubmitting] = useState(false);
+  const [queued, setQueued] = useState(false);
+  const subjects = useProfileSubjects();
 
   if (!isOpen) return null;
 
@@ -37,8 +35,7 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
     e.preventDefault();
     if (!topic || !wrong || !correct) return;
     setSubmitting(true);
-    try {
-      await attemptsApi.record({
+    const payload = {
         topic, los,
         prompt_or_question: `Quick: ${topic}/${los}`,
         wrong_choice_or_output: wrong,
@@ -49,16 +46,30 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
         evidence_refs: [`quick-${Date.now()}`],
         question_source: 'quick_capture',
         source_type: 'manual',
-      });
+      };
+    try {
+      await attemptsApi.record(payload);
       setTopic(''); setLos(''); setWrong(''); setCorrect('');
       onClose();
-    } catch { /* ignore */ }
+    } catch {
+      queueAttempt(payload);
+      setQueued(true);
+    }
     setSubmitting(false);
+  };
+
+  const captureVoice = () => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'zh-CN';
+    recognition.onresult = (event: any) => setWrong(event.results[0][0].transcript);
+    recognition.start();
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-      <div className="bg-[#0d0d1a] border border-[#1e1e2e] rounded-xl w-full max-w-md mx-4 p-6 shadow-2xl">
+      <div className="bg-surface-raised border border-line rounded-xl w-full max-w-md mx-4 p-6 shadow-2xl">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold flex items-center gap-2">
             <Upload size={16} className="text-accent" /> 快速录入
@@ -67,30 +78,36 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
             <X size={20} />
           </button>
         </div>
+        {queued && <p className="mb-3 text-xs text-warning">当前离线，已加入本地待同步队列。</p>}
         <form onSubmit={handleSubmit} className="space-y-3">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <select value={topic} onChange={e => setTopic(e.target.value)}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm" required>
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm" required>
               <option value="">科目</option>
-              {SUBJECTS.map(s => <option key={s} value={s}>{s}</option>)}
+              {subjects.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
             <input value={los} onChange={e => setLos(e.target.value)}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="LOS (可选)" />
           </div>
-          <input value={wrong} onChange={e => setWrong(e.target.value)}
-            className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-            placeholder="你的错误答案" required />
+          <div className="flex gap-2">
+            <input value={wrong} onChange={e => setWrong(e.target.value)}
+              className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
+              placeholder="你的错误答案" required />
+            <button type="button" onClick={captureVoice} className="rounded-lg border border-line px-3 text-muted hover:bg-surface-hover" aria-label="Voice capture">
+              <Mic size={16} />
+            </button>
+          </div>
           <input value={correct} onChange={e => setCorrect(e.target.value)}
-            className="w-full bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+            className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
             placeholder="正确答案" required />
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <select value={errorType} onChange={e => setErrorType(e.target.value)}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm text-xs">
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm text-xs">
               {ERROR_TYPES.map(et => <option key={et.value} value={et.value}>{et.label}</option>)}
             </select>
             <button type="submit" disabled={submitting}
-              className="bg-[#6366f1] hover:bg-[#5558e6] disabled:opacity-50 rounded-lg text-sm font-medium transition-colors">
+              className="bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm font-medium transition-colors">
               {submitting ? '...' : '保存'}
             </button>
           </div>

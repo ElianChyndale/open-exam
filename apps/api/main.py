@@ -16,10 +16,11 @@ if str(_SYSTEM) not in sys.path:
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import attempts, dashboard, diagnosis, energy, export as export_router, institution, mock, review, study_plan
+from deps import get_repo
+from routers import attempts, cards, dashboard, diagnosis, energy, export as export_router, institution, mock, profiles, question_banks, review, study_plan, transfer
 
 
 @asynccontextmanager
@@ -43,6 +44,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -50,17 +52,23 @@ app.add_middleware(
 
 # Mount routers
 app.include_router(attempts.router, prefix="/api/attempts", tags=["attempts"])
+app.include_router(cards.router, prefix="/api/cards", tags=["cards"])
+app.include_router(question_banks.router, prefix="/api/question-banks", tags=["question-banks"])
+app.include_router(profiles.router, prefix="/api/profiles", tags=["profiles"])
 app.include_router(diagnosis.router, prefix="/api/diagnose", tags=["diagnosis"])
 app.include_router(review.router, prefix="/api/review-pack", tags=["review"])
+app.include_router(review.router, prefix="/api/daily-review", tags=["daily-review"])
 app.include_router(energy.router, prefix="/api/energy", tags=["energy"])
 app.include_router(study_plan.router, prefix="/api/study-plan", tags=["study-plan"])
 app.include_router(mock.router, prefix="/api/mock", tags=["mock"])
 app.include_router(dashboard.router, prefix="/api/dashboard", tags=["dashboard"])
 app.include_router(institution.router, prefix="/api/institution", tags=["institution"])
 app.include_router(export_router.router, prefix="/api/export", tags=["export"])
+app.include_router(transfer.router, prefix="/api/import", tags=["transfer"])
 
 
 @app.get("/api/health")
-async def health_check():
+async def health_check(repo=Depends(get_repo)):
     """Health check endpoint."""
-    return {"status": "ok", "version": "0.1.0", "exam": "CFA Level I"}
+    from app.exam_profile import get_profile
+    return {"status": "ok", "version": "0.1.0", "exam": get_profile(repo.root).name}

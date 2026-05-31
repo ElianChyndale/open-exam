@@ -18,7 +18,7 @@ router = APIRouter()
 @router.get("/today", response_model=StudyPlanResponse)
 async def get_today_study_plan(
     date_str: str = Query(default="", alias="date"),
-    energy_level: int = Query(default=2, ge=0, le=4),
+    energy_level: int | None = Query(default=None, ge=0, le=4),
     available_minutes: int = Query(default=120, ge=10),
     focus_topic: str = Query(default=""),
     repo=Depends(get_repo),
@@ -39,9 +39,10 @@ async def get_today_study_plan(
         build_warm_start_items,
         mine_patterns,
     )
-    from study_science.energy_planner import EnergyAwarePlanner, EnergyProfile
-
     target_date = date.fromisoformat(date_str) if date_str else date.today()
+    if energy_level is None:
+        saved_energy = repo.load_energy_events()
+        energy_level = int(saved_energy[-1].get("energy_level", 2)) if saved_energy else 2
 
     # Gather review items
     mine_patterns(repo)
@@ -49,32 +50,6 @@ async def get_today_study_plan(
     recent = collect_recent_low_confidence_items(repo, target_date, 7)
     patterns = collect_pattern_items(repo)
     review_items = merge_review_sources(due, patterns, recent)
-
-    # Build energy profile
-    profile = EnergyProfile(
-        energy_level=energy_level,
-        available_minutes=available_minutes,
-    )
-
-    # Convert review items to tasks
-    tasks = []
-    for item in review_items[:30]:
-        tasks.append({
-            "task_type": _map_to_task_type(item.get("error_type", "")),
-            "description": f"{item.get('topic', '')} / {item.get('los', '')}: {item.get('fix_rule', '')}",
-            "priority": item.get("priority", 50),
-        })
-
-    # Add focus topic tasks if specified
-    if focus_topic:
-        tasks.insert(0, {
-            "task_type": "new_knowledge",
-            "description": f"学习 {focus_topic} 主内容",
-            "priority": 90,
-        })
-
-    # Energy-aware allocation
-    plan = EnergyAwarePlanner.allocate(tasks, profile)
 
     # Identify danger LOS
     danger_topics: dict[str, int] = {}
@@ -93,6 +68,15 @@ async def get_today_study_plan(
     else:
         focus_reason = "按到期错题和间隔复习安排"
 
+    from services.study_plan_service import build_daily_plan
+    plan = build_daily_plan(
+        topic=focus_topic,
+        energy_level=energy_level,
+        available_minutes=available_minutes,
+        review_items=review_items,
+        danger_los=danger_list,
+    )
+
     return StudyPlanResponse(
         plan_id=f"sp-{target_date.isoformat()}",
         date=target_date.isoformat(),
@@ -101,19 +85,20 @@ async def get_today_study_plan(
         focus_topic=focus_topic or (danger_list[0] if danger_list else ""),
         focus_reason=focus_reason,
         high_energy_tasks=[
-            {"task_type": t.task_type, "description": t.task_description, "fit": t.fit_score}
-            for t in plan.high_energy_slot[:5]
+            {"task_type": task["type"], "description": task["desc"], "fit": task["fit"]}
+            for task in plan["high_energy"]
         ],
         moderate_energy_tasks=[
-            {"task_type": t.task_type, "description": t.task_description, "fit": t.fit_score}
-            for t in plan.moderate_energy_slot[:5]
+            {"task_type": task["type"], "description": task["desc"], "fit": task["fit"]}
+            for task in plan["moderate_energy"]
         ],
         low_energy_tasks=[
-            {"task_type": t.task_type, "description": t.task_description, "fit": t.fit_score}
-            for t in plan.low_energy_slot[:5]
+            {"task_type": task["type"], "description": task["desc"], "fit": task["fit"]}
+            for task in plan["low_energy"]
         ],
         danger_los_list=danger_list,
-        warnings=plan.warnings,
+        warnings=plan["warnings"],
+        interleaving_composition=plan["interleaving_composition"],
     )
 
 

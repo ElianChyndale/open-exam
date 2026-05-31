@@ -44,6 +44,9 @@ async def energy_check_in(req: EnergyCheckInRequest, repo=Depends(get_repo)):
 
     check_in_id = f"en-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}"
     check_in_data = {
+        "schema_version": 1,
+        "event_type": "energy.checked_in",
+        "learner_id": "local",
         "check_in_id": check_in_id,
         "energy_level": req.energy_level,
         "mental_clarity": req.mental_clarity,
@@ -51,6 +54,13 @@ async def energy_check_in(req: EnergyCheckInRequest, repo=Depends(get_repo)):
         "motivation": req.motivation,
         "notes": req.notes,
         "created_at": datetime.now(UTC).isoformat(),
+    }
+    check_in_data["event_id"] = check_in_id
+    check_in_data["occurred_at"] = check_in_data["created_at"]
+    check_in_data["source_refs"] = []
+    check_in_data["payload"] = {
+        key: check_in_data[key]
+        for key in ("energy_level", "mental_clarity", "physical_fatigue", "motivation", "notes")
     }
 
     repo.append_energy_event(check_in_data)

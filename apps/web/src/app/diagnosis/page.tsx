@@ -94,7 +94,7 @@ export default function DiagnosisPage() {
             {patterns.map((p) => {
               const [topic, los, error] = p.pattern_key.split('::');
               return (
-                <div key={p.pattern_id} className="flex items-center justify-between text-sm bg-[#0a0a0f] rounded-lg px-3 py-2">
+                <div key={p.pattern_id} className="flex items-center justify-between text-sm bg-surface-field rounded-lg px-3 py-2">
                   <div>
                     <span className="font-medium">{topic}</span>
                     <span className="text-muted"> / {los} / {errorLabels[error] || error}</span>
@@ -113,7 +113,7 @@ export default function DiagnosisPage() {
       )}
 
       {/* Attempt selector + diagnose */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Attempt list */}
         <div className="card">
           <h3 className="text-sm font-semibold mb-3">最近错题</h3>
@@ -124,8 +124,8 @@ export default function DiagnosisPage() {
                 onClick={() => setSelectedId(a.event_id)}
                 className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                   selectedId === a.event_id
-                    ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                    : 'hover:bg-[#14141f]'
+                    ? 'bg-accent-soft border border-accent-soft'
+                    : 'hover:bg-surface-hover'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -141,7 +141,7 @@ export default function DiagnosisPage() {
           <button
             onClick={runDiagnosis}
             disabled={!selectedId || diagLoading}
-            className="mt-3 w-full py-2 bg-[#6366f1] hover:bg-[#5558e6] disabled:opacity-50 rounded-lg text-sm transition-colors"
+            className="mt-3 w-full py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
           >
             {diagLoading ? '诊断中...' : '诊断选中错题'}
           </button>
@@ -157,7 +157,7 @@ export default function DiagnosisPage() {
             <p className="text-sm text-danger">{diagnosis.error}</p>
           ) : diagnosis ? (
             <div className="space-y-4">
-              <div className="bg-[#0a0a0f] rounded-lg p-3">
+              <div className="bg-surface-field rounded-lg p-3">
                 <div className="text-xs text-muted mb-1">错因</div>
                 <div className="text-sm font-semibold">
                   {errorLabels[diagnosis.error_category] || diagnosis.error_category}
@@ -165,14 +165,14 @@ export default function DiagnosisPage() {
                 <div className="text-xs text-muted mt-1">{diagnosis.error_summary}</div>
               </div>
 
-              <div className="bg-[#0a0a0f] rounded-lg p-3">
+              <div className="bg-surface-field rounded-lg p-3">
                 <div className="text-xs text-muted mb-1 flex items-center gap-1">
                   <Lightbulb size={12} /> 纠偏规则
                 </div>
                 <div className="text-sm">{diagnosis.fix_rule}</div>
               </div>
 
-              <div className="bg-[#0a0a0f] rounded-lg p-3">
+              <div className="bg-surface-field rounded-lg p-3">
                 <div className="text-xs text-muted mb-1 flex items-center gap-1">
                   <Repeat size={12} /> 下一步练习
                 </div>

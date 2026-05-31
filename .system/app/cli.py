@@ -22,12 +22,16 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("moc-gap-review")
     subparsers.add_parser("pre-mock-brief")
 
-    review = subparsers.add_parser("daily-review-pack")
-    review.add_argument("--date", default="")
-    review.add_argument("--days-back", type=int, default=7)
-    review.add_argument("--max-items", type=int, default=20)
-    review.add_argument("--focus-topic", default="")
-    review.add_argument("--knowledge-depth", choices=("standard", "expanded"), default="standard")
+    for command in ("daily-review", "daily-review-pack"):
+        review = subparsers.add_parser(command)
+        review.add_argument("--date", default="")
+        review.add_argument("--days-back", type=int, default=7)
+        review.add_argument("--max-items", type=int, default=20)
+        review.add_argument("--focus-topic", default="")
+        review.add_argument("--knowledge-depth", choices=("standard", "expanded"), default="standard")
+
+    complete_review = subparsers.add_parser("complete-daily-review")
+    complete_review.add_argument("--review-id", required=True)
 
     progress = subparsers.add_parser("record-progress")
     progress.add_argument("--payload", required=True)
@@ -65,6 +69,8 @@ def build_parser() -> argparse.ArgumentParser:
     set_exam.add_argument("--date", required=True, help="考试日期 YYYY-MM-DD")
 
     subparsers.add_parser("weekly-focus", help="生成本周学习重点建议")
+    subparsers.add_parser("rebuild-catalog", help="从 JSONL 重建 SQLite 查询索引")
+    subparsers.add_parser("migrate-catalog", help="升级 SQLite 查询索引 schema")
 
     sync_push = subparsers.add_parser("sync-push", help="导出全部学习数据到文件")
     sync_push.add_argument("--output", default="examos-backup.json", help="导出文件路径")
@@ -92,7 +98,13 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
     repo = Repository(repo_root or Path.cwd())
 
     if args.command in {"record-mistake", "review-session", "audit-agent"}:
-        event = record_event(repo, load_payload(args.payload), args.command)
+        if args.command == "record-mistake":
+            from app.workflows import record_question_attempt
+            event = record_question_attempt(repo, load_payload(args.payload))["event"]
+        else:
+            event = record_event(repo, load_payload(args.payload), args.command)
+        if event is None:
+            return 0
         if event.source_layer == "question":
             mine_patterns(repo)
             moc_gap_review(repo)
@@ -110,9 +122,14 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
     if args.command == "pre-mock-brief":
         pre_mock_brief(repo)
         return 0
-    if args.command == "daily-review-pack":
+    if args.command in {"daily-review", "daily-review-pack"}:
         review_date = date.fromisoformat(args.date) if args.date else None
         daily_review_pack(repo, review_date, args.days_back, args.max_items, args.focus_topic, args.knowledge_depth)
+        return 0
+    if args.command == "complete-daily-review":
+        from app.workflows import complete_daily_review
+        result = complete_daily_review(repo, args.review_id)
+        print(f"✅ Daily Review 已完成: {result['review_id']}")
         return 0
     if args.command == "record-progress":
         record_progress(repo, load_payload(args.payload))
@@ -146,15 +163,15 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
             "time_spent": args.time,
             "evidence_refs": [f"quick-capture-{datetime.now().isoformat()}"],
         }
-        from app.workflows import record_event as fast_record_event
-        fast_record_event(repo, payload, "record-mistake")
+        from app.workflows import record_question_attempt
+        record_question_attempt(repo, payload)
         print(f"✅ 已记录: {topic} | {los} | {args.error_type}")
         return 0
     if args.command == "review":
         from app.workflows import daily_review_pack as review_cmd_pack
         path = review_cmd_pack(repo, date.today(), args.days_back, 20, args.focus_topic)
         print(f"📖 复习资料已生成: {path}")
-        print("在 CFA_tier1/dashboard/今日复习资料.md 查看")
+        print("在 CFA_tier1/dashboard/Daily Review.md 查看")
         return 0
     if args.command == "import-qbank":
         import json
@@ -171,7 +188,6 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         print(f"✅ 已导入 {len(ids)} 道错题")
         return 0
     if args.command == "set-exam":
-        from datetime import date
         try:
             date.fromisoformat(args.date)
         except ValueError:
@@ -188,6 +204,14 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         print(f"\n📄 已保存到 .system/memory/strategy/")
         return 0
 
+    if args.command == "rebuild-catalog":
+        print(repo.rebuild_catalog())
+        return 0
+
+    if args.command == "migrate-catalog":
+        print(repo.migrate_catalog())
+        return 0
+
     if args.command == "list-profiles":
         from app.exam_profile import list_available_profiles
         profiles = list_available_profiles()
@@ -198,7 +222,7 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         return 0
 
     if args.command == "set-profile":
-        from app.exam_profile import load_profile
+        from app.exam_profile import load_profile, set_profile
         profile = load_profile(args.name)
         # Save to .system/active_profile.txt
         profile_path = repo.root / ".system" / "active_profile.txt"
@@ -208,6 +232,7 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         print(f"   及格线: {profile.passing_score}%")
         # Set environment for current session
         os.environ["EXAMOS_PROFILE"] = args.name
+        set_profile(profile)
         return 0
 
     if args.command == "sync-push":

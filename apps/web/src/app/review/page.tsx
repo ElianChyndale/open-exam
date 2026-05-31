@@ -3,15 +3,13 @@
 import { useEffect, useState } from 'react';
 import { reviewApi } from '@/lib/api';
 import { BookOpen, Calendar, Filter, ChevronDown } from 'lucide-react';
-
-const SUBJECTS = [
-  '', 'Quantitative Methods', 'Economics', 'Financial Statement Analysis',
-  'Corporate Issuers', 'Equity', 'Fixed Income', 'Derivatives',
-  'Alternative Investments', 'Portfolio Management', 'Ethical and Professional Standards',
-];
+import { useProfileSubjects } from '@/lib/profiles';
 
 export default function ReviewPackPage() {
   const [markdown, setMarkdown] = useState('');
+  const [reviewId, setReviewId] = useState('');
+  const [completed, setCompleted] = useState(false);
+  const subjects = useProfileSubjects();
   const [loading, setLoading] = useState(true);
   const [focusTopic, setFocusTopic] = useState('');
   const [daysBack, setDaysBack] = useState(7);
@@ -26,6 +24,8 @@ export default function ReviewPackPage() {
       ...params,
     }).then((data: any) => {
       setMarkdown(data.markdown_content || '');
+      setReviewId(data.review_id || '');
+      setCompleted(false);
     }).finally(() => setLoading(false));
   };
 
@@ -39,18 +39,42 @@ export default function ReviewPackPage() {
     const elements: React.ReactNode[] = [];
     let inCodeBlock = false;
 
-    lines.forEach((line, i) => {
+    for (let i = 0; i < lines.length; i += 1) {
+      const line = lines[i];
       if (line.startsWith('```')) {
         inCodeBlock = !inCodeBlock;
-        return;
+        continue;
       }
       if (inCodeBlock) {
         elements.push(
-          <pre key={i} className="bg-[#0a0a0f] p-3 rounded-lg text-xs overflow-auto my-2">
+          <pre key={i} className="bg-surface-field p-3 rounded-lg text-xs overflow-auto my-2">
             {line}
           </pre>
         );
-        return;
+        continue;
+      }
+
+      if (line.startsWith('> [!answer]-')) {
+        const answerLines: string[] = [];
+        let next = i + 1;
+        while (next < lines.length && lines[next].startsWith('>')) {
+          answerLines.push(lines[next].replace(/^>\s?/, ''));
+          next += 1;
+        }
+        const label = line.replace('> [!answer]-', '').trim() || 'Reveal correct solution';
+        elements.push(
+          <details key={i} className="my-3 rounded-lg border border-accent-soft bg-surface-field p-3">
+            <summary className="flex cursor-pointer items-center gap-2 text-sm font-medium text-accent">
+              <ChevronDown size={14} />
+              {label}
+            </summary>
+            <div className="mt-3 border-t border-line pt-2">
+              {renderMarkdown(answerLines.join('\n'))}
+            </div>
+          </details>
+        );
+        i = next - 1;
+        continue;
       }
 
       if (line.startsWith('# ')) {
@@ -63,20 +87,20 @@ export default function ReviewPackPage() {
         elements.push(<h4 key={i} className="text-base font-semibold mt-3 mb-1 text-muted">{line.slice(5)}</h4>);
       } else if (line.startsWith('> ')) {
         elements.push(
-          <blockquote key={i} className="border-l-2 border-[#6366f1]/50 pl-3 my-1 text-sm text-muted">
+          <blockquote key={i} className="border-l-2 border-accent-soft pl-3 my-1 text-sm text-muted">
             {line.slice(2)}
           </blockquote>
         );
       } else if (line.startsWith('- ')) {
         elements.push(<li key={i} className="text-sm ml-4 list-disc my-0.5">{line.slice(2)}</li>);
       } else if (line.startsWith('---')) {
-        elements.push(<hr key={i} className="my-3 border-[#1e1e2e]" />);
+        elements.push(<hr key={i} className="my-3 border-line" />);
       } else if (line.trim() === '') {
         elements.push(<div key={i} className="h-2" />);
       } else {
         elements.push(<p key={i} className="text-sm my-1">{line}</p>);
       }
-    });
+    }
 
     return elements;
   };
@@ -85,14 +109,14 @@ export default function ReviewPackPage() {
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold">复习包</h2>
+          <h2 className="text-2xl font-bold">Daily Review</h2>
           <p className="text-muted text-sm mt-1">到期错题、低信心题、交错题组、公式/概念热身</p>
         </div>
         <button
           onClick={() => fetchPack()}
-          className="px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
+          className="px-4 py-2 bg-accent-solid hover:bg-accent-strong rounded-lg text-sm transition-colors"
         >
-          刷新复习包
+          刷新 Daily Review
         </button>
       </div>
 
@@ -105,17 +129,17 @@ export default function ReviewPackPage() {
         <select
           value={focusTopic}
           onChange={(e) => { setFocusTopic(e.target.value); fetchPack({ focus_topic: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
+          className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
         >
           <option value="">所有科目</option>
-          {SUBJECTS.filter(Boolean).map((s) => (
+          {subjects.map((s) => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
         <select
           value={daysBack}
           onChange={(e) => { setDaysBack(Number(e.target.value)); fetchPack({ days_back: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
+          className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
         >
           <option value={1}>1 天</option>
           <option value={3}>3 天</option>
@@ -126,7 +150,7 @@ export default function ReviewPackPage() {
         <select
           value={depth}
           onChange={(e) => { setDepth(e.target.value); fetchPack({ knowledge_depth: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
+          className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
         >
           <option value="standard">标准深度</option>
           <option value="expanded">扩展深度</option>
@@ -141,10 +165,19 @@ export default function ReviewPackPage() {
       {loading ? (
         <div className="card text-center py-12 text-muted animate-pulse">生成复习包中...</div>
       ) : markdown ? (
-        <div className="card">
-          <div className="prose prose-invert max-w-none">
-            {renderMarkdown(markdown)}
+        <div className="space-y-3">
+          <div className="card">
+            <div className="prose prose-invert max-w-none">
+              {renderMarkdown(markdown)}
+            </div>
           </div>
+          <button
+            onClick={() => reviewId && reviewApi.complete(reviewId).then(() => setCompleted(true))}
+            disabled={!reviewId || completed}
+            className="px-4 py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
+          >
+            {completed ? 'Reviewed once' : '完成 Daily Review'}
+          </button>
         </div>
       ) : (
         <div className="card text-center py-12 text-muted">

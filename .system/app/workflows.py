@@ -41,7 +41,8 @@ FORMULA_DENSE_SUBJECTS = {
     "Quantitative_Methods",
 }
 
-DAILY_REVIEW_TASK = "完成今日复习资料"
+DAILY_REVIEW_TASK = "完成 Daily Review"
+DAILY_REVIEW_TASK_ALIASES = {DAILY_REVIEW_TASK, "完成今日复习资料", "完成每日复习资料"}
 DAILY_REVIEW_DEADLINE = "20:00"
 
 CONCEPT_FIRST_SUBJECTS = {
@@ -244,14 +245,20 @@ def gap_type_for_target(gap_target: str) -> str:
     return "formula"
 
 
-def mock_bucket_for_event(event: MistakeEvent) -> str | None:
+def mock_bucket_for_event(repo: Repository, event: MistakeEvent) -> str | None:
+    from app.exam_profile import get_profile
+
+    profile = get_profile(repo.root)
     if event.moc_target:
         parts = Path(event.moc_target).parts
         if len(parts) >= 2:
             subject_dir = parts[-2]
+            bucket = profile.mock_bucket_for(subject_dir)
+            if bucket:
+                return bucket
             if subject_dir in MOCK_BUCKETS:
                 return MOCK_BUCKETS[subject_dir]
-    return MOCK_BUCKETS.get(event.topic)
+    return profile.mock_bucket_for(event.topic) or MOCK_BUCKETS.get(event.topic)
 
 
 def parse_date(value: str) -> date | None:
@@ -321,6 +328,12 @@ def add_review_item(items: dict[str, dict], key: str, candidate: dict) -> None:
     for field in ("next_drill", "fix_rule", "correct_resolution", "evidence_refs", "prompt", "wrong_output"):
         if not current.get(field) and candidate.get(field):
             current[field] = candidate[field]
+    for field in ("card_ids",):
+        current.setdefault(field, [])
+        for value in candidate.get(field, []):
+            if value not in current[field]:
+                current[field].append(value)
+    current["recurrence"] = max(int(current.get("recurrence", 0) or 0), int(candidate.get("recurrence", 0) or 0))
 
 
 def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dict]:
@@ -337,6 +350,7 @@ def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dic
             los = frontmatter.get("los", "Unknown LOS")
             root_cause = frontmatter.get("root_cause", "unknown")
             days_overdue = max((review_date - due_at).days, 0)
+            scheduler_priority = int(frontmatter.get("spacing_priority", "50") or 50)
             key = f"{source_layer}::{topic}::{los}::{root_cause}"
             evidence = extract_markdown_section(text, "Evidence")
             add_review_item(
@@ -347,7 +361,7 @@ def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dic
                     "topic": topic,
                     "los": los,
                     "error_type": root_cause,
-                    "priority": 100 + days_overdue * 2 + REVIEW_SOURCE_WEIGHTS.get(source_layer, 0),
+                    "priority": scheduler_priority + days_overdue * 2 + REVIEW_SOURCE_WEIGHTS.get(source_layer, 0),
                     "reasons": [f"review_due_at: {due_at.isoformat()}"],
                     "prompt": extract_markdown_section(text, "Prompt"),
                     "wrong_output": extract_markdown_section(text, "Wrong Output"),
@@ -357,6 +371,7 @@ def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dic
                     "fix_rule": frontmatter.get("fix_rule", ""),
                     "next_drill": frontmatter.get("next_drill", ""),
                     "evidence_refs": evidence,
+                    "card_ids": [frontmatter.get("card_id", path.stem)],
                 },
             )
     return items
@@ -366,6 +381,8 @@ def collect_recent_low_confidence_items(repo: Repository, review_date: date, day
     cutoff = review_date - timedelta(days=days_back)
     items: dict[str, dict] = {}
     for event in repo.load_events():
+        if event.source_layer == "question" and event.is_correct:
+            continue
         event_date = parse_datetime_date(event.created_at)
         if not event_date or event_date < cutoff or event_date > review_date:
             continue
@@ -394,6 +411,9 @@ def collect_recent_low_confidence_items(repo: Repository, review_date: date, day
                 "fix_rule": default_fix_rule(event.error_type),
                 "next_drill": next_drill_for(event),
                 "evidence_refs": ", ".join(event.evidence_refs),
+                "card_ids": [stable_id("card", event.event_id or "", event.topic, event.los)]
+                if event.source_layer == "question"
+                else [],
             },
         )
     return items
@@ -429,6 +449,7 @@ def collect_pattern_items(repo: Repository) -> dict[str, dict]:
                 "fix_rule": default_fix_rule(error_type),
                 "next_drill": extract_markdown_section(text, "Recommended Intervention"),
                 "evidence_refs": frontmatter.get("pattern_id", ""),
+                "recurrence": recurrence,
             },
         )
     return items
@@ -459,8 +480,11 @@ def normalize_subject(value: str) -> str:
 
 
 def subject_moc_path(repo: Repository, subject: str) -> Path | None:
-    normalized = normalize_subject(subject)
-    relative = SUBJECT_MOC_PATHS.get(normalized)
+    from app.exam_profile import get_profile
+
+    profile = get_profile(repo.root)
+    normalized = profile.normalize_subject(subject)
+    relative = profile.moc_path_for(normalized) or SUBJECT_MOC_PATHS.get(normalize_subject(subject))
     if not relative:
         return None
     path = repo.root / relative
@@ -545,8 +569,11 @@ def extract_moc_atoms(repo: Repository, subject: str) -> list[dict]:
 
 
 def subject_module_paths(repo: Repository, subject: str) -> list[Path]:
-    normalized = normalize_subject(subject)
-    relative = SUBJECT_MOC_PATHS.get(normalized)
+    from app.exam_profile import get_profile
+
+    profile = get_profile(repo.root)
+    normalized = profile.normalize_subject(subject)
+    relative = profile.moc_path_for(normalized) or SUBJECT_MOC_PATHS.get(normalize_subject(subject))
     if not relative:
         return []
     subject_dir = (repo.root / relative).parent
@@ -622,7 +649,7 @@ def build_expanded_warm_start_items(repo: Repository, review_items: list[dict], 
         subjects = []
         for item in review_items:
             subject = normalize_subject(item.get("topic", ""))
-            if subject in SUBJECT_MOC_PATHS and subject not in subjects:
+            if subject_moc_path(repo, subject) and subject not in subjects:
                 subjects.append(subject)
 
     selected: dict[str, dict] = {}
@@ -706,7 +733,7 @@ def build_warm_start_items(repo: Repository, review_items: list[dict], focus_top
         subjects.append(focus_subject)
     for item in review_items:
         subject = normalize_subject(item.get("topic", ""))
-        if subject in SUBJECT_MOC_PATHS and subject not in subjects:
+        if subject_moc_path(repo, subject) and subject not in subjects:
             subjects.append(subject)
 
     atoms_by_subject = {subject: extract_moc_atoms(repo, subject) for subject in subjects}
@@ -895,17 +922,18 @@ def render_warm_start(lines: list[str], warm_start_items: list[dict]) -> None:
                 f"- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？{compact_list(triggers)}",
                 f"- **今天为什么看：** {human_reasons(reason_parts)}",
                 "",
-                "#### 核心知识点 / 公式",
+                "> [!answer]- Reveal knowledge point",
+                "> #### 核心知识点 / 公式",
             ]
         )
         for item in group:
             lines.append(
-                f"- **{clean_display_text(item['trigger'])}:** {clean_display_text(item['formula'])} -> {clean_display_text(item['decision'])}"
+                f"> - **{clean_display_text(item['trigger'])}:** {clean_display_text(item['formula'])} -> {clean_display_text(item['decision'])}"
             )
         if boundaries:
-            lines.extend(["", "#### 易错边界"])
-            lines.extend(f"- {boundary}" for boundary in boundaries)
-        lines.append(f"- **来源：** {first['source']}")
+            lines.extend([">", "> #### 易错边界"])
+            lines.extend(f"> - {boundary}" for boundary in boundaries)
+        lines.extend([">", f"> **来源：** {first['source']}"])
 
 
 def render_review_pack(
@@ -917,6 +945,10 @@ def render_review_pack(
     source_event_count: int,
     progress_events: list[dict] | None = None,
 ) -> str:
+    from study_science.retrieval import RetrievalEngine
+    from study_science.self_explanation import SelfExplanationPrompt
+    from study_science.worked_example import WorkedExampleFader
+
     lines = [
         "---",
         f"generated_for: {review_date.isoformat()}",
@@ -926,7 +958,7 @@ def render_review_pack(
         f"review_item_count: {len(review_items)}",
         "---",
         "",
-        "# 今日复习资料",
+        "# Daily Review",
         "",
     ]
     lines.extend(progress_summary_lines(progress_events or [], focus_topic))
@@ -953,12 +985,35 @@ def render_review_pack(
         prompt, choices, options_missing = question_display_parts(item)
         wrong_output = item.get("wrong_output") or "_No previous wrong output captured._"
         correct_resolution = item.get("correct_resolution") or "见原错题卡或模式卡。"
+        retrieval_prompts = RetrievalEngine.build_prompts(
+            topic=item.get("topic", ""),
+            los=item.get("los", ""),
+            error_type=item.get("error_type", ""),
+            correct_resolution=correct_resolution,
+            question_prompt=prompt,
+            count=1,
+        )
+        self_explanation = SelfExplanationPrompt.generate(
+            error_type=item.get("error_type", ""),
+            topic=item.get("topic", ""),
+            los=item.get("los", ""),
+            correct_answer=correct_resolution,
+            user_answer=wrong_output,
+            question_stem=prompt,
+        )
+        use_fading = WorkedExampleFader.should_use_worked_examples(
+            int(item.get("recurrence", 0) or 0),
+            item.get("error_type", ""),
+        )
         lines.extend(
             [
                 "",
                 f"### {index}. {clean_display_text(item['topic'])} | {clean_display_text(item['los'])} | {clean_display_text(item['error_type'])}",
                 f"- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？",
                 f"- **今天为什么看：** {reasons}",
+                "",
+                "#### 主动回忆",
+                f"- {clean_display_text(retrieval_prompts[0].prompt_text) if retrieval_prompts else '闭卷讲出核心判断边界。'}",
                 "",
                 "#### 题目",
                 *quote_block(prompt),
@@ -981,14 +1036,30 @@ def render_review_pack(
                 *quote_block(wrong_output),
                 "",
                 "#### 正确理解 / 解法",
-                *quote_block(correct_resolution),
+                "> [!answer]- Reveal correct solution",
+                *[
+                    ">" if not line.strip() else f"> {line}"
+                    for line in clean_display_text(normalize_question_text(correct_resolution)).splitlines()
+                ],
                 "",
                 "#### 下次规则",
                 f"- **纠偏规则：** {clean_display_text(item.get('fix_rule') or default_fix_rule(item['error_type']))}",
                 f"- **下一步练习：** {clean_display_text(item.get('next_drill') or '做 2 道同类题并记录错因。')}",
                 f"- **证据：** {clean_display_text(item.get('evidence_refs') or 'memory cache')}",
+                "",
+                "#### 自我解释",
+                f"- {clean_display_text(self_explanation)}",
             ]
         )
+        if use_fading:
+            lines.extend(
+                [
+                    "",
+                    "#### Worked example fading",
+                    "- **当前阶段：** full solution -> hidden-step completion -> independent solve",
+                    "- **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。",
+                ]
+            )
 
     return "\n".join(lines)
 
@@ -1004,6 +1075,13 @@ def build_strategy_rule(events: list[MistakeEvent]) -> StrategyRule:
     )
 
 
+def load_exam_date(repo: Repository) -> str:
+    path = repo.root / ".system" / "exam_date.txt"
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8").strip()[:10]
+
+
 def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
     if mode == "record-mistake":
         payload = hydrate_question_fields(payload)
@@ -1012,7 +1090,15 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
     event = MistakeEvent.from_payload(payload)
     repo.append_event(event)
 
-    card = MistakeCard.from_event(event, default_fix_rule(event.error_type), next_drill_for(event))
+    if event.source_layer == "question" and event.is_correct:
+        return event
+
+    card = MistakeCard.from_event(
+        event,
+        default_fix_rule(event.error_type),
+        next_drill_for(event),
+        exam_date=load_exam_date(repo),
+    )
     domain = target_domain(event.source_layer)
     repo.save_card(domain, card, event.event_id or "")
 
@@ -1039,6 +1125,68 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
     return event
 
 
+def record_question_attempt(repo: Repository, payload: dict) -> dict:
+    """Persist one question attempt and create a mistake card only when wrong."""
+    payload = dict(payload)
+    payload.setdefault("source_layer", "question")
+    payload.setdefault("confidence", 2)
+    payload.setdefault("time_spent", 60)
+    payload.setdefault("evidence_refs", [])
+    payload.setdefault("error_type", "concept_confusion")
+    payload.setdefault("wrong_choice_or_output", "")
+    payload.setdefault("correct_resolution", "")
+    created_at = str(payload.get("created_at") or datetime.now(timezone.utc).isoformat())
+    payload["created_at"] = created_at
+
+    attempt_id = stable_id(
+        "attempt",
+        str(payload.get("topic", "")),
+        str(payload.get("los", "")),
+        str(payload.get("prompt_or_question", "")),
+        str(payload.get("wrong_choice_or_output", "")),
+        ",".join(str(ref) for ref in payload.get("evidence_refs", [])),
+        created_at,
+    )
+    is_correct = bool(payload.get("is_correct", False))
+    repo.append_attempt_record(
+        {
+            "schema_version": 1,
+            "event_id": attempt_id,
+            "event_type": "attempt.recorded",
+            "learner_id": "local",
+            "occurred_at": created_at,
+            "source_refs": payload.get("evidence_refs", []),
+            "payload": payload,
+            "attempt_id": attempt_id,
+            **payload,
+            "is_correct": is_correct,
+        }
+    )
+    if is_correct:
+        return {"attempt_id": attempt_id, "event": None, "card_id": ""}
+
+    event = record_event(repo, payload, mode="record-mistake")
+    return {
+        "attempt_id": attempt_id,
+        "event": event,
+        "card_id": stable_id("card", event.event_id or "", event.topic, event.los),
+    }
+
+
+def batch_import_attempts(repo: Repository, events_payload: list[dict], source_label: str = "batch-import") -> dict:
+    """Import question attempts through the same correctness-aware pipeline."""
+    attempt_ids: list[str] = []
+    event_ids: list[str] = []
+    for payload in events_payload:
+        payload = dict(payload)
+        payload.setdefault("evidence_refs", [source_label])
+        result = record_question_attempt(repo, payload)
+        attempt_ids.append(result["attempt_id"])
+        if result["event"] is not None:
+            event_ids.append(result["event"].event_id or "")
+    return {"attempt_ids": attempt_ids, "event_ids": event_ids}
+
+
 def batch_import_events(repo: Repository, events_payload: list[dict], source_label: str = "batch-import") -> list[str]:
     """Import multiple question attempts at once.
 
@@ -1050,20 +1198,10 @@ def batch_import_events(repo: Repository, events_payload: list[dict], source_lab
     Returns:
         List of created event IDs.
     """
-    event_ids: list[str] = []
-    for payload in events_payload:
-        payload.setdefault("source_layer", "question")
-        payload.setdefault("confidence", 2)
-        payload.setdefault("time_spent", 60)
-        payload.setdefault("evidence_refs", [source_label])
-        payload.setdefault("error_type", "concept_confusion")
-        event = record_event(repo, payload, mode="record-mistake")
-        if event.event_id:
-            event_ids.append(event.event_id)
-    return event_ids
+    return batch_import_attempts(repo, events_payload, source_label)["event_ids"]
 
 
-def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_after: int = 0) -> Path:
+def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_after: int = 0) -> dict:
     """Record a card review and reschedule using SpacingScheduler."""
     from datetime import date
     from study_science.spacing import SpacingInput, SpacingScheduler
@@ -1086,6 +1224,8 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
     los = frontmatter.get("los", "Unknown")
     error_type = frontmatter.get("root_cause", "unknown")
     prev_reviews = int(frontmatter.get("previous_reviews", "0") or "0")
+    confidence_before = int(frontmatter.get("confidence_before", "0") or "0")
+    exam_date = frontmatter.get("exam_date", "") or load_exam_date(repo)
 
     is_correct = outcome == "recalled"
     confidence = confidence_after if confidence_after > 0 else (
@@ -1101,7 +1241,7 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
         time_spent_seconds=60,
         previous_reviews=prev_reviews + 1,
         last_reviewed_at=date.today().isoformat(),
-        exam_date="",
+        exam_date=exam_date,
     )
     decision = SpacingScheduler.schedule(input_data)
 
@@ -1112,6 +1252,10 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
         review_due_at=decision.next_review_date,
         spacing_interval_days=decision.interval_days,
         spacing_priority=decision.priority,
+        last_reviewed_at=date.today().isoformat(),
+        spacing_reasoning=decision.reasoning,
+        confidence_before=confidence,
+        exam_date=exam_date,
     )
 
     progress = {
@@ -1120,15 +1264,34 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
         "outcome": outcome,
         "is_correct": is_correct,
         "confidence_after": confidence,
+        "confidence_before": confidence_before,
+        "confidence_delta": confidence - confidence_before,
         "topic": topic,
         "los": los,
         "next_review_date": decision.next_review_date,
         "interval_days": decision.interval_days,
+        "spacing_reasoning": decision.reasoning,
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
     repo.append_jsonl_event("progress", progress)
 
-    return card_path
+    return progress
+
+
+def record_fix_rule_feedback(repo: Repository, card_id: str, helpful: bool, note: str = "") -> dict:
+    """Append learner feedback for a card's correction rule."""
+    domain = _card_domain_for(repo, card_id)
+    if not domain:
+        raise FileNotFoundError(f"Card {card_id} not found in any domain")
+    event = _review_event(
+        "card.fix_rule.feedback",
+        card_id,
+        datetime.now(timezone.utc).isoformat(),
+        source_refs=[card_id],
+        payload={"card_id": card_id, "helpful": helpful, "note": note},
+    )
+    repo.append_jsonl_event("review", event)
+    return event
 
 
 def mine_patterns(repo: Repository) -> list[PatternInsight]:
@@ -1217,7 +1380,7 @@ def export_mock_pages(repo: Repository) -> None:
     events = [event for event in repo.load_events() if event.source_layer == "question"]
     grouped: dict[str, list[MistakeEvent]] = defaultdict(list)
     for event in events:
-        bucket = mock_bucket_for_event(event)
+        bucket = mock_bucket_for_event(repo, event)
         if bucket:
             grouped[bucket].append(event)
 
@@ -1371,6 +1534,239 @@ def progress_summary_lines(progress_events: list[dict], focus_topic: str) -> lis
     return ["## 复习进度", "", f"- 已完成复习: {', '.join(completed[-3:])}", ""]
 
 
+def _review_snapshot_root(repo: Repository) -> Path:
+    path = repo.memory_root / "review" / "daily"
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def _review_event(
+    event_type: str,
+    *identity_parts: str,
+    source_refs: list[str] | None = None,
+    payload: dict | None = None,
+) -> dict:
+    return {
+        "schema_version": 1,
+        "event_id": stable_id("review-event", event_type, *identity_parts),
+        "event_type": event_type,
+        "learner_id": "local",
+        "occurred_at": datetime.now(timezone.utc).isoformat(),
+        "source_refs": source_refs or [],
+        "payload": payload or {},
+    }
+
+
+def _append_review_event_once(repo: Repository, event: dict) -> bool:
+    existing_ids = {
+        row.get("event_id")
+        for row in repo.load_jsonl_events("review")
+    }
+    if event["event_id"] in existing_ids:
+        return False
+    repo.append_jsonl_event("review", event)
+    return True
+
+
+def _as_source_refs(value: object) -> list[str]:
+    if isinstance(value, list):
+        return [str(item) for item in value if str(item).strip()]
+    if not value:
+        return []
+    return [part.strip() for part in str(value).split(",") if part.strip()]
+
+
+def _knowledge_point_snapshot(item: dict) -> dict:
+    knowledge_id = stable_id(
+        "knowledge",
+        str(item.get("source", "")),
+        str(item.get("heading", "")),
+        str(item.get("trigger", "")),
+    )
+    return {
+        "knowledge_id": knowledge_id,
+        "subject": item.get("subject", ""),
+        "heading": item.get("heading", ""),
+        "trigger": item.get("trigger", ""),
+        "source_refs": [str(item.get("source", ""))] if item.get("source") else [],
+    }
+
+
+def write_daily_review_snapshot(
+    repo: Repository,
+    review_date: date,
+    days_back: int,
+    max_items: int,
+    focus_topic: str,
+    knowledge_depth: str,
+    review_items: list[dict],
+    warm_start_items: list[dict],
+) -> dict:
+    knowledge_points: list[dict] = []
+    seen_knowledge: set[str] = set()
+    for item in warm_start_items:
+        point = _knowledge_point_snapshot(item)
+        if point["knowledge_id"] not in seen_knowledge:
+            knowledge_points.append(point)
+            seen_knowledge.add(point["knowledge_id"])
+
+    mistake_cards: list[dict] = []
+    seen_cards: set[str] = set()
+    for item in review_items:
+        for card_id in item.get("card_ids", []):
+            if not card_id or card_id in seen_cards:
+                continue
+            mistake_cards.append(
+                {
+                    "card_id": card_id,
+                    "topic": item.get("topic", ""),
+                    "los": item.get("los", ""),
+                    "source_refs": _as_source_refs(item.get("evidence_refs")),
+                }
+            )
+            seen_cards.add(card_id)
+
+    item_ids = [
+        *[item["knowledge_id"] for item in knowledge_points],
+        *[item["card_id"] for item in mistake_cards],
+    ]
+    review_id = stable_id(
+        "daily-review",
+        review_date.isoformat(),
+        str(days_back),
+        str(max_items),
+        focus_topic,
+        knowledge_depth,
+        ",".join(sorted(item_ids)),
+    )
+    snapshot = {
+        "schema_version": 1,
+        "review_id": review_id,
+        "generated_for": review_date.isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generation": {
+            "days_back": days_back,
+            "max_items": max_items,
+            "focus_topic": focus_topic,
+            "knowledge_depth": knowledge_depth,
+        },
+        "knowledge_points": knowledge_points,
+        "mistake_cards": mistake_cards,
+    }
+    snapshot_root = _review_snapshot_root(repo)
+    body = json.dumps(snapshot, ensure_ascii=False, indent=2)
+    (snapshot_root / f"{review_id}.json").write_text(body, encoding="utf-8")
+    (snapshot_root / "latest.json").write_text(body, encoding="utf-8")
+
+    _append_review_event_once(
+        repo,
+        _review_event(
+            "daily_review.generated",
+            review_id,
+            source_refs=item_ids,
+            payload={
+                "review_id": review_id,
+                "generated_for": review_date.isoformat(),
+                "knowledge_point_count": len(knowledge_points),
+                "mistake_card_count": len(mistake_cards),
+                "generation": snapshot["generation"],
+            },
+        ),
+    )
+    return snapshot
+
+
+def load_daily_review_snapshot(repo: Repository, review_id: str = "") -> dict:
+    name = f"{review_id}.json" if review_id else "latest.json"
+    path = _review_snapshot_root(repo) / name
+    if not path.exists():
+        raise FileNotFoundError(f"Daily Review snapshot not found: {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _card_domain_for(repo: Repository, card_id: str) -> str | None:
+    for domain in CARD_DOMAINS:
+        if (repo.memory_root / domain / f"{card_id}.md").exists():
+            return domain
+    return None
+
+
+def complete_daily_review(repo: Repository, review_id: str) -> dict:
+    snapshot = load_daily_review_snapshot(repo, review_id)
+    occurred_at = datetime.now(timezone.utc).isoformat()
+    overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+    if overlay_path.exists():
+        overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+    else:
+        overlay = {"schema_version": 1, "knowledge_points": {}}
+
+    reviewed_items = 0
+    for point in snapshot.get("knowledge_points", []):
+        item_id = point["knowledge_id"]
+        event = _review_event(
+            "daily_review.item.reviewed",
+            review_id,
+            item_id,
+            source_refs=point.get("source_refs", []),
+            payload={"review_id": review_id, "item_id": item_id, "item_type": "knowledge_point", "status": "Reviewed once"},
+        )
+        if _append_review_event_once(repo, event):
+            reviewed_items += 1
+        overlay["knowledge_points"][item_id] = {
+            **point,
+            "status": "Reviewed once",
+            "reviewed_at": overlay["knowledge_points"].get(item_id, {}).get("reviewed_at", occurred_at),
+            "review_id": review_id,
+        }
+
+    overlay_path.parent.mkdir(parents=True, exist_ok=True)
+    overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    for card in snapshot.get("mistake_cards", []):
+        item_id = card["card_id"]
+        event = _review_event(
+            "daily_review.item.reviewed",
+            review_id,
+            item_id,
+            source_refs=card.get("source_refs", []),
+            payload={"review_id": review_id, "item_id": item_id, "item_type": "mistake_card", "status": "Reviewed once"},
+        )
+        if _append_review_event_once(repo, event):
+            reviewed_items += 1
+        domain = _card_domain_for(repo, item_id)
+        if domain:
+            repo.update_card_status(domain, item_id, "Reviewed once")
+
+    completed = _append_review_event_once(
+        repo,
+        _review_event(
+            "daily_review.completed",
+            review_id,
+            source_refs=[
+                *[item["knowledge_id"] for item in snapshot.get("knowledge_points", [])],
+                *[item["card_id"] for item in snapshot.get("mistake_cards", [])],
+            ],
+            payload={
+                "review_id": review_id,
+                "status": "completed",
+                "reviewed_item_count": len(snapshot.get("knowledge_points", [])) + len(snapshot.get("mistake_cards", [])),
+            },
+        ),
+    )
+    if completed:
+        record_progress(
+            repo,
+            {
+                "date": snapshot.get("generated_for", ""),
+                "record_type": "daily_review_completed",
+                "status": "completed",
+                "focus_topic": snapshot.get("generation", {}).get("focus_topic", ""),
+                "review_id": review_id,
+            },
+        )
+    return {"review_id": review_id, "completed": completed, "newly_reviewed_items": reviewed_items}
+
+
 def daily_review_pack(
     repo: Repository,
     review_date: date | None = None,
@@ -1406,9 +1802,26 @@ def daily_review_pack(
         source_event_count=len(events),
         progress_events=progress_events,
     )
-    strategy_path = repo.memory_root / "strategy" / "daily-review-pack.md"
-    repo.write_markdown(strategy_path, body, "daily_review_pack", "daily-review-pack")
-    repo.write_obsidian_page("今日复习资料.md", body.splitlines())
+    write_daily_review_snapshot(
+        repo,
+        review_date=target_date,
+        days_back=days_back,
+        max_items=max_items,
+        focus_topic=focus_topic,
+        knowledge_depth=knowledge_depth,
+        review_items=review_items,
+        warm_start_items=warm_start_items,
+    )
+    strategy_path = repo.memory_root / "strategy" / "daily-review.md"
+    repo.write_markdown(strategy_path, body, "daily_review", "daily-review")
+    repo.write_markdown(
+        repo.memory_root / "strategy" / "daily-review-pack.md",
+        "# Daily Review Pack\n\n已迁移至 [[daily-review]]。\n",
+        "daily_review_compatibility",
+        "daily-review-pack",
+    )
+    repo.write_obsidian_page("Daily Review.md", body.splitlines())
+    repo.write_obsidian_page("今日复习资料.md", ["# 今日复习资料", "", "已迁移至 [[Daily Review]]。"])
     return strategy_path
 
 
@@ -1491,7 +1904,8 @@ def normalize_todo_tasks(value: object) -> list[dict[str, str]]:
 
 def ensure_daily_review_task(tasks: list[dict[str, str]]) -> list[dict[str, str]]:
     for task in tasks:
-        if task["task"].strip().lower() == DAILY_REVIEW_TASK.lower():
+        if task["task"].strip().lower() in {alias.lower() for alias in DAILY_REVIEW_TASK_ALIASES}:
+            task["task"] = DAILY_REVIEW_TASK
             task["deadline"] = DAILY_REVIEW_DEADLINE
             return tasks
 
@@ -1504,7 +1918,8 @@ def ensure_daily_review_task(tasks: list[dict[str, str]]) -> list[dict[str, str]
 
 
 def archive_today_todo(repo: Repository, archive_date: str) -> Path | None:
-    today_path = repo.root / "today_todo.md"
+    dashboard_path = repo.obsidian_root / "today_todo.md"
+    today_path = dashboard_path if dashboard_path.exists() else repo.root / "today_todo.md"
     if not today_path.exists():
         return None
 
@@ -1571,7 +1986,7 @@ def write_todo(repo: Repository, payload: dict) -> Path:
     tasks = ensure_daily_review_task(normalize_todo_tasks(payload.get("tasks", [])))
     archive_today_todo(repo, plan_date)
 
-    path = repo.root / "today_todo.md"
+    path = repo.obsidian_root / "today_todo.md"
     body = render_todo(payload, plan_date, tasks)
     path.write_text(body, encoding="utf-8")
     return path
@@ -1714,7 +2129,7 @@ def weekly_focus_recommendation(repo: Repository) -> str:
     week_ago = today - timedelta(days=7)
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
     recent = [e for e in question_events if e.created_at[:10] >= week_ago.isoformat()]
 
     if not recent:

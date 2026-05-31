@@ -632,10 +632,10 @@ def test_daily_review_pack_uses_due_cards_and_recent_cache(tmp_path: Path) -> No
     )
 
     assert exit_code == 0
-    strategy = tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md"
+    strategy = tmp_path / ".system" / "memory" / "strategy" / "daily-review.md"
     assert strategy.exists()
     text = strategy.read_text(encoding="utf-8")
-    assert "今日复习资料" in text
+    assert "# Daily Review" in text
     assert "到期复习" in text
     assert "近期低信心 2026-05-27" in text
     assert "Corporate Issuers" in text
@@ -648,16 +648,18 @@ def test_daily_review_pack_uses_due_cards_and_recent_cache(tmp_path: Path) -> No
     assert "Read the base and price currency" in text
     assert "- retrieval_prompt:" not in text
     assert "#### 题目" in text
-    assert "#### 正确理解 / 解法" in text
+    assert "> [!answer]- Reveal correct solution" in text
     assert "> A. USD appreciates" in text
     assert "> B. EUR appreciates" in text
 
-    dashboard = tmp_path / "CFA_tier1" / "dashboard" / "今日复习资料.md"
+    dashboard = tmp_path / "CFA_tier1" / "dashboard" / "Daily Review.md"
     assert dashboard.exists()
     dashboard_text = dashboard.read_text(encoding="utf-8")
     assert "## 一、知识点和公式" in dashboard_text
     assert "## 二、错题" in dashboard_text
     assert "Bedtime: only mental replay" not in dashboard_text
+    legacy_dashboard = tmp_path / "CFA_tier1" / "dashboard" / "今日复习资料.md"
+    assert legacy_dashboard.read_text(encoding="utf-8") == "# 今日复习资料\n\n已迁移至 [[Daily Review]]。\n"
 
 
 def test_record_progress_writes_progress_ledger(tmp_path: Path) -> None:
@@ -679,6 +681,154 @@ def test_record_progress_writes_progress_ledger(tmp_path: Path) -> None:
     text = progress_log.read_text(encoding="utf-8")
     assert "daily_review_completed" in text
     assert "Corporate Issuers" in text
+
+
+def test_daily_review_command_writes_snapshot_and_collapsed_reveals(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### Capital Investments",
+            "| Tool | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| NPV | `NPV = sum CFt/(1+r)^t - initial outlay` | accept if positive. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+    payload = {
+        "source_layer": "question",
+        "topic": "Corporate Issuers",
+        "los": "M05 NPV",
+        "prompt_or_question": "Which capital-allocation rule should lead the decision?",
+        "wrong_choice_or_output": "IRR always leads.",
+        "correct_resolution": "Use NPV for mutually exclusive projects.",
+        "error_type": "concept_confusion",
+        "confidence": 1,
+        "time_spent": 60,
+        "evidence_refs": ["snapshot-test"],
+        "created_at": "2026-05-29T10:00:00+00:00",
+    }
+
+    run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+    exit_code = run_cli(
+        ["daily-review", "--date", "2026-05-30", "--focus-topic", "Corporate Issuers"],
+        repo_root=tmp_path,
+    )
+
+    assert exit_code == 0
+    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review.md").read_text(encoding="utf-8")
+    assert "# Daily Review" in text
+    assert "> [!answer]- Reveal knowledge point" in text
+    assert "> [!answer]- Reveal correct solution" in text
+    assert "> > Use NPV for mutually exclusive projects." not in text
+
+    latest_path = tmp_path / ".system" / "memory" / "review" / "daily" / "latest.json"
+    latest = json.loads(latest_path.read_text(encoding="utf-8"))
+    assert latest["schema_version"] == 1
+    assert latest["review_id"].startswith("daily-review-")
+    assert latest["generation"]["focus_topic"] == "Corporate Issuers"
+    assert latest["knowledge_points"]
+    assert latest["mistake_cards"]
+
+    review_events = [
+        json.loads(line)
+        for line in (tmp_path / ".system" / "events" / "review" / "review-events.jsonl").read_text(encoding="utf-8").splitlines()
+    ]
+    assert [event["event_type"] for event in review_events] == ["daily_review.generated"]
+    assert review_events[0]["payload"]["review_id"] == latest["review_id"]
+
+
+def test_complete_daily_review_marks_items_reviewed_once_idempotently(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    write_moc(
+        tmp_path,
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md",
+        [
+            "## 2. Formula & Framework Map 公式与框架地图",
+            "### Capital Investments",
+            "| Tool | Formula / Framework | Exam use |",
+            "|---|---|---|",
+            "| NPV | `NPV = sum CFt/(1+r)^t - initial outlay` | accept if positive. |",
+            "## 3. Module Atlas 模块地图",
+        ],
+    )
+    payload = {
+        "source_layer": "question",
+        "topic": "Corporate Issuers",
+        "los": "M05 NPV",
+        "prompt_or_question": "Which rule should lead mutually exclusive project selection?",
+        "wrong_choice_or_output": "IRR",
+        "correct_resolution": "NPV",
+        "error_type": "concept_confusion",
+        "confidence": 1,
+        "time_spent": 60,
+        "evidence_refs": ["completion-test"],
+        "created_at": "2026-05-29T10:00:00+00:00",
+    }
+
+    run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+    run_cli(
+        ["daily-review", "--date", "2026-05-30", "--focus-topic", "Corporate Issuers"],
+        repo_root=tmp_path,
+    )
+    latest = json.loads(
+        (tmp_path / ".system" / "memory" / "review" / "daily" / "latest.json").read_text(encoding="utf-8")
+    )
+    review_id = latest["review_id"]
+
+    assert run_cli(["complete-daily-review", "--review-id", review_id], repo_root=tmp_path) == 0
+    assert run_cli(["complete-daily-review", "--review-id", review_id], repo_root=tmp_path) == 0
+
+    card_path = next((tmp_path / ".system" / "memory" / "question-errors").glob("*.md"))
+    assert "review_status: Reviewed once" in card_path.read_text(encoding="utf-8")
+
+    overlay = json.loads(
+        (tmp_path / ".system" / "memory" / "review" / "knowledge-status.json").read_text(encoding="utf-8")
+    )
+    assert overlay["knowledge_points"]
+    assert {item["status"] for item in overlay["knowledge_points"].values()} == {"Reviewed once"}
+
+    review_events = [
+        json.loads(line)
+        for line in (tmp_path / ".system" / "events" / "review" / "review-events.jsonl").read_text(encoding="utf-8").splitlines()
+    ]
+    event_types = [event["event_type"] for event in review_events]
+    assert event_types.count("daily_review.completed") == 1
+    assert event_types.count("daily_review.item.reviewed") == (
+        len(latest["knowledge_points"]) + len(latest["mistake_cards"])
+    )
+
+
+def test_daily_review_activates_self_explanation_and_worked_example_fading(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    base_payload = {
+        "source_layer": "question",
+        "topic": "Fixed Income",
+        "los": "FI.Duration",
+        "prompt_or_question": "Estimate the price impact after a yield change.",
+        "correct_resolution": "Write the duration term first, then add the convexity adjustment.",
+        "error_type": "formula_misuse",
+        "confidence": 1,
+        "time_spent": 60,
+        "evidence_refs": ["fading-test"],
+        "created_at": "2026-05-29T10:00:00+00:00",
+    }
+    for wrong in ("Used duration only.", "Forgot convexity.", "Used the wrong sign."):
+        payload = dict(base_payload, wrong_choice_or_output=wrong)
+        run_cli(["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
+
+    run_cli(["daily-review", "--date", "2026-05-30"], repo_root=tmp_path)
+    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review.md").read_text(encoding="utf-8")
+
+    assert "#### 主动回忆" in text
+    assert "#### 自我解释" in text
+    assert "#### Worked example fading" in text
+    assert "full solution" in text
 
 
 def test_daily_review_pack_renders_choices_in_separate_section(tmp_path: Path) -> None:
@@ -717,7 +867,7 @@ def test_daily_review_pack_renders_choices_in_separate_section(tmp_path: Path) -
     )
 
     assert exit_code == 0
-    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md").read_text(encoding="utf-8")
+    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review.md").read_text(encoding="utf-8")
     assert "#### 题目" in text
     assert "#### 选项" in text
     assert "> The NPV is closest to:" in text
@@ -805,7 +955,7 @@ def test_daily_review_pack_expanded_uses_module_note_and_progress(tmp_path: Path
     )
 
     assert exit_code == 0
-    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md").read_text(encoding="utf-8")
+    text = (tmp_path / ".system" / "memory" / "strategy" / "daily-review.md").read_text(encoding="utf-8")
     assert "### 1. Corporate Issuers" in text
     assert "Project Type Classifier" in text
     assert "Compliance project" in text
@@ -855,7 +1005,7 @@ def test_daily_review_pack_promotes_repeated_patterns(tmp_path: Path) -> None:
     )
 
     assert exit_code == 0
-    strategy = tmp_path / ".system" / "memory" / "strategy" / "daily-review-pack.md"
+    strategy = tmp_path / ".system" / "memory" / "strategy" / "daily-review.md"
     text = strategy.read_text(encoding="utf-8")
     assert "重复错误 3 次" in text
     assert "Corporate Issuers | CI.5 | concept_confusion" in text
@@ -893,10 +1043,11 @@ def test_write_todo_archives_existing_file_and_writes_task_level_list(tmp_path: 
     assert len(archives) == 1
     assert "检查椅子是否稳固" in archives[0].read_text(encoding="utf-8")
 
-    text = existing.read_text(encoding="utf-8")
+    dashboard_todo = tmp_path / "CFA_tier1" / "dashboard" / "today_todo.md"
+    text = dashboard_todo.read_text(encoding="utf-8")
     assert "focus: 完成 Corporate Issuers 学习并保留足够做题时间" in text
     assert "- [ ] 完成 Corporate Issuers 主学习" in text
-    assert "- [ ] 完成今日复习资料（deadline: 20:00）" in text
+    assert "- [ ] 完成 Daily Review（deadline: 20:00）" in text
     assert "- [ ] 处理今天新增错题" in text
     assert "## Review" in text
     assert "检查椅子是否稳固" not in text
@@ -920,8 +1071,8 @@ def test_write_todo_supports_deadlines_and_adds_daily_review_by_default(tmp_path
     exit_code = run_cli(["write-todo", "--payload", json.dumps(payload, ensure_ascii=False)], repo_root=tmp_path)
 
     assert exit_code == 0
-    text = (tmp_path / "today_todo.md").read_text(encoding="utf-8")
-    assert "- [ ] 完成今日复习资料（deadline: 20:00）" in text
+    text = (tmp_path / "CFA_tier1" / "dashboard" / "today_todo.md").read_text(encoding="utf-8")
+    assert "- [ ] 完成 Daily Review（deadline: 20:00）" in text
     assert "- [ ] 完成 Corporate Issuers 主学习（deadline: 17:30）" in text
     assert "- [ ] 完成 Laptop 上线（deadline: 18:30）" in text
     assert "- [ ] 完成微信小程序上线（deadline: 20:30）" in text

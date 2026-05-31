@@ -40,7 +40,7 @@ export default function WeeklyTrend() {
         {metrics.map((m) => {
           const v = data[m.key];
           return (
-            <div key={m.key} className="flex items-center justify-between text-sm bg-[#0a0a0f] rounded-lg px-3 py-2">
+            <div key={m.key} className="flex items-center justify-between text-sm bg-surface-field rounded-lg px-3 py-2">
               <span>{m.label}</span>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-muted">上周 {v.previous}</span>

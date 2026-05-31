@@ -105,21 +105,29 @@ def load_profile(profile_name: str = "cfa-l1", profiles_dir: Path | None = None)
 
 # Global profile cache
 _current_profile: ExamProfile | None = None
+_current_profile_name = ""
 
 
-def get_profile() -> ExamProfile:
+def get_profile(repo_root: Path | None = None, refresh: bool = False) -> ExamProfile:
     """Get the currently active exam profile."""
-    global _current_profile
-    if _current_profile is None:
-        profile_name = os.environ.get("EXAMOS_PROFILE", "cfa-l1")
+    global _current_profile, _current_profile_name
+    profile_name = os.environ.get("EXAMOS_PROFILE", "")
+    if not profile_name and repo_root:
+        setting = repo_root / ".system" / "active_profile.txt"
+        if setting.exists():
+            profile_name = setting.read_text(encoding="utf-8").strip()
+    profile_name = profile_name or "cfa-l1"
+    if refresh or _current_profile is None or _current_profile_name != profile_name:
         _current_profile = load_profile(profile_name)
+        _current_profile_name = profile_name
     return _current_profile
 
 
 def set_profile(profile: ExamProfile) -> None:
     """Set the active exam profile."""
-    global _current_profile
+    global _current_profile, _current_profile_name
     _current_profile = profile
+    _current_profile_name = profile.short_name
 
 
 def list_available_profiles(profiles_dir: Path | None = None) -> list[dict]:

@@ -1,0 +1,13 @@
+pyproject.toml
+src/study_science/__init__.py
+src/study_science/calibration.py
+src/study_science/energy_planner.py
+src/study_science/interleaving.py
+src/study_science/retrieval.py
+src/study_science/self_explanation.py
+src/study_science/spacing.py
+src/study_science/worked_example.py
+src/study_science.egg-info/PKG-INFO
+src/study_science.egg-info/SOURCES.txt
+src/study_science.egg-info/dependency_links.txt
+src/study_science.egg-info/top_level.txt

@@ -15,6 +15,7 @@ async def create_cohort(req: CohortCreate, repo=Depends(get_repo)):
     """Create a new institution cohort."""
     import json
     from datetime import datetime, UTC
+    from app.exam_profile import get_profile
 
     cohort_dir = repo.memory_root / "institution" / "cohorts"
     cohort_dir.mkdir(parents=True, exist_ok=True)
@@ -23,7 +24,7 @@ async def create_cohort(req: CohortCreate, repo=Depends(get_repo)):
         "cohort_id": f"cohort-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}",
         "institution_id": req.institution_id,
         "cohort_name": req.cohort_name,
-        "exam_target": req.exam_target,
+        "exam_target": req.exam_target or get_profile(repo.root).name,
         "exam_date": req.exam_date,
         "learner_ids": req.learner_ids,
         "instructor_ids": [],
@@ -60,6 +61,7 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
     at_risk: list[dict] = []
     dropout_warnings: list[dict] = []
     learner_metrics: list[dict] = []
+    attempts = repo.load_attempt_records()
 
     for learner_id in cohort.get("learner_ids", []):
         # Each learner has their own repo/state
@@ -70,6 +72,11 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
         learner_events = [
             e for e in events
             if learner_id in e.evidence_refs or learner_id in str(e.event_id)
+        ]
+        learner_attempts = [
+            attempt for attempt in attempts
+            if learner_id == str(attempt.get("learner_id", ""))
+            or learner_id in attempt.get("source_refs", [])
         ]
 
         from datetime import date, datetime
@@ -118,6 +125,10 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
             "total_events": total_errors,
             "days_inactive": days_since_last,
             "risk_score": round(risk_score, 2),
+            "accuracy": (
+                sum(1 for attempt in learner_attempts if attempt.get("is_correct")) / len(learner_attempts)
+                if learner_attempts else None
+            ),
         })
 
     # Aggregate metrics
@@ -127,6 +138,8 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
     else:
         avg_events = 0
         avg_inactive = 0
+    accuracy_values = [m["accuracy"] for m in learner_metrics if m["accuracy"] is not None]
+    avg_accuracy = sum(accuracy_values) / len(accuracy_values) if accuracy_values else 0.0
 
     # Sort at-risk by risk score descending
     at_risk.sort(key=lambda x: -x["risk_score"])
@@ -149,7 +162,7 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
         at_risk_count=len(at_risk),
         dropout_warning_count=len(dropout_warnings),
         avg_review_completion=round(max(0, 1.0 - avg_inactive / 7), 3),  # approximation
-        avg_accuracy=0.0,  # requires correct/incorrect data
+        avg_accuracy=round(avg_accuracy, 3),
         at_risk_learners=at_risk[:20],
         dropout_warnings=dropout_warnings[:20],
         instructor_recommendations=recommendations,
@@ -185,7 +198,7 @@ async def get_cohort_weaknesses(cohort_id: str, repo=Depends(get_repo)):
 
     cohort = json.loads(cohort_path.read_text(encoding="utf-8"))
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question"]
+    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
 
     learner_set = set(cohort.get("learner_ids", []))
     cohort_events = [

@@ -1,10 +1,13 @@
 /** API client for ExamOS backend. */
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
 async function request<T = any>(path: string, options?: RequestInit): Promise<T> {
+  const headers = options?.body
+    ? { 'Content-Type': 'application/json', ...options?.headers }
+    : options?.headers;
   const res = await fetch(`${API_BASE}${path}`, {
-    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    headers,
     ...options,
   });
   if (!res.ok) {
@@ -35,14 +38,17 @@ export const diagnosisApi = {
     request('/api/diagnose/patterns'),
 };
 
-/** Review Pack */
+/** Daily Review */
 export const reviewApi = {
   getToday: (params?: Record<string, string>) => {
     const qs = new URLSearchParams(params || {}).toString();
-    return request(`/api/review-pack/today${qs ? `?${qs}` : ''}`);
+    return request(`/api/daily-review/today${qs ? `?${qs}` : ''}`);
   },
 
-  listDue: () => request('/api/review-pack/due'),
+  listDue: () => request('/api/daily-review/due'),
+
+  complete: (reviewId: string) =>
+    request(`/api/daily-review/${reviewId}/complete`, { method: 'POST' }),
 };
 
 /** Energy */
@@ -60,6 +66,8 @@ export const studyPlanApi = {
     const qs = new URLSearchParams(params || {}).toString();
     return request(`/api/study-plan/today${qs ? `?${qs}` : ''}`);
   },
+
+  getWeeklyFocus: () => request('/api/study-plan/weekly-focus'),
 };
 
 /** Mock */
@@ -84,6 +92,21 @@ export const dashboardApi = {
   getSummary: () => request('/api/dashboard/summary'),
 
   getMastery: () => request('/api/dashboard/mastery'),
+
+  getCalendarData: (month = '') =>
+    request(`/api/dashboard/calendar${month ? `?month=${encodeURIComponent(month)}` : ''}`),
+
+  getCalibrationWarnings: () => request('/api/dashboard/calibration-warnings'),
+
+  getStreaks: () => request('/api/dashboard/streaks'),
+
+  getWeeklyTrend: () => request('/api/dashboard/weekly-trend'),
+
+  updateCalendarSettings: (examDate: string) =>
+    request('/api/dashboard/calendar/settings', { method: 'PUT', body: JSON.stringify({ exam_date: examDate }) }),
+
+  runWhatIf: (adjustments: Record<string, number>) =>
+    request('/api/dashboard/what-if', { method: 'POST', body: JSON.stringify(adjustments) }),
 };
 
 /** Institution */
@@ -95,4 +118,24 @@ export const institutionApi = {
     request(`/api/institution/cohorts/${cohortId}/risk-report`),
 
   listCohorts: () => request('/api/institution/cohorts'),
+
+  getCohortWeaknesses: (cohortId: string) =>
+    request(`/api/institution/cohorts/${cohortId}/weaknesses`),
+};
+
+/** Profiles */
+export const profilesApi = {
+  list: () => request('/api/profiles'),
+  getActive: () => request('/api/profiles/active'),
+  setActive: (profileName: string) =>
+    request('/api/profiles/active', { method: 'PUT', body: JSON.stringify({ profile_name: profileName }) }),
+};
+
+/** Private question banks */
+export const questionBanksApi = {
+  importStructured: (data: { source_file: string; questions: Record<string, unknown>[] }) =>
+    request('/api/question-banks/import', { method: 'POST', body: JSON.stringify(data) }),
+  listQuarantine: () => request('/api/question-banks/quarantine'),
+  review: (questionId: string, action: 'approve' | 'reject', patch: Record<string, unknown> = {}) =>
+    request(`/api/question-banks/${questionId}/review`, { method: 'POST', body: JSON.stringify({ action, patch }) }),
 };

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { mockApi } from '@/lib/api';
+import { mockApi, profilesApi } from '@/lib/api';
 import { FileText, Play, RotateCcw, AlertTriangle, BarChart3, Plus } from 'lucide-react';
 
 interface MockSession {
@@ -32,6 +32,7 @@ export default function MockCenter() {
   const [brief, setBrief] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
+  const [examName, setExamName] = useState('');
   const [newMock, setNewMock] = useState({
     session_id: '',
     session_label: '',
@@ -44,12 +45,13 @@ export default function MockCenter() {
     mockApi.listHistory().then((data: any) => {
       setSessions(data.sessions || []);
     }).finally(() => setLoading(false));
+    profilesApi.getActive().then(({ profile }: any) => setExamName(profile.name)).catch(() => undefined);
   }, []);
 
   const createMock = async () => {
     await mockApi.create({
       ...newMock,
-      exam_name: 'CFA Level I',
+      exam_name: examName,
       scheduled_date: new Date().toISOString().slice(0, 10),
     });
     setShowCreate(false);
@@ -97,7 +99,7 @@ export default function MockCenter() {
         </div>
         <button
           onClick={() => setShowCreate(!showCreate)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-accent-solid hover:bg-accent-strong rounded-lg text-sm transition-colors"
         >
           <Plus size={14} /> 新模拟
         </button>
@@ -107,34 +109,34 @@ export default function MockCenter() {
       {showCreate && (
         <div className="card space-y-3">
           <h3 className="text-sm font-semibold">创建模拟记录</h3>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             <input
               value={newMock.session_id}
               onChange={(e) => setNewMock({ ...newMock, session_id: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="Session ID (e.g. mock-1)"
             />
             <input
               value={newMock.session_label}
               onChange={(e) => setNewMock({ ...newMock, session_label: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="标签 (e.g. Mock 1 AM)"
             />
             <input
               type="number"
               value={newMock.total_questions}
               onChange={(e) => setNewMock({ ...newMock, total_questions: Number(e.target.value) })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="总题数"
             />
           </div>
-          <button onClick={createMock} className="px-4 py-1.5 bg-[#22c55e]/20 text-success rounded-lg text-sm">
+          <button onClick={createMock} className="px-4 py-1.5 bg-success-soft text-success rounded-lg text-sm">
             创建
           </button>
         </div>
       )}
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {/* Session list */}
         <div className="card">
           <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
@@ -150,8 +152,8 @@ export default function MockCenter() {
                     onClick={() => { setSelectedSession(s.session_id); runRetro(s.session_id); getBrief(s.session_id); }}
                     className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${
                       selectedSession === s.session_id
-                        ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                        : 'hover:bg-[#14141f]'
+                        ? 'bg-accent-soft border border-accent-soft'
+                        : 'hover:bg-surface-hover'
                     }`}
                   >
                     <div className="font-medium">{s.session_label}</div>
@@ -200,15 +202,15 @@ export default function MockCenter() {
           {retro ? (
             <div className="space-y-3 text-xs">
               <div className="grid grid-cols-3 gap-2">
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
+                <div className="bg-surface-field rounded p-2 text-center">
                   <div className="text-lg font-bold text-danger">{retro.question_count}</div>
                   <div className="text-[10px] text-muted">题目错</div>
                 </div>
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
+                <div className="bg-surface-field rounded p-2 text-center">
                   <div className="text-lg font-bold text-warning">{retro.bias_count}</div>
                   <div className="text-[10px] text-muted">偏差信号</div>
                 </div>
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
+                <div className="bg-surface-field rounded p-2 text-center">
                   <div className="text-lg font-bold text-accent">{retro.agent_count}</div>
                   <div className="text-[10px] text-muted">Agent 失误</div>
                 </div>

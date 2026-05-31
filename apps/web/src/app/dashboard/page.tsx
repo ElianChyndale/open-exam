@@ -32,6 +32,7 @@ export default function EffectivenessDashboard() {
   const [calibrationWarnings, setCalibrationWarnings] = useState<any[]>([]);
   const [streakData, setStreakData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [whatIf, setWhatIf] = useState<any>(null);
 
   useEffect(() => {
     Promise.all([
@@ -70,7 +71,7 @@ export default function EffectivenessDashboard() {
 
       {/* Summary strip */}
       {summary && (
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           <MetricCard
             icon={<BarChart3 size={16} className="text-accent" />}
             label="总题目记录"
@@ -96,7 +97,7 @@ export default function EffectivenessDashboard() {
       )}
 
       {streakData && (
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           <div className="card flex items-center gap-3">
             <span className="text-2xl">{streakData.current_streak > 0 ? '🔥' : '🌱'}</span>
             <div>
@@ -115,16 +116,21 @@ export default function EffectivenessDashboard() {
             <span className="text-2xl">📊</span>
             <div className="flex-1">
               <div className="metric-label">本周复习包进度 ({streakData.weekly_goal.completed_reviews}/{streakData.weekly_goal.goal})</div>
-              <div className="w-full h-2 bg-[#0a0a0f] rounded-full mt-1 overflow-hidden">
-                <div className="h-full bg-[#6366f1] rounded-full transition-all"
+              <div className="w-full h-2 bg-surface-field rounded-full mt-1 overflow-hidden">
+                <div className="h-full bg-accent-solid rounded-full transition-all"
                   style={{ width: `${streakData.weekly_goal.progress_pct}%` }} />
               </div>
             </div>
           </div>
+          {streakData.recovery?.needed && (
+            <div className="card col-span-2 text-sm text-warning lg:col-span-4">
+              节奏恢复建议: {streakData.recovery.recommended_action}
+            </div>
+          )}
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {/* Key metrics */}
         <div className="card space-y-4">
           <h3 className="text-sm font-semibold flex items-center gap-2">
@@ -155,7 +161,7 @@ export default function EffectivenessDashboard() {
             />
           </div>
 
-          <div className="flex items-center gap-2 text-xs pt-2 border-t border-[#1e1e2e]">
+          <div className="flex items-center gap-2 text-xs pt-2 border-t border-line">
             <span className="text-muted">校准趋势:</span>
             <TrendIcon size={14} className={trendColor} />
             <span className={trendColor}>
@@ -168,14 +174,14 @@ export default function EffectivenessDashboard() {
 
         {/* Calibration warnings */}
         {calibrationWarnings.length > 0 && (
-          <div className="card col-span-2 border-[#ef4444]/30">
+          <div className="card border-danger-soft lg:col-span-2">
             <h3 className="text-sm font-semibold flex items-center gap-2 mb-3">
               <AlertTriangle size={14} className="text-danger" />
               信心校准警告 — 你以为你会了，其实不会
             </h3>
             <div className="space-y-2">
               {calibrationWarnings.slice(0, 5).map((w: any, i: number) => (
-                <div key={i} className="text-sm bg-[#0a0a0f] rounded-lg px-3 py-2">
+                <div key={i} className="text-sm bg-surface-field rounded-lg px-3 py-2">
                   <span className="font-medium">{w.topic}</span>
                   <span className="text-muted"> / {w.los}</span>
                   <span className="text-danger ml-2">信心 {w.confidence}/4 但做错</span>
@@ -198,12 +204,12 @@ export default function EffectivenessDashboard() {
                 .map(([los, risk]) => (
                   <div key={los} className="flex items-center gap-2">
                     <span className="text-xs w-40 truncate">{los}</span>
-                    <div className="flex-1 h-4 bg-[#0a0a0f] rounded-full overflow-hidden">
+                    <div className="flex-1 h-4 bg-surface-field rounded-full overflow-hidden">
                       <div
                         className={`h-full rounded-full transition-all ${
-                          risk > 0.7 ? 'bg-[#ef4444]'
-                          : risk > 0.4 ? 'bg-[#f59e0b]'
-                          : 'bg-[#22c55e]'
+                          risk > 0.7 ? 'bg-danger-solid'
+                          : risk > 0.4 ? 'bg-warning-solid'
+                          : 'bg-success-solid'
                         }`}
                         style={{ width: `${(risk * 100).toFixed(0)}%` }}
                       />
@@ -219,7 +225,7 @@ export default function EffectivenessDashboard() {
           )}
 
           {data?.danger_top_3 && data.danger_top_3.length > 0 && (
-            <div className="mt-4 pt-3 border-t border-[#1e1e2e]">
+            <div className="mt-4 pt-3 border-t border-line">
               <div className="text-xs text-muted mb-2">⚠️ 最危险 3 个 LOS</div>
               {data.danger_top_3.map((d, i) => (
                 <p key={i} className="text-xs text-danger">• {d}</p>
@@ -235,6 +241,20 @@ export default function EffectivenessDashboard() {
       {/* Weekly Trend Report */}
       <WeeklyTrend />
 
+      <div className="card flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h3 className="text-sm font-semibold">What-If 练习模拟</h3>
+          <p className="mt-1 text-xs text-muted">查看把复习完成率提升 10% 后的通过率变化。</p>
+        </div>
+        <button
+          className="rounded-lg bg-accent-solid px-4 py-2 text-sm text-white hover:bg-accent-strong"
+          onClick={() => dashboardApi.runWhatIf({ review_completion_rate: 0.1 }).then(setWhatIf)}
+        >
+          运行模拟
+        </button>
+        {whatIf && <p className="w-full text-sm text-accent">模拟通过率: {(whatIf.pass_probability * 100).toFixed(0)}%</p>}
+      </div>
+
       {/* Error trend mini chart */}
       {data?.error_count_trend && data.error_count_trend.length > 1 && (
         <div className="card">
@@ -246,7 +266,7 @@ export default function EffectivenessDashboard() {
               return (
                 <div key={i} className="flex-1 flex flex-col items-center gap-1">
                   <div
-                    className="w-full bg-[#6366f1]/60 hover:bg-[#6366f1] rounded-t transition-colors"
+                    className="w-full bg-accent-muted hover:bg-accent-solid rounded-t transition-colors"
                     style={{ height: `${Math.max(height, 2)}%` }}
                     title={`${count} errors`}
                   />

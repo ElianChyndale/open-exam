@@ -112,26 +112,29 @@ class EnergyAwarePlanner:
         - description: str
         - priority: int (0-100)
         """
-        fits: list[TaskEnergyFit] = []
+        ranked_fits: list[tuple[TaskEnergyFit, int]] = []
         for task in tasks:
             task_type = task.get("task_type", "light_review")
             score = cls.fit_score(task_type, profile.energy_level)
-            fits.append(
-                TaskEnergyFit(
+            ranked_fits.append(
+                (
+                    TaskEnergyFit(
                     task_type=task_type,
                     task_description=task.get("description", task_type),
                     energy_required=cls.ENERGY_REQUIREMENTS.get(task_type, 2),
                     fit_score=score,
                     recommendation=cls._recommendation(task_type, score, profile.energy_level),
+                    ),
+                    int(task.get("priority", 0)),
                 )
             )
 
         # Sort by fit score descending, then by priority
-        fits.sort(key=lambda f: (-f.fit_score, -tasks[fits.index(f)].get("priority", 0) if fits.index(f) < len(tasks) else 0))
+        ranked_fits.sort(key=lambda item: (-item[0].fit_score, -item[1]))
 
         plan = EnergyPlan(profile=profile)
 
-        for fit in fits:
+        for fit, _priority in ranked_fits:
             if profile.energy_level >= 3 and fit.energy_required >= 3:
                 plan.high_energy_slot.append(fit)
             elif profile.energy_level >= 1 and fit.energy_required >= 1:
