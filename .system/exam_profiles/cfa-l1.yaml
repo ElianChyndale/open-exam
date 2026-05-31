@@ -1,0 +1,103 @@
+name: "CFA Level I"
+short_name: "cfa-l1"
+total_los: 10
+passing_score: 70
+subjects:
+  - name: "Quantitative Methods"
+    short: "Quant"
+    los_count: 8
+    weight: 10
+  - name: "Economics"
+    short: "Eco"
+    los_count: 10
+    weight: 10
+  - name: "Financial Statement Analysis"
+    short: "FRA"
+    los_count: 12
+    weight: 15
+  - name: "Corporate Issuers"
+    short: "CorpIss"
+    los_count: 6
+    weight: 10
+  - name: "Equity"
+    short: "Equity"
+    los_count: 6
+    weight: 10
+  - name: "Fixed Income"
+    short: "FI"
+    los_count: 6
+    weight: 10
+  - name: "Derivatives"
+    short: "Derivatives"
+    los_count: 4
+    weight: 5
+  - name: "Alternative Investments"
+    short: "AltInv"
+    los_count: 3
+    weight: 5
+  - name: "Portfolio Management"
+    short: "Portfolio"
+    los_count: 6
+    weight: 10
+  - name: "Ethical and Professional Standards"
+    short: "Ethics"
+    los_count: 4
+    weight: 15
+mock_buckets:
+  "Alternative Investments": "AltInv"
+  "Alternative_Investments": "AltInv"
+  "Corporate Issuers": "CorpIss"
+  "Corporate_Issuers": "CorpIss"
+  "Derivatives": "Derivatives"
+  "Economics": "Economics"
+  "Equity": "Equity"
+  "Equity Investments": "Equity"
+  "Ethical and Professional Standards": "Ethics"
+  "Ethical_and_Professional_Standards": "Ethics"
+  "Financial Statement Analysis": "FRA"
+  "Financial Reporting and Analysis": "FRA"
+  "Financial_Statement_Analysis": "FRA"
+  "Fixed Income": "FI"
+  "Fixed_Income": "FI"
+  "Portfolio Management": "Portfolio"
+  "Portfolio_Management": "Portfolio"
+  "Quantitative Methods": "Quant"
+  "Quantitative_Methods": "Quant"
+subject_aliases:
+  "alternative investments": "Alternative Investments"
+  "alternative_investments": "Alternative Investments"
+  "altinv": "Alternative Investments"
+  "corporate issuers": "Corporate Issuers"
+  "corporate_issuers": "Corporate Issuers"
+  "corpiss": "Corporate Issuers"
+  "economics": "Economics"
+  "eco": "Economics"
+  "quantitative methods": "Quantitative Methods"
+  "quantitative_methods": "Quantitative Methods"
+  "quant": "Quantitative Methods"
+  "fixed income": "Fixed Income"
+  "fixed_income": "Fixed Income"
+  "fi": "Fixed Income"
+  "financial statement analysis": "Financial Statement Analysis"
+  "financial_statement_analysis": "Financial Statement Analysis"
+  "financial reporting and analysis": "Financial Statement Analysis"
+  "fra": "Financial Statement Analysis"
+  "portfolio management": "Portfolio Management"
+  "portfolio_management": "Portfolio Management"
+  "derivatives": "Derivatives"
+  "equity": "Equity"
+  "equity investments": "Equity"
+  "ethical and professional standards": "Ethical and Professional Standards"
+  "ethical_and_professional_standards": "Ethical and Professional Standards"
+  "ethics": "Ethical and Professional Standards"
+moc_paths:
+  "Alternative Investments": "CFA_tier1/Alternative_Investments/00-Alternative-Investments-MOC.md"
+  "Corporate Issuers": "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+  "Derivatives": "CFA_tier1/Derivatives/00-Derivatives-MOC.md"
+  "Economics": "CFA_tier1/Economics/00-Economics-MOC.md"
+  "Equity": "CFA_tier1/Equity/00-Equity-MOC.md"
+  "Ethical and Professional Standards": "CFA_tier1/Ethical_and_Professional_Standards/00-Ethical-and-Professional-Standards-MOC.md"
+  "Financial Statement Analysis": "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+  "Fixed Income": "CFA_tier1/Fixed_Income/00-Fixed-Income-MOC.md"
+  "Portfolio Management": "CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md"
+  "Quantitative Methods": "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"

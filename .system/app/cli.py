@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -185,6 +186,28 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         result = weekly_focus_recommendation(repo)
         print(result)
         print(f"\n📄 已保存到 .system/memory/strategy/")
+        return 0
+
+    if args.command == "list-profiles":
+        from app.exam_profile import list_available_profiles
+        profiles = list_available_profiles()
+        print(f"可用考试类型 ({len(profiles)}):")
+        for p in profiles:
+            print(f"  {p['short_name']}: {p['name']} ({p['subject_count']} subjects)")
+        print("\n设置考试类型: python scripts/cfa.py set-profile --name cfa-l1")
+        return 0
+
+    if args.command == "set-profile":
+        from app.exam_profile import load_profile
+        profile = load_profile(args.name)
+        # Save to .system/active_profile.txt
+        profile_path = repo.root / ".system" / "active_profile.txt"
+        profile_path.write_text(args.name, encoding="utf-8")
+        print(f"考试类型已切换为: {profile.name}")
+        print(f"   科目数: {len(profile.subjects)}")
+        print(f"   及格线: {profile.passing_score}%")
+        # Set environment for current session
+        os.environ["EXAMOS_PROFILE"] = args.name
         return 0
 
     if args.command == "sync-push":

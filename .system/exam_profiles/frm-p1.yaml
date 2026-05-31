@@ -1,0 +1,39 @@
+name: "FRM Part I"
+short_name: "frm-p1"
+total_los: 4
+passing_score: 60
+subjects:
+  - name: "Foundations of Risk Management"
+    short: "Foundations"
+    los_count: 4
+    weight: 20
+  - name: "Quantitative Analysis"
+    short: "Quant"
+    los_count: 4
+    weight: 20
+  - name: "Financial Markets and Products"
+    short: "Markets"
+    los_count: 4
+    weight: 30
+  - name: "Valuation and Risk Models"
+    short: "Valuation"
+    los_count: 4
+    weight: 30
+mock_buckets:
+  "Foundations of Risk Management": "Foundations"
+  "Quantitative Analysis": "Quant"
+  "Financial Markets and Products": "Markets"
+  "Valuation and Risk Models": "Valuation"
+subject_aliases:
+  "foundations of risk management": "Foundations of Risk Management"
+  "foundations": "Foundations of Risk Management"
+  "quantitative analysis": "Quantitative Analysis"
+  "financial markets and products": "Financial Markets and Products"
+  "markets": "Financial Markets and Products"
+  "valuation and risk models": "Valuation and Risk Models"
+  "valuation": "Valuation and Risk Models"
+moc_paths:
+  "Foundations of Risk Management": "FRM_p1/Foundations/00-Foundations-MOC.md"
+  "Quantitative Analysis": "FRM_p1/Quantitative_Analysis/00-Quantitative-Analysis-MOC.md"
+  "Financial Markets and Products": "FRM_p1/Financial_Markets/00-Financial-Markets-MOC.md"
+  "Valuation and Risk Models": "FRM_p1/Valuation/00-Valuation-MOC.md"
