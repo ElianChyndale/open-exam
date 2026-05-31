@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 from contextlib import closing
 from dataclasses import asdict
@@ -207,6 +208,10 @@ class Repository:
             f"fix_rule: {card.fix_rule}",
             f"next_drill: {card.next_drill}",
             f"review_due_at: {card.review_due_at}",
+            f"spacing_interval_days: {card.spacing_interval_days}",
+            f"spacing_priority: {card.spacing_priority}",
+            f"previous_reviews: {card.previous_reviews}",
+            f"exam_date: {card.exam_date}",
             f"linked_patterns: {', '.join(card.linked_patterns)}",
             f"correct_resolution: {card.correct_resolution}",
             "---",
@@ -221,6 +226,23 @@ class Repository:
             f"## Evidence\n{', '.join(card.evidence_refs)}",
         ]
         self.write_markdown(path, "\n".join(lines), "mistake_card", card.card_id, source_event_id)
+        return path
+
+    def update_card_review(self, domain: str, card_id: str, previous_reviews: int,
+                            review_due_at: str, spacing_interval_days: int,
+                            spacing_priority: int) -> Path:
+        """Update a card's review metadata after a review session."""
+        path = self.memory_root / domain / f"{card_id}.md"
+        if not path.exists():
+            raise FileNotFoundError(f"Card not found: {path}")
+
+        text = path.read_text(encoding="utf-8")
+        text = re.sub(rf"^previous_reviews:.*$", f"previous_reviews: {previous_reviews}", text, flags=re.MULTILINE)
+        text = re.sub(rf"^review_due_at:.*$", f"review_due_at: {review_due_at}", text, flags=re.MULTILINE)
+        text = re.sub(rf"^spacing_interval_days:.*$", f"spacing_interval_days: {spacing_interval_days}", text, flags=re.MULTILINE)
+        text = re.sub(rf"^spacing_priority:.*$", f"spacing_priority: {spacing_priority}", text, flags=re.MULTILINE)
+
+        path.write_text(text, encoding="utf-8")
         return path
 
     def save_validation_rule(self, rule: ValidationRule, source_event_id: str) -> Path:

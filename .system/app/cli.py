@@ -51,6 +51,11 @@ def build_parser() -> argparse.ArgumentParser:
     review_cmd.add_argument("--focus-topic", default="")
     review_cmd.add_argument("--days-back", type=int, default=7)
 
+    review = subparsers.add_parser("mark-reviewed")
+    review.add_argument("--card-id", required=True)
+    review.add_argument("--outcome", required=True, choices=("recalled", "struggled", "forgot"))
+    review.add_argument("--confidence-after", type=int, default=0)
+
     return parser
 
 
@@ -91,6 +96,11 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
     if args.command == "post-mock-retro":
         post_mock_retro(repo, args.session_id)
         return 0
+    if args.command == "mark-reviewed":
+        from app.workflows import mark_card_reviewed
+        mark_card_reviewed(repo, args.card_id, args.outcome, args.confidence_after)
+        print(f"✅ 已更新复习记录: {args.card_id}")
+        return 0
     if args.command == "fast":
         parts = [p.strip() for p in args.record.split("|")]
         if len(parts) < 4:
@@ -109,13 +119,13 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
             "time_spent": args.time,
             "evidence_refs": [f"quick-capture-{datetime.now().isoformat()}"],
         }
-        from app.workflows import record_event
-        record_event(repo, payload, "record-mistake")
+        from app.workflows import record_event as fast_record_event
+        fast_record_event(repo, payload, "record-mistake")
         print(f"✅ 已记录: {topic} | {los} | {args.error_type}")
         return 0
     if args.command == "review":
-        from app.workflows import daily_review_pack
-        path = daily_review_pack(repo, date.today(), args.days_back, 20, args.focus_topic)
+        from app.workflows import daily_review_pack as review_cmd_pack
+        path = review_cmd_pack(repo, date.today(), args.days_back, 20, args.focus_topic)
         print(f"📖 复习资料已生成: {path}")
         print("在 CFA_tier1/dashboard/今日复习资料.md 查看")
         return 0

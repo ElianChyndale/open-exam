@@ -951,3 +951,109 @@ def test_workflow_releases_catalog_before_temporary_repo_cleanup() -> None:
         )
 
         assert exit_code == 0
+
+
+def test_high_confidence_error_generates_calibration_warning(tmp_path: Path) -> None:
+    """confidence=4 + wrong → should create calibration-warning artifact."""
+    from app.cli import run_cli
+
+    payload = {
+        "source_layer": "question",
+        "topic": "Fixed Income",
+        "los": "FI.Convexity",
+        "prompt_or_question": "Convexity adjustment test",
+        "wrong_choice_or_output": "A",
+        "correct_resolution": "C includes convexity",
+        "error_type": "concept_confusion",
+        "confidence": 4,  # VERY_CONFIDENT — max danger
+        "time_spent": 120,
+        "evidence_refs": ["test-calibration"],
+    }
+
+    exit_code = run_cli(
+        ["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)],
+        repo_root=tmp_path,
+    )
+    assert exit_code == 0
+
+    warning_path = tmp_path / ".system" / "memory" / "strategy" / "calibration-warnings.jsonl"
+    assert warning_path.exists()
+    text = warning_path.read_text(encoding="utf-8")
+    assert "FI.Convexity" in text
+    assert "priority_bump" in text
+
+
+def test_mistake_card_uses_spacing_scheduler(tmp_path: Path) -> None:
+    """Card review_due_at should reflect SpacingScheduler output, not 1/3/7."""
+    from app.cli import run_cli
+    import json
+
+    payload = {
+        "source_layer": "question",
+        "topic": "Quantitative Methods",
+        "los": "QM.Rates",
+        "prompt_or_question": "Test question",
+        "wrong_choice_or_output": "A",
+        "correct_resolution": "B is correct",
+        "error_type": "concept_confusion",
+        "confidence": 0,  # GUESS level → interval should be 1
+        "time_spent": 60,
+        "evidence_refs": ["test-spacing"],
+    }
+
+    exit_code = run_cli(
+        ["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)],
+        repo_root=tmp_path,
+    )
+    assert exit_code == 0
+
+    cards = list((tmp_path / ".system" / "memory" / "question-errors").glob("*.md"))
+    assert len(cards) == 1
+    text = cards[0].read_text(encoding="utf-8")
+    assert "spacing_interval_days:" in text
+    assert "spacing_priority:" in text
+
+
+def test_mark_reviewed_updates_card_and_saves_progress(tmp_path: Path) -> None:
+    """Marking a card as reviewed should reschedule and record progress."""
+    from app.cli import run_cli
+    import json
+
+    payload = {
+        "source_layer": "question",
+        "topic": "Equity",
+        "los": "EQ.DDM",
+        "prompt_or_question": "DDM test question",
+        "wrong_choice_or_output": "A",
+        "correct_resolution": "C is correct",
+        "error_type": "concept_confusion",
+        "confidence": 2,
+        "time_spent": 90,
+        "evidence_refs": ["test-review"],
+    }
+    run_cli(
+        ["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)],
+        repo_root=tmp_path,
+    )
+
+    cards = list((tmp_path / ".system" / "memory" / "question-errors").glob("*.md"))
+    assert len(cards) == 1
+    card_text = cards[0].read_text(encoding="utf-8")
+    card_id_line = [l for l in card_text.splitlines() if l.startswith("card_id:")][0]
+    card_id = card_id_line.split(": ", 1)[1].strip()
+
+    exit_code = run_cli(
+        ["mark-reviewed", "--card-id", card_id, "--outcome", "struggled", "--confidence-after", "2"],
+        repo_root=tmp_path,
+    )
+    assert exit_code == 0
+
+    updated = cards[0].read_text(encoding="utf-8")
+    assert "previous_reviews: 1" in updated
+
+    progress_path = tmp_path / ".system" / "events" / "progress" / "progress-events.jsonl"
+    assert progress_path.exists()
+    progress_text = progress_path.read_text(encoding="utf-8")
+    assert "card_review" in progress_text
+    assert card_id in progress_text
+    assert "struggled" in progress_text

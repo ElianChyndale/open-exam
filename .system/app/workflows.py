@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import re
 from collections import Counter, defaultdict
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule, stable_id
@@ -1019,7 +1019,92 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
     if event.source_layer == "agent":
         repo.save_validation_rule(build_validation_rule(event), event.event_id or "")
 
+    # Calibration check — write warning artifact for high-confidence errors
+    if event.source_layer == "question" and not event.is_correct:
+        from study_science.calibration import ConfidenceCalibration
+        if ConfidenceCalibration.is_dangerous(event.confidence, is_correct=False):
+            bump = ConfidenceCalibration.priority_bump(event.confidence, is_correct=False)
+            warning_path = repo.memory_root / "strategy" / "calibration-warnings.jsonl"
+            warning = {
+                "event_id": event.event_id,
+                "topic": event.topic,
+                "los": event.los,
+                "confidence": event.confidence,
+                "priority_bump": bump,
+                "created_at": datetime.now().isoformat(),
+            }
+            with open(warning_path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(warning, ensure_ascii=False) + "\n")
+
     return event
+
+
+def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_after: int = 0) -> Path:
+    """Record a card review and reschedule using SpacingScheduler."""
+    from datetime import date
+    from study_science.spacing import SpacingInput, SpacingScheduler
+
+    card_path = None
+    card_domain = None
+    for domain in ("question-errors", "cognitive-bias", "agent-failures"):
+        p = repo.memory_root / domain / f"{card_id}.md"
+        if p.exists():
+            card_path = p
+            card_domain = domain
+            break
+
+    if not card_path:
+        raise FileNotFoundError(f"Card {card_id} not found in any domain")
+
+    text = card_path.read_text(encoding="utf-8")
+    frontmatter = parse_frontmatter(text)
+    topic = frontmatter.get("topic", "Unknown")
+    los = frontmatter.get("los", "Unknown")
+    error_type = frontmatter.get("root_cause", "unknown")
+    prev_reviews = int(frontmatter.get("previous_reviews", "0") or "0")
+
+    is_correct = outcome == "recalled"
+    confidence = confidence_after if confidence_after > 0 else (
+        3 if outcome == "recalled" else 1 if outcome == "struggled" else 0
+    )
+
+    input_data = SpacingInput(
+        topic=topic,
+        los=los,
+        error_type=error_type,
+        confidence=confidence,
+        is_correct=is_correct,
+        time_spent_seconds=60,
+        previous_reviews=prev_reviews + 1,
+        last_reviewed_at=date.today().isoformat(),
+        exam_date="",
+    )
+    decision = SpacingScheduler.schedule(input_data)
+
+    repo.update_card_review(
+        domain=card_domain,
+        card_id=card_id,
+        previous_reviews=prev_reviews + 1,
+        review_due_at=decision.next_review_date,
+        spacing_interval_days=decision.interval_days,
+        spacing_priority=decision.priority,
+    )
+
+    progress = {
+        "record_type": "card_review",
+        "card_id": card_id,
+        "outcome": outcome,
+        "is_correct": is_correct,
+        "confidence_after": confidence,
+        "topic": topic,
+        "los": los,
+        "next_review_date": decision.next_review_date,
+        "interval_days": decision.interval_days,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
+    repo.append_jsonl_event("progress", progress)
+
+    return card_path
 
 
 def mine_patterns(repo: Repository) -> list[PatternInsight]:
