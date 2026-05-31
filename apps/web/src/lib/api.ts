@@ -74,6 +74,17 @@ export const mockApi = {
     request(`/api/mock/${sessionId}/brief`),
 
   listHistory: () => request('/api/mock/history'),
+
+  startRun: (data: { session_label: string; total_minutes: number; total_questions: number }) =>
+    request<{ run: MockRun }>('/api/mock/runs', { method: 'POST', body: JSON.stringify(data) }),
+
+  listRuns: () => request<{ runs: MockRun[] }>('/api/mock/runs'),
+
+  setRunState: (runId: string, action: 'pause' | 'resume' | 'complete', elapsedSeconds: number) =>
+    request<{ run: MockRun }>(`/api/mock/runs/${runId}/state`, { method: 'POST', body: JSON.stringify({ action, elapsed_seconds: elapsedSeconds }) }),
+
+  importResults: (data: Record<string, unknown>) =>
+    request<{ run: MockRun }>('/api/mock/import-results', { method: 'POST', body: JSON.stringify(data) }),
 };
 
 /** Dashboard */
@@ -191,4 +202,81 @@ export const practiceApi = {
     request<{ session_id: string; items: PracticeQuestion[]; drills: PracticeDrill[] }>('/api/practice-sessions', { method: 'POST', body: JSON.stringify({ max_items: maxItems, topic }) }),
   answer: (sessionId: string, payload: { question_id: string; answer: string; confidence: number; elapsed_seconds: number; self_explanation: string }) =>
     request<{ is_correct: boolean; correct_answer: string; explanation: string; calibration_state: string; calibration_warning?: string; self_explanation_prompt: string; explanation_quality: number; worked_example_stage: string }>(`/api/practice-sessions/${sessionId}/answers`, { method: 'POST', body: JSON.stringify(payload) }),
+};
+
+/** Offline mock, deterministic coach, FTS search, graph, and reports */
+export interface MockRun {
+  run_id: string;
+  session_label: string;
+  source_kind: 'local' | 'external_import';
+  status: 'active' | 'paused' | 'completed';
+  total_minutes: number;
+  total_questions: number;
+  elapsed_seconds: number;
+  answered_count: number;
+  correct_count: number;
+  checkpoints: Array<{ question_number: number; target_elapsed_seconds: number }>;
+}
+
+export interface CoachBrief {
+  brief_id: string;
+  kind: string;
+  summary: string;
+  recommendations: string[];
+  evidence_refs: string[];
+  validated: boolean;
+  created_at: string;
+}
+
+export const coachApi = {
+  briefs: () => request<{ briefs: CoachBrief[] }>('/api/coach/briefs'),
+  retro: (summary: string, sourceRefs: string[], biases: string[] = []) =>
+    request<{ brief: CoachBrief }>('/api/coach/session-retro', { method: 'POST', body: JSON.stringify({ summary, source_refs: sourceRefs, biases }) }),
+  auditAgent: (summary: string, sourceRefs: string[]) =>
+    request<{ brief: CoachBrief }>('/api/coach/audit-agent', { method: 'POST', body: JSON.stringify({ summary, source_refs: sourceRefs }) }),
+};
+
+export interface SearchResult {
+  document_id: string;
+  kind: string;
+  title: string;
+  snippet: string;
+  source_ref: string;
+}
+
+export const searchApi = {
+  search: (query: string) => request<{ results: SearchResult[] }>(`/api/search?q=${encodeURIComponent(query)}`),
+};
+
+export interface GraphRecord {
+  id: string;
+  label: string;
+  source_kind: 'official' | 'evidence' | 'personal';
+  node_type?: string;
+  source?: string;
+  target?: string;
+  x?: number;
+  y?: number;
+  notes?: string;
+  locked?: boolean;
+}
+
+export const graphApi = {
+  get: () => request<{ nodes: GraphRecord[]; edges: GraphRecord[] }>('/api/knowledge-graph'),
+  updateOverlay: (nodes: GraphRecord[], edges: GraphRecord[]) =>
+    request('/api/knowledge-graph/overlay', { method: 'PUT', body: JSON.stringify({ nodes, edges }) }),
+};
+
+export interface WeeklyReport {
+  report_id: string;
+  attempt_count: number;
+  mock_run_count: number;
+  coach_brief_count: number;
+  evidence_refs: string[];
+  markdown_content: string;
+}
+
+export const reportsApi = {
+  weekly: () => request<WeeklyReport>('/api/reports/weekly'),
+  weeklyMarkdownUrl: () => `${API_BASE}/api/reports/weekly?format=markdown`,
 };

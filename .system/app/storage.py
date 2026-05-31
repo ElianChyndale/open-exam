@@ -163,6 +163,17 @@ class Repository:
                 ON stream_events (stream, learner_id, occurred_at)
                 """
             )
+            connection.execute(
+                """
+                CREATE VIRTUAL TABLE IF NOT EXISTS search_documents USING fts5(
+                    document_id UNINDEXED,
+                    kind,
+                    title,
+                    body,
+                    source_ref UNINDEXED
+                )
+                """
+            )
             connection.commit()
 
     def event_log_path(self, source_layer: str) -> Path:

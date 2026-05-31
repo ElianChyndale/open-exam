@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { BookOpen, ChevronDown, Library, Target } from 'lucide-react';
+import Link from 'next/link';
 import { curriculumApi } from '@/lib/api';
 import { Badge, EmptyState, Surface } from '@/components/ui/ui';
 
@@ -18,7 +19,7 @@ export default function CurriculumMapPage() {
           <h1 className="mt-1 text-3xl font-semibold tracking-tight">Curriculum map</h1>
           <p className="mt-2 text-sm text-muted">Navigate from topic weights to modules and LOS without losing the evidence trail.</p>
         </div>
-        <div className="flex gap-2"><Badge tone="accent">{data?.subject_count ?? '...'} subjects</Badge><Badge>{data?.module_count ?? '...'} modules</Badge></div>
+        <div className="flex items-center gap-2"><Link className="button-secondary" href="/graph">Open graph</Link><Badge tone="accent">{data?.subject_count ?? '...'} subjects</Badge><Badge>{data?.module_count ?? '...'} modules</Badge></div>
       </header>
       {!data ? <Surface className="animate-pulse text-sm text-muted">Loading official curriculum...</Surface> : null}
       {data?.subjects.length === 0 ? <EmptyState title="No curriculum registry found" /> : null}

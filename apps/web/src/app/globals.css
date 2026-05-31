@@ -1,3 +1,5 @@
+@import '@xyflow/react/dist/style.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,6 +99,10 @@ body {
   border-color: rgb(var(--accent) / 0.72);
   box-shadow: 0 0 0 3px rgb(var(--accent) / 0.15);
   background: rgb(var(--surface-raised));
+}
+
+.react-flow__attribution a {
+  color: rgb(var(--muted));
 }
 
 a:focus-visible,
