@@ -60,6 +60,9 @@ def build_parser() -> argparse.ArgumentParser:
     import_cmd.add_argument("--file", required=True, help="JSONL 文件路径")
     import_cmd.add_argument("--source", default="qbank-import", help="来源标签")
 
+    set_exam = subparsers.add_parser("set-exam")
+    set_exam.add_argument("--date", required=True, help="考试日期 YYYY-MM-DD")
+
     return parser
 
 
@@ -146,6 +149,17 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         from app.workflows import batch_import_events
         ids = batch_import_events(repo, payloads, args.source)
         print(f"✅ 已导入 {len(ids)} 道错题")
+        return 0
+    if args.command == "set-exam":
+        from datetime import date
+        try:
+            date.fromisoformat(args.date)
+        except ValueError:
+            print("ERROR: 日期格式错误，请使用 YYYY-MM-DD", file=sys.stderr)
+            return 1
+        exam_path = repo.root / ".system" / "exam_date.txt"
+        exam_path.write_text(args.date, encoding="utf-8")
+        print(f"✅ 考试日期已设置为 {args.date}")
         return 0
     parser.error(f"unsupported command: {args.command}")
     return 2
