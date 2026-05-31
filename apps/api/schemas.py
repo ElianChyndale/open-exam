@@ -357,3 +357,18 @@ class GraphEdge(BaseModel):
 class GraphOverlayUpdate(BaseModel):
     nodes: list[GraphNode] = Field(default_factory=list)
     edges: list[GraphEdge] = Field(default_factory=list)
+
+
+# ── Explicit Transfer And Institution Delivery ──────────────────────────────
+
+class TransferImportRequest(BaseModel):
+    bundle: dict[str, Any] = Field(default_factory=dict)
+    dry_run: bool = True
+    direction: str = Field(default="cloud-to-local", pattern="^(cloud-to-local|local-to-cloud)$")
+    organization_id: str = Field(default="")
+
+
+class InterventionCreate(BaseModel):
+    learner_id: str
+    reason: str
+    owner_id: str = Field(default="")

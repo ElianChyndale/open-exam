@@ -104,7 +104,29 @@ export const institutionApi = {
     request(`/api/institution/cohorts/${cohortId}/risk-report`),
 
   listCohorts: () => request('/api/institution/cohorts'),
+
+  listInterventions: () => request<{ interventions: Intervention[] }>('/api/institution/interventions'),
+
+  createIntervention: (data: { learner_id: string; reason: string; owner_id?: string }) =>
+    request<{ intervention: Intervention }>('/api/institution/interventions', { method: 'POST', body: JSON.stringify(data) }),
+
+  deliveryProof: () => request<DeliveryProof>('/api/institution/delivery-proof'),
 };
+
+export interface Intervention {
+  intervention_id: string;
+  learner_id: string;
+  reason: string;
+  owner_id: string;
+  status: string;
+  created_at: string;
+}
+
+export interface DeliveryProof {
+  cohort_count: number;
+  intervention_count: number;
+  weekly_report: WeeklyReport;
+}
 
 /** Daily learner loop */
 export interface LearnerProfile {
@@ -279,4 +301,10 @@ export interface WeeklyReport {
 export const reportsApi = {
   weekly: () => request<WeeklyReport>('/api/reports/weekly'),
   weeklyMarkdownUrl: () => `${API_BASE}/api/reports/weekly?format=markdown`,
+};
+
+export const transferApi = {
+  exportUrl: () => `${API_BASE}/api/export`,
+  dryRunCloudTransfer: (organizationId: string) =>
+    request('/api/import', { method: 'POST', body: JSON.stringify({ direction: 'local-to-cloud', organization_id: organizationId, dry_run: true }) }),
 };
