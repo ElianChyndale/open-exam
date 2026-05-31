@@ -77,10 +77,29 @@ class MistakeCard:
     moc_target: str
     question_format: str
     choices: list[str]
+    previous_reviews: int = 0
+    spacing_interval_days: int = 1
+    spacing_priority: int = 50
+    last_reviewed_at: str = ""
+    exam_date: str = ""
 
     @classmethod
     def from_event(cls, event: MistakeEvent, fix_rule: str, next_drill: str) -> "MistakeCard":
-        days = 1 if event.confidence <= 1 else 3 if event.confidence <= 3 else 7
+        from study_science.spacing import SpacingInput, SpacingScheduler
+
+        input_data = SpacingInput(
+            topic=event.topic,
+            los=event.los,
+            error_type=event.error_type,
+            confidence=event.confidence,
+            is_correct=event.is_correct,
+            time_spent_seconds=event.time_spent,
+            previous_reviews=0,
+            last_reviewed_at="",
+            exam_date="",
+        )
+        decision = SpacingScheduler.schedule(input_data)
+
         return cls(
             card_id=stable_id("card", event.event_id or "", event.topic, event.los),
             source_layer=event.source_layer,
@@ -89,7 +108,7 @@ class MistakeCard:
             root_cause=event.error_type,
             fix_rule=fix_rule,
             next_drill=next_drill,
-            review_due_at=(utc_now() + timedelta(days=days)).date().isoformat(),
+            review_due_at=decision.next_review_date,
             linked_patterns=[],
             prompt_or_question=event.prompt_or_question,
             wrong_choice_or_output=event.wrong_choice_or_output,
@@ -101,6 +120,11 @@ class MistakeCard:
             moc_target=event.moc_target,
             question_format=event.question_format,
             choices=event.choices,
+            previous_reviews=0,
+            spacing_interval_days=decision.interval_days,
+            spacing_priority=decision.priority,
+            last_reviewed_at="",
+            exam_date="",
         )
 
 
