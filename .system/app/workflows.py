@@ -17,6 +17,8 @@ FIX_RULES = {
     "hallucinated_rule": "所有规则性结论都要回到 CFA/IFRS/GAAP 原始约束重新核对。",
     "missed_root_cause": "先列现象，再单独写 root cause，不允许只总结表层现象。",
     "constructed_response_weak_structure": "Essay 先按题干动词搭框架：identify/list 先列对象，discuss 每一点必须补 relationship type、incentive/conflict 或 financial impact。",
+    "constructed_response_incomplete_classification": "套用 business model essay 模板：先逐格写 Customers / Product / Channels / Pricing strategy；每条证据只归到一个最贴切格，最后检查 recurring revenue、bundling 和 service。",
+    "constructed_response_omission": "Business model essay 不留空：先按 Customers / Product / Channels / Pricing strategy / Risks / Opportunities / Questions 写最小完整骨架，再扩展证据。",
     "constraint_miss": "表格题先圈出 governing criterion / hurdle / constraint，再比较 NPV、IRR 或 ROIC；不能只看最显眼的正 NPV。",
     "table_overload_constraint_miss": "图表信息过载时先做 10 秒门槛扫描：minimum、target、required、criterion、constraint、hurdle，再读项目数据。",
 }

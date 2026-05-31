@@ -137,7 +137,7 @@ tags:
 - **Liquidity route**: calculate days/ratio -> compare trend or peers -> diagnose source -> recommend working-capital implication.
 - **Capital budgeting route**: draw cash-flow timeline -> choose NPV first -> use IRR/payback/PI only for stated purpose -> explain conflict.
 - **Capital structure route**: choose market-value target weights -> after-tax debt cost -> compute WACC -> interpret leverage trade-off.
-- **Business model route**: identify `who/what/where/how much` -> map pricing/revenue model -> infer cash flow quality and risk.
+- **Business model route**: use the M07 essay template: customer/pain point -> product/value differentiation -> channel/fit -> pricing/support -> risks -> opportunities -> questions.
 
 ## 6. Practice & Mock Evidence Map 题库证据地图
 
