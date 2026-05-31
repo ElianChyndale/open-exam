@@ -37,6 +37,29 @@ def _checkpoints(total_minutes: int, total_questions: int) -> list[dict[str, int
     ]
 
 
+def _pre_mock_brief(repo) -> dict[str, Any]:
+    risk_topics = []
+    for event in reversed(repo.load_events()):
+        if event.source_layer == "question" and event.topic not in risk_topics:
+            risk_topics.append(event.topic)
+    return {
+        "pacing_rule": "Check elapsed time every 30 questions and move on when a question exceeds its budget.",
+        "risk_topics": risk_topics[:3],
+        "warm_start": "Review the cited weak topics, then solve five short discrimination questions.",
+    }
+
+
+def _post_mock_retro(repo, run_id: str) -> dict[str, Any]:
+    answers = _mock_answers(repo, run_id)
+    incorrect = [answer for answer in answers if not answer.get("is_correct")]
+    return {
+        "answered_count": len(answers),
+        "incorrect_count": len(incorrect),
+        "stop_doing": ["Stop spending beyond the pacing checkpoint on a single question."],
+        "next_strategy": "Review captured mistakes, then run one short weak-LOS set before the next mock.",
+    }
+
+
 def create_mock_run(repo, payload: dict[str, Any], source_kind: str = "local") -> dict[str, Any]:
     created_at = _now()
     run = {
@@ -50,6 +73,7 @@ def create_mock_run(repo, payload: dict[str, Any], source_kind: str = "local") -
         "answered_count": 0,
         "correct_count": 0,
         "checkpoints": _checkpoints(payload.get("total_minutes", 135), payload.get("total_questions", 90)),
+        "pre_mock_brief": _pre_mock_brief(repo),
         "created_at": created_at,
     }
     repo.append_stream_event("mock-run", "mock-run.started", {"run": run})
@@ -57,11 +81,23 @@ def create_mock_run(repo, payload: dict[str, Any], source_kind: str = "local") -
 
 
 def get_mock_run(repo, run_id: str) -> dict[str, Any] | None:
-    return _mock_runs(repo).get(run_id)
+    run = _mock_runs(repo).get(run_id)
+    return {**run, "answers": _mock_answers(repo, run_id)} if run else None
 
 
 def list_mock_runs(repo) -> list[dict[str, Any]]:
-    return list(reversed(list(_mock_runs(repo).values())))
+    return [get_mock_run(repo, run_id) for run_id in reversed(list(_mock_runs(repo)))]
+
+
+def _mock_answers(repo, run_id: str) -> list[dict[str, Any]]:
+    answers = []
+    for event in repo.load_stream_events("mock-run"):
+        payload = event.get("payload", {})
+        if payload.get("answer", {}).get("run_id") == run_id:
+            answers.append(payload["answer"])
+        if payload.get("run", {}).get("run_id") == run_id and payload.get("answers"):
+            answers.extend(payload["answers"])
+    return answers
 
 
 def update_mock_run_state(repo, run_id: str, action: str, elapsed_seconds: int) -> dict[str, Any] | None:
@@ -74,6 +110,8 @@ def update_mock_run_state(repo, run_id: str, action: str, elapsed_seconds: int) 
         "elapsed_seconds": elapsed_seconds,
         "updated_at": _now(),
     }
+    if action == "complete":
+        run["post_mock_retro"] = _post_mock_retro(repo, run_id)
     repo.append_stream_event("mock-run", f"mock-run.{action}d", {"run": run})
     return run
 
@@ -82,28 +120,7 @@ def submit_mock_answer(repo, run_id: str, payload: dict[str, Any]) -> dict[str, 
     run = get_mock_run(repo, run_id)
     if run is None:
         return None
-    mistake_event_id = ""
-    if not payload["is_correct"] and payload.get("prompt") and payload.get("correct_answer"):
-        from app.workflows import record_event
-
-        event = record_event(
-            repo,
-            {
-                "topic": payload.get("topic", ""),
-                "los": payload.get("los", ""),
-                "prompt_or_question": payload.get("prompt", ""),
-                "wrong_choice_or_output": payload.get("answer", ""),
-                "correct_resolution": payload.get("explanation") or payload.get("correct_answer", ""),
-                "error_type": "mock_mistake",
-                "confidence": payload.get("confidence", 1),
-                "time_spent": payload.get("elapsed_seconds", 0),
-                "evidence_refs": [run_id, payload["question_id"]],
-                "question_source": "mock_run",
-                "source_type": "mock_answer",
-            },
-            mode="record-mistake",
-        )
-        mistake_event_id = event.event_id or ""
+    mistake_event_id = _capture_mock_mistake(repo, run_id, payload)
     run = {
         **run,
         "answered_count": run.get("answered_count", 0) + 1,
@@ -118,6 +135,31 @@ def submit_mock_answer(repo, run_id: str, payload: dict[str, Any]) -> dict[str, 
         source_refs=[mistake_event_id] if mistake_event_id else [],
     )
     return answer
+
+
+def _capture_mock_mistake(repo, run_id: str, payload: dict[str, Any]) -> str:
+    if payload["is_correct"] or not payload.get("prompt") or not payload.get("correct_answer"):
+        return ""
+    from app.workflows import record_event
+
+    event = record_event(
+        repo,
+        {
+            "topic": payload.get("topic", ""),
+            "los": payload.get("los", ""),
+            "prompt_or_question": payload.get("prompt", ""),
+            "wrong_choice_or_output": payload.get("answer", ""),
+            "correct_resolution": payload.get("explanation") or payload.get("correct_answer", ""),
+            "error_type": "mock_mistake",
+            "confidence": payload.get("confidence", 1),
+            "time_spent": payload.get("elapsed_seconds", 0),
+            "evidence_refs": [run_id, payload["question_id"]],
+            "question_source": "mock_run",
+            "source_type": "mock_answer",
+        },
+        mode="record-mistake",
+    )
+    return event.event_id or ""
 
 
 def import_mock_results(repo, payload: dict[str, Any]) -> dict[str, Any]:
@@ -140,6 +182,9 @@ def import_mock_results(repo, payload: dict[str, Any]) -> dict[str, Any]:
         "correct_count": sum(answer.get("is_correct", False) for answer in payload.get("answers", [])),
         "updated_at": _now(),
     }
+    for answer in payload.get("answers", []):
+        _capture_mock_mistake(repo, run["run_id"], answer)
+    run["post_mock_retro"] = _post_mock_retro(repo, run["run_id"])
     repo.append_stream_event("mock-run", "mock-run.imported", {"run": run, "answers": payload.get("answers", [])})
     return run
 
@@ -174,6 +219,33 @@ def coach_briefs(repo) -> list[dict[str, Any]]:
     ]
 
 
+def audit_agent_failure(repo, payload: dict[str, Any]) -> dict[str, Any]:
+    from app.workflows import record_event
+
+    event = record_event(
+        repo,
+        {
+            "topic": "Agent quality",
+            "los": "AGENT.Validation",
+            "prompt_or_question": payload.get("summary", ""),
+            "wrong_choice_or_output": payload.get("summary", ""),
+            "correct_resolution": "Require an evidence-linked correction and validation check before reuse.",
+            "error_type": payload.get("risk_kind", "unsupported_claim"),
+            "confidence": 4,
+            "time_spent": 0,
+            "evidence_refs": payload.get("source_refs", []),
+            "question_source": "coach_audit",
+            "source_type": "agent_output",
+        },
+        mode="audit-agent",
+    )
+    return create_coach_brief(
+        repo,
+        {**payload, "source_refs": [*payload.get("source_refs", []), event.event_id or ""]},
+        kind="audit-agent",
+    )
+
+
 def _search_documents(repo) -> list[tuple[str, str, str, str, str]]:
     documents: list[tuple[str, str, str, str, str]] = []
     registry = curriculum_summary(repo)
@@ -192,6 +264,21 @@ def _search_documents(repo) -> list[tuple[str, str, str, str, str]]:
         title = f"{question.get('topic', '')} {question.get('los', '')}"
         body = f"{question.get('prompt', '')} {question.get('explanation', '')}"
         documents.append((question["question_id"], "verified-question", title, body, question["question_id"]))
+    memory_kinds = {
+        "patterns": "pattern",
+        "strategy": "strategy",
+        "validation": "validation",
+        "question-errors": "mistake-card",
+        "cognitive-bias": "bias",
+        "agent-failures": "agent-failure",
+    }
+    for directory, kind in memory_kinds.items():
+        for path in sorted((repo.memory_root / directory).glob("*.md")):
+            body = path.read_text(encoding="utf-8")
+            documents.append((stable_id("search", str(path)), kind, path.stem, body, str(path.relative_to(repo.root))))
+    for path in sorted(repo.vault_root.glob("*/*.md")):
+        body = path.read_text(encoding="utf-8")
+        documents.append((stable_id("search", str(path)), "curriculum-note", path.stem, body, str(path.relative_to(repo.root))))
     return documents
 
 
@@ -224,8 +311,10 @@ def search_assets(repo, query: str, limit: int = 20) -> list[dict[str, str]]:
 def knowledge_graph(repo) -> dict[str, list[dict[str, Any]]]:
     nodes: list[dict[str, Any]] = []
     edges: list[dict[str, Any]] = []
+    subject_ids = {}
     for subject_index, subject in enumerate(curriculum_summary(repo)["subjects"]):
         subject_id = stable_id("subject", subject["subject"])
+        subject_ids[subject["subject"]] = subject_id
         nodes.append(
             {
                 "id": subject_id,
@@ -259,6 +348,28 @@ def knowledge_graph(repo) -> dict[str, list[dict[str, Any]]]:
                     "locked": True,
                 }
             )
+            for los_index, los in enumerate(module.get("los", [])):
+                los_id = stable_id("los", subject["subject"], module["module"], los)
+                nodes.append(
+                    {
+                        "id": los_id,
+                        "label": los,
+                        "source_kind": "official",
+                        "node_type": "los",
+                        "x": subject_index * 260 + 120,
+                        "y": 180 + module_index * 100 + los_index * 42,
+                        "locked": True,
+                    }
+                )
+                edges.append(
+                    {
+                        "id": stable_id("edge", module_id, los_id),
+                        "source": module_id,
+                        "target": los_id,
+                        "source_kind": "official",
+                        "locked": True,
+                    }
+                )
     for event_index, event in enumerate(repo.load_events()):
         node_id = stable_id("evidence", event.event_id or "")
         nodes.append(
@@ -273,6 +384,55 @@ def knowledge_graph(repo) -> dict[str, list[dict[str, Any]]]:
                 "notes": event.correct_resolution,
             }
         )
+        if event.topic in subject_ids:
+            edges.append(
+                {
+                    "id": stable_id("edge", node_id, subject_ids[event.topic]),
+                    "source": node_id,
+                    "target": subject_ids[event.topic],
+                    "source_kind": "evidence",
+                    "label": "weakness",
+                    "locked": True,
+                }
+            )
+    for path in sorted((repo.memory_root / "patterns").glob("*.md")):
+        pattern_id = stable_id("pattern-node", path.stem)
+        nodes.append(
+            {
+                "id": pattern_id,
+                "label": path.stem,
+                "source_kind": "evidence",
+                "node_type": "pattern",
+                "x": 0,
+                "y": 1320 + len(nodes) * 10,
+                "locked": True,
+                "notes": path.read_text(encoding="utf-8"),
+            }
+        )
+    signal_count = 0
+    for path in sorted((repo.memory_root / "strategy").glob("*.md")):
+        for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+            lowered = line.lower()
+            node_type = "formula" if "formula" in lowered or "公式" in line else "trap" if "trap" in lowered or "陷阱" in line else ""
+            if not node_type:
+                continue
+            nodes.append(
+                {
+                    "id": stable_id(node_type, str(path), str(line_number)),
+                    "label": line.strip("-# >")[:120],
+                    "source_kind": "evidence",
+                    "node_type": node_type,
+                    "x": 240 + signal_count * 30,
+                    "y": 1420 + signal_count * 18,
+                    "locked": True,
+                    "notes": str(path.relative_to(repo.root)),
+                }
+            )
+            signal_count += 1
+            if signal_count >= 40:
+                break
+        if signal_count >= 40:
+            break
     overlay = repo.latest_stream_payload("graph-overlay", "graph-overlay.updated") or {"nodes": [], "edges": []}
     return {"nodes": [*nodes, *overlay["nodes"]], "edges": [*edges, *overlay["edges"]]}
 

@@ -28,7 +28,7 @@ export default function CurriculumMapPage() {
           <Surface key={subject.subject} className="space-y-3">
             <div className="flex items-start justify-between gap-3">
               <div><h2 className="font-semibold tracking-tight">{subject.subject}</h2><p className="mt-1 text-xs text-muted">{subject.module_count} modules</p></div>
-              <Badge tone="accent">{subject.exam_weight}</Badge>
+              <div className="flex gap-2"><Badge tone={subject.weakness_count ? 'warning' : 'neutral'}>{subject.weakness_count ?? 0} weak signals</Badge><Badge tone="accent">{subject.exam_weight}</Badge></div>
             </div>
             <div className="space-y-2">
               {subject.modules.map((module: any) => (

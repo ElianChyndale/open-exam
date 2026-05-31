@@ -151,6 +151,81 @@ def _mistake_card_drills(repo, max_items: int) -> list[dict[str, Any]]:
     return drills
 
 
+def _remediation_drills(repo, max_items: int) -> list[dict[str, Any]]:
+    drills = []
+    for event in reversed([item for item in repo.load_events() if item.source_layer == "question"]):
+        drills.append(
+            {
+                "drill_id": stable_id("weak-los", event.event_id or ""),
+                "source_kind": "weak_los",
+                "source_event_id": event.event_id,
+                "topic": event.topic,
+                "los": event.los,
+                "prompt": f"Weak-LOS retrieval: explain the deciding rule for {event.los}.",
+                "answer_text": event.correct_resolution,
+                "fix_rule": "Retrieve the rule before attempting a fresh question.",
+            }
+        )
+        if event.error_type == "formula_misuse":
+            drills.append(
+                {
+                    "drill_id": stable_id("formula", event.event_id or ""),
+                    "source_kind": "formula_recall",
+                    "source_event_id": event.event_id,
+                    "topic": event.topic,
+                    "los": event.los,
+                    "prompt": f"Recall the deciding formula or rule before solving: {event.prompt_or_question}",
+                    "answer_text": event.correct_resolution,
+                    "fix_rule": "Write the formula before substituting values.",
+                }
+            )
+        if event.error_type in {"concept_confusion", "careless_reading"}:
+            drills.append(
+                {
+                    "drill_id": stable_id("concept", event.event_id or ""),
+                    "source_kind": "concept_discrimination",
+                    "source_event_id": event.event_id,
+                    "topic": event.topic,
+                    "los": event.los,
+                    "prompt": f"Name the discriminating signal: {event.prompt_or_question}",
+                    "answer_text": event.correct_resolution,
+                    "fix_rule": "State the contrast before selecting an answer.",
+                }
+            )
+        if len(drills) >= max_items:
+            break
+    for question in load_questions(repo):
+        if question.get("verification_status") != "verified":
+            continue
+        drills.append(
+            {
+                "drill_id": stable_id("adjacent", question["question_id"]),
+                "source_kind": "adjacent_concept",
+                "source_event_id": question["question_id"],
+                "topic": question["topic"],
+                "los": question["los"],
+                "prompt": f"Adjacent-concept check: name the nearest competing rule before answering. {question['prompt']}",
+                "answer_text": question["explanation"],
+                "fix_rule": "Contrast the correct rule with its nearest alternative.",
+            }
+        )
+        drills.append(
+            {
+                "drill_id": stable_id("maintenance", question["question_id"]),
+                "source_kind": "maintenance",
+                "source_event_id": question["question_id"],
+                "topic": question["topic"],
+                "los": question["los"],
+                "prompt": f"Maintenance recall: {question['prompt']}",
+                "answer_text": question["explanation"],
+                "fix_rule": "Keep verified concepts active between weak-LOS sessions.",
+            }
+        )
+        if len(drills) >= max_items * 2:
+            break
+    return drills
+
+
 def start_practice_session(repo, max_items: int, topic: str = "") -> dict[str, Any]:
     questions = [
         question
@@ -159,14 +234,17 @@ def start_practice_session(repo, max_items: int, topic: str = "") -> dict[str, A
     ][:max_items]
     session_id = stable_id("practice", datetime.now(UTC).isoformat(), str(len(questions)))
     items = [_public_question(question) for question in questions]
-    drills = _mistake_card_drills(repo, max_items)
+    mistake_drills = _mistake_card_drills(repo, max_items)
+    remediation_drills = _remediation_drills(repo, max_items)
+    drills = [*mistake_drills, *remediation_drills]
     session = {
         "session_id": session_id,
         "items": items,
         "drills": drills,
         "composition": {
             "verified_imports": len(items),
-            "mistake_card_drills": len(drills),
+            "mistake_card_drills": len(mistake_drills),
+            "remediation_drills": len(remediation_drills),
         },
         "status": "active",
         "topic": topic,
@@ -192,6 +270,25 @@ def _failure_count(repo, question_id: str) -> int:
         and event.get("payload", {}).get("question_id") == question_id
         and not event.get("payload", {}).get("is_correct")
     )
+
+
+def _worked_example_stage(repo, question_id: str, is_correct: bool, failure_count: int) -> str:
+    prior_stages = [
+        event.get("payload", {}).get("worked_example_stage")
+        for event in repo.load_stream_events("practice")
+        if event.get("event_type") == "practice.answered"
+        and event.get("payload", {}).get("question_id") == question_id
+    ]
+    prior_stage = prior_stages[-1] if prior_stages else ""
+    if is_correct and prior_stage == "full_solution":
+        return "hidden_step_completion"
+    if is_correct and prior_stage == "hidden_step_completion":
+        return "independent"
+    if failure_count >= 3:
+        return "full_solution"
+    if failure_count >= 2:
+        return "hidden_step_completion"
+    return "independent"
 
 
 def answer_practice_question(repo, session_id: str, payload: dict[str, Any]) -> dict[str, Any] | None:
@@ -255,7 +352,7 @@ def answer_practice_question(repo, session_id: str, payload: dict[str, Any]) -> 
     quality = SelfExplanationPrompt.evaluate_quality(prompt, payload.get("self_explanation", ""))
     calibration_state = ConfidenceCalibration.classify(payload["confidence"], is_correct).value
     failure_count = _failure_count(repo, question["question_id"]) + (0 if is_correct else 1)
-    use_worked_example = WorkedExampleFader.should_use_worked_examples(failure_count, question["error_type"])
+    WorkedExampleFader.should_use_worked_examples(failure_count, question["error_type"])
     warning = ConfidenceCalibration.generate_warning(question["topic"], question["los"], 1) if ConfidenceCalibration.is_dangerous(payload["confidence"], is_correct) else None
     result = {
         "session_id": session_id,
@@ -268,7 +365,7 @@ def answer_practice_question(repo, session_id: str, payload: dict[str, Any]) -> 
         "calibration_warning": warning,
         "self_explanation_prompt": prompt,
         "explanation_quality": quality,
-        "worked_example_stage": "full_example" if use_worked_example else "independent",
+        "worked_example_stage": _worked_example_stage(repo, question["question_id"], is_correct, failure_count),
         "failure_count": failure_count,
     }
     repo.append_stream_event("practice", "practice.answered", result, source_refs=[question["question_id"]])

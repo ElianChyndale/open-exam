@@ -141,7 +141,7 @@ export default function DiagnosisPage() {
           <button
             onClick={runDiagnosis}
             disabled={!selectedId || diagLoading}
-            className="mt-3 w-full py-2 bg-accent text-white hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
+            className="mt-3 w-full py-2 bg-accent-action text-white hover:bg-accent-action-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
           >
             {diagLoading ? '诊断中...' : '诊断选中错题'}
           </button>

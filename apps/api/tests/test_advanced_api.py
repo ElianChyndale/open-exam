@@ -33,6 +33,7 @@ def test_timed_mock_run_tracks_checkpoints_pause_resume_and_mistake_capture(clie
     assert created.status_code == 200
     run = created.json()["run"]
     assert len(run["checkpoints"]) == 3
+    assert run["pre_mock_brief"]["pacing_rule"]
 
     paused = client.post(
         f"/api/mock/runs/{run['run_id']}/state",
@@ -65,8 +66,16 @@ def test_timed_mock_run_tracks_checkpoints_pause_resume_and_mistake_capture(clie
 
     assert answer.status_code == 200
     assert answer.json()["mistake_event_id"]
+    reviewed = client.get(f"/api/mock/runs/{run['run_id']}").json()["run"]
+    assert reviewed["answers"][0]["question_id"] == "mock-q-18"
     assert repo.load_stream_events("mock-run")[-1]["event_type"] == "mock-run.answered"
     assert repo.load_events()[-1].question_source == "mock_run"
+
+    completed = client.post(
+        f"/api/mock/runs/{run['run_id']}/state",
+        json={"action": "complete", "elapsed_seconds": 8100},
+    ).json()["run"]
+    assert completed["post_mock_retro"]["stop_doing"]
 
 
 def test_external_mock_result_import_is_append_only(client: TestClient, repo: LocalRepository) -> None:
@@ -87,6 +96,30 @@ def test_external_mock_result_import_is_append_only(client: TestClient, repo: Lo
     assert response.json()["run"]["source_kind"] == "external_import"
     assert response.json()["run"]["correct_count"] == 1
     assert repo.load_stream_events("mock-run")[-1]["event_type"] == "mock-run.imported"
+
+
+def test_external_mock_import_captures_evidence_rich_mistakes(client: TestClient, repo: LocalRepository) -> None:
+    response = client.post(
+        "/api/mock/import-results",
+        json={
+            "source_name": "provider-export.json",
+            "answers": [
+                {
+                    "question_id": "external-q1",
+                    "prompt": "Which duration measure handles changing cash flows?",
+                    "answer": "A",
+                    "correct_answer": "B",
+                    "explanation": "Effective duration handles changing cash flows.",
+                    "is_correct": False,
+                    "topic": "Fixed Income",
+                    "los": "FI.Duration",
+                }
+            ],
+        },
+    )
+
+    assert response.status_code == 200
+    assert repo.load_events()[-1].question_source == "mock_run"
 
 
 def test_coach_rejects_unsupported_claims_and_persists_evidence_linked_briefs(client: TestClient, repo: LocalRepository) -> None:
@@ -113,6 +146,19 @@ def test_coach_rejects_unsupported_claims_and_persists_evidence_linked_briefs(cl
     assert repo.load_stream_events("coach")[-1]["event_type"] == "coach.session-retro"
 
 
+def test_coach_agent_audit_enters_agent_evidence_layer_and_creates_validation(client: TestClient, repo: LocalRepository) -> None:
+    response = client.post(
+        "/api/coach/audit-agent",
+        json={"summary": "The explanation omitted the duration cash-flow condition.", "source_refs": ["agent-output-1"], "risk_kind": "omitted_condition"},
+    )
+
+    assert response.status_code == 200
+    event = repo.load_events()[-1]
+    assert event.source_layer == "agent"
+    assert event.evidence_refs == ["agent-output-1"]
+    assert list((repo.memory_root / "validation").glob("*.md"))
+
+
 def test_search_indexes_curriculum_and_evidence_assets(client: TestClient) -> None:
     client.post(
         "/api/attempts",
@@ -136,10 +182,21 @@ def test_search_indexes_curriculum_and_evidence_assets(client: TestClient) -> No
     assert any(result["kind"] in {"curriculum", "mistake-card"} for result in response.json()["results"])
 
 
+def test_search_indexes_strategy_and_validation_memory(client: TestClient, repo: LocalRepository) -> None:
+    strategy = repo.memory_root / "strategy" / "curve-trap.md"
+    strategy.write_text("# Curve trap\n\nUse forward-rate triangulation before calculation.", encoding="utf-8")
+
+    response = client.get("/api/search?q=triangulation")
+
+    assert response.status_code == 200
+    assert response.json()["results"][0]["kind"] == "strategy"
+
+
 def test_graph_locks_official_records_and_persists_personal_overlay(client: TestClient, repo: LocalRepository) -> None:
     graph = client.get("/api/knowledge-graph").json()
     official = next(node for node in graph["nodes"] if node["source_kind"] == "official")
     assert official["locked"] is True
+    assert any(node["node_type"] == "los" for node in graph["nodes"])
 
     rejected = client.put(
         "/api/knowledge-graph/overlay",
@@ -169,6 +226,16 @@ def test_graph_locks_official_records_and_persists_personal_overlay(client: Test
     assert repo.load_stream_events("graph-overlay")[-1]["event_type"] == "graph-overlay.updated"
     refreshed = client.get("/api/knowledge-graph").json()
     assert any(node["id"] == "personal-duration-note" for node in refreshed["nodes"])
+
+
+def test_graph_surfaces_formula_and_trap_assets_as_locked_evidence(client: TestClient, repo: LocalRepository) -> None:
+    strategy = repo.memory_root / "strategy" / "formula-trap.md"
+    strategy.write_text("# Formula and trap\n\n- Formula: use effective duration.\n- Trap: do not assume cash flows stay fixed.", encoding="utf-8")
+
+    nodes = client.get("/api/knowledge-graph").json()["nodes"]
+
+    assert any(node["node_type"] == "formula" and node["locked"] for node in nodes)
+    assert any(node["node_type"] == "trap" and node["locked"] for node in nodes)
 
 
 def test_weekly_report_is_exportable_and_evidence_linked(client: TestClient) -> None:

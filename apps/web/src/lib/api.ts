@@ -205,7 +205,7 @@ export interface PracticeQuestion {
 
 export interface PracticeDrill {
   drill_id: string;
-  source_kind: 'mistake_card';
+  source_kind: 'mistake_card' | 'weak_los' | 'adjacent_concept' | 'formula_recall' | 'concept_discrimination' | 'maintenance';
   topic: string;
   los: string;
   prompt: string;
@@ -238,6 +238,7 @@ export interface MockRun {
   answered_count: number;
   correct_count: number;
   checkpoints: Array<{ question_number: number; target_elapsed_seconds: number }>;
+  answers?: Array<{ question_id: string; answer?: string; correct_answer?: string; is_correct: boolean; topic?: string; los?: string }>;
 }
 
 export interface CoachBrief {
