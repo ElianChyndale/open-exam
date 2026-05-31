@@ -56,6 +56,10 @@ def build_parser() -> argparse.ArgumentParser:
     review.add_argument("--outcome", required=True, choices=("recalled", "struggled", "forgot"))
     review.add_argument("--confidence-after", type=int, default=0)
 
+    import_cmd = subparsers.add_parser("import-qbank", help="批量导入错题")
+    import_cmd.add_argument("--file", required=True, help="JSONL 文件路径")
+    import_cmd.add_argument("--source", default="qbank-import", help="来源标签")
+
     return parser
 
 
@@ -128,6 +132,20 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         path = review_cmd_pack(repo, date.today(), args.days_back, 20, args.focus_topic)
         print(f"📖 复习资料已生成: {path}")
         print("在 CFA_tier1/dashboard/今日复习资料.md 查看")
+        return 0
+    if args.command == "import-qbank":
+        import json
+        path = Path(args.file)
+        if not path.exists():
+            print(f"ERROR: 文件不存在 {path}", file=sys.stderr)
+            return 1
+        payloads = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                payloads.append(json.loads(line))
+        from app.workflows import batch_import_events
+        ids = batch_import_events(repo, payloads, args.source)
+        print(f"✅ 已导入 {len(ids)} 道错题")
         return 0
     parser.error(f"unsupported command: {args.command}")
     return 2

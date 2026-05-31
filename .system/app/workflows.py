@@ -1039,6 +1039,30 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
     return event
 
 
+def batch_import_events(repo: Repository, events_payload: list[dict], source_label: str = "batch-import") -> list[str]:
+    """Import multiple question attempts at once.
+
+    Args:
+        repo: Repository instance
+        events_payload: List of MistakeEvent-compatible dicts
+        source_label: Label for evidence_refs
+
+    Returns:
+        List of created event IDs.
+    """
+    event_ids: list[str] = []
+    for payload in events_payload:
+        payload.setdefault("source_layer", "question")
+        payload.setdefault("confidence", 2)
+        payload.setdefault("time_spent", 60)
+        payload.setdefault("evidence_refs", [source_label])
+        payload.setdefault("error_type", "concept_confusion")
+        event = record_event(repo, payload, mode="record-mistake")
+        if event.event_id:
+            event_ids.append(event.event_id)
+    return event_ids
+
+
 def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_after: int = 0) -> Path:
     """Record a card review and reschedule using SpacingScheduler."""
     from datetime import date

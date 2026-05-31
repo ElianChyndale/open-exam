@@ -138,3 +138,16 @@ async def list_recent_attempts(limit: int = 20, repo=Depends(get_repo)):
             for e in reversed(recent)
         ],
     }
+
+
+@router.post("/batch-import")
+async def batch_import(req: list[QuestionAttemptRequest], repo=Depends(get_repo)):
+    """Batch import multiple question attempts."""
+    from app.workflows import batch_import_events
+
+    payloads = [r.model_dump() for r in req]
+    event_ids = batch_import_events(repo, payloads, "api-batch-import")
+    return {
+        "imported_count": len(event_ids),
+        "event_ids": event_ids,
+    }
