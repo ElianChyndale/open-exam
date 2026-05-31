@@ -82,6 +82,8 @@ export const dashboardApi = {
     request(`/api/dashboard/effectiveness?days=${days}`),
 
   getSummary: () => request('/api/dashboard/summary'),
+
+  getMastery: () => request('/api/dashboard/mastery'),
 };
 
 /** Institution */

@@ -7,6 +7,7 @@ import {
   CheckCircle2, AlertTriangle, Brain, Target, Award,
 } from 'lucide-react';
 import WeeklyTrend from '@/components/dashboard/WeeklyTrend';
+import MasteryRadar from '@/components/dashboard/MasteryRadar';
 
 interface EffectivenessData {
   report_id: string;
@@ -227,6 +228,9 @@ export default function EffectivenessDashboard() {
           )}
         </div>
       </div>
+
+      {/* Topic Mastery Radar */}
+      <MasteryRadar />
 
       {/* Weekly Trend Report */}
       <WeeklyTrend />
