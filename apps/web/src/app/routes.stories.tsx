@@ -58,6 +58,12 @@ const handlers = [
     active_patterns: 2,
   })),
   http.get('http://localhost:8000/api/institution/cohorts', () => HttpResponse.json({ cohorts: [] })),
+  http.get('http://localhost:8000/api/institution/interventions', () => HttpResponse.json({ interventions: [] })),
+  http.get('http://localhost:8000/api/institution/delivery-proof', () => HttpResponse.json({
+    cohort_count: 0,
+    intervention_count: 0,
+    weekly_report: { attempt_count: 0 },
+  })),
   http.get('http://localhost:8000/api/profile', () => HttpResponse.json({
     profile: {
       exam_date: '2026-11-15',

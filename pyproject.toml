@@ -5,6 +5,7 @@ description = "Local CFA Tier 1 mistake system with skills, CLI, memory, and Ope
 requires-python = ">=3.11"
 dependencies = [
   "openai-agents>=0.2.0",
+  "PyJWT[crypto]>=2.8.0",
 ]
 
 [project.optional-dependencies]
