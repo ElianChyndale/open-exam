@@ -170,3 +170,63 @@ async def list_cohorts(repo=Depends(get_repo)):
         cohorts.append(json.loads(path.read_text(encoding="utf-8")))
 
     return {"count": len(cohorts), "cohorts": cohorts}
+
+
+@router.get("/cohorts/{cohort_id}/weaknesses")
+async def get_cohort_weaknesses(cohort_id: str, repo=Depends(get_repo)):
+    """Get aggregated top-5 weak LOS for a cohort."""
+    import json
+    from collections import Counter
+
+    cohort_dir = repo.memory_root / "institution" / "cohorts"
+    cohort_path = cohort_dir / f"{cohort_id}.json"
+    if not cohort_path.exists():
+        raise HTTPException(status_code=404, detail=f"Cohort {cohort_id} not found")
+
+    cohort = json.loads(cohort_path.read_text(encoding="utf-8"))
+    events = repo.load_events()
+    question_events = [e for e in events if e.source_layer == "question"]
+
+    learner_set = set(cohort.get("learner_ids", []))
+    cohort_events = [
+        e for e in question_events
+        if any(lid in str(e.event_id) or lid in e.evidence_refs for lid in learner_set)
+    ]
+
+    los_counts: Counter = Counter()
+    los_errors: dict[str, list] = {}
+    for e in cohort_events:
+        key = f"{e.topic} / {e.los}"
+        los_counts[key] += 1
+        if key not in los_errors:
+            los_errors[key] = []
+        if len(los_errors[key]) < 3:
+            los_errors[key].append({
+                "error_type": e.error_type,
+                "correct_resolution": e.correct_resolution[:100],
+            })
+
+    top5 = []
+    for los, count in los_counts.most_common(5):
+        top5.append({
+            "los": los,
+            "error_count": count,
+            "top_errors": los_errors.get(los, [])[:3],
+        })
+
+    topic_counts: Counter = Counter()
+    for e in cohort_events:
+        topic_counts[e.topic] += 1
+
+    topic_breakdown = [
+        {"topic": t, "error_count": c}
+        for t, c in topic_counts.most_common()
+    ]
+
+    return {
+        "cohort_id": cohort_id,
+        "cohort_name": cohort.get("cohort_name", ""),
+        "total_learner_events": len(cohort_events),
+        "weakest_los": top5,
+        "topic_breakdown": topic_breakdown,
+    }

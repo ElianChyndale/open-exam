@@ -245,7 +245,51 @@ export default function InstitutionConsole() {
               <p>选择一个班级查看风险报告</p>
             </div>
           )}
+
+          {riskReport && selectedCohort && (
+            <div className="card">
+              <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+                <AlertTriangle size={14} className="text-danger" /> 全班最弱 5 个 LOS
+              </h3>
+              <WeakLosSection cohortId={selectedCohort} />
+            </div>
+          )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function WeakLosSection({ cohortId }: { cohortId: string }) {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    institutionApi.getCohortWeaknesses(cohortId).then(setData).finally(() => setLoading(false));
+  }, [cohortId]);
+
+  if (loading) return <div className="text-xs text-muted animate-pulse">加载中...</div>;
+  if (!data?.weakest_los?.length) return <p className="text-xs text-muted">暂无数据</p>;
+
+  return (
+    <div className="space-y-2">
+      {data.weakest_los.map((item: any, i: number) => (
+        <div key={i} className="bg-[#0a0a0f] rounded-lg px-3 py-2">
+          <div className="flex items-center justify-between text-sm">
+            <span className="font-medium">{i + 1}. {item.los}</span>
+            <span className="text-danger">{item.error_count} 次错误</span>
+          </div>
+          {item.top_errors.length > 0 && (
+            <div className="text-[10px] text-muted mt-1">
+              {item.top_errors.map((e: any, j: number) => (
+                <span key={j} className="mr-2">• {e.error_type}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+      <div className="text-[10px] text-muted mt-1">
+        共 {data.total_learner_events} 条错题记录
       </div>
     </div>
   );
