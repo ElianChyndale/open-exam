@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 import argparse
-from datetime import date
+import sys
+from datetime import date, datetime
 from pathlib import Path
 
 from app.storage import Repository
@@ -35,6 +36,20 @@ def build_parser() -> argparse.ArgumentParser:
 
     retro = subparsers.add_parser("post-mock-retro")
     retro.add_argument("--session-id", required=True)
+
+    fast = subparsers.add_parser("fast", help="快速录入: topic|LOS|wrong|correct [--error-type TYPE] [--confidence N]")
+    fast.add_argument("record", help="topic|LOS|wrong|correct 管道分隔格式")
+    fast.add_argument("--error-type", default="concept_confusion", choices=(
+        "concept_confusion", "formula_misuse", "knowledge_gap",
+        "careless_reading", "time_pressure", "prompt_misread",
+        "constraint_miss", "constructed_response_weak_structure",
+    ))
+    fast.add_argument("--confidence", type=int, default=2, choices=range(0, 5))
+    fast.add_argument("--time", type=int, default=120, help="时间花费（秒）")
+
+    review_cmd = subparsers.add_parser("review", help="打开今日复习资料")
+    review_cmd.add_argument("--focus-topic", default="")
+    review_cmd.add_argument("--days-back", type=int, default=7)
 
     return parser
 
@@ -75,6 +90,34 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         return 0
     if args.command == "post-mock-retro":
         post_mock_retro(repo, args.session_id)
+        return 0
+    if args.command == "fast":
+        parts = [p.strip() for p in args.record.split("|")]
+        if len(parts) < 4:
+            print("ERROR: 需要至少 4 段: topic|LOS|wrong|correct", file=sys.stderr)
+            return 1
+        topic, los, wrong, correct = parts[0], parts[1], parts[2], parts[3]
+        payload = {
+            "source_layer": "question",
+            "topic": topic,
+            "los": los,
+            "prompt_or_question": f"Quick capture: {topic}/{los}",
+            "wrong_choice_or_output": wrong,
+            "correct_resolution": correct,
+            "error_type": args.error_type,
+            "confidence": args.confidence,
+            "time_spent": args.time,
+            "evidence_refs": [f"quick-capture-{datetime.now().isoformat()}"],
+        }
+        from app.workflows import record_event
+        record_event(repo, payload, "record-mistake")
+        print(f"✅ 已记录: {topic} | {los} | {args.error_type}")
+        return 0
+    if args.command == "review":
+        from app.workflows import daily_review_pack
+        path = daily_review_pack(repo, date.today(), args.days_back, 20, args.focus_topic)
+        print(f"📖 复习资料已生成: {path}")
+        print("在 CFA_tier1/dashboard/今日复习资料.md 查看")
         return 0
     parser.error(f"unsupported command: {args.command}")
     return 2
