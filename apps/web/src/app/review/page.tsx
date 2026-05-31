@@ -46,7 +46,7 @@ export default function ReviewPackPage() {
       }
       if (inCodeBlock) {
         elements.push(
-          <pre key={i} className="bg-[#0a0a0f] p-3 rounded-lg text-xs overflow-auto my-2">
+          <pre key={i} className="bg-surface-sunken p-3 rounded-lg text-xs overflow-auto my-2">
             {line}
           </pre>
         );
@@ -63,14 +63,14 @@ export default function ReviewPackPage() {
         elements.push(<h4 key={i} className="text-base font-semibold mt-3 mb-1 text-muted">{line.slice(5)}</h4>);
       } else if (line.startsWith('> ')) {
         elements.push(
-          <blockquote key={i} className="border-l-2 border-[#6366f1]/50 pl-3 my-1 text-sm text-muted">
+          <blockquote key={i} className="border-l-2 border-accent/40 pl-3 my-1 text-sm text-muted">
             {line.slice(2)}
           </blockquote>
         );
       } else if (line.startsWith('- ')) {
         elements.push(<li key={i} className="text-sm ml-4 list-disc my-0.5">{line.slice(2)}</li>);
       } else if (line.startsWith('---')) {
-        elements.push(<hr key={i} className="my-3 border-[#1e1e2e]" />);
+        elements.push(<hr key={i} className="my-3 border-line" />);
       } else if (line.trim() === '') {
         elements.push(<div key={i} className="h-2" />);
       } else {
@@ -90,7 +90,7 @@ export default function ReviewPackPage() {
         </div>
         <button
           onClick={() => fetchPack()}
-          className="px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
+          className="px-4 py-2 bg-accent text-white hover:bg-accent-strong rounded-lg text-sm transition-colors"
         >
           刷新复习包
         </button>
@@ -103,9 +103,10 @@ export default function ReviewPackPage() {
           <span className="text-xs text-muted">过滤:</span>
         </div>
         <select
+          aria-label="复习科目"
           value={focusTopic}
           onChange={(e) => { setFocusTopic(e.target.value); fetchPack({ focus_topic: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
+          className="bg-surface-sunken border border-line rounded-lg px-3 py-1.5 text-xs"
         >
           <option value="">所有科目</option>
           {SUBJECTS.filter(Boolean).map((s) => (
@@ -113,9 +114,10 @@ export default function ReviewPackPage() {
           ))}
         </select>
         <select
+          aria-label="回顾天数"
           value={daysBack}
           onChange={(e) => { setDaysBack(Number(e.target.value)); fetchPack({ days_back: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
+          className="bg-surface-sunken border border-line rounded-lg px-3 py-1.5 text-xs"
         >
           <option value={1}>1 天</option>
           <option value={3}>3 天</option>
@@ -124,9 +126,10 @@ export default function ReviewPackPage() {
           <option value={30}>30 天</option>
         </select>
         <select
+          aria-label="知识深度"
           value={depth}
           onChange={(e) => { setDepth(e.target.value); fetchPack({ knowledge_depth: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
+          className="bg-surface-sunken border border-line rounded-lg px-3 py-1.5 text-xs"
         >
           <option value="standard">标准深度</option>
           <option value="expanded">扩展深度</option>

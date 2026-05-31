@@ -97,7 +97,7 @@ export default function MockCenter() {
         </div>
         <button
           onClick={() => setShowCreate(!showCreate)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-accent text-white hover:bg-accent-strong rounded-lg text-sm transition-colors"
         >
           <Plus size={14} /> 新模拟
         </button>
@@ -111,24 +111,24 @@ export default function MockCenter() {
             <input
               value={newMock.session_id}
               onChange={(e) => setNewMock({ ...newMock, session_id: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-sunken border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="Session ID (e.g. mock-1)"
             />
             <input
               value={newMock.session_label}
               onChange={(e) => setNewMock({ ...newMock, session_label: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-sunken border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="标签 (e.g. Mock 1 AM)"
             />
             <input
               type="number"
               value={newMock.total_questions}
               onChange={(e) => setNewMock({ ...newMock, total_questions: Number(e.target.value) })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
+              className="bg-surface-sunken border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="总题数"
             />
           </div>
-          <button onClick={createMock} className="px-4 py-1.5 bg-[#22c55e]/20 text-success rounded-lg text-sm">
+          <button onClick={createMock} className="px-4 py-1.5 bg-success/10 text-success rounded-lg text-sm">
             创建
           </button>
         </div>
@@ -150,8 +150,8 @@ export default function MockCenter() {
                     onClick={() => { setSelectedSession(s.session_id); runRetro(s.session_id); getBrief(s.session_id); }}
                     className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${
                       selectedSession === s.session_id
-                        ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                        : 'hover:bg-[#14141f]'
+                        ? 'bg-accent/10 border border-accent/25'
+                        : 'hover:bg-surface-hover'
                     }`}
                   >
                     <div className="font-medium">{s.session_label}</div>
@@ -200,15 +200,15 @@ export default function MockCenter() {
           {retro ? (
             <div className="space-y-3 text-xs">
               <div className="grid grid-cols-3 gap-2">
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
+                <div className="bg-surface-sunken rounded p-2 text-center">
                   <div className="text-lg font-bold text-danger">{retro.question_count}</div>
                   <div className="text-[10px] text-muted">题目错</div>
                 </div>
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
+                <div className="bg-surface-sunken rounded p-2 text-center">
                   <div className="text-lg font-bold text-warning">{retro.bias_count}</div>
                   <div className="text-[10px] text-muted">偏差信号</div>
                 </div>
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
+                <div className="bg-surface-sunken rounded p-2 text-center">
                   <div className="text-lg font-bold text-accent">{retro.agent_count}</div>
                   <div className="text-[10px] text-muted">Agent 失误</div>
                 </div>
