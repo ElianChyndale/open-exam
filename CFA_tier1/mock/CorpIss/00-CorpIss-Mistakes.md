@@ -1,6 +1,6 @@
 ---
 bucket: CorpIss
-question_count: 10
+question_count: 14
 ---
 
 # CorpIss Mock Mistakes
@@ -103,4 +103,44 @@ question_count: 10
 - correct_resolution: Correct answer is A. reject both projects A and B. ABC management aims to achieve a minimum ROIC above 9.20 percent, but the IRR of both projects fails to meet this investment criterion. Project B has a positive NPV of 1.12 million, but its IRR is 8.97 percent, below the 9.20 percent target ROIC, so undertaking it would lower ABC ROIC. Project A also has an IRR below 9.20 percent and a negative NPV.
 - evidence_refs: chat-screenshot-2026-05-29-roic-criterion-irr-npv-projects
 - evidence_assets: conversation-image-2026-05-29-roic-criterion-q18
+- moc_target: CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
+
+## Corporate Issuers | M07 Business Models - business model feature classification
+- error_type: constructed_response_incomplete_classification
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: Identified the high-income, young, urban, busy professional pet owner segment and pet insurance product, but treated the preferred veterinarian network mainly as the channel and described premium pricing only as charging more because the product is better. The response omitted veterinarian referrals, boutique pet stores, the online storefront, direct veterinarian billing, customer peace of mind, and the subscription-like monthly premium model.
+- correct_resolution: Customers: high-income, young, urban, busy professional pet owners, including owners of multiple and exotic pets. Products: pet insurance for sickness or injury, peace of mind, and direct handling of billing with veterinarians. Channels: veterinarian referrals, boutique pet stores, and an online storefront. Pricing strategy: premium pricing for a premium product plus recurring monthly premiums similar to a subscription.
+- evidence_refs: chat-screenshot-2026-05-31-healthypet-diasera-business-model-case
+- evidence_assets: conversation-image-2026-05-31-business-model-case-article, conversation-image-2026-05-31-business-model-case-q3
+- moc_target: CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
+
+## Corporate Issuers | M07 Business Models - business model feature classification
+- error_type: constructed_response_incomplete_classification
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: The response contained fragments rather than a complete feature grid: customers were described unclearly as insulin-dependent diabetes known as an insulin pump; products only noted a smaller and more aesthetically pleasing pump; channels only noted shipment to customers homes; and 24/7 customer service was misclassified as the pricing strategy.
+- correct_resolution: Customers: diabetics who need insulin, with expansion to Type 2 diabetics using multiple daily injections. Products: a differentiated insulin pump, substantial expert customer service before and after sale, and positioning in a complex market with complements and substitutes. Channels: direct sales to customers, close customer relationships, and direct shipment to customers. Pricing strategy: bundling and premium pricing for a premium product with service.
+- evidence_refs: chat-screenshot-2026-05-31-healthypet-diasera-business-model-case
+- evidence_assets: conversation-image-2026-05-31-business-model-case-article, conversation-image-2026-05-31-business-model-case-q4
+- moc_target: CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
+
+## Corporate Issuers | M07 Business Models - risks opportunities and questions analysis
+- error_type: constructed_response_weak_structure
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: Raised plague or force-majeure bankruptcy, regulation compliance, market competition, online storefront leverage, expansion to more pet insurance types, growing pet-care demand, and online versus brick-and-mortar integration. The response relied on several secondary or weakly supported points and missed the central model-economics risks and diligence questions highlighted by the feedback.
+- correct_resolution: Key risks: insufficient differentiation to build a large enough policyholder pool, adverse selection from exotic pets, and imitation by incumbent insurers or veterinarians. Opportunities: build loyal customer and veterinarian bases using prestige, premium service, and peace of mind. Key questions: how difficult imitation is, how veterinarian relationships will be established and managed, whether those relationships can be exclusive, and whether referrals and boutique pet stores provide enough customers or broad advertising will be needed.
+- evidence_refs: chat-screenshot-2026-05-31-healthypet-diasera-business-model-case
+- evidence_assets: conversation-image-2026-05-31-business-model-case-article, conversation-image-2026-05-31-business-model-case-q5
+- moc_target: CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
+
+## Corporate Issuers | M07 Business Models - risks opportunities and questions analysis
+- error_type: constructed_response_omission
+- question_source: unknown_from_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: No usable response was displayed; the question received 0/1 point.
+- correct_resolution: Key risks: a pricing strategy that may be incompatible with high-cost customer service if growth is weaker than expected; uncertainty around manufacturing economies of scale; and difficulty persuading Type 2 diabetics to switch from cheaper multiple daily injections to a more expensive pump requiring prescription, purchase, and service navigation. Opportunities: gain Type 1 share from inferior competitor products and target Type 2 diabetics using multiple daily injections. Key questions: unit costs and gross margins at different volumes, manufacturing management and staff experience, ownership of manufacturing resources and supplier dependencies, realistic segment-level penetration and sales expectations, and customer-service staffing cost per customer.
+- evidence_refs: chat-screenshot-2026-05-31-healthypet-diasera-business-model-case
+- evidence_assets: conversation-image-2026-05-31-business-model-case-article, conversation-image-2026-05-31-business-model-case-q6
 - moc_target: CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md

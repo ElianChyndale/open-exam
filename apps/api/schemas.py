@@ -215,3 +215,160 @@ class CohortRiskResponse(BaseModel):
     dropout_warnings: list[dict]
     instructor_recommendations: list[str]
     generated_at: str
+
+
+# ── Daily Learner Loop ───────────────────────────────────────────────────────
+
+class ProfileUpdate(BaseModel):
+    """Persisted learner setup and settings."""
+    exam_date: str = Field(default="")
+    current_phase: str = Field(default="foundation")
+    target_score_percentile: int = Field(default=70, ge=1, le=100)
+    daily_minutes_available: int = Field(default=120, ge=10)
+    weekly_study_days: int = Field(default=6, ge=1, le=7)
+    preferred_session_minutes: int = Field(default=50, ge=10)
+    peak_energy_window: str = Field(default="09:00-12:00")
+    moderate_energy_window: str = Field(default="14:00-18:00")
+    low_energy_window: str = Field(default="20:00-22:00")
+
+
+class TaskStatusUpdate(BaseModel):
+    """Allowed learner task transitions."""
+    status: str = Field(pattern="^(pending|completed|skipped|deferred)$")
+
+
+class ReviewSessionCreate(BaseModel):
+    """Start an active-recall review session."""
+    max_items: int = Field(default=10, ge=1, le=50)
+
+
+class ReviewResponseSubmit(BaseModel):
+    """Record the learner's self-rated retrieval result."""
+    prompt_id: str
+    score: int = Field(ge=0, le=4)
+    self_explanation: str = Field(default="")
+
+
+# ── Practice And Private Question Banks ──────────────────────────────────────
+
+class ImportedQuestion(BaseModel):
+    """Normalized private import record. Missing fields stay quarantined."""
+    source_file: str = Field(default="")
+    source_page: int = Field(default=0, ge=0)
+    prompt: str = Field(default="")
+    choices: list[str] = Field(default_factory=list)
+    correct_answer: str = Field(default="")
+    explanation: str = Field(default="")
+    topic: str = Field(default="")
+    module: str = Field(default="")
+    los: str = Field(default="")
+    error_type: str = Field(default="concept_confusion")
+
+
+class QuestionBankImport(BaseModel):
+    source_name: str
+    questions: list[ImportedQuestion]
+
+
+class QuestionReview(BaseModel):
+    action: str = Field(pattern="^(approve|reject)$")
+    corrections: dict[str, Any] = Field(default_factory=dict)
+
+
+class PracticeSessionCreate(BaseModel):
+    max_items: int = Field(default=10, ge=1, le=100)
+    topic: str = Field(default="")
+
+
+class PracticeAnswer(BaseModel):
+    question_id: str
+    answer: str
+    confidence: int = Field(default=1, ge=0, le=4)
+    elapsed_seconds: int = Field(default=0, ge=0)
+    self_explanation: str = Field(default="")
+
+
+# ── Mock Runs, Coach, And Knowledge Graph ───────────────────────────────────
+
+class MockRunCreate(BaseModel):
+    session_label: str = Field(default="Mock run")
+    total_minutes: int = Field(default=135, ge=1)
+    total_questions: int = Field(default=90, ge=1)
+
+
+class MockRunStateUpdate(BaseModel):
+    action: str = Field(pattern="^(pause|resume|complete)$")
+    elapsed_seconds: int = Field(default=0, ge=0)
+
+
+class MockRunAnswer(BaseModel):
+    question_id: str
+    prompt: str = Field(default="")
+    answer: str = Field(default="")
+    correct_answer: str = Field(default="")
+    explanation: str = Field(default="")
+    is_correct: bool
+    topic: str = Field(default="")
+    los: str = Field(default="")
+    elapsed_seconds: int = Field(default=0, ge=0)
+    confidence: int = Field(default=1, ge=0, le=4)
+
+
+class ExternalMockImport(BaseModel):
+    source_name: str
+    session_label: str = Field(default="External mock")
+    total_questions: int = Field(default=0, ge=0)
+    answers: list[MockRunAnswer]
+
+
+class CoachRetroRequest(BaseModel):
+    summary: str
+    source_refs: list[str] = Field(min_length=1)
+    biases: list[str] = Field(default_factory=list)
+
+
+class CoachAgentAuditRequest(BaseModel):
+    summary: str
+    source_refs: list[str] = Field(min_length=1)
+    risk_kind: str = Field(default="unsupported_claim")
+
+
+class GraphNode(BaseModel):
+    id: str
+    label: str
+    source_kind: str = Field(pattern="^(official|evidence|personal)$")
+    node_type: str
+    x: float = 0
+    y: float = 0
+    notes: str = Field(default="")
+    color: str = Field(default="")
+    locked: bool = False
+
+
+class GraphEdge(BaseModel):
+    id: str
+    source: str
+    target: str
+    source_kind: str = Field(pattern="^(official|evidence|personal)$")
+    label: str = Field(default="")
+    locked: bool = False
+
+
+class GraphOverlayUpdate(BaseModel):
+    nodes: list[GraphNode] = Field(default_factory=list)
+    edges: list[GraphEdge] = Field(default_factory=list)
+
+
+# ── Explicit Transfer And Institution Delivery ──────────────────────────────
+
+class TransferImportRequest(BaseModel):
+    bundle: dict[str, Any] = Field(default_factory=dict)
+    dry_run: bool = True
+    direction: str = Field(default="cloud-to-local", pattern="^(cloud-to-local|local-to-cloud)$")
+    organization_id: str = Field(default="")
+
+
+class InterventionCreate(BaseModel):
+    learner_id: str
+    reason: str
+    owner_id: str = Field(default="")

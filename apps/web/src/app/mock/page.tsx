@@ -1,239 +1,94 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { mockApi } from '@/lib/api';
-import { FileText, Play, RotateCcw, AlertTriangle, BarChart3, Plus } from 'lucide-react';
-
-interface MockSession {
-  session_id: string;
-  session_label: string;
-  exam_name: string;
-  total_minutes: number;
-  total_questions: number;
-  correct_count: number;
-  scheduled_date: string;
-  created_at: string;
-}
-
-interface RetroData {
-  session_id: string;
-  question_count: number;
-  bias_count: number;
-  agent_count: number;
-  markdown_content: string;
-  stop_doing: string[];
-  next_strategy: string;
-}
+import { Clock3, FileUp, Pause, Play, Square } from 'lucide-react';
+import { mockApi, MockRun } from '@/lib/api';
+import { Badge, Button, EmptyState, Field, Metric, Sheet, Surface } from '@/components/ui/ui';
 
 export default function MockCenter() {
-  const [sessions, setSessions] = useState<MockSession[]>([]);
-  const [selectedSession, setSelectedSession] = useState('');
-  const [retro, setRetro] = useState<RetroData | null>(null);
-  const [brief, setBrief] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-  const [showCreate, setShowCreate] = useState(false);
-  const [newMock, setNewMock] = useState({
-    session_id: '',
-    session_label: '',
-    total_minutes: 180,
-    total_questions: 90,
-    correct_count: 0,
+  const [runs, setRuns] = useState<MockRun[]>([]);
+  const [selected, setSelected] = useState<MockRun | null>(null);
+  const [label, setLabel] = useState('CFA Level I timed mock');
+  const [elapsed, setElapsed] = useState(0);
+
+  const refresh = () => mockApi.listRuns().then((data) => {
+    setRuns(data.runs);
+    setSelected((current) => data.runs.find((run) => run.run_id === current?.run_id) ?? data.runs[0] ?? null);
   });
+  useEffect(() => { refresh(); }, []);
 
-  useEffect(() => {
-    mockApi.listHistory().then((data: any) => {
-      setSessions(data.sessions || []);
-    }).finally(() => setLoading(false));
-  }, []);
-
-  const createMock = async () => {
-    await mockApi.create({
-      ...newMock,
-      exam_name: 'CFA Level I',
-      scheduled_date: new Date().toISOString().slice(0, 10),
+  const start = async () => {
+    const { run } = await mockApi.startRun({ session_label: label, total_minutes: 135, total_questions: 90 });
+    setSelected(run);
+    await refresh();
+  };
+  const transition = async (action: 'pause' | 'resume' | 'complete') => {
+    if (!selected) return;
+    const { run } = await mockApi.setRunState(selected.run_id, action, elapsed);
+    setSelected(run);
+    await refresh();
+  };
+  const importSample = async () => {
+    const { run } = await mockApi.importResults({
+      source_name: 'manual-score-entry',
+      session_label: 'Imported mock result',
+      total_questions: 2,
+      answers: [{ question_id: 'manual-1', is_correct: true, topic: 'Ethics', los: 'ETH.I' }, { question_id: 'manual-2', is_correct: false, topic: 'Fixed Income', los: 'FI.Duration' }],
     });
-    setShowCreate(false);
-    // Refresh
-    const data: any = await mockApi.listHistory();
-    setSessions(data.sessions || []);
+    setSelected(run);
+    await refresh();
   };
-
-  const runRetro = async (sessionId: string) => {
-    setSelectedSession(sessionId);
-    setRetro(null);
-    try {
-      const data = await mockApi.getRetro(sessionId);
-      setRetro(data as RetroData);
-    } catch (err: any) {
-      setRetro({
-        session_id: sessionId,
-        question_count: 0,
-        bias_count: 0,
-        agent_count: 0,
-        markdown_content: '',
-        stop_doing: [],
-        next_strategy: err.message,
-      });
-    }
-  };
-
-  const getBrief = async (sessionId: string) => {
-    try {
-      const data = await mockApi.getBrief(sessionId);
-      setBrief(data);
-    } catch {}
-  };
-
-  if (loading) {
-    return <div className="text-muted animate-pulse">加载模拟中心...</div>;
-  }
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="mx-auto max-w-6xl space-y-5">
+      <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold">模拟中心</h2>
-          <p className="text-muted text-sm mt-1">Pre-mock brief · Mock 记录 · Post-mock retro · 停止做清单</p>
+          <p className="metric-label">Timed checkpoints + append-only results</p>
+          <h1 className="mt-1 text-3xl font-semibold tracking-tight">Mock center</h1>
+          <p className="mt-2 text-sm text-muted">Run timed sessions, pause deliberately, inspect pacing, and import external scores.</p>
         </div>
-        <button
-          onClick={() => setShowCreate(!showCreate)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
-        >
-          <Plus size={14} /> 新模拟
-        </button>
-      </div>
+        <Button variant="secondary" onClick={importSample}><FileUp size={15} /> Import external result</Button>
+      </header>
 
-      {/* Create form */}
-      {showCreate && (
-        <div className="card space-y-3">
-          <h3 className="text-sm font-semibold">创建模拟记录</h3>
-          <div className="grid grid-cols-3 gap-3">
-            <input
-              value={newMock.session_id}
-              onChange={(e) => setNewMock({ ...newMock, session_id: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-              placeholder="Session ID (e.g. mock-1)"
-            />
-            <input
-              value={newMock.session_label}
-              onChange={(e) => setNewMock({ ...newMock, session_label: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-              placeholder="标签 (e.g. Mock 1 AM)"
-            />
-            <input
-              type="number"
-              value={newMock.total_questions}
-              onChange={(e) => setNewMock({ ...newMock, total_questions: Number(e.target.value) })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-              placeholder="总题数"
-            />
-          </div>
-          <button onClick={createMock} className="px-4 py-1.5 bg-[#22c55e]/20 text-success rounded-lg text-sm">
-            创建
-          </button>
-        </div>
-      )}
-
-      <div className="grid grid-cols-3 gap-6">
-        {/* Session list */}
-        <div className="card">
-          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-            <FileText size={14} className="text-accent" /> 模拟记录
-          </h3>
-          {sessions.length === 0 ? (
-            <p className="text-xs text-muted">暂无模拟记录</p>
-          ) : (
-            <div className="space-y-1 max-h-80 overflow-auto">
-              {sessions.map((s) => (
-                <div key={s.session_id} className="space-y-0.5">
-                  <button
-                    onClick={() => { setSelectedSession(s.session_id); runRetro(s.session_id); getBrief(s.session_id); }}
-                    className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${
-                      selectedSession === s.session_id
-                        ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                        : 'hover:bg-[#14141f]'
-                    }`}
-                  >
-                    <div className="font-medium">{s.session_label}</div>
-                    <div className="text-muted">
-                      {s.total_questions} 题 · {s.correct_count} 对
-                      {s.total_questions > 0 && ` · ${Math.round(s.correct_count / s.total_questions * 100)}%`}
-                    </div>
-                    <div className="text-[10px] text-muted">{s.created_at?.slice(0, 10)}</div>
-                  </button>
-                </div>
-              ))}
+      <div className="grid gap-4 lg:grid-cols-[19rem_minmax(0,1fr)]">
+        <aside className="space-y-4">
+          <Sheet title="Start timed mock">
+            <div className="space-y-3">
+              <Field value={label} onChange={(event) => setLabel(event.target.value)} aria-label="Mock run label" />
+              <Button className="w-full" onClick={start}><Play size={15} /> Start 90-question run</Button>
             </div>
+          </Sheet>
+          <Sheet title="Run history">
+            {runs.length === 0 ? <EmptyState title="No mock runs yet" /> : (
+              <div className="space-y-2">
+                {runs.map((run) => <button key={run.run_id} onClick={() => setSelected(run)} className="w-full rounded-xl border border-line p-3 text-left hover:bg-surface-hover/70"><p className="text-sm font-semibold">{run.session_label}</p><p className="mt-1 text-xs text-muted">{run.status} · {run.answered_count}/{run.total_questions}</p></button>)}
+              </div>
+            )}
+          </Sheet>
+        </aside>
+
+        <section className="space-y-4">
+          {!selected ? <EmptyState title="Start or import a mock run" detail="The timed workspace will show section pacing checkpoints here." /> : (
+            <>
+              <Surface className="space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-3"><div><h2 className="font-semibold">{selected.session_label}</h2><p className="mt-1 text-xs text-muted">{selected.source_kind}</p></div><Badge tone={selected.status === 'completed' ? 'success' : selected.status === 'paused' ? 'warning' : 'accent'}>{selected.status}</Badge></div>
+                <div className="grid gap-3 sm:grid-cols-3"><Metric label="Answered" value={`${selected.answered_count}/${selected.total_questions}`} /><Metric label="Correct" value={selected.correct_count} /><Metric label="Elapsed" value={`${Math.round(selected.elapsed_seconds / 60)}m`} /></div>
+                <div className="flex flex-wrap gap-2">
+                  <Field className="max-w-40" type="number" value={elapsed} onChange={(event) => setElapsed(Number(event.target.value))} aria-label="Elapsed seconds" />
+                  {selected.status === 'active' ? <Button variant="secondary" onClick={() => transition('pause')}><Pause size={15} /> Pause</Button> : null}
+                  {selected.status === 'paused' ? <Button onClick={() => transition('resume')}><Play size={15} /> Resume</Button> : null}
+                  {selected.status !== 'completed' ? <Button variant="danger" onClick={() => transition('complete')}><Square size={14} /> Complete</Button> : null}
+                </div>
+              </Surface>
+              <Sheet title="Pacing checkpoints">
+                <div className="grid gap-2 sm:grid-cols-3">
+                  {selected.checkpoints.map((checkpoint) => <div key={checkpoint.question_number} className="rounded-xl border border-line bg-surface-sunken/60 p-3"><Clock3 size={15} className="text-accent" /><p className="mt-2 text-sm font-semibold">Question {checkpoint.question_number}</p><p className="mt-1 text-xs text-muted">Target {Math.round(checkpoint.target_elapsed_seconds / 60)} minutes</p></div>)}
+                </div>
+              </Sheet>
+              {selected.answers?.length ? <Sheet title="Answer review"><div className="space-y-2">{selected.answers.map((answer) => <div key={answer.question_id} className="rounded-xl border border-line p-3 text-xs"><div className="flex items-center justify-between gap-2"><span className="font-semibold">{answer.question_id}</span><Badge tone={answer.is_correct ? 'success' : 'danger'}>{answer.is_correct ? 'correct' : 'review'}</Badge></div><p className="mt-2 text-muted">{answer.topic} · {answer.los}</p></div>)}</div></Sheet> : null}
+            </>
           )}
-        </div>
-
-        {/* Pre-mock brief */}
-        <div className="card">
-          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-            <Play size={14} className="text-success" /> Pre-Mock Brief
-          </h3>
-          {brief ? (
-            <div className="space-y-3 text-xs">
-              <div>
-                <div className="text-muted mb-1">触发条件</div>
-                <div>{brief.trigger}</div>
-              </div>
-              <div>
-                <div className="text-muted mb-1">决策</div>
-                <div className="font-medium">{brief.decision}</div>
-              </div>
-              <div>
-                <div className="text-muted mb-1">为什么有效</div>
-                <div>{brief.why_it_works}</div>
-              </div>
-            </div>
-          ) : (
-            <p className="text-xs text-muted">选择一个模拟查看 pre-mock brief</p>
-          )}
-        </div>
-
-        {/* Post-mock retro */}
-        <div className="card">
-          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-            <RotateCcw size={14} className="text-warning" /> Post-Mock Retro
-          </h3>
-          {retro ? (
-            <div className="space-y-3 text-xs">
-              <div className="grid grid-cols-3 gap-2">
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
-                  <div className="text-lg font-bold text-danger">{retro.question_count}</div>
-                  <div className="text-[10px] text-muted">题目错</div>
-                </div>
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
-                  <div className="text-lg font-bold text-warning">{retro.bias_count}</div>
-                  <div className="text-[10px] text-muted">偏差信号</div>
-                </div>
-                <div className="bg-[#0a0a0f] rounded p-2 text-center">
-                  <div className="text-lg font-bold text-accent">{retro.agent_count}</div>
-                  <div className="text-[10px] text-muted">Agent 失误</div>
-                </div>
-              </div>
-
-              {retro.stop_doing.length > 0 && (
-                <div>
-                  <div className="text-muted mb-1 flex items-center gap-1">
-                    <AlertTriangle size={10} /> 停止做的事
-                  </div>
-                  {retro.stop_doing.map((s, i) => (
-                    <p key={i} className="text-danger text-[11px]">• {s}</p>
-                  ))}
-                </div>
-              )}
-
-              <div>
-                <div className="text-muted mb-1">下次策略</div>
-                <p>{retro.next_strategy}</p>
-              </div>
-            </div>
-          ) : (
-            <p className="text-xs text-muted">选择一个模拟查看 retro</p>
-          )}
-        </div>
+        </section>
       </div>
     </div>
   );

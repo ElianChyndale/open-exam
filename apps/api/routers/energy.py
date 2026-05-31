@@ -29,6 +29,9 @@ async def energy_check_in(req: EnergyCheckInRequest, repo=Depends(get_repo)):
 
     # Get recommended task order
     task_order = EnergyAwarePlanner.optimal_task_order(profile)
+    from services.daily_loop_service import refit_today_tasks
+
+    refit_today_tasks(repo, task_order)
 
     # Generate warnings
     warnings: list[str] = []

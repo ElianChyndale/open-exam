@@ -7,18 +7,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cockpit: {
-          bg: '#0a0a0f',
-          card: '#14141f',
-          border: '#1e1e2e',
-          accent: '#6366f1',
-          'accent-light': '#818cf8',
-          success: '#22c55e',
-          warning: '#f59e0b',
-          danger: '#ef4444',
-          muted: '#a1a1aa',
-          text: '#e4e4e7',
+        surface: {
+          canvas: 'rgb(var(--surface-canvas) / <alpha-value>)',
+          raised: 'rgb(var(--surface-raised) / <alpha-value>)',
+          sunken: 'rgb(var(--surface-sunken) / <alpha-value>)',
+          hover: 'rgb(var(--surface-hover) / <alpha-value>)',
+          sidebar: 'rgb(var(--surface-sidebar) / <alpha-value>)',
         },
+        line: 'rgb(var(--line) / <alpha-value>)',
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        'accent-strong': 'rgb(var(--accent-strong) / <alpha-value>)',
+        'accent-action': 'rgb(var(--accent-action) / <alpha-value>)',
+        'accent-action-strong': 'rgb(var(--accent-action-strong) / <alpha-value>)',
+        success: 'rgb(var(--success) / <alpha-value>)',
+        warning: 'rgb(var(--warning) / <alpha-value>)',
+        danger: 'rgb(var(--danger) / <alpha-value>)',
+      },
+      boxShadow: {
+        window: '0 18px 60px rgb(15 23 42 / 0.10), 0 2px 8px rgb(15 23 42 / 0.05)',
       },
     },
   },

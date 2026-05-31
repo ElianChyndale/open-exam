@@ -2,10 +2,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
+
+import scripts.cfa_content_extractor as ce
+
+log = logging.getLogger(__name__)
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -369,14 +374,58 @@ def render_knowledge_block(block: KnowledgeBlock) -> str:
 
 
 def build_knowledge_block(subject: str, module: dict, signal: str, formulas: list[FormulaFramework]) -> KnowledgeBlock:
+    """Build a KnowledgeBlock using extracted textbook content where available.
+
+    Priority:
+      1. Extraction cache (ePub/PDF/DOCX body text → rules)
+      2. Existing formula entries
+      3. Template fallback (signal-topic based)
+    """
     title = clean_anchor(signal)
     number = anchor_number(signal)
-    matching_formula = next((entry for entry in formulas if clean_anchor(entry.knowledge_node).lower() == title.lower()), None)
+    heading = f"{number + ' ' if number else ''}{title} / 教材小节精讲"
+    textbook_position = f"{subject} {module['official_module']} | {signal}"
+    matching_formula = next(
+        (entry for entry in formulas if clean_anchor(entry.knowledge_node).lower() == title.lower()),
+        None,
+    )
+    formula_fallback = matching_formula.output if matching_formula else ""
+
+    # ---- Try extraction ----
+    try:
+        cache = ce.load_cache()
+        key = ce.cache_key(subject, module["module"])
+        if key in cache:
+            cached_sections = ce._deserialize_cache_entries(cache[key])
+            if signal in cached_sections:
+                sec = cached_sections[signal]
+                fields = ce.build_knowledge_block_from_extraction(
+                    sec,
+                    textbook_position,
+                    formula_rule_fallback=formula_fallback,
+                    links=f"[[{textbook_position.split('|')[0].strip().replace(' ', '-')}]]",
+                )
+                return KnowledgeBlock(
+                    heading=heading,
+                    textbook_position=textbook_position,
+                    core_meaning=fields["core_meaning"],
+                    english_terms=fields["english_terms"],
+                    why_it_matters=fields["why_it_matters"],
+                    formula_rule=fields["formula_rule"],
+                    exam_translation=fields["exam_translation"],
+                    question_triggers=fields["question_triggers"],
+                    practice_mock_evidence=fields["practice_mock_evidence"],
+                    trap_fix_rule=fields["trap_fix_rule"],
+                )
+    except Exception as exc:
+        log.debug("Extraction cache lookup failed for %s %s: %s", subject, signal, exc)
+
+    # ---- Fallback: formula-derived ----
     depth_note = "主干框架" if anchor_depth(signal) <= 2 else "细节口径"
-    formula_rule = matching_formula.output if matching_formula else "先确认定义边界、输入条件、比较对象和例外条件；若涉及计算，再进入本模块 Formula & Decision Bench。"
+    formula_rule = formula_fallback or "先确认定义边界、输入条件、比较对象和例外条件；若涉及计算，再进入本模块 Formula & Decision Bench。"
     return KnowledgeBlock(
-        heading=f"{number + ' ' if number else ''}{title} / 教材小节精讲",
-        textbook_position=f"{subject} {module['official_module']} | {signal}",
+        heading=heading,
+        textbook_position=textbook_position,
         core_meaning=f"本节把 `{title}` 放在 `{module['official_module']}` 的 {depth_note} 中理解。学习时先用中文说清它解决什么问题，再保留 English terms 用于识别题干。",
         english_terms=english_terms(title),
         why_it_matters=f"它连接本模块 LOS 与考试输出：题目不会只考标题，而会要求你解释、计算、比较、评价或在情境中选择正确框架。",
@@ -402,7 +451,7 @@ def render_module(
     practice_file = practice_file_for_subject(registry_subject["directory"])
     mock_file = mock_file_for_subject(registry_subject["directory"])
     signals = module_index.get("signal_topics", [])
-    blocks = "\n".join(build_knowledge_block(subject, module, signal, formulas) for signal in signals)
+    blocks = "\n".join(render_knowledge_block(build_knowledge_block(subject, module, signal, formulas)) for signal in signals)
     los_lines = "\n".join(f"{idx}. {los}" for idx, los in enumerate(module.get("los", []), start=1))
     formula_bench = render_module_formula_bench(formulas, signals)
     title = f"{module['module']}: {module['official_module'].replace('Module ' + str(int(module['module'][1:])) + ': ', '')}"
@@ -619,6 +668,22 @@ def build_subject_formula_entries(subject: str, subject_index: dict, registry_su
 def rollout_all() -> list[Path]:
     index = load_textbook_index()
     registry = load_registry()
+
+    # Ensure extraction cache is populated before rendering
+    cache = ce.load_cache()
+    needs_extract = False
+    for subject_index in index:
+        for mod in subject_index.get("modules", []):
+            key = ce.cache_key(subject_index["subject"], mod["module"])
+            if key not in cache and mod.get("signal_topics"):
+                needs_extract = True
+                break
+        if needs_extract:
+            break
+    if needs_extract:
+        log.info("Extraction cache missing or stale; running extraction first...")
+        ce.extract_all_subjects()
+
     written: list[Path] = []
     for subject_index in index:
         subject = subject_index["subject"]
@@ -701,7 +766,38 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="C+ CFA knowledge-base redesign tools")
     parser.add_argument("--rollout-all", action="store_true")
     parser.add_argument("--audit-all", action="store_true")
+    parser.add_argument("--extract-all", action="store_true",
+                        help="Pre-extract body content from all ePub/PDF/DOCX sources into cache")
+    parser.add_argument("--extract-subject", type=str, default="",
+                        help="Extract a single subject (e.g. 'Quantitative Methods') and cache")
+    parser.add_argument("--extract-module", type=str, default="",
+                        help="Extract a single module (e.g. 'M01') — requires --extract-subject")
     args = parser.parse_args()
+
+    if args.extract_all:
+        total = ce.extract_all_subjects()
+        print(f"Extracted {total} sections into cache")
+        return
+
+    if args.extract_subject:
+        index = load_textbook_index()
+        subject_index = next((s for s in index if s["subject"] == args.extract_subject), None)
+        if subject_index is None:
+            print(f"Subject not found: {args.extract_subject}")
+            return
+        if args.extract_module:
+            modules = [m for m in subject_index.get("modules", []) if m["module"] == args.extract_module]
+        else:
+            modules = subject_index.get("modules", [])
+        total = 0
+        for mod in modules:
+            signals = mod.get("signal_topics", [])
+            if not signals:
+                continue
+            ce.extract_and_cache(args.extract_subject, mod["module"], signals)
+            total += len(signals)
+        print(f"Extracted {total} sections for {args.extract_subject}")
+        return
     if args.rollout_all:
         written = rollout_all()
         print(f"wrote {len(written)} active MOC/module files")

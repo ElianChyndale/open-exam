@@ -1,11 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { institutionApi } from '@/lib/api';
-import {
-  Building2, Users, AlertTriangle, GraduationCap,
-  UserX, FileText, TrendingDown, Plus,
-} from 'lucide-react';
+import { AlertTriangle, Building2, Download, Plus, UserRoundCheck, Users } from 'lucide-react';
+import { institutionApi, Intervention, transferApi, type DeliveryProof } from '@/lib/api';
+import { Badge, Button, EmptyState, Field, Metric, Sheet, Surface } from '@/components/ui/ui';
 
 interface Cohort {
   cohort_id: string;
@@ -13,249 +11,83 @@ interface Cohort {
   exam_target: string;
   exam_date: string;
   learner_ids: string[];
-  created_at: string;
-}
-
-interface RiskReport {
-  report_id: string;
-  cohort_id: string;
-  cohort_name: string;
-  total_learners: number;
-  at_risk_count: number;
-  dropout_warning_count: number;
-  avg_review_completion: number;
-  avg_accuracy: number;
-  at_risk_learners: Array<{
-    learner_id: string;
-    risk_score: number;
-    total_errors: number;
-    days_inactive: number;
-  }>;
-  dropout_warnings: Array<{
-    learner_id: string;
-    days_inactive: number;
-    warning: string;
-  }>;
-  instructor_recommendations: string[];
-  generated_at: string;
 }
 
 export default function InstitutionConsole() {
   const [cohorts, setCohorts] = useState<Cohort[]>([]);
-  const [selectedCohort, setSelectedCohort] = useState('');
-  const [riskReport, setRiskReport] = useState<RiskReport | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [showCreate, setShowCreate] = useState(false);
-  const [newCohort, setNewCohort] = useState({
-    institution_id: 'inst-001',
-    cohort_name: '',
-    exam_target: 'CFA Level I',
-    exam_date: '',
-    learner_ids: '',
-  });
+  const [interventions, setInterventions] = useState<Intervention[]>([]);
+  const [proof, setProof] = useState<DeliveryProof | null>(null);
+  const [cohortName, setCohortName] = useState('');
+  const [learnerIds, setLearnerIds] = useState('');
+  const [learnerId, setLearnerId] = useState('');
+  const [reason, setReason] = useState('');
 
-  useEffect(() => {
-    institutionApi.listCohorts().then((data: any) => {
-      setCohorts(data.cohorts || []);
-    }).finally(() => setLoading(false));
-  }, []);
+  const refresh = () => Promise.all([
+    institutionApi.listCohorts().then((data: any) => setCohorts(data.cohorts ?? [])),
+    institutionApi.listInterventions().then((data) => setInterventions(data.interventions)),
+    institutionApi.deliveryProof().then(setProof),
+  ]);
+  useEffect(() => { refresh(); }, []);
 
   const createCohort = async () => {
-    await institutionApi.createCohort({
-      ...newCohort,
-      learner_ids: newCohort.learner_ids.split(',').map((s: string) => s.trim()).filter(Boolean),
-    });
-    setShowCreate(false);
-    const data: any = await institutionApi.listCohorts();
-    setCohorts(data.cohorts || []);
+    await institutionApi.createCohort({ institution_id: 'local-institution', cohort_name: cohortName, learner_ids: learnerIds.split(',').map((item) => item.trim()).filter(Boolean) });
+    setCohortName(''); setLearnerIds(''); await refresh();
   };
-
-  const loadRiskReport = async (cohortId: string) => {
-    setSelectedCohort(cohortId);
-    const report = await institutionApi.getRiskReport(cohortId);
-    setRiskReport(report as RiskReport);
+  const createIntervention = async () => {
+    await institutionApi.createIntervention({ learner_id: learnerId, reason });
+    setLearnerId(''); setReason(''); await refresh();
   };
-
-  if (loading) {
-    return <div className="text-muted animate-pulse">加载机构控制台...</div>;
-  }
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="mx-auto max-w-6xl space-y-5">
+      <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold">机构控制台</h2>
-          <p className="text-muted text-sm mt-1">班级风险榜 · 掉队预警 · 学员周报 · 老师干预建议 · 续费/交付证明</p>
+          <p className="metric-label">Optional tenant workspace</p>
+          <h1 className="mt-1 text-3xl font-semibold tracking-tight">Institution console</h1>
+          <p className="mt-2 text-sm text-muted">Cohorts, intervention queues, inactivity follow-up, and delivery-proof exports.</p>
         </div>
-        <button
-          onClick={() => setShowCreate(!showCreate)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
-        >
-          <Plus size={14} /> 新建班级
-        </button>
-      </div>
+        <a className="button-secondary" href={transferApi.exportUrl()}><Download size={15} /> Export local bundle</a>
+      </header>
 
-      {/* Create cohort form */}
-      {showCreate && (
-        <div className="card space-y-3">
-          <h3 className="text-sm font-semibold">创建班级</h3>
-          <div className="grid grid-cols-3 gap-3">
-            <input
-              value={newCohort.cohort_name}
-              onChange={(e) => setNewCohort({ ...newCohort, cohort_name: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-              placeholder="班级名称"
-            />
-            <input
-              value={newCohort.exam_date}
-              onChange={(e) => setNewCohort({ ...newCohort, exam_date: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-              placeholder="考试日期 YYYY-MM-DD"
-            />
-            <input
-              value={newCohort.learner_ids}
-              onChange={(e) => setNewCohort({ ...newCohort, learner_ids: e.target.value })}
-              className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-2 text-sm"
-              placeholder="学员 ID (逗号分隔)"
-            />
+      <section className="grid gap-3 sm:grid-cols-3">
+        <Surface><Metric label="Cohorts" value={proof?.cohort_count ?? 0} /></Surface>
+        <Surface><Metric label="Open interventions" value={proof?.intervention_count ?? 0} /></Surface>
+        <Surface><Metric label="Weekly attempts" value={proof?.weekly_report.attempt_count ?? 0} /></Surface>
+      </section>
+
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Sheet title="Create cohort">
+          <div className="space-y-3">
+            <Field value={cohortName} onChange={(event) => setCohortName(event.target.value)} aria-label="Cohort name" placeholder="Cohort name" />
+            <Field value={learnerIds} onChange={(event) => setLearnerIds(event.target.value)} aria-label="Learner IDs" placeholder="Learner IDs, comma separated" />
+            <Button onClick={createCohort}><Plus size={15} /> Add cohort</Button>
           </div>
-          <button onClick={createCohort} className="px-4 py-1.5 bg-[#22c55e]/20 text-success rounded-lg text-sm">
-            创建
-          </button>
-        </div>
-      )}
-
-      <div className="grid grid-cols-3 gap-6">
-        {/* Cohort list */}
-        <div className="card">
-          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-            <GraduationCap size={14} className="text-accent" /> 班级列表
-          </h3>
-          {cohorts.length === 0 ? (
-            <p className="text-xs text-muted">暂无班级</p>
-          ) : (
-            <div className="space-y-1 max-h-80 overflow-auto">
-              {cohorts.map((c) => (
-                <button
-                  key={c.cohort_id}
-                  onClick={() => loadRiskReport(c.cohort_id)}
-                  className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors ${
-                    selectedCohort === c.cohort_id
-                      ? 'bg-[#6366f1]/15 border border-[#6366f1]/30'
-                      : 'hover:bg-[#14141f]'
-                  }`}
-                >
-                  <div className="font-medium">{c.cohort_name}</div>
-                  <div className="text-muted">
-                    {c.learner_ids.length} 学员 · {c.exam_target} · 考试 {c.exam_date}
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Risk report */}
-        <div className="col-span-2 space-y-4">
-          {riskReport ? (
-            <>
-              {/* Summary metrics */}
-              <div className="grid grid-cols-4 gap-3">
-                <MiniCard icon={<Users size={14} className="text-accent" />} label="总学员" value={String(riskReport.total_learners)} />
-                <MiniCard icon={<AlertTriangle size={14} className="text-danger" />} label="风险学员" value={String(riskReport.at_risk_count)} />
-                <MiniCard icon={<UserX size={14} className="text-warning" />} label="掉队预警" value={String(riskReport.dropout_warning_count)} />
-                <MiniCard icon={<TrendingDown size={14} className="text-muted" />} label="平均完成率" value={`${(riskReport.avg_review_completion * 100).toFixed(0)}%`} />
-              </div>
-
-              {/* At-risk learners */}
-              <div className="card">
-                <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-                  <AlertTriangle size={14} className="text-danger" /> 风险学员榜
-                </h3>
-                {riskReport.at_risk_learners.length === 0 ? (
-                  <p className="text-xs text-muted">暂无风险学员</p>
-                ) : (
-                  <div className="space-y-1">
-                    {riskReport.at_risk_learners.slice(0, 10).map((l, i) => (
-                      <div key={i} className="flex items-center justify-between text-xs bg-[#0a0a0f] rounded-lg px-3 py-2">
-                        <span className="font-medium">{l.learner_id}</span>
-                        <div className="flex items-center gap-3 text-muted">
-                          <span>风险分 {l.risk_score}</span>
-                          <span>{l.total_errors} 错题</span>
-                          <span className={l.days_inactive >= 7 ? 'text-danger' : ''}>
-                            不活跃 {l.days_inactive} 天
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Dropout warnings */}
-              {riskReport.dropout_warnings.length > 0 && (
-                <div className="card border-[#f59e0b]/30">
-                  <h3 className="text-sm font-semibold mb-3 flex items-center gap-2 text-warning">
-                    <UserX size={14} /> 掉队预警
-                  </h3>
-                  {riskReport.dropout_warnings.map((w, i) => (
-                    <p key={i} className="text-xs text-warning">• {w.warning}</p>
-                  ))}
-                </div>
-              )}
-
-              {/* Instructor recommendations */}
-              {riskReport.instructor_recommendations.length > 0 && (
-                <div className="card border-[#6366f1]/30">
-                  <h3 className="text-sm font-semibold mb-3 flex items-center gap-2 text-accent">
-                    <FileText size={14} /> 老师干预建议
-                  </h3>
-                  {riskReport.instructor_recommendations.map((r, i) => (
-                    <p key={i} className="text-xs">• {r}</p>
-                  ))}
-                </div>
-              )}
-
-              {/* Delivery proof metrics */}
-              <div className="card">
-                <h3 className="text-sm font-semibold mb-2">交付证明</h3>
-                <div className="grid grid-cols-3 gap-2 text-xs">
-                  <div>
-                    <span className="text-muted">平均复习完成率:</span>{' '}
-                    <span className="font-medium">{(riskReport.avg_review_completion * 100).toFixed(0)}%</span>
-                  </div>
-                  <div>
-                    <span className="text-muted">风险学员占比:</span>{' '}
-                    <span className="font-medium">
-                      {riskReport.total_learners > 0
-                        ? `${((riskReport.at_risk_count / riskReport.total_learners) * 100).toFixed(0)}%`
-                        : '0%'}
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-muted">生成时间:</span>{' '}
-                    <span className="font-medium">{riskReport.generated_at}</span>
-                  </div>
-                </div>
-              </div>
-            </>
-          ) : (
-            <div className="card text-center py-12 text-muted">
-              <Building2 size={32} className="mx-auto mb-3 opacity-50" />
-              <p>选择一个班级查看风险报告</p>
-            </div>
-          )}
-        </div>
+        </Sheet>
+        <Sheet title="Queue intervention">
+          <div className="space-y-3">
+            <Field value={learnerId} onChange={(event) => setLearnerId(event.target.value)} aria-label="Learner ID" placeholder="Learner ID" />
+            <Field value={reason} onChange={(event) => setReason(event.target.value)} aria-label="Intervention reason" placeholder="Evidence-linked reason" />
+            <Button onClick={createIntervention}><UserRoundCheck size={15} /> Queue follow-up</Button>
+          </div>
+        </Sheet>
       </div>
-    </div>
-  );
-}
 
-function MiniCard({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
-  return (
-    <div className="card">
-      <div className="flex items-center gap-2 mb-1">{icon}<span className="metric-label">{label}</span></div>
-      <div className="metric-value text-lg">{value}</div>
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_22rem]">
+        <Sheet title="Intervention queue">
+          {interventions.length === 0 ? <EmptyState title="No interventions queued" /> : (
+            <div className="space-y-2">
+              {interventions.map((item) => <div key={item.intervention_id} className="rounded-xl border border-line bg-surface-raised/70 p-3"><div className="flex flex-wrap items-center gap-2"><AlertTriangle size={15} className="text-warning" /><p className="text-sm font-semibold">{item.learner_id}</p><Badge tone="warning">{item.status}</Badge></div><p className="mt-2 text-xs text-muted">{item.reason}</p></div>)}
+            </div>
+          )}
+        </Sheet>
+        <Sheet title="Cohorts">
+          {cohorts.length === 0 ? <EmptyState title="No cohorts yet" /> : (
+            <div className="space-y-2">
+              {cohorts.map((cohort) => <div key={cohort.cohort_id} className="rounded-xl border border-line p-3"><div className="flex items-center gap-2"><Building2 size={15} className="text-accent" /><p className="text-sm font-semibold">{cohort.cohort_name}</p></div><p className="mt-2 flex items-center gap-1 text-xs text-muted"><Users size={13} /> {cohort.learner_ids.length} learners</p></div>)}
+            </div>
+          )}
+        </Sheet>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from functools import lru_cache
 from pathlib import Path
@@ -25,7 +26,7 @@ if str(_AGENT_RUNTIME) not in sys.path:
     sys.path.insert(0, str(_AGENT_RUNTIME))
 
 
-from app.storage import Repository
+from app.storage import LearningRepository, LocalRepository
 
 
 # Root of the monorepo
@@ -34,10 +35,21 @@ def get_repo_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
+def get_openexam_mode() -> str:
+    mode = os.getenv("OPENEXAM_MODE", "local").strip().lower()
+    if mode not in {"local", "supabase"}:
+        raise ValueError("OPENEXAM_MODE must be local or supabase")
+    return mode
+
+
 @lru_cache()
-def get_repo() -> Repository:
+def get_repo() -> LearningRepository:
     """Get or create the Repository instance."""
-    return Repository(get_repo_root())
+    if get_openexam_mode() == "supabase":
+        from app.supabase_repository import SupabaseRepository
+
+        return SupabaseRepository(get_repo_root())
+    return LocalRepository(get_repo_root())
 
 
 def get_agent_runtime():

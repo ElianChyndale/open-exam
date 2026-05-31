@@ -1,158 +1,77 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { reviewApi } from '@/lib/api';
-import { BookOpen, Calendar, Filter, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+import { BookOpen, Check, Eye, RotateCcw } from 'lucide-react';
+import { retrievalApi, type RetrievalItem } from '@/lib/api';
+import { Alert, Badge, Button, EmptyState, Select, Surface, TextArea } from '@/components/ui/ui';
 
-const SUBJECTS = [
-  '', 'Quantitative Methods', 'Economics', 'Financial Statement Analysis',
-  'Corporate Issuers', 'Equity', 'Fixed Income', 'Derivatives',
-  'Alternative Investments', 'Portfolio Management', 'Ethical and Professional Standards',
-];
+export default function RetrievalReviewPage() {
+  const [sessionId, setSessionId] = useState('');
+  const [items, setItems] = useState<RetrievalItem[]>([]);
+  const [index, setIndex] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const [score, setScore] = useState(2);
+  const [explanation, setExplanation] = useState('');
+  const [message, setMessage] = useState('');
 
-export default function ReviewPackPage() {
-  const [markdown, setMarkdown] = useState('');
-  const [loading, setLoading] = useState(true);
-  const [focusTopic, setFocusTopic] = useState('');
-  const [daysBack, setDaysBack] = useState(7);
-  const [depth, setDepth] = useState('standard');
+  const item = items[index];
+  const start = () => retrievalApi.start().then((session) => {
+    setSessionId(session.session_id);
+    setItems(session.items);
+    setIndex(0);
+    setRevealed(false);
+    setMessage('');
+  });
 
-  const fetchPack = (params?: Record<string, string>) => {
-    setLoading(true);
-    reviewApi.getToday({
-      days_back: String(daysBack),
-      focus_topic: focusTopic,
-      knowledge_depth: depth,
-      ...params,
-    }).then((data: any) => {
-      setMarkdown(data.markdown_content || '');
-    }).finally(() => setLoading(false));
-  };
-
-  useEffect(() => {
-    fetchPack();
-  }, []);
-
-  // Simple markdown renderer
-  const renderMarkdown = (md: string) => {
-    const lines = md.split('\n');
-    const elements: React.ReactNode[] = [];
-    let inCodeBlock = false;
-
-    lines.forEach((line, i) => {
-      if (line.startsWith('```')) {
-        inCodeBlock = !inCodeBlock;
-        return;
-      }
-      if (inCodeBlock) {
-        elements.push(
-          <pre key={i} className="bg-[#0a0a0f] p-3 rounded-lg text-xs overflow-auto my-2">
-            {line}
-          </pre>
-        );
-        return;
-      }
-
-      if (line.startsWith('# ')) {
-        elements.push(<h1 key={i} className="text-2xl font-bold mt-6 mb-3">{line.slice(2)}</h1>);
-      } else if (line.startsWith('## ')) {
-        elements.push(<h2 key={i} className="text-xl font-bold mt-5 mb-2 text-accent">{line.slice(3)}</h2>);
-      } else if (line.startsWith('### ')) {
-        elements.push(<h3 key={i} className="text-lg font-semibold mt-4 mb-2">{line.slice(4)}</h3>);
-      } else if (line.startsWith('#### ')) {
-        elements.push(<h4 key={i} className="text-base font-semibold mt-3 mb-1 text-muted">{line.slice(5)}</h4>);
-      } else if (line.startsWith('> ')) {
-        elements.push(
-          <blockquote key={i} className="border-l-2 border-[#6366f1]/50 pl-3 my-1 text-sm text-muted">
-            {line.slice(2)}
-          </blockquote>
-        );
-      } else if (line.startsWith('- ')) {
-        elements.push(<li key={i} className="text-sm ml-4 list-disc my-0.5">{line.slice(2)}</li>);
-      } else if (line.startsWith('---')) {
-        elements.push(<hr key={i} className="my-3 border-[#1e1e2e]" />);
-      } else if (line.trim() === '') {
-        elements.push(<div key={i} className="h-2" />);
-      } else {
-        elements.push(<p key={i} className="text-sm my-1">{line}</p>);
-      }
-    });
-
-    return elements;
-  };
+  const submit = () => retrievalApi.respond(sessionId, { prompt_id: item.prompt_id, score, self_explanation: explanation }).then((result) => {
+    setMessage(`Next review: ${result.next_review_date}`);
+    setExplanation('');
+    setRevealed(false);
+    setIndex((current) => Math.min(current + 1, items.length));
+  });
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="mx-auto max-w-4xl space-y-5">
+      <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold">复习包</h2>
-          <p className="text-muted text-sm mt-1">到期错题、低信心题、交错题组、公式/概念热身</p>
+          <p className="metric-label">Active recall before passive review</p>
+          <h1 className="mt-1 text-3xl font-semibold tracking-tight">Retrieval review</h1>
+          <p className="mt-2 text-sm text-muted">Answer from memory, reveal the evidence, then score the quality of recall.</p>
         </div>
-        <button
-          onClick={() => fetchPack()}
-          className="px-4 py-2 bg-[#6366f1] hover:bg-[#5558e6] rounded-lg text-sm transition-colors"
-        >
-          刷新复习包
-        </button>
-      </div>
+        <Button onClick={start}><RotateCcw size={15} /> Start session</Button>
+      </header>
 
-      {/* Filters */}
-      <div className="card flex items-center gap-4 flex-wrap">
-        <div className="flex items-center gap-2">
-          <Filter size={14} className="text-muted" />
-          <span className="text-xs text-muted">过滤:</span>
-        </div>
-        <select
-          value={focusTopic}
-          onChange={(e) => { setFocusTopic(e.target.value); fetchPack({ focus_topic: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
-        >
-          <option value="">所有科目</option>
-          {SUBJECTS.filter(Boolean).map((s) => (
-            <option key={s} value={s}>{s}</option>
-          ))}
-        </select>
-        <select
-          value={daysBack}
-          onChange={(e) => { setDaysBack(Number(e.target.value)); fetchPack({ days_back: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
-        >
-          <option value={1}>1 天</option>
-          <option value={3}>3 天</option>
-          <option value={7}>7 天</option>
-          <option value={14}>14 天</option>
-          <option value={30}>30 天</option>
-        </select>
-        <select
-          value={depth}
-          onChange={(e) => { setDepth(e.target.value); fetchPack({ knowledge_depth: e.target.value }); }}
-          className="bg-[#0a0a0f] border border-[#1e1e2e] rounded-lg px-3 py-1.5 text-xs"
-        >
-          <option value="standard">标准深度</option>
-          <option value="expanded">扩展深度</option>
-        </select>
-        <div className="flex items-center gap-1 text-xs text-muted">
-          <Calendar size={12} />
-          <span>回顾 {daysBack} 天</span>
-        </div>
-      </div>
-
-      {/* Review content */}
-      {loading ? (
-        <div className="card text-center py-12 text-muted animate-pulse">生成复习包中...</div>
-      ) : markdown ? (
-        <div className="card">
-          <div className="prose prose-invert max-w-none">
-            {renderMarkdown(markdown)}
-          </div>
-        </div>
+      {message ? <Alert tone="success">{message}</Alert> : null}
+      {!item ? (
+        <Surface><EmptyState title={items.length ? 'Session complete' : 'Start a retrieval session'} detail="Recent mistakes become concealed prompts with spaced follow-up dates." /></Surface>
       ) : (
-        <div className="card text-center py-12 text-muted">
-          <BookOpen size={32} className="mx-auto mb-3 opacity-50" />
-          <p>暂无复习内容</p>
-          <p className="text-xs mt-1">记录错题后，系统会自动生成复习包</p>
-        </div>
+        <Surface className="space-y-4">
+          <div className="flex items-center justify-between gap-2"><Badge tone="accent">{item.topic}</Badge><span className="text-xs text-muted">{index + 1} / {items.length}</span></div>
+          <div>
+            <p className="metric-label">Closed-book prompt</p>
+            <h2 className="mt-2 text-xl font-semibold tracking-tight">{item.prompt_text}</h2>
+            <p className="mt-2 text-xs text-muted">{item.los}</p>
+          </div>
+          {!revealed ? (
+            <Button onClick={() => setRevealed(true)}><Eye size={15} /> Reveal answer</Button>
+          ) : (
+            <>
+              <div className="rounded-xl border border-success/25 bg-success/10 p-4">
+                <p className="metric-label text-success">Evidence-backed answer</p>
+                <p className="mt-2 text-sm">{item.answer_text}</p>
+              </div>
+              <label className="block space-y-1 text-xs font-semibold text-muted"><span>Recall score</span><Select value={score} onChange={(event) => setScore(Number(event.target.value))}><option value={0}>0 · No recall</option><option value={1}>1 · Fragmentary</option><option value={2}>2 · Partial</option><option value={3}>3 · Mostly correct</option><option value={4}>4 · Precise</option></Select></label>
+              <label className="block space-y-1 text-xs font-semibold text-muted"><span>Self-explanation</span><TextArea value={explanation} onChange={(event) => setExplanation(event.target.value)} placeholder="What rule changes your next decision?" /></label>
+              <Button onClick={submit}><Check size={15} /> Save response</Button>
+            </>
+          )}
+        </Surface>
       )}
+
+      <Surface>
+        <div className="flex items-center gap-2"><BookOpen size={15} className="text-accent" /><h2 className="text-sm font-semibold">Legacy review pack</h2></div>
+        <p className="mt-2 text-xs text-muted">The generated markdown review pack remains available through the CLI and `/api/review-pack/today` compatibility endpoint.</p>
+      </Surface>
     </div>
   );
 }

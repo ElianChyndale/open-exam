@@ -116,7 +116,7 @@ export default function EffectivenessDashboard() {
             />
           </div>
 
-          <div className="flex items-center gap-2 text-xs pt-2 border-t border-[#1e1e2e]">
+          <div className="flex items-center gap-2 text-xs pt-2 border-t border-line">
             <span className="text-muted">校准趋势:</span>
             <TrendIcon size={14} className={trendColor} />
             <span className={trendColor}>
@@ -140,12 +140,12 @@ export default function EffectivenessDashboard() {
                 .map(([los, risk]) => (
                   <div key={los} className="flex items-center gap-2">
                     <span className="text-xs w-40 truncate">{los}</span>
-                    <div className="flex-1 h-4 bg-[#0a0a0f] rounded-full overflow-hidden">
+                    <div className="flex-1 h-4 bg-surface-sunken rounded-full overflow-hidden">
                       <div
                         className={`h-full rounded-full transition-all ${
-                          risk > 0.7 ? 'bg-[#ef4444]'
-                          : risk > 0.4 ? 'bg-[#f59e0b]'
-                          : 'bg-[#22c55e]'
+                          risk > 0.7 ? 'bg-danger'
+                          : risk > 0.4 ? 'bg-warning'
+                          : 'bg-success'
                         }`}
                         style={{ width: `${(risk * 100).toFixed(0)}%` }}
                       />
@@ -161,7 +161,7 @@ export default function EffectivenessDashboard() {
           )}
 
           {data?.danger_top_3 && data.danger_top_3.length > 0 && (
-            <div className="mt-4 pt-3 border-t border-[#1e1e2e]">
+            <div className="mt-4 pt-3 border-t border-line">
               <div className="text-xs text-muted mb-2">⚠️ 最危险 3 个 LOS</div>
               {data.danger_top_3.map((d, i) => (
                 <p key={i} className="text-xs text-danger">• {d}</p>
@@ -182,7 +182,7 @@ export default function EffectivenessDashboard() {
               return (
                 <div key={i} className="flex-1 flex flex-col items-center gap-1">
                   <div
-                    className="w-full bg-[#6366f1]/60 hover:bg-[#6366f1] rounded-t transition-colors"
+                    className="w-full bg-accent/60 hover:bg-accent rounded-t transition-colors"
                     style={{ height: `${Math.max(height, 2)}%` }}
                     title={`${count} errors`}
                   />

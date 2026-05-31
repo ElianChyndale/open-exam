@@ -5,9 +5,77 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException
 
 from deps import get_repo
-from schemas import CohortCreate, CohortRiskResponse
+from schemas import CohortCreate, CohortRiskResponse, InterventionCreate
 
 router = APIRouter()
+
+
+def _intervention_path(repo):
+    path = repo.memory_root / "institution" / "interventions.jsonl"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def _interventions(repo):
+    import json
+
+    current = {}
+    path = _intervention_path(repo)
+    if not path.exists():
+        return []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            intervention = json.loads(line)
+            current[intervention["intervention_id"]] = intervention
+    return list(reversed(list(current.values())))
+
+
+@router.post("/interventions")
+async def create_intervention(req: InterventionCreate, repo=Depends(get_repo)):
+    import json
+    from datetime import UTC, datetime
+    from app.models import stable_id
+
+    created_at = datetime.now(UTC).isoformat()
+    intervention = {
+        "intervention_id": stable_id("intervention", req.learner_id, req.reason, created_at),
+        "learner_id": req.learner_id,
+        "reason": req.reason,
+        "owner_id": req.owner_id,
+        "status": "open",
+        "created_at": created_at,
+    }
+    with _intervention_path(repo).open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(intervention, ensure_ascii=False) + "\n")
+    return {"intervention": intervention}
+
+
+@router.get("/interventions")
+async def list_interventions(repo=Depends(get_repo)):
+    return {"interventions": _interventions(repo)}
+
+
+@router.get("/learners/{learner_id}")
+async def learner_detail(learner_id: str, repo=Depends(get_repo)):
+    events = [event.as_dict() for event in repo.load_events() if learner_id in event.evidence_refs]
+    tasks = [
+        event["payload"]
+        for event in repo.load_stream_events("task")
+        if event.get("learner_id") == learner_id
+    ]
+    return {"learner_id": learner_id, "events": events, "tasks": tasks}
+
+
+@router.get("/delivery-proof")
+async def delivery_proof(repo=Depends(get_repo)):
+    from services.advanced_service import weekly_report
+
+    cohort_dir = repo.memory_root / "institution" / "cohorts"
+    return {
+        "cohort_count": len(list(cohort_dir.glob("*.json"))) if cohort_dir.exists() else 0,
+        "intervention_count": len(_interventions(repo)),
+        "weekly_report": weekly_report(repo),
+    }
 
 
 @router.post("/cohorts")

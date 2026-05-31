@@ -1,197 +1,101 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { studyPlanApi, energyApi } from '@/lib/api';
-import {
-  Zap, Clock, Target, AlertTriangle, CheckCircle2, Brain, Battery, BatteryLow, BatteryMedium, BatteryFull,
-} from 'lucide-react';
+import { Battery, Bell, Check, Clock, RotateCcw, Sparkles, Target, Zap } from 'lucide-react';
+import { energyApi, notificationsApi, tasksApi, type DailyTask } from '@/lib/api';
+import { Alert, Badge, Button, EmptyState, Metric, Select, Surface } from '@/components/ui/ui';
 
-interface PlanData {
-  plan_id: string;
-  date: string;
-  energy_level: number;
-  available_minutes: number;
-  focus_topic: string;
-  focus_reason: string;
-  high_energy_tasks: Task[];
-  moderate_energy_tasks: Task[];
-  low_energy_tasks: Task[];
-  danger_los_list: string[];
-  warnings: string[];
-}
-
-interface Task {
-  task_type: string;
-  description: string;
-  fit: number;
-}
-
-const taskLabels: Record<string, string> = {
-  new_knowledge: '新知识',
-  difficult_practice: '高难练习',
-  interleaved_set: '交错题组',
-  mock_exam: '模拟考试',
-  mistake_review: '错题复盘',
-  formula_drill: '公式练习',
-  worked_example_fading: '例题渐隐',
-  active_recall: '主动回忆',
-  concept_discrimination: '概念判断',
-  light_review: '轻量复习',
-};
-
-export default function TodayCockpit() {
-  const [plan, setPlan] = useState<PlanData | null>(null);
+export default function TodayPage() {
+  const [tasks, setTasks] = useState<DailyTask[]>([]);
+  const [notifications, setNotifications] = useState<Array<{ notification_id: string; kind: string; title: string; detail: string }>>([]);
+  const [energy, setEnergy] = useState(2);
+  const [warnings, setWarnings] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    studyPlanApi.getToday().then(setPlan).finally(() => setLoading(false));
-  }, []);
+  const refresh = () => Promise.all([tasksApi.getToday(), notificationsApi.list()])
+    .then(([taskData, notificationData]) => {
+      setTasks(taskData.tasks);
+      setNotifications(notificationData.notifications);
+    }).finally(() => setLoading(false));
 
-  const EnergyIcon = plan
-    ? plan.energy_level >= 3 ? BatteryFull
-    : plan.energy_level >= 1 ? BatteryMedium
-    : BatteryLow
-    : Battery;
+  useEffect(() => { refresh(); }, []);
 
-  if (loading) {
-    return <div className="text-muted animate-pulse">加载今日驾驶舱...</div>;
-  }
+  const updateStatus = (task: DailyTask, status: DailyTask['status']) =>
+    tasksApi.setStatus(task.task_id, status).then(refresh);
+
+  const completed = tasks.filter((task) => task.status === 'completed').length;
+  const minutes = tasks.filter((task) => task.status === 'pending').reduce((total, task) => total + task.estimated_minutes, 0);
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
+    <div className="mx-auto max-w-6xl space-y-5">
+      <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-bold">今日驾驶舱</h2>
-          <p className="text-muted text-sm mt-1">{plan?.date}</p>
+          <p className="metric-label">Daily execution</p>
+          <h1 className="mt-1 text-3xl font-semibold tracking-tight">Today</h1>
+          <p className="mt-2 text-sm text-muted">Turn evidence into the next small set of deliberate actions.</p>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="card flex items-center gap-3">
-            <Clock size={18} className="text-accent" />
-            <div>
-              <div className="metric-label">可用时间</div>
-              <div className="metric-value text-lg">{plan?.available_minutes} min</div>
+        <a className="button-secondary" href="/settings">Adjust study settings</a>
+      </header>
+
+      <div className="grid gap-3 sm:grid-cols-3">
+        <Surface><Metric label="Open work" value={`${minutes} min`} detail={`${tasks.length - completed} tasks remaining`} /></Surface>
+        <Surface><Metric label="Completed" value={`${completed}/${tasks.length}`} detail="Persisted to your local ledger" /></Surface>
+        <Surface><Metric label="Notifications" value={notifications.length} detail="Due work and deadlines" /></Surface>
+      </div>
+
+      <Surface className="grid gap-4 md:grid-cols-[1fr_auto] md:items-end">
+        <div>
+          <div className="mb-2 flex items-center gap-2"><Battery size={16} className="text-accent" /><h2 className="text-sm font-semibold">Readiness check-in</h2></div>
+          <p className="text-xs text-muted">Update the plan when your actual energy differs from the schedule.</p>
+          <label className="mt-3 block max-w-xs space-y-1 text-xs font-semibold text-muted">
+            <span>Current energy</span>
+            <Select value={energy} onChange={(event) => setEnergy(Number(event.target.value))}>
+              <option value={0}>Depleted</option><option value={1}>Low</option><option value={2}>Moderate</option><option value={3}>High</option><option value={4}>Peak</option>
+            </Select>
+          </label>
+        </div>
+        <Button onClick={() => energyApi.checkIn({ energy_level: energy, mental_clarity: 6, physical_fatigue: 4, motivation: 6 }).then((result: any) => { setWarnings(result.warnings || []); return refresh(); })}>
+          <RotateCcw size={15} /> Refit today
+        </Button>
+      </Surface>
+
+      {warnings.map((warning) => <Alert key={warning}>{warning}</Alert>)}
+
+      <section className="space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2"><Target size={16} className="text-accent" /><h2 className="text-sm font-semibold">Execution queue</h2></div>
+          <Badge tone="accent">Local event ledger</Badge>
+        </div>
+        {loading ? <Surface className="animate-pulse text-sm text-muted">Loading today plan...</Surface> : null}
+        {!loading && tasks.length === 0 ? <EmptyState title="Nothing planned yet" detail="Add a focus topic or capture a mistake to build the next queue." /> : null}
+        {tasks.map((task) => (
+          <Surface key={task.task_id} className="flex flex-wrap items-center gap-3">
+            <div className="grid h-9 w-9 place-items-center rounded-xl bg-accent/10 text-accent"><Sparkles size={16} /></div>
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2"><h3 className="text-sm font-semibold">{task.title}</h3><Badge tone={task.status === 'completed' ? 'success' : 'neutral'}>{task.status}</Badge></div>
+              <p className="mt-1 text-xs text-muted">{task.topic} · {task.estimated_minutes} min · {task.energy_fit} energy</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Warnings */}
-      {plan?.warnings && plan.warnings.length > 0 && (
-        <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/30 rounded-lg p-4">
-          {plan.warnings.map((w, i) => (
-            <p key={i} className="text-sm text-[#f59e0b] flex items-center gap-2">
-              <AlertTriangle size={14} /> {w}
-            </p>
-          ))}
-        </div>
-      )}
-
-      {/* Focus + Danger */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="card">
-          <div className="flex items-center gap-2 mb-2">
-            <Target size={16} className="text-accent" />
-            <span className="metric-label">今日主线</span>
-          </div>
-          <p className="text-lg font-semibold">{plan?.focus_topic || '按到期错题安排'}</p>
-          <p className="text-xs text-muted mt-1">{plan?.focus_reason}</p>
-        </div>
-
-        <div className="card">
-          <div className="flex items-center gap-2 mb-2">
-            <AlertTriangle size={16} className="text-danger" />
-            <span className="metric-label">最危险 3 个 LOS</span>
-          </div>
-          {plan?.danger_los_list.map((los, i) => (
-            <p key={i} className="text-sm text-danger">• {los}</p>
-          ))}
-          {(!plan?.danger_los_list || plan.danger_los_list.length === 0) && (
-            <p className="text-sm text-muted">暂无高危 LOS</p>
-          )}
-        </div>
-      </div>
-
-      {/* Tasks by energy tier */}
-      <div className="grid grid-cols-3 gap-4">
-        <TaskColumn
-          title="高精力任务"
-          icon={<BatteryFull size={16} className="text-success" />}
-          tasks={plan?.high_energy_tasks || []}
-          color="success"
-        />
-        <TaskColumn
-          title="中精力任务"
-          icon={<BatteryMedium size={16} className="text-warning" />}
-          tasks={plan?.moderate_energy_tasks || []}
-          color="warning"
-        />
-        <TaskColumn
-          title="低精力任务"
-          icon={<BatteryLow size={16} className="text-muted" />}
-          tasks={plan?.low_energy_tasks || []}
-          color="muted"
-        />
-      </div>
-
-      {/* Quick Actions */}
-      <div className="card">
-        <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-          <Zap size={16} className="text-accent" /> 快速操作
-        </h3>
-        <div className="flex gap-3 flex-wrap">
-          <QuickAction href="/capture" label="录入错题" />
-          <QuickAction href="/review" label="打开今日复习包" />
-          <QuickAction href="/diagnosis" label="错因诊断" />
-          <QuickAction href="/mock" label="模拟中心" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TaskColumn({
-  title, icon, tasks, color,
-}: {
-  title: string; icon: React.ReactNode; tasks: Task[]; color: string;
-}) {
-  if (tasks.length === 0) {
-    return (
-      <div className="card">
-        <div className="flex items-center gap-2 mb-3">
-          {icon}
-          <span className="metric-label">{title}</span>
-        </div>
-        <p className="text-xs text-muted">暂无</p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="card">
-      <div className="flex items-center gap-2 mb-3">
-        {icon}
-        <span className="metric-label">{title} ({tasks.length})</span>
-      </div>
-      <ul className="space-y-2">
-        {tasks.map((task, i) => (
-          <li key={i} className="text-sm flex items-start gap-2">
-            <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-muted" />
-            <span>{taskLabels[task.task_type] || task.task_type}: {task.description.slice(0, 40)}</span>
-          </li>
+            <div className="flex gap-1">
+              <Button variant="ghost" onClick={() => updateStatus(task, 'deferred')}>Defer</Button>
+              <Button variant="secondary" onClick={() => updateStatus(task, 'skipped')}>Skip</Button>
+              <Button onClick={() => updateStatus(task, 'completed')}><Check size={15} /> Complete</Button>
+            </div>
+          </Surface>
         ))}
-      </ul>
-    </div>
-  );
-}
+      </section>
 
-function QuickAction({ href, label }: { href: string; label: string }) {
-  return (
-    <a
-      href={href}
-      className="px-4 py-2 rounded-lg bg-[#6366f1]/10 border border-[#6366f1]/30 text-sm text-[#818cf8] hover:bg-[#6366f1]/20 transition-colors"
-    >
-      {label}
-    </a>
+      {notifications.length ? (
+        <Surface>
+          <div className="mb-3 flex items-center gap-2"><Bell size={15} className="text-accent" /><h2 className="text-sm font-semibold">Notification center</h2></div>
+          <div className="space-y-2">{notifications.map((item) => <p key={item.notification_id} className="text-xs text-muted"><span className="font-semibold text-ink">{item.title}</span> · {item.detail}</p>)}</div>
+        </Surface>
+      ) : null}
+
+      <Surface className="flex flex-wrap gap-2">
+        <a className="button-secondary" href="/review"><Zap size={15} /> Start retrieval</a>
+        <a className="button-secondary" href="/practice">Open practice</a>
+        <a className="button-secondary" href="/map">Browse curriculum</a>
+      </Surface>
+    </div>
   );
 }
