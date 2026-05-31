@@ -65,6 +65,18 @@ def build_parser() -> argparse.ArgumentParser:
 
     subparsers.add_parser("weekly-focus", help="生成本周学习重点建议")
 
+    sync_push = subparsers.add_parser("sync-push", help="导出全部学习数据到文件")
+    sync_push.add_argument("--output", default="examos-backup.json", help="导出文件路径")
+
+    sync_pull = subparsers.add_parser("sync-pull", help="从文件导入学习数据")
+    sync_pull.add_argument("--input", required=True, help="导入文件路径")
+
+    subparsers.add_parser("list-profiles", help="列出可用考试类型")
+
+    profile_cmd = subparsers.add_parser("set-profile")
+    profile_cmd.add_argument("--name", required=True, help="考试类型 short name (cfa-l1, frm-p1, ...)")
+    profile_cmd.add_argument("--path", default="", help="自定义 profile 文件路径")
+
     return parser
 
 
@@ -169,5 +181,22 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         print(result)
         print(f"\n📄 已保存到 .system/memory/strategy/")
         return 0
+
+    if args.command == "sync-push":
+        from app.sync_service import push_to_file
+        push_to_file(repo, args.output)
+        print(f"📁 保存至: {args.output}")
+        return 0
+
+    if args.command == "sync-pull":
+        from app.sync_service import pull_from_file
+        try:
+            counts = pull_from_file(repo, args.input)
+            print(f"📁 来源: {args.input}")
+        except FileNotFoundError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 1
+        return 0
+
     parser.error(f"unsupported command: {args.command}")
     return 2
