@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import argparse
+import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -496,6 +498,30 @@ def build_practice_markdown(spec: SubjectSpec, questions: list[tuple[int, int, s
     return lines
 
 
+def build_structured_practice_records(spec: SubjectSpec, questions: list[tuple[int, int, str]]) -> list[dict[str, object]]:
+    """Emit provenance-rich stem records for quarantine review.
+
+    The source PDFs do not expose reliably aligned choices and explanations in
+    the question extraction pass. Keep those fields empty so OpenExam
+    quarantines the record instead of inventing a gradable answer.
+    """
+    return [
+        {
+            "source_file": str(PRACTICE_PDF),
+            "source_page": page_number,
+            "prompt": stem,
+            "choices": [],
+            "correct_answer": "",
+            "explanation": "",
+            "topic": spec.display,
+            "module": "",
+            "los": "",
+            "error_type": "concept_confusion",
+        }
+        for _, page_number, stem in questions
+    ]
+
+
 def build_subject_bank_dashboard(practice_links: list[tuple[SubjectSpec, int]]) -> list[str]:
     lines = [
         "---",
@@ -601,13 +627,22 @@ def build_mock_unknown_markdown(items: list[dict[str, object]]) -> list[str]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--structured-json", type=Path, default=None, help="Also write private normalized stems for quarantine import")
+    args = parser.parse_args()
     practice_pages = read_pdf_pages(PRACTICE_PDF)
     practice_links: list[tuple[SubjectSpec, int]] = []
+    structured_records: list[dict[str, object]] = []
     for spec in SUBJECTS:
         questions = extract_subject_questions(practice_pages, spec)
         target = VAULT_ROOT / spec.directory / spec.practice_file
         write_markdown(target, build_practice_markdown(spec, questions))
         practice_links.append((spec, len(questions)))
+        structured_records.extend(build_structured_practice_records(spec, questions))
+
+    if args.structured_json:
+        args.structured_json.parent.mkdir(parents=True, exist_ok=True)
+        args.structured_json.write_text(json.dumps(structured_records, ensure_ascii=False, indent=2), encoding="utf-8")
 
     dashboard_path = VAULT_ROOT / "dashboard" / "Subject-Question-Banks.md"
     write_markdown(dashboard_path, build_subject_bank_dashboard(practice_links))

@@ -6,6 +6,7 @@ import Diagnosis from './diagnosis/page';
 import Institution from './institution/page';
 import MapPage from './map/page';
 import Mock from './mock/page';
+import Practice from './practice/page';
 import Review from './review/page';
 import Settings from './settings/page';
 import Setup from './setup/page';
@@ -84,6 +85,7 @@ const handlers = [
     session_id: 'review-story',
     items: [{ prompt_id: 'prompt-story', prompt_text: 'Recall the duration rule.', answer_text: 'Use effective duration when cash flows can change.', topic: 'Fixed Income', los: 'FI.Duration' }],
   })),
+  http.get('http://localhost:8000/api/question-banks/quarantine', () => HttpResponse.json({ questions: [] })),
 ];
 
 const meta = {
@@ -111,3 +113,4 @@ export const InstitutionRoute: Story = { render: () => <Institution /> };
 export const SetupRoute: Story = { render: () => <Setup /> };
 export const SettingsRoute: Story = { render: () => <Settings /> };
 export const MapRoute: Story = { render: () => <MapPage /> };
+export const PracticeRoute: Story = { render: () => <Practice /> };

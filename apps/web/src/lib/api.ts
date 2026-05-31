@@ -154,3 +154,41 @@ export const retrievalApi = {
   respond: (sessionId: string, payload: { prompt_id: string; score: number; self_explanation: string }) =>
     request<{ next_review_date: string; interval_days: number }>(`/api/review-sessions/${sessionId}/responses`, { method: 'POST', body: JSON.stringify(payload) }),
 };
+
+/** Verified private question banks and practice */
+export interface PracticeQuestion {
+  question_id: string;
+  prompt: string;
+  choices: string[];
+  topic: string;
+  module: string;
+  los: string;
+  verification_status: 'verified' | 'quarantined' | 'rejected';
+  explanation?: string;
+  correct_answer?: string;
+  source_file?: string;
+  source_page?: number;
+}
+
+export interface PracticeDrill {
+  drill_id: string;
+  source_kind: 'mistake_card';
+  topic: string;
+  los: string;
+  prompt: string;
+  answer_text: string;
+  fix_rule: string;
+}
+
+export const questionBanksApi = {
+  quarantine: () => request<{ questions: PracticeQuestion[] }>('/api/question-banks/quarantine'),
+  review: (questionId: string, action: 'approve' | 'reject', corrections: Record<string, unknown> = {}) =>
+    request<{ question: PracticeQuestion }>(`/api/question-banks/${questionId}/review`, { method: 'POST', body: JSON.stringify({ action, corrections }) }),
+};
+
+export const practiceApi = {
+  start: (maxItems = 10, topic = '') =>
+    request<{ session_id: string; items: PracticeQuestion[]; drills: PracticeDrill[] }>('/api/practice-sessions', { method: 'POST', body: JSON.stringify({ max_items: maxItems, topic }) }),
+  answer: (sessionId: string, payload: { question_id: string; answer: string; confidence: number; elapsed_seconds: number; self_explanation: string }) =>
+    request<{ is_correct: boolean; correct_answer: string; explanation: string; calibration_state: string; calibration_warning?: string; self_explanation_prompt: string; explanation_quality: number; worked_example_stage: string }>(`/api/practice-sessions/${sessionId}/answers`, { method: 'POST', body: JSON.stringify(payload) }),
+};
