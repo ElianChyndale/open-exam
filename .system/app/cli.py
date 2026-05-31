@@ -77,6 +77,11 @@ def build_parser() -> argparse.ArgumentParser:
     profile_cmd.add_argument("--name", required=True, help="考试类型 short name (cfa-l1, frm-p1, ...)")
     profile_cmd.add_argument("--path", default="", help="自定义 profile 文件路径")
 
+    print_cmd = subparsers.add_parser("print-cards", help="生成可打印复习卡 PDF")
+    print_cmd.add_argument("--topic", default="", help="筛选 Topic")
+    print_cmd.add_argument("--limit", type=int, default=20, help="最多卡片数")
+    print_cmd.add_argument("--output", default="", help="输出 PDF 路径")
+
     return parser
 
 
@@ -194,6 +199,20 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
             counts = pull_from_file(repo, args.input)
             print(f"📁 来源: {args.input}")
         except FileNotFoundError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 1
+        return 0
+
+    if args.command == "print-cards":
+        from app.card_printer import generate_print_cards
+        try:
+            path = generate_print_cards(repo, args.topic, args.limit, args.output or None)
+            print(f"✅ 已生成复习卡 PDF: {path}")
+        except ImportError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            print("请先安装: pip install reportlab", file=sys.stderr)
+            return 1
+        except ValueError as e:
             print(f"ERROR: {e}", file=sys.stderr)
             return 1
         return 0
