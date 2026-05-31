@@ -27,6 +27,7 @@ interface EffectivenessData {
 export default function EffectivenessDashboard() {
   const [data, setData] = useState<EffectivenessData | null>(null);
   const [summary, setSummary] = useState<any>(null);
+  const [calibrationWarnings, setCalibrationWarnings] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,6 +38,10 @@ export default function EffectivenessDashboard() {
       setData(eff);
       setSummary(sum);
     }).finally(() => setLoading(false));
+
+    dashboardApi.getCalibrationWarnings?.().then((data: any) => {
+      setCalibrationWarnings(data.warnings || []);
+    }).catch(() => {});
   }, []);
 
   const TrendIcon = data?.calibration_trend === 'improving'
@@ -126,6 +131,25 @@ export default function EffectivenessDashboard() {
             </span>
           </div>
         </div>
+
+        {/* Calibration warnings */}
+        {calibrationWarnings.length > 0 && (
+          <div className="card col-span-2 border-[#ef4444]/30">
+            <h3 className="text-sm font-semibold flex items-center gap-2 mb-3">
+              <AlertTriangle size={14} className="text-danger" />
+              信心校准警告 — 你以为你会了，其实不会
+            </h3>
+            <div className="space-y-2">
+              {calibrationWarnings.slice(0, 5).map((w: any, i: number) => (
+                <div key={i} className="text-sm bg-[#0a0a0f] rounded-lg px-3 py-2">
+                  <span className="font-medium">{w.topic}</span>
+                  <span className="text-muted"> / {w.los}</span>
+                  <span className="text-danger ml-2">信心 {w.confidence}/4 但做错</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* LOS risk heatmap */}
         <div className="card">

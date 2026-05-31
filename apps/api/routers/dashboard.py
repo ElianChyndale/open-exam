@@ -184,3 +184,18 @@ async def get_summary(repo=Depends(get_repo)):
         "due_review_items": len(due),
         "active_patterns": len(patterns),
     }
+
+
+@router.get("/calibration-warnings")
+async def get_calibration_warnings(repo=Depends(get_repo)):
+    """Get recent calibration warnings for the dashboard."""
+    import json
+    warning_path = repo.memory_root / "strategy" / "calibration-warnings.jsonl"
+    if not warning_path.exists():
+        return {"warnings": []}
+
+    warnings = []
+    for line in warning_path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            warnings.append(json.loads(line))
+    return {"warnings": warnings[-10:]}
