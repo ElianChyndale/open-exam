@@ -6,6 +6,7 @@ import {
   BarChart3, TrendingUp, TrendingDown, Minus,
   CheckCircle2, AlertTriangle, Brain, Target, Award,
 } from 'lucide-react';
+import WeeklyTrend from '@/components/dashboard/WeeklyTrend';
 
 interface EffectivenessData {
   report_id: string;
@@ -226,6 +227,9 @@ export default function EffectivenessDashboard() {
           )}
         </div>
       </div>
+
+      {/* Weekly Trend Report */}
+      <WeeklyTrend />
 
       {/* Error trend mini chart */}
       {data?.error_count_trend && data.error_count_trend.length > 1 && (

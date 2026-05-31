@@ -350,3 +350,131 @@ async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
         "factors": result.factors,
         "top_actions": result.top_actions,
     }
+
+
+@router.get("/weekly-trend")
+async def get_weekly_trend(repo=Depends(get_repo)):
+    """Get week-over-week trend comparison."""
+    from collections import Counter, defaultdict
+    from datetime import date, timedelta
+
+    today = date.today()
+    this_week_start = today - timedelta(days=today.weekday())
+    last_week_start = this_week_start - timedelta(days=7)
+    last_week_end = this_week_start - timedelta(days=1)
+
+    events = repo.load_events()
+    question_events = [e for e in events if e.source_layer == "question"]
+
+    this_week = [e for e in question_events if this_week_start.isoformat() <= e.created_at[:10] <= today.isoformat()]
+    last_week = [e for e in question_events if last_week_start.isoformat() <= e.created_at[:10] <= last_week_end.isoformat()]
+
+    this_errors = len(this_week)
+    last_errors = len(last_week)
+    error_change = ((this_errors - last_errors) / max(last_errors, 1)) * 100
+
+    this_high_conf = sum(1 for e in this_week if e.confidence >= 3 and not e.is_correct)
+    last_high_conf = sum(1 for e in last_week if e.confidence >= 3 and not e.is_correct)
+    high_conf_change = ((this_high_conf - last_high_conf) / max(last_high_conf, 1)) * 100
+
+    this_topics = len(set(e.topic for e in this_week))
+    last_topics = len(set(e.topic for e in last_week))
+
+    from app.workflows import load_progress_events
+    progress = load_progress_events(repo)
+    this_reviews = sum(1 for p in progress if p.get("record_type") == "daily_review_completed"
+                       and p.get("status") in {"completed", "done"}
+                       and this_week_start.isoformat() <= str(p.get("date") or p.get("created_at", "")[:10]) <= today.isoformat())
+    last_reviews = sum(1 for p in progress if p.get("record_type") == "daily_review_completed"
+                       and p.get("status") in {"completed", "done"}
+                       and last_week_start.isoformat() <= str(p.get("date") or p.get("created_at", "")[:10]) <= last_week_end.isoformat())
+
+    def trend(current: float, previous: float, lower_is_better: bool = True) -> str:
+        if previous == 0 and current == 0:
+            return "stable"
+        if previous == 0:
+            return "worsening" if current > 0 and lower_is_better else "improving"
+        ratio = (current - previous) / previous
+        if lower_is_better:
+            return "improving" if ratio < -0.1 else "worsening" if ratio > 0.1 else "stable"
+        return "improving" if ratio > 0.1 else "worsening" if ratio < -0.1 else "stable"
+
+    return {
+        "this_week": {"start": this_week_start.isoformat(), "end": today.isoformat()},
+        "last_week": {"start": last_week_start.isoformat(), "end": last_week_end.isoformat()},
+        "errors": {"current": this_errors, "previous": last_errors, "change_pct": round(error_change, 1), "trend": trend(this_errors, last_errors)},
+        "high_confidence_errors": {"current": this_high_conf, "previous": last_high_conf, "change_pct": round(high_conf_change, 1), "trend": trend(this_high_conf, last_high_conf)},
+        "topics_covered": {"current": this_topics, "previous": last_topics, "trend": trend(this_topics, last_topics, lower_is_better=False)},
+        "reviews_completed": {"current": this_reviews, "previous": last_reviews, "trend": trend(this_reviews, last_reviews, lower_is_better=False)},
+    }
+
+
+@router.get("/mastery")
+async def get_topic_mastery(repo=Depends(get_repo)):
+    """Get topic-level mastery scores for radar chart."""
+    from collections import Counter, defaultdict
+    from app.workflows import collect_due_card_items
+
+    events = repo.load_events()
+    question_events = [e for e in events if e.source_layer == "question"]
+
+    SUBJECTS = [
+        "Quantitative Methods", "Economics", "Financial Statement Analysis",
+        "Corporate Issuers", "Equity", "Fixed Income", "Derivatives",
+        "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards",
+    ]
+
+    topic_events: dict[str, list] = defaultdict(list)
+    for e in question_events:
+        topic_events[e.topic].append(e)
+
+    topic_los_attempted: dict[str, set] = defaultdict(set)
+    los_recurrence: dict[str, Counter] = defaultdict(Counter)
+    for e in question_events:
+        topic_los_attempted[e.topic].add(e.los)
+        key = f"{e.los}::{e.error_type}"
+        los_recurrence[e.topic][key] += 1
+
+    from datetime import date
+    exam_date_str = ""
+    exam_setting_path = repo.root / ".system" / "exam_date.txt"
+    if exam_setting_path.exists():
+        exam_date_str = exam_setting_path.read_text(encoding="utf-8").strip()[:10]
+
+    topics = []
+    for subject in SUBJECTS:
+        t_events = topic_events.get(subject, [])
+        if not t_events:
+            topics.append({"topic": subject, "mastery": 0, "errors": 0, "status": "no_data"})
+            continue
+
+        los_count = len(topic_los_attempted.get(subject, set()))
+        error_density = len(t_events) / max(los_count, 1)
+        density_score = max(0, 1 - error_density / 5)
+
+        recurrences = [c for c in los_recurrence.get(subject, {}).values() if c >= 2]
+        recurrence_score = max(0, 1 - len(recurrences) / max(los_count, 1))
+
+        high_conf_wrong = sum(1 for e in t_events if e.confidence >= 3 and not e.is_correct)
+        cal_score = max(0, 1 - high_conf_wrong / max(len(t_events), 1) * 2)
+
+        mastery = int((density_score * 0.35 + recurrence_score * 0.35 + cal_score * 0.30) * 100)
+        status = "critical" if mastery < 30 else "needs_work" if mastery < 60 else "ready"
+
+        topics.append({
+            "topic": subject,
+            "mastery": mastery,
+            "errors": len(t_events),
+            "status": status,
+            "error_density": round(error_density, 2),
+            "recurrence_count": len(recurrences),
+            "high_conf_errors": high_conf_wrong,
+        })
+
+    overall = int(sum(t["mastery"] for t in topics) / len(topics)) if topics else 0
+
+    return {
+        "topics": topics,
+        "overall_mastery": overall,
+        "exam_date": exam_date_str,
+    }
