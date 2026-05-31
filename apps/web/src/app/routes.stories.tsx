@@ -4,8 +4,11 @@ import Capture from './capture/page';
 import Dashboard from './dashboard/page';
 import Diagnosis from './diagnosis/page';
 import Institution from './institution/page';
+import MapPage from './map/page';
 import Mock from './mock/page';
 import Review from './review/page';
+import Settings from './settings/page';
+import Setup from './setup/page';
 import Today from './today/page';
 
 const handlers = [
@@ -50,6 +53,37 @@ const handlers = [
     active_patterns: 2,
   })),
   http.get('http://localhost:8000/api/institution/cohorts', () => HttpResponse.json({ cohorts: [] })),
+  http.get('http://localhost:8000/api/profile', () => HttpResponse.json({
+    profile: {
+      exam_date: '2026-11-15',
+      current_phase: 'review',
+      target_score_percentile: 75,
+      daily_minutes_available: 120,
+      weekly_study_days: 6,
+      preferred_session_minutes: 50,
+      peak_energy_window: '08:00-11:00',
+      moderate_energy_window: '14:00-18:00',
+      low_energy_window: '20:00-22:00',
+    },
+  })),
+  http.get('http://localhost:8000/api/curriculum', () => HttpResponse.json({
+    subject_count: 10,
+    module_count: 93,
+    subjects: [{
+      subject: 'Fixed Income',
+      exam_weight: '11-14%',
+      module_count: 19,
+      modules: [{ module: 'M01', official_module: 'Module 1: Fixed-Income Instrument Features', los: ['describe bond features'] }],
+    }],
+  })),
+  http.get('http://localhost:8000/api/tasks/today', () => HttpResponse.json({
+    tasks: [{ task_id: 'task-story', title: 'Complete due retrieval review', status: 'pending', task_type: 'active_recall', estimated_minutes: 25, priority: 95, energy_fit: 'moderate', topic: 'Fixed Income' }],
+  })),
+  http.get('http://localhost:8000/api/notifications', () => HttpResponse.json({ notifications: [] })),
+  http.post('http://localhost:8000/api/review-sessions', () => HttpResponse.json({
+    session_id: 'review-story',
+    items: [{ prompt_id: 'prompt-story', prompt_text: 'Recall the duration rule.', answer_text: 'Use effective duration when cash flows can change.', topic: 'Fixed Income', los: 'FI.Duration' }],
+  })),
 ];
 
 const meta = {
@@ -74,3 +108,6 @@ export const ReviewRoute: Story = { render: () => <Review /> };
 export const MockRoute: Story = { render: () => <Mock /> };
 export const DashboardRoute: Story = { render: () => <Dashboard /> };
 export const InstitutionRoute: Story = { render: () => <Institution /> };
+export const SetupRoute: Story = { render: () => <Setup /> };
+export const SettingsRoute: Story = { render: () => <Settings /> };
+export const MapRoute: Story = { render: () => <MapPage /> };

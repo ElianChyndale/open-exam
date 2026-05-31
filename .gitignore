@@ -6,6 +6,7 @@ __pycache__/
 .system/events/catalog.sqlite3
 .system/evals/results/
 .gstack/
+.playwright-mcp/
 node_modules/
 .next/
 apps/web/node_modules/

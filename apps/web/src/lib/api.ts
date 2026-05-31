@@ -94,3 +94,63 @@ export const institutionApi = {
 
   listCohorts: () => request('/api/institution/cohorts'),
 };
+
+/** Daily learner loop */
+export interface LearnerProfile {
+  exam_date: string;
+  current_phase: string;
+  target_score_percentile: number;
+  daily_minutes_available: number;
+  weekly_study_days: number;
+  preferred_session_minutes: number;
+  peak_energy_window: string;
+  moderate_energy_window: string;
+  low_energy_window: string;
+}
+
+export interface DailyTask {
+  task_id: string;
+  title: string;
+  topic: string;
+  task_type: string;
+  estimated_minutes: number;
+  priority: number;
+  energy_fit: string;
+  status: 'pending' | 'completed' | 'skipped' | 'deferred';
+}
+
+export const profileApi = {
+  get: () => request<{ profile: LearnerProfile }>('/api/profile'),
+  update: (profile: LearnerProfile) =>
+    request<{ profile: LearnerProfile }>('/api/profile', { method: 'PUT', body: JSON.stringify(profile) }),
+};
+
+export const curriculumApi = {
+  get: () => request<{ subject_count: number; module_count: number; subjects: any[] }>('/api/curriculum'),
+};
+
+export const tasksApi = {
+  getToday: (focusTopic = '') =>
+    request<{ tasks: DailyTask[] }>(`/api/tasks/today${focusTopic ? `?focus_topic=${encodeURIComponent(focusTopic)}` : ''}`),
+  setStatus: (taskId: string, status: DailyTask['status']) =>
+    request<{ task: DailyTask }>(`/api/tasks/${taskId}/status`, { method: 'POST', body: JSON.stringify({ status }) }),
+};
+
+export const notificationsApi = {
+  list: () => request<{ notifications: Array<{ notification_id: string; kind: string; title: string; detail: string }> }>('/api/notifications'),
+};
+
+export interface RetrievalItem {
+  prompt_id: string;
+  prompt_text: string;
+  answer_text: string;
+  topic: string;
+  los: string;
+}
+
+export const retrievalApi = {
+  start: (maxItems = 10) =>
+    request<{ session_id: string; items: RetrievalItem[] }>('/api/review-sessions', { method: 'POST', body: JSON.stringify({ max_items: maxItems }) }),
+  respond: (sessionId: string, payload: { prompt_id: string; score: number; self_explanation: string }) =>
+    request<{ next_review_date: string; interval_days: number }>(`/api/review-sessions/${sessionId}/responses`, { method: 'POST', body: JSON.stringify(payload) }),
+};

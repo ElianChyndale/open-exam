@@ -25,7 +25,7 @@ if str(_AGENT_RUNTIME) not in sys.path:
     sys.path.insert(0, str(_AGENT_RUNTIME))
 
 
-from app.storage import Repository
+from app.storage import LocalRepository
 
 
 # Root of the monorepo
@@ -35,9 +35,9 @@ def get_repo_root() -> Path:
 
 
 @lru_cache()
-def get_repo() -> Repository:
+def get_repo() -> LocalRepository:
     """Get or create the Repository instance."""
-    return Repository(get_repo_root())
+    return LocalRepository(get_repo_root())
 
 
 def get_agent_runtime():
