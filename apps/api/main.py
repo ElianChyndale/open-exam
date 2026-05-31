@@ -19,7 +19,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import attempts, dashboard, diagnosis, energy, institution, mock, review, study_plan
+from routers import attempts, dashboard, diagnosis, energy, export as export_router, institution, mock, review, study_plan
 
 
 @asynccontextmanager
@@ -57,6 +57,7 @@ app.include_router(study_plan.router, prefix="/api/study-plan", tags=["study-pla
 app.include_router(mock.router, prefix="/api/mock", tags=["mock"])
 app.include_router(dashboard.router, prefix="/api/dashboard", tags=["dashboard"])
 app.include_router(institution.router, prefix="/api/institution", tags=["institution"])
+app.include_router(export_router.router, prefix="/api/export", tags=["export"])
 
 
 @app.get("/api/health")
