@@ -112,15 +112,33 @@ async def get_effectiveness_dashboard(
     non_primary = [e for e in recent_events if e.topic != primary_topic]
     interleaving_acc = 0.0  # We don't have is_correct in MistakeEvent ATM
 
-    # Predicted pass probability (heuristic)
-    # Formula: base_rate + calibration_penalty + completion_bonus + pattern_penalty
-    base_rate = 0.65
-    calibration_penalty = min(0.20, cal_summary.calibration_error_rate * 0.5)
-    completion_bonus = min(0.15, completion_rate * 0.15)
-    pattern_penalty = min(0.10, recurrence_rate * 0.3)
+    # Predicted pass probability (multi-factor model)
+    from study_science.prediction import PassPredictor, PredictionInput
 
-    pass_prob = base_rate - calibration_penalty + completion_bonus - pattern_penalty
-    pass_prob = max(0.20, min(0.95, pass_prob))
+    pred_input = PredictionInput(
+        total_events=len(question_events),
+        topics_attempted=len(topic_counts),
+        total_topics=10,
+        high_conf_errors=high_conf_errors,
+        pattern_recurrence_rate=recurrence_rate,
+        review_completion_rate=completion_rate,
+        calibration_error_rate=cal_summary.calibration_error_rate,
+        calibration_trend=cal_summary.trend,
+        mock_score=None,
+        days_until_exam=365,
+    )
+
+    # Check for exam date
+    exam_setting_path = repo.root / ".system" / "exam_date.txt"
+    if exam_setting_path.exists():
+        try:
+            exam_date = date.fromisoformat(exam_setting_path.read_text(encoding="utf-8").strip()[:10])
+            remaining = (exam_date - today).days
+            pred_input.days_until_exam = max(1, remaining)
+        except (ValueError, OSError):
+            pass
+
+    prediction = PassPredictor.predict(pred_input)
 
     # Error count trend (daily buckets)
     daily_counts: dict[str, int] = Counter()
@@ -140,9 +158,9 @@ async def get_effectiveness_dashboard(
         same_error_recurrence_rate=round(recurrence_rate, 3),
         los_risk_heatmap=heatmap,
         danger_top_3=danger_top_3,
-        predicted_pass_probability=round(pass_prob, 3),
-        confidence_band_low=round(max(0.10, pass_prob - 0.10), 3),
-        confidence_band_high=round(min(0.99, pass_prob + 0.10), 3),
+        predicted_pass_probability=prediction.pass_probability,
+        confidence_band_low=prediction.confidence_band_low,
+        confidence_band_high=prediction.confidence_band_high,
         calibration_trend=cal_summary.trend,
         error_count_trend=error_trend if error_trend else [0],
     )
@@ -264,4 +282,71 @@ async def get_calendar_data(
         "review_days": sorted(review_days),
         "exam_date": exam_date_str,
         "countdown_days": countdown_days,
+    }
+
+
+@router.post("/what-if")
+async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
+    """Run a 'what if' simulation on pass probability."""
+    from study_science.prediction import PassPredictor, PredictionInput
+    from collections import Counter
+
+    events = repo.load_events()
+    question_events = [e for e in events if e.source_layer == "question"]
+
+    from app.workflows import (
+        collect_pattern_items,
+        collect_due_card_items,
+        load_progress_events,
+    )
+    from study_science.calibration import ConfidenceCalibration, CalibrationRecord
+
+    topic_counts = Counter(e.topic for e in question_events)
+    recent_events = question_events
+
+    calibration_records: list[CalibrationRecord] = []
+    high_conf_errors = 0
+    for e in recent_events:
+        state = ConfidenceCalibration.classify(e.confidence, is_correct=False)
+        record = CalibrationRecord(
+            attempt_id=e.event_id or "",
+            topic=e.topic,
+            los=e.los,
+            confidence=e.confidence,
+            is_correct=False,
+            state=state,
+            created_at=e.created_at,
+        )
+        calibration_records.append(record)
+        if ConfidenceCalibration.is_dangerous(e.confidence, is_correct=False):
+            high_conf_errors += 1
+
+    cal_summary = ConfidenceCalibration.summarize(calibration_records)
+    pattern_items = collect_pattern_items(repo)
+    recurrence_rate = len(pattern_items) / max(len(recent_events), 1)
+    due_items = collect_due_card_items(repo, date.today())
+    progress = load_progress_events(repo)
+    completed_reviews = sum(
+        1 for p in progress
+        if p.get("record_type") == "daily_review_completed"
+        and p.get("status") in {"completed", "done"}
+    )
+    completion_rate = completed_reviews / max(len(due_items), 1)
+
+    input_ = PredictionInput(
+        total_events=len(question_events),
+        topics_attempted=len(topic_counts),
+        total_topics=10,
+        high_conf_errors=high_conf_errors,
+        pattern_recurrence_rate=recurrence_rate,
+        review_completion_rate=completion_rate,
+        calibration_error_rate=cal_summary.calibration_error_rate,
+        calibration_trend=cal_summary.trend,
+    )
+
+    result = PassPredictor.what_if(input_, adjustments)
+    return {
+        "pass_probability": result.pass_probability,
+        "factors": result.factors,
+        "top_actions": result.top_actions,
     }
