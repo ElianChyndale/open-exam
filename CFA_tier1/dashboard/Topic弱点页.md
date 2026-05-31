@@ -1,6 +1,6 @@
 # Topic 弱点页
+- Quantitative Methods: 17
 - Economics: 14
-- Quantitative Methods: 13
 - Corporate Issuers: 10
 - Portfolio Management: 2
 - Economics - Market Structures - Barriers to Entry: 1

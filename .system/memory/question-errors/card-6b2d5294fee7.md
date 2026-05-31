@@ -12,6 +12,7 @@ next_drill: 24 小时内重做 2 道市场结构识别题，专门对比 monopol
 review_due_at: 2026-05-29
 linked_patterns: 
 correct_resolution: A. An oligopoly. Oligopoly markets have difficult entry, fairly high entry costs, and significant barriers to competition. Perfect competition has very low barriers, and monopolistic competition has low barriers to entry.
+review_status: Reviewed once
 ---
 
 ## Prompt

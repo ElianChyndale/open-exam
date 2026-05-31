@@ -1,0 +1,13 @@
+{
+  "cohort_id": "cohort-20260531174636",
+  "institution_id": "test-uni",
+  "cohort_name": "CFA L1 Fall 2026",
+  "exam_target": "CFA Level I",
+  "exam_date": "2026-11-15",
+  "learner_ids": [
+    "learner-1",
+    "learner-2"
+  ],
+  "instructor_ids": [],
+  "created_at": "2026-05-31T17:46:36.808525+00:00"
+}

@@ -1,1 +1,1 @@
-"""API routers for ExamOS."""
+"""API routers for OpenExam."""

@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Portfolio Management / unknown_from_screens
 review_due_at: 2026-05-28
 linked_patterns: 
 correct_resolution: 正确答案是 C。题目考的是 overfitting：ML 模型把 training data 学得过于精确，把噪音也当成真实参数，导致换一个 dataset 后预测反而不准。black box 不是因为 data biases 才被称为 black box；A 的因果关系不成立。
+review_status: Reviewed once
 ---
 
 ## Prompt

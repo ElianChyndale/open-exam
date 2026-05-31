@@ -12,6 +12,7 @@ next_drill: 24 小时内重做 2 道 Economics / M01 The Firm and Market Structu
 review_due_at: 2026-05-29
 linked_patterns: 
 correct_resolution: B. perfect competition. 在 perfect competition 下，企业的 MC schedule 就是其 supply function。因为 price taker 只能接受市场价格，按 P=MC 决定产量，因此 MC 曲线直接定义了价格与供给量的关系。其他市场结构（oligopoly、monopolistic competition）下不存在唯一的 supply function — oligopoly 有 strategic interdependence，产量决策受对手影响；monopoly 有定价权，可以按需求弹性设定价格而非单纯由 MC 决定。
+review_status: Reviewed once
 ---
 
 ## Prompt

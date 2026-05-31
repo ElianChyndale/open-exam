@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 from datetime import date, datetime
@@ -71,6 +72,8 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("weekly-focus", help="生成本周学习重点建议")
     subparsers.add_parser("rebuild-catalog", help="从 JSONL 重建 SQLite 查询索引")
     subparsers.add_parser("migrate-catalog", help="升级 SQLite 查询索引 schema")
+    subparsers.add_parser("knowledge-status", help="显示知识点的记忆状态（含衰减风险）")
+    subparsers.add_parser("decay-knowledge", help="扫描知识点状态并衰减超期未复习项")
 
     sync_push = subparsers.add_parser("sync-push", help="导出全部学习数据到文件")
     sync_push.add_argument("--output", default="examos-backup.json", help="导出文件路径")
@@ -174,7 +177,6 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         print("在 CFA_tier1/dashboard/Daily Review.md 查看")
         return 0
     if args.command == "import-qbank":
-        import json
         path = Path(args.file)
         if not path.exists():
             print(f"ERROR: 文件不存在 {path}", file=sys.stderr)
@@ -210,6 +212,48 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
 
     if args.command == "migrate-catalog":
         print(repo.migrate_catalog())
+        return 0
+
+    if args.command == "knowledge-status":
+        from study_science.knowledge_memory import KnowledgeMemoryEngine
+        overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+        if not overlay_path.exists():
+            print("No knowledge-status.json found. Complete a daily review first.")
+            return 0
+        overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+        kp = overlay.get("knowledge_points", {})
+        if not kp:
+            print("No knowledge points tracked yet.")
+            return 0
+        print(f"Knowledge Memory Status ({len(kp)} points)")
+        print(f"{'State':<20} {'Subject':<25} {'Heading':<40} {'Next Review':<15} {'Decay Risk'}")
+        print("-" * 120)
+        for kid, entry in sorted(kp.items()):
+            state = entry.get("status", "?")
+            subj = entry.get("subject", "")[:24]
+            head = entry.get("heading", "")[:39]
+            next_rev = (entry.get("next_review_at", "") or "")[:10]
+            risk = entry.get("decay_risk", "?")
+            print(f"{state:<20} {subj:<25} {head:<40} {next_rev:<15} {risk}")
+        return 0
+
+    if args.command == "decay-knowledge":
+        from study_science.knowledge_memory import KnowledgeMemoryEngine
+        overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+        if not overlay_path.exists():
+            print("No knowledge-status.json found.")
+            return 0
+        overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+        engine = KnowledgeMemoryEngine()
+        from datetime import date
+        overlay, decayed = engine.decay_sweep(overlay, date.today())
+        if decayed:
+            overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"✅ Decayed {len(decayed)} overdue knowledge points:")
+            for kid in decayed:
+                print(f"  - {kid}")
+        else:
+            print("No knowledge points needed decay.")
         return 0
 
     if args.command == "list-profiles":

@@ -1,4 +1,4 @@
-"""Agent Runtime — pluggable AI agent orchestration for ExamOS.
+"""Agent Runtime — pluggable AI agent orchestration for OpenExam.
 
 Six agent roles from PLAN.md:
 - orchestrator: route tasks to specialists

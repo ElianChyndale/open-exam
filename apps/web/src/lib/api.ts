@@ -1,4 +1,4 @@
-/** API client for ExamOS backend. */
+/** API client for OpenExam backend. */
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 

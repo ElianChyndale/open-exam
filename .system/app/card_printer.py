@@ -94,7 +94,7 @@ def generate_print_cards(
     card_h = (page_h - 2 * margin_y) / 5
 
     c = canvas.Canvas(str(out_path), pagesize=landscape(letter))
-    c.setTitle(f"ExamOS Review Cards - {today_str}")
+    c.setTitle(f"OpenExam Review Cards - {today_str}")
 
     for page_start in range(0, len(cards), 15):
         page_cards = cards[page_start : page_start + 15]

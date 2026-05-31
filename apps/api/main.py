@@ -1,4 +1,4 @@
-"""ExamOS API — FastAPI backend.
+"""OpenExam API — FastAPI backend.
 
 Wraps existing .system/app/ workflows as REST API endpoints.
 Provides the full user cockpit API per PLAN.md.
@@ -13,6 +13,11 @@ from pathlib import Path
 _SYSTEM = Path(__file__).resolve().parents[2] / ".system"
 if str(_SYSTEM) not in sys.path:
     sys.path.insert(0, str(_SYSTEM))
+
+# Ensure apps/api is importable (for deps, schemas, routers, services)
+_API = Path(__file__).resolve().parent
+if str(_API) not in sys.path:
+    sys.path.insert(0, str(_API))
 
 from contextlib import asynccontextmanager
 
@@ -34,7 +39,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="ExamOS API",
+    title="OpenExam API",
     description="考试通过率操作系统 — CFA/FRM/CPA Exam Operating System API",
     version="0.1.0",
     lifespan=lifespan,

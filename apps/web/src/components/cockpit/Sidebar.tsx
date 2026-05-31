@@ -67,7 +67,7 @@ export function Sidebar() {
       <div className="hidden px-5 py-4 border-t border-line lg:block">
         <ProfileSwitcher />
         <div className="text-[10px] text-muted">
-          <p className="mt-3">ExamOS · v0.1</p>
+          <p className="mt-3">OpenExam · v0.1</p>
           <p className="mt-0.5">local-first · evidence-driven</p>
         </div>
       </div>

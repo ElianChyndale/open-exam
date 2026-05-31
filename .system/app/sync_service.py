@@ -1,6 +1,6 @@
 """Local sync service — export/import all study data as a portable JSON file.
 
-This is the MVP for "ExamOS Cloud": instead of requiring a cloud backend,
+This is the MVP for "OpenExam Cloud": instead of requiring a cloud backend,
 users can export their entire study state to a single JSON file for backup
 or transfer to another device.
 

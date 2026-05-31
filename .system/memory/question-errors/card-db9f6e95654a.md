@@ -12,6 +12,7 @@ next_drill: 24 小时内重做 2 道 geopolitical risk classification 题，逐�
 review_due_at: 2026-05-30
 linked_patterns: 
 correct_resolution: B. An election. Event risk evolves around set dates such as elections, new legislation, holidays, or political anniversaries known in advance. An earthquake is an exogenous risk because the outcome/date cannot be known in advance. An ongoing civil war is a thematic risk because it is continuing rather than tied to a set date.
+review_status: Reviewed once
 ---
 
 ## Prompt

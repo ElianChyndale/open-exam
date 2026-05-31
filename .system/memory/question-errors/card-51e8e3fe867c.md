@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Corporate Issuers / M02 Investors and Other
 review_due_at: 2026-05-31
 linked_patterns: 
 correct_resolution: The supplier is a stakeholder because it has a vested interest in the company survival and success. It extends short-term credit through 30-day payment terms and has a long-term interest because it invested in integrated systems. High financial leverage is inconsistent with supplier interests because it raises short-term payment/default risk and longer-term risk to the value of the supplier relationship-specific investment.
+review_status: Reviewed once
 ---
 
 ## Prompt

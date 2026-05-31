@@ -13,6 +13,7 @@ source_type: manual
 evidence_assets: []
 moc_target: CFA_tier1/Economics/00-Economics-MOC.md
 correct_resolution: B. 1.3426. 1.4500 / X = 1.08 → X = 1.4500 / 1.08 = 1.3426. Base currency appreciation means the new rate = old rate × (1 + appreciation rate), so solve for old rate by dividing.
+review_status: Reviewed once
 ---
 
 ## Prompt

@@ -13,6 +13,7 @@ source_type: manual
 evidence_assets: []
 moc_target: CFA_tier1/Economics/00-Economics-MOC.md
 correct_resolution: C. More than 12 percent. [1/(1 - 0.12)] - 1 = 1/0.88 - 1 = 0.1364 = 13.64%. GBP appreciated more than 12% because the base currency changes — depreciation and appreciation are not symmetric.
+review_status: Reviewed once
 ---
 
 ## Prompt

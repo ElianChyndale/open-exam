@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Portfolio Management / unknown_from_screens
 review_due_at: 2026-05-28
 linked_patterns: 
 correct_resolution: Roy's safety-first criterion 关注 downside risk / shortfall risk。它讨论的是 portfolio returns 在最低可接受回报率 R_L 之下的概率，并在常见表述中假设 portfolio returns 服从正态分布；不是假设 asset prices 服从正态分布。A 正确，C 错在把 returns 和 asset prices 混了。
+review_status: Reviewed once
 ---
 
 ## Prompt

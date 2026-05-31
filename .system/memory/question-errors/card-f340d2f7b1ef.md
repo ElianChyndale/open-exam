@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Economics / M02 Understanding Business Cycl
 review_due_at: 2026-05-28
 linked_patterns: 
 correct_resolution: C. at the bottom of a recession. At the end/bottom of a recession, firms often run lean production and produce maximum output with the fewest workers, so output per hour worked can be highest.
+review_status: Reviewed once
 ---
 
 ## Prompt

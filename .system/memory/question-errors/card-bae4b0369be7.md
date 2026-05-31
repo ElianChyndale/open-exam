@@ -12,6 +12,7 @@ next_drill: 24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns
 review_due_at: 2026-05-24
 linked_patterns: 
 correct_resolution: C. 5.00%。正确三步：(1) Net return = 8.46% - 1.60% = 6.86%（trading expenses已在gross return中，不重复减）(2) Leveraged return = 6.86% + (2500/7500)*(6.86%-6%) = 7.15% (3) After-tax = 7.15%*(1-0.30) = 5.00%
+review_status: Reviewed once
 ---
 
 ## Prompt

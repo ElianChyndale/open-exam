@@ -2,7 +2,7 @@
 generated_for: 2026-06-01
 days_back: 7
 focus_topic: unspecified
-source_event_count: 46
+source_event_count: 48
 review_item_count: 20
 ---
 
@@ -10,14 +10,13 @@ review_item_count: 20
 
 ## 复习进度
 
-- 已完成复习: 2026-05-29
+- 已完成复习: 2026-05-29, 2026-05-30, 2026-06-01
 
 ## 一、知识点和公式
 
 ### 1. Corporate Issuers | B. Debt vs Equity Claims / Stakeholders
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Supplier relationship；Conflict map
 - **今天为什么看：** 到期复习 2026-05-31；近期低信心 2026-05-28
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Supplier relationship:** payment terms create short-term credit exposure; integrated systems create relationship-specific investment -> high leverage can conflict with supplier interests through payment risk and loss of long-term relationship value。
@@ -31,7 +30,6 @@ review_item_count: 20
 ### 2. Corporate Issuers | C. Governance Mechanisms
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Manager-shareholder agency examples
 - **今天为什么看：** 到期复习 2026-05-31；近期低信心 2026-05-28
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Manager-shareholder agency examples:** insufficient effort, excessive perks, avoiding appropriate risk, job protection -> 先回答 principal-agent，再给 independent board and compensation alignment。
@@ -41,7 +39,6 @@ review_item_count: 20
 ### 3. Economics | M02 Business Cycles and Indicators
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Cycle phases；Indicators；Business behavior
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Cycle phases:** Recovery -> expansion -> slowdown/peak -> contraction/recession -> trough -> 看题目问 current state 还是 expected future。
@@ -56,7 +53,6 @@ review_item_count: 20
 ### 4. Corporate Issuers | A. Organizational Forms / Ownership
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Organizational form；Corporate issuer features
 - **今天为什么看：** 到期复习 2026-05-31；近期低信心 2026-05-28
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Organizational form:** sole trader/proprietorship, partnership, limited company/corporation -> 比较 liability, tax, capital access, continuity, control。
@@ -67,7 +63,6 @@ review_item_count: 20
 ### 5. Economics | M04 Monetary Policy
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Transmission；Tools；Central bank roles；Limitations
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27；到期复习 2026-05-27；近期低信心 2026-05-26
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Transmission:** Policy tool -> short rates/reserves -> credit/asset prices/FX -> AD/output -> inflation -> `ultimately affects` 常指 inflation，不停在 total demand。
@@ -80,7 +75,6 @@ review_item_count: 20
 ### 6. Quantitative Methods | Estimation, CLT, confidence interval, and hypothesis-testing spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Standard error；t confidence interval；CLT
 - **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；到期复习 2026-05-27；近期低信心 2026-05-26
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Standard error:** `SE = sigma/sqrt(n)` or `s/sqrt(n)` -> SE measures uncertainty of the sample mean; SD measures dispersion of observations.
@@ -95,7 +89,6 @@ review_item_count: 20
 ### 7. Economics | M03 Fiscal Policy
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Policy actor
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Policy actor:** Government spending, taxation, transfers, automatic stabilizers -> Money supply / policy rate 属于 monetary policy。
@@ -104,8 +97,7 @@ review_item_count: 20
 
 ### 8. Corporate Issuers | D. Working Capital / Liquidity
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Liquidity sources；Quick ratio
-- **今天为什么看：** 到期复习 2026-06-01；近期低信心 2026-05-29
-
+- **今天为什么看：** 近期低信心 2026-05-29
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Liquidity sources:** primary: cash flows, cash balances, trade credit; secondary: asset sales, debt/equity issuance -> primary sources are normal operations; secondary sources may be costly or signal stress。
@@ -119,7 +111,6 @@ review_item_count: 20
 ### 9. Economics | M01 Firm, Cost, Shutdown, Market Structure
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Market structures；Breakeven
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Market structures:** Perfect competition: many, homogeneous, no pricing power; monopolistic competition: many differentiated, low barriers; oligopoly: few, strategic interdependence, high barriers; monopoly: one, very high barriers -> 题干通常用 barriers、product differentiation、number of sellers、pricing power 组合识别。
@@ -130,7 +121,6 @@ review_item_count: 20
 ### 10. Economics | M07 FX Market, Quotes, Regimes
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Capital restrictions
 - **今天为什么看：** 近期低信心 2026-05-27
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Capital restrictions:** Limit inflows/outflows, reduce volatility, protect reserves or policy autonomy -> 也可能 lower market efficiency and investor confidence。
@@ -140,7 +130,6 @@ review_item_count: 20
 ### 11. Quantitative Methods | Independence, regression, and ML-risk spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Spearman rank correlation
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Spearman rank correlation:** rank-based nonparametric correlation -> Use for ordinal, nonnormal, or outlier-prone data; detects monotonic relation.
@@ -150,7 +139,6 @@ review_item_count: 20
 ### 12. Economics | M08 Cross Rates, Forward Premiums, Arbitrage
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Covered interest parity；Cross rate；Inverted quote
 - **今天为什么看：** 近期低信心 2026-05-27
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Covered interest parity:** `F = S x (1 + i_domestic)/(1 + i_foreign)` -> 高利率货币通常 forward discount。
@@ -162,7 +150,6 @@ review_item_count: 20
 ### 13. Economics | M05 Geopolitics
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Investment channels
 - **今天为什么看：** 近期低信心 2026-05-27
-
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Investment channels:** Supply chain, commodity prices, sanctions, risk premium, capital flows, FX pressure -> 输出到 PM scenario analysis, country risk, currency exposure。
@@ -171,8 +158,7 @@ review_item_count: 20
 
 ### 14. Quantitative Methods | Simulation and resampling spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Bootstrap；Monte Carlo
-- **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；到期复习 2026-06-01；近期低信心 2026-05-31
-
+- **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；到期复习 2026-06-01；重复错误 3 次
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Bootstrap:** sample with replacement from observed data, compute statistic repeatedly -> Estimates sampling distribution/SE without a strong parametric distribution, but inherits sample bias.
@@ -185,8 +171,7 @@ review_item_count: 20
 
 ### 15. Quantitative Methods | Return and compounding spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Arithmetic mean；Continuously compounded return
-- **今天为什么看：** 到期复习 2026-05-24；重复错误 4 次
-
+- **今天为什么看：** 到期复习 2026-05-24；重复错误 5 次
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Arithmetic mean:** `AM = sum(R_i) / n` -> Best for one-period expected return. It is not the long-run compounded wealth rate.
@@ -199,8 +184,7 @@ review_item_count: 20
 
 ### 16. Quantitative Methods | TVM and cash-flow spine
 - **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Cash-flow additivity
-- **今天为什么看：** 到期复习 2026-06-01；近期低信心 2026-05-31
-
+- **今天为什么看：** 到期复习 2026-06-01；重复错误 3 次
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Cash-flow additivity:** portfolio value = sum of component PVs -> No-arbitrage interface for forward rates, forward FX, and option payoff replication.
@@ -211,7 +195,7 @@ review_item_count: 20
 
 ### 1. Quantitative Methods | QM.Rates and Returns | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-24；重复错误 4 次；严重度 high
+- **今天为什么看：** 到期复习 2026-05-24；重复错误 5 次；严重度 high；近期低信心 2026-05-31
 
 #### 主动回忆
 - 闭卷讲出 Quantitative Methods / QM.Rates and Returns 的核心定义和判断边界。
@@ -241,7 +225,36 @@ review_item_count: 20
 - **当前阶段：** full solution -> hidden-step completion -> independent solve
 - **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
 
-### 2. Quantitative Methods | unknown_from_screenshot | concept_confusion
+### 2. Quantitative Methods | QM.Rates | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-06-01；重复错误 3 次；严重度 medium；近期低信心 2026-05-31
+
+#### 主动回忆
+- 闭卷讲出 Quantitative Methods / QM.Rates 的核心定义和判断边界。
+
+#### 题目
+> Quick capture: Quantitative Methods/QM.Rates
+
+#### 我上次错在
+> 选了A
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> B 才是正确的
+
+#### 下次规则
+- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
+- **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。
+- **证据：** quick-capture-2026-05-31T23:31:41.995992
+
+#### 自我解释
+- 用一句话说出：为什么 `B 才是正确的` 是对的，而你的答案错了？
+
+#### Worked example fading
+- **当前阶段：** full solution -> hidden-step completion -> independent solve
+- **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
+
+### 3. Quantitative Methods | unknown_from_screenshot | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；重复错误 3 次；严重度 medium；近期低信心 2026-05-25
 
@@ -273,7 +286,7 @@ review_item_count: 20
 - **当前阶段：** full solution -> hidden-step completion -> independent solve
 - **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
 
-### 3. Economics | M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) | prompt_misread
+### 4. Economics | M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) | prompt_misread
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -298,7 +311,7 @@ review_item_count: 20
 #### 自我解释
 - 这道题我错在哪里？（一句话）
 
-### 4. Economics | M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) | concept_confusion
+### 5. Economics | M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -328,7 +341,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `B. non-colluding market conditions only. In colluding oligopoly conditions, the aggregate market dem` 是对的...
 
-### 5. Economics | M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) | concept_confusion
+### 6. Economics | M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -358,7 +371,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `A. increase. When a smaller competitor undercuts the price leader, the lower price can force smaller` 是对的...
 
-### 6. Economics | M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) | concept_confusion
+### 7. Economics | M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -388,7 +401,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building p` 是对的...
 
-### 7. Economics | M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot) | concept_confusion
+### 8. Economics | M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -418,7 +431,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `C. at the bottom of a recession. At the end/bottom of a recession, firms often run lean production a` 是对的...
 
-### 8. Economics | M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) | concept_confusion
+### 9. Economics | M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -448,7 +461,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `B. taxation and spending only. Fiscal policy is government decisions about taxation and spending; th` 是对的...
 
-### 9. Economics | M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot) | prompt_misread
+### 10. Economics | M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot) | prompt_misread
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -478,7 +491,7 @@ review_item_count: 20
 #### 自我解释
 - 这道题我错在哪里？（一句话）
 
-### 10. Economics | M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot) | concept_confusion
+### 11. Economics | M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -508,7 +521,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `B. Declining bank reserves and economic activity. QE creates additional bank reserves and uses large` 是对的...
 
-### 11. Economics | M07: Capital Flows and the FX Market - capital restrictions purpose | concept_confusion
+### 12. Economics | M07: Capital Flows and the FX Market - capital restrictions purpose | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 近期低信心 2026-05-27
 
@@ -536,7 +549,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `A. prevent capital flight. Restricting liquid asset investment prevents hot money sudden reversal. F` 是对的...
 
-### 12. Economics | M08: Exchange Rate Calculations - depreciation/appreciation asymmetry | formula_misuse
+### 13. Economics | M08: Exchange Rate Calculations - depreciation/appreciation asymmetry | formula_misuse
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 近期低信心 2026-05-27
 
@@ -564,7 +577,7 @@ review_item_count: 20
 #### 自我解释
 - 写出正确的计算步骤（只写步骤，不写解释）。
 
-### 13. Economics | M08: Exchange Rate Calculations - initial rate from appreciation percentage | formula_misuse
+### 14. Economics | M08: Exchange Rate Calculations - initial rate from appreciation percentage | formula_misuse
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 近期低信心 2026-05-27
 
@@ -592,7 +605,7 @@ review_item_count: 20
 #### 自我解释
 - 写出正确的计算步骤（只写步骤，不写解释）。
 
-### 14. Quantitative Methods | M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) | concept_confusion
+### 15. Quantitative Methods | M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -622,7 +635,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `A. data consist of ranked values. Nonparametric tests are most appropriate for ranked or ordinal dat` 是对的...
 
-### 15. Quantitative Methods | M08 Hypothesis Testing - paired comparisons test (exact LOS not shown) | formula_misuse
+### 16. Quantitative Methods | M08 Hypothesis Testing - paired comparisons test (exact LOS not shown) | formula_misuse
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
 
@@ -649,31 +662,6 @@ review_item_count: 20
 
 #### 自我解释
 - 写出正确的计算步骤（只写步骤，不写解释）。
-
-### 16. Quantitative Methods | QM.Rates | concept_confusion
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-06-01；近期低信心 2026-05-31
-
-#### 主动回忆
-- 闭卷讲出 Quantitative Methods / QM.Rates 的核心定义和判断边界。
-
-#### 题目
-> Quick capture: Quantitative Methods/QM.Rates
-
-#### 我上次错在
-> 选了A
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> B 才是正确的
-
-#### 下次规则
-- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。
-- **证据：** quick-capture-2026-05-31T23:31:41.995992
-
-#### 自我解释
-- 用一句话说出：为什么 `B 才是正确的` 是对的，而你的答案错了？
 
 ### 17. Corporate Issuers | M01 Organizational Forms - owner liability comparison | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
@@ -757,7 +745,7 @@ review_item_count: 20
 
 ### 20. Corporate Issuers | M04 Working Capital and Liquidity - liquidity drags and pulls | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-06-01；近期低信心 2026-05-29
+- **今天为什么看：** 近期低信心 2026-05-29
 
 #### 主动回忆
 - 闭卷讲出 Corporate Issuers / M04 Working Capital and Liquidity - liquidity drags and pulls 的核心定义和判断边界。

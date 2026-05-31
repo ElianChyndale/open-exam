@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Economics / M02 Understanding Business Cycl
 review_due_at: 2026-05-28
 linked_patterns: 
 correct_resolution: B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction.
+review_status: Reviewed once
 ---
 
 ## Prompt

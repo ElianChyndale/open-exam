@@ -1,4 +1,4 @@
-"""Exam profile management — makes ExamOS exam-agnostic.
+"""Exam profile management — makes OpenExam exam-agnostic.
 
 Each exam (CFA L1, FRM P1, etc.) has a YAML profile defining:
 - Subjects and their weights

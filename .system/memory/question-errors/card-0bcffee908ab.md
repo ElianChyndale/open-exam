@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Corporate Issuers / M03 Corporate Governanc
 review_due_at: 2026-05-31
 linked_patterns: 
 correct_resolution: Managers are agents of shareholders but may put their own interests ahead of shareholders: insufficient effort, excessive perquisite consumption such as corporate jets or elaborate offices, failure to take appropriate risks, or investments/actions to safeguard their jobs. Independent board oversight and compensation alignment, including performance-based and equity-based compensation, help mitigate the conflict.
+review_status: Reviewed once
 ---
 
 ## Prompt

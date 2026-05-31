@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from collections import Counter
 from datetime import date, datetime, timedelta
 
@@ -516,4 +517,74 @@ async def get_topic_mastery(repo=Depends(get_repo)):
         "topics": topics,
         "overall_mastery": overall,
         "exam_date": exam_date_str,
+    }
+
+
+@router.get("/knowledge-readiness")
+async def get_knowledge_readiness(repo=Depends(get_repo)):
+    """Knowledge point memory states with decay status and next-review schedule.
+
+    Returns every knowledge point with its graduated state (Reviewed once →
+    Familiar → Practiced → Proficient → Mastered), decay risk, and when it
+    should next be reviewed.  This is the ecological feedback from the
+    KnowledgeMemoryEngine — answering "what does the system know about what I know?"
+    """
+    from study_science.knowledge_memory import KnowledgeMemoryEngine
+
+    overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+    if not overlay_path.exists():
+        return {"knowledge_points": [], "decayed": [], "sweep_applied": False}
+
+    try:
+        overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {"knowledge_points": [], "decayed": [], "sweep_applied": False}
+
+    # Run decay sweep
+    engine = KnowledgeMemoryEngine()
+    today = date.today()
+    overlay, decayed_ids = engine.decay_sweep(overlay, today)
+    overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    kp_points = overlay.get("knowledge_points", {})
+    today_str = today.isoformat()
+
+    items = []
+    for kid, entry in kp_points.items():
+        next_review = entry.get("next_review_at", "")[:10]
+        overdue = next_review < today_str if next_review else False
+        items.append({
+            "knowledge_id": kid,
+            "subject": entry.get("subject", ""),
+            "heading": entry.get("heading", ""),
+            "trigger": entry.get("trigger", ""),
+            "status": entry.get("status", "New"),
+            "state_value": entry.get("state_value", 0),
+            "consecutive_successes": entry.get("consecutive_successes", 0),
+            "next_review_at": entry.get("next_review_at", ""),
+            "last_reviewed_at": entry.get("last_reviewed_at", ""),
+            "review_interval_days": entry.get("review_interval_days", 0),
+            "decay_risk": entry.get("decay_risk", "none"),
+            "overdue": overdue,
+        })
+
+    items.sort(key=lambda x: x["state_value"])
+
+    return {
+        "knowledge_points": items,
+        "decayed": decayed_ids,
+        "sweep_applied": len(decayed_ids) > 0,
+        "readiness_summary": {
+            "total": len(items),
+            "overdue": sum(1 for i in items if i["overdue"]),
+            "by_state": {
+                "new": sum(1 for i in items if i["state_value"] == 0),
+                "reviewed_once": sum(1 for i in items if i["state_value"] == 1),
+                "familiar": sum(1 for i in items if i["state_value"] == 2),
+                "practiced": sum(1 for i in items if i["state_value"] == 3),
+                "proficient": sum(1 for i in items if i["state_value"] == 4),
+                "mastered": sum(1 for i in items if i["state_value"] == 5),
+            },
+            "high_decay_risk": sum(1 for i in items if i["decay_risk"] in ("high", "overdue")),
+        },
     }

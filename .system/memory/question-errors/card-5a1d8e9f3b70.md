@@ -13,6 +13,7 @@ source_type: manual
 evidence_assets: []
 moc_target: CFA_tier1/Economics/00-Economics-MOC.md
 correct_resolution: A. prevent capital flight. Restricting foreign investment in liquid assets (easily sold/repatriated) prevents sudden outflows. FDI is illiquid and stable. C is wrong because FDI (not the restriction) stabilizes production capacity.
+review_status: Reviewed once
 ---
 
 ## Prompt

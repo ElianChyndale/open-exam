@@ -1,6 +1,6 @@
 ---
 bucket: Quant
-question_count: 13
+question_count: 17
 ---
 
 # Quant Mock Mistakes
@@ -134,3 +134,43 @@ question_count: 13
 - evidence_refs: chat-2026-05-26-regression-prediction-q28
 - evidence_assets: 
 - moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
+
+## Quantitative Methods | QM.Rates
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: unknown
+- wrong_choice_or_output: 选了A
+- correct_resolution: B 才是正确的
+- evidence_refs: quick-capture-2026-05-31T23:31:38.560972
+- evidence_assets: 
+- moc_target: 
+
+## Quantitative Methods | QM.Rates
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: unknown
+- wrong_choice_or_output: 选了A
+- correct_resolution: B 才是正确的
+- evidence_refs: quick-capture-2026-05-31T23:31:41.995992
+- evidence_assets: 
+- moc_target: 
+
+## Quantitative Methods | QM.Rates and Returns
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: unknown
+- wrong_choice_or_output: 
+- correct_resolution: Test answer
+- evidence_refs: 
+- evidence_assets: 
+- moc_target: 
+
+## Quantitative Methods | QM.Rates
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: unknown
+- wrong_choice_or_output: 
+- correct_resolution: Answer
+- evidence_refs: 
+- evidence_assets: 
+- moc_target: 

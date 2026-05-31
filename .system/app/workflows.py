@@ -915,13 +915,22 @@ def render_warm_start(lines: list[str], warm_start_items: list[dict]) -> None:
         ]
         triggers = [item.get("trigger", "") for item in group]
         boundaries = boundary_lines_for_group(group)
+        # Knowledge memory state for the group (from first item that has one)
+        decay_info = next((item for item in group if item.get("decay_risk")), None)
+        memory_lines: list[str] = []
+        if decay_info:
+            risk_labels = {"overdue": "超期", "high": "高衰减风险", "medium": "中等衰减风险", "low": "微衰减风险", "none": "状态良好"}
+            risk_label = risk_labels.get(decay_info.get("decay_risk", ""), "")
+            if risk_label:
+                kid_short = str(decay_info.get("knowledge_id", ""))[:24]
+                memory_lines = [f"- **记忆状态：** {risk_label}（{kid_short}）", ""]
         lines.extend(
             [
                 "",
                 f"### {index}. {clean_display_text(first['subject'])} | {clean_display_text(first['heading'])}",
                 f"- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？{compact_list(triggers)}",
                 f"- **今天为什么看：** {human_reasons(reason_parts)}",
-                "",
+                *memory_lines,
                 "> [!answer]- Reveal knowledge point",
                 "> #### 核心知识点 / 公式",
             ]
@@ -1275,7 +1284,80 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
     }
     repo.append_jsonl_event("progress", progress)
 
+    # ── Feedback loop: feed card outcome to linked knowledge points ──────
+    _feed_card_outcome_to_knowledge(repo, card_id, topic, los, outcome, confidence)
+
     return progress
+
+
+def _feed_card_outcome_to_knowledge(
+    repo: Repository, card_id: str, topic: str, los: str,
+    outcome: str, confidence_after: int,
+) -> None:
+    """Feed a card review outcome back into the knowledge-status overlay.
+
+    Knowledge points whose (subject, heading) match this card's (topic, los)
+    get their state updated based on the recall outcome.
+    """
+    from study_science.knowledge_memory import KnowledgeMemoryEngine, KnowledgeFeedbackInput, KnowledgeState
+
+    overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+    if not overlay_path.exists():
+        return
+    try:
+        overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return
+
+    kp_map = overlay.get("knowledge_points", {})
+    if not kp_map:
+        return
+
+    # Normalize topic for matching
+    topic_lower = topic.strip().lower()
+    los_lower = los.strip().lower()
+
+    km_engine = KnowledgeMemoryEngine()
+    updated = False
+
+    for kid, entry in kp_map.items():
+        subj = entry.get("subject", "").strip().lower()
+        head = entry.get("heading", "").strip().lower()
+        trig = entry.get("trigger", "").strip().lower()
+
+        # Match: subject must match, and the card's LOS should be findable
+        # in the knowledge point's heading or trigger
+        if subj != topic_lower:
+            continue
+        if los_lower not in head and los_lower not in trig:
+            # Partial match: if knowledge heading starts with card LOS prefix
+            # e.g. heading "m01 firm, cost, shutdown" matches los "m01 los 1.4..."
+            los_prefix = los_lower.split(" ")[0].split("/")[0] if los_lower else ""
+            if not los_prefix or (
+                los_prefix not in head and los_prefix not in trig
+            ):
+                continue
+
+        # Match found — feed outcome back
+        feedback = KnowledgeFeedbackInput(
+            knowledge_id=kid,
+            subject=entry.get("subject", ""),
+            heading=entry.get("heading", ""),
+            trigger=entry.get("trigger", ""),
+            source_refs=entry.get("source_refs", []),
+            outcome={"recalled": "reviewed", "struggled": "struggled", "forgot": "forgot"}.get(outcome, "reviewed"),
+            confidence_after=confidence_after,
+        )
+        new_entry, decision = km_engine.update_knowledge_point(
+            entry, feedback,
+            exam_date=load_exam_date(repo),
+        )
+        kp_map[kid] = new_entry
+        updated = True
+
+    if updated:
+        overlay["knowledge_points"] = kp_map
+        overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def record_fix_rule_feedback(repo: Repository, card_id: str, helpful: bool, note: str = "") -> dict:
@@ -1692,8 +1774,11 @@ def _card_domain_for(repo: Repository, card_id: str) -> str | None:
 
 
 def complete_daily_review(repo: Repository, review_id: str) -> dict:
+    from study_science.knowledge_memory import KnowledgeMemoryEngine
+
     snapshot = load_daily_review_snapshot(repo, review_id)
     occurred_at = datetime.now(timezone.utc).isoformat()
+    km_engine = KnowledgeMemoryEngine()
     overlay_path = repo.memory_root / "review" / "knowledge-status.json"
     if overlay_path.exists():
         overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
@@ -1701,6 +1786,8 @@ def complete_daily_review(repo: Repository, review_id: str) -> dict:
         overlay = {"schema_version": 1, "knowledge_points": {}}
 
     reviewed_items = 0
+    knowledge_decisions: list[dict] = []
+
     for point in snapshot.get("knowledge_points", []):
         item_id = point["knowledge_id"]
         event = _review_event(
@@ -1712,12 +1799,32 @@ def complete_daily_review(repo: Repository, review_id: str) -> dict:
         )
         if _append_review_event_once(repo, event):
             reviewed_items += 1
-        overlay["knowledge_points"][item_id] = {
-            **point,
-            "status": "Reviewed once",
-            "reviewed_at": overlay["knowledge_points"].get(item_id, {}).get("reviewed_at", occurred_at),
-            "review_id": review_id,
-        }
+
+        # Feedback loop: feed review exposure into KnowledgeMemoryEngine
+        from study_science.knowledge_memory import KnowledgeFeedbackInput
+        current_entry = overlay["knowledge_points"].get(item_id)
+        feedback = KnowledgeFeedbackInput(
+            knowledge_id=item_id,
+            subject=point.get("subject", ""),
+            heading=point.get("heading", ""),
+            trigger=point.get("trigger", ""),
+            source_refs=point.get("source_refs", []),
+            outcome="reviewed",
+            confidence_after=2,
+        )
+        entry, decision = km_engine.update_knowledge_point(
+            current_entry, feedback,
+            exam_date=load_exam_date(repo),
+        )
+        overlay["knowledge_points"][item_id] = entry
+        knowledge_decisions.append({
+            "knowledge_id": decision.knowledge_id,
+            "state": decision.status_label,
+            "state_value": int(decision.state),
+            "next_review_at": decision.next_review_date,
+            "review_interval_days": decision.review_interval_days,
+            "decay_risk": decision.decay_risk,
+        })
 
     overlay_path.parent.mkdir(parents=True, exist_ok=True)
     overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1764,7 +1871,85 @@ def complete_daily_review(repo: Repository, review_id: str) -> dict:
                 "review_id": review_id,
             },
         )
-    return {"review_id": review_id, "completed": completed, "newly_reviewed_items": reviewed_items}
+    return {
+        "review_id": review_id,
+        "completed": completed,
+        "newly_reviewed_items": reviewed_items,
+        "knowledge_decisions": knowledge_decisions,
+    }
+
+
+def collect_due_knowledge_points(repo: Repository, target_date: date) -> list[dict]:
+    """Collect knowledge points due for review from the KnowledgeMemoryEngine overlay.
+
+    Reads knowledge-status.json and returns entries whose next_review_at
+    has arrived or is past, enriched with decay priority for scheduling.
+    """
+    from study_science.knowledge_memory import KnowledgeMemoryEngine
+
+    overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+    if not overlay_path.exists():
+        return []
+
+    try:
+        overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+
+    kp_map = overlay.get("knowledge_points", {})
+    if not kp_map:
+        return []
+
+    # Run decay sweep first so states are current
+    engine = KnowledgeMemoryEngine()
+    overlay, _decayed = engine.decay_sweep(overlay, target_date)
+    overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    today_str = target_date.isoformat()
+    due: list[dict] = []
+
+    for kid, entry in kp_map.items():
+        next_review = entry.get("next_review_at", "")[:10]
+        if not next_review:
+            continue
+
+        # Due if next_review_at <= target_date
+        if next_review > today_str:
+            continue
+
+        decay_risk = entry.get("decay_risk", "none")
+        state_value = int(entry.get("state_value", 0) or 0)
+        consecutive = int(entry.get("consecutive_successes", 0) or 0)
+
+        # Priority boost from decay risk and state
+        risk_boost = {
+            "overdue": 50,
+            "high": 40,
+            "medium": 25,
+            "low": 10,
+            "none": 0,
+        }.get(decay_risk, 0)
+
+        scheduling_priority = 100 + risk_boost + (5 - state_value) * 3
+
+        due.append({
+            "subject": entry.get("subject", ""),
+            "heading": entry.get("heading", ""),
+            "trigger": entry.get("trigger", ""),
+            "reason": (
+                f"Memory review due; state={entry.get('status', '?')}, "
+                f"decay_risk={decay_risk}, consecutive_successes={consecutive}"
+            ),
+            "priority": scheduling_priority,
+            "knowledge_id": kid,
+            "state": entry.get("status", ""),
+            "state_value": state_value,
+            "decay_risk": decay_risk,
+            "next_review_at": next_review,
+            "source": "; ".join(entry.get("source_refs", [])),
+        })
+
+    return sorted(due, key=lambda x: -x["priority"])[:20]
 
 
 def daily_review_pack(
@@ -1790,6 +1975,46 @@ def daily_review_pack(
             warm_start_items,
             build_expanded_warm_start_items(repo, review_items, focus_topic),
         )
+
+    # ── Knowledge Memory Loop: inject due knowledge points ──────────────
+    # Due KPs are knowledge points whose next_review_at has arrived,
+    # as computed by the KnowledgeMemoryEngine. They need consolidation
+    # to prevent forgetting-curve decay. Inject them into warm-start items
+    # so they appear in the "知识点和公式" section of the daily review.
+    due_knowledge_points = collect_due_knowledge_points(repo, target_date)
+    if due_knowledge_points:
+        # Build a set of existing (subject, heading, trigger) keys from warm_start_items
+        existing_keys = {
+            (i.get("subject", ""), i.get("heading", ""), i.get("trigger", ""))
+            for i in warm_start_items
+        }
+        for kp in due_knowledge_points:
+            key = (kp["subject"], kp["heading"], kp["trigger"])
+            if key not in existing_keys:
+                # Look up formula/decision from MOC if available, otherwise use defaults
+                try:
+                    atoms = extract_moc_atoms(repo, kp["subject"])
+                    matching = [a for a in atoms if a.get("heading") == kp["heading"] and a.get("trigger") == kp["trigger"]]
+                    atom = matching[0] if matching else {}
+                except Exception:
+                    atom = {}
+                warm_start_items.append({
+                    "subject": kp["subject"],
+                    "heading": kp["heading"],
+                    "trigger": kp["trigger"],
+                    "formula": atom.get("formula", kp.get("state", "Reviewed once")),
+                    "decision": atom.get("decision", f"Decay risk: {kp.get('decay_risk', 'none')}"),
+                    "boundaries": atom.get("boundaries", []),
+                    "reason": kp.get("reason", "Memory review due"),
+                    "source": kp.get("source", "knowledge-status"),
+                    "priority": kp.get("priority", 50),
+                    "knowledge_id": kp.get("knowledge_id", ""),
+                    "decay_risk": kp.get("decay_risk", ""),
+                })
+                existing_keys.add(key)
+        # Re-sort by priority, then subject, then heading
+        warm_start_items.sort(key=lambda x: (-x.get("priority", 0), x.get("subject", ""), x.get("heading", "")))
+
     events = repo.load_events()
     progress_events = load_progress_events(repo)
 

@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Economics / M03 Fiscal Policy - compare mon
 review_due_at: 2026-05-28
 linked_patterns: 
 correct_resolution: B. taxation and spending only. Fiscal policy is government decisions about taxation and spending; the quantity of money in the economy is controlled through central bank monetary policy, not fiscal policy.
+review_status: Reviewed once
 ---
 
 ## Prompt

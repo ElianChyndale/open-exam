@@ -1,7 +1,7 @@
 ---
 pattern_id: pattern-f8ec7ca74e0e
 pattern_key: Quantitative Methods::QM.Rates and Returns::concept_confusion
-recurrence: 4
+recurrence: 5
 severity: high
 ---
 

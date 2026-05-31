@@ -1,7 +1,7 @@
 ---
 rule_id: pre-mock-brief
 trigger: 考前 24 小时或下一次 mock 开始前
-decision: 优先回看 General Review 的错题卡，再做 5 题定向热身。
+decision: 优先回看 Quantitative Methods 的错题卡，再做 5 题定向热身。
 ---
 
 ## Why It Works

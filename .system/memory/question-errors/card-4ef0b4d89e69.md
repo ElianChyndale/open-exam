@@ -13,6 +13,7 @@ next_drill: 24 小时内重做 2 道 Quantitative Methods / unknown_from_screens
 review_due_at: 2026-05-28
 linked_patterns: 
 correct_resolution: 若收益率按小数表示，则 target 2% 必须写成 0.02。低于 2% 的回报分别用 (0.015-0.02)^2、(-0.02-0.02)^2、(0-0.02)^2，合计 0.002025，再按题目口径开方得到 1.50%。核心不是公式变了，而是 percent 与 decimal 必须全程统一单位。
+review_status: Reviewed once
 ---
 
 ## Prompt

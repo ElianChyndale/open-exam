@@ -1,0 +1,10 @@
+{
+  "session_id": "mock-001",
+  "exam_name": "CFA L1",
+  "session_label": "Mock 1",
+  "scheduled_date": "",
+  "total_minutes": 180,
+  "total_questions": 120,
+  "correct_count": 70,
+  "created_at": "2026-05-31T17:46:34.156526+00:00"
+}

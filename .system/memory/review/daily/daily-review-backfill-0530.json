@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "review_id": "daily-review-backfill-0530",
+  "generated_for": "2026-05-30",
+  "generated_at": "2026-05-30T12:00:00+00:00",
+  "generation": {
+    "days_back": 7,
+    "max_items": 20,
+    "focus_topic": "unspecified",
+    "knowledge_depth": "standard"
+  },
+  "knowledge_points": [
+    {
+      "knowledge_id": "knowledge-0530-econ-m01",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures; Profit maximization; Breakeven",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-econ-m02",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases; Indicators; Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-econ-m04",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission; Tools; Central bank roles; Limitations",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-qm-estimation",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error; t confidence interval; CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-econ-m03",
+      "subject": "Economics",
+      "heading": "M03 Fiscal Policy",
+      "trigger": "Policy actor",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-econ-m07",
+      "subject": "Economics",
+      "heading": "M07 FX Market, Quotes, Regimes",
+      "trigger": "Capital restrictions",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-qm-regression",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-econ-m08",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Covered interest parity; Cross rate; Inverted quote",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-qm-simulation",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap; Lognormal price",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-qm-return",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean; Continuously compounded return; Holding-period total return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-pm-m03",
+      "subject": "Portfolio Management",
+      "heading": "M03 Portfolio Management Process",
+      "trigger": "Process; Pooled vehicles",
+      "source_refs": [
+        "CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0530-qm-probability",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Total probability; Expected value",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    }
+  ],
+  "mistake_cards": [
+    {
+      "card_id": "card-074b63e3a56a",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-09f0f3116e16",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-0ed22809af71",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-0fe899e35d65",
+      "topic": "Economics - Monetary Policy - Monetary Transmission Mechanism",
+      "los": "M04 LOS 4.2: describe monetary policy tools and the monetary transmission mechanism",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-13c67d46986d",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - paired comparisons test (exact LOS not shown)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-264a9e962574",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_user_note",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-28a38faad030",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-2e6ba8afb984",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-30a3acd94022",
+      "topic": "Quantitative Methods",
+      "los": "M10 Simple Linear Regression",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-360bf843b9a0",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-390367d43a5e",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - nonparametric tests (exact LOS not shown)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-3ffdb0d46d7b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-43808428ecd1",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-4ef0b4d89e69",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-54dfb9b2969c",
+      "topic": "Portfolio Management",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-5a1d8e9f3b70",
+      "topic": "Economics",
+      "los": "M07: Capital Flows and the FX Market — capital restrictions purpose (capital flight prevention vs production capacity)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-6b2d5294fee7",
+      "topic": "Economics - Market Structures - Barriers to Entry",
+      "los": "M01 LOS 1.2/1.5: describe market structure characteristics and concentration/market structure limits",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-6b3213b48d06",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-9e7b3a1f4c02",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations — initial rate from appreciation percentage",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-bae4b0369be7",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-bdbe2fbb2c93",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-ccaaee560d08",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations — exchange rate depreciation/appreciation asymmetry",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-db9f6e95654a",
+      "topic": "Economics - Geopolitics - Event Risk vs Thematic Risk",
+      "los": "M05 LOS 5.4/5.6: describe geopolitical risk and its impact on investments",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f340d2f7b1ef",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f62f1f977e7a",
+      "topic": "Economics",
+      "los": "M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f7ea9a7f28c9",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f862a042978b",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped)",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f8fcacfe78f7",
+      "topic": "Economics",
+      "los": "M01 The Firm and Market Structures",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-faa48e1ec793",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-ffd2a2c0e7bb",
+      "topic": "Portfolio Management",
+      "los": "unknown_from_screenshot",
+      "source_refs": []
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Pydantic request/response schemas for ExamOS API."""
+"""Pydantic request/response schemas for OpenExam API."""
 
 from __future__ import annotations
 
@@ -103,6 +103,7 @@ class DailyReviewCompleteResponse(BaseModel):
     review_id: str
     completed: bool
     newly_reviewed_items: int
+    knowledge_decisions: list[dict] = Field(default_factory=list, description="KnowledgeMemoryEngine state updates per knowledge point")
 
 
 class CardReviewRequest(BaseModel):

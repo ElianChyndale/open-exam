@@ -12,6 +12,7 @@ next_drill: 24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns
 review_due_at: 2026-05-24
 linked_patterns: 
 correct_resolution: C is correct. Gross return 已扣除交易费用（trading expenses 直接贡献于回报计算），但不含管理费/行政费。它是税前、非风险调整的，用于衡量经理投资能力。B 错在 gross return 实际已包含 trading expenses 的扣除（它们属于投资决策的一部分），而 A 错在 gross return 是税前且不调整风险。
+review_status: Reviewed once
 ---
 
 ## Prompt

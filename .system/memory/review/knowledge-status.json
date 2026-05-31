@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "knowledge_points": {
+    "knowledge-0530-econ-m01": {
+      "knowledge_id": "knowledge-0530-econ-m01",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures; Profit maximization; Breakeven",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674720+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674720+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-econ-m02": {
+      "knowledge_id": "knowledge-0530-econ-m02",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases; Indicators; Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674747+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674747+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-econ-m04": {
+      "knowledge_id": "knowledge-0530-econ-m04",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission; Tools; Central bank roles; Limitations",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674761+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674761+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-qm-estimation": {
+      "knowledge_id": "knowledge-0530-qm-estimation",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error; t confidence interval; CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674770+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674770+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-econ-m03": {
+      "knowledge_id": "knowledge-0530-econ-m03",
+      "subject": "Economics",
+      "heading": "M03 Fiscal Policy",
+      "trigger": "Policy actor",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674778+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674778+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-econ-m07": {
+      "knowledge_id": "knowledge-0530-econ-m07",
+      "subject": "Economics",
+      "heading": "M07 FX Market, Quotes, Regimes",
+      "trigger": "Capital restrictions",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674785+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674785+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-qm-regression": {
+      "knowledge_id": "knowledge-0530-qm-regression",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674792+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674792+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-econ-m08": {
+      "knowledge_id": "knowledge-0530-econ-m08",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Covered interest parity; Cross rate; Inverted quote",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674798+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674798+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-qm-simulation": {
+      "knowledge_id": "knowledge-0530-qm-simulation",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap; Lognormal price",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674804+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674804+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-qm-return": {
+      "knowledge_id": "knowledge-0530-qm-return",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean; Continuously compounded return; Holding-period total return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674809+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674809+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-pm-m03": {
+      "knowledge_id": "knowledge-0530-pm-m03",
+      "subject": "Portfolio Management",
+      "heading": "M03 Portfolio Management Process",
+      "trigger": "Process; Pooled vehicles",
+      "source_refs": [
+        "CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674815+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674815+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-0530-qm-probability": {
+      "knowledge_id": "knowledge-0530-qm-probability",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Total probability; Expected value",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Reviewed once",
+      "state_value": 1,
+      "consecutive_successes": 1,
+      "reviewed_at": "2026-06-01T01:41:46.674822+08:00",
+      "review_interval_days": 2,
+      "next_review_at": "2026-06-03",
+      "last_reviewed_at": "2026-06-01T01:41:46.674822+08:00",
+      "decay_risk": "none",
+      "review_id": "daily-review-backfill-0530"
+    },
+    "knowledge-396444dc185f": {
+      "knowledge_id": "knowledge-396444dc185f",
+      "subject": "Corporate Issuers",
+      "heading": "B. Debt vs Equity Claims / Stakeholders",
+      "trigger": "Supplier relationship",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.181959+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.181959+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-fb41a6884e80": {
+      "knowledge_id": "knowledge-fb41a6884e80",
+      "subject": "Corporate Issuers",
+      "heading": "C. Governance Mechanisms",
+      "trigger": "Manager-shareholder agency examples",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.182675+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.182675+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-033d03a0d683": {
+      "knowledge_id": "knowledge-033d03a0d683",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.183482+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.183482+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-4772ea88bf07": {
+      "knowledge_id": "knowledge-4772ea88bf07",
+      "subject": "Corporate Issuers",
+      "heading": "A. Organizational Forms / Ownership",
+      "trigger": "Organizational form",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.184099+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.184099+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-2798e5b9a4ad": {
+      "knowledge_id": "knowledge-2798e5b9a4ad",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Indicators",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.184755+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.184755+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-9709e5245520": {
+      "knowledge_id": "knowledge-9709e5245520",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.185343+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.185343+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-077d22a9b5dd": {
+      "knowledge_id": "knowledge-077d22a9b5dd",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.186002+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.186002+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-f9e5619fc18b": {
+      "knowledge_id": "knowledge-f9e5619fc18b",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.186610+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.186610+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-17e153e23d11": {
+      "knowledge_id": "knowledge-17e153e23d11",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "t confidence interval",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.187288+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.187288+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-637a91f74954": {
+      "knowledge_id": "knowledge-637a91f74954",
+      "subject": "Economics",
+      "heading": "M03 Fiscal Policy",
+      "trigger": "Policy actor",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.188062+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.188062+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-913e964c7854": {
+      "knowledge_id": "knowledge-913e964c7854",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Tools",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.188863+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.188863+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-46165028a7ec": {
+      "knowledge_id": "knowledge-46165028a7ec",
+      "subject": "Corporate Issuers",
+      "heading": "D. Working Capital / Liquidity",
+      "trigger": "Liquidity sources",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.189524+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.189524+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-6b46b38659d7": {
+      "knowledge_id": "knowledge-6b46b38659d7",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.190158+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.190158+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-30e99a02e37a": {
+      "knowledge_id": "knowledge-30e99a02e37a",
+      "subject": "Corporate Issuers",
+      "heading": "B. Debt vs Equity Claims / Stakeholders",
+      "trigger": "Conflict map",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.190909+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.190909+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-7db9bb917b61": {
+      "knowledge_id": "knowledge-7db9bb917b61",
+      "subject": "Corporate Issuers",
+      "heading": "A. Organizational Forms / Ownership",
+      "trigger": "Corporate issuer features",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.191542+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.191542+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-841e8abae9af": {
+      "knowledge_id": "knowledge-841e8abae9af",
+      "subject": "Economics",
+      "heading": "M07 FX Market, Quotes, Regimes",
+      "trigger": "Capital restrictions",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.192144+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.192144+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-5cb899871fe7": {
+      "knowledge_id": "knowledge-5cb899871fe7",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Central bank roles",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.192753+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.192753+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-7c6595399ca1": {
+      "knowledge_id": "knowledge-7c6595399ca1",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Limitations",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.193524+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.193524+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-d94dba7281d3": {
+      "knowledge_id": "knowledge-d94dba7281d3",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.194151+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.194151+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-ff8219508f67": {
+      "knowledge_id": "knowledge-ff8219508f67",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.194770+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.194770+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-c0dbf5efbc7e": {
+      "knowledge_id": "knowledge-c0dbf5efbc7e",
+      "subject": "Corporate Issuers",
+      "heading": "D. Working Capital / Liquidity",
+      "trigger": "Quick ratio",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.195372+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.195372+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-ca80e94e46d3": {
+      "knowledge_id": "knowledge-ca80e94e46d3",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Covered interest parity",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.196130+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.196130+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-a087943676ad": {
+      "knowledge_id": "knowledge-a087943676ad",
+      "subject": "Economics",
+      "heading": "M05 Geopolitics",
+      "trigger": "Investment channels",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.196748+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.196748+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-cf194fab952e": {
+      "knowledge_id": "knowledge-cf194fab952e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.197408+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.197408+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-3d844ce9a665": {
+      "knowledge_id": "knowledge-3d844ce9a665",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Breakeven",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.198079+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.198079+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-9f8c45f1aa4d": {
+      "knowledge_id": "knowledge-9f8c45f1aa4d",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Cross rate",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.198803+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.198803+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-9ff94dd17ed7": {
+      "knowledge_id": "knowledge-9ff94dd17ed7",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Inverted quote",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.199438+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.199438+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-bcf0e7bd9cb5": {
+      "knowledge_id": "knowledge-bcf0e7bd9cb5",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.200106+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.200106+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-fc6d00871082": {
+      "knowledge_id": "knowledge-fc6d00871082",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Continuously compounded return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.200866+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.200866+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-300fadd708c0": {
+      "knowledge_id": "knowledge-300fadd708c0",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Cash-flow additivity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.201643+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.201643+08:00",
+      "decay_risk": "none"
+    },
+    "knowledge-41e39f202c1e": {
+      "knowledge_id": "knowledge-41e39f202c1e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Monte Carlo",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ],
+      "status": "Proficient",
+      "state_value": 4,
+      "consecutive_successes": 4,
+      "reviewed_at": "2026-06-01T01:46:49.202420+08:00",
+      "review_interval_days": 25,
+      "next_review_at": "2026-06-26",
+      "last_reviewed_at": "2026-06-01T01:46:49.202420+08:00",
+      "decay_risk": "none"
+    }
+  }
+}
