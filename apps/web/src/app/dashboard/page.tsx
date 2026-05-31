@@ -28,6 +28,7 @@ export default function EffectivenessDashboard() {
   const [data, setData] = useState<EffectivenessData | null>(null);
   const [summary, setSummary] = useState<any>(null);
   const [calibrationWarnings, setCalibrationWarnings] = useState<any[]>([]);
+  const [streakData, setStreakData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,6 +43,8 @@ export default function EffectivenessDashboard() {
     dashboardApi.getCalibrationWarnings?.().then((data: any) => {
       setCalibrationWarnings(data.warnings || []);
     }).catch(() => {});
+
+    dashboardApi.getStreaks?.().then(setStreakData).catch(() => {});
   }, []);
 
   const TrendIcon = data?.calibration_trend === 'improving'
@@ -87,6 +90,35 @@ export default function EffectivenessDashboard() {
             value={`${((data?.predicted_pass_probability || 0) * 100).toFixed(0)}%`}
             subtitle={`${((data?.confidence_band_low || 0) * 100).toFixed(0)}% - ${((data?.confidence_band_high || 0) * 100).toFixed(0)}%`}
           />
+        </div>
+      )}
+
+      {streakData && (
+        <div className="grid grid-cols-4 gap-3">
+          <div className="card flex items-center gap-3">
+            <span className="text-2xl">{streakData.current_streak > 0 ? '🔥' : '🌱'}</span>
+            <div>
+              <div className="metric-label">连续学习</div>
+              <div className="metric-value">{streakData.current_streak} 天</div>
+            </div>
+          </div>
+          <div className="card flex items-center gap-3">
+            <span className="text-2xl">{streakData.active_today ? '✅' : '⏳'}</span>
+            <div>
+              <div className="metric-label">今日</div>
+              <div className="metric-value">{streakData.active_today ? '已学习' : '未学习'}</div>
+            </div>
+          </div>
+          <div className="card col-span-2 flex items-center gap-3">
+            <span className="text-2xl">📊</span>
+            <div className="flex-1">
+              <div className="metric-label">本周复习包进度 ({streakData.weekly_goal.completed_reviews}/{streakData.weekly_goal.goal})</div>
+              <div className="w-full h-2 bg-[#0a0a0f] rounded-full mt-1 overflow-hidden">
+                <div className="h-full bg-[#6366f1] rounded-full transition-all"
+                  style={{ width: `${streakData.weekly_goal.progress_pct}%` }} />
+              </div>
+            </div>
+          </div>
         </div>
       )}
 

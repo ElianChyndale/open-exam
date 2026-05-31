@@ -199,3 +199,69 @@ async def get_calibration_warnings(repo=Depends(get_repo)):
         if line.strip():
             warnings.append(json.loads(line))
     return {"warnings": warnings[-10:]}
+
+
+@router.get("/streaks")
+async def get_streaks(repo=Depends(get_repo)):
+    """Get learning streak and weekly goal progress."""
+    from app.streaks import compute_streak, compute_weekly_goal_progress, load_progress_dates
+    from app.workflows import load_progress_events
+
+    progress_path = repo.memory_root / "progress" / "progress-events.jsonl"
+    active_dates = load_progress_dates(progress_path)
+    streak, active_today = compute_streak(active_dates)
+    progress_events = load_progress_events(repo)
+    weekly = compute_weekly_goal_progress(progress_events)
+
+    return {
+        "current_streak": streak,
+        "active_today": active_today,
+        "longest_streak": streak,  # simplified: tracks current as longest
+        "weekly_goal": weekly,
+    }
+
+
+@router.get("/calendar")
+async def get_calendar_data(
+    month: str = "",
+    repo=Depends(get_repo),
+):
+    """Get calendar data: error counts per day, review completion, exam date."""
+    from collections import Counter
+    from app.workflows import load_progress_events
+
+    events = repo.load_events()
+    question_events = [e for e in events if e.source_layer == "question"]
+
+    daily_errors: dict[str, int] = Counter()
+    for e in question_events:
+        day = e.created_at[:7] if month else e.created_at[:10]
+        daily_errors[day] += 1
+
+    progress = load_progress_events(repo)
+    review_days = set()
+    for p in progress:
+        if p.get("record_type") == "daily_review_completed" and p.get("status") in {"completed", "done"}:
+            d = str(p.get("date") or p.get("created_at", "")[:10])
+            if d:
+                review_days.add(d)
+
+    from datetime import date
+    exam_date_str = ""
+    countdown_days = 0
+    exam_setting_path = repo.root / ".system" / "exam_date.txt"
+    if exam_setting_path.exists():
+        exam_date_str = exam_setting_path.read_text(encoding="utf-8").strip()
+        try:
+            exam = date.fromisoformat(exam_date_str[:10])
+            remaining = (exam - date.today()).days
+            countdown_days = max(0, remaining)
+        except ValueError:
+            pass
+
+    return {
+        "daily_errors": dict(daily_errors.most_common(90)),
+        "review_days": sorted(review_days),
+        "exam_date": exam_date_str,
+        "countdown_days": countdown_days,
+    }
