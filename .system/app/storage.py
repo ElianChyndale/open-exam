@@ -4,13 +4,45 @@ import json
 import sqlite3
 from contextlib import closing
 from dataclasses import asdict
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, Protocol, runtime_checkable
 
-from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule
+from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule, stable_id
 
 
 MISTAKE_EVENT_LAYERS = ("question", "bias", "agent")
+PLATFORM_STREAMS = (
+    "profile",
+    "task",
+    "review",
+    "practice",
+    "mock-run",
+    "coach",
+    "graph-overlay",
+)
+CATALOG_SCHEMA_VERSION = 1
+
+
+@runtime_checkable
+class LearningRepository(Protocol):
+    """Storage boundary shared by local and SaaS repository adapters."""
+
+    root: Path
+
+    def append_stream_event(
+        self,
+        stream: str,
+        event_type: str,
+        payload: dict[str, Any],
+        *,
+        learner_id: str = "local",
+        source_refs: list[str] | None = None,
+    ) -> dict[str, Any]: ...
+
+    def load_stream_events(self, stream: str) -> list[dict[str, Any]]: ...
+
+    def latest_stream_payload(self, stream: str, event_type: str | None = None) -> dict[str, Any] | None: ...
 
 
 class Repository:
@@ -19,6 +51,7 @@ class Repository:
         self.system_root = root / ".system"
         self.events_root = self.system_root / "events"
         self.memory_root = self.system_root / "memory"
+        self.private_root = self.system_root / "private"
         self.vault_root = root / "CFA_tier1"
         self.obsidian_root = self.vault_root / "dashboard"
         self.obsidian_config_root = root / ".obsidian"
@@ -35,6 +68,8 @@ class Repository:
             self.events_root / "agent",
             self.events_root / "attempt",
             self.events_root / "energy",
+            *[self.events_root / stream for stream in PLATFORM_STREAMS],
+            self.private_root / "question-bank",
             self.memory_root / "question-errors",
             self.memory_root / "cognitive-bias",
             self.memory_root / "agent-failures",
@@ -93,6 +128,39 @@ class Repository:
                     path TEXT NOT NULL,
                     source_event_id TEXT
                 )
+                """
+            )
+            connection.execute(
+                """
+                CREATE TABLE IF NOT EXISTS schema_meta (
+                    key TEXT PRIMARY KEY,
+                    value TEXT NOT NULL
+                )
+                """
+            )
+            connection.execute(
+                """
+                INSERT OR REPLACE INTO schema_meta (key, value)
+                VALUES ('catalog_schema_version', ?)
+                """,
+                (str(CATALOG_SCHEMA_VERSION),),
+            )
+            connection.execute(
+                """
+                CREATE TABLE IF NOT EXISTS stream_events (
+                    event_id TEXT PRIMARY KEY,
+                    stream TEXT NOT NULL,
+                    event_type TEXT NOT NULL,
+                    learner_id TEXT NOT NULL,
+                    occurred_at TEXT NOT NULL,
+                    payload_json TEXT NOT NULL
+                )
+                """
+            )
+            connection.execute(
+                """
+                CREATE INDEX IF NOT EXISTS idx_stream_events_lookup
+                ON stream_events (stream, learner_id, occurred_at)
                 """
             )
             connection.commit()
@@ -154,6 +222,60 @@ class Repository:
             if line.strip():
                 rows.append(json.loads(line))
         return rows
+
+    def append_stream_event(
+        self,
+        stream: str,
+        event_type: str,
+        payload: dict[str, Any],
+        *,
+        learner_id: str = "local",
+        source_refs: list[str] | None = None,
+    ) -> dict[str, Any]:
+        """Append a versioned platform event and update the rebuildable catalog."""
+        if stream not in PLATFORM_STREAMS:
+            raise ValueError(f"Unsupported platform stream: {stream}")
+        occurred_at = datetime.now(UTC).isoformat()
+        event_id = stable_id("stream", stream, event_type, learner_id, occurred_at)
+        envelope = {
+            "schema_version": CATALOG_SCHEMA_VERSION,
+            "event_id": event_id,
+            "event_type": event_type,
+            "learner_id": learner_id,
+            "occurred_at": occurred_at,
+            "source_refs": source_refs or [],
+            "payload": payload,
+        }
+        self.append_jsonl_event(stream, envelope)
+        with closing(sqlite3.connect(self.catalog_path)) as connection:
+            connection.execute(
+                """
+                INSERT INTO stream_events
+                (event_id, stream, event_type, learner_id, occurred_at, payload_json)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    event_id,
+                    stream,
+                    event_type,
+                    learner_id,
+                    occurred_at,
+                    json.dumps(payload, ensure_ascii=False),
+                ),
+            )
+            connection.commit()
+        return envelope
+
+    def load_stream_events(self, stream: str) -> list[dict[str, Any]]:
+        if stream not in PLATFORM_STREAMS:
+            raise ValueError(f"Unsupported platform stream: {stream}")
+        return self.load_jsonl_events(stream)
+
+    def latest_stream_payload(self, stream: str, event_type: str | None = None) -> dict[str, Any] | None:
+        events = self.load_stream_events(stream)
+        if event_type:
+            events = [event for event in events if event.get("event_type") == event_type]
+        return events[-1]["payload"] if events else None
 
     def append_attempt_record(self, payload: dict[str, Any]) -> Path:
         return self.append_jsonl_event("attempt", payload)
@@ -275,3 +397,7 @@ class Repository:
         path = self.obsidian_root / name
         self.write_markdown(path, "\n".join(lines).strip() + "\n", "obsidian_page", name)
         return path
+
+
+class LocalRepository(Repository):
+    """Filesystem-backed implementation used by the default local mode."""

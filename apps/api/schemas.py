@@ -215,3 +215,35 @@ class CohortRiskResponse(BaseModel):
     dropout_warnings: list[dict]
     instructor_recommendations: list[str]
     generated_at: str
+
+
+# ── Daily Learner Loop ───────────────────────────────────────────────────────
+
+class ProfileUpdate(BaseModel):
+    """Persisted learner setup and settings."""
+    exam_date: str = Field(default="")
+    current_phase: str = Field(default="foundation")
+    target_score_percentile: int = Field(default=70, ge=1, le=100)
+    daily_minutes_available: int = Field(default=120, ge=10)
+    weekly_study_days: int = Field(default=6, ge=1, le=7)
+    preferred_session_minutes: int = Field(default=50, ge=10)
+    peak_energy_window: str = Field(default="09:00-12:00")
+    moderate_energy_window: str = Field(default="14:00-18:00")
+    low_energy_window: str = Field(default="20:00-22:00")
+
+
+class TaskStatusUpdate(BaseModel):
+    """Allowed learner task transitions."""
+    status: str = Field(pattern="^(pending|completed|skipped|deferred)$")
+
+
+class ReviewSessionCreate(BaseModel):
+    """Start an active-recall review session."""
+    max_items: int = Field(default=10, ge=1, le=50)
+
+
+class ReviewResponseSubmit(BaseModel):
+    """Record the learner's self-rated retrieval result."""
+    prompt_id: str
+    score: int = Field(ge=0, le=4)
+    self_explanation: str = Field(default="")
