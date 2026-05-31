@@ -58,6 +58,30 @@ Business model analysis explains how a company turns customers and capabilities 
 | Platform model | network effects and two-sided participation | May subsidize one side to grow the other. |
 | Capability fit | resources, processes, organization, technology | Model must be executable, not just attractive. |
 
+## 4.1 Essay Answer Template 作答模板
+
+遇到 business model essay，先完整描述模型，再补 risks / opportunities / questions：
+
+```text
+The company's customers are [specific segment], who need [pain point].
+
+Its product creates value by [solving the pain point] through [key differentiation].
+
+Its channels are [channels], which are appropriate because [reason].
+
+Its pricing strategy is [premium/low-cost/bundled/subscription], supported by [reason].
+
+Key risks include [demand risk], [cost risk], and [competitive/regulatory/channel risk].
+
+Key opportunities include [market expansion], [differentiation], and [scale/brand/network effects].
+
+Key questions include whether [core assumption 1], whether [core assumption 2], and whether [core assumption 3].
+```
+
+- Feature grid question: use the first four sentences.
+- Discuss / evaluate question: use all seven sentences.
+- Time pressure: each required sentence gets one concrete evidence point before expanding.
+
 ## 5. Practice & Mock Evidence 题库证据
 
 - Expected item types: identify business model feature, compare pricing/revenue model, interpret platform/network effect, infer cash-flow implication.

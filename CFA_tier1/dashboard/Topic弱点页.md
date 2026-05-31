@@ -1,7 +1,8 @@
 # Topic 弱点页
 - Economics: 14
+- Corporate Issuers: 14
 - Quantitative Methods: 13
-- Corporate Issuers: 10
+- Financial Statement Analysis: 3
 - Portfolio Management: 2
 - Economics - Market Structures - Barriers to Entry: 1
 - Economics - Monetary Policy - Monetary Transmission Mechanism: 1

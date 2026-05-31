@@ -17,3 +17,8 @@
 - 先说明触发条件，后写建议。
 - 不登记只有情绪价值、没有决策价值的内容。
 
+## Active Strategy Assets
+
+| Asset | Trigger | Decision value | Evidence |
+|---|---|---|---|
+| `.system/memory/strategy/business-model-essay-template.md` | Business model feature grid or risks / opportunities / questions essay | 强制先写完整模型骨架，再补判断，避免分类遗漏和空白作答。 | `evt-9d341052d214`, `evt-728277555b2f`, `evt-847023c39454`, `evt-7f556f156add` |
