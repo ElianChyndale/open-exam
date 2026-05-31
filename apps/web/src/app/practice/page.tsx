@@ -64,9 +64,9 @@ export default function PracticePage() {
       </div>
       {drills.length ? (
         <Surface className="space-y-3">
-          <div className="flex items-center gap-2"><FileQuestion size={16} className="text-accent" /><h2 className="text-sm font-semibold">Personalized mistake-card drills</h2></div>
+          <div className="flex items-center gap-2"><FileQuestion size={16} className="text-accent" /><h2 className="text-sm font-semibold">Personalized remediation drills</h2></div>
           <div className="grid gap-2 md:grid-cols-2">
-            {drills.map((drill) => <details key={drill.drill_id} className="rounded-xl border border-line p-3 text-sm"><summary className="cursor-pointer font-medium">{drill.topic} · {drill.los}</summary><p className="mt-2 text-xs text-muted">{drill.prompt}</p><p className="mt-2 border-t border-line pt-2 text-xs">{drill.answer_text}</p></details>)}
+            {drills.map((drill) => <details key={drill.drill_id} className="rounded-xl border border-line p-3 text-sm"><summary className="cursor-pointer font-medium">{drill.topic} · {drill.los} <Badge>{drill.source_kind}</Badge></summary><p className="mt-2 text-xs text-muted">{drill.prompt}</p><p className="mt-2 border-t border-line pt-2 text-xs">{drill.answer_text}</p></details>)}
           </div>
         </Surface>
       ) : null}

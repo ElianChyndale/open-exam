@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 import json
-from datetime import date
+from collections import Counter
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -50,15 +51,34 @@ def load_registry(repo) -> dict[str, Any]:
 
 def curriculum_summary(repo) -> dict[str, Any]:
     registry = load_registry(repo)
+    weakness_events = [event for event in repo.load_events() if event.source_layer == "question"]
+    weakness_by_topic = Counter(event.topic for event in weakness_events)
     subjects = []
     for name, subject in registry["subjects"].items():
+        subject_events = [event for event in weakness_events if event.topic == name]
+        modules = []
+        for module in subject["modules"]:
+            module_events = [
+                event for event in subject_events
+                if module["module"].lower() in event.los.lower()
+                or any(event.los.lower() in los.lower() for los in module.get("los", []))
+            ]
+            modules.append(
+                {
+                    **module,
+                    "weakness_count": len(module_events),
+                    "weakness_los": sorted({event.los for event in module_events}),
+                }
+            )
         subjects.append(
             {
                 "subject": name,
                 "directory": subject["directory"],
                 "exam_weight": subject["exam_weight"],
                 "module_count": subject["module_count"],
-                "modules": subject["modules"],
+                "modules": modules,
+                "weakness_count": weakness_by_topic[name],
+                "weakness_los": sorted({event.los for event in subject_events}),
             }
         )
     return {
@@ -129,8 +149,32 @@ def set_task_status(repo, task_id: str, status: str) -> dict[str, Any] | None:
     return task
 
 
+def refit_today_tasks(repo, recommended_order: list[str]) -> list[dict[str, Any]]:
+    order = {task_type: index for index, task_type in enumerate(recommended_order)}
+    tasks = today_tasks(repo)
+    for task in tasks:
+        rank = order.get(task["task_type"], len(order) + 1)
+        updated = {**task, "priority": max(1, 100 - rank * 5)}
+        repo.append_stream_event("task", "task.recommended", {"task": updated})
+    return today_tasks(repo)
+
+
 def notifications(repo) -> list[dict[str, Any]]:
+    today = date.today()
     items = []
+    activity_dates = []
+    for stream in ("profile", "task", "review", "practice", "mock-run", "coach"):
+        for event in repo.load_stream_events(stream):
+            try:
+                activity_dates.append(datetime.fromisoformat(event["occurred_at"].replace("Z", "+00:00")))
+            except (KeyError, TypeError, ValueError):
+                pass
+    for event in repo.load_events():
+        try:
+            activity_dates.append(datetime.fromisoformat(event.created_at.replace("Z", "+00:00")))
+        except (TypeError, ValueError):
+            pass
+
     for task in today_tasks(repo):
         if task["status"] == "pending":
             items.append(
@@ -142,6 +186,59 @@ def notifications(repo) -> list[dict[str, Any]]:
                     "source_ref": task["task_id"],
                 }
             )
+    for task in _current_tasks(repo).values():
+        deadline = task.get("deadline", "")
+        if task.get("status") == "pending" and deadline and deadline < today.isoformat():
+            items.append(
+                {
+                    "notification_id": stable_id("note", task["task_id"], "overdue"),
+                    "kind": "task.overdue",
+                    "title": task.get("title", "Overdue task"),
+                    "detail": f"Deadline passed on {deadline}",
+                    "source_ref": task["task_id"],
+                }
+            )
+    latest_reviews = {}
+    for event in repo.load_stream_events("review"):
+        payload = event.get("payload", {})
+        if event.get("event_type") == "review.responded" and payload.get("prompt_id"):
+            latest_reviews[payload["prompt_id"]] = payload
+    for review in latest_reviews.values():
+        next_date = review.get("next_review_date", "")
+        if next_date and next_date <= today.isoformat():
+            items.append(
+                {
+                    "notification_id": stable_id("note", review["prompt_id"], "review-due"),
+                    "kind": "review.due",
+                    "title": "Retrieval review due",
+                    "detail": f"Scheduled spacing date: {next_date}",
+                    "source_ref": review["prompt_id"],
+                }
+            )
+    mock_dir = repo.memory_root / "mock_sessions"
+    for path in sorted(mock_dir.glob("*.json")) if mock_dir.exists() else []:
+        mock = json.loads(path.read_text(encoding="utf-8"))
+        scheduled_date = mock.get("scheduled_date", "")
+        if scheduled_date and scheduled_date <= today.isoformat():
+            items.append(
+                {
+                    "notification_id": stable_id("note", mock.get("session_id", path.stem), "mock-deadline"),
+                    "kind": "mock.deadline",
+                    "title": mock.get("session_label", "Mock deadline"),
+                    "detail": f"Scheduled mock date: {scheduled_date}",
+                    "source_ref": mock.get("session_id", path.stem),
+                }
+            )
+    if activity_dates and max(activity_dates) < datetime.now(UTC) - timedelta(days=7):
+        items.append(
+            {
+                "notification_id": stable_id("note", "local", "inactive-streak"),
+                "kind": "streak.inactive",
+                "title": "Study streak needs attention",
+                "detail": "No evidence has been captured for at least seven days.",
+                "source_ref": "local",
+            }
+        )
     return items
 
 

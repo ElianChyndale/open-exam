@@ -229,7 +229,7 @@ export default function QuestionCapture() {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full py-2.5 bg-accent text-white hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm font-medium transition-colors"
+          className="w-full py-2.5 bg-accent-action text-white hover:bg-accent-action-strong disabled:opacity-50 rounded-lg text-sm font-medium transition-colors"
         >
           {submitting ? '提交中...' : '记录错题'}
         </button>

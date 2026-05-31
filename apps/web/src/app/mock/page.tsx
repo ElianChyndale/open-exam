@@ -85,6 +85,7 @@ export default function MockCenter() {
                   {selected.checkpoints.map((checkpoint) => <div key={checkpoint.question_number} className="rounded-xl border border-line bg-surface-sunken/60 p-3"><Clock3 size={15} className="text-accent" /><p className="mt-2 text-sm font-semibold">Question {checkpoint.question_number}</p><p className="mt-1 text-xs text-muted">Target {Math.round(checkpoint.target_elapsed_seconds / 60)} minutes</p></div>)}
                 </div>
               </Sheet>
+              {selected.answers?.length ? <Sheet title="Answer review"><div className="space-y-2">{selected.answers.map((answer) => <div key={answer.question_id} className="rounded-xl border border-line p-3 text-xs"><div className="flex items-center justify-between gap-2"><span className="font-semibold">{answer.question_id}</span><Badge tone={answer.is_correct ? 'success' : 'danger'}>{answer.is_correct ? 'correct' : 'review'}</Badge></div><p className="mt-2 text-muted">{answer.topic} · {answer.los}</p></div>)}</div></Sheet> : null}
             </>
           )}
         </section>

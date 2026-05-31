@@ -91,7 +91,7 @@ export function Sidebar() {
     <>
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 border-r border-line/80 bg-surface-sidebar/80 px-3 py-4 backdrop-blur-2xl lg:flex lg:flex-col">
         <Link href="/today" className="mb-6 flex items-center gap-3 px-2 py-1">
-          <div className="grid h-9 w-9 place-items-center rounded-xl bg-accent text-sm font-bold text-white shadow-sm">O</div>
+          <div className="grid h-9 w-9 place-items-center rounded-xl bg-accent-action text-sm font-bold text-white shadow-sm">O</div>
           <div>
             <p className="text-sm font-semibold tracking-tight">OpenExam</p>
             <p className="text-[10px] uppercase tracking-[0.16em] text-muted">CFA Level I workspace</p>

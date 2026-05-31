@@ -19,6 +19,8 @@ const config: Config = {
         muted: 'rgb(var(--muted) / <alpha-value>)',
         accent: 'rgb(var(--accent) / <alpha-value>)',
         'accent-strong': 'rgb(var(--accent-strong) / <alpha-value>)',
+        'accent-action': 'rgb(var(--accent-action) / <alpha-value>)',
+        'accent-action-strong': 'rgb(var(--accent-action-strong) / <alpha-value>)',
         success: 'rgb(var(--success) / <alpha-value>)',
         warning: 'rgb(var(--warning) / <alpha-value>)',
         danger: 'rgb(var(--danger) / <alpha-value>)',

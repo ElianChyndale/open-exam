@@ -141,3 +141,7 @@ export const PracticeRoute: Story = { render: () => <Practice /> };
 export const CoachRoute: Story = { render: () => <Coach /> };
 export const SearchRoute: Story = { render: () => <SearchPage /> };
 export const GraphRoute: Story = { render: () => <Graph /> };
+export const TodayDarkRoute: Story = {
+  decorators: [(Story: () => JSX.Element) => <div className="theme-dark min-h-screen bg-surface-canvas p-4 text-ink"><Story /></div>],
+};
+export const TodayMobileRoute: Story = { parameters: { viewport: { defaultViewport: 'mobile1' } } };

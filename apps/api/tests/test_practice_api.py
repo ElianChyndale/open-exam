@@ -163,3 +163,56 @@ def test_practice_session_includes_personalized_mistake_card_drills(client: Test
 
     assert session["drills"]
     assert session["drills"][0]["source_kind"] == "mistake_card"
+
+
+def test_practice_session_composes_formula_concept_and_maintenance_drills(client: TestClient) -> None:
+    client.post("/api/question-banks/import", json={"source_name": "private-pack", "questions": [question_payload()]})
+    client.post(
+        "/api/attempts",
+        json={
+            "topic": "Fixed Income",
+            "los": "FI.Duration",
+            "prompt_or_question": "Choose the duration formula.",
+            "wrong_choice_or_output": "Macaulay duration.",
+            "correct_resolution": "Use effective duration when expected cash flows change.",
+            "error_type": "formula_misuse",
+            "confidence": 1,
+            "time_spent": 30,
+            "evidence_refs": ["formula-drill"],
+        },
+    )
+    client.post(
+        "/api/attempts",
+        json={
+            "topic": "Economics",
+            "los": "ECO.FX",
+            "prompt_or_question": "Read the A/B quote.",
+            "wrong_choice_or_output": "Read backwards.",
+            "correct_resolution": "A/B is units of B for one unit of A.",
+            "error_type": "concept_confusion",
+            "confidence": 1,
+            "time_spent": 30,
+            "evidence_refs": ["concept-drill"],
+        },
+    )
+
+    session = client.post("/api/practice-sessions", json={"max_items": 10}).json()
+    source_kinds = {drill["source_kind"] for drill in session["drills"]}
+
+    assert {"mistake_card", "weak_los", "adjacent_concept", "formula_recall", "concept_discrimination", "maintenance"} <= source_kinds
+
+
+def test_worked_example_remediation_fades_after_repeated_failure(client: TestClient) -> None:
+    client.post("/api/question-banks/import", json={"source_name": "private-pack", "questions": [question_payload()]})
+    session = client.post("/api/practice-sessions", json={"max_items": 5}).json()
+    question_id = session["items"][0]["question_id"]
+
+    stages = []
+    for answer in ("A", "A", "A", "B"):
+        response = client.post(
+            f"/api/practice-sessions/{session['session_id']}/answers",
+            json={"question_id": question_id, "answer": answer, "confidence": 2, "elapsed_seconds": 30},
+        )
+        stages.append(response.json()["worked_example_stage"])
+
+    assert stages[-2:] == ["full_solution", "hidden_step_completion"]

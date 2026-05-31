@@ -16,6 +16,8 @@
   --muted: 82 94 112;
   --accent: 10 82 184;
   --accent-strong: 0 65 155;
+  --accent-action: 10 82 184;
+  --accent-action-strong: 0 65 155;
   --success: 24 141 80;
   --warning: 139 82 0;
   --danger: 201 49 52;
@@ -76,8 +78,8 @@ body {
   transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, opacity 160ms ease;
 }
 
-.button-primary { background: rgb(var(--accent)); color: white; }
-.button-primary:hover { background: rgb(var(--accent-strong)); transform: translateY(-1px); }
+.button-primary { background: rgb(var(--accent-action)); color: white; }
+.button-primary:hover { background: rgb(var(--accent-action-strong)); transform: translateY(-1px); }
 .button-secondary { border: 1px solid rgb(var(--line)); background: rgb(var(--surface-raised) / 0.72); }
 .button-secondary:hover, .button-ghost:hover { background: rgb(var(--surface-hover) / 0.82); }
 .button-ghost { color: rgb(var(--muted)); }
@@ -133,10 +135,31 @@ textarea:focus-visible,
     --muted: 158 169 187;
     --accent: 91 159 255;
     --accent-strong: 64 139 246;
+    --accent-action: 10 82 184;
+    --accent-action-strong: 0 65 155;
     --success: 71 190 126;
     --warning: 240 173 69;
     --danger: 244 111 116;
   }
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --surface-canvas: 18 21 27;
+  --surface-raised: 29 33 41;
+  --surface-sunken: 14 17 22;
+  --surface-hover: 43 49 60;
+  --surface-sidebar: 24 28 35;
+  --line: 57 65 78;
+  --ink: 235 239 246;
+  --muted: 158 169 187;
+  --accent: 91 159 255;
+  --accent-strong: 64 139 246;
+  --accent-action: 10 82 184;
+  --accent-action-strong: 0 65 155;
+  --success: 71 190 126;
+  --warning: 240 173 69;
+  --danger: 244 111 116;
 }
 
 @media (prefers-reduced-motion: reduce) {

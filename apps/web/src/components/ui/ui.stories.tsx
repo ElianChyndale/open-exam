@@ -46,3 +46,13 @@ export const PrimitiveGallery: Story = {
     </Surface>
   ),
 };
+
+export const PrimitiveGalleryDark: Story = {
+  ...PrimitiveGallery,
+  decorators: [(Story) => <div className="theme-dark bg-surface-canvas p-8 text-ink"><Story /></div>],
+};
+
+export const PrimitiveGalleryMobile: Story = {
+  ...PrimitiveGallery,
+  parameters: { viewport: { defaultViewport: 'mobile1' } },
+};

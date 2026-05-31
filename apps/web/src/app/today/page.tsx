@@ -54,7 +54,7 @@ export default function TodayPage() {
             </Select>
           </label>
         </div>
-        <Button onClick={() => energyApi.checkIn({ energy_level: energy, mental_clarity: 6, physical_fatigue: 4, motivation: 6 }).then((result: any) => setWarnings(result.warnings || []))}>
+        <Button onClick={() => energyApi.checkIn({ energy_level: energy, mental_clarity: 6, physical_fatigue: 4, motivation: 6 }).then((result: any) => { setWarnings(result.warnings || []); return refresh(); })}>
           <RotateCcw size={15} /> Refit today
         </Button>
       </Surface>
