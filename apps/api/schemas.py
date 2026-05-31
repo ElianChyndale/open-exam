@@ -286,3 +286,74 @@ class PracticeAnswer(BaseModel):
     confidence: int = Field(default=1, ge=0, le=4)
     elapsed_seconds: int = Field(default=0, ge=0)
     self_explanation: str = Field(default="")
+
+
+# ── Mock Runs, Coach, And Knowledge Graph ───────────────────────────────────
+
+class MockRunCreate(BaseModel):
+    session_label: str = Field(default="Mock run")
+    total_minutes: int = Field(default=135, ge=1)
+    total_questions: int = Field(default=90, ge=1)
+
+
+class MockRunStateUpdate(BaseModel):
+    action: str = Field(pattern="^(pause|resume|complete)$")
+    elapsed_seconds: int = Field(default=0, ge=0)
+
+
+class MockRunAnswer(BaseModel):
+    question_id: str
+    prompt: str = Field(default="")
+    answer: str = Field(default="")
+    correct_answer: str = Field(default="")
+    explanation: str = Field(default="")
+    is_correct: bool
+    topic: str = Field(default="")
+    los: str = Field(default="")
+    elapsed_seconds: int = Field(default=0, ge=0)
+    confidence: int = Field(default=1, ge=0, le=4)
+
+
+class ExternalMockImport(BaseModel):
+    source_name: str
+    session_label: str = Field(default="External mock")
+    total_questions: int = Field(default=0, ge=0)
+    answers: list[MockRunAnswer]
+
+
+class CoachRetroRequest(BaseModel):
+    summary: str
+    source_refs: list[str] = Field(min_length=1)
+    biases: list[str] = Field(default_factory=list)
+
+
+class CoachAgentAuditRequest(BaseModel):
+    summary: str
+    source_refs: list[str] = Field(min_length=1)
+    risk_kind: str = Field(default="unsupported_claim")
+
+
+class GraphNode(BaseModel):
+    id: str
+    label: str
+    source_kind: str = Field(pattern="^(official|evidence|personal)$")
+    node_type: str
+    x: float = 0
+    y: float = 0
+    notes: str = Field(default="")
+    color: str = Field(default="")
+    locked: bool = False
+
+
+class GraphEdge(BaseModel):
+    id: str
+    source: str
+    target: str
+    source_kind: str = Field(pattern="^(official|evidence|personal)$")
+    label: str = Field(default="")
+    locked: bool = False
+
+
+class GraphOverlayUpdate(BaseModel):
+    nodes: list[GraphNode] = Field(default_factory=list)
+    edges: list[GraphEdge] = Field(default_factory=list)

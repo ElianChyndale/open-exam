@@ -9,6 +9,7 @@ import {
   Bot,
   Building2,
   FileText,
+  GitBranch,
   Library,
   Menu,
   PenLine,
@@ -29,6 +30,7 @@ const desktopGroups = [
       { href: '/practice', label: 'Practice', icon: Target },
       { href: '/review', label: 'Retrieval review', icon: BookOpen },
       { href: '/map', label: 'Curriculum map', icon: Library },
+      { href: '/graph', label: 'Knowledge graph', icon: GitBranch },
     ],
   },
   {

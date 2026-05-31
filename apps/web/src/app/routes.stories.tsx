@@ -3,6 +3,8 @@ import { http, HttpResponse } from 'msw';
 import Capture from './capture/page';
 import Dashboard from './dashboard/page';
 import Diagnosis from './diagnosis/page';
+import Coach from './coach/page';
+import Graph from './graph/page';
 import Institution from './institution/page';
 import MapPage from './map/page';
 import Mock from './mock/page';
@@ -10,6 +12,7 @@ import Practice from './practice/page';
 import Review from './review/page';
 import Settings from './settings/page';
 import Setup from './setup/page';
+import SearchPage from './search/page';
 import Today from './today/page';
 
 const handlers = [
@@ -32,6 +35,7 @@ const handlers = [
     markdown_content: '# Today\\n\\n## Retrieval\\n\\n- Recall duration before revealing the answer.',
   })),
   http.get('http://localhost:8000/api/mock/history', () => HttpResponse.json({ sessions: [] })),
+  http.get('http://localhost:8000/api/mock/runs', () => HttpResponse.json({ runs: [] })),
   http.get('http://localhost:8000/api/dashboard/effectiveness', () => HttpResponse.json({
     report_id: 'report-story',
     period_start: '2026-05-01',
@@ -86,6 +90,20 @@ const handlers = [
     items: [{ prompt_id: 'prompt-story', prompt_text: 'Recall the duration rule.', answer_text: 'Use effective duration when cash flows can change.', topic: 'Fixed Income', los: 'FI.Duration' }],
   })),
   http.get('http://localhost:8000/api/question-banks/quarantine', () => HttpResponse.json({ questions: [] })),
+  http.get('http://localhost:8000/api/coach/briefs', () => HttpResponse.json({ briefs: [] })),
+  http.get('http://localhost:8000/api/reports/weekly', () => HttpResponse.json({
+    report_id: 'weekly-story',
+    generated_at: '2026-05-31',
+    attempt_count: 4,
+    mock_run_count: 1,
+    coach_brief_count: 0,
+    evidence_refs: [],
+    markdown_content: '# OpenExam weekly learner report',
+  })),
+  http.get('http://localhost:8000/api/knowledge-graph', () => HttpResponse.json({
+    nodes: [{ id: 'subject-fi', label: 'Fixed Income', source_kind: 'official', node_type: 'subject', x: 20, y: 20, locked: true }],
+    edges: [],
+  })),
 ];
 
 const meta = {
@@ -114,3 +132,6 @@ export const SetupRoute: Story = { render: () => <Setup /> };
 export const SettingsRoute: Story = { render: () => <Settings /> };
 export const MapRoute: Story = { render: () => <MapPage /> };
 export const PracticeRoute: Story = { render: () => <Practice /> };
+export const CoachRoute: Story = { render: () => <Coach /> };
+export const SearchRoute: Story = { render: () => <SearchPage /> };
+export const GraphRoute: Story = { render: () => <Graph /> };
