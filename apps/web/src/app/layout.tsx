@@ -6,6 +6,7 @@ import { Sidebar } from '@/components/cockpit/Sidebar';
 import QuickCapture from '@/components/capture/QuickCapture';
 import OfflineCaptureRegistration from '@/components/capture/OfflineCaptureRegistration';
 import { PenLine } from 'lucide-react';
+import { MotionProvider } from '@/components/motion/MotionProvider';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [quickOpen, setQuickOpen] = useState(false);
@@ -36,10 +37,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           跳到主要内容
         </a>
         <div aria-live="polite" aria-atomic="true" className="sr-only" />
-        <Sidebar />
-        <main id="main-content" className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto" tabIndex={-1}>
-          {children}
-        </main>
+        <MotionProvider>
+          <Sidebar />
+          <main id="main-content" className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto" tabIndex={-1}>
+            {children}
+          </main>
+        </MotionProvider>
         <OfflineCaptureRegistration />
         <button
           type="button"

@@ -12,6 +12,7 @@ apps/web/node_modules/
 apps/web/.next/
 *.tsbuildinfo
 .playwright-mcp/
+.playwright-data/
 apps/web/storybook-static/
 .system/private/
 docs/superpowers/

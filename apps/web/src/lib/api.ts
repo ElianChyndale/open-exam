@@ -177,3 +177,81 @@ export const questionBanksApi = {
   review: (questionId: string, action: 'approve' | 'reject', patch: Record<string, unknown> = {}) =>
     request(`/api/question-banks/${questionId}/review`, { method: 'POST', body: JSON.stringify({ action, patch }) }),
 };
+
+/** LanguageOS */
+export interface LanguageProfile {
+  profile_id: string;
+  target_language: string;
+  native_language: string;
+  level_target: string;
+  domains: string[];
+}
+
+export interface LanguageSource {
+  source_id: string;
+  source_type: string;
+  title: string;
+  language: string;
+  content_hash: string;
+  url: string;
+}
+
+export interface LanguageSegment {
+  segment_id: string;
+  source_id: string;
+  text: string;
+  locator: string;
+  start_time?: number | null;
+  end_time?: number | null;
+}
+
+export interface LanguageItem {
+  item_id: string;
+  item_type: string;
+  canonical_form: string;
+  language: string;
+  context_window: string[];
+  source_segment_ids: string[];
+}
+
+export interface LanguageCard {
+  card_id: string;
+  item_id: string;
+  card_type: string;
+  front_payload: { prompt: string };
+  back_payload: { answer: string; gloss?: string };
+  context_window: string[];
+  fsrs_state: Record<string, unknown>;
+  due_at: string;
+}
+
+export const languageApi = {
+  profiles: () => request<{ active_profile_id: string; profiles: LanguageProfile[] }>('/api/language/profiles'),
+  selectProfile: (profileId: string) =>
+    request<LanguageProfile>('/api/language/profiles/select', { method: 'POST', body: JSON.stringify({ profile_id: profileId }) }),
+  settings: () => request<Record<string, boolean>>('/api/language/settings'),
+  stats: () => request<Record<string, number | string>>('/api/language/stats'),
+  sources: () => request<{ sources: LanguageSource[] }>('/api/language/sources'),
+  createSource: (data: Record<string, unknown>) =>
+    request<{ duplicate: boolean; source: LanguageSource; segments: LanguageSegment[] }>('/api/language/sources', { method: 'POST', body: JSON.stringify(data) }),
+  segments: (sourceId = '') =>
+    request<{ segments: LanguageSegment[] }>(`/api/language/segments${sourceId ? `?source_id=${encodeURIComponent(sourceId)}` : ''}`),
+  items: () => request<{ items: LanguageItem[] }>('/api/language/items'),
+  collectItem: (data: Record<string, unknown>) =>
+    request<{ merged: boolean; item: LanguageItem }>('/api/language/items', { method: 'POST', body: JSON.stringify(data) }),
+  dueCards: () => request<{ count: number; cards: LanguageCard[] }>('/api/language/cards/due'),
+  generateCards: (itemId: string, cardTypes?: string[]) =>
+    request<{ cards: LanguageCard[] }>('/api/language/cards/generate', { method: 'POST', body: JSON.stringify({ item_id: itemId, card_types: cardTypes }) }),
+  reviewCard: (cardId: string, rating: 'again' | 'hard' | 'good' | 'easy') =>
+    request<LanguageCard>(`/api/language/cards/${cardId}/review`, { method: 'POST', body: JSON.stringify({ rating }) }),
+  analyzeGrammar: (segmentId: string) =>
+    request<Record<string, any>>('/api/language/grammar/analyze', { method: 'POST', body: JSON.stringify({ segment_id: segmentId }) }),
+  graph: () => request<{ edges: Record<string, any>[] }>('/api/language/intuition/graph'),
+  rebuildGraph: () => request<{ count: number; edges: Record<string, any>[] }>('/api/language/intuition/rebuild', { method: 'POST' }),
+  searchGraph: (query: string) =>
+    request<{ items: LanguageItem[] }>(`/api/language/intuition/search?q=${encodeURIComponent(query)}`),
+  createSession: (data: Record<string, unknown>) =>
+    request('/api/language/sessions', { method: 'POST', body: JSON.stringify(data) }),
+  export: (format: 'anki' | 'csv' | 'markdown' | 'obsidian') =>
+    request<{ format: string; content: string; item_count: number }>(`/api/language/exports/${format}`),
+};

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -43,7 +44,8 @@ from app.storage import Repository
 # Root of the monorepo
 def get_repo_root() -> Path:
     """Get the monorepo root directory."""
-    return Path(__file__).resolve().parents[2]
+    override = os.environ.get("OPENEXAM_REPO_ROOT")
+    return Path(override).resolve() if override else Path(__file__).resolve().parents[2]
 
 
 @lru_cache()
