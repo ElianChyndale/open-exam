@@ -10,6 +10,10 @@ SYSTEM_ROOT = ROOT / ".system"
 if str(SYSTEM_ROOT) not in sys.path:
     sys.path.insert(0, str(SYSTEM_ROOT))
 
+LEARNING_RECORDS_ROOT = ROOT / "packages" / "learning-records" / "src"
+if str(LEARNING_RECORDS_ROOT) not in sys.path:
+    sys.path.insert(0, str(LEARNING_RECORDS_ROOT))
+
 from app.main import run_cli  # noqa: E402
 
 

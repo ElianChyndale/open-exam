@@ -24,6 +24,10 @@ _AGENT_RUNTIME = Path(__file__).resolve().parents[2] / "packages" / "agent-runti
 if str(_AGENT_RUNTIME) not in sys.path:
     sys.path.insert(0, str(_AGENT_RUNTIME))
 
+_LEARNING_RECORDS = Path(__file__).resolve().parents[2] / "packages" / "learning-records" / "src"
+if str(_LEARNING_RECORDS) not in sys.path:
+    sys.path.insert(0, str(_LEARNING_RECORDS))
+
 
 from app.storage import Repository
 

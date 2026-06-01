@@ -1,8 +1,16 @@
 # OpenExam — 后续开发路线图
 
 > 生成日期: 2026-06-01
-> 基线: `pytest -q` 72 passed, TypeScript 编译通过
+> 基线: `pytest -q` 97 passed, TypeScript 编译通过
 > 已完成 Bug 修复: 15/15, 代码异味: 7/7, Wave 0 内核加固: 11/11
+
+---
+
+## 执行证据
+
+| 日期 | Gate | 证据 |
+|------|------|------|
+| 2026-06-02 | Foundation | 新增 `learning-records` 包、`EventEnvelopeV2`、集中式 feature flags；`pytest -q` 为 `99 passed`，`npm run typecheck` 与 `npm run build` 通过 |
 
 ---
 
