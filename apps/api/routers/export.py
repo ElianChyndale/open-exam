@@ -90,6 +90,39 @@ async def export_patterns(repo=Depends(get_repo)):
     }
 
 
+@router.get("/xapi.json")
+async def export_xapi(repo=Depends(get_repo)):
+    """Export local attempts as xAPI-shaped statements."""
+    from app.roadmap_waves import build_xapi_statements
+
+    statements = build_xapi_statements(repo)
+    return {"generated_at": datetime.now(UTC).isoformat(), "count": len(statements), "statements": statements}
+
+
+@router.get("/caliper.json")
+async def export_caliper(repo=Depends(get_repo)):
+    """Export local attempts as IMS Caliper-shaped assessment events."""
+    from app.roadmap_waves import export_caliper_events
+
+    return export_caliper_events(repo)
+
+
+@router.get("/trust-snapshot.json")
+async def export_trust_snapshot(repo=Depends(get_repo)):
+    """Export a deterministic local integrity snapshot."""
+    from app.roadmap_waves import signed_evidence_snapshot
+
+    return signed_evidence_snapshot(repo)
+
+
+@router.get("/sync-v2.json")
+async def export_sync_v2_bundle(repo=Depends(get_repo)):
+    """Export all canonical JSONL streams through the explicit Sync V2 envelope."""
+    from app.sync_service import export_sync_v2
+
+    return export_sync_v2(repo)
+
+
 @router.get("/weekly-report.md")
 async def export_weekly_report(repo=Depends(get_repo)):
     """Export a compact evidence-linked weekly learner report."""

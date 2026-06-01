@@ -201,6 +201,26 @@ class TodoStudyPlanImportRequest(BaseModel):
     plan: dict[str, Any]
 
 
+# ── Privacy And Provenance ───────────────────────────────────────────────────
+
+class ProvenanceRecordRequest(BaseModel):
+    entity_id: str = Field(..., min_length=1)
+    activity_type: str = Field(..., min_length=1)
+    evidence_refs: list[str] = Field(default_factory=list)
+    agent_id: str = "local-openexam"
+    attributes: dict[str, Any] = Field(default_factory=dict)
+
+
+class ConsentRecordRequest(BaseModel):
+    provider: str = Field(..., min_length=1)
+    purpose: str = Field(..., min_length=1)
+    granted: bool
+
+
+class PrivacyPurgeRequest(BaseModel):
+    confirmation_token: str = ""
+
+
 # ── Mock ─────────────────────────────────────────────────────────────────────
 
 class MockSessionCreate(BaseModel):

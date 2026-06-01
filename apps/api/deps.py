@@ -28,6 +28,10 @@ _LEARNING_RECORDS = Path(__file__).resolve().parents[2] / "packages" / "learning
 if str(_LEARNING_RECORDS) not in sys.path:
     sys.path.insert(0, str(_LEARNING_RECORDS))
 
+_LEARNER_TWIN = Path(__file__).resolve().parents[2] / "packages" / "learner-twin" / "src"
+if str(_LEARNER_TWIN) not in sys.path:
+    sys.path.insert(0, str(_LEARNER_TWIN))
+
 
 from app.storage import Repository
 

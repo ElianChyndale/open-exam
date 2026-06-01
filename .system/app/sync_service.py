@@ -66,6 +66,44 @@ def export_all(repo: Repository) -> dict[str, Any]:
     }
 
 
+def export_sync_v2(repo: Repository) -> dict[str, Any]:
+    """Export every canonical JSONL stream without enabling background sync."""
+    streams = {}
+    for directory in sorted(repo.events_root.iterdir()):
+        if directory.is_dir():
+            records = repo.load_jsonl_events(directory.name)
+            if records:
+                streams[directory.name] = records
+    return {
+        "schema_version": 2,
+        "sync_mode": "explicit-local-export",
+        "exported_at": datetime.now(UTC).isoformat(),
+        "streams": streams,
+    }
+
+
+def import_sync_v2(repo: Repository, data: dict[str, Any], *, dry_run: bool = True) -> dict[str, Any]:
+    """Import canonical streams only after an explicit local request."""
+    if data.get("schema_version") != 2:
+        raise ValueError("Unsupported or missing Sync V2 schema_version")
+    supported = {"attempt", "energy", "review", "todo", "provenance", "consent", "language"}
+    counts = {"stream_events": 0, "duplicates": 0}
+    for stream, records in data.get("streams", {}).items():
+        if stream not in supported:
+            continue
+        existing = {json.dumps(record, ensure_ascii=False, sort_keys=True) for record in repo.load_jsonl_events(stream)}
+        for record in records:
+            fingerprint = json.dumps(record, ensure_ascii=False, sort_keys=True)
+            if fingerprint in existing:
+                counts["duplicates"] += 1
+                continue
+            if not dry_run:
+                repo.append_jsonl_event(stream, record)
+            existing.add(fingerprint)
+            counts["stream_events"] += 1
+    return {"dry_run": dry_run, **counts}
+
+
 def import_all(repo: Repository, data: dict[str, Any]) -> dict[str, int]:
     """Import study data from an export dict.
 

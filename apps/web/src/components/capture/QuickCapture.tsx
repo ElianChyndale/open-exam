@@ -53,7 +53,7 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
       setTopic(''); setLos(''); setWrong(''); setCorrect('');
       onClose();
     } catch {
-      queueAttempt(payload);
+      await queueAttempt(payload);
       setQueued(true);
     }
     setSubmitting(false);

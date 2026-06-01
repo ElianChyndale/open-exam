@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { CheckCircle2, Circle, ClipboardPlus, Plus, Trash2 } from 'lucide-react';
 
 import { TodoState, TodoTask, todosApi } from '@/lib/api';
+import { queueTodoWrite } from '@/lib/offline';
 
 export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknown> | null }) {
   const [todo, setTodo] = useState<TodoState | null>(null);
@@ -27,6 +28,7 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
   const optimistic = async (
     next: TodoState,
     operation: () => Promise<TodoState>,
+    retry: { path: string; method: string; body?: Record<string, unknown> },
   ) => {
     const previous = todo;
     setTodo(next);
@@ -37,7 +39,10 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
       setTodo(previous);
       setError(reason instanceof Error && reason.message.includes('409')
         ? 'Todo 已在其他位置更新，已刷新最新版本。'
-        : 'Todo 更新失败，已回滚本次操作。');
+        : 'Todo 更新失败，已回滚并加入离线重试队列。');
+      if (!(reason instanceof Error && reason.message.includes('409'))) {
+        await queueTodoWrite(retry.path, retry.method, retry.body);
+      }
       await refresh();
     }
   };
@@ -55,7 +60,10 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
       setDeadline('');
       setError('');
     } catch {
-      setError('新增任务失败，已刷新最新版本。');
+      await queueTodoWrite('/api/todos/tasks', 'POST', {
+        text: text.trim(), deadline, expected_revision: todo.revision, date: todo.date,
+      });
+      setError('新增任务失败，已加入离线重试队列。');
       await refresh();
     }
   };
@@ -70,7 +78,11 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
         ? { ...item, status: completed ? 'completed' as const : 'pending' as const, progress: completed ? 100 : 0 }
         : item),
     };
-    void optimistic(next, () => todosApi.toggle(task.task_id, todo.revision));
+    void optimistic(next, () => todosApi.toggle(task.task_id, todo.revision), {
+      path: `/api/todos/tasks/${task.task_id}/toggle`,
+      method: 'POST',
+      body: { expected_revision: todo.revision },
+    });
   };
 
   const remove = (task: TodoTask) => {
@@ -80,7 +92,10 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
       revision: todo.revision + 1,
       tasks: todo.tasks.filter((item) => item.task_id !== task.task_id),
     };
-    void optimistic(next, () => todosApi.remove(task.task_id, todo.revision));
+    void optimistic(next, () => todosApi.remove(task.task_id, todo.revision), {
+      path: `/api/todos/tasks/${task.task_id}?expected_revision=${todo.revision}`,
+      method: 'DELETE',
+    });
   };
 
   const updateProgress = (task: TodoTask, progress: number) => {
@@ -90,7 +105,11 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
       revision: todo.revision + 1,
       tasks: todo.tasks.map((item) => item.task_id === task.task_id ? { ...item, progress } : item),
     };
-    void optimistic(next, () => todosApi.update(task.task_id, { progress, expected_revision: todo.revision }));
+    void optimistic(next, () => todosApi.update(task.task_id, { progress, expected_revision: todo.revision }), {
+      path: `/api/todos/tasks/${task.task_id}`,
+      method: 'PATCH',
+      body: { progress, expected_revision: todo.revision },
+    });
   };
 
   const importPlan = async () => {
@@ -99,7 +118,8 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
       setTodo(await todosApi.importStudyPlan(studyPlan, true));
       setError('');
     } catch {
-      setError('学习计划导入失败，已刷新最新版本。');
+      await queueTodoWrite('/api/todos/import-study-plan', 'POST', { plan: studyPlan, confirmed: true });
+      setError('学习计划导入失败，已加入离线重试队列。');
       await refresh();
     }
   };

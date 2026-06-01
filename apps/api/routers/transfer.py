@@ -20,3 +20,13 @@ async def import_portable_backup(payload: dict, repo=Depends(get_repo)):
         return {"dry_run": False, "imported": import_all(repo, data)}
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+
+@router.post("/sync-v2")
+async def import_sync_v2_bundle(payload: dict, repo=Depends(get_repo)):
+    from app.sync_service import import_sync_v2
+
+    try:
+        return import_sync_v2(repo, dict(payload.get("data", {})), dry_run=bool(payload.get("dry_run", True)))
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc

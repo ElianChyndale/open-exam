@@ -52,6 +52,27 @@ async def get_today_review_pack(
     # Count items
     item_count = content.count("### ") - content.count("### 1. ")  # rough count
 
+    from study_science.structured_tasks import StructuredTask
+
+    structured_items = [
+        StructuredTask(
+            task_id=item["knowledge_id"],
+            task_type="active_recall",
+            prompt=f"Recall: {item.get('heading', '')}",
+            evidence_refs=item.get("source_refs", []),
+        ).as_dict()
+        for item in snapshot.get("knowledge_points", [])
+    ]
+    structured_items.extend(
+        StructuredTask(
+            task_id=item["card_id"],
+            task_type="mistake_review",
+            prompt=f"Review: {item.get('topic', '')} / {item.get('los', '')}",
+            evidence_refs=item.get("source_refs", []),
+        ).as_dict()
+        for item in snapshot.get("mistake_cards", [])
+    )
+
     return ReviewPackResponse(
         review_id=snapshot["review_id"],
         generated_for=(review_date or datetime.now().date()).isoformat(),
@@ -60,7 +81,7 @@ async def get_today_review_pack(
         warm_start_item_count=content.count("- **先问自己：**"),
         source_event_count=snapshot.get("source_event_count", 0),
         markdown_content=content,
-        items=[],  # parsed by frontend from markdown
+        items=structured_items,
     )
 
 

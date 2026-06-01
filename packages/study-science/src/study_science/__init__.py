@@ -19,6 +19,10 @@ from study_science.self_explanation import SelfExplanationPrompt
 from study_science.calibration import ConfidenceCalibration
 from study_science.energy_planner import EnergyAwarePlanner
 from study_science.knowledge_memory import KnowledgeMemoryEngine, KnowledgeState, KnowledgeMemoryConfig, DEFAULT_CONFIG
+from study_science.pedagogy import PedagogyPolicy
+from study_science.psychometrics import BayesianKnowledgeTrace, HalfLifeEstimator, RaschModel
+from study_science.structured_tasks import StructuredTask
+from study_science.simulation import SimulationLab
 
 __all__ = [
     "RetrievalEngine",
@@ -32,4 +36,10 @@ __all__ = [
     "KnowledgeState",
     "KnowledgeMemoryConfig",
     "DEFAULT_CONFIG",
+    "PedagogyPolicy",
+    "BayesianKnowledgeTrace",
+    "HalfLifeEstimator",
+    "RaschModel",
+    "StructuredTask",
+    "SimulationLab",
 ]

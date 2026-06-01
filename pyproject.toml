@@ -31,4 +31,5 @@ pythonpath = [
   "packages/study-science/src",
   "packages/agent-runtime/src",
   "packages/learning-records/src",
+  "packages/learner-twin/src",
 ]

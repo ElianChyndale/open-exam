@@ -12,6 +12,7 @@
 |------|------|------|
 | 2026-06-02 | Foundation | 新增 `learning-records` 包、`EventEnvelopeV2`、集中式 feature flags；`pytest -q` 为 `99 passed`，`npm run typecheck` 与 `npm run build` 通过 |
 | 2026-06-02 | Todo | JSONL reducer、快照、Markdown 投影、归档、CLI/API parity 与 `/today` 交互面板完成；`pytest -q` 为 `105 passed`，Web typecheck/build 通过，并经浏览器验证新增、deadline、完成与刷新持久化 |
+| 2026-06-02 | Wave 1-6 local-first adapters | IndexedDB 队列、Todo 离线重试、provenance、consent、隐私导出/二次确认清除、xAPI、learner twin、psychometrics、structured tasks、pedagogy、grounded claims、Sync V2、只读 MCP、simulation/research 与 trust exports 基线完成；`pytest -q` 为 `110 passed`，Web typecheck/build 通过 |
 
 ---
 
