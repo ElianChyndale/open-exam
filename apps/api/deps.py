@@ -32,6 +32,10 @@ _LEARNER_TWIN = Path(__file__).resolve().parents[2] / "packages" / "learner-twin
 if str(_LEARNER_TWIN) not in sys.path:
     sys.path.insert(0, str(_LEARNER_TWIN))
 
+_LANGUAGE_SCIENCE = Path(__file__).resolve().parents[2] / "packages" / "language-science" / "src"
+if str(_LANGUAGE_SCIENCE) not in sys.path:
+    sys.path.insert(0, str(_LANGUAGE_SCIENCE))
+
 
 from app.storage import Repository
 

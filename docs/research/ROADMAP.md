@@ -14,6 +14,7 @@
 | 2026-06-02 | Todo | JSONL reducer、快照、Markdown 投影、归档、CLI/API parity 与 `/today` 交互面板完成；`pytest -q` 为 `105 passed`，Web typecheck/build 通过，并经浏览器验证新增、deadline、完成与刷新持久化 |
 | 2026-06-02 | Wave 1-6 local-first adapters | IndexedDB 队列、Todo 离线重试、provenance、consent、隐私导出/二次确认清除、xAPI、learner twin、psychometrics、structured tasks、pedagogy、grounded claims、Sync V2、只读 MCP、simulation/research 与 trust exports 基线完成；`pytest -q` 为 `110 passed`，Web typecheck/build 通过 |
 | 2026-06-02 | LanguageOS basis | 从 `docs/superpowers/specs/languangePlan.md`、仓库模式与官方 GSAP React 文档冻结 LanguageOS 实现基线：`docs/superpowers/specs/2026-06-02-openexam-languageos-implementation-basis.md` |
+| 2026-06-02 | LanguageOS backend L0-L6 | 新增 `language-science`、语言 JSONL replay/projection、四 profile、语料导入、hash 去重、segment locator、item merge、多型卡片、FSRS-compatible 排期、英西语 grammar cache/edit、intuition graph、skill-transfer session、exam bridge、consent-gated transcription 与 Anki/CSV/Markdown/Obsidian 导出；`pytest -q` 为 `115 passed`，Web typecheck/build 通过 |
 
 ---
 
