@@ -164,6 +164,7 @@ def test_daily_review_api_completes_snapshot_idempotently(client: TestClient, tm
         "review_id": review_id,
         "completed": False,
         "newly_reviewed_items": 0,
+        "knowledge_decisions": [],
     }
 
     card_path = tmp_path / ".system" / "memory" / "question-errors" / f"{attempt.json()['card_id']}.md"
@@ -395,3 +396,83 @@ def test_explicit_transfer_supports_duplicate_safe_dry_run(client: TestClient) -
     assert dry_run.status_code == 200
     assert dry_run.json()["dry_run"] is True
     assert "would_import" in dry_run.json()
+
+
+def test_diagnosis_resolves_attempt_id_to_the_recorded_mistake(client: TestClient) -> None:
+    attempt = client.post(
+        "/api/attempts",
+        json={
+            "topic": "Fixed Income",
+            "los": "FI.Duration",
+            "prompt_or_question": "Which duration belongs here?",
+            "wrong_choice_or_output": "Macaulay duration",
+            "correct_resolution": "Use effective duration for embedded options.",
+            "error_type": "concept_confusion",
+            "confidence": 2,
+            "time_spent": 60,
+            "evidence_refs": ["diagnosis-attempt-link"],
+            "is_correct": False,
+        },
+    ).json()
+
+    diagnosis = client.post("/api/diagnose", json={"attempt_id": attempt["attempt_id"]})
+
+    assert diagnosis.status_code == 200
+    assert diagnosis.json()["error_summary"] == "Fixed Income / FI.Duration: concept_confusion"
+    assert diagnosis.json()["linked_los"] == ["FI.Duration"]
+
+
+def test_effectiveness_completion_rate_uses_due_item_count(client: TestClient, monkeypatch) -> None:
+    from app import workflows
+
+    monkeypatch.setattr(workflows, "collect_due_card_items", lambda repo, today: {"a": {}, "b": {}, "c": {}, "d": {}})
+    monkeypatch.setattr(
+        workflows,
+        "load_progress_events",
+        lambda repo: [
+            {"record_type": "daily_review_completed", "status": "completed", "date": "2026-05-31"},
+            {"record_type": "daily_review_completed", "status": "done", "date": "2026-06-01"},
+        ],
+    )
+
+    response = client.get("/api/dashboard/effectiveness?days=30")
+
+    assert response.status_code == 200
+    assert response.json()["due_review_completion_rate"] == 0.5
+
+
+def test_cohort_weaknesses_do_not_match_learner_id_substrings_in_event_hashes(
+    client: TestClient,
+    tmp_path: Path,
+) -> None:
+    from app.models import MistakeEvent
+    from app.storage import Repository
+
+    repo = Repository(tmp_path)
+    repo.append_event(
+        MistakeEvent.from_payload(
+            {
+                "source_layer": "question",
+                "topic": "Equity",
+                "los": "EQ.1",
+                "prompt_or_question": "DDM question",
+                "wrong_choice_or_output": "A",
+                "correct_resolution": "B",
+                "error_type": "concept_confusion",
+                "confidence": 2,
+                "time_spent": 60,
+                "evidence_refs": [],
+                "event_id": "evt-learner-abc-hash",
+                "learner_id": "someone-else",
+            }
+        )
+    )
+    created = client.post(
+        "/api/institution/cohorts",
+        json={"institution_id": "inst-1", "cohort_name": "Audit", "learner_ids": ["learner-abc"]},
+    ).json()
+
+    weaknesses = client.get(f"/api/institution/cohorts/{created['cohort_id']}/weaknesses")
+
+    assert weaknesses.status_code == 200
+    assert weaknesses.json()["total_learner_events"] == 0

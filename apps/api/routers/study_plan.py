@@ -10,7 +10,7 @@ from datetime import date, datetime
 from fastapi import APIRouter, Depends, Query
 
 from deps import get_repo
-from schemas import StudyPlanRequest, StudyPlanResponse
+from schemas import StudyPlanResponse
 
 router = APIRouter()
 
@@ -100,21 +100,6 @@ async def get_today_study_plan(
         warnings=plan["warnings"],
         interleaving_composition=plan["interleaving_composition"],
     )
-
-
-def _map_to_task_type(error_type: str) -> str:
-    """Map error type to task category for energy planning."""
-    mapping = {
-        "concept_confusion": "concept_discrimination",
-        "formula_misuse": "formula_drill",
-        "knowledge_gap": "new_knowledge",
-        "careless_reading": "active_recall",
-        "time_pressure": "active_recall",
-        "confidence_calibration_failure": "mistake_review",
-        "fatigue_energy_mismatch": "light_review",
-        "agent_failure": "mistake_review",
-    }
-    return mapping.get(error_type, "mistake_review")
 
 
 @router.get("/weekly-focus")

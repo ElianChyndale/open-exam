@@ -245,7 +245,6 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
             return 0
         overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
         engine = KnowledgeMemoryEngine()
-        from datetime import date
         overlay, decayed = engine.decay_sweep(overlay, date.today())
         if decayed:
             overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -1,24 +1,41 @@
 from __future__ import annotations
 
 import json
-import re
 import sqlite3
 from contextlib import closing
 from dataclasses import asdict
 from pathlib import Path
+from time import monotonic
 from typing import Any, Iterable
 
 from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule
 
 
 MISTAKE_EVENT_LAYERS = ("question", "bias", "agent")
+EVENT_CACHE_TTL_SECONDS = 60.0
 
 
 def _set_frontmatter_value(text: str, key: str, value: object) -> str:
     line = f"{key}: {value}"
-    if re.search(rf"^{re.escape(key)}:.*$", text, flags=re.MULTILINE):
-        return re.sub(rf"^{re.escape(key)}:.*$", line, text, flags=re.MULTILINE)
-    return text.replace("\n---\n", f"\n{line}\n---\n", 1)
+    lines = text.splitlines()
+    trailing_newline = "\n" if text.endswith("\n") else ""
+    if not lines or lines[0].strip() != "---":
+        return text
+
+    closing_index = next(
+        (index for index, current in enumerate(lines[1:], 1) if current.strip() == "---"),
+        None,
+    )
+    if closing_index is None:
+        return text
+
+    for index in range(1, closing_index):
+        if lines[index].startswith(f"{key}:"):
+            lines[index] = line
+            return "\n".join(lines) + trailing_newline
+
+    lines.insert(closing_index, line)
+    return "\n".join(lines) + trailing_newline
 
 
 class Repository:
@@ -34,6 +51,7 @@ class Repository:
         self.skills_root = root / "skills"
         self.evals_root = self.system_root / "evals"
         self.catalog_path = self.events_root / "catalog.sqlite3"
+        self._events_cache: tuple[float, tuple[tuple[str, int, int], ...], tuple[MistakeEvent, ...]] | None = None
         self.ensure_layout()
 
     def ensure_layout(self) -> None:
@@ -131,6 +149,7 @@ class Repository:
         payload = event.as_dict()
         with self.event_log_path(event.source_layer).open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+        self._events_cache = None
         self._index_event(event)
 
     def _index_event(self, event: MistakeEvent) -> None:
@@ -170,9 +189,24 @@ class Repository:
     def migrate_catalog(self) -> dict[str, int]:
         """Apply local catalog schema migrations without changing canonical JSONL."""
         self._initialize_catalog()
-        return {"schema_version": 1}
+        events = self.load_events()
+        with closing(sqlite3.connect(self.catalog_path)) as connection:
+            indexed = connection.execute("SELECT COUNT(*) FROM mistake_events").fetchone()[0]
+            if indexed != len(events):
+                connection.execute("DELETE FROM mistake_events")
+                connection.commit()
+        if indexed != len(events):
+            for event in events:
+                self._index_event(event)
+        return {"schema_version": 1, "mistake_events": len(events)}
 
     def load_events(self) -> list[MistakeEvent]:
+        signature = self._event_log_signature()
+        if self._events_cache:
+            cached_at, cached_signature, cached_rows = self._events_cache
+            if monotonic() - cached_at <= EVENT_CACHE_TTL_SECONDS and signature == cached_signature:
+                return list(cached_rows)
+
         rows: list[MistakeEvent] = []
         for source_layer in MISTAKE_EVENT_LAYERS:
             log_path = self.event_log_path(source_layer)
@@ -181,7 +215,31 @@ class Repository:
             for line in log_path.read_text(encoding="utf-8").splitlines():
                 if line.strip():
                     rows.append(MistakeEvent.from_payload(json.loads(line)))
-        return sorted(rows, key=lambda item: item.created_at)
+        sorted_rows = tuple(sorted(rows, key=lambda item: item.created_at))
+        self._events_cache = (monotonic(), signature, sorted_rows)
+        return list(sorted_rows)
+
+    def _event_log_signature(self) -> tuple[tuple[str, int, int], ...]:
+        signature = []
+        for source_layer in MISTAKE_EVENT_LAYERS:
+            path = self.event_log_path(source_layer)
+            if path.exists():
+                stat = path.stat()
+                signature.append((source_layer, stat.st_mtime_ns, stat.st_size))
+        return tuple(signature)
+
+    def load_incorrect_question_events(self) -> list[MistakeEvent]:
+        return [
+            event
+            for event in self.load_events()
+            if event.source_layer == "question" and not event.is_correct
+        ]
+
+    def load_unified_events(self) -> dict[str, list]:
+        return {
+            "mistakes": self.load_events(),
+            "attempts": self.load_attempt_records(),
+        }
 
     def jsonl_event_path(self, stream: str) -> Path:
         return self.events_root / stream / f"{stream}-events.jsonl"

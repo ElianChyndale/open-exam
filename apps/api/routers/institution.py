@@ -10,6 +10,10 @@ from schemas import CohortCreate, CohortRiskResponse
 router = APIRouter()
 
 
+def _event_belongs_to_learner(event, learner_id: str) -> bool:
+    return event.learner_id == learner_id or learner_id in event.evidence_refs
+
+
 @router.post("/cohorts")
 async def create_cohort(req: CohortCreate, repo=Depends(get_repo)):
     """Create a new institution cohort."""
@@ -61,17 +65,16 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
     at_risk: list[dict] = []
     dropout_warnings: list[dict] = []
     learner_metrics: list[dict] = []
+    events = repo.load_events()
     attempts = repo.load_attempt_records()
 
     for learner_id in cohort.get("learner_ids", []):
         # Each learner has their own repo/state
         # In production, this queries learner-specific data
         # For MVP, we check the events directory for learner-tagged events
-        events = repo.load_events()
-
         learner_events = [
             e for e in events
-            if learner_id in e.evidence_refs or learner_id in str(e.event_id)
+            if _event_belongs_to_learner(e, learner_id)
         ]
         learner_attempts = [
             attempt for attempt in attempts
@@ -203,7 +206,7 @@ async def get_cohort_weaknesses(cohort_id: str, repo=Depends(get_repo)):
     learner_set = set(cohort.get("learner_ids", []))
     cohort_events = [
         e for e in question_events
-        if any(lid in str(e.event_id) or lid in e.evidence_refs for lid in learner_set)
+        if any(_event_belongs_to_learner(e, learner_id) for learner_id in learner_set)
     ]
 
     los_counts: Counter = Counter()

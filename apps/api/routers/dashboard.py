@@ -40,7 +40,7 @@ async def get_effectiveness_dashboard(
     period_end = today.isoformat()
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    question_events = repo.load_incorrect_question_events()
     attempts = repo.load_attempt_records()
 
     # Filter to period
@@ -66,7 +66,7 @@ async def get_effectiveness_dashboard(
         and p.get("status") in {"completed", "done"}
         and p.get("date", "")[:10] >= period_start[:10]
     )
-    completion_rate = (completed_reviews / max(days, 1)) if days > 0 else 0.0
+    completion_rate = min(1.0, completed_reviews / max(total_due, 1))
 
     # High-confidence error count
     calibration_records: list[CalibrationRecord] = []
@@ -185,7 +185,7 @@ async def get_summary(repo=Depends(get_repo)):
     from collections import Counter
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    question_events = repo.load_incorrect_question_events()
     attempts = repo.load_attempt_records()
 
     total_questions = len(question_events)
@@ -272,7 +272,7 @@ async def get_calendar_data(
     from app.workflows import load_progress_events
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    question_events = repo.load_incorrect_question_events()
 
     daily_errors: dict[str, int] = Counter()
     for e in question_events:
@@ -332,7 +332,7 @@ async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
     from app.exam_profile import get_profile
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    question_events = repo.load_incorrect_question_events()
     attempts = repo.load_attempt_records()
 
     from app.workflows import (
@@ -407,7 +407,7 @@ async def get_weekly_trend(repo=Depends(get_repo)):
     last_week_end = this_week_start - timedelta(days=1)
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    question_events = repo.load_incorrect_question_events()
 
     this_week = [e for e in question_events if this_week_start.isoformat() <= e.created_at[:10] <= today.isoformat()]
     last_week = [e for e in question_events if last_week_start.isoformat() <= e.created_at[:10] <= last_week_end.isoformat()]
@@ -459,7 +459,7 @@ async def get_topic_mastery(repo=Depends(get_repo)):
     from app.workflows import collect_due_card_items
 
     events = repo.load_events()
-    question_events = [e for e in events if e.source_layer == "question" and not e.is_correct]
+    question_events = repo.load_incorrect_question_events()
 
     from app.exam_profile import get_profile
     subjects = [subject["name"] for subject in get_profile(repo.root).subjects]

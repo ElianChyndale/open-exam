@@ -34,11 +34,31 @@ async def diagnose_error(req: DiagnosisRequest, repo=Depends(get_repo)):
 
     # Find the source event
     events = repo.load_events()
-    event = None
-    for e in events:
-        if e.event_id == req.attempt_id:
-            event = e
-            break
+    events_by_id = {event.event_id: event for event in events}
+    event = events_by_id.get(req.attempt_id)
+    if event is None:
+        attempt = next(
+            (
+                candidate
+                for candidate in repo.load_attempt_records()
+                if candidate.get("attempt_id") == req.attempt_id
+            ),
+            None,
+        )
+        if attempt:
+            event = events_by_id.get(attempt.get("mistake_event_id"))
+            if event is None:
+                event = next(
+                    (
+                        candidate
+                        for candidate in events
+                        if candidate.topic == attempt.get("topic")
+                        and candidate.los == attempt.get("los")
+                        and candidate.prompt_or_question == attempt.get("prompt_or_question")
+                        and candidate.wrong_choice_or_output == attempt.get("wrong_choice_or_output")
+                    ),
+                    None,
+                )
 
     if not event:
         # Create a diagnosis from provided info
@@ -95,7 +115,7 @@ async def diagnose_error(req: DiagnosisRequest, repo=Depends(get_repo)):
 
     return DiagnosisResponse(
         diagnosis_id=f"dx-{event.event_id or req.attempt_id}",
-        attempt_id=event.event_id or req.attempt_id,
+        attempt_id=req.attempt_id,
         error_category=event.error_type,
         error_summary=f"{event.topic} / {event.los}: {event.error_type}",
         fix_rule=fix_rule,

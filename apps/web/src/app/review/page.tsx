@@ -14,9 +14,11 @@ export default function ReviewPackPage() {
   const [focusTopic, setFocusTopic] = useState('');
   const [daysBack, setDaysBack] = useState(7);
   const [depth, setDepth] = useState('standard');
+  const [error, setError] = useState('');
 
   const fetchPack = (params?: Record<string, string>) => {
     setLoading(true);
+    setError('');
     reviewApi.getToday({
       days_back: String(daysBack),
       focus_topic: focusTopic,
@@ -26,6 +28,8 @@ export default function ReviewPackPage() {
       setMarkdown(data.markdown_content || '');
       setReviewId(data.review_id || '');
       setCompleted(false);
+    }).catch(() => {
+      setError('复习包刷新失败，请确认本地 API 已启动。');
     }).finally(() => setLoading(false));
   };
 
@@ -114,11 +118,14 @@ export default function ReviewPackPage() {
         </div>
         <button
           onClick={() => fetchPack()}
-          className="px-4 py-2 bg-accent-solid hover:bg-accent-strong rounded-lg text-sm transition-colors"
+          disabled={loading}
+          className="px-4 py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
         >
           刷新 Daily Review
         </button>
       </div>
+
+      {error && <div className="rounded-lg border border-danger-soft bg-danger-soft p-3 text-sm text-danger">{error}</div>}
 
       {/* Filters */}
       <div className="card flex items-center gap-4 flex-wrap">

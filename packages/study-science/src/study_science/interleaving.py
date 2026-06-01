@@ -92,6 +92,20 @@ class InterleavingBuilder:
 
         cfg = config or InterleavingConfig()
         num = cfg.max_items
+        rng = random.Random(
+            repr(
+                (
+                    weak_items,
+                    old_mistake_items,
+                    maintenance_items,
+                    cfg.weak_ratio,
+                    cfg.old_mistake_ratio,
+                    cfg.adjacent_ratio,
+                    cfg.maintenance_ratio,
+                    cfg.max_items,
+                )
+            )
+        )
 
         # Allocate counts
         n_weak = max(1, int(num * cfg.weak_ratio))
@@ -104,7 +118,7 @@ class InterleavingBuilder:
             if not items:
                 return []
             shuffled = list(items)
-            random.shuffle(shuffled)
+            rng.shuffle(shuffled)
             # Prefer higher priority items
             shuffled.sort(key=lambda x: -(x.get("priority", 0) or 0))
             return shuffled[:n]
@@ -140,7 +154,7 @@ class InterleavingBuilder:
         interleaved: list[dict] = []
         bucket_iterators = {name: iter(items) for name, items in buckets if items}
         active = list(bucket_iterators.keys())
-        random.shuffle(active)
+        rng.shuffle(active)
 
         while active:
             next_active: list[str] = []
@@ -154,7 +168,7 @@ class InterleavingBuilder:
                     continue
             if not next_active:
                 break
-            random.shuffle(next_active)
+            rng.shuffle(next_active)
             active = next_active
 
         composition = {

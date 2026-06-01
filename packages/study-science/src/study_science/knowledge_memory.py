@@ -285,6 +285,7 @@ class KnowledgeMemoryEngine:
 
         # Build overlay entry
         entry = {
+            **(current or {}),
             "knowledge_id": feedback.knowledge_id,
             "subject": feedback.subject,
             "heading": feedback.heading,

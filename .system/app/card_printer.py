@@ -19,7 +19,13 @@ def collect_due_print_cards(
     """Collect due mistake cards for PDF rendering."""
     from app.workflows import clean_display_text, extract_markdown_section, parse_date, parse_frontmatter
 
-    target_date = date.fromisoformat(review_date) if isinstance(review_date, str) else review_date or date.today()
+    if isinstance(review_date, str):
+        try:
+            target_date = date.fromisoformat(review_date)
+        except ValueError as exc:
+            raise ValueError("review_date must use YYYY-MM-DD") from exc
+    else:
+        target_date = review_date or date.today()
     cards: list[dict] = []
     for path in sorted((repo.memory_root / "question-errors").glob("*.md")):
         text = path.read_text(encoding="utf-8")

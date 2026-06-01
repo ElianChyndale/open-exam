@@ -10,6 +10,7 @@ import {
   FileText,
   BarChart3,
   Building2,
+  CalendarDays,
   Zap,
 } from 'lucide-react';
 import ProfileSwitcher from './ProfileSwitcher';
@@ -22,6 +23,7 @@ const navItems = [
   { href: '/mock', label: '模拟中心', shortLabel: 'Mock', icon: FileText },
   { href: '/dashboard', label: '有效性仪表盘', shortLabel: 'Metrics', icon: BarChart3 },
   { href: '/institution', label: '机构控制台', shortLabel: 'Cohorts', icon: Building2 },
+  { href: '/calendar', label: '学习日历', shortLabel: 'Calendar', icon: CalendarDays },
 ];
 
 export function Sidebar() {

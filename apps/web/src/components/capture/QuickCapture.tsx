@@ -27,6 +27,7 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
   const [errorType, setErrorType] = useState('concept_confusion');
   const [submitting, setSubmitting] = useState(false);
   const [queued, setQueued] = useState(false);
+  const [voiceMessage, setVoiceMessage] = useState('');
   const subjects = useProfileSubjects();
 
   if (!isOpen) return null;
@@ -60,10 +61,18 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
 
   const captureVoice = () => {
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) return;
+    if (!SpeechRecognition) {
+      setVoiceMessage('当前浏览器不支持语音录入，请直接键入答案。');
+      return;
+    }
     const recognition = new SpeechRecognition();
     recognition.lang = 'zh-CN';
-    recognition.onresult = (event: any) => setWrong(event.results[0][0].transcript);
+    recognition.onstart = () => setVoiceMessage('正在听，请说出你的错误答案...');
+    recognition.onresult = (event: any) => {
+      setWrong(event.results[0][0].transcript);
+      setVoiceMessage('已写入语音内容。');
+    };
+    recognition.onerror = () => setVoiceMessage('语音识别失败，请重试或直接键入。');
     recognition.start();
   };
 
@@ -79,6 +88,7 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
           </button>
         </div>
         {queued && <p className="mb-3 text-xs text-warning">当前离线，已加入本地待同步队列。</p>}
+        {voiceMessage && <p className="mb-3 text-xs text-muted" role="status">{voiceMessage}</p>}
         <form onSubmit={handleSubmit} className="space-y-3">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <select value={topic} onChange={e => setTopic(e.target.value)}
@@ -94,7 +104,7 @@ export default function QuickCapture({ isOpen, onClose }: Props) {
             <input value={wrong} onChange={e => setWrong(e.target.value)}
               className="w-full bg-surface-field border border-line rounded-lg px-3 py-2 text-sm"
               placeholder="你的错误答案" required />
-            <button type="button" onClick={captureVoice} className="rounded-lg border border-line px-3 text-muted hover:bg-surface-hover" aria-label="Voice capture">
+            <button type="button" onClick={captureVoice} className="rounded-lg border border-line px-3 text-muted hover:bg-surface-hover" aria-label="语音录入错误答案" title="语音录入错误答案">
               <Mic size={16} />
             </button>
           </div>

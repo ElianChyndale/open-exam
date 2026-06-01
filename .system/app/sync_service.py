@@ -141,17 +141,58 @@ def preview_import(repo: Repository, data: dict[str, Any]) -> dict[str, Any]:
     if data.get("schema_version") != 1:
         raise ValueError("Unsupported or missing backup schema_version")
     existing_event_ids = {event.event_id for event in repo.load_events()}
-    incoming_events = data.get("events", [])
-    duplicate_events = sum(1 for event in incoming_events if event.get("event_id") in existing_event_ids)
+    importable_events = 0
+    duplicates = 0
+    for event in data.get("events", []):
+        event_id = event.get("event_id")
+        if event_id in existing_event_ids:
+            duplicates += 1
+            continue
+        existing_event_ids.add(event_id)
+        importable_events += 1
+
+    progress_path = repo.memory_root / "progress" / "progress-events.jsonl"
+    existing_progress = set()
+    if progress_path.exists():
+        existing_progress = {
+            json.dumps(json.loads(line), ensure_ascii=False, sort_keys=True)
+            for line in progress_path.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        }
+    importable_progress = 0
+    for record in data.get("progress_events", []):
+        fingerprint = json.dumps(record, ensure_ascii=False, sort_keys=True)
+        if fingerprint in existing_progress:
+            duplicates += 1
+            continue
+        existing_progress.add(fingerprint)
+        importable_progress += 1
+
+    importable_stream_events = 0
+    for stream, records in data.get("streams", {}).items():
+        if stream not in {"attempt", "energy", "review"}:
+            continue
+        existing_records = {
+            json.dumps(record, ensure_ascii=False, sort_keys=True)
+            for record in repo.load_jsonl_events(stream)
+        }
+        for record in records:
+            fingerprint = json.dumps(record, ensure_ascii=False, sort_keys=True)
+            if fingerprint in existing_records:
+                duplicates += 1
+                continue
+            existing_records.add(fingerprint)
+            importable_stream_events += 1
+
     return {
         "dry_run": True,
         "schema_version": 1,
         "would_import": {
-            "events": len(incoming_events) - duplicate_events,
-            "progress": len(data.get("progress_events", [])),
-            "stream_events": sum(len(records) for records in data.get("streams", {}).values()),
+            "events": importable_events,
+            "progress": importable_progress,
+            "stream_events": importable_stream_events,
         },
-        "duplicates": duplicate_events,
+        "duplicates": duplicates,
     }
 
 

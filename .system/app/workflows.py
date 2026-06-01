@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import json
 import re
+from copy import deepcopy
 from collections import Counter, defaultdict
+from dataclasses import fields
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -316,8 +318,9 @@ def extract_markdown_section(text: str, heading: str) -> str:
 
 def add_review_item(items: dict[str, dict], key: str, candidate: dict) -> None:
     if key not in items:
-        candidate["reasons"] = list(candidate.get("reasons", []))
-        items[key] = candidate
+        stored = deepcopy(candidate)
+        stored["reasons"] = list(stored.get("reasons", []))
+        items[key] = stored
         return
 
     current = items[key]
@@ -350,7 +353,8 @@ def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dic
             los = frontmatter.get("los", "Unknown LOS")
             root_cause = frontmatter.get("root_cause", "unknown")
             days_overdue = max((review_date - due_at).days, 0)
-            scheduler_priority = int(frontmatter.get("spacing_priority", "50") or 50)
+            raw_priority = frontmatter.get("spacing_priority", "50")
+            scheduler_priority = int(raw_priority) if str(raw_priority).strip() else 50
             key = f"{source_layer}::{topic}::{los}::{root_cause}"
             evidence = extract_markdown_section(text, "Evidence")
             add_review_item(
@@ -377,10 +381,15 @@ def collect_due_card_items(repo: Repository, review_date: date) -> dict[str, dic
     return items
 
 
-def collect_recent_low_confidence_items(repo: Repository, review_date: date, days_back: int) -> dict[str, dict]:
+def collect_recent_low_confidence_items(
+    repo: Repository,
+    review_date: date,
+    days_back: int,
+    events: list[MistakeEvent] | None = None,
+) -> dict[str, dict]:
     cutoff = review_date - timedelta(days=days_back)
     items: dict[str, dict] = {}
-    for event in repo.load_events():
+    for event in events if events is not None else repo.load_events():
         if event.source_layer == "question" and event.is_correct:
             continue
         event_date = parse_datetime_date(event.created_at)
@@ -464,6 +473,44 @@ def merge_review_sources(*sources: dict[str, dict]) -> list[dict]:
         merged.values(),
         key=lambda item: (-item.get("priority", 0), item.get("topic", ""), item.get("los", "")),
     )
+
+
+def interleave_review_items(review_items: list[dict], max_items: int) -> tuple[list[dict], dict[str, int]]:
+    """Mix review sources when the cache contains more than one practice bucket."""
+    from study_science.interleaving import InterleavingBuilder, InterleavingConfig
+
+    candidates = [deepcopy(item) for item in review_items]
+    weak_items = [item for item in candidates if item.get("priority", 0) >= 85]
+    old_items = [
+        item
+        for item in candidates
+        if item not in weak_items and any("review_due_at:" in reason for reason in item.get("reasons", []))
+    ]
+    maintenance_items = [
+        item
+        for item in candidates
+        if item not in weak_items and item not in old_items
+    ]
+    mix = InterleavingBuilder.build(
+        weak_items=weak_items,
+        old_mistake_items=old_items,
+        maintenance_items=maintenance_items,
+        config=InterleavingConfig(max_items=max_items),
+    )
+
+    selected = list(mix.items)
+    selected_keys = {
+        (item.get("source_layer", ""), item.get("topic", ""), item.get("los", ""), item.get("error_type", ""))
+        for item in selected
+    }
+    for item in candidates:
+        key = (item.get("source_layer", ""), item.get("topic", ""), item.get("los", ""), item.get("error_type", ""))
+        if key not in selected_keys:
+            selected.append(item)
+            selected_keys.add(key)
+        if len(selected) >= max_items:
+            break
+    return selected[:max_items], mix.composition
 
 
 def normalize_subject(value: str) -> str:
@@ -1092,10 +1139,13 @@ def load_exam_date(repo: Repository) -> str:
 
 
 def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
+    payload = dict(payload)
     if mode == "record-mistake":
         payload = hydrate_question_fields(payload)
     expected = {"record-mistake": "question", "review-session": "bias", "audit-agent": "agent"}[mode]
-    payload = {**payload, "source_layer": expected}
+    for field_name in ("event_id", "event_type", "learner_id", "schema_version"):
+        payload.pop(field_name, None)
+    payload["source_layer"] = expected
     event = MistakeEvent.from_payload(payload)
     repo.append_event(event)
 
@@ -1126,7 +1176,7 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
                 "los": event.los,
                 "confidence": event.confidence,
                 "priority_bump": bump,
-                "created_at": datetime.now().isoformat(),
+                "created_at": datetime.now(timezone.utc).isoformat(),
             }
             with open(warning_path, "a", encoding="utf-8") as f:
                 f.write(json.dumps(warning, ensure_ascii=False) + "\n")
@@ -1157,8 +1207,19 @@ def record_question_attempt(repo: Repository, payload: dict) -> dict:
         created_at,
     )
     is_correct = bool(payload.get("is_correct", False))
+    event = None
+    if not is_correct:
+        capture_fields = {field.name for field in fields(MistakeEvent)}
+        mistake_payload = {
+            key: value
+            for key, value in payload.items()
+            if key in capture_fields
+        }
+        event = record_event(repo, mistake_payload, mode="record-mistake")
+
     repo.append_attempt_record(
         {
+            **payload,
             "schema_version": 1,
             "event_id": attempt_id,
             "event_type": "attempt.recorded",
@@ -1167,14 +1228,13 @@ def record_question_attempt(repo: Repository, payload: dict) -> dict:
             "source_refs": payload.get("evidence_refs", []),
             "payload": payload,
             "attempt_id": attempt_id,
-            **payload,
+            "mistake_event_id": event.event_id if event else "",
             "is_correct": is_correct,
         }
     )
     if is_correct:
         return {"attempt_id": attempt_id, "event": None, "card_id": ""}
 
-    event = record_event(repo, payload, mode="record-mistake")
     return {
         "attempt_id": attempt_id,
         "event": event,
@@ -1324,19 +1384,22 @@ def _feed_card_outcome_to_knowledge(
         subj = entry.get("subject", "").strip().lower()
         head = entry.get("heading", "").strip().lower()
         trig = entry.get("trigger", "").strip().lower()
+        linked_card_ids = entry.get("linked_card_ids", [])
 
-        # Match: subject must match, and the card's LOS should be findable
-        # in the knowledge point's heading or trigger
-        if subj != topic_lower:
-            continue
-        if los_lower not in head and los_lower not in trig:
-            # Partial match: if knowledge heading starts with card LOS prefix
-            # e.g. heading "m01 firm, cost, shutdown" matches los "m01 los 1.4..."
-            los_prefix = los_lower.split(" ")[0].split("/")[0] if los_lower else ""
-            if not los_prefix or (
-                los_prefix not in head and los_prefix not in trig
-            ):
+        if linked_card_ids:
+            if card_id not in linked_card_ids:
                 continue
+        else:
+            # Historical overlays do not have explicit links, so retain the
+            # conservative topic/LOS fallback until their next snapshot.
+            if subj != topic_lower:
+                continue
+            if los_lower not in head and los_lower not in trig:
+                los_prefix = los_lower.split(" ")[0].split("/")[0] if los_lower else ""
+                if not los_prefix or (
+                    los_prefix not in head and los_prefix not in trig
+                ):
+                    continue
 
         # Match found — feed outcome back
         feedback = KnowledgeFeedbackInput(
@@ -1376,8 +1439,8 @@ def record_fix_rule_feedback(repo: Repository, card_id: str, helpful: bool, note
     return event
 
 
-def mine_patterns(repo: Repository) -> list[PatternInsight]:
-    events = repo.load_events()
+def mine_patterns(repo: Repository, events: list[MistakeEvent] | None = None) -> list[PatternInsight]:
+    events = events if events is not None else repo.load_events()
     buckets: dict[str, list[MistakeEvent]] = defaultdict(list)
     for event in events:
         if event.source_layer != "question":
@@ -1426,7 +1489,7 @@ def moc_gap_review(repo: Repository) -> Path | None:
 
     lines = [
         "---",
-        f"generated_at: {repo.load_events()[-1].created_at if events else ''}",
+        f"generated_at: {events[-1].created_at if events else ''}",
         f"recommendation_count: {len(recommendations)}",
         "---",
         "",
@@ -1651,7 +1714,7 @@ def _append_review_event_once(repo: Repository, event: dict) -> bool:
 
 
 def _as_source_refs(value: object) -> list[str]:
-    if isinstance(value, list):
+    if isinstance(value, (list, tuple)):
         return [str(item) for item in value if str(item).strip()]
     if not value:
         return []
@@ -1683,6 +1746,8 @@ def write_daily_review_snapshot(
     knowledge_depth: str,
     review_items: list[dict],
     warm_start_items: list[dict],
+    source_event_count: int = 0,
+    interleaving_composition: dict[str, int] | None = None,
 ) -> dict:
     knowledge_points: list[dict] = []
     seen_knowledge: set[str] = set()
@@ -1712,6 +1777,19 @@ def write_daily_review_snapshot(
         *[item["knowledge_id"] for item in knowledge_points],
         *[item["card_id"] for item in mistake_cards],
     ]
+    knowledge_card_map: dict[str, list[str]] = {}
+    for point in knowledge_points:
+        searchable = f"{point.get('heading', '')} {point.get('trigger', '')}".lower()
+        linked_cards = [
+            card["card_id"]
+            for card in mistake_cards
+            if normalize_subject(card.get("topic", "")) == normalize_subject(point.get("subject", ""))
+            and card.get("los", "").strip()
+            and card.get("los", "").strip().lower() in searchable
+        ]
+        if linked_cards:
+            knowledge_card_map[point["knowledge_id"]] = linked_cards
+
     review_id = stable_id(
         "daily-review",
         review_date.isoformat(),
@@ -1726,6 +1804,7 @@ def write_daily_review_snapshot(
         "review_id": review_id,
         "generated_for": review_date.isoformat(),
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "source_event_count": source_event_count,
         "generation": {
             "days_back": days_back,
             "max_items": max_items,
@@ -1734,6 +1813,8 @@ def write_daily_review_snapshot(
         },
         "knowledge_points": knowledge_points,
         "mistake_cards": mistake_cards,
+        "knowledge_card_map": knowledge_card_map,
+        "interleaving_composition": interleaving_composition or {},
     }
     snapshot_root = _review_snapshot_root(repo)
     body = json.dumps(snapshot, ensure_ascii=False, indent=2)
@@ -1797,12 +1878,23 @@ def complete_daily_review(repo: Repository, review_id: str) -> dict:
             source_refs=point.get("source_refs", []),
             payload={"review_id": review_id, "item_id": item_id, "item_type": "knowledge_point", "status": "Reviewed once"},
         )
-        if _append_review_event_once(repo, event):
+        newly_reviewed = _append_review_event_once(repo, event)
+        if newly_reviewed:
             reviewed_items += 1
+        else:
+            continue
 
         # Feedback loop: feed review exposure into KnowledgeMemoryEngine
         from study_science.knowledge_memory import KnowledgeFeedbackInput
         current_entry = overlay["knowledge_points"].get(item_id)
+        linked_card_ids = snapshot.get("knowledge_card_map", {}).get(item_id, [])
+        if linked_card_ids:
+            current_entry = {
+                **(current_entry or {}),
+                "linked_card_ids": sorted(
+                    set((current_entry or {}).get("linked_card_ids", [])) | set(linked_card_ids)
+                ),
+            }
         feedback = KnowledgeFeedbackInput(
             knowledge_id=item_id,
             subject=point.get("subject", ""),
@@ -1964,11 +2056,15 @@ def daily_review_pack(
     days_back = max(days_back, 1)
     max_items = max(max_items, 1)
 
-    mine_patterns(repo)
+    events = repo.load_events()
+    mine_patterns(repo, events)
     due_items = collect_due_card_items(repo, target_date)
-    recent_items = collect_recent_low_confidence_items(repo, target_date, days_back)
+    recent_items = collect_recent_low_confidence_items(repo, target_date, days_back, events)
     pattern_items = collect_pattern_items(repo)
-    review_items = merge_review_sources(due_items, pattern_items, recent_items)[:max_items]
+    review_items, interleaving_composition = interleave_review_items(
+        merge_review_sources(due_items, pattern_items, recent_items),
+        max_items,
+    )
     warm_start_items = build_warm_start_items(repo, review_items, focus_topic)
     if knowledge_depth == "expanded":
         warm_start_items = merge_warm_start_items(
@@ -2015,16 +2111,15 @@ def daily_review_pack(
         # Re-sort by priority, then subject, then heading
         warm_start_items.sort(key=lambda x: (-x.get("priority", 0), x.get("subject", ""), x.get("heading", "")))
 
-    events = repo.load_events()
     progress_events = load_progress_events(repo)
 
     body = render_review_pack(
         review_items=review_items,
         warm_start_items=warm_start_items,
+        source_event_count=len(events),
         review_date=target_date,
         days_back=days_back,
         focus_topic=focus_topic,
-        source_event_count=len(events),
         progress_events=progress_events,
     )
     write_daily_review_snapshot(
@@ -2036,6 +2131,8 @@ def daily_review_pack(
         knowledge_depth=knowledge_depth,
         review_items=review_items,
         warm_start_items=warm_start_items,
+        source_event_count=len(events),
+        interleaving_composition=interleaving_composition,
     )
     strategy_path = repo.memory_root / "strategy" / "daily-review.md"
     repo.write_markdown(strategy_path, body, "daily_review", "daily-review")

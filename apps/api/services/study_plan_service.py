@@ -48,8 +48,8 @@ def build_daily_plan(
     task_order = EnergyAwarePlanner.optimal_task_order(profile)
 
     # Build interleaving mix suggestion
-    weak_items = [t for t in tasks if t["priority"] >= 70]
-    old_items = [t for t in tasks if 40 <= t["priority"] < 70]
+    weak_items = [t for t in tasks if t["priority"] >= 80]
+    old_items = [t for t in tasks if 40 <= t["priority"] < 80]
     maint_items = [t for t in tasks if t["priority"] < 40]
 
     interleaving = InterleavingBuilder.build(

@@ -1,5 +1,17 @@
-const CACHE_NAME = 'openexam-shell-v1';
-const SHELL = ['/today', '/capture', '/review', '/manifest.json'];
+const CACHE_NAME = 'openexam-shell-v2';
+const SHELL = [
+  '/',
+  '/today',
+  '/capture',
+  '/diagnosis',
+  '/review',
+  '/mock',
+  '/dashboard',
+  '/institution',
+  '/calendar',
+  '/favicon.svg',
+  '/manifest.json',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)));
@@ -17,6 +29,8 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin || url.pathname.startsWith('/api/')) return;
   event.respondWith(
     fetch(event.request)
       .then((response) => {
@@ -24,6 +38,11 @@ self.addEventListener('fetch', (event) => {
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         return response;
       })
-      .catch(() => caches.match(event.request).then((cached) => cached || caches.match('/today'))),
+      .catch(() =>
+        caches.match(event.request).then((cached) => {
+          if (cached) return cached;
+          return event.request.mode === 'navigate' ? caches.match('/today') : undefined;
+        }),
+      ),
   );
 });

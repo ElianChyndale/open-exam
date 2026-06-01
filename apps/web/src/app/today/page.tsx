@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { studyPlanApi, energyApi } from '@/lib/api';
 import {
-  Zap, Clock, Target, AlertTriangle, CheckCircle2, Brain, Battery, BatteryLow, BatteryMedium, BatteryFull,
+  Zap, Clock, Target, AlertTriangle, CheckCircle2, Battery, BatteryLow, BatteryMedium, BatteryFull,
 } from 'lucide-react';
 
 interface PlanData {
@@ -39,10 +40,14 @@ const taskLabels: Record<string, string> = {
   light_review: '轻量复习',
 };
 
+const energyLabels = ['耗尽', '偏低', '平稳', '充足', '高能'];
+
 export default function TodayCockpit() {
   const [plan, setPlan] = useState<PlanData | null>(null);
   const [loading, setLoading] = useState(true);
   const [weeklyFocus, setWeeklyFocus] = useState('');
+  const [energySaving, setEnergySaving] = useState<number | null>(null);
+  const [energyError, setEnergyError] = useState('');
 
   useEffect(() => {
     studyPlanApi.getToday().then(setPlan).finally(() => setLoading(false));
@@ -59,6 +64,24 @@ export default function TodayCockpit() {
     : plan.energy_level >= 1 ? BatteryMedium
     : BatteryLow
     : Battery;
+
+  const updateEnergy = async (energyLevel: number) => {
+    setEnergySaving(energyLevel);
+    setEnergyError('');
+    try {
+      await energyApi.checkIn({
+        energy_level: energyLevel,
+        mental_clarity: Math.min(10, 3 + energyLevel * 2),
+        physical_fatigue: Math.max(1, 9 - energyLevel * 2),
+        motivation: Math.min(10, 3 + energyLevel * 2),
+      });
+      setPlan(await studyPlanApi.getToday({ energy_level: String(energyLevel) }));
+    } catch {
+      setEnergyError('精力记录失败，请确认本地 API 已启动。');
+    } finally {
+      setEnergySaving(null);
+    }
+  };
 
   if (loading) {
     return <div className="text-muted animate-pulse">加载今日驾驶舱...</div>;
@@ -81,6 +104,41 @@ export default function TodayCockpit() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Energy check-in */}
+      <div className="card">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <EnergyIcon size={20} className="text-accent" />
+            <div>
+              <div className="metric-label">此刻精力</div>
+              <p className="text-sm font-semibold">
+                {energyLabels[plan?.energy_level ?? 2]} · 选择后立即重排今日任务
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-2" role="group" aria-label="记录当前精力">
+            {energyLabels.map((label, level) => (
+              <button
+                key={label}
+                type="button"
+                disabled={energySaving !== null}
+                onClick={() => updateEnergy(level)}
+                aria-pressed={plan?.energy_level === level}
+                title={label}
+                className={`h-9 w-9 rounded-full border text-xs font-semibold transition-colors ${
+                  plan?.energy_level === level
+                    ? 'border-accent bg-accent-solid text-white'
+                    : 'border-line bg-surface-field text-muted hover:border-accent-soft hover:text-accent'
+                } disabled:opacity-50`}
+              >
+                {level}
+              </button>
+            ))}
+          </div>
+        </div>
+        {energyError && <p className="mt-3 text-xs text-danger">{energyError}</p>}
       </div>
 
       {/* Warnings */}
@@ -204,11 +262,11 @@ function TaskColumn({
 
 function QuickAction({ href, label }: { href: string; label: string }) {
   return (
-    <a
+    <Link
       href={href}
       className="px-4 py-2 rounded-lg bg-accent-soft border border-accent-soft text-sm text-accent hover:bg-accent-soft transition-colors"
     >
       {label}
-    </a>
+    </Link>
   );
 }

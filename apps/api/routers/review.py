@@ -58,7 +58,7 @@ async def get_today_review_pack(
         focus_topic=focus_topic or "unspecified",
         review_item_count=content.count("#### 下次规则"),
         warm_start_item_count=content.count("- **先问自己：**"),
-        source_event_count=len(repo.load_events()),
+        source_event_count=snapshot.get("source_event_count", 0),
         markdown_content=content,
         items=[],  # parsed by frontend from markdown
     )
