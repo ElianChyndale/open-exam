@@ -89,7 +89,8 @@ class MistakeCard:
     confidence_before: int = 0
 
     @classmethod
-    def from_event(cls, event: MistakeEvent, fix_rule: str, next_drill: str, exam_date: str = "") -> "MistakeCard":
+    def from_event(cls, event: MistakeEvent, fix_rule: str, next_drill: str,
+                   exam_date: str = "", calibration_adjustment: float = 1.0) -> "MistakeCard":
         from study_science.spacing import SpacingInput, SpacingScheduler
 
         input_data = SpacingInput(
@@ -102,6 +103,7 @@ class MistakeCard:
             previous_reviews=0,
             last_reviewed_at="",
             exam_date=exam_date,
+            calibration_adjustment=calibration_adjustment,
         )
         decision = SpacingScheduler.schedule(input_data)
 
@@ -159,3 +161,6 @@ class ValidationRule:
     trigger: str
     check_steps: list[str]
     failure_message: str
+    expiry_date: str = ""             # ISO date when this rule expires (needs review)
+    review_status: str = "active"     # "active" | "pending_review" | "expired" | "superseded"
+    last_reviewed_at: str = ""        # ISO datetime of last human review

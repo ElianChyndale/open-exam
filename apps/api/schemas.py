@@ -126,6 +126,8 @@ class EnergyCheckInRequest(BaseModel):
     mental_clarity: int = Field(5, ge=1, le=10)
     physical_fatigue: int = Field(5, ge=1, le=10)
     motivation: int = Field(5, ge=1, le=10)
+    sleep_hours: float = Field(0.0, ge=0, le=24, description="Hours of sleep last night (0 = not reported)")
+    stress_level: int = Field(0, ge=0, le=10, description="0 = not reported, 1-10 stress level")
     notes: str = Field("")
     session_id: str = Field("")
 

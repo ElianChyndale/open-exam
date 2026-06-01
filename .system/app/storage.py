@@ -8,34 +8,50 @@ from pathlib import Path
 from time import monotonic
 from typing import Any, Iterable
 
-from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule
+import yaml
+
+from app.models import MistakeCard, MistakeEvent, PatternInsight, StrategyRule, ValidationRule, stable_id
 
 
 MISTAKE_EVENT_LAYERS = ("question", "bias", "agent")
 EVENT_CACHE_TTL_SECONDS = 60.0
 
 
-def _set_frontmatter_value(text: str, key: str, value: object) -> str:
-    line = f"{key}: {value}"
-    lines = text.splitlines()
+def _parse_frontmatter_block(text: str) -> tuple[dict[str, Any], str, str]:
+    """Parse YAML frontmatter from markdown text.
+
+    Returns (frontmatter_dict, body_text, trailing_newline).
+    Returns ({}, text, "") if no valid frontmatter found.
+    """
+    if not text.startswith("---"):
+        return {}, text, ""
+    end_index = text.find("---", 3)
+    if end_index == -1:
+        return {}, text, ""
+    frontmatter_raw = text[3:end_index].strip()
+    body = text[end_index + 3:]
     trailing_newline = "\n" if text.endswith("\n") else ""
-    if not lines or lines[0].strip() != "---":
+    try:
+        fm = yaml.safe_load(frontmatter_raw) or {}
+        if not isinstance(fm, dict):
+            return {}, text, ""
+        return fm, body, trailing_newline
+    except yaml.YAMLError:
+        return {}, text, ""
+
+
+def _set_frontmatter_value(text: str, key: str, value: object) -> str:
+    fm, body, trailing_newline = _parse_frontmatter_block(text)
+    if not fm:
         return text
-
-    closing_index = next(
-        (index for index, current in enumerate(lines[1:], 1) if current.strip() == "---"),
-        None,
-    )
-    if closing_index is None:
-        return text
-
-    for index in range(1, closing_index):
-        if lines[index].startswith(f"{key}:"):
-            lines[index] = line
-            return "\n".join(lines) + trailing_newline
-
-    lines.insert(closing_index, line)
-    return "\n".join(lines) + trailing_newline
+    fm[key] = value
+    frontmatter_out = yaml.dump(
+        fm,
+        default_flow_style=False,
+        allow_unicode=True,
+        sort_keys=False,
+    ).strip()
+    return f"---\n{frontmatter_out}\n---{body}{trailing_newline}"
 
 
 class Repository:
@@ -145,7 +161,20 @@ class Repository:
     def event_log_path(self, source_layer: str) -> Path:
         return self.events_root / source_layer / f"{source_layer}-events.jsonl"
 
+    def has_event(self, event_id: str | None) -> bool:
+        """Check if an event already exists, using the SQLite catalog."""
+        if not event_id:
+            return False
+        with closing(sqlite3.connect(self.catalog_path)) as connection:
+            row = connection.execute(
+                "SELECT 1 FROM mistake_events WHERE event_id = ?", (event_id,)
+            ).fetchone()
+            return row is not None
+
     def append_event(self, event: MistakeEvent) -> None:
+        # Replay guard at the storage layer (defense in depth)
+        if event.event_id and self.has_event(event.event_id):
+            return
         payload = event.as_dict()
         with self.event_log_path(event.source_layer).open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
@@ -245,8 +274,20 @@ class Repository:
         return self.events_root / stream / f"{stream}-events.jsonl"
 
     def append_jsonl_event(self, stream: str, payload: dict[str, Any]) -> Path:
+        # Deterministic idempotency key from content hash
+        if "event_id" not in payload:
+            content_fingerprint = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+            payload["event_id"] = stable_id(stream, content_fingerprint)
         path = self.jsonl_event_path(stream)
         path.parent.mkdir(parents=True, exist_ok=True)
+        # Replay guard: skip if event_id already exists in this stream
+        existing = {
+            json.loads(line).get("event_id")
+            for line in (path.read_text(encoding="utf-8").splitlines() if path.exists() else [])
+            if line.strip()
+        }
+        if payload.get("event_id") in existing:
+            return path
         with path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
         return path
@@ -379,6 +420,9 @@ class Repository:
             f"rule_id: {rule.rule_id}",
             f"trigger: {rule.trigger}",
             f"failure_message: {rule.failure_message}",
+            f"expiry_date: {rule.expiry_date}",
+            f"review_status: {rule.review_status}",
+            f"last_reviewed_at: {rule.last_reviewed_at}",
             "---",
             "",
             "## Check Steps",

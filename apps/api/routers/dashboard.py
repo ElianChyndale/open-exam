@@ -96,7 +96,7 @@ async def get_effectiveness_dashboard(
     total_patterns = len(pattern_items)
     recurrence_rate = total_patterns / max(len(recent_events), 1) if recent_events else 0.0
 
-    # LOS risk heatmap
+    # LOS risk heatmap (normalized through profile aliases)
     los_errors: dict[str, int] = Counter()
     for e in recent_events:
         key = f"{e.topic}/{e.los}"
@@ -462,18 +462,22 @@ async def get_topic_mastery(repo=Depends(get_repo)):
     question_events = repo.load_incorrect_question_events()
 
     from app.exam_profile import get_profile
-    subjects = [subject["name"] for subject in get_profile(repo.root).subjects]
+    profile = get_profile(repo.root)
+    subjects = [subject["name"] for subject in profile.subjects]
 
+    # Normalize event topics through profile aliases
     topic_events: dict[str, list] = defaultdict(list)
     for e in question_events:
-        topic_events[e.topic].append(e)
+        normalized = profile.normalize_subject(e.topic)
+        topic_events[normalized].append(e)
 
     topic_los_attempted: dict[str, set] = defaultdict(set)
     los_recurrence: dict[str, Counter] = defaultdict(Counter)
     for e in question_events:
-        topic_los_attempted[e.topic].add(e.los)
+        normalized = profile.normalize_subject(e.topic)
+        topic_los_attempted[normalized].add(e.los)
         key = f"{e.los}::{e.error_type}"
-        los_recurrence[e.topic][key] += 1
+        los_recurrence[normalized][key] += 1
 
     from datetime import date
     exam_date_str = ""

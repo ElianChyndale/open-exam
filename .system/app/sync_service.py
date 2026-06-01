@@ -138,13 +138,16 @@ def import_all(repo: Repository, data: dict[str, Any]) -> dict[str, int]:
 
 def preview_import(repo: Repository, data: dict[str, Any]) -> dict[str, Any]:
     """Return a dry-run summary without mutating local state."""
+    from app.models import MistakeEvent
+
     if data.get("schema_version") != 1:
         raise ValueError("Unsupported or missing backup schema_version")
     existing_event_ids = {event.event_id for event in repo.load_events()}
     importable_events = 0
     duplicates = 0
     for event in data.get("events", []):
-        event_id = event.get("event_id")
+        normalized = MistakeEvent.from_payload(event)
+        event_id = normalized.event_id
         if event_id in existing_event_ids:
             duplicates += 1
             continue

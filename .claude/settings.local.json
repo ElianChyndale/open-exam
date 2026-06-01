@@ -1,7 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Skill(update-config)",
+      "Bash(Get-ChildItem -Directory)",
+      "Bash(Select-Object Name)",
+      "Bash(python -m pytest .system/tests/ -q)",
+      "Bash(python -c \"from app.sync_service import preview_import; print\\('sync_service OK'\\)\")",
+      "Bash(PYTHONPATH=\".system;apps/api;packages/study-science/src;packages/agent-runtime/src\" python -c \"from app.sync_service import preview_import; print\\('sync_service OK'\\); from app.workflows import post_mock_retro, daily_review_pack, record_event; print\\('workflows OK'\\); from app.storage import Repository; print\\('storage OK'\\)\")",
+      "Bash(PYTHONPATH=\".system;apps/api;packages/study-science/src;packages/agent-runtime/src\" python scripts/cfa.py daily-review --help)",
+      "Bash(python -m pytest .system/tests/ -v)",
+      "Bash(PYTHONPATH=\".system;apps/api;packages/study-science/src;packages/agent-runtime/src\" python -c \"from app.workflows import moc_gap_review, daily_review_pack, record_event, post_mock_retro, build_validation_rule; from app.models import ValidationRule, MistakeEvent; from app.storage import Repository; print\\('All imports OK'\\); vr = ValidationRule\\(rule_id='test', trigger='test', check_steps=[], failure_message='test', expiry_date='2026-09-01', review_status='active', last_reviewed_at='2026-06-01'\\); print\\(f'ValidationRule: review_status={vr.review_status}, expiry={vr.expiry_date}'\\)\")",
+      "Bash(python -c \"import yaml; print\\(yaml.__version__\\)\")",
+      "Bash(NEXT_PUBLIC_API_URL=\"http://127.0.0.1:8000\" npx next dev -p 3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:3000/today)",
+      "Bash(jobs -l)",
+      "Bash(curl -s http://127.0.0.1:3000/today)",
+      "Bash(curl -s http://127.0.0.1:8000/api/health)",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":3000\")",
+      "Bash(taskkill /F /PID 33400)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Get-Process *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/api/health)",
+      "PowerShell(Set-Location D:\\\\AmyProjects\\\\New folder\\\\open-exam\\\\apps\\\\web; $env:NEXT_PUBLIC_API_URL = \"http://127.0.0.1:8000\"; Write-Output \"Starting web on port 3000...\"; Start-Process -NoNewWindow \"cmd\" -ArgumentList \"/c npx next dev -p 3000 > $env:TEMP\\\\next-output.txt 2>&1\")",
+      "PowerShell(Get-Content *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://127.0.0.1:3000/_next/static/chunks/app/layout.js\")"
     ]
   }
 }

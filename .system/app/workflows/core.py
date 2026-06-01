@@ -177,6 +177,8 @@ def target_domain(source_layer: str) -> str:
 
 
 def build_validation_rule(event: MistakeEvent) -> ValidationRule:
+    from datetime import date, timedelta
+
     return ValidationRule(
         rule_id=stable_id("validation", event.event_id or "", event.error_type),
         trigger=f"当 agent 输出涉及 {event.topic} / {event.los} 的规则结论时",
@@ -186,6 +188,9 @@ def build_validation_rule(event: MistakeEvent) -> ValidationRule:
             "如果结论无法被证据支持，改写为保守表述。",
         ],
         failure_message=event.correct_resolution,
+        expiry_date=(date.today() + timedelta(days=90)).isoformat(),
+        review_status="active",
+        last_reviewed_at=datetime.now(timezone.utc).isoformat(),
     )
 
 
@@ -1000,6 +1005,7 @@ def render_review_pack(
     focus_topic: str,
     source_event_count: int,
     progress_events: list[dict] | None = None,
+    energy_warnings: list[str] | None = None,
 ) -> str:
     from study_science.retrieval import RetrievalEngine
     from study_science.self_explanation import SelfExplanationPrompt
@@ -1017,6 +1023,10 @@ def render_review_pack(
         "# Daily Review",
         "",
     ]
+    if energy_warnings:
+        for w in energy_warnings:
+            lines.extend(["", w])
+        lines.append("")
     lines.extend(progress_summary_lines(progress_events or [], focus_topic))
 
     render_warm_start(lines, warm_start_items)
@@ -1147,16 +1157,27 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
         payload.pop(field_name, None)
     payload["source_layer"] = expected
     event = MistakeEvent.from_payload(payload)
+
+    # Replay guard: skip if event_id already exists in the catalog index
+    if repo.has_event(event.event_id):
+        return event
+
     repo.append_event(event)
 
     if event.source_layer == "question" and event.is_correct:
         return event
+
+    # Compute personalized calibration adjustment for dynamic expansion
+    from study_science.spacing import SpacingScheduler
+    cal_warnings = repo.memory_root / "strategy" / "calibration-warnings.jsonl"
+    cal_adjustment = SpacingScheduler.compute_calibration_adjustment(cal_warnings)
 
     card = MistakeCard.from_event(
         event,
         default_fix_rule(event.error_type),
         next_drill_for(event),
         exam_date=load_exam_date(repo),
+        calibration_adjustment=cal_adjustment,
     )
     domain = target_domain(event.source_layer)
     repo.save_card(domain, card, event.event_id or "")
@@ -1301,6 +1322,10 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
         3 if outcome == "recalled" else 1 if outcome == "struggled" else 0
     )
 
+    # Compute personalized calibration adjustment for dynamic expansion
+    cal_warnings = repo.memory_root / "strategy" / "calibration-warnings.jsonl"
+    cal_adjustment = SpacingScheduler.compute_calibration_adjustment(cal_warnings)
+
     input_data = SpacingInput(
         topic=topic,
         los=los,
@@ -1311,6 +1336,7 @@ def mark_card_reviewed(repo: Repository, card_id: str, outcome: str, confidence_
         previous_reviews=prev_reviews + 1,
         last_reviewed_at=date.today().isoformat(),
         exam_date=exam_date,
+        calibration_adjustment=cal_adjustment,
     )
     decision = SpacingScheduler.schedule(input_data)
 
@@ -1467,12 +1493,18 @@ def mine_patterns(repo: Repository, events: list[MistakeEvent] | None = None) ->
 
 def moc_gap_review(repo: Repository) -> Path | None:
     events = repo.load_events()
+    seen_event_ids: set[str] = set()
     buckets: dict[str, list[MistakeEvent]] = defaultdict(list)
     for event in events:
         if event.source_layer != "question":
             continue
         if not event.moc_target:
             continue
+        # Deduplicate by event_id
+        if event.event_id and event.event_id in seen_event_ids:
+            continue
+        if event.event_id:
+            seen_event_ids.add(event.event_id)
         key = f"{event.topic}::{event.los}::{event.error_type}::{event.moc_target}"
         buckets[key].append(event)
 
@@ -2051,10 +2083,38 @@ def daily_review_pack(
     max_items: int = 20,
     focus_topic: str = "",
     knowledge_depth: str = "standard",
+    energy_level: int | None = None,
 ) -> Path:
     target_date = review_date or datetime.now().date()
     days_back = max(days_back, 1)
     max_items = max(max_items, 1)
+
+    # ── Energy-aware shaping ──────────────────────────────────────────
+    # Auto-detect energy from the latest check-in if not provided
+    if energy_level is None:
+        energy_events = repo.load_energy_events()
+        if energy_events:
+            latest = max(energy_events, key=lambda e: e.get("created_at", ""))
+            energy_level = latest.get("energy_level")
+    energy_warnings: list[str] = []
+    if energy_level is not None:
+        if energy_level <= 1:
+            # Low energy: fewer items, mistakes only (no new material)
+            max_items = min(max_items, 8)
+            energy_warnings.append(
+                "⚠️ 当前精力偏低，已减少复习量至核心错题。建议优先完成后再休息。"
+            )
+        elif energy_level == 2:
+            # Moderate energy: standard but no expansion
+            max_items = min(max_items, 14)
+            energy_warnings.append(
+                "⚡ 精力适中，复习量已适度缩减。聚焦高优先级错题。"
+            )
+        else:
+            energy_warnings.append(
+                "🧠 精力充沛，适合完整复习和深入理解。"
+            )
+    # ──────────────────────────────────────────────────────────────────
 
     events = repo.load_events()
     mine_patterns(repo, events)
@@ -2121,6 +2181,7 @@ def daily_review_pack(
         days_back=days_back,
         focus_topic=focus_topic,
         progress_events=progress_events,
+        energy_warnings=energy_warnings,
     )
     write_daily_review_snapshot(
         repo,
@@ -2314,6 +2375,39 @@ def write_todo(repo: Repository, payload: dict) -> Path:
     return path
 
 
+def _feed_mock_to_spacing(repo: Repository, incorrect_events: list[MistakeEvent]) -> None:
+    """Feed mock incorrect results back into spacing intervals.
+
+    For each incorrect mock event, find the corresponding card and compress
+    its spacing interval (force review soon) and boost priority.
+    """
+    from datetime import date as date_type
+    from app.models import stable_id as sid
+
+    tomorrow = (date_type.today() + timedelta(days=1)).isoformat()
+    for event in incorrect_events:
+        card_id = sid("card", event.event_id or "", event.topic, event.los)
+        # Try both question-errors and cognitive-bias domains
+        for domain in ("question-errors", "cognitive-bias"):
+            card_path = repo.memory_root / domain / f"{card_id}.md"
+            if not card_path.exists():
+                continue
+            try:
+                repo.update_card_review(
+                    domain=domain,
+                    card_id=card_id,
+                    previous_reviews=0,  # don't increment — this is a reset
+                    review_due_at=tomorrow,
+                    spacing_interval_days=1,
+                    spacing_priority=95,  # mock error = highest priority
+                    last_reviewed_at=datetime.now(timezone.utc).isoformat(),
+                    spacing_reasoning="Mock feedback: incorrect → forced review tomorrow",
+                )
+            except (FileNotFoundError, OSError):
+                continue
+            break  # found and updated in this domain
+
+
 def post_mock_retro(repo: Repository, session_id: str) -> Path:
     events = [
         event
@@ -2344,6 +2438,27 @@ def post_mock_retro(repo: Repository, session_id: str) -> Path:
 
     path = repo.memory_root / "strategy" / f"{session_id}-retro.md"
     repo.write_markdown(path, "\n".join(lines), "mock_retro", f"{session_id}-retro")
+
+    # ── Feed mock results back into spacing and knowledge memory ──────
+    incorrect_questions = [e for e in grouped.get("question", []) if not e.is_correct]
+    if incorrect_questions:
+        _feed_mock_to_spacing(repo, incorrect_questions)
+
+        # Write mock accuracy signal
+        total = len(grouped.get("question", []))
+        accuracy = round((total - len(incorrect_questions)) / total * 100) if total > 0 else 100
+        signal = {
+            "session_id": session_id,
+            "total_questions": total,
+            "incorrect_count": len(incorrect_questions),
+            "accuracy_pct": accuracy,
+            "topics": list({e.topic for e in incorrect_questions}),
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        signal_path = repo.memory_root / "strategy" / "mock-feedback-signals.jsonl"
+        with open(signal_path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(signal, ensure_ascii=False) + "\n")
+
     refresh_learning_outputs(repo)
     return path
 

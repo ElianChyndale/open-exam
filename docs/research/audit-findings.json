@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "wave": 1,
+    "item": "learning-records package — packages/ has study-science, exam-core, agent-runtime. No learning-records directory or package found.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 2,
+    "wave": 1,
+    "item": "provenance package — No package named provenance exists. The word 'provenance' appears only as a string literal in agent-runtime/src/agent_runtime/runtime.py (line 62 in the mistake_recorder instructions). No provenance module, class, or data structures.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 3,
+    "wave": 1,
+    "item": "EventEnvelopeV2 with provenance/consent fields — No EventEnvelope or EventEnvelopeV2 class exists anywhere. The event envelope format (seen in energy.py) has: schema_version, event_id, event_type, learner_id, occurred_at, source_refs, payload. No provenance or consent_scope fields exist on any event structure in exam_core/models.py or the API schemas.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 4,
+    "wave": 1,
+    "item": "/api/provenance/{id} endpoint — No such endpoint exists. The API routers (main.py) include: attempts, cards, question-banks, profiles, diagnosis, review, energy, study-plan, mock, dashboard, institution, export, transfer. No provenance router.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 5,
+    "wave": 1,
+    "item": "/api/privacy/export and /api/privacy/purge endpoints — No such endpoints exist. The closest is /api/export (structured JSON export of events/cards/patterns) and /api/import (local backup import). No privacy-specific data export or purge endpoints.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 6,
+    "wave": 1,
+    "item": "xAPI export (Experience API / Tin Can) — grep for xapi, xAPI, tin.can across the entire codebase returned zero matches. No xAPI statement generation, vocabulary, or export support.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 7,
+    "wave": 1,
+    "item": "Consent events / consent mechanism — grep for 'consent' found only CFA exam content files (Ethical and Professional Standards topics). No consent data model, event type, or user consent flow exists in the codebase.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 8,
+    "wave": 2,
+    "item": "learner-twin package — No package named learner-twin exists in packages/ (contains study-science, exam-core, agent-runtime) or anywhere in the codebase.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 9,
+    "wave": 2,
+    "item": "psychometrics package — No package named psychometrics exists. No IRT (Item Response Theory), Rasch, or 3PL models found in any package.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 10,
+    "wave": 2,
+    "item": "Mastery estimate with half-life — KnowledgeMemoryEngine (study-science/knowledge_memory.py) has state_value (enum 0-5), state transitions, review_interval_days, and decay_interval_days. However, it does NOT compute half-life (the exponential recall-probability half-life parameter from HLR models). Decay is handled via discrete state transitions with fixed intervals, not continuous recall probability estimation. The only reference to 'half.life' is in 1.md (an external feedback document).",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 11,
+    "wave": 2,
+    "item": "Confidence bias tracking — calibration.py has ConfidenceCalibration tracking over-confident and severe-miscalibration states, with priority_bump and trend detection. Agent-runtime references 'cognitive-bias' as a card domain. Mock retro counts bias_count. However, there is no dedicated 'confidence_bias' field in any data model; bias tracking is indirect via calibration metrics.",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 12,
+    "wave": 2,
+    "item": "BKT/HLR-style scheduling — SpacingScheduler (study-science/spacing.py) uses static EXPANSION_FACTORS = [1.0, 2.0, 3.5, 5.0, 7.0] — fixed multipliers indexed by review count. No Bayesian Knowledge Tracing, no Half-Life Regression, no dynamically personalized interval prediction based on learner performance history.",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 13,
+    "wave": 2,
+    "item": "Mock outcome feedback into scheduling — Mock retro endpoint (mock.py) generates post-mock analysis but does NOT feed mock scores or performance data back into SpacingScheduler interval calculations. SpacingScheduler has an exam_date parameter for urgency compression but no mock_score or mock_outcome input. Mock results are stored but not consumed by the scheduling system.",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 14,
+    "wave": 2,
+    "item": "Confidence bands on pass probability — prediction.py PassPredictor returns confidence_band_low and confidence_band_high on PredictionResult (lines 37-38). These are computed as static ±0.10 offsets from pass_probability (line 151-152). Dashboard and schemas both expose these fields. Functionality exists but bands are simple offsets, not statistically computed.",
+    "status": "COMPLETED"
+  },
+  {
+    "id": 15,
+    "wave": 3,
+    "item": "pedagogy-policy package — No such package exists in packages/ or anywhere in the codebase.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 16,
+    "wave": 3,
+    "item": "human-factors package — No such package exists in packages/ or anywhere in the codebase.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 17,
+    "wave": 3,
+    "item": "Structured tasks plus Markdown projection — Review packs are entirely markdown-based. The ReviewPackResponse schema has an 'items' field (list[dict]) but it is always set to empty list (review.py line 63: items=[]). The web frontend (review/page.tsx) renders only markdown_content. No structured task objects (typed task items with completion state, response fields, etc.) are projected.",
+    "status": "NOT_STARTED"
+  },
+  {
+    "id": 18,
+    "wave": 3,
+    "item": "Retrieval probes, self-explanation, contrast pairs — RetrievalEngine (retrieval.py) generates RetrievalPrompt objects with 4 types (definition, formula, concept_boundary, procedure). SelfExplanationPrompt (self_explanation.py) generates short post-error reflection prompts by error category. InterleavingBuilder (interleaving.py) has an ADJACENCY_MAP pairing commonly confused concepts (NPV/IRR, Call/Put, LIFO/FIFO) — effectively contrast pairs used for interleaving. However, there is no dedicated 'contrast pair' generation module that creates side-by-side comparison exercises.",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 19,
+    "wave": 3,
+    "item": "Sleep/stress/energy/workload check-ins — EnergyCheckIn (models.py) tracks energy_level (0-4), mental_clarity (1-10), physical_fatigue (1-10), motivation (1-10). The /api/energy/check-in endpoint handles check-ins and returns task recommendations. However, no sleep tracking, stress assessment, or workload measurement fields exist. grep for 'sleep' and 'stress' in packages/ returned zero matches.",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 20,
+    "wave": 3,
+    "item": "WCAG 2.2 AA accessibility — globals.css includes prefers-reduced-motion support (lines 119-127), focus-visible outlines on all interactive elements (lines 89-95), and dark mode via prefers-color-scheme. The web app uses semantic HTML with aria-label on key buttons (layout.tsx line 43), aria-pressed on energy buttons (today/page.tsx line 129), and role='group' on button groups (today/page.tsx line 121). However, there is no skip-to-content link, no heading hierarchy enforcement, no aria-live regions for dynamic content, no color-contrast ratio verification, no viewport meta tag in layout.tsx, and no WCAG compliance testing infrastructure.",
+    "status": "PARTIAL"
+  },
+  {
+    "id": 21,
+    "wave": 3,
+    "item": "Mobile review validation — Responsive layout exists using Tailwind breakpoints (sm:, lg:). Sidebar adapts from bottom nav on mobile (fixed bottom, h-16, w-full) to side nav on desktop (lg:top-0, lg:h-screen, lg:w-60). Cards reduce padding at 1023px. Grid columns change from 1 to 2/3 at sm: and lg: breakpoints. However, no viewport meta tag is rendered in layout.tsx (no initial-scale or user-scalable settings), no touch-specific event handling (swipe, tap targets), and no mobile testing setup was found.",
+    "status": "PARTIAL"
+  }
+]

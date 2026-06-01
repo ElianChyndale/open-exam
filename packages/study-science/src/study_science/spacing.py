@@ -1,14 +1,17 @@
 """Spacing Scheduler — optimal review intervals.
 
 Based on spaced practice research (Dunlosky 2013, Nature Reviews Psych 2022).
-Schedules review based on confidence, correctness, time spent, and exam date.
+Schedules review based on confidence, correctness, time spent, exam date,
+and personalized calibration history (dynamic expansion factors).
 """
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from enum import IntEnum
+from pathlib import Path
 from typing import Protocol
 
 
@@ -32,6 +35,7 @@ class SpacingInput:
     previous_reviews: int = 0              # how many times already reviewed
     last_reviewed_at: str = ""             # ISO date
     exam_date: str = ""                    # ISO date, for urgency scaling
+    calibration_adjustment: float = 1.0    # 0.5-1.5, personalized from calibration history
 
 
 @dataclass(slots=True)
@@ -74,16 +78,57 @@ class SpacingScheduler:
     EXPANSION_FACTORS = [1.0, 2.0, 3.5, 5.0, 7.0]  # review #0, #1, #2, #3, #4+
 
     @classmethod
+    def compute_calibration_adjustment(cls, calibration_warnings_path: str | Path) -> float:
+        """Compute personalized expansion adjustment from calibration history.
+
+        Reads the calibration-warnings.jsonl file and computes an adjustment factor:
+        - Few/no warnings → ~1.2 (faster expansion, trust self-assessment)
+        - Moderate warnings → ~1.0 (default)
+        - Many warnings → ~0.6 (slower expansion, need more reviews)
+
+        Returns a float in [0.5, 1.5].
+        """
+        path = Path(calibration_warnings_path)
+        if not path.exists():
+            return 1.0
+
+        warnings = []
+        try:
+            for line in path.read_text(encoding="utf-8").splitlines():
+                if line.strip():
+                    warnings.append(json.loads(line))
+        except (json.JSONDecodeError, OSError):
+            return 1.0
+
+        if not warnings:
+            return 1.0
+
+        # Look at recent warnings (last 50)
+        recent = warnings[-50:]
+        high_conf_errors = sum(
+            1 for w in recent if w.get("confidence", 0) >= 3
+        )
+        total = len(recent)
+        error_rate = high_conf_errors / total if total > 0 else 0
+
+        # Map error rate to adjustment: 0% errors → 1.2, 50% errors → 0.8, 100% → 0.5
+        adj = 1.2 - (error_rate * 0.7)
+        return round(max(0.5, min(1.5, adj)), 2)
+
+    @classmethod
     def schedule(cls, input_: SpacingInput) -> SpacingDecision:
         """Compute optimal next review date and priority."""
         # Base interval
         key = (input_.is_correct, min(input_.confidence, 4))
         base_days = cls.BASE_INTERVALS.get(key, 7)
 
-        # Expansion for repeated reviews
+        # Expansion for repeated reviews (adjusted by calibration)
         review_idx = min(input_.previous_reviews, len(cls.EXPANSION_FACTORS) - 1)
-        expansion = cls.EXPANSION_FACTORS[review_idx]
-        interval = int(base_days * expansion)
+        base_expansion = cls.EXPANSION_FACTORS[review_idx]
+        # Calibration adjustment: poor calibration → slower expansion (more reviews)
+        adj = max(0.5, min(1.5, input_.calibration_adjustment))
+        expansion = base_expansion * adj
+        interval = max(1, int(base_days * expansion))
 
         # Urgency: compress if exam is approaching
         urgency = 1.0

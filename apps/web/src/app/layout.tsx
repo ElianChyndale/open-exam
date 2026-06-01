@@ -27,12 +27,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className="min-h-screen lg:flex">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-surface-raised focus:px-4 focus:py-2 focus:text-accent focus:shadow-lg focus:outline-none">
+          跳到主要内容
+        </a>
+        <div aria-live="polite" aria-atomic="true" className="sr-only" />
         <Sidebar />
-        <main className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto">
+        <main id="main-content" className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto" tabIndex={-1}>
           {children}
         </main>
         <OfflineCaptureRegistration />

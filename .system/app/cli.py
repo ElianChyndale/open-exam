@@ -30,6 +30,8 @@ def build_parser() -> argparse.ArgumentParser:
         review.add_argument("--max-items", type=int, default=20)
         review.add_argument("--focus-topic", default="")
         review.add_argument("--knowledge-depth", choices=("standard", "expanded"), default="standard")
+        review.add_argument("--energy-level", type=int, default=-1, choices=range(0, 5),
+                            help="当前精力水平 0-4，默认自动从最近打卡获取")
 
     complete_review = subparsers.add_parser("complete-daily-review")
     complete_review.add_argument("--review-id", required=True)
@@ -127,7 +129,8 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         return 0
     if args.command in {"daily-review", "daily-review-pack"}:
         review_date = date.fromisoformat(args.date) if args.date else None
-        daily_review_pack(repo, review_date, args.days_back, args.max_items, args.focus_topic, args.knowledge_depth)
+        energy = args.energy_level if args.energy_level >= 0 else None
+        daily_review_pack(repo, review_date, args.days_back, args.max_items, args.focus_topic, args.knowledge_depth, energy_level=energy)
         return 0
     if args.command == "complete-daily-review":
         from app.workflows import complete_daily_review
