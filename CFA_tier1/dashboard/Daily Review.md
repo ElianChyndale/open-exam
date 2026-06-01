@@ -2,7 +2,7 @@
 generated_for: 2026-06-01
 days_back: 7
 focus_topic: unspecified
-source_event_count: 48
+source_event_count: 49
 review_item_count: 20
 ---
 
@@ -37,13 +37,13 @@ review_item_count: 20
 > **来源：** CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
 
 ### 3. Economics | M02 Business Cycles and Indicators
-- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Cycle phases；Indicators；Business behavior
+- **先问自己：** 看到这些 trigger，能不能讲出定义、公式、适用条件和例外？Cycle phases；Business behavior；Indicators
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 > [!answer]- Reveal knowledge point
 > #### 核心知识点 / 公式
 > - **Cycle phases:** Recovery -> expansion -> slowdown/peak -> contraction/recession -> trough -> 看题目问 current state 还是 expected future。
-> - **Indicators:** Leading predict; coincident describe now; lagging confirm past -> 预测题优先 leading；不要用 unemployment duration 这类 lagging 指标预测未来。
 > - **Business behavior:** New orders/capex/inventory/housing/labor productivity -> Recession bottom 附近可能因 lean production 出现高 productivity。
+> - **Indicators:** Leading predict; coincident describe now; lagging confirm past -> 预测题优先 leading；不要用 unemployment duration 这类 lagging 指标预测未来。
 >
 > #### 易错边界
 > - Indicators: 预测题优先 leading；不要用 unemployment duration 这类 lagging 指标预测未来。
@@ -225,36 +225,93 @@ review_item_count: 20
 - **当前阶段：** full solution -> hidden-step completion -> independent solve
 - **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
 
-### 2. Quantitative Methods | QM.Rates | concept_confusion
+### 2. Economics | M08: Exchange Rate Calculations - initial rate from appreciation percentage | formula_misuse
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-06-01；重复错误 3 次；严重度 medium；近期低信心 2026-05-31
+- **今天为什么看：** 近期低信心 2026-05-27
 
 #### 主动回忆
-- 闭卷讲出 Quantitative Methods / QM.Rates 的核心定义和判断边界。
+- 闭卷讲出 Economics / M08: Exchange Rate Calculations - initial rate from appreciation percentage 的核心定义和判断边界。
 
 #### 题目
-> Quick capture: Quantitative Methods/QM.Rates
+> An exchange rate between two currencies has increased to 1.4500. If the base currency has appreciated by 8 percent against the price currency, the initial exchange rate was closest to?
+
+#### 选项
+> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
 
 #### 我上次错在
-> 选了A
+> C. 1.5660 - multiplied 1.45 x 1.08 instead of dividing.
 
 #### 正确理解 / 解法
 > [!answer]- Reveal correct solution
-> B 才是正确的
+> B. 1.3426. 1.4500/X = 1.08 - X = 1.45/1.08 = 1.3426. Base currency appreciated 8% means new = old x (1+r), so old = new/(1+r).
+
+#### 下次规则
+- **纠偏规则：** 先画结构或时间轴，再代入公式或计算器。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M08: Exchange Rate Calculations - initial rate from appreciation percentage 同类题。
+- **证据：** memory cache
+
+#### 自我解释
+- 写出正确的计算步骤（只写步骤，不写解释）。
+
+### 3. Quantitative Methods | M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
+
+#### 主动回忆
+- 闭卷讲出 Quantitative Methods / M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) 的核心定义和判断边界。
+
+#### 题目
+> A nonparametric test is most appropriate when the:
+
+#### 选项
+> A. data consist of ranked values.
+> B. validity of the test depends on many assumptions.
+> C. sample sizes are large but are drawn from a population that may be non-normal.
+
+#### 我上次错在
+> B. validity of the test depends on many assumptions.
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> A. data consist of ranked values. Nonparametric tests are most appropriate for ranked or ordinal data; they are used when parametric-test assumptions are not appropriate.
 
 #### 下次规则
 - **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。
-- **证据：** quick-capture-2026-05-31T23:31:41.995992
+- **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) 同类题。
+- **证据：** chat-2026-05-26-q18-nonparametric-test-screenshot
 
 #### 自我解释
-- 用一句话说出：为什么 `B 才是正确的` 是对的，而你的答案错了？
+- 用一句话说出：为什么 `A. data consist of ranked values. Nonparametric tests are most appropriate for ranked or ordinal dat` 是对的...
 
-#### Worked example fading
-- **当前阶段：** full solution -> hidden-step completion -> independent solve
-- **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
+### 4. Economics | M08: Exchange Rate Calculations - depreciation/appreciation asymmetry | formula_misuse
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 近期低信心 2026-05-27
 
-### 3. Quantitative Methods | unknown_from_screenshot | concept_confusion
+#### 主动回忆
+- 闭卷讲出 Economics / M08: Exchange Rate Calculations - depreciation/appreciation asymmetry 的核心定义和判断边界。
+
+#### 题目
+> Over the past month, the Swiss franc (CHF) has depreciated 12 percent against the British pound (GBP). How much has the pound sterling appreciated against the Swiss franc?
+
+#### 选项
+> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
+
+#### 我上次错在
+> A. 12 percent - incorrectly assumed symmetric offset.
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> C. More than 12 percent. [1/(1-0.12)]-1 = 1/0.88-1 = 0.1364 = 13.64%. Depreciation/appreciation are not symmetric.
+
+#### 下次规则
+- **纠偏规则：** 先画结构或时间轴，再代入公式或计算器。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M08: Exchange Rate Calculations - depreciation/appreciation asymmetry 同类题。
+- **证据：** memory cache
+
+#### 自我解释
+- 写出正确的计算步骤（只写步骤，不写解释）。
+
+### 5. Quantitative Methods | unknown_from_screenshot | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；到期复习 2026-05-24；重复错误 3 次；严重度 medium；近期低信心 2026-05-25
 
@@ -286,122 +343,7 @@ review_item_count: 20
 - **当前阶段：** full solution -> hidden-step completion -> independent solve
 - **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
 
-### 4. Economics | M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) | prompt_misread
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
-#### 主动回忆
-- 闭卷讲出 Economics / M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) 的核心定义和判断边界。
-
-#### 题目
-> Partial screenshot: CFA Learning Ecosystem duopoly payoff matrix for ArcCo and BatCo choosing Low Price or High Price. The prompt includes a collusive agreement / side-payment condition, and asks which firm would deviate or benefit from breaking the agreement; exact top wording and selected option are not fully visible.
-
-#### 我上次错在
-> Applied the no-collusion Nash equilibrium automatically instead of using the collusive-agreement condition; exact selected option is not visible in the screenshot.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> C. neither firm. The lower-left quadrant is the Nash solution when there is no collusion. With collusion, if ArcCo shares enough of the bottom-right high-price/high-price profit to give BatCo more than it would receive in the lower-left outcome, the optimal joint-profit solution is for both firms to charge high prices, so neither firm should deviate.
-
-#### 下次规则
-- **纠偏规则：** 把错误转成一句可重复执行的纠偏规则。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) 同类题。
-- **证据：** screenshot-2026-05-26-arc-bat-collusive-agreement
-
-#### 自我解释
-- 这道题我错在哪里？（一句话）
-
-### 5. Economics | M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) | concept_confusion
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
-#### 主动回忆
-- 闭卷讲出 Economics / M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) 的核心定义和判断边界。
-
-#### 题目
-> Each oligopoly firm faces an individual demand curve under:
-
-#### 选项
-> A. colluding market conditions only.
-> B. non-colluding market conditions only.
-> C. both colluding and non-colluding market conditions.
-
-#### 我上次错在
-> C. both colluding and non-colluding market conditions.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> B. non-colluding market conditions only. In colluding oligopoly conditions, the aggregate market demand curve is divided among production participants; under non-colluding conditions, each firm faces an individual demand curve.
-
-#### 下次规则
-- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) 同类题。
-- **证据：** screenshot-2026-05-26-q26-oligopoly-demand-curve-collusion
-
-#### 自我解释
-- 用一句话说出：为什么 `B. non-colluding market conditions only. In colluding oligopoly conditions, the aggregate market dem` 是对的...
-
-### 6. Economics | M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) | concept_confusion
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
-#### 主动回忆
-- 闭卷讲出 Economics / M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) 的核心定义和判断边界。
-
-#### 题目
-> Aquarius, Inc. is the dominant company and the price leader in its market. One of the other companies in the market attempts to gain market share by undercutting the price set by Aquarius. The market share of Aquarius will most likely:
-
-#### 选项
-> A. increase.
-> B. decrease.
-> C. stay the same.
-
-#### 我上次错在
-> B. decrease
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> A. increase. When a smaller competitor undercuts the price leader, the lower price can force smaller/high-cost firms to leave rather than sell below cost; as those firms exit, the dominant price leader Aquarius is expected to gain market share.
-
-#### 下次规则
-- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) 同类题。
-- **证据：** screenshot-2026-05-26-q12-aquarius-price-leader
-
-#### 自我解释
-- 用一句话说出：为什么 `A. increase. When a smaller competitor undercuts the price leader, the lower price can force smaller` 是对的...
-
-### 7. Economics | M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) | concept_confusion
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
-
-#### 主动回忆
-- 闭卷讲出 Economics / M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) 的核心定义和判断边界。
-
-#### 题目
-> Current economic statistics indicating little change in services inflation, rising residential building permits, and increasing average duration of unemployment are best interpreted as:
-
-#### 选项
-> A. conflicting evidence about the direction of the economy.
-> B. evidence that a cyclical upturn is expected to occur in the future.
-> C. evidence that a cyclical downturn is expected to occur in the future.
-
-#### 我上次错在
-> A. conflicting evidence about the direction of the economy.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction.
-
-#### 下次规则
-- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) 同类题。
-- **证据：** chat-screenshot-2026-05-27-econ-indicators-upturn
-
-#### 自我解释
-- 用一句话说出：为什么 `B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building p` 是对的...
-
-### 8. Economics | M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot) | concept_confusion
+### 6. Economics | M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -431,37 +373,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `C. at the bottom of a recession. At the end/bottom of a recession, firms often run lean production a` 是对的...
 
-### 9. Economics | M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) | concept_confusion
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
-
-#### 主动回忆
-- 闭卷讲出 Economics / M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) 的核心定义和判断边界。
-
-#### 题目
-> Fiscal policy refers to the government's decisions about:
-
-#### 选项
-> A. taxation only.
-> B. taxation and spending only.
-> C. taxation, spending, and the quantity of money in the economy.
-
-#### 我上次错在
-> C. taxation, spending, and the quantity of money in the economy.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> B. taxation and spending only. Fiscal policy is government decisions about taxation and spending; the quantity of money in the economy is controlled through central bank monetary policy, not fiscal policy.
-
-#### 下次规则
-- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) 同类题。
-- **证据：** chat-screenshot-2026-05-27-fiscal-vs-monetary-scope
-
-#### 自我解释
-- 用一句话说出：为什么 `B. taxation and spending only. Fiscal policy is government decisions about taxation and spending; th` 是对的...
-
-### 10. Economics | M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot) | prompt_misread
+### 7. Economics | M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot) | prompt_misread
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -491,7 +403,181 @@ review_item_count: 20
 #### 自我解释
 - 这道题我错在哪里？（一句话）
 
-### 11. Economics | M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot) | concept_confusion
+### 8. Quantitative Methods | QM.Rates | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-06-01；重复错误 3 次；严重度 medium；近期低信心 2026-05-31
+
+#### 主动回忆
+- 闭卷讲出 Quantitative Methods / QM.Rates 的核心定义和判断边界。
+
+#### 题目
+> Quick capture: Quantitative Methods/QM.Rates
+
+#### 我上次错在
+> 选了A
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> B 才是正确的
+
+#### 下次规则
+- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
+- **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。
+- **证据：** quick-capture-2026-05-31T23:31:41.995992
+
+#### 自我解释
+- 用一句话说出：为什么 `B 才是正确的` 是对的，而你的答案错了？
+
+#### Worked example fading
+- **当前阶段：** full solution -> hidden-step completion -> independent solve
+- **动作：** 先复述完整解法，再遮住关键步骤完成一次，最后独立重做。
+
+### 9. Economics | M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
+
+#### 主动回忆
+- 闭卷讲出 Economics / M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) 的核心定义和判断边界。
+
+#### 题目
+> Each oligopoly firm faces an individual demand curve under:
+
+#### 选项
+> A. colluding market conditions only.
+> B. non-colluding market conditions only.
+> C. both colluding and non-colluding market conditions.
+
+#### 我上次错在
+> C. both colluding and non-colluding market conditions.
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> B. non-colluding market conditions only. In colluding oligopoly conditions, the aggregate market demand curve is divided among production participants; under non-colluding conditions, each firm faces an individual demand curve.
+
+#### 下次规则
+- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS) 同类题。
+- **证据：** screenshot-2026-05-26-q26-oligopoly-demand-curve-collusion
+
+#### 自我解释
+- 用一句话说出：为什么 `B. non-colluding market conditions only. In colluding oligopoly conditions, the aggregate market dem` 是对的...
+
+### 10. Economics | M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) | prompt_misread
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
+
+#### 主动回忆
+- 闭卷讲出 Economics / M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) 的核心定义和判断边界。
+
+#### 题目
+> Partial screenshot: CFA Learning Ecosystem duopoly payoff matrix for ArcCo and BatCo choosing Low Price or High Price. The prompt includes a collusive agreement / side-payment condition, and asks which firm would deviate or benefit from breaking the agreement; exact top wording and selected option are not fully visible.
+
+#### 我上次错在
+> Applied the no-collusion Nash equilibrium automatically instead of using the collusive-agreement condition; exact selected option is not visible in the screenshot.
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> C. neither firm. The lower-left quadrant is the Nash solution when there is no collusion. With collusion, if ArcCo shares enough of the bottom-right high-price/high-price profit to give BatCo more than it would receive in the lower-left outcome, the optimal joint-profit solution is for both firms to charge high prices, so neither firm should deviate.
+
+#### 下次规则
+- **纠偏规则：** 把错误转成一句可重复执行的纠偏规则。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped) 同类题。
+- **证据：** screenshot-2026-05-26-arc-bat-collusive-agreement
+
+#### 自我解释
+- 这道题我错在哪里？（一句话）
+
+### 11. Economics | M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
+
+#### 主动回忆
+- 闭卷讲出 Economics / M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) 的核心定义和判断边界。
+
+#### 题目
+> Aquarius, Inc. is the dominant company and the price leader in its market. One of the other companies in the market attempts to gain market share by undercutting the price set by Aquarius. The market share of Aquarius will most likely:
+
+#### 选项
+> A. increase.
+> B. decrease.
+> C. stay the same.
+
+#### 我上次错在
+> B. decrease
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> A. increase. When a smaller competitor undercuts the price leader, the lower price can force smaller/high-cost firms to leave rather than sell below cost; as those firms exit, the dominant price leader Aquarius is expected to gain market share.
+
+#### 下次规则
+- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS) 同类题。
+- **证据：** screenshot-2026-05-26-q12-aquarius-price-leader
+
+#### 自我解释
+- 用一句话说出：为什么 `A. increase. When a smaller competitor undercuts the price leader, the lower price can force smaller` 是对的...
+
+### 12. Economics | M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
+
+#### 主动回忆
+- 闭卷讲出 Economics / M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) 的核心定义和判断边界。
+
+#### 题目
+> Current economic statistics indicating little change in services inflation, rising residential building permits, and increasing average duration of unemployment are best interpreted as:
+
+#### 选项
+> A. conflicting evidence about the direction of the economy.
+> B. evidence that a cyclical upturn is expected to occur in the future.
+> C. evidence that a cyclical downturn is expected to occur in the future.
+
+#### 我上次错在
+> A. conflicting evidence about the direction of the economy.
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction.
+
+#### 下次规则
+- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) 同类题。
+- **证据：** chat-screenshot-2026-05-27-econ-indicators-upturn
+
+#### 自我解释
+- 用一句话说出：为什么 `B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building p` 是对的...
+
+### 13. Economics | M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) | concept_confusion
+- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
+- **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
+
+#### 主动回忆
+- 闭卷讲出 Economics / M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) 的核心定义和判断边界。
+
+#### 题目
+> Fiscal policy refers to the government's decisions about:
+
+#### 选项
+> A. taxation only.
+> B. taxation and spending only.
+> C. taxation, spending, and the quantity of money in the economy.
+
+#### 我上次错在
+> C. taxation, spending, and the quantity of money in the economy.
+
+#### 正确理解 / 解法
+> [!answer]- Reveal correct solution
+> B. taxation and spending only. Fiscal policy is government decisions about taxation and spending; the quantity of money in the economy is controlled through central bank monetary policy, not fiscal policy.
+
+#### 下次规则
+- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
+- **下一步练习：** 24 小时内重做 2 道 Economics / M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot) 同类题。
+- **证据：** chat-screenshot-2026-05-27-fiscal-vs-monetary-scope
+
+#### 自我解释
+- 用一句话说出：为什么 `B. taxation and spending only. Fiscal policy is government decisions about taxation and spending; th` 是对的...
+
+### 14. Economics | M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot) | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 到期复习 2026-05-28；近期低信心 2026-05-27
 
@@ -521,7 +607,7 @@ review_item_count: 20
 #### 自我解释
 - 用一句话说出：为什么 `B. Declining bank reserves and economic activity. QE creates additional bank reserves and uses large` 是对的...
 
-### 12. Economics | M07: Capital Flows and the FX Market - capital restrictions purpose | concept_confusion
+### 15. Economics | M07: Capital Flows and the FX Market - capital restrictions purpose | concept_confusion
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
 - **今天为什么看：** 近期低信心 2026-05-27
 
@@ -548,92 +634,6 @@ review_item_count: 20
 
 #### 自我解释
 - 用一句话说出：为什么 `A. prevent capital flight. Restricting liquid asset investment prevents hot money sudden reversal. F` 是对的...
-
-### 13. Economics | M08: Exchange Rate Calculations - depreciation/appreciation asymmetry | formula_misuse
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 近期低信心 2026-05-27
-
-#### 主动回忆
-- 闭卷讲出 Economics / M08: Exchange Rate Calculations - depreciation/appreciation asymmetry 的核心定义和判断边界。
-
-#### 题目
-> Over the past month, the Swiss franc (CHF) has depreciated 12 percent against the British pound (GBP). How much has the pound sterling appreciated against the Swiss franc?
-
-#### 选项
-> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
-
-#### 我上次错在
-> A. 12 percent - incorrectly assumed symmetric offset.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> C. More than 12 percent. [1/(1-0.12)]-1 = 1/0.88-1 = 0.1364 = 13.64%. Depreciation/appreciation are not symmetric.
-
-#### 下次规则
-- **纠偏规则：** 先画结构或时间轴，再代入公式或计算器。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M08: Exchange Rate Calculations - depreciation/appreciation asymmetry 同类题。
-- **证据：** memory cache
-
-#### 自我解释
-- 写出正确的计算步骤（只写步骤，不写解释）。
-
-### 14. Economics | M08: Exchange Rate Calculations - initial rate from appreciation percentage | formula_misuse
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 近期低信心 2026-05-27
-
-#### 主动回忆
-- 闭卷讲出 Economics / M08: Exchange Rate Calculations - initial rate from appreciation percentage 的核心定义和判断边界。
-
-#### 题目
-> An exchange rate between two currencies has increased to 1.4500. If the base currency has appreciated by 8 percent against the price currency, the initial exchange rate was closest to?
-
-#### 选项
-> _options_missing: 原错题卡未捕获选项，请回到证据截图补全。_
-
-#### 我上次错在
-> C. 1.5660 - multiplied 1.45 x 1.08 instead of dividing.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> B. 1.3426. 1.4500/X = 1.08 - X = 1.45/1.08 = 1.3426. Base currency appreciated 8% means new = old x (1+r), so old = new/(1+r).
-
-#### 下次规则
-- **纠偏规则：** 先画结构或时间轴，再代入公式或计算器。
-- **下一步练习：** 24 小时内重做 2 道 Economics / M08: Exchange Rate Calculations - initial rate from appreciation percentage 同类题。
-- **证据：** memory cache
-
-#### 自我解释
-- 写出正确的计算步骤（只写步骤，不写解释）。
-
-### 15. Quantitative Methods | M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) | concept_confusion
-- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？
-- **今天为什么看：** 到期复习 2026-05-27；近期低信心 2026-05-26
-
-#### 主动回忆
-- 闭卷讲出 Quantitative Methods / M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) 的核心定义和判断边界。
-
-#### 题目
-> A nonparametric test is most appropriate when the:
-
-#### 选项
-> A. data consist of ranked values.
-> B. validity of the test depends on many assumptions.
-> C. sample sizes are large but are drawn from a population that may be non-normal.
-
-#### 我上次错在
-> B. validity of the test depends on many assumptions.
-
-#### 正确理解 / 解法
-> [!answer]- Reveal correct solution
-> A. data consist of ranked values. Nonparametric tests are most appropriate for ranked or ordinal data; they are used when parametric-test assumptions are not appropriate.
-
-#### 下次规则
-- **纠偏规则：** 先写出考点定义，再用一句话说明为什么正确选项成立。
-- **下一步练习：** 24 小时内重做 2 道 Quantitative Methods / M08 Hypothesis Testing - nonparametric tests (exact LOS not shown) 同类题。
-- **证据：** chat-2026-05-26-q18-nonparametric-test-screenshot
-
-#### 自我解释
-- 用一句话说出：为什么 `A. data consist of ranked values. Nonparametric tests are most appropriate for ranked or ordinal dat` 是对的...
 
 ### 16. Quantitative Methods | M08 Hypothesis Testing - paired comparisons test (exact LOS not shown) | formula_misuse
 - **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？

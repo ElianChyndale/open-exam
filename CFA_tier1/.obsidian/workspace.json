@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dashboard/Daily Review.md",
+                "file": "dashboard/today_todo.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Review"
+              "title": "today_todo"
             }
           }
         ]
@@ -201,15 +201,16 @@
   },
   "active": "6ed053e7e425603b",
   "lastOpenFiles": [
-    "dashboard/今日新增错题.md",
     "dashboard/Daily Review.md",
-    "dashboard/今日复习资料.md",
-    "dashboard/策略手册页.md",
-    "dashboard/高频错因榜.md",
+    "mock/FI/00-FI-Mistakes.md",
     "dashboard/today_todo.md",
-    "dashboard/Agent失误页.md",
+    "dashboard/高频错因榜.md",
+    "dashboard/策略手册页.md",
+    "dashboard/今日新增错题.md",
+    "dashboard/今日复习资料.md",
     "dashboard/Subject-Question-Banks.md",
-    "Untitled.base",
-    "dashboard/Topic弱点页.md"
+    "dashboard/Topic弱点页.md",
+    "dashboard/Agent失误页.md",
+    "Untitled.base"
   ]
 }
