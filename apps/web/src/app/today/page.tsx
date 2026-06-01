@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { studyPlanApi, energyApi } from '@/lib/api';
+import { TodayTodoPanel } from '@/components/cockpit/TodayTodoPanel';
 import {
   Zap, Clock, Target, AlertTriangle, CheckCircle2, Battery, BatteryLow, BatteryMedium, BatteryFull,
 } from 'lucide-react';
@@ -208,6 +209,8 @@ export default function TodayCockpit() {
           color="muted"
         />
       </div>
+
+      <TodayTodoPanel studyPlan={plan as unknown as Record<string, unknown> | null} />
 
       {/* Quick Actions */}
       <div className="card">

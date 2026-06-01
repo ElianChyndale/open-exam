@@ -25,7 +25,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from deps import get_repo
-from routers import attempts, cards, dashboard, diagnosis, energy, export as export_router, institution, mock, profiles, question_banks, review, study_plan, transfer
+from routers import attempts, cards, dashboard, diagnosis, energy, export as export_router, institution, mock, profiles, question_banks, review, study_plan, todos, transfer
 
 
 @asynccontextmanager
@@ -65,6 +65,7 @@ app.include_router(review.router, prefix="/api/review-pack", tags=["review"])
 app.include_router(review.router, prefix="/api/daily-review", tags=["daily-review"])
 app.include_router(energy.router, prefix="/api/energy", tags=["energy"])
 app.include_router(study_plan.router, prefix="/api/study-plan", tags=["study-plan"])
+app.include_router(todos.router, prefix="/api/todos", tags=["todos"])
 app.include_router(mock.router, prefix="/api/mock", tags=["mock"])
 app.include_router(dashboard.router, prefix="/api/dashboard", tags=["dashboard"])
 app.include_router(institution.router, prefix="/api/institution", tags=["institution"])

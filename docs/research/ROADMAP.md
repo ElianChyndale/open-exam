@@ -11,6 +11,7 @@
 | 日期 | Gate | 证据 |
 |------|------|------|
 | 2026-06-02 | Foundation | 新增 `learning-records` 包、`EventEnvelopeV2`、集中式 feature flags；`pytest -q` 为 `99 passed`，`npm run typecheck` 与 `npm run build` 通过 |
+| 2026-06-02 | Todo | JSONL reducer、快照、Markdown 投影、归档、CLI/API parity 与 `/today` 交互面板完成；`pytest -q` 为 `105 passed`，Web typecheck/build 通过，并经浏览器验证新增、deadline、完成与刷新持久化 |
 
 ---
 

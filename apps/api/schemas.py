@@ -166,6 +166,41 @@ class StudyPlanResponse(BaseModel):
     interleaving_composition: dict[str, int] = Field(default_factory=dict)
 
 
+# ── Todo ─────────────────────────────────────────────────────────────────────
+
+class TodoTaskCreate(BaseModel):
+    text: str = Field(..., min_length=1)
+    deadline: str = ""
+    progress: int = Field(0, ge=0, le=100)
+    expected_revision: int = Field(..., ge=0)
+    date: str = ""
+
+
+class TodoTaskUpdate(BaseModel):
+    text: str | None = None
+    deadline: str | None = None
+    progress: int | None = Field(default=None, ge=0, le=100)
+    status: Literal["pending", "completed"] | None = None
+    expected_revision: int = Field(..., ge=0)
+
+
+class TodoRevisionRequest(BaseModel):
+    expected_revision: int = Field(..., ge=0)
+
+
+class TodoReplaceRequest(BaseModel):
+    date: str = ""
+    title: str = ""
+    focus: str = ""
+    tasks: list[Any] = Field(default_factory=list)
+    time_blocks: list[str] = Field(default_factory=list)
+
+
+class TodoStudyPlanImportRequest(BaseModel):
+    confirmed: bool = False
+    plan: dict[str, Any]
+
+
 # ── Mock ─────────────────────────────────────────────────────────────────────
 
 class MockSessionCreate(BaseModel):

@@ -70,6 +70,44 @@ export const studyPlanApi = {
   getWeeklyFocus: () => request('/api/study-plan/weekly-focus'),
 };
 
+/** Todo */
+export interface TodoTask {
+  task_id: string;
+  text: string;
+  deadline: string;
+  progress: number;
+  status: 'pending' | 'completed';
+  source: string;
+}
+
+export interface TodoState {
+  date: string;
+  title: string;
+  focus: string;
+  tasks: TodoTask[];
+  revision: number;
+}
+
+export const todosApi = {
+  getToday: (date = '') =>
+    request<TodoState>(`/api/todos/today${date ? `?date=${encodeURIComponent(date)}` : ''}`),
+
+  create: (data: { text: string; deadline?: string; progress?: number; expected_revision: number; date?: string }) =>
+    request<TodoState>('/api/todos/tasks', { method: 'POST', body: JSON.stringify(data) }),
+
+  update: (taskId: string, data: { text?: string; deadline?: string; progress?: number; status?: TodoTask['status']; expected_revision: number }) =>
+    request<TodoState>(`/api/todos/tasks/${taskId}`, { method: 'PATCH', body: JSON.stringify(data) }),
+
+  toggle: (taskId: string, expectedRevision: number) =>
+    request<TodoState>(`/api/todos/tasks/${taskId}/toggle`, { method: 'POST', body: JSON.stringify({ expected_revision: expectedRevision }) }),
+
+  remove: (taskId: string, expectedRevision: number) =>
+    request<TodoState>(`/api/todos/tasks/${taskId}?expected_revision=${expectedRevision}`, { method: 'DELETE' }),
+
+  importStudyPlan: (plan: Record<string, unknown>, confirmed: boolean) =>
+    request<TodoState>('/api/todos/import-study-plan', { method: 'POST', body: JSON.stringify({ plan, confirmed }) }),
+};
+
 /** Mock */
 export const mockApi = {
   create: (data: Record<string, unknown>) =>
