@@ -2,8 +2,10 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { reviewApi } from '@/lib/api';
-import { BookOpen, Calendar, Filter, ChevronDown } from 'lucide-react';
+import { BookOpen, Calendar, Filter, ChevronDown, Activity } from 'lucide-react';
 import { useProfileSubjects } from '@/lib/profiles';
+import { ProactiveReviewSection } from '@/components/ProactiveReviewSection';
+import { CoverageRadar } from '@/components/CoverageRadar';
 
 export default function ReviewPackPage() {
   const [markdown, setMarkdown] = useState('');
@@ -15,6 +17,8 @@ export default function ReviewPackPage() {
   const [daysBack, setDaysBack] = useState(7);
   const [depth, setDepth] = useState('standard');
   const [error, setError] = useState('');
+  const [proactiveQuestions, setProactiveQuestions] = useState<any[]>([]);
+  const [subjectCoverage, setSubjectCoverage] = useState<Record<string, { captured: number; total: number; examWeight: number }>>({});
 
   const fetchPack = useCallback((params?: Record<string, string>) => {
     setLoading(true);
@@ -36,6 +40,19 @@ export default function ReviewPackPage() {
   useEffect(() => {
     fetchPack();
   }, [fetchPack]);
+
+  useEffect(() => {
+    reviewApi.getProactive()
+      .then((data: any) => setProactiveQuestions(data.questions || []))
+      .catch(() => { /* proactive endpoint may not exist yet */ });
+    reviewApi.getCoverage()
+      .then((data: any) => setSubjectCoverage(data || {}))
+      .catch(() => { /* coverage endpoint may not exist yet */ });
+  }, []);
+
+  const handleProactiveAnswer = (questionId: string, correct: boolean) => {
+    // Track answer for future review scheduling
+  };
 
   // Simple markdown renderer
   const renderMarkdown = (md: string) => {
@@ -127,72 +144,98 @@ export default function ReviewPackPage() {
 
       {error && <div className="rounded-lg border border-danger-soft bg-danger-soft p-3 text-sm text-danger">{error}</div>}
 
-      {/* Filters */}
-      <div className="card flex items-center gap-4 flex-wrap">
-        <div className="flex items-center gap-2">
-          <Filter size={14} className="text-muted" />
-          <span className="text-xs text-muted">过滤:</span>
-        </div>
-        <select
-          value={focusTopic}
-          onChange={(e) => { setFocusTopic(e.target.value); fetchPack({ focus_topic: e.target.value }); }}
-          className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
-        >
-          <option value="">所有科目</option>
-          {subjects.map((s) => (
-            <option key={s} value={s}>{s}</option>
-          ))}
-        </select>
-        <select
-          value={daysBack}
-          onChange={(e) => { setDaysBack(Number(e.target.value)); fetchPack({ days_back: e.target.value }); }}
-          className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
-        >
-          <option value={1}>1 天</option>
-          <option value={3}>3 天</option>
-          <option value={7}>7 天</option>
-          <option value={14}>14 天</option>
-          <option value={30}>30 天</option>
-        </select>
-        <select
-          value={depth}
-          onChange={(e) => { setDepth(e.target.value); fetchPack({ knowledge_depth: e.target.value }); }}
-          className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
-        >
-          <option value="standard">标准深度</option>
-          <option value="expanded">扩展深度</option>
-        </select>
-        <div className="flex items-center gap-1 text-xs text-muted">
-          <Calendar size={12} />
-          <span>回顾 {daysBack} 天</span>
-        </div>
-      </div>
+      <div className="grid grid-cols-[1fr_260px] gap-6">
+        {/* Left column: proactive section + review content */}
+        <div className="space-y-6">
+          {/* Proactive review section */}
+          {proactiveQuestions.length > 0 && (
+            <div className="card">
+              <ProactiveReviewSection
+                questions={proactiveQuestions}
+                onAnswer={handleProactiveAnswer}
+              />
+            </div>
+          )}
 
-      {/* Review content */}
-      {loading ? (
-        <div className="card text-center py-12 text-muted animate-pulse">生成复习包中...</div>
-      ) : markdown ? (
-        <div className="space-y-3">
-          <div className="card">
-            <div className="prose prose-invert max-w-none">
-              {renderMarkdown(markdown)}
+          {/* Filters */}
+          <div className="card flex items-center gap-4 flex-wrap">
+            <div className="flex items-center gap-2">
+              <Filter size={14} className="text-muted" />
+              <span className="text-xs text-muted">过滤:</span>
+            </div>
+            <select
+              value={focusTopic}
+              onChange={(e) => { setFocusTopic(e.target.value); fetchPack({ focus_topic: e.target.value }); }}
+              className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
+            >
+              <option value="">所有科目</option>
+              {subjects.map((s) => (
+                <option key={s} value={s}>{s}</option>
+              ))}
+            </select>
+            <select
+              value={daysBack}
+              onChange={(e) => { setDaysBack(Number(e.target.value)); fetchPack({ days_back: e.target.value }); }}
+              className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
+            >
+              <option value={1}>1 天</option>
+              <option value={3}>3 天</option>
+              <option value={7}>7 天</option>
+              <option value={14}>14 天</option>
+              <option value={30}>30 天</option>
+            </select>
+            <select
+              value={depth}
+              onChange={(e) => { setDepth(e.target.value); fetchPack({ knowledge_depth: e.target.value }); }}
+              className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
+            >
+              <option value="standard">标准深度</option>
+              <option value="expanded">扩展深度</option>
+            </select>
+            <div className="flex items-center gap-1 text-xs text-muted">
+              <Calendar size={12} />
+              <span>回顾 {daysBack} 天</span>
             </div>
           </div>
-          <button
-            onClick={() => reviewId && reviewApi.complete(reviewId).then(() => setCompleted(true))}
-            disabled={!reviewId || completed}
-            className="px-4 py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
-          >
-            {completed ? 'Reviewed once' : '完成 Daily Review'}
-          </button>
+
+          {/* Review content */}
+          {loading ? (
+            <div className="card text-center py-12 text-muted animate-pulse">生成复习包中...</div>
+          ) : markdown ? (
+            <div className="space-y-3">
+              <div className="card">
+                <div className="prose prose-invert max-w-none">
+                  {renderMarkdown(markdown)}
+                </div>
+              </div>
+              <button
+                onClick={() => reviewId && reviewApi.complete(reviewId).then(() => setCompleted(true))}
+                disabled={!reviewId || completed}
+                className="px-4 py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
+              >
+                {completed ? 'Reviewed once' : '完成 Daily Review'}
+              </button>
+            </div>
+          ) : (
+            <div className="card text-center py-12 text-muted">
+              <BookOpen size={32} className="mx-auto mb-3 opacity-50" />
+              <p>暂无复习内容</p>
+              <p className="text-xs mt-1">记录错题后，系统会自动生成复习包</p>
+            </div>
+          )}
         </div>
-      ) : (
-        <div className="card text-center py-12 text-muted">
-          <BookOpen size={32} className="mx-auto mb-3 opacity-50" />
-          <p>暂无复习内容</p>
-          <p className="text-xs mt-1">记录错题后，系统会自动生成复习包</p>
+
+        {/* Right column: coverage panel */}
+        <div className="space-y-4">
+          <div className="card p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <Activity size={15} className="text-muted" />
+              <span className="text-xs text-muted font-medium">复习覆盖度</span>
+            </div>
+            <CoverageRadar subjectCoverage={subjectCoverage} />
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -49,6 +49,12 @@ export const reviewApi = {
 
   complete: (reviewId: string) =>
     request(`/api/daily-review/${reviewId}/complete`, { method: 'POST' }),
+
+  getProactive: () =>
+    request<{ questions: any[] }>('/api/daily-review/proactive'),
+
+  getCoverage: () =>
+    request<Record<string, { captured: number; total: number; examWeight: number }>>('/api/daily-review/coverage'),
 };
 
 /** Energy */
