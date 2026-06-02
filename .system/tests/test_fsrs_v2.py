@@ -146,3 +146,38 @@ def test_fsrs6_full_cycle(tmp_path: Path):
 
     reviewed = review_card(lang_repo, gen_cards[0]["card_id"], "good")
     assert reviewed["fsrs_state"]["stability"] > 0
+
+
+from language_science.cards import CardFactory, fuzzy_match
+
+
+def test_fuzzy_match_exact():
+    assert fuzzy_match("hello", "hello") >= 1.0
+
+
+def test_fuzzy_match_typo():
+    score = fuzzy_match("recieve", "receive")
+    assert 0.7 <= score < 1.0
+
+
+def test_fuzzy_match_wrong():
+    score = fuzzy_match("dog", "cat")
+    assert score < 0.5
+
+
+def test_card_factory_recognition():
+    item = {"item_id": "test-1", "canonical_form": "hello", "language": "en", "context_window": ["hello world"], "native_gloss": "你好"}
+    card = CardFactory.create_card(item, "recognition")
+    assert card.card_type == "recognition"
+
+
+def test_card_factory_cloze():
+    item = {"item_id": "test-2", "canonical_form": "hello", "language": "en", "context_window": ["hello world"], "native_gloss": "你好"}
+    card = CardFactory.create_card(item, "cloze")
+    assert "____" in card.cloze_sentence
+
+
+def test_card_factory_production():
+    item = {"item_id": "test-3", "canonical_form": "hello", "language": "en", "context_window": ["hello world"], "native_gloss": "你好"}
+    card = CardFactory.create_card(item, "production")
+    assert card.card_type == "production"

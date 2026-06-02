@@ -131,6 +131,26 @@ async def cards_due(repo=Depends(get_repo)):
     return {"count": len(cards), "cards": cards}
 
 
+@router.post("/cards/production-review")
+async def production_review(payload: dict, repo=Depends(get_repo)):
+    from app.language_workflows import review_card
+    from language_science.cards import fuzzy_match
+    card_id = str(payload.get("card_id", ""))
+    user_input = str(payload.get("user_input", ""))
+    rating = str(payload.get("rating", "good"))
+    language_repo = _repo(repo)
+    card = language_repo.replay()["cards"].get(card_id)
+    if card is None:
+        raise HTTPException(status_code=404, detail="Card not found")
+    expected = card.get("back_payload", {}).get("answer", "")
+    score = fuzzy_match(user_input, expected)
+    try:
+        result = review_card(language_repo, card_id, rating)
+        return {**result, "fuzzy_score": score, "expected": expected, "received": user_input}
+    except Exception as exc:
+        _raise(exc)
+
+
 @router.post("/cards/generate", status_code=status.HTTP_201_CREATED)
 async def cards_generate(payload: dict, repo=Depends(get_repo)):
     from app.language_workflows import generate_cards

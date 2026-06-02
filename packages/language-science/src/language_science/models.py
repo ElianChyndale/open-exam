@@ -1,12 +1,33 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
+from enum import Enum
 from typing import Any
 
 
 class DictModel:
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+
+class CardDimension(str, Enum):
+    RECOGNITION = "recognition"
+    PRODUCTION = "production"
+    CLOZE = "cloze"
+    DICTATION = "dictation"
+    SHADOWING = "shadowing"
+    GRAMMAR_PARSE = "grammar_parse"
+    TRANSLATION_REVERSE = "translation_reverse"
+    FREE_RECALL = "free_recall"
+    CONTEXT = "context"
+
+
+class CfaItemType(str, Enum):
+    FORMULA = "cfa_formula"
+    PROCEDURE = "cfa_procedure"
+    CONCEPT = "cfa_concept"
+    ETHICS = "cfa_ethics_standard"
+    VIGNETTE = "cfa_vignette"
 
 
 @dataclass(slots=True)
@@ -73,7 +94,11 @@ class LanguageCard(DictModel):
     context_window: list[str]
     fsrs_state: dict[str, Any]
     due_at: str
+    card_dimensions: list[str] = field(default_factory=lambda: ["recognition"])
     audio_ref: str = ""
+    cloze_sentence: str = ""
+    cloze_token: str = ""
+    source_excerpt: str = ""
 
 
 @dataclass(slots=True)

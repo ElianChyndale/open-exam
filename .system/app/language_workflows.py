@@ -205,6 +205,30 @@ def generate_cards(repo: LanguageRepository, item_id: str, *, card_types: list[s
     return cards
 
 
+def generate_multidim_cards(
+    repo: LanguageRepository,
+    item_id: str,
+    *,
+    card_dimensions: list[str] | None = None,
+) -> list[dict[str, Any]]:
+    from language_science.cards import CardFactory
+    state = repo.replay()
+    item = state["items"].get(item_id)
+    if item is None:
+        raise KeyError(item_id)
+    selected = card_dimensions or ["recognition", "production", "cloze"]
+    cards = []
+    for ctype in selected:
+        card = CardFactory.create_card(item, ctype)
+        existing = state["cards"].get(card.card_id)
+        if existing:
+            cards.append(existing)
+            continue
+        repo.append("language.card.created", {"card": card.as_dict()}, evidence_refs=item["source_segment_ids"])
+        cards.append(card.as_dict())
+    return cards
+
+
 def due_cards(repo: LanguageRepository) -> list[dict[str, Any]]:
     now = _now()
     return [card for card in repo.replay()["cards"].values() if card["due_at"] <= now]
