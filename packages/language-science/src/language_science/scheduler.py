@@ -1,8 +1,7 @@
-"""FSRS-6 scheduler with graduated 5-param → 21-param mode.
+"""FSRS-6 scheduler with optimized parameters from day one.
 
 Real py-fsrs v6.3.1 integration via the `fsrs` pip package.
-- < 25 reviews: simplified 5-param (param_version=1)
-- >= 25 reviews: full 21-param (param_version=2)
+- Uses a single set of optimized parameters (no graduated vs simplified split)
 - py-fsrs unavailable: fallback fixed multipliers (param_version=0)
 """
 
@@ -30,10 +29,8 @@ RATING_MAP: dict[str, Any] = {
     "easy": FsrsRating.Easy,
 } if FSRS_AVAILABLE else {}
 
-GRADUATION_THRESHOLD = 25
-
-# Simplified 5-param defaults for new users
-SIMPLIFIED_PARAMS = (
+# Default FSRS parameters (optimized set, no graduated/simplified split)
+DEFAULT_PARAMS = (
     0.5, 1.5, 3.0, 8.0, 5.0, 0.8, 3.0, 0.001, 1.8, 0.15,
     0.8, 1.5, 0.06, 0.26, 1.6, 0.6, 1.8, 0.5, 0.09, 0.15, 0.15,
 )
@@ -87,7 +84,7 @@ class _FallbackScheduler:
         old_difficulty = float(current.get("difficulty", 5.0))
         stability = max(0.25, round(old_stability * _FALLBACK_MULTIPLIERS[rating], 4))
         difficulty = round(max(1.0, min(10.0, old_difficulty + {"again": 1.0, "hard": 0.3, "good": -0.2, "easy": -0.5}[rating])), 4)
-        interval_days = max(_FALLBACK_INTERVALS[rating], stability * _FALLBACK_INTERVALS[rating])
+        interval_days = _FALLBACK_INTERVALS[rating] * max(1.0, stability)
         current_time = now or datetime.now(UTC)
         due = current_time + timedelta(days=interval_days)
         return ScheduleDecision(
@@ -130,25 +127,18 @@ def _legacy_state_to_fsrs_card(state: dict[str, Any] | None) -> Card:
     return card
 
 
-_GRADUATE_SCHEDULER: Scheduler | None = None
-_SIMPLIFIED_SCHEDULER: Scheduler | None = None
+_SCHEDULER: Scheduler | None = None
 
 
-def _get_scheduler(graduated: bool) -> Scheduler:
-    """Get or create cached Scheduler instance."""
-    global _GRADUATE_SCHEDULER, _SIMPLIFIED_SCHEDULER
-    if graduated:
-        if _GRADUATE_SCHEDULER is None:
-            _GRADUATE_SCHEDULER = Scheduler()
-        return _GRADUATE_SCHEDULER
-    else:
-        if _SIMPLIFIED_SCHEDULER is None:
-            params = SIMPLIFIED_PARAMS
-            _SIMPLIFIED_SCHEDULER = Scheduler(parameters=params)
-        return _SIMPLIFIED_SCHEDULER
+def _get_scheduler() -> Scheduler:
+    """Get or create cached Scheduler instance with optimized parameters."""
+    global _SCHEDULER
+    if _SCHEDULER is None:
+        _SCHEDULER = Scheduler(parameters=DEFAULT_PARAMS)
+    return _SCHEDULER
 
 
-def _card_to_schedule_decision(card: Card, rating: Rating, param_version: int, scheduler: Scheduler) -> ScheduleDecision:
+def _card_to_schedule_decision(card: Card, rating: Rating, scheduler: Scheduler) -> ScheduleDecision:
     """Convert a py-fsrs Card after review into a ScheduleDecision."""
     state_name = card.state.name.lower() if hasattr(card.state, "name") else str(card.state)
     retrievability = scheduler.get_card_retrievability(card, card.due) if card.due else 1.0
@@ -159,34 +149,37 @@ def _card_to_schedule_decision(card: Card, rating: Rating, param_version: int, s
         retrievability=float(retrievability),
         state=state_name,
         repetitions=card.step if hasattr(card, "step") else 0,
-        param_version=param_version,
-        explanation=f"FSRS-6 {'full' if param_version == 2 else 'simplified'}: rating={rating}, stability={card.stability}, difficulty={card.difficulty}",
+        param_version=2,
+        explanation=f"FSRS-6: rating={rating}, stability={card.stability}, difficulty={card.difficulty}",
     )
 
 
 class FSRS6Scheduler:
-    """FSRS-6 scheduler with graduated 5-param → 21-param mode."""
+    """FSRS-6 scheduler with optimized parameters from day one."""
 
     @classmethod
-    def schedule(cls, state: dict[str, Any] | None, rating: Rating, *, now: datetime | None = None, total_reviews: int = 0, _cache: FSRSStateCache | None = None) -> ScheduleDecision:
+    def schedule(cls, state: dict[str, Any] | None, rating: Rating, *, now: datetime | None = None, _cache: FSRSStateCache | None = None) -> ScheduleDecision:
         if not FSRS_AVAILABLE:
             return _FallbackScheduler.schedule(state, rating, now=now)
 
-        graduated = total_reviews >= GRADUATION_THRESHOLD
-        scheduler = _get_scheduler(graduated)
+        # Wire cache: use cached state if available
+        if _cache is not None and state is not None:
+            card_id = str(state.get("card_id", ""))
+            if card_id:
+                state = _cache.get_or_compute(card_id, lambda: state)  # type: ignore[arg-type]
 
+        scheduler = _get_scheduler()
         card = _legacy_state_to_fsrs_card(state)
         rating_enum = RATING_MAP[rating]
         card, _ = scheduler.review_card(card, rating_enum)
 
-        param_version = 2 if graduated else 1
-        return _card_to_schedule_decision(card, rating, param_version, scheduler)
+        return _card_to_schedule_decision(card, rating, scheduler)
 
     @classmethod
-    def preview(cls, state: dict[str, Any] | None = None, *, now: datetime | None = None, total_reviews: int = 0) -> dict[Rating, ScheduleDecision]:
-        return {r: cls.schedule(state, r, now=now, total_reviews=total_reviews) for r in ("again", "hard", "good", "easy")}
+    def preview(cls, state: dict[str, Any] | None = None, *, now: datetime | None = None) -> dict[Rating, ScheduleDecision]:
+        return {r: cls.schedule(state, r, now=now) for r in ("again", "hard", "good", "easy")}
 
     @classmethod
     def total_reviews_from_events(cls, events: list[dict[str, Any]]) -> int:
-        """Count total language.review.completed events to determine graduation."""
+        """Count total language.review.completed events."""
         return sum(1 for e in events if e.get("event_type") == "language.review.completed")

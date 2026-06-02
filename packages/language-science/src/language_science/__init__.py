@@ -12,7 +12,7 @@ from .models import (
     LanguageSession,
 )
 from .fsrs_cache import FSRSStateCache
-from .scheduler import FSRS6Scheduler, MemorySchedulerProtocol, ScheduleDecision, GRADUATION_THRESHOLD
+from .scheduler import FSRS6Scheduler, MemorySchedulerProtocol, ScheduleDecision
 from .confusion_map import build_confusion_map, lookup_confusions, CONFUSION_MAP, EXPLICIT_CFA_CONFUSIONS, LANGUAGE_CONFUSIONS
 from .confusion import detect_term_confusion
 from .difficulty import AdaptiveDifficultyEstimator, DOMAIN_WEIGHTS, _count_syllables, _estimate_frequency, _estimate_cefr
@@ -26,7 +26,6 @@ __all__ = [
     "EXPLICIT_CFA_CONFUSIONS",
     "FSRS6Scheduler",
     "FSRSStateCache",
-    "GRADUATION_THRESHOLD",
     "GrammarAnalysis",
     "IntuitionEdge",
     "LANGUAGE_CONFUSIONS",

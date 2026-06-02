@@ -27,6 +27,7 @@ async def diagnose_error(req: DiagnosisRequest, repo=Depends(get_repo)):
         default_fix_rule,
         mine_patterns,
         next_drill_for,
+        update_knowledge_from_diagnosis,
     )
     from study_science.spacing import SpacingInput, SpacingScheduler
     from study_science.calibration import ConfidenceCalibration
@@ -111,6 +112,18 @@ async def diagnose_error(req: DiagnosisRequest, repo=Depends(get_repo)):
     # If calibration danger, prepend warning to fix rule
     if is_calibration_danger:
         fix_rule = f"⚠️ 高信心错误（校准失败）—— {fix_rule}"
+
+    # ── Feed diagnosis into KnowledgeMemoryEngine ──────────────────────────────
+    # This creates/updates a knowledge point so the next Daily Review pack
+    # will include a review item for this (topic, LOS, error_type).
+    update_knowledge_from_diagnosis(
+        repo,
+        error_type=event.error_type,
+        topic=event.topic,
+        los=event.los,
+        confidence=event.confidence,
+        attempt_id=req.attempt_id,
+    )
 
     return DiagnosisResponse(
         diagnosis_id=f"dx-{event.event_id or req.attempt_id}",

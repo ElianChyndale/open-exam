@@ -1449,6 +1449,68 @@ def _feed_card_outcome_to_knowledge(
         overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def update_knowledge_from_diagnosis(
+    repo: Repository,
+    error_type: str,
+    topic: str,
+    los: str = "",
+    confidence: int = 0,
+    attempt_id: str = "",
+) -> None:
+    """Feed a diagnosis result into the KnowledgeMemoryEngine.
+
+    After diagnosing an error type (concept_confusion, formula_misuse, etc.),
+    this function creates or updates a knowledge point in the knowledge-status
+    overlay so the KnowledgeMemoryEngine schedules it for review in the next
+    Daily Review pack.
+
+    The outcome is set to ``"struggled"`` because the diagnosis identified
+    a real problem with this (topic, LOS, error_type) combination.
+    """
+    from study_science.knowledge_memory import KnowledgeMemoryEngine, KnowledgeFeedbackInput
+    from app.models import stable_id as sid
+
+    if not topic or not error_type:
+        return
+
+    overlay_path = repo.memory_root / "review" / "knowledge-status.json"
+    if overlay_path.exists():
+        try:
+            overlay = json.loads(overlay_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            overlay = {"schema_version": 1, "knowledge_points": {}}
+    else:
+        overlay = {"schema_version": 1, "knowledge_points": {}}
+
+    kp_map = overlay.setdefault("knowledge_points", {})
+
+    knowledge_id = sid("knowledge", topic, los or error_type, error_type)
+
+    engine = KnowledgeMemoryEngine()
+    current = kp_map.get(knowledge_id)
+
+    feedback = KnowledgeFeedbackInput(
+        knowledge_id=knowledge_id,
+        subject=topic,
+        heading=los or error_type,
+        trigger=error_type,
+        source_refs=[f"diagnosis:{error_type}"] + ([attempt_id] if attempt_id else []),
+        outcome="struggled",
+        confidence_after=confidence,
+    )
+
+    entry, _decision = engine.update_knowledge_point(current, feedback)
+
+    # Force immediate review so it appears in the next Daily Review pack
+    from datetime import date as _dt
+    entry["next_review_at"] = _dt.today().isoformat()
+    entry["decay_risk"] = "high"
+
+    kp_map[knowledge_id] = entry
+    overlay_path.parent.mkdir(parents=True, exist_ok=True)
+    overlay_path.write_text(json.dumps(overlay, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def record_fix_rule_feedback(repo: Repository, card_id: str, helpful: bool, note: str = "") -> dict:
     """Append learner feedback for a card's correction rule."""
     domain = _card_domain_for(repo, card_id)
@@ -2379,12 +2441,23 @@ def _feed_mock_to_spacing(repo: Repository, incorrect_events: list[MistakeEvent]
 
     For each incorrect mock event, find the corresponding card and compress
     its spacing interval (force review soon) and boost priority.
+
+    Exam-weight boosting: subjects with higher CFA exam weight get an
+    additional priority boost so they surface before lower-weight subjects.
     """
     from datetime import date as date_type
     from app.models import stable_id as sid
+    from app.cfa_workflows import EXAM_WEIGHTS
 
     tomorrow = (date_type.today() + timedelta(days=1)).isoformat()
     for event in incorrect_events:
+        # Compute exam-weight-based priority boost
+        normalized_topic = event.topic.replace(" ", "_")
+        exam_weight = EXAM_WEIGHTS.get(normalized_topic, 0.08)
+        # Boost priority proportional to exam weight (0.18 → +18, 0.07 → +7)
+        weight_boost = int(exam_weight * 100)
+        priority = min(100, 95 + weight_boost)
+
         card_id = sid("card", event.event_id or "", event.topic, event.los)
         # Try both question-errors and cognitive-bias domains
         for domain in ("question-errors", "cognitive-bias"):
@@ -2398,9 +2471,12 @@ def _feed_mock_to_spacing(repo: Repository, incorrect_events: list[MistakeEvent]
                     previous_reviews=0,  # don't increment — this is a reset
                     review_due_at=tomorrow,
                     spacing_interval_days=1,
-                    spacing_priority=95,  # mock error = highest priority
+                    spacing_priority=priority,
                     last_reviewed_at=datetime.now(timezone.utc).isoformat(),
-                    spacing_reasoning="Mock feedback: incorrect → forced review tomorrow",
+                    spacing_reasoning=(
+                        f"Mock feedback: incorrect (weight={exam_weight:.0%}) "
+                        f"→ forced review tomorrow (priority={priority})"
+                    ),
                 )
             except (FileNotFoundError, OSError):
                 continue
