@@ -1,6 +1,7 @@
 """Automatic vocabulary extraction from resource documents."""
 from __future__ import annotations
 
+import math
 import re
 from typing import Any
 
@@ -24,9 +25,18 @@ CFA_DOMAIN_MARKERS = {"cfa", "finance", "invest", "bond", "equity", "asset", "po
                        "leverage", "liquidity", "volatility", "amortize", "depreciate"}
 
 
+def compute_confidence(term_freq: int, doc_length: int, total_docs: int = 100, doc_freq: int = 1) -> float:
+    """TF-IDF-like confidence: higher for terms that are frequent in doc, rare in general."""
+    tf = term_freq / max(doc_length, 1)
+    idf = math.log((total_docs + 1) / (doc_freq + 1)) + 1
+    tfidf = tf * idf
+    return min(0.95, tfidf * 0.5)
+
+
 def extract_candidate_terms(text: str, min_length: int = 3, max_terms: int = 20) -> list[dict[str, Any]]:
     """Extract candidate vocabulary terms from document text."""
     words = re.findall(r"[A-Za-z][A-Za-z\-']{2,}", text.lower())
+    doc_length = len(words)
     word_freq: dict[str, int] = {}
     for word in words:
         if word in COMMON_WORDS:
@@ -38,12 +48,13 @@ def extract_candidate_terms(text: str, min_length: int = 3, max_terms: int = 20)
     candidates = []
     for word, freq in scored[:max_terms]:
         is_cfa = any(marker in word for marker in CFA_DOMAIN_MARKERS)
+        confidence = compute_confidence(freq, doc_length)
         candidates.append({
             "canonical_form": word,
             "frequency": freq,
             "item_type": "term",
             "domain": "cfa" if is_cfa else "general",
-            "confidence": min(0.9, 0.3 + freq * 0.02),
+            "confidence": confidence,
         })
     return candidates
 

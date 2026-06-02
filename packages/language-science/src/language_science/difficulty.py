@@ -123,7 +123,8 @@ class AdaptiveDifficultyEstimator:
         alpha = self._alphas.get(word.lower(), 5)
         beta = self._betas.get(word.lower(), 5)
         posterior_mean = alpha / (alpha + beta)
-        corrected = difficulty * (1.0 - posterior_mean * 0.3)
+        # Proper Beta-Bernoulli posterior: use posterior mean scaled by effective sample size
+        corrected = difficulty * (1.0 - alpha / (alpha + beta + 1))
 
         return {
             "canonical_form": word,
