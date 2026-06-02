@@ -39,16 +39,25 @@ Ebbinghaus graduated knowledge memory model.
 .\start-examos.ps1
 ```
 
-Starts the API (port 8000) and web app (port 3000), opens
-`http://localhost:3000`, and stops both on `Ctrl+C`.
+Starts the API (port 8000), web app (port 3000), imports the 613 CFA mock
+question bank, checks all dependencies, and opens `http://localhost:3000`.
+Press `Ctrl+C` in the terminal to stop all services.
+
+### What's included
+
+| Service | URL | Description |
+|---------|-----|-------------|
+| **Web Cockpit** | `http://localhost:3000` | Today, review, mock, LanguageOS |
+| **API** | `http://localhost:8000` | FastAPI with 47+ endpoints |
+| **Mock Bank** | auto-imported | 613 CFA L1 questions across 10 subjects |
+| **Logs** | `.system/logs/` | stdout/stderr for both processes |
 
 ### Manual start
 
 **API:**
 
 ```powershell
-$env:PYTHONPATH = ".system;apps\api;packages\study-science\src;packages\agent-runtime\src;packages\resource-ingestion\src"
-python -m uvicorn main:app --app-dir apps\api --host 0.0.0.0 --port 8000
+.\start-api.ps1
 ```
 
 **Frontend:**
