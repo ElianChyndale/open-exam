@@ -15,7 +15,7 @@ last_reviewed_at: 2026-06-01
 exam_date: 2026-11-15
 spacing_reasoning: Base=14d, expansion=2.0x, urgency=1.0, priority=40
 confidence_before: 3
-linked_patterns: 
+linked_patterns: null
 correct_resolution: Test answer
 ---
 
@@ -28,3 +28,4 @@ Test question
 ## Choices
 
 ## Evidence
+

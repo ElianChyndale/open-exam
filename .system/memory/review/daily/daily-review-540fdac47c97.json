@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "review_id": "daily-review-5c48c22eaf0b",
+  "review_id": "daily-review-540fdac47c97",
   "generated_for": "2026-06-02",
-  "generated_at": "2026-06-02T13:56:30.583638+00:00",
+  "generated_at": "2026-06-02T15:19:00.171332+00:00",
   "source_event_count": 53,
   "generation": {
     "days_back": 7,
@@ -21,37 +21,10 @@
       ]
     },
     {
-      "knowledge_id": "knowledge-fb41a6884e80",
-      "subject": "Corporate Issuers",
-      "heading": "C. Governance Mechanisms",
-      "trigger": "Manager-shareholder agency examples",
-      "source_refs": [
-        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
-      ]
-    },
-    {
       "knowledge_id": "knowledge-033d03a0d683",
       "subject": "Economics",
       "heading": "M02 Business Cycles and Indicators",
       "trigger": "Cycle phases",
-      "source_refs": [
-        "CFA_tier1/Economics/00-Economics-MOC.md"
-      ]
-    },
-    {
-      "knowledge_id": "knowledge-4772ea88bf07",
-      "subject": "Corporate Issuers",
-      "heading": "A. Organizational Forms / Ownership",
-      "trigger": "Organizational form",
-      "source_refs": [
-        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
-      ]
-    },
-    {
-      "knowledge_id": "knowledge-9709e5245520",
-      "subject": "Economics",
-      "heading": "M02 Business Cycles and Indicators",
-      "trigger": "Business behavior",
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ]
@@ -66,30 +39,30 @@
       ]
     },
     {
+      "knowledge_id": "knowledge-9709e5245520",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4772ea88bf07",
+      "subject": "Corporate Issuers",
+      "heading": "A. Organizational Forms / Ownership",
+      "trigger": "Organizational form",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
       "knowledge_id": "knowledge-077d22a9b5dd",
       "subject": "Economics",
       "heading": "M04 Monetary Policy",
       "trigger": "Transmission",
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
-      ]
-    },
-    {
-      "knowledge_id": "knowledge-f9e5619fc18b",
-      "subject": "Quantitative Methods",
-      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
-      "trigger": "Standard error",
-      "source_refs": [
-        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
-      ]
-    },
-    {
-      "knowledge_id": "knowledge-17e153e23d11",
-      "subject": "Quantitative Methods",
-      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
-      "trigger": "t confidence interval",
-      "source_refs": [
-        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ]
     },
     {
@@ -111,30 +84,21 @@
       ]
     },
     {
-      "knowledge_id": "knowledge-46165028a7ec",
-      "subject": "Corporate Issuers",
-      "heading": "D. Working Capital / Liquidity",
-      "trigger": "Liquidity sources",
+      "knowledge_id": "knowledge-f9e5619fc18b",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error",
       "source_refs": [
-        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ]
     },
     {
-      "knowledge_id": "knowledge-6b46b38659d7",
-      "subject": "Economics",
-      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
-      "trigger": "Market structures",
+      "knowledge_id": "knowledge-4cba52ffa353",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Expected value",
       "source_refs": [
-        "CFA_tier1/Economics/00-Economics-MOC.md"
-      ]
-    },
-    {
-      "knowledge_id": "knowledge-30e99a02e37a",
-      "subject": "Corporate Issuers",
-      "heading": "B. Debt vs Equity Claims / Stakeholders",
-      "trigger": "Conflict map",
-      "source_refs": [
-        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ]
     },
     {
@@ -174,6 +138,15 @@
       ]
     },
     {
+      "knowledge_id": "knowledge-6b46b38659d7",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
       "knowledge_id": "knowledge-d94dba7281d3",
       "subject": "Quantitative Methods",
       "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
@@ -183,19 +156,10 @@
       ]
     },
     {
-      "knowledge_id": "knowledge-ff8219508f67",
-      "subject": "Quantitative Methods",
-      "heading": "Independence, regression, and ML-risk spine",
-      "trigger": "Spearman rank correlation",
-      "source_refs": [
-        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
-      ]
-    },
-    {
-      "knowledge_id": "knowledge-c0dbf5efbc7e",
+      "knowledge_id": "knowledge-30e99a02e37a",
       "subject": "Corporate Issuers",
-      "heading": "D. Working Capital / Liquidity",
-      "trigger": "Quick ratio",
+      "heading": "B. Debt vs Equity Claims / Stakeholders",
+      "trigger": "Conflict map",
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ]
@@ -207,6 +171,15 @@
       "trigger": "Covered interest parity",
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a79fd65818c0",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Chi-square variance test",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ]
     },
     {
@@ -293,14 +266,6 @@
   ],
   "mistake_cards": [
     {
-      "card_id": "card-f340d2f7b1ef",
-      "topic": "Economics",
-      "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
-      "source_refs": [
-        "chat-screenshot-2026-05-27-productivity-business-cycle"
-      ]
-    },
-    {
       "card_id": "card-2e6ba8afb984",
       "topic": "Quantitative Methods",
       "los": "QM.Rates and Returns",
@@ -341,17 +306,67 @@
       ]
     },
     {
-      "card_id": "card-fce995b98934",
+      "card_id": "card-f862a042978b",
       "topic": "Economics",
-      "los": "M07: Capital Flows and the FX Market �� capital restrictions purpose",
-      "source_refs": []
+      "los": "M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped)",
+      "source_refs": [
+        "screenshot-2026-05-26-arc-bat-collusive-agreement"
+      ]
     },
     {
-      "card_id": "card-09f0f3116e16",
+      "card_id": "card-f7ea9a7f28c9",
       "topic": "Economics",
-      "los": "M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS)",
+      "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
       "source_refs": [
-        "screenshot-2026-05-26-q26-oligopoly-demand-curve-collusion"
+        "chat-screenshot-2026-05-27-econ-indicators-upturn"
+      ]
+    },
+    {
+      "card_id": "card-4a6193fc95f8",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-900d267beb41",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-90467864957e",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-6b3213b48d06",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS)",
+      "source_refs": [
+        "screenshot-2026-05-26-q12-aquarius-price-leader"
+      ]
+    },
+    {
+      "card_id": "card-f62f1f977e7a",
+      "topic": "Economics",
+      "los": "M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-fiscal-vs-monetary-scope"
+      ]
+    },
+    {
+      "card_id": "card-390367d43a5e",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - nonparametric tests (exact LOS not shown)",
+      "source_refs": [
+        "chat-2026-05-26-q18-nonparametric-test-screenshot"
       ]
     },
     {
@@ -379,73 +394,27 @@
       ]
     },
     {
-      "card_id": "card-d16c25bd38cf",
-      "topic": "Economics",
-      "los": "M08: Exchange Rate Calculations �� depreciation/appreciation asymmetry",
-      "source_refs": []
-    },
-    {
-      "card_id": "card-4a6193fc95f8",
+      "card_id": "card-13c67d46986d",
       "topic": "Quantitative Methods",
-      "los": "QM.Rates",
+      "los": "M08 Hypothesis Testing - paired comparisons test (exact LOS not shown)",
       "source_refs": [
-        "quick-capture-2026-05-31T23:31:41.995992"
+        "chat-2026-05-26-q22-paired-comparisons-screenshot"
       ]
     },
     {
-      "card_id": "card-900d267beb41",
-      "topic": "Quantitative Methods",
-      "los": "QM.Rates",
-      "source_refs": [
-        "quick-capture-2026-05-31T23:31:41.995992"
-      ]
-    },
-    {
-      "card_id": "card-90467864957e",
-      "topic": "Quantitative Methods",
-      "los": "QM.Rates",
-      "source_refs": [
-        "quick-capture-2026-05-31T23:31:41.995992"
-      ]
-    },
-    {
-      "card_id": "card-28a38faad030",
+      "card_id": "card-09f0f3116e16",
       "topic": "Economics",
-      "los": "M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot)",
+      "los": "M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS)",
       "source_refs": [
-        "chat-screenshot-2026-05-27-qe-environment-bank-reserves-vs-liquidity-trap"
+        "screenshot-2026-05-26-q26-oligopoly-demand-curve-collusion"
       ]
     },
     {
-      "card_id": "card-6b3213b48d06",
+      "card_id": "card-f340d2f7b1ef",
       "topic": "Economics",
-      "los": "M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS)",
+      "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
       "source_refs": [
-        "screenshot-2026-05-26-q12-aquarius-price-leader"
-      ]
-    },
-    {
-      "card_id": "card-f862a042978b",
-      "topic": "Economics",
-      "los": "M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped)",
-      "source_refs": [
-        "screenshot-2026-05-26-arc-bat-collusive-agreement"
-      ]
-    },
-    {
-      "card_id": "card-f7ea9a7f28c9",
-      "topic": "Economics",
-      "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
-      "source_refs": [
-        "chat-screenshot-2026-05-27-econ-indicators-upturn"
-      ]
-    },
-    {
-      "card_id": "card-f62f1f977e7a",
-      "topic": "Economics",
-      "los": "M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot)",
-      "source_refs": [
-        "chat-screenshot-2026-05-27-fiscal-vs-monetary-scope"
+        "chat-screenshot-2026-05-27-productivity-business-cycle"
       ]
     },
     {
@@ -457,26 +426,30 @@
       ]
     },
     {
+      "card_id": "card-28a38faad030",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-qe-environment-bank-reserves-vs-liquidity-trap"
+      ]
+    },
+    {
+      "card_id": "card-fce995b98934",
+      "topic": "Economics",
+      "los": "M07: Capital Flows and the FX Market �� capital restrictions purpose",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-d16c25bd38cf",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations �� depreciation/appreciation asymmetry",
+      "source_refs": []
+    },
+    {
       "card_id": "card-852f9da34d61",
       "topic": "Economics",
       "los": "M08: Exchange Rate Calculations �� initial rate from appreciation percentage",
       "source_refs": []
-    },
-    {
-      "card_id": "card-390367d43a5e",
-      "topic": "Quantitative Methods",
-      "los": "M08 Hypothesis Testing - nonparametric tests (exact LOS not shown)",
-      "source_refs": [
-        "chat-2026-05-26-q18-nonparametric-test-screenshot"
-      ]
-    },
-    {
-      "card_id": "card-13c67d46986d",
-      "topic": "Quantitative Methods",
-      "los": "M08 Hypothesis Testing - paired comparisons test (exact LOS not shown)",
-      "source_refs": [
-        "chat-2026-05-26-q22-paired-comparisons-screenshot"
-      ]
     },
     {
       "card_id": "card-809ce81c44f7",
@@ -492,22 +465,6 @@
       "los": "M02 Investors and Other Stakeholders - supplier relationship and leverage risk",
       "source_refs": [
         "chat-screenshot-2026-05-28-supplier-stakeholder-leverage-risk"
-      ]
-    },
-    {
-      "card_id": "card-0bcffee908ab",
-      "topic": "Corporate Issuers",
-      "los": "M03 Corporate Governance - principal-agent manager-shareholder conflict",
-      "source_refs": [
-        "chat-screenshot-2026-05-28-manager-shareholder-agent-conflict"
-      ]
-    },
-    {
-      "card_id": "card-02333fcf15a1",
-      "topic": "Corporate Issuers",
-      "los": "M04 Working Capital and Liquidity - liquidity drags and pulls",
-      "source_refs": [
-        "chat-screenshot-2026-05-29-liquidity-drag-vs-pull"
       ]
     }
   ],

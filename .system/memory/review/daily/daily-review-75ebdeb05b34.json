@@ -1,0 +1,1178 @@
+{
+  "schema_version": 1,
+  "review_id": "daily-review-75ebdeb05b34",
+  "generated_for": "2026-06-02",
+  "generated_at": "2026-06-02T06:31:07.035109+00:00",
+  "source_event_count": 49,
+  "generation": {
+    "days_back": 7,
+    "max_items": 20,
+    "focus_topic": "Quantitative Methods",
+    "knowledge_depth": "expanded"
+  },
+  "knowledge_points": [
+    {
+      "knowledge_id": "knowledge-396444dc185f",
+      "subject": "Corporate Issuers",
+      "heading": "B. Debt vs Equity Claims / Stakeholders",
+      "trigger": "Supplier relationship",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-00be8f47e098",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Bootstrap flow",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-893c43f81a2e",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-44a0a1bf77e8",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`SE=s/sqrt(n)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-422c2f16e4fd",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`Arithmetic mean=sum(R_i)/n`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-d0633337ce85",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`mu=sum(x_i)/N`; `xbar=sum(x_i)/n`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures-of-Asset-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-205655670ddd",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Bootstrap",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-1cee77ae79e1",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`HPR=(P1-P0+D1)/P0`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ee2e530f9ddc",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`r_cc=ln(1+HPR)`; `HPR=e^(r_cc)-1`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-cb309dbc7ea7",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`r=D1/P0+g`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-20f28ec1e204",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`sigma=sqrt(Var)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M04-Probability-Trees-and-Conditional-Expectations.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a3914e34d707",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`n=(z sigma/E)^2`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-36f06e478063",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`t=(xbar1-xbar2-d0)/(s_p sqrt(1/n1+1/n2))`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9f21cd218762",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Cross-validation / out-of-sample testing",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M11-Introduction-to-Big-Data-Techniques.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-e78ea290748d",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`Gross return=(P1+D1)/P0=1+HPR`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4ba16a71832c",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`Geometric mean=[prod(1+R_i)]^(1/n)-1`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2c2da333936e",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`FV=PV e^(rt)`; `PV=FV e^(-rt)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6473591c31a4",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Simulation output",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b39b9a97dd77",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`SE=sigma/sqrt(n)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-72e1c84f0e60",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`z=(xbar-mu0)/(sigma/sqrt(n))`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-82e499d5701b",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`t=(xbar-mu0)/(s/sqrt(n))`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9a01d6e20938",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`SEE=sqrt[SSE/(n-2)]`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M10-Simple-Linear-Regression.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-787657594469",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Four Vs: volume, velocity, variety, veracity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M11-Introduction-to-Big-Data-Techniques.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-e790a72655c1",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`Harmonic mean=n/sum(1/x_i)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M01-Rates-and-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-e5bb8f5da88c",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`PV=FV/(1+r)^n`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M02-Time-Value-of-Money-in-Finance.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-555919dcd2ea",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`GM=[prod(1+R_i)]^(1/n)-1`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures-of-Asset-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c8e975c2dc8f",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`HM=n/sum(1/x_i)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures-of-Asset-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-499bb4e306f1",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`s^2=sum(x_i-xbar)^2/(n-1)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures-of-Asset-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-0bed1e07127b",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`Excess kurtosis=kurtosis-3`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M03-Statistical-Measures-of-Asset-Returns.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c8b9f6983cb5",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`E(X)=sum p_i x_i`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M04-Probability-Trees-and-Conditional-Expectations.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b6d9d2dabdb6",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`E(Rp)=sum w_iE(R_i)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a6909f151af3",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`sigma_p^2=w1^2sigma1^2+w2^2sigma2^2+2w1w2Cov12`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-723ce0bd9dd9",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`Cov12=sum p_i[R1_i-E(R1)][R2_i-E(R2)]`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M05-Portfolio-Mathematics.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-36e013be2938",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`r_cc=ln(P_t/P_0)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-f3081c26109b",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Monte Carlo flow",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c3ff6738ec93",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Jackknife",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b4ac46e07019",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`t=[(xbar1-xbar2)-d0]/sqrt(s1^2/n1+s2^2/n2)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9c09d2211335",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`z=(p1hat-p2hat)/sqrt[phat(1-phat)(1/n1+1/n2)]`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M08-Hypothesis-Testing.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-e747ea3d6662",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`t = r sqrt[(n-2)/(1-r^2)]`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M09-Parametric-and-Non-Parametric-Tests-of-Independence.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-dc1253062578",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M09-Parametric-and-Non-Parametric-Tests-of-Independence.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-79f1d833af55",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`E=(row total x column total)/n`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M09-Parametric-and-Non-Parametric-Tests-of-Independence.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-fb41a6884e80",
+      "subject": "Corporate Issuers",
+      "heading": "C. Governance Mechanisms",
+      "trigger": "Manager-shareholder agency examples",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-033d03a0d683",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4772ea88bf07",
+      "subject": "Corporate Issuers",
+      "heading": "A. Organizational Forms / Ownership",
+      "trigger": "Organizational form",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9709e5245520",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2798e5b9a4ad",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Indicators",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-f9e5619fc18b",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-17e153e23d11",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "t confidence interval",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-077d22a9b5dd",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-637a91f74954",
+      "subject": "Economics",
+      "heading": "M03 Fiscal Policy",
+      "trigger": "Policy actor",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-913e964c7854",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Tools",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-d94dba7281d3",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ddaa76b0434a",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "z confidence interval",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-422a1610072c",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Required sample size",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-f33c03982228",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Hypothesis-test flow",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-75d275a183b9",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Type I / Type II / power",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-3c34989db7a0",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Pooled two-sample t",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9d1373fe84ec",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Unequal-variance t",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2336a0e6cc80",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Paired t",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6ec9ea136796",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "F-test for variances",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a79fd65818c0",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Chi-square variance test",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-da1f69e39bd7",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Correlation test",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ff8219508f67",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-28906a2b5a35",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Chi-square independence",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2505abe970e1",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Simple regression equation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-30eda9eebd5e",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "OLS coefficients",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-3d6336ca9e09",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "ANOVA and fit",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ac9bf57a5781",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Regression tests",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-1e4bf94d274b",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Prediction",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a14b811fd7df",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Functional forms",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-689b6db1a66f",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "ML model risk",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4cba52ffa353",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Expected value",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-855baccb8d37",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Variance from probabilities",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4b12dc5abf94",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Conditional probability",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-49a8cd16cb1a",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Total probability",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-bc3e701026f3",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Bayes formula",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-1ec74f1e6350",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Portfolio expected return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b3e724a318ab",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Covariance",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a7a5ff799318",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-f4cf100d7570",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Two-asset portfolio variance",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-46851d29d69f",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Roy safety-first",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6fccbf63ff62",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Holding-period total return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-bcf0e7bd9cb5",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-daa283b50151",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Geometric mean",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2c3daec465e2",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Harmonic mean",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-fae33ce64f70",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "MWRR",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6b356091cf0b",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "TWRR",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-aab59d40e47a",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Annualized return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-fc6d00871082",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Continuously compounded return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-28b8ba617085",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Gross/net/tax/leverage",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4ea603c638d7",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Lognormal price",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-41e39f202c1e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Monte Carlo",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-cf194fab952e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-cf2b8f8be9cf",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Jackknife",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-099946217bda",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Single cash flow",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-1fdbb317ad8c",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Continuous compounding / discounting",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-d97d06314487",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Ordinary annuity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-08cc22e04d1d",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Annuity due",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c3a47d7a22dc",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Perpetuity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-26e216a5ce19",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Growing perpetuity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b5ae335e63cd",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Growing annuity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-926ea45d2dc5",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Implied return / growth",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-300fadd708c0",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Cash-flow additivity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-46165028a7ec",
+      "subject": "Corporate Issuers",
+      "heading": "D. Working Capital / Liquidity",
+      "trigger": "Liquidity sources",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    }
+  ],
+  "mistake_cards": [
+    {
+      "card_id": "card-f340d2f7b1ef",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-productivity-business-cycle"
+      ]
+    },
+    {
+      "card_id": "card-fce995b98934",
+      "topic": "Economics",
+      "los": "M07: Capital Flows and the FX Market �� capital restrictions purpose",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-2e6ba8afb984",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-3ffdb0d46d7b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-bae4b0369be7",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-faa48e1ec793",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-a39ddef9c96b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-074b63e3a56a",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-0ed22809af71",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-43808428ecd1",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-f862a042978b",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped)",
+      "source_refs": [
+        "screenshot-2026-05-26-arc-bat-collusive-agreement"
+      ]
+    },
+    {
+      "card_id": "card-d16c25bd38cf",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations �� depreciation/appreciation asymmetry",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f62f1f977e7a",
+      "topic": "Economics",
+      "los": "M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-fiscal-vs-monetary-scope"
+      ]
+    },
+    {
+      "card_id": "card-4a6193fc95f8",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-900d267beb41",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-90467864957e",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-13c67d46986d",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - paired comparisons test (exact LOS not shown)",
+      "source_refs": [
+        "chat-2026-05-26-q22-paired-comparisons-screenshot"
+      ]
+    },
+    {
+      "card_id": "card-09f0f3116e16",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS)",
+      "source_refs": [
+        "screenshot-2026-05-26-q26-oligopoly-demand-curve-collusion"
+      ]
+    },
+    {
+      "card_id": "card-6b3213b48d06",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS)",
+      "source_refs": [
+        "screenshot-2026-05-26-q12-aquarius-price-leader"
+      ]
+    },
+    {
+      "card_id": "card-f7ea9a7f28c9",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-econ-indicators-upturn"
+      ]
+    },
+    {
+      "card_id": "card-bdbe2fbb2c93",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-monetary-policy-least-likely-limitation"
+      ]
+    },
+    {
+      "card_id": "card-28a38faad030",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-qe-environment-bank-reserves-vs-liquidity-trap"
+      ]
+    },
+    {
+      "card_id": "card-852f9da34d61",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations �� initial rate from appreciation percentage",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-390367d43a5e",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - nonparametric tests (exact LOS not shown)",
+      "source_refs": [
+        "chat-2026-05-26-q18-nonparametric-test-screenshot"
+      ]
+    },
+    {
+      "card_id": "card-809ce81c44f7",
+      "topic": "Corporate Issuers",
+      "los": "M01 Organizational Forms - owner liability comparison",
+      "source_refs": [
+        "chat-screenshot-2026-05-28-corporate-issuer-liability"
+      ]
+    },
+    {
+      "card_id": "card-51e8e3fe867c",
+      "topic": "Corporate Issuers",
+      "los": "M02 Investors and Other Stakeholders - supplier relationship and leverage risk",
+      "source_refs": [
+        "chat-screenshot-2026-05-28-supplier-stakeholder-leverage-risk"
+      ]
+    },
+    {
+      "card_id": "card-0bcffee908ab",
+      "topic": "Corporate Issuers",
+      "los": "M03 Corporate Governance - principal-agent manager-shareholder conflict",
+      "source_refs": [
+        "chat-screenshot-2026-05-28-manager-shareholder-agent-conflict"
+      ]
+    },
+    {
+      "card_id": "card-02333fcf15a1",
+      "topic": "Corporate Issuers",
+      "los": "M04 Working Capital and Liquidity - liquidity drags and pulls",
+      "source_refs": [
+        "chat-screenshot-2026-05-29-liquidity-drag-vs-pull"
+      ]
+    }
+  ],
+  "knowledge_card_map": {},
+  "interleaving_composition": {
+    "weak": 3,
+    "old_mistakes": 4,
+    "adjacent": 0,
+    "maintenance": 2
+  }
+}

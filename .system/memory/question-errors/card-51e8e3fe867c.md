@@ -9,10 +9,16 @@ source_type: screenshot
 evidence_assets: conversation-image-2026-05-28-corp-essay-q8-supplier-leverage
 moc_target: CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md
 fix_rule: 把错误转成一句可重复执行的纠偏规则。
-next_drill: 24 小时内重做 2 道 Corporate Issuers / M02 Investors and Other Stakeholders - supplier relationship and leverage risk 同类题。
+next_drill: 24 小时内重做 2 道 Corporate Issuers / M02 Investors and Other Stakeholders
+  - supplier relationship and leverage risk 同类题。
 review_due_at: 2026-05-31
-linked_patterns: 
-correct_resolution: The supplier is a stakeholder because it has a vested interest in the company survival and success. It extends short-term credit through 30-day payment terms and has a long-term interest because it invested in integrated systems. High financial leverage is inconsistent with supplier interests because it raises short-term payment/default risk and longer-term risk to the value of the supplier relationship-specific investment.
+linked_patterns: null
+correct_resolution: The supplier is a stakeholder because it has a vested interest
+  in the company survival and success. It extends short-term credit through 30-day
+  payment terms and has a long-term interest because it invested in integrated systems.
+  High financial leverage is inconsistent with supplier interests because it raises
+  short-term payment/default risk and longer-term risk to the value of the supplier
+  relationship-specific investment.
 review_status: Reviewed once
 ---
 

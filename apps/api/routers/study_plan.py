@@ -39,9 +39,13 @@ def get_today_study_plan(
         mine_patterns,
     )
     target_date = date.fromisoformat(date_str) if date_str else date.today()
+    saved_energy = repo.load_energy_events()
+    latest_energy = saved_energy[-1] if saved_energy else None
     if energy_level is None:
-        saved_energy = repo.load_energy_events()
-        energy_level = int(saved_energy[-1].get("energy_level", 2)) if saved_energy else 2
+        energy_level = int(latest_energy.get("energy_level", 2)) if latest_energy else 2
+    sleep_hours = float(latest_energy.get("sleep_hours", 0.0)) if latest_energy else 0.0
+    stress_level = int(latest_energy.get("stress_level", 0)) if latest_energy else 0
+    physical_fatigue = int(latest_energy.get("physical_fatigue", 5)) if latest_energy else 5
 
     # Gather review items
     mine_patterns(repo)
@@ -74,6 +78,9 @@ def get_today_study_plan(
         available_minutes=available_minutes,
         review_items=review_items,
         danger_los=danger_list,
+        sleep_hours=sleep_hours,
+        stress_level=stress_level,
+        physical_fatigue=physical_fatigue,
     )
 
     return StudyPlanResponse(

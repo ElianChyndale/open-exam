@@ -225,13 +225,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.181959+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.181959+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.510820+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.510820+08:00",
       "decay_risk": "none"
     },
     "knowledge-fb41a6884e80": {
@@ -242,13 +242,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.182675+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.182675+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.512888+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.512888+08:00",
       "decay_risk": "none"
     },
     "knowledge-033d03a0d683": {
@@ -259,13 +259,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.183482+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.183482+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.515042+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.515042+08:00",
       "decay_risk": "none"
     },
     "knowledge-4772ea88bf07": {
@@ -276,13 +276,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.184099+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.184099+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.517006+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.517006+08:00",
       "decay_risk": "none"
     },
     "knowledge-2798e5b9a4ad": {
@@ -293,13 +293,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.184755+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.184755+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.520461+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.520461+08:00",
       "decay_risk": "none"
     },
     "knowledge-9709e5245520": {
@@ -310,13 +310,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.185343+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.185343+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.518696+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.518696+08:00",
       "decay_risk": "none"
     },
     "knowledge-077d22a9b5dd": {
@@ -327,13 +327,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.186002+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.186002+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.522169+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.522169+08:00",
       "decay_risk": "none"
     },
     "knowledge-f9e5619fc18b": {
@@ -344,13 +344,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.186610+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.186610+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.523993+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.523993+08:00",
       "decay_risk": "none"
     },
     "knowledge-17e153e23d11": {
@@ -361,13 +361,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.187288+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.187288+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.525674+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.525674+08:00",
       "decay_risk": "none"
     },
     "knowledge-637a91f74954": {
@@ -378,13 +378,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.188062+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.188062+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.527421+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.527421+08:00",
       "decay_risk": "none"
     },
     "knowledge-913e964c7854": {
@@ -395,13 +395,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.188863+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.188863+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.529030+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.529030+08:00",
       "decay_risk": "none"
     },
     "knowledge-46165028a7ec": {
@@ -412,13 +412,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.189524+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.189524+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.530854+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.530854+08:00",
       "decay_risk": "none"
     },
     "knowledge-6b46b38659d7": {
@@ -429,13 +429,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.190158+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.190158+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.532402+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.532402+08:00",
       "decay_risk": "none"
     },
     "knowledge-30e99a02e37a": {
@@ -446,13 +446,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.190909+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.190909+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.533990+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.533990+08:00",
       "decay_risk": "none"
     },
     "knowledge-7db9bb917b61": {
@@ -463,13 +463,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.191542+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.191542+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.535616+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.535616+08:00",
       "decay_risk": "none"
     },
     "knowledge-841e8abae9af": {
@@ -480,13 +480,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.192144+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.192144+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.537172+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.537172+08:00",
       "decay_risk": "none"
     },
     "knowledge-5cb899871fe7": {
@@ -497,13 +497,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.192753+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.192753+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.538830+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.538830+08:00",
       "decay_risk": "none"
     },
     "knowledge-7c6595399ca1": {
@@ -514,13 +514,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.193524+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.193524+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.540911+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.540911+08:00",
       "decay_risk": "none"
     },
     "knowledge-d94dba7281d3": {
@@ -531,13 +531,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.194151+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.194151+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.542770+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.542770+08:00",
       "decay_risk": "none"
     },
     "knowledge-ff8219508f67": {
@@ -548,13 +548,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.194770+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.194770+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.544411+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.544411+08:00",
       "decay_risk": "none"
     },
     "knowledge-c0dbf5efbc7e": {
@@ -565,13 +565,13 @@
       "source_refs": [
         "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.195372+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.195372+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.546090+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.546090+08:00",
       "decay_risk": "none"
     },
     "knowledge-ca80e94e46d3": {
@@ -582,13 +582,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.196130+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.196130+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.547929+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.547929+08:00",
       "decay_risk": "none"
     },
     "knowledge-a087943676ad": {
@@ -599,13 +599,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.196748+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.196748+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.549541+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.549541+08:00",
       "decay_risk": "none"
     },
     "knowledge-cf194fab952e": {
@@ -616,13 +616,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.197408+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.197408+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.551264+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.551264+08:00",
       "decay_risk": "none"
     },
     "knowledge-3d844ce9a665": {
@@ -633,13 +633,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.198079+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.198079+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.553021+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.553021+08:00",
       "decay_risk": "none"
     },
     "knowledge-9f8c45f1aa4d": {
@@ -650,13 +650,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.198803+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.198803+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.554661+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.554661+08:00",
       "decay_risk": "none"
     },
     "knowledge-9ff94dd17ed7": {
@@ -667,13 +667,13 @@
       "source_refs": [
         "CFA_tier1/Economics/00-Economics-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.199438+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.199438+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.556390+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.556390+08:00",
       "decay_risk": "none"
     },
     "knowledge-bcf0e7bd9cb5": {
@@ -684,13 +684,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.200106+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.200106+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.558237+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.558237+08:00",
       "decay_risk": "none"
     },
     "knowledge-fc6d00871082": {
@@ -701,13 +701,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.200866+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.200866+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.560266+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.560266+08:00",
       "decay_risk": "none"
     },
     "knowledge-300fadd708c0": {
@@ -718,13 +718,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.201643+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.201643+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.562055+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.562055+08:00",
       "decay_risk": "none"
     },
     "knowledge-41e39f202c1e": {
@@ -735,13 +735,13 @@
       "source_refs": [
         "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
       ],
-      "status": "Proficient",
-      "state_value": 4,
-      "consecutive_successes": 4,
-      "reviewed_at": "2026-06-01T01:46:49.202420+08:00",
-      "review_interval_days": 25,
-      "next_review_at": "2026-06-26",
-      "last_reviewed_at": "2026-06-01T01:46:49.202420+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 5,
+      "reviewed_at": "2026-06-02T23:18:54.563790+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-01",
+      "last_reviewed_at": "2026-06-02T23:18:54.563790+08:00",
       "decay_risk": "none"
     }
   }

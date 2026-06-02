@@ -25,6 +25,8 @@ class EnergyProfile:
     motivation: int = 5              # 1-10
     time_of_day: str = ""            # "morning", "afternoon", "evening"
     available_minutes: int = 120
+    sleep_hours: float = 0.0         # 0 = not reported
+    stress_level: int = 0            # 0 = not reported, 1-10
 
 
 @dataclass(slots=True)
@@ -88,16 +90,23 @@ class EnergyAwarePlanner:
 
     @classmethod
     def fit_score(cls, task_type: str, energy_level: int) -> float:
-        """Calculate how well a task fits the current energy level."""
+        """Calculate how well a task fits the current energy level.
+
+        Returns 0.0–1.0; thresholds are chosen so that:
+        - 1.0  → energy exceeds requirement (comfortable)
+        - 0.9  → exact match (optimal)
+        - 0.5  → one level below (doable but efficiency drops)
+        - 0.1  → two or more levels below (not recommended)
+        """
         required = cls.ENERGY_REQUIREMENTS.get(task_type, 2)
         diff = energy_level - required
-        if diff >= 2:
-            return 1.0     # plenty of energy for this task
-        if diff >= 0:
-            return 0.8     # adequate
+        if diff >= 1:
+            return 1.0     # comfortable surplus
+        if diff == 0:
+            return 0.9     # exact match — optimal
         if diff == -1:
-            return 0.4     # marginal — might be OK with effort
-        return 0.1         # poor fit — wasting effort
+            return 0.5     # marginal — doable with reduced efficiency
+        return 0.1         # poor fit — avoid or defer
 
     @classmethod
     def allocate(
@@ -135,31 +144,49 @@ class EnergyAwarePlanner:
         plan = EnergyPlan(profile=profile)
 
         for fit, _priority in ranked_fits:
-            if profile.energy_level >= 3 and fit.energy_required >= 3:
-                plan.high_energy_slot.append(fit)
-            elif profile.energy_level >= 1 and fit.energy_required >= 1:
+            if fit.fit_score >= 0.8:
+                # Fully suitable — place by cognitive load tier
+                if fit.energy_required >= 3:
+                    plan.high_energy_slot.append(fit)
+                elif fit.energy_required >= 1:
+                    plan.moderate_energy_slot.append(fit)
+                else:
+                    plan.low_energy_slot.append(fit)
+            elif fit.fit_score >= 0.4:
+                # Marginal — still doable, show in moderate tier with warning
                 plan.moderate_energy_slot.append(fit)
             else:
+                # Poor fit — push to low tier so the user sees it is not recommended
                 plan.low_energy_slot.append(fit)
 
         # Warnings
-        if profile.energy_level <= 1:
-            plan.warnings.append(
-                "⚠️ 当前精力偏低，不建议学习新知识或做高难度练习。优先完成复习和轻量任务。"
-            )
         if profile.energy_level == 0:
             plan.warnings.append(
                 "🛑 精力耗尽。建议休息或仅做被动回顾。强制学习会产生更多校准错误。"
             )
+        elif profile.energy_level <= 1:
+            plan.warnings.append(
+                "⚠️ 当前精力偏低，不建议学习新知识或做高难度练习。优先完成复习和轻量任务。"
+            )
         if profile.physical_fatigue >= 8:
             plan.warnings.append(
                 "😴 身体疲劳度高，学习效率会显著下降。考虑缩短学习时间或先休息。"
+            )
+        if profile.sleep_hours > 0 and profile.sleep_hours < 6:
+            plan.warnings.append(
+                f"😴 睡眠仅 {profile.sleep_hours:.0f} 小时，睡眠不足会影响记忆巩固和学习效率。"
+            )
+        if profile.stress_level >= 7:
+            plan.warnings.append(
+                f"🧘 压力水平偏高（{profile.stress_level}/10），高压状态下学习效率显著下降，建议先做放松。"
             )
 
         return plan
 
     @classmethod
     def _recommendation(cls, task_type: str, fit_score: float, energy_level: int) -> str:
+        if fit_score >= 0.9:
+            return "✅ 当前精力完全匹配此任务"
         if fit_score >= 0.8:
             return "✅ 当前精力适合此任务"
         if fit_score >= 0.4:

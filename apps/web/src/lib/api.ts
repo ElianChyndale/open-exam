@@ -59,7 +59,7 @@ export const reviewApi = {
 
 /** Energy */
 export const energyApi = {
-  checkIn: (data: { energy_level: number; mental_clarity: number; physical_fatigue: number; motivation: number; notes?: string }) =>
+  checkIn: (data: { energy_level: number; mental_clarity: number; physical_fatigue: number; motivation: number; sleep_hours?: number; stress_level?: number; notes?: string }) =>
     request('/api/energy/check-in', { method: 'POST', body: JSON.stringify(data) }),
 
   history: (limit = 30) =>

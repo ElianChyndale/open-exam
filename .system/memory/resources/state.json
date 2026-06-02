@@ -531,6 +531,1882 @@
         "etag": "",
         "last_modified": "Tue, 19 May 2026 06:19:30 GMT"
       }
+    },
+    "resource-c4a41c8923e821d0": {
+      "document_id": "resource-c4a41c8923e821d0",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/English-speaking_world",
+      "title": "English-Speaking World",
+      "content_hash": "c2d1a9495e1dbfe070bc190e687b10b9301dc0bc6b68f6ddf847eb9695c6ad4a",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/c2d1a9495e1dbfe070bc190e687b10b9301dc0bc6b68f6ddf847eb9695c6ad4a.txt",
+      "excerpt": "English-speaking world - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search",
+      "retrieved_at": "2026-06-02T06:20:55.002115+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Tue, 02 Jun 2026 06:01:41 GMT"
+      }
+    },
+    "resource-660f80a9cff1c0ce": {
+      "document_id": "resource-660f80a9cff1c0ce",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/List_of_English_words_of_French_origin",
+      "title": "English Words of French Origin",
+      "content_hash": "7ba528e38c62571c7da8a13323fceeb3a40d5516df5cfccd8e57641116dae86e",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/7ba528e38c62571c7da8a13323fceeb3a40d5516df5cfccd8e57641116dae86e.txt",
+      "excerpt": "List of English words of French origin - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pag",
+      "retrieved_at": "2026-06-02T06:20:57.134095+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Mon, 18 May 2026 08:45:50 GMT"
+      }
+    },
+    "resource-ece36ba5ebfa17a7": {
+      "document_id": "resource-ece36ba5ebfa17a7",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://es.wikibooks.org/wiki/Espanol/Subjuntivo",
+      "title": "El subjuntivo en espanol - C1 level",
+      "content_hash": "efe102e291d6da7cd01899d12b895094c4870b2aa6c0adbb72bb6295ad79303f",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/efe102e291d6da7cd01899d12b895094c4870b2aa6c0adbb72bb6295ad79303f.txt",
+      "excerpt": "El subjuntivo en espanol. El modo subjuntivo es fundamental para expresar subjetividad. Se utiliza en situaciones de duda, deseo, emocion, necesidad, opinion negativa o hipotesis. Las conjunciones como que, cuando, aunque introducen el subjuntivo. Ejemplos: Espero que vengas mana",
+      "retrieved_at": "2026-06-02T06:20:57.488631+00:00",
+      "language": "es",
+      "topic": "grammar",
+      "answer_bearing": false,
+      "metadata": {}
+    },
+    "resource-1397c50bef2dc069": {
+      "document_id": "resource-1397c50bef2dc069",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/English_prefix",
+      "title": "English Prefixes",
+      "content_hash": "51dda5367db9725a7a2028c564a7f6bd6945a2ffb13e7c13bc3a7ad1aadf9946",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/51dda5367db9725a7a2028c564a7f6bd6945a2ffb13e7c13bc3a7ad1aadf9946.txt",
+      "excerpt": "English prefix - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appeara",
+      "retrieved_at": "2026-06-02T06:20:59.415697+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Tue, 19 May 2026 06:20:58 GMT"
+      }
+    },
+    "resource-25326dc318ec7b96": {
+      "document_id": "resource-25326dc318ec7b96",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail",
+      "title": "IELTS Scoring in Detail",
+      "content_hash": "b43650c9279dc2a06aedeea1b2e04d5f1cf8f73ca5dd37c4491fb7b0c85cd09d",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "IELTS | Understanding your score Test Takers Back to All Why choose IELTS? Back to Why choose IELTS? Why choose IELTS? What can IELTS do for you Ways to take IELTS Who accepts IELTS? Test types Back to Test types Test types IELTS Academic IELTS General Training IELTS for UKVI Pre",
+      "retrieved_at": "2026-06-02T06:21:11.559681+00:00",
+      "language": "en",
+      "topic": "ielts",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Tue, 02 Jun 2026 06:18:20 GMT"
+      }
+    },
+    "resource-17d5dd2d01dd32b1": {
+      "document_id": "resource-17d5dd2d01dd32b1",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://es.wikibooks.org/wiki/Espanol/Subjuntivo-avanzado-C1",
+      "title": "El subjuntivo avanzado en espanol - C1 level",
+      "content_hash": "f49a2fcfd18650ffc7c34324be928dc3b44bdd50c4d977b382e744bdff89253f",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/f49a2fcfd18650ffc7c34324be928dc3b44bdd50c4d977b382e744bdff89253f.txt",
+      "excerpt": "El modo subjuntivo en espanol. El modo subjuntivo es un modo gramatical que expresa la subjetividad del hablante. A diferencia del indicativo, que expresa hechos objetivos, el subjuntivo se utiliza para expresar dudas, deseos, emociones, opiniones personales y situaciones hipotet",
+      "retrieved_at": "2026-06-02T06:21:20.930821+00:00",
+      "language": "es",
+      "topic": "grammar",
+      "answer_bearing": false,
+      "metadata": {}
+    },
+    "resource-d549a49d966c9e6f": {
+      "document_id": "resource-d549a49d966c9e6f",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference",
+      "title": "British Council English Grammar Reference",
+      "content_hash": "fd659f3e2a3051bb48412dfe6dd5323d1a2054e0048b89f8e4885ec522153018",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "English grammar reference | LearnEnglish Skip to main content LearnEnglish Search Search Search Menu Close Search Search Search User account menu Log in Register Mega main menu Free resources In this section Learning hub Community discussions Community events Listening A1 listeni",
+      "retrieved_at": "2026-06-02T06:21:23.557498+00:00",
+      "language": "en",
+      "topic": "grammar",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"1780321293-gzip\"",
+        "last_modified": "Mon, 01 Jun 2026 13:41:33 GMT"
+      }
+    },
+    "resource-b320ec297616b995": {
+      "document_id": "resource-b320ec297616b995",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://es.wikibooks.org/wiki/Espanol/Modismos-idioms-C1",
+      "title": "Modismos y expresiones idiomaticas del espanol - C1",
+      "content_hash": "6967787fba014e5a3c6ae1953c121fcb20bb429e7af73796f25533527d363293",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/6967787fba014e5a3c6ae1953c121fcb20bb429e7af73796f25533527d363293.txt",
+      "excerpt": "Los modismos en espanol. Los modismos son expresiones idiomaticas cuyo significado no es literal. Son fundamentales para alcanzar un nivel C1 de competencia linguistica.\nLos siguientes modismos son de uso frecuente en el espanol avanzado:\n1) Estar en las nubes - Significa estar d",
+      "retrieved_at": "2026-06-02T06:21:35.135655+00:00",
+      "language": "es",
+      "topic": "idioms",
+      "answer_bearing": false,
+      "metadata": {}
+    },
+    "resource-0a6b1e6be8b8a04a": {
+      "document_id": "resource-0a6b1e6be8b8a04a",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/c1",
+      "title": "British Council C1 Reading",
+      "content_hash": "7594795a4bb1722494322e734866ab307b4cd83dd81ebc969cb1b93c58959dbb",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "C1 reading | LearnEnglish Skip to main content LearnEnglish Search Search Search Menu Close Search Search Search User account menu Log in Register Mega main menu Free resources In this section Learning hub Community discussions Community events Listening A1 listening A2 listening",
+      "retrieved_at": "2026-06-02T06:21:36.608233+00:00",
+      "language": "en",
+      "topic": "reading",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"1780301010-gzip\"",
+        "last_modified": "Mon, 01 Jun 2026 08:03:30 GMT"
+      }
+    },
+    "resource-f36a27223049941b": {
+      "document_id": "resource-f36a27223049941b",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/listening/c1",
+      "title": "British Council C1 Listening",
+      "content_hash": "022cc9133ea2d4ff77b3c8aef428f003c519e96680ee2bf3731c187656851aa7",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "C1 listening | LearnEnglish Skip to main content LearnEnglish Search Search Search Menu Close Search Search Search User account menu Log in Register Mega main menu Free resources In this section Learning hub Community discussions Community events Listening A1 listening A2 listeni",
+      "retrieved_at": "2026-06-02T06:21:47.883931+00:00",
+      "language": "en",
+      "topic": "listening",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"1780306073-gzip\"",
+        "last_modified": "Mon, 01 Jun 2026 09:27:53 GMT"
+      }
+    },
+    "resource-a1e3afcf859d88c5": {
+      "document_id": "resource-a1e3afcf859d88c5",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://examenes.cervantes.es/es/dele/preparar-prueba-C1-vocabulario",
+      "title": "DELE C1 - Vocabulario academico y conectores avanzados",
+      "content_hash": "ec2f510c446ba8fc2934c8c184c72af873b4281e9042580023ba43baf24dc36c",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/ec2f510c446ba8fc2934c8c184c72af873b4281e9042580023ba43baf24dc36c.txt",
+      "excerpt": "Preparacion para el DELE C1. El DELE C1 es un examen oficial del Instituto Cervantes que acredita un nivel avanzado de espanol. El examen consta de cuatro pruebas:\nPrueba 1: Comprension de lectura y uso de la lengua. 90 minutos. Incluye textos largos y complejos de temas como cie",
+      "retrieved_at": "2026-06-02T06:21:48.341968+00:00",
+      "language": "es",
+      "topic": "exam-prep",
+      "answer_bearing": false,
+      "metadata": {}
+    },
+    "resource-2bf45bea4816ad1d": {
+      "document_id": "resource-2bf45bea4816ad1d",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/English_suffix",
+      "title": "English Suffixes",
+      "content_hash": "ed49313253bd725cf42e75108c98d5d6353cc3d28c44212eafbe0173e9cce380",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/ed49313253bd725cf42e75108c98d5d6353cc3d28c44212eafbe0173e9cce380.txt",
+      "excerpt": "Suffix - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Dona",
+      "retrieved_at": "2026-06-02T06:21:53.343556+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Tue, 02 Jun 2026 05:10:11 GMT"
+      }
+    },
+    "resource-73cb38460e07f6d7": {
+      "document_id": "resource-73cb38460e07f6d7",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/English_compound",
+      "title": "English Compound Words",
+      "content_hash": "603e0e131e1b3dec99b3068c2fe8295b819fd92f2b6bf8c4bf4bc82172188cd6",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/603e0e131e1b3dec99b3068c2fe8295b819fd92f2b6bf8c4bf4bc82172188cd6.txt",
+      "excerpt": "English compound - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appea",
+      "retrieved_at": "2026-06-02T06:21:55.408066+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Mon, 18 May 2026 23:40:31 GMT"
+      }
+    },
+    "resource-b72ed7b980069620": {
+      "document_id": "resource-b72ed7b980069620",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://examenes.cervantes.es/dele/C1-vocabulario-v2",
+      "title": "DELE C1 - Vocabulario academico y conectores avanzados",
+      "content_hash": "c32f59eded0fab6f6d4b064391e930c23c69c27b23ff877980357df587f7950d",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/c32f59eded0fab6f6d4b064391e930c23c69c27b23ff877980357df587f7950d.txt",
+      "excerpt": "Preparacion para el DELE C1. El DELE C1 es un examen oficial del Instituto Cervantes que acredita un nivel avanzado de espanol. El examen consta de cuatro pruebas:\nPrueba 1: Comprension de lectura y uso de la lengua. 90 minutos.\nPrueba 2: Comprension auditiva y uso de la lengua. ",
+      "retrieved_at": "2026-06-02T06:21:57.007275+00:00",
+      "language": "es",
+      "topic": "exam-prep",
+      "answer_bearing": false,
+      "metadata": {}
+    },
+    "resource-c9c404f20d4f9701": {
+      "document_id": "resource-c9c404f20d4f9701",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/International_English",
+      "title": "International English",
+      "content_hash": "85564c05b331308fe6fc3c1bebc42360f5aec81d051ef36007ca851bca3eb5f7",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/85564c05b331308fe6fc3c1bebc42360f5aec81d051ef36007ca851bca3eb5f7.txt",
+      "excerpt": "International English - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search ",
+      "retrieved_at": "2026-06-02T06:21:58.887317+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Sat, 30 May 2026 13:58:01 GMT"
+      }
+    },
+    "resource-81c44c68c599f606": {
+      "document_id": "resource-81c44c68c599f606",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/IELTS",
+      "title": "IELTS Overview",
+      "content_hash": "214880dfaff4469dfc0aa661194eabeb0d7194214fbd5874018b3fd73c06911b",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/214880dfaff4469dfc0aa661194eabeb0d7194214fbd5874018b3fd73c06911b.txt",
+      "excerpt": "International English Language Testing System - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Spec",
+      "retrieved_at": "2026-06-02T06:22:03.515161+00:00",
+      "language": "en",
+      "topic": "ielts",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Sun, 31 May 2026 17:04:12 GMT"
+      }
+    },
+    "resource-48a0ac000a007541": {
+      "document_id": "resource-48a0ac000a007541",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages",
+      "title": "CEFR Language Proficiency Framework",
+      "content_hash": "189d6273bcbdb02c1064c74b6fe24f728cdc4fbd8e19bcfa31c516f7d8dae6ce",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/189d6273bcbdb02c1064c74b6fe24f728cdc4fbd8e19bcfa31c516f7d8dae6ce.txt",
+      "excerpt": "Common European Framework of Reference for Languages - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload fi",
+      "retrieved_at": "2026-06-02T06:22:05.932066+00:00",
+      "language": "en",
+      "topic": "vocabulary",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": "Tue, 02 Jun 2026 06:01:47 GMT"
+      }
+    },
+    "resource-3bbf911745a35a9e": {
+      "document_id": "resource-3bbf911745a35a9e",
+      "lane": "language",
+      "provider": "generic_web",
+      "url": "https://es.wikibooks.org/wiki/Espanol/Conjugacion-avanzada-C1",
+      "title": "Conjugacion verbal avanzada en espanol - C1",
+      "content_hash": "a515ab91b264bd95cf2cf89a6db62b777e745a0f9bb6220753dd2b1655942ae8",
+      "license_mode": "fulltext_allowed",
+      "content_ref": ".system/private/resources/raw/a515ab91b264bd95cf2cf89a6db62b777e745a0f9bb6220753dd2b1655942ae8.txt",
+      "excerpt": "La conjugacion verbal avanzada en espanol. Los verbos irregulares en espanol presentan patrones complejos. Los verbos de cambio radical como poder (puedo, puedes, puede, podemos, podeis, pueden), tener (tengo, tienes, tiene, tenemos, teneis, tienen), y venir (vengo, vienes, viene",
+      "retrieved_at": "2026-06-02T06:22:17.125622+00:00",
+      "language": "es",
+      "topic": "grammar",
+      "answer_bearing": false,
+      "metadata": {}
+    },
+    "resource-45e1f9984b50f5d9": {
+      "document_id": "resource-45e1f9984b50f5d9",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://feeds.simplecast.com/_T63wIwi",
+      "title": "https://feeds.simplecast.com/_T63wIwi",
+      "content_hash": "ef6e4bd994a7371380dfb4b1e20fe32b3f2038980897ea4e544854029929ac80",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:googleplay=\"http://www.google.com/schemas/play-podcasts/1.0\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"",
+      "retrieved_at": "2026-06-02T10:14:14.003020+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/xml",
+        "etag": "W/\"64ff3713220a8435ca09143ad6ab385d\"",
+        "last_modified": "Mon, 01 Jun 2026 16:00:20 GMT"
+      }
+    },
+    "resource-beb34bc299e77db7": {
+      "document_id": "resource-beb34bc299e77db7",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://simplecast.superfeedr.com/",
+      "title": "https://simplecast.superfeedr.com/",
+      "content_hash": "0bf16605f8e940212d3bd7ce945ddac91a3589a270ac201f543db7e8bb980f1e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "simplecast's PubSubHubbub Hub The PubSubHubbub PuSH API allows simplecast to send real-time notifications to subscribers every time new content is published. Ever wonder how your application can get real-time notifications every time feeds are updated? Try the PubSubHubbub open p",
+      "retrieved_at": "2026-06-02T10:14:15.908028+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "W/\"1p3fFA+7tEUTQW33ftT7pQ==\"",
+        "last_modified": ""
+      }
+    },
+    "resource-2c4ab6b5d8136b3b": {
+      "document_id": "resource-2c4ab6b5d8136b3b",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/",
+      "title": "https://everybodyesl.simplecast.com/",
+      "content_hash": "d5de98f2306cc14f2b216285e3f5596bdefd3bb0f207d96ed5c34ce95b8657e0",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:17.621501+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-8b38e808fc1850dd": {
+      "document_id": "resource-8b38e808fc1850dd",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep468-e8uTY1pN",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep468-e8uTY1pN",
+      "content_hash": "361f438583cdeae57804278277cb6ec0596da2f5aef8e3f3f7746d5b211e8052",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:18.827114+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-447b1af679eaa837": {
+      "document_id": "resource-447b1af679eaa837",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep467-TQdRG_H1",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep467-TQdRG_H1",
+      "content_hash": "1e49fd1023b80849172f39f89ad55d958beee3f711fcd724e702f2a55c802605",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:20.030036+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-f3d6b084bdba5c1f": {
+      "document_id": "resource-f3d6b084bdba5c1f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep466-bjHymmGn",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep466-bjHymmGn",
+      "content_hash": "792aca249f1cdbeca3171d03c4d329366b3cd5e8bb229e26e8212caae228c489",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:21.236921+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-7a7e9c8daca7f8c2": {
+      "document_id": "resource-7a7e9c8daca7f8c2",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep465-JMdCsIEU",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep465-JMdCsIEU",
+      "content_hash": "9a8b67db7634c05453a5a5ef232916f8d6452cc2bda3e7605b4734be72437b21",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:22.436621+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-7977b5169b9890a2": {
+      "document_id": "resource-7977b5169b9890a2",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep464-YU3kBpje",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep464-YU3kBpje",
+      "content_hash": "6b5a4caaa196864d01903b844f2d633f17f2573f76a195da397d1469f6f6880c",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:23.664677+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-b9a4cfd17309a12b": {
+      "document_id": "resource-b9a4cfd17309a12b",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep463-pkuPVQeO",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep463-pkuPVQeO",
+      "content_hash": "7d3fec579625c17c0a55c06739bdfc8fa2f023529cac6a9d7d0bd77dad789ae3",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:24.866902+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-977431f9af3b21b8": {
+      "document_id": "resource-977431f9af3b21b8",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://everybodyesl.simplecast.com/episodes/ep462-o06OA5bO",
+      "title": "https://everybodyesl.simplecast.com/episodes/ep462-o06OA5bO",
+      "content_hash": "7239817653afa9c65487ec2c0eb83b0d53ea351450ef757c8f924f0ee995ab02",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "",
+      "retrieved_at": "2026-06-02T10:14:26.068005+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "\"683dc82f-cd1\"",
+        "last_modified": "Mon, 02 Jun 2025 15:50:07 GMT"
+      }
+    },
+    "resource-256da110acfedd39": {
+      "document_id": "resource-256da110acfedd39",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p02pc9tn",
+      "title": "https://www.bbc.co.uk/programmes/p02pc9tn",
+      "content_hash": "feb089ad1b6b6d32a95ce58d366fd22c7e19cf24b945272db1f1d87ebef09fa4",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content 6 Minute English Learn and practise useful English with clips from programmes ",
+      "retrieved_at": "2026-06-02T10:14:30.800325+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a8b9b6bc264a016f": {
+      "document_id": "resource-a8b9b6bc264a016f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://podcasts.files.bbci.co.uk/p02pc9tn.rss",
+      "title": "https://podcasts.files.bbci.co.uk/p02pc9tn.rss",
+      "content_hash": "bb19536fc38fbbae490df0bb7a61bb52e9db350004572171109c2bb9a4c6aeaf",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ppg=\"http://bbc.co.uk/2009/01/ppgRss\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"><!--By accessing this feed you are w",
+      "retrieved_at": "2026-06-02T10:14:33.716130+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/rss+xml",
+        "etag": "\"63f82baeb7d4effa7f8fbbffeb00001f\"",
+        "last_modified": "Thu, 28 May 2026 08:11:36 GMT"
+      }
+    },
+    "resource-2c57fded04637930": {
+      "document_id": "resource-2c57fded04637930",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nnpsqf",
+      "title": "https://www.bbc.co.uk/programmes/p0nnpsqf",
+      "content_hash": "5dfb82cf367010cb83ad4970442e45f6f7945bde510159c813d2b7cc0ed5b69b",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, Living with debt Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now Living with debt 6 Minute English Many people hav",
+      "retrieved_at": "2026-06-02T10:14:35.719292+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-2f5dd27ef3ca4cf6": {
+      "document_id": "resource-2f5dd27ef3ca4cf6",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nmg0q1",
+      "title": "https://www.bbc.co.uk/programmes/p0nmg0q1",
+      "content_hash": "a28962007070222c8a219a3e66e9fbd2836eb2597df289d7f6235e1647ef5a10",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, Making cities feel quieter Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now Making cities feel quieter 6 Minute Eng",
+      "retrieved_at": "2026-06-02T10:14:37.836908+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-e5e7042e823e8134": {
+      "document_id": "resource-e5e7042e823e8134",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nl4mwz",
+      "title": "https://www.bbc.co.uk/programmes/p0nl4mwz",
+      "content_hash": "e92a8082b250d46034c3a071801167368b1ad6145f5c93ddf3d77e9f0c81a240",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, How reading shapes your brain Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now How reading shapes your brain 6 Minu",
+      "retrieved_at": "2026-06-02T10:14:40.327396+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-b0f9483667ff3064": {
+      "document_id": "resource-b0f9483667ff3064",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0njsn2d",
+      "title": "https://www.bbc.co.uk/programmes/p0njsn2d",
+      "content_hash": "f8af083d591ebdb997d17d925f45a02c078f188241f696f1703cda49689ed45f",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, Searching for life on another planet Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now Searching for life on another",
+      "retrieved_at": "2026-06-02T10:14:42.399091+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-37cb0276a2986ec6": {
+      "document_id": "resource-37cb0276a2986ec6",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nhfvyw",
+      "title": "https://www.bbc.co.uk/programmes/p0nhfvyw",
+      "content_hash": "6b35ccb23c9d0b392d74603787281a2c85bf85d8fdd5b7aeee753c9064d7ece1",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, Should we eat ultra-processed food? Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now Should we eat ultra-processed ",
+      "retrieved_at": "2026-06-02T10:14:44.535259+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-321f3d62ee687a83": {
+      "document_id": "resource-321f3d62ee687a83",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0ng2d84",
+      "title": "https://www.bbc.co.uk/programmes/p0ng2d84",
+      "content_hash": "656e8509eb2ceb5be64e86c35b25dc65587e5ceccaf062b9c38f2b0710c3eb18",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, Why are we all so stressed? Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now Why are we all so stressed? 6 Minute E",
+      "retrieved_at": "2026-06-02T10:14:47.171605+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-1b8c538704d84a43": {
+      "document_id": "resource-1b8c538704d84a43",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0ndq0lv",
+      "title": "https://www.bbc.co.uk/programmes/p0ndq0lv",
+      "content_hash": "8fecf4e1cee042a6eb51abb930189b84169d8f61ebfc25b47924a23941131c4b",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, Love the foods you hate Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now Love the foods you hate 6 Minute English A",
+      "retrieved_at": "2026-06-02T10:14:49.282398+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-074b216858b5192f": {
+      "document_id": "resource-074b216858b5192f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nccgt3",
+      "title": "https://www.bbc.co.uk/programmes/p0nccgt3",
+      "content_hash": "56e098610a477db32f7aff81302e6f537d724b04b57fe62f47e18ec590b6b2be",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, The future of food Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now The future of food 6 Minute English Many of us ",
+      "retrieved_at": "2026-06-02T10:14:51.286866+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-0c519ed22373266f": {
+      "document_id": "resource-0c519ed22373266f",
+      "lane": "cfa",
+      "provider": "sec_edgar",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "title": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "content_hash": "6327bfa0038ea068db003ab6a742e1bc660d3d44de25b4632e9ce5ad86e3ed5e",
+      "license_mode": "official_structured",
+      "content_ref": ".system/private/resources/raw/6327bfa0038ea068db003ab6a742e1bc660d3d44de25b4632e9ce5ad86e3ed5e.txt",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Tue, 02 Jun 2026 06:14:51 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "retrieved_at": "2026-06-02T10:14:52.970052+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/atom+xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-d05b6224da974df9": {
+      "document_id": "resource-d05b6224da974df9",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/learningenglish",
+      "title": "https://www.bbc.co.uk/learningenglish",
+      "content_hash": "89f442df60215758e5d2752fa9769a7e53a44cd4f2752c70be1f51ef4f12a056",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Learning English - Learn English with BBC Learning English - Homepage Homepage Accessibility links Skip to content Accessibility Help BBC Account Notifications Home News Sport Weather iPlayer Sounds Bitesize CBeebies CBBC Food Home News Sport Business Technology Health Cultur",
+      "retrieved_at": "2026-06-02T10:15:00.055824+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "0a89e65b5033d5a1b656fa56f602c8b03555e80c",
+        "last_modified": "Tue, 02 Jun 2026 10:07:33 GMT"
+      }
+    },
+    "resource-088534697ad3a711": {
+      "document_id": "resource-088534697ad3a711",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/podcast/spotlight-english-advanced--4083252",
+      "title": "https://www.spreaker.com/podcast/spotlight-english-advanced--4083252",
+      "content_hash": "5826920a27e9f644b25f3c010366f76807cecfcec8bb713c0e9d945f161247fc",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Spotlight English: Advanced Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light Theme Dark Theme Our Platform How Spr",
+      "retrieved_at": "2026-06-02T10:15:07.023791+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-b5ead6fa9ab31da5": {
+      "document_id": "resource-b5ead6fa9ab31da5",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/show/4083252/episodes/feed",
+      "title": "https://www.spreaker.com/show/4083252/episodes/feed",
+      "content_hash": "4dac2eea1ae6869b784fa93bbfb74acf029771be525583afb015248b4f3bf26d",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:podcast=\"https://podcastindex.org/namespace/1.0\" xmlns:media=\"http://search.yahoo.com/mrss/\" version=\"2.0\"><channel><title>Spotligh",
+      "retrieved_at": "2026-06-02T10:15:08.466720+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/xml",
+        "etag": "W/\"192e8a0140b97bc4489b09bb2c773daa\"",
+        "last_modified": "Sat, 30 May 2026 21:22:18 GMT"
+      }
+    },
+    "resource-766ce59a7099e193": {
+      "document_id": "resource-766ce59a7099e193",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/twenty-six-seconds-that-changed-one-man-s-life-advanced-program--72121384",
+      "title": "https://www.spreaker.com/episode/twenty-six-seconds-that-changed-one-man-s-life-advanced-program--72121384",
+      "content_hash": "9b7ca0df185953642ef6b64496bfea68ab4ad02183e83d1fef207e512a79ade3",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Twenty-Six Seconds that Changed One Man's Life (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light",
+      "retrieved_at": "2026-06-02T10:15:10.853099+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-b0ad909546f21cc8": {
+      "document_id": "resource-b0ad909546f21cc8",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/the-rise-of-the-nfl-advanced-program--72026946",
+      "title": "https://www.spreaker.com/episode/the-rise-of-the-nfl-advanced-program--72026946",
+      "content_hash": "cbca7d31d1c0d371b97977da78823ac4e93ecbaa84f6c9179d56ca4e35b82957",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "The Rise of the NFL (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light Theme Dark Theme Our Platf",
+      "retrieved_at": "2026-06-02T10:15:13.492699+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a29a73b1f1e75a77": {
+      "document_id": "resource-a29a73b1f1e75a77",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/the-utilidors-a-hidden-world-beneath-magic-kingdom-advanced-program--71940750",
+      "title": "https://www.spreaker.com/episode/the-utilidors-a-hidden-world-beneath-magic-kingdom-advanced-program--71940750",
+      "content_hash": "7cfc572ad5be2b0fbcccb02f8377f7e6c3d9c15b34ec1ae04ae815778c5d7bcd",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "The Utilidors: A Hidden World Beneath Magic Kingdom (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings ",
+      "retrieved_at": "2026-06-02T10:15:15.439238+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-d723d59892fd2006": {
+      "document_id": "resource-d723d59892fd2006",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/the-tunnels-of-the-vietnam-war-advanced-program--71702497",
+      "title": "https://www.spreaker.com/episode/the-tunnels-of-the-vietnam-war-advanced-program--71702497",
+      "content_hash": "b9c66f8a09ec994de3cdca3624afb8a3da6dc0135de790bc0d89ec8b6dca2d01",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "The Tunnels of the Vietnam War (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light Theme Dark Them",
+      "retrieved_at": "2026-06-02T10:15:17.895771+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-c4f220edbcb21523": {
+      "document_id": "resource-c4f220edbcb21523",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/amen-prayer-practices-around-the-world-advanced-program--71637114",
+      "title": "https://www.spreaker.com/episode/amen-prayer-practices-around-the-world-advanced-program--71637114",
+      "content_hash": "b74ac0cdbb44c3eabbf22ab7365d2678da87fdb657255cd8d86dc5568930ee91",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Amen: Prayer Practices Around the World (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light Theme ",
+      "retrieved_at": "2026-06-02T10:15:19.851106+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-d8b71617281b3077": {
+      "document_id": "resource-d8b71617281b3077",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/playing-with-peanuts-advanced-program--71424802",
+      "title": "https://www.spreaker.com/episode/playing-with-peanuts-advanced-program--71424802",
+      "content_hash": "c73ca2460e5412073f696ae5a379f8315a33889f26465cb9fc25a1abca56c009",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Playing with Peanuts (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light Theme Dark Theme Our Plat",
+      "retrieved_at": "2026-06-02T10:15:22.484337+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-37fd02cb35d65d8a": {
+      "document_id": "resource-37fd02cb35d65d8a",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/we-re-getting-married-marriage-traditions-around-the-world-advanced-program--71279422",
+      "title": "https://www.spreaker.com/episode/we-re-getting-married-marriage-traditions-around-the-world-advanced-program--71279422",
+      "content_hash": "083f848b6b6f9e3822f98d3b94aa43d2fc7bcf0a28a4e13e26c78b081da328db",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "We're Getting Married: Marriage Traditions Around the World (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free S",
+      "retrieved_at": "2026-06-02T10:15:24.405681+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-7168fe93c387ef8f": {
+      "document_id": "resource-7168fe93c387ef8f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.spreaker.com/episode/new-homes-from-old-prisons-advanced-program--71235791",
+      "title": "https://www.spreaker.com/episode/new-homes-from-old-prisons-advanced-program--71235791",
+      "content_hash": "27103168b623262c6e72ff96c350bbe7307cc0ef1deb93735732c0493d3ae358",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "New Homes from Old Prisons (Advanced Program) Discover Your Library Search For Podcasters Your Podcasts Free Our Platform How Spreaker Works Podcasts App Spreaker Create Prime Network Help Sign up Log in Sign up For Podcasters Your Podcasts Free Settings Light Theme Dark Theme Ou",
+      "retrieved_at": "2026-06-02T10:15:26.301819+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-d92d2b50db711ec1": {
+      "document_id": "resource-d92d2b50db711ec1",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://feeds.simplecast.com/UrwSRKXH",
+      "title": "https://feeds.simplecast.com/UrwSRKXH",
+      "content_hash": "43754cd7fc8652bafd2712675488f1c604d0eac3af3eaecf730f597bfefc81dd",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:googleplay=\"http://www.google.com/schemas/play-podcasts/1.0\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"",
+      "retrieved_at": "2026-06-02T10:15:29.567705+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/xml",
+        "etag": "W/\"10147993b474ac13ce2d7b7c5f3eca1b\"",
+        "last_modified": "Sun, 31 May 2026 07:28:33 GMT"
+      }
+    },
+    "resource-b5f80eb0d73c0c55": {
+      "document_id": "resource-b5f80eb0d73c0c55",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.nohaytospodcast.com/",
+      "title": "https://www.nohaytospodcast.com/",
+      "content_hash": "0f49e427b039f260cfb776e0f5b4adba61a67a2e4657a0ea4a0a7b8e54bcbddc",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "No Hay Tos Podcast | Improve Your Spanish 0 Skip to Content HOME LESSONS MERCH ABOUT CONTACT Become a Patron Open Menu Close Menu Become a Patron HOME LESSONS MERCH ABOUT CONTACT Open Menu Close Menu HOME LESSONS MERCH ABOUT CONTACT Become a Patron Newsletter Sign up with your em",
+      "retrieved_at": "2026-06-02T10:15:33.015902+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "W/\"6fa65ee6770064d39207993afc7434dd\"",
+        "last_modified": ""
+      }
+    },
+    "resource-23329e0ae68a4ac3": {
+      "document_id": "resource-23329e0ae68a4ac3",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://rss.buzzsprout.com/2370174.rss",
+      "title": "https://rss.buzzsprout.com/2370174.rss",
+      "content_hash": "0157e3d25562a28b076b5cd06d2b1e2fee38f98216ea957706947bb76b902c1f",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<?xml-stylesheet href=\"https://rss.buzzsprout.com/styles.xsl\" type=\"text/xsl\"?>\n<rss version=\"2.0\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\" xmlns:podcast=\"https://podcastindex.org/namespace/1.0\" xmlns:content=\"http://purl.o",
+      "retrieved_at": "2026-06-02T10:15:39.770743+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/xml",
+        "etag": "W/\"0bc44eef0b348c117babc41cca5d34c7\"",
+        "last_modified": "Mon, 11 May 2026 17:22:52 GMT"
+      }
+    },
+    "resource-b2a66a8a2363d567": {
+      "document_id": "resource-b2a66a8a2363d567",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://pubsubhubbub.appspot.com/",
+      "title": "https://pubsubhubbub.appspot.com/",
+      "content_hash": "7fb97f016815bf405bc39aba20d0b88045442e53540cb5d28690f878c65b29ee",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "PubSubHubbub Hub Welcome to the Google PubSubHubbub Hub! This hub conforms to the Pubsubhubbub 0.4 specification . In addition, this hub conforms to the Pubsubhubbub 0.3 specification with the exception of permanent subscriptions. Because of this you will need to refresh each of ",
+      "retrieved_at": "2026-06-02T10:15:41.121756+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-1a059b6b8aa6479a": {
+      "document_id": "resource-1a059b6b8aa6479a",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.morethanalanguage.com/",
+      "title": "https://www.morethanalanguage.com/",
+      "content_hash": "8fabd6cca841ffe3d3a01fffe0d84c82e4bd1424c835d0b6d89837d77b2e4eb4",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "English and Beyond | English Learning Podcasts, Intermediate and Advanced Levels top of page Transcripts Transcripts Scroll down for more info on the podcasts! WELCOME Guides Survey More Than A Language At More Than a Language , you’ll find two podcasts designed to help you under",
+      "retrieved_at": "2026-06-02T10:15:43.560677+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "W/\"09ee90e65d45fdaadc4c850f7f2d5c85\"",
+        "last_modified": ""
+      }
+    },
+    "resource-0f2f0d78f07a8751": {
+      "document_id": "resource-0f2f0d78f07a8751",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/",
+      "title": "https://www.elmundo.es/",
+      "content_hash": "dd3768488ec89638a602b1fd9485451afed7a2d6cc708dc01a2a091b0bc0aa19",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "EL MUNDO - Diario online líder de información en español Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra Irán Torrelodones Michael Jordan Martiño Rivas Rafa Jódar Zverev hora Euphoria final Irene Esser Nota alta Comp",
+      "retrieved_at": "2026-06-02T10:15:48.627405+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-432a9c171cff5b0e": {
+      "document_id": "resource-432a9c171cff5b0e",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/rss/index.xml",
+      "title": "https://www.elmundo.es/rss/index.xml",
+      "content_hash": "6e3bbf783d86bd648551785fbcb82d4da135fd9e49d5f07d7b30c2bc8ed122f0",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\" xmlns:ue=\"https://www.elmundo.es/im",
+      "retrieved_at": "2026-06-02T10:15:50.601606+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-68193a39afff3034": {
+      "document_id": "resource-68193a39afff3034",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/extremadura/2026/06/02/6a1ea3de21efa0ad338b45b0.html",
+      "title": "https://www.elmundo.es/espana/extremadura/2026/06/02/6a1ea3de21efa0ad338b45b0.html",
+      "content_hash": "4574f7a8d95e32f8505df8960575d45812280961c0dcef15e218622acee3c2ca",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "La Diputación de Badajoz elaboró dos actas con distinta puntuación para baremar a los 11 candidatos que se presentaron a la plaza que ganó David Sánchez | Extremadura Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra I",
+      "retrieved_at": "2026-06-02T10:15:52.220583+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-7f05abd5720db760": {
+      "document_id": "resource-7f05abd5720db760",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/cataluna/2026/06/02/6a1e8be8e4d4d873568b45a0.html",
+      "title": "https://www.elmundo.es/cataluna/2026/06/02/6a1e8be8e4d4d873568b45a0.html",
+      "content_hash": "e3cc9243053336c17cb05c15bb3e6140bb74190a6fb70707a482ae345d64ea70",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Junts reta a Feijóo a reunirse con Puigdemont en Waterloo para plantearle la moción de censura | Cataluña Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra Irán Torrelodones Michael Jordan Martiño Rivas Rafa Jódar Zver",
+      "retrieved_at": "2026-06-02T10:15:53.833719+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-8df1a6be22f0b442": {
+      "document_id": "resource-8df1a6be22f0b442",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/02/6a1e9e5921efa0ad338b45a1.html",
+      "title": "https://www.elmundo.es/espana/2026/06/02/6a1e9e5921efa0ad338b45a1.html",
+      "content_hash": "6380d89d2aed6be740c1d15aac74c8fd6343d5e51a103207f7de06528f013896",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Feijóo intenta despertar a la élite económica catalana y rechaza las llamadas al \"consenso\": \"Ya no me engañan. Ustedes no pactarían con una compañía investigada por corrupción\" | España Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trum",
+      "retrieved_at": "2026-06-02T10:15:55.483864+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-dbcb8da153a9170d": {
+      "document_id": "resource-dbcb8da153a9170d",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/economia/empresas/2026/06/01/6a1d961efdddff55268b45aa.html",
+      "title": "https://www.elmundo.es/economia/empresas/2026/06/01/6a1d961efdddff55268b45aa.html",
+      "content_hash": "5002cdd0e5d8d7e406b5c5ad70151d023521089565398621918e5f041c1355db",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Florentino planea traspasar el negocio del fútbol del Real Madrid a una nueva filial y vender hasta un 10% a un inversor privado | Empresas Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra Irán Torrelodones Michael Jo",
+      "retrieved_at": "2026-06-02T10:15:57.094368+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-3147e9ef211efb88": {
+      "document_id": "resource-3147e9ef211efb88",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/deportes/futbol/2026/06/02/6a1dffaffc6c83872b8b4597.html",
+      "title": "https://www.elmundo.es/deportes/futbol/2026/06/02/6a1dffaffc6c83872b8b4597.html",
+      "content_hash": "251674dd788193046be2a2074f6f301b04f8e0e2435d63a5680e14a54d20a039",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Enrique Riquelme: \"No hay nadie más apropiado que Raúl González para liderar mi proyecto deportivo\" | Fútbol Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra Irán Torrelodones Michael Jordan Martiño Rivas Rafa Jódar Z",
+      "retrieved_at": "2026-06-02T10:15:58.703838+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a726c6c2296df439": {
+      "document_id": "resource-a726c6c2296df439",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/02/6a1ea9bd21efa0f7348b45a9.html",
+      "title": "https://www.elmundo.es/espana/2026/06/02/6a1ea9bd21efa0f7348b45a9.html",
+      "content_hash": "addeb3b5bad7c3927ff8ad5167b1d2f18ec733cf05091b6f6e00763012f54548",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Los profesores se organizan para ir a la huelga en toda España en septiembre ante la \"parálisis\" del Gobierno en educación | España Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra Irán Torrelodones Michael Jordan Mar",
+      "retrieved_at": "2026-06-02T10:16:00.325194+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-591c4f753d8eb042": {
+      "document_id": "resource-591c4f753d8eb042",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/internacional/2026/06/02/6a1e1445e85eceb7348b4590.html",
+      "title": "https://www.elmundo.es/internacional/2026/06/02/6a1e1445e85eceb7348b4590.html",
+      "content_hash": "aa565b270dd880e7afd621855d48a4f9c360b0134bfd8200590f578c85199fbf",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Trump abronca a Netanyahu: \"¡¿Qué coño estás haciendo? Estás jodidamente loco, estarías en prisión si no fuera por mí. Te estoy salvando el culo. Todos odian a Israel por esto!\" | Internacional Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pér",
+      "retrieved_at": "2026-06-02T10:16:01.945125+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-09a3976674aaa9c5": {
+      "document_id": "resource-09a3976674aaa9c5",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/02/6a1e9c54e85ece5a688b459a.html",
+      "title": "https://www.elmundo.es/espana/2026/06/02/6a1e9c54e85ece5a688b459a.html",
+      "content_hash": "16e02c12a9a50897d47a522618b19a6f2450a5683cd10348231cd893d6a52585",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Del primer salto a uno nocturno: así se ha convertido la Princesa Leonor en paracaidista | España Es noticia Últimas noticias Feijóo Moción censura Hermano Pedro Sánchez Florentino Pérez Trump Netanyahu Guerra Irán Torrelodones Michael Jordan Martiño Rivas Rafa Jódar Zverev hora ",
+      "retrieved_at": "2026-06-02T10:16:03.573437+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-774f02593a5689ed": {
+      "document_id": "resource-774f02593a5689ed",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p05hw4bq",
+      "title": "https://www.bbc.co.uk/programmes/p05hw4bq",
+      "content_hash": "1b3511ef3a38e0e2fcaad109b89a516b854c8bd773345a744902e8ae3d840267",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Learning English from the News Learn the language you need ",
+      "retrieved_at": "2026-06-02T10:16:07.570081+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-d557eb086bd2f525": {
+      "document_id": "resource-d557eb086bd2f525",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://podcasts.files.bbci.co.uk/p05hw4bq.rss",
+      "title": "https://podcasts.files.bbci.co.uk/p05hw4bq.rss",
+      "content_hash": "07caea833b65fde3bbabc5fc8381b55ff5465c06e18cc7016e428e4b03a56c7e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ppg=\"http://bbc.co.uk/2009/01/ppgRss\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"><!--By accessing this feed you are w",
+      "retrieved_at": "2026-06-02T10:16:10.498633+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/rss+xml",
+        "etag": "\"074d191d5affaca574befca8108eba80\"",
+        "last_modified": "Wed, 27 May 2026 11:33:56 GMT"
+      }
+    },
+    "resource-88c68d2eba6c930c": {
+      "document_id": "resource-88c68d2eba6c930c",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nnj8cy",
+      "title": "https://www.bbc.co.uk/programmes/p0nnj8cy",
+      "content_hash": "cc1fbc795cbd2328a49802c6dc5c2855aedb26b10ddac87a404a4278831f5f94",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Is social media 'the new smoking'? Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Listen now Is social me",
+      "retrieved_at": "2026-06-02T10:16:13.166003+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-96299f3fee0d0d0d": {
+      "document_id": "resource-96299f3fee0d0d0d",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nm9crs",
+      "title": "https://www.bbc.co.uk/programmes/p0nm9crs",
+      "content_hash": "778dfa12a77a4d84f8595cb1f613aa9af0107a1e177fc177e08b28b3fdc6bf7c",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Deadly Ebola virus spreads Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Listen now Deadly Ebola virus s",
+      "retrieved_at": "2026-06-02T10:16:16.321065+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-e78f8b7386a22f8d": {
+      "document_id": "resource-e78f8b7386a22f8d",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nky8qz",
+      "title": "https://www.bbc.co.uk/programmes/p0nky8qz",
+      "content_hash": "0a2723ac90bd460f058d0ce86e06b6c166b3ac9904b9f0d9ce792260818547b4",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Hantavirus ship evacuated Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Listen now Hantavirus ship evacu",
+      "retrieved_at": "2026-06-02T10:16:19.332971+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-ffb55d61bfab504a": {
+      "document_id": "resource-ffb55d61bfab504a",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0njmlw2",
+      "title": "https://www.bbc.co.uk/programmes/p0njmlw2",
+      "content_hash": "c09e3fcf8843fa892feb156a92f0144c30f5054ca101d47d862a7dea4194706b",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Iran war puts global food production at risk, says fertiliser boss Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main",
+      "retrieved_at": "2026-06-02T10:16:21.491806+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-125e81358fdfc039": {
+      "document_id": "resource-125e81358fdfc039",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nh8lz9",
+      "title": "https://www.bbc.co.uk/programmes/p0nh8lz9",
+      "content_hash": "3d8c29923822c543e3237af03f6bf46c4f384559976751c159788fbb7fabee4d",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Trump shooting attempt Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Listen now Trump shooting attempt L",
+      "retrieved_at": "2026-06-02T10:16:23.616933+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-83240503a9381141": {
+      "document_id": "resource-83240503a9381141",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nfx8nt",
+      "title": "https://www.bbc.co.uk/programmes/p0nfx8nt",
+      "content_hash": "d0aeaf223885f57fd799b31c75e29c1d18ecd3818d6d599bf0b098a12762ec78",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Mass shooting at Mexican pyramids Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Listen now Mass shooting",
+      "retrieved_at": "2026-06-02T10:16:25.746893+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-dd9146dcd94e2e35": {
+      "document_id": "resource-dd9146dcd94e2e35",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0ndj0yf",
+      "title": "https://www.bbc.co.uk/programmes/p0ndj0yf",
+      "content_hash": "5ba08ffaf16ff0a55d40f5e56330ec8d840b644b353ce47e778925b33418c91e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Hungary election landslide Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main content Listen now Hungary election lan",
+      "retrieved_at": "2026-06-02T10:16:27.910909+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-fdb174790500c950": {
+      "document_id": "resource-fdb174790500c950",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nc5z33",
+      "title": "https://www.bbc.co.uk/programmes/p0nc5z33",
+      "content_hash": "fa49fd965cb2610a9395aa2056287547a3426090c749e1395e6b1d5f91246290",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English from the News, Artemis II takes humans further from Earth than ever before Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English from the News Home Podcast Subscribe to our newsletter Main conten",
+      "retrieved_at": "2026-06-02T10:16:30.583899+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-168602715641c363": {
+      "document_id": "resource-168602715641c363",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p02pc9s1",
+      "title": "https://www.bbc.co.uk/programmes/p02pc9s1",
+      "content_hash": "d43aea7f8c0b4603eb023cb3d75494b142af2938a7c7a23dca736c10a2ce7180",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Learning English Stories Improve your English with these short",
+      "retrieved_at": "2026-06-02T10:16:34.718097+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-8ced2435f4c89f4f": {
+      "document_id": "resource-8ced2435f4c89f4f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://podcasts.files.bbci.co.uk/p02pc9s1.rss",
+      "title": "https://podcasts.files.bbci.co.uk/p02pc9s1.rss",
+      "content_hash": "c9a5dedf631e66c79ccd105be7dd6cea87e6f7c14f03991a22415d111f32965e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ppg=\"http://bbc.co.uk/2009/01/ppgRss\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"><!--By accessing this feed you are w",
+      "retrieved_at": "2026-06-02T10:16:37.626126+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/rss+xml",
+        "etag": "\"9bf3170fc2be0cb0476416c5e0576ec9\"",
+        "last_modified": "Fri, 29 May 2026 11:55:05 GMT"
+      }
+    },
+    "resource-604e0837d3c8741c": {
+      "document_id": "resource-604e0837d3c8741c",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0np0nvy",
+      "title": "https://www.bbc.co.uk/programmes/p0np0nvy",
+      "content_hash": "f6597f15b90f2d24f8636d0ce84866bf00e11c2f2633891bc7765b2c9a070876",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: The War of the Worlds Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Sto",
+      "retrieved_at": "2026-06-02T10:16:39.653567+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-60b886c2a6b8b491": {
+      "document_id": "resource-60b886c2a6b8b491",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nmqsgt",
+      "title": "https://www.bbc.co.uk/programmes/p0nmqsgt",
+      "content_hash": "a0ecd12d557656cfc124dffd6a2e7b14979aef5f408840d4d3ef1cd499f60d17",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: The 39 Steps Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Stories: The",
+      "retrieved_at": "2026-06-02T10:16:41.962501+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-c13f2d4b23beb437": {
+      "document_id": "resource-c13f2d4b23beb437",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nldgn4",
+      "title": "https://www.bbc.co.uk/programmes/p0nldgn4",
+      "content_hash": "37e4b936643a9e6c56e74e734f8133c14275c0de3513416aa9fe4bb1cff3632f",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: A Midsummer Night's Dream Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic",
+      "retrieved_at": "2026-06-02T10:16:44.823504+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-b9d96899845f8359": {
+      "document_id": "resource-b9d96899845f8359",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nk2s1x",
+      "title": "https://www.bbc.co.uk/programmes/p0nk2s1x",
+      "content_hash": "f039ffdec6549ade0b4dcdbfd69ffd62f2e8a4da1734cd0519bc4fda242977d3",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: Animal Farm Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Stories: Anim",
+      "retrieved_at": "2026-06-02T10:16:47.041639+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-4065805872cf0504": {
+      "document_id": "resource-4065805872cf0504",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nhrpys",
+      "title": "https://www.bbc.co.uk/programmes/p0nhrpys",
+      "content_hash": "671ba457b49395d1c79fa705317e81c35e43ce5acc21d9c58c59ccfb8fe2ab77",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: Little Women Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Stories: Lit",
+      "retrieved_at": "2026-06-02T10:16:48.996985+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-76e606d8d8f9a9bc": {
+      "document_id": "resource-76e606d8d8f9a9bc",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0ngc2yx",
+      "title": "https://www.bbc.co.uk/programmes/p0ngc2yx",
+      "content_hash": "ffda75bb206d3bcd03158c29c55f48b42c0b3f3289f756d0f21f0a27785246d8",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: The Tempest Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Stories: The ",
+      "retrieved_at": "2026-06-02T10:16:51.595598+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-980fc1f43a40524b": {
+      "document_id": "resource-980fc1f43a40524b",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0ndz0nn",
+      "title": "https://www.bbc.co.uk/programmes/p0ndz0nn",
+      "content_hash": "264af89f7bea053d7d359d3d68e0302b3b996b59c0e0af88a5a904f7e78caa57",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: 1984 Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Stories: 1984 Learni",
+      "retrieved_at": "2026-06-02T10:16:53.711543+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a0b2364b59f0cfef": {
+      "document_id": "resource-a0b2364b59f0cfef",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0ncnxf4",
+      "title": "https://www.bbc.co.uk/programmes/p0ncnxf4",
+      "content_hash": "1bf0ba6d1215e03deee0d4927f9dc197f70b20f082dfbea35f234f428146edd6",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: Much Ado About Nothing Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic St",
+      "retrieved_at": "2026-06-02T10:16:55.817222+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-bb13c38163766077": {
+      "document_id": "resource-bb13c38163766077",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/feed/",
+      "title": "https://www.notesinspanish.com/feed/",
+      "content_hash": "c4267758848306d3d195abfa7b0367ce09f968820e1cd504c026b9355be65334",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\"\n\txmlns:content=\"http://purl.org/rss/1.0/modules/content/\"\n\txmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"\n\txmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n\txmlns:atom=\"http://www.w3.org/2005/Atom\"\n\txmlns:sy=\"http://purl.org/r",
+      "retrieved_at": "2026-06-02T10:17:04.978979+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/rss+xml",
+        "etag": "W/\"d355c433942999d1da4b34590b97c893\"",
+        "last_modified": "Fri, 29 May 2026 08:22:19 GMT"
+      }
+    },
+    "resource-8c8120aa9a50ee45": {
+      "document_id": "resource-8c8120aa9a50ee45",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/",
+      "title": "https://www.notesinspanish.com/",
+      "content_hash": "261989dfd9fafaf0f8a292fd7700d1b18595ea91d18a687b6c834528915ab02c",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "From Intermediate to Fluent: Master the Spanish Locals Actually Speak - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Learn the Real Spanish you’ll never fi",
+      "retrieved_at": "2026-06-02T10:17:07.093604+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a1c3ce4bb285bf7f": {
+      "document_id": "resource-a1c3ce4bb285bf7f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/05/26/how-to-stay-clever-in-an-ai-world-real-spanish-conversation/",
+      "title": "https://www.notesinspanish.com/2026/05/26/how-to-stay-clever-in-an-ai-world-real-spanish-conversation/",
+      "content_hash": "2b6a96b0763a9074173ed2728b76052eac8e307808a6283287f7050fe66c357e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "How to stay clever in an AI world! (Real Spanish Conversation) - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos How to",
+      "retrieved_at": "2026-06-02T10:17:09.309805+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-2b3ff5cef4058eae": {
+      "document_id": "resource-2b3ff5cef4058eae",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/05/26/madrid-slang-and-real-spanish-chat-what-do-you-get/",
+      "title": "https://www.notesinspanish.com/2026/05/26/madrid-slang-and-real-spanish-chat-what-do-you-get/",
+      "content_hash": "26189038ef0b95abbc83c55b6d160636e85a4cd7cb606c33d15997c3d524e580",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Madrid Slang and Real Spanish Chat - What % do you get? - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos Madrid Slang ",
+      "retrieved_at": "2026-06-02T10:17:11.166332+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-c64c1e9f5dd919ae": {
+      "document_id": "resource-c64c1e9f5dd919ae",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/05/07/how-to-measure-your-spanish-progress-real-spanish-conversation/",
+      "title": "https://www.notesinspanish.com/2026/05/07/how-to-measure-your-spanish-progress-real-spanish-conversation/",
+      "content_hash": "82f523b76201db250a2e08d0edc154e56dba6990db2713954ee5ffdccb7d21e8",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "How to Measure Your Spanish Progress (Real Spanish Conversation) - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos How ",
+      "retrieved_at": "2026-06-02T10:17:13.415204+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-4918dfc0913d22f0": {
+      "document_id": "resource-4918dfc0913d22f0",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/04/07/why-you-still-cant-understand-fast-spanish-even-after-years/",
+      "title": "https://www.notesinspanish.com/2026/04/07/why-you-still-cant-understand-fast-spanish-even-after-years/",
+      "content_hash": "378bce8c28488bfbf17135e59ca231f094779dd9611d7d695c770543f20ee73e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Why You STILL Can’t Understand Fast Spanish (Even After Years) - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos Why Yo",
+      "retrieved_at": "2026-06-02T10:17:15.601264+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-3dc0a0329bb7d84a": {
+      "document_id": "resource-3dc0a0329bb7d84a",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/03/26/why-spanish-speakers-say-ya-50-times-a-day/",
+      "title": "https://www.notesinspanish.com/2026/03/26/why-spanish-speakers-say-ya-50-times-a-day/",
+      "content_hash": "acd822b2d008176335d5c788cf95d397704304b029ffc8c38479fe8ffaf67cf9",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Why Spanish Speakers Say \"Ya\" 50 Times a Day - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos Why Spanish Speakers Say",
+      "retrieved_at": "2026-06-02T10:17:17.729729+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-4ee6f45387d81c91": {
+      "document_id": "resource-4ee6f45387d81c91",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/03/19/two-spanish-words-that-trigger-the-subjunctive-real-subjunctive-wins-2/",
+      "title": "https://www.notesinspanish.com/2026/03/19/two-spanish-words-that-trigger-the-subjunctive-real-subjunctive-wins-2/",
+      "content_hash": "a760fb8c903f063f54267b3aba2124a9ab1e444a07e8cf0983c640ea3df8884b",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Two Spanish Words That Trigger the Subjunctive: Real Subjunctive Wins 2 - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Vide",
+      "retrieved_at": "2026-06-02T10:17:19.857416+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-6fe2bf6943486b86": {
+      "document_id": "resource-6fe2bf6943486b86",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/03/16/you-already-know-the-spanish-subjunctive/",
+      "title": "https://www.notesinspanish.com/2026/03/16/you-already-know-the-spanish-subjunctive/",
+      "content_hash": "149b37cdd82d3779920d7836260042e6aca2d6e406b21257f1cf72602ac70323",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "You Already Know The Spanish Subjunctive - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos You Already Know The Spanish",
+      "retrieved_at": "2026-06-02T10:17:22.001349+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-e3243889cdeba380": {
+      "document_id": "resource-e3243889cdeba380",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.notesinspanish.com/2026/03/11/when-you-freeze-in-spanish-say-this/",
+      "title": "https://www.notesinspanish.com/2026/03/11/when-you-freeze-in-spanish-say-this/",
+      "content_hash": "80dc425f6bb65ee03299d47b194d481e4227d6cc501ab2db653d890a0c398ba0",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "When You Freeze in Spanish… Say This - Notes in Spanish Real Spanish Culture Challenge is Open Now! Skip to content Menu Menu Courses Fluency Tips About Blog Log in Menu Courses Fluency Tips About Blog Log in Categories Our Spanish Learning Videos When You Freeze in Spanish… Say ",
+      "retrieved_at": "2026-06-02T10:17:23.854951+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
     }
   },
   "segments": {
@@ -632,6 +2508,156 @@
       "excerpt": "English-language idioms - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Searc",
       "language": "en",
       "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-a7bdebccaeeedefc": {
+      "segment_id": "resource-segment-a7bdebccaeeedefc",
+      "document_id": "resource-c4a41c8923e821d0",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/c2d1a9495e1dbfe070bc190e687b10b9301dc0bc6b68f6ddf847eb9695c6ad4a.txt#segment=1",
+      "excerpt": "English-speaking world - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-85eb0a063c39a692": {
+      "segment_id": "resource-segment-85eb0a063c39a692",
+      "document_id": "resource-660f80a9cff1c0ce",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/7ba528e38c62571c7da8a13323fceeb3a40d5516df5cfccd8e57641116dae86e.txt#segment=1",
+      "excerpt": "List of English words of French origin - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pag",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-a0e4eb3aacb87a0a": {
+      "segment_id": "resource-segment-a0e4eb3aacb87a0a",
+      "document_id": "resource-ece36ba5ebfa17a7",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/efe102e291d6da7cd01899d12b895094c4870b2aa6c0adbb72bb6295ad79303f.txt#segment=1",
+      "excerpt": "El subjuntivo en espanol. El modo subjuntivo es fundamental para expresar subjetividad. Se utiliza en situaciones de duda, deseo, emocion, necesidad, opinion negativa o hipotesis. Las conjunciones como que, cuando, aunque introducen el subjuntivo. Ejemplos: Espero que vengas mana",
+      "language": "es",
+      "topic": "grammar",
+      "confidence": 1.0
+    },
+    "resource-segment-fcc038b28480a0d2": {
+      "segment_id": "resource-segment-fcc038b28480a0d2",
+      "document_id": "resource-1397c50bef2dc069",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/51dda5367db9725a7a2028c564a7f6bd6945a2ffb13e7c13bc3a7ad1aadf9946.txt#segment=1",
+      "excerpt": "English prefix - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appeara",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-4afd0df5af229054": {
+      "segment_id": "resource-segment-4afd0df5af229054",
+      "document_id": "resource-17d5dd2d01dd32b1",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/f49a2fcfd18650ffc7c34324be928dc3b44bdd50c4d977b382e744bdff89253f.txt#segment=1",
+      "excerpt": "El modo subjuntivo en espanol. El modo subjuntivo es un modo gramatical que expresa la subjetividad del hablante. A diferencia del indicativo, que expresa hechos objetivos, el subjuntivo se utiliza para expresar dudas, deseos, emociones, opiniones personales y situaciones hipotet",
+      "language": "es",
+      "topic": "grammar",
+      "confidence": 1.0
+    },
+    "resource-segment-c7f363ec785c7d2f": {
+      "segment_id": "resource-segment-c7f363ec785c7d2f",
+      "document_id": "resource-b320ec297616b995",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/6967787fba014e5a3c6ae1953c121fcb20bb429e7af73796f25533527d363293.txt#segment=1",
+      "excerpt": "Los modismos en espanol. Los modismos son expresiones idiomaticas cuyo significado no es literal. Son fundamentales para alcanzar un nivel C1 de competencia linguistica.\nLos siguientes modismos son de uso frecuente en el espanol avanzado:\n1) Estar en las nubes - Significa estar d",
+      "language": "es",
+      "topic": "idioms",
+      "confidence": 1.0
+    },
+    "resource-segment-f5f0669b0b63dc47": {
+      "segment_id": "resource-segment-f5f0669b0b63dc47",
+      "document_id": "resource-a1e3afcf859d88c5",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/ec2f510c446ba8fc2934c8c184c72af873b4281e9042580023ba43baf24dc36c.txt#segment=1",
+      "excerpt": "Preparacion para el DELE C1. El DELE C1 es un examen oficial del Instituto Cervantes que acredita un nivel avanzado de espanol. El examen consta de cuatro pruebas:\nPrueba 1: Comprension de lectura y uso de la lengua. 90 minutos. Incluye textos largos y complejos de temas como cie",
+      "language": "es",
+      "topic": "exam-prep",
+      "confidence": 1.0
+    },
+    "resource-segment-c5faf55eb5476a9d": {
+      "segment_id": "resource-segment-c5faf55eb5476a9d",
+      "document_id": "resource-2bf45bea4816ad1d",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/ed49313253bd725cf42e75108c98d5d6353cc3d28c44212eafbe0173e9cce380.txt#segment=1",
+      "excerpt": "Suffix - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Dona",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-a40f362f02679651": {
+      "segment_id": "resource-segment-a40f362f02679651",
+      "document_id": "resource-73cb38460e07f6d7",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/603e0e131e1b3dec99b3068c2fe8295b819fd92f2b6bf8c4bf4bc82172188cd6.txt#segment=1",
+      "excerpt": "English compound - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appea",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-b4f64944a47d803a": {
+      "segment_id": "resource-segment-b4f64944a47d803a",
+      "document_id": "resource-b72ed7b980069620",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/c32f59eded0fab6f6d4b064391e930c23c69c27b23ff877980357df587f7950d.txt#segment=1",
+      "excerpt": "Preparacion para el DELE C1. El DELE C1 es un examen oficial del Instituto Cervantes que acredita un nivel avanzado de espanol. El examen consta de cuatro pruebas:\nPrueba 1: Comprension de lectura y uso de la lengua. 90 minutos.\nPrueba 2: Comprension auditiva y uso de la lengua. ",
+      "language": "es",
+      "topic": "exam-prep",
+      "confidence": 1.0
+    },
+    "resource-segment-700db3cc6e73c8fe": {
+      "segment_id": "resource-segment-700db3cc6e73c8fe",
+      "document_id": "resource-c9c404f20d4f9701",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/85564c05b331308fe6fc3c1bebc42360f5aec81d051ef36007ca851bca3eb5f7.txt#segment=1",
+      "excerpt": "International English - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search ",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-f6158d1cc47dd388": {
+      "segment_id": "resource-segment-f6158d1cc47dd388",
+      "document_id": "resource-81c44c68c599f606",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/214880dfaff4469dfc0aa661194eabeb0d7194214fbd5874018b3fd73c06911b.txt#segment=1",
+      "excerpt": "International English Language Testing System - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Spec",
+      "language": "en",
+      "topic": "ielts",
+      "confidence": 1.0
+    },
+    "resource-segment-2686155683bbab5b": {
+      "segment_id": "resource-segment-2686155683bbab5b",
+      "document_id": "resource-48a0ac000a007541",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/189d6273bcbdb02c1064c74b6fe24f728cdc4fbd8e19bcfa31c516f7d8dae6ce.txt#segment=1",
+      "excerpt": "Common European Framework of Reference for Languages - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload fi",
+      "language": "en",
+      "topic": "vocabulary",
+      "confidence": 1.0
+    },
+    "resource-segment-c9f3925838129270": {
+      "segment_id": "resource-segment-c9f3925838129270",
+      "document_id": "resource-3bbf911745a35a9e",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/a515ab91b264bd95cf2cf89a6db62b777e745a0f9bb6220753dd2b1655942ae8.txt#segment=1",
+      "excerpt": "La conjugacion verbal avanzada en espanol. Los verbos irregulares en espanol presentan patrones complejos. Los verbos de cambio radical como poder (puedo, puedes, puede, podemos, podeis, pueden), tener (tengo, tienes, tiene, tenemos, teneis, tienen), y venir (vengo, vienes, viene",
+      "language": "es",
+      "topic": "grammar",
+      "confidence": 1.0
+    },
+    "resource-segment-0de1fabedbe334c2": {
+      "segment_id": "resource-segment-0de1fabedbe334c2",
+      "document_id": "resource-0c519ed22373266f",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/6327bfa0038ea068db003ab6a742e1bc660d3d44de25b4632e9ce5ad86e3ed5e.txt#segment=1",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Tue, 02 Jun 2026 06:14:51 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "language": "",
+      "topic": "",
       "confidence": 1.0
     }
   },
@@ -925,9 +2951,11 @@
     "resource-job-3511a74d1a08": {
       "job_id": "resource-job-3511a74d1a08",
       "trigger": "crawl",
-      "status": "running",
+      "status": "failed",
       "budget_usage": 0,
-      "retry_state": {},
+      "retry_state": {
+        "reason": "Resource request failed: "
+      },
       "audit_summary": {},
       "created_at": "2026-06-02T06:19:03.753440+00:00"
     },
@@ -1011,11 +3039,1091 @@
     "resource-job-fd82ce641502": {
       "job_id": "resource-job-fd82ce641502",
       "trigger": "crawl",
-      "status": "running",
+      "status": "failed",
       "budget_usage": 0,
-      "retry_state": {},
+      "retry_state": {
+        "reason": "Resource request failed: "
+      },
       "audit_summary": {},
       "created_at": "2026-06-02T06:19:33.967710+00:00"
+    },
+    "resource-job-c1be335f703c": {
+      "job_id": "resource-job-c1be335f703c",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource request failed: "
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-02T06:20:08.018738+00:00"
+    },
+    "resource-job-7e6a57f97478": {
+      "job_id": "resource-job-7e6a57f97478",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:20:53.527584+00:00"
+    },
+    "resource-job-4cb6e44c7ffa": {
+      "job_id": "resource-job-4cb6e44c7ffa",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:20:55.859077+00:00"
+    },
+    "resource-job-a92cc4ee756c": {
+      "job_id": "resource-job-a92cc4ee756c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:20:57.947370+00:00"
+    },
+    "resource-job-b0c857ac44a4": {
+      "job_id": "resource-job-b0c857ac44a4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:09.894433+00:00"
+    },
+    "resource-job-c37a399f9d6e": {
+      "job_id": "resource-job-c37a399f9d6e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:15.009725+00:00"
+    },
+    "resource-job-5f02cb0e1795": {
+      "job_id": "resource-job-5f02cb0e1795",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:24.383940+00:00"
+    },
+    "resource-job-64572706353e": {
+      "job_id": "resource-job-64572706353e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:37.520459+00:00"
+    },
+    "resource-job-dab03087121c": {
+      "job_id": "resource-job-dab03087121c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:51.666101+00:00"
+    },
+    "resource-job-8f5a69bab1c6": {
+      "job_id": "resource-job-8f5a69bab1c6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:54.150667+00:00"
+    },
+    "resource-job-f1c4e2f181d9": {
+      "job_id": "resource-job-f1c4e2f181d9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:21:56.202204+00:00"
+    },
+    "resource-job-36f4b9b1c27d": {
+      "job_id": "resource-job-36f4b9b1c27d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:22:01.984679+00:00"
+    },
+    "resource-job-eda90b2d30a1": {
+      "job_id": "resource-job-eda90b2d30a1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T06:22:04.335120+00:00"
+    },
+    "resource-job-e9eec09639a9": {
+      "job_id": "resource-job-e9eec09639a9",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource request failed: Server disconnected without sending a response."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-02T06:22:06.748880+00:00"
+    },
+    "resource-job-c355e406ee79": {
+      "job_id": "resource-job-c355e406ee79",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource redirect did not include a location."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-02T10:14:05.283072+00:00"
+    },
+    "resource-job-f87c51577c1b": {
+      "job_id": "resource-job-f87c51577c1b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:12.528243+00:00"
+    },
+    "resource-job-e8c053d89430": {
+      "job_id": "resource-job-e8c053d89430",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:14.030700+00:00"
+    },
+    "resource-job-50d8457433ee": {
+      "job_id": "resource-job-50d8457433ee",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:15.931925+00:00"
+    },
+    "resource-job-ea3138592ab9": {
+      "job_id": "resource-job-ea3138592ab9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:17.645536+00:00"
+    },
+    "resource-job-c04b892bab93": {
+      "job_id": "resource-job-c04b892bab93",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:18.851812+00:00"
+    },
+    "resource-job-5104933034e0": {
+      "job_id": "resource-job-5104933034e0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:20.055049+00:00"
+    },
+    "resource-job-830bab18d45e": {
+      "job_id": "resource-job-830bab18d45e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:21.262565+00:00"
+    },
+    "resource-job-36cff80b831a": {
+      "job_id": "resource-job-36cff80b831a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:22.462863+00:00"
+    },
+    "resource-job-5e10e013be5f": {
+      "job_id": "resource-job-5e10e013be5f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:23.690975+00:00"
+    },
+    "resource-job-e12c9dc8e100": {
+      "job_id": "resource-job-e12c9dc8e100",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:24.893379+00:00"
+    },
+    "resource-job-fceba836b270": {
+      "job_id": "resource-job-fceba836b270",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:27.939153+00:00"
+    },
+    "resource-job-3e8adb69e038": {
+      "job_id": "resource-job-3e8adb69e038",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:30.827736+00:00"
+    },
+    "resource-job-73c1092104b1": {
+      "job_id": "resource-job-73c1092104b1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:33.745025+00:00"
+    },
+    "resource-job-398678ee190a": {
+      "job_id": "resource-job-398678ee190a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:35.746970+00:00"
+    },
+    "resource-job-42bf75df95da": {
+      "job_id": "resource-job-42bf75df95da",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:37.865189+00:00"
+    },
+    "resource-job-66f290f63db1": {
+      "job_id": "resource-job-66f290f63db1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:40.356083+00:00"
+    },
+    "resource-job-00504a020add": {
+      "job_id": "resource-job-00504a020add",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:42.427792+00:00"
+    },
+    "resource-job-241f0073dafc": {
+      "job_id": "resource-job-241f0073dafc",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:44.564707+00:00"
+    },
+    "resource-job-3137e162c1be": {
+      "job_id": "resource-job-3137e162c1be",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:47.200516+00:00"
+    },
+    "resource-job-5a60cd8ca42a": {
+      "job_id": "resource-job-5a60cd8ca42a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:49.312619+00:00"
+    },
+    "resource-job-8f6516a38d04": {
+      "job_id": "resource-job-8f6516a38d04",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:51.316253+00:00"
+    },
+    "resource-job-8b598ee5c06e": {
+      "job_id": "resource-job-8b598ee5c06e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:53.009811+00:00"
+    },
+    "resource-job-6362c264af28": {
+      "job_id": "resource-job-6362c264af28",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:14:56.358126+00:00"
+    },
+    "resource-job-d5adb0fdf1b1": {
+      "job_id": "resource-job-d5adb0fdf1b1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:00.087577+00:00"
+    },
+    "resource-job-fcaeddea0391": {
+      "job_id": "resource-job-fcaeddea0391",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:04.279331+00:00"
+    },
+    "resource-job-c42b99bec230": {
+      "job_id": "resource-job-c42b99bec230",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:07.054639+00:00"
+    },
+    "resource-job-79a58f4ae5c4": {
+      "job_id": "resource-job-79a58f4ae5c4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:08.500457+00:00"
+    },
+    "resource-job-f15730d975e8": {
+      "job_id": "resource-job-f15730d975e8",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:10.885061+00:00"
+    },
+    "resource-job-4e05318f5e7a": {
+      "job_id": "resource-job-4e05318f5e7a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:13.523961+00:00"
+    },
+    "resource-job-e38af93f6fa2": {
+      "job_id": "resource-job-e38af93f6fa2",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:15.470998+00:00"
+    },
+    "resource-job-61da4df92687": {
+      "job_id": "resource-job-61da4df92687",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:17.927862+00:00"
+    },
+    "resource-job-4e4d085ea0ac": {
+      "job_id": "resource-job-4e4d085ea0ac",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:19.883467+00:00"
+    },
+    "resource-job-3d6fbc7d3cba": {
+      "job_id": "resource-job-3d6fbc7d3cba",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:22.521198+00:00"
+    },
+    "resource-job-fc2ab35e280a": {
+      "job_id": "resource-job-fc2ab35e280a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:24.439485+00:00"
+    },
+    "resource-job-72bb79a706cd": {
+      "job_id": "resource-job-72bb79a706cd",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:28.277889+00:00"
+    },
+    "resource-job-335d8e3a58a3": {
+      "job_id": "resource-job-335d8e3a58a3",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:29.608506+00:00"
+    },
+    "resource-job-04ee561a876c": {
+      "job_id": "resource-job-04ee561a876c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:31.085458+00:00"
+    },
+    "resource-job-be57af77ee29": {
+      "job_id": "resource-job-be57af77ee29",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource fetch failed with HTTP 403."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-02T10:15:35.364188+00:00"
+    },
+    "resource-job-ec7b23ceb045": {
+      "job_id": "resource-job-ec7b23ceb045",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:38.567821+00:00"
+    },
+    "resource-job-16ed22557dad": {
+      "job_id": "resource-job-16ed22557dad",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:39.807494+00:00"
+    },
+    "resource-job-efba4d114d0d": {
+      "job_id": "resource-job-efba4d114d0d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:41.161723+00:00"
+    },
+    "resource-job-735601254894": {
+      "job_id": "resource-job-735601254894",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:43.596621+00:00"
+    },
+    "resource-job-63a88f370681": {
+      "job_id": "resource-job-63a88f370681",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:46.700995+00:00"
+    },
+    "resource-job-42d7a5c80044": {
+      "job_id": "resource-job-42d7a5c80044",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:48.663510+00:00"
+    },
+    "resource-job-d6514e9ef364": {
+      "job_id": "resource-job-d6514e9ef364",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:50.637621+00:00"
+    },
+    "resource-job-2a2815a67142": {
+      "job_id": "resource-job-2a2815a67142",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:52.257449+00:00"
+    },
+    "resource-job-d2fbe1424832": {
+      "job_id": "resource-job-d2fbe1424832",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:53.870384+00:00"
+    },
+    "resource-job-2b31e17368ec": {
+      "job_id": "resource-job-2b31e17368ec",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:55.521465+00:00"
+    },
+    "resource-job-ceb195bac0b4": {
+      "job_id": "resource-job-ceb195bac0b4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:57.131478+00:00"
+    },
+    "resource-job-c6eecf945ed0": {
+      "job_id": "resource-job-c6eecf945ed0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:15:58.741742+00:00"
+    },
+    "resource-job-4ba619108913": {
+      "job_id": "resource-job-4ba619108913",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:00.364009+00:00"
+    },
+    "resource-job-45c7657e3d5c": {
+      "job_id": "resource-job-45c7657e3d5c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:01.983823+00:00"
+    },
+    "resource-job-64b0847426d0": {
+      "job_id": "resource-job-64b0847426d0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:05.297267+00:00"
+    },
+    "resource-job-e01844eb7251": {
+      "job_id": "resource-job-e01844eb7251",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:07.609112+00:00"
+    },
+    "resource-job-d1c43dd16e19": {
+      "job_id": "resource-job-d1c43dd16e19",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:10.539378+00:00"
+    },
+    "resource-job-ebd41a04d37c": {
+      "job_id": "resource-job-ebd41a04d37c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:13.205284+00:00"
+    },
+    "resource-job-3c909fe4bef0": {
+      "job_id": "resource-job-3c909fe4bef0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:16.362053+00:00"
+    },
+    "resource-job-24bedfd72ade": {
+      "job_id": "resource-job-24bedfd72ade",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:19.374297+00:00"
+    },
+    "resource-job-7c5fec43a58a": {
+      "job_id": "resource-job-7c5fec43a58a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:21.533476+00:00"
+    },
+    "resource-job-f71364a8c863": {
+      "job_id": "resource-job-f71364a8c863",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:23.658701+00:00"
+    },
+    "resource-job-75de34ed9bff": {
+      "job_id": "resource-job-75de34ed9bff",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:25.788030+00:00"
+    },
+    "resource-job-a3622d23703c": {
+      "job_id": "resource-job-a3622d23703c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:27.953189+00:00"
+    },
+    "resource-job-8d0c2d80409e": {
+      "job_id": "resource-job-8d0c2d80409e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:32.205923+00:00"
+    },
+    "resource-job-4aa9ffaeb7f3": {
+      "job_id": "resource-job-4aa9ffaeb7f3",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:34.761628+00:00"
+    },
+    "resource-job-5f1eb79f71f6": {
+      "job_id": "resource-job-5f1eb79f71f6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:37.669785+00:00"
+    },
+    "resource-job-e1a391ef9c27": {
+      "job_id": "resource-job-e1a391ef9c27",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:39.697336+00:00"
+    },
+    "resource-job-b82491f26ec0": {
+      "job_id": "resource-job-b82491f26ec0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:42.005656+00:00"
+    },
+    "resource-job-3242af08baa0": {
+      "job_id": "resource-job-3242af08baa0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:44.867456+00:00"
+    },
+    "resource-job-c5ff63613a12": {
+      "job_id": "resource-job-c5ff63613a12",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:47.086024+00:00"
+    },
+    "resource-job-ac4ac574f261": {
+      "job_id": "resource-job-ac4ac574f261",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:49.041288+00:00"
+    },
+    "resource-job-65efbc0fdc1e": {
+      "job_id": "resource-job-65efbc0fdc1e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:51.648548+00:00"
+    },
+    "resource-job-2798116cf7ec": {
+      "job_id": "resource-job-2798116cf7ec",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:16:53.756166+00:00"
+    },
+    "resource-job-b1f7249ac9a9": {
+      "job_id": "resource-job-b1f7249ac9a9",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource denied by robots.txt: https://creators.spotify.com/pod/show/worldsacross"
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-02T10:16:57.907943+00:00"
+    },
+    "resource-job-8353b9c46c0f": {
+      "job_id": "resource-job-8353b9c46c0f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:02.866430+00:00"
+    },
+    "resource-job-cfd9bb2636b9": {
+      "job_id": "resource-job-cfd9bb2636b9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:05.024247+00:00"
+    },
+    "resource-job-1fae947e1aef": {
+      "job_id": "resource-job-1fae947e1aef",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:07.138650+00:00"
+    },
+    "resource-job-864ce23c9d71": {
+      "job_id": "resource-job-864ce23c9d71",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:09.356046+00:00"
+    },
+    "resource-job-900a7506f694": {
+      "job_id": "resource-job-900a7506f694",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:11.212187+00:00"
+    },
+    "resource-job-82aa9ef955e9": {
+      "job_id": "resource-job-82aa9ef955e9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:13.461624+00:00"
+    },
+    "resource-job-4e50edc9dd4d": {
+      "job_id": "resource-job-4e50edc9dd4d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:15.647758+00:00"
+    },
+    "resource-job-5f0464560a8f": {
+      "job_id": "resource-job-5f0464560a8f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:17.776277+00:00"
+    },
+    "resource-job-1e6b5627bc61": {
+      "job_id": "resource-job-1e6b5627bc61",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:19.904335+00:00"
+    },
+    "resource-job-0d26e45cf323": {
+      "job_id": "resource-job-0d26e45cf323",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-02T10:17:22.049174+00:00"
     }
   },
   "promotions": {
@@ -1144,114 +4252,219 @@
       ],
       "approved": true,
       "revoked": false
+    },
+    "resource-promotion-216bcf59fe5d": {
+      "promotion_id": "resource-promotion-216bcf59fe5d",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-c4a41c8923e821d0",
+        "c2d1a9495e1dbfe070bc190e687b10b9301dc0bc6b68f6ddf847eb9695c6ad4a",
+        "https://en.wikipedia.org/wiki/English-speaking_world"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-67efc9b5e9e4": {
+      "promotion_id": "resource-promotion-67efc9b5e9e4",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-660f80a9cff1c0ce",
+        "7ba528e38c62571c7da8a13323fceeb3a40d5516df5cfccd8e57641116dae86e",
+        "https://en.wikipedia.org/wiki/List_of_English_words_of_French_origin"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-505dedaf1eb7": {
+      "promotion_id": "resource-promotion-505dedaf1eb7",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-ece36ba5ebfa17a7",
+        "efe102e291d6da7cd01899d12b895094c4870b2aa6c0adbb72bb6295ad79303f",
+        "https://es.wikibooks.org/wiki/Espanol/Subjuntivo"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-479d12b009e5": {
+      "promotion_id": "resource-promotion-479d12b009e5",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-1397c50bef2dc069",
+        "51dda5367db9725a7a2028c564a7f6bd6945a2ffb13e7c13bc3a7ad1aadf9946",
+        "https://en.wikipedia.org/wiki/English_prefix"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-0f1c08a57ff7": {
+      "promotion_id": "resource-promotion-0f1c08a57ff7",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-17d5dd2d01dd32b1",
+        "f49a2fcfd18650ffc7c34324be928dc3b44bdd50c4d977b382e744bdff89253f",
+        "https://es.wikibooks.org/wiki/Espanol/Subjuntivo-avanzado-C1"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-b9ffb1de2e5d": {
+      "promotion_id": "resource-promotion-b9ffb1de2e5d",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-b320ec297616b995",
+        "6967787fba014e5a3c6ae1953c121fcb20bb429e7af73796f25533527d363293",
+        "https://es.wikibooks.org/wiki/Espanol/Modismos-idioms-C1"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-34b20dc588db": {
+      "promotion_id": "resource-promotion-34b20dc588db",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-a1e3afcf859d88c5",
+        "ec2f510c446ba8fc2934c8c184c72af873b4281e9042580023ba43baf24dc36c",
+        "https://examenes.cervantes.es/es/dele/preparar-prueba-C1-vocabulario"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-fc9d33d3a6c1": {
+      "promotion_id": "resource-promotion-fc9d33d3a6c1",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-2bf45bea4816ad1d",
+        "ed49313253bd725cf42e75108c98d5d6353cc3d28c44212eafbe0173e9cce380",
+        "https://en.wikipedia.org/wiki/English_suffix"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-7284cb2ded1b": {
+      "promotion_id": "resource-promotion-7284cb2ded1b",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-73cb38460e07f6d7",
+        "603e0e131e1b3dec99b3068c2fe8295b819fd92f2b6bf8c4bf4bc82172188cd6",
+        "https://en.wikipedia.org/wiki/English_compound"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-67a034f4bad9": {
+      "promotion_id": "resource-promotion-67a034f4bad9",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-b72ed7b980069620",
+        "c32f59eded0fab6f6d4b064391e930c23c69c27b23ff877980357df587f7950d",
+        "https://examenes.cervantes.es/dele/C1-vocabulario-v2"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-80e91a122480": {
+      "promotion_id": "resource-promotion-80e91a122480",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-c9c404f20d4f9701",
+        "85564c05b331308fe6fc3c1bebc42360f5aec81d051ef36007ca851bca3eb5f7",
+        "https://en.wikipedia.org/wiki/International_English"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-d42a67b2c3b8": {
+      "promotion_id": "resource-promotion-d42a67b2c3b8",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-81c44c68c599f606",
+        "214880dfaff4469dfc0aa661194eabeb0d7194214fbd5874018b3fd73c06911b",
+        "https://en.wikipedia.org/wiki/IELTS"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-a20319e8c48d": {
+      "promotion_id": "resource-promotion-a20319e8c48d",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-48a0ac000a007541",
+        "189d6273bcbdb02c1064c74b6fe24f728cdc4fbd8e19bcfa31c516f7d8dae6ce",
+        "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-ba22a9a77c4f": {
+      "promotion_id": "resource-promotion-ba22a9a77c4f",
+      "lane": "language",
+      "target": "language_private_corpus",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-3bbf911745a35a9e",
+        "a515ab91b264bd95cf2cf89a6db62b777e745a0f9bb6220753dd2b1655942ae8",
+        "https://es.wikibooks.org/wiki/Espanol/Conjugacion-avanzada-C1"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-76befb1c6189": {
+      "promotion_id": "resource-promotion-76befb1c6189",
+      "lane": "cfa",
+      "target": "cfa_registry_fact",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-0c519ed22373266f",
+        "6327bfa0038ea068db003ab6a742e1bc660d3d44de25b4632e9ce5ad86e3ed5e",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom"
+      ],
+      "approved": true,
+      "revoked": false
     }
   },
-  "inbox": {
-    "resource-inbox-5a5c5e821a6b": {
-      "inbox_id": "resource-inbox-5a5c5e821a6b",
-      "document_id": "resource-2555cc2f1111a854",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-2555cc2f1111a854",
-        "5fd1899b810751d349a2746f00de7199af87cb91f047b18e096771ab24a5e97e",
-        "https://es.wikipedia.org/wiki/Gram%C3%A1tica_del_espa%C3%B1ol"
-      ],
-      "created_at": "2026-06-02T06:17:48.575919+00:00"
-    },
-    "resource-inbox-7c8abcd21e30": {
-      "inbox_id": "resource-inbox-7c8abcd21e30",
-      "document_id": "resource-134a273ff5474f98",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-134a273ff5474f98",
-        "9067e7485e7f5e6aaa31900f892f1392979cd1be7424d9000e011aaa0864d24f",
-        "https://es.wikipedia.org/wiki/Subjuntivo"
-      ],
-      "created_at": "2026-06-02T06:18:05.645654+00:00"
-    },
-    "resource-inbox-d15a261dff80": {
-      "inbox_id": "resource-inbox-d15a261dff80",
-      "document_id": "resource-21f95552328fcb59",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-21f95552328fcb59",
-        "79a96ef91984c4e39d9ed696c6fe6a499474143515ec70a59b7ad6caf2a238bb",
-        "https://es.wikipedia.org/wiki/Conjugaci%C3%B3n"
-      ],
-      "created_at": "2026-06-02T06:18:27.842280+00:00"
-    },
-    "resource-inbox-cbf9d3b42013": {
-      "inbox_id": "resource-inbox-cbf9d3b42013",
-      "document_id": "resource-b0689e8575b8511a",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-b0689e8575b8511a",
-        "fee93abc43243746e3a4d4d12f8d3367cd1ce88c641652f9587cb45b89944a07",
-        "https://es.wikipedia.org/wiki/Modismo"
-      ],
-      "created_at": "2026-06-02T06:18:29.882797+00:00"
-    },
-    "resource-inbox-6daf7d292e13": {
-      "inbox_id": "resource-inbox-6daf7d292e13",
-      "document_id": "resource-d1d531bc729e86b8",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-d1d531bc729e86b8",
-        "c3e51bcab5604985e572b541c96c28c4461b13cfec35b6095e6af12a44b68847",
-        "https://examenes.cervantes.es/es/dele/preparar-prueba"
-      ],
-      "created_at": "2026-06-02T06:18:43.854717+00:00"
-    },
-    "resource-inbox-672e320abe1d": {
-      "inbox_id": "resource-inbox-672e320abe1d",
-      "document_id": "resource-61645624fcd20f36",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-61645624fcd20f36",
-        "310e50f80b406f0151dbce293303a7a022376ff29cdcf0d6e494be0cd58a00d2",
-        "https://es.wikibooks.org/wiki/Espa%C3%B1ol/Gram%C3%A1tica"
-      ],
-      "created_at": "2026-06-02T06:19:18.902191+00:00"
-    },
-    "resource-inbox-0ba41ba736b9": {
-      "inbox_id": "resource-inbox-0ba41ba736b9",
-      "document_id": "resource-d735dfcf6dfb6f9a",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-d735dfcf6dfb6f9a",
-        "82f4e0acc6858c618c5f9b0e2822af2bc16a9c0fb6e0cb8a40ea6eb3865d503b",
-        "https://www.bbc.com/mundo"
-      ],
-      "created_at": "2026-06-02T06:19:29.782836+00:00"
-    },
-    "resource-inbox-b2b86f617c29": {
-      "inbox_id": "resource-inbox-b2b86f617c29",
-      "document_id": "resource-91d4b956ba7e0957",
-      "lane": "language",
-      "reason": "lane_policy_requires_review",
-      "status": "pending",
-      "evidence_refs": [
-        "resource-91d4b956ba7e0957",
-        "4993075942c5a4b9982a722c6563b643d8ea096e905fb34eaf53f9cf8abf7782",
-        "https://es.wikibooks.org/wiki/Espa%C3%B1ol"
-      ],
-      "created_at": "2026-06-02T06:19:31.868240+00:00"
-    }
-  },
+  "inbox": {},
   "audits": {},
   "ai_enhancements": {
     "resource-ai-9e6887ed98ef": {
@@ -1266,6 +4479,71 @@
       ],
       "cost": 0.0,
       "confidence": 0.9
+    },
+    "resource-ai-96a5e3b7f77d": {
+      "enhancement_id": "resource-ai-96a5e3b7f77d",
+      "provider": "spanish-c1-agent",
+      "model": "manual-curation",
+      "prompt_version": "language-ai-extraction-v1",
+      "input_hash": "0714ae3fd4e765c0668be717ab1bb9c5bb032ab2902bfd7aead1b7e785c20cf8",
+      "output_hash": "9c28f7f0f91c4a02ce5ea002fee2bf20de83afcc80ff3916b82b19e998bdde1e",
+      "citations": [
+        "resource-segment-4afd0df5af229054"
+      ],
+      "cost": 0.0,
+      "confidence": 0.85
+    },
+    "resource-ai-aaa70d5aa020": {
+      "enhancement_id": "resource-ai-aaa70d5aa020",
+      "provider": "spanish-c1-agent",
+      "model": "manual-curation",
+      "prompt_version": "language-ai-extraction-v1",
+      "input_hash": "9ae1a6f0af87d0968db8dc6a8e9c20de8e5cf750b4c1a3f4d8dcf988ff15d858",
+      "output_hash": "10f29cc5ce469ab880ab1b9c0eda183e3551e217738ff4f24917efd1796b46c1",
+      "citations": [
+        "resource-segment-c7f363ec785c7d2f"
+      ],
+      "cost": 0.0,
+      "confidence": 0.85
+    },
+    "resource-ai-670468331b27": {
+      "enhancement_id": "resource-ai-670468331b27",
+      "provider": "spanish-c1-agent",
+      "model": "manual-curation",
+      "prompt_version": "language-ai-extraction-v1",
+      "input_hash": "6d1d3d37fc05b753cba9a60fd471a9ea9fea1bdc64258fc3287dd51d127ec666",
+      "output_hash": "6a94f3e54e363942a0e6f4de4d97caa7c47b28b2bf431db32441b48b7fa6d802",
+      "citations": [
+        "resource-segment-f5f0669b0b63dc47"
+      ],
+      "cost": 0.0,
+      "confidence": 0.85
+    },
+    "resource-ai-d44bd27ea0c3": {
+      "enhancement_id": "resource-ai-d44bd27ea0c3",
+      "provider": "spanish-c1-agent",
+      "model": "manual-curation",
+      "prompt_version": "language-ai-extraction-v1",
+      "input_hash": "9f9c1af307edb5b17186a0bedeca4826e1365190343c26e98b3bc359e3dd0373",
+      "output_hash": "8e0dab7b1583b3730313dc2f3d8c980ebf0ce718cd58ca3655f2c4c07e95b79c",
+      "citations": [
+        "resource-segment-b4f64944a47d803a"
+      ],
+      "cost": 0.0,
+      "confidence": 0.85
+    },
+    "resource-ai-5e9b43ee0390": {
+      "enhancement_id": "resource-ai-5e9b43ee0390",
+      "provider": "spanish-c1-agent",
+      "model": "manual-curation",
+      "prompt_version": "language-ai-extraction-v1",
+      "input_hash": "cff079cf118094d9fc2249ecbbee45da0f10df2a2f603fa6e0552e8fa6c45e67",
+      "output_hash": "81604e68a781220e35938725736d9d3072413c48354114d3bad99a3f08e5841c",
+      "citations": [
+        "resource-segment-c9f3925838129270"
+      ],
+      "cost": 0.0,
+      "confidence": 0.85
     }
   }
 }

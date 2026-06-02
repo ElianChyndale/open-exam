@@ -11,8 +11,10 @@ moc_target: CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md
 fix_rule: 先写出考点定义，再用一句话说明为什么正确选项成立。
 next_drill: 24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。
 review_due_at: 2026-05-24
-linked_patterns: 
-correct_resolution: For money-weighted return, build investor cash flows and solve IRR. Here the MWRR is about -2.22%, while TWRR is a separate measure and is positive at about 7.97%.
+linked_patterns: null
+correct_resolution: For money-weighted return, build investor cash flows and solve
+  IRR. Here the MWRR is about -2.22%, while TWRR is a separate measure and is positive
+  at about 7.97%.
 review_status: Reviewed once
 ---
 
@@ -24,3 +26,4 @@ Selected A (Geometric mean return) and confused money-weighted return with time-
 
 ## Evidence
 screenshot-session-2026-05-21
+

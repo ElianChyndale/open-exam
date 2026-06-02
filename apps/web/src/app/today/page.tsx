@@ -72,9 +72,11 @@ export default function TodayCockpit() {
     try {
       await energyApi.checkIn({
         energy_level: energyLevel,
-        mental_clarity: Math.min(10, 3 + energyLevel * 2),
-        physical_fatigue: Math.max(1, 9 - energyLevel * 2),
-        motivation: Math.min(10, 3 + energyLevel * 2),
+        mental_clarity: Math.max(1, Math.min(10, 2 + energyLevel * 2)),
+        physical_fatigue: Math.max(1, Math.min(10, 9 - energyLevel * 2)),
+        motivation: Math.max(1, Math.min(10, 3 + energyLevel * 2)),
+        sleep_hours: 0,
+        stress_level: 0,
       });
       setPlan(await studyPlanApi.getToday({ energy_level: String(energyLevel) }));
     } catch {

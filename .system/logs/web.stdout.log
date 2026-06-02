@@ -1,0 +1,23 @@
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.19.0.1:3000
+✓ Ready in 455ms
+
+ GET / 307 in 301ms (next.js: 139ms, application-code: 162ms)
+ GET /today 200 in 78ms (next.js: 23ms, application-code: 55ms)
+ GET / 307 in 40ms (next.js: 2ms, application-code: 38ms)
+ GET /today 200 in 29ms (next.js: 1826µs, application-code: 27ms)
+ GET /review 200 in 32ms (next.js: 17ms, application-code: 14ms)
+ GET /resources 200 in 31ms (next.js: 18ms, application-code: 12ms)
+ GET /language 200 in 30ms (next.js: 17ms, application-code: 13ms)
+ GET /language/import 404 in 367ms (next.js: 355ms, application-code: 12ms)
+ GET /language/import 404 in 30ms (next.js: 4ms, application-code: 26ms)
+ GET /language 200 in 43ms (next.js: 3ms, application-code: 41ms)
+ GET /language/corpus 404 in 24ms (next.js: 13ms, application-code: 11ms)
+ GET /language/corpus 404 in 27ms (next.js: 4ms, application-code: 24ms)
+ GET /language 200 in 13ms (next.js: 1624µs, application-code: 11ms)
+ GET /language/review 404 in 21ms (next.js: 11ms, application-code: 10ms)
+ GET /language/review 404 in 27ms (next.js: 3ms, application-code: 24ms)
+ GET /language 200 in 12ms (next.js: 1591µs, application-code: 10ms)
+ GET /calendar 200 in 26ms (next.js: 14ms, application-code: 12ms)
+ GET /review 200 in 9ms (next.js: 1573µs, application-code: 8ms)

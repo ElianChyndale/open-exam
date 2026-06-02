@@ -17,6 +17,9 @@ def build_daily_plan(
     available_minutes: int,
     review_items: list[dict],
     danger_los: list[str],
+    sleep_hours: float = 0.0,
+    stress_level: int = 0,
+    physical_fatigue: int = 5,
 ) -> dict:
     """Build a complete daily study plan with energy-aware task allocation."""
     from study_science.energy_planner import EnergyAwarePlanner, EnergyProfile
@@ -25,6 +28,9 @@ def build_daily_plan(
     profile = EnergyProfile(
         energy_level=energy_level,
         available_minutes=available_minutes,
+        physical_fatigue=physical_fatigue,
+        sleep_hours=sleep_hours,
+        stress_level=stress_level,
     )
 
     # Convert review items to tasks

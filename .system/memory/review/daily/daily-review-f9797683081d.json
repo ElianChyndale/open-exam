@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "review_id": "daily-review-f9797683081d",
+  "generated_for": "2026-06-02",
+  "generated_at": "2026-06-02T06:31:12.251325+00:00",
+  "source_event_count": 49,
+  "generation": {
+    "days_back": 7,
+    "max_items": 20,
+    "focus_topic": "",
+    "knowledge_depth": "expanded"
+  },
+  "knowledge_points": [
+    {
+      "knowledge_id": "knowledge-e8fd81236fbd",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "QE",
+      "source_refs": [
+        "CFA_tier1/Economics/M04-Monetary-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a67f6d627fae",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Central bank buys foreign currency",
+      "source_refs": [
+        "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-396444dc185f",
+      "subject": "Corporate Issuers",
+      "heading": "B. Debt vs Equity Claims / Stakeholders",
+      "trigger": "Supplier relationship",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ede85713c019",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Expansionary stance",
+      "source_refs": [
+        "CFA_tier1/Economics/M04-Monetary-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4a70690a36e9",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Percentage change",
+      "source_refs": [
+        "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-22d306fa0399",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Productivity trap",
+      "source_refs": [
+        "CFA_tier1/Economics/M02-Understanding-Business-Cycles.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b0afc2348d1b",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "CR",
+      "source_refs": [
+        "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6e683be1b5bd",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Debt risk",
+      "source_refs": [
+        "CFA_tier1/Economics/M03-Fiscal-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2efc717d77d2",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Approx neutral nominal rate",
+      "source_refs": [
+        "CFA_tier1/Economics/M04-Monetary-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-45352c055f90",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Transmission chain",
+      "source_refs": [
+        "CFA_tier1/Economics/M04-Monetary-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-145c8eac02e6",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Investment channel",
+      "source_refs": [
+        "CFA_tier1/Economics/M05-Introduction-to-Geopolitics.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-bd5a605a6878",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Export subsidy",
+      "source_refs": [
+        "CFA_tier1/Economics/M06-International-Trade.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-d91c47b1dc9e",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Forward premium / interest rate",
+      "source_refs": [
+        "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-493bf759558d",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Contractionary stance",
+      "source_refs": [
+        "CFA_tier1/Economics/M04-Monetary-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4191b1f737d5",
+      "subject": "Corporate Issuers",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Supplier stakeholder",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4fc34d75aa5a",
+      "subject": "Corporate Issuers",
+      "heading": "6. Trap Ledger 易错账本",
+      "trigger": "If a prompt asks why managers may not act for shareholders, answer principal-age",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M03-Corporate-Governance-Conflicts-Mechanisms-Risks-and-Benefits.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-e18d6c0efd4d",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Cycle order",
+      "source_refs": [
+        "CFA_tier1/Economics/M02-Understanding-Business-Cycles.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6595630f41f5",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Cooperation lens",
+      "source_refs": [
+        "CFA_tier1/Economics/M05-Introduction-to-Geopolitics.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-70bcee2397f4",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Integration order",
+      "source_refs": [
+        "CFA_tier1/Economics/M06-International-Trade.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-808079013406",
+      "subject": "Corporate Issuers",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Partnership",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-b91fda9ec2e7",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Scenario analysis",
+      "source_refs": [
+        "CFA_tier1/Economics/M05-Introduction-to-Geopolitics.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-169e2a502e50",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Tariff",
+      "source_refs": [
+        "CFA_tier1/Economics/M06-International-Trade.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7f94e85ce28e",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Real exchange rate",
+      "source_refs": [
+        "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-81c773427c3a",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Base currency appreciation",
+      "source_refs": [
+        "CFA_tier1/Economics/M07-Capital-Flows-and-the-FX-Market.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-00be8f47e098",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Bootstrap flow",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M06-Simulation-Methods.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7c4b241aa55f",
+      "subject": "Economics",
+      "heading": "7. Final Recall Sheet 最终回忆单",
+      "trigger": "Base at forward premium → base has lower interest rate**（F>S → i_price > i_base）",
+      "source_refs": [
+        "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-808021043f39",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Cross rate",
+      "source_refs": [
+        "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ff586242eadf",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Covered interest parity",
+      "source_refs": [
+        "CFA_tier1/Economics/M08-Exchange-Rate-Calculations.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-893c43f81a2e",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6a74d08f8307",
+      "subject": "Corporate Issuers",
+      "heading": "6. Trap Ledger 易错账本",
+      "trigger": "Suppliers are stakeholders when they provide trade credit or make relationship-s",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-8b3b4ef4ea1b",
+      "subject": "Economics",
+      "heading": "7. Final Recall Sheet 最终回忆单",
+      "trigger": "Tools = policy rate, OMO, reserves, asset purchases.",
+      "source_refs": [
+        "CFA_tier1/Economics/M04-Monetary-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-5011993898c0",
+      "subject": "Corporate Issuers",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Sole trader",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M01-Organizational-Forms-Corporate-Issuer-Features-and-Ownership.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-52d45df9ed2e",
+      "subject": "Corporate Issuers",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Shareholder-creditor conflict",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-168305a84740",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "HHI",
+      "source_refs": [
+        "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4e810d38cdd7",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Indicator timing",
+      "source_refs": [
+        "CFA_tier1/Economics/M02-Understanding-Business-Cycles.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-1c554ae8cc24",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Diffusion index",
+      "source_refs": [
+        "CFA_tier1/Economics/M02-Understanding-Business-Cycles.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-80df0603bc02",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Tax multiplier",
+      "source_refs": [
+        "CFA_tier1/Economics/M03-Fiscal-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2d1dab945e61",
+      "subject": "Corporate Issuers",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Stakeholder mapping",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/M02-Investors-and-Other-Stakeholders.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6b540cfd3542",
+      "subject": "Economics",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "Spending multiplier",
+      "source_refs": [
+        "CFA_tier1/Economics/M03-Fiscal-Policy.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-44a0a1bf77e8",
+      "subject": "Quantitative Methods",
+      "heading": "4. Formula & Decision Bench 公式与决策台",
+      "trigger": "`SE=s/sqrt(n)`",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/M07-Estimation-and-Inference.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-702afbe65c5f",
+      "subject": "Economics",
+      "heading": "7. Final Recall Sheet 最终回忆单",
+      "trigger": "Perfect competition = price taker; monopoly = one seller; monopolistic competiti",
+      "source_refs": [
+        "CFA_tier1/Economics/M01-The-Firm-and-Market-Structures.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-fb41a6884e80",
+      "subject": "Corporate Issuers",
+      "heading": "C. Governance Mechanisms",
+      "trigger": "Manager-shareholder agency examples",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-033d03a0d683",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4772ea88bf07",
+      "subject": "Corporate Issuers",
+      "heading": "A. Organizational Forms / Ownership",
+      "trigger": "Organizational form",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9709e5245520",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2798e5b9a4ad",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Indicators",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-077d22a9b5dd",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-f9e5619fc18b",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-17e153e23d11",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "t confidence interval",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-637a91f74954",
+      "subject": "Economics",
+      "heading": "M03 Fiscal Policy",
+      "trigger": "Policy actor",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-913e964c7854",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Tools",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-46165028a7ec",
+      "subject": "Corporate Issuers",
+      "heading": "D. Working Capital / Liquidity",
+      "trigger": "Liquidity sources",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6b46b38659d7",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-30e99a02e37a",
+      "subject": "Corporate Issuers",
+      "heading": "B. Debt vs Equity Claims / Stakeholders",
+      "trigger": "Conflict map",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7db9bb917b61",
+      "subject": "Corporate Issuers",
+      "heading": "A. Organizational Forms / Ownership",
+      "trigger": "Corporate issuer features",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-841e8abae9af",
+      "subject": "Economics",
+      "heading": "M07 FX Market, Quotes, Regimes",
+      "trigger": "Capital restrictions",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-5cb899871fe7",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Central bank roles",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7c6595399ca1",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Limitations",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-d94dba7281d3",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ff8219508f67",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c0dbf5efbc7e",
+      "subject": "Corporate Issuers",
+      "heading": "D. Working Capital / Liquidity",
+      "trigger": "Quick ratio",
+      "source_refs": [
+        "CFA_tier1/Corporate_Issuers/00-Corporate-Issuers-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ca80e94e46d3",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Covered interest parity",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-a087943676ad",
+      "subject": "Economics",
+      "heading": "M05 Geopolitics",
+      "trigger": "Investment channels",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-cf194fab952e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-3d844ce9a665",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Breakeven",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9f8c45f1aa4d",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Cross rate",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9ff94dd17ed7",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Inverted quote",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-bcf0e7bd9cb5",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-fc6d00871082",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Continuously compounded return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-300fadd708c0",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Cash-flow additivity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-41e39f202c1e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Monte Carlo",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    }
+  ],
+  "mistake_cards": [
+    {
+      "card_id": "card-f340d2f7b1ef",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-productivity-business-cycle"
+      ]
+    },
+    {
+      "card_id": "card-fce995b98934",
+      "topic": "Economics",
+      "los": "M07: Capital Flows and the FX Market �� capital restrictions purpose",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-2e6ba8afb984",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-3ffdb0d46d7b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-bae4b0369be7",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-faa48e1ec793",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-a39ddef9c96b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-074b63e3a56a",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-0ed22809af71",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-43808428ecd1",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-f862a042978b",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly collusion and game theory (approx.; screenshot prompt is partially cropped)",
+      "source_refs": [
+        "screenshot-2026-05-26-arc-bat-collusive-agreement"
+      ]
+    },
+    {
+      "card_id": "card-d16c25bd38cf",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations �� depreciation/appreciation asymmetry",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f62f1f977e7a",
+      "topic": "Economics",
+      "los": "M03 Fiscal Policy - compare monetary and fiscal policy; fiscal policy scope (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-fiscal-vs-monetary-scope"
+      ]
+    },
+    {
+      "card_id": "card-4a6193fc95f8",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-900d267beb41",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-90467864957e",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-13c67d46986d",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - paired comparisons test (exact LOS not shown)",
+      "source_refs": [
+        "chat-2026-05-26-q22-paired-comparisons-screenshot"
+      ]
+    },
+    {
+      "card_id": "card-09f0f3116e16",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly demand curves under collusion vs non-collusion (approx.; screenshot does not show LOS)",
+      "source_refs": [
+        "screenshot-2026-05-26-q26-oligopoly-demand-curve-collusion"
+      ]
+    },
+    {
+      "card_id": "card-6b3213b48d06",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS)",
+      "source_refs": [
+        "screenshot-2026-05-26-q12-aquarius-price-leader"
+      ]
+    },
+    {
+      "card_id": "card-f7ea9a7f28c9",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-econ-indicators-upturn"
+      ]
+    },
+    {
+      "card_id": "card-bdbe2fbb2c93",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-monetary-policy-least-likely-limitation"
+      ]
+    },
+    {
+      "card_id": "card-28a38faad030",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-qe-environment-bank-reserves-vs-liquidity-trap"
+      ]
+    },
+    {
+      "card_id": "card-852f9da34d61",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations �� initial rate from appreciation percentage",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-390367d43a5e",
+      "topic": "Quantitative Methods",
+      "los": "M08 Hypothesis Testing - nonparametric tests (exact LOS not shown)",
+      "source_refs": [
+        "chat-2026-05-26-q18-nonparametric-test-screenshot"
+      ]
+    },
+    {
+      "card_id": "card-809ce81c44f7",
+      "topic": "Corporate Issuers",
+      "los": "M01 Organizational Forms - owner liability comparison",
+      "source_refs": [
+        "chat-screenshot-2026-05-28-corporate-issuer-liability"
+      ]
+    },
+    {
+      "card_id": "card-51e8e3fe867c",
+      "topic": "Corporate Issuers",
+      "los": "M02 Investors and Other Stakeholders - supplier relationship and leverage risk",
+      "source_refs": [
+        "chat-screenshot-2026-05-28-supplier-stakeholder-leverage-risk"
+      ]
+    },
+    {
+      "card_id": "card-0bcffee908ab",
+      "topic": "Corporate Issuers",
+      "los": "M03 Corporate Governance - principal-agent manager-shareholder conflict",
+      "source_refs": [
+        "chat-screenshot-2026-05-28-manager-shareholder-agent-conflict"
+      ]
+    },
+    {
+      "card_id": "card-02333fcf15a1",
+      "topic": "Corporate Issuers",
+      "los": "M04 Working Capital and Liquidity - liquidity drags and pulls",
+      "source_refs": [
+        "chat-screenshot-2026-05-29-liquidity-drag-vs-pull"
+      ]
+    }
+  ],
+  "knowledge_card_map": {},
+  "interleaving_composition": {
+    "weak": 3,
+    "old_mistakes": 4,
+    "adjacent": 0,
+    "maintenance": 2
+  }
+}
