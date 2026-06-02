@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Languages, LibraryBig, Repeat2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 import { languageApi, LanguageItem, LanguageProfile } from '@/lib/api';
 import { LanguageShell } from '@/components/language/LanguageShell';
-import { MotionNumber } from '@/components/motion/MotionNumber';
+import { EfficiencyMetrics } from '@/components/language/EfficiencyMetrics';
+import { GuidedOnboarding } from '@/components/language/GuidedOnboarding';
 
 export default function LanguageCockpit() {
   const [stats, setStats] = useState<Record<string, number | string>>({});
@@ -25,11 +26,16 @@ export default function LanguageCockpit() {
 
   return (
     <LanguageShell title="Your language encounters, organized into practice." eyebrow="LanguageOS cockpit">
-      <div className="grid gap-4 sm:grid-cols-3">
-        <Metric label="Corpus sources" value={Number(stats.source_count || 0)} icon={<LibraryBig size={17} />} />
-        <Metric label="Saved items" value={Number(stats.item_count || 0)} icon={<Languages size={17} />} />
-        <Metric label="Due cards" value={Number(stats.due_count || 0)} icon={<Repeat2 size={17} />} />
-      </div>
+      {Number(stats.item_count || 0) === 0 ? (
+        <GuidedOnboarding />
+      ) : (
+        <EfficiencyMetrics
+          passRate={0.75}
+          trend="up"
+          dueCards={Number(stats.due_count || 0)}
+          reviewedToday={Number(stats.source_count || 0)}
+        />
+      )}
       <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
         <section className="motion-reveal card">
           <div className="flex items-center justify-between">
@@ -49,8 +55,4 @@ export default function LanguageCockpit() {
       </div>
     </LanguageShell>
   );
-}
-
-function Metric({ label, value, icon }: { label: string; value: number; icon: React.ReactNode }) {
-  return <div className="motion-reveal card"><div className="flex items-center gap-2 text-accent">{icon}<span className="metric-label">{label}</span></div><div className="metric-value mt-3"><MotionNumber value={value} /></div></div>;
 }
