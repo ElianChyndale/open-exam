@@ -39,5 +39,5 @@ def analyze_sentence(text: str, language: str) -> dict[str, Any]:
         "collocations": collocations,
         "cefr_level": "B2" if len(tokens) >= 8 else "A2",
         "spanish_features": _spanish_features(text) if language == "es" else [],
-        "text_hash": sha1(text.encode("utf-8")).hexdigest(),
+        "text_hash": sha1(text.encode("utf-8"), usedforsecurity=False).hexdigest(),
     }

@@ -26,6 +26,13 @@ DEFAULT_FEATURE_FLAGS: dict[str, bool] = {
     "language_content_import": False,
     "language_cloud_transcription": False,
     "language_embedding_search": False,
+    "resource_ingestion_enabled": False,
+    "resource_fulltext_index_enabled": False,
+    "resource_language_auto_promotion_enabled": False,
+    "resource_cfa_official_promotion_enabled": False,
+    "resource_ai_discovery_enabled": False,
+    "resource_scheduler_enabled": False,
+    "resource_code_audit_enabled": False,
     "gsap_motion_enabled": False,
     "reduced_motion_safe": True,
 }

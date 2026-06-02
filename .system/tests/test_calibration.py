@@ -1,7 +1,6 @@
 """Tests for ConfidenceCalibration."""
 from __future__ import annotations
 
-import pytest
 from study_science.calibration import (
     CalibrationRecord,
     CalibrationState,

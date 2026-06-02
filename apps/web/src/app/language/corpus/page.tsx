@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { languageApi, LanguageItem, LanguageSegment, LanguageSource } from '@/lib/api';
 import { LanguageShell } from '@/components/language/LanguageShell';
@@ -12,11 +12,11 @@ export default function LanguageCorpus() {
   const [form, setForm] = useState({ item_type: 'phrase', canonical_form: '', language: 'en', segment_id: '' });
   const [message, setMessage] = useState('');
 
-  const refresh = () => Promise.all([languageApi.sources(), languageApi.segments(), languageApi.items()]).then(([sourceData, segmentData, itemData]) => {
+  const refresh = useCallback(() => Promise.all([languageApi.sources(), languageApi.segments(), languageApi.items()]).then(([sourceData, segmentData, itemData]) => {
     setSources(sourceData.sources); setSegments(segmentData.segments); setItems(itemData.items);
-    if (!form.segment_id && segmentData.segments[0]) setForm((value) => ({ ...value, segment_id: segmentData.segments[0].segment_id, language: sourceData.sources.find((source) => source.source_id === segmentData.segments[0].source_id)?.language || 'en' }));
-  });
-  useEffect(() => { void refresh(); }, []);
+    if (segmentData.segments[0]) setForm((value) => value.segment_id ? value : ({ ...value, segment_id: segmentData.segments[0].segment_id, language: sourceData.sources.find((source) => source.source_id === segmentData.segments[0].source_id)?.language || 'en' }));
+  }), []);
+  useEffect(() => { void refresh(); }, [refresh]);
 
   const collect = async (event: React.FormEvent) => {
     event.preventDefault();

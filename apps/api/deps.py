@@ -37,6 +37,10 @@ _LANGUAGE_SCIENCE = Path(__file__).resolve().parents[2] / "packages" / "language
 if str(_LANGUAGE_SCIENCE) not in sys.path:
     sys.path.insert(0, str(_LANGUAGE_SCIENCE))
 
+_RESOURCE_INGESTION = Path(__file__).resolve().parents[2] / "packages" / "resource-ingestion" / "src"
+if str(_RESOURCE_INGESTION) not in sys.path:
+    sys.path.insert(0, str(_RESOURCE_INGESTION))
+
 
 from app.storage import Repository
 

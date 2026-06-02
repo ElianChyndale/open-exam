@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { mockApi, profilesApi } from '@/lib/api';
-import { FileText, Play, RotateCcw, AlertTriangle, BarChart3, Plus } from 'lucide-react';
+import { FileText, Play, RotateCcw, AlertTriangle, Plus } from 'lucide-react';
 
 interface MockSession {
   session_id: string;

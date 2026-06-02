@@ -7,7 +7,7 @@ from datetime import date, datetime
 from fastapi import APIRouter, Depends, Query
 
 from deps import get_repo
-from schemas import DailyReviewCompleteResponse, ReviewPackRequest, ReviewPackResponse
+from schemas import DailyReviewCompleteResponse, ReviewPackResponse
 
 router = APIRouter()
 
@@ -48,9 +48,6 @@ async def get_today_review_pack(
 
     from app.workflows import load_daily_review_snapshot
     snapshot = load_daily_review_snapshot(repo)
-
-    # Count items
-    item_count = content.count("### ") - content.count("### 1. ")  # rough count
 
     from study_science.structured_tasks import StructuredTask
 

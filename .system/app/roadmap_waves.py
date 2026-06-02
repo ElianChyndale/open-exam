@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 from dataclasses import asdict, dataclass, field
 from datetime import UTC, datetime
 from hashlib import sha256
@@ -86,7 +87,26 @@ def export_privacy_bundle(repo: Repository) -> dict[str, Any]:
         path = directory / f"{directory.name}-events.jsonl"
         if path.exists():
             streams[directory.name] = _load_stream(path)
-    return {"schema_version": 2, "exported_at": _now(), "learner_id": "local-default", "streams": streams}
+    private_resources = []
+    private_root = repo.system_root / "private" / "resources"
+    for path in sorted(private_root.glob("**/*")) if private_root.exists() else []:
+        if not path.is_file():
+            continue
+        body = path.read_bytes()
+        private_resources.append(
+            {
+                "path": path.relative_to(repo.root).as_posix(),
+                "sha256": sha256(body).hexdigest(),
+                "content_base64": base64.b64encode(body).decode("ascii"),
+            }
+        )
+    return {
+        "schema_version": 2,
+        "exported_at": _now(),
+        "learner_id": "local-default",
+        "streams": streams,
+        "private_resources": private_resources,
+    }
 
 
 def _privacy_files(repo: Repository) -> list[Path]:
@@ -94,6 +114,8 @@ def _privacy_files(repo: Repository) -> list[Path]:
     candidates.extend((repo.memory_root / "progress").glob("*.jsonl"))
     candidates.extend((repo.memory_root / "review").glob("**/*.json"))
     candidates.extend((repo.memory_root / "todo").glob("**/*.json"))
+    candidates.extend((repo.memory_root / "resources").glob("**/*"))
+    candidates.extend((repo.system_root / "private" / "resources").glob("**/*"))
     return sorted({path for path in candidates if path.is_file()})
 
 

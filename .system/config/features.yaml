@@ -16,5 +16,12 @@ language_intuition_graph: false
 language_content_import: false
 language_cloud_transcription: false
 language_embedding_search: false
+resource_ingestion_enabled: true
+resource_fulltext_index_enabled: true
+resource_language_auto_promotion_enabled: true
+resource_cfa_official_promotion_enabled: true
+resource_ai_discovery_enabled: false
+resource_scheduler_enabled: false
+resource_code_audit_enabled: false
 gsap_motion_enabled: false
 reduced_motion_safe: true

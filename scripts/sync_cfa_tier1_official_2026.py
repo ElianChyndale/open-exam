@@ -14,7 +14,7 @@ CFA_ROOT = ROOT / "CFA_tier1"
 CURRICULUM = CFA_ROOT / "CFA_2026_L1_Complete_Curriculum.md"
 SCRAPE_DIR = Path(r"C:\Users\Administrator\AppData\Local\Temp\cfa_courses")
 SYNC_DATE = date.today().isoformat()
-LEGACY_DIR_NAME = f"2026-05-26-official-sync"
+LEGACY_DIR_NAME = "2026-05-26-official-sync"
 
 
 SUBJECTS = [
@@ -297,7 +297,6 @@ def demote_legacy_headings(body: str) -> str:
 
 
 def build_module_markdown(subject: dict[str, str], module: Module, assigned: list[tuple[LegacyNote, float]]) -> str:
-    filename = f"M{module.number:02d}-{slugify(module.name)}.md"
     lines = [
         "---",
         f"title: {yaml_quote(f'M{module.number:02d} — {module.name}')}",
@@ -364,10 +363,11 @@ def build_module_markdown(subject: dict[str, str], module: Module, assigned: lis
 
 def build_moc(subject: dict[str, str], modules: list[Module]) -> str:
     title_slug = subject["name"].replace(" ", "-")
+    description = yaml_quote(f"CFA Level I 2026 official module map for {subject['name']}.")
     lines = [
         "---",
         f"title: {yaml_quote(f'00-{title_slug}-MOC')}",
-        f"description: {yaml_quote(f'CFA Level I 2026 official module map for {subject["name"]}.')}",
+        f"description: {description}",
         f"subject: {yaml_quote(subject['name'])}",
         f"topic_area: {subject['dir']}",
         "level: CFA Level I",
@@ -385,7 +385,7 @@ def build_moc(subject: dict[str, str], modules: list[Module]) -> str:
         "",
         f"# {subject['name']} MOC",
         "",
-        f"> Official 2026 Level I projection. Module names, numbers, and order are locked to the CFA Institute Learning Ecosystem scrape generated on 2026-05-25.",
+        "> Official 2026 Level I projection. Module names, numbers, and order are locked to the CFA Institute Learning Ecosystem scrape generated on 2026-05-25.",
         "",
         "## Official Module Table",
         "",

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { reviewApi } from '@/lib/api';
 import { BookOpen, Calendar, Filter, ChevronDown } from 'lucide-react';
 import { useProfileSubjects } from '@/lib/profiles';
@@ -16,7 +16,7 @@ export default function ReviewPackPage() {
   const [depth, setDepth] = useState('standard');
   const [error, setError] = useState('');
 
-  const fetchPack = (params?: Record<string, string>) => {
+  const fetchPack = useCallback((params?: Record<string, string>) => {
     setLoading(true);
     setError('');
     reviewApi.getToday({
@@ -31,11 +31,11 @@ export default function ReviewPackPage() {
     }).catch(() => {
       setError('复习包刷新失败，请确认本地 API 已启动。');
     }).finally(() => setLoading(false));
-  };
+  }, [daysBack, depth, focusTopic]);
 
   useEffect(() => {
     fetchPack();
-  }, []);
+  }, [fetchPack]);
 
   // Simple markdown renderer
   const renderMarkdown = (md: string) => {

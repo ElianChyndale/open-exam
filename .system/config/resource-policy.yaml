@@ -1,0 +1,11 @@
+version: resource-policy-v1
+robots_cache_hours: 24
+per_domain_concurrency: 2
+subscription_resource_limit: 50
+max_html_bytes: 5242880
+max_redirects: 5
+cfa_official_structured_providers:
+  - sec_edgar
+  - fred
+  - world_bank
+fulltext_allowed_domains: []

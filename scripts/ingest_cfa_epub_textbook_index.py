@@ -3,11 +3,10 @@ from __future__ import annotations
 import json
 import re
 import zipfile
-from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
-import xml.etree.ElementTree as ET
+from defusedxml import ElementTree as ET
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent

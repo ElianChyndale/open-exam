@@ -463,6 +463,13 @@ def render_rich_moc(subject: str, subject_data: dict, matches_by_module: dict[tu
         deps.append(f"- **{module['module']} {module_name}**：承接 `{prev_name}`，输出到 `{next_name}`。")
 
     path_note = section_by_keywords(legacy_moc, ["学习路径", "通用分析框架"])
+    analysis_path = path_note.strip() if path_note else (
+        "1. **识别任务**：读 LOS 动词和题干问法。\n"
+        "2. **定位节点**：回到 `## 3. 核心知识树` 的编号节点。\n"
+        "3. **选择工具**：概念框架、公式、表格比较或合规流程。\n"
+        "4. **输出结论**：中文结论 + 英文关键词 + 必要限制条件。\n"
+        "5. **复盘缺口**：若错因重复出现，进入 `.system/events/` 和 `.system/memory/` 闭环。"
+    )
 
     return moc_frontmatter(subject, subject_data) + f"""
 # {subject} MOC
@@ -500,7 +507,7 @@ def render_rich_moc(subject: str, subject_data: dict, matches_by_module: dict[tu
 {render_moc_traps(subject, legacy_moc)}
 ## 8. 通用分析框架
 
-{path_note.strip() if path_note else '1. **识别任务**：读 LOS 动词和题干问法。\\n2. **定位节点**：回到 `## 3. 核心知识树` 的编号节点。\\n3. **选择工具**：概念框架、公式、表格比较或合规流程。\\n4. **输出结论**：中文结论 + 英文关键词 + 必要限制条件。\\n5. **复盘缺口**：若错因重复出现，进入 `.system/events/` 和 `.system/memory/` 闭环。'}
+{analysis_path}
 
 ## 9. 学习路径建议
 

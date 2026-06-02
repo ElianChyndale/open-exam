@@ -255,3 +255,104 @@ export const languageApi = {
   export: (format: 'anki' | 'csv' | 'markdown' | 'obsidian') =>
     request<{ format: string; content: string; item_count: number }>(`/api/language/exports/${format}`),
 };
+
+/** ResourceOS */
+export interface ResourceProvider {
+  provider_id: string;
+  label: string;
+  modes: string[];
+  configured: boolean;
+  health: string;
+  default_license_mode: string;
+}
+
+export interface ResourceSubscription {
+  subscription_id: string;
+  lane: 'language' | 'cfa';
+  provider: string;
+  target: string;
+  schedule: string;
+  budget: number;
+  enabled: boolean;
+}
+
+export interface ResourceDocument {
+  document_id: string;
+  lane: 'language' | 'cfa';
+  provider: string;
+  url: string;
+  title: string;
+  license_mode: string;
+  excerpt: string;
+  retrieved_at: string;
+  answer_bearing: boolean;
+}
+
+export interface ResourceInboxItem {
+  inbox_id: string;
+  document_id: string;
+  lane: 'language' | 'cfa';
+  reason: string;
+  status: string;
+  source_url?: string;
+  title?: string;
+}
+
+export interface ResourceAuditFinding {
+  finding_id: string;
+  check_id: string;
+  severity: string;
+  remediation: string;
+}
+
+export interface ResourceJob {
+  job_id: string;
+  trigger: string;
+  status: string;
+  budget_usage: number;
+  retry_state: { reason?: string };
+  audit_summary: { finding_count?: number };
+  created_at: string;
+}
+
+export interface ResourceSettings {
+  robots_cache_hours: number;
+  per_domain_concurrency: number;
+  subscription_resource_limit: number;
+  max_html_bytes: number;
+  max_redirects: number;
+  ai_discovery_requires_consent: boolean;
+  consent: { openai_web_search: boolean };
+  features: Record<string, boolean>;
+}
+
+export const resourcesApi = {
+  providers: () => request<{ providers: ResourceProvider[] }>('/api/resources/providers'),
+  subscriptions: () => request<{ subscriptions: ResourceSubscription[] }>('/api/resources/subscriptions'),
+  createSubscription: (data: { lane: 'language' | 'cfa'; provider: string; target: string; budget?: number }) =>
+    request<ResourceSubscription>('/api/resources/subscriptions', { method: 'POST', body: JSON.stringify(data) }),
+  updateSubscription: (subscriptionId: string, data: { enabled?: boolean; budget?: number; schedule?: string }) =>
+    request<ResourceSubscription>(`/api/resources/subscriptions/${subscriptionId}`, { method: 'PATCH', body: JSON.stringify(data) }),
+  documents: () => request<{ documents: ResourceDocument[] }>('/api/resources/documents'),
+  jobs: () => request<{ jobs: ResourceJob[] }>('/api/resources/jobs'),
+  crawl: (data: { lane: 'language' | 'cfa'; url: string; provider?: string; license_mode?: string }) =>
+    request('/api/resources/jobs/crawl', { method: 'POST', body: JSON.stringify(data) }),
+  runDue: () => request('/api/resources/jobs/run-due', { method: 'POST' }),
+  search: (query: string, lane = '') =>
+    request<{ count: number; results: { document_id: string; title: string; excerpt: string; topic: string }[] }>(
+      `/api/resources/search?q=${encodeURIComponent(query)}${lane ? `&lane=${encodeURIComponent(lane)}` : ''}`,
+  ),
+  inbox: () => request<{ items: ResourceInboxItem[] }>('/api/resources/inbox'),
+  resolveInbox: (inboxId: string, action: 'approve' | 'reject') =>
+    request(`/api/resources/inbox/${inboxId}/resolve`, { method: 'POST', body: JSON.stringify({ action }) }),
+  audits: () => request<{ findings: ResourceAuditFinding[] }>('/api/resources/audits'),
+  runAudit: (scope: 'content' | 'runtime' | 'code') =>
+    request('/api/resources/audits/run', { method: 'POST', body: JSON.stringify({ scope }) }),
+  scheduler: () => request<{ task_name: string; installed: boolean; status: string }>('/api/resources/scheduler/status'),
+  settings: () => request<ResourceSettings>('/api/resources/settings'),
+  setAiDiscoveryConsent: (granted: boolean) =>
+    request('/api/privacy/consent', {
+      method: 'POST',
+      body: JSON.stringify({ provider: 'openai', purpose: 'resource_ai_discovery', granted }),
+    }),
+};

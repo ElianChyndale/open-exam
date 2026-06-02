@@ -31,18 +31,27 @@ class LanguageRepository:
         evidence_refs: list[str] | None = None,
         consent_scope: list[str] | None = None,
     ) -> dict[str, Any]:
-        envelope = EventEnvelopeV2.create(
-            event_type=event_type,
-            source_layer="language",
-            payload=payload,
-            evidence_refs=list(evidence_refs or []),
-            provenance={"subsystem": "LanguageOS"},
-            consent_scope=list(consent_scope or ["local_storage"]),
-            idempotency_key=f"{event_type}:{json.dumps(payload, ensure_ascii=False, sort_keys=True)}",
-        ).as_dict()
-        self.repo.append_jsonl_event("language", envelope)
+        return self.append_many([(event_type, payload, evidence_refs or [], consent_scope or ["local_storage"])])[0]
+
+    def append_many(
+        self,
+        rows: list[tuple[str, dict[str, Any], list[str], list[str]]],
+    ) -> list[dict[str, Any]]:
+        envelopes = [
+            EventEnvelopeV2.create(
+                event_type=event_type,
+                source_layer="language",
+                payload=payload,
+                evidence_refs=evidence_refs,
+                provenance={"subsystem": "LanguageOS"},
+                consent_scope=consent_scope,
+                idempotency_key=f"{event_type}:{json.dumps(payload, ensure_ascii=False, sort_keys=True)}",
+            ).as_dict()
+            for event_type, payload, evidence_refs, consent_scope in rows
+        ]
+        self.repo.append_jsonl_events("language", envelopes)
         self.project()
-        return envelope
+        return envelopes
 
     def replay(self) -> dict[str, Any]:
         state: dict[str, Any] = {

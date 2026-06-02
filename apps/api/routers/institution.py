@@ -136,10 +136,8 @@ async def get_cohort_risk_report(cohort_id: str, repo=Depends(get_repo)):
 
     # Aggregate metrics
     if learner_metrics:
-        avg_events = sum(m["total_events"] for m in learner_metrics) / len(learner_metrics)
         avg_inactive = sum(m["days_inactive"] for m in learner_metrics) / len(learner_metrics)
     else:
-        avg_events = 0
         avg_inactive = 0
     accuracy_values = [m["accuracy"] for m in learner_metrics if m["accuracy"] is not None]
     avg_accuracy = sum(accuracy_values) / len(accuracy_values) if accuracy_values else 0.0

@@ -46,7 +46,7 @@ class EventEnvelopeV2:
             "payload": payload,
             "source_layer": source_layer,
         }
-        digest = sha1(_stable_json(fingerprint).encode("utf-8")).hexdigest()[:20]
+        digest = sha1(_stable_json(fingerprint).encode("utf-8"), usedforsecurity=False).hexdigest()[:20]
         return cls(
             event_id=f"evt2-{digest}",
             schema_version=2,

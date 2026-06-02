@@ -3,9 +3,8 @@ from __future__ import annotations
 import base64
 import csv
 from datetime import UTC, datetime
-from hashlib import sha1, sha256
+from hashlib import sha256
 from io import StringIO
-import json
 from pathlib import Path
 from typing import Any
 
@@ -77,7 +76,6 @@ def import_source(
         "duration_seconds": None,
         "attachment_manifest": attachment_manifest,
     }
-    repo.append("language.source.imported", {"source": source}, evidence_refs=[content_hash])
     raw_segments = segment_content(content, import_format or source_type)
     segment_ids = [stable_id("lseg", source_id, str(index), segment["locator"], segment["text"]) for index, segment in enumerate(raw_segments)]
     segments = []
@@ -94,8 +92,15 @@ def import_source(
             "next_segment_id": segment_ids[index + 1] if index + 1 < len(segment_ids) else "",
             "confidence": 1.0,
         }
-        repo.append("language.segment.created", {"segment": segment}, evidence_refs=[source_id, content_hash])
         segments.append(segment)
+    rows = [
+        ("language.source.imported", {"source": source}, [content_hash], ["local_storage"]),
+        *[
+            ("language.segment.created", {"segment": segment}, [source_id, content_hash], ["local_storage"])
+            for segment in segments
+        ],
+    ]
+    repo.append_many(rows)
     return {"duplicate": False, "source": source, "segments": segments}
 
 

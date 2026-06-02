@@ -318,5 +318,5 @@ def list_todo_archives(repo: Repository) -> list[str]:
 def write_todo(repo: Repository, payload: dict[str, Any]) -> Path:
     if not repo.load_jsonl_events("todo"):
         archive_today_todo(repo, str(payload.get("date") or date.today().isoformat()))
-    state = replace_todo(repo, payload)
+    replace_todo(repo, payload)
     return repo.obsidian_root / "today_todo.md"

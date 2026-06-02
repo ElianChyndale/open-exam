@@ -5,7 +5,7 @@ Integrates: energy check, review pack, todo list, and cognitive science engines.
 
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import date
 
 from fastapi import APIRouter, Depends, Query
 
@@ -36,7 +36,6 @@ async def get_today_study_plan(
         collect_pattern_items,
         collect_recent_low_confidence_items,
         merge_review_sources,
-        build_warm_start_items,
         mine_patterns,
     )
     target_date = date.fromisoformat(date_str) if date_str else date.today()

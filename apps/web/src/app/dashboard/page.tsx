@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { dashboardApi } from '@/lib/api';
 import {
   BarChart3, TrendingUp, TrendingDown, Minus,
-  CheckCircle2, AlertTriangle, Brain, Target, Award,
+  AlertTriangle, Brain, Target, Award,
 } from 'lucide-react';
 import WeeklyTrend from '@/components/dashboard/WeeklyTrend';
 import MasteryRadar from '@/components/dashboard/MasteryRadar';

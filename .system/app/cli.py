@@ -206,7 +206,7 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         from app.workflows import weekly_focus_recommendation
         result = weekly_focus_recommendation(repo)
         print(result)
-        print(f"\n📄 已保存到 .system/memory/strategy/")
+        print("\n📄 已保存到 .system/memory/strategy/")
         return 0
 
     if args.command == "rebuild-catalog":
@@ -290,7 +290,7 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
     if args.command == "sync-pull":
         from app.sync_service import pull_from_file
         try:
-            counts = pull_from_file(repo, args.input)
+            pull_from_file(repo, args.input)
             print(f"📁 来源: {args.input}")
         except FileNotFoundError as e:
             print(f"ERROR: {e}", file=sys.stderr)

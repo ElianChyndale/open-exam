@@ -1,5 +1,6 @@
 """End-to-end verification: knowledge memory feedback loop."""
-import json, sys
+import json
+import sys
 from pathlib import Path
 
 repo_root = Path(__file__).resolve().parents[2]
@@ -51,7 +52,6 @@ for kid, entry in kp.items():
     decay = entry.get("decay_risk", "?")
     status = entry["status"]
     states.add(status)
-    l = 1 if len(kid) > 40 else 0
     trunc = kid[:40]
     spaces = " " * (42 - len(trunc))
     print(f"  {trunc}{spaces}status={status:20s} val={state_val} interval={interval:2d}d next={next_review} decay={decay}")
@@ -61,7 +61,6 @@ print(f"\nAll states present: {sorted(states)}")
 # Step 5: Decay sweep
 print("\n=== Step 4: Decay sweep ===")
 engine = KnowledgeMemoryEngine()
-from datetime import date as dt_date
 overlay, decayed = engine.decay_sweep(overlay)
 print(f"Decayed knowledge points: {len(decayed)}")
 # Should be 0 since everything was just reviewed

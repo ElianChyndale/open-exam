@@ -39,5 +39,8 @@ def test_provenance_privacy_xapi_and_trust_routes(client: TestClient) -> None:
 
     requested = client.post("/api/privacy/purge", json={})
     assert requested.status_code == 200
-    blocked = client.post("/api/privacy/purge", json={"confirmation_token": "wrong"})
+    blocked = client.post(
+        "/api/privacy/purge",
+        json={"confirmation_token": f"invalid-{requested.json()['confirmation_token']}"},
+    )
     assert blocked.status_code == 422

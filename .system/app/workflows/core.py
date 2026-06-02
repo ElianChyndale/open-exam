@@ -1075,7 +1075,7 @@ def render_review_pack(
             [
                 "",
                 f"### {index}. {clean_display_text(item['topic'])} | {clean_display_text(item['los'])} | {clean_display_text(item['error_type'])}",
-                f"- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？",
+                "- **先遮答案想：** 这题真正考的 trigger 是什么？我上次为什么会错？",
                 f"- **今天为什么看：** {reasons}",
                 "",
                 "#### 主动回忆",
@@ -1385,7 +1385,7 @@ def _feed_card_outcome_to_knowledge(
     Knowledge points whose (subject, heading) match this card's (topic, los)
     get their state updated based on the recall outcome.
     """
-    from study_science.knowledge_memory import KnowledgeMemoryEngine, KnowledgeFeedbackInput, KnowledgeState
+    from study_science.knowledge_memory import KnowledgeMemoryEngine, KnowledgeFeedbackInput
 
     overlay_path = repo.memory_root / "review" / "knowledge-status.json"
     if not overlay_path.exists():
@@ -1890,7 +1890,6 @@ def complete_daily_review(repo: Repository, review_id: str) -> dict:
     from study_science.knowledge_memory import KnowledgeMemoryEngine
 
     snapshot = load_daily_review_snapshot(repo, review_id)
-    occurred_at = datetime.now(timezone.utc).isoformat()
     km_engine = KnowledgeMemoryEngine()
     overlay_path = repo.memory_root / "review" / "knowledge-status.json"
     if overlay_path.exists():
@@ -2559,7 +2558,7 @@ def weekly_focus_recommendation(repo: Repository) -> str:
 
     Returns the markdown content written to strategy/weekly-focus-*.md
     """
-    from collections import Counter, defaultdict
+    from collections import defaultdict
     from datetime import date, timedelta
 
     today = date.today()

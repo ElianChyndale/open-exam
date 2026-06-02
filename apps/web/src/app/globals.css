@@ -92,6 +92,41 @@ body {
   letter-spacing: 0;
 }
 
+.btn-primary,
+.btn-secondary {
+  border-radius: 0.65rem;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.btn-primary {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid var(--line);
+  background: var(--surface-field);
+  color: var(--ink);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.input {
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: var(--surface-field);
+  padding: 0.65rem 0.75rem;
+  color: var(--ink);
+}
+
 button,
 a,
 input,

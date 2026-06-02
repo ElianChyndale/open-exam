@@ -194,19 +194,16 @@ export default function TodayCockpit() {
           title="高精力任务"
           icon={<BatteryFull size={16} className="text-success" />}
           tasks={plan?.high_energy_tasks || []}
-          color="success"
         />
         <TaskColumn
           title="中精力任务"
           icon={<BatteryMedium size={16} className="text-warning" />}
           tasks={plan?.moderate_energy_tasks || []}
-          color="warning"
         />
         <TaskColumn
           title="低精力任务"
           icon={<BatteryLow size={16} className="text-muted" />}
           tasks={plan?.low_energy_tasks || []}
-          color="muted"
         />
       </div>
 
@@ -229,9 +226,9 @@ export default function TodayCockpit() {
 }
 
 function TaskColumn({
-  title, icon, tasks, color,
+  title, icon, tasks,
 }: {
-  title: string; icon: React.ReactNode; tasks: Task[]; color: string;
+  title: string; icon: React.ReactNode; tasks: Task[];
 }) {
   if (tasks.length === 0) {
     return (

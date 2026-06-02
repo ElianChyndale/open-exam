@@ -379,7 +379,7 @@ def build_knowledge_block(subject: str, module: dict, signal: str, formulas: lis
         textbook_position=f"{subject} {module['official_module']} | {signal}",
         core_meaning=f"本节把 `{title}` 放在 `{module['official_module']}` 的 {depth_note} 中理解。学习时先用中文说清它解决什么问题，再保留 English terms 用于识别题干。",
         english_terms=english_terms(title),
-        why_it_matters=f"它连接本模块 LOS 与考试输出：题目不会只考标题，而会要求你解释、计算、比较、评价或在情境中选择正确框架。",
+        why_it_matters="它连接本模块 LOS 与考试输出：题目不会只考标题，而会要求你解释、计算、比较、评价或在情境中选择正确框架。",
         formula_rule=formula_rule,
         exam_translation=f"看到 `{title}` 或同义表述时，先定位本小节，再判断题目要 definition、calculation、comparison、interpretation 还是 exception。",
         question_triggers=f"`{title}`；{english_terms(title)}；LOS 动词；题干里的时间口径、条件限制、比较对象或情境变化。",
@@ -404,6 +404,10 @@ def render_module(
     signals = module_index.get("signal_topics", [])
     blocks = "\n".join(build_knowledge_block(subject, module, signal, formulas) for signal in signals)
     los_lines = "\n".join(f"{idx}. {los}" for idx, los in enumerate(module.get("los", []), start=1))
+    curriculum_blocks = blocks or (
+        "### Module Framework / 教材主线\n\n"
+        "本模块没有从 ePub index 抽到细分小节；复习时以官方 LOS、模块标题和题库证据为主。"
+    )
     formula_bench = render_module_formula_bench(formulas, signals)
     title = f"{module['module']}: {module['official_module'].replace('Module ' + str(int(module['module'][1:])) + ': ', '')}"
     body = f"""# {title}
@@ -432,7 +436,7 @@ def render_module(
 
 ## 2. Curriculum Spine 教材正文主线
 
-{blocks if blocks else "### Module Framework / 教材主线\n\n本模块没有从 ePub index 抽到细分小节；复习时以官方 LOS、模块标题和题库证据为主。"}
+{curriculum_blocks}
 
 ## 3. Exam Translation 考试翻译
 
@@ -626,14 +630,16 @@ def rollout_all() -> list[Path]:
         entries_by_module = build_subject_formula_entries(subject, subject_index, registry_subject)
         all_entries = [entry for entries in entries_by_module.values() for entry in entries]
         moc_path = REPO_ROOT / subject_index["moc_path"]
-        assert is_active_knowledge_file(moc_path.relative_to(REPO_ROOT))
+        if not is_active_knowledge_file(moc_path.relative_to(REPO_ROOT)):
+            raise ValueError(f"Refusing to write inactive path: {moc_path}")
         moc_path.write_text(render_moc(subject, subject_index, registry_subject, all_entries), encoding="utf-8")
         written.append(moc_path)
         index_by_id = module_indexes_by_id(subject_index)
         for module in registry_subject["modules"]:
             module_path = VAULT_ROOT / registry_subject["directory"] / module["filename"]
             relative = module_path.relative_to(REPO_ROOT)
-            assert is_active_knowledge_file(relative), f"Refusing to write inactive path: {relative}"
+            if not is_active_knowledge_file(relative):
+                raise ValueError(f"Refusing to write inactive path: {relative}")
             module_text = render_module(
                 subject,
                 subject_index,
@@ -671,6 +677,7 @@ def write_rollout_audit(written: list[Path]) -> Path:
             target.append(f"{relative}: {result['missing_required_sections']}")
         if result["old_patch_markers"]:
             old_markers.append(f"{relative}: {result['old_patch_markers']}")
+    module_file_count = sum(1 for path in written if re.match(r"M\d{2}-", path.name))
     lines = [
         "# C+ Rollout Audit",
         "",
@@ -678,7 +685,7 @@ def write_rollout_audit(written: list[Path]) -> Path:
         "- Excluded: `_legacy/`, `_archive/`, `mock/`, `dashboard/`, practice question pages",
         f"- Written files: {len(written)}",
         f"- MOC files: {sum(1 for path in written if path.name.startswith('00-'))}",
-        f"- Module files: {sum(1 for path in written if re.match(r'M\\d{{2}}-', path.name))}",
+        f"- Module files: {module_file_count}",
         "",
         "## Results",
         "",

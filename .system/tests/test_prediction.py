@@ -1,7 +1,6 @@
 """Tests for PassPredictor."""
 from __future__ import annotations
 
-import pytest
 from study_science.prediction import PassPredictor, PredictionInput
 
 

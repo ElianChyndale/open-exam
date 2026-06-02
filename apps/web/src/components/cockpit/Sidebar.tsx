@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-  LayoutDashboard,
   PenLine,
   Stethoscope,
   BookOpen,
@@ -13,6 +12,7 @@ import {
   CalendarDays,
   Zap,
   Languages,
+  Library,
 } from 'lucide-react';
 import ProfileSwitcher from './ProfileSwitcher';
 
@@ -26,6 +26,7 @@ const navItems = [
   { href: '/institution', label: '机构控制台', shortLabel: 'Cohorts', icon: Building2 },
   { href: '/calendar', label: '学习日历', shortLabel: 'Calendar', icon: CalendarDays },
   { href: '/language', label: 'LanguageOS', shortLabel: 'Language', icon: Languages },
+  { href: '/resources', label: '资源中心', shortLabel: 'Resources', icon: Library },
 ];
 
 export function Sidebar() {

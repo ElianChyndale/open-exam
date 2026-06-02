@@ -4,13 +4,20 @@ version = "0.1.0"
 description = "Local CFA Tier 1 mistake system with skills, CLI, memory, and OpenAI Agents SDK scaffolding."
 requires-python = ">=3.11"
 dependencies = [
+  "defusedxml>=0.7.1",
+  "httpx>=0.27.0",
   "openai-agents>=0.2.0",
   "PyYAML>=6.0.0",
 ]
 
 [project.optional-dependencies]
 dev = [
+  "bandit>=1.8.0",
+  "mypy>=1.15.0",
+  "pip-audit>=2.8.0",
   "pytest>=9.0.0",
+  "ruff>=0.11.0",
+  "types-PyYAML>=6.0.12",
 ]
 
 [build-system]
@@ -33,4 +40,51 @@ pythonpath = [
   "packages/learning-records/src",
   "packages/learner-twin/src",
   "packages/language-science/src",
+  "packages/resource-ingestion/src",
 ]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+".system/app/workflows/__init__.py" = ["F403"]
+".system/evals/run_local.py" = ["E402"]
+".system/tests/backfill_0530_review.py" = ["E402"]
+".system/tests/migrate_knowledge_status.py" = ["E402"]
+".system/tests/verify_knowledge_memory.py" = ["E402"]
+"apps/api/deps.py" = ["E402"]
+"apps/api/main.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+follow_imports = "skip"
+ignore_missing_imports = true
+explicit_package_bases = true
+mypy_path = [
+  ".system",
+  "packages/learning-records/src",
+  "packages/resource-ingestion/src",
+]
+exclude = [
+  "^\\.system[\\\\/](?!app(?:[\\\\/]|$))",
+  "^\\.system[\\\\/]app[\\\\/](?!resource_(storage|workflows)\\.py$)",
+  "^apps[\\\\/]",
+  "^scripts[\\\\/]",
+  "^packages[\\\\/](?!resource-ingestion(?:[\\\\/]|$))",
+  "^packages[\\\\/]resource-ingestion[\\\\/](?!src(?:[\\\\/]|$))",
+  "^packages[\\\\/]resource-ingestion[\\\\/]src[\\\\/](?!resource_ingestion(?:[\\\\/]|$))",
+]
+files = [
+  "packages/resource-ingestion/src/resource_ingestion",
+  ".system/app/resource_storage.py",
+  ".system/app/resource_workflows.py",
+]
+
+[tool.bandit]
+exclude_dirs = [
+  ".system/tests",
+  "apps/api/tests",
+  "packages/exam-core/tests",
+]
+skips = ["B101"]

@@ -22,12 +22,13 @@ Ebbinghaus graduated knowledge memory model.
 
 - `apps/api/` — FastAPI backend: attempts, diagnosis, review packs, study plans,
   mock retros, dashboards, institution reports, knowledge memory.
-- `apps/web/` — Next.js frontend cockpit (8 pages: today, capture, diagnosis,
-  review, mock, dashboard, institution, calendar).
+- `apps/web/` — Next.js frontend cockpit, including LanguageOS and ResourceOS.
 - `packages/study-science/` — retrieval, spacing, interleaving,
   worked-example fading, self-explanation, calibration, energy planning,
   and **knowledge memory** engines.
 - `packages/agent-runtime/` — six AI agent role boundaries.
+- `packages/resource-ingestion/` — policy-guarded public resource ingestion,
+  deterministic fetching, discovery providers, and private FTS5 indexing.
 - `.system/` — canonical local event stream, memory overlay, workflow kernel,
   exam profiles, and 40+ tests.
 - `CFA_tier1/` — Obsidian/Markdown vault projection layer.
@@ -46,7 +47,7 @@ Starts the API (port 8000) and web app (port 3000), opens
 **API:**
 
 ```powershell
-$env:PYTHONPATH = ".system;apps\api;packages\study-science\src;packages\agent-runtime\src"
+$env:PYTHONPATH = ".system;apps\api;packages\study-science\src;packages\agent-runtime\src;packages\resource-ingestion\src"
 python -m uvicorn main:app --app-dir apps\api --host 0.0.0.0 --port 8000
 ```
 
@@ -82,6 +83,30 @@ python scripts/cfa.py decay-knowledge
 python scripts/cfa.py complete-daily-review --review-id daily-review-xxxx
 ```
 
+## ResourceOS
+
+ResourceOS ingests public internet resources through robots, SSRF, redirect,
+license, hash-manifest, and audit checks. Unknown copyright defaults to
+metadata and a short excerpt. Licensed full text stays under
+`.system/private/resources/`, is excluded from Git, and is searchable through
+the local FTS5 index.
+
+```powershell
+python scripts/resources.py providers
+python scripts/resources.py crawl --lane language --url https://example.com/article
+python scripts/resources.py subscribe --provider rss_atom --lane cfa --url https://example.com/feed.xml
+python scripts/resources.py run-due --scheduled
+python scripts/resources.py audit --scope content
+python scripts/resources.py rebuild-index
+```
+
+The Windows scheduler is always an explicit user operation:
+
+```powershell
+.\scripts\install-resource-scheduler.ps1
+.\scripts\remove-resource-scheduler.ps1
+```
+
 ## Knowledge Memory Engine
 
 OpenExam's core differentiator: an Ebbinghaus-inspired graduated knowledge
@@ -103,16 +128,25 @@ into daily review generation so overdue points automatically resurface.
 ## Tests
 
 ```powershell
-pytest                           # Python tests (workflows, API smoke, models)
+python -m ruff check .
+python -m mypy
+python -m bandit -c pyproject.toml -r .system apps packages scripts
+python -m pip_audit -r requirements-audit.txt
+pytest -q
 ```
 
 ```powershell
 cd apps\web
-npm install && npm run typecheck && npm run build   # Frontend checks
+npm install
+npm run lint
+npm run typecheck
+npm run build
+npm run test:e2e
+npm run audit:deps
 ```
 
-47 API endpoints tested, all 200 OK. 15 bugs identified and tracked in
-`docs/ecosystem-audit-findings.md`.
+`python -m mypy` is the strict ResourceOS gate. The older modules remain
+covered by Ruff, Bandit, tests, and incremental typing work.
 
 ## Source Of Truth
 

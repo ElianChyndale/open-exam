@@ -39,6 +39,32 @@ def test_language_profiles_source_dedupe_segments_and_replay(tmp_path: Path) -> 
     assert (tmp_path / ".system" / "memory" / "language" / "state.json").exists()
 
 
+def test_language_source_import_projects_once_after_segment_batch(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    from app.language_storage import LanguageRepository
+    from app.language_workflows import import_source
+
+    repo = LanguageRepository(tmp_path)
+    project_calls = 0
+    original = repo.project
+
+    def count_project():
+        nonlocal project_calls
+        project_calls += 1
+        return original()
+
+    monkeypatch.setattr(repo, "project", count_project)
+    imported = import_source(
+        repo,
+        source_type="manual",
+        title="Batch projection",
+        language="en",
+        content="First sentence. Second sentence.",
+    )
+
+    assert len(imported["segments"]) == 2
+    assert project_calls == 1
+
+
 def test_item_merge_cards_fsrs_review_and_exports(tmp_path: Path) -> None:
     from app.language_storage import LanguageRepository
     from app.language_workflows import collect_item, export_language, generate_cards, import_source, review_card

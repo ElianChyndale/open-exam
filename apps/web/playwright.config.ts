@@ -1,7 +1,9 @@
 import { defineConfig } from '@playwright/test';
-import { resolve } from 'path';
+import { mkdtempSync } from 'fs';
+import { tmpdir } from 'os';
+import { join, resolve } from 'path';
 
-const dataRoot = resolve(__dirname, '../../.playwright-data');
+const dataRoot = mkdtempSync(join(tmpdir(), 'openexam-playwright-'));
 
 export default defineConfig({
   testDir: './tests',
@@ -16,14 +18,14 @@ export default defineConfig({
       cwd: resolve(__dirname, '../api'),
       env: { OPENEXAM_REPO_ROOT: dataRoot },
       url: 'http://127.0.0.1:8000/api/health',
-      reuseExistingServer: true,
+      reuseExistingServer: false,
       timeout: 120_000,
     },
     {
       command: 'npm run dev -- --hostname 127.0.0.1 --port 3010',
       cwd: __dirname,
       url: 'http://127.0.0.1:3010/language',
-      reuseExistingServer: true,
+      reuseExistingServer: false,
       timeout: 120_000,
     },
   ],

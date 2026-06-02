@@ -13,7 +13,6 @@ Default ratio from PLAN.md:
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
 
 
 @dataclass(slots=True)
@@ -92,7 +91,8 @@ class InterleavingBuilder:
 
         cfg = config or InterleavingConfig()
         num = cfg.max_items
-        rng = random.Random(
+        # This shuffle is deliberately reproducible and is not used for security.
+        rng = random.Random(  # nosec B311
             repr(
                 (
                     weak_items,

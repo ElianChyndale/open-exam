@@ -4,9 +4,8 @@ Tracks consecutive days of study activity and weekly goal completion.
 """
 from __future__ import annotations
 
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from pathlib import Path
-from typing import Any
 
 
 def load_progress_dates(progress_path: Path) -> list[str]:

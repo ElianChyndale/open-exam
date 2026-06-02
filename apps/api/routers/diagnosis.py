@@ -28,7 +28,6 @@ async def diagnose_error(req: DiagnosisRequest, repo=Depends(get_repo)):
         mine_patterns,
         next_drill_for,
     )
-    from app.models import MistakeEvent as LegacyMistakeEvent
     from study_science.spacing import SpacingInput, SpacingScheduler
     from study_science.calibration import ConfidenceCalibration
 
@@ -63,7 +62,7 @@ async def diagnose_error(req: DiagnosisRequest, repo=Depends(get_repo)):
     if not event:
         # Create a diagnosis from provided info
         fix_rule = default_fix_rule(req.error_type)
-        next_drill = f"24 小时内重做 2 道同类题。"
+        next_drill = "24 小时内重做 2 道同类题。"
         return DiagnosisResponse(
             diagnosis_id=f"dx-{req.attempt_id[:12]}",
             attempt_id=req.attempt_id,

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from collections import Counter
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 
@@ -39,7 +39,6 @@ async def get_effectiveness_dashboard(
     period_start = (today - timedelta(days=days)).isoformat()
     period_end = today.isoformat()
 
-    events = repo.load_events()
     question_events = repo.load_incorrect_question_events()
     attempts = repo.load_attempt_records()
 
@@ -271,7 +270,6 @@ async def get_calendar_data(
     from collections import Counter
     from app.workflows import load_progress_events
 
-    events = repo.load_events()
     question_events = repo.load_incorrect_question_events()
 
     daily_errors: dict[str, int] = Counter()
@@ -331,7 +329,6 @@ async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
     from collections import Counter
     from app.exam_profile import get_profile
 
-    events = repo.load_events()
     question_events = repo.load_incorrect_question_events()
     attempts = repo.load_attempt_records()
 
@@ -398,7 +395,6 @@ async def what_if_simulation(adjustments: dict, repo=Depends(get_repo)):
 @router.get("/weekly-trend")
 async def get_weekly_trend(repo=Depends(get_repo)):
     """Get week-over-week trend comparison."""
-    from collections import Counter, defaultdict
     from datetime import date, timedelta
 
     today = date.today()
@@ -406,7 +402,6 @@ async def get_weekly_trend(repo=Depends(get_repo)):
     last_week_start = this_week_start - timedelta(days=7)
     last_week_end = this_week_start - timedelta(days=1)
 
-    events = repo.load_events()
     question_events = repo.load_incorrect_question_events()
 
     this_week = [e for e in question_events if this_week_start.isoformat() <= e.created_at[:10] <= today.isoformat()]
@@ -456,9 +451,7 @@ async def get_weekly_trend(repo=Depends(get_repo)):
 async def get_topic_mastery(repo=Depends(get_repo)):
     """Get topic-level mastery scores for radar chart."""
     from collections import Counter, defaultdict
-    from app.workflows import collect_due_card_items
 
-    events = repo.load_events()
     question_events = repo.load_incorrect_question_events()
 
     from app.exam_profile import get_profile
@@ -479,7 +472,6 @@ async def get_topic_mastery(repo=Depends(get_repo)):
         key = f"{e.los}::{e.error_type}"
         los_recurrence[normalized][key] += 1
 
-    from datetime import date
     exam_date_str = ""
     exam_setting_path = repo.root / ".system" / "exam_date.txt"
     if exam_setting_path.exists():

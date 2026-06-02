@@ -678,7 +678,7 @@ tags:
         high_count += sum(1 for item in module_matches if item.confidence == "high")
         medium_count += sum(1 for item in module_matches if item.confidence == "medium")
     legacy_lines.append(f"- 本科目高置信 legacy 映射：{high_count} 条；中置信候选：{medium_count} 条。")
-    legacy_lines.append(f"- 详细来源与处理建议见 [[cfa-legacy-to-official-enrichment-map]]。")
+    legacy_lines.append("- 详细来源与处理建议见 [[cfa-legacy-to-official-enrichment-map]]。")
     legacy_lines.append("- `_legacy` 只作为补强来源，不作为最终学习入口；若与官方 2026 LOS 冲突，以 registry 和官方 Topic Outline 为准。")
 
     return frontmatter + f"""

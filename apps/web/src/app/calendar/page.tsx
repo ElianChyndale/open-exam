@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { dashboardApi } from '@/lib/api';
-import { Calendar, ChevronLeft, ChevronRight, AlertTriangle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, AlertTriangle } from 'lucide-react';
 
 export default function CalendarPage() {
   const [data, setData] = useState<any>(null);

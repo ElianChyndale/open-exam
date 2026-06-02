@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import base64
-from pathlib import Path
-from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends, HTTPException
 

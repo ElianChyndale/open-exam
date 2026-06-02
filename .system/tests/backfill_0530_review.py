@@ -15,15 +15,10 @@ sys.path.insert(0, str(repo_root / "packages/study-science/src"))
 
 from app.storage import Repository
 from app.workflows import (
-    _append_review_event_once,
-    _card_domain_for,
-    _review_event,
     complete_daily_review,
-    load_daily_review_snapshot,
     parse_frontmatter,
-    record_progress,
 )
-from datetime import datetime, timezone, date
+from datetime import date
 
 
 def build_0530_snapshot(repo: Repository) -> dict | None:
@@ -88,8 +83,6 @@ def build_0530_snapshot(repo: Repository) -> dict | None:
         print("  No cards or knowledge points found for 5.30 review")
         return None
 
-    item_ids = [kp["knowledge_id"] for kp in knowledge_points] + [c["card_id"] for c in mistake_cards]
-
     snapshot = {
         "schema_version": 1,
         "review_id": review_id,
@@ -126,13 +119,13 @@ def main():
     print(f"\nStep 2: Running complete_daily_review for {review_id}...")
     result = complete_daily_review(repo, review_id)
 
-    print(f"\nResults:")
+    print("\nResults:")
     print(f"  Review ID: {result['review_id']}")
     print(f"  Completed: {result['completed']}")
     print(f"  Newly reviewed items: {result['newly_reviewed_items']}")
 
     # Verify
-    print(f"\nVerification:")
+    print("\nVerification:")
     overlay_path = repo.memory_root / "review" / "knowledge-status.json"
     if overlay_path.exists():
         overlay = json.loads(overlay_path.read_text(encoding="utf-8"))

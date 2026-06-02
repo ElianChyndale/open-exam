@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 import sqlite3
 from contextlib import closing
-from dataclasses import asdict
 from pathlib import Path
 from time import monotonic
 from typing import Any, Iterable
@@ -80,6 +79,7 @@ class Repository:
             self.events_root / "review",
             self.events_root / "todo",
             self.events_root / "language",
+            self.events_root / "resource",
             self.memory_root / "question-errors",
             self.memory_root / "cognitive-bias",
             self.memory_root / "agent-failures",
@@ -90,6 +90,7 @@ class Repository:
             self.memory_root / "review" / "daily",
             self.memory_root / "todo" / "snapshots",
             self.memory_root / "language",
+            self.memory_root / "resources",
             self.vault_root / "Alternative_Investments",
             self.vault_root / "Corporate_Issuers",
             self.vault_root / "Derivatives",
@@ -278,22 +279,29 @@ class Repository:
         return self.events_root / stream / f"{stream}-events.jsonl"
 
     def append_jsonl_event(self, stream: str, payload: dict[str, Any]) -> Path:
-        # Deterministic idempotency key from content hash
-        if "event_id" not in payload:
-            content_fingerprint = json.dumps(payload, ensure_ascii=False, sort_keys=True)
-            payload["event_id"] = stable_id(stream, content_fingerprint)
+        return self.append_jsonl_events(stream, [payload])
+
+    def append_jsonl_events(self, stream: str, payloads: Iterable[dict[str, Any]]) -> Path:
+        """Append an idempotent event batch after scanning the stream once."""
         path = self.jsonl_event_path(stream)
         path.parent.mkdir(parents=True, exist_ok=True)
-        # Replay guard: skip if event_id already exists in this stream
         existing = {
             json.loads(line).get("event_id")
             for line in (path.read_text(encoding="utf-8").splitlines() if path.exists() else [])
             if line.strip()
         }
-        if payload.get("event_id") in existing:
-            return path
+        pending: list[dict[str, Any]] = []
+        for payload in payloads:
+            if "event_id" not in payload:
+                content_fingerprint = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+                payload["event_id"] = stable_id(stream, content_fingerprint)
+            if payload.get("event_id") in existing:
+                continue
+            pending.append(payload)
+            existing.add(payload.get("event_id"))
         with path.open("a", encoding="utf-8") as handle:
-            handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+            for payload in pending:
+                handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
         return path
 
     def load_jsonl_events(self, stream: str) -> list[dict[str, Any]]:

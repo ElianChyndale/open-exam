@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime
 from hashlib import sha1
 from typing import Any
 
@@ -12,7 +12,7 @@ def utc_now() -> datetime:
 
 def stable_id(prefix: str, *parts: str) -> str:
     raw = "||".join(parts).encode("utf-8")
-    return f"{prefix}-{sha1(raw).hexdigest()[:12]}"
+    return f"{prefix}-{sha1(raw, usedforsecurity=False).hexdigest()[:12]}"
 
 
 @dataclass(slots=True)

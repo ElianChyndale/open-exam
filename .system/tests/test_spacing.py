@@ -3,8 +3,7 @@ from __future__ import annotations
 
 from datetime import date, timedelta
 
-import pytest
-from study_science.spacing import ConfidenceLevel, SpacingInput, SpacingScheduler
+from study_science.spacing import SpacingInput, SpacingScheduler
 
 
 def test_wrong_low_confidence_returns_one_day():

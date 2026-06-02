@@ -11,7 +11,7 @@ FALSE_FRIENDS = {"actualmente": "actually", "embarazada": "embarrassed", "asisti
 def _edge(source: str, target: str, edge_type: str, weight: float, evidence_refs: list[str]) -> dict[str, Any]:
     raw = f"{source}|{target}|{edge_type}"
     return {
-        "edge_id": f"ledge-{sha1(raw.encode('utf-8')).hexdigest()[:12]}",
+        "edge_id": f"ledge-{sha1(raw.encode('utf-8'), usedforsecurity=False).hexdigest()[:12]}",
         "source_item_id": source,
         "target_item_id": target,
         "edge_type": edge_type,

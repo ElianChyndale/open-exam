@@ -70,14 +70,11 @@ class WorkedExampleFader:
         for i in range(num_examples):
             hidden: list[int] = []
             hints: list[str] = []
-            stage = FadeStage.FULL_EXAMPLE
-
             if i == 0:
                 # First: full example, nothing hidden
-                stage = FadeStage.FULL_EXAMPLE
+                pass
             elif i == 1:
                 # Second: hide ~30% of steps (key steps)
-                stage = FadeStage.COMPLETION
                 if len(solution_steps) >= 3:
                     hidden = [len(solution_steps) // 2]  # hide middle step
                     hints = ["先写出这一步的公式定义，再代入数值。"]
@@ -86,7 +83,6 @@ class WorkedExampleFader:
                     hints = ["用上一步的结果继续推算。"]
             else:
                 # Third+: independent
-                stage = FadeStage.INDEPENDENT
                 hidden = list(range(len(solution_steps)))
                 hints = ["如果需要帮助，回顾上一个例题的解法结构。"]
 

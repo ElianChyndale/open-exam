@@ -8,11 +8,10 @@ and personalized calibration history (dynamic expansion factors).
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
-from datetime import date, datetime, timedelta
+from dataclasses import dataclass
+from datetime import date, timedelta
 from enum import IntEnum
 from pathlib import Path
-from typing import Protocol
 
 
 class ConfidenceLevel(IntEnum):

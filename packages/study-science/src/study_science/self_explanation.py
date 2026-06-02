@@ -9,7 +9,7 @@ PLAN.md rule: "每道错题只问极短复盘，不要求写长文"
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
 
 

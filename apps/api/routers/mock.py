@@ -5,7 +5,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException
 
 from deps import get_repo
-from schemas import MockRetroRequest, MockRetroResponse, MockSessionCreate
+from schemas import MockRetroResponse, MockSessionCreate
 
 router = APIRouter()
 

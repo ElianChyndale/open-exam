@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-import pytest
 
 
 def write_moc(tmp_path: Path, relative_path: str, lines: list[str]) -> None:
@@ -1190,7 +1189,7 @@ def test_mark_reviewed_updates_card_and_saves_progress(tmp_path: Path) -> None:
     cards = list((tmp_path / ".system" / "memory" / "question-errors").glob("*.md"))
     assert len(cards) == 1
     card_text = cards[0].read_text(encoding="utf-8")
-    card_id_line = [l for l in card_text.splitlines() if l.startswith("card_id:")][0]
+    card_id_line = [line for line in card_text.splitlines() if line.startswith("card_id:")][0]
     card_id = card_id_line.split(": ", 1)[1].strip()
 
     exit_code = run_cli(
