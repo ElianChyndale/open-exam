@@ -55,7 +55,7 @@ def test_xapi_export_and_provider_opt_in_are_explicit(tmp_path: Path) -> None:
 
 def test_sparse_data_models_and_pedagogy_are_deterministic() -> None:
     from learner_twin import LearnerTwin
-    from study_science.pedagogy import PedagogyPolicy
+    from study_science.pedagogy import AdaptivePedagogy
     from study_science.psychometrics import BayesianKnowledgeTrace, HalfLifeEstimator, RaschModel
     from study_science.structured_tasks import StructuredTask
 
@@ -68,7 +68,9 @@ def test_sparse_data_models_and_pedagogy_are_deterministic() -> None:
     assert HalfLifeEstimator.recall_probability(half_life_days=7, elapsed_days=7) == 0.5
     assert round(RaschModel.probability(ability=0, difficulty=0), 3) == 0.5
     assert BayesianKnowledgeTrace.update(0.4, correct=True) > 0.4
-    assert PedagogyPolicy.select(error_type="concept_confusion", confidence=4, energy_level=2).strategy == "contrast_pair"
+    ped = AdaptivePedagogy()
+    result = ped.select(topic="Ethics", error_type="concept_confusion", confidence=4, energy_level=2)
+    assert result.strategy == "discrimination"
     assert StructuredTask(task_id="task-1", task_type="active_recall", prompt="Define duration.").as_dict()["completion_state"] == "pending"
 
 

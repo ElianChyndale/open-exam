@@ -18,12 +18,27 @@ DISTRACTOR_TYPES = {
 
 
 def classify_distractor(correct_answer: Any, selected_answer: Any, question_type: str, topic: str) -> dict[str, Any]:
-    return {
-        "distractor_type": "concept_pair",
-        "topic": topic,
-        "question_type": question_type,
-        "confidence": 0.5,
-    }
+    """Classify why the selected distractor was wrong, based on actual answer comparison."""
+    if question_type == "calculation":
+        # Check for sign error
+        if isinstance(correct_answer, (int, float)) and isinstance(selected_answer, (int, float)):
+            if abs(correct_answer) == abs(-selected_answer):
+                return {"distractor_type": "sign_error", "topic": topic, "confidence": 0.8}
+            if selected_answer == correct_answer * 2 or selected_answer == correct_answer / 2:
+                return {"distractor_type": "unit_error", "topic": topic, "confidence": 0.7}
+    elif question_type == "concept":
+        ca_str = str(correct_answer).lower()
+        sa_str = str(selected_answer).lower()
+        # Check inverse relationship
+        inverse_pairs = [
+            ("increase", "decrease"), ("buy", "sell"), ("long", "short"),
+            ("call", "put"), ("asset", "liability"), ("revenue", "expense"),
+        ]
+        for a, b in inverse_pairs:
+            if a in ca_str and b in sa_str:
+                return {"distractor_type": "inverse_relationship", "topic": topic, "confidence": 0.8}
+
+    return {"distractor_type": "concept_pair", "topic": topic, "confidence": 0.5}
 
 
 class DistractorAnalyzer:

@@ -68,8 +68,11 @@ async def upload_screenshot(req: ScreenshotUploadRequest, repo=Depends(get_repo)
     evidence_dir = repo.root / "evidence" / "screenshots"
     evidence_dir.mkdir(parents=True, exist_ok=True)
 
-    import time
-    filename = f"{int(time.time())}-{req.filename}"
+    from datetime import datetime
+    from pathlib import Path as PathLib
+    # Sanitize filename: strip directory components to prevent path traversal
+    safe_name = PathLib(req.filename).name
+    filename = f"{datetime.now().strftime('%Y%m%d%H%M%S%f')}-{safe_name}"
     filepath = evidence_dir / filename
     filepath.write_bytes(image_bytes)
 
