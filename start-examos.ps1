@@ -36,10 +36,10 @@ function Stop-ProcessOnPort {
     param([int]$Port)
     $conn = netstat -ano | Select-String ":$Port\s"
     foreach ($line in $conn) {
-        $pid = ($line -split '\s+')[-1]
-        if ($pid -match '^\d+$') {
-            Write-Warn "Port $Port in use by PID $pid — stopping..."
-            Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+        $foundPid = ($line -split '\s+')[-1]
+        if ($foundPid -match '^\d+$') {
+            Write-Warn "Port $Port in use by PID $foundPid — stopping..."
+            Stop-Process -Id $foundPid -Force -ErrorAction SilentlyContinue
             Start-Sleep -Seconds 1
         }
     }
@@ -51,9 +51,9 @@ $CleanupRegistered = $false
 
 function Cleanup-Processes {
     Write-Info "Shutting down ExamOS..."
-    foreach ($pid in $Script:ChildPids) {
-        if (Get-Process -Id $pid -ErrorAction SilentlyContinue) {
-            Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+    foreach ($childPid in $Script:ChildPids) {
+        if (Get-Process -Id $childPid -ErrorAction SilentlyContinue) {
+            Stop-Process -Id $childPid -Force -ErrorAction SilentlyContinue
         }
     }
     $Script:ChildPids = @()
