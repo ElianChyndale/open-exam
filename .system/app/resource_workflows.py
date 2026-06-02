@@ -613,6 +613,67 @@ def promote_language_extractions(
     return {"promoted": True, "new_card_count": new_card_count, "enhancement": enhancement}
 
 
+def auto_extract_and_promote(
+    repo: Repository | ResourceRepository,
+    *,
+    document_id: str,
+    max_items: int = 15,
+) -> dict[str, Any]:
+    """Auto-extract vocabulary from a resource document and promote to LanguageOS."""
+    from app.feature_flags import FeatureFlags
+    from app.language_storage import LanguageRepository
+    from app.language_workflows import import_source, collect_item, generate_cards
+    from language_science.extraction import full_extract
+
+    if not FeatureFlags.load(_resources(repo).root).enabled("resource_language_pipeline_v2_enabled"):
+        return {"promoted": False, "reason": "feature_disabled", "items": []}
+
+    resources = _resources(repo)
+    state = resources.replay()
+    document = state["documents"].get(document_id)
+    if document is None:
+        raise KeyError(document_id)
+    if document["lane"] != "language":
+        return {"promoted": False, "reason": "not_language_lane", "items": []}
+    if not document.get("content_ref"):
+        return {"promoted": False, "reason": "no_fulltext", "items": []}
+
+    content_path = (resources.root / document["content_ref"]).resolve()
+    private_root = (resources.root / ".system" / "private" / "resources").resolve()
+    if private_root not in content_path.parents:
+        raise ValueError("Content reference outside private store")
+    text = content_path.read_text(encoding="utf-8")
+
+    extracted = full_extract(text, max_terms=max_items, max_phrases=max_items // 2)
+    language_repo = LanguageRepository(resources.repo)
+    imported = import_source(
+        language_repo, source_type="resource", title=document["title"],
+        language=document.get("language") or "en", content=text, url=document["url"],
+    )
+    segment_id = imported["segments"][0]["segment_id"] if imported["segments"] else ""
+
+    promoted_count = 0
+    for item_data in extracted:
+        if item_data["confidence"] < 0.4:
+            continue
+        try:
+            collected = collect_item(
+                language_repo,
+                item_type=item_data["item_type"],
+                canonical_form=item_data["canonical_form"],
+                language=document.get("language") or "en",
+                segment_id=segment_id,
+                created_from="resource_auto_extraction",
+            )
+            if not collected.get("merged"):
+                generate_cards(language_repo, collected["item"]["item_id"], card_types=["recognition"])
+                promoted_count += 1
+        except Exception:
+            continue
+
+    return {"promoted": True, "extracted": len(extracted), "promoted_count": promoted_count}
+
+
 def revoke_promotion(repo: Repository | ResourceRepository, promotion_id: str) -> dict[str, Any]:
     resources = _resources(repo)
     promotion = resources.replay()["promotions"].get(promotion_id)
