@@ -2,7 +2,7 @@
 const apiProxyUrl = process.env.EXAMOS_API_PROXY_URL || 'http://localhost:8000';
 
 const nextConfig = {
-  output: 'standalone',
+  allowedDevOrigins: ['127.0.0.1'],
   async rewrites() {
     return [
       {

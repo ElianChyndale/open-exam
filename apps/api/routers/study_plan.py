@@ -16,7 +16,7 @@ router = APIRouter()
 
 
 @router.get("/today", response_model=StudyPlanResponse)
-async def get_today_study_plan(
+def get_today_study_plan(
     date_str: str = Query(default="", alias="date"),
     energy_level: int | None = Query(default=None, ge=0, le=4),
     available_minutes: int = Query(default=120, ge=10),
@@ -102,7 +102,7 @@ async def get_today_study_plan(
 
 
 @router.get("/weekly-focus")
-async def get_weekly_focus(repo=Depends(get_repo)):
+def get_weekly_focus(repo=Depends(get_repo)):
     """Get weekly study focus recommendation."""
     from app.workflows import weekly_focus_recommendation
     result = weekly_focus_recommendation(repo)

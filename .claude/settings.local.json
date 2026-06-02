@@ -25,7 +25,22 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/api/health)",
       "PowerShell(Set-Location D:\\\\AmyProjects\\\\New folder\\\\open-exam\\\\apps\\\\web; $env:NEXT_PUBLIC_API_URL = \"http://127.0.0.1:8000\"; Write-Output \"Starting web on port 3000...\"; Start-Process -NoNewWindow \"cmd\" -ArgumentList \"/c npx next dev -p 3000 > $env:TEMP\\\\next-output.txt 2>&1\")",
       "PowerShell(Get-Content *)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://127.0.0.1:3000/_next/static/chunks/app/layout.js\")"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://127.0.0.1:3000/_next/static/chunks/app/layout.js\")",
+      "Skill(investigate)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(Get-WmiObject *)",
+      "PowerShell(try { Invoke-WebRequest -Uri \"http://127.0.0.1:3000/today\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop | Select-Object StatusCode, StatusDescription } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest -Uri \"http://127.0.0.1:3000/api/health\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest -Uri \"http://127.0.0.1:3000\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest -Uri \"http://127.0.0.1:3000/_next/static/media/geist-latin\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop | Select-Object StatusCode, StatusDescription } catch { try { $_.Exception.Response.StatusCode.value__ } catch { \"Request failed: $\\($_.Exception.Message\\)\" } })",
+      "PowerShell(Write-Host \"=== API check ===\"; try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 5 } catch { $_.Exception.Message }; Write-Host \"`n=== Web /today check ===\"; try { Invoke-WebRequest \"http://127.0.0.1:3000/today\" -UseBasicParsing -TimeoutSec 5 } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:3000/api/health\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:3000/api/health\" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop } catch { if \\($_.Exception.Response\\) { \"Status: $\\($_.Exception.Response.StatusCode.value__\\)\" } else { \"Timeout or error: $\\($_.Exception.Message\\)\" } })",
+      "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/study-plan/today\" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
+      "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 5 | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
+      "PowerShell(cd \"D:\\\\AmyProjects\\\\New folder\\\\open-exam\\\\apps\\\\web\"; $env:NEXT_PUBLIC_API_URL = \"http://localhost:8000\"; Write-Host \"Starting Web...\"; .\\\\node_modules\\\\.bin\\\\next.cmd dev -p 3000)"
     ]
   }
 }
