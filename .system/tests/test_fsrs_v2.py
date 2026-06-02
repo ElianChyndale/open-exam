@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from language_science.fsrs_cache import FSRSStateCache
-from language_science.scheduler import FSRS6Scheduler, ScheduleDecision, GRADUATION_THRESHOLD
+from language_science.scheduler import FSRS6Scheduler, ScheduleDecision
 
 
 # ── FSRSStateCache ──
@@ -49,7 +49,7 @@ def test_fsrs6_schedule_good_rating():
     decision = FSRS6Scheduler.schedule(None, "good")
     assert decision.stability >= 0
     assert decision.repetitions >= 0
-    assert decision.param_version in (1, 2)
+    assert decision.param_version == 2  # always full-param mode now
 
 
 def test_fsrs6_schedule_again_resets():
@@ -65,18 +65,6 @@ def test_fsrs6_schedule_easy_increases():
     for _ in range(5):
         state = FSRS6Scheduler.schedule(state.as_dict(), "easy")
     assert state.stability >= 0
-
-
-def test_fsrs6_graduation_default():
-    """Before GRADUATION_THRESHOLD reviews, param_version should be 1 (simplified)."""
-    decision = FSRS6Scheduler.schedule(None, "good", total_reviews=5)
-    assert decision.param_version == 1
-
-
-def test_fsrs6_graduation_upgrade():
-    """At GRADUATION_THRESHOLD reviews, scheduler upgrades to param_version 2."""
-    decision = FSRS6Scheduler.schedule(None, "good", total_reviews=GRADUATION_THRESHOLD)
-    assert decision.param_version == 2
 
 
 def test_fsrs6_legacy_state_conversion():

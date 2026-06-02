@@ -140,14 +140,15 @@ def test_interleaving_with_mixed_domains():
     assert lang_builder.find_adjacent("its")
 
 
-def test_fsrs6_graduation_pipeline(tmp_path: Path):
-    """FSRS-6 graduates from simplified to full params via accumulated reviews."""
+def test_fsrs6_sustained_reviews(tmp_path: Path):
+    """FSRS-6 should handle sustained reviews across multiple iterations."""
     from language_science.scheduler import FSRS6Scheduler
     state = None
     for i in range(26):
-        decision = FSRS6Scheduler.schedule(state, "good" if i % 3 else "again", total_reviews=i)
+        decision = FSRS6Scheduler.schedule(state, "good" if i % 3 else "again")
         state = decision.as_dict()
-    assert decision.param_version == 2, "Should graduate to full params after 25 reviews"
+    assert decision.param_version == 2
+    assert decision.stability > 0
 
 
 def test_resource_extraction_pipeline():

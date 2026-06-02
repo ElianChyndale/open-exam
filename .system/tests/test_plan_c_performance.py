@@ -13,7 +13,7 @@ def test_fsrs_schedule_throughput():
     state = None
     start = monotonic()
     for i in range(1000):
-        state = FSRS6Scheduler.schedule(state, "good", total_reviews=i)
+        state = FSRS6Scheduler.schedule(state, "good")
         state = state.as_dict() if hasattr(state, 'as_dict') else state
     elapsed = monotonic() - start
     assert elapsed < 2.0, f"FSRS-6 1000 reviews took {elapsed:.2f}s, expected <2.0s"

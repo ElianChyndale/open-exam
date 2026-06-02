@@ -244,10 +244,9 @@ def review_card(repo: LanguageRepository, card_id: str, rating: str) -> dict[str
     flags = FeatureFlags.load(repo.root)
     if flags.enabled("language_fsrs_v2_enabled"):
         events = repo.events()
-        total_reviews = FSRS6Scheduler.total_reviews_from_events(events)
         decision = FSRS6Scheduler.schedule(
             card.get("fsrs_state"), rating,
-            total_reviews=total_reviews, _cache=_FSRS_CACHE,
+            _cache=_FSRS_CACHE,
         )
     else:
         from language_science.scheduler import _FallbackScheduler

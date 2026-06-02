@@ -13,6 +13,8 @@ from datetime import date, timedelta
 from enum import IntEnum
 from pathlib import Path
 
+import math
+
 
 class ConfidenceLevel(IntEnum):
     GUESS = 0
@@ -44,37 +46,38 @@ class SpacingDecision:
     interval_days: int = 1
     priority: int = 50                     # 0-100
     urgency_multiplier: float = 1.0
+    stability: float = 1.0                 # estimated half-life in days
+    retrievability: float = 0.9            # predicted recall probability at next review
     reasoning: str = ""
 
 
+def compute_interval(stability_days: float, retrievability_target: float = 0.9) -> float:
+    """Compute review interval from half-life model: R = 2^(-t/H) -> t = -H * log2(R)"""
+    if stability_days <= 0:
+        stability_days = 1.0
+    t = -stability_days * math.log2(retrievability_target)
+    return max(1.0, t)
+
+
+def compute_stability_update(previous_stability: float, correct: bool, confidence: int) -> float:
+    """Update stability (half-life) based on recall outcome."""
+    if not correct:
+        return max(0.5, previous_stability * 0.4)
+    # Correct answer: stability grows based on confidence
+    growth_multipliers = {0: 1.0, 1: 1.3, 2: 1.8, 3: 2.5, 4: 3.5}
+    multiplier = growth_multipliers.get(confidence, 1.0)
+    return previous_stability * multiplier
+
+
 class SpacingScheduler:
-    """Calculate optimal review intervals and priorities.
+    """Calculate optimal review intervals and priorities using exponential forgetting curves."""
 
-    Core rules:
-    - Low confidence + wrong → review tomorrow (interval = 1)
-    - Medium confidence + wrong → review in 3 days
-    - High confidence + wrong → review in 7 days (highest priority — calibration failure)
-    - Correct + any confidence → increasing intervals (1→3→7→14→30)
-    - Closer to exam date → compress intervals
-    """
-
-    # Base intervals by confidence and correctness
-    BASE_INTERVALS = {
-        # (is_correct, confidence): days
-        (False, 0): 1,    # guess + wrong → tomorrow
-        (False, 1): 1,    # unsure + wrong → tomorrow
-        (False, 2): 2,    # moderate + wrong → 2 days
-        (False, 3): 5,    # confident + wrong → 5 days (calibration danger)
-        (False, 4): 7,    # very confident + wrong → 7 days (worst calibration)
-        (True, 0): 1,     # guess + right → still review soon (lucky guess)
-        (True, 1): 3,     # unsure + right → 3 days
-        (True, 2): 7,     # moderate + right → 7 days
-        (True, 3): 14,    # confident + right → 14 days
-        (True, 4): 30,    # very confident + right → 30 days
-    }
-
-    # Successive review multipliers — expands interval each successful review
-    EXPANSION_FACTORS = [1.0, 2.0, 3.5, 5.0, 7.0]  # review #0, #1, #2, #3, #4+
+    @classmethod
+    def predicted_retrievability(cls, stability: float, elapsed_days: float) -> float:
+        """R(t) = 2^(-t/stability) — probability of recall at time t."""
+        if stability <= 0 or elapsed_days <= 0:
+            return 1.0
+        return 2.0 ** (-elapsed_days / stability)
 
     @classmethod
     def compute_calibration_adjustment(cls, calibration_warnings_path: str | Path) -> float:
@@ -116,18 +119,29 @@ class SpacingScheduler:
 
     @classmethod
     def schedule(cls, input_: SpacingInput) -> SpacingDecision:
-        """Compute optimal next review date and priority."""
-        # Base interval
-        key = (input_.is_correct, min(input_.confidence, 4))
-        base_days = cls.BASE_INTERVALS.get(key, 7)
+        """Compute optimal next review date and priority using exponential forgetting curve."""
+        # Initial stability estimate based on previous reviews
+        # Each prior review increased stability via the exponential model
+        if input_.previous_reviews == 0:
+            stability = 1.0
+        else:
+            stability = 1.0
+            # Simulate prior review history — assume correct at moderate confidence
+            for _ in range(input_.previous_reviews):
+                stability = compute_stability_update(stability, True, 2)
 
-        # Expansion for repeated reviews (adjusted by calibration)
-        review_idx = min(input_.previous_reviews, len(cls.EXPANSION_FACTORS) - 1)
-        base_expansion = cls.EXPANSION_FACTORS[review_idx]
-        # Calibration adjustment: poor calibration → slower expansion (more reviews)
+        # Update stability based on this review's outcome
+        stability = compute_stability_update(stability, input_.is_correct, input_.confidence)
+
+        # Apply calibration adjustment
         adj = max(0.5, min(1.5, input_.calibration_adjustment))
-        expansion = base_expansion * adj
-        interval = max(1, int(base_days * expansion))
+        stability *= adj
+
+        # Compute interval from stability
+        interval = max(1, int(compute_interval(stability)))
+
+        # Compute retrievability at the scheduled review time
+        retrievability = cls.predicted_retrievability(stability, interval)
 
         # Urgency: compress if exam is approaching
         urgency = 1.0
@@ -173,8 +187,10 @@ class SpacingScheduler:
             interval_days=interval,
             priority=priority,
             urgency_multiplier=urgency,
+            stability=round(stability, 2),
+            retrievability=round(retrievability, 4),
             reasoning=(
-                f"Base={base_days}d, expansion={expansion}x, "
+                f"Stability={stability:.1f}d, interval={interval}d, "
                 f"urgency={urgency}, priority={priority}"
             ),
         )

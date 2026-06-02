@@ -71,8 +71,7 @@ def review_cfa_card(repo: CfaRepository, card_id: str, rating: str) -> dict[str,
     flags = FeatureFlags.load(repo.root)
     if flags.enabled("cfa_extensions_enabled"):
         events = repo.events()
-        total = FSRS6Scheduler.total_reviews_from_events(events)
-        decision = FSRS6Scheduler.schedule(card.get("fsrs_state"), rating, total_reviews=total)
+        decision = FSRS6Scheduler.schedule(card.get("fsrs_state"), rating, _cache=None)
     else:
         from language_science.scheduler import _FallbackScheduler
         decision = _FallbackScheduler.schedule(card.get("fsrs_state"), rating)
