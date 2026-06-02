@@ -11,12 +11,15 @@ from .models import (
     LanguageProfile,
     LanguageSession,
 )
-from .scheduler import FSRSCompatibleScheduler, MemorySchedulerProtocol, ScheduleDecision
+from .fsrs_cache import FSRSStateCache
+from .scheduler import FSRS6Scheduler, MemorySchedulerProtocol, ScheduleDecision, GRADUATION_THRESHOLD
 
 __all__ = [
     "CorpusSegment",
     "CorpusSource",
-    "FSRSCompatibleScheduler",
+    "FSRS6Scheduler",
+    "FSRSStateCache",
+    "GRADUATION_THRESHOLD",
     "GrammarAnalysis",
     "IntuitionEdge",
     "LanguageCard",

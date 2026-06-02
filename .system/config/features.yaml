@@ -23,5 +23,13 @@ resource_cfa_official_promotion_enabled: true
 resource_ai_discovery_enabled: false
 resource_scheduler_enabled: false
 resource_code_audit_enabled: false
+language_fsrs_v2_enabled: false
+language_multidim_cards_enabled: false
+language_semantic_interference_enabled: false
+language_lexical_difficulty_enabled: false
+language_interleaving_v2_enabled: false
+cfa_extensions_enabled: false
+cfa_mock_exam_enabled: false
+resource_language_pipeline_v2_enabled: false
 gsap_motion_enabled: false
 reduced_motion_safe: true

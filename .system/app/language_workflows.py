@@ -13,7 +13,11 @@ from app.models import stable_id
 from language_science.grammar import analyze_sentence
 from language_science.importers import segment_content
 from language_science.intuition_graph import build_edges, search_items
-from language_science.scheduler import FSRSCompatibleScheduler
+from language_science.scheduler import FSRS6Scheduler
+from language_science.fsrs_cache import FSRSStateCache
+
+
+_FSRS_CACHE = FSRSStateCache(maxsize=256)
 
 
 def _now() -> str:
@@ -207,11 +211,26 @@ def due_cards(repo: LanguageRepository) -> list[dict[str, Any]]:
 
 
 def review_card(repo: LanguageRepository, card_id: str, rating: str) -> dict[str, Any]:
+    from app.feature_flags import FeatureFlags
+
     card = repo.replay()["cards"].get(card_id)
     if card is None:
         raise KeyError(card_id)
-    decision = FSRSCompatibleScheduler.schedule(card.get("fsrs_state"), rating)  # type: ignore[arg-type]
+
+    flags = FeatureFlags.load(repo.root)
+    if flags.enabled("language_fsrs_v2_enabled"):
+        events = repo.events()
+        total_reviews = FSRS6Scheduler.total_reviews_from_events(events)
+        decision = FSRS6Scheduler.schedule(
+            card.get("fsrs_state"), rating,
+            total_reviews=total_reviews, _cache=_FSRS_CACHE,
+        )
+    else:
+        from language_science.scheduler import _FallbackScheduler
+        decision = _FallbackScheduler.schedule(card.get("fsrs_state"), rating)
+
     card = {**card, "fsrs_state": decision.as_dict(), "due_at": decision.next_due_at}
+    _FSRS_CACHE.invalidate(card_id)
     repo.append("language.review.completed", {"card": card, "rating": rating}, evidence_refs=[card_id])
     return card
 
