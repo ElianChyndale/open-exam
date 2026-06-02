@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime, UTC
+from typing import Any
 
 
 @dataclass(slots=True)
@@ -139,3 +140,37 @@ class RetrievalEngine:
         if overlap >= 0.3:
             return 2
         return 1 if overlap > 0 else 0
+
+
+# ---------------------------------------------------------------------------
+# LanguageOS bridge helpers (added in Phase 6)
+# ---------------------------------------------------------------------------
+
+RETRIEVAL_PROMPTS: dict[str, str] = {
+    "definition": "闭卷讲出 {term} 的核心定义和判断边界。",
+    "formula": "写出 {term} 的公式并解释每个变量的含义。",
+    "concept_boundary": "解释 {term} 与 {related} 的核心区别，并给出一个例子。",
+    "procedure": "一步步描述 {term} 的计算过程。",
+    "compare_contrast": "比较 {term} 和 {related}，列出相同点和不同点。",
+}
+
+
+def format_retrieval_prompt(prompt_type: str, term: str, related: str = "") -> str:
+    """Format a retrieval prompt by type for the given term."""
+    template = RETRIEVAL_PROMPTS.get(prompt_type)
+    if not template:
+        return f"回忆并写出关于 '{term}' 的所有要点。"
+    return template.format(term=term, related=related)
+
+
+def score_recall(response: str, expected: str) -> dict[str, Any]:
+    """Score a free-recall response against expected key terms."""
+    response_tokens = set(response.lower().split())
+    expected_tokens = set(expected.lower().split())
+    if not expected_tokens:
+        return {"score": 0.0, "missing": [], "extra": []}
+    overlap = len(response_tokens & expected_tokens)
+    score = overlap / len(expected_tokens)
+    missing = list(expected_tokens - response_tokens)
+    extra = list(response_tokens - expected_tokens)
+    return {"score": round(score, 3), "missing": missing[:5], "extra": extra[:5]}
