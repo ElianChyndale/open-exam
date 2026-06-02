@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: learning-records
+Version: 0.1.0
+Summary: Canonical event envelopes for OpenExam learning records.
+Requires-Python: >=3.11

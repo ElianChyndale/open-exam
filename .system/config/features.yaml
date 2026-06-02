@@ -9,11 +9,11 @@ sync_v2_enabled: false
 mcp_read_only_enabled: false
 research_runtime_enabled: false
 trust_exports_enabled: false
-language_os_enabled: false
-language_fsrs_enabled: false
+language_os_enabled: true
+language_fsrs_enabled: true
 language_grammar_lens: false
 language_intuition_graph: false
-language_content_import: false
+language_content_import: true
 language_cloud_transcription: false
 language_embedding_search: false
 resource_ingestion_enabled: true
@@ -30,6 +30,6 @@ language_lexical_difficulty_enabled: false
 language_interleaving_v2_enabled: false
 cfa_extensions_enabled: false
 cfa_mock_exam_enabled: false
-resource_language_pipeline_v2_enabled: false
+resource_language_pipeline_v2_enabled: true
 gsap_motion_enabled: false
 reduced_motion_safe: true

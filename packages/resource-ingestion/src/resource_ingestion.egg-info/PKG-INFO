@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: resource-ingestion
+Version: 0.1.0
+Summary: Policy-guarded local resource ingestion kernel for OpenExam.
+Requires-Python: >=3.11
+Requires-Dist: defusedxml>=0.7.1
+Requires-Dist: httpx>=0.27.0

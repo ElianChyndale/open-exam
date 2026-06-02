@@ -40,7 +40,8 @@
       "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 5 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
       "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 15 -ErrorAction Stop | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
       "PowerShell(try { Invoke-WebRequest \"http://127.0.0.1:8000/api/health\" -UseBasicParsing -TimeoutSec 5 | Select-Object StatusCode, Content } catch { $_.Exception.Message })",
-      "PowerShell(cd \"D:\\\\AmyProjects\\\\New folder\\\\open-exam\\\\apps\\\\web\"; $env:NEXT_PUBLIC_API_URL = \"http://localhost:8000\"; Write-Host \"Starting Web...\"; .\\\\node_modules\\\\.bin\\\\next.cmd dev -p 3000)"
+      "PowerShell(cd \"D:\\\\AmyProjects\\\\New folder\\\\open-exam\\\\apps\\\\web\"; $env:NEXT_PUBLIC_API_URL = \"http://localhost:8000\"; Write-Host \"Starting Web...\"; .\\\\node_modules\\\\.bin\\\\next.cmd dev -p 3000)",
+      "PowerShell(.\\\\scripts\\\\install-resource-scheduler.ps1)"
     ]
   }
 }

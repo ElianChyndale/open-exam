@@ -8,4 +8,7 @@ cfa_official_structured_providers:
   - sec_edgar
   - fred
   - world_bank
-fulltext_allowed_domains: []
+fulltext_allowed_domains:
+  - en.wikipedia.org
+  - investopedia.com
+  - www.investopedia.com

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dashboard/today_todo.md",
+                "file": "CFA_2026_L1_Complete_Curriculum.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "today_todo"
+              "title": "CFA_2026_L1_Complete_Curriculum"
             }
           }
         ]
@@ -201,16 +201,19 @@
   },
   "active": "6ed053e7e425603b",
   "lastOpenFiles": [
+    "00-Index.md",
+    "00-CFA_L1_备考指南.md",
+    "00-CFA_L1_Formula_Audit.md",
     "dashboard/Daily Review.md",
-    "mock/FI/00-FI-Mistakes.md",
+    "dashboard/Agent失误页.md",
+    "dashboard/今日复习资料.md",
+    "dashboard/Topic弱点页.md",
     "dashboard/today_todo.md",
+    "mock/FI/00-FI-Mistakes.md",
     "dashboard/高频错因榜.md",
     "dashboard/策略手册页.md",
     "dashboard/今日新增错题.md",
-    "dashboard/今日复习资料.md",
     "dashboard/Subject-Question-Banks.md",
-    "dashboard/Topic弱点页.md",
-    "dashboard/Agent失误页.md",
     "Untitled.base"
   ]
 }

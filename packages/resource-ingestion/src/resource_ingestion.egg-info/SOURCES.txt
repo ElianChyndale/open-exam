@@ -1,0 +1,15 @@
+pyproject.toml
+src/resource_ingestion/__init__.py
+src/resource_ingestion/ai_discovery.py
+src/resource_ingestion/audit.py
+src/resource_ingestion/discovery.py
+src/resource_ingestion/fetch.py
+src/resource_ingestion/index.py
+src/resource_ingestion/models.py
+src/resource_ingestion/policy.py
+src/resource_ingestion/providers.py
+src/resource_ingestion.egg-info/PKG-INFO
+src/resource_ingestion.egg-info/SOURCES.txt
+src/resource_ingestion.egg-info/dependency_links.txt
+src/resource_ingestion.egg-info/requires.txt
+src/resource_ingestion.egg-info/top_level.txt

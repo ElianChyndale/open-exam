@@ -1,0 +1,70 @@
+{
+  "date": "2026-06-02",
+  "title": "今日 Todo",
+  "focus": "完成今天最重要的任务",
+  "time_blocks": [],
+  "tasks": [
+    {
+      "task_id": "todo-6ca1f06a04cd",
+      "text": "完成 Daily Review",
+      "deadline": "20:00",
+      "progress": 0,
+      "status": "pending",
+      "source": "system",
+      "created_at": "",
+      "updated_at": ""
+    },
+    {
+      "task_id": "todo-c8ae55deb11f",
+      "text": "完成财报的一半modules学习",
+      "deadline": "20:30",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-02T04:17:53.348028+00:00",
+      "updated_at": "2026-06-02T04:17:53.348028+00:00"
+    },
+    {
+      "task_id": "todo-254eb1affe8b",
+      "text": "完成LanguageOS迭代成功",
+      "deadline": "21:30",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-02T04:18:32.746580+00:00",
+      "updated_at": "2026-06-02T04:18:32.746580+00:00"
+    },
+    {
+      "task_id": "todo-3a91d8889e1a",
+      "text": "打两把cs",
+      "deadline": "22:30",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-02T04:18:44.890594+00:00",
+      "updated_at": "2026-06-02T04:18:44.890594+00:00"
+    },
+    {
+      "task_id": "todo-5f18234b1576",
+      "text": "做30个俯卧撑",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-02T04:18:57.313079+00:00",
+      "updated_at": "2026-06-02T04:18:57.313079+00:00"
+    },
+    {
+      "task_id": "todo-0337debfc537",
+      "text": "做好四川行程",
+      "deadline": "21:46",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-02T04:19:54.970565+00:00",
+      "updated_at": "2026-06-02T04:19:54.970565+00:00"
+    }
+  ],
+  "revision": 5,
+  "updated_at": "2026-06-02T04:19:54.970599+00:00"
+}
