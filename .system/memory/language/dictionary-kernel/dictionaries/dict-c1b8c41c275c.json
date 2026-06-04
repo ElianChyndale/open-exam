@@ -1,0 +1,30 @@
+{
+  "dictionary_id": "dict-c1b8c41c275c",
+  "language_pair": "es-en",
+  "title": "Browser Assessment Dictionary 1780491521394",
+  "format": "json",
+  "file_hash": "8d9d16a44f235dd809b04dececddce9ede074e865bba495df607687d7790308f",
+  "license_mode": "manual_local",
+  "imported_at": "2026-06-03T12:58:41.413129+00:00",
+  "priority": 0,
+  "profile_id": "default",
+  "dictionary_type": "spanish_english",
+  "source_language": "es",
+  "target_language": "en",
+  "origin": "import_json",
+  "content_hash": "8d9d16a44f235dd809b04dececddce9ede074e865bba495df607687d7790308f",
+  "quality_score": 0.8143,
+  "quality_status": "high",
+  "validation_status": "confirmed",
+  "source_refs": [
+    "dict-c1b8c41c275c#source"
+  ],
+  "quality_dimensions": {
+    "source_type_trust": 0.76,
+    "structure_quality": 0.52,
+    "bilingual_completeness": 0.8,
+    "lexical_asset_quality": 0.973,
+    "source_refs": 1.0,
+    "user_confirmation_signal": 1.0
+  }
+}

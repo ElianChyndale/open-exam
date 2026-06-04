@@ -2,7 +2,13 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
 from enum import Enum
+from hashlib import sha1
 from typing import Any
+
+
+def stable_id(prefix: str, *parts: str) -> str:
+    raw = "::".join([prefix, *[str(part) for part in parts]])
+    return f"{prefix}-{sha1(raw.encode('utf-8')).hexdigest()[:12]}"
 
 
 class DictModel:

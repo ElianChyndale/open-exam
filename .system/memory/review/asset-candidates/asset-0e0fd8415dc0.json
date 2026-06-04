@@ -1,0 +1,70 @@
+{
+  "asset_id": "asset-0e0fd8415dc0",
+  "asset_type": "formula",
+  "profile_id": "default",
+  "subject": "Browser Assessment Review Source 1780491521315",
+  "module": "Browser Assessment Review Source 1780491521315",
+  "los": "",
+  "title": "LOS CI-BROWSER-ASSESS",
+  "trigger": "LOS CI-BROWSER-ASSESS",
+  "correct_rule": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+  "formula_latex": "LOS: CI-BROWSER-ASSESS",
+  "plain_formula": "LOS: CI-BROWSER-ASSESS",
+  "variables": [
+    {
+      "symbol": "LOS",
+      "meaning": "CI-BROWSER-ASSESS",
+      "unit": ""
+    },
+    {
+      "symbol": "CI",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "BROWSER",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "ASSESS",
+      "meaning": "",
+      "unit": ""
+    }
+  ],
+  "applies_when": [
+    "Use after-tax cost of debt in WACC.",
+    "Apply target capital weights when valuing the firm."
+  ],
+  "not_when": [],
+  "assumptions": [
+    "Apply target capital weights when valuing the firm."
+  ],
+  "common_correct_boundary_rules": [
+    "Use after-tax cost of debt in WACC.",
+    "Apply target capital weights when valuing the firm."
+  ],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [],
+  "formula_family": "cost_of_capital",
+  "syllabus_topic_id": "",
+  "difficulty": "intermediate",
+  "source_refs": [
+    "ksource-10e3974fedf8#seg-1"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "new",
+  "next_review_at": "",
+  "created_from": "text_note",
+  "validation_status": "confirmed"
+}

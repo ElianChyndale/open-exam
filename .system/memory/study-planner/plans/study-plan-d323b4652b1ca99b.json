@@ -1,0 +1,372 @@
+{
+  "plan_id": "study-plan-d323b4652b1ca99b",
+  "profile_id": "default",
+  "plan_date": "2026-06-04",
+  "energy_mode": "normal",
+  "available_minutes": 90,
+  "goal": null,
+  "generated_at": "2026-06-03T17:01:04.655223+00:00",
+  "status": "draft",
+  "blocks": [
+    {
+      "block_id": "block-9908555b229f3100",
+      "plan_id": "study-plan-d323b4652b1ca99b",
+      "block_type": "review_lab",
+      "title": "Review Lab correct-only recall",
+      "description": "Run today's recall-first Review Lab units.",
+      "target_minutes": 30,
+      "priority": 57.9,
+      "launch_route": "/review/lab",
+      "due_reason": "30 correct-only units are due from DailyReview and confirmed assets.",
+      "linked_asset_ids": [
+        "asset-bb2c345b8b9b",
+        "asset-0e0fd8415dc0",
+        "asset-e19f181977d2",
+        "card-69ae1db561dd",
+        "card-33c8bac202a7",
+        "card-2e6ba8afb984",
+        "card-3ffdb0d46d7b",
+        "card-bae4b0369be7",
+        "card-faa48e1ec793",
+        "card-a39ddef9c96b",
+        "card-4a6193fc95f8",
+        "card-900d267beb41"
+      ],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_resource_ids": [],
+      "linked_lexical_ids": [],
+      "prerequisites": [],
+      "blocked_reason": null,
+      "status": "completed",
+      "completion_outcome": "Completed in Focus Session (22 actual minutes)"
+    },
+    {
+      "block_id": "block-2b222d651641b25a",
+      "plan_id": "study-plan-d323b4652b1ca99b",
+      "block_type": "formula_lab",
+      "title": "Formula Lab and calculator drill",
+      "description": "Recall formulas and reinforce BA II Plus procedure gaps.",
+      "target_minutes": 18,
+      "priority": 57.59,
+      "launch_route": "/review/formulas",
+      "due_reason": "19 confirmed formula assets are eligible; 19 look weak or new.",
+      "linked_asset_ids": [
+        "asset-bb2c345b8b9b",
+        "asset-e19f181977d2",
+        "asset-0e0fd8415dc0",
+        "knowledge-9ecde8a395db",
+        "knowledge-ff8219508f67",
+        "knowledge-56fcc522f044",
+        "knowledge-4fdb15373170",
+        "knowledge-2d226ef762a1",
+        "knowledge-51dc745f12f2",
+        "knowledge-5e5333729c03"
+      ],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_resource_ids": [],
+      "linked_lexical_ids": [],
+      "prerequisites": [],
+      "blocked_reason": null,
+      "status": "completed",
+      "completion_outcome": "Completed in Focus Session (18 actual minutes)"
+    },
+    {
+      "block_id": "block-03b4888fba4b6128",
+      "plan_id": "study-plan-d323b4652b1ca99b",
+      "block_type": "coverage_gap",
+      "title": "Close highest-value coverage gaps",
+      "description": "Use the coverage audit to create or import source-backed assets.",
+      "target_minutes": 14,
+      "priority": 44.01,
+      "launch_route": "/review/coverage",
+      "due_reason": "5 syllabus gaps are missing, partial, weak, or stale.",
+      "linked_asset_ids": [],
+      "linked_topic_ids": [
+        "demo-equity-gordon-growth",
+        "demo-ci-wacc",
+        "demo-fi-effective-duration",
+        "demo-quant-tvm",
+        "demo-econ-business-cycles"
+      ],
+      "linked_gap_ids": [],
+      "linked_resource_ids": [],
+      "linked_lexical_ids": [],
+      "prerequisites": [],
+      "blocked_reason": null,
+      "status": "completed",
+      "completion_outcome": "Completed in Focus Session (14 actual minutes)"
+    },
+    {
+      "block_id": "block-34524d3ec3c3a706",
+      "plan_id": "study-plan-d323b4652b1ca99b",
+      "block_type": "mock_transfer_drill",
+      "title": "Mock transfer gap drill",
+      "description": "Practice the open transfer gaps created from sanitized mock retro evidence.",
+      "target_minutes": 14,
+      "priority": 53.48,
+      "launch_route": "/review/mock-retro",
+      "due_reason": "3 open transfer gaps remain; highest severity 0.80.",
+      "linked_asset_ids": [],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [
+        "transfer-gap-d1cd4ff0e098",
+        "transfer-gap-ca11bc50e164",
+        "transfer-gap-assessment-cc7d2789aae31dd3"
+      ],
+      "linked_resource_ids": [],
+      "linked_lexical_ids": [],
+      "prerequisites": [],
+      "blocked_reason": null,
+      "status": "completed",
+      "completion_outcome": "Completed in Focus Session (14 actual minutes)"
+    },
+    {
+      "block_id": "block-a462c07425667688",
+      "plan_id": "study-plan-d323b4652b1ca99b",
+      "block_type": "lexical_review",
+      "title": "LanguageOS lexical recall",
+      "description": "Run due confirmed lexical items through the LanguageOS review loop.",
+      "target_minutes": 9,
+      "priority": 38.08,
+      "launch_route": "/language/review",
+      "due_reason": "2 confirmed lexical items are eligible for review.",
+      "linked_asset_ids": [],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_resource_ids": [],
+      "linked_lexical_ids": [
+        "lex-06aef54cad12",
+        "lex-9859eaa29ce7"
+      ],
+      "prerequisites": [],
+      "blocked_reason": null,
+      "status": "skipped",
+      "completion_outcome": "Skipped: Deferred from Focus Session"
+    },
+    {
+      "block_id": "block-c68338baa6196067",
+      "plan_id": "study-plan-d323b4652b1ca99b",
+      "block_type": "asset_confirmation",
+      "title": "Confirm draft formula candidates",
+      "description": "Validate formula metadata, source refs, and calculator steps.",
+      "target_minutes": 5,
+      "priority": 25.5,
+      "launch_route": "/review/formulas",
+      "due_reason": "Draft formula assets are not used as review content until confirmed.",
+      "linked_asset_ids": [
+        "asset-6253aab182da",
+        "asset-723425328264",
+        "asset-86eb03785435",
+        "asset-871967d2fdcf",
+        "asset-e9b7e710313f",
+        "asset-431498291f0c"
+      ],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_resource_ids": [],
+      "linked_lexical_ids": [],
+      "prerequisites": [
+        "Confirm source-backed formula"
+      ],
+      "blocked_reason": null,
+      "status": "pending",
+      "completion_outcome": null
+    }
+  ],
+  "summary": {
+    "total_minutes": 90,
+    "available_minutes": 90,
+    "block_count": 6,
+    "completed_blocks": 4,
+    "skipped_blocks": 1,
+    "blocked_blocks": 0,
+    "pending_blocks": 1,
+    "in_progress_blocks": 0,
+    "completed_minutes": 76,
+    "status_counts": {
+      "pending": 1,
+      "in_progress": 0,
+      "completed": 4,
+      "skipped": 1,
+      "blocked": 0
+    },
+    "block_type_counts": {
+      "review_lab": 1,
+      "formula_lab": 1,
+      "coverage_gap": 1,
+      "mock_transfer_drill": 1,
+      "lexical_review": 1,
+      "asset_confirmation": 1
+    }
+  },
+  "source_signals": {
+    "mission_control": {
+      "profile_id": "default",
+      "generated_at": "2026-06-03T17:01:02.982064+00:00",
+      "review_lab": {
+        "due_count": 50,
+        "next_session_available": true,
+        "weak_asset_count": 50,
+        "active_session_id": "lab-session-49aa02c14044",
+        "status": "ready"
+      },
+      "assets": {
+        "draft": 6,
+        "needs_review": 1,
+        "confirmed": 3,
+        "rejected": 0,
+        "total": 10,
+        "needs_confirmation_count": 7,
+        "ready_for_review_count": 3
+      },
+      "formulas": {
+        "total": 25,
+        "due_formula_count": 18,
+        "weak_formula_count": 25,
+        "ba_ii_plus_gap_count": 18,
+        "confirmed_count": 3
+      },
+      "coverage": {
+        "topic_count": 5,
+        "asset_count": 79,
+        "link_count": 29,
+        "missing": 1,
+        "partial": 0,
+        "draft_only": 0,
+        "weak": 4,
+        "stale": 0,
+        "covered": 0
+      },
+      "mock_retro": {
+        "open_transfer_gap_count": 3,
+        "top_gap_types": [
+          {
+            "gap_type": "confidence_mismatch",
+            "count": 1
+          },
+          {
+            "gap_type": "variable_confusion",
+            "count": 1
+          },
+          {
+            "gap_type": "interleaving_failure",
+            "count": 1
+          }
+        ],
+        "highest_severity": 0.8
+      },
+      "resources": {
+        "resource_count": 0,
+        "candidate_asset_count": 0,
+        "promoted_asset_count": 0,
+        "candidates_needing_promotion": 0,
+        "unscored": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "trusted": 0,
+        "rejected": 0
+      },
+      "language": {
+        "due_lexical_count": 2,
+        "draft_lexical_count": 0,
+        "weak_lexical_count": 2,
+        "confirmed_lexical_count": 2,
+        "dictionary_count": 2,
+        "status": "ready"
+      },
+      "system_health": {
+        "green_test_gate": "runtime_summary_available",
+        "test_status_hook": "not_runtime_evaluated",
+        "route_registry_available": true,
+        "dirty_state_note": "Working tree status is reported by validation, not this runtime endpoint."
+      },
+      "recommended_actions": [
+        {
+          "priority": 100,
+          "action_id": "start_onboarding",
+          "title": "Start first-run onboarding",
+          "href": "/onboarding",
+          "reason": "Choose a goal profile, course pack, time budget, and safe Day-1 plan."
+        },
+        {
+          "priority": 99,
+          "action_id": "generate_study_plan",
+          "title": "Generate today's adaptive study plan",
+          "href": "/review/study-planner",
+          "reason": "Turn Mission Control signals into an executable energy-aware session."
+        },
+        {
+          "priority": 98,
+          "action_id": "ask_tutor_copilot",
+          "title": "Ask grounded Tutor Copilot",
+          "href": "/review/tutor",
+          "reason": "Use cited local context before choosing a review action."
+        },
+        {
+          "priority": 95,
+          "action_id": "review_today",
+          "title": "Review today's Review Lab session",
+          "href": "/review/lab",
+          "reason": "50 recall-first units are ready."
+        },
+        {
+          "priority": 93,
+          "action_id": "generate_assessment",
+          "title": "Generate adaptive assessment drill",
+          "href": "/review/assessments",
+          "reason": "Test transfer across confirmed assets, coverage gaps, formulas, lexical items, and open gaps."
+        },
+        {
+          "priority": 88,
+          "action_id": "confirm_assets",
+          "title": "Confirm draft review assets",
+          "href": "/review/assets",
+          "reason": "7 source-backed assets are blocked from review."
+        },
+        {
+          "priority": 82,
+          "action_id": "close_coverage_gaps",
+          "title": "Inspect syllabus coverage gaps",
+          "href": "/review/coverage",
+          "reason": "5 syllabus topics are missing, weak, stale, partial, or draft-only."
+        },
+        {
+          "priority": 78,
+          "action_id": "run_formula_lab",
+          "title": "Run Formula Lab for weak formulas",
+          "href": "/review/formulas",
+          "reason": "25 formula assets need recall or BA II Plus reinforcement."
+        },
+        {
+          "priority": 76,
+          "action_id": "resolve_transfer_gaps",
+          "title": "Review open mock transfer gaps",
+          "href": "/review/mock-retro",
+          "reason": "3 open gaps remain; top type is confidence_mismatch."
+        },
+        {
+          "priority": 64,
+          "action_id": "lexical_review",
+          "title": "Run LanguageOS lexical review",
+          "href": "/language/review",
+          "reason": "2 lexical items are due."
+        }
+      ]
+    },
+    "candidate_block_count": 7,
+    "priority_formula": "0.24*urgency + 0.18*exam_weight + 0.16*memory_decay + 0.14*transfer_gap_severity + 0.10*coverage_gap_value + 0.08*formula_or_language_value + 0.06*source_quality + 0.04*user_goal_alignment",
+    "safety": {
+      "correct_only": true,
+      "draft_content_enters_review": false,
+      "ocr_enabled": false
+    }
+  },
+  "recommended_next_actions": [
+    "Continue with Confirm draft formula candidates.",
+    "Generate an adaptive assessment after the next recall block to test transfer.",
+    "Reschedule skipped blocks into the next generated plan."
+  ]
+}

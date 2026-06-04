@@ -8,7 +8,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 from app.storage import Repository
-from app.workflows import daily_review_pack, load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event, record_progress, refresh_learning_outputs, write_todo
+from app.workflows import daily_review_pack, load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event, record_progress, refresh_learning_outputs, rollover_todo, write_todo
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -38,6 +38,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     progress = subparsers.add_parser("record-progress")
     progress.add_argument("--payload", required=True)
+
+    subparsers.add_parser("todo-rollover", help="自动将昨日未完成任务滚到今天")
 
     todo = subparsers.add_parser("write-todo")
     todo.add_argument("--payload", required=True)
@@ -140,6 +142,13 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
     if args.command == "record-progress":
         record_progress(repo, load_payload(args.payload))
         return 0
+    if args.command == "todo-rollover":
+        state = rollover_todo(repo)
+        archived = state["date"] != getattr(args, "_previous_date", "")
+        pending = sum(1 for t in state["tasks"] if t["status"] != "completed")
+        print(f"✅ Todo 已更新: {state['date']}，待完成 {pending} 项")
+        return 0
+
     if args.command == "write-todo":
         write_todo(repo, load_payload(args.payload))
         return 0

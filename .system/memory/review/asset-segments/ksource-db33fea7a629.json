@@ -1,0 +1,38 @@
+[
+  {
+    "segment_id": "segment-ksource-db33fea7a629-1",
+    "source_id": "ksource-db33fea7a629",
+    "page": null,
+    "heading": null,
+    "text": "WACC = w_d r_d (1 - t) + w_e r_e.",
+    "char_start": 0,
+    "char_end": 33,
+    "source_ref": "ksource-db33fea7a629#seg-1",
+    "evidence_type": "formula",
+    "confidence": 0.65
+  },
+  {
+    "segment_id": "segment-ksource-db33fea7a629-2",
+    "source_id": "ksource-db33fea7a629",
+    "page": null,
+    "heading": null,
+    "text": "Use after-tax cost of debt with target market value weights.",
+    "char_start": 34,
+    "char_end": 94,
+    "source_ref": "ksource-db33fea7a629#seg-2",
+    "evidence_type": "formula",
+    "confidence": 0.6
+  },
+  {
+    "segment_id": "segment-ksource-db33fea7a629-3",
+    "source_id": "ksource-db33fea7a629",
+    "page": null,
+    "heading": null,
+    "text": "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV.",
+    "char_start": 95,
+    "char_end": 155,
+    "source_ref": "ksource-db33fea7a629#seg-3",
+    "evidence_type": "formula",
+    "confidence": 0.6
+  }
+]

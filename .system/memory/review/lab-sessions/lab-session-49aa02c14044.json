@@ -1,0 +1,264 @@
+{
+  "session_id": "lab-session-49aa02c14044",
+  "review_id": "daily-review-0f34dd7f6101",
+  "status": "active",
+  "units": [
+    {
+      "unit_id": "unit-asset-bb2c345b8b9b",
+      "review_id": "daily-review-0f34dd7f6101",
+      "asset_id": "asset-bb2c345b8b9b",
+      "asset_type": "formula",
+      "unit_type": "formula",
+      "display_mode": "formula_input",
+      "front_prompt": "Recall from memory: WACC w d r d 1 - t +",
+      "correct_answer": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "correct_reasoning": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "correct_steps": [],
+      "ba_ii_plus_steps": [
+        "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+      ],
+      "boundary_rules": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "variables": [
+        {
+          "symbol": "WACC",
+          "meaning": "w_d r_d (1 - t) + w_e r_e",
+          "unit": ""
+        },
+        {
+          "symbol": "w_d",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "r_d",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "t",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "w_e",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "r_e",
+          "meaning": "",
+          "unit": ""
+        }
+      ],
+      "applies_when": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "not_when": [],
+      "assumptions": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "formula_family": "cost_of_capital",
+      "difficulty": "advanced",
+      "memory_state_before": "new",
+      "prompt": "Recall from memory: WACC w d r d 1 - t +",
+      "recall_instruction": "Write the formula and variables first, then reveal the correct version.",
+      "answer": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "worked_example": "",
+      "common_wrong_path": "",
+      "exam_trap": "",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "source_spans": [],
+      "due_reason": "Confirmed source-backed note asset selected for recall.",
+      "memory_state": "new",
+      "priority": 61,
+      "interaction_mode": "formula_input",
+      "knowledge_id": "asset-bb2c345b8b9b",
+      "card_id": "",
+      "subject": "Browser Assessment Formula 1780491521367",
+      "heading": "Browser Assessment Formula 1780491521367",
+      "los": ""
+    },
+    {
+      "unit_id": "unit-asset-0e0fd8415dc0",
+      "review_id": "daily-review-0f34dd7f6101",
+      "asset_id": "asset-0e0fd8415dc0",
+      "asset_type": "formula",
+      "unit_type": "formula",
+      "display_mode": "formula_input",
+      "front_prompt": "Recall from memory: LOS CI-BROWSER-ASSESS",
+      "correct_answer": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+      "correct_reasoning": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+      "correct_steps": [],
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [
+        "Use after-tax cost of debt in WACC.",
+        "Apply target capital weights when valuing the firm."
+      ],
+      "variables": [
+        {
+          "symbol": "LOS",
+          "meaning": "CI-BROWSER-ASSESS",
+          "unit": ""
+        },
+        {
+          "symbol": "CI",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "BROWSER",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "ASSESS",
+          "meaning": "",
+          "unit": ""
+        }
+      ],
+      "applies_when": [
+        "Use after-tax cost of debt in WACC.",
+        "Apply target capital weights when valuing the firm."
+      ],
+      "not_when": [],
+      "assumptions": [
+        "Apply target capital weights when valuing the firm."
+      ],
+      "formula_family": "cost_of_capital",
+      "difficulty": "intermediate",
+      "memory_state_before": "new",
+      "prompt": "Recall from memory: LOS CI-BROWSER-ASSESS",
+      "recall_instruction": "Write the formula and variables first, then reveal the correct version.",
+      "answer": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+      "formula_latex": "LOS: CI-BROWSER-ASSESS",
+      "worked_example": "",
+      "common_wrong_path": "",
+      "exam_trap": "",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "source_spans": [],
+      "due_reason": "Confirmed source-backed note asset selected for recall.",
+      "memory_state": "new",
+      "priority": 58,
+      "interaction_mode": "formula_input",
+      "knowledge_id": "asset-0e0fd8415dc0",
+      "card_id": "",
+      "subject": "Browser Assessment Review Source 1780491521315",
+      "heading": "Browser Assessment Review Source 1780491521315",
+      "los": ""
+    },
+    {
+      "unit_id": "unit-card-69ae1db561dd",
+      "review_id": "daily-review-0f34dd7f6101",
+      "asset_id": "card-69ae1db561dd",
+      "asset_type": "mistake_corrected",
+      "unit_type": "mistake_corrected",
+      "display_mode": "recall_reveal",
+      "front_prompt": "Recall the correct rule for: FI.Convexity",
+      "correct_answer": "B",
+      "correct_reasoning": "B",
+      "correct_steps": [
+        "B"
+      ],
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [],
+      "variables": [],
+      "applies_when": [],
+      "not_when": [],
+      "assumptions": [],
+      "formula_family": "",
+      "difficulty": "basic",
+      "memory_state_before": "New",
+      "prompt": "Recall the correct rule for: FI.Convexity",
+      "recall_instruction": "Answer from memory first. Reveal only after committing to your recall.",
+      "answer": "B",
+      "formula_latex": "",
+      "worked_example": "24 小时内重做 2 道 Fixed Income / FI.Convexity 同类题。",
+      "common_wrong_path": "",
+      "exam_trap": "",
+      "source_refs": [],
+      "source_spans": [],
+      "due_reason": "Corrected from a prior mistake; rehearse the right rule only.",
+      "memory_state": "New",
+      "priority": 51,
+      "interaction_mode": "recall_reveal",
+      "knowledge_id": "",
+      "card_id": "card-69ae1db561dd",
+      "subject": "Fixed Income",
+      "heading": "Fixed Income",
+      "los": "FI.Convexity"
+    },
+    {
+      "unit_id": "unit-card-2e6ba8afb984",
+      "review_id": "daily-review-0f34dd7f6101",
+      "asset_id": "card-2e6ba8afb984",
+      "asset_type": "mistake_corrected",
+      "unit_type": "mistake_corrected",
+      "display_mode": "recall_reveal",
+      "front_prompt": "Recall the correct rule for: QM.Rates and Returns",
+      "correct_answer": "r = ln(186.75/208.25) = ln(0.89676) = -0.10897 ≈ -10.90%. 连续复利收益率必须用",
+      "correct_reasoning": "r = ln(186.75/208.25) = ln(0.89676) = -0.10897 ≈ -10.90%. 连续复利收益率必须用",
+      "correct_steps": [
+        "r = ln(186.75/208.25) = ln(0.89676) = -0.10897 ≈ -10.90%. 连续复利收益率必须用"
+      ],
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [],
+      "variables": [],
+      "applies_when": [],
+      "not_when": [],
+      "assumptions": [],
+      "formula_family": "",
+      "difficulty": "basic",
+      "memory_state_before": "New",
+      "prompt": "Recall the correct rule for: QM.Rates and Returns",
+      "recall_instruction": "Answer from memory first. Reveal only after committing to your recall.",
+      "answer": "r = ln(186.75/208.25) = ln(0.89676) = -0.10897 ≈ -10.90%. 连续复利收益率必须用",
+      "formula_latex": "",
+      "worked_example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。",
+      "common_wrong_path": "",
+      "exam_trap": "",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ],
+      "source_spans": [],
+      "due_reason": "Corrected from a prior mistake; rehearse the right rule only.",
+      "memory_state": "New",
+      "priority": 51,
+      "interaction_mode": "recall_reveal",
+      "knowledge_id": "",
+      "card_id": "card-2e6ba8afb984",
+      "subject": "Quantitative Methods",
+      "heading": "Quantitative Methods",
+      "los": "QM.Rates and Returns"
+    }
+  ],
+  "current_unit_index": 1,
+  "completed_unit_ids": [
+    "unit-asset-bb2c345b8b9b"
+  ],
+  "outcomes": [
+    {
+      "unit_id": "unit-asset-bb2c345b8b9b",
+      "confidence_before": 2,
+      "time_spent_seconds": 19,
+      "needed_hint": false,
+      "outcome": "partial",
+      "confidence_after": 1,
+      "answer_quality": "minor_gap",
+      "fix_rule_helpful": null,
+      "next_action": "drill"
+    }
+  ],
+  "energy_level": 2,
+  "focus_topic": "Fixed Income",
+  "started_at": "2026-06-03T14:07:31.637120+00:00",
+  "completed_at": "",
+  "paused_at": "",
+  "resumed_at": ""
+}

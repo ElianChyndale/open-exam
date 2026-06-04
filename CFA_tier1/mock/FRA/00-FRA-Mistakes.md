@@ -1,6 +1,6 @@
 ---
 bucket: FRA
-question_count: 4
+question_count: 5
 ---
 
 # FRA Mock Mistakes
@@ -43,4 +43,14 @@ question_count: 4
 - correct_resolution: Correct answer: C. Both the debt-to-equity ratio and total asset turnover. An impairment write-down reduces long-lived assets and reduces equity through the loss, while debt and revenue are unchanged all else equal. Debt-to-equity increases because its denominator, equity, falls. Total asset turnover increases because its denominator, average total assets, falls while revenue is unchanged.
 - evidence_refs: chat-screenshot-2026-06-02-impairment-ratios
 - evidence_assets: chat-uploaded-screenshot-2026-06-02-impairment-ratios
+- moc_target: CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md
+
+## Financial Statement Analysis | M04 Analyzing Statements of Cash Flows I - cash paid to suppliers from COGS, inventory, and accounts payable
+- error_type: formula_misuse
+- question_source: unknown_screenshot_source
+- source_type: screenshot
+- wrong_choice_or_output: Selected C. USD83 million.
+- correct_resolution: Correct answer: A. USD67 million. First derive purchases from suppliers: COGS 75 minus the inventory decline of 6 equals purchases of 69. Then adjust for the increase in accounts payable of 2: because payables increased, not all purchases were paid in cash, so cash paid to suppliers is 69 minus 2 = 67.
+- evidence_refs: chat-screenshot-2026-06-03-fsa-cash-paid-to-suppliers-q7
+- evidence_assets: chat-uploaded-screenshot-2026-06-03-fsa-cash-paid-to-suppliers-q7
 - moc_target: CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md

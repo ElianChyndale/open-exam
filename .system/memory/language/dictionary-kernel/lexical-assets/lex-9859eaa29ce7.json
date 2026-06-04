@@ -1,0 +1,33 @@
+{
+  "lexical_id": "lex-9859eaa29ce7",
+  "profile_id": "default",
+  "dictionary_id": "dict-50fc3bf9e188",
+  "headword": "repasar",
+  "language": "es",
+  "target_language": "en",
+  "part_of_speech": "verb",
+  "sense_number": 1,
+  "definition": "to review or go over again",
+  "translation": "review",
+  "example_sentence": "Voy a repasar la formula WACC.",
+  "example_translation": null,
+  "collocations": [
+    "repasar una formula"
+  ],
+  "synonyms": [],
+  "antonyms": [],
+  "register": null,
+  "usage_notes": [],
+  "morphology": {},
+  "pronunciation": null,
+  "tags": [],
+  "source_refs": [
+    "dict-50fc3bf9e188#entry-1#sense-1"
+  ],
+  "quality_score": 0.973,
+  "validation_status": "confirmed",
+  "mastery_state": "new",
+  "next_review_at": null,
+  "created_at": "2026-06-03T15:31:01.605760+00:00",
+  "dictionary_quality_status": "high"
+}

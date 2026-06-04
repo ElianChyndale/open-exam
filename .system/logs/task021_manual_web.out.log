@@ -1,0 +1,29 @@
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://127.0.0.1:3170
+- Network:       http://127.0.0.1:3170
+✓ Ready in 246ms
+
+ GET /review 200 in 213ms (next.js: 101ms, application-code: 112ms)
+ GET / 307 in 132ms (next.js: 12ms, application-code: 120ms)
+ GET /today 200 in 132ms (next.js: 48ms, application-code: 85ms)
+ GET /capture 200 in 132ms (next.js: 66ms, application-code: 67ms)
+ GET /today 200 in 70ms (next.js: 1947µs, application-code: 68ms)
+ GET /diagnosis 200 in 82ms (next.js: 10ms, application-code: 72ms)
+ GET /review 200 in 83ms (next.js: 26ms, application-code: 57ms)
+ GET /mock 200 in 135ms (next.js: 11ms, application-code: 125ms)
+ GET /dashboard 200 in 103ms (next.js: 11ms, application-code: 91ms)
+ GET /institution 200 in 127ms (next.js: 78ms, application-code: 49ms)
+ GET /calendar 200 in 29ms (next.js: 10ms, application-code: 19ms)
+ GET /review/focus 200 in 23ms (next.js: 13ms, application-code: 11ms)
+ GET /review/focus 200 in 21ms (next.js: 1292µs, application-code: 20ms)
+ GET / 307 in 84ms (next.js: 1436µs, application-code: 83ms)
+ GET /today 200 in 84ms (next.js: 19ms, application-code: 66ms)
+ GET /capture 200 in 67ms (next.js: 16ms, application-code: 52ms)
+ GET /today 200 in 36ms (next.js: 1214µs, application-code: 35ms)
+ GET /diagnosis 200 in 51ms (next.js: 1108µs, application-code: 50ms)
+ GET /review 200 in 38ms (next.js: 3ms, application-code: 35ms)
+ GET /mock 200 in 34ms (next.js: 2ms, application-code: 31ms)
+ GET /dashboard 200 in 69ms (next.js: 1232µs, application-code: 67ms)
+ GET /institution 200 in 56ms (next.js: 1700µs, application-code: 55ms)
+ GET /calendar 200 in 37ms (next.js: 3ms, application-code: 34ms)
+[?25h

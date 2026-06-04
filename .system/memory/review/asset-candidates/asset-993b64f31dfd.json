@@ -1,0 +1,43 @@
+{
+  "asset_id": "asset-993b64f31dfd",
+  "asset_type": "decision_rule",
+  "profile_id": "default",
+  "subject": "Browser Assessment Review Source 1780491521315",
+  "module": "Browser Assessment Review Source 1780491521315",
+  "los": "",
+  "title": "Apply target capital weights when valuing the firm",
+  "trigger": "Apply target capital weights when valuing the firm",
+  "correct_rule": "Apply this boundary rule: Apply target capital weights when valuing the firm.",
+  "formula_latex": "",
+  "plain_formula": "",
+  "variables": [],
+  "applies_when": [],
+  "not_when": [
+    "Apply target capital weights when valuing the firm."
+  ],
+  "assumptions": [],
+  "common_correct_boundary_rules": [],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [],
+  "formula_family": "",
+  "syllabus_topic_id": "",
+  "difficulty": "basic",
+  "source_refs": [
+    "ksource-10e3974fedf8#seg-3"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "new",
+  "next_review_at": "",
+  "created_from": "text_note",
+  "validation_status": "needs_review"
+}

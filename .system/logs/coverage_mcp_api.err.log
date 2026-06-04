@@ -1,0 +1,14 @@
+OPENEXAM_REPO_ROOT=C:\Users\Administrator\AppData\Local\Temp\openexam-mcp-9816ab1353b14b62b3012bdb63410d0d : The term 
+'OPENEXAM_REPO_ROOT=C:\Users\Administrator\AppData\Local\Temp\openexam-mcp-9816ab1353b14b62b3012bdb63410d0d' is not 
+recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if 
+a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ OPENEXAM_REPO_ROOT=C:\Users\Administrator\AppData\Local\Temp\openexam ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (OPENEXAM_REPO_R...3012bdb63410d0d:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+INFO:     Started server process [24964]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8034 (Press CTRL+C to quit)

@@ -35,6 +35,7 @@ from app.workflows.core import (
     parse_frontmatter,
     default_fix_rule,
     next_drill_for,
+    update_knowledge_from_diagnosis,
     # Aliased to avoid shadowing if a todo version ever appears
     archive_today_todo as core_archive_todo,
     # Private symbol needed by tests
@@ -44,4 +45,5 @@ from app.workflows.core import (
 # Todo is event sourced. Its write_todo is the V2 reducer entry point.
 from app.workflows.todo import (
     write_todo,
+    rollover_todo,
 )

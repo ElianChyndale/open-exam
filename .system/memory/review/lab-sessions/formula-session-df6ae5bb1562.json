@@ -1,0 +1,118 @@
+{
+  "session_id": "formula-session-df6ae5bb1562",
+  "review_id": "formula-lab-2026-06-03",
+  "status": "active",
+  "units": [
+    {
+      "unit_id": "formula-unit-asset-bb2c345b8b9b",
+      "review_id": "formula-lab-2026-06-03",
+      "asset_id": "asset-bb2c345b8b9b",
+      "asset_type": "formula",
+      "unit_type": "formula",
+      "display_mode": "ba_ii_plus_procedure",
+      "front_prompt": "Recall the formula for: WACC w d r d 1 - t +",
+      "correct_answer": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "correct_reasoning": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "correct_steps": [
+        "WACC = w_d r_d (1 - t) + w_e r_e",
+        "WACC: w_d r_d (1 - t) + w_e r_e",
+        "w_d",
+        "r_d",
+        "t",
+        "w_e",
+        "r_e"
+      ],
+      "ba_ii_plus_steps": [
+        "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+      ],
+      "boundary_rules": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "variables": [
+        {
+          "symbol": "WACC",
+          "meaning": "w_d r_d (1 - t) + w_e r_e",
+          "unit": ""
+        },
+        {
+          "symbol": "w_d",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "r_d",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "t",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "w_e",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "r_e",
+          "meaning": "",
+          "unit": ""
+        }
+      ],
+      "applies_when": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "not_when": [],
+      "assumptions": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "formula_family": "cost_of_capital",
+      "difficulty": "advanced",
+      "memory_state_before": "Learning",
+      "prompt": "Recall the formula for: WACC w d r d 1 - t +",
+      "recall_instruction": "Write the formula and key variables before revealing.",
+      "answer": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "worked_example": "",
+      "common_wrong_path": "",
+      "exam_trap": "",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "source_spans": [],
+      "due_reason": "Formula Lab selected this confirmed formula by exam value, decay, boundaries, and source quality.",
+      "memory_state": "Learning",
+      "priority": 79,
+      "interaction_mode": "ba_ii_plus_procedure",
+      "knowledge_id": "asset-bb2c345b8b9b",
+      "card_id": "",
+      "subject": "Browser Assessment Formula 1780491521367",
+      "heading": "Browser Assessment Formula 1780491521367",
+      "los": ""
+    }
+  ],
+  "current_unit_index": 1,
+  "completed_unit_ids": [
+    "formula-unit-asset-bb2c345b8b9b"
+  ],
+  "outcomes": [
+    {
+      "unit_id": "formula-unit-asset-bb2c345b8b9b",
+      "confidence_before": 2,
+      "time_spent_seconds": 1080,
+      "needed_hint": false,
+      "outcome": "recalled",
+      "confidence_after": 3,
+      "answer_quality": "perfect",
+      "fix_rule_helpful": null,
+      "next_action": "advance"
+    }
+  ],
+  "energy_level": 2,
+  "focus_topic": "Formula Lab",
+  "started_at": "2026-06-03T18:27:02.897347+00:00",
+  "completed_at": "",
+  "paused_at": "",
+  "resumed_at": ""
+}

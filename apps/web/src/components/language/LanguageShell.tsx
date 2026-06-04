@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BarChart3, BookOpenText, BrainCircuit, Ear, FileInput, LibraryBig, Settings2, Sparkles } from 'lucide-react';
+import { BarChart3, BookOpenText, BrainCircuit, Ear, FileInput, LibraryBig, Settings2, Sparkles, SpellCheck2 } from 'lucide-react';
 
 import { AnimatedPage } from '@/components/motion/AnimatedPage';
 
@@ -10,6 +10,7 @@ const tabs = [
   { href: '/language', label: 'Cockpit', icon: Sparkles },
   { href: '/language/import', label: 'Import', icon: FileInput },
   { href: '/language/corpus', label: 'Corpus', icon: LibraryBig },
+  { href: '/language/dictionaries', label: 'Dictionaries', icon: SpellCheck2 },
   { href: '/language/review', label: 'Review', icon: BookOpenText },
   { href: '/language/listening', label: 'Listening', icon: Ear },
   { href: '/language/grammar', label: 'Grammar', icon: BrainCircuit },

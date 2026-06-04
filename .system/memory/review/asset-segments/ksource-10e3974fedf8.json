@@ -1,0 +1,38 @@
+[
+  {
+    "segment_id": "segment-ksource-10e3974fedf8-1",
+    "source_id": "ksource-10e3974fedf8",
+    "page": null,
+    "heading": null,
+    "text": "LOS: CI-BROWSER-ASSESS",
+    "char_start": 0,
+    "char_end": 22,
+    "source_ref": "ksource-10e3974fedf8#seg-1",
+    "evidence_type": "formula",
+    "confidence": 0.55
+  },
+  {
+    "segment_id": "segment-ksource-10e3974fedf8-2",
+    "source_id": "ksource-10e3974fedf8",
+    "page": null,
+    "heading": null,
+    "text": "Use after-tax cost of debt in WACC.",
+    "char_start": 23,
+    "char_end": 58,
+    "source_ref": "ksource-10e3974fedf8#seg-2",
+    "evidence_type": "formula",
+    "confidence": 0.45
+  },
+  {
+    "segment_id": "segment-ksource-10e3974fedf8-3",
+    "source_id": "ksource-10e3974fedf8",
+    "page": null,
+    "heading": null,
+    "text": "Apply target capital weights when valuing the firm.",
+    "char_start": 59,
+    "char_end": 110,
+    "source_ref": "ksource-10e3974fedf8#seg-3",
+    "evidence_type": "rule",
+    "confidence": 0.6
+  }
+]

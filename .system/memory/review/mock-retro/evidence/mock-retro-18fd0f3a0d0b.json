@@ -1,0 +1,31 @@
+[
+  {
+    "evidence_id": "mock-evidence-b07ae2368678",
+    "mock_id": "mock-retro-18fd0f3a0d0b",
+    "profile_id": "default",
+    "question_number": 1,
+    "topic_id": "demo-ci-wacc",
+    "asset_id": "asset-bb2c345b8b9b",
+    "subject": "Corporate Issuers",
+    "module": "Corporate Issuers WACC",
+    "los": "",
+    "is_correct": false,
+    "confidence_before": null,
+    "time_spent_seconds": null,
+    "correct_rule": "WACC uses after-tax cost of debt.",
+    "tested_skill": "Corporate Issuers WACC",
+    "tested_formula": "WACC",
+    "boundary_rule": "",
+    "correct_steps": [
+      "WACC uses after-tax cost of debt."
+    ],
+    "ba_ii_plus_steps": [],
+    "source_refs": [
+      "mock-retro-18fd0f3a0d0b#q-1"
+    ],
+    "created_at": "2026-06-03T15:31:01.630385+00:00",
+    "wrong_choice_or_output": "UNIQUE_WRONG_TUTOR_BROWSER_TASK016_20260603233101",
+    "wrong_reasoning": "",
+    "wrong_formula": ""
+  }
+]

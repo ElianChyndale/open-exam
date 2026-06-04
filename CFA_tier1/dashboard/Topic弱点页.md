@@ -2,7 +2,7 @@
 - Quantitative Methods: 17
 - Economics: 14
 - Corporate Issuers: 10
-- Financial Statement Analysis: 4
+- Financial Statement Analysis: 5
 - Portfolio Management: 2
 - Economics - Market Structures - Barriers to Entry: 1
 - Economics - Monetary Policy - Monetary Transmission Mechanism: 1

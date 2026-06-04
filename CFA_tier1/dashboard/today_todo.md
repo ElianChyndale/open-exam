@@ -1,7 +1,7 @@
 ---
-date: 2026-06-02
+date: 2026-06-03
 focus: 完成今天最重要的任务
-revision: 11
+revision: 2
 status: active
 ---
 
@@ -10,12 +10,11 @@ status: active
 > Focus: 完成今天最重要的任务
 
 ## Tasks
-- [x] 完成 Daily Review（deadline: 20:00）
-- [x] 完成财报的一半modules学习（deadline: 20:30）
-- [x] 完成LanguageOS迭代成功（deadline: 21:30）
+- [ ] 完成 Daily Review（deadline: 20:00）
 - [ ] 打两把cs（deadline: 22:30）
 - [ ] 做30个俯卧撑
 - [ ] 做好四川行程（deadline: 21:46）
+- [ ] FSA完成到M9.尽量3分钟内一道题（deadline: 18:00）
 
 ## Review
 - 完成了什么：

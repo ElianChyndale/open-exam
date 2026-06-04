@@ -52,20 +52,6 @@ Press `Ctrl+C` in the terminal to stop all services.
 | **Mock Bank** | auto-imported | 613 CFA L1 questions across 10 subjects |
 | **Logs** | `.system/logs/` | stdout/stderr for both processes |
 
-### Manual start
-
-**API:**
-
-```powershell
-.\start-api.ps1
-```
-
-**Frontend:**
-
-```powershell
-.\start-web.ps1
-```
-
 **Health check:**
 
 ```powershell

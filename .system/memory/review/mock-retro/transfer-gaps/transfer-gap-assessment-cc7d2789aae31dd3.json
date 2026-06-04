@@ -1,0 +1,18 @@
+{
+  "gap_id": "transfer-gap-assessment-cc7d2789aae31dd3",
+  "profile_id": "default",
+  "topic_id": "demo-equity-gordon-growth",
+  "asset_id": null,
+  "formula_family": null,
+  "gap_type": "interleaving_failure",
+  "severity": 0.35,
+  "evidence_count": 1,
+  "last_seen_at": "2026-06-03T12:58:42.959548+00:00",
+  "recommended_actions": [
+    "Review the correct rule, then retry an interleaved assessment item."
+  ],
+  "source_refs": [
+    "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+  ],
+  "status": "open"
+}

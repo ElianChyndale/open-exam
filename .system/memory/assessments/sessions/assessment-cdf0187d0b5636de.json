@@ -1,0 +1,380 @@
+{
+  "assessment_id": "assessment-cdf0187d0b5636de",
+  "profile_id": "default",
+  "title": "Interleaving Drill",
+  "mode": "interleaving_drill",
+  "generated_at": "2026-06-03T12:58:42.793110+00:00",
+  "status": "completed",
+  "target_minutes": 30,
+  "source_signals": {
+    "available_question_count": 10,
+    "category_counts": {
+      "formula": 2,
+      "coverage": 5,
+      "transfer": 2,
+      "lexical": 1
+    },
+    "question_type_counts": {
+      "formula_setup": 1,
+      "calculator_steps": 1,
+      "mini_case": 7,
+      "collocation": 1
+    }
+  },
+  "question_ids": [
+    "aq-2b07a5e42396ee0b",
+    "aq-a22f7dfb84135f28",
+    "aq-da28a32f48245f15",
+    "aq-de851faa01858905",
+    "aq-6bf39ab673e8f619",
+    "aq-a95468be6c7380e9"
+  ],
+  "summary": {
+    "available_question_count": 10,
+    "question_count": 6,
+    "category_counts": {
+      "coverage": 2,
+      "formula": 2,
+      "lexical": 1,
+      "transfer": 1
+    },
+    "question_type_counts": {
+      "mini_case": 3,
+      "formula_setup": 1,
+      "collocation": 1,
+      "calculator_steps": 1
+    },
+    "focus": "mixed",
+    "difficulty": "medium",
+    "answered_count": 1,
+    "score": 0.5,
+    "transfer_gaps_created": 1,
+    "completed_at": "2026-06-03T12:58:42.960065+00:00"
+  },
+  "questions": [
+    {
+      "question_id": "aq-2b07a5e42396ee0b",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "question_type": "mini_case",
+      "prompt": "Apply a confirmed rule to this coverage gap topic: Apply the Gordon growth model.",
+      "choices": [],
+      "correct_answer": "Use the source-backed rule for Apply the Gordon growth model.",
+      "correct_reasoning": "This topic is currently missing; practice should close the coverage gap with confirmed evidence.",
+      "correct_rule": "Review confirmed evidence and state the correct rule for Apply the Gordon growth model.",
+      "formula_latex": null,
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [],
+      "source_refs": [],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [
+        "demo-equity-gordon-growth"
+      ],
+      "linked_gap_ids": [],
+      "linked_lexical_ids": [],
+      "difficulty": "medium",
+      "interleaving_tags": [
+        "coverage",
+        "missing"
+      ],
+      "validation_status": "generated",
+      "category": "coverage"
+    },
+    {
+      "question_id": "aq-a22f7dfb84135f28",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "question_type": "formula_setup",
+      "prompt": "Set up the formula for LOS CI-BROWSER-ASSESS and name the key variables.",
+      "choices": [],
+      "correct_answer": "LOS: CI-BROWSER-ASSESS",
+      "correct_reasoning": "Apply the confirmed rule for LOS CI-BROWSER-ASSESS.",
+      "correct_rule": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+      "formula_latex": "LOS: CI-BROWSER-ASSESS",
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [
+        "Use after-tax cost of debt in WACC.",
+        "Apply target capital weights when valuing the firm."
+      ],
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "linked_asset_ids": [
+        "asset-0e0fd8415dc0"
+      ],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_lexical_ids": [],
+      "difficulty": "medium",
+      "interleaving_tags": [
+        "formula",
+        "formula"
+      ],
+      "validation_status": "generated",
+      "category": "formula"
+    },
+    {
+      "question_id": "aq-da28a32f48245f15",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "question_type": "collocation",
+      "prompt": "Produce a correct use of 'repasar' in context.",
+      "choices": [],
+      "correct_answer": "repasar una formula",
+      "correct_reasoning": "Use repasar for: to review or go over again.",
+      "correct_rule": "repasar: to review or go over again.",
+      "formula_latex": null,
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [],
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_lexical_ids": [
+        "lex-06aef54cad12"
+      ],
+      "difficulty": "medium",
+      "interleaving_tags": [
+        "lexical",
+        "es"
+      ],
+      "validation_status": "generated",
+      "category": "lexical"
+    },
+    {
+      "question_id": "aq-de851faa01858905",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "question_type": "mini_case",
+      "prompt": "Transfer drill: apply the correct rule for cost_of_capital in a new context.",
+      "choices": [],
+      "correct_answer": "Apply the correct cost_of_capital rule.",
+      "correct_reasoning": "A transfer drill tests whether the confirmed rule can be applied without relying on the prior miss.",
+      "correct_rule": "Use the confirmed source-backed rule for cost_of_capital.",
+      "formula_latex": null,
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [],
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "linked_asset_ids": [
+        "asset-bb2c345b8b9b"
+      ],
+      "linked_topic_ids": [
+        "demo-ci-wacc"
+      ],
+      "linked_gap_ids": [
+        "transfer-gap-ca11bc50e164"
+      ],
+      "linked_lexical_ids": [],
+      "difficulty": "medium",
+      "interleaving_tags": [
+        "transfer",
+        "variable_confusion"
+      ],
+      "validation_status": "generated",
+      "category": "transfer"
+    },
+    {
+      "question_id": "aq-6bf39ab673e8f619",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "question_type": "mini_case",
+      "prompt": "Apply a confirmed rule to this coverage gap topic: Calculate and interpret WACC.",
+      "choices": [],
+      "correct_answer": "Use the source-backed rule for Calculate and interpret WACC.",
+      "correct_reasoning": "This topic is currently weak; practice should close the coverage gap with confirmed evidence.",
+      "correct_rule": "Review confirmed evidence and state the correct rule for Calculate and interpret WACC.",
+      "formula_latex": null,
+      "ba_ii_plus_steps": [],
+      "boundary_rules": [],
+      "source_refs": [],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [
+        "demo-ci-wacc"
+      ],
+      "linked_gap_ids": [],
+      "linked_lexical_ids": [],
+      "difficulty": "medium",
+      "interleaving_tags": [
+        "coverage",
+        "weak"
+      ],
+      "validation_status": "generated",
+      "category": "coverage"
+    },
+    {
+      "question_id": "aq-a95468be6c7380e9",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "question_type": "calculator_steps",
+      "prompt": "List the correct calculation/procedure steps for WACC w d r d 1 - t +.",
+      "choices": [],
+      "correct_answer": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "correct_reasoning": "Apply the confirmed rule for WACC w d r d 1 - t +.",
+      "correct_rule": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "ba_ii_plus_steps": [
+        "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+      ],
+      "boundary_rules": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "linked_asset_ids": [
+        "asset-bb2c345b8b9b"
+      ],
+      "linked_topic_ids": [],
+      "linked_gap_ids": [],
+      "linked_lexical_ids": [],
+      "difficulty": "medium",
+      "interleaving_tags": [
+        "formula",
+        "formula"
+      ],
+      "validation_status": "generated",
+      "category": "formula"
+    }
+  ],
+  "responses": [
+    {
+      "response_id": "ar-c4fbebdece4acb52",
+      "assessment_id": "assessment-cdf0187d0b5636de",
+      "question_id": "aq-2b07a5e42396ee0b",
+      "profile_id": "default",
+      "answer_text": null,
+      "selected_choice": null,
+      "confidence_before": 0.5,
+      "confidence_after": 0.5,
+      "time_spent_seconds": 30,
+      "is_correct": false,
+      "score": 0.5,
+      "feedback": {
+        "correct_answer": "Use the source-backed rule for Apply the Gordon growth model.",
+        "correct_rule": "Review confirmed evidence and state the correct rule for Apply the Gordon growth model.",
+        "correct_reasoning": "This topic is currently missing; practice should close the coverage gap with confirmed evidence.",
+        "formula_latex": null,
+        "ba_ii_plus_steps": [],
+        "boundary_rules": [],
+        "source_refs": [],
+        "next_action": "create_transfer_drill",
+        "recommended_review_asset_ids": []
+      },
+      "created_at": "2026-06-03T12:58:42.861118+00:00"
+    }
+  ],
+  "retro": {
+    "assessment_id": "assessment-cdf0187d0b5636de",
+    "profile_id": "default",
+    "status": "completed",
+    "score": 0.5,
+    "answered_count": 1,
+    "question_count": 6,
+    "topic_breakdown": {
+      "demo-equity-gordon-growth": 1,
+      "demo-ci-wacc": 2
+    },
+    "formula_procedure_breakdown": {
+      "formula": {
+        "attempts": 0,
+        "score": 0.0
+      },
+      "transfer": {
+        "attempts": 0,
+        "score": 0.0
+      }
+    },
+    "lexical_breakdown": {
+      "lexical": {
+        "attempts": 0,
+        "score": 0.0
+      }
+    },
+    "confidence_calibration": {
+      "calibration_error": 0.0,
+      "pair_count": 1
+    },
+    "transfer_gaps_created": 1,
+    "correct_rules_to_review": [
+      {
+        "question_id": "aq-2b07a5e42396ee0b",
+        "correct_rule": "Review confirmed evidence and state the correct rule for Apply the Gordon growth model.",
+        "correct_answer": "Use the source-backed rule for Apply the Gordon growth model.",
+        "source_refs": [],
+        "linked_asset_ids": []
+      },
+      {
+        "question_id": "aq-a22f7dfb84135f28",
+        "correct_rule": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+        "correct_answer": "LOS: CI-BROWSER-ASSESS",
+        "source_refs": [
+          "ksource-10e3974fedf8#seg-1"
+        ],
+        "linked_asset_ids": [
+          "asset-0e0fd8415dc0"
+        ]
+      },
+      {
+        "question_id": "aq-da28a32f48245f15",
+        "correct_rule": "repasar: to review or go over again.",
+        "correct_answer": "repasar una formula",
+        "source_refs": [
+          "dict-c1b8c41c275c#entry-1#sense-1"
+        ],
+        "linked_asset_ids": []
+      },
+      {
+        "question_id": "aq-de851faa01858905",
+        "correct_rule": "Use the confirmed source-backed rule for cost_of_capital.",
+        "correct_answer": "Apply the correct cost_of_capital rule.",
+        "source_refs": [
+          "mock-evidence-1c5e3771d632",
+          "mock-retro-9f880073c07f#q-1"
+        ],
+        "linked_asset_ids": [
+          "asset-bb2c345b8b9b"
+        ]
+      },
+      {
+        "question_id": "aq-6bf39ab673e8f619",
+        "correct_rule": "Review confirmed evidence and state the correct rule for Calculate and interpret WACC.",
+        "correct_answer": "Use the source-backed rule for Calculate and interpret WACC.",
+        "source_refs": [],
+        "linked_asset_ids": []
+      },
+      {
+        "question_id": "aq-a95468be6c7380e9",
+        "correct_rule": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+        "correct_answer": "WACC = w_d r_d (1 - t) + w_e r_e",
+        "source_refs": [
+          "ksource-db33fea7a629#seg-1"
+        ],
+        "linked_asset_ids": [
+          "asset-bb2c345b8b9b"
+        ]
+      }
+    ],
+    "recommended_next_actions": [
+      {
+        "priority": 92,
+        "title": "Resolve new transfer gaps",
+        "href": "/review/mock-retro"
+      },
+      {
+        "priority": 80,
+        "title": "Review assessment analytics",
+        "href": "/review/analytics"
+      },
+      {
+        "priority": 76,
+        "title": "Run Formula Lab follow-up",
+        "href": "/review/formulas"
+      }
+    ]
+  }
+}

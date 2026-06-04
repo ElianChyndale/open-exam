@@ -1,0 +1,40 @@
+default_model = "deepseek-flash"   # 执行器；设 [agent].planner_model 可加规划器
+
+[agent]
+planner_model = "deepseek-pro"          # 低频规划器，处理复杂推理
+auto_plan = "ask"                  # off|ask|on；复杂任务自动进入计划模式
+
+[[providers]]
+name        = "deepseek-flash"
+kind        = "openai"
+base_url    = "https://api.deepseek.com"
+model       = "deepseek-v4-flash"
+api_key_env = "DEEPSEEK_API_KEY"
+
+[[providers]]
+name        = "deepseek-pro"
+kind        = "openai"
+base_url    = "https://api.deepseek.com"
+model       = "deepseek-v4-pro"
+api_key_env = "DEEPSEEK_API_KEY"
+
+[tools]
+enabled = []   # 省略/为空 = 全部内置工具
+
+[permissions]
+mode  = "allow"                            # 无规则命中时 writer 的兜底：ask|allow|deny
+
+allow = ["*"]                   # 放行所有
+
+deny  = [
+    "bash(rm -rf*)",            # 拒绝递归删除
+    "bash(git push*)",          # 拒绝直接推送
+]
+
+[sandbox]
+# workspace_root = ""
+# allow_write    = ["/tmp"]
+
+[[plugins]]
+# name    = "example"
+# command = "reasonix-plugin-example"

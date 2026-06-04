@@ -1,0 +1,20 @@
+=true : The term '=true' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ='true'; ='true'; python -m uvicorn main:app --host 127.0.0.1 --port  ...
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=true:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=true : The term '=true' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:10
++ ='true'; ='true'; python -m uvicorn main:app --host 127.0.0.1 --port  ...
++          ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=true:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+INFO:     Started server process [26540]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8183 (Press CTRL+C to quit)

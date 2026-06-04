@@ -1,0 +1,23 @@
+{
+  "profile_id": "default",
+  "active_goal_id": null,
+  "completed_steps": [],
+  "skipped_steps": [],
+  "current_step": "choose_goal",
+  "readiness_score": 0.65,
+  "readiness_status": "not_started",
+  "blockers": [
+    {
+      "blocker_id": "goal_missing",
+      "severity": "high",
+      "message": "No active goal profile is configured.",
+      "launch_route": "/onboarding"
+    }
+  ],
+  "recommended_next_action": {
+    "action_id": "goal_missing",
+    "title": "No active goal profile is configured.",
+    "launch_route": "/onboarding"
+  },
+  "updated_at": "2026-06-03T20:09:07.153698+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "session_id": "lex-session-6551b529d199",
+  "profile_id": "default",
+  "status": "active",
+  "units": [
+    {
+      "unit_id": "lex-unit-66399488c892",
+      "session_id": "lex-session-6551b529d199",
+      "lexical_id": "lex-06aef54cad12",
+      "display_mode": "cloze_context",
+      "front_prompt": "Fill the lexical gap from context: Voy a ____ la formula.",
+      "correct_answer": "to review or go over again; Translation: review; Example: Voy a repasar la formula.; Collocations: repasar una formula",
+      "correct_reasoning": "to review or go over again",
+      "example_sentence": "Voy a repasar la formula.",
+      "collocations": [
+        "repasar una formula"
+      ],
+      "usage_notes": [],
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "memory_state_before": "new",
+      "headword": "repasar",
+      "translation": "review",
+      "example_translation": null,
+      "progress_index": 1
+    }
+  ],
+  "current_unit_index": 0,
+  "completed_unit_ids": [],
+  "outcomes": [],
+  "started_at": "2026-06-03T18:27:03.030038+00:00",
+  "completed_at": null
+}

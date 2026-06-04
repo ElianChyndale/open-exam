@@ -1,241 +1,204 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-import { reviewApi } from '@/lib/api';
-import { BookOpen, Calendar, Filter, ChevronDown, Activity } from 'lucide-react';
-import { useProfileSubjects } from '@/lib/profiles';
-import { ProactiveReviewSection } from '@/components/ProactiveReviewSection';
-import { CoverageRadar } from '@/components/CoverageRadar';
+import Link from 'next/link';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
+import {
+  ArrowRight,
+  Brain,
+  CalendarCheck2,
+  CheckCircle2,
+  Gauge,
+  Loader2,
+  Search,
+  Sparkles,
+  Target,
+  Wrench,
+} from 'lucide-react';
 
-export default function ReviewPackPage() {
-  const [markdown, setMarkdown] = useState('');
-  const [reviewId, setReviewId] = useState('');
-  const [completed, setCompleted] = useState(false);
-  const subjects = useProfileSubjects();
+import { CockpitSummary, navigationApi } from '@/lib/api';
+
+export default function ReviewCockpitPage() {
+  const [cockpit, setCockpit] = useState<CockpitSummary | null>(null);
   const [loading, setLoading] = useState(true);
-  const [focusTopic, setFocusTopic] = useState('');
-  const [daysBack, setDaysBack] = useState(7);
-  const [depth, setDepth] = useState('standard');
   const [error, setError] = useState('');
-  const [proactiveQuestions, setProactiveQuestions] = useState<any[]>([]);
-  const [subjectCoverage, setSubjectCoverage] = useState<Record<string, { captured: number; total: number; examWeight: number }>>({});
+  const [query, setQuery] = useState('');
 
-  const fetchPack = useCallback((params?: Record<string, string>) => {
+  const load = async () => {
     setLoading(true);
     setError('');
-    reviewApi.getToday({
-      days_back: String(daysBack),
-      focus_topic: focusTopic,
-      knowledge_depth: depth,
-      ...params,
-    }).then((data: any) => {
-      setMarkdown(data.markdown_content || '');
-      setReviewId(data.review_id || '');
-      setCompleted(false);
-    }).catch(() => {
-      setError('复习包刷新失败，请确认本地 API 已启动。');
-    }).finally(() => setLoading(false));
-  }, [daysBack, depth, focusTopic]);
-
-  useEffect(() => {
-    fetchPack();
-  }, [fetchPack]);
-
-  useEffect(() => {
-    reviewApi.getProactive()
-      .then((data: any) => setProactiveQuestions(data.questions || []))
-      .catch(() => { /* proactive endpoint may not exist yet */ });
-    reviewApi.getCoverage()
-      .then((data: any) => setSubjectCoverage(data || {}))
-      .catch(() => { /* coverage endpoint may not exist yet */ });
-  }, []);
-
-  const handleProactiveAnswer = (questionId: string, correct: boolean) => {
-    // Track answer for future review scheduling
+    try {
+      setCockpit(await navigationApi.cockpit('default'));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Cockpit load failed');
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // Simple markdown renderer
-  const renderMarkdown = (md: string) => {
-    const lines = md.split('\n');
-    const elements: React.ReactNode[] = [];
-    let inCodeBlock = false;
+  useEffect(() => {
+    load().catch(() => undefined);
+  }, []);
 
-    for (let i = 0; i < lines.length; i += 1) {
-      const line = lines[i];
-      if (line.startsWith('```')) {
-        inCodeBlock = !inCodeBlock;
-        continue;
-      }
-      if (inCodeBlock) {
-        elements.push(
-          <pre key={i} className="bg-surface-field p-3 rounded-lg text-xs overflow-auto my-2">
-            {line}
-          </pre>
-        );
-        continue;
-      }
+  const planBlocks = cockpit?.today_plan_preview || [];
+  const health = cockpit?.learning_health || {};
+  const primary = cockpit?.primary_action || {
+    label: 'Begin setup',
+    href: '/onboarding',
+    reason: 'Set a focused goal to unlock the first useful plan.',
+  };
+  const supporting = (cockpit?.supporting_actions || []).slice(0, 4);
+  const readiness = cockpit?.active_goal?.readiness_status || health.readiness || 'not_started';
 
-      if (line.startsWith('> [!answer]-')) {
-        const answerLines: string[] = [];
-        let next = i + 1;
-        while (next < lines.length && lines[next].startsWith('>')) {
-          answerLines.push(lines[next].replace(/^>\s?/, ''));
-          next += 1;
-        }
-        const label = line.replace('> [!answer]-', '').trim() || 'Reveal correct solution';
-        elements.push(
-          <details key={i} className="my-3 rounded-lg border border-accent-soft bg-surface-field p-3">
-            <summary className="flex cursor-pointer items-center gap-2 text-sm font-medium text-accent">
-              <ChevronDown size={14} />
-              {label}
-            </summary>
-            <div className="mt-3 border-t border-line pt-2">
-              {renderMarkdown(answerLines.join('\n'))}
-            </div>
-          </details>
-        );
-        i = next - 1;
-        continue;
-      }
+  const tutorHref = useMemo(() => {
+    const trimmed = query.trim();
+    return trimmed ? `/review/tutor?q=${encodeURIComponent(trimmed)}` : '/review/tutor';
+  }, [query]);
 
-      if (line.startsWith('# ')) {
-        elements.push(<h1 key={i} className="text-2xl font-bold mt-6 mb-3">{line.slice(2)}</h1>);
-      } else if (line.startsWith('## ')) {
-        elements.push(<h2 key={i} className="text-xl font-bold mt-5 mb-2 text-accent">{line.slice(3)}</h2>);
-      } else if (line.startsWith('### ')) {
-        elements.push(<h3 key={i} className="text-lg font-semibold mt-4 mb-2">{line.slice(4)}</h3>);
-      } else if (line.startsWith('#### ')) {
-        elements.push(<h4 key={i} className="text-base font-semibold mt-3 mb-1 text-muted">{line.slice(5)}</h4>);
-      } else if (line.startsWith('> ')) {
-        elements.push(
-          <blockquote key={i} className="border-l-2 border-accent-soft pl-3 my-1 text-sm text-muted">
-            {line.slice(2)}
-          </blockquote>
-        );
-      } else if (line.startsWith('- ')) {
-        elements.push(<li key={i} className="text-sm ml-4 list-disc my-0.5">{line.slice(2)}</li>);
-      } else if (line.startsWith('---')) {
-        elements.push(<hr key={i} className="my-3 border-line" />);
-      } else if (line.trim() === '') {
-        elements.push(<div key={i} className="h-2" />);
-      } else {
-        elements.push(<p key={i} className="text-sm my-1">{line}</p>);
-      }
-    }
-
-    return elements;
+  const ask = (event: FormEvent) => {
+    event.preventDefault();
+    window.location.href = tutorHref;
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="mx-auto max-w-6xl pb-12">
+      <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 className="text-2xl font-bold">Daily Review</h2>
-          <p className="text-muted text-sm mt-1">到期错题、低信心题、交错题组、公式/概念热身</p>
+          <div className="inline-flex items-center gap-2 rounded-full bg-surface-raised px-3 py-1 text-xs font-medium text-muted">
+            <CheckCircle2 size={13} className="text-success" />
+            Correct-only learning
+          </div>
+          <h2 className="mt-4 text-3xl font-semibold tracking-normal md:text-4xl">Today</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
+            {cockpit?.active_goal?.title || 'Choose a goal, then let OpenExam narrow the day to one useful next step.'}
+          </p>
         </div>
-        <button
-          onClick={() => fetchPack()}
-          disabled={loading}
-          className="px-4 py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
-        >
-          刷新 Daily Review
-        </button>
+        <Link href="/review/tools" className="btn-secondary inline-flex w-fit items-center gap-2">
+          <Wrench size={15} />
+          More Tools
+        </Link>
       </div>
 
-      {error && <div className="rounded-lg border border-danger-soft bg-danger-soft p-3 text-sm text-danger">{error}</div>}
+      {error && (
+        <div className="mb-4 rounded-lg border border-warning-soft bg-warning-soft p-3 text-sm text-warning">
+          {error}
+        </div>
+      )}
 
-      <div className="grid grid-cols-[1fr_260px] gap-6">
-        {/* Left column: proactive section + review content */}
-        <div className="space-y-6">
-          {/* Proactive review section */}
-          {proactiveQuestions.length > 0 && (
-            <div className="card">
-              <ProactiveReviewSection
-                questions={proactiveQuestions}
-                onAnswer={handleProactiveAnswer}
-              />
-            </div>
-          )}
-
-          {/* Filters */}
-          <div className="card flex items-center gap-4 flex-wrap">
-            <div className="flex items-center gap-2">
-              <Filter size={14} className="text-muted" />
-              <span className="text-xs text-muted">过滤:</span>
-            </div>
-            <select
-              value={focusTopic}
-              onChange={(e) => { setFocusTopic(e.target.value); fetchPack({ focus_topic: e.target.value }); }}
-              className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
-            >
-              <option value="">所有科目</option>
-              {subjects.map((s) => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-            </select>
-            <select
-              value={daysBack}
-              onChange={(e) => { setDaysBack(Number(e.target.value)); fetchPack({ days_back: e.target.value }); }}
-              className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
-            >
-              <option value={1}>1 天</option>
-              <option value={3}>3 天</option>
-              <option value={7}>7 天</option>
-              <option value={14}>14 天</option>
-              <option value={30}>30 天</option>
-            </select>
-            <select
-              value={depth}
-              onChange={(e) => { setDepth(e.target.value); fetchPack({ knowledge_depth: e.target.value }); }}
-              className="bg-surface-field border border-line rounded-lg px-3 py-1.5 text-xs"
-            >
-              <option value="standard">标准深度</option>
-              <option value="expanded">扩展深度</option>
-            </select>
-            <div className="flex items-center gap-1 text-xs text-muted">
-              <Calendar size={12} />
-              <span>回顾 {daysBack} 天</span>
-            </div>
-          </div>
-
-          {/* Review content */}
-          {loading ? (
-            <div className="card text-center py-12 text-muted animate-pulse">生成复习包中...</div>
-          ) : markdown ? (
-            <div className="space-y-3">
-              <div className="card">
-                <div className="prose prose-invert max-w-none">
-                  {renderMarkdown(markdown)}
-                </div>
+      <main data-testid="primary-cockpit" className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
+        <section className="min-w-0 rounded-lg bg-surface-raised p-6 shadow-sm">
+          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 text-sm font-medium text-accent">
+                <Target size={17} />
+                Next best step
               </div>
-              <button
-                onClick={() => reviewId && reviewApi.complete(reviewId).then(() => setCompleted(true))}
-                disabled={!reviewId || completed}
-                className="px-4 py-2 bg-accent-solid hover:bg-accent-strong disabled:opacity-50 rounded-lg text-sm transition-colors"
-              >
-                {completed ? 'Reviewed once' : '完成 Daily Review'}
-              </button>
+              <h3 className="mt-4 text-2xl font-semibold">{primary.label}</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">{primary.reason}</p>
             </div>
-          ) : (
-            <div className="card text-center py-12 text-muted">
-              <BookOpen size={32} className="mx-auto mb-3 opacity-50" />
-              <p>暂无复习内容</p>
-              <p className="text-xs mt-1">记录错题后，系统会自动生成复习包</p>
-            </div>
-          )}
-        </div>
-
-        {/* Right column: coverage panel */}
-        <div className="space-y-4">
-          <div className="card p-4">
-            <div className="flex items-center gap-2 mb-3">
-              <Activity size={15} className="text-muted" />
-              <span className="text-xs text-muted font-medium">复习覆盖度</span>
-            </div>
-            <CoverageRadar subjectCoverage={subjectCoverage} />
+            <Link href={primary.href} className="btn-primary inline-flex shrink-0 items-center justify-center gap-2 px-5 py-3">
+              <ArrowRight size={16} />
+              {primary.label}
+            </Link>
           </div>
-        </div>
-      </div>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <QuietMetric icon={Gauge} label="Readiness" value={labelize(readiness)} />
+            <QuietMetric icon={CalendarCheck2} label="Plan" value={labelize(String(health.plan_status || 'not planned'))} />
+            <QuietMetric icon={Brain} label="Next blocks" value={String(health.next_blocks || planBlocks.length || 0)} />
+          </div>
+        </section>
+
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5">
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="font-semibold">Today Plan</h3>
+            <Link href="/review/study-planner" className="text-sm font-medium text-accent hover:underline">
+              Open plan
+            </Link>
+          </div>
+          <div className="mt-4 space-y-3">
+            {loading ? (
+              <div className="rounded-lg bg-surface-field p-4 text-sm text-muted">
+                <Loader2 size={15} className="mr-2 inline animate-spin" />
+                Preparing today...
+              </div>
+            ) : planBlocks.length ? (
+              <Link href="/review/focus" className="block rounded-lg bg-surface-field p-4 transition-colors hover:bg-surface-hover">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold">Start Focus Session</p>
+                    <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted">
+                      {planBlocks.length} guided steps / {planBlocks.reduce((total, block) => total + Number(block.target_minutes || 0), 0)}m planned
+                    </p>
+                  </div>
+                  <ArrowRight size={15} className="shrink-0 text-accent" />
+                </div>
+              </Link>
+            ) : (
+              <CalmEmptyState title="No plan yet" actionHref="/review/focus" actionLabel="Start Focus Session" />
+            )}
+          </div>
+        </section>
+
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5 lg:col-span-2">
+          <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
+            <div className="min-w-0">
+              <h3 className="font-semibold">Focus</h3>
+              <div className="mt-4 grid gap-2 sm:grid-cols-4">
+                {supporting.map((action) => (
+                  <Link key={action.href} href={action.href} className="rounded-lg bg-surface-field px-3 py-3 text-sm font-medium transition-colors hover:bg-surface-hover">
+                    {action.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <form onSubmit={ask} className="min-w-0 rounded-lg bg-surface-field p-3">
+              <label className="flex min-w-0 items-center gap-2 text-sm">
+                <Search size={15} className="shrink-0 text-muted" />
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Ask about your plan or a concept..."
+                  className="min-w-0 flex-1 bg-transparent outline-none placeholder:text-muted"
+                />
+              </label>
+              <div className="mt-3 flex justify-end">
+                <Link href={tutorHref} className="btn-secondary inline-flex items-center gap-2">
+                  <Sparkles size={14} />
+                  Ask Tutor
+                </Link>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
     </div>
   );
+}
+
+function QuietMetric({ icon: Icon, label, value }: { icon: any; label: string; value: string }) {
+  return (
+    <div className="rounded-lg bg-surface-field p-3">
+      <div className="flex items-center gap-2 text-muted">
+        <Icon size={15} />
+        <span className="text-xs">{label}</span>
+      </div>
+      <p className="mt-2 text-sm font-semibold">{value}</p>
+    </div>
+  );
+}
+
+function CalmEmptyState({ title, actionHref, actionLabel }: { title: string; actionHref: string; actionLabel: string }) {
+  return (
+    <div className="rounded-lg bg-surface-field p-4 text-sm text-muted">
+      <p className="font-medium text-foreground">{title}</p>
+      <Link href={actionHref} className="mt-3 inline-flex items-center gap-2 text-accent hover:underline">
+        {actionLabel}
+        <ArrowRight size={13} />
+      </Link>
+    </div>
+  );
+}
+
+function labelize(value: string) {
+  return value.replace(/[_-]+/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 }

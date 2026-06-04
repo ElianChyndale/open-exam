@@ -1,0 +1,17 @@
+{
+  "source_id": "ksource-10e3974fedf8",
+  "profile_id": "default",
+  "title": "Browser Assessment Review Source 1780491521315",
+  "source_type": "text_note",
+  "file_path": null,
+  "content_hash": "28844202093b276a5709758181eaeeed1dc942fe8bb631af0beec5b6520620f0",
+  "imported_at": "2026-06-03T12:58:41.342000+00:00",
+  "page_count": null,
+  "extraction_status": "extracted",
+  "extraction_error": null,
+  "source_refs": [
+    "ksource-10e3974fedf8#seg-1",
+    "ksource-10e3974fedf8#seg-2",
+    "ksource-10e3974fedf8#seg-3"
+  ]
+}

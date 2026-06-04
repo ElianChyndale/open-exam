@@ -1,0 +1,22 @@
+{
+  "gap_id": "transfer-gap-ca11bc50e164",
+  "profile_id": "default",
+  "topic_id": "demo-ci-wacc",
+  "asset_id": "asset-bb2c345b8b9b",
+  "formula_family": "cost_of_capital",
+  "gap_type": "variable_confusion",
+  "severity": 0.8,
+  "evidence_count": 1,
+  "last_seen_at": "2026-06-03T15:31:01.630385+00:00",
+  "recommended_actions": [
+    "review transfer gap",
+    "run Formula Lab"
+  ],
+  "source_refs": [
+    "mock-evidence-1c5e3771d632",
+    "mock-evidence-b07ae2368678",
+    "mock-retro-18fd0f3a0d0b#q-1",
+    "mock-retro-9f880073c07f#q-1"
+  ],
+  "status": "open"
+}

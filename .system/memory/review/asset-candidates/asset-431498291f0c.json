@@ -1,0 +1,85 @@
+{
+  "asset_id": "asset-431498291f0c",
+  "asset_type": "formula",
+  "profile_id": "default",
+  "subject": "Browser Assessment Review Source 1780491521315",
+  "module": "Browser Assessment Review Source 1780491521315",
+  "los": "",
+  "title": "Use after-tax cost of debt in WACC",
+  "trigger": "Use after-tax cost of debt in WACC",
+  "correct_rule": "Recall and apply this formula exactly: Use after-tax cost of debt in WACC.",
+  "formula_latex": "Use after-tax cost of debt in WACC",
+  "plain_formula": "Use after-tax cost of debt in WACC",
+  "variables": [
+    {
+      "symbol": "after",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "tax",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "cost",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "of",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "debt",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "in",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "WACC",
+      "meaning": "",
+      "unit": ""
+    }
+  ],
+  "applies_when": [
+    "Use after-tax cost of debt in WACC.",
+    "Apply target capital weights when valuing the firm."
+  ],
+  "not_when": [],
+  "assumptions": [
+    "Apply target capital weights when valuing the firm."
+  ],
+  "common_correct_boundary_rules": [
+    "Use after-tax cost of debt in WACC.",
+    "Apply target capital weights when valuing the firm."
+  ],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [],
+  "formula_family": "cost_of_capital",
+  "syllabus_topic_id": "",
+  "difficulty": "advanced",
+  "source_refs": [
+    "ksource-10e3974fedf8#seg-2"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "new",
+  "next_review_at": "",
+  "created_from": "text_note",
+  "validation_status": "draft"
+}

@@ -95,6 +95,7 @@ body {
 .btn-primary,
 .btn-secondary {
   border-radius: 0.65rem;
+  min-height: 2.5rem;
   padding: 0.55rem 0.8rem;
   font-size: 0.8rem;
   font-weight: 600;
@@ -125,6 +126,17 @@ body {
   background: var(--surface-field);
   padding: 0.65rem 0.75rem;
   color: var(--ink);
+}
+
+.source-ref-token,
+.formula-token,
+.break-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+table {
+  max-width: 100%;
 }
 
 button,

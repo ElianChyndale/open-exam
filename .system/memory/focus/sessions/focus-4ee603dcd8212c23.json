@@ -1,0 +1,352 @@
+{
+  "focus_id": "focus-4ee603dcd8212c23",
+  "profile_id": "default",
+  "plan_id": "study-plan-d323b4652b1ca99b",
+  "source": "today_plan",
+  "status": "active",
+  "current_step_id": "focus-step-f4948c2dfc9b6187",
+  "created_at": "2026-06-03T18:27:01.384721+00:00",
+  "updated_at": "2026-06-03T20:10:21.436241+00:00",
+  "completed_at": null,
+  "total_target_minutes": 90,
+  "steps": [
+    {
+      "step_id": "focus-step-86b60f7eda5c562d",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "review_lab",
+      "title": "Review Lab correct-only recall",
+      "description": "Run today's recall-first Review Lab units.",
+      "target_minutes": 22,
+      "launch_route": "/review/lab",
+      "embedded_payload": {
+        "adapter": "review_lab",
+        "session_id": "lab-session-494dafc1fa60",
+        "unit_id": "unit-asset-bb2c345b8b9b",
+        "prompt": "Recall from memory: WACC w d r d 1 - t +",
+        "display_mode": "formula_input",
+        "correct_answer": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+        "correct_reasoning": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+        "source_refs": [
+          "ksource-db33fea7a629#seg-1"
+        ],
+        "linked_asset_ids": [
+          "asset-bb2c345b8b9b"
+        ],
+        "answer_hidden_until_reveal": true,
+        "study_block_id": "block-9908555b229f3100",
+        "plan_id": "study-plan-d323b4652b1ca99b"
+      },
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "linked_asset_ids": [
+        "asset-bb2c345b8b9b",
+        "asset-0e0fd8415dc0",
+        "asset-e19f181977d2",
+        "card-69ae1db561dd",
+        "card-33c8bac202a7",
+        "card-2e6ba8afb984",
+        "card-3ffdb0d46d7b",
+        "card-bae4b0369be7",
+        "card-faa48e1ec793",
+        "card-a39ddef9c96b",
+        "card-4a6193fc95f8",
+        "card-900d267beb41"
+      ],
+      "linked_topic_ids": [],
+      "linked_lexical_ids": [],
+      "linked_gap_ids": [],
+      "status": "completed",
+      "blocked_reason": null,
+      "correct_only_warning": "Recall first. The correct answer is hidden until reveal; prior wrong answers are never shown.",
+      "completed_at": "2026-06-03T18:45:01.472506+00:00",
+      "completion_outcome": "Completed in Focus Session"
+    },
+    {
+      "step_id": "focus-step-2118ab17df7ab4cf",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "formula_lab",
+      "title": "Formula Lab and calculator drill",
+      "description": "Recall formulas and reinforce BA II Plus procedure gaps.",
+      "target_minutes": 18,
+      "launch_route": "/review/formulas",
+      "embedded_payload": {
+        "adapter": "formula_lab",
+        "session_id": "formula-session-df6ae5bb1562",
+        "unit_id": "formula-unit-asset-bb2c345b8b9b",
+        "prompt": "Recall the formula for: WACC w d r d 1 - t +",
+        "display_mode": "ba_ii_plus_procedure",
+        "correct_answer": "WACC = w_d r_d (1 - t) + w_e r_e",
+        "correct_reasoning": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+        "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+        "variables": [
+          {
+            "symbol": "WACC",
+            "meaning": "w_d r_d (1 - t) + w_e r_e",
+            "unit": ""
+          },
+          {
+            "symbol": "w_d",
+            "meaning": "",
+            "unit": ""
+          },
+          {
+            "symbol": "r_d",
+            "meaning": "",
+            "unit": ""
+          },
+          {
+            "symbol": "t",
+            "meaning": "",
+            "unit": ""
+          },
+          {
+            "symbol": "w_e",
+            "meaning": "",
+            "unit": ""
+          },
+          {
+            "symbol": "r_e",
+            "meaning": "",
+            "unit": ""
+          }
+        ],
+        "ba_ii_plus_steps": [
+          "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+        ],
+        "source_refs": [
+          "ksource-db33fea7a629#seg-1"
+        ],
+        "linked_asset_ids": [
+          "asset-bb2c345b8b9b"
+        ],
+        "answer_hidden_until_reveal": true,
+        "study_block_id": "block-2b222d651641b25a",
+        "plan_id": "study-plan-d323b4652b1ca99b"
+      },
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "linked_asset_ids": [
+        "asset-bb2c345b8b9b",
+        "asset-e19f181977d2",
+        "asset-0e0fd8415dc0",
+        "knowledge-9ecde8a395db",
+        "knowledge-ff8219508f67",
+        "knowledge-56fcc522f044",
+        "knowledge-4fdb15373170",
+        "knowledge-2d226ef762a1",
+        "knowledge-51dc745f12f2",
+        "knowledge-5e5333729c03"
+      ],
+      "linked_topic_ids": [],
+      "linked_lexical_ids": [],
+      "linked_gap_ids": [],
+      "status": "completed",
+      "blocked_reason": null,
+      "correct_only_warning": "Formula feedback is correct-only and calculator steps stay hidden until reveal.",
+      "completed_at": "2026-06-03T19:05:42.061449+00:00",
+      "completion_outcome": "Completed in Focus Session"
+    },
+    {
+      "step_id": "focus-step-e0133a25cbdabcf9",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "coverage_confirmation",
+      "title": "Close highest-value coverage gaps",
+      "description": "Use the coverage audit to create or import source-backed assets.",
+      "target_minutes": 14,
+      "launch_route": "/review/coverage",
+      "embedded_payload": {
+        "adapter": "coverage_confirmation",
+        "prompt": "5 syllabus gaps are missing, partial, weak, or stale.",
+        "next_action": "/review/coverage",
+        "source_refs": [],
+        "study_block_id": "block-03b4888fba4b6128",
+        "plan_id": "study-plan-d323b4652b1ca99b"
+      },
+      "source_refs": [],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [
+        "demo-equity-gordon-growth",
+        "demo-ci-wacc",
+        "demo-fi-effective-duration",
+        "demo-quant-tvm",
+        "demo-econ-business-cycles"
+      ],
+      "linked_lexical_ids": [],
+      "linked_gap_ids": [],
+      "status": "completed",
+      "blocked_reason": null,
+      "correct_only_warning": "Draft or unconfirmed assets must be confirmed before recall.",
+      "completed_at": "2026-06-03T19:49:46.616263+00:00",
+      "completion_outcome": "Completed in Focus Session"
+    },
+    {
+      "step_id": "focus-step-e6346d835ce84f85",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "assessment",
+      "title": "Mock transfer gap drill",
+      "description": "Practice the open transfer gaps created from sanitized mock retro evidence.",
+      "target_minutes": 14,
+      "launch_route": "/review/assessments",
+      "embedded_payload": {
+        "adapter": "assessment",
+        "prompt": "Practice the open transfer gaps created from sanitized mock retro evidence.",
+        "next_action": "Use Assessment Lab when you want a timed transfer check.",
+        "source_refs": [],
+        "study_block_id": "block-34524d3ec3c3a706",
+        "plan_id": "study-plan-d323b4652b1ca99b"
+      },
+      "source_refs": [],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [],
+      "linked_lexical_ids": [],
+      "linked_gap_ids": [
+        "transfer-gap-d1cd4ff0e098",
+        "transfer-gap-ca11bc50e164",
+        "transfer-gap-assessment-cc7d2789aae31dd3"
+      ],
+      "status": "completed",
+      "blocked_reason": null,
+      "correct_only_warning": "Assessment feedback should use correct rules only.",
+      "completed_at": "2026-06-03T20:10:06.964988+00:00",
+      "completion_outcome": "Completed in Focus Session"
+    },
+    {
+      "step_id": "focus-step-4f8168340d194984",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "lexical_review",
+      "title": "LanguageOS lexical recall",
+      "description": "Run due confirmed lexical items through the LanguageOS review loop.",
+      "target_minutes": 9,
+      "launch_route": "/language/review",
+      "embedded_payload": {
+        "adapter": "lexical_review",
+        "session_id": "lex-session-6551b529d199",
+        "unit_id": "lex-unit-66399488c892",
+        "prompt": "Fill the lexical gap from context: Voy a ____ la formula.",
+        "display_mode": "cloze_context",
+        "correct_answer": "to review or go over again; Translation: review; Example: Voy a repasar la formula.; Collocations: repasar una formula",
+        "correct_reasoning": "to review or go over again",
+        "headword": "repasar",
+        "translation": "review",
+        "example_sentence": "Voy a repasar la formula.",
+        "collocations": [
+          "repasar una formula"
+        ],
+        "source_refs": [
+          "dict-c1b8c41c275c#entry-1#sense-1"
+        ],
+        "linked_lexical_ids": [
+          "lex-06aef54cad12"
+        ],
+        "answer_hidden_until_reveal": true,
+        "study_block_id": "block-a462c07425667688",
+        "plan_id": "study-plan-d323b4652b1ca99b"
+      },
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [],
+      "linked_lexical_ids": [
+        "lex-06aef54cad12",
+        "lex-9859eaa29ce7"
+      ],
+      "linked_gap_ids": [],
+      "status": "skipped",
+      "blocked_reason": null,
+      "correct_only_warning": "Lexical review uses confirmed dictionary assets only.",
+      "completed_at": "2026-06-03T20:10:21.435676+00:00",
+      "completion_outcome": "Skipped: Deferred from Focus Session"
+    },
+    {
+      "step_id": "focus-step-f4948c2dfc9b6187",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "coverage_confirmation",
+      "title": "Confirm assets before recall",
+      "description": "Confirm draft or needs-review assets before they can be used as recall content.",
+      "target_minutes": 5,
+      "launch_route": "/review/formulas",
+      "embedded_payload": {
+        "adapter": "coverage_confirmation",
+        "prompt": "Draft formula assets are not used as review content until confirmed.",
+        "next_action": "/review/formulas",
+        "source_refs": [],
+        "study_block_id": "block-c68338baa6196067",
+        "plan_id": "study-plan-d323b4652b1ca99b"
+      },
+      "source_refs": [],
+      "linked_asset_ids": [
+        "asset-6253aab182da",
+        "asset-723425328264",
+        "asset-86eb03785435",
+        "asset-871967d2fdcf",
+        "asset-e9b7e710313f",
+        "asset-431498291f0c"
+      ],
+      "linked_topic_ids": [],
+      "linked_lexical_ids": [],
+      "linked_gap_ids": [],
+      "status": "pending",
+      "blocked_reason": null,
+      "correct_only_warning": "Draft or unconfirmed assets must be confirmed before recall.",
+      "completed_at": null,
+      "completion_outcome": null
+    },
+    {
+      "step_id": "focus-step-d13e15cde8d9d325",
+      "focus_id": "focus-4ee603dcd8212c23",
+      "step_type": "reflection",
+      "title": "Session reflection",
+      "description": "Record what moved, what stayed blocked, and the next safe action.",
+      "target_minutes": 8,
+      "launch_route": "/review/mission-control",
+      "embedded_payload": {
+        "adapter": "reflection",
+        "prompt": "What improved, what remains blocked, and what should the next session do first?",
+        "fields": [
+          "moved",
+          "blocked",
+          "next_action"
+        ]
+      },
+      "source_refs": [],
+      "linked_asset_ids": [],
+      "linked_topic_ids": [],
+      "linked_lexical_ids": [],
+      "linked_gap_ids": [],
+      "status": "pending",
+      "blocked_reason": null,
+      "correct_only_warning": "Reflection records outcomes without exposing raw wrong-answer text.",
+      "completed_at": null,
+      "completion_outcome": null
+    }
+  ],
+  "summary": {
+    "total_steps": 7,
+    "completed_steps": 4,
+    "skipped_steps": 1,
+    "blocked_steps": 0,
+    "pending_steps": 2,
+    "in_progress_steps": 0,
+    "target_minutes": 90,
+    "completed_minutes": 68,
+    "status_counts": {
+      "pending": 2,
+      "in_progress": 0,
+      "completed": 4,
+      "skipped": 1,
+      "blocked": 0
+    },
+    "step_type_counts": {
+      "review_lab": 1,
+      "formula_lab": 1,
+      "coverage_confirmation": 2,
+      "assessment": 1,
+      "lexical_review": 1,
+      "reflection": 1
+    },
+    "correct_only": true
+  }
+}

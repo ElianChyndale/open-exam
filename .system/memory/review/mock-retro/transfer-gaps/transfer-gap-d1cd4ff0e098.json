@@ -1,0 +1,20 @@
+{
+  "gap_id": "transfer-gap-d1cd4ff0e098",
+  "profile_id": "default",
+  "topic_id": "demo-ci-wacc",
+  "asset_id": "asset-bb2c345b8b9b",
+  "formula_family": "cost_of_capital",
+  "gap_type": "confidence_mismatch",
+  "severity": 0.8,
+  "evidence_count": 1,
+  "last_seen_at": "2026-06-03T12:58:41.433643+00:00",
+  "recommended_actions": [
+    "calibrate confidence before reveal",
+    "review transfer gap"
+  ],
+  "source_refs": [
+    "mock-evidence-1c5e3771d632",
+    "mock-retro-9f880073c07f#q-1"
+  ],
+  "status": "open"
+}

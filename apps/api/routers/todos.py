@@ -25,15 +25,18 @@ def _raise_workflow_error(exc: Exception) -> None:
 
 @router.get("/today")
 async def get_today(date_str: str = Query(default="", alias="date"), repo=Depends(get_repo)):
-    from app.workflows.todo import get_todo
+    from app.workflows.todo import get_todo, rollover_todo
 
+    if not date_str:
+        rollover_todo(repo)
     return get_todo(repo, date_str)
 
 
 @router.post("/replace")
 async def replace(request: TodoReplaceRequest, repo=Depends(get_repo)):
-    from app.workflows.todo import replace_todo
+    from app.workflows.todo import replace_todo, rollover_todo
 
+    rollover_todo(repo)
     return replace_todo(repo, request.model_dump())
 
 

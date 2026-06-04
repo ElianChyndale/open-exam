@@ -1,0 +1,33 @@
+{
+  "artifact_id": "anki_csv-d08685ba44f6",
+  "profile_id": "default",
+  "artifact_type": "anki_csv",
+  "created_at": "2026-06-03T17:03:11.059393+00:00",
+  "file_path": ".system/memory/interop/exports/anki_csv-d08685ba44f6.csv",
+  "size_bytes": 1001,
+  "content_hash": "4eccfdf8a01fe01f1aef19e85780a22ee67ae8f505352a9dda6a10139ced9e13",
+  "categories": [
+    "assets",
+    "formulas",
+    "lexical_assets",
+    "assessments",
+    "goals"
+  ],
+  "source_filters": {
+    "confirmed_only": true,
+    "format": "csv"
+  },
+  "safe_mode": true,
+  "redaction_report": {
+    "fields_removed_count": 0,
+    "redacted_fields": [
+      "answer_text",
+      "common_wrong_path",
+      "internal_secret",
+      "selected_choice",
+      "wrong_choice_or_output",
+      "wrong_formula",
+      "wrong_reasoning"
+    ]
+  }
+}

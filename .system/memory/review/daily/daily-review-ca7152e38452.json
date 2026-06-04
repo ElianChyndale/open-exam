@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "review_id": "daily-review-ca7152e38452",
+  "generated_for": "2026-06-03",
+  "generated_at": "2026-06-02T23:59:41.987076+00:00",
+  "source_event_count": 53,
+  "generation": {
+    "days_back": 7,
+    "max_items": 14,
+    "focus_topic": "",
+    "knowledge_depth": "standard"
+  },
+  "knowledge_points": [
+    {
+      "knowledge_id": "knowledge-73969fff525e",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures; Profit maximization; Breakeven",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c09508719b80",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases; Indicators; Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-637a91f74954",
+      "subject": "Economics",
+      "heading": "M03 Fiscal Policy",
+      "trigger": "Policy actor",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7f0258ff810a",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission; Tools; Central bank roles; Limitations",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-841e8abae9af",
+      "subject": "Economics",
+      "heading": "M07 FX Market, Quotes, Regimes",
+      "trigger": "Capital restrictions",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7083e1124323",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Covered interest parity; Cross rate; Inverted quote",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-c59db975b20a",
+      "subject": "Portfolio Management",
+      "heading": "M03 Portfolio Management Process",
+      "trigger": "Process; Pooled vehicles",
+      "source_refs": [
+        "CFA_tier1/Portfolio_Management/00-Portfolio-Management-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9ecde8a395db",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error; t confidence interval; CLT",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ff8219508f67",
+      "subject": "Quantitative Methods",
+      "heading": "Independence, regression, and ML-risk spine",
+      "trigger": "Spearman rank correlation",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-56fcc522f044",
+      "subject": "Quantitative Methods",
+      "heading": "Probability, statistics, and portfolio spine",
+      "trigger": "Total probability; Expected value",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-4fdb15373170",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean; Continuously compounded return; Holding-period total return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2d226ef762a1",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap; Lognormal price",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-51dc745f12f2",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.1 Income Statement 收入、费用与 EPS",
+      "trigger": "Basic EPS",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-033d03a0d683",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Cycle phases",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-5e5333729c03",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.1 Income Statement 收入、费用与 EPS",
+      "trigger": "Diluted EPS",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2798e5b9a4ad",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Indicators",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9709e5245520",
+      "subject": "Economics",
+      "heading": "M02 Business Cycles and Indicators",
+      "trigger": "Business behavior",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-cefce807ed03",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.1 Income Statement 收入、费用与 EPS",
+      "trigger": "Common-size income statement",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-077d22a9b5dd",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Transmission",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-dab418d62017",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.4 Inventories and Long-Term Assets 存货与长期资产",
+      "trigger": "Inventory write-downs",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-913e964c7854",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Tools",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-1820470c6818",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.3 Cash Flow 现金流",
+      "trigger": "Direct CFO",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-2712f09a36e4",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.1 Income Statement 收入、费用与 EPS",
+      "trigger": "Expense matching/capitalization",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-ffa4ceb34d13",
+      "subject": "Financial Statement Analysis",
+      "heading": "2.2 Balance Sheet 资产、负债与权益",
+      "trigger": "Goodwill",
+      "source_refs": [
+        "CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-5cb899871fe7",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Central bank roles",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-7c6595399ca1",
+      "subject": "Economics",
+      "heading": "M04 Monetary Policy",
+      "trigger": "Limitations",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-6b46b38659d7",
+      "subject": "Economics",
+      "heading": "M01 Firm, Cost, Shutdown, Market Structure",
+      "trigger": "Market structures",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-cf194fab952e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Bootstrap",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9f8c45f1aa4d",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Cross rate",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-9ff94dd17ed7",
+      "subject": "Economics",
+      "heading": "M08 Cross Rates, Forward Premiums, Arbitrage",
+      "trigger": "Inverted quote",
+      "source_refs": [
+        "CFA_tier1/Economics/00-Economics-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-f9e5619fc18b",
+      "subject": "Quantitative Methods",
+      "heading": "Estimation, CLT, confidence interval, and hypothesis-testing spine",
+      "trigger": "Standard error",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-bcf0e7bd9cb5",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Arithmetic mean",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-fc6d00871082",
+      "subject": "Quantitative Methods",
+      "heading": "Return and compounding spine",
+      "trigger": "Continuously compounded return",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-300fadd708c0",
+      "subject": "Quantitative Methods",
+      "heading": "TVM and cash-flow spine",
+      "trigger": "Cash-flow additivity",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    },
+    {
+      "knowledge_id": "knowledge-41e39f202c1e",
+      "subject": "Quantitative Methods",
+      "heading": "Simulation and resampling spine",
+      "trigger": "Monte Carlo",
+      "source_refs": [
+        "CFA_tier1/Quantitative_Methods/00-Quantitative-Methods-MOC.md"
+      ]
+    }
+  ],
+  "mistake_cards": [
+    {
+      "card_id": "card-852f9da34d61",
+      "topic": "Economics",
+      "los": "M08: Exchange Rate Calculations �� initial rate from appreciation percentage",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f7ea9a7f28c9",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-econ-indicators-upturn"
+      ]
+    },
+    {
+      "card_id": "card-2e6ba8afb984",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-3ffdb0d46d7b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-bae4b0369be7",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-faa48e1ec793",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-a39ddef9c96b",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates and Returns",
+      "source_refs": [
+        "typed-q-2026-05-21-quant"
+      ]
+    },
+    {
+      "card_id": "card-6b3213b48d06",
+      "topic": "Economics",
+      "los": "M01 LOS 1.4 Oligopoly pricing strategy (approx.; screenshot does not show LOS)",
+      "source_refs": [
+        "screenshot-2026-05-26-q12-aquarius-price-leader"
+      ]
+    },
+    {
+      "card_id": "card-bdbe2fbb2c93",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - limitations of monetary policy; least likely limitation (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-monetary-policy-least-likely-limitation"
+      ]
+    },
+    {
+      "card_id": "card-0c6bed898052",
+      "topic": "Financial Statement Analysis",
+      "los": "FSA.Diluted EPS calculation using if-converted and treasury stock methods (approximate LOS from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-06-02-q20"
+      ]
+    },
+    {
+      "card_id": "card-cf05ee016200",
+      "topic": "Financial Statement Analysis",
+      "los": "FSA.Long-lived asset impairment effects on leverage and activity ratios (approximate LOS from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-06-02-impairment-ratios"
+      ]
+    },
+    {
+      "card_id": "card-28a38faad030",
+      "topic": "Economics",
+      "los": "M04 Monetary Policy - quantitative easing and environments where monetary policy is effective (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-qe-environment-bank-reserves-vs-liquidity-trap"
+      ]
+    },
+    {
+      "card_id": "card-c147d570c5cf",
+      "topic": "Financial Statement Analysis",
+      "los": "FSA.Available-for-sale financial assets: unrealized gains and losses in OCI/AOCI (approximate LOS from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-06-02-q4-afs-aoci"
+      ]
+    },
+    {
+      "card_id": "card-7154aa5adf53",
+      "topic": "Financial Statement Analysis",
+      "los": "FSA.Common-size income statements and comparison use cases (approximate LOS from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-06-02-q24"
+      ]
+    },
+    {
+      "card_id": "card-4a6193fc95f8",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-900d267beb41",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-90467864957e",
+      "topic": "Quantitative Methods",
+      "los": "QM.Rates",
+      "source_refs": [
+        "quick-capture-2026-05-31T23:31:41.995992"
+      ]
+    },
+    {
+      "card_id": "card-074b63e3a56a",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-0ed22809af71",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-43808428ecd1",
+      "topic": "Quantitative Methods",
+      "los": "unknown_from_screenshot",
+      "source_refs": [
+        "chat-screenshot-2026-05-25-bootstrap-standard-error"
+      ]
+    },
+    {
+      "card_id": "card-69ae1db561dd",
+      "topic": "Fixed Income",
+      "los": "FI.Convexity",
+      "source_refs": []
+    },
+    {
+      "card_id": "card-f340d2f7b1ef",
+      "topic": "Economics",
+      "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
+      "source_refs": [
+        "chat-screenshot-2026-05-27-productivity-business-cycle"
+      ]
+    }
+  ],
+  "knowledge_card_map": {},
+  "interleaving_composition": {
+    "weak": 8,
+    "old_mistakes": 2,
+    "adjacent": 0,
+    "maintenance": 3
+  }
+}

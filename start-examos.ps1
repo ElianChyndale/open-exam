@@ -37,7 +37,8 @@ function Stop-ProcessOnPort {
     $conn = netstat -ano | Select-String ":$Port\s"
     foreach ($line in $conn) {
         $foundPid = ($line -split '\s+')[-1]
-        if ($foundPid -match '^\d+$') {
+        # PID 0 = kernel / TIME_WAIT — can't be killed, skip
+        if ($foundPid -match '^\d+$' -and $foundPid -ne '0') {
             Write-Warn "Port $Port in use by PID $foundPid — stopping..."
             Stop-Process -Id $foundPid -Force -ErrorAction SilentlyContinue
             Start-Sleep -Seconds 1
@@ -45,9 +46,8 @@ function Stop-ProcessOnPort {
     }
 }
 
-# ── Cleanup handler ──
+# ── Process tracking & cleanup ──
 $Script:ChildPids = @()
-$CleanupRegistered = $false
 
 function Cleanup-Processes {
     Write-Info "Shutting down ExamOS..."
@@ -58,10 +58,11 @@ function Cleanup-Processes {
     }
     $Script:ChildPids = @()
 }
-if (-not $CleanupRegistered) {
-    Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Action { Cleanup-Processes } | Out-Null
-    $CleanupRegistered = $true
-}
+
+# PowerShell engine exit handler — catches Ctrl+C (PS 5.1), Ctrl+Break (PS 7+),
+# host shutdown, and unexpected termination. Combined with try/finally below
+# this ensures orphaned processes are killed.
+Register-EngineEvent -SourceIdentifier PowerShell.Exiting -Action { Cleanup-Processes } | Out-Null
 
 # ── Main ──
 
@@ -69,14 +70,27 @@ Write-Info "ExamOS starting..."
 
 # 1. Dependency check
 if (-not $SkipDeps) {
-    Write-Info "Checking Python dependencies..."
-    $deps = @("fastapi", "uvicorn", "httpx", "fsrs")
-    foreach ($dep in $deps) {
-        $found = python -c "import $dep" 2>$null
-        if ($LASTEXITCODE -ne 0) {
-            Write-Warn "Missing: $dep — installing..."
-            pip install $dep -q
+    $requirementsFile = "$Root\apps\api\requirements.txt"
+    if (Test-Path $requirementsFile) {
+        Write-Info "Installing Python dependencies from requirements.txt..."
+        pip install -r $requirementsFile -q
+        if ($LASTEXITCODE -ne 0) { Write-Warn "pip install encountered issues — check logs" }
+    } else {
+        Write-Warn "requirements.txt not found at $requirementsFile — checking individual deps"
+        $deps = @("fastapi", "uvicorn", "httpx", "pydantic", "PyYAML", "fsrs")
+        foreach ($dep in $deps) {
+            python -c "import $dep" 2>$null
+            if ($LASTEXITCODE -ne 0) {
+                Write-Warn "Missing: $dep — installing..."
+                pip install $dep -q
+            }
         }
+    }
+    # Also ensure fsrs (needed by language-science, not in api/requirements.txt)
+    python -c "import fsrs" 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warn "Missing: fsrs (needed by scheduler) — installing..."
+        pip install "fsrs>=6.0.0" -q
     }
     Write-Ok "Python dependencies OK"
 
@@ -111,14 +125,16 @@ print(f'Mock question bank: {idx["total_questions"]} questions indexed')
 Stop-ProcessOnPort -Port $ApiPort
 Stop-ProcessOnPort -Port $WebPort
 
-# 4. Start API
+# 4. Start API (use .NET Process directly — Start-Process has a bug on this host)
 Write-Info "Starting API on $ApiUrl ..."
-$apiProc = Start-Process -FilePath "python" -ArgumentList @(
-    "-m", "uvicorn", "main:app",
-    "--app-dir", "$Root\apps\api",
-    "--host", "0.0.0.0",
-    "--port", "$ApiPort"
-) -NoNewWindow -PassThru -RedirectStandardOutput "$Root\.system\logs\api.stdout.log" -RedirectStandardError "$Root\.system\logs\api.stderr.log"
+$apiPsi = New-Object System.Diagnostics.ProcessStartInfo
+$apiPsi.FileName = "python"
+$apiPsi.Arguments = "-m uvicorn main:app --app-dir `"$Root\apps\api`" --host 0.0.0.0 --port $ApiPort"
+$apiPsi.UseShellExecute = $false
+$apiPsi.CreateNoWindow = $true
+$apiPsi.RedirectStandardOutput = $true
+$apiPsi.RedirectStandardError = $true
+$apiProc = [System.Diagnostics.Process]::Start($apiPsi)
 $Script:ChildPids += $apiProc.Id
 Write-Info "API PID: $($apiProc.Id)"
 
@@ -126,14 +142,18 @@ try {
     Wait-ForUrl -Url "$ApiUrl/api/health" -Name "ExamOS API"
     Write-Ok "API ready → $ApiUrl"
 
-    # 5. Start Web
+    # 5. Start Web (npx.cmd is a batch file, so route through cmd.exe)
     $env:NEXT_PUBLIC_API_URL = $ApiUrl
     Write-Info "Starting Web on $WebUrl ..."
-    $webProc = Start-Process -FilePath "npx.cmd" -ArgumentList @(
-        "next", "dev", "-p", "$WebPort"
-    ) -NoNewWindow -PassThru -WorkingDirectory "$Root\apps\web" `
-        -RedirectStandardOutput "$Root\.system\logs\web.stdout.log" `
-        -RedirectStandardError "$Root\.system\logs\web.stderr.log"
+    $webPsi = New-Object System.Diagnostics.ProcessStartInfo
+    $webPsi.FileName = "cmd.exe"
+    $webPsi.Arguments = "/c npx.cmd next dev -p $WebPort"
+    $webPsi.WorkingDirectory = "$Root\apps\web"
+    $webPsi.UseShellExecute = $false
+    $webPsi.CreateNoWindow = $true
+    $webPsi.RedirectStandardOutput = $true
+    $webPsi.RedirectStandardError = $true
+    $webProc = [System.Diagnostics.Process]::Start($webPsi)
     $Script:ChildPids += $webProc.Id
     Write-Info "Web PID: $($webProc.Id)"
 

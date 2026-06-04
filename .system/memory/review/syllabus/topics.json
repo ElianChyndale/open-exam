@@ -1,0 +1,119 @@
+[
+  {
+    "topic_id": "demo-ci-wacc",
+    "profile_id": "default",
+    "exam": "CFA Level I",
+    "subject": "Corporate Issuers",
+    "module": "Cost of Capital",
+    "los": "CI-001",
+    "title": "Calculate and interpret WACC",
+    "description": "Weighted average cost of capital, component weights, tax shield, and use boundaries.",
+    "parent_topic_id": null,
+    "exam_weight": 0.9,
+    "importance": 0.95,
+    "expected_asset_types": [
+      "definition",
+      "formula",
+      "decision_rule"
+    ],
+    "formula_expected": true,
+    "decision_rule_expected": true,
+    "source_refs": [
+      "curriculum/corporate-issuers/cost-of-capital"
+    ],
+    "active": true
+  },
+  {
+    "topic_id": "demo-econ-business-cycles",
+    "profile_id": "default",
+    "exam": "CFA Level I",
+    "subject": "Economics",
+    "module": "Business Cycles",
+    "los": "EC-001",
+    "title": "Distinguish leading and lagging indicators",
+    "description": "Indicator timing and exam boundaries for cycle interpretation.",
+    "parent_topic_id": null,
+    "exam_weight": 0.58,
+    "importance": 0.7,
+    "expected_asset_types": [
+      "definition",
+      "decision_rule"
+    ],
+    "formula_expected": false,
+    "decision_rule_expected": true,
+    "source_refs": [
+      "curriculum/economics/business-cycles"
+    ],
+    "active": true
+  },
+  {
+    "topic_id": "demo-equity-gordon-growth",
+    "profile_id": "default",
+    "exam": "CFA Level I",
+    "subject": "Equity",
+    "module": "Equity Valuation",
+    "los": "EQ-001",
+    "title": "Apply the Gordon growth model",
+    "description": "Dividend discount valuation when growth is stable and required return exceeds growth.",
+    "parent_topic_id": null,
+    "exam_weight": 0.8,
+    "importance": 0.9,
+    "expected_asset_types": [
+      "formula",
+      "decision_rule"
+    ],
+    "formula_expected": true,
+    "decision_rule_expected": true,
+    "source_refs": [
+      "curriculum/equity/valuation"
+    ],
+    "active": true
+  },
+  {
+    "topic_id": "demo-fi-effective-duration",
+    "profile_id": "default",
+    "exam": "CFA Level I",
+    "subject": "Fixed Income",
+    "module": "Duration and Convexity",
+    "los": "FI-001",
+    "title": "Choose effective duration for option-sensitive bonds",
+    "description": "Decision boundary between Macaulay, modified, and effective duration.",
+    "parent_topic_id": null,
+    "exam_weight": 0.78,
+    "importance": 0.88,
+    "expected_asset_types": [
+      "definition",
+      "formula",
+      "decision_rule"
+    ],
+    "formula_expected": true,
+    "decision_rule_expected": true,
+    "source_refs": [
+      "curriculum/fixed-income/duration"
+    ],
+    "active": true
+  },
+  {
+    "topic_id": "demo-quant-tvm",
+    "profile_id": "default",
+    "exam": "CFA Level I",
+    "subject": "Quantitative Methods",
+    "module": "Time Value of Money",
+    "los": "QM-001",
+    "title": "Solve TVM and NPV problems",
+    "description": "PV, FV, PMT, NPV, IRR, and BA II Plus setup.",
+    "parent_topic_id": null,
+    "exam_weight": 0.72,
+    "importance": 0.82,
+    "expected_asset_types": [
+      "formula",
+      "procedure"
+    ],
+    "formula_expected": true,
+    "decision_rule_expected": false,
+    "source_refs": [
+      "curriculum/quant/time-value-of-money"
+    ],
+    "active": true
+  }
+]

@@ -117,6 +117,155 @@ class FixRuleFeedbackRequest(BaseModel):
     note: str = ""
 
 
+# ── Review Lab ───────────────────────────────────────────────────────────────
+
+class ReviewLabCreateRequest(BaseModel):
+    """Create a new review lab session."""
+    review_id: str = Field(default="", description="Daily review snapshot ID; empty = latest")
+    energy_level: int = Field(2, ge=0, le=4)
+    focus_topic: str = Field("")
+    max_units: int = Field(20, ge=1, le=100)
+
+
+class ReviewLabOutcomeRequest(BaseModel):
+    """Submit an outcome for a single review unit."""
+    confidence_before: int = Field(2, ge=0, le=4)
+    time_spent_seconds: int = Field(0, ge=0)
+    needed_hint: bool = False
+    outcome: Literal["recalled", "partial", "forgot", "skipped"]
+    confidence_after: int = Field(2, ge=0, le=4)
+    answer_quality: Literal["perfect", "minor_gap", "major_gap", "blank"] = "perfect"
+    fix_rule_helpful: bool | None = None
+    next_action: Literal["advance", "stay", "drill", "revisit_source"] = "advance"
+
+
+class ReviewLabUnitCompleteRequest(ReviewLabOutcomeRequest):
+    """Complete a unit via the TASK-001 compatibility endpoint."""
+    session_id: str = Field("", description="Optional active Review Lab session ID")
+
+
+class ReviewAssetImportTextRequest(BaseModel):
+    """Import local note text as source-backed Review Lab asset candidates."""
+    profile_id: str = Field("default")
+    title: str = Field(..., min_length=1)
+    text: str = Field(..., min_length=1)
+    source_type: Literal["pdf_note", "markdown_note", "text_note", "manual"] = "text_note"
+
+
+class ResourceImportTextRequest(BaseModel):
+    """Import pasted text into the ResourceOS quality gate."""
+    profile_id: str = Field("default")
+    title: str = Field(..., min_length=1)
+    text: str = Field(..., min_length=1)
+    resource_type: Literal[
+        "text_note",
+        "pdf_note",
+        "web_article",
+        "official_syllabus",
+        "textbook",
+        "lecture_slide",
+        "dictionary",
+        "manual",
+        "unknown",
+    ] = "text_note"
+    origin: Literal["manual", "import_text", "file", "url", "system_seed"] = "import_text"
+    url: str | None = None
+    file_path: str | None = None
+    notes: str | None = None
+
+
+class ResourcePromoteAssetsRequest(BaseModel):
+    """Promote selected ResourceOS candidate assets after the resource passes quality gate."""
+    asset_ids: list[str] = Field(default_factory=list)
+
+
+class FormulaImportTextRequest(BaseModel):
+    """Import formula note text for Formula Lab extraction."""
+    profile_id: str = Field("default")
+    title: str = Field(..., min_length=1)
+    text: str = Field(..., min_length=1)
+
+
+class FormulaLabGenerateRequest(BaseModel):
+    """Create a Formula Lab session."""
+    profile_id: str = Field("default")
+    max_units: int = Field(12, ge=1, le=100)
+
+
+class SyllabusImportTextRequest(BaseModel):
+    """Import pasted syllabus/LOS text for coverage auditing."""
+    profile_id: str = Field("default")
+    exam: str | None = Field(default=None)
+    text: str = Field(..., min_length=1)
+
+
+class SyllabusImportJsonRequest(BaseModel):
+    """Import syllabus topics from local JSON."""
+    profile_id: str = Field("default")
+    exam: str | None = Field(default=None)
+    topics: list[dict[str, Any]] | None = None
+    payload: Any | None = None
+
+
+class MockRetroImportTextRequest(BaseModel):
+    """Import pasted mock retro text for transfer-gap analysis."""
+    profile_id: str = Field("default")
+    title: str = Field(..., min_length=1)
+    exam: str | None = Field(default=None)
+    text: str = Field(..., min_length=1)
+
+
+class MockRetroGenerateReviewRequest(BaseModel):
+    """Generate a Review Lab session from open transfer gaps."""
+    profile_id: str = Field("default")
+    max_units: int = Field(10, ge=1, le=100)
+
+
+class ReviewLabHintRequest(BaseModel):
+    """Request a hint for a review unit."""
+    hint_level: int = Field(1, ge=1, le=3)
+
+
+class ReviewLabSessionResponse(BaseModel):
+    """Current state of a review lab session."""
+    session_id: str
+    review_id: str
+    status: Literal["active", "paused", "completed", "abandoned"]
+    units: list[dict] = Field(default_factory=list)
+    current_unit_index: int
+    current_unit: dict | None = None
+    completed_unit_ids: list[str] = Field(default_factory=list)
+    outcomes: list[dict] = Field(default_factory=list)
+    progress_pct: float = 0.0
+    is_complete: bool = False
+    energy_level: int = 2
+    focus_topic: str = ""
+    started_at: str = ""
+    completed_at: str = ""
+    paused_at: str = ""
+    resumed_at: str = ""
+
+
+class ReviewLabReportResponse(BaseModel):
+    """Quality report after a review lab session."""
+    session_id: str
+    review_id: str = ""
+    status: str = ""
+    total_units: int
+    completed_units: int
+    recalled: int
+    partial: int
+    forgot: int
+    skipped: int
+    recall_rate: float
+    avg_confidence_before: float
+    avg_confidence_after: float
+    total_time_seconds: int
+    subject_breakdown: dict[str, Any] = Field(default_factory=dict)
+    started_at: str = ""
+    completed_at: str = ""
+
+
 # ── Energy ───────────────────────────────────────────────────────────────────
 
 class EnergyCheckInRequest(BaseModel):
@@ -163,6 +312,68 @@ class StudyPlanResponse(BaseModel):
     danger_los_list: list[str]
     warnings: list[str]
     interleaving_composition: dict[str, int] = Field(default_factory=dict)
+
+
+class StudyPlannerGenerateRequest(BaseModel):
+    """Generate an adaptive daily study plan."""
+    profile_id: str = Field("default")
+    plan_date: str = Field("", description="YYYY-MM-DD; defaults to today")
+    energy_mode: Literal["low", "normal", "high"] = "normal"
+    available_minutes: int = Field(90, ge=10)
+    goal: str = Field("")
+
+
+class StudyPlannerBlockCompleteRequest(BaseModel):
+    """Complete one adaptive study plan block."""
+    outcome: str = Field("")
+    actual_minutes: int | None = Field(default=None, ge=0)
+
+
+class StudyPlannerBlockSkipRequest(BaseModel):
+    """Skip one adaptive study plan block with a short reason."""
+    reason: str = Field("")
+
+
+# ── Learning Analytics ───────────────────────────────────────────────────────
+
+class LearningAnalyticsRecomputeRequest(BaseModel):
+    """Recompute correct-only learning analytics projections."""
+    profile_id: str = Field("default")
+    range: Literal["today", "7d", "30d", "all"] = "30d"
+
+
+# ── Adaptive Assessments ─────────────────────────────────────────────────────
+
+class AssessmentGenerateRequest(BaseModel):
+    """Generate an adaptive assessment session."""
+    profile_id: str = Field("default")
+    mode: Literal[
+        "quick_check",
+        "interleaving_drill",
+        "formula_drill",
+        "coverage_gap_drill",
+        "mock_transfer_drill",
+        "lexical_drill",
+        "mixed_exam_drill",
+    ] = "quick_check"
+    target_minutes: int = Field(20, ge=5, le=240)
+    question_count: int = Field(5, ge=0, le=50)
+    difficulty: Literal["easy", "medium", "hard"] = "medium"
+    focus: Literal["coverage", "formula", "transfer", "lexical", "mixed"] = "mixed"
+
+
+class AssessmentAnswerRequest(BaseModel):
+    """Submit an answer to one assessment question."""
+    answer_text: str | None = None
+    selected_choice: str | None = None
+    confidence_before: float | None = Field(default=None, ge=0, le=1)
+    time_spent_seconds: int | None = Field(default=None, ge=0)
+
+
+class AssessmentSelfGradeRequest(BaseModel):
+    """Manual fallback grade for an assessment response."""
+    grade: Literal["correct", "partial", "incorrect"]
+    confidence_after: float | None = Field(default=None, ge=0, le=1)
 
 
 # ── Todo ─────────────────────────────────────────────────────────────────────

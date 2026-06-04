@@ -1,0 +1,95 @@
+{
+  "asset_id": "asset-871967d2fdcf",
+  "asset_type": "formula",
+  "profile_id": "default",
+  "subject": "Browser Tutor WACC note",
+  "module": "Browser Tutor WACC note",
+  "los": "",
+  "title": "Use WACC when valuing a firm with target market",
+  "trigger": "Use WACC when valuing a firm with target market",
+  "correct_rule": "Recall and apply this formula exactly: Use WACC when valuing a firm with target market value weights.",
+  "formula_latex": "Use WACC when valuing a firm with target market value weights",
+  "plain_formula": "Use WACC when valuing a firm with target market value weights",
+  "variables": [
+    {
+      "symbol": "WACC",
+      "meaning": "w_d r_d (1 - t) + w_e r_e",
+      "unit": ""
+    },
+    {
+      "symbol": "when",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "valuing",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "a",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "firm",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "with",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "target",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "market",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "weights",
+      "meaning": "",
+      "unit": ""
+    }
+  ],
+  "applies_when": [
+    "Use WACC when valuing a firm with target market value weights."
+  ],
+  "not_when": [],
+  "assumptions": [
+    "Use WACC when valuing a firm with target market value weights."
+  ],
+  "common_correct_boundary_rules": [
+    "Use WACC when valuing a firm with target market value weights."
+  ],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [
+    "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV."
+  ],
+  "formula_family": "cost_of_capital",
+  "syllabus_topic_id": "",
+  "difficulty": "advanced",
+  "source_refs": [
+    "ksource-273a2ffdab8f#seg-3"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "new",
+  "next_review_at": "",
+  "created_from": "text_note",
+  "validation_status": "draft"
+}

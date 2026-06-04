@@ -1,0 +1,100 @@
+{
+  "asset_id": "asset-86eb03785435",
+  "asset_type": "formula",
+  "profile_id": "default",
+  "subject": "Browser Tutor WACC note",
+  "module": "Browser Tutor WACC note",
+  "los": "",
+  "title": "w d debt weight r d pre-tax cost of",
+  "trigger": "w d debt weight r d pre-tax cost of",
+  "correct_rule": "Recall and apply this formula exactly: w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity.",
+  "formula_latex": "w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity",
+  "plain_formula": "w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity",
+  "variables": [
+    {
+      "symbol": "w_d",
+      "meaning": "debt weight",
+      "unit": ""
+    },
+    {
+      "symbol": "debt",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "weight",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "r_d",
+      "meaning": "pre-tax cost of debt",
+      "unit": ""
+    },
+    {
+      "symbol": "pre",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "tax",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "cost",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "of",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "t",
+      "meaning": "tax rate",
+      "unit": ""
+    },
+    {
+      "symbol": "rate",
+      "meaning": "",
+      "unit": ""
+    }
+  ],
+  "applies_when": [
+    "Use WACC when valuing a firm with target market value weights."
+  ],
+  "not_when": [],
+  "assumptions": [
+    "Use WACC when valuing a firm with target market value weights."
+  ],
+  "common_correct_boundary_rules": [
+    "Use WACC when valuing a firm with target market value weights."
+  ],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [
+    "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV."
+  ],
+  "formula_family": "cost_of_capital",
+  "syllabus_topic_id": "",
+  "difficulty": "advanced",
+  "source_refs": [
+    "ksource-273a2ffdab8f#seg-2"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "new",
+  "next_review_at": "",
+  "created_from": "text_note",
+  "validation_status": "draft"
+}

@@ -1,0 +1,80 @@
+{
+  "asset_id": "asset-bb2c345b8b9b",
+  "asset_type": "formula",
+  "profile_id": "default",
+  "subject": "Browser Assessment Formula 1780491521367",
+  "module": "Browser Assessment Formula 1780491521367",
+  "los": "",
+  "title": "WACC w d r d 1 - t +",
+  "trigger": "WACC w d r d 1 - t +",
+  "correct_rule": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+  "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+  "plain_formula": "WACC = w_d r_d (1 - t) + w_e r_e",
+  "variables": [
+    {
+      "symbol": "WACC",
+      "meaning": "w_d r_d (1 - t) + w_e r_e",
+      "unit": ""
+    },
+    {
+      "symbol": "w_d",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "r_d",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "t",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "w_e",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "r_e",
+      "meaning": "",
+      "unit": ""
+    }
+  ],
+  "applies_when": [
+    "Use after-tax cost of debt with target market value weights."
+  ],
+  "not_when": [],
+  "assumptions": [
+    "Use after-tax cost of debt with target market value weights."
+  ],
+  "common_correct_boundary_rules": [
+    "Use after-tax cost of debt with target market value weights."
+  ],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [
+    "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+  ],
+  "formula_family": "cost_of_capital",
+  "syllabus_topic_id": "",
+  "difficulty": "advanced",
+  "source_refs": [
+    "ksource-db33fea7a629#seg-1"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "Practiced",
+  "next_review_at": "2026-06-10T19:05:42.063067+00:00",
+  "created_from": "text_note",
+  "validation_status": "confirmed"
+}

@@ -65,3 +65,43 @@ def test_resource_api_import_search_subscription_and_audit(client: TestClient) -
     )
     assert consent.status_code == 201
     assert client.get("/api/resources/settings").json()["consent"]["openai_web_search"] is True
+
+
+def test_resource_candidate_api_is_flag_gated_and_then_works(client: TestClient) -> None:
+    gated = client.get("/api/resources/candidates")
+    assert gated.status_code == 403
+
+    config_dir = client.app.dependency_overrides[get_repo]().root / ".system" / "config"
+    config_dir.mkdir(parents=True, exist_ok=True)
+    (config_dir / "features.yaml").write_text(
+        "resource_quality_gate: true\nresource_candidate_queue: true\n",
+        encoding="utf-8",
+    )
+
+    imported = client.post(
+        "/api/resources/documents/import",
+        json={
+            "lane": "language",
+            "provider": "generic_web",
+            "url": "https://example.com/spanish",
+            "title": "Spanish listening practice",
+            "text": "Spanish listening practice with CEFR aligned vocabulary and grammar notes.",
+            "license_mode": "fulltext_allowed",
+            "language": "es",
+            "topic": "listening",
+        },
+    )
+    assert imported.status_code == 201
+    document_id = imported.json()["document"]["document_id"]
+
+    enqueued = client.post("/api/resources/candidates/enqueue", json={"document_id": document_id})
+    assert enqueued.status_code == 201
+    candidate_id = enqueued.json()["candidate_id"]
+
+    listed = client.get("/api/resources/candidates")
+    assert listed.status_code == 200
+    assert listed.json()["candidates"][0]["document_id"] == document_id
+
+    rescored = client.post(f"/api/resources/candidates/{candidate_id}/rescore")
+    assert rescored.status_code == 200
+    assert "normalized_score" in rescored.json()["score"]

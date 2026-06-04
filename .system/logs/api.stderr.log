@@ -1,4 +1,5 @@
-Usage: python -m uvicorn [OPTIONS] APP
-Try 'python -m uvicorn --help' for help.
+INFO:     Started server process [10708]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 
-Error: Got unexpected extra argument (folder\open-exam\apps\api)

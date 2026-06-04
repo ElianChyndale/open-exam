@@ -1,0 +1,50 @@
+[
+  {
+    "segment_id": "segment-ksource-273a2ffdab8f-1",
+    "source_id": "ksource-273a2ffdab8f",
+    "page": null,
+    "heading": null,
+    "text": "WACC = w_d r_d (1 - t) + w_e r_e.",
+    "char_start": 0,
+    "char_end": 33,
+    "source_ref": "ksource-273a2ffdab8f#seg-1",
+    "evidence_type": "formula",
+    "confidence": 0.65
+  },
+  {
+    "segment_id": "segment-ksource-273a2ffdab8f-2",
+    "source_id": "ksource-273a2ffdab8f",
+    "page": null,
+    "heading": null,
+    "text": "w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity.",
+    "char_start": 34,
+    "char_end": 137,
+    "source_ref": "ksource-273a2ffdab8f#seg-2",
+    "evidence_type": "formula",
+    "confidence": 0.8
+  },
+  {
+    "segment_id": "segment-ksource-273a2ffdab8f-3",
+    "source_id": "ksource-273a2ffdab8f",
+    "page": null,
+    "heading": null,
+    "text": "Use WACC when valuing a firm with target market value weights.",
+    "char_start": 138,
+    "char_end": 200,
+    "source_ref": "ksource-273a2ffdab8f#seg-3",
+    "evidence_type": "formula",
+    "confidence": 0.6
+  },
+  {
+    "segment_id": "segment-ksource-273a2ffdab8f-4",
+    "source_id": "ksource-273a2ffdab8f",
+    "page": null,
+    "heading": null,
+    "text": "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV.",
+    "char_start": 201,
+    "char_end": 274,
+    "source_ref": "ksource-273a2ffdab8f#seg-4",
+    "evidence_type": "formula",
+    "confidence": 0.6
+  }
+]

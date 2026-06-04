@@ -1,0 +1,4537 @@
+{
+  "profile_id": "default",
+  "generated_at": "2026-06-03T13:22:26.358313+00:00",
+  "summary": {
+    "profile_id": "default",
+    "node_count": 75,
+    "edge_count": 233,
+    "nodes_by_type": {
+      "analytics_record": 17,
+      "assessment": 1,
+      "assessment_question": 6,
+      "asset": 6,
+      "coverage_record": 5,
+      "formula": 5,
+      "lexical_asset": 1,
+      "mission_action": 8,
+      "source_document": 3,
+      "source_segment": 6,
+      "study_plan": 2,
+      "study_plan_block": 7,
+      "syllabus_topic": 5,
+      "transfer_gap": 3
+    },
+    "edges_by_type": {
+      "addresses_gap": 1,
+      "covers": 6,
+      "derived_from": 12,
+      "measured_by": 37,
+      "planned_by": 7,
+      "requires": 5,
+      "revealed_gap": 4,
+      "reviewed_in": 6,
+      "same_formula_family": 66,
+      "same_source_ref": 70,
+      "same_syllabus_topic": 3,
+      "supported_by": 6,
+      "tests": 10
+    },
+    "unconfirmed_islands": 12,
+    "missing_source_assets": 0,
+    "high_value_connected_topics": 4
+  },
+  "nodes": [
+    {
+      "node_id": "analytics_record:evt-d80ea647aad579f3",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "assessment_completed",
+      "subtitle": "assessment",
+      "status": "completed",
+      "quality_score": 0.5,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-d80ea647aad579f3",
+        "subsystem": "assessment",
+        "outcome": "completed",
+        "occurred_at": "2026-06-03T12:58:42.960065+00:00",
+        "asset_id": null,
+        "topic_id": null,
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": "assessment-cdf0187d0b5636de"
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-c069c1fb895e5ee5",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "assessment_question_answered",
+      "subtitle": "assessment",
+      "status": "partial",
+      "quality_score": 0.5,
+      "validation_status": null,
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-c069c1fb895e5ee5",
+        "subsystem": "assessment",
+        "outcome": "partial",
+        "occurred_at": "2026-06-03T12:58:42.861118+00:00",
+        "asset_id": null,
+        "topic_id": "demo-equity-gordon-growth",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": "assessment-cdf0187d0b5636de"
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-077f6398d613e614",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "asset_validation",
+      "subtitle": "assets",
+      "status": "confirmed",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-077f6398d613e614",
+        "subsystem": "assets",
+        "outcome": "confirmed",
+        "occurred_at": "2026-06-03T13:22:24.933156+00:00",
+        "asset_id": "asset-bb2c345b8b9b",
+        "topic_id": "",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "asset_validation",
+      "subtitle": "assets",
+      "status": "confirmed",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-2f093d08f7c7d315",
+        "subsystem": "assets",
+        "outcome": "confirmed",
+        "occurred_at": "2026-06-03T13:22:24.932872+00:00",
+        "asset_id": "asset-0e0fd8415dc0",
+        "topic_id": "",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-395d189a6d7d729a",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "asset_validation",
+      "subtitle": "assets",
+      "status": "needs_review",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-395d189a6d7d729a",
+        "subsystem": "assets",
+        "outcome": "needs_review",
+        "occurred_at": "2026-06-03T13:22:24.933102+00:00",
+        "asset_id": "asset-993b64f31dfd",
+        "topic_id": "",
+        "lexical_id": null,
+        "formula_family": "",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-3e3392de3b42b226",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "asset_validation",
+      "subtitle": "assets",
+      "status": "draft",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-3e3392de3b42b226",
+        "subsystem": "assets",
+        "outcome": "draft",
+        "occurred_at": "2026-06-03T13:22:24.933046+00:00",
+        "asset_id": "asset-723425328264",
+        "topic_id": "",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-9c98cfdf22ba35df",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "asset_validation",
+      "subtitle": "assets",
+      "status": "draft",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-9c98cfdf22ba35df",
+        "subsystem": "assets",
+        "outcome": "draft",
+        "occurred_at": "2026-06-03T13:22:24.932933+00:00",
+        "asset_id": "asset-431498291f0c",
+        "topic_id": "",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-f577f9fc9e79e128",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "asset_validation",
+      "subtitle": "assets",
+      "status": "draft",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-f577f9fc9e79e128",
+        "subsystem": "assets",
+        "outcome": "draft",
+        "occurred_at": "2026-06-03T13:22:24.932994+00:00",
+        "asset_id": "asset-6253aab182da",
+        "topic_id": "",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-83986e91a36e3509",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "coverage_record",
+      "subtitle": "coverage",
+      "status": "missing",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-83986e91a36e3509",
+        "subsystem": "coverage",
+        "outcome": "missing",
+        "occurred_at": "2026-06-03T13:22:24.932495+00:00",
+        "asset_id": null,
+        "topic_id": "demo-equity-gordon-growth",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-90793e900bf4d2ed",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "coverage_record",
+      "subtitle": "coverage",
+      "status": "weak",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-90793e900bf4d2ed",
+        "subsystem": "coverage",
+        "outcome": "weak",
+        "occurred_at": "2026-06-03T13:22:24.932505+00:00",
+        "asset_id": null,
+        "topic_id": "demo-ci-wacc",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-b986f4083e608826",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "coverage_record",
+      "subtitle": "coverage",
+      "status": "weak",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-b986f4083e608826",
+        "subsystem": "coverage",
+        "outcome": "weak",
+        "occurred_at": "2026-06-03T13:22:24.932509+00:00",
+        "asset_id": null,
+        "topic_id": "demo-fi-effective-duration",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-c8846af4074f3a22",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "coverage_record",
+      "subtitle": "coverage",
+      "status": "weak",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-c8846af4074f3a22",
+        "subsystem": "coverage",
+        "outcome": "weak",
+        "occurred_at": "2026-06-03T13:22:24.932514+00:00",
+        "asset_id": null,
+        "topic_id": "demo-econ-business-cycles",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-c99c63317d72b1e0",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "coverage_record",
+      "subtitle": "coverage",
+      "status": "weak",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-c99c63317d72b1e0",
+        "subsystem": "coverage",
+        "outcome": "weak",
+        "occurred_at": "2026-06-03T13:22:24.932512+00:00",
+        "asset_id": null,
+        "topic_id": "demo-quant-tvm",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-b0def61a32866efa",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "study_plan_block",
+      "subtitle": "study_planner",
+      "status": "completed",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-b0def61a32866efa",
+        "subsystem": "study_planner",
+        "outcome": "completed",
+        "occurred_at": "2026-06-03T11:47:20.059405+00:00",
+        "asset_id": null,
+        "topic_id": null,
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-2863b1de5c6246df",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "transfer_gap",
+      "subtitle": "mock_retro",
+      "status": "open",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-2863b1de5c6246df",
+        "subsystem": "mock_retro",
+        "outcome": "open",
+        "occurred_at": "2026-06-03T12:58:41.433643+00:00",
+        "asset_id": "asset-bb2c345b8b9b",
+        "topic_id": "demo-ci-wacc",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-6d92d7f504beab31",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "transfer_gap",
+      "subtitle": "mock_retro",
+      "status": "open",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-6d92d7f504beab31",
+        "subsystem": "mock_retro",
+        "outcome": "open",
+        "occurred_at": "2026-06-03T12:58:42.959548+00:00",
+        "asset_id": null,
+        "topic_id": "demo-equity-gordon-growth",
+        "lexical_id": null,
+        "formula_family": null,
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "profile_id": "default",
+      "node_type": "analytics_record",
+      "title": "transfer_gap",
+      "subtitle": "mock_retro",
+      "status": "open",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "launch_route": "/review/analytics",
+      "metadata": {
+        "event_id": "evt-e3fd6d11e85bf59b",
+        "subsystem": "mock_retro",
+        "outcome": "open",
+        "occurred_at": "2026-06-03T12:58:41.433643+00:00",
+        "asset_id": "asset-bb2c345b8b9b",
+        "topic_id": "demo-ci-wacc",
+        "lexical_id": null,
+        "formula_family": "cost_of_capital",
+        "assessment_id": null
+      }
+    },
+    {
+      "node_id": "assessment:assessment-cdf0187d0b5636de",
+      "profile_id": "default",
+      "node_type": "assessment",
+      "title": "Interleaving Drill",
+      "subtitle": "interleaving_drill",
+      "status": "completed",
+      "quality_score": 0.5,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "mode": "interleaving_drill",
+        "question_count": 6,
+        "transfer_gaps_created": 1
+      }
+    },
+    {
+      "node_id": "assessment_question:aq-2b07a5e42396ee0b",
+      "profile_id": "default",
+      "node_type": "assessment_question",
+      "title": "Apply a confirmed rule to this coverage gap topic: Apply the Gordon growth model.",
+      "subtitle": "mini_case",
+      "status": "generated",
+      "quality_score": null,
+      "validation_status": "generated",
+      "source_refs": [],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "question_id": "aq-2b07a5e42396ee0b",
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "question_type": "mini_case",
+        "category": "coverage",
+        "correct_rule": "Review confirmed evidence and state the correct rule for Apply the Gordon growth model."
+      }
+    },
+    {
+      "node_id": "assessment_question:aq-6bf39ab673e8f619",
+      "profile_id": "default",
+      "node_type": "assessment_question",
+      "title": "Apply a confirmed rule to this coverage gap topic: Calculate and interpret WACC.",
+      "subtitle": "mini_case",
+      "status": "generated",
+      "quality_score": null,
+      "validation_status": "generated",
+      "source_refs": [],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "question_id": "aq-6bf39ab673e8f619",
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "question_type": "mini_case",
+        "category": "coverage",
+        "correct_rule": "Review confirmed evidence and state the correct rule for Calculate and interpret WACC."
+      }
+    },
+    {
+      "node_id": "assessment_question:aq-a95468be6c7380e9",
+      "profile_id": "default",
+      "node_type": "assessment_question",
+      "title": "List the correct calculation/procedure steps for WACC w d r d 1 - t +.",
+      "subtitle": "calculator_steps",
+      "status": "generated",
+      "quality_score": null,
+      "validation_status": "generated",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "question_id": "aq-a95468be6c7380e9",
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "question_type": "calculator_steps",
+        "category": "formula",
+        "correct_rule": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e."
+      }
+    },
+    {
+      "node_id": "assessment_question:aq-da28a32f48245f15",
+      "profile_id": "default",
+      "node_type": "assessment_question",
+      "title": "Produce a correct use of 'repasar' in context.",
+      "subtitle": "collocation",
+      "status": "generated",
+      "quality_score": null,
+      "validation_status": "generated",
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "question_id": "aq-da28a32f48245f15",
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "question_type": "collocation",
+        "category": "lexical",
+        "correct_rule": "repasar: to review or go over again."
+      }
+    },
+    {
+      "node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "profile_id": "default",
+      "node_type": "assessment_question",
+      "title": "Set up the formula for LOS CI-BROWSER-ASSESS and name the key variables.",
+      "subtitle": "formula_setup",
+      "status": "generated",
+      "quality_score": null,
+      "validation_status": "generated",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "question_id": "aq-a22f7dfb84135f28",
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "question_type": "formula_setup",
+        "category": "formula",
+        "correct_rule": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS"
+      }
+    },
+    {
+      "node_id": "assessment_question:aq-de851faa01858905",
+      "profile_id": "default",
+      "node_type": "assessment_question",
+      "title": "Transfer drill: apply the correct rule for cost_of_capital in a new context.",
+      "subtitle": "mini_case",
+      "status": "generated",
+      "quality_score": null,
+      "validation_status": "generated",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "question_id": "aq-de851faa01858905",
+        "assessment_id": "assessment-cdf0187d0b5636de",
+        "question_type": "mini_case",
+        "category": "transfer",
+        "correct_rule": "Use the confirmed source-backed rule for cost_of_capital."
+      }
+    },
+    {
+      "node_id": "asset:asset-993b64f31dfd",
+      "profile_id": "default",
+      "node_type": "asset",
+      "title": "Apply target capital weights when valuing the firm",
+      "subtitle": "decision_rule",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "needs_review",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "asset_id": "asset-993b64f31dfd",
+        "asset_type": "decision_rule",
+        "module": "Browser Assessment Review Source 1780491521315",
+        "subject": "Browser Assessment Review Source 1780491521315",
+        "los": "",
+        "formula_family": "",
+        "syllabus_topic_id": "",
+        "resource_id": "",
+        "resource_quality_status": "",
+        "created_from": "text_note"
+      }
+    },
+    {
+      "node_id": "asset:asset-723425328264",
+      "profile_id": "default",
+      "node_type": "asset",
+      "title": "BA II Plus enter cash flows set I Y",
+      "subtitle": "formula",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "draft",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "asset_id": "asset-723425328264",
+        "asset_type": "formula",
+        "module": "Browser Assessment Formula 1780491521367",
+        "subject": "Browser Assessment Formula 1780491521367",
+        "los": "",
+        "formula_family": "cost_of_capital",
+        "syllabus_topic_id": "",
+        "resource_id": "",
+        "resource_quality_status": "",
+        "created_from": "text_note"
+      }
+    },
+    {
+      "node_id": "asset:asset-0e0fd8415dc0",
+      "profile_id": "default",
+      "node_type": "asset",
+      "title": "LOS CI-BROWSER-ASSESS",
+      "subtitle": "formula",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "confirmed",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "asset_id": "asset-0e0fd8415dc0",
+        "asset_type": "formula",
+        "module": "Browser Assessment Review Source 1780491521315",
+        "subject": "Browser Assessment Review Source 1780491521315",
+        "los": "",
+        "formula_family": "cost_of_capital",
+        "syllabus_topic_id": "",
+        "resource_id": "",
+        "resource_quality_status": "",
+        "created_from": "text_note"
+      }
+    },
+    {
+      "node_id": "asset:asset-431498291f0c",
+      "profile_id": "default",
+      "node_type": "asset",
+      "title": "Use after-tax cost of debt in WACC",
+      "subtitle": "formula",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "draft",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "asset_id": "asset-431498291f0c",
+        "asset_type": "formula",
+        "module": "Browser Assessment Review Source 1780491521315",
+        "subject": "Browser Assessment Review Source 1780491521315",
+        "los": "",
+        "formula_family": "cost_of_capital",
+        "syllabus_topic_id": "",
+        "resource_id": "",
+        "resource_quality_status": "",
+        "created_from": "text_note"
+      }
+    },
+    {
+      "node_id": "asset:asset-6253aab182da",
+      "profile_id": "default",
+      "node_type": "asset",
+      "title": "Use after-tax cost of debt with target market value",
+      "subtitle": "formula",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "draft",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "asset_id": "asset-6253aab182da",
+        "asset_type": "formula",
+        "module": "Browser Assessment Formula 1780491521367",
+        "subject": "Browser Assessment Formula 1780491521367",
+        "los": "",
+        "formula_family": "cost_of_capital",
+        "syllabus_topic_id": "",
+        "resource_id": "",
+        "resource_quality_status": "",
+        "created_from": "text_note"
+      }
+    },
+    {
+      "node_id": "asset:asset-bb2c345b8b9b",
+      "profile_id": "default",
+      "node_type": "asset",
+      "title": "WACC w d r d 1 - t +",
+      "subtitle": "formula",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "confirmed",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "asset_id": "asset-bb2c345b8b9b",
+        "asset_type": "formula",
+        "module": "Browser Assessment Formula 1780491521367",
+        "subject": "Browser Assessment Formula 1780491521367",
+        "los": "",
+        "formula_family": "cost_of_capital",
+        "syllabus_topic_id": "",
+        "resource_id": "",
+        "resource_quality_status": "",
+        "created_from": "text_note"
+      }
+    },
+    {
+      "node_id": "coverage_record:coverage-530589fafee8",
+      "profile_id": "default",
+      "node_type": "coverage_record",
+      "title": "Coverage: Apply the Gordon growth model",
+      "subtitle": "missing",
+      "status": "missing",
+      "quality_score": 0.0,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/equity/valuation"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "record_id": "coverage-530589fafee8",
+        "topic_id": "demo-equity-gordon-growth",
+        "coverage_status": "missing",
+        "coverage_score": 0.0,
+        "confirmed_asset_count": 0,
+        "missing_asset_types": [
+          "formula",
+          "decision_rule"
+        ],
+        "exam_weight": 0.8
+      }
+    },
+    {
+      "node_id": "coverage_record:coverage-70eecc042c8c",
+      "profile_id": "default",
+      "node_type": "coverage_record",
+      "title": "Coverage: Calculate and interpret WACC",
+      "subtitle": "weak",
+      "status": "weak",
+      "quality_score": 0.6925,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/corporate-issuers/cost-of-capital"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "record_id": "coverage-70eecc042c8c",
+        "topic_id": "demo-ci-wacc",
+        "coverage_status": "weak",
+        "coverage_score": 0.6925,
+        "confirmed_asset_count": 2,
+        "missing_asset_types": [
+          "definition"
+        ],
+        "exam_weight": 0.9
+      }
+    },
+    {
+      "node_id": "coverage_record:coverage-f9f195e44e84",
+      "profile_id": "default",
+      "node_type": "coverage_record",
+      "title": "Coverage: Choose effective duration for option-sensitive bonds",
+      "subtitle": "weak",
+      "status": "weak",
+      "quality_score": 0.2625,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/fixed-income/duration"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "record_id": "coverage-f9f195e44e84",
+        "topic_id": "demo-fi-effective-duration",
+        "coverage_status": "weak",
+        "coverage_score": 0.2625,
+        "confirmed_asset_count": 1,
+        "missing_asset_types": [
+          "formula",
+          "decision_rule"
+        ],
+        "exam_weight": 0.78
+      }
+    },
+    {
+      "node_id": "coverage_record:coverage-7b5f0124c8d8",
+      "profile_id": "default",
+      "node_type": "coverage_record",
+      "title": "Coverage: Distinguish leading and lagging indicators",
+      "subtitle": "weak",
+      "status": "weak",
+      "quality_score": 0.5225,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/economics/business-cycles"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "record_id": "coverage-7b5f0124c8d8",
+        "topic_id": "demo-econ-business-cycles",
+        "coverage_status": "weak",
+        "coverage_score": 0.5225,
+        "confirmed_asset_count": 6,
+        "missing_asset_types": [
+          "decision_rule"
+        ],
+        "exam_weight": 0.58
+      }
+    },
+    {
+      "node_id": "coverage_record:coverage-9065b68fd1ab",
+      "profile_id": "default",
+      "node_type": "coverage_record",
+      "title": "Coverage: Solve TVM and NPV problems",
+      "subtitle": "weak",
+      "status": "weak",
+      "quality_score": 0.3125,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/quant/time-value-of-money"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "record_id": "coverage-9065b68fd1ab",
+        "topic_id": "demo-quant-tvm",
+        "coverage_status": "weak",
+        "coverage_score": 0.3125,
+        "confirmed_asset_count": 11,
+        "missing_asset_types": [
+          "formula",
+          "procedure"
+        ],
+        "exam_weight": 0.72
+      }
+    },
+    {
+      "node_id": "formula:asset-723425328264",
+      "profile_id": "default",
+      "node_type": "formula",
+      "title": "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV",
+      "subtitle": "cost_of_capital",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "draft",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "asset_id": "asset-723425328264",
+        "formula_family": "cost_of_capital",
+        "module": "Browser Assessment Formula 1780491521367",
+        "ba_ii_plus_steps_count": 1,
+        "plain_formula": "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV"
+      }
+    },
+    {
+      "node_id": "formula:asset-0e0fd8415dc0",
+      "profile_id": "default",
+      "node_type": "formula",
+      "title": "LOS: CI-BROWSER-ASSESS",
+      "subtitle": "cost_of_capital",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "confirmed",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "asset_id": "asset-0e0fd8415dc0",
+        "formula_family": "cost_of_capital",
+        "module": "Browser Assessment Review Source 1780491521315",
+        "ba_ii_plus_steps_count": 0,
+        "plain_formula": "LOS: CI-BROWSER-ASSESS"
+      }
+    },
+    {
+      "node_id": "formula:asset-431498291f0c",
+      "profile_id": "default",
+      "node_type": "formula",
+      "title": "Use after-tax cost of debt in WACC",
+      "subtitle": "cost_of_capital",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "draft",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "asset_id": "asset-431498291f0c",
+        "formula_family": "cost_of_capital",
+        "module": "Browser Assessment Review Source 1780491521315",
+        "ba_ii_plus_steps_count": 0,
+        "plain_formula": "Use after-tax cost of debt in WACC"
+      }
+    },
+    {
+      "node_id": "formula:asset-6253aab182da",
+      "profile_id": "default",
+      "node_type": "formula",
+      "title": "Use after-tax cost of debt with target market value weights",
+      "subtitle": "cost_of_capital",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "draft",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "asset_id": "asset-6253aab182da",
+        "formula_family": "cost_of_capital",
+        "module": "Browser Assessment Formula 1780491521367",
+        "ba_ii_plus_steps_count": 1,
+        "plain_formula": "Use after-tax cost of debt with target market value weights"
+      }
+    },
+    {
+      "node_id": "formula:asset-bb2c345b8b9b",
+      "profile_id": "default",
+      "node_type": "formula",
+      "title": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "subtitle": "cost_of_capital",
+      "status": "new",
+      "quality_score": 0.45,
+      "validation_status": "confirmed",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "asset_id": "asset-bb2c345b8b9b",
+        "formula_family": "cost_of_capital",
+        "module": "Browser Assessment Formula 1780491521367",
+        "ba_ii_plus_steps_count": 1,
+        "plain_formula": "WACC = w_d r_d (1 - t) + w_e r_e"
+      }
+    },
+    {
+      "node_id": "lexical_asset:lex-06aef54cad12",
+      "profile_id": "default",
+      "node_type": "lexical_asset",
+      "title": "repasar",
+      "subtitle": "review",
+      "status": "new",
+      "quality_score": 0.973,
+      "validation_status": "confirmed",
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "launch_route": "/language/review",
+      "metadata": {
+        "lexical_id": "lex-06aef54cad12",
+        "dictionary_id": "dict-c1b8c41c275c",
+        "language": "es",
+        "target_language": "en",
+        "part_of_speech": "verb",
+        "dictionary_quality_status": "high"
+      }
+    },
+    {
+      "node_id": "mission_action:confirm_assets",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Confirm draft review assets",
+      "subtitle": "/review/assets",
+      "status": "recommended",
+      "quality_score": 88.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "action_id": "confirm_assets",
+        "priority": 88,
+        "reason": "4 source-backed assets are blocked from review."
+      }
+    },
+    {
+      "node_id": "mission_action:generate_assessment",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Generate adaptive assessment drill",
+      "subtitle": "/review/assessments",
+      "status": "recommended",
+      "quality_score": 93.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/assessments",
+      "metadata": {
+        "action_id": "generate_assessment",
+        "priority": 93,
+        "reason": "Test transfer across confirmed assets, coverage gaps, formulas, lexical items, and open gaps."
+      }
+    },
+    {
+      "node_id": "mission_action:generate_study_plan",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Generate today's adaptive study plan",
+      "subtitle": "/review/study-planner",
+      "status": "recommended",
+      "quality_score": 99.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/study-planner",
+      "metadata": {
+        "action_id": "generate_study_plan",
+        "priority": 99,
+        "reason": "Turn Mission Control signals into an executable energy-aware session."
+      }
+    },
+    {
+      "node_id": "mission_action:close_coverage_gaps",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Inspect syllabus coverage gaps",
+      "subtitle": "/review/coverage",
+      "status": "recommended",
+      "quality_score": 82.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "action_id": "close_coverage_gaps",
+        "priority": 82,
+        "reason": "5 syllabus topics are missing, weak, stale, partial, or draft-only."
+      }
+    },
+    {
+      "node_id": "mission_action:resolve_transfer_gaps",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Review open mock transfer gaps",
+      "subtitle": "/review/mock-retro",
+      "status": "recommended",
+      "quality_score": 76.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/mock-retro",
+      "metadata": {
+        "action_id": "resolve_transfer_gaps",
+        "priority": 76,
+        "reason": "3 open gaps remain; top type is variable_confusion."
+      }
+    },
+    {
+      "node_id": "mission_action:review_today",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Review today's Review Lab session",
+      "subtitle": "/review/lab",
+      "status": "recommended",
+      "quality_score": 95.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/lab",
+      "metadata": {
+        "action_id": "review_today",
+        "priority": 95,
+        "reason": "50 recall-first units are ready."
+      }
+    },
+    {
+      "node_id": "mission_action:run_formula_lab",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Run Formula Lab for weak formulas",
+      "subtitle": "/review/formulas",
+      "status": "recommended",
+      "quality_score": 78.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "action_id": "run_formula_lab",
+        "priority": 78,
+        "reason": "21 formula assets need recall or BA II Plus reinforcement."
+      }
+    },
+    {
+      "node_id": "mission_action:lexical_review",
+      "profile_id": "default",
+      "node_type": "mission_action",
+      "title": "Run LanguageOS lexical review",
+      "subtitle": "/language/review",
+      "status": "recommended",
+      "quality_score": 64.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/language/review",
+      "metadata": {
+        "action_id": "lexical_review",
+        "priority": 64,
+        "reason": "1 lexical items are due."
+      }
+    },
+    {
+      "node_id": "source_document:dict-c1b8c41c275c",
+      "profile_id": "default",
+      "node_type": "source_document",
+      "title": "Browser Assessment Dictionary 1780491521394",
+      "subtitle": "spanish_english",
+      "status": "confirmed",
+      "quality_score": 0.8143,
+      "validation_status": "confirmed",
+      "source_refs": [
+        "dict-c1b8c41c275c#source"
+      ],
+      "launch_route": "/language/dictionaries",
+      "metadata": {
+        "dictionary_id": "dict-c1b8c41c275c",
+        "dictionary_type": "spanish_english"
+      }
+    },
+    {
+      "node_id": "source_document:ksource-db33fea7a629",
+      "profile_id": "default",
+      "node_type": "source_document",
+      "title": "Browser Assessment Formula 1780491521367",
+      "subtitle": "text_note",
+      "status": "extracted",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1",
+        "ksource-db33fea7a629#seg-2",
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "source_id": "ksource-db33fea7a629",
+        "source_type": "text_note",
+        "file_path": null,
+        "imported_at": "2026-06-03T12:58:41.375982+00:00",
+        "content_hash": "deadebdd13cc03d7b45fb24279e872f35c8e4fc8e1fc8ce20631ce9b90d05190"
+      }
+    },
+    {
+      "node_id": "source_document:ksource-10e3974fedf8",
+      "profile_id": "default",
+      "node_type": "source_document",
+      "title": "Browser Assessment Review Source 1780491521315",
+      "subtitle": "text_note",
+      "status": "extracted",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1",
+        "ksource-10e3974fedf8#seg-2",
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "source_id": "ksource-10e3974fedf8",
+        "source_type": "text_note",
+        "file_path": null,
+        "imported_at": "2026-06-03T12:58:41.342000+00:00",
+        "content_hash": "28844202093b276a5709758181eaeeed1dc942fe8bb631af0beec5b6520620f0"
+      }
+    },
+    {
+      "node_id": "source_segment:segment-ksource-10e3974fedf8-3",
+      "profile_id": "default",
+      "node_type": "source_segment",
+      "title": "Apply target capital weights when valuing the firm.",
+      "subtitle": "rule",
+      "status": "extracted",
+      "quality_score": 0.6,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "segment_id": "segment-ksource-10e3974fedf8-3",
+        "source_id": "ksource-10e3974fedf8",
+        "page": null,
+        "heading": null,
+        "evidence_type": "rule"
+      }
+    },
+    {
+      "node_id": "source_segment:segment-ksource-db33fea7a629-3",
+      "profile_id": "default",
+      "node_type": "source_segment",
+      "title": "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV.",
+      "subtitle": "formula",
+      "status": "extracted",
+      "quality_score": 0.6,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "segment_id": "segment-ksource-db33fea7a629-3",
+        "source_id": "ksource-db33fea7a629",
+        "page": null,
+        "heading": null,
+        "evidence_type": "formula"
+      }
+    },
+    {
+      "node_id": "source_segment:segment-ksource-10e3974fedf8-1",
+      "profile_id": "default",
+      "node_type": "source_segment",
+      "title": "LOS: CI-BROWSER-ASSESS",
+      "subtitle": "formula",
+      "status": "extracted",
+      "quality_score": 0.55,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "segment_id": "segment-ksource-10e3974fedf8-1",
+        "source_id": "ksource-10e3974fedf8",
+        "page": null,
+        "heading": null,
+        "evidence_type": "formula"
+      }
+    },
+    {
+      "node_id": "source_segment:segment-ksource-10e3974fedf8-2",
+      "profile_id": "default",
+      "node_type": "source_segment",
+      "title": "Use after-tax cost of debt in WACC.",
+      "subtitle": "formula",
+      "status": "extracted",
+      "quality_score": 0.45,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "segment_id": "segment-ksource-10e3974fedf8-2",
+        "source_id": "ksource-10e3974fedf8",
+        "page": null,
+        "heading": null,
+        "evidence_type": "formula"
+      }
+    },
+    {
+      "node_id": "source_segment:segment-ksource-db33fea7a629-2",
+      "profile_id": "default",
+      "node_type": "source_segment",
+      "title": "Use after-tax cost of debt with target market value weights.",
+      "subtitle": "formula",
+      "status": "extracted",
+      "quality_score": 0.6,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "segment_id": "segment-ksource-db33fea7a629-2",
+        "source_id": "ksource-db33fea7a629",
+        "page": null,
+        "heading": null,
+        "evidence_type": "formula"
+      }
+    },
+    {
+      "node_id": "source_segment:segment-ksource-db33fea7a629-1",
+      "profile_id": "default",
+      "node_type": "source_segment",
+      "title": "WACC = w_d r_d (1 - t) + w_e r_e.",
+      "subtitle": "formula",
+      "status": "extracted",
+      "quality_score": 0.65,
+      "validation_status": null,
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "launch_route": "/review/assets",
+      "metadata": {
+        "segment_id": "segment-ksource-db33fea7a629-1",
+        "source_id": "ksource-db33fea7a629",
+        "page": null,
+        "heading": null,
+        "evidence_type": "formula"
+      }
+    },
+    {
+      "node_id": "study_plan:study-plan-03e43ba445c75486",
+      "profile_id": "default",
+      "node_type": "study_plan",
+      "title": "Study plan 2026-06-03",
+      "subtitle": "normal",
+      "status": "draft",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/study-planner",
+      "metadata": {
+        "plan_id": "study-plan-03e43ba445c75486",
+        "plan_date": "2026-06-03",
+        "available_minutes": 90
+      }
+    },
+    {
+      "node_id": "study_plan:study-plan-412c26c462560852",
+      "profile_id": "default",
+      "node_type": "study_plan",
+      "title": "Study plan 2026-06-03",
+      "subtitle": "normal",
+      "status": "active",
+      "quality_score": null,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/study-planner",
+      "metadata": {
+        "plan_id": "study-plan-412c26c462560852",
+        "plan_date": "2026-06-03",
+        "available_minutes": 90
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Close highest-value coverage gaps",
+      "subtitle": "coverage_gap",
+      "status": "pending",
+      "quality_score": 44.01,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "block_id": "block-1b2e9bf9b9961df7",
+        "plan_id": "study-plan-412c26c462560852",
+        "block_type": "coverage_gap",
+        "due_reason": "5 syllabus gaps are missing, partial, weak, or stale.",
+        "target_minutes": 14
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-13f82893125ae142",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Formula Lab and calculator drill",
+      "subtitle": "formula_lab",
+      "status": "pending",
+      "quality_score": 57.92,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "block_id": "block-13f82893125ae142",
+        "plan_id": "study-plan-03e43ba445c75486",
+        "block_type": "formula_lab",
+        "due_reason": "16 confirmed formula assets are eligible; 16 look weak or new.",
+        "target_minutes": 18
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-be3eb92cf7d5aec3",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Formula Lab and calculator drill",
+      "subtitle": "formula_lab",
+      "status": "pending",
+      "quality_score": 59.25,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/formulas",
+      "metadata": {
+        "block_id": "block-be3eb92cf7d5aec3",
+        "plan_id": "study-plan-412c26c462560852",
+        "block_type": "formula_lab",
+        "due_reason": "16 confirmed formula assets are eligible; 16 look weak or new.",
+        "target_minutes": 18
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-6a467cea7b8d0b2c",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Review Lab correct-only recall",
+      "subtitle": "review_lab",
+      "status": "completed",
+      "quality_score": 57.9,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/lab",
+      "metadata": {
+        "block_id": "block-6a467cea7b8d0b2c",
+        "plan_id": "study-plan-412c26c462560852",
+        "block_type": "review_lab",
+        "due_reason": "30 correct-only units are due from DailyReview and confirmed assets.",
+        "target_minutes": 31
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-ab1b164f24573693",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Review Lab correct-only recall",
+      "subtitle": "review_lab",
+      "status": "pending",
+      "quality_score": 57.9,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/lab",
+      "metadata": {
+        "block_id": "block-ab1b164f24573693",
+        "plan_id": "study-plan-03e43ba445c75486",
+        "block_type": "review_lab",
+        "due_reason": "30 correct-only units are due from DailyReview and confirmed assets.",
+        "target_minutes": 31
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-b188ce9a319cdc22",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Session reflection and tomorrow setup",
+      "subtitle": "reflection",
+      "status": "pending",
+      "quality_score": 8.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/mission-control",
+      "metadata": {
+        "block_id": "block-b188ce9a319cdc22",
+        "plan_id": "study-plan-412c26c462560852",
+        "block_type": "reflection",
+        "due_reason": "Every study session should end with measurable outcomes and next actions.",
+        "target_minutes": 10
+      }
+    },
+    {
+      "node_id": "study_plan_block:block-ccb917c697c018c6",
+      "profile_id": "default",
+      "node_type": "study_plan_block",
+      "title": "Session reflection and tomorrow setup",
+      "subtitle": "reflection",
+      "status": "pending",
+      "quality_score": 8.0,
+      "validation_status": null,
+      "source_refs": [],
+      "launch_route": "/review/mission-control",
+      "metadata": {
+        "block_id": "block-ccb917c697c018c6",
+        "plan_id": "study-plan-03e43ba445c75486",
+        "block_type": "reflection",
+        "due_reason": "Every study session should end with measurable outcomes and next actions.",
+        "target_minutes": 10
+      }
+    },
+    {
+      "node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "profile_id": "default",
+      "node_type": "syllabus_topic",
+      "title": "Apply the Gordon growth model",
+      "subtitle": "Equity Valuation",
+      "status": "active",
+      "quality_score": 0.9,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/equity/valuation"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "topic_id": "demo-equity-gordon-growth",
+        "exam": "CFA Level I",
+        "subject": "Equity",
+        "module": "Equity Valuation",
+        "los": "EQ-001",
+        "exam_weight": 0.8,
+        "importance": 0.9
+      }
+    },
+    {
+      "node_id": "syllabus_topic:demo-ci-wacc",
+      "profile_id": "default",
+      "node_type": "syllabus_topic",
+      "title": "Calculate and interpret WACC",
+      "subtitle": "Cost of Capital",
+      "status": "active",
+      "quality_score": 0.95,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/corporate-issuers/cost-of-capital"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "topic_id": "demo-ci-wacc",
+        "exam": "CFA Level I",
+        "subject": "Corporate Issuers",
+        "module": "Cost of Capital",
+        "los": "CI-001",
+        "exam_weight": 0.9,
+        "importance": 0.95
+      }
+    },
+    {
+      "node_id": "syllabus_topic:demo-fi-effective-duration",
+      "profile_id": "default",
+      "node_type": "syllabus_topic",
+      "title": "Choose effective duration for option-sensitive bonds",
+      "subtitle": "Duration and Convexity",
+      "status": "active",
+      "quality_score": 0.88,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/fixed-income/duration"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "topic_id": "demo-fi-effective-duration",
+        "exam": "CFA Level I",
+        "subject": "Fixed Income",
+        "module": "Duration and Convexity",
+        "los": "FI-001",
+        "exam_weight": 0.78,
+        "importance": 0.88
+      }
+    },
+    {
+      "node_id": "syllabus_topic:demo-econ-business-cycles",
+      "profile_id": "default",
+      "node_type": "syllabus_topic",
+      "title": "Distinguish leading and lagging indicators",
+      "subtitle": "Business Cycles",
+      "status": "active",
+      "quality_score": 0.7,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/economics/business-cycles"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "topic_id": "demo-econ-business-cycles",
+        "exam": "CFA Level I",
+        "subject": "Economics",
+        "module": "Business Cycles",
+        "los": "EC-001",
+        "exam_weight": 0.58,
+        "importance": 0.7
+      }
+    },
+    {
+      "node_id": "syllabus_topic:demo-quant-tvm",
+      "profile_id": "default",
+      "node_type": "syllabus_topic",
+      "title": "Solve TVM and NPV problems",
+      "subtitle": "Time Value of Money",
+      "status": "active",
+      "quality_score": 0.82,
+      "validation_status": null,
+      "source_refs": [
+        "curriculum/quant/time-value-of-money"
+      ],
+      "launch_route": "/review/coverage",
+      "metadata": {
+        "topic_id": "demo-quant-tvm",
+        "exam": "CFA Level I",
+        "subject": "Quantitative Methods",
+        "module": "Time Value of Money",
+        "los": "QM-001",
+        "exam_weight": 0.72,
+        "importance": 0.82
+      }
+    },
+    {
+      "node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "profile_id": "default",
+      "node_type": "transfer_gap",
+      "title": "confidence_mismatch",
+      "subtitle": "cost_of_capital",
+      "status": "open",
+      "quality_score": 0.8,
+      "validation_status": null,
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "launch_route": "/review/mock-retro",
+      "metadata": {
+        "gap_id": "transfer-gap-d1cd4ff0e098",
+        "gap_type": "confidence_mismatch",
+        "topic_id": "demo-ci-wacc",
+        "asset_id": "asset-bb2c345b8b9b",
+        "formula_family": "cost_of_capital",
+        "severity": 0.8,
+        "evidence_count": 1
+      }
+    },
+    {
+      "node_id": "transfer_gap:transfer-gap-assessment-cc7d2789aae31dd3",
+      "profile_id": "default",
+      "node_type": "transfer_gap",
+      "title": "interleaving_failure",
+      "subtitle": "demo-equity-gordon-growth",
+      "status": "open",
+      "quality_score": 0.35,
+      "validation_status": null,
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "launch_route": "/review/mock-retro",
+      "metadata": {
+        "gap_id": "transfer-gap-assessment-cc7d2789aae31dd3",
+        "gap_type": "interleaving_failure",
+        "topic_id": "demo-equity-gordon-growth",
+        "asset_id": null,
+        "formula_family": null,
+        "severity": 0.35,
+        "evidence_count": 1
+      }
+    },
+    {
+      "node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "profile_id": "default",
+      "node_type": "transfer_gap",
+      "title": "variable_confusion",
+      "subtitle": "cost_of_capital",
+      "status": "open",
+      "quality_score": 0.8,
+      "validation_status": null,
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "launch_route": "/review/mock-retro",
+      "metadata": {
+        "gap_id": "transfer-gap-ca11bc50e164",
+        "gap_type": "variable_confusion",
+        "topic_id": "demo-ci-wacc",
+        "asset_id": "asset-bb2c345b8b9b",
+        "formula_family": "cost_of_capital",
+        "severity": 0.8,
+        "evidence_count": 1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge-3bef37ecd8854318",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "addresses_gap",
+      "confidence": 0.82,
+      "reason": "question addresses transfer gap",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929475+00:00"
+    },
+    {
+      "edge_id": "edge-9313295d96801eea",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "covers",
+      "confidence": 0.72,
+      "reason": "formula family match: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928655+00:00"
+    },
+    {
+      "edge_id": "edge-49a2c8395108f506",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "covers",
+      "confidence": 0.72,
+      "reason": "formula family match: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928661+00:00"
+    },
+    {
+      "edge_id": "edge-ecddf804a873d99d",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "covers",
+      "confidence": 0.72,
+      "reason": "formula family match: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928666+00:00"
+    },
+    {
+      "edge_id": "edge-59e5bbda6cb64b05",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "covers",
+      "confidence": 0.72,
+      "reason": "formula family match: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928671+00:00"
+    },
+    {
+      "edge_id": "edge-1fe0119b90f67c87",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-993b64f31dfd",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "covers",
+      "confidence": 0.5657,
+      "reason": "keyword overlap: capital, weights",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928681+00:00"
+    },
+    {
+      "edge_id": "edge-7081197f515d40d0",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "covers",
+      "confidence": 0.72,
+      "reason": "formula family match: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928675+00:00"
+    },
+    {
+      "edge_id": "edge-1afa8f8791956fa4",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "asset:asset-0e0fd8415dc0",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "formula metadata projected from asset",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.927721+00:00"
+    },
+    {
+      "edge_id": "edge-e6ac95e2be4c08ba",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "asset:asset-431498291f0c",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "formula metadata projected from asset",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.927797+00:00"
+    },
+    {
+      "edge_id": "edge-694a1869a72c5a4c",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-6253aab182da",
+      "to_node_id": "asset:asset-6253aab182da",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "formula metadata projected from asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.927870+00:00"
+    },
+    {
+      "edge_id": "edge-3df72d5bd47cd5ee",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-723425328264",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "formula metadata projected from asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.927940+00:00"
+    },
+    {
+      "edge_id": "edge-943e49b9427637d1",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-bb2c345b8b9b",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "formula metadata projected from asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.928067+00:00"
+    },
+    {
+      "edge_id": "edge-b305eb6c2903243e",
+      "profile_id": "default",
+      "from_node_id": "lexical_asset:lex-06aef54cad12",
+      "to_node_id": "source_document:dict-c1b8c41c275c",
+      "edge_type": "derived_from",
+      "confidence": 0.95,
+      "reason": "lexical asset derived from dictionary",
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929245+00:00"
+    },
+    {
+      "edge_id": "edge-8c815cb2eff9fcf2",
+      "profile_id": "default",
+      "from_node_id": "source_segment:segment-ksource-10e3974fedf8-1",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "segment extracted from source document",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.927456+00:00"
+    },
+    {
+      "edge_id": "edge-792e63db3a41d267",
+      "profile_id": "default",
+      "from_node_id": "source_segment:segment-ksource-10e3974fedf8-2",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "segment extracted from source document",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.927469+00:00"
+    },
+    {
+      "edge_id": "edge-64fae3ccbdd1b38a",
+      "profile_id": "default",
+      "from_node_id": "source_segment:segment-ksource-10e3974fedf8-3",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "segment extracted from source document",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.927476+00:00"
+    },
+    {
+      "edge_id": "edge-8cac1f12726618c7",
+      "profile_id": "default",
+      "from_node_id": "source_segment:segment-ksource-db33fea7a629-1",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "segment extracted from source document",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.927546+00:00"
+    },
+    {
+      "edge_id": "edge-578ac4a6682b3b33",
+      "profile_id": "default",
+      "from_node_id": "source_segment:segment-ksource-db33fea7a629-2",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "segment extracted from source document",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.927553+00:00"
+    },
+    {
+      "edge_id": "edge-fd24dea1d56ec1ae",
+      "profile_id": "default",
+      "from_node_id": "source_segment:segment-ksource-db33fea7a629-3",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "derived_from",
+      "confidence": 0.99,
+      "reason": "segment extracted from source document",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.927559+00:00"
+    },
+    {
+      "edge_id": "edge-29042ff5824f43c8",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-077f6398d613e614",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935286+00:00"
+    },
+    {
+      "edge_id": "edge-ffe37cda134245f9",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-077f6398d613e614",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935292+00:00"
+    },
+    {
+      "edge_id": "edge-d8583118d331cf94",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935424+00:00"
+    },
+    {
+      "edge_id": "edge-b6498aa2ececcb8c",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935427+00:00"
+    },
+    {
+      "edge_id": "edge-eecc2129397c1e36",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935430+00:00"
+    },
+    {
+      "edge_id": "edge-dd56a7fca4a1cd0d",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "to_node_id": "asset:asset-0e0fd8415dc0",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935348+00:00"
+    },
+    {
+      "edge_id": "edge-8803760763346680",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935351+00:00"
+    },
+    {
+      "edge_id": "edge-f086b2e6b06c47b1",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-395d189a6d7d729a",
+      "to_node_id": "asset:asset-993b64f31dfd",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.935304+00:00"
+    },
+    {
+      "edge_id": "edge-5835f79cac1e2fdd",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-3e3392de3b42b226",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.935314+00:00"
+    },
+    {
+      "edge_id": "edge-8c7e57fe442b8e39",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-3e3392de3b42b226",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.935318+00:00"
+    },
+    {
+      "edge_id": "edge-e5f9e3fa18237994",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-6d92d7f504beab31",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:24.935406+00:00"
+    },
+    {
+      "edge_id": "edge-bbc6ad3100898871",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-83986e91a36e3509",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.935390+00:00"
+    },
+    {
+      "edge_id": "edge-0e7df5f22cb12c48",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-90793e900bf4d2ed",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.935381+00:00"
+    },
+    {
+      "edge_id": "edge-011d267151aab9f0",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-9c98cfdf22ba35df",
+      "to_node_id": "asset:asset-431498291f0c",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.935337+00:00"
+    },
+    {
+      "edge_id": "edge-0288896739a18e99",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-9c98cfdf22ba35df",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.935340+00:00"
+    },
+    {
+      "edge_id": "edge-7383ee19f2bfc164",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-b986f4083e608826",
+      "to_node_id": "syllabus_topic:demo-fi-effective-duration",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.935374+00:00"
+    },
+    {
+      "edge_id": "edge-ff381cec4e265f69",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-c069c1fb895e5ee5",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures assessment",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:24.935416+00:00"
+    },
+    {
+      "edge_id": "edge-4e7e827729c7cb52",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-c069c1fb895e5ee5",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:24.935413+00:00"
+    },
+    {
+      "edge_id": "edge-d592a036b53cfcd9",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-c8846af4074f3a22",
+      "to_node_id": "syllabus_topic:demo-econ-business-cycles",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.935359+00:00"
+    },
+    {
+      "edge_id": "edge-decc25a96731578d",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-c99c63317d72b1e0",
+      "to_node_id": "syllabus_topic:demo-quant-tvm",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.935367+00:00"
+    },
+    {
+      "edge_id": "edge-4682cb452e07cf08",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-d80ea647aad579f3",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures assessment",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.935398+00:00"
+    },
+    {
+      "edge_id": "edge-158a57e8740d4794",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935438+00:00"
+    },
+    {
+      "edge_id": "edge-43b97ca5c1c23e59",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935441+00:00"
+    },
+    {
+      "edge_id": "edge-4926f9efff176a8d",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures topic",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.935444+00:00"
+    },
+    {
+      "edge_id": "edge-11a9e78949b62228",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-f577f9fc9e79e128",
+      "to_node_id": "asset:asset-6253aab182da",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "analytics event measures asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.935325+00:00"
+    },
+    {
+      "edge_id": "edge-f56f67d4b9ebac0e",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-f577f9fc9e79e128",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "measured_by",
+      "confidence": 0.72,
+      "reason": "analytics event measures formula",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.935329+00:00"
+    },
+    {
+      "edge_id": "edge-c8550dc9d7ed6667",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-530589fafee8",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "measured_by",
+      "confidence": 0.98,
+      "reason": "coverage record measures syllabus topic",
+      "source_refs": [
+        "curriculum/equity/valuation"
+      ],
+      "created_at": "2026-06-03T13:22:24.928639+00:00"
+    },
+    {
+      "edge_id": "edge-1f863fb0cbf78629",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "asset:asset-0e0fd8415dc0",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "coverage includes asset",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928658+00:00"
+    },
+    {
+      "edge_id": "edge-bf064f494ee997d2",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "asset:asset-431498291f0c",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "coverage includes asset",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928664+00:00"
+    },
+    {
+      "edge_id": "edge-95765d5b5f7daa2e",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "asset:asset-6253aab182da",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "coverage includes asset",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928669+00:00"
+    },
+    {
+      "edge_id": "edge-6a7a164dac3e7a26",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "coverage includes asset",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928673+00:00"
+    },
+    {
+      "edge_id": "edge-d9aa5232534b61ab",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "asset:asset-993b64f31dfd",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "coverage includes asset",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928683+00:00"
+    },
+    {
+      "edge_id": "edge-36a4dccbcf94aea9",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "measured_by",
+      "confidence": 0.7,
+      "reason": "coverage includes asset",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.928678+00:00"
+    },
+    {
+      "edge_id": "edge-cd08fecf3486a21d",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "measured_by",
+      "confidence": 0.98,
+      "reason": "coverage record measures syllabus topic",
+      "source_refs": [
+        "curriculum/corporate-issuers/cost-of-capital"
+      ],
+      "created_at": "2026-06-03T13:22:24.928651+00:00"
+    },
+    {
+      "edge_id": "edge-e6fc122c10483432",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-7b5f0124c8d8",
+      "to_node_id": "syllabus_topic:demo-econ-business-cycles",
+      "edge_type": "measured_by",
+      "confidence": 0.98,
+      "reason": "coverage record measures syllabus topic",
+      "source_refs": [
+        "curriculum/economics/business-cycles"
+      ],
+      "created_at": "2026-06-03T13:22:24.928716+00:00"
+    },
+    {
+      "edge_id": "edge-4f31436f713ad6bd",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-9065b68fd1ab",
+      "to_node_id": "syllabus_topic:demo-quant-tvm",
+      "edge_type": "measured_by",
+      "confidence": 0.98,
+      "reason": "coverage record measures syllabus topic",
+      "source_refs": [
+        "curriculum/quant/time-value-of-money"
+      ],
+      "created_at": "2026-06-03T13:22:24.928701+00:00"
+    },
+    {
+      "edge_id": "edge-0ae950707666bd71",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-f9f195e44e84",
+      "to_node_id": "syllabus_topic:demo-fi-effective-duration",
+      "edge_type": "measured_by",
+      "confidence": 0.98,
+      "reason": "coverage record measures syllabus topic",
+      "source_refs": [
+        "curriculum/fixed-income/duration"
+      ],
+      "created_at": "2026-06-03T13:22:24.928692+00:00"
+    },
+    {
+      "edge_id": "edge-70b9a4afb66788e2",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-13f82893125ae142",
+      "to_node_id": "study_plan:study-plan-03e43ba445c75486",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929775+00:00"
+    },
+    {
+      "edge_id": "edge-8bf02362c8a5b936",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "to_node_id": "study_plan:study-plan-412c26c462560852",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929917+00:00"
+    },
+    {
+      "edge_id": "edge-5cca67c538e230cd",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-6a467cea7b8d0b2c",
+      "to_node_id": "study_plan:study-plan-412c26c462560852",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929902+00:00"
+    },
+    {
+      "edge_id": "edge-14120187239a0ce8",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-ab1b164f24573693",
+      "to_node_id": "study_plan:study-plan-03e43ba445c75486",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929763+00:00"
+    },
+    {
+      "edge_id": "edge-894a49c831565c4c",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-b188ce9a319cdc22",
+      "to_node_id": "study_plan:study-plan-412c26c462560852",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929942+00:00"
+    },
+    {
+      "edge_id": "edge-398087ae064ac9e9",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-be3eb92cf7d5aec3",
+      "to_node_id": "study_plan:study-plan-412c26c462560852",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929911+00:00"
+    },
+    {
+      "edge_id": "edge-ad1c889544ef9f95",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-ccb917c697c018c6",
+      "to_node_id": "study_plan:study-plan-03e43ba445c75486",
+      "edge_type": "planned_by",
+      "confidence": 0.99,
+      "reason": "block belongs to study plan",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929783+00:00"
+    },
+    {
+      "edge_id": "edge-8ca079022f41ea2f",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "requires",
+      "confidence": 0.75,
+      "reason": "planner block references topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929922+00:00"
+    },
+    {
+      "edge_id": "edge-be271c69153a7c3a",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "to_node_id": "syllabus_topic:demo-econ-business-cycles",
+      "edge_type": "requires",
+      "confidence": 0.75,
+      "reason": "planner block references topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929936+00:00"
+    },
+    {
+      "edge_id": "edge-ec5f08cbe2326b24",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "requires",
+      "confidence": 0.75,
+      "reason": "planner block references topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929926+00:00"
+    },
+    {
+      "edge_id": "edge-aa65e2c154365ca9",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "to_node_id": "syllabus_topic:demo-fi-effective-duration",
+      "edge_type": "requires",
+      "confidence": 0.75,
+      "reason": "planner block references topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929930+00:00"
+    },
+    {
+      "edge_id": "edge-7bf1ffe01590ec29",
+      "profile_id": "default",
+      "from_node_id": "study_plan_block:block-1b2e9bf9b9961df7",
+      "to_node_id": "syllabus_topic:demo-quant-tvm",
+      "edge_type": "requires",
+      "confidence": 0.75,
+      "reason": "planner block references topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929933+00:00"
+    },
+    {
+      "edge_id": "edge-3ff640d1a8a2bb0c",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "revealed_gap",
+      "confidence": 0.9,
+      "reason": "gap is linked to asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.928965+00:00"
+    },
+    {
+      "edge_id": "edge-ce90f4c93c9a5cc1",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "revealed_gap",
+      "confidence": 0.9,
+      "reason": "gap is linked to formula asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.928969+00:00"
+    },
+    {
+      "edge_id": "edge-5fbdfa500bebdcbf",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "revealed_gap",
+      "confidence": 0.9,
+      "reason": "gap is linked to asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929031+00:00"
+    },
+    {
+      "edge_id": "edge-691e762d2c19f2ea",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "revealed_gap",
+      "confidence": 0.9,
+      "reason": "gap is linked to formula asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929034+00:00"
+    },
+    {
+      "edge_id": "edge-a6ffa6cf39c70f90",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-2b07a5e42396ee0b",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "reviewed_in",
+      "confidence": 0.99,
+      "reason": "question belongs to assessment",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929431+00:00"
+    },
+    {
+      "edge_id": "edge-8ff9b5d531b37498",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-6bf39ab673e8f619",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "reviewed_in",
+      "confidence": 0.99,
+      "reason": "question belongs to assessment",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929480+00:00"
+    },
+    {
+      "edge_id": "edge-9883827f1548a8f8",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "reviewed_in",
+      "confidence": 0.99,
+      "reason": "question belongs to assessment",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929443+00:00"
+    },
+    {
+      "edge_id": "edge-b4a15bcc42f00e7e",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "reviewed_in",
+      "confidence": 0.99,
+      "reason": "question belongs to assessment",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929486+00:00"
+    },
+    {
+      "edge_id": "edge-d7711eb185e29089",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-da28a32f48245f15",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "reviewed_in",
+      "confidence": 0.99,
+      "reason": "question belongs to assessment",
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929457+00:00"
+    },
+    {
+      "edge_id": "edge-978b9d86d0fcc6e2",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "assessment:assessment-cdf0187d0b5636de",
+      "edge_type": "reviewed_in",
+      "confidence": 0.99,
+      "reason": "question belongs to assessment",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929465+00:00"
+    },
+    {
+      "edge_id": "edge-e1b076d280b2be25",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "asset:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357669+00:00"
+    },
+    {
+      "edge_id": "edge-fc5a067800c4bcfe",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "asset:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357672+00:00"
+    },
+    {
+      "edge_id": "edge-de40bb9f865fa08f",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357674+00:00"
+    },
+    {
+      "edge_id": "edge-8be82fe45af9563d",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357676+00:00"
+    },
+    {
+      "edge_id": "edge-f0192b407fbc1860",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357680+00:00"
+    },
+    {
+      "edge_id": "edge-a49bdaa64bc86899",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357682+00:00"
+    },
+    {
+      "edge_id": "edge-5d395dacee4023a7",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357684+00:00"
+    },
+    {
+      "edge_id": "edge-0a07615e84d8e3ec",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357686+00:00"
+    },
+    {
+      "edge_id": "edge-a635e55ad59a557a",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357688+00:00"
+    },
+    {
+      "edge_id": "edge-49049378f3530a95",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357690+00:00"
+    },
+    {
+      "edge_id": "edge-4e582597813ca40b",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357692+00:00"
+    },
+    {
+      "edge_id": "edge-616fcc9191b99f9d",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "asset:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357695+00:00"
+    },
+    {
+      "edge_id": "edge-77677a69339f223f",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357697+00:00"
+    },
+    {
+      "edge_id": "edge-a0768f1c5d6930c1",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357699+00:00"
+    },
+    {
+      "edge_id": "edge-0c2e5b5c0391ec19",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357701+00:00"
+    },
+    {
+      "edge_id": "edge-284cd9a1003026a9",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357703+00:00"
+    },
+    {
+      "edge_id": "edge-5c58975ec1e95cb7",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357705+00:00"
+    },
+    {
+      "edge_id": "edge-d642a3326d7e0a3c",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357707+00:00"
+    },
+    {
+      "edge_id": "edge-d35cbf1dc2f5bfae",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357709+00:00"
+    },
+    {
+      "edge_id": "edge-713cbae5ea162a3c",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357712+00:00"
+    },
+    {
+      "edge_id": "edge-bffc72c4d532cf25",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357714+00:00"
+    },
+    {
+      "edge_id": "edge-92c16e2035e77292",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357717+00:00"
+    },
+    {
+      "edge_id": "edge-3447138d68893e20",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357719+00:00"
+    },
+    {
+      "edge_id": "edge-58fdb1675bb9c4cc",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357721+00:00"
+    },
+    {
+      "edge_id": "edge-4fa72a2f36161f1d",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357723+00:00"
+    },
+    {
+      "edge_id": "edge-53af48faa0b34141",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357725+00:00"
+    },
+    {
+      "edge_id": "edge-415ca1cc5e6d6a61",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357727+00:00"
+    },
+    {
+      "edge_id": "edge-9d632c8b46cfbf6a",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357729+00:00"
+    },
+    {
+      "edge_id": "edge-ef84b0bf2dc17705",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357731+00:00"
+    },
+    {
+      "edge_id": "edge-e4072c39e1dd7792",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357733+00:00"
+    },
+    {
+      "edge_id": "edge-43b0d0c28548e7cc",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357735+00:00"
+    },
+    {
+      "edge_id": "edge-d6b28fa9fad47c2e",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357737+00:00"
+    },
+    {
+      "edge_id": "edge-08975d862290469a",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357739+00:00"
+    },
+    {
+      "edge_id": "edge-2beed2fb9fcd8ad7",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357741+00:00"
+    },
+    {
+      "edge_id": "edge-995548a9ac78d7cc",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357743+00:00"
+    },
+    {
+      "edge_id": "edge-7a174b69726210aa",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357746+00:00"
+    },
+    {
+      "edge_id": "edge-62da2913934e1899",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357748+00:00"
+    },
+    {
+      "edge_id": "edge-a298ba1878367ccf",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357750+00:00"
+    },
+    {
+      "edge_id": "edge-30b7af9d01886eb1",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357752+00:00"
+    },
+    {
+      "edge_id": "edge-b16e29ed3f6f2af7",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357754+00:00"
+    },
+    {
+      "edge_id": "edge-202d6d99d436343a",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357756+00:00"
+    },
+    {
+      "edge_id": "edge-8d46245efd6a6cae",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357758+00:00"
+    },
+    {
+      "edge_id": "edge-6f7f8d320e7f67ac",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357760+00:00"
+    },
+    {
+      "edge_id": "edge-0c9c7e2e07f8bf40",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357762+00:00"
+    },
+    {
+      "edge_id": "edge-3cef7c08a1d03479",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357764+00:00"
+    },
+    {
+      "edge_id": "edge-beb19df559c42cf4",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357766+00:00"
+    },
+    {
+      "edge_id": "edge-e25cb4b746301d51",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357768+00:00"
+    },
+    {
+      "edge_id": "edge-4b96d6ce175fe3b1",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357771+00:00"
+    },
+    {
+      "edge_id": "edge-abf7d75f35e090bc",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357773+00:00"
+    },
+    {
+      "edge_id": "edge-6ede503d38d4faab",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357775+00:00"
+    },
+    {
+      "edge_id": "edge-97ebabfdc85d7e9e",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357777+00:00"
+    },
+    {
+      "edge_id": "edge-e2829432d3e6028d",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357779+00:00"
+    },
+    {
+      "edge_id": "edge-4eed450a70df4e9c",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357782+00:00"
+    },
+    {
+      "edge_id": "edge-5bcae160952c9492",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357784+00:00"
+    },
+    {
+      "edge_id": "edge-4e66355ea6f5647c",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357786+00:00"
+    },
+    {
+      "edge_id": "edge-ce203ed466037b47",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357788+00:00"
+    },
+    {
+      "edge_id": "edge-8453eae35a8ef960",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-6253aab182da",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357790+00:00"
+    },
+    {
+      "edge_id": "edge-c201d2a9f393bea8",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-6253aab182da",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357792+00:00"
+    },
+    {
+      "edge_id": "edge-24515598b8f9b694",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-6253aab182da",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357794+00:00"
+    },
+    {
+      "edge_id": "edge-62e3942f6f9c3f69",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-6253aab182da",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357796+00:00"
+    },
+    {
+      "edge_id": "edge-a0bb66800249e270",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-723425328264",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357798+00:00"
+    },
+    {
+      "edge_id": "edge-cdd74e3bb589b03c",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-723425328264",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357800+00:00"
+    },
+    {
+      "edge_id": "edge-c9f7b52a198063bc",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-723425328264",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357802+00:00"
+    },
+    {
+      "edge_id": "edge-a6fb8be975cac4b2",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-bb2c345b8b9b",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357804+00:00"
+    },
+    {
+      "edge_id": "edge-579ca5530d85caa4",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-bb2c345b8b9b",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357806+00:00"
+    },
+    {
+      "edge_id": "edge-56e0b3baf5ede197",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_formula_family",
+      "confidence": 0.6,
+      "reason": "same formula family: cost_of_capital",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:26.357808+00:00"
+    },
+    {
+      "edge_id": "edge-e18aab3b1648103c",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-077f6398d613e614",
+      "to_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357520+00:00"
+    },
+    {
+      "edge_id": "edge-50db30ea5818270d",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-077f6398d613e614",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357523+00:00"
+    },
+    {
+      "edge_id": "edge-72b70dfef82da7cc",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-077f6398d613e614",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357525+00:00"
+    },
+    {
+      "edge_id": "edge-51982f7ebc623540",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-077f6398d613e614",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357527+00:00"
+    },
+    {
+      "edge_id": "edge-87392ba149f58bd0",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357600+00:00"
+    },
+    {
+      "edge_id": "edge-18b8a7f4be9850ab",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357623+00:00"
+    },
+    {
+      "edge_id": "edge-71a5fa3cceb59440",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "assessment_question:aq-de851faa01858905",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357603+00:00"
+    },
+    {
+      "edge_id": "edge-98fd9adfcfef9949",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "assessment_question:aq-de851faa01858905",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357625+00:00"
+    },
+    {
+      "edge_id": "edge-3c3e7860ef251ec5",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357605+00:00"
+    },
+    {
+      "edge_id": "edge-1fb248ca5f5086e3",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357628+00:00"
+    },
+    {
+      "edge_id": "edge-5444300883121f5a",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357608+00:00"
+    },
+    {
+      "edge_id": "edge-36fc03aace48a62e",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2863b1de5c6246df",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357630+00:00"
+    },
+    {
+      "edge_id": "edge-f915bc6d5279e135",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "to_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357468+00:00"
+    },
+    {
+      "edge_id": "edge-deabd85956793eb2",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "to_node_id": "asset:asset-0e0fd8415dc0",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357474+00:00"
+    },
+    {
+      "edge_id": "edge-6d454652346f1733",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357477+00:00"
+    },
+    {
+      "edge_id": "edge-035309c268599180",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-2f093d08f7c7d315",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357480+00:00"
+    },
+    {
+      "edge_id": "edge-41f9b9d23f82e0ab",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-395d189a6d7d729a",
+      "to_node_id": "asset:asset-993b64f31dfd",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-3",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357513+00:00"
+    },
+    {
+      "edge_id": "edge-7330d0cd9f1e7828",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-395d189a6d7d729a",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-3",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357515+00:00"
+    },
+    {
+      "edge_id": "edge-f769ac50ab775691",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-3e3392de3b42b226",
+      "to_node_id": "asset:asset-723425328264",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-3",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357558+00:00"
+    },
+    {
+      "edge_id": "edge-b5f428a92816252b",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-3e3392de3b42b226",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-3",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357560+00:00"
+    },
+    {
+      "edge_id": "edge-ea982c15f43a8be5",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-3e3392de3b42b226",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-3",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357562+00:00"
+    },
+    {
+      "edge_id": "edge-46ed074a13e45b6e",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-6d92d7f504beab31",
+      "to_node_id": "analytics_record:evt-c069c1fb895e5ee5",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:26.357592+00:00"
+    },
+    {
+      "edge_id": "edge-eb44127836b7369a",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-6d92d7f504beab31",
+      "to_node_id": "transfer_gap:transfer-gap-assessment-cc7d2789aae31dd3",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:26.357595+00:00"
+    },
+    {
+      "edge_id": "edge-5d4ad1e2f7e9c268",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-9c98cfdf22ba35df",
+      "to_node_id": "asset:asset-431498291f0c",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-2",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357498+00:00"
+    },
+    {
+      "edge_id": "edge-55928175b568ef01",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-9c98cfdf22ba35df",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-2",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357501+00:00"
+    },
+    {
+      "edge_id": "edge-a8be3a4fbbe49d0b",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-9c98cfdf22ba35df",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-2",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357503+00:00"
+    },
+    {
+      "edge_id": "edge-6dc4ea06b8ecf804",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-c069c1fb895e5ee5",
+      "to_node_id": "transfer_gap:transfer-gap-assessment-cc7d2789aae31dd3",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:26.357597+00:00"
+    },
+    {
+      "edge_id": "edge-7d44efadfc767547",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "assessment_question:aq-de851faa01858905",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357610+00:00"
+    },
+    {
+      "edge_id": "edge-411509548e8dfc69",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "assessment_question:aq-de851faa01858905",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357632+00:00"
+    },
+    {
+      "edge_id": "edge-f34f4677584b3c64",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357612+00:00"
+    },
+    {
+      "edge_id": "edge-8dbcbe483af11f57",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357634+00:00"
+    },
+    {
+      "edge_id": "edge-fdff09dcc9ed9de6",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357614+00:00"
+    },
+    {
+      "edge_id": "edge-ebf268197d6e5d3d",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-e3fd6d11e85bf59b",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357636+00:00"
+    },
+    {
+      "edge_id": "edge-a99418fbcd5e5320",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-f577f9fc9e79e128",
+      "to_node_id": "asset:asset-6253aab182da",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-2",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357544+00:00"
+    },
+    {
+      "edge_id": "edge-dc600c5f59b0d987",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-f577f9fc9e79e128",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-2",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357547+00:00"
+    },
+    {
+      "edge_id": "edge-d8e2e481b1cf241d",
+      "profile_id": "default",
+      "from_node_id": "analytics_record:evt-f577f9fc9e79e128",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-2",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357549+00:00"
+    },
+    {
+      "edge_id": "edge-4e7e25cc8428008d",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "to_node_id": "asset:asset-0e0fd8415dc0",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357483+00:00"
+    },
+    {
+      "edge_id": "edge-18bd20957f9e39ef",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357485+00:00"
+    },
+    {
+      "edge_id": "edge-5b3754d8f9ddfdce",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357487+00:00"
+    },
+    {
+      "edge_id": "edge-fe94dad81dc08123",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357529+00:00"
+    },
+    {
+      "edge_id": "edge-83d9a5aa79fe5835",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357531+00:00"
+    },
+    {
+      "edge_id": "edge-5fff45b083ce7202",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357533+00:00"
+    },
+    {
+      "edge_id": "edge-c2e373505707655b",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-da28a32f48245f15",
+      "to_node_id": "lexical_asset:lex-06aef54cad12",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref dict-c1b8c41c275c#entry-1#sense-1",
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357646+00:00"
+    },
+    {
+      "edge_id": "edge-c26b2bd3b6ccb7cd",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357617+00:00"
+    },
+    {
+      "edge_id": "edge-a328c35e5349a47c",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357638+00:00"
+    },
+    {
+      "edge_id": "edge-1c0702c005bb2844",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357619+00:00"
+    },
+    {
+      "edge_id": "edge-3897538c6603b11c",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357641+00:00"
+    },
+    {
+      "edge_id": "edge-a9f89b3bd6e1c318",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357490+00:00"
+    },
+    {
+      "edge_id": "edge-48daa94ddfe0eb1a",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357492+00:00"
+    },
+    {
+      "edge_id": "edge-799bb02027194ca3",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "formula:asset-431498291f0c",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-2",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357505+00:00"
+    },
+    {
+      "edge_id": "edge-0cb2f775962b03d7",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-2",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357507+00:00"
+    },
+    {
+      "edge_id": "edge-cdf731e51ea20f03",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "formula:asset-6253aab182da",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-2",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357551+00:00"
+    },
+    {
+      "edge_id": "edge-914c8773cde8dcaa",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-2",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357553+00:00"
+    },
+    {
+      "edge_id": "edge-90dd2df1820c3beb",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "formula:asset-723425328264",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-3",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357565+00:00"
+    },
+    {
+      "edge_id": "edge-b75a67464f4c7224",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-3",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357567+00:00"
+    },
+    {
+      "edge_id": "edge-50754cf00bca59ea",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-993b64f31dfd",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-3",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357517+00:00"
+    },
+    {
+      "edge_id": "edge-46efe51dff081f7a",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357537+00:00"
+    },
+    {
+      "edge_id": "edge-8d71e90e3fa4dcbb",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357539+00:00"
+    },
+    {
+      "edge_id": "edge-efa51e0a95a106df",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-530589fafee8",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref curriculum/equity/valuation",
+      "source_refs": [
+        "curriculum/equity/valuation"
+      ],
+      "created_at": "2026-06-03T13:22:26.357578+00:00"
+    },
+    {
+      "edge_id": "edge-ae2fd21eac6755ca",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-70eecc042c8c",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref curriculum/corporate-issuers/cost-of-capital",
+      "source_refs": [
+        "curriculum/corporate-issuers/cost-of-capital"
+      ],
+      "created_at": "2026-06-03T13:22:26.357573+00:00"
+    },
+    {
+      "edge_id": "edge-fc4ca968ca745624",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-7b5f0124c8d8",
+      "to_node_id": "syllabus_topic:demo-econ-business-cycles",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref curriculum/economics/business-cycles",
+      "source_refs": [
+        "curriculum/economics/business-cycles"
+      ],
+      "created_at": "2026-06-03T13:22:26.357575+00:00"
+    },
+    {
+      "edge_id": "edge-6ead5ecacbd7b180",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-9065b68fd1ab",
+      "to_node_id": "syllabus_topic:demo-quant-tvm",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref curriculum/quant/time-value-of-money",
+      "source_refs": [
+        "curriculum/quant/time-value-of-money"
+      ],
+      "created_at": "2026-06-03T13:22:26.357588+00:00"
+    },
+    {
+      "edge_id": "edge-022d56c853cba92e",
+      "profile_id": "default",
+      "from_node_id": "coverage_record:coverage-f9f195e44e84",
+      "to_node_id": "syllabus_topic:demo-fi-effective-duration",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref curriculum/fixed-income/duration",
+      "source_refs": [
+        "curriculum/fixed-income/duration"
+      ],
+      "created_at": "2026-06-03T13:22:26.357583+00:00"
+    },
+    {
+      "edge_id": "edge-2b78168ba3282f67",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-0e0fd8415dc0",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-1",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357495+00:00"
+    },
+    {
+      "edge_id": "edge-682be4a6beed5d2f",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-431498291f0c",
+      "to_node_id": "source_document:ksource-10e3974fedf8",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-10e3974fedf8#seg-2",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357510+00:00"
+    },
+    {
+      "edge_id": "edge-c549abb70adf9df8",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-6253aab182da",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-2",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:26.357555+00:00"
+    },
+    {
+      "edge_id": "edge-08ca9867b0bfb201",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-723425328264",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-3",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:26.357569+00:00"
+    },
+    {
+      "edge_id": "edge-e709871f299d2e83",
+      "profile_id": "default",
+      "from_node_id": "formula:asset-bb2c345b8b9b",
+      "to_node_id": "source_document:ksource-db33fea7a629",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref ksource-db33fea7a629#seg-1",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357541+00:00"
+    },
+    {
+      "edge_id": "edge-ae25676eec2cca35",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-evidence-1c5e3771d632",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632"
+      ],
+      "created_at": "2026-06-03T13:22:26.357621+00:00"
+    },
+    {
+      "edge_id": "edge-89c9961347dab8bc",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "to_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "edge_type": "same_source_ref",
+      "confidence": 0.55,
+      "reason": "shared source ref mock-retro-9f880073c07f#q-1",
+      "source_refs": [
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:26.357643+00:00"
+    },
+    {
+      "edge_id": "edge-d56acf08eb5ea0dd",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-assessment-cc7d2789aae31dd3",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "same_syllabus_topic",
+      "confidence": 0.72,
+      "reason": "gap shares syllabus topic",
+      "source_refs": [
+        "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+      ],
+      "created_at": "2026-06-03T13:22:24.928900+00:00"
+    },
+    {
+      "edge_id": "edge-f3e2b0f93dff6e40",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-ca11bc50e164",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "same_syllabus_topic",
+      "confidence": 0.72,
+      "reason": "gap shares syllabus topic",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.928972+00:00"
+    },
+    {
+      "edge_id": "edge-f09741ca8a7e1c41",
+      "profile_id": "default",
+      "from_node_id": "transfer_gap:transfer-gap-d1cd4ff0e098",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "same_syllabus_topic",
+      "confidence": 0.72,
+      "reason": "gap shares syllabus topic",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929037+00:00"
+    },
+    {
+      "edge_id": "edge-18da66d2a59c3ea0",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-0e0fd8415dc0",
+      "to_node_id": "source_segment:segment-ksource-10e3974fedf8-1",
+      "edge_type": "supported_by",
+      "confidence": 0.92,
+      "reason": "asset cites source segment",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.927712+00:00"
+    },
+    {
+      "edge_id": "edge-a7f255e82b51fdca",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-431498291f0c",
+      "to_node_id": "source_segment:segment-ksource-10e3974fedf8-2",
+      "edge_type": "supported_by",
+      "confidence": 0.92,
+      "reason": "asset cites source segment",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.927790+00:00"
+    },
+    {
+      "edge_id": "edge-f7cfcb2010078288",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-6253aab182da",
+      "to_node_id": "source_segment:segment-ksource-db33fea7a629-2",
+      "edge_type": "supported_by",
+      "confidence": 0.92,
+      "reason": "asset cites source segment",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-2"
+      ],
+      "created_at": "2026-06-03T13:22:24.927863+00:00"
+    },
+    {
+      "edge_id": "edge-bdc8e2a3387ca46b",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-723425328264",
+      "to_node_id": "source_segment:segment-ksource-db33fea7a629-3",
+      "edge_type": "supported_by",
+      "confidence": 0.92,
+      "reason": "asset cites source segment",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.927934+00:00"
+    },
+    {
+      "edge_id": "edge-48bbb7fac3d51784",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-993b64f31dfd",
+      "to_node_id": "source_segment:segment-ksource-10e3974fedf8-3",
+      "edge_type": "supported_by",
+      "confidence": 0.92,
+      "reason": "asset cites source segment",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-3"
+      ],
+      "created_at": "2026-06-03T13:22:24.928001+00:00"
+    },
+    {
+      "edge_id": "edge-2975e2180765ee74",
+      "profile_id": "default",
+      "from_node_id": "asset:asset-bb2c345b8b9b",
+      "to_node_id": "source_segment:segment-ksource-db33fea7a629-1",
+      "edge_type": "supported_by",
+      "confidence": 0.92,
+      "reason": "asset cites source segment",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.928062+00:00"
+    },
+    {
+      "edge_id": "edge-f1016e5bb5c8b798",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-2b07a5e42396ee0b",
+      "to_node_id": "syllabus_topic:demo-equity-gordon-growth",
+      "edge_type": "tests",
+      "confidence": 0.8,
+      "reason": "question tests syllabus topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929436+00:00"
+    },
+    {
+      "edge_id": "edge-4c3d67d3f2209d0c",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-6bf39ab673e8f619",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "tests",
+      "confidence": 0.8,
+      "reason": "question tests syllabus topic",
+      "source_refs": [],
+      "created_at": "2026-06-03T13:22:24.929482+00:00"
+    },
+    {
+      "edge_id": "edge-07312eb12f129d37",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "to_node_id": "asset:asset-0e0fd8415dc0",
+      "edge_type": "tests",
+      "confidence": 0.9,
+      "reason": "question tests linked asset",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929446+00:00"
+    },
+    {
+      "edge_id": "edge-b19db1b25f4d925f",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a22f7dfb84135f28",
+      "to_node_id": "formula:asset-0e0fd8415dc0",
+      "edge_type": "tests",
+      "confidence": 0.92,
+      "reason": "question tests formula",
+      "source_refs": [
+        "ksource-10e3974fedf8#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929448+00:00"
+    },
+    {
+      "edge_id": "edge-db42de7ef96d0bf0",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "tests",
+      "confidence": 0.9,
+      "reason": "question tests linked asset",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929489+00:00"
+    },
+    {
+      "edge_id": "edge-3822d060c9b98920",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-a95468be6c7380e9",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "tests",
+      "confidence": 0.92,
+      "reason": "question tests formula",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929491+00:00"
+    },
+    {
+      "edge_id": "edge-de5221c9a69394b2",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-da28a32f48245f15",
+      "to_node_id": "lexical_asset:lex-06aef54cad12",
+      "edge_type": "tests",
+      "confidence": 0.88,
+      "reason": "question tests lexical asset",
+      "source_refs": [
+        "dict-c1b8c41c275c#entry-1#sense-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929461+00:00"
+    },
+    {
+      "edge_id": "edge-400f0d9acaab7496",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "asset:asset-bb2c345b8b9b",
+      "edge_type": "tests",
+      "confidence": 0.9,
+      "reason": "question tests linked asset",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929468+00:00"
+    },
+    {
+      "edge_id": "edge-c002fe571e220565",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "formula:asset-bb2c345b8b9b",
+      "edge_type": "tests",
+      "confidence": 0.92,
+      "reason": "question tests formula",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929470+00:00"
+    },
+    {
+      "edge_id": "edge-f316cdc8d47eba3c",
+      "profile_id": "default",
+      "from_node_id": "assessment_question:aq-de851faa01858905",
+      "to_node_id": "syllabus_topic:demo-ci-wacc",
+      "edge_type": "tests",
+      "confidence": 0.8,
+      "reason": "question tests syllabus topic",
+      "source_refs": [
+        "mock-evidence-1c5e3771d632",
+        "mock-retro-9f880073c07f#q-1"
+      ],
+      "created_at": "2026-06-03T13:22:24.929473+00:00"
+    }
+  ]
+}

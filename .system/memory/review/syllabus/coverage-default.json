@@ -1,0 +1,2441 @@
+{
+  "profile_id": "default",
+  "topic_count": 5,
+  "asset_count": 79,
+  "link_count": 29,
+  "summary": {
+    "covered": 0,
+    "partial": 0,
+    "draft_only": 0,
+    "missing": 1,
+    "weak": 4,
+    "stale": 0
+  },
+  "records": [
+    {
+      "record_id": "coverage-530589fafee8",
+      "profile_id": "default",
+      "topic_id": "demo-equity-gordon-growth",
+      "confirmed_asset_count": 0,
+      "draft_asset_count": 0,
+      "rejected_asset_count": 0,
+      "formula_asset_count": 0,
+      "decision_rule_asset_count": 0,
+      "mistake_link_count": 0,
+      "mastery_state": "none",
+      "coverage_status": "missing",
+      "coverage_score": 0.0,
+      "missing_asset_types": [
+        "formula",
+        "decision_rule"
+      ],
+      "recommended_actions": [
+        "review transfer gap",
+        "import notes for this topic",
+        "create formula asset",
+        "create decision boundary asset",
+        "practice interleaved mini-case",
+        "run Formula Lab"
+      ],
+      "last_reviewed_at": null,
+      "next_review_at": null,
+      "topic": {
+        "topic_id": "demo-equity-gordon-growth",
+        "profile_id": "default",
+        "exam": "CFA Level I",
+        "subject": "Equity",
+        "module": "Equity Valuation",
+        "los": "EQ-001",
+        "title": "Apply the Gordon growth model",
+        "description": "Dividend discount valuation when growth is stable and required return exceeds growth.",
+        "parent_topic_id": null,
+        "exam_weight": 0.8,
+        "importance": 0.9,
+        "expected_asset_types": [
+          "formula",
+          "decision_rule"
+        ],
+        "formula_expected": true,
+        "decision_rule_expected": true,
+        "source_refs": [
+          "curriculum/equity/valuation"
+        ],
+        "active": true
+      },
+      "links": [],
+      "linked_assets": [],
+      "transfer_gaps": [
+        {
+          "gap_id": "transfer-gap-assessment-cc7d2789aae31dd3",
+          "profile_id": "default",
+          "topic_id": "demo-equity-gordon-growth",
+          "asset_id": null,
+          "formula_family": null,
+          "gap_type": "interleaving_failure",
+          "severity": 0.35,
+          "evidence_count": 1,
+          "last_seen_at": "2026-06-03T12:58:42.959548+00:00",
+          "recommended_actions": [
+            "Review the correct rule, then retry an interleaved assessment item."
+          ],
+          "source_refs": [
+            "assessment:assessment-cdf0187d0b5636de:aq-2b07a5e42396ee0b"
+          ],
+          "status": "open"
+        },
+        {
+          "gap_id": "transfer-gap-ca11bc50e164",
+          "profile_id": "default",
+          "topic_id": "demo-ci-wacc",
+          "asset_id": "asset-bb2c345b8b9b",
+          "formula_family": "cost_of_capital",
+          "gap_type": "variable_confusion",
+          "severity": 0.8,
+          "evidence_count": 1,
+          "last_seen_at": "2026-06-03T15:31:01.630385+00:00",
+          "recommended_actions": [
+            "review transfer gap",
+            "run Formula Lab"
+          ],
+          "source_refs": [
+            "mock-evidence-1c5e3771d632",
+            "mock-evidence-b07ae2368678",
+            "mock-retro-18fd0f3a0d0b#q-1",
+            "mock-retro-9f880073c07f#q-1"
+          ],
+          "status": "open"
+        },
+        {
+          "gap_id": "transfer-gap-d1cd4ff0e098",
+          "profile_id": "default",
+          "topic_id": "demo-ci-wacc",
+          "asset_id": "asset-bb2c345b8b9b",
+          "formula_family": "cost_of_capital",
+          "gap_type": "confidence_mismatch",
+          "severity": 0.8,
+          "evidence_count": 1,
+          "last_seen_at": "2026-06-03T12:58:41.433643+00:00",
+          "recommended_actions": [
+            "calibrate confidence before reveal",
+            "review transfer gap"
+          ],
+          "source_refs": [
+            "mock-evidence-1c5e3771d632",
+            "mock-retro-9f880073c07f#q-1"
+          ],
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "record_id": "coverage-70eecc042c8c",
+      "profile_id": "default",
+      "topic_id": "demo-ci-wacc",
+      "confirmed_asset_count": 3,
+      "draft_asset_count": 7,
+      "rejected_asset_count": 0,
+      "formula_asset_count": 3,
+      "decision_rule_asset_count": 3,
+      "mistake_link_count": 0,
+      "mastery_state": "Learning",
+      "coverage_status": "weak",
+      "coverage_score": 0.7175,
+      "missing_asset_types": [
+        "definition"
+      ],
+      "recommended_actions": [
+        "review transfer gap",
+        "review weak confirmed assets",
+        "run Formula Lab"
+      ],
+      "last_reviewed_at": null,
+      "next_review_at": "2026-06-10T19:05:42.063067+00:00",
+      "topic": {
+        "topic_id": "demo-ci-wacc",
+        "profile_id": "default",
+        "exam": "CFA Level I",
+        "subject": "Corporate Issuers",
+        "module": "Cost of Capital",
+        "los": "CI-001",
+        "title": "Calculate and interpret WACC",
+        "description": "Weighted average cost of capital, component weights, tax shield, and use boundaries.",
+        "parent_topic_id": null,
+        "exam_weight": 0.9,
+        "importance": 0.95,
+        "expected_asset_types": [
+          "definition",
+          "formula",
+          "decision_rule"
+        ],
+        "formula_expected": true,
+        "decision_rule_expected": true,
+        "source_refs": [
+          "curriculum/corporate-issuers/cost-of-capital"
+        ],
+        "active": true
+      },
+      "links": [
+        {
+          "asset_id": "asset-0e0fd8415dc0",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-431498291f0c",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-6253aab182da",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-723425328264",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-86eb03785435",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-871967d2fdcf",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-bb2c345b8b9b",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-e19f181977d2",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-e9b7e710313f",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "formula family match: cost_of_capital",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "asset-993b64f31dfd",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "keyword overlap: capital, weights",
+          "confidence": 0.5657142857142857,
+          "created_by": "keyword_match"
+        }
+      ],
+      "linked_assets": [
+        {
+          "asset_id": "asset-0e0fd8415dc0",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Assessment Review Source 1780491521315",
+          "module": "Browser Assessment Review Source 1780491521315",
+          "los": "",
+          "title": "LOS CI-BROWSER-ASSESS",
+          "trigger": "LOS CI-BROWSER-ASSESS",
+          "correct_rule": "Recall and apply this formula exactly: LOS: CI-BROWSER-ASSESS",
+          "formula_latex": "LOS: CI-BROWSER-ASSESS",
+          "plain_formula": "LOS: CI-BROWSER-ASSESS",
+          "variables": [
+            {
+              "symbol": "LOS",
+              "meaning": "CI-BROWSER-ASSESS",
+              "unit": ""
+            },
+            {
+              "symbol": "CI",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "BROWSER",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "ASSESS",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use after-tax cost of debt in WACC.",
+            "Apply target capital weights when valuing the firm."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Apply target capital weights when valuing the firm."
+          ],
+          "common_correct_boundary_rules": [
+            "Use after-tax cost of debt in WACC.",
+            "Apply target capital weights when valuing the firm."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "intermediate",
+          "source_refs": [
+            "ksource-10e3974fedf8#seg-1"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "confirmed"
+        },
+        {
+          "asset_id": "asset-431498291f0c",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Assessment Review Source 1780491521315",
+          "module": "Browser Assessment Review Source 1780491521315",
+          "los": "",
+          "title": "Use after-tax cost of debt in WACC",
+          "trigger": "Use after-tax cost of debt in WACC",
+          "correct_rule": "Recall and apply this formula exactly: Use after-tax cost of debt in WACC.",
+          "formula_latex": "Use after-tax cost of debt in WACC",
+          "plain_formula": "Use after-tax cost of debt in WACC",
+          "variables": [
+            {
+              "symbol": "after",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "tax",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "cost",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "of",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "debt",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "in",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "WACC",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use after-tax cost of debt in WACC.",
+            "Apply target capital weights when valuing the firm."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Apply target capital weights when valuing the firm."
+          ],
+          "common_correct_boundary_rules": [
+            "Use after-tax cost of debt in WACC.",
+            "Apply target capital weights when valuing the firm."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-10e3974fedf8#seg-2"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "draft"
+        },
+        {
+          "asset_id": "asset-6253aab182da",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Assessment Formula 1780491521367",
+          "module": "Browser Assessment Formula 1780491521367",
+          "los": "",
+          "title": "Use after-tax cost of debt with target market value",
+          "trigger": "Use after-tax cost of debt with target market value",
+          "correct_rule": "Recall and apply this formula exactly: Use after-tax cost of debt with target market value weights.",
+          "formula_latex": "Use after-tax cost of debt with target market value weights",
+          "plain_formula": "Use after-tax cost of debt with target market value weights",
+          "variables": [
+            {
+              "symbol": "after",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "tax",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "cost",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "of",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "debt",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "with",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "target",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "market",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "weights",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-db33fea7a629#seg-2"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "draft"
+        },
+        {
+          "asset_id": "asset-723425328264",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Assessment Formula 1780491521367",
+          "module": "Browser Assessment Formula 1780491521367",
+          "los": "",
+          "title": "BA II Plus enter cash flows set I Y",
+          "trigger": "BA II Plus enter cash flows set I Y",
+          "correct_rule": "Recall and apply this formula exactly: BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV.",
+          "formula_latex": "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV",
+          "plain_formula": "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV",
+          "variables": [
+            {
+              "symbol": "enter",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "cash",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "flows",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "set",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "I/Y",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "to",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "WACC",
+              "meaning": "w_d r_d (1 - t) + w_e r_e",
+              "unit": ""
+            },
+            {
+              "symbol": "then",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "NPV",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-db33fea7a629#seg-3"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "draft"
+        },
+        {
+          "asset_id": "asset-86eb03785435",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Tutor WACC note",
+          "module": "Browser Tutor WACC note",
+          "los": "",
+          "title": "w d debt weight r d pre-tax cost of",
+          "trigger": "w d debt weight r d pre-tax cost of",
+          "correct_rule": "Recall and apply this formula exactly: w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity.",
+          "formula_latex": "w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity",
+          "plain_formula": "w_d = debt weight; r_d = pre-tax cost of debt; t = tax rate; w_e = equity weight; r_e = cost of equity",
+          "variables": [
+            {
+              "symbol": "w_d",
+              "meaning": "debt weight",
+              "unit": ""
+            },
+            {
+              "symbol": "debt",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "weight",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "r_d",
+              "meaning": "pre-tax cost of debt",
+              "unit": ""
+            },
+            {
+              "symbol": "pre",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "tax",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "cost",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "of",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "t",
+              "meaning": "tax rate",
+              "unit": ""
+            },
+            {
+              "symbol": "rate",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-273a2ffdab8f#seg-2"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "draft"
+        },
+        {
+          "asset_id": "asset-871967d2fdcf",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Tutor WACC note",
+          "module": "Browser Tutor WACC note",
+          "los": "",
+          "title": "Use WACC when valuing a firm with target market",
+          "trigger": "Use WACC when valuing a firm with target market",
+          "correct_rule": "Recall and apply this formula exactly: Use WACC when valuing a firm with target market value weights.",
+          "formula_latex": "Use WACC when valuing a firm with target market value weights",
+          "plain_formula": "Use WACC when valuing a firm with target market value weights",
+          "variables": [
+            {
+              "symbol": "WACC",
+              "meaning": "w_d r_d (1 - t) + w_e r_e",
+              "unit": ""
+            },
+            {
+              "symbol": "when",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "valuing",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "a",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "firm",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "with",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "target",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "market",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "weights",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-273a2ffdab8f#seg-3"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "draft"
+        },
+        {
+          "asset_id": "asset-bb2c345b8b9b",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Assessment Formula 1780491521367",
+          "module": "Browser Assessment Formula 1780491521367",
+          "los": "",
+          "title": "WACC w d r d 1 - t +",
+          "trigger": "WACC w d r d 1 - t +",
+          "correct_rule": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+          "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+          "plain_formula": "WACC = w_d r_d (1 - t) + w_e r_e",
+          "variables": [
+            {
+              "symbol": "WACC",
+              "meaning": "w_d r_d (1 - t) + w_e r_e",
+              "unit": ""
+            },
+            {
+              "symbol": "w_d",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "r_d",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "t",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "w_e",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "r_e",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use after-tax cost of debt with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-db33fea7a629#seg-1"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "Practiced",
+          "next_review_at": "2026-06-10T19:05:42.063067+00:00",
+          "created_from": "text_note",
+          "validation_status": "confirmed"
+        },
+        {
+          "asset_id": "asset-e19f181977d2",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Tutor WACC note",
+          "module": "Browser Tutor WACC note",
+          "los": "",
+          "title": "WACC w d r d 1 - t +",
+          "trigger": "WACC w d r d 1 - t +",
+          "correct_rule": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+          "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+          "plain_formula": "WACC = w_d r_d (1 - t) + w_e r_e",
+          "variables": [
+            {
+              "symbol": "WACC",
+              "meaning": "w_d r_d (1 - t) + w_e r_e",
+              "unit": ""
+            },
+            {
+              "symbol": "w_d",
+              "meaning": "debt weight",
+              "unit": ""
+            },
+            {
+              "symbol": "r_d",
+              "meaning": "pre-tax cost of debt",
+              "unit": ""
+            },
+            {
+              "symbol": "t",
+              "meaning": "tax rate",
+              "unit": ""
+            },
+            {
+              "symbol": "w_e",
+              "meaning": "equity weight",
+              "unit": ""
+            },
+            {
+              "symbol": "r_e",
+              "meaning": "cost of equity",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-273a2ffdab8f#seg-1"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "confirmed"
+        },
+        {
+          "asset_id": "asset-e9b7e710313f",
+          "asset_type": "formula",
+          "profile_id": "default",
+          "subject": "Browser Tutor WACC note",
+          "module": "Browser Tutor WACC note",
+          "los": "",
+          "title": "BA II Plus enter cash flows press NPV enter",
+          "trigger": "BA II Plus enter cash flows press NPV enter",
+          "correct_rule": "Recall and apply this formula exactly: BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV.",
+          "formula_latex": "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV",
+          "plain_formula": "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV",
+          "variables": [
+            {
+              "symbol": "enter",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "cash",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "flows",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "press",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "NPV",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "WACC",
+              "meaning": "w_d r_d (1 - t) + w_e r_e",
+              "unit": ""
+            },
+            {
+              "symbol": "as",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "I/Y",
+              "meaning": "",
+              "unit": ""
+            },
+            {
+              "symbol": "then",
+              "meaning": "",
+              "unit": ""
+            }
+          ],
+          "applies_when": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "not_when": [],
+          "assumptions": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "common_correct_boundary_rules": [
+            "Use WACC when valuing a firm with target market value weights."
+          ],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [
+            "BA II Plus: enter cash flows, press NPV, enter WACC as I/Y, then CPT NPV."
+          ],
+          "formula_family": "cost_of_capital",
+          "syllabus_topic_id": "",
+          "difficulty": "advanced",
+          "source_refs": [
+            "ksource-273a2ffdab8f#seg-4"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "draft"
+        },
+        {
+          "asset_id": "asset-993b64f31dfd",
+          "asset_type": "decision_rule",
+          "profile_id": "default",
+          "subject": "Browser Assessment Review Source 1780491521315",
+          "module": "Browser Assessment Review Source 1780491521315",
+          "los": "",
+          "title": "Apply target capital weights when valuing the firm",
+          "trigger": "Apply target capital weights when valuing the firm",
+          "correct_rule": "Apply this boundary rule: Apply target capital weights when valuing the firm.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [
+            "Apply target capital weights when valuing the firm."
+          ],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "ksource-10e3974fedf8#seg-3"
+          ],
+          "source_quality": 0.45,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.68,
+          "mistake_link_count": 0,
+          "decay_risk": 0.7,
+          "mastery_state": "new",
+          "next_review_at": "",
+          "created_from": "text_note",
+          "validation_status": "needs_review"
+        }
+      ],
+      "transfer_gaps": [
+        {
+          "gap_id": "transfer-gap-ca11bc50e164",
+          "profile_id": "default",
+          "topic_id": "demo-ci-wacc",
+          "asset_id": "asset-bb2c345b8b9b",
+          "formula_family": "cost_of_capital",
+          "gap_type": "variable_confusion",
+          "severity": 0.8,
+          "evidence_count": 1,
+          "last_seen_at": "2026-06-03T15:31:01.630385+00:00",
+          "recommended_actions": [
+            "review transfer gap",
+            "run Formula Lab"
+          ],
+          "source_refs": [
+            "mock-evidence-1c5e3771d632",
+            "mock-evidence-b07ae2368678",
+            "mock-retro-18fd0f3a0d0b#q-1",
+            "mock-retro-9f880073c07f#q-1"
+          ],
+          "status": "open"
+        },
+        {
+          "gap_id": "transfer-gap-d1cd4ff0e098",
+          "profile_id": "default",
+          "topic_id": "demo-ci-wacc",
+          "asset_id": "asset-bb2c345b8b9b",
+          "formula_family": "cost_of_capital",
+          "gap_type": "confidence_mismatch",
+          "severity": 0.8,
+          "evidence_count": 1,
+          "last_seen_at": "2026-06-03T12:58:41.433643+00:00",
+          "recommended_actions": [
+            "calibrate confidence before reveal",
+            "review transfer gap"
+          ],
+          "source_refs": [
+            "mock-evidence-1c5e3771d632",
+            "mock-retro-9f880073c07f#q-1"
+          ],
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "record_id": "coverage-f9f195e44e84",
+      "profile_id": "default",
+      "topic_id": "demo-fi-effective-duration",
+      "confirmed_asset_count": 2,
+      "draft_asset_count": 0,
+      "rejected_asset_count": 0,
+      "formula_asset_count": 0,
+      "decision_rule_asset_count": 0,
+      "mistake_link_count": 2,
+      "mastery_state": "Learning",
+      "coverage_status": "weak",
+      "coverage_score": 0.2625,
+      "missing_asset_types": [
+        "formula",
+        "decision_rule"
+      ],
+      "recommended_actions": [
+        "create formula asset",
+        "create decision boundary asset",
+        "review weak confirmed assets",
+        "add source references",
+        "run Formula Lab"
+      ],
+      "last_reviewed_at": null,
+      "next_review_at": null,
+      "topic": {
+        "topic_id": "demo-fi-effective-duration",
+        "profile_id": "default",
+        "exam": "CFA Level I",
+        "subject": "Fixed Income",
+        "module": "Duration and Convexity",
+        "los": "FI-001",
+        "title": "Choose effective duration for option-sensitive bonds",
+        "description": "Decision boundary between Macaulay, modified, and effective duration.",
+        "parent_topic_id": null,
+        "exam_weight": 0.78,
+        "importance": 0.88,
+        "expected_asset_types": [
+          "definition",
+          "formula",
+          "decision_rule"
+        ],
+        "formula_expected": true,
+        "decision_rule_expected": true,
+        "source_refs": [
+          "curriculum/fixed-income/duration"
+        ],
+        "active": true
+      },
+      "links": [
+        {
+          "asset_id": "card-69ae1db561dd",
+          "topic_id": "demo-fi-effective-duration",
+          "match_reason": "keyword overlap: convexity, fixed, income",
+          "confidence": 0.72,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-33c8bac202a7",
+          "topic_id": "demo-fi-effective-duration",
+          "match_reason": "keyword overlap: duration, effective, fixed, income",
+          "confidence": 0.6133333333333333,
+          "created_by": "keyword_match"
+        }
+      ],
+      "linked_assets": [
+        {
+          "asset_id": "card-69ae1db561dd",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Fixed Income",
+          "module": "Fixed Income",
+          "los": "FI.Convexity",
+          "title": "Fixed Income",
+          "trigger": "FI.Convexity",
+          "correct_rule": "B",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Fixed Income / FI.Convexity 同类题。",
+          "correct_steps": [
+            "B"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-33c8bac202a7",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Fixed Income",
+          "module": "Fixed Income",
+          "los": "FI.UX.Browser",
+          "title": "Fixed Income",
+          "trigger": "FI.UX.Browser",
+          "correct_rule": "Use effective duration when cash flows can change.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Fixed Income / FI.UX.Browser 同类题。",
+          "correct_steps": [
+            "Use effective duration when cash flows can change."
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "task014-browser"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        }
+      ],
+      "transfer_gaps": []
+    },
+    {
+      "record_id": "coverage-9065b68fd1ab",
+      "profile_id": "default",
+      "topic_id": "demo-quant-tvm",
+      "confirmed_asset_count": 11,
+      "draft_asset_count": 0,
+      "rejected_asset_count": 0,
+      "formula_asset_count": 0,
+      "decision_rule_asset_count": 0,
+      "mistake_link_count": 11,
+      "mastery_state": "Learning",
+      "coverage_status": "weak",
+      "coverage_score": 0.3125,
+      "missing_asset_types": [
+        "formula",
+        "procedure"
+      ],
+      "recommended_actions": [
+        "create formula asset",
+        "review weak confirmed assets",
+        "run Formula Lab"
+      ],
+      "last_reviewed_at": null,
+      "next_review_at": null,
+      "topic": {
+        "topic_id": "demo-quant-tvm",
+        "profile_id": "default",
+        "exam": "CFA Level I",
+        "subject": "Quantitative Methods",
+        "module": "Time Value of Money",
+        "los": "QM-001",
+        "title": "Solve TVM and NPV problems",
+        "description": "PV, FV, PMT, NPV, IRR, and BA II Plus setup.",
+        "parent_topic_id": null,
+        "exam_weight": 0.72,
+        "importance": 0.82,
+        "expected_asset_types": [
+          "formula",
+          "procedure"
+        ],
+        "formula_expected": true,
+        "decision_rule_expected": false,
+        "source_refs": [
+          "curriculum/quant/time-value-of-money"
+        ],
+        "active": true
+      },
+      "links": [
+        {
+          "asset_id": "card-900d267beb41",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.6799999999999999,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-90467864957e",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.6799999999999999,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-2e6ba8afb984",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.63,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-4a6193fc95f8",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.63,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-a39ddef9c96b",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.58,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-43808428ecd1",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.5657142857142857,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-faa48e1ec793",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative, solve",
+          "confidence": 0.5618181818181818,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-074b63e3a56a",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.5549999999999999,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-0ed22809af71",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.5549999999999999,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-3ffdb0d46d7b",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.5549999999999999,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-bae4b0369be7",
+          "topic_id": "demo-quant-tvm",
+          "match_reason": "keyword overlap: methods, quantitative",
+          "confidence": 0.5466666666666666,
+          "created_by": "keyword_match"
+        }
+      ],
+      "linked_assets": [
+        {
+          "asset_id": "card-900d267beb41",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates",
+          "correct_rule": "B 才是正确的",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。",
+          "correct_steps": [
+            "B 才是正确的"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "quick-capture-2026-05-31T23:31:41.995992"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-90467864957e",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates",
+          "correct_rule": "B 才是正确的",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。",
+          "correct_steps": [
+            "B 才是正确的"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "quick-capture-2026-05-31T23:31:41.995992"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-2e6ba8afb984",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates and Returns",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates and Returns",
+          "correct_rule": "r = ln(186.75/208.25) = ln(0.89676) = -0.10897 ≈ -10.90%. 连续复利收益率必须用",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。",
+          "correct_steps": [
+            "r = ln(186.75/208.25) = ln(0.89676) = -0.10897 ≈ -10.90%. 连续复利收益率必须用"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "typed-q-2026-05-21-quant"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-4a6193fc95f8",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates",
+          "correct_rule": "Answer",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates 同类题。",
+          "correct_steps": [
+            "Answer"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "quick-capture-2026-05-31T23:31:41.995992"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-a39ddef9c96b",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates and Returns",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates and Returns",
+          "correct_rule": "Test answer",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。",
+          "correct_steps": [
+            "Test answer"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "typed-q-2026-05-21-quant"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-43808428ecd1",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "unknown_from_screenshot",
+          "title": "Quantitative Methods",
+          "trigger": "unknown_from_screenshot",
+          "correct_rule": "正确答案是 C。Sampling error 指样本统计量（statistic）的观测值与它试图估计的总体参数/quantity",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / unknown_from_screenshot 同类题。",
+          "correct_steps": [
+            "正确答案是 C。Sampling error 指样本统计量（statistic）的观测值与它试图估计的总体参数/quantity"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "chat-screenshot-2026-05-25-bootstrap-standard-error"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-faa48e1ec793",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates and Returns",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates and Returns",
+          "correct_rule": "For money-weighted return, build investor cash flows and solve",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。",
+          "correct_steps": [
+            "For money-weighted return, build investor cash flows and solve"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "typed-q-2026-05-21-quant"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-074b63e3a56a",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "unknown_from_screenshot",
+          "title": "Quantitative Methods",
+          "trigger": "unknown_from_screenshot",
+          "correct_rule": "正确答案是 A. The mean of each resample。Bootstrap 估计 sample mean 的",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / unknown_from_screenshot 同类题。",
+          "correct_steps": [
+            "正确答案是 A. The mean of each resample。Bootstrap 估计 sample mean 的"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "chat-screenshot-2026-05-25-bootstrap-standard-error"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-0ed22809af71",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "unknown_from_screenshot",
+          "title": "Quantitative Methods",
+          "trigger": "unknown_from_screenshot",
+          "correct_rule": "C. real risk-free interest rate. The real risk-free rate reflects",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / unknown_from_screenshot 同类题。",
+          "correct_steps": [
+            "C. real risk-free interest rate. The real risk-free rate reflects"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "chat-screenshot-2026-05-25-bootstrap-standard-error"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-3ffdb0d46d7b",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates and Returns",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates and Returns",
+          "correct_rule": "C is correct. Gross return 已扣除交易费用（trading expenses 直接贡献于回报计算），但不含管理费/行政费。它是税前、非风险调整的，用于衡量经理投资能力。B",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。",
+          "correct_steps": [
+            "C is correct. Gross return 已扣除交易费用（trading expenses 直接贡献于回报计算），但不含管理费/行政费。它是税前、非风险调整的，用于衡量经理投资能力。B"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "typed-q-2026-05-21-quant"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-bae4b0369be7",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Quantitative Methods",
+          "module": "Quantitative Methods",
+          "los": "QM.Rates and Returns",
+          "title": "Quantitative Methods",
+          "trigger": "QM.Rates and Returns",
+          "correct_rule": "C. 5.00%。正确三步：(1) Net return = 8.46% - 1.60% = 6.86%（trading expenses已在gross",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Quantitative Methods / QM.Rates and Returns 同类题。",
+          "correct_steps": [
+            "C. 5.00%。正确三步：(1) Net return = 8.46% - 1.60% = 6.86%（trading expenses已在gross"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "typed-q-2026-05-21-quant"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        }
+      ],
+      "transfer_gaps": []
+    },
+    {
+      "record_id": "coverage-7b5f0124c8d8",
+      "profile_id": "default",
+      "topic_id": "demo-econ-business-cycles",
+      "confirmed_asset_count": 6,
+      "draft_asset_count": 0,
+      "rejected_asset_count": 0,
+      "formula_asset_count": 0,
+      "decision_rule_asset_count": 0,
+      "mistake_link_count": 2,
+      "mastery_state": "Learning",
+      "coverage_status": "weak",
+      "coverage_score": 0.5225,
+      "missing_asset_types": [
+        "decision_rule"
+      ],
+      "recommended_actions": [
+        "create decision boundary asset",
+        "review weak confirmed assets"
+      ],
+      "last_reviewed_at": null,
+      "next_review_at": null,
+      "topic": {
+        "topic_id": "demo-econ-business-cycles",
+        "profile_id": "default",
+        "exam": "CFA Level I",
+        "subject": "Economics",
+        "module": "Business Cycles",
+        "los": "EC-001",
+        "title": "Distinguish leading and lagging indicators",
+        "description": "Indicator timing and exam boundaries for cycle interpretation.",
+        "parent_topic_id": null,
+        "exam_weight": 0.58,
+        "importance": 0.7,
+        "expected_asset_types": [
+          "definition",
+          "decision_rule"
+        ],
+        "formula_expected": false,
+        "decision_rule_expected": true,
+        "source_refs": [
+          "curriculum/economics/business-cycles"
+        ],
+        "active": true
+      },
+      "links": [
+        {
+          "asset_id": "card-f7ea9a7f28c9",
+          "topic_id": "demo-econ-business-cycles",
+          "match_reason": "keyword overlap: business, cycle, cycles, economics, indicator, indicators",
+          "confidence": 0.6514285714285714,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "knowledge-033d03a0d683",
+          "topic_id": "demo-econ-business-cycles",
+          "match_reason": "keyword overlap: business, cycle, cycles, indicators",
+          "confidence": 0.63,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "knowledge-2798e5b9a4ad",
+          "topic_id": "demo-econ-business-cycles",
+          "match_reason": "keyword overlap: business, cycles, indicators",
+          "confidence": 0.63,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "knowledge-c09508719b80",
+          "topic_id": "demo-econ-business-cycles",
+          "match_reason": "keyword overlap: business, cycle, cycles, indicators",
+          "confidence": 0.6133333333333333,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "knowledge-9709e5245520",
+          "topic_id": "demo-econ-business-cycles",
+          "match_reason": "keyword overlap: business, cycles, indicators",
+          "confidence": 0.6085714285714285,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-f340d2f7b1ef",
+          "topic_id": "demo-econ-business-cycles",
+          "match_reason": "keyword overlap: business, cycle, cycles, economics",
+          "confidence": 0.5657142857142857,
+          "created_by": "keyword_match"
+        }
+      ],
+      "linked_assets": [
+        {
+          "asset_id": "card-f7ea9a7f28c9",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Economics",
+          "module": "Economics",
+          "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
+          "title": "Economics",
+          "trigger": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
+          "correct_rule": "B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Economics / M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) 同类题。",
+          "correct_steps": [
+            "B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction."
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "chat-screenshot-2026-05-27-econ-indicators-upturn"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "knowledge-033d03a0d683",
+          "asset_type": "syllabus_core",
+          "profile_id": "default",
+          "subject": "Economics",
+          "module": "M02 Business Cycles and Indicators",
+          "los": "Cycle phases",
+          "title": "M02 Business Cycles and Indicators",
+          "trigger": "Cycle phases",
+          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Cycle phases.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "CFA_tier1/Economics/00-Economics-MOC.md"
+          ],
+          "source_quality": 0.8,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.6,
+          "mistake_link_count": 0,
+          "decay_risk": 0.5,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "syllabus",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "knowledge-2798e5b9a4ad",
+          "asset_type": "syllabus_core",
+          "profile_id": "default",
+          "subject": "Economics",
+          "module": "M02 Business Cycles and Indicators",
+          "los": "Indicators",
+          "title": "M02 Business Cycles and Indicators",
+          "trigger": "Indicators",
+          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Indicators.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "CFA_tier1/Economics/00-Economics-MOC.md"
+          ],
+          "source_quality": 0.8,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.6,
+          "mistake_link_count": 0,
+          "decay_risk": 0.5,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "syllabus",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "knowledge-c09508719b80",
+          "asset_type": "syllabus_core",
+          "profile_id": "default",
+          "subject": "Economics",
+          "module": "M02 Business Cycles and Indicators",
+          "los": "Cycle phases; Indicators; Business behavior",
+          "title": "M02 Business Cycles and Indicators",
+          "trigger": "Cycle phases; Indicators; Business behavior",
+          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Cycle phases; Indicators; Business behavior.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "CFA_tier1/Economics/00-Economics-MOC.md"
+          ],
+          "source_quality": 0.8,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.6,
+          "mistake_link_count": 0,
+          "decay_risk": 0.5,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "syllabus",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "knowledge-9709e5245520",
+          "asset_type": "syllabus_core",
+          "profile_id": "default",
+          "subject": "Economics",
+          "module": "M02 Business Cycles and Indicators",
+          "los": "Business behavior",
+          "title": "M02 Business Cycles and Indicators",
+          "trigger": "Business behavior",
+          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Business behavior.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "",
+          "correct_steps": [],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "CFA_tier1/Economics/00-Economics-MOC.md"
+          ],
+          "source_quality": 0.8,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.6,
+          "mistake_link_count": 0,
+          "decay_risk": 0.5,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "syllabus",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-f340d2f7b1ef",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Economics",
+          "module": "Economics",
+          "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
+          "title": "Economics",
+          "trigger": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
+          "correct_rule": "C. at the bottom of a recession. At the end/bottom of a recession,",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Economics / M02 Understanding Business Cycles - resource",
+          "correct_steps": [
+            "C. at the bottom of a recession. At the end/bottom of a recession,"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "chat-screenshot-2026-05-27-productivity-business-cycle"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        }
+      ],
+      "transfer_gaps": []
+    }
+  ],
+  "links": [
+    {
+      "asset_id": "asset-0e0fd8415dc0",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-431498291f0c",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-6253aab182da",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-723425328264",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-86eb03785435",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-871967d2fdcf",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-bb2c345b8b9b",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-e19f181977d2",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-e9b7e710313f",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "formula family match: cost_of_capital",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "asset-993b64f31dfd",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "keyword overlap: capital, weights",
+      "confidence": 0.5657142857142857,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-f7ea9a7f28c9",
+      "topic_id": "demo-econ-business-cycles",
+      "match_reason": "keyword overlap: business, cycle, cycles, economics, indicator, indicators",
+      "confidence": 0.6514285714285714,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "knowledge-033d03a0d683",
+      "topic_id": "demo-econ-business-cycles",
+      "match_reason": "keyword overlap: business, cycle, cycles, indicators",
+      "confidence": 0.63,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "knowledge-2798e5b9a4ad",
+      "topic_id": "demo-econ-business-cycles",
+      "match_reason": "keyword overlap: business, cycles, indicators",
+      "confidence": 0.63,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "knowledge-c09508719b80",
+      "topic_id": "demo-econ-business-cycles",
+      "match_reason": "keyword overlap: business, cycle, cycles, indicators",
+      "confidence": 0.6133333333333333,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "knowledge-9709e5245520",
+      "topic_id": "demo-econ-business-cycles",
+      "match_reason": "keyword overlap: business, cycles, indicators",
+      "confidence": 0.6085714285714285,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-f340d2f7b1ef",
+      "topic_id": "demo-econ-business-cycles",
+      "match_reason": "keyword overlap: business, cycle, cycles, economics",
+      "confidence": 0.5657142857142857,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-69ae1db561dd",
+      "topic_id": "demo-fi-effective-duration",
+      "match_reason": "keyword overlap: convexity, fixed, income",
+      "confidence": 0.72,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-33c8bac202a7",
+      "topic_id": "demo-fi-effective-duration",
+      "match_reason": "keyword overlap: duration, effective, fixed, income",
+      "confidence": 0.6133333333333333,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-900d267beb41",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.6799999999999999,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-90467864957e",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.6799999999999999,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-2e6ba8afb984",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.63,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-4a6193fc95f8",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.63,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-a39ddef9c96b",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.58,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-43808428ecd1",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.5657142857142857,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-faa48e1ec793",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative, solve",
+      "confidence": 0.5618181818181818,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-074b63e3a56a",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.5549999999999999,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-0ed22809af71",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.5549999999999999,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-3ffdb0d46d7b",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.5549999999999999,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-bae4b0369be7",
+      "topic_id": "demo-quant-tvm",
+      "match_reason": "keyword overlap: methods, quantitative",
+      "confidence": 0.5466666666666666,
+      "created_by": "keyword_match"
+    }
+  ],
+  "coverage_scoring_formula": "0.30*confirmed_core_asset_coverage + 0.20*formula_coverage + 0.15*decision_rule_coverage + 0.15*mastery_strength + 0.10*source_quality + 0.10*review_recency"
+}

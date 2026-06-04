@@ -8,6 +8,7 @@ from io import StringIO
 from pathlib import Path
 from typing import Any
 
+from app.feature_flags import FeatureFlags
 from app.language_storage import LanguageRepository
 from app.models import stable_id
 from language_science.grammar import analyze_sentence
@@ -176,12 +177,179 @@ def collect_item(
     return {"merged": False, "item": item}
 
 
+def _infer_pos(item: dict[str, Any], flags: FeatureFlags) -> str:
+    if item.get("pos"):
+        return str(item["pos"]).strip().lower()
+    canonical = str(item.get("canonical_form", "")).strip().lower()
+    if item.get("language") == "es" and flags.enabled("spanish_morphology_engine"):
+        if canonical.endswith(("ar", "er", "ir")):
+            return "verb"
+        if " " not in canonical and canonical:
+            return "noun"
+    return "phrase" if " " in canonical else "word"
+
+
+def _infer_cefr(item: dict[str, Any], context_text: str) -> str:
+    cefr_level = str(item.get("cefr_level", "")).strip()
+    if cefr_level:
+        return cefr_level.upper()
+    try:
+        from language_science.cefr import CEFR_NUMERIC
+
+        token_count = max(len(context_text.split()), len(str(item.get("canonical_form", "")).split()))
+        if token_count <= 2:
+            candidate = "A1"
+        elif token_count <= 5:
+            candidate = "A2"
+        elif token_count <= 10:
+            candidate = "B1"
+        else:
+            candidate = "B2"
+        return candidate if candidate.lower() in CEFR_NUMERIC else ""
+    except Exception:
+        return ""
+
+
+def _build_dictionary_entry(item: dict[str, Any], flags: FeatureFlags) -> Any:
+    from language_science.dictionary_models import BilingualMapping, LexicalEntry, Sense
+
+    canonical = str(item["canonical_form"]).strip()
+    context_window = [str(part).strip() for part in item.get("context_window", []) if str(part).strip()]
+    context_text = context_window[0] if context_window else canonical
+    native_gloss = str(item.get("native_gloss", "")).strip()
+    pos = _infer_pos(item, flags)
+    cefr_level = _infer_cefr(item, context_text)
+    translations = []
+    if native_gloss and native_gloss.lower() != canonical.lower():
+        translations.append(
+            BilingualMapping(
+                mapping_id=stable_id("lmap", item["item_id"], native_gloss.lower()),
+                target_lemma=native_gloss,
+                target_language="en" if item.get("language") != "en" else "zh",
+                verified=False,
+            )
+        )
+    sense = Sense(
+        sense_id=stable_id("lsense", item["item_id"], "primary"),
+        definition=native_gloss or f"Meaning of '{canonical}' in context",
+        examples=context_window[:2] or [canonical],
+        synonyms=context_window[1:2],
+        cefr_level=cefr_level,
+        translations=translations,
+    )
+    inflections: list[Any] = []
+    gender = ""
+    if item.get("language") == "es" and flags.enabled("spanish_morphology_engine"):
+        from language_science.spanish_morphology import conjugate, detect_gender
+
+        if pos == "verb":
+            inflections.append(conjugate(canonical, mood="indicative", tense="present").forms)
+        elif pos == "noun":
+            agreement = detect_gender(canonical)
+            gender = agreement.gender
+    return LexicalEntry(
+        entry_id=stable_id("lentry", item["item_id"]),
+        lemma=canonical,
+        pos=pos,
+        language=str(item.get("language", "")).strip(),
+        source_id=item["item_id"],
+        inflections=inflections,
+        gender=gender,
+        senses=[sense],
+    )
+
+
+def _legacy_prompt_from_v2(card_type: str, v2_card: Any, item: dict[str, Any]) -> str:
+    prompt = str(v2_card.front).strip()
+    answer = str(v2_card.answer).strip()
+    if prompt.lower() != answer.lower():
+        return prompt
+    fallback_parts = [
+        f"Recall the meaning and usage of: {item['canonical_form']}",
+        str(item.get("native_gloss", "")).strip(),
+        str(v2_card.context).strip(),
+    ]
+    return next((part for part in fallback_parts if part and part.lower() != answer.lower()), item["canonical_form"])
+
+
+def _create_cards_v2(repo: LanguageRepository, item: dict[str, Any], requested_types: list[str]) -> list[dict[str, Any]]:
+    from language_science import models as language_models
+
+    if not hasattr(language_models, "stable_id"):
+        language_models.stable_id = stable_id
+    from language_science.cards_v2 import CardFactoryV2
+    entry = _build_dictionary_entry(item, FeatureFlags.load(repo.root))
+    v2_cards = CardFactoryV2(native_language="en").create_cards(entry, source_id=item["item_id"])
+    if not v2_cards:
+        return []
+
+    preferred_types: dict[str, list[str]] = {
+        "recognition": ["definition_to_word", "reverse_translation", "word_to_sense"],
+        "production": ["reverse_translation", "word_to_sense", "definition_to_word"],
+        "cloze": ["example_cloze", "collocation_completion", "word_to_sense"],
+    }
+    by_type = {card.card_type: card for card in v2_cards}
+    cards = []
+    for requested_type in requested_types:
+        selected = next((by_type[name] for name in preferred_types.get(requested_type, []) if name in by_type), None)
+        if selected is None:
+            selected = next(iter(v2_cards), None)
+        if selected is None:
+            continue
+        prompt = _legacy_prompt_from_v2(requested_type, selected, item)
+        answer = str(selected.answer).strip() or str(item["canonical_form"]).strip()
+        if prompt.strip().lower() == answer.strip().lower():
+            continue
+        card_id = stable_id("lcard", item["item_id"], requested_type)
+        cards.append({
+            "card_id": card_id,
+            "item_id": item["item_id"],
+            "card_type": requested_type,
+            "front_payload": {
+                "prompt": prompt,
+                "card_type": requested_type,
+                "source_card_type": selected.card_type,
+                "lemma": selected.lemma,
+                "context": selected.context,
+                "cefr_level": selected.cefr_level,
+                "tags": selected.tags,
+            },
+            "back_payload": {
+                "answer": answer,
+                "gloss": str(item.get("native_gloss", "")).strip(),
+                "collocations": selected.collocations,
+            },
+            "audio_ref": selected.audio_ref,
+            "context_window": item["context_window"],
+            "fsrs_state": {"state": "new", "repetitions": 0, "stability": 1.0, "difficulty": 5.0, "retrievability": 1.0},
+            "due_at": _now(),
+        })
+    return cards
+
+
 def generate_cards(repo: LanguageRepository, item_id: str, *, card_types: list[str] | None = None) -> list[dict[str, Any]]:
     state = repo.replay()
     item = state["items"].get(item_id)
     if item is None:
         raise KeyError(item_id)
     selected = card_types or ["recognition", "production", "cloze"]
+    flags = FeatureFlags.load(repo.root)
+    if flags.enabled("language_cards_v2"):
+        cards = []
+        generated = {card["card_id"]: card for card in _create_cards_v2(repo, item, selected)}
+        for card_type in selected:
+            card_id = stable_id("lcard", item_id, card_type)
+            existing = state["cards"].get(card_id)
+            if existing:
+                cards.append(existing)
+                continue
+            card = generated.get(card_id)
+            if card is None:
+                continue
+            repo.append("language.card.created", {"card": card}, evidence_refs=item["source_segment_ids"])
+            cards.append(card)
+        if cards:
+            return cards
     cards = []
     for card_type in selected:
         card_id = stable_id("lcard", item_id, card_type)

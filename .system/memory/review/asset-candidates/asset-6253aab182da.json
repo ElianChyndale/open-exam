@@ -1,0 +1,95 @@
+{
+  "asset_id": "asset-6253aab182da",
+  "asset_type": "formula",
+  "profile_id": "default",
+  "subject": "Browser Assessment Formula 1780491521367",
+  "module": "Browser Assessment Formula 1780491521367",
+  "los": "",
+  "title": "Use after-tax cost of debt with target market value",
+  "trigger": "Use after-tax cost of debt with target market value",
+  "correct_rule": "Recall and apply this formula exactly: Use after-tax cost of debt with target market value weights.",
+  "formula_latex": "Use after-tax cost of debt with target market value weights",
+  "plain_formula": "Use after-tax cost of debt with target market value weights",
+  "variables": [
+    {
+      "symbol": "after",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "tax",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "cost",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "of",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "debt",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "with",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "target",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "market",
+      "meaning": "",
+      "unit": ""
+    },
+    {
+      "symbol": "weights",
+      "meaning": "",
+      "unit": ""
+    }
+  ],
+  "applies_when": [
+    "Use after-tax cost of debt with target market value weights."
+  ],
+  "not_when": [],
+  "assumptions": [
+    "Use after-tax cost of debt with target market value weights."
+  ],
+  "common_correct_boundary_rules": [
+    "Use after-tax cost of debt with target market value weights."
+  ],
+  "example": "",
+  "correct_steps": [],
+  "ba_ii_plus_steps": [
+    "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+  ],
+  "formula_family": "cost_of_capital",
+  "syllabus_topic_id": "",
+  "difficulty": "advanced",
+  "source_refs": [
+    "ksource-db33fea7a629#seg-2"
+  ],
+  "source_quality": 0.45,
+  "resource_id": "",
+  "resource_quality_status": "",
+  "resource_validation_status": "",
+  "resource_match_reasons": [],
+  "resource_conflicts": [],
+  "resource_promoted_at": "",
+  "exam_weight": 0.68,
+  "mistake_link_count": 0,
+  "decay_risk": 0.7,
+  "mastery_state": "new",
+  "next_review_at": "",
+  "created_from": "text_note",
+  "validation_status": "draft"
+}

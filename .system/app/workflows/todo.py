@@ -125,16 +125,80 @@ def _reduce(events: list[dict[str, Any]], plan_date: str) -> dict[str, Any]:
     return state
 
 
+def rollover_todo(repo: Repository) -> dict[str, Any]:
+    """Auto-rollover if today > latest todo date. Carries unfinished tasks forward."""
+    today = date.today().isoformat()
+    events = repo.load_jsonl_events("todo")
+    if not events:
+        return _empty_state(today)
+
+    latest_date = str(events[-1].get("payload", {}).get("date", ""))
+    if latest_date >= today:
+        # Already current — return today's state as-is
+        return get_todo(repo, plan_date=today) if latest_date == today else _reduce(events, latest_date)
+
+    # Stale — archive old projection and carry pending tasks forward
+    old_state = _reduce(events, latest_date)
+    _archive_projection(repo, old_state["date"])
+
+    pending = [
+        t for t in old_state["tasks"]
+        if t["status"] != "completed"
+        and str(t.get("text", "")).strip().lower() not in DAILY_REVIEW_ALIASES
+    ]
+    new_tasks = [
+        _new_task(
+            plan_date=today,
+            text=t["text"],
+            deadline=t.get("deadline", ""),
+            progress=t["progress"],
+            source="rollover",
+        )
+        for t in pending
+    ]
+    return _append(
+        repo,
+        "todo.list.replaced",
+        {
+            "date": today,
+            "title": "今日 Todo",
+            "focus": "完成今天最重要的任务",
+            "time_blocks": [],
+            "tasks": new_tasks,
+            "revision": 1,
+            "evidence_refs": [],
+        },
+    )
+
+
 def get_todo(repo: Repository, plan_date: str = "") -> dict[str, Any]:
     events = repo.load_jsonl_events("todo")
     if not plan_date:
-        plan_date = str(events[-1].get("payload", {}).get("date", "")) if events else date.today().isoformat()
+        if events:
+            latest_date = str(events[-1].get("payload", {}).get("date", ""))
+            if latest_date < date.today().isoformat():
+                return rollover_todo(repo)
+        plan_date = date.today().isoformat()
     return _reduce(events, plan_date)
 
 
 def _assert_revision(state: dict[str, Any], expected_revision: int) -> None:
     if expected_revision != state["revision"]:
         raise RevisionConflict(expected_revision, state["revision"])
+
+
+def _state_for_task(repo: Repository, task_id: str) -> dict[str, Any]:
+    events = repo.load_jsonl_events("todo")
+    seen_dates: list[str] = []
+    for envelope in events:
+        event_date = str(envelope.get("payload", {}).get("date", ""))
+        if event_date and event_date not in seen_dates:
+            seen_dates.append(event_date)
+    for plan_date in reversed(seen_dates):
+        state = get_todo(repo, plan_date=plan_date)
+        if any(task["task_id"] == task_id for task in state["tasks"]):
+            return state
+    return get_todo(repo)
 
 
 def _append(repo: Repository, event_type: str, payload: dict[str, Any]) -> dict[str, Any]:
@@ -254,7 +318,7 @@ def create_todo_task(
 
 
 def update_todo_task(repo: Repository, task_id: str, patch: dict[str, Any], expected_revision: int) -> dict[str, Any]:
-    state = get_todo(repo)
+    state = _state_for_task(repo, task_id)
     _assert_revision(state, expected_revision)
     task = next((deepcopy(item) for item in state["tasks"] if item["task_id"] == task_id), None)
     if task is None:
@@ -276,7 +340,7 @@ def update_todo_task(repo: Repository, task_id: str, patch: dict[str, Any], expe
 
 
 def toggle_todo_task(repo: Repository, task_id: str, expected_revision: int) -> dict[str, Any]:
-    state = get_todo(repo)
+    state = _state_for_task(repo, task_id)
     task = next((item for item in state["tasks"] if item["task_id"] == task_id), None)
     if task is None:
         raise KeyError(task_id)
@@ -285,7 +349,7 @@ def toggle_todo_task(repo: Repository, task_id: str, expected_revision: int) -> 
 
 
 def delete_todo_task(repo: Repository, task_id: str, expected_revision: int) -> dict[str, Any]:
-    state = get_todo(repo)
+    state = _state_for_task(repo, task_id)
     _assert_revision(state, expected_revision)
     if not any(task["task_id"] == task_id for task in state["tasks"]):
         raise KeyError(task_id)
