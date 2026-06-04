@@ -18,3 +18,9 @@ apps/web/test-results/
 apps/web/playwright-report/
 .system/private/
 docs/superpowers/
+
+# Root-level working screenshots
+chatgpt-*.png
+cfa-kb-*.png
+task*.png
+portfolio-console.png

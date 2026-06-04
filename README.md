@@ -6,6 +6,16 @@ OpenExam is a local-first, AI-augmented exam operating system for CFA Level I. I
 
 This is not a generic flashcards app. OpenExam keeps the learning loop local, tracks mistakes and confidence over time, and feeds those signals back into spaced repetition, daily planning, and mock retros.
 
+## Build Philosophy
+
+- Human defines the direction, audience, constraints, and success criteria.
+- Human shapes the architecture and workflow first; AI expands the options and implementation paths.
+- AI does the repetitive algorithmic iteration and code generation.
+- Human verifies behavior, UX, edge cases, and release quality.
+- The loop stays closed: define, build, test, polish, repeat.
+
+If you want the short version for sharing, see [the project-thinking note](./notes/OpenExam-打造思路.md).
+
 ## What it does
 
 - Captures question attempts, wrong answers, confidence, and timing data.
