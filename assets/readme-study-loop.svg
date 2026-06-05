@@ -1,0 +1,55 @@
+<svg width="1600" height="360" viewBox="0 0 1600 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">OpenExam study loop</title>
+  <desc id="desc">A horizontal diagram showing how question attempts become diagnosis, review packs, and scheduled memory updates.</desc>
+  <defs>
+    <linearGradient id="line" x1="120" y1="180" x2="1480" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2563eb" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="360" rx="30" fill="#050816"/>
+  <rect x="18" y="18" width="1564" height="324" rx="24" fill="#081120" stroke="#1f2a44"/>
+  <path d="M170 180H1430" stroke="url(#line)" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+  <path d="M170 180C340 104 520 104 690 180C860 256 1040 256 1210 180C1290 145 1360 132 1430 132" stroke="url(#line)" stroke-width="4" stroke-linecap="round" opacity="0.95"/>
+
+  <g filter="url(#glow)">
+    <circle cx="170" cy="180" r="48" fill="#0f172a" stroke="#22d3ee" stroke-width="4"/>
+    <text x="144" y="187" fill="#e2e8f0" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">1</text>
+    <text x="96" y="254" fill="#93c5fd" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">Attempt</text>
+    <text x="56" y="280" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">Answer, time, confidence</text>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="530" cy="180" r="48" fill="#0f172a" stroke="#60a5fa" stroke-width="4"/>
+    <text x="504" y="187" fill="#e2e8f0" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">2</text>
+    <text x="474" y="254" fill="#93c5fd" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">Diagnose</text>
+    <text x="442" y="280" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">Error type and weak LOS</text>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="890" cy="180" r="48" fill="#0f172a" stroke="#a78bfa" stroke-width="4"/>
+    <text x="864" y="187" fill="#e2e8f0" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">3</text>
+    <text x="835" y="254" fill="#c4b5fd" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">Review</text>
+    <text x="804" y="280" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">Spaced repetition pack</text>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="1250" cy="180" r="48" fill="#0f172a" stroke="#22c55e" stroke-width="4"/>
+    <text x="1224" y="187" fill="#e2e8f0" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">4</text>
+    <text x="1204" y="254" fill="#86efac" font-size="18" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">Retain</text>
+    <text x="1172" y="280" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">Memory state advances</text>
+  </g>
+
+  <g filter="url(#glow)">
+    <rect x="1360" y="96" width="136" height="168" rx="24" fill="#0b1020" stroke="#334155"/>
+    <text x="1384" y="132" fill="#f8fafc" font-size="16" font-weight="700" font-family="Inter, Segoe UI, Arial, sans-serif">Daily plan</text>
+    <text x="1384" y="162" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">Resurface overdue</text>
+    <text x="1384" y="184" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">knowledge points</text>
+    <text x="1384" y="206" fill="#cbd5e1" font-size="14" font-family="Inter, Segoe UI, Arial, sans-serif">and weak topics</text>
+    <rect x="1384" y="224" width="88" height="18" rx="9" fill="#1d4ed8"/>
+  </g>
+</svg>

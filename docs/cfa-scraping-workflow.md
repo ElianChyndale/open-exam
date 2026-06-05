@@ -114,7 +114,7 @@ Phase 4: 知识库同步
 
 ```bash
 # 浏览器自动化
-B="/c/Users/Administrator/.claude/skills/gstack/browse/dist/browse"
+B="<your local gstack browse binary>"
 $B goto <url>           # 导航
 $B text                  # 获取页面文本
 $B js <expr>             # 执行 JS 表达式
