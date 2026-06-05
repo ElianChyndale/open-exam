@@ -1,0 +1,12 @@
+{
+  "event_type": "codex.loop.completed",
+  "candidate_id": "gap-pre-mock-brief-personalization",
+  "summary": "Personalized pre-mock brief and next-strategy with recent weak topics and error-type signals from local events.",
+  "artifacts": [
+    "apps/api/routers/mock.py",
+    "apps/api/tests/test_api_smoke.py"
+  ],
+  "verification": "pytest -q apps/api/tests/test_api_smoke.py -k pre_mock_brief_surfaces_recent_weak_topics_when_evidence_exists",
+  "created_at": "2026-06-05T10:28:13.337654+00:00",
+  "event_id": "codex-loop-complete-b80f81756530"
+}

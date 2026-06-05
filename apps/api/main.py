@@ -25,7 +25,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from deps import get_repo
-from routers import attempts, assessments, cards, dashboard, data_governance, diagnosis, energy, export as export_router, focus, goals, institution, interop, knowledge_graph, language, learning_analytics, mock, navigation, onboarding, privacy, profiles, provenance, question_banks, resource_candidates, resources, review, study_plan, study_planner, todos, transfer, tutor, waves
+from routers import attempts, assessments, auth, cards, dashboard, data_governance, diagnosis, energy, export as export_router, focus, goals, institution, interop, knowledge_graph, language, learning_analytics, mock, navigation, onboarding, privacy, profiles, provenance, question_banks, resource_candidates, resources, review, security, skills, study_plan, study_planner, todos, transfer, tutor, waves
 from routers import review_lab
 
 # New wave routers (feature-flag gated)
@@ -74,6 +74,8 @@ app.add_middleware(
 
 # Mount routers
 app.include_router(attempts.router, prefix="/api/attempts", tags=["attempts"])
+app.include_router(auth.router, prefix="/api/auth", tags=["auth"])
+app.include_router(security.router, prefix="/api/security", tags=["security"])
 app.include_router(cards.router, prefix="/api/cards", tags=["cards"])
 app.include_router(question_banks.router, prefix="/api/question-banks", tags=["question-banks"])
 app.include_router(profiles.router, prefix="/api/profiles", tags=["profiles"])
@@ -89,6 +91,7 @@ app.include_router(assessments.router, prefix="/api/assessments", tags=["assessm
 app.include_router(knowledge_graph.router, prefix="/api/knowledge-graph", tags=["knowledge-graph"])
 app.include_router(data_governance.router, prefix="/api/data-governance", tags=["data-governance"])
 app.include_router(tutor.router, prefix="/api/tutor", tags=["tutor"])
+app.include_router(skills.router, prefix="/api/skills", tags=["skills"])
 app.include_router(goals.router, prefix="/api/goals", tags=["goals"])
 app.include_router(onboarding.router, prefix="/api/onboarding", tags=["onboarding"])
 app.include_router(interop.router, prefix="/api/interop", tags=["interop"])

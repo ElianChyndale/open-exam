@@ -2,12 +2,27 @@
 
 from __future__ import annotations
 
+from collections import Counter
+
 from fastapi import APIRouter, Depends, HTTPException
 
 from deps import get_repo
 from schemas import MockRetroResponse, MockSessionCreate
 
 router = APIRouter()
+
+
+def _recent_mock_focus(repo) -> tuple[list[str], list[str]]:
+    wrong_events = [
+        event for event in repo.load_events()
+        if event.source_layer == "question" and not event.is_correct
+    ]
+    if not wrong_events:
+        return [], []
+    recent = sorted(wrong_events, key=lambda item: item.created_at, reverse=True)[:30]
+    topic_counts = Counter(event.topic for event in recent if event.topic)
+    error_counts = Counter(event.error_type for event in recent if event.error_type)
+    return [topic for topic, _ in topic_counts.most_common(3)], [error for error, _ in error_counts.most_common(3)]
 
 
 @router.post("/create")
@@ -62,9 +77,8 @@ async def post_mock_retro(session_id: str, repo=Depends(get_repo)):
     a_count = sum(1 for e in events if e.source_layer == "agent")
 
     # Generate stop-doing and next-strategy
-    from collections import Counter
-
     error_counts = Counter(e.error_type for e in events if e.source_layer == "question")
+    focus_topics, focus_error_types = _recent_mock_focus(repo)
     stop_doing = []
     if error_counts.get("careless_reading", 0) >= 3:
         stop_doing.append("别再快速扫题——每题先读最后一句（问什么）再回头看数据。")
@@ -75,7 +89,10 @@ async def post_mock_retro(session_id: str, repo=Depends(get_repo)):
     if b_count > 0:
         stop_doing.append(f"识别到 {b_count} 个可能的认知偏差，下次 mock 前先读纠偏规则。")
 
-    next_strategy = "下次 mock 前 24 小时：1) 复习高频错题卡 2) 做 10 题定向热身 3) 读 pre-mock brief。"
+    if focus_topics:
+        next_strategy = f"下次 mock 前 24 小时：1) 优先复习 {', '.join(focus_topics[:2])} 的高频错题卡 2) 做 10 题定向热身 3) 读 pre-mock brief。"
+    else:
+        next_strategy = "下次 mock 前 24 小时：1) 复习高频错题卡 2) 做 10 题定向热身 3) 读 pre-mock brief。"
 
     return MockRetroResponse(
         session_id=session_id,
@@ -94,11 +111,20 @@ async def get_pre_mock_brief(session_id: str, repo=Depends(get_repo)):
     from app.workflows import pre_mock_brief
 
     rule = pre_mock_brief(repo)
+    focus_topics, focus_error_types = _recent_mock_focus(repo)
+    decision = rule.decision
+    if focus_topics:
+        decision = f"{rule.decision} 本次 mock 前优先关注: {', '.join(focus_topics[:3])}。"
+    why_it_works = rule.why_it_works
+    if focus_error_types:
+        why_it_works = f"{rule.why_it_works} 最近高频错因: {', '.join(focus_error_types[:3])}。"
     return {
         "session_id": session_id,
         "trigger": rule.trigger,
-        "decision": rule.decision,
-        "why_it_works": rule.why_it_works,
+        "decision": decision,
+        "why_it_works": why_it_works,
+        "focus_topics": focus_topics,
+        "focus_error_types": focus_error_types,
     }
 
 

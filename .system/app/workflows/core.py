@@ -1157,6 +1157,8 @@ def record_event(repo: Repository, payload: dict, mode: str) -> MistakeEvent:
         payload.pop(field_name, None)
     payload["source_layer"] = expected
     event = MistakeEvent.from_payload(payload)
+    if event.source_layer == "question" and event.is_correct:
+        event.event_type = "question.evidence.recorded"
 
     # Replay guard: skip if event_id already exists in the catalog index
     if repo.has_event(event.event_id):
@@ -1228,15 +1230,13 @@ def record_question_attempt(repo: Repository, payload: dict) -> dict:
         created_at,
     )
     is_correct = bool(payload.get("is_correct", False))
-    event = None
-    if not is_correct:
-        capture_fields = {field.name for field in fields(MistakeEvent)}
-        mistake_payload = {
-            key: value
-            for key, value in payload.items()
-            if key in capture_fields
-        }
-        event = record_event(repo, mistake_payload, mode="record-mistake")
+    capture_fields = {field.name for field in fields(MistakeEvent)}
+    mistake_payload = {
+        key: value
+        for key, value in payload.items()
+        if key in capture_fields
+    }
+    event = record_event(repo, mistake_payload, mode="record-mistake")
 
     repo.append_attempt_record(
         {
@@ -1254,7 +1254,7 @@ def record_question_attempt(repo: Repository, payload: dict) -> dict:
         }
     )
     if is_correct:
-        return {"attempt_id": attempt_id, "event": None, "card_id": ""}
+        return {"attempt_id": attempt_id, "event": event, "card_id": ""}
 
     return {
         "attempt_id": attempt_id,
@@ -1533,6 +1533,8 @@ def mine_patterns(repo: Repository, events: list[MistakeEvent] | None = None) ->
     for event in events:
         if event.source_layer != "question":
             continue
+        if event.is_correct:
+            continue
         key = f"{event.topic}::{event.los}::{event.error_type}"
         buckets[key].append(event)
 
@@ -1559,6 +1561,8 @@ def moc_gap_review(repo: Repository) -> Path | None:
     buckets: dict[str, list[MistakeEvent]] = defaultdict(list)
     for event in events:
         if event.source_layer != "question":
+            continue
+        if event.is_correct:
             continue
         if not event.moc_target:
             continue
@@ -1616,7 +1620,11 @@ def moc_gap_review(repo: Repository) -> Path | None:
 
 
 def export_mock_pages(repo: Repository) -> None:
-    events = [event for event in repo.load_events() if event.source_layer == "question"]
+    events = [
+        event
+        for event in repo.load_events()
+        if event.source_layer == "question" and not event.is_correct
+    ]
     grouped: dict[str, list[MistakeEvent]] = defaultdict(list)
     for event in events:
         bucket = mock_bucket_for_event(repo, event)
@@ -1655,6 +1663,7 @@ def export_mock_pages(repo: Repository) -> None:
 def export_obsidian(repo: Repository) -> None:
     events = repo.load_events()
     question_events = [event for event in events if event.source_layer == "question"]
+    wrong_question_events = [event for event in question_events if not event.is_correct]
     bias_events = [event for event in events if event.source_layer == "bias"]
     agent_events = [event for event in events if event.source_layer == "agent"]
 
@@ -1664,12 +1673,12 @@ def export_obsidian(repo: Repository) -> None:
             "# 今日新增错题",
             *[
                 f"- {event.topic} | {event.los} | {event.error_type} | {event.correct_resolution}"
-                for event in question_events
+                for event in wrong_question_events
             ],
         ],
     )
 
-    error_counts = Counter(event.error_type for event in events)
+    error_counts = Counter(event.error_type for event in [*wrong_question_events, *bias_events, *agent_events])
     repo.write_obsidian_page(
         "高频错因榜.md",
         [
@@ -1678,7 +1687,7 @@ def export_obsidian(repo: Repository) -> None:
         ],
     )
 
-    topic_counts = Counter(event.topic for event in question_events)
+    topic_counts = Counter(event.topic for event in wrong_question_events)
     repo.write_obsidian_page(
         "Topic弱点页.md",
         [

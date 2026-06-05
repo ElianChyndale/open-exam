@@ -1,8 +1,8 @@
 {
   "profile_id": "default",
   "topic_count": 5,
-  "asset_count": 79,
-  "link_count": 29,
+  "asset_count": 128,
+  "link_count": 26,
   "summary": {
     "covered": 0,
     "partial": 0,
@@ -131,18 +131,16 @@
       "record_id": "coverage-70eecc042c8c",
       "profile_id": "default",
       "topic_id": "demo-ci-wacc",
-      "confirmed_asset_count": 3,
+      "confirmed_asset_count": 4,
       "draft_asset_count": 7,
       "rejected_asset_count": 0,
       "formula_asset_count": 3,
       "decision_rule_asset_count": 3,
-      "mistake_link_count": 0,
+      "mistake_link_count": 1,
       "mastery_state": "Learning",
       "coverage_status": "weak",
-      "coverage_score": 0.7175,
-      "missing_asset_types": [
-        "definition"
-      ],
+      "coverage_score": 0.8225,
+      "missing_asset_types": [],
       "recommended_actions": [
         "review transfer gap",
         "review weak confirmed assets",
@@ -243,6 +241,13 @@
           "topic_id": "demo-ci-wacc",
           "match_reason": "keyword overlap: capital, weights",
           "confidence": 0.5657142857142857,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-02333fcf15a1",
+          "topic_id": "demo-ci-wacc",
+          "match_reason": "keyword overlap: capital, corporate, issuers",
+          "confidence": 0.5492307692307692,
           "created_by": "keyword_match"
         }
       ],
@@ -1084,6 +1089,49 @@
           "next_review_at": "",
           "created_from": "text_note",
           "validation_status": "needs_review"
+        },
+        {
+          "asset_id": "card-02333fcf15a1",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Corporate Issuers",
+          "module": "Corporate Issuers",
+          "los": "M04 Working Capital and Liquidity - liquidity drags and pulls",
+          "title": "Corporate Issuers",
+          "trigger": "M04 Working Capital and Liquidity - liquidity drags and pulls",
+          "correct_rule": "Correct answer is B. Uncollected receivables are a drag on liquidity",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Corporate Issuers / M04 Working Capital and Liquidity - liquidity",
+          "correct_steps": [
+            "Correct answer is B. Uncollected receivables are a drag on liquidity"
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "chat-screenshot-2026-05-29-liquidity-drag-vs-pull"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
         }
       ],
       "transfer_gaps": [
@@ -1135,12 +1183,12 @@
       "record_id": "coverage-f9f195e44e84",
       "profile_id": "default",
       "topic_id": "demo-fi-effective-duration",
-      "confirmed_asset_count": 2,
+      "confirmed_asset_count": 3,
       "draft_asset_count": 0,
       "rejected_asset_count": 0,
       "formula_asset_count": 0,
       "decision_rule_asset_count": 0,
-      "mistake_link_count": 2,
+      "mistake_link_count": 3,
       "mastery_state": "Learning",
       "coverage_status": "weak",
       "coverage_score": 0.2625,
@@ -1194,6 +1242,13 @@
           "topic_id": "demo-fi-effective-duration",
           "match_reason": "keyword overlap: duration, effective, fixed, income",
           "confidence": 0.6133333333333333,
+          "created_by": "keyword_match"
+        },
+        {
+          "asset_id": "card-2af6bfa1b23c",
+          "topic_id": "demo-fi-effective-duration",
+          "match_reason": "keyword overlap: duration, effective, fixed, income",
+          "confidence": 0.6,
           "created_by": "keyword_match"
         }
       ],
@@ -1266,6 +1321,49 @@
           "difficulty": "basic",
           "source_refs": [
             "task014-browser"
+          ],
+          "source_quality": 0.65,
+          "resource_id": "",
+          "resource_quality_status": "",
+          "resource_validation_status": "",
+          "resource_match_reasons": [],
+          "resource_conflicts": [],
+          "resource_promoted_at": "",
+          "exam_weight": 0.55,
+          "mistake_link_count": 1,
+          "decay_risk": 0.7,
+          "mastery_state": "New",
+          "next_review_at": "",
+          "created_from": "mistake",
+          "validation_status": "derived"
+        },
+        {
+          "asset_id": "card-2af6bfa1b23c",
+          "asset_type": "mistake_corrected",
+          "profile_id": "default",
+          "subject": "Fixed Income",
+          "module": "Fixed Income",
+          "los": "FI.DATA.Browser",
+          "title": "Fixed Income",
+          "trigger": "FI.DATA.Browser",
+          "correct_rule": "Use effective duration when cash flows can change.",
+          "formula_latex": "",
+          "plain_formula": "",
+          "variables": [],
+          "applies_when": [],
+          "not_when": [],
+          "assumptions": [],
+          "common_correct_boundary_rules": [],
+          "example": "24 小时内重做 2 道 Fixed Income / FI.DATA.Browser 同类题。",
+          "correct_steps": [
+            "Use effective duration when cash flows can change."
+          ],
+          "ba_ii_plus_steps": [],
+          "formula_family": "",
+          "syllabus_topic_id": "",
+          "difficulty": "basic",
+          "source_refs": [
+            "task015-browser"
           ],
           "source_quality": 0.65,
           "resource_id": "",
@@ -1892,15 +1990,15 @@
       "record_id": "coverage-7b5f0124c8d8",
       "profile_id": "default",
       "topic_id": "demo-econ-business-cycles",
-      "confirmed_asset_count": 6,
+      "confirmed_asset_count": 1,
       "draft_asset_count": 0,
       "rejected_asset_count": 0,
       "formula_asset_count": 0,
       "decision_rule_asset_count": 0,
-      "mistake_link_count": 2,
+      "mistake_link_count": 0,
       "mastery_state": "Learning",
       "coverage_status": "weak",
-      "coverage_score": 0.5225,
+      "coverage_score": 0.5275,
       "missing_asset_types": [
         "decision_rule"
       ],
@@ -1935,174 +2033,14 @@
       },
       "links": [
         {
-          "asset_id": "card-f7ea9a7f28c9",
-          "topic_id": "demo-econ-business-cycles",
-          "match_reason": "keyword overlap: business, cycle, cycles, economics, indicator, indicators",
-          "confidence": 0.6514285714285714,
-          "created_by": "keyword_match"
-        },
-        {
-          "asset_id": "knowledge-033d03a0d683",
-          "topic_id": "demo-econ-business-cycles",
-          "match_reason": "keyword overlap: business, cycle, cycles, indicators",
-          "confidence": 0.63,
-          "created_by": "keyword_match"
-        },
-        {
-          "asset_id": "knowledge-2798e5b9a4ad",
-          "topic_id": "demo-econ-business-cycles",
-          "match_reason": "keyword overlap: business, cycles, indicators",
-          "confidence": 0.63,
-          "created_by": "keyword_match"
-        },
-        {
           "asset_id": "knowledge-c09508719b80",
           "topic_id": "demo-econ-business-cycles",
           "match_reason": "keyword overlap: business, cycle, cycles, indicators",
           "confidence": 0.6133333333333333,
           "created_by": "keyword_match"
-        },
-        {
-          "asset_id": "knowledge-9709e5245520",
-          "topic_id": "demo-econ-business-cycles",
-          "match_reason": "keyword overlap: business, cycles, indicators",
-          "confidence": 0.6085714285714285,
-          "created_by": "keyword_match"
-        },
-        {
-          "asset_id": "card-f340d2f7b1ef",
-          "topic_id": "demo-econ-business-cycles",
-          "match_reason": "keyword overlap: business, cycle, cycles, economics",
-          "confidence": 0.5657142857142857,
-          "created_by": "keyword_match"
         }
       ],
       "linked_assets": [
-        {
-          "asset_id": "card-f7ea9a7f28c9",
-          "asset_type": "mistake_corrected",
-          "profile_id": "default",
-          "subject": "Economics",
-          "module": "Economics",
-          "los": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
-          "title": "Economics",
-          "trigger": "M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot)",
-          "correct_rule": "B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction.",
-          "formula_latex": "",
-          "plain_formula": "",
-          "variables": [],
-          "applies_when": [],
-          "not_when": [],
-          "assumptions": [],
-          "common_correct_boundary_rules": [],
-          "example": "24 小时内重做 2 道 Economics / M02 Understanding Business Cycles - economic indicators over the business cycle: leading vs lagging indicators (approximate from screenshot) 同类题。",
-          "correct_steps": [
-            "B. evidence that a cyclical upturn is expected to occur in the future. Rising residential building permits are a leading indicator and point to a future upturn; increasing average duration of unemployment is lagging and shows a downturn has already occurred; little change in services inflation is lagging and neutral for future direction."
-          ],
-          "ba_ii_plus_steps": [],
-          "formula_family": "",
-          "syllabus_topic_id": "",
-          "difficulty": "basic",
-          "source_refs": [
-            "chat-screenshot-2026-05-27-econ-indicators-upturn"
-          ],
-          "source_quality": 0.65,
-          "resource_id": "",
-          "resource_quality_status": "",
-          "resource_validation_status": "",
-          "resource_match_reasons": [],
-          "resource_conflicts": [],
-          "resource_promoted_at": "",
-          "exam_weight": 0.55,
-          "mistake_link_count": 1,
-          "decay_risk": 0.7,
-          "mastery_state": "New",
-          "next_review_at": "",
-          "created_from": "mistake",
-          "validation_status": "derived"
-        },
-        {
-          "asset_id": "knowledge-033d03a0d683",
-          "asset_type": "syllabus_core",
-          "profile_id": "default",
-          "subject": "Economics",
-          "module": "M02 Business Cycles and Indicators",
-          "los": "Cycle phases",
-          "title": "M02 Business Cycles and Indicators",
-          "trigger": "Cycle phases",
-          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Cycle phases.",
-          "formula_latex": "",
-          "plain_formula": "",
-          "variables": [],
-          "applies_when": [],
-          "not_when": [],
-          "assumptions": [],
-          "common_correct_boundary_rules": [],
-          "example": "",
-          "correct_steps": [],
-          "ba_ii_plus_steps": [],
-          "formula_family": "",
-          "syllabus_topic_id": "",
-          "difficulty": "basic",
-          "source_refs": [
-            "CFA_tier1/Economics/00-Economics-MOC.md"
-          ],
-          "source_quality": 0.8,
-          "resource_id": "",
-          "resource_quality_status": "",
-          "resource_validation_status": "",
-          "resource_match_reasons": [],
-          "resource_conflicts": [],
-          "resource_promoted_at": "",
-          "exam_weight": 0.6,
-          "mistake_link_count": 0,
-          "decay_risk": 0.5,
-          "mastery_state": "New",
-          "next_review_at": "",
-          "created_from": "syllabus",
-          "validation_status": "derived"
-        },
-        {
-          "asset_id": "knowledge-2798e5b9a4ad",
-          "asset_type": "syllabus_core",
-          "profile_id": "default",
-          "subject": "Economics",
-          "module": "M02 Business Cycles and Indicators",
-          "los": "Indicators",
-          "title": "M02 Business Cycles and Indicators",
-          "trigger": "Indicators",
-          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Indicators.",
-          "formula_latex": "",
-          "plain_formula": "",
-          "variables": [],
-          "applies_when": [],
-          "not_when": [],
-          "assumptions": [],
-          "common_correct_boundary_rules": [],
-          "example": "",
-          "correct_steps": [],
-          "ba_ii_plus_steps": [],
-          "formula_family": "",
-          "syllabus_topic_id": "",
-          "difficulty": "basic",
-          "source_refs": [
-            "CFA_tier1/Economics/00-Economics-MOC.md"
-          ],
-          "source_quality": 0.8,
-          "resource_id": "",
-          "resource_quality_status": "",
-          "resource_validation_status": "",
-          "resource_match_reasons": [],
-          "resource_conflicts": [],
-          "resource_promoted_at": "",
-          "exam_weight": 0.6,
-          "mistake_link_count": 0,
-          "decay_risk": 0.5,
-          "mastery_state": "New",
-          "next_review_at": "",
-          "created_from": "syllabus",
-          "validation_status": "derived"
-        },
         {
           "asset_id": "knowledge-c09508719b80",
           "asset_type": "syllabus_core",
@@ -2142,90 +2080,6 @@
           "mastery_state": "New",
           "next_review_at": "",
           "created_from": "syllabus",
-          "validation_status": "derived"
-        },
-        {
-          "asset_id": "knowledge-9709e5245520",
-          "asset_type": "syllabus_core",
-          "profile_id": "default",
-          "subject": "Economics",
-          "module": "M02 Business Cycles and Indicators",
-          "los": "Business behavior",
-          "title": "M02 Business Cycles and Indicators",
-          "trigger": "Business behavior",
-          "correct_rule": "M02 Business Cycles and Indicators: correctly define, recall, and apply Business behavior.",
-          "formula_latex": "",
-          "plain_formula": "",
-          "variables": [],
-          "applies_when": [],
-          "not_when": [],
-          "assumptions": [],
-          "common_correct_boundary_rules": [],
-          "example": "",
-          "correct_steps": [],
-          "ba_ii_plus_steps": [],
-          "formula_family": "",
-          "syllabus_topic_id": "",
-          "difficulty": "basic",
-          "source_refs": [
-            "CFA_tier1/Economics/00-Economics-MOC.md"
-          ],
-          "source_quality": 0.8,
-          "resource_id": "",
-          "resource_quality_status": "",
-          "resource_validation_status": "",
-          "resource_match_reasons": [],
-          "resource_conflicts": [],
-          "resource_promoted_at": "",
-          "exam_weight": 0.6,
-          "mistake_link_count": 0,
-          "decay_risk": 0.5,
-          "mastery_state": "New",
-          "next_review_at": "",
-          "created_from": "syllabus",
-          "validation_status": "derived"
-        },
-        {
-          "asset_id": "card-f340d2f7b1ef",
-          "asset_type": "mistake_corrected",
-          "profile_id": "default",
-          "subject": "Economics",
-          "module": "Economics",
-          "los": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
-          "title": "Economics",
-          "trigger": "M02 Understanding Business Cycles - resource use and labor productivity over the business cycle (approximate from screenshot)",
-          "correct_rule": "C. at the bottom of a recession. At the end/bottom of a recession,",
-          "formula_latex": "",
-          "plain_formula": "",
-          "variables": [],
-          "applies_when": [],
-          "not_when": [],
-          "assumptions": [],
-          "common_correct_boundary_rules": [],
-          "example": "24 小时内重做 2 道 Economics / M02 Understanding Business Cycles - resource",
-          "correct_steps": [
-            "C. at the bottom of a recession. At the end/bottom of a recession,"
-          ],
-          "ba_ii_plus_steps": [],
-          "formula_family": "",
-          "syllabus_topic_id": "",
-          "difficulty": "basic",
-          "source_refs": [
-            "chat-screenshot-2026-05-27-productivity-business-cycle"
-          ],
-          "source_quality": 0.65,
-          "resource_id": "",
-          "resource_quality_status": "",
-          "resource_validation_status": "",
-          "resource_match_reasons": [],
-          "resource_conflicts": [],
-          "resource_promoted_at": "",
-          "exam_weight": 0.55,
-          "mistake_link_count": 1,
-          "decay_risk": 0.7,
-          "mastery_state": "New",
-          "next_review_at": "",
-          "created_from": "mistake",
           "validation_status": "derived"
         }
       ],
@@ -2304,24 +2158,10 @@
       "created_by": "keyword_match"
     },
     {
-      "asset_id": "card-f7ea9a7f28c9",
-      "topic_id": "demo-econ-business-cycles",
-      "match_reason": "keyword overlap: business, cycle, cycles, economics, indicator, indicators",
-      "confidence": 0.6514285714285714,
-      "created_by": "keyword_match"
-    },
-    {
-      "asset_id": "knowledge-033d03a0d683",
-      "topic_id": "demo-econ-business-cycles",
-      "match_reason": "keyword overlap: business, cycle, cycles, indicators",
-      "confidence": 0.63,
-      "created_by": "keyword_match"
-    },
-    {
-      "asset_id": "knowledge-2798e5b9a4ad",
-      "topic_id": "demo-econ-business-cycles",
-      "match_reason": "keyword overlap: business, cycles, indicators",
-      "confidence": 0.63,
+      "asset_id": "card-02333fcf15a1",
+      "topic_id": "demo-ci-wacc",
+      "match_reason": "keyword overlap: capital, corporate, issuers",
+      "confidence": 0.5492307692307692,
       "created_by": "keyword_match"
     },
     {
@@ -2329,20 +2169,6 @@
       "topic_id": "demo-econ-business-cycles",
       "match_reason": "keyword overlap: business, cycle, cycles, indicators",
       "confidence": 0.6133333333333333,
-      "created_by": "keyword_match"
-    },
-    {
-      "asset_id": "knowledge-9709e5245520",
-      "topic_id": "demo-econ-business-cycles",
-      "match_reason": "keyword overlap: business, cycles, indicators",
-      "confidence": 0.6085714285714285,
-      "created_by": "keyword_match"
-    },
-    {
-      "asset_id": "card-f340d2f7b1ef",
-      "topic_id": "demo-econ-business-cycles",
-      "match_reason": "keyword overlap: business, cycle, cycles, economics",
-      "confidence": 0.5657142857142857,
       "created_by": "keyword_match"
     },
     {
@@ -2357,6 +2183,13 @@
       "topic_id": "demo-fi-effective-duration",
       "match_reason": "keyword overlap: duration, effective, fixed, income",
       "confidence": 0.6133333333333333,
+      "created_by": "keyword_match"
+    },
+    {
+      "asset_id": "card-2af6bfa1b23c",
+      "topic_id": "demo-fi-effective-duration",
+      "match_reason": "keyword overlap: duration, effective, fixed, income",
+      "confidence": 0.6,
       "created_by": "keyword_match"
     },
     {

@@ -1,0 +1,14 @@
+{
+  "event_type": "codex.loop.completed",
+  "candidate_id": "gap-admin-auth-boundary",
+  "summary": "Implemented local auth scaffold, admin-only question-bank boundaries, security audit events, and API tests.",
+  "artifacts": [
+    ".system/app/local_auth.py",
+    "apps/api/routers/auth.py",
+    "apps/api/routers/question_banks.py",
+    "apps/api/tests/test_api_auth.py"
+  ],
+  "verification": "pytest -q apps/api/tests/test_api_auth.py apps/api/tests/test_api_smoke.py -k private_question_import_quarantines_incomplete_records_until_reviewed",
+  "created_at": "2026-06-05T09:50:53.390812+00:00",
+  "event_id": "codex-loop-complete-2dc8eb75c407"
+}

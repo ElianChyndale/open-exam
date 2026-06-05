@@ -103,6 +103,51 @@ def test_record_question_mistake_preserves_screenshot_metadata(tmp_path: Path) -
     assert "attachments/mock4-q18.png" in projection_text
 
 
+def test_record_non_wrong_question_evidence_creates_event_but_no_card(tmp_path: Path) -> None:
+    from app.cli import run_cli
+
+    payload = {
+        "source_layer": "question",
+        "topic": "Financial Statement Analysis",
+        "los": "M03 cash proceeds from sale of equipment",
+        "prompt_or_question": "Cash received from the sale of equipment question, but the learner read the explanation directly before solving independently.",
+        "wrong_choice_or_output": "Did not answer independently; read the explanation directly.",
+        "correct_resolution": "Accumulated depreciation removed = 7 + 4 - 8 = 3. Book value of equipment sold = 5 - 3 = 2. Because the company reported a loss of 0.25, cash proceeds = 2 - 0.25 = 1.75.",
+        "error_type": "solution_peek",
+        "confidence": 1,
+        "time_spent": 0,
+        "evidence_refs": ["direct-solution-view-1"],
+        "is_correct": True,
+    }
+
+    exit_code = run_cli(
+        ["record-mistake", "--payload", json.dumps(payload, ensure_ascii=False)],
+        repo_root=tmp_path,
+    )
+
+    assert exit_code == 0
+
+    question_events = list((tmp_path / ".system" / "events" / "question").glob("*.jsonl"))
+    assert question_events
+    event_record = json.loads(question_events[0].read_text(encoding="utf-8").splitlines()[0])
+    assert event_record["is_correct"] is True
+    assert event_record["error_type"] == "solution_peek"
+    assert event_record["event_type"] == "question.evidence.recorded"
+
+    attempts = list((tmp_path / ".system" / "events" / "attempt").glob("*.jsonl"))
+    assert attempts
+    attempt_record = json.loads(attempts[0].read_text(encoding="utf-8").splitlines()[0])
+    assert attempt_record["is_correct"] is True
+    assert attempt_record["mistake_event_id"] == event_record["event_id"]
+
+    cards = list((tmp_path / ".system" / "memory" / "question-errors").glob("*.md"))
+    assert cards == []
+
+    daily = tmp_path / "CFA_tier1" / "dashboard" / "今日新增错题.md"
+    assert daily.exists()
+    assert "solution_peek" not in daily.read_text(encoding="utf-8")
+
+
 def test_learning_block_is_classified_as_cognitive_bias(tmp_path: Path) -> None:
     from app.cli import run_cli
 

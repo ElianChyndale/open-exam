@@ -76,18 +76,22 @@ async def upload_screenshot(req: ScreenshotUploadRequest, repo=Depends(get_repo)
     filepath = evidence_dir / filename
     filepath.write_bytes(image_bytes)
 
-    # Return a pre-filled payload for the agent to complete
+    from app.screenshot_capture import create_screenshot_extraction_draft
+
+    draft = create_screenshot_extraction_draft(
+        repo,
+        evidence_path=str(filepath.relative_to(repo.root)),
+        topic=req.topic,
+        los=req.los,
+    )
+
     return {
-        "status": "screenshot_saved",
+        "status": "screenshot_draft_created",
         "filename": filename,
         "path": str(filepath.relative_to(repo.root)),
-        "suggested_payload": {
-            "source_layer": "question",
-            "topic": req.topic,
-            "los": req.los,
-            "source_type": "screenshot",
-            "evidence_assets": [str(filepath.relative_to(repo.root))],
-        },
+        "draft_id": draft.draft_id,
+        "draft_path": draft.draft_path,
+        "draft": draft.as_dict(),
     }
 
 

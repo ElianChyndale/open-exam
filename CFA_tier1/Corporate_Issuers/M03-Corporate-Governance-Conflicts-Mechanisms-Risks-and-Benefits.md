@@ -62,12 +62,12 @@ Governance is the control system around corporate power. 考试重点不是背�
 
 ### Manager-Shareholder Agency Conflict Examples
 
-| Manager behavior | Why it conflicts with shareholders | Mitigating mechanism |
-|---|---|---|
-| Insufficient effort | Managers enjoy private time/comfort while shareholders bear lower performance | Independent board monitoring; performance evaluation |
-| Excessive perquisites | Corporate jets, elaborate offices, or perks transfer value from shareholders to managers | Compensation committee; expense controls; disclosure |
-| Failure to take appropriate risk | Managers may avoid positive-NPV risk to protect their careers | Equity-based compensation; board challenge |
-| Job protection / entrenchment | Managers may invest or restructure to safeguard their jobs rather than maximize value | Independent board; takeover discipline; shareholder voting |
+| Manager behavior                 | Why it conflicts with shareholders                                                       | Mitigating mechanism                                       |     |
+| -------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | --- |
+| Insufficient effort              | Managers enjoy private time/comfort while shareholders bear lower performance            | Independent board monitoring; performance evaluation       |     |
+| Excessive perquisites            | Corporate jets, elaborate offices, or perks transfer value from shareholders to managers | Compensation committee; expense controls; disclosure       |     |
+| Failure to take appropriate risk | Managers may avoid positive-NPV risk to protect their careers                            | Equity-based compensation; board challenge                 |     |
+| Job protection / entrenchment    | Managers may invest or restructure to safeguard their jobs rather than maximize value    | Independent board; takeover discipline; shareholder voting |     |
 
 ## 5. Practice & Mock Evidence 题库证据
 

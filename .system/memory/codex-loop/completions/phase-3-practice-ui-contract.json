@@ -1,0 +1,11 @@
+{
+  "event_type": "codex.loop.completed",
+  "candidate_id": "phase-3-practice-ui-contract",
+  "summary": "Created practice UI API contract covering project selection, practice configuration, safe question display gap, answer submission, frontend states, and browser smoke checklist before frontend route changes.",
+  "artifacts": [
+    "docs/practice_ui_api_contract.md"
+  ],
+  "verification": "Checked contract sections/fields with Select-String; pytest private question-bank practice/answer tests remain green",
+  "created_at": "2026-06-05T06:08:11.629997+00:00",
+  "event_id": "codex-loop-complete-185ada5a6ce9"
+}

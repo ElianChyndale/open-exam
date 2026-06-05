@@ -96,6 +96,44 @@ def test_correct_attempt_is_stored_without_mistake_card(client: TestClient, tmp_
     assert (tmp_path / ".system" / "events" / "attempt" / "attempt-events.jsonl").exists()
 
 
+def test_screenshot_upload_creates_structured_draft_handoff(client: TestClient, tmp_path: Path) -> None:
+    response = client.post(
+        "/api/attempts/screenshot",
+        json={
+            "topic": "Fixed Income",
+            "los": "",
+            "filename": "../../callable-bond.png",
+            "image_data": "aGVsbG8=",
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["status"] == "screenshot_draft_created"
+    assert payload["filename"].endswith("-callable-bond.png")
+    assert payload["draft_id"].startswith("screenshot-draft-")
+    assert payload["draft"]["status"] == "needs_extraction"
+    assert "los" in payload["draft"]["uncertain_fields"]
+
+    draft_path = tmp_path / payload["draft_path"]
+    assert draft_path.exists()
+    assert (tmp_path / ".system" / "events" / "capture" / "capture-events.jsonl").exists()
+
+
+def _bootstrap_admin_headers(client: TestClient) -> dict[str, str]:
+    created = client.post(
+        "/api/auth/bootstrap-admin",
+        json={"username": "admin", "password": "s3cret-passphrase"},
+    )
+    assert created.status_code == 200
+    logged_in = client.post(
+        "/api/auth/login",
+        json={"username": "admin", "password": "s3cret-passphrase"},
+    )
+    assert logged_in.status_code == 200
+    return {"Authorization": f"Bearer {logged_in.json()['session_token']}"}
+
+
 def test_energy_check_in_does_not_poison_mistake_event_loading(client: TestClient) -> None:
     energy = client.post(
         "/api/energy/check-in",
@@ -303,8 +341,10 @@ def test_dashboard_uses_attempt_correctness_and_calendar_keeps_day_keys(client: 
 
 
 def test_private_question_import_quarantines_incomplete_records_until_reviewed(client: TestClient) -> None:
+    headers = _bootstrap_admin_headers(client)
     imported = client.post(
         "/api/question-banks/import",
+        headers=headers,
         json={
             "source_file": "private-bank.pdf",
             "questions": [
@@ -332,13 +372,14 @@ def test_private_question_import_quarantines_incomplete_records_until_reviewed(c
     assert imported.json()["verified_count"] == 1
     assert imported.json()["quarantined_count"] == 1
 
-    quarantine = client.get("/api/question-banks/quarantine")
+    quarantine = client.get("/api/question-banks/quarantine", headers=headers)
     assert quarantine.status_code == 200
     question = quarantine.json()["questions"][0]
     assert question["verification_status"] == "quarantined"
 
     reviewed = client.post(
         f"/api/question-banks/{question['question_id']}/review",
+        headers=headers,
         json={
             "action": "approve",
             "patch": {
@@ -352,7 +393,45 @@ def test_private_question_import_quarantines_incomplete_records_until_reviewed(c
     )
     assert reviewed.status_code == 200
     assert reviewed.json()["question"]["verification_status"] == "verified"
-    assert client.get("/api/question-banks/quarantine").json()["questions"] == []
+    assert client.get("/api/question-banks/quarantine", headers=headers).json()["questions"] == []
+
+    practice = client.post(
+        "/api/question-banks/practice-sessions",
+        json={
+            "topic": "Fixed Income",
+            "count": 1,
+            "tags": ["FI.1"],
+            "tag_mode": "or",
+            "seed": 3,
+        },
+    )
+    assert practice.status_code == 200
+    assert practice.json()["question_count"] == 1
+    assert "prompt" not in practice.json()["question_refs"][0]
+
+    display = client.get(
+        f"/api/question-banks/practice-sessions/{practice.json()['session_id']}/questions/"
+        f"{practice.json()['question_ids'][0]}"
+    )
+    assert display.status_code == 200
+    assert display.json()["state"] == "unanswered"
+    assert "answer" not in display.json()
+    assert "explanation" not in display.json()
+
+    answered = client.post(
+        f"/api/question-banks/practice-sessions/{practice.json()['session_id']}/answer",
+        json={
+            "question_id": practice.json()["question_ids"][0],
+            "selected_answer": "A",
+            "time_spent": 45,
+            "confidence": 2,
+            "note": "Reviewed the source answer.",
+            "favorite": True,
+        },
+    )
+    assert answered.status_code == 200
+    assert answered.json()["attempt"]["is_correct"] is True
+    assert answered.json()["favorite"]["favorite"] is True
 
 
 def test_calendar_settings_and_weekly_markdown_report_are_exportable(client: TestClient) -> None:
@@ -420,6 +499,47 @@ def test_diagnosis_resolves_attempt_id_to_the_recorded_mistake(client: TestClien
     assert diagnosis.status_code == 200
     assert diagnosis.json()["error_summary"] == "Fixed Income / FI.Duration: concept_confusion"
     assert diagnosis.json()["linked_los"] == ["FI.Duration"]
+
+
+def test_pre_mock_brief_surfaces_recent_weak_topics_when_evidence_exists(client: TestClient) -> None:
+    client.post(
+        "/api/attempts",
+        json={
+            "topic": "Derivatives",
+            "los": "DER.1",
+            "prompt_or_question": "Option delta question",
+            "wrong_choice_or_output": "A",
+            "correct_resolution": "B",
+            "error_type": "concept_confusion",
+            "confidence": 3,
+            "time_spent": 70,
+            "evidence_refs": ["mock-brief-1"],
+            "is_correct": False,
+        },
+    )
+    client.post(
+        "/api/attempts",
+        json={
+            "topic": "Derivatives",
+            "los": "DER.2",
+            "prompt_or_question": "Swap valuation question",
+            "wrong_choice_or_output": "A",
+            "correct_resolution": "B",
+            "error_type": "formula_misuse",
+            "confidence": 2,
+            "time_spent": 80,
+            "evidence_refs": ["mock-brief-2"],
+            "is_correct": False,
+        },
+    )
+
+    brief = client.get("/api/mock/mock-1/brief")
+
+    assert brief.status_code == 200
+    payload = brief.json()
+    assert payload["focus_topics"]
+    assert "Derivatives" in payload["focus_topics"]
+    assert payload["focus_error_types"]
 
 
 def test_effectiveness_completion_rate_uses_due_item_count(client: TestClient, monkeypatch) -> None:

@@ -101,3 +101,43 @@ async def archive_conversation(conversation_id: str, repo=Depends(get_repo)):
         return _service(repo).archive_conversation(conversation_id)
     except KeyError as exc:
         raise HTTPException(status_code=404, detail=f"Tutor conversation not found: {exc.args[0]}") from exc
+
+
+@router.post("/analyze-event/{event_id}", response_model=dict[str, Any])
+async def analyze_event(event_id: str, req: dict[str, Any] | None = None, repo=Depends(get_repo)):
+    _check_flag(repo, "tutor_analysis_enabled")
+    req = req or {}
+    from app.tutor_workflows import tutor_analysis_from_mistake_event
+
+    event = repo.load_event_by_id(event_id)
+    if event is None:
+        raise HTTPException(status_code=404, detail="Mistake event not found")
+    analysis = tutor_analysis_from_mistake_event(
+        repo,
+        event,
+        skill_id=str(req.get("skill_id") or "cfa-question-captor"),
+    )
+    return {"analysis": analysis.as_dict()}
+
+
+@router.get("/analysis/{analysis_id}", response_model=dict[str, Any])
+async def get_analysis(analysis_id: str, repo=Depends(get_repo)):
+    _check_flag(repo, "tutor_analysis_enabled")
+    from app.tutor_workflows import load_tutor_analysis
+
+    analysis = load_tutor_analysis(repo.root, analysis_id)
+    if analysis is None:
+        raise HTTPException(status_code=404, detail="Tutor analysis not found")
+    return {"analysis": analysis.as_dict()}
+
+
+@router.post("/analysis/{analysis_id}/confirm", response_model=dict[str, Any])
+async def confirm_analysis(analysis_id: str, repo=Depends(get_repo)):
+    _check_flag(repo, "tutor_analysis_enabled")
+    from app.tutor_workflows import confirm_tutor_analysis
+
+    try:
+        analysis = confirm_tutor_analysis(repo, analysis_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=f"Tutor analysis not found: {exc.args[0]}") from exc
+    return {"analysis": analysis.as_dict()}

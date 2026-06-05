@@ -35,7 +35,8 @@ Do not treat formula-presence requests as generic tutoring.
 
 ## Routing rules
 
-- Wrong answer or screenshot of a wrong question -> `record-mistake`
+- Wrong answer, or screenshot of a wrong question -> `record-mistake`
+- Non-wrong but low-quality question evidence (for example: read the explanation directly, relied on a heavy hint, did not answer independently) -> `record-mistake` with `is_correct=true`
 - Process issue, timing issue, repeated confusion without a single question focus -> `review-session`
 - Repeated weak area analysis -> `mine-patterns`
 - Mock coming up soon -> `pre-mock-brief`

@@ -114,6 +114,10 @@ tutor_source_citations_enabled: true
 tutor_correct_only_enabled: true
 tutor_llm_provider_enabled: false
 tutor_conversation_memory_enabled: true
+skill_reflection_enabled: true
+skill_upgrade_proposals_enabled: true
+skill_codex_task_generator_enabled: true
+codex_self_loop_enabled: true
 goal_profiles_enabled: true
 course_packs_enabled: true
 first_run_onboarding_enabled: true

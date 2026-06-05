@@ -1,0 +1,23 @@
+{
+  "loop_id": "ITER-014",
+  "mode": "unattended",
+  "selected": null,
+  "candidates_considered": [],
+  "task_path": "",
+  "plan_json_path": ".system/memory/codex-loop/ITER-014.json",
+  "plan_markdown_path": ".system/memory/codex-loop/ITER-014.md",
+  "generated_at": "2026-06-05T09:45:20.170558+00:00",
+  "status": "planned",
+  "stop_conditions": [
+    "No eligible non-human candidate remains.",
+    "The same blocker repeats for three consecutive goal turns.",
+    "A task would modify locked question-bank content, secrets, destructive filesystem state, or remote GitHub refs.",
+    "Targeted verification cannot be run or replaced by an explicit verification note."
+  ],
+  "impact_controls": [
+    "Prefer Capture/Memory/Decision Layer changes before Projection changes.",
+    "Write plan and completion events before selecting the next task.",
+    "Keep core brushing-question flow stable; put recommendations and analytics behind extension boundaries.",
+    "Use tests or deterministic validation before marking work complete."
+  ]
+}

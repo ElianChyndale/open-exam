@@ -1,0 +1,83 @@
+{
+  "loop_id": "ITER-022",
+  "mode": "unattended",
+  "selected": {
+    "candidate_id": "gap-capture-batch-import-ui",
+    "title": "Expose batch attempt import in the capture workflow",
+    "source": "runtime_gap",
+    "phase": "1-environment-data-model",
+    "layer": "Projection",
+    "priority": 72,
+    "expected_outputs": [
+      "Add a batch import surface to Question Capture for multiple attempts or mistake records.",
+      "Bridge the UI to the existing batch-import API instead of keeping it API-only.",
+      "Keep single-question manual capture and screenshot capture intact."
+    ],
+    "acceptance_criteria": [
+      "Capture UI exposes a clear batch import path.",
+      "The batch import route is no longer hidden behind direct API usage only.",
+      "Typecheck or deterministic verification confirms the added UI compiles."
+    ],
+    "safety_limits": [
+      "Do not disrupt the existing manual or screenshot capture flow.",
+      "Do not invent remote file storage if the first pass can use pasted JSON.",
+      "Keep the first version minimal and local-first."
+    ],
+    "evidence_refs": [
+      "apps/web/src/app/capture/page.tsx",
+      "apps/api/routers/attempts.py",
+      "docs/research/product-audit-report.md#G15"
+    ],
+    "risk_level": "safe",
+    "requires_human": false
+  },
+  "candidates_considered": [
+    {
+      "candidate_id": "gap-capture-batch-import-ui",
+      "title": "Expose batch attempt import in the capture workflow",
+      "source": "runtime_gap",
+      "phase": "1-environment-data-model",
+      "layer": "Projection",
+      "priority": 72,
+      "expected_outputs": [
+        "Add a batch import surface to Question Capture for multiple attempts or mistake records.",
+        "Bridge the UI to the existing batch-import API instead of keeping it API-only.",
+        "Keep single-question manual capture and screenshot capture intact."
+      ],
+      "acceptance_criteria": [
+        "Capture UI exposes a clear batch import path.",
+        "The batch import route is no longer hidden behind direct API usage only.",
+        "Typecheck or deterministic verification confirms the added UI compiles."
+      ],
+      "safety_limits": [
+        "Do not disrupt the existing manual or screenshot capture flow.",
+        "Do not invent remote file storage if the first pass can use pasted JSON.",
+        "Keep the first version minimal and local-first."
+      ],
+      "evidence_refs": [
+        "apps/web/src/app/capture/page.tsx",
+        "apps/api/routers/attempts.py",
+        "docs/research/product-audit-report.md#G15"
+      ],
+      "risk_level": "safe",
+      "requires_human": false
+    }
+  ],
+  "task_path": "docs/codex_tasks/TASK-014.md",
+  "plan_json_path": ".system/memory/codex-loop/ITER-022.json",
+  "plan_markdown_path": ".system/memory/codex-loop/ITER-022.md",
+  "generated_at": "2026-06-05T10:25:08.052627+00:00",
+  "status": "planned",
+  "stop_conditions": [
+    "No eligible non-human candidate remains.",
+    "The same blocker repeats for three consecutive goal turns.",
+    "A task would modify locked question-bank content, secrets, destructive filesystem state, or remote GitHub refs.",
+    "Targeted verification cannot be run or replaced by an explicit verification note."
+  ],
+  "impact_controls": [
+    "Prefer Capture/Memory/Decision Layer changes before Projection changes.",
+    "Write plan and completion events before selecting the next task.",
+    "Keep core brushing-question flow stable; put recommendations and analytics behind extension boundaries.",
+    "Use tests or deterministic validation before marking work complete."
+  ]
+}

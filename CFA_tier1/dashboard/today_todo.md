@@ -1,20 +1,19 @@
 ---
-date: 2026-06-03
-focus: 完成今天最重要的任务
+date: 2026-06-05
+focus: 今天优先完成 FSA、求职投递和系统开发推进
 revision: 2
 status: active
 ---
 
 # 今日 Todo
 
-> Focus: 完成今天最重要的任务
+> Focus: 今天优先完成 FSA、求职投递和系统开发推进
 
 ## Tasks
+- [ ] 学 Financial Statement Analysis
+- [ ] 继续投一些工作的简历
+- [ ] 推进系统开发，写好一些约束，并在晚上继续进行 AI & AI coding
 - [ ] 完成 Daily Review（deadline: 20:00）
-- [ ] 打两把cs（deadline: 22:30）
-- [ ] 做30个俯卧撑
-- [ ] 做好四川行程（deadline: 21:46）
-- [ ] FSA完成到M9.尽量3分钟内一道题（deadline: 18:00）
 
 ## Review
 - 完成了什么：

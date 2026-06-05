@@ -5,7 +5,8 @@ import { diagnosisApi, attemptsApi } from '@/lib/api';
 import { Stethoscope, Lightbulb, Repeat, Link2, AlertTriangle, TrendingUp } from 'lucide-react';
 
 interface Attempt {
-  event_id: string;
+  attempt_id: string;
+  event_id?: string;
   topic: string;
   los: string;
   error_type: string;
@@ -118,25 +119,29 @@ export default function DiagnosisPage() {
         <div className="card">
           <h3 className="text-sm font-semibold mb-3">最近错题</h3>
           <div className="space-y-1 max-h-96 overflow-auto">
-            {attempts.slice(0, 20).map((a) => (
-              <button
-                key={a.event_id}
-                onClick={() => setSelectedId(a.event_id)}
-                className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
-                  selectedId === a.event_id
-                    ? 'bg-accent-soft border border-accent-soft'
-                    : 'hover:bg-surface-hover'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-medium">{a.topic}</span>
-                  <span className="text-xs text-muted">{a.created_at?.slice(0, 10)}</span>
-                </div>
-                <div className="text-xs text-muted mt-0.5">
-                  {a.los} · {errorLabels[a.error_type] || a.error_type} · 信心 {a.confidence}/4
-                </div>
-              </button>
-            ))}
+            {attempts.slice(0, 20).map((a, index) => {
+              const attemptKey = a.attempt_id || a.event_id || `attempt-${index}`;
+              const attemptId = a.attempt_id || a.event_id || '';
+              return (
+                <button
+                  key={attemptKey}
+                  onClick={() => setSelectedId(attemptId)}
+                  className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                    selectedId === attemptId
+                      ? 'bg-accent-soft border border-accent-soft'
+                      : 'hover:bg-surface-hover'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium">{a.topic}</span>
+                    <span className="text-xs text-muted">{a.created_at?.slice(0, 10)}</span>
+                  </div>
+                  <div className="text-xs text-muted mt-0.5">
+                    {a.los} · {errorLabels[a.error_type] || a.error_type} · 信心 {a.confidence}/4
+                  </div>
+                </button>
+              );
+            })}
           </div>
           <button
             onClick={runDiagnosis}

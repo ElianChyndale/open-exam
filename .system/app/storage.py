@@ -80,6 +80,8 @@ class Repository:
             self.events_root / "todo",
             self.events_root / "language",
             self.events_root / "resource",
+            self.events_root / "skill_reflection",
+            self.events_root / "codex_loop",
             self.memory_root / "question-errors",
             self.memory_root / "cognitive-bias",
             self.memory_root / "agent-failures",
@@ -87,10 +89,23 @@ class Repository:
             self.memory_root / "strategy",
             self.memory_root / "validation",
             self.memory_root / "progress",
+            self.memory_root / "capture" / "screenshot-drafts",
+            self.memory_root / "review" / "asset-candidates",
+            self.memory_root / "review" / "asset-segments",
+            self.memory_root / "review" / "asset-sources",
             self.memory_root / "review" / "daily",
+            self.memory_root / "review" / "unit-seeds",
             self.memory_root / "todo" / "snapshots",
             self.memory_root / "language",
             self.memory_root / "resources",
+            self.memory_root / "tutor" / "analyses",
+            self.memory_root / "tutor" / "correct-asset-seeds",
+            self.memory_root / "tutor" / "daily-review-unit-seeds",
+            self.memory_root / "tutor" / "conversations",
+            self.memory_root / "skills" / "reflections",
+            self.memory_root / "skills" / "proposals",
+            self.memory_root / "codex-loop",
+            self.memory_root / "codex-loop" / "completions",
             self.vault_root / "Alternative_Investments",
             self.vault_root / "Corporate_Issuers",
             self.vault_root / "Derivatives",
@@ -252,6 +267,18 @@ class Repository:
         sorted_rows = tuple(sorted(rows, key=lambda item: item.created_at))
         self._events_cache = (monotonic(), signature, sorted_rows)
         return list(sorted_rows)
+
+    def load_event_by_id(self, event_id: str) -> MistakeEvent | None:
+        if not event_id:
+            return None
+        with closing(sqlite3.connect(self.catalog_path)) as connection:
+            row = connection.execute(
+                "SELECT payload_json FROM mistake_events WHERE event_id = ?",
+                (event_id,),
+            ).fetchone()
+        if not row:
+            return None
+        return MistakeEvent.from_payload(json.loads(row[0]))
 
     def _event_log_signature(self) -> tuple[tuple[str, int, int], ...]:
         signature = []

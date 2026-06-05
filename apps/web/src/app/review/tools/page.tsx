@@ -13,6 +13,7 @@ import {
   Search,
   Settings2,
   ShieldCheck,
+  Target,
   Wrench,
 } from 'lucide-react';
 
@@ -82,6 +83,65 @@ export default function ReviewToolsPage() {
         </div>
       ) : (
         <div className="grid min-w-0 gap-4 md:grid-cols-2">
+          {/* Static question-bank tools */}
+          <section className="min-w-0 rounded-lg bg-surface-raised p-5">
+            <div className="flex items-center gap-2">
+              <Database size={18} className="text-accent" />
+              <h3 className="font-semibold">Question Banks</h3>
+            </div>
+            <div className="mt-4 grid gap-2">
+              <Link href="/review/wrongbook" className="group flex min-w-0 items-center justify-between gap-3 rounded-lg bg-surface-field px-3 py-3 transition-colors hover:bg-surface-hover">
+                <span className="flex min-w-0 items-center gap-3">
+                  <Search size={15} className="shrink-0 text-muted" />
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-medium">📕 错题本</span>
+                    <span className="mt-0.5 block truncate text-xs text-muted">按优先级复习错题，查看答题记录</span>
+                  </span>
+                </span>
+                <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
+              </Link>
+              <Link href="/review/practice" className="group flex min-w-0 items-center justify-between gap-3 rounded-lg bg-surface-field px-3 py-3 transition-colors hover:bg-surface-hover">
+                <span className="flex min-w-0 items-center gap-3">
+                  <Target size={15} className="shrink-0 text-muted" />
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-medium">📝 章节练习</span>
+                    <span className="mt-0.5 block truncate text-xs text-muted">选题生成练习，答题卡逐题作答</span>
+                  </span>
+                </span>
+                <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
+              </Link>
+              <Link href="/capture" className="group flex min-w-0 items-center justify-between gap-3 rounded-lg bg-surface-field px-3 py-3 transition-colors hover:bg-surface-hover">
+                <span className="flex min-w-0 items-center gap-3">
+                  <Database size={15} className="shrink-0 text-muted" />
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-medium">📥 导入题库</span>
+                    <span className="mt-0.5 block truncate text-xs text-muted">导入审核 / 批量导入</span>
+                  </span>
+                </span>
+                <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
+              </Link>
+              <Link href="/review/admin-auth" className="group flex min-w-0 items-center justify-between gap-3 rounded-lg bg-surface-field px-3 py-3 transition-colors hover:bg-surface-hover">
+                <span className="flex min-w-0 items-center gap-3">
+                  <ShieldCheck size={15} className="shrink-0 text-muted" />
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-medium">🔐 管理员会话</span>
+                    <span className="mt-0.5 block truncate text-xs text-muted">本地 bootstrap / login / protected import</span>
+                  </span>
+                </span>
+                <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
+              </Link>
+              <Link href="/review/security" className="group flex min-w-0 items-center justify-between gap-3 rounded-lg bg-surface-field px-3 py-3 transition-colors hover:bg-surface-hover">
+                <span className="flex min-w-0 items-center gap-3">
+                  <ShieldCheck size={15} className="shrink-0 text-muted" />
+                  <span className="min-w-0">
+                    <span className="block truncate text-sm font-medium">🛡️ 安全审计</span>
+                    <span className="mt-0.5 block truncate text-xs text-muted">查看 bootstrap / login / access-control 事件</span>
+                  </span>
+                </span>
+                <ArrowRight size={14} className="shrink-0 text-muted transition-colors group-hover:text-accent" />
+              </Link>
+            </div>
+          </section>
           {groups.map((group) => {
             const Icon = groupIcons[group.group_id] || Wrench;
             return (

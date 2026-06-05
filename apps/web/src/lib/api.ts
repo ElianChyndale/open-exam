@@ -1,6 +1,40 @@
 /** API client for OpenExam backend. */
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
+const ADMIN_SESSION_STORAGE_KEY = 'openexam.admin_session_token';
+
+function getAdminSessionToken(): string {
+  if (typeof window === 'undefined') return '';
+  try {
+    return window.localStorage.getItem(ADMIN_SESSION_STORAGE_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+function setAdminSessionToken(token: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    if (token) window.localStorage.setItem(ADMIN_SESSION_STORAGE_KEY, token);
+  } catch {
+    // Ignore localStorage errors in restricted environments.
+  }
+}
+
+function clearAdminSessionToken(): void {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.removeItem(ADMIN_SESSION_STORAGE_KEY);
+  } catch {
+    // Ignore localStorage errors in restricted environments.
+  }
+}
+
+function withAdminAuth(headers?: HeadersInit): HeadersInit {
+  const token = getAdminSessionToken();
+  if (!token) return headers || {};
+  return { ...(headers || {}), Authorization: `Bearer ${token}` };
+}
 
 async function request<T = any>(path: string, options?: RequestInit): Promise<T> {
   const isFormData = typeof FormData !== 'undefined' && options?.body instanceof FormData;
@@ -26,8 +60,58 @@ export const attemptsApi = {
   uploadScreenshot: (data: { topic: string; los?: string; image_data: string; filename: string }) =>
     request('/api/attempts/screenshot', { method: 'POST', body: JSON.stringify(data) }),
 
+  batchImport: (data: Record<string, unknown>[]) =>
+    request('/api/attempts/batch-import', { method: 'POST', body: JSON.stringify(data) }),
+
   listRecent: (limit = 20) =>
     request(`/api/attempts/recent?limit=${limit}`),
+};
+
+/** Local Admin Auth */
+export const authApi = {
+  bootstrapAdmin: (data: { username: string; password: string }) =>
+    request<{ user: { user_id: string; username: string; role: string } }>('/api/auth/bootstrap-admin', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    }),
+
+  login: async (data: { username: string; password: string }) => {
+    const payload = await request<{ session_token: string; user: { user_id: string; username: string; role: string } }>(
+      '/api/auth/login',
+      { method: 'POST', body: JSON.stringify(data) },
+    );
+    setAdminSessionToken(payload.session_token);
+    return payload;
+  },
+
+  logout: async () => {
+    try {
+      const payload = await request<{ ok: boolean }>('/api/auth/logout', {
+        method: 'POST',
+        headers: withAdminAuth(),
+      });
+      clearAdminSessionToken();
+      return payload;
+    } catch (error) {
+      clearAdminSessionToken();
+      throw error;
+    }
+  },
+
+  session: () =>
+    request<{ authenticated: boolean; user: { user_id: string; username: string; role: string } }>('/api/auth/session', {
+      headers: withAdminAuth(),
+    }),
+
+  hasStoredSession: () => Boolean(getAdminSessionToken()),
+  clearStoredSession: () => clearAdminSessionToken(),
+};
+
+export const securityApi = {
+  listEvents: (limit = 50) =>
+    request<{ count: number; events: Array<Record<string, any>> }>(`/api/security/events?limit=${limit}`, {
+      headers: withAdminAuth(),
+    }),
 };
 
 /** Diagnosis */
@@ -1027,11 +1111,53 @@ export const profilesApi = {
 /** Private question banks */
 export const questionBanksApi = {
   importStructured: (data: { source_file: string; questions: Record<string, unknown>[] }) =>
-    request('/api/question-banks/import', { method: 'POST', body: JSON.stringify(data) }),
-  listQuarantine: () => request('/api/question-banks/quarantine'),
+    request('/api/question-banks/import', { method: 'POST', headers: withAdminAuth(), body: JSON.stringify(data) }),
+  listAll: (params?: { status?: string; search?: string; subject?: string }) => {
+    const qs = new URLSearchParams();
+    if (params?.status) qs.set('status', params.status);
+    if (params?.search) qs.set('search', params.search);
+    if (params?.subject) qs.set('subject', params.subject);
+    return request<{ count: number; questions: any[] }>(`/api/question-banks/all?${qs.toString()}`, { headers: withAdminAuth() });
+  },
+  listQuarantine: () => request('/api/question-banks/quarantine', { headers: withAdminAuth() }),
   review: (questionId: string, action: 'approve' | 'reject', patch: Record<string, unknown> = {}) =>
-    request(`/api/question-banks/${questionId}/review`, { method: 'POST', body: JSON.stringify({ action, patch }) }),
+    request(`/api/question-banks/${questionId}/review`, {
+      method: 'POST',
+      headers: withAdminAuth(),
+      body: JSON.stringify({ action, patch }),
+    }),
+
+  getWrongbook: (sort = 'priority') =>
+    request<{ count: number; items: WrongbookEntry[] }>(`/api/question-banks/wrongbook?sort=${sort}`),
+
+  getWrongbookQuestion: (questionId: string) =>
+    request<{ question: any; wrongbook: any; recent_attempts: any[] }>(`/api/question-banks/wrongbook/questions/${questionId}`),
+
+  createPracticeSession: (data: any) =>
+    request('/api/question-banks/practice-sessions', { method: 'POST', body: JSON.stringify(data) }),
+
+  getPracticeSession: (sessionId: string) =>
+    request(`/api/question-banks/practice-sessions/${sessionId}`),
+
+  getPracticeSessionQuestion: (sessionId: string, questionId: string) =>
+    request(`/api/question-banks/practice-sessions/${sessionId}/questions/${questionId}`),
+
+  submitAnswer: (sessionId: string, data: { question_id: string; selected_answer: string; time_spent?: number; note?: string; favorite?: boolean }) =>
+    request(`/api/question-banks/practice-sessions/${sessionId}/answer`, { method: 'POST', body: JSON.stringify(data) }),
 };
+
+export interface WrongbookEntry {
+  question_id: string;
+  wrong_count: number;
+  correct_retry_count: number;
+  priority: number;
+  last_seen: string;
+  subject: string;
+  chapter: string;
+  prompt: string;
+  difficulty: string;
+  knowledge_tags: string[];
+}
 
 /** LanguageOS */
 export interface LanguageProfile {

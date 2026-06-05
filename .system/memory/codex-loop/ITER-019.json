@@ -1,0 +1,81 @@
+{
+  "loop_id": "ITER-019",
+  "mode": "unattended",
+  "selected": {
+    "candidate_id": "gap-import-console-admin-guidance",
+    "title": "Make question-bank import console aware of admin session requirements",
+    "source": "runtime_gap",
+    "phase": "3-frontend-prototype",
+    "layer": "Projection",
+    "priority": 74,
+    "expected_outputs": [
+      "Show explicit admin-session guidance inside the question-bank import console.",
+      "Surface 401/403 failures as actionable prompts instead of silent loading failures.",
+      "Link import/review operators to the admin auth page without affecting learner practice."
+    ],
+    "acceptance_criteria": [
+      "Import console displays a clear path to `/review/admin-auth` when no admin session is active.",
+      "Protected API failures produce a readable UI state instead of disappearing silently.",
+      "Learner-facing practice screens remain unchanged."
+    ],
+    "safety_limits": [
+      "Do not require admin auth for learner-only screens.",
+      "Do not expose session tokens in the UI.",
+      "Keep the first pass focused on guidance, not a full auth redesign."
+    ],
+    "evidence_refs": [
+      "apps/web/src/components/capture/QuestionBankImportConsole.tsx",
+      "apps/web/src/app/review/admin-auth/page.tsx"
+    ],
+    "risk_level": "safe",
+    "requires_human": false
+  },
+  "candidates_considered": [
+    {
+      "candidate_id": "gap-import-console-admin-guidance",
+      "title": "Make question-bank import console aware of admin session requirements",
+      "source": "runtime_gap",
+      "phase": "3-frontend-prototype",
+      "layer": "Projection",
+      "priority": 74,
+      "expected_outputs": [
+        "Show explicit admin-session guidance inside the question-bank import console.",
+        "Surface 401/403 failures as actionable prompts instead of silent loading failures.",
+        "Link import/review operators to the admin auth page without affecting learner practice."
+      ],
+      "acceptance_criteria": [
+        "Import console displays a clear path to `/review/admin-auth` when no admin session is active.",
+        "Protected API failures produce a readable UI state instead of disappearing silently.",
+        "Learner-facing practice screens remain unchanged."
+      ],
+      "safety_limits": [
+        "Do not require admin auth for learner-only screens.",
+        "Do not expose session tokens in the UI.",
+        "Keep the first pass focused on guidance, not a full auth redesign."
+      ],
+      "evidence_refs": [
+        "apps/web/src/components/capture/QuestionBankImportConsole.tsx",
+        "apps/web/src/app/review/admin-auth/page.tsx"
+      ],
+      "risk_level": "safe",
+      "requires_human": false
+    }
+  ],
+  "task_path": "docs/codex_tasks/TASK-012.md",
+  "plan_json_path": ".system/memory/codex-loop/ITER-019.json",
+  "plan_markdown_path": ".system/memory/codex-loop/ITER-019.md",
+  "generated_at": "2026-06-05T09:56:35.087104+00:00",
+  "status": "planned",
+  "stop_conditions": [
+    "No eligible non-human candidate remains.",
+    "The same blocker repeats for three consecutive goal turns.",
+    "A task would modify locked question-bank content, secrets, destructive filesystem state, or remote GitHub refs.",
+    "Targeted verification cannot be run or replaced by an explicit verification note."
+  ],
+  "impact_controls": [
+    "Prefer Capture/Memory/Decision Layer changes before Projection changes.",
+    "Write plan and completion events before selecting the next task.",
+    "Keep core brushing-question flow stable; put recommendations and analytics behind extension boundaries.",
+    "Use tests or deterministic validation before marking work complete."
+  ]
+}

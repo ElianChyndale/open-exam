@@ -42,6 +42,8 @@ export default function QuestionCapture() {
   });
 
   const [submitting, setSubmitting] = useState(false);
+  const [batchImporting, setBatchImporting] = useState(false);
+  const [batchRecords, setBatchRecords] = useState('[\n  {\n    "topic": "Fixed Income",\n    "los": "FI.1",\n    "prompt_or_question": "Sample imported question",\n    "wrong_choice_or_output": "A",\n    "correct_resolution": "B",\n    "error_type": "concept_confusion",\n    "confidence": 1,\n    "time_spent": 60,\n    "is_correct": false\n  }\n]');
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState('');
 
@@ -84,6 +86,24 @@ export default function QuestionCapture() {
       }
     };
     reader.readAsDataURL(file);
+  };
+
+  const handleBatchImport = async () => {
+    setBatchImporting(true);
+    setError('');
+    setResult(null);
+    try {
+      const payload = JSON.parse(batchRecords);
+      if (!Array.isArray(payload)) {
+        throw new Error('Batch import payload must be a JSON array.');
+      }
+      const res = await attemptsApi.batchImport(payload);
+      setResult({ status: 'batch_imported', ...res });
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setBatchImporting(false);
+    }
   };
 
   return (
@@ -223,6 +243,36 @@ export default function QuestionCapture() {
           {submitting ? '提交中...' : '记录错题'}
         </button>
       </form>
+
+      <section className="card space-y-4">
+        <div>
+          <h3 className="text-lg font-semibold flex items-center gap-2">
+            <Upload size={18} className="text-accent" /> 批量导入
+          </h3>
+          <p className="text-xs text-muted mt-1">
+            适合把多条 attempt / mistake 记录一次性导入到现有 <code className="bg-surface-field px-1 rounded">/api/attempts/batch-import</code>。
+          </p>
+        </div>
+        <textarea
+          value={batchRecords}
+          onChange={(e) => setBatchRecords(e.target.value)}
+          className="min-h-44 w-full bg-surface-field border border-line rounded-lg px-3 py-2 font-mono text-xs"
+          placeholder='[{"topic":"Fixed Income","los":"FI.1","prompt_or_question":"..."}]'
+        />
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-xs text-muted">
+            第一版保持本地优先：直接粘贴 JSON 数组，不改变现有单题和截图流程。
+          </p>
+          <button
+            type="button"
+            onClick={handleBatchImport}
+            disabled={batchImporting}
+            className="shrink-0 rounded-lg bg-accent-solid px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-strong disabled:opacity-50"
+          >
+            {batchImporting ? '导入中...' : '批量导入'}
+          </button>
+        </div>
+      </section>
 
       {/* Result */}
       {result && (

@@ -1,0 +1,79 @@
+{
+  "loop_id": "ITER-008",
+  "mode": "unattended",
+  "selected": {
+    "candidate_id": "phase-3-safe-question-display-endpoint",
+    "title": "Implement safe practice question display endpoint from UI contract",
+    "source": "contract_gap",
+    "phase": "3-frontend-prototype",
+    "layer": "Decision",
+    "priority": 86,
+    "expected_outputs": [
+      "Add a session-scoped question display endpoint for practice UI use.",
+      "Return prompt, choices, learner state, note count, and favorite state before submission.",
+      "Keep answer, explanation, and correct-answer fields hidden from display payloads."
+    ],
+    "acceptance_criteria": [
+      "Display endpoint returns 404 or 422 for missing sessions or mismatched question IDs.",
+      "Pre-submission payload includes prompt and choices but excludes answer/explanation fields.",
+      "Post-submission display reflects answered/noted/favorited state without exposing canonical answers."
+    ],
+    "safety_limits": [
+      "Do not duplicate display payloads into practice session metadata.",
+      "Do not expose answer, correct_answer, explanation, rationale, or hidden diagnostics.",
+      "Do not change frontend routes until backend contract tests pass."
+    ],
+    "evidence_refs": [
+      "docs/practice_ui_api_contract.md#Question Display"
+    ],
+    "risk_level": "guarded",
+    "requires_human": false
+  },
+  "candidates_considered": [
+    {
+      "candidate_id": "phase-3-safe-question-display-endpoint",
+      "title": "Implement safe practice question display endpoint from UI contract",
+      "source": "contract_gap",
+      "phase": "3-frontend-prototype",
+      "layer": "Decision",
+      "priority": 86,
+      "expected_outputs": [
+        "Add a session-scoped question display endpoint for practice UI use.",
+        "Return prompt, choices, learner state, note count, and favorite state before submission.",
+        "Keep answer, explanation, and correct-answer fields hidden from display payloads."
+      ],
+      "acceptance_criteria": [
+        "Display endpoint returns 404 or 422 for missing sessions or mismatched question IDs.",
+        "Pre-submission payload includes prompt and choices but excludes answer/explanation fields.",
+        "Post-submission display reflects answered/noted/favorited state without exposing canonical answers."
+      ],
+      "safety_limits": [
+        "Do not duplicate display payloads into practice session metadata.",
+        "Do not expose answer, correct_answer, explanation, rationale, or hidden diagnostics.",
+        "Do not change frontend routes until backend contract tests pass."
+      ],
+      "evidence_refs": [
+        "docs/practice_ui_api_contract.md#Question Display"
+      ],
+      "risk_level": "guarded",
+      "requires_human": false
+    }
+  ],
+  "task_path": "docs/codex_tasks/TASK-007.md",
+  "plan_json_path": ".system/memory/codex-loop/ITER-008.json",
+  "plan_markdown_path": ".system/memory/codex-loop/ITER-008.md",
+  "generated_at": "2026-06-05T06:10:12.568460+00:00",
+  "status": "planned",
+  "stop_conditions": [
+    "No eligible non-human candidate remains.",
+    "The same blocker repeats for three consecutive goal turns.",
+    "A task would modify locked question-bank content, secrets, destructive filesystem state, or remote GitHub refs.",
+    "Targeted verification cannot be run or replaced by an explicit verification note."
+  ],
+  "impact_controls": [
+    "Prefer Capture/Memory/Decision Layer changes before Projection changes.",
+    "Write plan and completion events before selecting the next task.",
+    "Keep core brushing-question flow stable; put recommendations and analytics behind extension boundaries.",
+    "Use tests or deterministic validation before marking work complete."
+  ]
+}

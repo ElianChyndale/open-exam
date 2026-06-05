@@ -1,6 +1,6 @@
 ---
 bucket: FRA
-question_count: 5
+question_count: 9
 ---
 
 # FRA Mock Mistakes
@@ -53,4 +53,44 @@ question_count: 5
 - correct_resolution: Correct answer: A. USD67 million. First derive purchases from suppliers: COGS 75 minus the inventory decline of 6 equals purchases of 69. Then adjust for the increase in accounts payable of 2: because payables increased, not all purchases were paid in cash, so cash paid to suppliers is 69 minus 2 = 67.
 - evidence_refs: chat-screenshot-2026-06-03-fsa-cash-paid-to-suppliers-q7
 - evidence_assets: chat-uploaded-screenshot-2026-06-03-fsa-cash-paid-to-suppliers-q7
+- moc_target: CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md
+
+## Financial Statement Analysis | FSA.M05
+- error_type: formula_misuse
+- question_source: user_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: C. Deduct both after-tax interest payments and capital expenditures from operating cash flows.
+- correct_resolution: B. Add operating cash flows to after-tax interest payments and deduct capital expenditures.
+- evidence_refs: user-screenshot-1
+- evidence_assets: 
+- moc_target: 
+
+## Financial Statement Analysis | FSA.M05
+- error_type: concept_confusion
+- question_source: user_screenshot
+- source_type: screenshot
+- wrong_choice_or_output: B. 73
+- correct_resolution: A. 70. Because interest is classified as financing cash flow, FCFF = CFO - CapEx = 120 - 50 = 70.
+- evidence_refs: user-screenshot-2
+- evidence_assets: 
+- moc_target: 
+
+## Financial Statement Analysis | calculate and interpret common-size balance sheets and related financial ratios (approximate from screenshot)
+- error_type: formula_misuse
+- question_source: unknown
+- source_type: screenshot
+- wrong_choice_or_output: Unknown from screenshot evidence; likely denominator confusion in vertical common-size balance sheet.
+- correct_resolution: Correct answer: B. 25%. For a vertical common-size balance sheet, each balance-sheet line item is expressed as a percentage of total assets. Total assets = 125 + 35 = 160, so cash and cash equivalents = 40 / 160 = 25%.
+- evidence_refs: chat-2026-06-05, screenshot-question
+- evidence_assets: chat_upload:screenshot:2026-06-05-common-size-balance-sheet
+- moc_target: CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md
+
+## Financial Statement Analysis | inventory write-down risk under US GAAP with rising inventory costs (approximate from screenshot)
+- error_type: concept_confusion
+- question_source: unknown
+- source_type: screenshot
+- wrong_choice_or_output: A. FIFO
+- correct_resolution: Correct answer: B. LIFO. In a period of stable inventory quantities and rising unit costs, LIFO ending inventory is carried at relatively older, lower costs, making it less likely that carrying value will exceed market and trigger a write-down under US GAAP.
+- evidence_refs: chat-2026-06-05, batch-3q-1-wrong
+- evidence_assets: chat_upload:screenshot:2026-06-05-inventory-write-down-lifo
 - moc_target: CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md

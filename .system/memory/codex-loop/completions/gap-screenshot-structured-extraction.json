@@ -1,0 +1,13 @@
+{
+  "event_type": "codex.loop.completed",
+  "candidate_id": "gap-screenshot-structured-extraction",
+  "summary": "Implemented durable screenshot extraction drafts, capture events, API handoff, and tests.",
+  "artifacts": [
+    ".system/app/screenshot_capture.py",
+    "apps/api/routers/attempts.py",
+    "apps/api/tests/test_api_smoke.py"
+  ],
+  "verification": "pytest -q .system/tests/test_screenshot_capture.py apps/api/tests/test_api_smoke.py -k screenshot",
+  "created_at": "2026-06-05T09:42:34.916428+00:00",
+  "event_id": "codex-loop-complete-ed2ac91eec80"
+}

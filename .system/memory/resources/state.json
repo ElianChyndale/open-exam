@@ -3627,6 +3627,826 @@
         "etag": "",
         "last_modified": ""
       }
+    },
+    "resource-740fdafff4e87398": {
+      "document_id": "resource-740fdafff4e87398",
+      "lane": "cfa",
+      "provider": "sec_edgar",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "title": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "content_hash": "5c7ea66ba8d929a674095199f8880e8ddaa2760702753b1e759072901f6ceeb3",
+      "license_mode": "official_structured",
+      "content_ref": ".system/private/resources/raw/5c7ea66ba8d929a674095199f8880e8ddaa2760702753b1e759072901f6ceeb3.txt",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Thu, 04 Jun 2026 00:23:45 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "retrieved_at": "2026-06-04T04:14:37.360795+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/atom+xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-26498862652881d6": {
+      "document_id": "resource-26498862652881d6",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/",
+      "title": "https://www.elmundo.es/",
+      "content_hash": "7e4b05b1d462880e73f286ce737ac1de48ad9a30b5d3f958e6fead628afdc2d7",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "EL MUNDO - Diario online líder de información en español Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloaca del PSOE Congreso PSOE Hermano Pedro Sánchez Congreso PSOE Enrique Riquelme Guerra Irán Florentino Pérez Valle Sal",
+      "retrieved_at": "2026-06-04T04:15:17.881794+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-42f5be5fcb122317": {
+      "document_id": "resource-42f5be5fcb122317",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/rss/index.xml",
+      "title": "https://www.elmundo.es/rss/index.xml",
+      "content_hash": "8b53fcbc8246e8cba1efe85760142db8b65bb7d6004eb98824af3b2bb5b5e799",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\" xmlns:ue=\"https://www.elmundo.es/im",
+      "retrieved_at": "2026-06-04T04:15:19.340990+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-3e19ad2771ec7bc4": {
+      "document_id": "resource-3e19ad2771ec7bc4",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/03/6a204b11fdddff55128b45cd.html",
+      "title": "https://www.elmundo.es/espana/2026/06/03/6a204b11fdddff55128b45cd.html",
+      "content_hash": "1c2f9175de360dd8f364e096e172b3eba2a08a36ae82680d345aba7f60a379f7",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Los jefes políticos de la Guardia Civil hostigaron a la UCO para proteger a Sánchez y la directora siguió el plan trazado por la 'fontanera' del PSOE | España Saltar a navegación principal (Pulse Enter) Saltar a contenido (Pulse Enter) Secciones España España Madrid Andalucía Sev",
+      "retrieved_at": "2026-06-04T04:15:20.547176+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-1309a95642276ef3": {
+      "document_id": "resource-1309a95642276ef3",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/03/6a204b64fdddffdc0d8b45c3.html",
+      "title": "https://www.elmundo.es/espana/2026/06/03/6a204b64fdddffdc0d8b45c3.html",
+      "content_hash": "4e857ce1f9d10baabc89ee23d9bba8cc4a869c3d9886ada2e98e922dea59c123",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "La trama contó con el teniente coronel Llamas y persiguió al coronel Yuste: ¿quién es quién en la infiltración de las cloacas en la Guardia Civil? | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloaca del PSOE Congre",
+      "retrieved_at": "2026-06-04T04:15:21.772062+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-b6c32ceafb9400ed": {
+      "document_id": "resource-b6c32ceafb9400ed",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/03/6a2056afe85ecec74f8b45bf.html",
+      "title": "https://www.elmundo.es/espana/2026/06/03/6a2056afe85ecec74f8b45bf.html",
+      "content_hash": "019e89bd413c567d4f7dd69826af8b91953134eee2bfe4990666485d61883700",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Mercedes González, el tentáculo del sanchismo clavado en la Guardia Civil | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloaca del PSOE Congreso PSOE Hermano Pedro Sánchez Congreso PSOE Enrique Riquelme Guerra Irán ",
+      "retrieved_at": "2026-06-04T04:15:22.983757+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-f412925221047c5e": {
+      "document_id": "resource-f412925221047c5e",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a204baefdddff80378b4570.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a204baefdddff80378b4570.html",
+      "content_hash": "e03adf97b82284b5a97f06da5350038a5b423164e968b202d3580ba774c58235",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "La Fiscalía General de García Ortiz, un \"elemento fundamental\" para las cloacas de Ferraz: \"Te va a recibir el FGE\" | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloaca del PSOE Congreso PSOE Hermano Pedro Sánchez C",
+      "retrieved_at": "2026-06-04T04:15:24.181867+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a8daf40a8a1cac94": {
+      "document_id": "resource-a8daf40a8a1cac94",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/03/6a204b8bfdddff1a798b4595.html",
+      "title": "https://www.elmundo.es/espana/2026/06/03/6a204b8bfdddff1a798b4595.html",
+      "content_hash": "26f4090f62d8d64b1540273fc9a4ba56f0ee1881de46e2b66fffae4acbd9e5f1",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "'El One' es Sánchez: la UCO y Leire apuntan a la X de las cloacas | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloaca del PSOE Congreso PSOE Hermano Pedro Sánchez Congreso PSOE Enrique Riquelme Guerra Irán Florenti",
+      "retrieved_at": "2026-06-04T04:15:25.461835+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-2f9337a02248567f": {
+      "document_id": "resource-2f9337a02248567f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a20225cfdddffb6298b45c5.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a20225cfdddffb6298b45c5.html",
+      "content_hash": "84d14a42703897220ab7678ba27676d37ed12c0b53c58a2e9e28a82698921d12",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "22 reuniones de la cloaca del PSOE: una masa de militantes se concentró en la puerta de Ferraz mientras dentro se fundaba la trama con un cargo de Moncloa presente | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloac",
+      "retrieved_at": "2026-06-04T04:15:26.682496+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-f57fc4d35e21cb06": {
+      "document_id": "resource-f57fc4d35e21cb06",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/03/6a207aeae85ecea9548b4579.html",
+      "title": "https://www.elmundo.es/espana/2026/06/03/6a207aeae85ecea9548b4579.html",
+      "content_hash": "eda68cacba7cfe05acf3ecb0deee9f5cf8d517c69f6289be5175872b4b82a37a",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Un centenar de militantes y ex altos cargos del PSOE se reúne en Madrid para exigir un congreso extraordinario y elecciones anticipadas ante \"la situación crítica\" del partido | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro S",
+      "retrieved_at": "2026-06-04T04:15:27.898720+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-8ba1ce8fd2ca6728": {
+      "document_id": "resource-8ba1ce8fd2ca6728",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a204bd3fdddffdc0d8b45ca.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a204bd3fdddffdc0d8b45ca.html",
+      "content_hash": "7a971359895f601369c07e4882f0346ad52256f457849db886241ff2fbb992ef",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El hermano de Sánchez declara hoy con poco margen tras la acusación de la UCO: la plaza para David Azagra fue \"dirigida\" por Gallardo | España Es noticia Últimas noticias Leire Díez UCO Guardia Civil Mercedes González García Ortiz Pedro Sánchez Cloaca del PSOE Congreso PSOE Herma",
+      "retrieved_at": "2026-06-04T04:15:29.120399+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-80652abc20a76c6a": {
+      "document_id": "resource-80652abc20a76c6a",
+      "lane": "cfa",
+      "provider": "sec_edgar",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "title": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "content_hash": "7fd19caafedffc98a5efcac2ea061022c100fd7fbda0907bcf450e44a8f99379",
+      "license_mode": "official_structured",
+      "content_ref": ".system/private/resources/raw/7fd19caafedffc98a5efcac2ea061022c100fd7fbda0907bcf450e44a8f99379.txt",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Fri, 05 Jun 2026 00:14:49 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "retrieved_at": "2026-06-05T04:14:48.925966+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/atom+xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-7e381e097c8beec9": {
+      "document_id": "resource-7e381e097c8beec9",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://feeds.simplecast.com/UrwSRKXH",
+      "title": "https://feeds.simplecast.com/UrwSRKXH",
+      "content_hash": "a092cefe9ac536ee6a0162e86928fa4d5ed1c9b655c3ce9a3b6990c9ea04dcf6",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:googleplay=\"http://www.google.com/schemas/play-podcasts/1.0\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"",
+      "retrieved_at": "2026-06-05T04:15:42.826821+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/xml",
+        "etag": "W/\"74f75417d97b3e791916e167a95a49a1\"",
+        "last_modified": "Thu, 04 Jun 2026 14:00:17 GMT"
+      }
+    },
+    "resource-87c667e80722768f": {
+      "document_id": "resource-87c667e80722768f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/",
+      "title": "https://www.elmundo.es/",
+      "content_hash": "8bc242a4439969d3aff0ec8c4e5b13c75dd32c20a09ebe082cefdc1deeaca535",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "EL MUNDO - Diario online líder de información en español Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda Festivales música Calendario escolar Madrid Real Madrid elecciones OPA BBVA Sabad",
+      "retrieved_at": "2026-06-05T04:16:02.300442+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-5a3844befc88b2b4": {
+      "document_id": "resource-5a3844befc88b2b4",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/rss/index.xml",
+      "title": "https://www.elmundo.es/rss/index.xml",
+      "content_hash": "7a9c93728a9a2008ba0271d602c9b3472f996b47dfc6ba88d3198ce17ee053c7",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\" xmlns:ue=\"https://www.elmundo.es/im",
+      "retrieved_at": "2026-06-05T04:16:04.399324+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a5536f654f92e308": {
+      "document_id": "resource-a5536f654f92e308",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21bb6ee9cf4a2b698b45c2.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21bb6ee9cf4a2b698b45c2.html",
+      "content_hash": "a8c601bd7beec0a29b933113db1c3d05d5b2ce07c8979a5614108cc7324f5352",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El Supremo frenó \"de forma tajante\" el plan de Mercedes González contra la UCO: \"Si se hace, abriré diligencias contra quien lo ordenó\" | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vi",
+      "retrieved_at": "2026-06-05T04:16:06.198602+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-5a7f08995da2d88b": {
+      "document_id": "resource-5a7f08995da2d88b",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21b95fe9cf4ab9238b457b.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21b95fe9cf4ab9238b457b.html",
+      "content_hash": "a39a0a372d12892c3be4d891c8a3e262e156b4bc0d4d5577203e5aa79005ab1e",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El auditor privado del PSOE comunica a la UCO que rompe con Ferraz y deja de fiscalizar sus cuentas tras entregar documentación | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda F",
+      "retrieved_at": "2026-06-05T04:16:07.990085+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-122916303c4857f7": {
+      "document_id": "resource-122916303c4857f7",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21eee921efa000698b45a8.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21eee921efa000698b45a8.html",
+      "content_hash": "0467bacbdfada8af0e389580934a6f915d4f4dc987709238e55fbf5cfd1cdfe8",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "La Guardia Civil confirma reuniones de su directora con Leire tras desmentirlo Marlaska: 'la fontanera' pidió rehabilitar al agente del 'caso Koldo' | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán ",
+      "retrieved_at": "2026-06-05T04:16:09.717266+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-f80bb4aa9abbcbcb": {
+      "document_id": "resource-f80bb4aa9abbcbcb",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21bbefe9cf4a0e388b4597.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21bbefe9cf4a0e388b4597.html",
+      "content_hash": "c9fab7cf97fa0ea5ec2be048339b7ec9c5585e261ad6f37720d244121fd75c29",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El listado de la cloaca contra los jueces: Lesmes, Marchena o la mujer de Llarena | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda Festivales música Calendario escolar Madrid Rea",
+      "retrieved_at": "2026-06-05T04:16:11.509607+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-4a23e1a738914848": {
+      "document_id": "resource-4a23e1a738914848",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a219d9921efa01c4b8b45b3.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a219d9921efa01c4b8b45b3.html",
+      "content_hash": "60c2b37ee9548c7bce9ad4b5d060e2be7c795ae48d72122c0a5d79c6d7c3a2a2",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "La trama de Cerdán desbloqueó con el PNV el rescate de 112,8 millones de Tubos Reunidos y alivió después su deuda con el Estado | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda F",
+      "retrieved_at": "2026-06-05T04:16:13.331127+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-d87f18b34d7964b4": {
+      "document_id": "resource-d87f18b34d7964b4",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/05/6a21bc9a21efa04f368b45a6.html",
+      "title": "https://www.elmundo.es/espana/2026/06/05/6a21bc9a21efa04f368b45a6.html",
+      "content_hash": "2d7e36cea6facee04f68fdf6cff17ac43bdb289a31e81f3ca30cc955c38108ce",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El PNV aparca ahora las elecciones anticipadas y le da aire a Sánchez | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda Festivales música Calendario escolar Madrid Real Madrid ele",
+      "retrieved_at": "2026-06-05T04:16:15.070419+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-5e259b7a26709112": {
+      "document_id": "resource-5e259b7a26709112",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21bc11e9cf4ab9238b4583.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21bc11e9cf4ab9238b4583.html",
+      "content_hash": "e8793e60ccca575d0499d8079450df647ba20facfc0733832101385d63c36045",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "David Sánchez escapa de momento de las pruebas clave: ¿por qué quiso alquilar una vivienda antes de que se adjudicase la plaza | España Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda Fe",
+      "retrieved_at": "2026-06-05T04:16:16.839043+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-4259ac5e236bd6ed": {
+      "document_id": "resource-4259ac5e236bd6ed",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/internacional/2026/06/04/6a21a2befc6c83992a8b4591.html",
+      "title": "https://www.elmundo.es/internacional/2026/06/04/6a21a2befc6c83992a8b4591.html",
+      "content_hash": "e9e9dbcfd3d640cc55ad5de0b2fd46155ea6e0f27a5870764a82ecfe5c3a39a5",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Donald Trump y el fracaso de un mundo sin reglas: \"Sus decisiones sabotean el proceso de negociación\" | Internacional Es noticia Mercedes González Últimas noticias David Sánchez Leire Díez PNV Trama Cerdán Auditor PSOE 100 días guerra Irán Florentino Vivienda Festivales música Ca",
+      "retrieved_at": "2026-06-05T04:16:18.670719+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-fc8a9733508c8f63": {
+      "document_id": "resource-fc8a9733508c8f63",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p02pc9tn",
+      "title": "https://www.bbc.co.uk/programmes/p02pc9tn",
+      "content_hash": "3933de0a95c13b2ba21f37b3130c4f1ec36b5208f3cedaa72dc20cb825505bb9",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content 6 Minute English Learn and practise useful English with clips from programmes ",
+      "retrieved_at": "2026-06-05T10:14:25.567597+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-0a99530157036c6f": {
+      "document_id": "resource-0a99530157036c6f",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://podcasts.files.bbci.co.uk/p02pc9tn.rss",
+      "title": "https://podcasts.files.bbci.co.uk/p02pc9tn.rss",
+      "content_hash": "9dcdd6328fd02d89870f4b03f88b0ce8aa1c55ea7837adb5a0f132f5f7ca7305",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ppg=\"http://bbc.co.uk/2009/01/ppgRss\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"><!--By accessing this feed you are w",
+      "retrieved_at": "2026-06-05T10:14:28.645119+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/rss+xml",
+        "etag": "\"edeb73d0edc2b6760d42c629e6e6eaa1\"",
+        "last_modified": "Thu, 04 Jun 2026 09:39:52 GMT"
+      }
+    },
+    "resource-c8a7ba091dfb05de": {
+      "document_id": "resource-c8a7ba091dfb05de",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nq06hm",
+      "title": "https://www.bbc.co.uk/programmes/p0nq06hm",
+      "content_hash": "9837b344cf355157bbc1ab2fed63009ae4b8fc9653c16e8b5e4b4ddf9258931f",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - 6 Minute English, The power of poetry Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service 6 Minute English Home Episodes Podcast Subscribe to our newsletter Main content Listen now The power of poetry 6 Minute English Learn abo",
+      "retrieved_at": "2026-06-05T10:14:31.393218+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-a8bbe6e84fd80956": {
+      "document_id": "resource-a8bbe6e84fd80956",
+      "lane": "cfa",
+      "provider": "sec_edgar",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "title": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom",
+      "content_hash": "78571368b7db940c951853d7b8c4f9359c9cbd35cf64d50e68592c32d282b7c2",
+      "license_mode": "official_structured",
+      "content_ref": ".system/private/resources/raw/78571368b7db940c951853d7b8c4f9359c9cbd35cf64d50e68592c32d282b7c2.txt",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Fri, 05 Jun 2026 06:14:49 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "retrieved_at": "2026-06-05T10:14:49.560389+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/atom+xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-5fe5f6f507e527f9": {
+      "document_id": "resource-5fe5f6f507e527f9",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/learningenglish",
+      "title": "https://www.bbc.co.uk/learningenglish",
+      "content_hash": "0cc1e6788e24b33aa5c3832db1ae241a7b125ee790aae6d546564b90e809aa20",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Learning English - Learn English with BBC Learning English - Homepage Homepage Accessibility links Skip to content Accessibility Help BBC Account Notifications Home News Sport Weather iPlayer Sounds Bitesize CBeebies CBBC Food Home News Sport Business Technology Health Cultur",
+      "retrieved_at": "2026-06-05T10:14:56.355674+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "943a7e3caca051faa3d12b403dd897673dc02a75",
+        "last_modified": "Fri, 05 Jun 2026 10:09:31 GMT"
+      }
+    },
+    "resource-baa49d62bf9ab9a4": {
+      "document_id": "resource-baa49d62bf9ab9a4",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/",
+      "title": "https://www.elmundo.es/",
+      "content_hash": "722b3084b36da3dc28b37d10940137f90876d9a896d81e669f50e07a87c8afdd",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "EL MUNDO - Diario online líder de información en español Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Constanza dron Emma Heming Border Collie China Kiko Matamoros Elecciones Real Madrid Cortes t",
+      "retrieved_at": "2026-06-05T10:15:46.108391+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-2ed8ea268b800f23": {
+      "document_id": "resource-2ed8ea268b800f23",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/rss/index.xml",
+      "title": "https://www.elmundo.es/rss/index.xml",
+      "content_hash": "02b4ac65e26acbd3274856a1739863b777496348ef8de43aff7d6b97567f0a36",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\" xmlns:ue=\"https://www.elmundo.es/im",
+      "retrieved_at": "2026-06-05T10:15:48.184361+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/xml",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-915ac272fcd0c4ef": {
+      "document_id": "resource-915ac272fcd0c4ef",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21bb6ee9cf4a2b698b45c2.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21bb6ee9cf4a2b698b45c2.html",
+      "content_hash": "89ffa4d5e75adf7d56570d76c5d38253e7a7ab143b7097886df341b6441860ad",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El Supremo frenó \"de forma tajante\" el plan de Mercedes González contra la UCO: \"Si se hace, abriré diligencias contra quien lo ordenó\" | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Const",
+      "retrieved_at": "2026-06-05T10:15:50.272150+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-02d53daf962b210e": {
+      "document_id": "resource-02d53daf962b210e",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/05/6a228616e85ece415b8b45bd.html",
+      "title": "https://www.elmundo.es/espana/2026/06/05/6a228616e85ece415b8b45bd.html",
+      "content_hash": "88f12175e979dfccec542f6c57ce83da821bac420e7fc04d5923d3884335444d",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Marlaska se desdice a sí mismo y alega ahora que cuando negó reuniones de la 'fontanera' con la directora de la Guardia Civil eran citas sobre el \"objeto de la trama\" | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán",
+      "retrieved_at": "2026-06-05T10:15:52.004916+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-e1c2cb6d537ff18e": {
+      "document_id": "resource-e1c2cb6d537ff18e",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21b95fe9cf4ab9238b457b.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21b95fe9cf4ab9238b457b.html",
+      "content_hash": "b8c613a15dfd87ddb0edebc58d394c9731fb6381e834f0a204b7643a576d909d",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El auditor privado del PSOE comunica a la UCO que rompe con Ferraz y deja de fiscalizar sus cuentas tras entregar documentación | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Constanza dro",
+      "retrieved_at": "2026-06-05T10:15:53.747393+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-03f31825f7e02ae3": {
+      "document_id": "resource-03f31825f7e02ae3",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21bbefe9cf4a0e388b4597.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21bbefe9cf4a0e388b4597.html",
+      "content_hash": "0c58105a1ec85bf8585ebbf7d40d915a1e2a75c9b3b8230597344a4dab6c08e5",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El listado de la cloaca contra los jueces: Lesmes, Marchena o la mujer de Llarena | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Constanza dron Emma Heming Border Collie China Kiko Matamor",
+      "retrieved_at": "2026-06-05T10:15:55.517899+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-3c19bfc69175945b": {
+      "document_id": "resource-3c19bfc69175945b",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/05/6a228ae9fc6c83992a8b45b8.html",
+      "title": "https://www.elmundo.es/espana/2026/06/05/6a228ae9fc6c83992a8b45b8.html",
+      "content_hash": "80a9949790092e3a3d89a69147f1abba01f15fb331213fe79c2a3fbc560507bd",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "El Gobierno intenta blindar a Sánchez de la 'fontanera': \"Utilizó su nombre continuamente pero no hay nada; el presidente es una persona íntegra\" | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra ",
+      "retrieved_at": "2026-06-05T10:16:00.706966+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-5a37d3467622c405": {
+      "document_id": "resource-5a37d3467622c405",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a219d9921efa01c4b8b45b3.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a219d9921efa01c4b8b45b3.html",
+      "content_hash": "7302ac6da14f7e77556e0c13bab34e376609aee76fcd9c566480858dbdabb7b7",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "La trama de Cerdán desbloqueó con el PNV el rescate de 112,8 millones de Tubos Reunidos y alivió después su deuda con el Estado | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Constanza dro",
+      "retrieved_at": "2026-06-05T10:16:02.437473+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-08134eaabd16a747": {
+      "document_id": "resource-08134eaabd16a747",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/espana/2026/06/04/6a21bc11e9cf4ab9238b4583.html",
+      "title": "https://www.elmundo.es/espana/2026/06/04/6a21bc11e9cf4ab9238b4583.html",
+      "content_hash": "16e242797e45079503da2980fd776db1a0777917f2194f0bd1bf079606048452",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "David Sánchez escapa de momento de las pruebas clave: ¿por qué quiso alquilar una vivienda antes de que se adjudicase la plaza? | España Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Constanza dro",
+      "retrieved_at": "2026-06-05T10:16:04.186417+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-9509b3dca356cf4a": {
+      "document_id": "resource-9509b3dca356cf4a",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.elmundo.es/internacional/2026/06/04/6a21a2befc6c83992a8b4591.html",
+      "title": "https://www.elmundo.es/internacional/2026/06/04/6a21a2befc6c83992a8b4591.html",
+      "content_hash": "1dddbe4af52ee3be569c7d61d0e96201514c0ec1e83dd400d3ffd717a0a76efc",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "Donald Trump y el fracaso de un mundo sin reglas: \"Sus decisiones sabotean el proceso de negociación\" | Internacional Es noticia Últimas noticias Auditor PSOE Florentino Pérez Mercedes González UCO Leire Díez Santos Cerdán PNV Marlaska Guerra Irán Constanza dron Emma Heming Borde",
+      "retrieved_at": "2026-06-05T10:16:05.923319+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-617793edb92c5547": {
+      "document_id": "resource-617793edb92c5547",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p02pc9s1",
+      "title": "https://www.bbc.co.uk/programmes/p02pc9s1",
+      "content_hash": "7cd48692b45cad4cd989eafd49723a5dbd53348d41b9b2acfa52a08b83f5860b",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Learning English Stories Improve your English with these short",
+      "retrieved_at": "2026-06-05T10:16:40.529664+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
+    },
+    "resource-818d3015255b9eb7": {
+      "document_id": "resource-818d3015255b9eb7",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://podcasts.files.bbci.co.uk/p02pc9s1.rss",
+      "title": "https://podcasts.files.bbci.co.uk/p02pc9s1.rss",
+      "content_hash": "a8f0dc898ab3d0b06a41a8a0a2390ad3de83ba9910d7e3a2d4a813eec6c2966c",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:ppg=\"http://bbc.co.uk/2009/01/ppgRss\" xmlns:itunes=\"http://www.itunes.com/dtds/podcast-1.0.dtd\"><!--By accessing this feed you are w",
+      "retrieved_at": "2026-06-05T10:16:48.327861+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "application/rss+xml",
+        "etag": "\"417a71da9099dded40f4fa8aed87de1e\"",
+        "last_modified": "Fri, 05 Jun 2026 09:03:22 GMT"
+      }
+    },
+    "resource-cf07bbb9de0f4516": {
+      "document_id": "resource-cf07bbb9de0f4516",
+      "lane": "language",
+      "provider": "rss_atom",
+      "url": "https://www.bbc.co.uk/programmes/p0nq8ms9",
+      "title": "https://www.bbc.co.uk/programmes/p0nq8ms9",
+      "content_hash": "33b07f16da3d4bd11f21233f352e82b68d02955746de86bfa14c1b93bf4489e4",
+      "license_mode": "metadata_only",
+      "content_ref": "",
+      "excerpt": "BBC Radio - Learning English Stories, Classic Stories: A Tale of Two Cities Homepage Accessibility links Skip to content Accessibility Help Close menu BBC World Service Learning English Stories Home Episodes Podcast Subscribe to our newsletter Main content Listen now Classic Stor",
+      "retrieved_at": "2026-06-05T10:16:50.542109+00:00",
+      "language": "",
+      "topic": "",
+      "answer_bearing": false,
+      "metadata": {
+        "mime_type": "text/html",
+        "etag": "",
+        "last_modified": ""
+      }
     }
   },
   "segments": {
@@ -3916,6 +4736,36 @@
       "locator": "segment:1",
       "text_ref": ".system/private/resources/raw/662e389e770fc472810bd684ab2f31acdfa343db9b2c1aba2cd0fb4939e466b2.txt#segment=1",
       "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Wed, 03 Jun 2026 12:36:27 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "language": "",
+      "topic": "",
+      "confidence": 1.0
+    },
+    "resource-segment-808d261038983951": {
+      "segment_id": "resource-segment-808d261038983951",
+      "document_id": "resource-740fdafff4e87398",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/5c7ea66ba8d929a674095199f8880e8ddaa2760702753b1e759072901f6ceeb3.txt#segment=1",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Thu, 04 Jun 2026 00:23:45 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "language": "",
+      "topic": "",
+      "confidence": 1.0
+    },
+    "resource-segment-1f98f9ac17b69082": {
+      "segment_id": "resource-segment-1f98f9ac17b69082",
+      "document_id": "resource-80652abc20a76c6a",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/7fd19caafedffc98a5efcac2ea061022c100fd7fbda0907bcf450e44a8f99379.txt#segment=1",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Fri, 05 Jun 2026 00:14:49 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
+      "language": "",
+      "topic": "",
+      "confidence": 1.0
+    },
+    "resource-segment-f5e6c11fa2e40b9d": {
+      "segment_id": "resource-segment-f5e6c11fa2e40b9d",
+      "document_id": "resource-a8bbe6e84fd80956",
+      "locator": "segment:1",
+      "text_ref": ".system/private/resources/raw/78571368b7db940c951853d7b8c4f9359c9cbd35cf64d50e68592c32d282b7c2.txt#segment=1",
+      "excerpt": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n<title>Latest Filings - Fri, 05 Jun 2026 06:14:49 EDT</title>\n<link rel=\"alternate\" href=\"/cgi-bin/browse-edgar?action=getcurrent\"/>\n<link rel=\"self\" href=\"/cgi-bin/browse-edgar?action=getcurr",
       "language": "",
       "topic": "",
       "confidence": 1.0
@@ -8924,6 +9774,2437 @@
         "finding_count": 0
       },
       "created_at": "2026-06-03T16:16:23.826337+00:00"
+    },
+    "resource-job-c08c79cc50a7": {
+      "job_id": "resource-job-c08c79cc50a7",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource redirect did not include a location."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-04T04:14:06.448180+00:00"
+    },
+    "resource-job-0edc09a17589": {
+      "job_id": "resource-job-0edc09a17589",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:08.540496+00:00"
+    },
+    "resource-job-38aad79a3171": {
+      "job_id": "resource-job-38aad79a3171",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:09.525437+00:00"
+    },
+    "resource-job-4ce18e66b835": {
+      "job_id": "resource-job-4ce18e66b835",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:10.824378+00:00"
+    },
+    "resource-job-025f414158b1": {
+      "job_id": "resource-job-025f414158b1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:12.015126+00:00"
+    },
+    "resource-job-88f1706f4d57": {
+      "job_id": "resource-job-88f1706f4d57",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:12.916785+00:00"
+    },
+    "resource-job-4ec11f846ddf": {
+      "job_id": "resource-job-4ec11f846ddf",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:13.803381+00:00"
+    },
+    "resource-job-86db164bfd6e": {
+      "job_id": "resource-job-86db164bfd6e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:14.707845+00:00"
+    },
+    "resource-job-8516ed6b780e": {
+      "job_id": "resource-job-8516ed6b780e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:15.600606+00:00"
+    },
+    "resource-job-8ac17cf7d71f": {
+      "job_id": "resource-job-8ac17cf7d71f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:16.479051+00:00"
+    },
+    "resource-job-dd126584785e": {
+      "job_id": "resource-job-dd126584785e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:17.369307+00:00"
+    },
+    "resource-job-b3ee561c1f74": {
+      "job_id": "resource-job-b3ee561c1f74",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:19.834509+00:00"
+    },
+    "resource-job-7a94ff8d4e7c": {
+      "job_id": "resource-job-7a94ff8d4e7c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:21.522895+00:00"
+    },
+    "resource-job-a2d0be97a004": {
+      "job_id": "resource-job-a2d0be97a004",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:23.594940+00:00"
+    },
+    "resource-job-01cd883a5c39": {
+      "job_id": "resource-job-01cd883a5c39",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:24.894668+00:00"
+    },
+    "resource-job-13736e290dea": {
+      "job_id": "resource-job-13736e290dea",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:26.523701+00:00"
+    },
+    "resource-job-155bb9f5676d": {
+      "job_id": "resource-job-155bb9f5676d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:27.955626+00:00"
+    },
+    "resource-job-5eaec567b5b9": {
+      "job_id": "resource-job-5eaec567b5b9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:29.272039+00:00"
+    },
+    "resource-job-60d9192e0261": {
+      "job_id": "resource-job-60d9192e0261",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:30.834668+00:00"
+    },
+    "resource-job-8a3cad611da9": {
+      "job_id": "resource-job-8a3cad611da9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:32.676363+00:00"
+    },
+    "resource-job-3d0820e6b331": {
+      "job_id": "resource-job-3d0820e6b331",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:34.222364+00:00"
+    },
+    "resource-job-a8586a09ef47": {
+      "job_id": "resource-job-a8586a09ef47",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:36.168517+00:00"
+    },
+    "resource-job-dcb40d5de967": {
+      "job_id": "resource-job-dcb40d5de967",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:37.440549+00:00"
+    },
+    "resource-job-6539d54f5e17": {
+      "job_id": "resource-job-6539d54f5e17",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:39.765965+00:00"
+    },
+    "resource-job-b89c8cb469a2": {
+      "job_id": "resource-job-b89c8cb469a2",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:42.382152+00:00"
+    },
+    "resource-job-f02a6b56c736": {
+      "job_id": "resource-job-f02a6b56c736",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:45.752690+00:00"
+    },
+    "resource-job-b771a0811441": {
+      "job_id": "resource-job-b771a0811441",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:47.310958+00:00"
+    },
+    "resource-job-38b1f4a8f450": {
+      "job_id": "resource-job-38b1f4a8f450",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:48.394097+00:00"
+    },
+    "resource-job-0f1f28a239a0": {
+      "job_id": "resource-job-0f1f28a239a0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:50.110235+00:00"
+    },
+    "resource-job-29774e0d8bd9": {
+      "job_id": "resource-job-29774e0d8bd9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:51.974237+00:00"
+    },
+    "resource-job-b189d552612d": {
+      "job_id": "resource-job-b189d552612d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:53.342255+00:00"
+    },
+    "resource-job-6dcf7906361e": {
+      "job_id": "resource-job-6dcf7906361e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:55.029143+00:00"
+    },
+    "resource-job-f6fee348f8d7": {
+      "job_id": "resource-job-f6fee348f8d7",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:56.719799+00:00"
+    },
+    "resource-job-a41f2eb69071": {
+      "job_id": "resource-job-a41f2eb69071",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:14:58.429086+00:00"
+    },
+    "resource-job-b298dc864d17": {
+      "job_id": "resource-job-b298dc864d17",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:00.157629+00:00"
+    },
+    "resource-job-f765b67b16e0": {
+      "job_id": "resource-job-f765b67b16e0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:03.147890+00:00"
+    },
+    "resource-job-2a6763fb3fb4": {
+      "job_id": "resource-job-2a6763fb3fb4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:04.155726+00:00"
+    },
+    "resource-job-189bfefc6121": {
+      "job_id": "resource-job-189bfefc6121",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:05.242003+00:00"
+    },
+    "resource-job-c59b42a4637d": {
+      "job_id": "resource-job-c59b42a4637d",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource fetch failed with HTTP 403."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-04T04:15:08.078636+00:00"
+    },
+    "resource-job-5060ed9e2552": {
+      "job_id": "resource-job-5060ed9e2552",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:10.648661+00:00"
+    },
+    "resource-job-4aa1e3720ec9": {
+      "job_id": "resource-job-4aa1e3720ec9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:11.563773+00:00"
+    },
+    "resource-job-c7ddff86c82d": {
+      "job_id": "resource-job-c7ddff86c82d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:12.574182+00:00"
+    },
+    "resource-job-f7c0775bb7ab": {
+      "job_id": "resource-job-f7c0775bb7ab",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:14.201825+00:00"
+    },
+    "resource-job-b4527cf5b343": {
+      "job_id": "resource-job-b4527cf5b343",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:16.477080+00:00"
+    },
+    "resource-job-808bbd73200d": {
+      "job_id": "resource-job-808bbd73200d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:17.959480+00:00"
+    },
+    "resource-job-dfd7d0e320f0": {
+      "job_id": "resource-job-dfd7d0e320f0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:19.419812+00:00"
+    },
+    "resource-job-0b066ce99aff": {
+      "job_id": "resource-job-0b066ce99aff",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:20.629054+00:00"
+    },
+    "resource-job-22a618d15664": {
+      "job_id": "resource-job-22a618d15664",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:21.858149+00:00"
+    },
+    "resource-job-7af0a6266774": {
+      "job_id": "resource-job-7af0a6266774",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:23.063609+00:00"
+    },
+    "resource-job-29267d91efce": {
+      "job_id": "resource-job-29267d91efce",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:24.261964+00:00"
+    },
+    "resource-job-cb7bba092018": {
+      "job_id": "resource-job-cb7bba092018",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:25.546613+00:00"
+    },
+    "resource-job-268c8417145b": {
+      "job_id": "resource-job-268c8417145b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:26.764679+00:00"
+    },
+    "resource-job-72ddaea0d1f8": {
+      "job_id": "resource-job-72ddaea0d1f8",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:27.987129+00:00"
+    },
+    "resource-job-068c17318a28": {
+      "job_id": "resource-job-068c17318a28",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:30.331590+00:00"
+    },
+    "resource-job-e2db925cb3f2": {
+      "job_id": "resource-job-e2db925cb3f2",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:32.003858+00:00"
+    },
+    "resource-job-c08a39849f7c": {
+      "job_id": "resource-job-c08a39849f7c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:34.254093+00:00"
+    },
+    "resource-job-69c9780ba8ca": {
+      "job_id": "resource-job-69c9780ba8ca",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:35.900225+00:00"
+    },
+    "resource-job-e4d515205651": {
+      "job_id": "resource-job-e4d515205651",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:37.383908+00:00"
+    },
+    "resource-job-4832b7be9c97": {
+      "job_id": "resource-job-4832b7be9c97",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:39.125661+00:00"
+    },
+    "resource-job-6e2a61aedf1f": {
+      "job_id": "resource-job-6e2a61aedf1f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:40.674408+00:00"
+    },
+    "resource-job-cb697c8dcbce": {
+      "job_id": "resource-job-cb697c8dcbce",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:15:42.246006+00:00"
+    },
+    "resource-job-5574b6a41262": {
+      "job_id": "resource-job-5574b6a41262",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:16:26.875646+00:00"
+    },
+    "resource-job-7999c155ecc1": {
+      "job_id": "resource-job-7999c155ecc1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:16:28.403843+00:00"
+    },
+    "resource-job-8b2d1ca21325": {
+      "job_id": "resource-job-8b2d1ca21325",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:16:31.222039+00:00"
+    },
+    "resource-job-ef7b85d63d5b": {
+      "job_id": "resource-job-ef7b85d63d5b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:16:33.027189+00:00"
+    },
+    "resource-job-a91ea4f9bd91": {
+      "job_id": "resource-job-a91ea4f9bd91",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:18.363913+00:00"
+    },
+    "resource-job-31e3b6c546db": {
+      "job_id": "resource-job-31e3b6c546db",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:20.073871+00:00"
+    },
+    "resource-job-11f37c593eba": {
+      "job_id": "resource-job-11f37c593eba",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:21.641914+00:00"
+    },
+    "resource-job-6476926a7d93": {
+      "job_id": "resource-job-6476926a7d93",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:23.170479+00:00"
+    },
+    "resource-job-7e60c21341c6": {
+      "job_id": "resource-job-7e60c21341c6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:25.027839+00:00"
+    },
+    "resource-job-9357e4d5d286": {
+      "job_id": "resource-job-9357e4d5d286",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:26.577298+00:00"
+    },
+    "resource-job-cf43b04a171c": {
+      "job_id": "resource-job-cf43b04a171c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:28.192925+00:00"
+    },
+    "resource-job-13b35eccfc00": {
+      "job_id": "resource-job-13b35eccfc00",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:29.812314+00:00"
+    },
+    "resource-job-e01cc330bdd1": {
+      "job_id": "resource-job-e01cc330bdd1",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource denied by robots.txt: https://creators.spotify.com/pod/show/worldsacross"
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-04T04:17:32.848351+00:00"
+    },
+    "resource-job-2aae3a610331": {
+      "job_id": "resource-job-2aae3a610331",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:36.970209+00:00"
+    },
+    "resource-job-8350780b7500": {
+      "job_id": "resource-job-8350780b7500",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:38.548243+00:00"
+    },
+    "resource-job-2233d46ae1e7": {
+      "job_id": "resource-job-2233d46ae1e7",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:40.352202+00:00"
+    },
+    "resource-job-fa1c74833916": {
+      "job_id": "resource-job-fa1c74833916",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:41.834049+00:00"
+    },
+    "resource-job-322814664968": {
+      "job_id": "resource-job-322814664968",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:43.241570+00:00"
+    },
+    "resource-job-539a830f57fa": {
+      "job_id": "resource-job-539a830f57fa",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:44.544467+00:00"
+    },
+    "resource-job-1386748cb57e": {
+      "job_id": "resource-job-1386748cb57e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:46.021105+00:00"
+    },
+    "resource-job-689b8261cc7b": {
+      "job_id": "resource-job-689b8261cc7b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:47.574930+00:00"
+    },
+    "resource-job-e7f6570724f9": {
+      "job_id": "resource-job-e7f6570724f9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:49.242351+00:00"
+    },
+    "resource-job-c718bb472971": {
+      "job_id": "resource-job-c718bb472971",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-04T04:17:50.767506+00:00"
+    },
+    "resource-job-66919189c565": {
+      "job_id": "resource-job-66919189c565",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource redirect did not include a location."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T04:14:05.322697+00:00"
+    },
+    "resource-job-c4001c776552": {
+      "job_id": "resource-job-c4001c776552",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:08.093304+00:00"
+    },
+    "resource-job-5b86be935fbf": {
+      "job_id": "resource-job-5b86be935fbf",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:09.522180+00:00"
+    },
+    "resource-job-12c0b23133d6": {
+      "job_id": "resource-job-12c0b23133d6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:11.450779+00:00"
+    },
+    "resource-job-407dcf418b59": {
+      "job_id": "resource-job-407dcf418b59",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:13.189405+00:00"
+    },
+    "resource-job-8f2084dc98e9": {
+      "job_id": "resource-job-8f2084dc98e9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:14.490494+00:00"
+    },
+    "resource-job-e5225176b62b": {
+      "job_id": "resource-job-e5225176b62b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:15.778665+00:00"
+    },
+    "resource-job-a88656b1d57e": {
+      "job_id": "resource-job-a88656b1d57e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:17.053477+00:00"
+    },
+    "resource-job-c40d03f6e456": {
+      "job_id": "resource-job-c40d03f6e456",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:18.337339+00:00"
+    },
+    "resource-job-f70f749b8861": {
+      "job_id": "resource-job-f70f749b8861",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:19.630318+00:00"
+    },
+    "resource-job-273c47a5c15c": {
+      "job_id": "resource-job-273c47a5c15c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:20.921364+00:00"
+    },
+    "resource-job-83ce45c63505": {
+      "job_id": "resource-job-83ce45c63505",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource request failed: "
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T04:14:23.970241+00:00"
+    },
+    "resource-job-6e92aefc4fad": {
+      "job_id": "resource-job-6e92aefc4fad",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:47.383922+00:00"
+    },
+    "resource-job-bf991848db02": {
+      "job_id": "resource-job-bf991848db02",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:14:49.054875+00:00"
+    },
+    "resource-job-1732f89107fd": {
+      "job_id": "resource-job-1732f89107fd",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:18.039080+00:00"
+    },
+    "resource-job-e54b8c2c6642": {
+      "job_id": "resource-job-e54b8c2c6642",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:20.830292+00:00"
+    },
+    "resource-job-ac6e1bc41c08": {
+      "job_id": "resource-job-ac6e1bc41c08",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:22.631621+00:00"
+    },
+    "resource-job-4dd8dbabded7": {
+      "job_id": "resource-job-4dd8dbabded7",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:24.600471+00:00"
+    },
+    "resource-job-44c5abf745a3": {
+      "job_id": "resource-job-44c5abf745a3",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:27.118301+00:00"
+    },
+    "resource-job-c467358f7623": {
+      "job_id": "resource-job-c467358f7623",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:29.641662+00:00"
+    },
+    "resource-job-3dfb6a4954b4": {
+      "job_id": "resource-job-3dfb6a4954b4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:31.614392+00:00"
+    },
+    "resource-job-55eec3cc12da": {
+      "job_id": "resource-job-55eec3cc12da",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:33.588966+00:00"
+    },
+    "resource-job-82f9059645c3": {
+      "job_id": "resource-job-82f9059645c3",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:35.552139+00:00"
+    },
+    "resource-job-81ef6483701e": {
+      "job_id": "resource-job-81ef6483701e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:37.785708+00:00"
+    },
+    "resource-job-b5dabe84d0fd": {
+      "job_id": "resource-job-b5dabe84d0fd",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:41.498939+00:00"
+    },
+    "resource-job-6f5cca4f7bc6": {
+      "job_id": "resource-job-6f5cca4f7bc6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:42.944762+00:00"
+    },
+    "resource-job-7665fc9b3765": {
+      "job_id": "resource-job-7665fc9b3765",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:44.492144+00:00"
+    },
+    "resource-job-c2e32c06ff4e": {
+      "job_id": "resource-job-c2e32c06ff4e",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource fetch failed with HTTP 403."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T04:15:48.641047+00:00"
+    },
+    "resource-job-935bfbbc8819": {
+      "job_id": "resource-job-935bfbbc8819",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:52.034945+00:00"
+    },
+    "resource-job-26d5c1518852": {
+      "job_id": "resource-job-26d5c1518852",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:53.381678+00:00"
+    },
+    "resource-job-ddc7ff02963b": {
+      "job_id": "resource-job-ddc7ff02963b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:54.841625+00:00"
+    },
+    "resource-job-0845897e2171": {
+      "job_id": "resource-job-0845897e2171",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:15:57.286123+00:00"
+    },
+    "resource-job-3af14981959f": {
+      "job_id": "resource-job-3af14981959f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:00.388065+00:00"
+    },
+    "resource-job-fab3b85a50af": {
+      "job_id": "resource-job-fab3b85a50af",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:02.415506+00:00"
+    },
+    "resource-job-c4bcd5a16ed6": {
+      "job_id": "resource-job-c4bcd5a16ed6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:04.521467+00:00"
+    },
+    "resource-job-30a1b69855d6": {
+      "job_id": "resource-job-30a1b69855d6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:06.315019+00:00"
+    },
+    "resource-job-3d6516c23ec6": {
+      "job_id": "resource-job-3d6516c23ec6",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:08.105623+00:00"
+    },
+    "resource-job-e12feece7f35": {
+      "job_id": "resource-job-e12feece7f35",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:09.836929+00:00"
+    },
+    "resource-job-3d119f506e6c": {
+      "job_id": "resource-job-3d119f506e6c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:11.626476+00:00"
+    },
+    "resource-job-155594e4ca96": {
+      "job_id": "resource-job-155594e4ca96",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:13.460742+00:00"
+    },
+    "resource-job-0896b114f64c": {
+      "job_id": "resource-job-0896b114f64c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:15.190182+00:00"
+    },
+    "resource-job-ef73abf09a66": {
+      "job_id": "resource-job-ef73abf09a66",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:16:16.958373+00:00"
+    },
+    "resource-job-b340894f6220": {
+      "job_id": "resource-job-b340894f6220",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource denied by robots.txt: https://creators.spotify.com/pod/show/worldsacross"
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T04:17:07.413885+00:00"
+    },
+    "resource-job-4b06cf387b80": {
+      "job_id": "resource-job-4b06cf387b80",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:12.199376+00:00"
+    },
+    "resource-job-d92b6808c11d": {
+      "job_id": "resource-job-d92b6808c11d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:18.702080+00:00"
+    },
+    "resource-job-c299d4c0f6c0": {
+      "job_id": "resource-job-c299d4c0f6c0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:21.011519+00:00"
+    },
+    "resource-job-e2651eadcecd": {
+      "job_id": "resource-job-e2651eadcecd",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:23.045313+00:00"
+    },
+    "resource-job-2047064c4f1f": {
+      "job_id": "resource-job-2047064c4f1f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:25.206879+00:00"
+    },
+    "resource-job-dfe51fea55af": {
+      "job_id": "resource-job-dfe51fea55af",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:27.648868+00:00"
+    },
+    "resource-job-c3b8de8c6c72": {
+      "job_id": "resource-job-c3b8de8c6c72",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:30.032981+00:00"
+    },
+    "resource-job-110cab653f48": {
+      "job_id": "resource-job-110cab653f48",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:32.349104+00:00"
+    },
+    "resource-job-497132e00b7b": {
+      "job_id": "resource-job-497132e00b7b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:34.428402+00:00"
+    },
+    "resource-job-654099c7d634": {
+      "job_id": "resource-job-654099c7d634",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T04:17:36.888978+00:00"
+    },
+    "resource-job-f989d54a0199": {
+      "job_id": "resource-job-f989d54a0199",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource redirect did not include a location."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T10:14:04.775427+00:00"
+    },
+    "resource-job-c11f7dd4e454": {
+      "job_id": "resource-job-c11f7dd4e454",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:07.657389+00:00"
+    },
+    "resource-job-ae1981be65bf": {
+      "job_id": "resource-job-ae1981be65bf",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:09.086823+00:00"
+    },
+    "resource-job-c1898e2a4661": {
+      "job_id": "resource-job-c1898e2a4661",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:10.998584+00:00"
+    },
+    "resource-job-152c89ff6e38": {
+      "job_id": "resource-job-152c89ff6e38",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:12.669296+00:00"
+    },
+    "resource-job-9e6753170aca": {
+      "job_id": "resource-job-9e6753170aca",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:13.987731+00:00"
+    },
+    "resource-job-b5e55cf79fb5": {
+      "job_id": "resource-job-b5e55cf79fb5",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:15.284858+00:00"
+    },
+    "resource-job-4755cc124deb": {
+      "job_id": "resource-job-4755cc124deb",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:16.581371+00:00"
+    },
+    "resource-job-20b94d9d290e": {
+      "job_id": "resource-job-20b94d9d290e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:17.872117+00:00"
+    },
+    "resource-job-dc0c92a887ab": {
+      "job_id": "resource-job-dc0c92a887ab",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:19.173791+00:00"
+    },
+    "resource-job-7bd9899b12b5": {
+      "job_id": "resource-job-7bd9899b12b5",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:20.473126+00:00"
+    },
+    "resource-job-53831d91e603": {
+      "job_id": "resource-job-53831d91e603",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:23.500735+00:00"
+    },
+    "resource-job-5486e5c306cc": {
+      "job_id": "resource-job-5486e5c306cc",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:25.687180+00:00"
+    },
+    "resource-job-868e641eefc4": {
+      "job_id": "resource-job-868e641eefc4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:28.776998+00:00"
+    },
+    "resource-job-513c9e16df5a": {
+      "job_id": "resource-job-513c9e16df5a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:31.513605+00:00"
+    },
+    "resource-job-81fbc6903210": {
+      "job_id": "resource-job-81fbc6903210",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:33.604623+00:00"
+    },
+    "resource-job-e0c915303a48": {
+      "job_id": "resource-job-e0c915303a48",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:36.544699+00:00"
+    },
+    "resource-job-06b4f0f47869": {
+      "job_id": "resource-job-06b4f0f47869",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:38.772436+00:00"
+    },
+    "resource-job-174fc0818327": {
+      "job_id": "resource-job-174fc0818327",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:41.140955+00:00"
+    },
+    "resource-job-4c4cc3d7f426": {
+      "job_id": "resource-job-4c4cc3d7f426",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:43.608528+00:00"
+    },
+    "resource-job-46199e75b70b": {
+      "job_id": "resource-job-46199e75b70b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:45.847215+00:00"
+    },
+    "resource-job-3b52047cc6e1": {
+      "job_id": "resource-job-3b52047cc6e1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:48.081860+00:00"
+    },
+    "resource-job-a667880a37ed": {
+      "job_id": "resource-job-a667880a37ed",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:49.683193+00:00"
+    },
+    "resource-job-7877057ed72f": {
+      "job_id": "resource-job-7877057ed72f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:52.729551+00:00"
+    },
+    "resource-job-aa35561b41a2": {
+      "job_id": "resource-job-aa35561b41a2",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:14:56.480707+00:00"
+    },
+    "resource-job-8d32736306d1": {
+      "job_id": "resource-job-8d32736306d1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:00.751000+00:00"
+    },
+    "resource-job-28225afc7514": {
+      "job_id": "resource-job-28225afc7514",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:03.621739+00:00"
+    },
+    "resource-job-747bd5fb7ef4": {
+      "job_id": "resource-job-747bd5fb7ef4",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:05.145788+00:00"
+    },
+    "resource-job-64d8216ea8a1": {
+      "job_id": "resource-job-64d8216ea8a1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:07.122660+00:00"
+    },
+    "resource-job-deb9d3bc6fea": {
+      "job_id": "resource-job-deb9d3bc6fea",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:09.694966+00:00"
+    },
+    "resource-job-14dbafc877be": {
+      "job_id": "resource-job-14dbafc877be",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:12.236406+00:00"
+    },
+    "resource-job-f842f737973b": {
+      "job_id": "resource-job-f842f737973b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:14.223051+00:00"
+    },
+    "resource-job-0a958fbd561d": {
+      "job_id": "resource-job-0a958fbd561d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:16.777415+00:00"
+    },
+    "resource-job-fc9952a67581": {
+      "job_id": "resource-job-fc9952a67581",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:19.286447+00:00"
+    },
+    "resource-job-26a0ba45a38b": {
+      "job_id": "resource-job-26a0ba45a38b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:21.835486+00:00"
+    },
+    "resource-job-e47c50e34909": {
+      "job_id": "resource-job-e47c50e34909",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:26.294530+00:00"
+    },
+    "resource-job-12ab597d79cc": {
+      "job_id": "resource-job-12ab597d79cc",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:27.696755+00:00"
+    },
+    "resource-job-361917ee0085": {
+      "job_id": "resource-job-361917ee0085",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:29.308184+00:00"
+    },
+    "resource-job-4f6bbfd56ca6": {
+      "job_id": "resource-job-4f6bbfd56ca6",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource fetch failed with HTTP 403."
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T10:15:33.319526+00:00"
+    },
+    "resource-job-4ec5c4bf4274": {
+      "job_id": "resource-job-4ec5c4bf4274",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:36.142162+00:00"
+    },
+    "resource-job-a5bbce1a826d": {
+      "job_id": "resource-job-a5bbce1a826d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:37.439214+00:00"
+    },
+    "resource-job-68abd3e94644": {
+      "job_id": "resource-job-68abd3e94644",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:38.861612+00:00"
+    },
+    "resource-job-ec0f3af38c0c": {
+      "job_id": "resource-job-ec0f3af38c0c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:41.109872+00:00"
+    },
+    "resource-job-509958e51268": {
+      "job_id": "resource-job-509958e51268",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:44.210782+00:00"
+    },
+    "resource-job-dd1c5b16635f": {
+      "job_id": "resource-job-dd1c5b16635f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:46.234539+00:00"
+    },
+    "resource-job-589cf82e82b1": {
+      "job_id": "resource-job-589cf82e82b1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:48.325489+00:00"
+    },
+    "resource-job-4a985db116df": {
+      "job_id": "resource-job-4a985db116df",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:50.396974+00:00"
+    },
+    "resource-job-e2c7b0685c01": {
+      "job_id": "resource-job-e2c7b0685c01",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:52.139309+00:00"
+    },
+    "resource-job-5f6cbfd596d7": {
+      "job_id": "resource-job-5f6cbfd596d7",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:53.871748+00:00"
+    },
+    "resource-job-9e9b13aea579": {
+      "job_id": "resource-job-9e9b13aea579",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:15:55.646075+00:00"
+    },
+    "resource-job-1e6f3f843ce3": {
+      "job_id": "resource-job-1e6f3f843ce3",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:00.836022+00:00"
+    },
+    "resource-job-5ff86135964c": {
+      "job_id": "resource-job-5ff86135964c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:02.574678+00:00"
+    },
+    "resource-job-274e45c65cb2": {
+      "job_id": "resource-job-274e45c65cb2",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:04.318802+00:00"
+    },
+    "resource-job-0a2f04bd7049": {
+      "job_id": "resource-job-0a2f04bd7049",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:07.628153+00:00"
+    },
+    "resource-job-00694014d757": {
+      "job_id": "resource-job-00694014d757",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:10.879625+00:00"
+    },
+    "resource-job-73ef179cbf99": {
+      "job_id": "resource-job-73ef179cbf99",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:17.550345+00:00"
+    },
+    "resource-job-d4c13c8be896": {
+      "job_id": "resource-job-d4c13c8be896",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:19.743212+00:00"
+    },
+    "resource-job-cc28a750b837": {
+      "job_id": "resource-job-cc28a750b837",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:22.119840+00:00"
+    },
+    "resource-job-4852f4f6207c": {
+      "job_id": "resource-job-4852f4f6207c",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:24.843434+00:00"
+    },
+    "resource-job-600babde5810": {
+      "job_id": "resource-job-600babde5810",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:27.250710+00:00"
+    },
+    "resource-job-cc650d54bac9": {
+      "job_id": "resource-job-cc650d54bac9",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:29.509757+00:00"
+    },
+    "resource-job-3f126af45967": {
+      "job_id": "resource-job-3f126af45967",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:31.917810+00:00"
+    },
+    "resource-job-288eca45e88a": {
+      "job_id": "resource-job-288eca45e88a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:34.350277+00:00"
+    },
+    "resource-job-0437a5fe41ca": {
+      "job_id": "resource-job-0437a5fe41ca",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:38.258577+00:00"
+    },
+    "resource-job-53ccc53c31ae": {
+      "job_id": "resource-job-53ccc53c31ae",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:40.660572+00:00"
+    },
+    "resource-job-04fdce00b56b": {
+      "job_id": "resource-job-04fdce00b56b",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:48.459673+00:00"
+    },
+    "resource-job-c6f9c1900e5e": {
+      "job_id": "resource-job-c6f9c1900e5e",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:50.673220+00:00"
+    },
+    "resource-job-5aac082c4c61": {
+      "job_id": "resource-job-5aac082c4c61",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:52.854246+00:00"
+    },
+    "resource-job-dc5bc7609696": {
+      "job_id": "resource-job-dc5bc7609696",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:55.092522+00:00"
+    },
+    "resource-job-cd19140f063a": {
+      "job_id": "resource-job-cd19140f063a",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:16:58.075031+00:00"
+    },
+    "resource-job-f57ecfb67dbe": {
+      "job_id": "resource-job-f57ecfb67dbe",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:01.084114+00:00"
+    },
+    "resource-job-01525ed0166d": {
+      "job_id": "resource-job-01525ed0166d",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:04.318273+00:00"
+    },
+    "resource-job-ba84c90ff7ae": {
+      "job_id": "resource-job-ba84c90ff7ae",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:06.708560+00:00"
+    },
+    "resource-job-5b51a73e9588": {
+      "job_id": "resource-job-5b51a73e9588",
+      "trigger": "crawl",
+      "status": "failed",
+      "budget_usage": 0,
+      "retry_state": {
+        "reason": "Resource denied by robots.txt: https://creators.spotify.com/pod/show/worldsacross"
+      },
+      "audit_summary": {},
+      "created_at": "2026-06-05T10:17:11.263081+00:00"
+    },
+    "resource-job-ee6d015bbbc1": {
+      "job_id": "resource-job-ee6d015bbbc1",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:16.218747+00:00"
+    },
+    "resource-job-cb144735fc98": {
+      "job_id": "resource-job-cb144735fc98",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:18.325108+00:00"
+    },
+    "resource-job-5863092bc964": {
+      "job_id": "resource-job-5863092bc964",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:20.664159+00:00"
+    },
+    "resource-job-c781f800cbfe": {
+      "job_id": "resource-job-c781f800cbfe",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:22.693871+00:00"
+    },
+    "resource-job-0235dc758a14": {
+      "job_id": "resource-job-0235dc758a14",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:24.637513+00:00"
+    },
+    "resource-job-f01102348102": {
+      "job_id": "resource-job-f01102348102",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:26.795428+00:00"
+    },
+    "resource-job-b4b68a3d2fa7": {
+      "job_id": "resource-job-b4b68a3d2fa7",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:28.755858+00:00"
+    },
+    "resource-job-64ace2c2779f": {
+      "job_id": "resource-job-64ace2c2779f",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:30.752996+00:00"
+    },
+    "resource-job-7b51ee24f3e0": {
+      "job_id": "resource-job-7b51ee24f3e0",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:32.764020+00:00"
+    },
+    "resource-job-b4158f59c512": {
+      "job_id": "resource-job-b4158f59c512",
+      "trigger": "crawl",
+      "status": "completed",
+      "budget_usage": 1,
+      "retry_state": {},
+      "audit_summary": {
+        "finding_count": 0
+      },
+      "created_at": "2026-06-05T10:17:34.795780+00:00"
     }
   },
   "promotions": {
@@ -9314,6 +12595,48 @@
       "evidence_refs": [
         "resource-b9e42cb9a75400a4",
         "662e389e770fc472810bd684ab2f31acdfa343db9b2c1aba2cd0fb4939e466b2",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-3aa48ada335b": {
+      "promotion_id": "resource-promotion-3aa48ada335b",
+      "lane": "cfa",
+      "target": "cfa_registry_fact",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-740fdafff4e87398",
+        "5c7ea66ba8d929a674095199f8880e8ddaa2760702753b1e759072901f6ceeb3",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-94b0e09487be": {
+      "promotion_id": "resource-promotion-94b0e09487be",
+      "lane": "cfa",
+      "target": "cfa_registry_fact",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-80652abc20a76c6a",
+        "7fd19caafedffc98a5efcac2ea061022c100fd7fbda0907bcf450e44a8f99379",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom"
+      ],
+      "approved": true,
+      "revoked": false
+    },
+    "resource-promotion-d465683cbfae": {
+      "promotion_id": "resource-promotion-d465683cbfae",
+      "lane": "cfa",
+      "target": "cfa_registry_fact",
+      "policy_version": "resource-policy-v1",
+      "confidence": 1.0,
+      "evidence_refs": [
+        "resource-a8bbe6e84fd80956",
+        "78571368b7db940c951853d7b8c4f9359c9cbd35cf64d50e68592c32d282b7c2",
         "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=10-K&company=&dateb=&owner=exclude&start=0&count=40&output=atom"
       ],
       "approved": true,
@@ -10061,6 +13384,500 @@
         "https://www.notesinspanish.com/2026/03/11/when-you-freeze-in-spanish-say-this/"
       ],
       "created_at": "2026-06-03T16:16:25.278010+00:00"
+    },
+    "resource-inbox-6c412b39b13a": {
+      "inbox_id": "resource-inbox-6c412b39b13a",
+      "document_id": "resource-26498862652881d6",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-26498862652881d6",
+        "7e4b05b1d462880e73f286ce737ac1de48ad9a30b5d3f958e6fead628afdc2d7",
+        "https://www.elmundo.es/"
+      ],
+      "created_at": "2026-06-04T04:15:17.885310+00:00"
+    },
+    "resource-inbox-48c862a64bbc": {
+      "inbox_id": "resource-inbox-48c862a64bbc",
+      "document_id": "resource-42f5be5fcb122317",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-42f5be5fcb122317",
+        "8b53fcbc8246e8cba1efe85760142db8b65bb7d6004eb98824af3b2bb5b5e799",
+        "https://www.elmundo.es/rss/index.xml"
+      ],
+      "created_at": "2026-06-04T04:15:19.344364+00:00"
+    },
+    "resource-inbox-6760fdef95a3": {
+      "inbox_id": "resource-inbox-6760fdef95a3",
+      "document_id": "resource-3e19ad2771ec7bc4",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-3e19ad2771ec7bc4",
+        "1c2f9175de360dd8f364e096e172b3eba2a08a36ae82680d345aba7f60a379f7",
+        "https://www.elmundo.es/espana/2026/06/03/6a204b11fdddff55128b45cd.html"
+      ],
+      "created_at": "2026-06-04T04:15:20.550552+00:00"
+    },
+    "resource-inbox-2581ae94ebdf": {
+      "inbox_id": "resource-inbox-2581ae94ebdf",
+      "document_id": "resource-1309a95642276ef3",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-1309a95642276ef3",
+        "4e857ce1f9d10baabc89ee23d9bba8cc4a869c3d9886ada2e98e922dea59c123",
+        "https://www.elmundo.es/espana/2026/06/03/6a204b64fdddffdc0d8b45c3.html"
+      ],
+      "created_at": "2026-06-04T04:15:21.775694+00:00"
+    },
+    "resource-inbox-5cdc37c68943": {
+      "inbox_id": "resource-inbox-5cdc37c68943",
+      "document_id": "resource-b6c32ceafb9400ed",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-b6c32ceafb9400ed",
+        "019e89bd413c567d4f7dd69826af8b91953134eee2bfe4990666485d61883700",
+        "https://www.elmundo.es/espana/2026/06/03/6a2056afe85ecec74f8b45bf.html"
+      ],
+      "created_at": "2026-06-04T04:15:22.987608+00:00"
+    },
+    "resource-inbox-fdaab71bc4e0": {
+      "inbox_id": "resource-inbox-fdaab71bc4e0",
+      "document_id": "resource-f412925221047c5e",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-f412925221047c5e",
+        "e03adf97b82284b5a97f06da5350038a5b423164e968b202d3580ba774c58235",
+        "https://www.elmundo.es/espana/2026/06/04/6a204baefdddff80378b4570.html"
+      ],
+      "created_at": "2026-06-04T04:15:24.185352+00:00"
+    },
+    "resource-inbox-d2ad242f23c9": {
+      "inbox_id": "resource-inbox-d2ad242f23c9",
+      "document_id": "resource-a8daf40a8a1cac94",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-a8daf40a8a1cac94",
+        "26f4090f62d8d64b1540273fc9a4ba56f0ee1881de46e2b66fffae4acbd9e5f1",
+        "https://www.elmundo.es/espana/2026/06/03/6a204b8bfdddff1a798b4595.html"
+      ],
+      "created_at": "2026-06-04T04:15:25.465361+00:00"
+    },
+    "resource-inbox-70e869c56217": {
+      "inbox_id": "resource-inbox-70e869c56217",
+      "document_id": "resource-2f9337a02248567f",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-2f9337a02248567f",
+        "84d14a42703897220ab7678ba27676d37ed12c0b53c58a2e9e28a82698921d12",
+        "https://www.elmundo.es/espana/2026/06/04/6a20225cfdddffb6298b45c5.html"
+      ],
+      "created_at": "2026-06-04T04:15:26.685979+00:00"
+    },
+    "resource-inbox-12d540051053": {
+      "inbox_id": "resource-inbox-12d540051053",
+      "document_id": "resource-f57fc4d35e21cb06",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-f57fc4d35e21cb06",
+        "eda68cacba7cfe05acf3ecb0deee9f5cf8d517c69f6289be5175872b4b82a37a",
+        "https://www.elmundo.es/espana/2026/06/03/6a207aeae85ecea9548b4579.html"
+      ],
+      "created_at": "2026-06-04T04:15:27.902203+00:00"
+    },
+    "resource-inbox-823efc672a0a": {
+      "inbox_id": "resource-inbox-823efc672a0a",
+      "document_id": "resource-8ba1ce8fd2ca6728",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-8ba1ce8fd2ca6728",
+        "7a971359895f601369c07e4882f0346ad52256f457849db886241ff2fbb992ef",
+        "https://www.elmundo.es/espana/2026/06/04/6a204bd3fdddffdc0d8b45ca.html"
+      ],
+      "created_at": "2026-06-04T04:15:29.123904+00:00"
+    },
+    "resource-inbox-70d340910754": {
+      "inbox_id": "resource-inbox-70d340910754",
+      "document_id": "resource-7e381e097c8beec9",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-7e381e097c8beec9",
+        "a092cefe9ac536ee6a0162e86928fa4d5ed1c9b655c3ce9a3b6990c9ea04dcf6",
+        "https://feeds.simplecast.com/UrwSRKXH"
+      ],
+      "created_at": "2026-06-05T04:15:42.837689+00:00"
+    },
+    "resource-inbox-50c788fbccbb": {
+      "inbox_id": "resource-inbox-50c788fbccbb",
+      "document_id": "resource-87c667e80722768f",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-87c667e80722768f",
+        "8bc242a4439969d3aff0ec8c4e5b13c75dd32c20a09ebe082cefdc1deeaca535",
+        "https://www.elmundo.es/"
+      ],
+      "created_at": "2026-06-05T04:16:02.305332+00:00"
+    },
+    "resource-inbox-238677611d66": {
+      "inbox_id": "resource-inbox-238677611d66",
+      "document_id": "resource-5a3844befc88b2b4",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-5a3844befc88b2b4",
+        "7a9c93728a9a2008ba0271d602c9b3472f996b47dfc6ba88d3198ce17ee053c7",
+        "https://www.elmundo.es/rss/index.xml"
+      ],
+      "created_at": "2026-06-05T04:16:04.404283+00:00"
+    },
+    "resource-inbox-d9fee2e8a508": {
+      "inbox_id": "resource-inbox-d9fee2e8a508",
+      "document_id": "resource-a5536f654f92e308",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-a5536f654f92e308",
+        "a8c601bd7beec0a29b933113db1c3d05d5b2ce07c8979a5614108cc7324f5352",
+        "https://www.elmundo.es/espana/2026/06/04/6a21bb6ee9cf4a2b698b45c2.html"
+      ],
+      "created_at": "2026-06-05T04:16:06.203543+00:00"
+    },
+    "resource-inbox-58a604220351": {
+      "inbox_id": "resource-inbox-58a604220351",
+      "document_id": "resource-5a7f08995da2d88b",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-5a7f08995da2d88b",
+        "a39a0a372d12892c3be4d891c8a3e262e156b4bc0d4d5577203e5aa79005ab1e",
+        "https://www.elmundo.es/espana/2026/06/04/6a21b95fe9cf4ab9238b457b.html"
+      ],
+      "created_at": "2026-06-05T04:16:07.994991+00:00"
+    },
+    "resource-inbox-585b6084e01a": {
+      "inbox_id": "resource-inbox-585b6084e01a",
+      "document_id": "resource-122916303c4857f7",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-122916303c4857f7",
+        "0467bacbdfada8af0e389580934a6f915d4f4dc987709238e55fbf5cfd1cdfe8",
+        "https://www.elmundo.es/espana/2026/06/04/6a21eee921efa000698b45a8.html"
+      ],
+      "created_at": "2026-06-05T04:16:09.722261+00:00"
+    },
+    "resource-inbox-534db908346c": {
+      "inbox_id": "resource-inbox-534db908346c",
+      "document_id": "resource-f80bb4aa9abbcbcb",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-f80bb4aa9abbcbcb",
+        "c9fab7cf97fa0ea5ec2be048339b7ec9c5585e261ad6f37720d244121fd75c29",
+        "https://www.elmundo.es/espana/2026/06/04/6a21bbefe9cf4a0e388b4597.html"
+      ],
+      "created_at": "2026-06-05T04:16:11.514577+00:00"
+    },
+    "resource-inbox-0a0a9c935693": {
+      "inbox_id": "resource-inbox-0a0a9c935693",
+      "document_id": "resource-4a23e1a738914848",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-4a23e1a738914848",
+        "60c2b37ee9548c7bce9ad4b5d060e2be7c795ae48d72122c0a5d79c6d7c3a2a2",
+        "https://www.elmundo.es/espana/2026/06/04/6a219d9921efa01c4b8b45b3.html"
+      ],
+      "created_at": "2026-06-05T04:16:13.335938+00:00"
+    },
+    "resource-inbox-b51f2f89512f": {
+      "inbox_id": "resource-inbox-b51f2f89512f",
+      "document_id": "resource-d87f18b34d7964b4",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-d87f18b34d7964b4",
+        "2d7e36cea6facee04f68fdf6cff17ac43bdb289a31e81f3ca30cc955c38108ce",
+        "https://www.elmundo.es/espana/2026/06/05/6a21bc9a21efa04f368b45a6.html"
+      ],
+      "created_at": "2026-06-05T04:16:15.075519+00:00"
+    },
+    "resource-inbox-5cdf16d1b2f1": {
+      "inbox_id": "resource-inbox-5cdf16d1b2f1",
+      "document_id": "resource-5e259b7a26709112",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-5e259b7a26709112",
+        "e8793e60ccca575d0499d8079450df647ba20facfc0733832101385d63c36045",
+        "https://www.elmundo.es/espana/2026/06/04/6a21bc11e9cf4ab9238b4583.html"
+      ],
+      "created_at": "2026-06-05T04:16:16.843709+00:00"
+    },
+    "resource-inbox-4065fb3cccc2": {
+      "inbox_id": "resource-inbox-4065fb3cccc2",
+      "document_id": "resource-4259ac5e236bd6ed",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-4259ac5e236bd6ed",
+        "e9e9dbcfd3d640cc55ad5de0b2fd46155ea6e0f27a5870764a82ecfe5c3a39a5",
+        "https://www.elmundo.es/internacional/2026/06/04/6a21a2befc6c83992a8b4591.html"
+      ],
+      "created_at": "2026-06-05T04:16:18.675357+00:00"
+    },
+    "resource-inbox-e9d0f9b716e7": {
+      "inbox_id": "resource-inbox-e9d0f9b716e7",
+      "document_id": "resource-fc8a9733508c8f63",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-fc8a9733508c8f63",
+        "3933de0a95c13b2ba21f37b3130c4f1ec36b5208f3cedaa72dc20cb825505bb9",
+        "https://www.bbc.co.uk/programmes/p02pc9tn"
+      ],
+      "created_at": "2026-06-05T10:14:25.572349+00:00"
+    },
+    "resource-inbox-6e7b4e14fba6": {
+      "inbox_id": "resource-inbox-6e7b4e14fba6",
+      "document_id": "resource-0a99530157036c6f",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-0a99530157036c6f",
+        "9dcdd6328fd02d89870f4b03f88b0ce8aa1c55ea7837adb5a0f132f5f7ca7305",
+        "https://podcasts.files.bbci.co.uk/p02pc9tn.rss"
+      ],
+      "created_at": "2026-06-05T10:14:28.652821+00:00"
+    },
+    "resource-inbox-31afe2da2435": {
+      "inbox_id": "resource-inbox-31afe2da2435",
+      "document_id": "resource-c8a7ba091dfb05de",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-c8a7ba091dfb05de",
+        "9837b344cf355157bbc1ab2fed63009ae4b8fc9653c16e8b5e4b4ddf9258931f",
+        "https://www.bbc.co.uk/programmes/p0nq06hm"
+      ],
+      "created_at": "2026-06-05T10:14:31.398212+00:00"
+    },
+    "resource-inbox-5de4e41d5aa3": {
+      "inbox_id": "resource-inbox-5de4e41d5aa3",
+      "document_id": "resource-5fe5f6f507e527f9",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-5fe5f6f507e527f9",
+        "0cc1e6788e24b33aa5c3832db1ae241a7b125ee790aae6d546564b90e809aa20",
+        "https://www.bbc.co.uk/learningenglish"
+      ],
+      "created_at": "2026-06-05T10:14:56.360851+00:00"
+    },
+    "resource-inbox-96285a3ce89d": {
+      "inbox_id": "resource-inbox-96285a3ce89d",
+      "document_id": "resource-baa49d62bf9ab9a4",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-baa49d62bf9ab9a4",
+        "722b3084b36da3dc28b37d10940137f90876d9a896d81e669f50e07a87c8afdd",
+        "https://www.elmundo.es/"
+      ],
+      "created_at": "2026-06-05T10:15:46.113018+00:00"
+    },
+    "resource-inbox-8a5bc1c75171": {
+      "inbox_id": "resource-inbox-8a5bc1c75171",
+      "document_id": "resource-2ed8ea268b800f23",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-2ed8ea268b800f23",
+        "02b4ac65e26acbd3274856a1739863b777496348ef8de43aff7d6b97567f0a36",
+        "https://www.elmundo.es/rss/index.xml"
+      ],
+      "created_at": "2026-06-05T10:15:48.189342+00:00"
+    },
+    "resource-inbox-a3aa0eb83a19": {
+      "inbox_id": "resource-inbox-a3aa0eb83a19",
+      "document_id": "resource-915ac272fcd0c4ef",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-915ac272fcd0c4ef",
+        "89ffa4d5e75adf7d56570d76c5d38253e7a7ab143b7097886df341b6441860ad",
+        "https://www.elmundo.es/espana/2026/06/04/6a21bb6ee9cf4a2b698b45c2.html"
+      ],
+      "created_at": "2026-06-05T10:15:50.276584+00:00"
+    },
+    "resource-inbox-d657278acaae": {
+      "inbox_id": "resource-inbox-d657278acaae",
+      "document_id": "resource-02d53daf962b210e",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-02d53daf962b210e",
+        "88f12175e979dfccec542f6c57ce83da821bac420e7fc04d5923d3884335444d",
+        "https://www.elmundo.es/espana/2026/06/05/6a228616e85ece415b8b45bd.html"
+      ],
+      "created_at": "2026-06-05T10:15:52.009990+00:00"
+    },
+    "resource-inbox-a686af1ae5fd": {
+      "inbox_id": "resource-inbox-a686af1ae5fd",
+      "document_id": "resource-e1c2cb6d537ff18e",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-e1c2cb6d537ff18e",
+        "b8c613a15dfd87ddb0edebc58d394c9731fb6381e834f0a204b7643a576d909d",
+        "https://www.elmundo.es/espana/2026/06/04/6a21b95fe9cf4ab9238b457b.html"
+      ],
+      "created_at": "2026-06-05T10:15:53.752138+00:00"
+    },
+    "resource-inbox-43ec34127428": {
+      "inbox_id": "resource-inbox-43ec34127428",
+      "document_id": "resource-03f31825f7e02ae3",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-03f31825f7e02ae3",
+        "0c58105a1ec85bf8585ebbf7d40d915a1e2a75c9b3b8230597344a4dab6c08e5",
+        "https://www.elmundo.es/espana/2026/06/04/6a21bbefe9cf4a0e388b4597.html"
+      ],
+      "created_at": "2026-06-05T10:15:55.522330+00:00"
+    },
+    "resource-inbox-e4751ab39b5c": {
+      "inbox_id": "resource-inbox-e4751ab39b5c",
+      "document_id": "resource-3c19bfc69175945b",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-3c19bfc69175945b",
+        "80a9949790092e3a3d89a69147f1abba01f15fb331213fe79c2a3fbc560507bd",
+        "https://www.elmundo.es/espana/2026/06/05/6a228ae9fc6c83992a8b45b8.html"
+      ],
+      "created_at": "2026-06-05T10:16:00.711457+00:00"
+    },
+    "resource-inbox-4e89e6bb7622": {
+      "inbox_id": "resource-inbox-4e89e6bb7622",
+      "document_id": "resource-5a37d3467622c405",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-5a37d3467622c405",
+        "7302ac6da14f7e77556e0c13bab34e376609aee76fcd9c566480858dbdabb7b7",
+        "https://www.elmundo.es/espana/2026/06/04/6a219d9921efa01c4b8b45b3.html"
+      ],
+      "created_at": "2026-06-05T10:16:02.442413+00:00"
+    },
+    "resource-inbox-10f6358efa39": {
+      "inbox_id": "resource-inbox-10f6358efa39",
+      "document_id": "resource-08134eaabd16a747",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-08134eaabd16a747",
+        "16e242797e45079503da2980fd776db1a0777917f2194f0bd1bf079606048452",
+        "https://www.elmundo.es/espana/2026/06/04/6a21bc11e9cf4ab9238b4583.html"
+      ],
+      "created_at": "2026-06-05T10:16:04.191174+00:00"
+    },
+    "resource-inbox-15a618622bed": {
+      "inbox_id": "resource-inbox-15a618622bed",
+      "document_id": "resource-9509b3dca356cf4a",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-9509b3dca356cf4a",
+        "1dddbe4af52ee3be569c7d61d0e96201514c0ec1e83dd400d3ffd717a0a76efc",
+        "https://www.elmundo.es/internacional/2026/06/04/6a21a2befc6c83992a8b4591.html"
+      ],
+      "created_at": "2026-06-05T10:16:05.928007+00:00"
+    },
+    "resource-inbox-e0c7a71ff667": {
+      "inbox_id": "resource-inbox-e0c7a71ff667",
+      "document_id": "resource-617793edb92c5547",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-617793edb92c5547",
+        "7cd48692b45cad4cd989eafd49723a5dbd53348d41b9b2acfa52a08b83f5860b",
+        "https://www.bbc.co.uk/programmes/p02pc9s1"
+      ],
+      "created_at": "2026-06-05T10:16:40.534540+00:00"
+    },
+    "resource-inbox-f574c892c0e7": {
+      "inbox_id": "resource-inbox-f574c892c0e7",
+      "document_id": "resource-818d3015255b9eb7",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-818d3015255b9eb7",
+        "a8f0dc898ab3d0b06a41a8a0a2390ad3de83ba9910d7e3a2d4a813eec6c2966c",
+        "https://podcasts.files.bbci.co.uk/p02pc9s1.rss"
+      ],
+      "created_at": "2026-06-05T10:16:48.333553+00:00"
+    },
+    "resource-inbox-b2bcb5160fb9": {
+      "inbox_id": "resource-inbox-b2bcb5160fb9",
+      "document_id": "resource-cf07bbb9de0f4516",
+      "lane": "language",
+      "reason": "lane_policy_requires_review",
+      "status": "pending",
+      "evidence_refs": [
+        "resource-cf07bbb9de0f4516",
+        "33b07f16da3d4bd11f21233f352e82b68d02955746de86bfa14c1b93bf4489e4",
+        "https://www.bbc.co.uk/programmes/p0nq8ms9"
+      ],
+      "created_at": "2026-06-05T10:16:50.546926+00:00"
     }
   },
   "audits": {},

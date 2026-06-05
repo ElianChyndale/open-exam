@@ -78,6 +78,28 @@ python scripts/cfa.py decay-knowledge
 python scripts/cfa.py complete-daily-review --review-id daily-review-xxxx
 ```
 
+### ChatGPT Collaboration Brief
+
+When you want ChatGPT to critique the current local plan before more Codex work,
+export a ready-to-paste brief:
+
+```powershell
+python scripts/cfa.py chatgpt-brief
+```
+
+This writes `.system/memory/collaboration/chatgpt/CURRENT_BRIEF.md` plus an
+archived copy under `.system/memory/collaboration/chatgpt/briefs/`.
+
+If external ChatGPT control is unavailable, use the built-in local two-agent
+fallback:
+
+```powershell
+python scripts/cfa.py agent-duet-brief
+```
+
+This refreshes the local codex loop and writes a planner/critic synthesis to
+`.system/memory/collaboration/internal-agents/CURRENT_DUET.md`.
+
 ## ResourceOS
 
 ResourceOS ingests public internet resources through robots, SSRF, redirect,

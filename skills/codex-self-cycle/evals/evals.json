@@ -1,0 +1,23 @@
+{
+  "skill_name": "codex-self-cycle",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/goal 根据计划说明，让 Codex 完成一个阶段后自己制定下一阶段计划并继续工作，不要等我确认。",
+      "expected_output": "Uses codex-loop-plan, executes the selected local task, records completion, then generates the next plan.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I want an unattended AI coding loop for this repo, but it must not mutate locked question-bank answers or push to GitHub.",
+      "expected_output": "Applies safety gates, avoids remote GitHub actions, and keeps core question-bank records immutable.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "继续上一个 Codex goal，自己根据已有 proposals 和 failing validations 选下一步，不要只写建议。",
+      "expected_output": "Reads local proposal/reflection evidence, generates a governed task, verifies changes, and writes loop completion.",
+      "files": []
+    }
+  ]
+}

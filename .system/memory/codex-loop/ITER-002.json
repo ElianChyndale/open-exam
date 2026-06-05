@@ -1,0 +1,191 @@
+{
+  "loop_id": "ITER-002",
+  "mode": "unattended",
+  "selected": {
+    "candidate_id": "phase-1-import-contract",
+    "title": "Harden question-bank import contract and immutable published records",
+    "source": "plan_doc",
+    "phase": "1-environment-data-model",
+    "layer": "Capture",
+    "priority": 92,
+    "expected_outputs": [
+      "Define import payload validation for exam, subject, chapter, knowledge tags, difficulty, and answer fields.",
+      "Add a published-question immutability guard for prompts, choices, answers, and explanations.",
+      "Emit an import report that separates accepted, rejected, duplicate, and locked records."
+    ],
+    "acceptance_criteria": [
+      "Invalid imports are rejected with actionable errors.",
+      "Published core question content cannot be changed without an explicit override path.",
+      "Tests prove import order and explanation text stay stable after publish."
+    ],
+    "safety_limits": [
+      "Do not rewrite existing core question text or answer explanations.",
+      "Do not infer missing official answers from ambiguous source files.",
+      "Keep import changes behind tests and local data only."
+    ],
+    "evidence_refs": [
+      "系统改革与刷题计划.docx#阶段1"
+    ],
+    "risk_level": "guarded",
+    "requires_human": false
+  },
+  "candidates_considered": [
+    {
+      "candidate_id": "phase-1-import-contract",
+      "title": "Harden question-bank import contract and immutable published records",
+      "source": "plan_doc",
+      "phase": "1-environment-data-model",
+      "layer": "Capture",
+      "priority": 92,
+      "expected_outputs": [
+        "Define import payload validation for exam, subject, chapter, knowledge tags, difficulty, and answer fields.",
+        "Add a published-question immutability guard for prompts, choices, answers, and explanations.",
+        "Emit an import report that separates accepted, rejected, duplicate, and locked records."
+      ],
+      "acceptance_criteria": [
+        "Invalid imports are rejected with actionable errors.",
+        "Published core question content cannot be changed without an explicit override path.",
+        "Tests prove import order and explanation text stay stable after publish."
+      ],
+      "safety_limits": [
+        "Do not rewrite existing core question text or answer explanations.",
+        "Do not infer missing official answers from ambiguous source files.",
+        "Keep import changes behind tests and local data only."
+      ],
+      "evidence_refs": [
+        "系统改革与刷题计划.docx#阶段1"
+      ],
+      "risk_level": "guarded",
+      "requires_human": false
+    },
+    {
+      "candidate_id": "phase-2-practice-generation",
+      "title": "Add governed practice generation with AND/OR tag filters",
+      "source": "plan_doc",
+      "phase": "2-question-bank-practice",
+      "layer": "Decision",
+      "priority": 88,
+      "expected_outputs": [
+        "Create a deterministic practice-session request model with exam, topic, chapter, count, and tag filters.",
+        "Support AND/OR tag semantics without changing the source question bank.",
+        "Persist generated session metadata for answer submission and review."
+      ],
+      "acceptance_criteria": [
+        "Practice generation can be reproduced in tests with a seeded random source.",
+        "AND filters narrow results and OR filters broaden them as documented.",
+        "The generated session references questions without copying or mutating canonical records."
+      ],
+      "safety_limits": [
+        "Do not duplicate canonical question content into mutable session state.",
+        "Do not use random behavior in tests without a fixed seed.",
+        "Do not add recommendation logic inside the core question-bank module."
+      ],
+      "evidence_refs": [
+        "系统改革与刷题计划.docx#阶段2"
+      ],
+      "risk_level": "guarded",
+      "requires_human": false
+    },
+    {
+      "candidate_id": "phase-2-answer-wrongbook-contract",
+      "title": "Connect answer submission to attempts, wrongbook, notes, and favorites",
+      "source": "plan_doc",
+      "phase": "2-question-bank-practice",
+      "layer": "Capture",
+      "priority": 84,
+      "expected_outputs": [
+        "Persist each answer attempt with correctness, selected answer, time spent, and session ID.",
+        "Update wrongbook records idempotently when answers are incorrect.",
+        "Add note and favorite records that remain attached to a stable question ID."
+      ],
+      "acceptance_criteria": [
+        "Repeated incorrect answers increment wrongbook counters instead of creating duplicates.",
+        "Correct retries can lower wrongbook priority without deleting history.",
+        "Notes and favorites survive repeated answer submissions."
+      ],
+      "safety_limits": [
+        "Do not delete historical attempts when wrongbook priority changes.",
+        "Do not expose hidden correct answers before submission.",
+        "Keep user notes separate from canonical question text."
+      ],
+      "evidence_refs": [
+        "系统改革与刷题计划.docx#阶段2"
+      ],
+      "risk_level": "guarded",
+      "requires_human": false
+    },
+    {
+      "candidate_id": "phase-3-practice-ui-contract",
+      "title": "Create practice UI API contract before changing frontend screens",
+      "source": "plan_doc",
+      "phase": "3-frontend-prototype",
+      "layer": "Decision",
+      "priority": 76,
+      "expected_outputs": [
+        "Write a compact API contract for project selection, practice configuration, question display, and submission.",
+        "Define frontend states for unanswered, answered, reviewed, noted, and favorited questions.",
+        "Add a smoke-test checklist for browser verification."
+      ],
+      "acceptance_criteria": [
+        "The contract names every backend field the practice UI needs.",
+        "The checklist can be run before and after frontend work.",
+        "No frontend route is changed before the contract exists."
+      ],
+      "safety_limits": [
+        "Do not redesign UI until the API contract is stable.",
+        "Do not introduce Chrome/browser dependency into backend-only tests.",
+        "Preserve existing dashboard routes."
+      ],
+      "evidence_refs": [
+        "系统改革与刷题计划.docx#阶段3"
+      ],
+      "risk_level": "safe",
+      "requires_human": false
+    },
+    {
+      "candidate_id": "phase-4-analytics-extension-boundary",
+      "title": "Separate analytics and recommendation extension boundary from core practice",
+      "source": "plan_doc",
+      "phase": "4-analytics-extensions",
+      "layer": "Decision",
+      "priority": 72,
+      "expected_outputs": [
+        "Document which statistics are core and which recommendations are extension-layer outputs.",
+        "Add a local feature flag boundary for recommendation and adaptive-practice modules.",
+        "Define rollback behavior when analytics extension code fails."
+      ],
+      "acceptance_criteria": [
+        "Core answer submission works when recommendation flags are disabled.",
+        "Analytics failures do not corrupt canonical attempts or question-bank records.",
+        "Tests cover at least one disabled-extension path."
+      ],
+      "safety_limits": [
+        "Do not make core practice depend on AI recommendation availability.",
+        "Do not store generated strategy as canonical evidence.",
+        "Keep extension outputs traceable to attempt and wrongbook events."
+      ],
+      "evidence_refs": [
+        "系统改革与刷题计划.docx#阶段4"
+      ],
+      "risk_level": "safe",
+      "requires_human": false
+    }
+  ],
+  "task_path": "docs/codex_tasks/TASK-002.md",
+  "plan_json_path": ".system/memory/codex-loop/ITER-002.json",
+  "plan_markdown_path": ".system/memory/codex-loop/ITER-002.md",
+  "generated_at": "2026-06-05T06:00:33.911096+00:00",
+  "status": "planned",
+  "stop_conditions": [
+    "No eligible non-human candidate remains.",
+    "The same blocker repeats for three consecutive goal turns.",
+    "A task would modify locked question-bank content, secrets, destructive filesystem state, or remote GitHub refs.",
+    "Targeted verification cannot be run or replaced by an explicit verification note."
+  ],
+  "impact_controls": [
+    "Prefer Capture/Memory/Decision Layer changes before Projection changes.",
+    "Write plan and completion events before selecting the next task.",
+    "Keep core brushing-question flow stable; put recommendations and analytics behind extension boundaries.",
+    "Use tests or deterministic validation before marking work complete."
+  ]
+}

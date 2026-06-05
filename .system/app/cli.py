@@ -7,6 +7,8 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
+from app.chat_collaboration import export_chatgpt_collaboration_brief
+from app.agent_duet import export_agent_duet_brief
 from app.storage import Repository
 from app.workflows import daily_review_pack, load_payload, mine_patterns, moc_gap_review, post_mock_retro, pre_mock_brief, record_event, record_progress, refresh_learning_outputs, rollover_todo, write_todo
 
@@ -79,6 +81,22 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers.add_parser("knowledge-status", help="显示知识点的记忆状态（含衰减风险）")
     subparsers.add_parser("decay-knowledge", help="扫描知识点状态并衰减超期未复习项")
 
+    loop_plan = subparsers.add_parser("codex-loop-plan", help="生成 Codex 无人值守自循环的下一步计划")
+    loop_plan.add_argument("--mode", choices=("unattended", "supervised"), default="unattended")
+    loop_plan.add_argument("--max-candidates", type=int, default=8)
+
+    loop_done = subparsers.add_parser("codex-loop-complete", help="标记一个 Codex 自循环候选任务已完成")
+    loop_done.add_argument("--candidate-id", required=True)
+    loop_done.add_argument("--summary", required=True)
+    loop_done.add_argument("--artifact", action="append", default=[])
+    loop_done.add_argument("--verification", default="")
+
+    chatgpt_brief = subparsers.add_parser("chatgpt-brief", help="导出当前计划与任务的 ChatGPT 协作简报")
+    chatgpt_brief.add_argument("--chat-name", default="Codex ChatGPT 协同工作流")
+
+    duet_brief = subparsers.add_parser("agent-duet-brief", help="导出本地双 agent 自协作简报")
+    duet_brief.add_argument("--mode", choices=("unattended", "supervised"), default="unattended")
+
     sync_push = subparsers.add_parser("sync-push", help="导出全部学习数据到文件")
     sync_push.add_argument("--output", default="examos-backup.json", help="导出文件路径")
 
@@ -112,7 +130,7 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
             event = record_event(repo, load_payload(args.payload), args.command)
         if event is None:
             return 0
-        if event.source_layer == "question":
+        if event.source_layer == "question" and not event.is_correct:
             mine_patterns(repo)
             moc_gap_review(repo)
         refresh_learning_outputs(repo)
@@ -144,7 +162,6 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
         return 0
     if args.command == "todo-rollover":
         state = rollover_todo(repo)
-        archived = state["date"] != getattr(args, "_previous_date", "")
         pending = sum(1 for t in state["tasks"] if t["status"] != "completed")
         print(f"✅ Todo 已更新: {state['date']}，待完成 {pending} 项")
         return 0
@@ -265,6 +282,60 @@ def run_cli(argv: list[str] | None = None, repo_root: Path | None = None) -> int
                 print(f"  - {kid}")
         else:
             print("No knowledge points needed decay.")
+        return 0
+
+    if args.command == "codex-loop-plan":
+        from app.codex_loop import plan_codex_loop
+
+        try:
+            plan = plan_codex_loop(repo, mode=args.mode, max_candidates=args.max_candidates)
+        except RuntimeError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 1
+        if plan.selected:
+            print(f"Codex loop plan: {plan.plan_markdown_path}")
+            print(f"Next: {plan.selected.candidate_id} - {plan.selected.title}")
+            print(f"Task: {plan.task_path}")
+        else:
+            print(f"Codex loop plan: {plan.plan_markdown_path}")
+            print("No eligible autonomous candidate remains.")
+        return 0
+
+    if args.command == "codex-loop-complete":
+        from app.codex_loop import complete_codex_loop_candidate
+
+        try:
+            path = complete_codex_loop_candidate(
+                repo,
+                candidate_id=args.candidate_id,
+                summary=args.summary,
+                artifacts=list(args.artifact),
+                verification=args.verification,
+            )
+        except (RuntimeError, ValueError) as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 1
+        print(f"Codex loop completion saved: {path.relative_to(repo.root)}")
+        return 0
+
+    if args.command == "chatgpt-brief":
+        brief = export_chatgpt_collaboration_brief(repo, chat_name=args.chat_name)
+        print(f"ChatGPT brief: {brief.current_path}")
+        print(f"Archived copy: {brief.archive_path}")
+        if brief.selected_candidate_id:
+            print(f"Selected candidate: {brief.selected_candidate_id}")
+        else:
+            print("Selected candidate: none")
+        return 0
+
+    if args.command == "agent-duet-brief":
+        brief = export_agent_duet_brief(repo, mode=args.mode)
+        print(f"Agent duet brief: {brief.current_path}")
+        print(f"Archived copy: {brief.archive_path}")
+        if brief.selected_candidate_id:
+            print(f"Selected candidate: {brief.selected_candidate_id}")
+        else:
+            print("Selected candidate: none")
         return 0
 
     if args.command == "list-profiles":

@@ -23,7 +23,7 @@
 本系统服务 4 个直接结果：
 
 1. 更快定位弱点：知道自己错在知识、过程还是复盘质量。
-2. 更高质量复盘：每条错题都要转成可执行的 fix rule 和 next drill。
+2. 更高质量复盘：每条高价值题目证据都要转成可执行的 fix rule 和 next drill；错题优先，但“未独立作答 / 直接看解析 / 靠提示完成”的非错题也允许记录。
 3. 更少重复犯错：高频错误自动升级为 pattern、strategy、validation。
 4. 更强 agent 协作：agent 不是只会生成内容，而是参与记录、分析、提醒、校验。
 
@@ -51,6 +51,12 @@
 | `agent` | agent 执行失误 | 幻觉、漏掉 root cause、总结错误 |
 
 如果不能分清层级，先按 `question` 记录，再在复盘中升级为 `bias` 或 `agent`。
+
+补充约束：
+
+- `question` 层不只容纳“做错的题”，也容纳高价值题目证据。
+- 例如：做对但没独立做出、直接看了解析、靠强提示才完成、答案对但口径没讲清。
+- 其中只有真正“做错”的题默认生成错题卡；非错题证据可以只保留事件/attempt，用于后续 tutor analysis、review seed 或过程诊断。
 
 ---
 
@@ -190,7 +196,7 @@ CFA_learning/
 
 | 动作 | 作用 |
 |------|------|
-| `record-mistake` | 记录题目层错误 |
+| `record-mistake` | 记录题目层证据（错题优先，也允许记录非错题但低质量完成的题） |
 | `review-session` | 记录学习偏差 / 卡壳点 |
 | `audit-agent` | 审计 agent 失误 |
 | `mine-patterns` | 识别重复模式 |
@@ -256,6 +262,7 @@ python scripts/cfa.py post-mock-retro --session-id mock-2
 每次出现错误后立即做一件事：
 
 - 题错了：`record-mistake`
+- 题没错，但不是独立做出来的：`record-mistake`，并在 payload 中标记 `is_correct: true`
 - 学习卡住了：`review-session`
 - agent 解释错了：`audit-agent`
 
@@ -388,6 +395,7 @@ MOC 缺口建议不属于 dashboard 导出页，它属于治理和补强决策�
 | 用户意图 | 首选动作 |
 |------|------|
 | “这题我又做错了” | `record-mistake` |
+| “这题没错，但我是直接看了解析 / 没独立做出来” | `record-mistake` |
 | “我最近总在某类题上卡住” | `review-session` 或 `mine-patterns` |
 | “帮我看下我为什么总失分” | `mine-patterns` |
 | “今天该先复习什么 / 给我今天复习资料” | `daily-review-pack` |
@@ -469,4 +477,3 @@ MOC 缺口建议不属于 dashboard 导出页，它属于治理和补强决策�
 | 2026-04 | 初始版本 | 1.0 |
 | 2026-05-01 | 引入 Harness-First、自进化与防腐机制 | 2.0 |
 | 2026-05-21 | 对齐本地 agent 仓库真实结构，升级为四层架构、三类错误源、五级节奏、经验晋升门槛与治理规范 | 3.0 |
-

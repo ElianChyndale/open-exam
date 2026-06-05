@@ -1,0 +1,14 @@
+{
+  "event_type": "codex.loop.completed",
+  "candidate_id": "phase-2-answer-wrongbook-contract",
+  "summary": "Connected private practice answer submission to historical attempts, idempotent wrongbook counters, correct-retry priority lowering, stable question notes, favorites, API endpoint, and tests.",
+  "artifacts": [
+    ".system/app/question_banks.py",
+    "apps/api/routers/question_banks.py",
+    ".system/tests/test_question_banks.py",
+    "apps/api/tests/test_api_smoke.py"
+  ],
+  "verification": "ruff targeted files; pytest question_banks, codex loop, and API smoke private question import/answer tests",
+  "created_at": "2026-06-05T06:07:07.620453+00:00",
+  "event_id": "codex-loop-complete-0e0038acd921"
+}

@@ -1,0 +1,110 @@
+{
+  "date": "2026-06-04",
+  "title": "今日 Todo",
+  "focus": "先整理系统成果，再推进 1000 题刷题主线与考前准备",
+  "time_blocks": [],
+  "tasks": [
+    {
+      "task_id": "todo-2907e674a2a1",
+      "text": "整理自己的系统实现成果，准备和 CFA 前辈沟通的展示材料",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386018+00:00",
+      "updated_at": "2026-06-04T07:01:17.386018+00:00"
+    },
+    {
+      "task_id": "todo-8f236636f8f2",
+      "text": "按文档风格补齐说明内容，并用 GPT 生成 2 张配套图",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386024+00:00",
+      "updated_at": "2026-06-04T07:01:17.386024+00:00"
+    },
+    {
+      "task_id": "todo-342d927b9af7",
+      "text": "确认有关付一手的做题逻辑，以及家里/市场价格等要补问的信息",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386027+00:00",
+      "updated_at": "2026-06-04T07:01:17.386027+00:00"
+    },
+    {
+      "task_id": "todo-651f91f539be",
+      "text": "配置好刷题环境，确保今天就能开始刷题",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386030+00:00",
+      "updated_at": "2026-06-04T07:01:17.386030+00:00"
+    },
+    {
+      "task_id": "todo-044878767df6",
+      "text": "以 1000 题为主线刷题，先补完没刷过的 modules，再回头补刷已刷过内容",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386033+00:00",
+      "updated_at": "2026-06-04T07:01:17.386033+00:00"
+    },
+    {
+      "task_id": "todo-8ca23a1bc982",
+      "text": "安排交叉刷题、模拟题和模考的顺序",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386036+00:00",
+      "updated_at": "2026-06-04T07:01:17.386036+00:00"
+    },
+    {
+      "task_id": "todo-f5e7cc953ac6",
+      "text": "输出一条自己的 vibe coding 学习成果到社媒",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386038+00:00",
+      "updated_at": "2026-06-04T07:01:17.386038+00:00"
+    },
+    {
+      "task_id": "todo-0997e8039ed4",
+      "text": "确认 PSM 相关事项和考前准备问题",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386041+00:00",
+      "updated_at": "2026-06-04T07:01:17.386041+00:00"
+    },
+    {
+      "task_id": "todo-0e11920c6ccb",
+      "text": "整理考试注意事项清单",
+      "deadline": "",
+      "progress": 0,
+      "status": "pending",
+      "source": "manual",
+      "created_at": "2026-06-04T07:01:17.386044+00:00",
+      "updated_at": "2026-06-04T07:01:17.386044+00:00"
+    },
+    {
+      "task_id": "todo-d8bae37e5bd8",
+      "text": "完成 Daily Review",
+      "deadline": "20:00",
+      "progress": 0,
+      "status": "pending",
+      "source": "system",
+      "created_at": "",
+      "updated_at": ""
+    }
+  ],
+  "revision": 2,
+  "updated_at": "2026-06-04T07:01:17.386133+00:00"
+}
