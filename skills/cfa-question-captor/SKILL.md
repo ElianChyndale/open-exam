@@ -1,73 +1,93 @@
 ---
 name: cfa-question-captor
-description: Turn a CFA question mistake into a structured MistakeEvent and MistakeCard. Use whenever the user reports a wrong answer, misread option, weak LOS, or wants to save a wrong question for later review.
+description: |
+  题目证据标准化录入器。把错题、非独立作答、强提示完成、答案对但口径不清的题目，
+  统一转换成可信的 `record-mistake` payload 与后续复盘资产。
+metadata:
+  version: OpenExam Skill Pack v1
 ---
 
 # CFA Question Captor
 
-Normalize question mistakes into:
+把题目层证据变成结构化事件，而不是聊天里的模糊总结。
 
-- topic
-- LOS
-- wrong choice
-- correct resolution
-- error type
-- confidence
-- time spent
-- evidence refs
-- question source
-- source type
-- evidence assets
-- moc target
+## SOUL
 
-Always produce one executable fix rule and one next drill.
+宁可不完整，也不脑补。
 
-## Formula-aware MOC targeting
+- 优先保留真实证据
+- 优先让 payload 可持久化
+- 优先把“哪里不确定”说清楚
 
-When a mistake exposes a framework gap, preserve enough evidence to decide the right MOC destination instead of collapsing everything into “formula missing”.
+## When To Trigger
 
-- `knowledge_tree_core_formula`: the main formula is missing from the node's `核心公式`
-- `formula_table_variant`: the node has the main formula, but the table misses a variant, conversion, or rearrangement
-- `both`: the tree node and formula table both need reinforcement
-- `knowledge_tree_concept`: the tree is missing a concept branch or distinction
-- `exam_trap`: the issue is misuse or confusion, not missing formula storage
+当用户出现这些场景时触发：
+
+- 真正做错了一道题
+- 题没错，但不是独立完成
+- 直接看了解析
+- 靠强提示才做出来
+- 想把题目证据录入本地系统
+
+## Data And Persistence
+
+应尽量补全这些字段：
+
+- `source_layer`
+- `topic`
+- `los`
+- `prompt_or_question`
+- `wrong_choice_or_output`
+- `correct_resolution`
+- `error_type`
+- `confidence`
+- `time_spent`
+- `evidence_refs`
+- `question_source`
+- `source_type`
+- `evidence_assets`
+- `moc_target`
+
+持久化入口：
+
+```powershell
+python scripts/cfa.py record-mistake --payload "{...}"
+```
 
 ## Workflow
 
-1. Extract the minimum trustworthy facts from the user's question or screenshot.
-2. Decide whether this is really a `question` error rather than a `bias` or `agent` failure.
-3. Normalize the mistake into a `record-mistake` payload.
-4. Preserve provenance:
-   - where the question came from
-   - whether the evidence is a screenshot or typed note
-   - which MOC should absorb future repeated gaps
-   - whether the user is pointing to a missing core formula, variant formula, concept branch, or exam trap
-5. Persist through the CLI rather than leaving the result as chat-only analysis.
+1. 从用户输入中提取最小可信事实。
+2. 判断这是不是 `question` 层，而不是 `bias` 或 `agent` 层。
+3. 构造 `record-mistake` payload。
+4. 标明来源和证据：
+   - typed / screenshot
+   - mock / qbank / custom drill
+   - 是否为 `is_correct=true` 的高价值非错题证据
+5. 如果题目暴露 MOC 缺口，保留 `moc_target` 与 gap 方向线索。
+6. 通过 CLI 持久化，而不是只停留在聊天结论。
 
-## MOC Auto-Patch
+## Output Contract
 
-每次完成错题录入后，必须执行 MOC 补缺检查：
+输出必须给出：
 
-1. 读取 `moc-gap-review` 产出（`.system/memory/strategy/moc-gap-review.md`）
-2. 先验证公式是否真的属于目标知识树节点，再决定补哪里
-3. 按 `gap_target` 选择补写位置：
-   - `knowledge_tree_core_formula` -> 补知识树节点下的 `核心公式`
-   - `formula_table_variant` -> 只补「核心公式速查」表
-   - `both` -> 树和表一起补
-   - `knowledge_tree_concept` -> 补知识树概念分支
-   - `exam_trap` -> 补「高频考试陷阱速查」或节点警示行
-4. 调用 `docs/moc-auto-patch-workflow.md` 参考流程执行
+- 结构化 payload
+- 一条可执行 `fix_rule`
+- 一条 `next_drill`
+- 必要时说明哪些字段仍不确定
 
-## 补写示例
+## Guardrails
 
-- 主公式缺失 → 追加节点下 `核心公式`
-- 变形公式缺失 → 追加公式表行：`| 指标 | 公式 | 知识树节点 | 考试说明 |`
-- 概念混淆 → 追加陷阱表行：`| 错误理解 | 正确理解 |`
-- 计算链缺失 → 新增知识树分支：`├── X.N 题目名【考试核心】← 高频错因`
+- 不要凭空编 LOS
+- 不要把不确定信息包装成确定结论
+- 不要在证据不足时直接改 MOC
+- 不要把题目层错误误升级成 strategy
 
-## Discipline
+## Handoff
 
-- Do not invent a LOS if the evidence cannot support it.
-- Do not hide uncertainty; record the best honest approximation.
-- Prefer a slightly rough but truthful payload over a polished hallucination.
-- Do not patch a formula into a node until formula ownership has been validated against the concept and the existing MOC structure.
+- 上游：`cfa-intent-router`
+- 常见下游：
+  - `cfa-pattern-miner`
+  - `cfa-review-synthesizer`
+  - `cfa-strategy-coach`
+  - `cfa-validation-guard`（当题目录入暴露 agent 风险时）
+

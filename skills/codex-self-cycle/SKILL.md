@@ -1,62 +1,84 @@
 ---
 name: codex-self-cycle
-description: Use this skill whenever the user asks Codex to work autonomously, keep planning after finishing work, run a no-human-interaction coding loop, continue a /goal without waiting for the user, or turn a product plan into iterative AI & AI-coding work. This skill routes the agent through the local `codex-loop-plan` and `codex-loop-complete` workflow so autonomous work stays traceable, test-gated, and safe.
+description: |
+  OpenExam 的自治迭代 orchestrator。用于 Codex 在本地依据证据自动选择下一条安全任务、
+  执行、验证、记账并继续规划，不属于普通 CFA 学习技能。
+metadata:
+  version: OpenExam Skill Pack v1
 ---
 
 # Codex Self-Cycle
 
-Use this skill to turn an open-ended autonomous coding request into a governed local loop.
-The goal is not to create an infinite runaway process; it is to make each autonomous step
-traceable, verifiable, and able to select the next step without extra human prompting.
+这是系统维护与功能迭代 skill，不是 learner-facing CFA skill。
 
-## Operating Loop
+## SOUL
 
-1. Read the local source of truth first: `AGENTS.md`, `.system/events/`, `.system/memory/`,
-   existing plans, and any plan file the user provided.
-2. Generate the next loop plan:
-   ```powershell
-   python scripts/cfa.py codex-loop-plan --mode unattended
-   ```
-3. Open the generated plan under `.system/memory/codex-loop/` and the task under
-   `docs/codex_tasks/`.
-4. Execute the selected task while respecting the safety limits in the task file.
-5. Verify with targeted tests, lint, API checks, or an explicit deterministic inspection.
-6. Mark the task complete:
-   ```powershell
-   python scripts/cfa.py codex-loop-complete --candidate-id "<id>" --summary "<what changed>" --artifact "<path>" --verification "<tests/checks>"
-   ```
-7. Immediately generate the next plan again. Continue while there is a meaningful eligible
-   candidate and the goal remains active.
+持续推进，但不失控。
 
-## Safety Gates
+- 先看本地事实
+- 先选可验证任务
+- 做完就记账，再继续
+- 没有候选时宁可停，不 invent work
 
-Stop instead of inventing work when:
+## When To Trigger
 
-- No eligible non-human candidate remains.
-- The same blocker repeats for three consecutive goal turns.
-- The next task would modify locked question-bank prompts, answer keys, explanations,
-  secrets, destructive filesystem state, or remote GitHub refs.
-- Verification cannot be run and no explicit deterministic inspection can replace it.
+当用户要求这些时触发：
 
-Escalate to the user when:
+- “自己继续做”
+- “不要停”
+- “按 loop 自动推进”
+- “继续实现计划，不等我确认”
+- “自己修循环、自己找下一步”
 
-- The task requires admin approval under the question-bank immutability rule.
-- Remote GitHub branch, PR, or issue changes are required.
-- The task changes published core brushing-question behavior instead of an extension boundary.
+## Data And Persistence
 
-## Project-Specific Boundaries
+先读：
 
-- Keep the core question-bank flow stable.
-- Put recommendation, analytics, adaptive practice, and self-improvement logic in extension
-  or Decision Layer modules.
-- Treat Obsidian pages as projections, not canonical data.
-- Preserve the six agent roles in `.system/app/agents_runtime.py`; do not add new agent roles
-  just to make the loop feel more autonomous.
+- `AGENTS.md`
+- `.system/events/`
+- `.system/memory/`
+- `.system/memory/codex-loop/`
+- `docs/codex_tasks/`
 
-## Completion Note Pattern
+标准命令：
 
-Use a concise completion summary:
-
-```text
-Implemented <capability>. Artifacts: <files>. Verification: <commands/results>. Next plan generated.
+```powershell
+python scripts/cfa.py codex-loop-plan --mode unattended
+python scripts/cfa.py codex-loop-complete --candidate-id "<id>" --summary "<...>" --artifact "<path>" --verification "<...>"
 ```
+
+## Workflow
+
+1. 先读取本地 source of truth。
+2. 生成下一条 loop 计划。
+3. 打开 `ITER-xxx` 与 `TASK-xxx`。
+4. 按 task safety limits 执行。
+5. 跑验证。
+6. 标记完成。
+7. 立即再生成下一条计划。
+8. 若无 eligible candidate，则停，不编造任务。
+
+## Output Contract
+
+完成记录必须明确：
+
+- 做了什么
+- 改了哪些 artifact
+- 用什么验证
+- 是否已生成下一条 plan
+
+## Guardrails
+
+- 不改 locked question-bank prompts / answers / explanations
+- 不碰 secrets / destructive filesystem / remote refs
+- 没有验证就不 claim complete
+- 不把 ordinary learner requests 错当成 self-cycle request
+
+## Handoff
+
+- 上游：用户或系统级自治要求
+- 下游：
+  - `docs/codex_tasks/TASK-xxx.md`
+  - 具体实现任务本身
+  - 完成后再回到 `codex-loop-plan`
+

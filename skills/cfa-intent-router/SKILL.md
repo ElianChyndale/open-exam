@@ -1,65 +1,96 @@
 ---
 name: cfa-intent-router
-description: Route CFA Tier 1 local-agent tasks into record-mistake, review-session, mine-patterns, pre-mock-brief, post-mock-retro, or audit-agent flows. Use this whenever the user mentions wrong questions, weak topics, mock review, study bottlenecks, or agent audit work.
+description: |
+  CFA 请求总入口。把用户请求路由到正确的 capture / pattern / strategy workflow，
+  避免在证据不足时直接给高层建议。常见触发：错题、复习、mock、agent 解释出错、框架缺口。
+metadata:
+  version: OpenExam Skill Pack v1
 ---
 
 # CFA Intent Router
 
-Classify the incoming request into one of six workflow intents:
+把 CFA 学习请求路由到最小但正确的工作流。
 
-- `record-mistake`
-- `review-session`
-- `mine-patterns`
-- `pre-mock-brief`
-- `post-mock-retro`
-- `audit-agent`
+## SOUL
 
-Prefer the smallest workflow that preserves the evidence trail.
+保守路由，不抢答。
 
-## Formula-aware MOC routing
+- 先决定用户处在哪一层：question / bias / agent / pattern / strategy
+- 能补事件就先补事件
+- 不把“想要建议”误判成“已经有足够证据可以给建议”
 
-When the user is really asking whether their framework contains a formula, route through MOC inspection before giving a study explanation or patch suggestion.
+## When To Trigger
 
-- “我的知识框架里有没有这个公式”
-- “这个公式在我的 MOC 里吗”
-- “如果没有就帮我补进知识树”
+当用户说这些时优先触发：
 
-These requests should first trigger MOC gap inspection anchored to the relevant `moc_target`, then decide whether the user needs:
+- “这题我又错了”
+- “我最近总在这类题上卡住”
+- “帮我看我为什么总失分”
+- “我明天要做 mock”
+- “这次 mock 帮我复盘”
+- “你刚才解释错了”
+- “这个公式 / 这个框架在我的知识树里吗”
 
-- formula ownership validation
-- `record-mistake` evidence capture
-- later `mine-patterns`
-- or a conservative patch recommendation
+## Data And Persistence
 
-Do not treat formula-presence requests as generic tutoring.
+先读：
 
-## Routing rules
+- `AGENTS.md`
+- `.system/events/`
+- `.system/memory/`
+- 必要时读对应 `CFA_tier1/*/00-*-MOC.md`
 
-- Wrong answer, or screenshot of a wrong question -> `record-mistake`
-- Non-wrong but low-quality question evidence (for example: read the explanation directly, relied on a heavy hint, did not answer independently) -> `record-mistake` with `is_correct=true`
-- Process issue, timing issue, repeated confusion without a single question focus -> `review-session`
-- Repeated weak area analysis -> `mine-patterns`
-- Mock coming up soon -> `pre-mock-brief`
-- Finished a mock and want synthesis -> `post-mock-retro`
-- Agent explanation was wrong or unsafe -> `audit-agent`
-- Formula presence / framework completeness question -> MOC gap inspection first, usually through `record-mistake` or `mine-patterns` depending on whether event evidence already exists
+常见下游 CLI / workflow：
 
-If a request spans multiple layers, preserve the system order:
+- `python scripts/cfa.py record-mistake`
+- `python scripts/cfa.py review-session`
+- `python scripts/cfa.py audit-agent`
+- `python scripts/cfa.py mine-patterns`
+- `python scripts/cfa.py daily-review-pack`
+- `python scripts/cfa.py pre-mock-brief`
+- `python scripts/cfa.py post-mock-retro`
 
-1. capture event
-2. mine pattern
-3. generate strategy
+## Workflow
 
-Do not jump to strategy if the evidence layer is still missing.
+1. 判断请求最接近哪种意图：
+   - `record-mistake`
+   - `review-session`
+   - `mine-patterns`
+   - `daily-review-pack`
+   - `pre-mock-brief`
+   - `post-mock-retro`
+   - `audit-agent`
+2. 如果请求跨层，保持系统顺序：
+   - 先 capture
+   - 再 pattern
+   - 再 strategy
+3. 如果用户问的是公式是否存在于框架中，先做 MOC / gap 方向判断，而不是直接讲题。
+4. 只有在证据已经存在时，才把请求直接路由到 pattern 或 strategy。
 
-## Gap target taxonomy
+## Output Contract
 
-Use the same MOC gap taxonomy as the rest of the system:
+产出应明确回答：
 
-- `knowledge_tree_core_formula`: the node is missing its main formula
-- `formula_table_variant`: the node has the core formula but the formula table misses a variant or conversion
-- `both`: both the tree node and formula table are incomplete
-- `knowledge_tree_concept`: the tree lacks the concept branch or distinction
-- `exam_trap`: the weakness is misuse, confusion, or a missing warning rather than formula absence
+- 当前请求被路由到哪个 workflow
+- 为什么是这个 workflow，不是更高层
+- 如果还有下一步，下一步通常是什么
 
-Route patch requests conservatively. Validate formula ownership before recommending any writeback.
+## Guardrails
+
+- 不要看到 CFA 请求就直接长篇解释
+- 不要跳过事件层直接做策略
+- 不要把公式存在性问题当普通 tutoring
+- 证据不足时要说“先补事件”
+
+## Handoff
+
+- 上游：用户自然语言请求
+- 常见下游：
+  - `cfa-question-captor`
+  - `cfa-screenshot-mistake-captor`
+  - `cfa-bias-detector`
+  - `cfa-agent-auditor`
+  - `cfa-pattern-miner`
+  - `cfa-review-pack-builder`
+  - `cfa-strategy-coach`
+

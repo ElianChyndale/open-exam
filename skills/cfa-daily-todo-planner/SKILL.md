@@ -1,97 +1,78 @@
 ---
 name: cfa-daily-todo-planner
-description: Convert the user's daily plan into a concise task-level today_todo.md and archive older todo files. Use this whenever the user mentions today's arrangement, todo list, daily tasks, schedule, what to do today, or asks to update today_todo.md.
+description: |
+  每日执行面规划器。把学习计划压缩成 `today_todo.md` 风格的任务级清单，
+  并通过既有 workflow 做归档与替换，适合“今天安排 / 更新 todo”的请求。
+metadata:
+  version: OpenExam Skill Pack v1
 ---
 
 # CFA Daily Todo Planner
 
-Use this skill when the user tells you their day plan or asks to update `today_todo.md`.
+Todo 是执行面，不是学习论文。
 
-The todo file is an execution surface, not a detailed study note. Keep it fast, readable, and task-level.
+## SOUL
 
-## Source And Destination
+短、硬、能执行。
 
-- Current active todo: `today_todo.md` at the repository root.
-- Archive folder: `schedule/todo_archive/`.
-- Standard CLI workflow: `python scripts/cfa.py write-todo --payload "{...}"`.
-- Task deadlines are written inline as `（deadline: HH:MM）` using 24-hour local system time.
+- 只写任务级结果
+- 不写过度细碎步骤
+- 默认让今天的行动更轻、更快、更清楚
 
-## Task Granularity
+## When To Trigger
 
-Write one checkbox per meaningful outcome.
+当用户：
 
-Good:
+- 说“今天安排”
+- 说“帮我写 todo”
+- 说“更新 today_todo”
+- 需要把 strategy / review pack 压缩成可执行日程
 
-- `完成 Corporate Issuers 主学习`
-- `做 Corporate Issuers 练习题`
-- `处理今天新增错题`
-- `整理学习区和设备`
+时触发。
 
-Too detailed:
+## Data And Persistence
 
-- `检查椅子螺丝是否拧紧`
-- `用自己的话复述关键概念`
-- `把不熟的内容加入下一轮复习清单`
-- `总结 3-5 个高频考点`
+主文件：
 
-If a detail is merely how to do the task, fold it into the larger task or omit it.
+- `today_todo.md`
+- `schedule/todo_archive/`
 
-## Structure
+标准入口：
 
-Use this shape:
-
-```markdown
----
-date: YYYY-MM-DD
-focus: one-line focus
-status: active
----
-
-# 今日 Todo
-
-> Focus: one-line focus
-
-## Tasks
-- [ ] task（deadline: HH:MM）
-- [ ] task（deadline: HH:MM）
-
-## Time Blocks
-- morning: ...
-- afternoon: ...
-
-## Review
-- 完成了什么：
-- 卡住或调整：
-- 明天保留：
+```powershell
+python scripts/cfa.py write-todo --payload "{...}"
 ```
 
-`Time Blocks` are optional. Use them only when the user gives timing or asks for timing.
+## Workflow
 
-## Behavior
+1. 先读现有 `today_todo.md`。
+2. 通过 workflow 归档旧 todo。
+3. 将输入压缩成 3-8 个任务级 checkbox。
+4. 默认包含 `完成今日复习资料（deadline: 20:00）`。
+5. 如用户给了时间，再加 `Time Blocks`。
+6. 保持 Review 区简短，不写成长日志。
 
-1. Read the existing `today_todo.md` before modifying it.
-2. Archive the existing file through the workflow before writing the new one.
-3. Convert the user's plan into 3-8 task-level checkboxes.
-4. Always include `完成今日复习资料` with deadline `20:00`; this is a daily required task even if the user does not mention it.
-5. Keep review short. Do not create a long journal.
-6. If the day includes CFA study, prefer task names that match the learning system: study, review pack, practice questions, record mistakes, mock/retro.
+## Output Contract
 
-## Payload Pattern
+输出应是一个可执行的今日任务面，包含：
 
-```json
-{
-  "date": "YYYY-MM-DD",
-  "title": "今日 Todo",
-  "focus": "今天的主目标",
-  "tasks": [
-    {"task": "完成 Corporate Issuers 主学习", "deadline": "17:30"},
-    {"task": "做 Corporate Issuers 练习题", "deadline": "19:00"},
-    {"task": "处理今天新增错题", "deadline": "21:00"}
-  ],
-  "time_blocks": [
-    "上午：主学习",
-    "下午：练习题和错题",
-    "晚上：轻复盘"
-  ]
-}
-```
+- date
+- focus
+- tasks
+- optional time blocks
+- short review stub
+
+## Guardrails
+
+- 不把方法论细节拆成一堆伪任务
+- 不跳过读取旧 todo 就覆盖
+- 不把 todo 写成长篇学习总结
+
+## Handoff
+
+- 上游：
+  - `cfa-strategy-coach`
+  - `cfa-review-pack-builder`
+- 下游：
+  - `experience-hub`（仅当日后治理需要）
+

@@ -1,46 +1,84 @@
 ---
 name: cfa-pattern-miner
-description: Mine repeated CFA mistake patterns by Topic, LOS, and error type. Use whenever the user asks what they keep getting wrong, what topics are weak, or what patterns emerged across sessions.
+description: |
+  高频错误模式识别器。按 `topic + los + error_type` 聚合重复问题，
+  决定哪些信号值得升级为 pattern、strategy 或 validation。
+metadata:
+  version: OpenExam Skill Pack v1
 ---
 
 # CFA Pattern Miner
 
-Only promote a pattern when recurrence is high enough to justify intervention.
+不是所有重复都值得升级成 doctrine。
 
-## Required checks
+## SOUL
 
-- group by `topic + los + error_type`
-- separate question patterns from bias and agent problems
-- do not upgrade one-off pain into long-term doctrine
+晋升严格，证据优先。
 
-## Promotion path
+- 一次是事件
+- 重复才是 pattern
+- 能改变下一次决策才值得晋升
 
-1. event
-2. card
-3. pattern
-4. strategy or validation
-5. if relevant, `moc-gap-review`
+## When To Trigger
 
-## Formula-aware pattern splits
+当用户：
 
-Repeated formula-related errors must stay separated by what is actually wrong:
+- 问“我到底总错什么”
+- 想看重复弱点
+- 想分析 topic / los 高频问题
+- 需要周度 pattern mining
 
-- missing `knowledge_tree_core_formula`
-- missing `formula_table_variant`
-- formula exists but the learner misapplies it
-- concept confusion that really belongs to `knowledge_tree_concept`
-- misuse that should become `exam_trap`
+时触发。
 
-Do not promote every repeated formula error into the same “formula missing” conclusion.
+## Data And Persistence
 
-## Output standard
+标准入口：
 
-Every promoted pattern should answer:
+```powershell
+python scripts/cfa.py mine-patterns
+```
 
-- what repeats
-- how often it repeats
-- what action should change next
-- whether the MOC may need strengthening
-- which `gap_target` is most likely, if the evidence is strong enough
+依赖：
 
-If evidence is weak, say that MOC patch direction is still unproven rather than guessing.
+- `.system/events/`
+- `.system/memory/question-errors`
+- `.system/memory/cognitive-bias`
+- `.system/memory/agent-failures`
+
+## Workflow
+
+1. 以 `topic + los + error_type` 聚合 question 层事件。
+2. 将 bias、agent 问题与 question pattern 分开。
+3. 检查 recurrence 是否达到晋升门槛。
+4. 判断是否需要：
+   - 只留在 pattern
+   - 升级 strategy
+   - 升级 validation
+   - 触发 `moc-gap-review`
+
+## Output Contract
+
+每个 promoted pattern 应说明：
+
+- 重复了什么
+- 重复了几次
+- 下次该改什么
+- 是否需要 MOC 补强
+
+## Guardrails
+
+- 不把 one-off 痛点升级成长期规则
+- 不把所有公式问题都归结为“公式缺失”
+- 证据弱时要明确“方向未证实”
+
+## Handoff
+
+- 上游：
+  - `cfa-question-captor`
+  - `cfa-bias-detector`
+  - `cfa-agent-auditor`
+- 下游：
+  - `cfa-strategy-coach`
+  - `cfa-validation-guard`
+  - `experience-hub`
+

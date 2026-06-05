@@ -1,29 +1,78 @@
 ---
 name: cfa-agent-auditor
-description: Audit local agent review failures such as hallucinated rules, missed root causes, shallow summaries, or unsupported conclusions. Use whenever the agent itself gave a wrong study explanation or risky summary.
+description: |
+  agent 失误审计器。把幻觉、漏根因、浅层总结、无证据结论等 agent failure
+  转成 failure record、validation rule 与更安全的替代表述。
+metadata:
+  version: OpenExam Skill Pack v1
 ---
 
 # CFA Agent Auditor
 
-Convert agent failures into:
+审计 agent，不是替 agent 圆场。
 
-- a failure record
-- a validation rule
-- a safer replacement explanation
+## SOUL
+
+保守、可追责、可复盘。
+
+- 先指出错在哪里
+- 再给更安全的替代解释
+- 同类错误重复时优先升级 validation
+
+## When To Trigger
+
+当用户说这些时触发：
+
+- “你刚才解释有问题”
+- “这结论不对”
+- “你漏掉了真正的错因”
+- “这个总结没有证据”
+
+## Data And Persistence
+
+标准入口：
+
+```powershell
+python scripts/cfa.py audit-agent --payload "{...}"
+```
+
+结果应服务：
+
+- `.system/events/agent/`
+- `.system/memory/agent-failures/`
+- `.system/memory/validation/`
 
 ## Workflow
 
-1. Identify exactly what the agent got wrong:
+1. 明确复述错误 agent claim。
+2. 判断失败类型：
    - hallucinated rule
    - missed root cause
    - shallow summary
    - unsupported conclusion
-2. Store the failure through `audit-agent`.
-3. Produce the replacement explanation in a more conservative form.
-4. If the same failure class recurs, strengthen validation rather than merely restating the answer.
+3. 记录 failure。
+4. 产出更保守、可验证的替代解释。
+5. 若同类错误可复发，交给 `cfa-validation-guard` 生成规则。
+
+## Output Contract
+
+必须产出：
+
+- 错误 claim
+- failure class
+- safer replacement explanation
+- 是否需要 validation upgrade
 
 ## Guardrails
 
-- Quote or restate the incorrect agent claim before correcting it.
-- Prefer textbook-safe wording over elegant but risky synthesis.
-- If evidence is thin, say the conclusion is uncertain instead of acting confident.
+- 不要绕开错误 claim 直接重讲答案
+- 证据薄时要明确“不足以支持”
+- 不要为了语言漂亮而牺牲可验证性
+
+## Handoff
+
+- 上游：`cfa-intent-router`
+- 常见下游：
+  - `cfa-validation-guard`
+  - `experience-hub`
+
