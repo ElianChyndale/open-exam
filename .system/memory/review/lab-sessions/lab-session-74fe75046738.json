@@ -1,0 +1,110 @@
+{
+  "session_id": "lab-session-74fe75046738",
+  "review_id": "daily-review-173ac4ab2819",
+  "status": "completed",
+  "units": [
+    {
+      "unit_id": "unit-asset-bb2c345b8b9b",
+      "review_id": "daily-review-173ac4ab2819",
+      "asset_id": "asset-bb2c345b8b9b",
+      "asset_type": "formula",
+      "unit_type": "formula",
+      "display_mode": "formula_input",
+      "front_prompt": "Recall from memory: WACC w d r d 1 - t +",
+      "correct_answer": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "correct_reasoning": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "correct_steps": [],
+      "ba_ii_plus_steps": [
+        "BA II Plus: enter cash flows, set I/Y to WACC, then CPT NPV."
+      ],
+      "boundary_rules": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "variables": [
+        {
+          "symbol": "WACC",
+          "meaning": "w_d r_d (1 - t) + w_e r_e",
+          "unit": ""
+        },
+        {
+          "symbol": "w_d",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "r_d",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "t",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "w_e",
+          "meaning": "",
+          "unit": ""
+        },
+        {
+          "symbol": "r_e",
+          "meaning": "",
+          "unit": ""
+        }
+      ],
+      "applies_when": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "not_when": [],
+      "assumptions": [
+        "Use after-tax cost of debt with target market value weights."
+      ],
+      "formula_family": "cost_of_capital",
+      "difficulty": "advanced",
+      "memory_state_before": "Practiced",
+      "prompt": "Recall from memory: WACC w d r d 1 - t +",
+      "recall_instruction": "Write the formula and variables first, then reveal the correct version.",
+      "answer": "Recall and apply this formula exactly: WACC = w_d r_d (1 - t) + w_e r_e.",
+      "formula_latex": "WACC = w_d r_d (1 - t) + w_e r_e",
+      "worked_example": "",
+      "common_wrong_path": "",
+      "exam_trap": "",
+      "source_refs": [
+        "ksource-db33fea7a629#seg-1"
+      ],
+      "source_spans": [],
+      "due_reason": "Confirmed source-backed note asset selected for recall.",
+      "memory_state": "Practiced",
+      "priority": 61,
+      "interaction_mode": "formula_input",
+      "knowledge_id": "asset-bb2c345b8b9b",
+      "card_id": "",
+      "subject": "Browser Assessment Formula 1780491521367",
+      "heading": "Browser Assessment Formula 1780491521367",
+      "los": ""
+    }
+  ],
+  "current_unit_index": 1,
+  "completed_unit_ids": [
+    "unit-asset-bb2c345b8b9b"
+  ],
+  "outcomes": [
+    {
+      "unit_id": "unit-asset-bb2c345b8b9b",
+      "confidence_before": 2,
+      "time_spent_seconds": 0,
+      "needed_hint": false,
+      "outcome": "recalled",
+      "confidence_after": 3,
+      "answer_quality": "perfect",
+      "fix_rule_helpful": null,
+      "next_action": "advance"
+    }
+  ],
+  "energy_level": 2,
+  "focus_topic": "Corporate Issuers",
+  "started_at": "2026-06-07T14:03:23.814178+00:00",
+  "completed_at": "2026-06-07T14:03:24.053049+00:00",
+  "paused_at": "",
+  "resumed_at": ""
+}

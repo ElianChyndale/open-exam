@@ -61,17 +61,23 @@ export default function ReviewToolsPage() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-surface-raised px-3 py-1 text-xs font-medium text-muted">
             <Wrench size={13} />
-            Tools drawer
+            Tool library
           </div>
           <h2 className="mt-4 text-3xl font-semibold tracking-normal">Tools</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-            Source work, intelligence views, portability, and diagnostics.
+            Advanced study surfaces, diagnostics, and system utilities.
           </p>
         </div>
-        <Link href="/review" className="btn-primary inline-flex w-fit items-center gap-2">
-          <ArrowRight size={15} />
-          Back to Today
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/review" className="btn-primary inline-flex w-fit items-center gap-2">
+            <ArrowRight size={15} />
+            Back to Daily Review
+          </Link>
+          <Link href="/today" className="btn-secondary inline-flex w-fit items-center gap-2">
+            <ArrowRight size={15} />
+            Today
+          </Link>
+        </div>
       </div>
 
       {error && <div className="mb-4 rounded-lg border border-warning-soft bg-warning-soft p-3 text-sm text-warning">{error}</div>}

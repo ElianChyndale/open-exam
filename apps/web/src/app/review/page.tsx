@@ -1,81 +1,174 @@
 'use client';
 
 import Link from 'next/link';
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
-  Brain,
-  CalendarCheck2,
+  BookOpen,
   CheckCircle2,
-  Gauge,
+  Clock3,
+  Battery,
+  BatteryFull,
+  BatteryLow,
+  BatteryMedium,
   Loader2,
-  Search,
+  NotebookPen,
+  RefreshCcw,
   Sparkles,
-  Target,
   Wrench,
 } from 'lucide-react';
 
-import { CockpitSummary, navigationApi } from '@/lib/api';
+import { energyApi, reviewApi } from '@/lib/api';
+import { ReviewProjection } from '@/components/review/ReviewProjection';
 
-export default function ReviewCockpitPage() {
-  const [cockpit, setCockpit] = useState<CockpitSummary | null>(null);
+interface ReviewPack {
+  review_id: string;
+  generated_for: string;
+  focus_topic: string;
+  review_item_count: number;
+  warm_start_item_count: number;
+  source_event_count: number;
+  markdown_content: string;
+  items: Array<Record<string, any>>;
+}
+
+interface DueSummary {
+  date: string;
+  total_due: number;
+  total_recent_low_confidence: number;
+  total_patterns: number;
+  merged_count: number;
+  top_items: Array<{
+    topic: string;
+    los: string;
+    error_type: string;
+    priority: number;
+    reasons: string[];
+  }>;
+}
+
+interface EnergyHistoryEvent {
+  check_in_id?: string;
+  energy_level?: number;
+  mental_clarity?: number;
+  physical_fatigue?: number;
+  motivation?: number;
+  created_at?: string;
+}
+
+export default function DailyReviewPage() {
+  const [pack, setPack] = useState<ReviewPack | null>(null);
+  const [due, setDue] = useState<DueSummary | null>(null);
   const [loading, setLoading] = useState(true);
+  const [completing, setCompleting] = useState(false);
+  const [energyBusy, setEnergyBusy] = useState<number | null>(null);
+  const [selectedEnergyLevel, setSelectedEnergyLevel] = useState<number | null>(null);
+  const [latestEnergy, setLatestEnergy] = useState<EnergyHistoryEvent | null>(null);
   const [error, setError] = useState('');
-  const [query, setQuery] = useState('');
+  const [status, setStatus] = useState('');
 
-  const load = async () => {
+  const load = async (energyLevel?: number | null) => {
     setLoading(true);
     setError('');
     try {
-      setCockpit(await navigationApi.cockpit('default'));
+      const [packPayload, duePayload] = await Promise.all([
+        reviewApi.getToday(energyLevel === null || energyLevel === undefined ? undefined : { energy_level: String(energyLevel) }),
+        reviewApi.listDue(),
+      ]);
+      setPack(packPayload as ReviewPack);
+      setDue(duePayload as DueSummary);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Cockpit load failed');
+      setError(err instanceof Error ? err.message : 'Daily review load failed');
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    load().catch(() => undefined);
+    Promise.all([
+      load().catch(() => undefined),
+      energyApi.history(1).then((payload: any) => {
+        const history = Array.isArray(payload?.history) ? payload.history : [];
+        setLatestEnergy(history[0] || null);
+      }).catch(() => undefined),
+    ]).catch(() => undefined);
   }, []);
 
-  const planBlocks = cockpit?.today_plan_preview || [];
-  const health = cockpit?.learning_health || {};
-  const primary = cockpit?.primary_action || {
-    label: 'Begin setup',
-    href: '/onboarding',
-    reason: 'Set a focused goal to unlock the first useful plan.',
-  };
-  const supporting = (cockpit?.supporting_actions || []).slice(0, 4);
-  const readiness = cockpit?.active_goal?.readiness_status || health.readiness || 'not_started';
+  const effectiveEnergy = selectedEnergyLevel ?? latestEnergy?.energy_level ?? 2;
+  const energyMessage = useMemo(() => {
+    if (!pack?.markdown_content) return '';
+    const lines = pack.markdown_content.split('\n').map((line) => line.trim()).filter(Boolean);
+    return lines.find((line) => /^[⚠⚡🧠🛑😴]/.test(line)) || '';
+  }, [pack]);
 
-  const tutorHref = useMemo(() => {
-    const trimmed = query.trim();
-    return trimmed ? `/review/tutor?q=${encodeURIComponent(trimmed)}` : '/review/tutor';
-  }, [query]);
-
-  const ask = (event: FormEvent) => {
-    event.preventDefault();
-    window.location.href = tutorHref;
+  const completeReview = async () => {
+    if (!pack?.review_id) return;
+    setCompleting(true);
+    setStatus('');
+    try {
+      const result = await reviewApi.complete(pack.review_id) as {
+        review_id: string;
+        completed: boolean;
+        newly_reviewed_items: number;
+      };
+      setStatus(`Marked ${result.newly_reviewed_items} items as reviewed.`);
+      await load(selectedEnergyLevel);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Review completion failed');
+    } finally {
+      setCompleting(false);
+    }
   };
+
+  const checkInEnergy = async (energyLevel: number) => {
+    setEnergyBusy(energyLevel);
+    setStatus('');
+    setError('');
+    try {
+      await energyApi.checkIn({
+        energy_level: energyLevel,
+        mental_clarity: Math.max(1, Math.min(10, 2 + energyLevel * 2)),
+        physical_fatigue: Math.max(1, Math.min(10, 9 - energyLevel * 2)),
+        motivation: Math.max(1, Math.min(10, 3 + energyLevel * 2)),
+        sleep_hours: 0,
+        stress_level: 0,
+      });
+      setSelectedEnergyLevel(energyLevel);
+      const historyPayload = await energyApi.history(1) as { history: EnergyHistoryEvent[] };
+      setLatestEnergy(historyPayload.history?.[0] || null);
+      await load(energyLevel);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Energy check-in failed');
+    } finally {
+      setEnergyBusy(null);
+    }
+  };
+
+  const EnergyIcon = effectiveEnergy >= 3 ? BatteryFull : effectiveEnergy >= 1 ? BatteryMedium : BatteryLow;
 
   return (
     <div className="mx-auto max-w-6xl pb-12">
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full bg-surface-raised px-3 py-1 text-xs font-medium text-muted">
-            <CheckCircle2 size={13} className="text-success" />
-            Correct-only learning
+            <BookOpen size={13} />
+            Daily review
           </div>
-          <h2 className="mt-4 text-3xl font-semibold tracking-normal md:text-4xl">Today</h2>
+          <h2 className="mt-4 text-3xl font-semibold tracking-normal md:text-4xl">Daily Review</h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
-            {cockpit?.active_goal?.title || 'Choose a goal, then let OpenExam narrow the day to one useful next step.'}
+            Review what you studied today: due mistake cards, low-confidence points, and repeated patterns.
           </p>
         </div>
-        <Link href="/review/tools" className="btn-secondary inline-flex w-fit items-center gap-2">
-          <Wrench size={15} />
-          More Tools
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/today" className="btn-secondary inline-flex w-fit items-center gap-2">
+            <ArrowRight size={15} />
+            Back to Today
+          </Link>
+          <Link href="/review/tools" className="btn-secondary inline-flex w-fit items-center gap-2">
+            <Wrench size={15} />
+            More Tools
+          </Link>
+        </div>
       </div>
 
       {error && (
@@ -83,92 +176,130 @@ export default function ReviewCockpitPage() {
           {error}
         </div>
       )}
+      {status && (
+        <div className="mb-4 rounded-lg border border-success-soft bg-success-soft p-3 text-sm text-success">
+          {status}
+        </div>
+      )}
 
-      <main data-testid="primary-cockpit" className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
-        <section className="min-w-0 rounded-lg bg-surface-raised p-6 shadow-sm">
-          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+      <main className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5 lg:col-span-2">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div className="min-w-0">
               <div className="flex items-center gap-2 text-sm font-medium text-accent">
-                <Target size={17} />
-                Next best step
+                <EnergyIcon size={16} />
+                Energy subsystem
               </div>
-              <h3 className="mt-4 text-2xl font-semibold">{primary.label}</h3>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">{primary.reason}</p>
+              <h3 className="mt-2 text-lg font-semibold">Shape today&apos;s review intensity before you start</h3>
+              <p className="mt-1 text-sm leading-6 text-muted">
+                Daily Review is energy-aware. Lower energy reduces review volume and pushes you toward core items first.
+              </p>
+              {energyMessage && <p className="mt-3 text-sm font-medium text-ink">{energyMessage}</p>}
             </div>
-            <Link href={primary.href} className="btn-primary inline-flex shrink-0 items-center justify-center gap-2 px-5 py-3">
-              <ArrowRight size={16} />
-              {primary.label}
-            </Link>
+            <div className="grid shrink-0 grid-cols-5 gap-2" role="group" aria-label="Select effective review energy">
+              {[0, 1, 2, 3, 4].map((level) => (
+                <button
+                  key={level}
+                  type="button"
+                  onClick={() => checkInEnergy(level)}
+                  disabled={energyBusy !== null}
+                  aria-pressed={effectiveEnergy === level}
+                  className={`h-10 w-10 rounded-full border text-sm font-semibold transition-colors ${
+                    effectiveEnergy === level
+                      ? 'border-accent bg-accent-solid text-white'
+                      : 'border-line bg-surface-field text-muted hover:border-accent-soft hover:text-accent'
+                  } disabled:opacity-50`}
+                >
+                  {energyBusy === level ? <Loader2 size={14} className="mx-auto animate-spin" /> : level}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="min-w-0 rounded-lg bg-surface-raised p-6 shadow-sm">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 text-sm font-medium text-accent">
+                <NotebookPen size={17} />
+                Today&apos;s review pack
+              </div>
+              <h3 className="mt-4 text-2xl font-semibold">
+                {loading ? 'Loading review pack...' : (pack?.focus_topic || 'General review')}
+              </h3>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">
+                Keep this page as your main review surface. The pack below is generated from local events and memory, not from guessed summaries.
+              </p>
+            </div>
+            <div className="flex shrink-0 flex-wrap gap-2">
+              <button type="button" onClick={() => load(selectedEnergyLevel)} className="btn-secondary inline-flex items-center gap-2" disabled={loading}>
+                <RefreshCcw size={14} className={loading ? 'animate-spin' : ''} />
+                Refresh
+              </button>
+              <button type="button" onClick={completeReview} className="btn-primary inline-flex items-center gap-2" disabled={loading || completing || !pack?.review_id}>
+                <CheckCircle2 size={14} />
+                {completing ? 'Completing...' : 'Mark Reviewed'}
+              </button>
+            </div>
           </div>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            <QuietMetric icon={Gauge} label="Readiness" value={labelize(readiness)} />
-            <QuietMetric icon={CalendarCheck2} label="Plan" value={labelize(String(health.plan_status || 'not planned'))} />
-            <QuietMetric icon={Brain} label="Next blocks" value={String(health.next_blocks || planBlocks.length || 0)} />
+            <QuietMetric icon={BookOpen} label="Review items" value={String(pack?.review_item_count || 0)} />
+            <QuietMetric icon={Sparkles} label="Warm start" value={String(pack?.warm_start_item_count || 0)} />
+            <QuietMetric icon={Clock3} label="Source events" value={String(pack?.source_event_count || 0)} />
           </div>
         </section>
 
         <section className="min-w-0 rounded-lg bg-surface-raised p-5">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="font-semibold">Today Plan</h3>
-            <Link href="/review/study-planner" className="text-sm font-medium text-accent hover:underline">
-              Open plan
+            <h3 className="font-semibold">What needs review</h3>
+            <Link href="/review/lab" className="text-sm font-medium text-accent hover:underline">
+              Open Review Lab
             </Link>
           </div>
           <div className="mt-4 space-y-3">
             {loading ? (
               <div className="rounded-lg bg-surface-field p-4 text-sm text-muted">
                 <Loader2 size={15} className="mr-2 inline animate-spin" />
-                Preparing today...
+                Loading due items...
               </div>
-            ) : planBlocks.length ? (
-              <Link href="/review/focus" className="block rounded-lg bg-surface-field p-4 transition-colors hover:bg-surface-hover">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold">Start Focus Session</p>
-                    <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted">
-                      {planBlocks.length} guided steps / {planBlocks.reduce((total, block) => total + Number(block.target_minutes || 0), 0)}m planned
-                    </p>
-                  </div>
-                  <ArrowRight size={15} className="shrink-0 text-accent" />
-                </div>
-              </Link>
             ) : (
-              <CalmEmptyState title="No plan yet" actionHref="/review/focus" actionLabel="Start Focus Session" />
+              <>
+                <div className="rounded-lg bg-surface-field p-4">
+                  <p className="text-sm font-semibold">{due?.merged_count || 0} items in the merged queue</p>
+                  <p className="mt-1 text-xs text-muted">
+                    Due: {due?.total_due || 0} · Low confidence: {due?.total_recent_low_confidence || 0} · Patterns: {due?.total_patterns || 0}
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  {(due?.top_items || []).slice(0, 5).map((item, index) => (
+                    <div key={`${item.topic}-${item.los}-${index}`} className="rounded-lg bg-surface-field px-3 py-3">
+                      <p className="text-sm font-medium">{item.topic || 'Unknown topic'}{item.los ? ` · ${item.los}` : ''}</p>
+                      <p className="mt-1 text-xs text-muted">
+                        {item.error_type || 'review'} · priority {item.priority || 0}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </>
             )}
           </div>
         </section>
 
         <section className="min-w-0 rounded-lg bg-surface-raised p-5 lg:col-span-2">
-          <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
-            <div className="min-w-0">
-              <h3 className="font-semibold">Focus</h3>
-              <div className="mt-4 grid gap-2 sm:grid-cols-4">
-                {supporting.map((action) => (
-                  <Link key={action.href} href={action.href} className="rounded-lg bg-surface-field px-3 py-3 text-sm font-medium transition-colors hover:bg-surface-hover">
-                    {action.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <form onSubmit={ask} className="min-w-0 rounded-lg bg-surface-field p-3">
-              <label className="flex min-w-0 items-center gap-2 text-sm">
-                <Search size={15} className="shrink-0 text-muted" />
-                <input
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Ask about your plan or a concept..."
-                  className="min-w-0 flex-1 bg-transparent outline-none placeholder:text-muted"
-                />
-              </label>
-              <div className="mt-3 flex justify-end">
-                <Link href={tutorHref} className="btn-secondary inline-flex items-center gap-2">
-                  <Sparkles size={14} />
-                  Ask Tutor
-                </Link>
-              </div>
-            </form>
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <h3 className="font-semibold">Review content</h3>
+            <span className="text-xs text-muted">{pack?.generated_for || ''}</span>
           </div>
+
+          {loading ? (
+            <div className="rounded-lg bg-surface-field p-6 text-sm text-muted">
+              <Loader2 size={15} className="mr-2 inline animate-spin" />
+              Building daily review...
+            </div>
+          ) : (
+            <ReviewProjection markdown={pack?.markdown_content || '# Daily Review\n\n暂无复习内容。'} />
+          )}
         </section>
       </main>
     </div>
@@ -185,20 +316,4 @@ function QuietMetric({ icon: Icon, label, value }: { icon: any; label: string; v
       <p className="mt-2 text-sm font-semibold">{value}</p>
     </div>
   );
-}
-
-function CalmEmptyState({ title, actionHref, actionLabel }: { title: string; actionHref: string; actionLabel: string }) {
-  return (
-    <div className="rounded-lg bg-surface-field p-4 text-sm text-muted">
-      <p className="font-medium text-foreground">{title}</p>
-      <Link href={actionHref} className="mt-3 inline-flex items-center gap-2 text-accent hover:underline">
-        {actionLabel}
-        <ArrowRight size={13} />
-      </Link>
-    </div>
-  );
-}
-
-function labelize(value: string) {
-  return value.replace(/[_-]+/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 }

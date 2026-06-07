@@ -19,6 +19,7 @@ async def get_today_review_pack(
     max_items: int = Query(default=20, ge=1, le=100),
     focus_topic: str = Query(default=""),
     knowledge_depth: str = Query(default="standard", pattern="^(standard|expanded)$"),
+    energy_level: int | None = Query(default=None, ge=0, le=4),
     repo=Depends(get_repo),
 ):
     """Generate today's review pack.
@@ -39,6 +40,7 @@ async def get_today_review_pack(
         max_items=max_items,
         focus_topic=focus_topic,
         knowledge_depth=knowledge_depth,
+        energy_level=energy_level,
     )
 
     if result_path and result_path.exists():

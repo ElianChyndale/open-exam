@@ -752,13 +752,13 @@
       "source_refs": [
         "ksource-db33fea7a629#seg-1"
       ],
-      "status": "Familiar",
-      "state_value": 2,
-      "consecutive_successes": 2,
-      "reviewed_at": "2026-06-04T03:05:42.062588+08:00",
-      "review_interval_days": 5,
-      "next_review_at": "2026-06-09",
-      "last_reviewed_at": "2026-06-04T03:05:42.062588+08:00",
+      "status": "Mastered",
+      "state_value": 5,
+      "consecutive_successes": 12,
+      "reviewed_at": "2026-06-07T22:21:01.716324+08:00",
+      "review_interval_days": 60,
+      "next_review_at": "2026-08-06",
+      "last_reviewed_at": "2026-06-07T22:21:01.716324+08:00",
       "decay_risk": "none"
     }
   }

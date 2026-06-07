@@ -55,6 +55,7 @@ Core English anchors: PP&E, intangible assets, purchased intangibles, internally
 | Purchased intangible | capitalized asset | Amortize if finite-lived; test impairment |
 | Internally developed brand/reputation | usually expensed | Do not capitalize unless specific criteria are met |
 | Impairment loss | carrying value write-down | Assets/NI/equity down; ROA may improve later from lower asset base |
+| Upward revaluation under revaluation model | carrying amount increases; revaluation surplus goes to equity; liabilities unchanged | If original leverage is debt/assets = `12/20`, after upward revaluation of `x`, new leverage = `12 / (20 + x)` ↳ 笔记：assets up, equity up, liabilities unchanged, so leverage falls；if a later downward revaluation exceeds the prior surplus, first reduce surplus to zero and send the remainder to profit or loss, e.g. surplus `2,500` and decrease `5,000` -> ending surplus `0`, P&L loss `2,500` |
 | Reversal | standard-specific | IFRS may allow certain reversals; goodwill reversal prohibited |
 | Sale of asset | derecognition | Gain/loss = proceeds - carrying amount; proceeds in CFI |
 

@@ -77,6 +77,7 @@ Financial Statement Analysis 是 CFA Level I 中连接会计、估值、信用�
 | Inventory ratios | inventory turnover = COGS / average inventory; DOH = 365 / turnover | Rising DOH can signal obsolete inventory or demand weakness |
 | Depreciation | straight-line, accelerated, units-of-production | Higher depreciation lowers NI/assets/equity, can raise future ROA if asset base falls |
 | Impairment | carrying value exceeds recoverable amount/fair value rules | Impairment reduces assets, NI, equity; ignore tax unless stated |
+| Revaluation model (IFRS) | upward revaluation increases asset carrying amount and revaluation surplus in equity; liabilities unchanged | Ratio move: if debt/assets was `12/20`, after upward revaluation by `x`, leverage becomes `12 / (20 + x)` | ↳ 笔记：upward revaluation -> assets up, equity up via revaluation surplus, liabilities unchanged, so leverage falls rather than `(12+x)/(20+x)`；second downward revaluation first eliminates existing surplus, then any excess goes to profit or loss, so if surplus was `2,500` and the decrease is `5,000`, ending surplus = `0` and remaining `2,500` hits P&L |
 | Derecognition | gain/loss on sale = proceeds - carrying amount | Remove asset and accumulated depreciation; classify cash proceeds as investing |
 
 ### 2.5 Leases, Taxes, Quality, Ratios, Modeling 租赁、税、质量、比率、建模

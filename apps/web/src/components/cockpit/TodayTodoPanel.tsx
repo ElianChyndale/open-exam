@@ -11,10 +11,12 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
   const [text, setText] = useState('');
   const [deadline, setDeadline] = useState('');
   const [error, setError] = useState('');
+  const [progressDrafts, setProgressDrafts] = useState<Record<string, number>>({});
 
   const refresh = useCallback(async () => {
     try {
       setTodo(await todosApi.getToday());
+      setProgressDrafts({});
       setError('');
     } catch {
       setError('Todo 加载失败，请确认本地 API 已启动。');
@@ -112,6 +114,21 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
     });
   };
 
+  const setProgressDraft = (taskId: string, progress: number) => {
+    setProgressDrafts((current) => ({ ...current, [taskId]: progress }));
+  };
+
+  const commitProgressDraft = (task: TodoTask) => {
+    const draft = progressDrafts[task.task_id];
+    if (draft === undefined || draft === task.progress) return;
+    setProgressDrafts((current) => {
+      const next = { ...current };
+      delete next[task.task_id];
+      return next;
+    });
+    updateProgress(task, draft);
+  };
+
   const importPlan = async () => {
     if (!studyPlan || !window.confirm('确认将今日学习计划导入 Todo？重复任务会自动跳过。')) return;
     try {
@@ -160,12 +177,15 @@ export function TodayTodoPanel({ studyPlan }: { studyPlan: Record<string, unknow
                   min="0"
                   max="100"
                   step="10"
-                  value={task.progress}
+                  value={progressDrafts[task.task_id] ?? task.progress}
                   aria-label={`${task.text} 进度`}
-                  onChange={(event) => updateProgress(task, Number(event.target.value))}
+                  onChange={(event) => setProgressDraft(task.task_id, Number(event.target.value))}
+                  onMouseUp={() => commitProgressDraft(task)}
+                  onTouchEnd={() => commitProgressDraft(task)}
+                  onKeyUp={() => commitProgressDraft(task)}
                   className="w-28"
                 />
-                <span className="text-xs text-muted">{task.progress}%{task.deadline ? ` · ${task.deadline}` : ''}</span>
+                <span className="text-xs text-muted">{progressDrafts[task.task_id] ?? task.progress}%{task.deadline ? ` · ${task.deadline}` : ''}</span>
               </div>
             </div>
             {task.source !== 'system' && (

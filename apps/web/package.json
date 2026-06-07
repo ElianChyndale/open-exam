@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "next typegen && tsc --noEmit",
+    "typecheck": "node scripts/ensure-next-typegen.mjs && tsc --noEmit",
     "test:e2e": "playwright test",
     "audit:deps": "npm audit --registry=https://registry.npmjs.org --audit-level=high"
   },

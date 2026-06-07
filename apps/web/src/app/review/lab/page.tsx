@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Brain, Pause, Play, RotateCcw, HelpCircle } from 'lucide-react';
 
@@ -15,6 +15,7 @@ import { ErrorState, LoadingState, ShortcutHelp } from '@/components/ux/UXStates
 export default function ReviewLabPage() {
   const router = useRouter();
   const [paramsReady, setParamsReady] = useState(false);
+  const [freshStart, setFreshStart] = useState(false);
   const [sessionId, setSessionId] = useState<string | undefined>(undefined);
   const {
     session,
@@ -38,12 +39,15 @@ export default function ReviewLabPage() {
   const [report, setReport] = useState<any>(null);
   const [showCompletion, setShowCompletion] = useState(false);
   const [creating, setCreating] = useState(false);
+  const [restartingSession, setRestartingSession] = useState(false);
   const [recallDraft, setRecallDraft] = useState('');
   const [showShortcuts, setShowShortcuts] = useState(false);
+  const completionRunRef = useRef(0);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setSessionId(params.get('session') || undefined);
+    setFreshStart(params.get('fresh') === '1');
     setParamsReady(true);
   }, []);
 
@@ -94,21 +98,23 @@ export default function ReviewLabPage() {
     if (!paramsReady || session || creating || sessionId || error) return;
 
     const init = async () => {
-      // Try to find an active session from history
-      try {
-        const res = await fetch('/api/review-lab/history?limit=10');
-        if (res.ok) {
-          const data = await res.json();
-          const active = (data.sessions || []).find(
-            (s: any) => s.status === 'active' || s.status === 'paused'
-          );
-          if (active) {
-            await loadSession(active.session_id);
-            return;
+      if (!freshStart) {
+        // Try to find an active session from history
+        try {
+          const res = await fetch('/api/review-lab/history?limit=10');
+          if (res.ok) {
+            const data = await res.json();
+            const active = (data.sessions || []).find(
+              (s: any) => s.status === 'active' || s.status === 'paused'
+            );
+            if (active) {
+              await loadSession(active.session_id);
+              return;
+            }
           }
+        } catch {
+          // ignore
         }
-      } catch {
-        // ignore
       }
 
       // Create new session
@@ -116,26 +122,50 @@ export default function ReviewLabPage() {
       const sid = await createSession({ max_units: 20 });
       setCreating(false);
       if (sid) {
+        setFreshStart(false);
         router.replace(`/review/lab?session=${sid}`);
       }
     };
 
     init();
-  }, [paramsReady, session, creating, sessionId, error, createSession, loadSession, router]);
+  }, [paramsReady, freshStart, session, creating, sessionId, error, createSession, loadSession, router]);
 
   // Handle completion
   useEffect(() => {
-    if (session?.is_complete && !showCompletion) {
-      completeSession().then(() => {
-        fetchReport().then((r) => {
-          if (r) {
-            setReport(r);
-            setShowCompletion(true);
-          }
-        });
-      });
+    if (!session?.is_complete || showCompletion || restartingSession) return;
+
+    const runId = ++completionRunRef.current;
+    const completedSessionId = session.session_id;
+    let cancelled = false;
+
+    const finalize = async () => {
+      await completeSession();
+      const nextReport = await fetchReport();
+      if (
+        cancelled ||
+        completionRunRef.current !== runId ||
+        restartingSession ||
+        !nextReport ||
+        nextReport.session_id !== completedSessionId
+      ) {
+        return;
+      }
+      setReport(nextReport);
+      setShowCompletion(true);
+    };
+
+    void finalize();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [session?.is_complete, session?.session_id, showCompletion, restartingSession, completeSession, fetchReport]);
+
+  useEffect(() => {
+    if (restartingSession && session && !session.is_complete) {
+      setRestartingSession(false);
     }
-  }, [session?.is_complete, showCompletion, completeSession, fetchReport]);
+  }, [restartingSession, session]);
 
   useEffect(() => {
     setRecallDraft('');
@@ -155,14 +185,13 @@ export default function ReviewLabPage() {
     [submitOutcome]
   );
 
-  const handleStartNew = useCallback(async () => {
+  const handleStartNew = useCallback(() => {
+    completionRunRef.current += 1;
+    setRestartingSession(true);
     setShowCompletion(false);
     setReport(null);
-    const sid = await createSession({ max_units: 20 });
-    if (sid) {
-      router.replace(`/review/lab?session=${sid}`);
-    }
-  }, [createSession, router]);
+    window.location.assign('/review/lab?fresh=1');
+  }, []);
 
   // Error state
   if (error && !session) {
@@ -339,7 +368,7 @@ export default function ReviewLabPage() {
       )}
 
       {/* Completion */}
-      {!paused && !current && session.is_complete && (
+      {!paused && !current && session.is_complete && !showCompletion && (
         <div className="text-center py-12">
           <RotateCcw size={32} className="mx-auto mb-3 text-muted" />
           <h3 className="text-lg font-semibold">All done!</h3>
@@ -355,7 +384,7 @@ export default function ReviewLabPage() {
 
       {/* Completion modal */}
       <LabCompletionModal
-        report={report}
+        report={showCompletion ? report : null}
         onClose={() => setShowCompletion(false)}
         onStartNew={handleStartNew}
       />

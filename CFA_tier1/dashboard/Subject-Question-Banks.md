@@ -2,7 +2,7 @@
 title: "CFA L1 Subject Question Banks"
 description: 本地基础题与题库承接页索引
 generated: 2026-05-27
-source: "D:\3\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题"
+source: "D:\Study\CFA\CFA一级（及时转存，避免丢失）\2026年备考CFA一级Pack1000练习题"
 ---
 
 # CFA L1 Subject Question Banks

@@ -1,274 +1,243 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { studyPlanApi, energyApi } from '@/lib/api';
-import { TodayTodoPanel } from '@/components/cockpit/TodayTodoPanel';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 import {
-  Zap, Clock, Target, AlertTriangle, CheckCircle2, Battery, BatteryLow, BatteryMedium, BatteryFull,
+  ArrowRight,
+  BatteryFull,
+  BatteryLow,
+  BatteryMedium,
+  Brain,
+  CalendarCheck2,
+  CheckCircle2,
+  Gauge,
+  Loader2,
+  Search,
+  Sparkles,
+  Target,
+  Wrench,
 } from 'lucide-react';
 
-interface PlanData {
-  plan_id: string;
-  date: string;
-  energy_level: number;
-  available_minutes: number;
-  focus_topic: string;
-  focus_reason: string;
-  high_energy_tasks: Task[];
-  moderate_energy_tasks: Task[];
-  low_energy_tasks: Task[];
-  danger_los_list: string[];
-  warnings: string[];
-}
+import { CockpitSummary, energyApi, navigationApi } from '@/lib/api';
+import { TodayTodoPanel } from '@/components/cockpit/TodayTodoPanel';
 
-interface Task {
-  task_type: string;
-  description: string;
-  fit: number;
-}
-
-const taskLabels: Record<string, string> = {
-  new_knowledge: '新知识',
-  difficult_practice: '高难练习',
-  interleaved_set: '交错题组',
-  mock_exam: '模拟考试',
-  mistake_review: '错题复盘',
-  formula_drill: '公式练习',
-  worked_example_fading: '例题渐隐',
-  active_recall: '主动回忆',
-  concept_discrimination: '概念判断',
-  light_review: '轻量复习',
-};
-
-const energyLabels = ['耗尽', '偏低', '平稳', '充足', '高能'];
-
-export default function TodayCockpit() {
-  const [plan, setPlan] = useState<PlanData | null>(null);
+export default function TodayCockpitPage() {
+  const [cockpit, setCockpit] = useState<CockpitSummary | null>(null);
   const [loading, setLoading] = useState(true);
-  const [weeklyFocus, setWeeklyFocus] = useState('');
-  const [energySaving, setEnergySaving] = useState<number | null>(null);
-  const [energyError, setEnergyError] = useState('');
+  const [error, setError] = useState('');
+  const [query, setQuery] = useState('');
+  const [latestEnergy, setLatestEnergy] = useState<number | null>(null);
 
-  useEffect(() => {
-    studyPlanApi.getToday().then(setPlan).finally(() => setLoading(false));
-  }, []);
-
-  useEffect(() => {
-    studyPlanApi.getWeeklyFocus().then((data: any) => {
-      setWeeklyFocus(data.recommendation || '');
-    }).catch(() => {});
-  }, []);
-
-  const EnergyIcon = plan
-    ? plan.energy_level >= 3 ? BatteryFull
-    : plan.energy_level >= 1 ? BatteryMedium
-    : BatteryLow
-    : Battery;
-
-  const updateEnergy = async (energyLevel: number) => {
-    setEnergySaving(energyLevel);
-    setEnergyError('');
+  const load = async () => {
+    setLoading(true);
+    setError('');
     try {
-      await energyApi.checkIn({
-        energy_level: energyLevel,
-        mental_clarity: Math.max(1, Math.min(10, 2 + energyLevel * 2)),
-        physical_fatigue: Math.max(1, Math.min(10, 9 - energyLevel * 2)),
-        motivation: Math.max(1, Math.min(10, 3 + energyLevel * 2)),
-        sleep_hours: 0,
-        stress_level: 0,
-      });
-      setPlan(await studyPlanApi.getToday({ energy_level: String(energyLevel) }));
-    } catch {
-      setEnergyError('精力记录失败，请确认本地 API 已启动。');
+      setCockpit(await navigationApi.cockpit('default'));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Cockpit load failed');
     } finally {
-      setEnergySaving(null);
+      setLoading(false);
     }
   };
 
-  if (loading) {
-    return <div className="text-muted animate-pulse">加载今日驾驶舱...</div>;
-  }
+  useEffect(() => {
+    load().catch(() => undefined);
+  }, []);
+
+  useEffect(() => {
+    energyApi.history(1).then((payload: any) => {
+      const history = Array.isArray(payload?.history) ? payload.history : [];
+      setLatestEnergy(typeof history[0]?.energy_level === 'number' ? history[0].energy_level : null);
+    }).catch(() => undefined);
+  }, []);
+
+  const planBlocks = cockpit?.today_plan_preview || [];
+  const health = cockpit?.learning_health || {};
+  const primary = cockpit?.primary_action || {
+    label: 'Begin setup',
+    href: '/onboarding',
+    reason: 'Set a focused goal to unlock the first useful plan.',
+  };
+  const supporting = (cockpit?.supporting_actions || []).slice(0, 4);
+  const readiness = cockpit?.active_goal?.readiness_status || health.readiness || 'not_started';
+
+  const tutorHref = useMemo(() => {
+    const trimmed = query.trim();
+    return trimmed ? `/review/tutor?q=${encodeURIComponent(trimmed)}` : '/review/tutor';
+  }, [query]);
+
+  const ask = (event: FormEvent) => {
+    event.preventDefault();
+    window.location.href = tutorHref;
+  };
+  const EnergyIcon = latestEnergy === null ? Brain : latestEnergy >= 3 ? BatteryFull : latestEnergy >= 1 ? BatteryMedium : BatteryLow;
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
+    <div className="mx-auto max-w-6xl pb-12">
+      <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 className="text-2xl font-bold">今日驾驶舱</h2>
-          <p className="text-muted text-sm mt-1">{plan?.date}</p>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="card flex items-center gap-3">
-            <Clock size={18} className="text-accent" />
-            <div>
-              <div className="metric-label">可用时间</div>
-              <div className="metric-value text-lg">{plan?.available_minutes} min</div>
-            </div>
+          <div className="inline-flex items-center gap-2 rounded-full bg-surface-raised px-3 py-1 text-xs font-medium text-muted">
+            <CheckCircle2 size={13} className="text-success" />
+            Study cockpit
           </div>
+          <h2 className="mt-4 text-3xl font-semibold tracking-normal md:text-4xl">Today</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
+            {cockpit?.active_goal?.title || 'Use Today for plan, focus, and execution. Use Daily Review to review what you studied.'}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/review" className="btn-primary inline-flex w-fit items-center gap-2">
+            <CalendarCheck2 size={15} />
+            Daily Review
+          </Link>
+          <Link href="/review/tools" className="btn-secondary inline-flex w-fit items-center gap-2">
+            <Wrench size={15} />
+            More Tools
+          </Link>
         </div>
       </div>
 
-      {/* Energy check-in */}
-      <div className="card">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      {error && (
+        <div className="mb-4 rounded-lg border border-warning-soft bg-warning-soft p-3 text-sm text-warning">
+          {error}
+        </div>
+      )}
+
+      <main data-testid="primary-cockpit" className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
+        <section className="min-w-0 rounded-lg bg-surface-raised p-6 shadow-sm">
+          <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 text-sm font-medium text-accent">
+                <Target size={17} />
+                Next best step
+              </div>
+              <h3 className="mt-4 text-2xl font-semibold">{primary.label}</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted">{primary.reason}</p>
+            </div>
+            <Link href={primary.href} className="btn-primary inline-flex shrink-0 items-center justify-center gap-2 px-5 py-3">
+              <ArrowRight size={16} />
+              {primary.label}
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <QuietMetric icon={Gauge} label="Readiness" value={labelize(readiness)} />
+            <QuietMetric icon={CalendarCheck2} label="Plan" value={labelize(String(health.plan_status || 'not planned'))} />
+            <QuietMetric icon={Brain} label="Next blocks" value={String(health.next_blocks || planBlocks.length || 0)} />
+          </div>
+        </section>
+
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5">
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="font-semibold">Today Plan</h3>
+            <Link href="/review/study-planner" className="text-sm font-medium text-accent hover:underline">
+              Open plan
+            </Link>
+          </div>
+          <div className="mt-4 space-y-3">
+            {loading ? (
+              <div className="rounded-lg bg-surface-field p-4 text-sm text-muted">
+                <Loader2 size={15} className="mr-2 inline animate-spin" />
+                Preparing today...
+              </div>
+            ) : planBlocks.length ? (
+              <Link href="/review/focus" className="block rounded-lg bg-surface-field p-4 transition-colors hover:bg-surface-hover">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold">Start Focus Session</p>
+                    <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted">
+                      {planBlocks.length} guided steps / {planBlocks.reduce((total, block) => total + Number(block.target_minutes || 0), 0)}m planned
+                    </p>
+                  </div>
+                  <ArrowRight size={15} className="shrink-0 text-accent" />
+                </div>
+              </Link>
+            ) : (
+              <CalmEmptyState title="No plan yet" actionHref="/review/focus" actionLabel="Start Focus Session" />
+            )}
+          </div>
+        </section>
+
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5">
           <div className="flex items-center gap-3">
-            <EnergyIcon size={20} className="text-accent" />
+            <EnergyIcon size={18} className="text-accent" />
             <div>
-              <div className="metric-label">此刻精力</div>
-              <p className="text-sm font-semibold">
-                {energyLabels[plan?.energy_level ?? 2]} · 选择后立即重排今日任务
+              <h3 className="font-semibold">Energy Summary</h3>
+              <p className="text-sm text-muted">
+                {latestEnergy === null ? 'No check-in yet. Daily Review will use the default balanced mode.' : `Current review energy: ${latestEnergy} / 4`}
               </p>
             </div>
           </div>
-          <div className="flex gap-2" role="group" aria-label="记录当前精力">
-            {energyLabels.map((label, level) => (
-              <button
-                key={label}
-                type="button"
-                disabled={energySaving !== null}
-                onClick={() => updateEnergy(level)}
-                aria-pressed={plan?.energy_level === level}
-                title={label}
-                className={`h-9 w-9 rounded-full border text-xs font-semibold transition-colors ${
-                  plan?.energy_level === level
-                    ? 'border-accent bg-accent-solid text-white'
-                    : 'border-line bg-surface-field text-muted hover:border-accent-soft hover:text-accent'
-                } disabled:opacity-50`}
-              >
-                {level}
-              </button>
-            ))}
+          <Link href="/review" className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline">
+            Adjust energy in Daily Review
+            <ArrowRight size={13} />
+          </Link>
+        </section>
+
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5 lg:col-span-2">
+          <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
+            <div className="min-w-0">
+              <h3 className="font-semibold">Focus</h3>
+              <div className="mt-4 grid gap-2 sm:grid-cols-4">
+                {supporting.map((action) => (
+                  <Link key={action.href} href={action.href} className="rounded-lg bg-surface-field px-3 py-3 text-sm font-medium transition-colors hover:bg-surface-hover">
+                    {action.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <form onSubmit={ask} className="min-w-0 rounded-lg bg-surface-field p-3">
+              <label className="flex min-w-0 items-center gap-2 text-sm">
+                <Search size={15} className="shrink-0 text-muted" />
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Ask about your plan or a concept..."
+                  className="min-w-0 flex-1 bg-transparent outline-none placeholder:text-muted"
+                />
+              </label>
+              <div className="mt-3 flex justify-end">
+                <Link href={tutorHref} className="btn-secondary inline-flex items-center gap-2">
+                  <Sparkles size={14} />
+                  Ask Tutor
+                </Link>
+              </div>
+            </form>
           </div>
-        </div>
-        {energyError && <p className="mt-3 text-xs text-danger">{energyError}</p>}
-      </div>
+        </section>
 
-      {/* Warnings */}
-      {plan?.warnings && plan.warnings.length > 0 && (
-        <div className="bg-warning-soft border border-warning-soft rounded-lg p-4">
-          {plan.warnings.map((w, i) => (
-            <p key={i} className="text-sm text-warning flex items-center gap-2">
-              <AlertTriangle size={14} /> {w}
-            </p>
-          ))}
-        </div>
-      )}
-
-      {/* Focus + Danger */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div className="card">
-          <div className="flex items-center gap-2 mb-2">
-            <Target size={16} className="text-accent" />
-            <span className="metric-label">今日主线</span>
-          </div>
-          <p className="text-lg font-semibold">{plan?.focus_topic || '按到期错题安排'}</p>
-          <p className="text-xs text-muted mt-1">{plan?.focus_reason}</p>
-        </div>
-
-        <div className="card">
-          <div className="flex items-center gap-2 mb-2">
-            <AlertTriangle size={16} className="text-danger" />
-            <span className="metric-label">最危险 3 个 LOS</span>
-          </div>
-          {plan?.danger_los_list.map((los, i) => (
-            <p key={i} className="text-sm text-danger">• {los}</p>
-          ))}
-          {(!plan?.danger_los_list || plan.danger_los_list.length === 0) && (
-            <p className="text-sm text-muted">暂无高危 LOS</p>
-          )}
-        </div>
-      </div>
-
-      {/* Weekly Focus */}
-      {weeklyFocus && (
-        <div className="card sm:col-span-2">
-          <h3 className="text-sm font-semibold mb-2">📋 本周重点建议</h3>
-          <pre className="text-xs text-muted whitespace-pre-wrap font-sans leading-relaxed">
-            {weeklyFocus.split('\n').slice(4, 12).join('\n')}
-          </pre>
-        </div>
-      )}
-
-      {/* Tasks by energy tier */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <TaskColumn
-          title="高精力任务"
-          icon={<BatteryFull size={16} className="text-success" />}
-          tasks={plan?.high_energy_tasks || []}
-        />
-        <TaskColumn
-          title="中精力任务"
-          icon={<BatteryMedium size={16} className="text-warning" />}
-          tasks={plan?.moderate_energy_tasks || []}
-        />
-        <TaskColumn
-          title="低精力任务"
-          icon={<BatteryLow size={16} className="text-muted" />}
-          tasks={plan?.low_energy_tasks || []}
-        />
-      </div>
-
-      <TodayTodoPanel studyPlan={plan as unknown as Record<string, unknown> | null} />
-
-      {/* Quick Actions */}
-      <div className="card">
-        <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
-          <Zap size={16} className="text-accent" /> 快速操作
-        </h3>
-        <div className="flex gap-3 flex-wrap">
-          <QuickAction href="/capture" label="录入错题" />
-          <QuickAction href="/review" label="打开今日复习包" />
-          <QuickAction href="/diagnosis" label="错因诊断" />
-          <QuickAction href="/mock" label="模拟中心" />
-        </div>
-      </div>
+        <section className="min-w-0 rounded-lg bg-surface-raised p-5 lg:col-span-2">
+          <TodayTodoPanel studyPlan={null} />
+        </section>
+      </main>
     </div>
   );
 }
 
-function TaskColumn({
-  title, icon, tasks,
-}: {
-  title: string; icon: React.ReactNode; tasks: Task[];
-}) {
-  if (tasks.length === 0) {
-    return (
-      <div className="card">
-        <div className="flex items-center gap-2 mb-3">
-          {icon}
-          <span className="metric-label">{title}</span>
-        </div>
-        <p className="text-xs text-muted">暂无</p>
-      </div>
-    );
-  }
-
+function QuietMetric({ icon: Icon, label, value }: { icon: any; label: string; value: string }) {
   return (
-    <div className="card">
-      <div className="flex items-center gap-2 mb-3">
-        {icon}
-        <span className="metric-label">{title} ({tasks.length})</span>
+    <div className="rounded-lg bg-surface-field p-3">
+      <div className="flex items-center gap-2 text-muted">
+        <Icon size={15} />
+        <span className="text-xs">{label}</span>
       </div>
-      <ul className="space-y-2">
-        {tasks.map((task, i) => (
-          <li key={i} className="text-sm flex items-start gap-2">
-            <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-muted" />
-            <span>{taskLabels[task.task_type] || task.task_type}: {task.description.slice(0, 40)}</span>
-          </li>
-        ))}
-      </ul>
+      <p className="mt-2 text-sm font-semibold">{value}</p>
     </div>
   );
 }
 
-function QuickAction({ href, label }: { href: string; label: string }) {
+function CalmEmptyState({ title, actionHref, actionLabel }: { title: string; actionHref: string; actionLabel: string }) {
   return (
-    <Link
-      href={href}
-      className="px-4 py-2 rounded-lg bg-accent-soft border border-accent-soft text-sm text-accent hover:bg-accent-soft transition-colors"
-    >
-      {label}
-    </Link>
+    <div className="rounded-lg bg-surface-field p-4 text-sm text-muted">
+      <p className="font-medium text-foreground">{title}</p>
+      <Link href={actionHref} className="mt-3 inline-flex items-center gap-2 text-accent hover:underline">
+        {actionLabel}
+        <ArrowRight size={13} />
+      </Link>
+    </div>
   );
+}
+
+function labelize(value: string) {
+  return value.replace(/[_-]+/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 }

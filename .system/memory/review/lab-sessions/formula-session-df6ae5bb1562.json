@@ -1,7 +1,7 @@
 {
   "session_id": "formula-session-df6ae5bb1562",
   "review_id": "formula-lab-2026-06-03",
-  "status": "active",
+  "status": "completed",
   "units": [
     {
       "unit_id": "formula-unit-asset-bb2c345b8b9b",
@@ -112,7 +112,7 @@
   "energy_level": 2,
   "focus_topic": "Formula Lab",
   "started_at": "2026-06-03T18:27:02.897347+00:00",
-  "completed_at": "",
+  "completed_at": "2026-06-07T13:57:08.851258+00:00",
   "paused_at": "",
   "resumed_at": ""
 }

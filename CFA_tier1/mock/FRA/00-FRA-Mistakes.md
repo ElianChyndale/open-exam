@@ -1,6 +1,6 @@
 ---
 bucket: FRA
-question_count: 9
+question_count: 10
 ---
 
 # FRA Mock Mistakes
@@ -94,3 +94,13 @@ question_count: 9
 - evidence_refs: chat-2026-06-05, batch-3q-1-wrong
 - evidence_assets: chat_upload:screenshot:2026-06-05-inventory-write-down-lifo
 - moc_target: CFA_tier1/Financial_Statement_Analysis/00-Financial-Statement-Analysis-MOC.md
+
+## Financial Statement Analysis | impairment measurement for long-lived assets under IFRS versus US GAAP (approximate from screenshot)
+- error_type: accounting_standard_confusion
+- question_source: unknown
+- source_type: screenshot
+- wrong_choice_or_output: C. EUR20,000
+- correct_resolution: Correct answer: B. EUR17,400. Under IFRS, impairment is measured using recoverable amount = higher of value in use and fair value less costs to sell. Fair value less costs to sell = 19,100 - 1,900 = 17,200, so recoverable amount = max(17,400, 17,200) = 17,400. Because carrying value 20,000 exceeds recoverable amount 17,400, the asset is written down to 17,400. The undiscounted expected future cash flows figure is a US GAAP trigger-style input, not the measurement amount used for the IFRS answer here.
+- evidence_refs: chat-2026-06-07, screenshot-impairment-equipment-ifrs-vs-usgaap
+- evidence_assets: chat_upload:screenshot:2026-06-07-impairment-equipment-ifrs-vs-usgaap
+- moc_target: CFA_tier1/Financial_Statement_Analysis/M07-Analysis-of-Long-Term-Assets.md

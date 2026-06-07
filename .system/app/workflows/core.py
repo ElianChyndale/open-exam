@@ -1236,7 +1236,7 @@ def record_question_attempt(repo: Repository, payload: dict) -> dict:
         for key, value in payload.items()
         if key in capture_fields
     }
-    event = record_event(repo, mistake_payload, mode="record-mistake")
+    event = None if is_correct else record_event(repo, mistake_payload, mode="record-mistake")
 
     repo.append_attempt_record(
         {
@@ -1254,7 +1254,7 @@ def record_question_attempt(repo: Repository, payload: dict) -> dict:
         }
     )
     if is_correct:
-        return {"attempt_id": attempt_id, "event": event, "card_id": ""}
+        return {"attempt_id": attempt_id, "event": None, "card_id": ""}
 
     return {
         "attempt_id": attempt_id,
