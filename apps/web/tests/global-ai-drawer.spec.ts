@@ -33,3 +33,9 @@ test('assistant drawer shows action result cards for capture and commands', asyn
   await page.getByRole('button', { name: /Send/i }).click();
   await expect(page.getByText(/Recorded this as question evidence/i)).toBeVisible();
 });
+
+test('capture page is clearly secondary while AI assistant remains primary', async ({ page }) => {
+  await page.goto('/capture');
+  await expect(page.getByText(/Import and admin tools/i)).toBeVisible();
+  await expect(page.getByRole('button', { name: /Open AI assistant/i })).toBeVisible();
+});

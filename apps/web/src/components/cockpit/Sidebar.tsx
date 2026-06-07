@@ -18,7 +18,7 @@ import ProfileSwitcher from './ProfileSwitcher';
 
 const navItems = [
   { href: '/today', label: '今日驾驶舱', shortLabel: 'Today', icon: Zap },
-  { href: '/capture', label: '题目录入', shortLabel: 'Capture', icon: PenLine },
+  { href: '/capture', label: 'Capture Tools', shortLabel: 'Tools', icon: PenLine },
   { href: '/diagnosis', label: '错因诊断', shortLabel: 'Diagnose', icon: Stethoscope },
   { href: '/review', label: 'Daily Review', shortLabel: 'Review', icon: BookOpen },
   { href: '/mock', label: '模拟中心', shortLabel: 'Mock', icon: FileText },
