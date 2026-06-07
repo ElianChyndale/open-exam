@@ -67,6 +67,17 @@ export const attemptsApi = {
     request(`/api/attempts/recent?limit=${limit}`),
 };
 
+/** Global AI Assistant Drawer */
+export const assistantApi = {
+  sendMessage: (data: {
+    conversation_id?: string;
+    page_context?: Record<string, unknown>;
+    message: string;
+    attachments?: Array<Record<string, unknown>>;
+  }) =>
+    request('/api/assistant/messages', { method: 'POST', body: JSON.stringify(data) }),
+};
+
 /** Local Admin Auth */
 export const authApi = {
   bootstrapAdmin: (data: { username: string; password: string }) =>
