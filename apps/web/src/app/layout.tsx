@@ -7,6 +7,9 @@ import QuickCapture from '@/components/capture/QuickCapture';
 import OfflineCaptureRegistration from '@/components/capture/OfflineCaptureRegistration';
 import { PenLine } from 'lucide-react';
 import { MotionProvider } from '@/components/motion/MotionProvider';
+import { AssistantProvider } from '@/components/assistant/AssistantProvider';
+import { AssistantLauncher } from '@/components/assistant/AssistantLauncher';
+import { AssistantDrawer } from '@/components/assistant/AssistantDrawer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [quickOpen, setQuickOpen] = useState(false);
@@ -37,27 +40,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           跳到主要内容
         </a>
         <div aria-live="polite" aria-atomic="true" className="sr-only" />
-        <MotionProvider>
-          <Sidebar />
-          <main id="main-content" className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto" tabIndex={-1}>
-            {children}
-          </main>
-        </MotionProvider>
-        <OfflineCaptureRegistration />
-        <button
-          type="button"
-          onClick={() => setQuickOpen(true)}
-          className="fixed bottom-20 right-4 z-40 flex items-center gap-2 rounded-full border border-accent-soft bg-surface-raised px-3 py-2 text-xs text-accent shadow-lg backdrop-blur-xl transition-colors hover:bg-accent-soft lg:bottom-5"
-          aria-label="打开快速录入，快捷键 Ctrl 或 Command 加 Shift 加 E"
-          title="快速录入 · Ctrl/Command + Shift + E"
-        >
-          <PenLine size={14} />
-          <span>快速录入</span>
-          <kbd className="hidden rounded border border-line bg-surface-field px-1.5 py-0.5 text-[10px] text-muted sm:inline">
-            Ctrl/⌘ Shift E
-          </kbd>
-        </button>
-        <QuickCapture isOpen={quickOpen} onClose={() => setQuickOpen(false)} />
+        <AssistantProvider>
+          <MotionProvider>
+            <Sidebar />
+            <main id="main-content" className="min-h-screen flex-1 p-4 pb-24 lg:ml-60 lg:p-6 overflow-auto" tabIndex={-1}>
+              {children}
+            </main>
+          </MotionProvider>
+          <OfflineCaptureRegistration />
+          <AssistantLauncher />
+          <AssistantDrawer />
+          <button
+            type="button"
+            onClick={() => setQuickOpen(true)}
+            className="fixed bottom-20 right-4 z-40 flex items-center gap-2 rounded-full border border-accent-soft bg-surface-raised px-3 py-2 text-xs text-accent shadow-lg backdrop-blur-xl transition-colors hover:bg-accent-soft lg:bottom-5"
+            aria-label="打开快速录入，快捷键 Ctrl 或 Command 加 Shift 加 E"
+            title="快速录入 · Ctrl/Command + Shift + E"
+          >
+            <PenLine size={14} />
+            <span>快速录入</span>
+            <kbd className="hidden rounded border border-line bg-surface-field px-1.5 py-0.5 text-[10px] text-muted sm:inline">
+              Ctrl/⌘ Shift E
+            </kbd>
+          </button>
+          <QuickCapture isOpen={quickOpen} onClose={() => setQuickOpen(false)} />
+        </AssistantProvider>
       </body>
     </html>
   );
