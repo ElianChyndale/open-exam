@@ -25,7 +25,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from deps import get_repo
-from routers import attempts, assessments, auth, cards, dashboard, data_governance, diagnosis, energy, export as export_router, focus, goals, institution, interop, knowledge_graph, language, learning_analytics, mock, navigation, onboarding, privacy, profiles, provenance, question_banks, resource_candidates, resources, review, security, skills, study_plan, study_planner, todos, transfer, tutor, waves
+from routers import assistant, attempts, assessments, auth, cards, dashboard, data_governance, diagnosis, energy, export as export_router, focus, goals, institution, interop, knowledge_graph, language, learning_analytics, mock, navigation, onboarding, privacy, profiles, provenance, question_banks, resource_candidates, resources, review, security, skills, study_plan, study_planner, todos, transfer, tutor, waves
 from routers import review_lab
 
 # New wave routers (feature-flag gated)
@@ -73,6 +73,7 @@ app.add_middleware(
 )
 
 # Mount routers
+app.include_router(assistant.router, prefix="/api/assistant", tags=["assistant"])
 app.include_router(attempts.router, prefix="/api/attempts", tags=["attempts"])
 app.include_router(auth.router, prefix="/api/auth", tags=["auth"])
 app.include_router(security.router, prefix="/api/security", tags=["security"])
