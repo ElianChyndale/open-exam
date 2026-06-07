@@ -101,6 +101,19 @@ export async function flushPendingAttempts(
   return { sent, remaining: pending.filter((write) => write.family === 'attempt').length - sent };
 }
 
+export async function queueAssistantRequest(payload: Record<string, unknown>) {
+  const db = await openQueue();
+  await migrateLegacyQueue(db);
+  const transaction = db.transaction(STORE_NAME, 'readwrite');
+  transaction.objectStore(STORE_NAME).add({
+    family: 'attempt',
+    payload,
+    request: { path: '/api/assistant/messages', method: 'POST', body: payload },
+    queuedAt: new Date().toISOString(),
+  } satisfies PendingWrite);
+  await transactionDone(transaction);
+}
+
 export async function flushPendingWrites(
   sendAttempt: (payload: Record<string, unknown>) => Promise<unknown>,
 ) {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useAssistant } from './AssistantProvider';
+import { AssistantActionCard } from './AssistantActionCard';
 
 export function AssistantThread() {
   const { messages } = useAssistant();
@@ -21,6 +22,7 @@ export function AssistantThread() {
         >
           <p className="text-xs font-semibold uppercase text-muted">{message.role}</p>
           <p className="mt-2 text-sm leading-6">{message.text}</p>
+          {message.action ? <AssistantActionCard action={message.action} /> : null}
         </div>
       ))}
     </div>
